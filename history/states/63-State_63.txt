@@ -1,0 +1,35 @@
+
+state={
+	id=63
+	name="STATE_63"
+	resources={
+
+		powder=0.000
+		metal=0.000
+		gas=5.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = NIT
+			add_core_of = NIT
+			add_core_of = KAP
+			buildings = {
+				infrastructure =5
+				industrial_complex = 4
+				arms_factory = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		172 729 2266 2655 3390 4202 4203 4209 4212 4217 4219 
+	}
+	manpower=1244.0
+	buildings_max_level_factor=1.000
+	state_category=s7
+}

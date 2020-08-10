@@ -1,0 +1,103 @@
+﻿capital = 69
+138.8.13 = {
+
+}
+141.6.2 = {
+    
+}
+142.3.8 = {
+    
+}
+144.2.5 = {
+    
+}
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card = 1
+        linglijiejing139 = 1
+        linglijiejing144 = 1
+        danmujingque139 = 1
+        gaosudanmu139 = 1
+        buqiang117 = 1
+        buqiang140 = 1
+        tangxiangailiang140 = 1
+        jiandanmiaozhunjing140 = 1
+        #辅助
+        zhiyuanzhuangbei = 1
+
+        #专用辅助
+        fangzhihuopao143 = 1
+        
+        #专用基础
+        
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+        zuzhihuazhanzheng142 = 1
+        zhanchangzhihui145 = 1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        waike = 1
+        jisuangongju144 = 1
+        tongxunlilun = 1
+        jiemi137 = 1
+        jiami137 = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+        jianzaojishu140 = 1
+        ziyuankaifa130 = 1
+            
+        #专用工业
+        fangwaijieshengchan130 = 1
+        fangwaijieshengchan140 = 1
+        fangwaijieshengchan145 = 1
+
+        #种族
+            
+    }
+}
+
+146.1.1={
+    oob = "GRS_146"
+    # set_research_slots = 5
+    # Starting tech
+    
+    add_ideas = {
+    kappa
+    Village
+    open2
+    dove2
+    normal_border
+    sc_rule
+    }
+    set_politics = {
+    	ruling_party = guli
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 10
+        guli = 80
+        neworder = 2
+        oldorder = 0
+        fandong = 8
+    }
+}
+create_country_leader = {
+	name = "未知河童"
+	picture = "kappaA.dds"
+	ideology = guli_type
+	traits = {  }
+}

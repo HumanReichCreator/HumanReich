@@ -1,0 +1,130 @@
+﻿capital = 191
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card = 1
+        linglijiejing139 = 1
+        danmujingque139 = 1
+        gaosudanmu139 = 1
+        buqiang117 = 1
+        tezhong149 = 1
+            
+        #辅助
+        zhiyuanzhuangbei = 1
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+        zuzhihuazhanzheng142 = 1
+        zhanchangzhihui145 = 1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        lingben = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+        ziyuankaifa130 = 1
+            
+        #专用工业
+        linglishengchan130 = 1
+
+        #种族
+        # yanjiujingshen1 = 1
+            
+    }
+}
+146.1.1={
+    add_manpower = 100
+    oob = "ALI_146"
+    # set_research_slots = 4
+    # Starting tech
+    set_country_flag = bunengsuiyiqiehuanzhengti
+
+    add_ideas = {
+        ali_renoujuntuan_idea
+        ali_zhenduidaojudeliliang_idea
+        Magician
+        Tribal
+        hawk2
+        close1
+        normal_border
+        sc_rule
+    }
+    #########局势修改
+    set_politics = {
+        ruling_party = qinwai
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 80
+        guli = 0
+        neworder = 19
+        oldorder = 0
+        fandong = 1
+    }
+
+    set_truce = {target = RMI days = 365}
+    set_truce = {target = NIB days = 365}
+    set_truce = {target = SEI days = 365}
+
+
+}
+
+create_country_leader = {
+    # name = "Alice Margatroid"
+    name = "爱丽丝·玛格特罗伊德"
+    desc = ""
+    picture = "ALI_ali.dds"
+    ideology = oldorder_type
+    traits = {  }
+}
+
+create_country_leader = {
+    # name = "Alice Margatroid"
+    name = "爱丽丝·玛格特罗伊德"
+    desc = ""
+    picture = "ALI_ali.dds"
+    ideology = neworder_type
+    traits = {  }
+}
+
+create_country_leader = {
+    # name = "Alice Margatroid"
+    name = "上海人偶"
+    desc = ""
+    picture = "ALI_shh.dds"
+    ideology = fandong_type
+    traits = {  }
+}
+
+create_country_leader = {
+    # name = "Alice Margatroid"
+    name = "爱丽丝·玛格特罗伊德"
+    desc = ""
+    picture = "ALI_ali.dds"
+    ideology = qinwai_type
+    traits = {  }
+}
+
+create_country_leader = {
+    # name = "Alice Margatroid"
+    name = "爱丽丝·玛格特罗伊德"
+    desc = ""
+    picture = "ALI_ali.dds"
+    ideology = guli_type
+    traits = {  }
+}

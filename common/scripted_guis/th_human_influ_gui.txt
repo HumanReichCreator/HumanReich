@@ -1,0 +1,23 @@
+scripted_gui = {
+	th_hum_influ_top_effect = {
+		context_type = player_context
+		
+		window_name = "th_hum_influ_top"
+
+		parent_window_token = top_bar
+        
+		visible = {
+            not = { has_idea = Human }
+		}
+		
+		effects = {
+
+		}
+
+		triggers = {
+
+		}
+        
+	}
+}
+

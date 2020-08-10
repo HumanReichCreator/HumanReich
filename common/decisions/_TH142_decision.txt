@@ -1,0 +1,255 @@
+scenario_decision = {
+    # borderdenfence = {
+    #       activation = {
+    #         has_global_flag = scnario142
+	   #      OR = {
+	   #          divisions_in_border_state = { state = 340 border_state = 67 size < 3 }
+	   #          divisions_in_border_state = { state = 337 border_state = 494 size < 2 }
+	   #          divisions_in_border_state = { state = 451 border_state = 494 size < 2 }
+	   #          divisions_in_border_state = { state = 451 border_state = 52 size < 2 }
+	   #          divisions_in_border_state = { state = 451 border_state = 52 size < 2 }
+	   #          divisions_in_border_state = { state = 336 border_state = 51 size < 2 }
+	   #          divisions_in_border_state = { state = 453 border_state = 51 size < 2 }
+	   #      }
+	   #      tag = HUM
+	   #      HUM = {
+		  #       is_ai = no
+		  #       has_war = yes
+	   #      }
+	   #      KOG = {has_war = no}
+    #       }
+    #       available = {
+    #         custom_trigger_tooltip = {
+    #          tooltip = scn142border
+    #          divisions_in_border_state = { state = 340 border_state = 67 size > 2 }
+    #          divisions_in_border_state = { state = 337 border_state = 494 size > 1 }
+	   #       divisions_in_border_state = { state = 451 border_state = 494 size > 1 }
+	   #       divisions_in_border_state = { state = 451 border_state = 52 size > 1 }
+	   #       divisions_in_border_state = { state = 451 border_state = 52 size > 1 }
+	   #       divisions_in_border_state = { state = 336 border_state = 51 size > 1 }
+	   #       divisions_in_border_state = { state = 453 border_state = 51 size > 1 }
+    #         }
+             
+    #       }
+
+    #       is_good = no
+
+    #       fire_only_once = no
+
+	   #    timeout_effect = {
+	   #      	KOG = {declare_war_on = {target = HUM type = annex_everything}}
+	   #    }
+
+	   #    complete_effect = {
+
+	   #    }
+
+	   #    days_mission_timeout = 30
+    # }
+
+    #TEST
+    scn144_hum1 = {
+          	visible = {
+            	has_global_flag = scnario144
+		        tag = HUM 
+          	}
+          	available = {
+          		HKR = { has_capitulated = no}
+          	}
+
+          	fire_only_once = yes
+
+
+	      	complete_effect = {
+	      		set_country_flag = scn144_hum
+	      	}
+
+	      	ai_will_do = {
+	      		factor = 1
+	      	}
+
+    }
+    scn144_hum2 = {
+          	activation = {
+            	has_global_flag = scnario144
+            	has_country_flag = scn144_hum
+		        tag = HUM 
+		        NOT = {has_global_flag = scnario144_failed}
+          	}
+          	available = {
+          		HKR = { has_capitulated = yes}
+          	    # has_global_flag = scnario144_failed
+          	}
+
+          	highlight_states = {
+          	    
+          	}
+
+          	is_good = yes
+
+          	fire_only_once = yes
+
+	     	timeout_effect = {
+	     		add_war_support = 0.1
+	        	HUM = {
+	        		annex_country = {target = HKR transfer_troops = yes}
+	        		set_country_flag = scn144_hum_complete
+	        	}
+	        	every_state = {
+	        		limit = {
+	        			is_core_of = HKR
+	        		}
+	        		add_core_of = HUM
+	        	}
+	        	
+	        	
+	      	}
+
+	      	complete_effect = {
+
+	      	}
+
+	      	days_mission_timeout = 60
+    }
+    scn144_hum3 = {
+          	activation = {
+            	has_global_flag = scnario144
+            	AND = {
+            		HKR = {
+		        		NOT = { 
+		        			controls_state = 57
+			        		controls_state = 13
+			        		controls_state = 282
+		        		}
+		        	}
+		        	HUM = {
+		        		NOT = { 
+			        		controls_state = 57
+		    	    		controls_state = 13
+		        			controls_state = 282
+		        		}
+		        	}
+            	}
+
+		        HUM = {
+		        	NOT = {has_global_flag = scnario144_failed}
+		        }
+          	}
+          	available = {
+          	    	OR = {
+          	    		HUM = {
+          	    			AND = {
+		          	    		controls_state = 57
+				        		controls_state = 13
+				        		controls_state = 282
+          	    			}
+          	    		}
+          	    		
+          	    		AND = {
+          	    			HKR = {
+	          	    			controls_state = 57
+				        		controls_state = 13
+				        		controls_state = 282
+          	    			}	          	
+          	    		}
+          	    		
+          	    	}
+          	}
+
+          	highlight_states = {
+          	    state = 57
+          	    state = 13
+          	    state = 282
+          	}
+
+          	is_good = no
+
+          	fire_only_once = no
+
+	     	timeout_effect = {
+	        	KOG = {
+	      			transfer_state = 192
+	      			transfer_state = 490
+	      		}
+	      		MSD = {
+	      			transfer_state = 193
+	      			transfer_state = 447
+	      			transfer_state = 484
+	      		}
+	      		set_global_flag = scnario144_failed
+	      		if = {
+				    limit = {
+				    	OR = {
+					    	HUM = {has_country_flag = L_s }
+					        KOG = {has_country_flag = E_s }
+				    	}
+				        
+				        HUM = {has_country_flag = scn144_hum_complete }
+				    }
+				    HUM = { add_ideas = renlidebuff2_l_c }
+				}
+				if = {
+				    limit = {
+				    	OR = {
+					    	HUM = {has_country_flag = L_s }
+					        KOG = {has_country_flag = E_s }
+				    	}
+				        
+				        HUM = { NOT = { has_country_flag = scn144_hum_complete } }
+				    }
+				    HUM = { add_ideas = renlidebuff2_l }
+				}
+				if = {
+				    limit = {
+				        OR = {
+					        HUM = {has_country_flag = H_s }
+					        KOG = {has_country_flag = N_s }
+				        }
+				        HUM = {has_country_flag = scn144_hum_complete }
+				    }
+				    HUM = { add_ideas = renlidebuff2_h_c }
+				}
+				if = {
+				    limit = {
+				        OR = {
+					        HUM = {has_country_flag = H_s }
+					        KOG = {has_country_flag = N_s }
+				        }
+				        HUM = { NOT = { has_country_flag = scn144_hum_complete } }
+				    }
+				    HUM = { add_ideas = renlidebuff2_h }
+				}
+				if = {
+				    limit = {
+				    	OR = {
+				    		HUM = {has_country_flag = E_s }
+				    		HUM = {has_country_flag = N_s }
+				    		KOG = {has_country_flag = H_s }
+				    		KOG = {has_country_flag = L_s }
+				    	}				        
+				        HUM = {has_country_flag = scn144_hum_complete }
+				    }
+				    HUM = { add_ideas = renlidebuff2_e_n_c }
+				}
+				if = {
+				    limit = {
+				        OR = {
+				    		HUM = {has_country_flag = E_s }
+				    		HUM = {has_country_flag = N_s }
+				    		KOG = {has_country_flag = H_s }
+				    		KOG = {has_country_flag = L_s }
+				    	}
+				        HUM = { NOT = { has_country_flag = scn144_hum_complete } }
+				    }
+				    HUM = { add_ideas = renlidebuff2_e_n }
+				}
+	      		
+	      	}
+
+	      	complete_effect = {
+
+	      	}
+
+	      	days_mission_timeout = 60
+    }
+}

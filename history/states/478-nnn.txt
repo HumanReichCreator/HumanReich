@@ -1,0 +1,31 @@
+state={
+	id=478
+	name="STATE_478"
+	provinces={
+		6191 6192 6203 6209 6214 6220 
+	}
+	resources={
+		energy = 0
+		powder=0.000
+		metal=0.000
+		gas=0.000
+		crystal=3.000
+	}
+	history={
+		146.1.1 = {
+			owner = GYK
+			add_core_of = GYK
+			buildings = {
+				infrastructure = 1
+				industrial_complex = 1
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+	manpower=3459.0
+	state_category=s2
+	buildings_max_level_factor=1.000
+}

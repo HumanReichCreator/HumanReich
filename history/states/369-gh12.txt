@@ -1,0 +1,34 @@
+state={
+	id=369
+	name="STATE_369"
+	provinces={
+		27 1016 2328 2792 2815 4878 4885 4892 4903 4922 
+	}
+	resources={
+		energy = 10
+		powder=5.000
+		metal=5.000
+		gas=5.000
+		crystal=5.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = ZYD
+			controller = GH1
+			add_claim_by = GH1
+			add_core_of = ZYD
+			buildings = {
+				infrastructure =3
+				industrial_complex = 2
+				arms_factory = 2
+
+			}
+
+		}
+
+	}
+	state_category=s7
+	manpower=2801.0
+	buildings_max_level_factor=1.000
+}

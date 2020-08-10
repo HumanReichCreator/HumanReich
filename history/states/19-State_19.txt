@@ -1,0 +1,30 @@
+state={
+	id=19
+	name="STATE_19"
+
+	resources={
+
+		powder = 5.0
+		metal = 5
+		gas = 15.0
+		crystal = 0.0
+	}
+
+	history={
+       	146.1.1 = {
+			owner = KUT
+			add_core_of = KUT
+			buildings = {
+				infrastructure =7
+				industrial_complex = 9
+				arms_factory = 1
+			}
+       	}
+	}
+	provinces={
+		321 1162 1270 1325 
+	}
+	state_category=s12
+	manpower=8969.0
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,359 @@
+﻿add_namespace = und
+country_event = { #UUG ACE VS UNL
+	id = und.1
+	title = und.1.t
+	desc = und.1.d
+	fire_only_once = yes
+	trigger = {
+		date > 151.1.30
+		has_global_flag = main_scenario
+		country_exists = UNL
+		not = {
+			UNL = {
+				is_subject_of = UUG
+			}
+		}
+		tag = UUG
+		UUG = {
+			is_subject = no
+		}
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = und.1.1
+		army_experience = 10
+
+		if = {
+			limit = {
+				ACE = {
+					is_subject = no
+				}
+				UNL = {
+					not = { is_subject_of = ACE }
+				}
+				country_exists = ACE
+			}
+			ACE = {
+				declare_war_on = {
+				    target = UNL
+				    type = annex_everything
+				}
+			}
+		}
+		if = {
+			limit = {
+				UFA = {
+					is_subject = no
+				}
+				country_exists = ACE
+				UNL = {
+					not = { is_subject_of = UFA }
+				}
+				
+			}
+			UFA = {
+				declare_war_on = {
+				    target = UNL
+				    type = annex_everything
+				}
+			}
+			
+		}
+
+		hidden_effect = {
+			news_event = { days = 2 id = und.2}	
+		}
+	}
+
+	option = {
+		name = und.1.2
+		ai_chance = {
+			base = 0
+		}
+	}
+	
+}
+
+news_event = { #UUG ACE VS UNL
+	id = und.2
+	title = und.2.t
+	desc = und.2.d
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = und.2.1
+		trigger = {
+			capital_scope = {
+				not = { is_on_continent = Underground }
+			}
+		}
+	}
+
+	option = {
+		name = und.2.2
+		trigger = {
+			capital_scope = {
+				is_on_continent = Underground
+			}
+		}
+	}
+}
+
+country_event = { #地底 VS UUG
+	id = und.3
+	title = und.3.t
+	desc = und.3.d
+
+	fire_only_once = no
+	
+	trigger = {
+		has_global_flag = main_scenario
+		not = {
+			has_country_flag = UND_xuanze
+		}
+		or = {
+			and = {
+				tag = SAT
+				not = { has_war_with = UNL}
+				UNL = { 
+					surrender_progress > 0.65
+					has_war_with = UUG
+				}
+			}
+			and = {
+				tag = KUT
+				not = { has_war_with = UNL}
+				UNL = { 
+					surrender_progress > 0.65
+					has_war_with = UUG
+				}
+			}
+			and = {
+				tag = MHP
+				not = { has_war_with = UNL}
+				UNL = { 
+					surrender_progress > 0.35
+					has_war_with = UUG
+				}
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = UND_xuanze
+		}
+	}
+	mean_time_to_happen = {
+		days = 180
+	}
+
+	option = {
+		ai_chance = {
+			base = 70
+			modifier = {
+				MHP = {
+					has_war_with = UUG
+				}
+				add = -10
+			}
+			modifier = {
+				SAT = {
+					has_war_with = UUG
+				}
+				add = -25
+			}
+			modifier = {
+				KUT = {
+					has_war_with = UUG
+				}
+				add = -25
+			}
+		}
+		name = und.3.1
+		army_experience = 10
+
+		every_country = {
+			limit = {
+				has_war_with = UNL
+			}
+			ROOT = {
+				declare_war_on = {
+				    target = PREV
+				    type = puppet_wargoal_focus
+				}
+			}
+		}
+		add_to_faction = UNL
+
+	}
+
+	option = {
+		name = und.3.2
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+country_event = { ####地底自卫同盟成立
+	id = und.4
+	title = und.4.t
+	desc = und.4.d
+	fire_only_once = yes
+	is_triggered_only = no
+
+	mean_time_to_happen = {
+		days = 160
+	}
+
+	trigger = {
+		date > 151.1.1
+		or = {
+			threat > 0.5
+			MHP = {
+				any_country = {
+					not = {
+						capital_scope ={
+							is_on_continent = Underground
+						}
+					}
+				}
+			}
+		}
+		not = {
+			SAT = { has_war_with = KUT }
+			SAT = { has_war_with = MHP }
+		}
+		tag = SAT
+	}
+
+	option = {
+		name = und.4.1
+		MHP = {
+			country_event = und.5
+		}
+		KUT = {
+			country_event = und.5
+		}
+		YMM = {
+			country_event = und.5
+		}
+		ai_chance = {
+			base = 95
+		}
+		create_faction = didiziwei
+
+		hidden_effect = {
+			news_event = { id = und.6 days = 7}
+		}
+	}
+
+	option = {
+		name = und.4.2
+		ai_chance = {
+			base = 5
+		}
+	}
+}
+
+country_event = { ####加入？
+	id = und.5
+	title = und.5.t
+	desc = und.5.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+
+	option = {
+		name = und.5.1
+		ai_chance = {
+			base = 60
+			modifier = {
+				not = { has_government = guli }
+				factor = 0.1
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+			modifier = {
+				or = {
+					any_owned_state = {
+						not = { is_on_continent = Underground }
+					}
+					any_country = {
+						is_subject_of = ROOT
+						any_owned_state = {
+							not = { is_on_continent = Underground }
+						}
+					}
+				}
+				factor = 0
+			}
+		}
+		SAT = {
+			add_to_faction = ROOT
+		}
+
+		hidden_effect = {
+			FROM = {
+				country_event = { days = 1 id = glo.2001}
+			}
+		}
+	}
+
+	option = {
+		name = und.5.2
+		ai_chance = {
+			base = 40
+		}
+
+		hidden_effect = {
+			FROM = {
+				country_event = { days = 1 id = glo.2002}
+			}
+		}
+	}
+}
+
+news_event = { ####成立新闻
+	id = und.6
+	title = und.6.t
+	desc = und.6.d
+	# fire_only_once = yes
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = und.6.1
+		conservativedecrease = yes
+		trigger = {
+			or = {
+				tag = SAT
+				is_in_faction_with = SAT
+			}
+			
+		}
+	}
+
+	option = {
+		name = und.6.2
+		trigger = {
+			not = {
+				tag = SAT
+				is_in_faction_with = SAT
+			}
+		}
+	}
+}

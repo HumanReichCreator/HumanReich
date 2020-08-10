@@ -1,0 +1,34 @@
+
+introduce_show_pic = { # 某国某页是否有图片
+	always = no
+	# or = {
+	# 	and = { 	
+	# 		check_variable = { introduce_page = 0 }
+	# 		or = { tag = CIR tag = TEG tag = SCA }
+	# 	}
+	# }
+}
+introduce_show_page_button = { # 某国是否有转到某页的按钮
+	or = {
+		and = { 	
+			check_variable = { i = 0 }
+			always = yes
+		}
+		and = { 
+			check_variable = { i = 1 }
+			always = yes
+		}
+		and = { 	
+			check_variable = { i = 2 }
+			always = yes
+		}
+		and = { 	
+			check_variable = { i = 3 }
+			always = yes
+		}
+		and = { 	
+			check_variable = { i = 4 }
+			always = yes
+		}
+	}
+}

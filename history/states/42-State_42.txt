@@ -1,0 +1,34 @@
+
+state={
+	id=42
+	name="STATE_42"
+	resources={
+
+		powder=0.000
+		metal=0.000
+		gas=5.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = SAK
+			add_core_of = SAK
+			buildings = {
+				infrastructure =0
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		770 1820 2554 3903 5011 5015 5026 5031 5035 5045 5059 5062 
+	}
+	manpower=210.0
+	buildings_max_level_factor=1.000
+	state_category=s2
+}

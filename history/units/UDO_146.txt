@@ -1,0 +1,150 @@
+﻿division_template = {
+	name = "前月兔战斗编制"
+	regiments = {
+		sc_infantry = { x = 0 y = 0 }
+		sc_infantry = { x = 0 y = 1 }
+		sc_infantry = { x = 0 y = 2 }
+		sc_artillery_brigade = {x = 1 y = 0 }
+	}
+}
+division_template = {
+	name = "竹林游击编制"
+	regiments = {
+		ma_militia = { x = 0 y = 0 }
+		ma_militia = { x = 0 y = 1 }
+		ma_militia = { x = 0 y = 2 }
+		ma_militia = {x = 1 y = 0 }
+		ma_militia = {x = 1 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "前月兔战斗编制"
+		location = 6536
+		division_template = "前月兔战斗编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "前月兔战斗编制"
+		location = 6536
+		division_template = "前月兔战斗编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "前月兔战斗编制"
+		location = 6536
+		division_template = "前月兔战斗编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "竹林游击编制"
+		location = 6483
+		division_template = "竹林游击编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "竹林游击编制"
+		location = 6483
+		division_template = "竹林游击编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "竹林游击编制"
+		location = 6483
+		division_template = "竹林游击编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "竹林游击编制"
+		location = 6497
+		division_template = "竹林游击编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "竹林游击编制"
+		location = 6497
+		division_template = "竹林游击编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "竹林游击编制"
+		location = 6497
+		division_template = "竹林游击编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "竹林游击编制"
+		location = 6507
+		division_template = "竹林游击编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "竹林游击编制"
+		location = 6507
+		division_template = "竹林游击编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "竹林游击编制"
+		location = 6507
+		division_template = "竹林游击编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "竹林游击编制"
+		location = 6578
+		division_template = "竹林游击编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "竹林游击编制"
+		location = 6578
+		division_template = "竹林游击编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "竹林游击编制"
+		location = 6578
+		division_template = "竹林游击编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "竹林游击编制"
+		location = 6588
+		division_template = "竹林游击编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "竹林游击编制"
+		location = 6588
+		division_template = "竹林游击编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "竹林游击编制"
+		location = 6588
+		division_template = "竹林游击编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+
+}

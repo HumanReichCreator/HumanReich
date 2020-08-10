@@ -1,0 +1,34 @@
+
+state={
+	id=54
+	name="STATE_54"
+	resources={
+		powder=1.000
+		metal=0.000
+		gas=0.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = UNL
+			add_core_of = UNL
+			add_core_of = ACE
+			buildings = {
+				infrastructure = 3
+				industrial_complex = 1
+				arms_factory = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		68 497 867 1182 1308 1867 1891 2134 2627 
+	}
+	manpower=23450
+	buildings_max_level_factor=1.000
+	state_category=s7
+}

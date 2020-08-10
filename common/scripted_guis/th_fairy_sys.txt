@@ -1,0 +1,115 @@
+scripted_gui = {
+	th_fairy_sys_effect = {
+	    context_type = selected_state_context
+		
+		window_name = "th_fairy_sys_gui"
+
+		parent_window_token = selected_state_view
+
+		visible = {
+			ROOT = { has_idea = Fairy }
+			is_owned_by = ROOT
+		}
+
+		effects = {
+			th_fairy_sys_can_click = {
+				meta_effect = {
+				    text = {
+				    	ROOT = { 
+							add_to_variable = { PO_mp_add = FAPO_reduced_power_gain}
+							set_country_flag = {
+								flag = fairy_recent_reduced 
+								value = 1
+								days = [country_recent_action_cd]
+							}
+							set_country_flag = {
+								flag = FAPO_extra_gain_cd
+								value = 1
+								days = [gain_power_time]
+							}
+							
+						}
+						set_state_flag = {
+							flag = been_reduced
+							value = 1
+							days = [state_recent_action_cd]
+						}
+				    }
+				    country_recent_action_cd = "[?ROOT.FAPO_country_reduced_cd]"
+				    gain_power_time = "[?ROOT.FAPO_extra_gain_cd]"
+				    state_recent_action_cd = "[?FAPO_state_reduced_cd]"
+				}
+				
+				remove_building = { type = infrastructure level = 1 }
+				random_list = {
+					20 = { add_resource = { type = gas amount = 6} }
+					20 = { add_resource = { type = gas amount = 7} }
+					20 = { add_resource = { type = gas amount = 8} }
+					20 = { add_resource = { type = gas amount = 9} }
+					20 = { add_resource = { type = gas amount = 10} }
+				}
+				
+			}
+
+		}
+
+		triggers = {
+			th_fairy_sys_can_visible = {
+				ROOT = {
+					NOT = { 
+						has_country_flag = fairy_recent_reduced
+						has_country_flag = forbidden_fairy_sys 
+					}
+					has_full_control_of_state = PREV
+				}
+				NOT = { has_state_flag = been_reduced}
+				is_owned_by = ROOT
+				is_core_of = ROOT
+		        infrastructure > 0
+		    }
+		}
+		#AI
+		ai_enabled = {
+            always = yes
+		}
+
+		ai_test_interval = 168
+		ai_test_variance = 0.1
+
+		# ai_max_weight_taken_per_test = 3
+
+		ai_check = {
+          	NOT = { 
+          		has_country_flag = fairy_recent_reduced 
+          		has_country_flag = forbidden_fairy_sys 
+          	}
+          	check_variable = { PO_average_mp > 0.1}
+          	has_idea = Fairy
+       	}
+
+       	ai_test_scopes = test_self_controlled_states
+
+		ai_weights = {
+			th_fairy_sys_can_click = {
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 10
+						arms_factory < 1
+						industrial_complex < 1
+						infrastructure < 4
+					}
+					modifier = {
+						factor = 0
+						set_temp_variable = { var = civil value = industrial_complex_level }
+						set_temp_variable = { var = arms value = arms_factory_level }
+						add_to_temp_variable = { civil = arms}
+						check_variable = { civil > 4}
+					}
+				}
+			}
+		}
+
+	}
+}
+

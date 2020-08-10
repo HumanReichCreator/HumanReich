@@ -1,0 +1,122 @@
+scripted_gui = {
+	th_subject_effect = {
+		context_type = player_context
+
+		window_name = "th_subject"
+
+		parent_window_token = politics_tab
+
+		visible = {
+			num_subjects > 0
+		}
+
+		triggers = {
+
+		}
+
+		effects = {
+			show_subjects_button_click = {
+				if = {
+					limit = {
+						check_variable = { subject_show = 0}
+					}
+					set_variable = { subject_show = 1}
+					else = {
+						set_variable = { subject_show = 0}
+					}
+				}
+			}
+		}
+
+	}
+
+	th_subject_low_effect = {
+		context_type = player_context
+
+		window_name = "th_subject_container"
+
+		parent_window_token = player_context
+
+		visible = {
+			check_variable = { subject_show = 1}
+		}
+
+		triggers = {
+			th_subject_sys_cant_visible = {
+				NOT = { tag = ROOT }
+			}
+			th_subject_sys_stop_visible = {
+				has_country_flag = LS_start_lowing
+			}
+			th_subject_sys_can_visible = {
+				is_subject_of = ROOT
+				is_neighbor_of = ROOT
+				has_country_flag = LS_cooldown_completed
+
+				not = {
+					has_country_flag = LS_start_lowing
+				}
+
+				ROOT = {
+					has_war = no
+				}
+			}
+			th_subject_level1_visible = {
+				has_autonomy_state = autonomy_integrated_puppet
+			}
+			th_subject_level2_visible = {
+				has_autonomy_state = autonomy_puppet
+			}
+			th_subject_level3_visible = {
+				has_autonomy_state = autonomy_colony
+			}
+			th_subject_level4_visible = {
+				has_autonomy_state = autonomy_dominion
+			}
+		}
+
+		dynamic_lists = {
+			# this is the main grid that contains added countries
+			subjects_grid = {
+				array = subjects #the array that will be used for populating the array
+				change_scope = yes # since our array contains scope objects (countries) we can set change_scope to yes, which will chance current scope to array element while displaying the lists
+				# index = i current index and value is also stored as temp variables and can be used in effects/triggers if wanted. You can rename them to another temp variables
+				# value = v
+				
+				entry_container = th_subject_low_container # gui container name of the entry (this is actually scripted localization. you can have different containers depending on scope)
+
+				# ai_enabled = {
+		  #           always = yes
+				# }
+			}
+		}
+
+		effects = {
+			close_button_click = {
+				if = {
+					limit = {
+						check_variable = { subject_show = 0}
+					}
+					set_variable = { subject_show = 1}
+					else = {
+						set_variable = { subject_show = 0}
+					}
+				}
+			}
+
+			th_subject_sys_can_click = {
+				LS_start_lowing = yes
+			}
+			th_subject_sys_stop_click = {
+				LS_stop_lowing = yes
+			}
+		}
+
+		properties = {
+            autonomy_country_flag = {
+                image = "[This.GetFlag]"
+            }
+		}
+	}
+}
+

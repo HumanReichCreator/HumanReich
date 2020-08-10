@@ -1,0 +1,32 @@
+state={
+	id=428
+	name="STATE_428"
+	provinces={
+		1027 1917 2865 2873 4277 4278 4279 4491 4497 4499 4502 4506 5930 
+	}
+	resources={
+		energy = 0
+		powder=0.000
+		metal=0.000
+		gas=0.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = MSD
+			add_core_of = MSD
+			buildings = {
+				infrastructure =3
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+	state_category=s2
+	manpower=477.0
+	buildings_max_level_factor=1.000
+}

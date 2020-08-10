@@ -1,0 +1,36 @@
+
+state={
+	id=354
+	name="STATE_354"
+
+	resources={
+		energy = 10
+		powder=0.000
+		metal=0.000
+		gas=5.000
+		crystal=5.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = ALI
+			add_core_of = ALI
+			add_core_of = MYK
+			buildings = {
+				infrastructure = 2
+				industrial_complex = 1
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		394 832 1273 2789 3039 3271 3326 4367 4378 4382 4534 
+	}
+	manpower=232.0
+	buildings_max_level_factor=1.000
+	state_category=s5
+}

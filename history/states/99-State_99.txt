@@ -1,0 +1,28 @@
+state={
+	id=99
+	name="STATE_99"
+	resources={
+		energy = 10
+		powder = 5.0
+		metal = 5
+		gas = 0.0
+		crystal = 0.0
+	}
+	history={
+       	146.1.1 = {
+			owner = RUH
+			add_core_of = RUH
+			buildings = {
+				infrastructure =1
+				industrial_complex = 0
+				arms_factory = 0
+			}
+       	}
+	}
+	provinces={
+		318 344 753 1005 1384 1434 1658 2451 2548 2711 2725 2727 
+	}
+	state_category=s2
+	manpower=1269.0
+	buildings_max_level_factor=1.000
+}

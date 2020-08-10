@@ -1,0 +1,35 @@
+
+state={
+	id=200
+	name="STATE_200"
+
+	resources={
+		energy = 0
+		powder=0.000
+		metal=0.000
+		gas=3.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = CLO
+			add_core_of = CLO
+			buildings = {
+				infrastructure = 3
+				industrial_complex = 2
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		262 646 1982 2391 6028 6070 6081 6098 6408 6411 6417 6419 
+	}
+	manpower=11922.0
+	state_category=s5
+	buildings_max_level_factor=1.000
+}

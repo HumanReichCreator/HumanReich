@@ -1,0 +1,35 @@
+
+state={
+	id=130
+	name="STATE_130"
+	resources={
+
+		powder=0.000
+		metal=1.000
+		gas=5.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = SEI
+			add_core_of = SEI
+			add_core_of = ONS
+			buildings = {
+				infrastructure =4
+				industrial_complex = 4
+				arms_factory = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		755 1123 1635 1716 2000 2735 2747 5776 5777 
+	}
+	manpower=527.0
+	buildings_max_level_factor=1.000
+	state_category=s7
+}

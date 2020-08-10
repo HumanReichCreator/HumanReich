@@ -1,0 +1,63 @@
+setup_introductions = {
+ 
+	update_introductions = {
+	      complete_effect = {
+	          # country_event = glo.1
+	          set_country_flag = introduce_not_closed
+	      }
+
+	      fire_only_once = no
+
+	      ai_will_do = {
+	         factor = 0
+	      }
+	}
+}
+scenario_introduction = {
+    introduction141 = {
+	      visible = {
+	          has_global_flag = scnario141
+	      }
+
+	      complete_effect = {
+	          country_event = scn141.1
+	      }
+
+	      fire_only_once = no
+
+	      ai_will_do = {
+	         factor = 0
+	      }
+	}
+	introduction142 = {
+	      visible = {
+	          has_global_flag = scnario142
+	      }
+
+	      complete_effect = {
+	          country_event = scn142.1
+	      }
+
+	      fire_only_once = no
+
+	      ai_will_do = {
+	         factor = 0
+	      }
+	}
+	introduction144 = {
+	      visible = {
+	          has_global_flag = scnario144
+	      }
+
+	      complete_effect = {
+	          country_event = scn144.1
+	      }
+
+	      fire_only_once = no
+
+	      ai_will_do = {
+	         factor = 0
+	      }
+	}
+	
+}

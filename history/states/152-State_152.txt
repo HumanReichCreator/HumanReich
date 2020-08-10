@@ -1,0 +1,34 @@
+
+state={
+	id=152
+	name="STATE_152"
+	resources={
+		energy=0.000
+		powder=5.000
+		metal=2.000
+		gas=0.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = AOO
+			add_core_of = AOO
+			buildings = {
+				infrastructure = 4
+				industrial_complex = 4
+				arms_factory = 2
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		643 873 1103 2116 2773 2784 6198 7063 7064 7066 7070 7072 
+	}
+	manpower=5287
+	buildings_max_level_factor=1.000
+	state_category=s10
+}

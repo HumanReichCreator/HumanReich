@@ -1,0 +1,249 @@
+# inherit_tech = {
+# 	electronic_mechanical_engineering_inherit = yes
+# 	industry_inherit = yes
+# 	infantry_a_inherit = yes
+# 	land_doctrine_inherit = yes
+# 	support_inherit = yes
+
+# 	if = {
+# 		limit = {
+# 			has_tech = lingben
+# 			PREV = { has_tech = lingben}
+# 		}
+# 		electronic_ma_inherit = yes
+# 		industry_ma_inherit = yes
+# 		infantry_ma_advanced_inherit = yes
+# 		infantry_ma_primary_inherit = yes
+# 		infantry_ma_support_inherit = yes
+# 	}
+
+# 	if = {
+# 		limit = {
+# 			has_tech = waike
+# 			PREV = { has_tech = waike}
+# 		}
+# 		electronic_sc_inherit = yes
+# 		industry_sc_inherit = yes
+# 		infantry_sc_advanced_inherit = yes
+# 		infantry_sc_primary_inherit = yes
+# 		infantry_sc_support_inherit = yes
+# 	}
+# }
+
+clear_waike_tech = {
+	electronic_sc_clear = yes
+	industry_sc_clear = yes
+	infantry_sc_advanced_clear = yes
+	infantry_sc_primary_clear = yes
+	infantry_sc_support_clear = yes
+	kap_tech_clear = yes
+	hum_tech_clear = yes
+	
+}
+
+clear_lingben_tech = {
+	electronic_ma_clear = yes
+	industry_ma_clear = yes
+	infantry_ma_advanced_clear = yes
+	infantry_ma_primary_clear = yes
+	infantry_ma_support_clear = yes
+	youkai_tech_clear = yes
+	p_youkai_tech_clear = yes
+
+}
+
+tech_initialize = {
+   if = {
+     limit = {
+	   OR = {
+	     has_tech = waike
+	   }
+	 }
+     waike = yes
+   }
+   if = {
+     limit = {
+	   OR = {
+	     has_tech = lingben
+	   }
+	 }
+     lingben = yes
+   }
+   if = {
+     limit = {
+	   NOT = {
+	     has_tech = waike
+		 has_tech = lingben
+	   }
+	 }
+     add_ideas = none_theory
+   }
+   ##############
+   if = {
+     limit = {
+        has_idea = Beast
+     }
+     set_technology = { beast_tech = 1 }	 
+   }
+   if = {
+     limit = {
+        has_idea = Fairy
+     }
+     set_technology = { fairy_tech = 1 }	 
+   }
+   if = {
+     limit = {
+        has_idea = Ghost
+     }
+     set_technology = { ghost_tech = 1 }	 
+   }
+   if = {
+     limit = {
+        has_idea = Human
+     }
+     set_technology = { human_tech = 1 }	 
+   }
+   if = {
+     limit = {
+        has_idea = Pri_youkai
+     }
+     set_technology = { pri_youkai_tech = 1 }	 
+   }
+   if = {
+     limit = {
+        has_idea = Magician
+     }
+     set_technology = { magician_tech = 1 }	 
+   }
+   if = {
+     limit = {
+        has_idea = Kappa
+     }
+     set_technology = { kappa_tech = 1 }	 
+   }
+   if = {
+     limit = {
+        has_idea = Youkai
+     }
+     set_technology = { youkai_tech = 1 }	 
+   }
+   if = {
+     limit = {
+        has_idea = God
+     }
+     set_technology = { god_tech = 1 }	 
+   }
+   if = {
+     limit = {
+        has_idea = Tenggu
+     }
+     set_technology = { tengu_tech = 1 }	 
+   }
+}
+#抽卡
+YSK_research1_tech = {
+	random_list = {
+		10 = {
+			effect_tooltip = {
+				add_tech_bonus = { bonus = 0.1 uses = 1 category = jiegou }
+			}
+			set_variable = { YSK_research_bonus = 1 }
+		}
+		10 = {
+			effect_tooltip = {
+				add_tech_bonus = { bonus = 0.1 uses = 1 category = main }
+			}
+			set_variable = { YSK_research_bonus = 2 }
+		}
+		10 = {
+			effect_tooltip = {
+				add_tech_bonus = { bonus = 0.1 uses = 1 category = fuzhu }
+			}
+			set_variable = { YSK_research_bonus = 3 }
+		}
+		10 = {
+			effect_tooltip = {
+				add_tech_bonus = { bonus = 0.1 uses = 1 category = build }
+			}
+			set_variable = { YSK_research_bonus = 4 }
+		}
+		10 = {
+			effect_tooltip = {
+				add_tech_bonus = { bonus = 0.1 uses = 1 category = resource }
+			}	
+			set_variable = { YSK_research_bonus = 5 }
+		}
+		10 = {
+			effect_tooltip = {
+				add_tech_bonus = { bonus = 0.1 uses = 1 category = jiemi }
+			}
+			set_variable = { YSK_research_bonus = 6 }
+		}
+		10 = {
+			effect_tooltip = {
+				add_tech_bonus = { bonus = 0.1 uses = 1 category = jiami }
+			}
+			set_variable = { YSK_research_bonus = 7 }
+		}
+		10 = {
+			effect_tooltip = {
+				add_tech_bonus = { bonus = 0.1 uses = 1 category = radio }
+			}
+			set_variable = { YSK_research_bonus = 8 }
+		}
+	}
+}
+
+YSK_research2_tech = {
+	random_list = {
+		10 = {
+			effect_tooltip = {
+				add_tech_bonus = { bonus = 0.1 uses = 1 category = science_weapons }
+			}
+			set_variable = { YSK_research_bonus = 9 }
+		}
+		10 = {
+			effect_tooltip = {
+				add_tech_bonus = { bonus = 0.1 uses = 1 category = science_weapons_improve }
+			}
+			set_variable = { YSK_research_bonus = 10 }
+		}
+		10 = {
+			effect_tooltip = {
+				add_tech_bonus = { bonus = 0.1 uses = 1 category = science_vehicle_weapons }
+			}
+			set_variable = { YSK_research_bonus = 11 }
+		}
+		10 = {
+			effect_tooltip = {
+				add_tech_bonus = { bonus = 0.1 uses = 1 category = science_artillery_weapons }
+			}
+			set_variable = { YSK_research_bonus = 12 }
+		}
+		10 = {
+			effect_tooltip = {
+				add_tech_bonus = { bonus = 0.1 uses = 1 category = science_artillery_improve }
+			}
+			set_variable = { YSK_research_bonus = 13 }
+		}
+		10 = {
+			effect_tooltip = {
+				add_tech_bonus = { bonus = 0.1 uses = 1 category = support_tech }
+			}
+			set_variable = { YSK_research_bonus = 14 }
+		}
+		10 = {
+			effect_tooltip = {
+				add_tech_bonus = { bonus = 0.1 uses = 1 category = basic_doctrine }
+			}
+			set_variable = { YSK_research_bonus = 15 }
+		}
+		10 = {
+			effect_tooltip = {
+				add_tech_bonus = { bonus = 0.1 uses = 1 category = land_doctrine }
+			}
+			set_variable = { YSK_research_bonus = 16 }
+		}
+	}
+}
+

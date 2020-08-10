@@ -1,0 +1,192 @@
+	technologies = {
+	zhiyuanwuyujiaqiang148 = {
+		
+		dependencies = {
+		   wunvzhiyuan146 = 1
+		}
+
+		path = {
+			leads_to_tech = zhiyuanwuyujiaqiang154
+			research_cost_coeff = 1
+		}
+
+		sp_wunv = {
+			reliability_factor = 0.05
+			equipment_capture_factor = 0.05
+		}
+		
+		research_cost = 2
+		start_year = 148
+
+		folder = {
+			name = hum_tech_folder
+			position = { x = 4 y = 2 }
+		}
+		
+		categories = {
+			techtree_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	zhiyuanwuyujiaqiang154 = {
+	
+		path = {
+			leads_to_tech = zhiyuanwuyujiaqiang160
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 154
+
+		sp_wunv = {
+			supply_consumption_factor = -0.05
+		}
+
+		folder = {
+			name = hum_tech_folder
+			position = { x = 4 y = 4 }
+		}
+		
+		categories = {
+			techtree_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	zhiyuanwuyujiaqiang160 = {
+		
+		research_cost = 2
+		start_year = 160
+
+		folder = {
+			name = hum_tech_folder
+			position = { x = 4 y = 6 }
+		}
+
+		sp_wunv = {
+			breakthrough = 0.2
+			defense = 0.2
+		}
+		
+		categories = {
+			techtree_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	chuandunhuopao148 = {
+	
+		path = {
+			leads_to_tech = chuandunhuopao154
+			research_cost_coeff = 1
+		}
+
+		# on_research_complete = {
+		# 	add_ideas = chuandunhuopao148_idea
+		# }
+		sc_mot_artillery_brigade = {
+			hard_attack = 1.5
+		}
+		sc_artillery_brigade = {
+			hard_attack = 1.5
+		}
+		sc_artillery = {
+			hard_attack = 1.5
+		}
+		
+		research_cost = 2
+		start_year = 148
+
+		folder = {
+			name = hum_tech_folder
+			position = { x = 10 y = 2 }
+		}
+		
+		categories = {
+			techtree_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	chuandunhuopao154 = {
+	
+		path = {
+			leads_to_tech = chuandunhuopao160
+			research_cost_coeff = 1
+		}
+
+		# on_research_complete = {
+		# 	add_ideas = chuandunhuopao154_idea
+		# }
+		sc_mot_artillery_brigade = {
+			hard_attack = 1.5
+		}
+		sc_artillery_brigade = {
+			hard_attack = 1.5
+		}
+		sc_artillery = {
+			hard_attack = 1.5
+		}
+		
+		research_cost = 2
+		start_year = 154
+
+		folder = {
+			name = hum_tech_folder
+			position = { x = 10 y = 4 }
+		}
+		
+		categories = {
+			techtree_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	chuandunhuopao160 = {
+		
+		research_cost = 2
+		start_year = 160
+
+		# on_research_complete = {
+		# 	add_ideas = chuandunhuopao160_idea
+		# }
+		sc_mot_artillery_brigade = {
+			hard_attack = 1.5
+		}
+		sc_artillery_brigade = {
+			hard_attack = 1.5
+		}
+		sc_artillery = {
+			hard_attack = 1.5
+		}
+
+		folder = {
+			name = hum_tech_folder
+			position = { x = 10 y = 6 }
+		}
+		
+		categories = {
+			techtree_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

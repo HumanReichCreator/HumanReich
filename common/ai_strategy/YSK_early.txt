@@ -1,0 +1,280 @@
+# unit_base is the base value used for evaluating how important it is to deploy the various categories
+# Written by Henrik "Groogy" Hansson
+#AI 倾向
+
+YSK_TEG_set = {
+	enable = {
+		has_global_flag = main_scenario
+	}
+	abort = {
+		or = {
+			has_global_flag = xinshidai
+			TEG = { is_subject = yes }
+		}
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "TEG"			
+		value = 100
+	}	
+}
+# YSK_dixia = {
+# 	reversed = yes
+# 	enable = {
+# 		capital_scope = {
+# 			is_on_continent = Underground
+# 		}
+# 		YSK = { has_completed_focus = YSK_zhuzhongdixia }
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+
+
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "YSK"			
+# 		value = 75
+# 	}
+# }
+
+# YSK_dixia2 = {
+# 	reversed = yes
+# 	enable = {
+# 		tag = YSK
+# 		has_completed_focus = YSK_zhuzhongdixia
+# 	}
+# 	abort = {
+# 		date > "154.1.1"
+# 	}
+
+
+# 	ai_strategy = {
+# 		type = ignore
+# 		id = "SCA"			
+# 		value = 150
+# 	}
+# 	ai_strategy = {
+# 		type = ignore
+# 		id = "TEG"			
+# 		value = 150
+# 	}
+# }
+
+# YSK_jiaohao_SCA = {
+# 	enable = {
+# 		has_completed_focus = YSK_yuscarletjiaohao
+# 		tag = YSK
+# 	}
+# 	abort = {
+# 		date > "154.1.1"
+# 	}
+
+
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "SCA"			
+# 		value = 30
+# 	}
+# }
+
+# YSK_jiaohao_SCA2 = {
+# 	enable = {
+# 		has_completed_focus = YSK_yuscarletjiaohao
+# 		tag = SCA
+# 	}
+# 	abort = {
+# 		date > "154.1.1"
+# 	}
+
+
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "YSK"			
+# 		value = 30
+# 	}
+# }
+# YSK_jiaohao_TEG = {
+# 	enable = {
+# 		has_completed_focus = YSK_yutiangoujiaohao
+# 		tag = YSK
+# 	}
+# 	abort = {
+# 		date > "154.1.1"
+# 	}
+
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "TEG"			
+# 		value = 30
+# 	}	
+# }
+
+# YSK_jiaohao_TEG2 = {
+# 	enable = {
+# 		has_completed_focus = YSK_yutiangoujiaohao
+# 		tag = TEG2
+# 	}
+# 	abort = {
+# 		date > "154.1.1"
+# 	}
+
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "YSK"			
+# 		value = 30
+# 	}	
+# }
+# YSK_attack_KAP = {
+# 	enable = {
+# 		has_completed_focus = YSK_zhudongdiyuyaoguaishanweixie
+# 		tag = YSK
+# 	}
+# 	abort = {
+# 		date > "154.1.1"
+# 	}
+
+
+# 	ai_strategy = {
+# 		type = invade
+# 		id = "KAP"			
+# 		value = 100
+# 	}
+# 	ai_strategy = {
+# 		type = antagonize
+# 		id = "KAP"			
+# 		value = 100
+# 	}	
+# }
+# YSK_attack_TEG = {
+# 	enable = {
+# 		has_completed_focus = YSK_shoujishanshangdexinyang
+# 		tag = YSK
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+
+
+# 	ai_strategy = {
+# 		type = invade
+# 		id = "TEG"			
+# 		value = 100
+# 	}
+# 	ai_strategy = {
+# 		type = antagonize
+# 		id = "TEG"			
+# 		value = 100
+# 	}	
+# }
+
+# YSK_attack2_TEG = {
+# 	enable = {
+# 		has_completed_focus = YSK_shoushidiguo#######
+# 		tag = TEG
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+
+
+# 	ai_strategy = {
+# 		type = invade
+# 		id = "YSK"			
+# 		value = 100
+# 	}
+# 	ai_strategy = {
+# 		type = antagonize
+# 		id = "YSK"			
+# 		value = 100
+# 	}	
+# }
+
+# YSK_attack_SCA = {
+# 	enable = {
+# 		has_completed_focus = YSK_shoujishanxiadexinyang
+# 		tag = YSK
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+
+
+# 	ai_strategy = {
+# 		type = invade
+# 		id = "SCA"			
+# 		value = 100
+# 	}
+# 	ai_strategy = {
+# 		type = antagonize
+# 		id = "SCA"			
+# 		value = 100
+# 	}	
+# }
+
+# YSK_attack2_SCA = {
+# 	enable = {
+# 		has_completed_focus = YSK_yaoguaishandeyijia#######
+# 		tag = SCA
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+
+
+# 	ai_strategy = {
+# 		type = invade
+# 		id = "YSK"			
+# 		value = 100
+# 	}
+# 	ai_strategy = {
+# 		type = antagonize
+# 		id = "YSK"			
+# 		value = 100
+# 	}	
+# }
+
+# YSK_rongrudidi = {
+# 	enable = {
+# 		has_country_flag = YSK_rongurdidi
+# 		tag = YSK
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+
+
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "SAT"			
+# 		value = 200	
+# 	}
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "SAT"			
+# 		value = 500
+# 	}	
+# }
+
+# YSK_rongrudidi2 = {
+# 	enable = {
+# 		YSK = { has_country_flag = YSK_rongurdidi }
+# 		tag = SAT
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+
+
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "YSK"			
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "YSK"			
+# 		value = 500
+# 	}	
+# }

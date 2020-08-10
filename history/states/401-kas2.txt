@@ -1,0 +1,31 @@
+state={
+	id=401
+	name="STATE_401"
+	provinces={
+		471 907 1652 3900 3902 5213 5228 5238 5256 
+	}
+	resources={
+
+		powder=0.000
+		metal=0.000
+		gas=0.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = KAS
+			add_core_of = KAS
+			buildings = {
+				infrastructure =4
+				industrial_complex = 3
+				arms_factory = 1
+			}
+
+		}
+
+	}
+	state_category=s5
+	manpower=1621.0
+	buildings_max_level_factor=1.000
+}

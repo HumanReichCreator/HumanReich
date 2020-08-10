@@ -1,0 +1,130 @@
+﻿capital = 514
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+            spell_card = 1
+            buqiang117 = 1
+            buqiang140 = 1
+            tangxiangailiang140 = 1
+            linglijiejing139 = 1
+            
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+            zhanchangzhihui140 = 1
+            zuzhihuazhanzheng142 = 1
+            zhanchangzhihui145 = 1
+            
+        #工程学 
+            jichushuxue = 1
+            shuxuegongju = 1
+            waike = 1
+            tongxunlilun = 1
+            jiemi137 = 1
+        #专用工程学
+
+        #工业
+            production_theory = 1
+            org_production = 1
+            
+        #专用工业
+            fangwaijieshengchan130 = 1
+            fangwaijieshengchan130 = 1
+
+        #种族
+            
+    }
+    
+}
+
+138.1.1={
+    oob = "BYA_146"
+    add_ideas = {
+        Beast
+        Tribal
+        hawk2
+        close2
+        strict_border
+    }
+    set_politics = {
+        ruling_party = fandong
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 0
+        guli = 10
+        neworder = 20
+        oldorder = 0
+        fandong = 70
+    }
+}
+
+create_country_leader = {
+    name = "正在商讨。。。"
+    desc = ""
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    ideology = fandong_type
+    traits = {
+
+    }
+}
+
+# create_country_leader = {
+#     # name = "Council"
+#     name = "竹林妖怪临时议会"
+#     desc = ""
+#     picture = "gfx/leaders/ZYD/ZYD_council.dds"
+#     ideology = guli_type
+#     traits = {
+#         #warrior_code
+#     }
+# }
+# create_country_leader = {
+#     # name = "Council"
+#     name = "竹林妖怪临时议会"
+#     desc = ""
+#     picture = "gfx/leaders/ZYD/ZYD_council.dds"
+#     ideology = fandong_type
+#     traits = {
+#         #warrior_code
+#     }
+# }
+# create_country_leader = {
+#     # name = "Council"
+#     name = "竹林妖怪临时议会"
+#     desc = ""
+#     picture = "gfx/leaders/ZYD/ZYD_council.dds"
+#     ideology = neworder_type
+#     traits = {
+#         #warrior_code
+#     }
+# }
+# create_country_leader = {
+#     # name = "Council"
+#     name = "竹林妖怪临时议会"
+#     desc = ""
+#     picture = "gfx/leaders/ZYD/ZYD_council.dds"
+#     ideology = qinwai_type
+#     traits = {
+#         #warrior_code
+#     }
+# }
+# create_country_leader = {
+#     # name = "Council"
+#     name = "竹林妖怪临时议会"
+#     desc = ""
+#     picture = "gfx/leaders/ZYD/ZYD_council.dds"
+#     ideology = oldorder_type
+#     traits = {
+#         #warrior_code
+#     }
+# }

@@ -1,0 +1,29 @@
+
+state={
+	id=300
+	name="STATE_300"
+	resources={
+		powder=2.000
+		metal=0.000
+		gas=0.000
+		crystal=4.000
+	}
+	history={
+		146.1.1 = {
+			owner = BYA
+			add_core_of = BYA
+			buildings = {
+				infrastructure = 0
+				industrial_complex = 0
+				arms_factory = 1
+			}
+		}
+	}
+
+	provinces={
+		335 1255 1341 1608 2946 3137 5496 6621 6622 
+	}
+	state_category=s5
+	manpower=756.0
+	buildings_max_level_factor=1.000
+}

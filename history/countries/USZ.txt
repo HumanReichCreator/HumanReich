@@ -1,0 +1,118 @@
+﻿capital = 447
+
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card = 1
+        linglijiejing139 = 1
+        danmujingque139 = 1
+         #外界
+        buqiang117 = 1
+        buqiang140 = 1
+        tangxiangailiang140 = 1
+        jiandanmiaozhunjing140 = 1
+            
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        waike = 1
+
+        #专用工程学
+
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+            
+        #专用工业
+        fangwaijieshengchan130 = 1
+
+        #种族
+            
+    }
+}
+138.1.1={
+    oob = "USZ_146"
+    # set_research_slots = 0
+    add_ideas = {
+        Youkai
+        Town
+        hawk1
+        close1
+        sc_rule
+    }
+    set_politics = {
+        ruling_party = guli
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 10
+        guli = 75
+        neworder = 10
+        oldorder = 0
+        fandong = 5
+    }
+}
+
+
+create_country_leader = {
+    #name = "Ushizaki Urumi"
+    name = "牛崎润美"
+    picture = "USZ_usz.dds"
+    ideology = guli_type
+    traits = {
+
+    }
+}
+create_country_leader = {
+    #name = "Ushizaki Urumi"
+    name = "牛崎润美"
+    picture = "USZ_usz.dds"
+    ideology = oldorder_type
+    traits = {
+
+    }
+}
+create_country_leader = {
+    #name = "Ebisu Eika"
+    name = "戎璎花"
+    picture = "USZ_ebs.dds"
+    ideology = fandong_type
+    traits = {
+
+    }
+}
+create_country_leader = {
+    #name = "Ushizaki Urumi"
+    name = "牛崎润美"
+    picture = "USZ_usz.dds"
+    ideology = neworder_type
+    traits = {
+
+    }
+}
+create_country_leader = {
+    #name = "Niwatari Kutaka"
+    name = "庭渡久侘歌"
+    picture = "USZ_nwt.dds"
+    ideology = qinwai_type
+    traits = {
+
+    }
+}
+

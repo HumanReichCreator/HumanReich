@@ -1,0 +1,363 @@
+ideas = {
+	country = {
+		nms_yaoguaifojiaokuangrezhe_idea = {
+			picture = new_sytle_buddism
+			# picture = from_outside
+			
+			allowed = {
+				always = no
+			}
+
+			available = {
+				# not = { has_government = neworder}
+			}
+
+			allowed_civil_war = {
+			}
+			
+			modifier = {
+				neworder_drift = 0.05
+				war_support_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = HUM
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			
+			removal_cost = -1
+		}
+		nms_yaoguaifojiaokuangrezhedebaodong_idea = {
+			picture = chi_war_of_resistance
+			# picture = from_outside
+			
+			allowed = {
+				always = no
+			}
+
+			available = {
+				# not = { has_government = neworder}
+			}
+
+			modifier = {
+				stability_weekly = -0.005
+				stability_factor = -0.15
+			}
+
+			
+			removal_cost = -1
+		}
+
+		nms_shenglizhezhongdeshibaizhe_idea = {
+			picture = generic_victors_of_ww1
+			# picture = from_outside
+			
+			allowed = {
+				always = no
+			}
+
+			available = {
+				# not = { has_government = neworder}
+			}
+
+			allowed_civil_war = {
+			}
+			
+			modifier = {
+				qinwai_drift = -0.05
+				conscription_factor = 0.05
+			}
+			
+			removal_cost = -1
+		}
+		NMS_xiudingjiaozhi_idea = {
+			picture = generic_victors_of_ww1
+			# picture = from_outside
+			
+			allowed = {
+				always = no
+			}
+
+			available = {
+				# not = { has_government = neworder}
+			}
+
+			allowed_civil_war = {
+			}
+			
+			modifier = {
+				qinwai_drift = -0.05
+				conscription_factor = 0.05
+				guli_drift = -0.05
+				war_support_factor = 0.05
+			}
+			
+			removal_cost = -1
+		}
+		NMS_anzhixinjinyaoguai_idea = {
+			picture = prc_the_long_march2
+			
+			allowed = {
+				always = no
+			}
+
+			available = {
+				# not = { has_government = neworder}
+			}
+
+			allowed_civil_war = {
+			}
+			
+			modifier = {
+				weekly_manpower = 6
+				MONTHLY_POPULATION = 0.1
+			}
+			
+			removal_cost = -1
+		}
+		NMS_jiaohuahepingyaoguai_idea = {
+			picture = imperial_glory_idea
+			
+			allowed = {
+				always = no
+			}
+
+			available = {
+				# not = { has_government = neworder}
+			}
+
+			allowed_civil_war = {
+			}
+			
+			modifier = {
+				weekly_manpower = -5
+				war_support_weekly = 0.002
+			}
+			
+			removal_cost = -1
+		}
+
+		NMS_shengchengzhengrendajiangjun_idea = {
+			picture = chi_war_of_resistance3
+			
+			allowed = {
+				always = no
+			}
+
+			available = {
+				# not = { has_government = neworder}
+			}
+
+			allowed_civil_war = {
+			}
+			
+			targeted_modifier = { 
+				tag = NMS
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.1
+			}
+			
+			removal_cost = -1
+		}
+		NMS_ningjumingliansideyaoguai_idea = {
+			picture = new_sytle_buddism
+			# picture = from_outside
+			
+			allowed = {
+				always = no
+			}
+
+			available = {
+				# not = { has_government = neworder}
+			}
+
+			allowed_civil_war = {
+			}
+			
+			modifier = {
+				neworder_drift = 0.1
+				war_support_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = HUM
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			
+			removal_cost = -1
+		}
+		NMS_lituifojiao_idea = {
+			picture = new_sytle_buddism
+			# picture = from_outside
+			
+			allowed = {
+				always = no
+			}
+
+			available = {
+				# not = { has_government = neworder}
+			}
+
+			allowed_civil_war = {
+			}
+			
+			modifier = {
+				operative_slot = 1
+				compliance_gain = 0.05 
+			}
+			
+			removal_cost = -1
+		}
+		
+
+		NMS_motuopilianghua_idea = {
+	    	picture = FRA_motorized_focus
+	
+			modifier = {
+				# fandong_drift = 0.01
+			}
+			equipment_bonus = {
+				motorized_a = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
+		NMS_zhongshiminyongfazhan_idea = {
+	    	picture = man_five_year_plan_industry
+	
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+			# equipment_bonus = {
+			# 	motorized_a = {
+			# 		build_cost_ic = -0.15 instant = yes
+			# 	}
+			# }
+		}
+		NMS_zhongshijunshifazhan_idea = {
+	    	picture = man_five_year_plan_tank
+	
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				industrial_capacity_factory = 0.05
+			}
+			# equipment_bonus = {
+			# 	motorized_a = {
+			# 		build_cost_ic = -0.15 instant = yes
+			# 	}
+			# }
+		}
+
+		NMS_kefuzongjiaobiduan_idea = {
+	    	picture = generic_production_bonus
+	
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				research_speed_factor = 0.15
+			}
+			# equipment_bonus = {
+			# 	motorized_a = {
+			# 		build_cost_ic = -0.15 instant = yes
+			# 	}
+			# }
+		}
+
+		NMS_xiangwaixuanchuanlinian_idea = {
+	    	picture = vittoria_mutilata
+	
+			modifier = {
+				political_power_factor = 0.15
+			}
+			# equipment_bonus = {
+			# 	motorized_a = {
+			# 		build_cost_ic = -0.15 instant = yes
+			# 	}
+			# }
+		}
+		NMS_shentouboruodiqu_idea = {
+
+	    	picture = generic_acquire_tanks
+
+			modifier = {
+
+			}
+			targeted_modifier = { 
+				tag = SCA
+				attack_bonus_against = 0.04
+				defense_bonus_against = 0.04
+			}
+
+		}
+
+		NMS_kuangredechuanjiaoshi_idea = {
+
+	    	picture = chi_war_of_resistance3
+
+			modifier = {
+				stability_factor = -0.15
+				army_org_factor = -0.1
+			}
+			targeted_modifier = { 
+				tag = NMS
+				attack_bonus_against = -0.05
+				defense_bonus_against = -0.05
+			}
+		}
+
+		NMS_baochizongjiaoxianzhuang_idea = {
+
+	    	picture = ROM_iron_guard
+
+			modifier = {
+				research_speed_factor = 0.15
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		NMS_jianliyaoguaideguodu_idea = {
+
+	    	picture = imperial_glory_idea
+
+			modifier = {
+				army_org_factor = 0.15
+				conscription_factor = 0.05
+				army_morale_factor = 0.05
+				stability_factor = 0.2
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		NMS_chaorenshengbailian_idea = {
+
+	    	picture = jap_supremacy_of_will
+
+			modifier = {
+				army_org_factor = 0.4
+			}
+		}
+		NMS_yaoguaikuangre_idea = {
+
+	    	picture = jap_supremacy_of_will
+
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+		NMS_jianshifojiaoxinyang_idea = {
+
+	    	picture = generic_army_war_college
+
+			modifier = {
+				army_morale_factor = 0.15
+				army_leader_start_defense_level = 1
+				army_leader_start_planning_level = 1
+			}
+		}
+
+	}
+}

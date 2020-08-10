@@ -1,0 +1,185 @@
+on_actions = {
+	on_daily_ALI = {
+		effect = {
+			if = {
+				limit = {
+					has_idea = ALI_quganyoujiti_idea
+				}
+				set_variable = { ALI_weekly = num_of_civilian_factories}
+				multiply_variable = { ali_weekly = 0.2}
+				clamp_variable = {
+					var = ALI_weekly 
+					min = 0
+					max = 20
+				}
+				if = {
+					limit = {
+						has_war = yes
+					}
+					multiply_variable = { ALI_weekly = 0.5}
+				}
+			}
+			if = {
+				limit = {
+					date < 150.1.1
+					not = {
+						has_country_flag = ALI_mojie
+					}
+				}
+				if = {
+					limit = {
+						surrender_progress > 0.55
+					}
+					set_country_flag = ALI_mojie
+				}
+			}
+		}
+	}
+	on_daily_KOG = {
+		effect = {
+			set_variable = { KOG_weekly = num_of_military_factories}
+			multiply_variable = { KOG_weekly = 0.2}
+			if = {
+				limit = {
+					has_completed_focus = KOG_leiguyaolizhuanyikecheng
+				}
+				multiply_variable = { KOG_weekly = 1.5}
+			}
+			if = {
+				limit = {
+					has_completed_focus = KOG_chengweizhenzhengdeshenming
+				}
+				multiply_variable = { KOG_weekly = 0.8}
+			}
+			clamp_variable = {
+				var = KOG_weekly 
+				min = 0
+				max = 20
+			}
+			if = {
+				limit = {
+					has_war = yes
+				}
+				multiply_variable = { KOG_weekly = 0.5}
+			}
+		}
+	}
+	on_daily_SRB = {
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = SRB_huanxiangxiangjiangshihua
+				}
+				every_owned_state = {
+					
+					limit = {
+						not = { check_variable = { ST_present_race = 4 } }
+					}
+					CONV_convert = yes
+					add_core_of = ROOT
+					# start_resistance = yes
+				}
+			}
+		}
+	}
+	# on_weekly = {
+	# 	effect = {
+			
+	# 	}
+	# }
+	# on_monthly = {
+	# 	effect = {
+			
+		    
+	# 	}
+	# }
+	on_daily = {
+		effect = {
+			random_country = {
+			    every_state = {
+			       	state_value_calculator = yes
+			    }
+			    power_global_value_generator = yes
+		    }
+
+			if = {
+		    	limit = {
+		    		has_idea = Fairy
+		    	}
+		    	FAPO_calculator = yes
+		    }
+		    if = {
+		    	limit = {
+		    		not = { has_idea = Human }
+		    	}
+		    	HMIF_daily_changer = yes
+		    }
+
+			SS_power_calculator = yes
+
+		    
+
+		    AC_daily_check = yes
+
+		    country_value_calculator_and_manpower_gainer = yes
+
+		    outlook_daily_change = yes
+		    
+		    LS_daily = yes
+
+		    exhuastion_daily_change = yes
+		    
+		    power_daily_changer = yes
+
+		    CO_coring_daily = yes
+
+		    CONV_daily = yes
+
+		    state_race_manpower = yes
+
+		    region_daily_check = yes
+
+		    if = {
+		    	limit = {
+		    		tag = HUM
+		    	}
+		    	HMIF_influenced = yes
+		    }
+
+		    # every_state = {
+		    #     limit = {
+		    #     	has_variable = in_claim_progress_of_@ROOT
+		    #     	ROOT = { has_war = no }
+		    #     }
+		    #     add_to_variable = { in_claim_progress_of_@ROOT = 1 }
+		    #     if = {
+		    #     	limit = {
+		    #     		check_variable = { in_claim_progress_of_@ROOT > ROOT.claim_time }	
+		    #     	}
+		    #     	add_claim_by = ROOT
+		    #     	clear_variable = in_claim_progress_of_@ROOT
+		    #     }
+		    # }	
+
+		    # #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		    
+		}
+	}
+
+	on_weekly = {
+		effect = {
+			if = {
+				limit = { 
+					has_intelligence_agency = yes
+					is_ai = yes
+				}
+				update_operation_ai = yes
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			# region_daily_check = yes
+		}
+	}
+}

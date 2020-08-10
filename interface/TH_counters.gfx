@@ -1,0 +1,663 @@
+spriteTypes = {	
+	#民兵
+	spriteType = { 
+		name = "GFX_unit_sc_militia_icon_medium"								
+		textureFile = "gfx/interface/counters/large_sc_militia.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_sc_militia_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_sc_militia.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_sc_militia_icon_small"
+		texturefile = "gfx/interface/counters/small_sc_militia.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = { 
+		name = "GFX_unit_ma_militia_icon_medium"								
+		textureFile = "gfx/interface/counters/large_ma_militia.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_ma_militia_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_ma_militia.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_ma_militia_icon_small"
+		texturefile = "gfx/interface/counters/small_ma_militia.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#主要步兵
+	spriteType = { 
+		name = "GFX_unit_sc_infantry_icon_medium"								
+		textureFile = "gfx/interface/counters/large_sc_infantry.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_sc_infantry_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_sc_infantry.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_sc_infantry_icon_small"
+		texturefile = "gfx/interface/counters/small_sc_infantry.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = { 
+		name = "GFX_unit_ma_infantry_icon_medium"								
+		textureFile = "gfx/interface/counters/large_ma_infantry.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_ma_infantry_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_ma_infantry.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_ma_infantry_icon_small"
+		texturefile = "gfx/interface/counters/small_ma_infantry.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = { 
+		name = "GFX_unit_new_infantry_icon_medium"								
+		textureFile = "gfx/interface/counters/large_new_infantry.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_new_infantry_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_new_infantry.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_new_infantry_icon_small"
+		texturefile = "gfx/interface/counters/small_new_infantry.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#轻装
+	spriteType = { 
+		name = "GFX_unit_sc_light_infantry_icon_medium"								
+		textureFile = "gfx/interface/counters/large_sc_light_infantry.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_sc_light_infantry_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_sc_light_infantry.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_sc_light_infantry_icon_small"
+		texturefile = "gfx/interface/counters/small_sc_light_infantry.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = { 
+		name = "GFX_unit_ma_light_infantry_icon_medium"								
+		textureFile = "gfx/interface/counters/large_ma_light_infantry.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_ma_light_infantry_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_ma_light_infantry.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_ma_light_infantry_icon_small"
+		texturefile = "gfx/interface/counters/small_ma_light_infantry.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#特种
+	spriteType = { 
+		name = "GFX_unit_sc_sf_infantry_icon_medium"								
+		textureFile = "gfx/interface/counters/large_sc_sf_infantry.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_sc_sf_infantry_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_sc_sf_infantry.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_sc_sf_infantry_icon_small"
+		texturefile = "gfx/interface/counters/small_sc_sf_infantry.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = { 
+		name = "GFX_unit_ma_sf_infantry_icon_medium"								
+		textureFile = "gfx/interface/counters/large_ma_sf_infantry.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_ma_sf_infantry_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_ma_sf_infantry.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_ma_sf_infantry_icon_small"
+		texturefile = "gfx/interface/counters/small_ma_sf_infantry.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#火炮
+	spriteType = { 
+		name = "GFX_unit_sc_artillery_brigade_icon_medium"								
+		textureFile = "gfx/interface/counters/large_sc_artillery_brigade.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_sc_artillery_brigade_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_sc_artillery_brigade.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_sc_artillery_brigade_icon_small"
+		texturefile = "gfx/interface/counters/small_sc_artillery_brigade.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = { 
+		name = "GFX_unit_sc_artillery_icon_medium"								
+		textureFile = "gfx/interface/counters/large_sc_artillery.dds" 
+		noOfFrames = 2 
+	}
+
+	spriteType = { 
+		name = "GFX_unit_ma_artillery_brigade_icon_medium"								
+		textureFile = "gfx/interface/counters/large_ma_artillery_brigade.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_ma_artillery_brigade_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_ma_artillery_brigade.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_ma_artillery_brigade_icon_small"
+		texturefile = "gfx/interface/counters/small_ma_artillery_brigade.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = { 
+		name = "GFX_unit_new_artillery_brigade_icon_medium"								
+		textureFile = "gfx/interface/counters/large_new_artillery_brigade.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_new_artillery_brigade_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_new_artillery_brigade.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_new_artillery_brigade_icon_small"
+		texturefile = "gfx/interface/counters/small_new_artillery_brigade.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = { 
+		name = "GFX_unit_ma_rocket_artillery_brigade_icon_medium"								
+		textureFile = "gfx/interface/counters/large_ma_rocket_artillery_brigade.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_ma_rocket_artillery_brigade_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_ma_rocket_artillery_brigade.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_ma_rocket_artillery_brigade_icon_small"
+		texturefile = "gfx/interface/counters/small_ma_rocket_artillery_brigade.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = { 
+		name = "GFX_unit_ma_mot_artillery_brigade_icon_medium"								
+		textureFile = "gfx/interface/counters/large_ma_mot_artillery_brigade.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_ma_mot_artillery_brigade_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_ma_mot_artillery_brigade.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_ma_mot_artillery_brigade_icon_small"
+		texturefile = "gfx/interface/counters/small_ma_mot_artillery_brigade.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = { 
+		name = "GFX_unit_sc_mot_artillery_brigade_icon_medium"								
+		textureFile = "gfx/interface/counters/large_sc_mot_artillery_brigade.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_sc_mot_artillery_brigade_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_sc_mot_artillery_brigade.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_sc_mot_artillery_brigade_icon_small"
+		texturefile = "gfx/interface/counters/small_sc_mot_artillery_brigade.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#摩托化
+	spriteType = { 
+		name = "GFX_unit_sc_motorized_icon_medium"								
+		textureFile = "gfx/interface/counters/large_sc_motorized.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_sc_motorized_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_sc_motorized.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_sc_motorized_icon_small"
+		texturefile = "gfx/interface/counters/small_sc_motorized.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = { 
+		name = "GFX_unit_ma_motorized_icon_medium"								
+		textureFile = "gfx/interface/counters/large_ma_motorized.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_ma_motorized_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_ma_motorized.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_ma_motorized_icon_small"
+		texturefile = "gfx/interface/counters/small_ma_motorized.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#装甲车
+	spriteType = { 
+		name = "GFX_unit_sc_mechanized_icon_medium"								
+		textureFile = "gfx/interface/counters/large_sc_mechanized.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_sc_mechanized_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_sc_mechanized.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_sc_mechanized_icon_small"
+		texturefile = "gfx/interface/counters/small_sc_mechanized.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = { 
+		name = "GFX_unit_ma_mechanized_icon_medium"								
+		textureFile = "gfx/interface/counters/large_ma_mechanized.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_ma_mechanized_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_ma_mechanized.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_ma_mechanized_icon_small"
+		texturefile = "gfx/interface/counters/small_ma_mechanized.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#坦克
+	spriteType = { 
+		name = "GFX_unit_new_light_armor_icon_medium"								
+		textureFile = "gfx/interface/counters/large_new_tank.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_new_light_armor_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_new_tank.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_new_light_armor_icon_small"
+		texturefile = "gfx/interface/counters/small_new_tank.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#支援
+	spriteType = { 
+		name = "GFX_unit_sp_zhihuidui_icon_medium"								
+		textureFile = "gfx/interface/counters/large_sp_zhihuidui.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_sp_zhihuidui_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_sp_zhihuidui.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_sp_zhihuidui_icon_small"
+		texturefile = "gfx/interface/counters/small_sp_zhihuidui.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = { 
+		name = "GFX_unit_sp_duzhanxiaodui_icon_medium"								
+		textureFile = "gfx/interface/counters/large_sp_duzhanxiaodui.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_sp_duzhanxiaodui_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_sp_duzhanxiaodui.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_sp_duzhanxiaodui_icon_small"
+		texturefile = "gfx/interface/counters/small_sp_duzhanxiaodui.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = { 
+		name = "GFX_unit_sp_zhanchanggongbing_icon_medium"								
+		textureFile = "gfx/interface/counters/large_sp_zhanchanggongbing.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_sp_zhanchanggongbing_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_sp_zhanchanggongbing.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_sp_zhanchanggongbing_icon_small"
+		texturefile = "gfx/interface/counters/small_sp_zhanchanggongbing.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = { 
+		name = "GFX_unit_sp_houfangyiliao_icon_medium"								
+		textureFile = "gfx/interface/counters/large_sp_houfangyiliao.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_sp_houfangyiliao_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_sp_houfangyiliao.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_sp_houfangyiliao_icon_small"
+		texturefile = "gfx/interface/counters/small_sp_houfangyiliao.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = { 
+		name = "GFX_unit_sp_wunv_icon_medium"								
+		textureFile = "gfx/interface/counters/large_sp_wunv.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_sp_wunv_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_sp_wunv.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_sp_wunv_icon_small"
+		texturefile = "gfx/interface/counters/small_sp_wunv.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = { 
+		name = "GFX_unit_sp_gongjianpao_icon_medium"								
+		textureFile = "gfx/interface/counters/large_sp_gongjianpao.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_sp_gongjianpao_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_sp_gongjianpao.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_sp_gongjianpao_icon_small"
+		texturefile = "gfx/interface/counters/small_sp_gongjianpao.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = { 
+		name = "GFX_unit_sp_jiaqiangban_icon_medium"								
+		textureFile = "gfx/interface/counters/large_sp_jiaqiangban.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_sp_jiaqiangban_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_sp_jiaqiangban.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_sp_jiaqiangban_icon_small"
+		texturefile = "gfx/interface/counters/small_sp_jiaqiangban.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+	
+	spriteType = { 
+		name = "GFX_unit_sp_feixingzhencha_icon_medium"								
+		textureFile = "gfx/interface/counters/large_sp_feixingzhencha.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_sp_feixingzhencha_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_sp_feixingzhencha.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_sp_feixingzhencha_icon_small"
+		texturefile = "gfx/interface/counters/small_sp_feixingzhencha.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	#race
+	spriteType = { 
+		name = "GFX_unit_Human_special_icon_medium"								
+		textureFile = "gfx/interface/counters/large_Human_special.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_Human_special_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_Human_special.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_Human_special_icon_small"
+		texturefile = "gfx/interface/counters/small_Human_special.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = { 
+		name = "GFX_unit_Fairy_special_icon_medium"								
+		textureFile = "gfx/interface/counters/large_Fairy_special.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_Fairy_special_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_Fairy_special.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_Fairy_special_icon_small"
+		texturefile = "gfx/interface/counters/small_Fairy_special.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = { 
+		name = "GFX_unit_Ghost_special_icon_medium"								
+		textureFile = "gfx/interface/counters/large_Ghost_special.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_Ghost_special_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_Ghost_special.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_Ghost_special_icon_small"
+		texturefile = "gfx/interface/counters/small_Ghost_special.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = { 
+		name = "GFX_unit_Tengu_special_icon_medium"								
+		textureFile = "gfx/interface/counters/large_Tengu_special.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_Tengu_special_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_Tengu_special.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_Tengu_special_icon_small"
+		texturefile = "gfx/interface/counters/small_Tengu_special.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+	
+	spriteType = { 
+		name = "GFX_unit_Kappa_special_icon_medium"								
+		textureFile = "gfx/interface/counters/large_Kappa_special.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_Kappa_special_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_Kappa_special.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_Kappa_special_icon_small"
+		texturefile = "gfx/interface/counters/small_Kappa_special.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = { 
+		name = "GFX_unit_Beast_special_icon_medium"								
+		textureFile = "gfx/interface/counters/large_Beast_special.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_Beast_special_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_Beast_special.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_Beast_special_icon_small"
+		texturefile = "gfx/interface/counters/small_Beast_special.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = { 
+		name = "GFX_unit_Pri_youkai_special_icon_medium"								
+		textureFile = "gfx/interface/counters/large_Pri_youkai_special.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_Pri_youkai_special_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_Pri_youkai_special.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_Pri_youkai_special_icon_small"
+		texturefile = "gfx/interface/counters/small_Pri_youkai_special.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = { 
+		name = "GFX_unit_Youkai_special_icon_medium"								
+		textureFile = "gfx/interface/counters/large_Youkai_special.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_Youkai_special_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_Youkai_special.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_Youkai_special_icon_small"
+		texturefile = "gfx/interface/counters/small_Youkai_special.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = { 
+		name = "GFX_unit_God_special_icon_medium"								
+		textureFile = "gfx/interface/counters/large_God_special.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_God_special_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_God_special.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_God_special_icon_small"
+		texturefile = "gfx/interface/counters/small_God_special.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+
+	spriteType = { 
+		name = "GFX_unit_Magician_special_icon_medium"								
+		textureFile = "gfx/interface/counters/large_Magician_special.dds" 
+		noOfFrames = 2 
+	}
+	spriteType = { 
+		name = "GFX_unit_Magician_special_icon_medium_white"							
+		textureFile = "gfx/interface/counters/small_Magician_special.dds" 
+		noOfFrames = 2 
+	}
+ 	spriteType = {
+		name = "GFX_unit_Magician_special_icon_small"
+		texturefile = "gfx/interface/counters/small_Magician_special.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+}

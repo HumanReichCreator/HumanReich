@@ -1,0 +1,96 @@
+# unit_base is the base value used for evaluating how important it is to deploy the various categories
+# Written by Henrik "Groogy" Hansson
+#AI 倾向
+CIR_fangyanshijie = {
+	# reversed = yes
+
+	enable = {
+		has_idea = CIR_fangyanshijie_idea
+	}
+	abort = {
+		not = {
+			has_idea = CIR_fangyanshijie_idea
+		}
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "CIR"			
+		value = 90
+	}
+}
+
+CIR_yanshenbeibubianjie = {
+	# reversed = yes
+
+	enable = {
+		tag = CIR
+		has_completed_focus = CIR_yanshenbeibubianjie
+		is_subject = no
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "SEI"			
+		value = 100
+	}
+
+	ai_strategy = {
+		type = invade
+		id = "SEI"			
+		value = 100
+	}
+}
+
+CIR_wanquankongzhidongbeiwuzhihu = {
+	# reversed = yes
+
+	enable = {
+		tag = CIR
+		has_completed_focus = CIR_wanquankongzhidongbeiwuzhihu
+		is_subject = no
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "MRS"			
+		value = 15
+	}
+
+	ai_strategy = {
+		type = invade
+		id = "MRS"			
+		value = 15
+	}
+}
+
+CIR_juezhanshike = {
+	# reversed = yes
+
+	enable = {
+		tag = CIR
+		has_completed_focus = CIR_juezhanshike
+		is_subject = no
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "SCA"			
+		value = 100
+	}
+
+	ai_strategy = {
+		type = invade
+		id = "SCA"			
+		value = 100
+	}
+}

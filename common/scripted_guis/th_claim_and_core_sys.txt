@@ -1,0 +1,290 @@
+scripted_gui = {
+	# th_claim_sys_effect = {
+	# 	context_type = selected_state_context
+
+	# 	window_name = "th_claim_sys_gui"
+
+	# 	parent_window_token = selected_state_view
+
+	# 	visible = {
+	# 		# NOT = {
+	# 		# 	is_core_of = ROOT
+	# 		# 	is_claimed_by = ROOT
+	# 		# }
+	# 		# ROOT = { has_country_flag = can_claim_state } #没有任何一个国家给了这个flag
+	# 		# OR = {
+	# 		# 	ROOT = {
+	# 		# 		any_neighbor_country = {
+	# 		# 			owns_state = PREV.PREV
+	# 		# 		}
+	# 		# 	}
+	# 		# 	is_owned_by = ROOT
+	# 		# }	
+	# 	}
+
+	# 	triggers = {
+	# 		th_claim_sys_can_visible = {
+	# 			NOT = {				
+	# 				has_variable = in_claim_progress_of_@ROOT
+	# 			}
+	# 			owner = {
+	# 				NOT = { is_subject_of = ROOT }
+	# 			}
+	# 			ROOT = {
+	# 				set_temp_variable = { a = ROOT.political_power }
+	# 				check_variable = { ROOT.political_power > claim_cost }
+	# 				has_war = no
+	# 				NOT = { has_country_flag = recent_claim_action }
+					
+					
+ # 				}
+
+	# 		}
+	# 		th_claim_progress_visible = {
+	# 			has_variable = in_claim_progress_of_@ROOT
+	# 		}
+	# 		# th_claim_sys_cant_visible = {
+	# 		# 	is_neighbor_of = ROOT #broken?
+	# 		# }
+	# 	}
+
+	# 	effects = {
+	# 		th_claim_sys_can_click = {
+	# 			set_variable = {
+	# 				var = in_claim_progress_of_@ROOT
+	# 				value = 0
+	# 			}
+	# 			ROOT = {
+	# 				set_temp_variable = { b = ROOT.claim_cost }
+	# 				multiply_temp_variable = { b = -1 }
+	# 				add_political_power = b
+	# 				# set_country_flag = {
+	# 				# 	flag = recent_claim_action
+	# 				# 	days = 10
+	# 				# 	value = 1
+	# 				# }
+	# 			}
+	# 		}
+	# 	}
+	# }
+
+	th_core_sys_effect = {
+		context_type = selected_state_context
+
+		window_name = "th_core_sys_gui"
+
+		parent_window_token = selected_state_view
+
+		visible = {
+			has_variable = CO_core_time
+			NOT = {
+				is_core_of = ROOT
+				has_variable = in_core_progress_of_@ROOT
+			}
+
+			is_owned_by = ROOT
+
+			any_neighbor_state = {
+				and = {
+					is_core_of = ROOT
+					is_owned_by = ROOT
+				}
+			}
+		}
+
+		triggers = {
+			th_core_sys_can_visible = {
+				or = {
+					compliance > 80
+					and = {
+						compliance > 40
+						ROOT = {
+							has_country_flag = SEI_half_core
+						}
+					}
+				}
+				
+				NOT = {
+					has_variable = in_convert_progress_of_@ROOT
+					has_variable = in_core_progress_of_@ROOT
+				}
+				ROOT = { 
+					has_war = no 
+					set_temp_variable = { a = ROOT.political_power }
+					set_temp_variable = { b = PREV.CO_core_time }
+					check_variable = { a > b }
+				}
+			}
+			th_progressing_visible = {
+				or = {
+					has_variable = in_core_progress_of_@ROOT
+					has_variable = in_convert_progress_of_@ROOT
+				}
+			}
+		}
+
+		effects = {
+			th_core_sys_can_click = {
+				set_variable = {
+					in_core_progress_of_@ROOT = 0
+				}
+				set_variable = {
+					CO_current_core_time = CO_core_time
+				}
+				ROOT ={
+					set_temp_variable = { b = PREV.CO_core_time }
+					multiply_temp_variable = { b = -1 }
+					add_political_power = b
+				}
+			}
+		}
+
+		#AI
+		ai_enabled = {
+            always = yes
+		}
+
+		ai_check = {
+          	has_war = no
+       	}
+
+       	ai_test_scopes = test_self_owned_states
+
+		ai_weights = {
+			th_core_sys_can_click = {
+				ai_will_do = {
+					base = 0.01
+					modifier = {
+						factor = 0
+						ROOT = { has_political_power < 150 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { CO_core_time < 15}
+					}
+					modifier = {
+						factor = 1.5
+						check_variable = { CO_core_time > 90}
+					}
+				}
+			}
+		}
+	}
+
+	th_state_value_effect = {
+		context_type = selected_state_context
+
+		window_name = "th_value_gui"
+
+		parent_window_token = selected_state_view
+
+		visible = {
+			OR = {
+				is_owned_by = ROOT
+				any_country = {
+					is_subject_of = ROOT
+					owns_state = PREV.PREV
+				}
+			}
+		}
+	}
+
+	th_convert_sys_effect = {
+		context_type = selected_state_context
+
+		window_name = "th_convert_sys_gui"
+
+		parent_window_token = selected_state_view
+
+		visible = {
+			has_variable = CONV_convert_cost
+			is_owned_by = ROOT
+			not = {
+				ST_present_same_race = yes
+			}
+		}
+
+		triggers = {
+			th_convert_sys_can_visible = {
+				resistance < 5
+				NOT = {
+					has_variable = in_convert_progress_of_@ROOT
+					has_variable = in_core_progress_of_@ROOT
+				}
+				ROOT = { 
+					has_war = no 
+					set_temp_variable = { a = ROOT.political_power }
+					set_temp_variable = { b = PREV.CONV_convert_cost }
+					check_variable = { a > b }
+				}
+				not = {
+					ROOT = { has_country_flag = cant_convert }
+				}
+			}
+			th_convert_progress_visible = {
+				# always = yes
+				has_variable = in_convert_progress_of_@ROOT
+			}
+		}
+
+		effects = {
+			th_convert_sys_can_click = {
+				set_variable = { CONV_current_convert_PO = CONV_convert_PO}
+				set_variable = { CONV_current_convert_time = CONV_convert_time}
+				set_variable = {
+					in_convert_progress_of_@ROOT = 0
+				}
+				set_variable = {
+					CONV_current_convert_time = CONV_convert_time
+				}
+				ROOT ={
+					set_temp_variable = { b = PREV.CONV_convert_cost }
+					multiply_temp_variable = { b = -1 }
+					add_political_power = b
+				}
+			}
+		}
+
+		#AI
+		ai_enabled = {
+            has_war = no
+		}
+
+		ai_check = {
+
+       	}
+
+       	ai_test_scopes = test_self_owned_states
+
+		ai_weights = {
+			th_convert_sys_can_click = {
+				ai_will_do = {
+					base = 0.01
+					modifier = {
+						factor = 0
+						ROOT = { has_political_power < 300 }
+					}
+					modifier = {
+						add = 0.01
+						ROOT = {
+							or = {
+								has_idea = Pri_youkai
+                        		has_idea = Youkai
+							}
+						}
+					}
+					modifier = {
+						factor = 0.1
+						check_variable = { CONV_convert_cost < 25}
+					}
+					modifier = {
+						factor = 1.5
+						check_variable = { CONV_convert_cost > 90}
+					}
+				}
+			}
+		}
+	}
+
+}
+

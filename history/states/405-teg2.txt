@@ -1,0 +1,34 @@
+
+state={
+	id=405
+	name="STATE_405"
+	resources={
+
+		powder=0.000
+		metal=2.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = OTG
+			add_core_of = OTG
+			add_core_of = TEG
+			buildings = {
+				infrastructure =7
+				industrial_complex = 1
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		402 1547 3408 3415 3457 5366 5379 5388 
+	}
+	manpower=56.0
+	buildings_max_level_factor=1.000
+	state_category=s2
+}

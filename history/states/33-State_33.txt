@@ -1,0 +1,28 @@
+state={
+	id=33
+	name="STATE_33"
+	resources={
+
+		powder = 2.0
+		metal = 2
+		gas = 5.0
+		crystal = 0.0
+	}
+	history={
+       	146.1.1 = {
+			owner = KUT
+			add_core_of = KUT
+			buildings = {
+				infrastructure =4
+				industrial_complex = 3
+				arms_factory = 1
+			}
+       	}
+	}
+	provinces={
+		256 304 1435 2091 2599 
+	}
+	state_category=s7
+	manpower=1963.0
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,360 @@
+ideas = {
+	country = {
+		kog_jixingdegongye_idea = {
+			picture = generic_local_self_management
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = -0.3
+
+			}
+			research_bonus = {
+				civil = -0.15
+			}	
+		}
+		kog_xinshengdeshili_idea = {
+			picture = generic_pp_unity_bonus
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				political_power_factor = -0.5
+			}
+			research_bonus = {
+
+			}	
+		}
+		kog_xinshengdeshili2_idea = {
+			picture = generic_pp_unity_bonus
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				political_power_factor = -0.2
+			}
+			research_bonus = {
+
+			}	
+		}
+		kog_manpower_puppet = {
+			picture = generic_production_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				conscription_factor = -0.66
+				mobilization_speed = -0.5
+				custom_modifier_tooltip = kog_manpower_puppet_tt
+			}
+			research_bonus = {
+
+			}	
+		}
+		KOG_zhongshiminyongyanjiu_idea = {
+			picture = man_five_year_plan_industry
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				industrial_capacity_factory = 0.15
+
+			}
+			research_bonus = {
+				civil = 0
+				industrys = 0.05
+			}	
+		}
+		KOG_suoyoudaojujiewuqi_idea = {
+			picture = man_five_year_plan_tank
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				production_speed_arms_factory_factor = 0.3
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = -0.3
+
+			}
+			research_bonus = {
+				civil = -0.15
+				military = 0.2
+			}	
+		}
+		KOG_yanxujunshigongyequ_idea = {
+			picture = man_five_year_plan_tank
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				consumer_goods_factor = -0.02
+				production_speed_arms_factory_factor = 0.15
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = -0.3
+
+			}
+			research_bonus = {
+				civil = -0.15
+			}	
+		}
+		KOG_chongzhengfusangshenjundui_idea = {
+	    	picture = eng_service_overseas
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				army_morale_factor = 0.05
+
+			}
+			research_bonus = {
+
+			}
+	    }
+	    KOG_wendinggedangpaizhenglun_idea = {
+	    	picture = generic_disjointed_gov
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				political_power_factor = 0.3
+
+			}
+			research_bonus = {
+
+			}
+	    }
+	    KOG_fusangshenxinyaoli_idea = {
+	    	picture = generic_research_bonus
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				# political_power_factor = 0.3
+
+			}
+			research_bonus = {
+				combined = 0.06
+			}
+		}
+		KOG_leiguyaolizhuanyikecheng_idea = {
+			picture = eng_imperial_conscription
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				conscription = 0.02
+			}
+			research_bonus = {
+				# combined = 0.06
+			}	
+		}
+		KOG_kejigexindeqishi_idea = {
+			picture = generic_research_bonus
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				research_speed_factor = 0.07
+
+			}
+			research_bonus = {
+				# combined = 0.06
+			}
+		}
+		KOG_jiefangbeiyaoguaishiyongdedaoju_idea = {
+			picture = generic_production_bonus
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.3
+				production_factory_max_efficiency_factor = 0.15
+
+			}
+			research_bonus = {
+				science_weapons_improve = 0.1
+            	science_artillery_improve = 0.1
+			}
+		}
+
+		KOG_zichengjiushijiushen_idea = {
+			picture = vittoria_mutilata
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				political_power_factor = 0.2
+
+			}
+			research_bonus = {
+
+			}
+		}
+
+		KOG_zili_idea = {
+			picture = wilkies_new_deal
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				manufacturer_cost_factor = -0.15
+
+			}
+			research_bonus = {
+
+			}
+		}
+		KOG_quankaowomenziji_idea = {
+			picture = chi_chinese_support
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				army_morale_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+			research_bonus = {
+
+			}
+		}
+		KOG_chengweizhenzhengdeshenming_idea = {
+			picture = por_estado_novo
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				ARMY_MORALE_FACTOR = 0.06
+				training_time_factor = -0.025
+				land_night_attack = 0.025
+			}
+			research_bonus = {
+
+			}
+		}
+		KOG_jianliduoduolangduanzaogongsi_idea = {
+			picture = generic_production_bonus
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+			}
+			research_bonus = {
+
+			}
+		}
+	}
+}

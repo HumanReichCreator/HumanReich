@@ -1,0 +1,230 @@
+﻿add_namespace = net
+news_event = { #NG2 or NG1 VS YYK(trigger)
+	id = net.1
+	option = {}
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		date > 148.1.5
+		has_global_flag = main_scenario
+		country_exists = YYK
+		or = {
+			country_exists = NG4
+			country_exists = NG3
+			country_exists = NG2
+			country_exists = NG1
+		}
+
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	immediate = {
+		hidden_effect = {
+			YYK = {
+				end_puppet = NG1
+				end_puppet = NG2
+				end_puppet = NG3
+				end_puppet = NG4
+			}
+			every_country = {
+				limit = {
+					or = {
+						tag = NG1
+						tag = NG2
+						tag = NG3
+						tag = NG4
+						tag = YYK
+					}
+				}
+				every_state = {
+					limit = {
+						or = {
+							is_core_of = NG1
+							is_core_of = NG2
+							is_core_of = NG3
+							is_core_of = NG4
+							is_core_of = YYK
+						}
+					}
+					add_core_of = PREV
+				}
+				every_state = {
+					limit = {
+						or = {
+							is_claimed_by = NG1
+							is_claimed_by = NG2
+							is_claimed_by = NG3
+							is_claimed_by = NG4
+							is_claimed_by = YYK
+						}
+					}
+					add_claim_by = PREV
+				}
+				every_country = {
+					limit = {
+						or = {
+							tag = NG1
+							tag = NG2
+							tag = NG3
+							tag = NG4
+							tag = YYK
+						}
+					}
+					add_ai_strategy = {
+						type = conquer 
+						id = PREV
+						value = 100
+					}
+					add_ai_strategy = {
+						type = antagonize
+						id = PREV
+						value = 100
+					}
+					add_ai_strategy = {
+						type = alliance
+						id = PREV
+						value = -1000
+					}
+				}
+			}
+			NG1 = {
+				declare_war_on = {
+					type = duli_wargoal
+					target = YYK
+				}
+			}
+			NG2 = {
+				declare_war_on = {
+					type = duli_wargoal
+					target = YYK
+				}
+			}
+			NG3 = {
+				declare_war_on = {
+					type = duli_wargoal
+					target = YYK
+				}
+			}
+			NG4 = {
+				declare_war_on = {
+					type = duli_wargoal
+					target = YYK
+				}
+			}
+			random_list = {
+				40 = {#zuoyou
+					NG1 = {
+						declare_war_on = {
+							type = annex_everything
+							target = NG3
+						}
+					}
+					NG1 = {
+						declare_war_on = {
+							type = annex_everything
+							target = NG2
+						}
+					}
+					NG4 = {
+						declare_war_on = {
+							type = annex_everything
+							target = NG3
+						}
+					}
+					NG4 = {
+						declare_war_on = {
+							type = annex_everything
+							target = NG2
+						}
+					}
+				}
+				40 = {#shangxia
+					NG1 = {
+						declare_war_on = {
+							type = annex_everything
+							target = NG4
+						}
+					}
+					NG1 = {
+						declare_war_on = {
+							type = annex_everything
+							target = NG2
+						}
+					}
+					NG3 = {
+						declare_war_on = {
+							type = annex_everything
+							target = NG4
+						}
+					}
+					NG3 = {
+						declare_war_on = {
+							type = annex_everything
+							target = NG2
+						}
+					}
+				}
+				15 = {#quan
+					NG1 = {
+						declare_war_on = {
+							type = annex_everything
+							target = NG2
+						}
+					}
+					NG1 = {
+						declare_war_on = {
+							type = annex_everything
+							target = NG3
+						}
+					}
+					NG1 = {
+						declare_war_on = {
+							type = annex_everything
+							target = NG4
+						}
+					}
+					NG2 = {
+						declare_war_on = {
+							type = annex_everything
+							target = NG3
+						}
+						declare_war_on = {
+							type = annex_everything
+							target = NG4
+						}
+					}
+					NG3 = {
+						declare_war_on = {
+							type = annex_everything
+							target = NG4
+						}
+					}
+				}
+				5 = {#quan
+					
+				}
+			}
+			news_event = { days = 2 id = net.2}
+		}
+	}
+	
+}
+
+news_event = { #NG2 or NG1 VS YYK
+	id = net.2
+	title = net.2.t
+	desc = net.2.d
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = net.2.1
+		trigger = {
+
+		}
+	}
+}

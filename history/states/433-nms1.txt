@@ -1,0 +1,36 @@
+state={
+	id=433
+	name="STATE_433"
+	history={
+		# 143.7.1 = {
+		# 	owner = NMS
+		# 	add_core_of = NMS
+		# 	buildings = {
+		# 		infrastructure = 0
+		# 		industrial_complex = 0
+		# 		arms_factory = 0
+
+		# 	}
+
+		# }
+		146.1.1 = {
+			owner = MNM
+			add_core_of = MNM
+			add_claim_by = WAK
+			buildings = {
+				infrastructure = 0
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+	provinces={
+		1297 2809 3660 3661 3663 
+	}
+	manpower=105
+	buildings_max_level_factor=1.000
+	state_category=s2
+}

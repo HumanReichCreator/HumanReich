@@ -1,0 +1,573 @@
+ideas = {
+	country = {
+		#hkr
+		hkr_treaty = {
+			picture = HUN_treaty_of_triannon
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				war_support_factor = -0.5
+			}
+			research_bonus = {
+				science = -0.2
+				magic = -0.15
+			}
+		}
+
+		hkr_huaping = {
+			picture = ast_abandon_the_westminster_system
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				stability_factor = 0.25
+				political_power_gain = -0.2
+			}
+		}
+
+		hkr_bolifendui = {
+			picture = state_shintoism
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				weekly_manpower = 4
+				army_org_factor = 0.15
+				army_morale_factor = 0.1
+				army_leader_start_defense_level = 1
+			}
+		}
+
+		hkr_chisesharenmo = {
+			picture = FRA_scw_intervention_nationalists_focus
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				production_speed_buildings_factor = -0.15
+			}
+			research_bonus = {
+				civil = -0.1
+			}
+		}
+
+		hkr_yaoguaiwunv = {
+			picture = FRA_army_of_aggression_focus
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				political_power_factor = -0.25
+			}
+		}
+
+		hkr_bayunzi = {
+			picture = generic_spy_political
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+				not = {
+					has_war_with = YKR
+					is_subject_of = YKR
+				}
+				country_exists = YKR
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+
+			}
+		}
+		hkr_bayunzi2 = {
+			picture = generic_spy_political
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+				not = {
+					has_war_with = YKR
+					is_subject_of = YKR
+				}
+				country_exists = YKR
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				research_speed_factor = -0.05
+				political_power_factor = -0.1
+			}
+		}
+		hkr_bayunzi3 = {
+			picture = generic_spy_political
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+				not = {
+					has_war_with = YKR
+					is_subject_of = YKR
+				}
+				country_exists = YKR
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				research_speed_factor = -0.1
+				political_power_factor = -0.2
+			}
+		}
+
+		hkr_treaty2 = {
+			picture = HUN_treaty_of_triannon
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+
+			}
+			research_bonus = {
+				science = -0.2
+				magic = -0.15
+			}
+		}
+
+		HKR_zhushoubolishenshe_idea = {
+
+			picture = generic_fortify_the_borders
+
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				production_speed_bunker_factor = 0.15
+			}
+	    }
+	    HKR_bolishenshedexinyang_idea = {
+
+			picture = state_shintoism
+
+	    	modifier = {
+				conscription_factor = -0.15
+			}
+	    }
+	    HKR_kuodabolifendui_idea = {
+	    	picture = state_shintoism
+
+			modifier = {
+				weekly_manpower = 6
+				army_org_factor = 0.25
+				army_morale_factor = 0.15
+				army_leader_start_defense_level = 1
+			}
+		}
+		HKR_jianliyaoguaichaogong_idea = {
+
+			picture = generic_research_bonus
+
+			modifier = {
+				research_speed_factor = 0.04
+			}
+		}
+		HKR_shuliweiwang_idea = {
+
+			picture = vittoria_mutilata
+
+			modifier = {
+				political_power_factor = 0.15
+			}
+		}
+		HKR_yaoguaiwunv2_idea = {
+			picture = FRA_army_of_aggression_focus
+			
+			modifier = {
+				political_power_factor = -0.4
+			}
+		}
+		HKR_chongshenfuka_idea = {
+
+			picture = HUN_secret_rearmament
+
+		 	equipment_bonus = {
+				spell_card_a = {
+					soft_attack = 0.05 hard_attack = 0.05
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+		}
+		HKR_ziligengsheng_idea = {
+
+			picture = generic_manpower_bonus
+
+		 	modifier = {
+		 		weekly_manpower = 7
+		 	}
+		}
+		HKR_yaoqinghetongnanmin_idea = {
+
+			picture = generic_production_bonus
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+		HKR_mingquedangxiaweixie_idea = {
+
+			picture = por_colonial_army
+
+			modifier = {
+				war_support_factor = 0.15
+				training_time_factor = -0.1
+			}
+		}
+		HKR_buzuorendereqing_idea = {
+
+			picture = jap_supremacy_of_will
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		HKR_buzuorendereqing2_idea = {
+
+			picture = generic_acquire_tanks
+
+			targeted_modifier = { 
+				tag = CHE
+				attack_bonus_against = 0.115
+				defense_bonus_against = 0.115
+			}
+			targeted_modifier = { 
+				tag = YKR
+				attack_bonus_against = 0.115
+				defense_bonus_against = 0.115
+			}
+		}
+		HKR_yaoqingrenlei_idea = {
+
+			picture = generic_foreign_capital
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		HKR_liaojiebolidajiejie_idea = {
+
+			picture = generic_research_bonus
+
+			research_bonus = {
+				magic = 0.075
+				science = 0.04
+			}
+		}
+		HKR_laizidajiejiedeliliang_idea = {
+
+			picture = jap_supremacy_of_will
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		HKR_qurenli_idea = {
+
+			picture = generic_research_bonus
+
+			modifier = {
+
+			}
+			research_bonus = {
+				science = 0.05
+			}
+		}
+		HKR_zhiyuanzhe_idea = {
+
+			picture = generic_research_bonus
+
+			modifier = {
+				research_speed_factor = 0.03
+			}
+		}
+		HKR_zhaoyaoguai_idea = {
+
+			picture = generic_research_bonus
+
+			research_bonus  = {
+				magic = 0.05
+			}
+		}
+		HKR_fengmozhen_idea = {
+
+			picture = HUN_secret_rearmament
+
+			equipment_bonus = {
+				spell_card_a = {
+					build_cost_ic = -0.075
+					soft_attack = 0.05
+					hard_attack = 0.05
+					defense = 0.05
+					breakthrough = 0.05
+					instant = yes
+				}
+			}
+		}
+		HKR_yinyangyu_idea = {
+
+			picture = HUN_secret_rearmament
+
+			equipment_bonus = {
+				spell_card_a = {
+					build_cost_ic = 0.05
+					soft_attack = 0.15
+					hard_attack = 0.15
+					defense = 0.15
+					breakthrough = 0.15
+					instant = yes
+				}
+			}
+		}
+		HKR_mengxiangtiansheng_idea = {
+
+			picture = the_long_lance
+
+			modifier = {
+				army_infantry_attack_factor = 0.15
+				army_infantry_defence_factor = 0.15
+			}
+		}
+		HKR_weiwang_idea = {
+
+			picture = vittoria_mutilata
+
+			modifier = {
+				political_power_gain = 0.15
+			}
+		}
+		HKR_ziran_idea = {
+
+			picture = ROM_iron_guard
+
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		HKR_zhize_idea = {
+
+			picture = vittoria_mutilata
+
+			modifier = {
+				army_attack_factor = 0.03
+				army_defence_factor = 0.03
+			}
+		}
+		HKR_yishen_idea = {
+
+			picture = generic_foreign_capital
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		HKR_huashanxiulian_idea = {
+
+			picture = generic_army_war_college
+
+			modifier = {
+				military_leader_cost_factor = -0.25
+			}
+		}
+		HKR_bianyuanrenlei_idea = {
+
+			picture = generic_research_bonus
+
+			research_bonus = {
+				science = 0.05
+				magic = 0.05
+			}
+		}
+		HKR_renlirenlei_idea = {
+
+			picture = generic_research_bonus
+
+			research_bonus = {
+				science = 0.1
+				magic = 0.1
+			}
+		}
+		HKR_qiangxingruzhu_idea = {
+
+			picture = chi_war_of_resistance3
+
+			available = {
+				has_war_with = HKR
+			}
+			modifier = {
+				army_org_factor = -0.33
+			}
+		}
+		HKR_zheshiyichangguangronggeming_idea = {
+
+			picture = chi_war_of_resistance3
+
+			modifier = {
+				conscription_factor = -0.6
+				production_speed_buildings_factor = -0.4
+			}
+		}
+		HKR_chisesharenmo2_idea = {
+			picture = FRA_scw_intervention_nationalists_focus
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				army_attack_factor = 0.13
+				army_defence_factor = 0.13
+				production_speed_buildings_factor = -0.14
+			}
+			research_bonus = {
+				civil = -0.15
+			}
+		}
+		HKR_tichuqitashili_idea = {
+
+			picture = vittoria_mutilata
+
+			modifier = {
+				political_power_factor = 0.25
+			}
+		}
+		HKR_duohuishoudao_idea = {
+
+			picture = generic_acquire_tanks
+
+			targeted_modifier = {
+				tag = MSD
+				attack_bonus_against = 0.06
+				defense_bonus_against = 0.06
+			}
+		}
+
+		HKR_bolidekuangrexintu_idea = {
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription = 0.09
+			}
+		}
+
+		HKR_zhizechongshen_idea = {
+			picture = generic_pp_unity_bonus
+			modifier = {
+				political_power_factor = 0.25
+			}
+		}
+
+	}
+}

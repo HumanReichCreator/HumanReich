@@ -1,0 +1,501 @@
+#8openvalue reset
+open_reset = {
+  hidden_effect = {
+  	if = {
+	   limit = {
+	      has_idea = open5
+	   }
+	   set_country_flag = {
+	      flag = openvalue
+	      value = 5
+	   }
+	}
+	if = {
+	   limit = {
+	      has_idea = open4
+	   }
+	   set_country_flag = {
+	      flag = openvalue
+	      value = 4
+	   }
+	}
+    if = {
+	   limit = {
+	      has_idea = open3
+	   }
+	   set_country_flag = {
+	      flag = openvalue
+	      value = 3
+	   }
+	}
+	if = {
+	   limit = {
+	      has_idea = open2
+	   }
+	   set_country_flag = {
+	      flag = openvalue
+	      value = 2
+	   }
+	}
+	if = {
+	   limit = {
+	      has_idea = open1
+	   }
+	   set_country_flag = {
+	      flag = openvalue
+	      value = 1
+	   }
+	}
+	if = {
+	   limit = {
+	      has_idea = open0
+	   }
+	   set_country_flag = {
+	      flag = openvalue
+	      value = 0
+	   }
+	}
+	if = {
+	   limit = {
+	      has_idea = close1
+	   }
+	   set_country_flag = {
+	      flag = openvalue
+	      value = -1
+	   }
+	}
+	if = {
+	   limit = {
+	      has_idea = close2
+	   }
+	   set_country_flag = {
+	      flag = openvalue
+	      value = -2
+	   }
+	}
+	if = {
+	   limit = {
+	      has_idea = close3
+	   }
+	   set_country_flag = {
+	      flag = openvalue
+	      value = -3
+	   }
+	}
+	if = {
+	   limit = {
+	      has_idea = close4
+	   }
+	   set_country_flag = {
+	      flag = openvalue
+	      value = -4
+	   }
+	}
+	if = {
+	   limit = {
+	      has_idea = close5
+	   }
+	   set_country_flag = {
+	      flag = openvalue
+	      value = -5
+	   }
+	}
+  }
+}
+#9 lobby value reset
+lobby_reset = {
+  hidden_effect = {
+  	if = {
+	   limit = {
+	      has_idea = hawk5
+	   }
+	   set_country_flag = {
+	      flag = lobbyvalue
+	      value = 5
+	   }
+	}
+	if = {
+	   limit = {
+	      has_idea = hawk4
+	   }
+	   set_country_flag = {
+	      flag = lobbyvalue
+	      value = 4
+	   }
+	}
+    if = {
+	   limit = {
+	      has_idea = hawk3
+	   }
+	   set_country_flag = {
+	      flag = lobbyvalue
+	      value = 3
+	   }
+	}
+	if = {
+	   limit = {
+	      has_idea = hawk2
+	   }
+	   set_country_flag = {
+	      flag = lobbyvalue
+	      value = 2
+	   }
+	}
+	if = {
+	   limit = {
+	      has_idea = hawk1
+	   }
+	   set_country_flag = {
+	      flag = lobbyvalue
+	      value = 1
+	   }
+	}
+	if = {
+	   limit = {
+	      has_idea = hawk0
+	   }
+	   set_country_flag = {
+	      flag = lobbyvalue
+	      value = 0
+	   }
+	}
+	if = {
+	   limit = {
+	      has_idea = dove1
+	   }
+	   set_country_flag = {
+	      flag = lobbyvalue
+	      value = -1
+	   }
+	}
+	if = {
+	   limit = {
+	      has_idea = dove2
+	   }
+	   set_country_flag = {
+	      flag = lobbyvalue
+	      value = -2
+	   }
+	}
+	if = {
+	   limit = {
+	      has_idea = dove3
+	   }
+	   set_country_flag = {
+	      flag = lobbyvalue
+	      value = -3
+	   }
+	}
+	if = {
+	   limit = {
+	      has_idea = dove4
+	   }
+	   set_country_flag = {
+	      flag = lobbyvalue
+	      value = -4
+	   }
+	}
+	if = {
+	   limit = {
+	      has_idea = dove5
+	   }
+	   set_country_flag = {
+	      flag = lobbyvalue
+	      value = -5
+	   }
+	}
+  }
+}
+
+#13 increase lobby
+lobbyincrease = {
+	custom_effect_tooltip = lobbyincrease_tt
+	if = {
+	    limit = {
+	        has_idea = hawk5
+	    }
+	    custom_effect_tooltip = already_full_tt
+	    add_political_power = 100
+	}
+	if = {
+	    limit = {
+	        has_idea = hawk4
+	    }
+	    swap_ideas = {remove_idea = hawk4 add_idea = hawk5}
+	}
+	if = {
+	    limit = {
+	        has_idea = hawk3
+	    }
+	    swap_ideas = {remove_idea = hawk3 add_idea = hawk4}
+	}
+	if = {
+	    limit = {
+	        has_idea = hawk2
+	    }
+	    swap_ideas = {remove_idea = hawk2 add_idea = hawk3}
+	}
+	if = {
+	    limit = {
+	        has_idea = hawk1
+	    }
+	    swap_ideas = {remove_idea = hawk1 add_idea = hawk2}
+	}
+	if = {
+	    limit = {
+	        has_idea = hawk0
+	    }
+	    swap_ideas = {remove_idea = hawk0 add_idea = hawk1}
+	}
+	if = {
+	    limit = {
+	        has_idea = dove1
+	    }
+	    swap_ideas = {remove_idea = dove1 add_idea = hawk0}
+	}
+	if = {
+	    limit = {
+	        has_idea = dove2
+	    }
+	    swap_ideas = {remove_idea = dove2 add_idea = dove1}
+	}
+	if = {
+	    limit = {
+	        has_idea = dove3
+	    }
+	    swap_ideas = {remove_idea = dove3 add_idea = dove2}
+	}
+	if = {
+	    limit = {
+	        has_idea = dove4
+	    }
+	    swap_ideas = {remove_idea = dove4 add_idea = dove3}
+	}
+	if = {
+	    limit = {
+	        has_idea = dove5
+	    }
+	    swap_ideas = {remove_idea = dove5 add_idea = dove4}
+	}
+	lobby_reset = yes
+	# country_event = sys.1
+}
+#14 decrease lobby
+lobbydecrease = {
+	custom_effect_tooltip = lobbydecrease_tt
+	if = {
+	    limit = {
+	        has_idea = dove5
+	    }
+	    custom_effect_tooltip = already_full_tt
+	    add_political_power = 100
+	}
+	if = {
+	    limit = {
+	        has_idea = dove4
+	    }
+	    swap_ideas = {remove_idea = dove4 add_idea = dove5}
+	}
+	if = {
+	    limit = {
+	        has_idea = dove3
+	    }
+	    swap_ideas = {remove_idea = dove3 add_idea = dove4}
+	}
+	if = {
+	    limit = {
+	        has_idea = dove2
+	    }
+	    swap_ideas = {remove_idea = dove2 add_idea = dove3}
+	}
+	if = {
+	    limit = {
+	        has_idea = dove1
+	    }
+	    swap_ideas = {remove_idea = dove1 add_idea = dove2}
+	}
+	if = {
+	    limit = {
+	        has_idea = hawk0
+	    }
+	    swap_ideas = {remove_idea = hawk0 add_idea = dove1}
+	}
+	if = {
+	    limit = {
+	        has_idea = hawk1
+	    }
+	    swap_ideas = {remove_idea = hawk1 add_idea = hawk0}
+	}
+	if = {
+	    limit = {
+	        has_idea = hawk2
+	    }
+	    swap_ideas = {remove_idea = hawk2 add_idea = hawk1}
+	}
+	if = {
+	    limit = {
+	        has_idea = hawk3
+	    }
+	    swap_ideas = {remove_idea = hawk3 add_idea = hawk2}
+	}
+	if = {
+	    limit = {
+	        has_idea = hawk4
+	    }
+	    swap_ideas = {remove_idea = hawk4 add_idea = hawk3}
+	}
+	if = {
+	    limit = {
+	        has_idea = hawk5
+	    }
+	    swap_ideas = {remove_idea = hawk5 add_idea = hawk4}
+	}
+	lobby_reset = yes
+	# country_event = sys.2
+}
+#15 increase conservative
+conservativeincrease = {
+	custom_effect_tooltip = conservativeincrease_tt
+	if = {
+	    limit = {
+	        has_idea = open5
+	    }
+	    custom_effect_tooltip = already_full_tt
+	    add_political_power = 100
+	}
+	if = {
+	    limit = {
+	        has_idea = open4
+	    }
+	    swap_ideas = {remove_idea = open4 add_idea = open5}
+	}
+	if = {
+	    limit = {
+	        has_idea = open3
+	    }
+	    swap_ideas = {remove_idea = open3 add_idea = open4}
+	}
+	if = {
+	    limit = {
+	        has_idea = open2
+	    }
+	    swap_ideas = {remove_idea = open2 add_idea = open3}
+	}
+	if = {
+	    limit = {
+	        has_idea = open1
+	    }
+	    swap_ideas = {remove_idea = open1 add_idea = open2}
+	}
+	if = {
+	    limit = {
+	        has_idea = open0
+	    }
+	    swap_ideas = {remove_idea = open0 add_idea = open1}
+	}
+	if = {
+	    limit = {
+	        has_idea = close1
+	    }
+	    swap_ideas = {remove_idea = close1 add_idea = open0}
+	}
+	if = {
+	    limit = {
+	        has_idea = close2
+	    }
+	    swap_ideas = {remove_idea = close2 add_idea = close1}
+	}
+	if = {
+	    limit = {
+	        has_idea = close3
+	    }
+	    swap_ideas = {remove_idea = close3 add_idea = close2}
+	}
+	if = {
+	    limit = {
+	        has_idea = close4
+	    }
+	    swap_ideas = {remove_idea = close4 add_idea = close3}
+	}
+	if = {
+	    limit = {
+	        has_idea = close5
+	    }
+	    swap_ideas = {remove_idea = close5 add_idea = close4}
+	}
+	open_reset = yes
+	# country_event = sys.4
+}
+#16 decrease conservative
+conservativedecrease = {
+	custom_effect_tooltip = conservativedecrease_tt
+	if = {
+	    limit = {
+	        has_idea = close5
+	    }
+	    custom_effect_tooltip = already_full_tt
+	    add_political_power = 100
+	}
+	if = {
+	    limit = {
+	        has_idea = close4
+	    }
+	    swap_ideas = {remove_idea = close4 add_idea = close5}
+	}
+	if = {
+	    limit = {
+	        has_idea = close3
+	    }
+	    swap_ideas = {remove_idea = close3 add_idea = close4}
+	}
+	if = {
+	    limit = {
+	        has_idea = close2
+	    }
+	    swap_ideas = {remove_idea = close2 add_idea = close3}
+	}
+	if = {
+	    limit = {
+	        has_idea = close1
+	    }
+	    swap_ideas = {remove_idea = close1 add_idea = close2}
+	}
+	if = {
+	    limit = {
+	        has_idea = open0
+	    }
+	    swap_ideas = {remove_idea = open0 add_idea = close1}
+	}
+	if = {
+	    limit = {
+	        has_idea = open1
+	    }
+	    swap_ideas = {remove_idea = open1 add_idea = open0}
+	}
+	if = {
+	    limit = {
+	        has_idea = open2
+	    }
+	    swap_ideas = {remove_idea = open2 add_idea = open1}
+	}
+	if = {
+	    limit = {
+	        has_idea = open3
+	    }
+	    swap_ideas = {remove_idea = open3 add_idea = open2}
+	}
+	if = {
+	    limit = {
+	        has_idea = open4
+	    }
+	    swap_ideas = {remove_idea = open4 add_idea = open3}
+	}
+	if = {
+	    limit = {
+	        has_idea = open5
+	    }
+	    swap_ideas = {remove_idea = open5 add_idea = open4}
+	}
+	open_reset = yes
+	# country_event = sys.3
+}

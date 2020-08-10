@@ -1,0 +1,29 @@
+state={
+	id=222
+	name="STATE_222"
+	resources={
+
+		powder = 0.0
+		metal = 0
+		gas = 3.0
+		crystal = 20.0
+	}
+
+	provinces={
+		404 421 472 473 581 791 944 1098 1557 1738 1800 1998 2092 2194 2384 2566 2861 2875 2886 
+	}
+	history={
+       	146.1.1 = {
+			owner = NG4
+			add_core_of = NG4
+			buildings = {
+				infrastructure =2
+				industrial_complex = 2
+				arms_factory = 0
+			}
+       	}
+	}
+	state_category=s7
+	manpower=412188.0
+	buildings_max_level_factor=1.000
+}

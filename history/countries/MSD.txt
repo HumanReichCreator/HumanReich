@@ -1,0 +1,224 @@
+﻿capital = 259
+138.8.13 = {
+
+}
+141.6.2 = {
+    
+}
+142.3.8 = {
+    set_technology = {
+        #通用武器线
+        spell_card = 1
+        buqiang117 = 1
+            
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+            
+        #工程学 
+        jichushuxue = 1
+        tongxunlilun = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+            
+        #专用工业
+
+        #种族
+            
+    }
+}
+144.2.5 = {
+    set_technology = {
+        zhanchangzhihui140 = 1
+        zuzhihuazhanzheng142 = 1
+        zhanchangzhihui145 = 1
+    }
+}
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card = 1
+        linglijiejing139 = 1
+        buqiang117 = 1
+        buqiang140 = 1
+            
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+        zuzhihuazhanzheng142 = 1
+        zhanchangzhihui145 = 1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        waike = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+            
+        #专用工业
+        fangwaijieshengchan130 = 1
+
+        #种族
+        yaohuakecheng1 = 1
+            
+    }
+}
+142.3.8.7 = {
+    oob = "MSD_142"
+	# set_research_slots = 2
+
+    
+
+
+    
+    add_ideas = {
+    Tribal
+    Beast
+    
+    open2
+    dove2
+    normal_border
+    sc_rule
+    }
+	set_politics = {
+    	ruling_party = guli
+    	election_frequency = 48
+    	elections_allowed = no
+    } 
+    set_popularities = {
+        qinwai = 10
+        guli = 80
+        neworder = 0
+        oldorder = 0
+        fandong = 10
+    }
+}
+144.1.1 = {
+    oob = "MSD_144"
+
+    set_technology = {
+    linglijiejing139 = 1
+    }
+
+    set_politics = {
+        ruling_party = neworder
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 12
+        guli = 20
+        neworder = 65
+        oldorder = 0
+        fandong = 3
+    }
+
+}
+146.1.1={
+    oob = "MSD_146"
+    
+    add_ideas = {
+    Tribal
+    Beast
+    type4_manpowerlv4
+    close1
+    hawk2
+    normal_border
+    sc_rule
+    }
+    
+    set_politics = {
+    	ruling_party = neworder
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 18
+        guli = 5
+        neworder = 75
+        oldorder = 0
+        fandong = 2
+    }
+    
+}
+create_country_leader = {
+	# name = "Mystia Lorelei"
+    name = "米斯蒂娅·萝蕾拉"
+	desc = ""
+	picture = "MSD_msd.dds"
+	ideology = guli_type
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+    # name = "Mystia Lorelei"
+    name = "米斯蒂娅·萝蕾拉"
+    desc = ""
+    picture = "MSD_msd.dds"
+    ideology = qinwai_type
+    traits = {
+        #
+    }
+}
+create_country_leader = {
+    # name = "Mystia Lorelei"
+    name = "米斯蒂娅·萝蕾拉"
+    desc = ""
+    picture = "MSD_msd.dds"
+    ideology = neworder_type
+    traits = {
+        #
+    }
+}
+create_country_leader = {
+    # name = "Mystia Lorelei"
+    name = "米斯蒂娅·萝蕾拉"
+    desc = ""
+    picture = "MSD_msd.dds"
+    ideology = fandong_type
+    traits = {
+        #
+    }
+}
+create_country_leader = {
+    # name = "Mystia Lorelei"
+    name = "米斯蒂娅·萝蕾拉"
+    desc = ""
+    picture = "MSD_msd.dds"
+    ideology = oldorder_type
+    traits = {
+        #
+    }
+}
+
+
+

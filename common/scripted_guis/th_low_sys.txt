@@ -1,0 +1,107 @@
+scripted_gui = {
+	th_subject_sys_effect = {
+		context_type = selected_country_context
+
+		window_name = "th_subject_sys_gui"
+
+		parent_window_token = selected_country_view
+
+		visible = {
+			NOT = { has_global_flag = not_ready }
+			OR = {
+				is_subject_of = ROOT
+				tag = ROOT
+			}
+			# 
+		}
+
+		triggers = {
+			th_subject_sys_cant_visible = {
+				NOT = { tag = ROOT }
+			}
+			th_subject_sys_stop_visible = {
+				has_country_flag = LS_start_lowing
+				is_subject_of = ROOT
+			}
+			th_subject_sys_can_visible = {
+				is_subject_of = ROOT
+				is_neighbor_of = ROOT
+				has_country_flag = LS_cooldown_completed
+
+				not = {
+					has_country_flag = LS_start_lowing
+				}
+
+				ROOT = {
+					has_war = no
+				}
+			}
+		}
+
+		effects = {
+			th_subject_sys_can_click = {
+				LS_start_lowing = yes
+			}
+			th_subject_sys_stop_click = {
+				LS_stop_lowing = yes
+			}
+		}
+
+		#AI
+		ai_enabled = {
+            always = yes
+		}
+		# ai_max_weight_taken_per_test = 3
+
+		ai_check = {
+          	check_variable = { LS_lowing_number < 1}
+          	num_subjects > 0
+          	has_war = no
+       	}
+
+       	ai_check_scope = {
+       		is_subject_of = ROOT
+		}
+
+       	ai_test_scopes = test_neighbouring_countries
+
+		ai_weights = {
+			th_subject_sys_can_click = {
+				ai_will_do = {
+					base = 1
+					modifier = {
+						has_autonomy_state = autonomy_integrated_puppet
+						dont_annex = yes
+						factor = 0
+					}
+					modifier = {
+						ROOT = {
+							tag = CCA
+						}
+						date < 148.1.1
+						factor = 0
+					}
+					modifier = {
+						ROOT = {
+							political_power_daily < 0.65
+						}
+						factor = 0
+					}
+				}
+			}
+		}
+	}
+	
+	th_self_sys_gui_effect = {
+		context_type = player_context
+
+		window_name = "th_self_sys_gui"
+
+		parent_window_token = politics_tab
+
+		visible = {
+			always = yes
+		}
+	}
+}
+

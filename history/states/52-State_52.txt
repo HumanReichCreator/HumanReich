@@ -1,0 +1,35 @@
+
+state={
+	id=52
+	name="STATE_52"
+	resources={
+
+		powder=0.000
+		metal=0.000
+		gas=0.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = KAP
+			add_core_of = KAP
+			add_core_of = NIT
+			buildings = {
+				infrastructure =5
+				industrial_complex = 4
+				arms_factory = 2
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		608 2403 3120 3122 4138 4215 4216 4222 4224 4231 
+	}
+	manpower=1144.0
+	buildings_max_level_factor=1.000
+	state_category=s10
+}

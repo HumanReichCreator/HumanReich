@@ -1,0 +1,191 @@
+guiTypes = {
+    #top
+    #world view
+	containerWindowType = {
+		name = "th_view_type_top"
+		position = { x = 246 y = 5 }
+
+		iconType ={
+			name ="th_view_type_top_bg" 
+			spriteType = "GFX_generic_box_smallest"
+			position = { x= 0 y = 0 } 
+			Orientation = "UPPER_LEFT"
+
+			pdx_tooltip = "th_view_top_tt"
+			pdx_tooltip_delayed = "th_view_top_delayed_tt"
+		}
+
+		iconType ={
+			name ="th_view_type_fanling" 
+			spriteType = "GFX_view_fanling_s"
+			position = { x= 0 y = 3 } 
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType ={
+			name ="th_view_type_pingheng" 
+			spriteType = "GFX_view_pingheng_s"
+			position = { x= 0 y = 3 } 
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		iconType ={
+			name ="th_view_type_weiwu" 
+			spriteType = "GFX_view_weiwu_s"
+			position = { x= 0 y = 3 } 
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name ="th_view_type_value"
+			position = { x= -5 y = 3 }
+			font = "hoi_18mbs"
+			text = "[view_type_value]"
+			# text = "view_type_value"
+			format = center
+			maxWidth = 100
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes	
+		}
+	}
+
+	#power
+
+	containerWindowType = {
+		name = "th_top_power"
+		position = { x = 173 y = 5 }
+		
+		# buttonType = {
+		# 	name ="th_top_power_bg"
+		# 	spriteType = "GFX_generic_box_smallest"
+		# 	position = { x= 0 y = 4 }
+		# 	pdx_tooltip = "th_power_tt"
+		# 	pdx_tooltip_delayed = "th_power_delayed_tt"
+		# 	shortcut = "ctrl+q"
+		# }
+		iconType ={
+			name ="th_top_power_bg"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x= 0 y = 0 } 
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "th_power_tt"
+			pdx_tooltip_delayed = "th_power_delayed_tt"
+			# alwaystransparent = yes	
+		}
+
+		iconType ={
+			name ="th_top_power_icon"
+			spriteType = "GFX_red_P"
+			position = { x= 5 y = 5 } 
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes	
+		}
+		
+		instantTextBoxType = {
+			name ="th_power"
+			position = { x= -5 y = 3 }
+			font = "hoi_18mbs"
+			text = "[th_power]"
+			# text = "[?PO_average_mp|1]%"
+			#暂时
+			# text = "重做"
+			format = center
+			maxWidth = 100
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes	
+		}
+	}
+
+	#exhaust
+
+	containerWindowType = {
+		name = "th_top_exhaustion"
+		position = { x = 565 y = 5 }
+		
+		# buttonType = {
+		# 	name ="th_top_power_bg"
+		# 	spriteType = "GFX_generic_box_smallest"
+		# 	position = { x= 0 y = 4 }
+		# 	pdx_tooltip = "th_power_tt"
+		# 	pdx_tooltip_delayed = "th_power_delayed_tt"
+		# 	shortcut = "ctrl+q"
+		# }
+		iconType ={
+			name ="th_top_exhaustion"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x= 0 y = 0 } 
+			Orientation = "UPPER_LEFT"
+			
+			pdx_tooltip = "th_top_exhaustion_tt"
+			pdx_tooltip_delayed = "th_top_exhaustion_tt_delayed"
+		}
+
+		iconType ={
+			name ="th_top_exhaustion_icon"
+			spriteType = "GFX_war_exhaustion"
+			position = { x= 1 y = 0 } 
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes	
+		}
+		
+		instantTextBoxType = {
+			name ="th_exhaustion"
+			position = { x= -5 y = 3 }
+			font = "hoi_18mbs"
+			# text = "[?PO_average_mp|2]"
+			#暂时
+			text = "[exhaustion_current]"
+			format = center
+			maxWidth = 100
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes	
+		}
+	}
+
+
+	#HUM influ
+	containerWindowType = {
+		name = "th_hum_influ_top"
+		position = { x = -465 y = 5 }
+		Orientation = UPPER_RIGHT
+
+		iconType ={
+			name ="th_hum_influ_top_bg" 
+			spriteType = "GFX_generic_box_smallest"
+			position = { x= 0 y = 0 } 
+			Orientation = "UPPER_LEFT"
+
+			pdx_tooltip = "th_hum_influ_tt"
+			pdx_tooltip_delayed = "th_hum_influ_delayed_tt"
+		}
+
+		instantTextBoxType = {
+			name ="th_hum_influ_top_icon"
+			position = { x= 12 y = 3 }
+			font = "hoi_18mbs"
+			text = "[HUM.GetFlag]"
+			#暂时
+			# text = "[exhaustion_current]"
+			format = left
+			alwaystransparent = yes	
+		}
+
+		instantTextBoxType = {
+			name ="th_hum_influ_top_value"
+			position = { x= -5 y = 3 }
+			font = "hoi_18mbs"
+			text = "[?HMIF_influence|1]"
+			#暂时
+			# text = "[exhaustion_current]"
+			format = center
+			maxWidth = 100
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes	
+		}
+	}
+}

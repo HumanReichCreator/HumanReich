@@ -1,0 +1,30 @@
+state={
+	id=256
+	name="STATE_256"
+
+	resources={
+		energy = 0
+		powder = 0.0
+		metal = 0
+		gas = 5.0
+		crystal = 5.0
+	}
+
+	history={
+       	146.1.1 = {
+			owner = OKI
+			add_core_of = OKI
+			buildings = {
+				infrastructure =5
+				industrial_complex = 4
+				arms_factory = 2
+			}
+       	}
+	}
+	provinces={
+		115 168 524 878 1229 1426 1705 2320 2878 
+	}
+	state_category=s10
+	manpower=1001.0
+	buildings_max_level_factor=1.000
+}

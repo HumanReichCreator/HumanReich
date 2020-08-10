@@ -1,0 +1,894 @@
+ideas = {
+    #===========1.1通用焦点精神============
+    country = {	
+	 	received_attache = {
+
+	    	picture = CZE_planning_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.02
+				planning_speed = 0.10
+			}
+		}
+
+		
+	   neutrality_idea = {
+
+	    	picture = generic_neutrality_drift_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				# has_government = neutrality
+			}
+
+			cancel = {
+				has_war = yes
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+			    ai_get_ally_desire_factor = -250
+				# AI_JOIN_ALLY_DESIRE_FACTOR = -250
+				AI_FOCUS_DEFENSE_FACTOR = 0.5
+				AI_FOCUS_AGGRESSIVE_FACTOR = -0.3
+				AI_FOCUS_PEACEFUL_FACTOR = 0.4
+				AI_DESIRED_DIVISIONS_FACTOR = -0.2
+				TRAINING_TIME_FACTOR = 0.05
+				stability_factor = 0.35
+			}
+		}
+#shared level 1
+		zhengjugaibian = {
+	    	picture = great_depression
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			     drift_defence_factor = -0.45
+			}
+		}
+		fandong_drift1 = {
+			 picture = generic_communism_drift_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			     fandong_drift = 0.05
+			}
+		}
+		qinwai_drift1 = {
+			 picture = generic_democratic_drift_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			     qinwai_drift = 0.05
+			}
+		}
+		neworder_drift1 = {
+			 picture = generic_fascism_drift_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			    neworder_drift = 0.05
+			}
+		}
+		guli_drift1 = {
+	    	picture = generic_neutrality_drift_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			     guli_drift = 0.05
+			}
+		}
+
+		jungong_long_focus = {
+			picture = man_five_year_plan_air
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			     production_speed_arms_factory_factor = 0.35
+			}
+		}
+		mingong_long_focus = {
+			picture = man_five_year_plan_air
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			     production_speed_industrial_complex_factor = 0.35
+			}
+		}
+		science_focus = {
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_research_bonus
+			
+			research_bonus = { science = 0.03 }	
+		}
+		magic_focus = {
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_research_bonus
+			
+			research_bonus = { magic = 0.03 }	
+		}
+		jizhongyanjiu_focus = {
+			picture = jap_duplicate_research
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			   research_speed_factor = 0.1
+			}
+		}
+
+		kejichengguo_focus1 = {
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_research_bonus
+			
+			modifier = {
+				research_speed_factor = 0.03
+			}
+		}
+
+		kejichengguo_focus2 = {
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_research_bonus
+			
+			modifier = {
+				research_speed_factor = 0.07
+			}
+		}
+
+		waibulianxi = {
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+		    	IMPROVE_RELATIONS_MAINTAIN_COST_FACTOR = -0.25
+				opinion_gain_monthly_factor = 0.2
+			}	
+		}
+		yingduiweixie_focus = {
+			picture = generic_war_preparation
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			  TRAINING_TIME_FACTOR = -0.15
+			}
+		}
+		neiwuchuli_focus = {
+			picture = generic_pp_unity_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			
+			
+			modifier = {
+			  political_power_factor = 0.25
+			}
+		}
+		changshiganshe = {
+			picture = generic_volunteer_expedition_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+
+			modifier = {
+				send_volunteer_divisions_required = -0.5
+				send_volunteer_size = 12
+			}
+		}
+		weisheyanxi = {
+			picture = generic_infantry_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			
+			modifier = {
+			  ARMY_ATTACK_FACTOR = 0.06
+			  ARMY_DEFENCE_FACTOR = 0.06
+			}
+		}
+
+		kaifangshehui = {
+	    	picture = great_depression
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			
+			modifier = {
+			  	qinwai_drift = 0.06
+			  	fandong_drift = 0.06
+			  	drift_defence_factor = -0.2
+			}
+		}
+
+		baoshousixiang = {
+	    	picture = great_depression
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			
+			modifier = {
+			  	guli_drift = 0.06
+			  	neworder_drift = 0.06
+			  	drift_defence_factor = -0.2
+			}
+		}
+
+		hepingdiyi = {
+	    	picture = great_depression
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			
+			modifier = {
+			  	guli_drift = 0.06
+			  	qinwai_drift = 0.06
+			  	drift_defence_factor = -0.2
+			}
+		}
+
+		zhijiedeshouduan = {
+	    	picture = great_depression
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			
+			modifier = {
+			  	fandong_drift = 0.06
+			  	neworder_drift = 0.06
+			  	drift_defence_factor = -0.2
+			}
+		}
+
+		zhongzuzhuanxing = {
+			picture = generic_democratic_drift_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			
+			modifier = {
+			  	improve_relations_maintain_cost_factor = -0.5
+			  	conscription = 0.025
+			  	war_support_factor = -0.05
+			}
+		}
+
+		baochiguli = {
+			picture = generic_neutrality_drift_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			
+			modifier = {
+			  	drift_defence_factor = 0.5
+			  	stability_factor = 0.35
+			  	war_support_factor = -0.05
+			}
+		}
+
+		quanlidouzheng = {
+			 picture = generic_communism_drift_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			
+			modifier = {
+			  	war_support_factor = 0.35
+			  	conscription_factor = 0.12
+			  	stability_factor = -0.05
+			}
+		}
+
+		zhengduobaquan = {
+			 picture = generic_fascism_drift_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			
+			modifier = {
+			  	war_support_factor = 0.25
+			  	army_leader_start_level = 1
+			  	stability_factor = -0.05
+			}
+		}
+
+		
+		
+		lianjiaqiang = {
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = ast_volunteer_defence_corps
+			
+			equipment_bonus = {
+				buqiang_a = {
+				 	build_cost_ic = -0.1 instant = yes
+				}
+				spell_card_a = {
+				 	build_cost_ic = -0.1 instant = yes
+				}
+				new_buqiang_a = {
+				 	build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		
+		lianjiahuopao = {
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_artillery_regiments
+			
+			equipment_bonus = {
+				sc_artillery_a = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				ma_artillery_a = {
+				    build_cost_ic = -0.1 instant = yes
+				}
+				ma_rocket_artillery_a = {
+				    build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+#shared level 2
+        mingonggailiang = {
+        	picture = man_five_year_plan_air
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			     production_speed_industrial_complex_factor = 0.15
+			     conversion_cost_mil_to_civ_factor = -0.2
+			}
+		}
+		jungonggailiang = {
+			picture = man_five_year_plan_air
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			
+			modifier = {
+			     production_speed_arms_factory_factor = 0.15
+			     conversion_cost_civ_to_mil_factor = -0.2
+			}
+		}
+		ziyuantance = {
+			picture = generic_exploit_mines
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			
+			modifier = {
+			    local_resources_factor = 0.25
+			}
+		}
+		shebeihunhe = {
+			picture = generic_flexible_foreign_policy
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			
+			modifier = {
+			    production_factory_max_efficiency_factor = 0.15
+			}
+		}
+		shebeifenli = {
+			picture = generic_local_self_management
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			
+			modifier = {
+			    production_factory_efficiency_gain_factor = 0.25
+			}
+		}
+
+		gongyelilun = {
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_production_bonus
+			
+			modifier = {
+			    production_factory_efficiency_gain_factor = 0.15
+			    production_factory_max_efficiency_factor = 0.05
+			    line_change_production_efficiency_factor = 0.33
+			}
+		}
+		yanjiushengchan = {
+			picture = generic_research_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			research_bonus = { industrys = 0.04 }
+		}
+		yanjiujianzao = {
+			picture = generic_research_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			research_bonus = { build = 0.04 }
+		}
+		yanjiububing = {
+			picture = generic_research_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			research_bonus = { infantry_weapons = 0.04 }
+		}
+		yanjiuhuopao = {
+			picture = generic_research_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			research_bonus = { artillery_tech = 0.04 }
+		}
+		yanjiuziyuan = {
+			picture = generic_research_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			research_bonus = { resource = 0.04 }
+		}
+		wuqigailiang = {
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = partial_economic_mobilisation
+			
+			equipment_bonus = {
+				buqiang_a = {
+				 	soft_attack = 0.1 instant = yes
+				}
+				spell_card_a = {
+				 	soft_attack = 0.1 instant = yes
+				}
+				new_buqiang_a = {
+				 	soft_attack = 0.1 instant = yes
+				}
+			}
+		}
+		jiaqiangxunlian = {
+			picture = chi_army_corruption3
+			
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+			     training_time_factor = -0.05
+			     army_org_Factor = 0.1
+			}
+		}
+		jiadazhengbing = {
+			picture = generic_manpower_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			     conscription_factor = 0.25
+			     mobilization_speed = -0.05
+			}
+		}
+		kuansongzhanling = {
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+			    non_core_manpower = -0.001
+			    compliance_growth = 0.15
+			}
+		}
+		zhaquzhanling = {
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+			    non_core_manpower = 0.001
+			    resistance_growth = 0.5
+			}
+		}
+
+		hunshuimoyu = {
+			picture = generic_intel_bonus
+			
+			modifier = {
+				ai_badass_factor = 0.1
+			    justify_war_goal_time = -0.25
+			    generate_wargoal_tension = -0.05
+			}
+		}
+
+		gonggusixiang = {
+			picture = generic_democratic_drift_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			
+			modifier = {
+			  	manufacturer_cost_factor = -0.3
+			}
+		}
+}
+		
+		

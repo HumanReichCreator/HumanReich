@@ -1,0 +1,659 @@
+region_defines = {
+    ##Netherworld
+    every_state = {
+        limit = {
+            is_on_continent = Netherworld
+        }
+        add_to_variable = { global.RE_Netherworld_all = 1}
+    }
+    ##Celestial
+    every_state = {
+        limit = {
+            is_on_continent = Celestial
+        }
+        add_to_variable = { global.RE_Celestial_all = 1}
+    }
+    ##Underground
+    every_state = {
+        limit = {
+            is_on_continent = Underground
+        }
+        add_to_variable = { global.RE_Underground_all = 1}
+    }
+    ##Hell
+    every_state = {
+        limit = {
+            is_on_continent = Hell
+        }
+        add_to_variable = { global.RE_Hell_all = 1}
+    }
+    ##Gensokyo
+    every_state = {
+        limit = {
+            is_on_continent = Gensokyo
+        }
+        add_to_variable = { global.RE_Gensokyo_all = 1}
+    }
+    ##Hell_region1 彼岸
+    every_state = {
+        limit = {
+            or = {
+                region = 7
+                region = 77
+                region = 8
+            }
+        }
+        add_to_variable = { global.RE_Hell_region1_all = 1}
+    }
+    ##Hell_region2 畜生界
+    every_state = {
+        limit = {
+            or = {
+                region = 82
+                region = 78
+            }
+        }
+        add_to_variable = { global.RE_Hell_region2_all = 1}
+    }
+    ##Hell_region3 外地狱
+    every_state = {
+        limit = {
+            or = {
+                region = 5
+                region = 81
+            }
+        }
+        add_to_variable = { global.RE_Hell_region3_all = 1}
+    }
+    ##Hell_region4 地狱
+    every_state = {
+        limit = {
+            or = {
+                region = 6
+                region = 79
+                region = 80
+                region = 83
+            }
+        }
+        add_to_variable = { global.RE_Hell_region4_all = 1}
+    }
+    ##Underground_region1 旧地狱通路
+    every_state = {
+        limit = {
+            or = {
+                region = 16
+                region = 17
+                region = 18
+                region = 76
+            }
+        }
+        add_to_variable = { global.RE_Underground_region1_all = 1}
+    }
+    ##Underground_region2 旧地狱深处
+    every_state = {
+        limit = {
+            or = {
+                region = 22
+                region = 23
+                region = 19
+                region = 21
+                region = 20
+            }
+        }
+        add_to_variable = { global.RE_Underground_region2_all = 1}
+    }
+    ##Gensokyo_region1 迷途竹林地区
+    every_state = {
+        limit = {
+            or = {
+                region = 52
+                region = 53
+                region = 54
+                region = 74
+                region = 75
+            }
+        }
+        add_to_variable = { global.RE_Gensokyo_region1_all = 1}
+    }
+    ##Gensokyo_region2 现代人间之里地区
+    every_state = {
+        limit = {
+            or = {
+                region = 50
+                region = 51
+                region = 55
+            }
+        }
+        add_to_variable = { global.RE_Gensokyo_region2_all = 1}
+    }
+    ##Gensokyo_region3 人间之里远西南地区
+    every_state = {
+        limit = {
+            or = {
+                region = 44
+                region = 46
+                region = 48
+                region = 49
+            }
+        }
+        add_to_variable = { global.RE_Gensokyo_region3_all = 1}
+    }
+    ##Gensokyo_region4 人间之里外围妖怪区
+    every_state = {
+        limit = {
+            or = {
+                region = 40
+                region = 47
+                region = 56
+            }
+        }
+        add_to_variable = { global.RE_Gensokyo_region4_all = 1}
+    }
+    ##Gensokyo_region5 博丽和其通路地区
+    every_state = {
+        limit = {
+            or = {
+                region = 57
+                region = 60
+                region = 61
+            }
+        }
+        add_to_variable = { global.RE_Gensokyo_region5_all = 1}
+    }
+    ##Gensokyo_region6 魔法之森核心区
+    every_state = {
+        limit = {
+            or = {
+                region = 58
+                region = 59
+                region = 64
+            }
+        }
+        add_to_variable = { global.RE_Gensokyo_region6_all = 1}
+    }
+    ##Gensokyo_region7 东北幻想乡地区
+    every_state = {
+        limit = {
+            or = {
+                region = 62
+                region = 63
+                region = 66
+                region = 67
+            }
+        }
+        add_to_variable = { global.RE_Gensokyo_region7_all = 1}
+    }
+    ##Gensokyo_region8 妖精核心地区
+    every_state = {
+        limit = {
+            or = {
+                region = 29
+                region = 30
+                region = 69
+                region = 65
+            }
+        }
+        add_to_variable = { global.RE_Gensokyo_region8_all = 1}
+    }
+    ##Gensokyo_region9 红魔城及周边地区
+    every_state = {
+        limit = {
+            or = {
+                region = 31
+                region = 32
+                region = 33
+            }
+        }
+        add_to_variable = { global.RE_Gensokyo_region9_all = 1}
+    }
+    ##Gensokyo_region10 河童和北妖怪山地区
+    every_state = {
+        limit = {
+            or = {
+                region = 27
+                region = 28
+                region = 34
+                region = 35
+            }
+        }
+        add_to_variable = { global.RE_Gensokyo_region10_all = 1}
+    }
+    ##Gensokyo_region11 妖怪山深处地区
+    every_state = {
+        limit = {
+            or = {
+                region = 71
+                region = 26
+                region = 73
+                region = 24
+                region = 72
+            }
+        }
+        add_to_variable = { global.RE_Gensokyo_region11_all = 1}
+    }
+    ##Gensokyo_region12 妖怪山山脚地区
+    every_state = {
+        limit = {
+            or = {
+                region = 36
+                region = 37
+                region = 38
+                region = 25
+            }
+        }
+        add_to_variable = { global.RE_Gensokyo_region12_all = 1}
+    }
+    ##Gensokyo_region13 雾之湖西南废弃地区
+    every_state = {
+        limit = {
+            or = {
+                region = 39
+                region = 45
+            }
+        }
+        add_to_variable = { global.RE_Gensokyo_region13_all = 1}
+    }
+    ##Gensokyo_region14 无缘冢周边地区
+    every_state = {
+        limit = {
+            or = {
+                region = 41
+                region = 42
+                region = 43
+            }
+        }
+        add_to_variable = { global.RE_Gensokyo_region14_all = 1}
+    }
+}
+
+region_daily_check = {
+    ##Netherworld
+    if = {
+        limit = {
+            any_owned_state = {
+                is_on_continent = Netherworld
+            }
+        }
+        set_variable = { RE_Netherworld_ratio = 0 }
+        every_owned_state = {
+            limit = {
+                is_on_continent = Netherworld
+            }
+            add_to_variable = { ROOT.RE_Netherworld_ratio = 1}
+        }
+        divide_variable = { RE_Netherworld_ratio = global.RE_Netherworld_all }
+    }
+    
+
+    ##Celestial
+    if = {
+        limit = {
+            any_owned_state = {
+                is_on_continent = Celestial
+            }
+        }
+        set_variable = { RE_Celestial_ratio = 0 }
+        every_owned_state = {
+            limit = {
+                is_on_continent = Celestial
+            }
+            add_to_variable = { ROOT.RE_Celestial_ratio = 1}
+        }
+        divide_variable = { RE_Celestial_ratio = global.RE_Celestial_all }
+    }
+    
+
+    ##Underground
+    if = {
+        limit = {
+            any_owned_state = {
+                is_on_continent = Celestial
+            }
+        }
+        set_variable = { RE_Underground_ratio = 0 }
+        every_owned_state = {
+            limit = {
+                is_on_continent = Underground
+            }
+            add_to_variable = { ROOT.RE_Underground_ratio = 1}
+        }
+        divide_variable = { RE_Underground_ratio = global.RE_Underground_all }
+    }
+    
+
+    ##Hell
+    if = {
+        limit = {
+            any_owned_state = {
+                is_on_continent = Hell
+            }
+        }
+        set_variable = { RE_Hell_ratio = 0 }
+        every_owned_state = {
+            limit = {
+                is_on_continent = Hell
+            }
+            add_to_variable = { ROOT.RE_Hell_ratio = 1}
+        }
+        divide_variable = { RE_Hell_ratio = global.RE_Hell_all }
+    }
+    
+
+    ##Gensokyo
+    if = {
+        limit = {
+            any_owned_state = {
+                is_on_continent = Gensokyo
+            }
+        }
+        set_variable = { RE_Gensokyo_ratio = 0 }
+        every_owned_state = {
+            limit = {
+                is_on_continent = Gensokyo
+            }
+            add_to_variable = { ROOT.RE_Gensokyo_ratio = 1}
+        }
+        divide_variable = { RE_Gensokyo_ratio = global.RE_Gensokyo_all }
+    }
+    
+
+    ##Underground_region1 西部
+    set_variable = { RE_Underground_region1_ratio = 0 }
+    every_owned_state = {
+        limit = {
+            or = {
+                region = 16
+                region = 17
+                region = 76
+            }
+        }
+        add_to_variable = { ROOT.RE_Underground_region1_ratio = 1}
+    }
+    divide_variable = { RE_Underground_region1_ratio = global.RE_Underground_region1_all }
+    
+    ##Underground_region2 东部
+    set_variable = { RE_Underground_region2_ratio = 0 }
+    every_owned_state = {
+        limit = {
+            or = {
+                region = 22
+                region = 23
+                region = 18
+                region = 19
+                region = 21
+                region = 20
+            }
+        }
+        add_to_variable = { ROOT.RE_Underground_region2_ratio = 1}
+    }
+    divide_variable = { RE_Underground_region2_ratio = global.RE_Underground_region2_all }
+
+    ##Hell_region1 彼岸
+    set_variable = { RE_Hell_region1_ratio = 0 }
+    every_owned_state = {
+        limit = {
+            or = {
+                region = 7
+                region = 77
+                region = 8
+            }
+        }
+        add_to_variable = { ROOT.RE_Hell_region1_ratio = 1}
+    }
+    divide_variable = { RE_Hell_region1_ratio = global.RE_Hell_region1_all }
+
+    ##Hell_region2 畜生界
+    set_variable = { RE_Hell_region2_ratio = 0 }
+    every_owned_state = {
+        limit = {
+            or = {
+                region = 82
+                region = 78
+            }
+        }
+        add_to_variable = { ROOT.RE_Hell_region2_ratio = 1}
+    }
+    divide_variable = { RE_Hell_region2_ratio = global.RE_Hell_region2_all }
+
+    ##Hell_region3 外地狱
+    set_variable = { RE_Hell_region3_ratio = 0 }
+    every_owned_state = {
+        limit = {
+            or = {
+                region = 5
+                region = 81
+            }
+        }
+        add_to_variable = { ROOT.RE_Hell_region3_ratio = 1}
+    }
+    divide_variable = { RE_Hell_region3_ratio = global.RE_Hell_region3_all }
+
+    ##Hell_region4 地狱深处
+    set_variable = { RE_Hell_region4_ratio = 0 }
+    every_owned_state = {
+        limit = {
+            or = {
+                region = 6
+                region = 79
+                region = 80
+                region = 83
+            }
+        }
+        add_to_variable = { ROOT.RE_Hell_region4_ratio = 1}
+    }
+    divide_variable = { RE_Hell_region4_ratio = global.RE_Hell_region4_all }
+
+    ##Gensokyo_region1 迷途竹林地区
+    set_variable = { RE_Gensokyo_region1_ratio = 0 }
+    every_owned_state = {
+        limit = {
+            or = {
+                region = 52
+                region = 53
+                region = 54
+                region = 74
+                region = 75
+            }
+        }
+        add_to_variable = { ROOT.RE_Gensokyo_region1_ratio = 1}
+    }
+    divide_variable = { RE_Gensokyo_region1_ratio = global.RE_Gensokyo_region1_all }
+
+    ##Gensokyo_region2 现代人间之里地区
+    set_variable = { RE_Gensokyo_region2_ratio = 0 }
+    every_owned_state = {
+        limit = {
+            or = {
+                region = 50
+                region = 51
+                region = 55
+            }
+        }
+        add_to_variable = { ROOT.RE_Gensokyo_region2_ratio = 1}
+    }
+    divide_variable = { RE_Gensokyo_region2_ratio = global.RE_Gensokyo_region2_all }
+
+    ##Gensokyo_region3 人间之里远西南地区
+    set_variable = { RE_Gensokyo_region3_ratio = 0 }
+    every_owned_state = {
+        limit = {
+            or = {
+                region = 44
+                region = 46
+                region = 48
+                region = 49
+            }
+        }
+        add_to_variable = { ROOT.RE_Gensokyo_region3_ratio = 1}
+    }
+    divide_variable = { RE_Gensokyo_region3_ratio = global.RE_Gensokyo_region3_all }
+
+    ##Gensokyo_region4 人间之里外围妖怪区
+    set_variable = { RE_Gensokyo_region4_ratio = 0 }
+    every_owned_state = {
+        limit = {
+            or = {
+                region = 40
+                region = 47
+                region = 56
+            }
+        }
+        add_to_variable = { ROOT.RE_Gensokyo_region4_ratio = 1}
+    }
+    divide_variable = { RE_Gensokyo_region4_ratio = global.RE_Gensokyo_region4_all }
+
+    ##Gensokyo_region5 博丽和其通路地区
+    set_variable = { RE_Gensokyo_region5_ratio = 0 }
+    every_owned_state = {
+        limit = {
+            or = {
+                region = 57
+                region = 60
+                region = 61
+            }
+        }
+        add_to_variable = { ROOT.RE_Gensokyo_region5_ratio = 1}
+    }
+    divide_variable = { RE_Gensokyo_region5_ratio = global.RE_Gensokyo_region5_all }
+
+    ##Gensokyo_region6 魔法之森核心区
+    set_variable = { RE_Gensokyo_region6_ratio = 0 }
+    every_state = {
+        limit = {
+            or = {
+                region = 58
+                region = 59
+                region = 64
+            }
+        }
+        add_to_temp_variable = { ROOT.RE_Gensokyo_region6_all = 1}
+    }
+    every_owned_state = {
+        limit = {
+            or = {
+                region = 58
+                region = 59
+                region = 64
+            }
+        }
+        add_to_variable = { ROOT.RE_Gensokyo_region6_ratio = 1}
+    }
+    divide_variable = { RE_Gensokyo_region6_ratio = global.RE_Gensokyo_region6_all }
+
+    ##Gensokyo_region7 东北幻想乡地区
+    set_variable = { RE_Gensokyo_region7_ratio = 0 }
+    every_owned_state = {
+        limit = {
+            or = {
+                region = 62
+                region = 63
+                region = 66
+                region = 67
+            }
+        }
+        add_to_variable = { ROOT.RE_Gensokyo_region7_ratio = 1}
+    }
+    divide_variable = { RE_Gensokyo_region7_ratio = global.RE_Gensokyo_region7_all }
+
+    ##Gensokyo_region8 妖精核心地区
+    set_variable = { RE_Gensokyo_region8_ratio = 0 }
+    every_owned_state = {
+        limit = {
+            or = {
+                region = 29
+                region = 30
+                region = 69
+                region = 65
+            }
+        }
+        add_to_variable = { ROOT.RE_Gensokyo_region8_ratio = 1}
+    }
+    divide_variable = { RE_Gensokyo_region8_ratio = global.RE_Gensokyo_region8_all }
+
+    ##Gensokyo_region9 红魔城及周边地区
+    set_variable = { RE_Gensokyo_region9_ratio = 0 }
+    every_owned_state = {
+        limit = {
+            or = {
+                region = 31
+                region = 32
+                region = 33
+            }
+        }
+        add_to_variable = { ROOT.RE_Gensokyo_region9_ratio = 1}
+    }
+    divide_variable = { RE_Gensokyo_region9_ratio = global.RE_Gensokyo_region9_all }
+
+    ##Gensokyo_region10 河童和北妖怪山地区
+    set_variable = { RE_Gensokyo_region10_ratio = 0 }
+    every_owned_state = {
+        limit = {
+            or = {
+                region = 27
+                region = 28
+                region = 34
+                region = 35
+            }
+        }
+        add_to_variable = { ROOT.RE_Gensokyo_region10_ratio = 1}
+    }
+    divide_variable = { RE_Gensokyo_region10_ratio = global.RE_Gensokyo_region10_all }
+
+    ##Gensokyo_region11 妖怪山深处地区
+    set_variable = { RE_Gensokyo_region11_ratio = 0 }
+    every_owned_state = {
+        limit = {
+            or = {
+                region = 71
+                region = 26
+                region = 73
+                region = 24
+                region = 72
+            }
+        }
+        add_to_variable = { ROOT.RE_Gensokyo_region11_ratio = 1}
+    }
+    divide_variable = { RE_Gensokyo_region11_ratio = global.RE_Gensokyo_region11_all }
+
+    ##Gensokyo_region12 妖怪山山脚地区
+    set_variable = { RE_Gensokyo_region12_ratio = 0 }
+    every_owned_state = {
+        limit = {
+            or = {
+                region = 36
+                region = 37
+                region = 38
+                region = 25
+            }
+        }
+        add_to_variable = { ROOT.RE_Gensokyo_region12_ratio = 1}
+    }
+    divide_variable = { RE_Gensokyo_region12_ratio = global.RE_Gensokyo_region12_all }
+
+    ##Gensokyo_region13 雾之湖西南废弃地区
+    set_variable = { RE_Gensokyo_region13_ratio = 0 }
+    every_owned_state = {
+        limit = {
+            or = {
+                region = 39
+                region = 45
+            }
+        }
+        add_to_variable = { ROOT.RE_Gensokyo_region13_ratio = 1}
+    }
+    divide_variable = { RE_Gensokyo_region13_ratio = global.RE_Gensokyo_region13_all }
+
+    ##Gensokyo_region14 无缘冢周边地区
+    set_variable = { RE_Gensokyo_region14_ratio = 0 }
+    every_owned_state = {
+        limit = {
+            or = {
+                region = 41
+                region = 42
+                region = 43
+            }
+        }
+        add_to_variable = { ROOT.RE_Gensokyo_region14_ratio = 1}
+    }
+    divide_variable = { RE_Gensokyo_region14_ratio = global.RE_Gensokyo_region14_all }
+}

@@ -1,0 +1,35 @@
+
+state={
+	id=70
+	name="STATE_70"
+	resources={
+		energy = 5
+		powder=0.000
+		metal=0.000
+		gas=25.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = SCA
+			add_core_of = SCA
+			add_core_of = SC2
+			buildings = {
+				infrastructure =6
+				industrial_complex = 4
+				arms_factory = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		48 1563 2007 3384 3385 3396 3397 3400 4114 4115 4122 4125 4126 4133 4135 4140 4145 4147 4150 4151 
+	}
+	manpower=58686.0
+	buildings_max_level_factor=1.000
+	state_category=s10
+}

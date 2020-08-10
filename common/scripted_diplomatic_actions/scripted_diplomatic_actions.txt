@@ -1,0 +1,973 @@
+
+#scripted_diplomatic_actions = {
+#
+#	action_key = { # will be used in most localizations
+#	
+#		allowed = { #if action is valid
+#			always = yes
+#		}
+#		visible = { #if action is visible on gui
+#			always = yes
+#		}
+#		selectable = { #if action is selectable on gui
+#			always = yes
+#		}
+#
+#		requires_acceptance = yes # if true the action will require acceptance of target country
+#		cost = 10 # pp cost, can be zero
+#		command_power = 10 # cp cost, can be zero
+#
+#		cost_string = loc_key # if you have a custom cost, use this loc to display it
+#		show_acceptance_on_action_button = yes # set to no if acceptance shouldn't be displayed on the action button
+#
+#		icon = 1 # icon frame to use in notification
+#
+#       #for effects/triggers/variables, from is the sender and this is receiver
+#
+#		# runs when the action is properly sent and accepted
+#		complete_effect = {
+#		}
+#
+#
+#
+#		# SEND POPUP CUSTOMIZATION
+#		# use diplomatic_action as context in scripted gui
+#		send_scripted_gui = send_scripted_gui_name # if specified, the diplomatic action will use this scripted gui before sending the request. the player (or ai) can make changes on that gui and store stuff as variable to customize action
+#		reset_send_effect = { # if action has a send scripted gui, this effect will be used for clearing the state of gui (will run when player opens the scripted gui by sending the action or when ai proposes action
+#			# clear action
+#			if = {
+#				limit = { 
+#					from = {
+#						is_ai = yes
+#					}
+#				}
+#				# initialize for ai
+#			}
+#		}
+#		can_be_sent = { # send button will be disabled if no
+#			always = yes
+#		}
+#		send_description = loc_key # if there is no scripted gui, this desc will be used in send yes/no pop up
+#
+#
+#		# RECEIVE POPUP CUSTOMIZATION
+#		# use diplomatic_action as context in scripted gui
+#		receive_scripted_gui = receive_scripted_gui_name #if specified the receiver of the action will get this scripted gui instead of yes-no popup when they receive the propose
+#		reset_receive_effect = {
+#			# clear action
+#			if = {
+#				limit = { 
+#					from = {
+#						is_ai = yes
+#					}
+#				}
+#				# change stuff for ai
+#			}
+#		}
+#		can_be_accepted = { # accept button will be disabled if no
+#			always = yes
+#		}
+#		request_description = loc_key # if there is no scripted gui, this desc will be used in send yes/no pop up
+#
+#		
+#		# PLAYER FEEDBACK ON ACCEPT/REJECT
+#		accept_title = loc_key #can be overridden to customize accepted/rejected pop ups for the sender
+#		accept_description = loc_key
+#		reject_title = loc_key
+#		reject_description = loc_key
+#	
+#		
+#		# AI
+#		# a list of ai_will_do entries that will be used to decide if AI should accept or reject a request
+#		ai_acceptance = {
+#			condition = { # name is used for loc
+#				base = 100
+#			}
+#		}
+#
+#		# ai_will_do to decide if AI should send this action or not
+#		ai_desire = {
+#			factor = -1
+#		}
+#	}
+#}
+
+
+scripted_diplomatic_actions = {
+
+	SSI_support_independence = { # will be used in most localizations
+	
+		allowed = { #if action is valid
+			always = yes
+		}
+		visible = { #if action is visible on gui
+			ROOT = {
+				is_subject = yes
+			}
+			FROM = {
+				ROOT = {
+					not = { is_subject_of = PREV }
+				}
+			}
+		}
+		selectable = { #if action is selectable on gui
+			FROM = {
+				or = {
+					custom_trigger_tooltip = {
+						tooltip = SS_zhichiduli1
+						and = {
+							is_subject = yes
+							OVERLORD = {
+								or = {
+									ROOT = {
+										is_subject_of = PREV
+									}
+									tag = ROOT
+								}
+							}
+						}
+					}
+					is_subject = no
+				}
+				has_war = no
+				custom_trigger_tooltip = {
+					tooltip = SS_zhichiduli2
+					not = {
+						has_country_flag = SSI_support_@ROOT
+					}
+				}
+				
+			}
+			ROOT = {
+				has_war = no
+			}
+		}
+
+		requires_acceptance = yes # if true the action will require acceptance of target country
+		# cost = 100 # pp cost, can be zero
+		# command_power = 10 # cp cost, can be zero
+
+		# cost_string = loc_key # if you have a custom cost, use this loc to display it
+		show_acceptance_on_action_button = yes # set to no if acceptance shouldn't be displayed on the action button
+
+		icon = 1 # icon frame to use in notification
+
+      #for effects/triggers/variables, from is the sender and this is receiver
+
+		# runs when the action is properly sent and accepted
+		complete_effect = {
+			ROOT = {
+				OVERLORD = {
+					save_global_event_target_as = current_overlord
+				}
+				set_country_flag = {
+					flag = SSI_xiangduli_from_@event_target:current_overlord
+					value = 1
+					days = 547
+				}
+				set_country_flag = {
+					flag = SSI_xiangyaoduli
+					value = 1
+					days = 365
+				}
+				# activate_decision = SS_zhunbeiduli
+			}
+			FROM = {
+				set_country_flag = {
+					flag = SSI_support_@ROOT
+					value = 1
+					days = 547
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						OVERLORD = {
+							ROOT = {
+								is_subject_of = PREV
+							}
+						}
+						is_subject = yes
+					}
+				}
+				FROM = {
+					set_country_flag = {
+						flag = SSI_xiangduli_from_@event_target:current_overlord
+						value = 1
+						days = 547
+					}
+				}
+				ROOT = {
+					set_country_flag = {
+						flag = SSI_support_@FROM
+						value = 1
+						days = 547
+					}
+				}
+				else = {
+					FROM = { 
+						set_country_flag = {
+							flag = SSI_against_@event_target:current_overlord 
+							value = 1
+							days = 547
+						}
+					}
+				}	
+			}
+			clear_global_event_target = current_overlord
+		}
+		
+		# PLAYER FEEDBACK ON ACCEPT/REJECT
+		accept_title = SSI_ziji_title #can be overridden to customize accepted/rejected pop ups for the sender
+		accept_description = SSI_ziji_desc
+		reject_title = SSI_ziji_reject_title
+		reject_description = SSI_ziji_reject_desc
+	
+		
+		# AI
+		# a list of ai_will_do entries that will be used to decide if AI should accept or reject a request
+		ai_acceptance = {
+			condition_base = {
+				base = -60
+			}
+			condition_neighbor = { # name is used for loc
+				base = 0
+				modifier = {
+					add = -100
+					FROM = { 
+						not = { 
+							is_neighbor_of = ROOT 
+							any_country = {
+								ROOT = {
+									is_subject_of = PREV
+								}
+								is_neighbor_of = PREV
+							}
+						}
+					}
+				}
+			}
+			condition_opinion_to_you = { # name is used for loc
+				base = 0
+				modifier = {
+					FROM = {
+						has_opinion = {
+		    				target = ROOT
+		    				value < -5
+						}
+					}
+					add = -5
+				}
+				modifier = {
+					FROM = {
+						has_opinion = {
+		    				target = ROOT
+		    				value < -30
+						}
+					}
+					add = -10
+				}
+				modifier = {
+					FROM = {
+						has_opinion = {
+		    				target = ROOT
+		    				value < -80
+						}
+					}
+					add = -50
+				}
+				modifier = {
+					FROM = {
+						has_opinion = {
+		    				target = ROOT
+		    				value > 0
+						}
+					}
+					add = 2
+				}
+				modifier = {
+					FROM = {
+						has_opinion = {
+		    				target = ROOT
+		    				value > 40
+						}
+					}
+					add = 3
+				}
+				modifier = {
+					FROM = {
+						has_opinion = {
+		    				target = ROOT
+		    				value > 70
+						}
+					}
+					add = 5
+				}
+				modifier = {
+					FROM = {
+						has_opinion = {
+		    				target = ROOT
+		    				value > 100
+						}
+					}
+					add = 5
+				}
+			}
+			condition_opinion_to_overlord = { # name is used for loc
+				base = 0
+				modifier = {
+					FROM = {
+						any_country = {
+							ROOT = {
+								is_subject_of = PREV
+							}
+							is_in_faction_with = PREV
+						}
+						is_subject = no
+					}
+					add = -1000
+				}
+				modifier = {
+					FROM = {
+						any_country = {
+							ROOT = {
+								is_subject_of = PREV
+							}
+							has_non_aggression_pact_with = PREV
+						}
+						is_subject = no
+					}
+					add = -1000
+				}
+				modifier = {
+					FROM = {
+						any_country = {
+							ROOT = {
+								is_subject_of = PREV
+							}
+							PREV = {
+								has_opinion = {
+				    				target = PREV
+				    				value > 50
+								}
+							}
+						}
+						is_subject = no
+					}
+					add = -30
+				}
+				modifier = {
+					FROM = {
+						any_country = {
+							ROOT = {
+								is_subject_of = PREV
+							}
+							PREV = {
+								has_opinion = {
+				    				target = PREV
+				    				value > 25
+								}
+							}
+						}
+						is_subject = no
+					}
+					add = -15
+				}
+				modifier = {
+					FROM = {
+						any_country = {
+							ROOT = {
+								is_subject_of = PREV
+							}
+							PREV = {
+								has_opinion = {
+				    				target = PREV
+				    				value < 0
+								}
+							}
+						}
+						is_subject = no
+					}
+					add = 2
+				}
+
+				modifier = {
+					FROM = {
+						any_country = {
+							ROOT = {
+								is_subject_of = PREV
+							}
+							PREV = {
+								has_opinion = {
+				    				target = PREV
+				    				value < -25
+								}
+							}
+						}
+						is_subject = no
+					}
+					add = 3
+				}
+
+				modifier = {
+					FROM = {
+						any_country = {
+							ROOT = {
+								is_subject_of = PREV
+							}
+							PREV = {
+								has_opinion = {
+				    				target = PREV
+				    				value < -60
+								}
+							}
+						}
+						is_subject = no
+					}
+					add = 5
+				}
+
+				modifier = {
+					FROM = {
+						any_country = {
+							ROOT = {
+								is_subject_of = PREV
+							}
+							PREV = {
+								has_opinion = {
+				    				target = PREV
+				    				value < -80
+								}
+							}
+						}
+						is_subject = no
+					}
+					add = 10
+				}
+
+				modifier = {
+					FROM = {
+						any_country = {
+							ROOT = {
+								is_subject_of = PREV
+							}
+							PREV = {
+								has_opinion = {
+				    				target = PREV
+				    				value < -100
+								}
+							}
+						}
+						is_subject = no
+					}
+					add = 10
+				}
+			}
+			condition_subject = { # name is used for loc
+				base = 0
+				modifier = {
+					FROM = { is_subject = yes }
+					add = 10
+				}
+				modifier = {
+					FROM = {
+						has_country_flag = SSI_ziji_xiangyaoduli
+					}
+					add = 10
+				}
+			}
+			condition_race = {
+				base = 0 
+				modifier = {
+					FROM = {
+						ROOT = {
+							is_same_race = yes
+						}
+					}
+					add = 5
+				}
+				modifier = {
+					FROM = {
+						is_subject = yes
+						any_country = {
+							ROOT = {
+								is_subject_of = PREV
+							}
+							not = { is_same_race = yes }
+						}
+					}
+					add = 10
+				}
+				modifier = {
+					FROM = {
+						or = {
+							has_government = qinwai
+							has_government = fandong
+						}
+					}
+					factor = 1.2
+				}
+			}
+			condition_ideo = {
+				base = 0 
+				modifier = {
+					FROM = {
+						has_government = ROOT
+					}
+					add = 10
+				}
+				modifier = {
+					FROM = {
+						or = {
+							has_government = guli
+							has_government = oldorder
+							has_idea = gensoukyo_creator_idea
+						}
+					}
+					add = -25
+				}
+				modifier = {
+					FROM = {
+						or = {
+							has_government = qinwai
+							has_government = fandong
+						}
+						is_subject = no
+					}
+					add = 25
+				}
+				modifier = {
+					FROM = {
+						is_subject = yes
+						any_country = {
+							ROOT = {
+								is_subject_of = PREV
+							}
+							not = { is_same_government = yes }
+						}
+					}
+					add = 15
+				}
+			}
+			condition_view = {
+				base = 0 
+				modifier = {
+					FROM = {
+						ROOT = {
+							is_same_view = yes
+						}
+					}
+					add = 15
+				}
+				modifier = {
+					FROM = {
+						is_subject = yes
+						any_country = {
+							ROOT = {
+								is_subject_of = PREV
+							}
+							not = { is_same_view = yes }
+						}
+					}
+					add = 25
+				}
+			}
+			condition_power = {
+				base = 0 
+				modifier = {
+					any_country  = {
+						ROOT = {
+							is_subject_of = PREV
+						}
+						set_temp_variable = { ROOT.enemy_power = num_divisions}
+					}
+					ROOT = {
+						set_temp_variable = { my_power = num_divisions}
+						divide_temp_variable = {
+							my_power = enemy_power
+						}
+						check_variable = {
+							my_power < 0.1
+						}
+					}
+					add = -30
+				}
+				modifier = {
+					any_country  = {
+						ROOT = {
+							is_subject_of = PREV
+						}
+						set_temp_variable = { ROOT.enemy_power = num_divisions}
+					}
+					ROOT = {
+						set_temp_variable = { my_power = num_divisions}
+						divide_temp_variable = {
+							my_power = enemy_power
+						}
+						check_variable = {
+							my_power < 0.3
+						}
+					}
+					add = -10
+				}
+				modifier = {
+					any_country  = {
+						ROOT = {
+							is_subject_of = PREV
+						}
+						set_temp_variable = { ROOT.enemy_power = num_divisions}
+					}
+					ROOT = {
+						set_temp_variable = { my_power = num_divisions}
+						divide_temp_variable = {
+							my_power = enemy_power
+						}
+						check_variable = {
+							my_power < 0.5
+						}
+					}
+					add = -10
+				}
+				modifier = {
+					any_country  = {
+						ROOT = {
+							is_subject_of = PREV
+						}
+						set_temp_variable = { ROOT.enemy_power = num_divisions}
+					}
+					ROOT = {
+						set_temp_variable = { my_power = num_divisions}
+						divide_temp_variable = {
+							my_power = enemy_power
+						}
+						check_variable = {
+							my_power > 0.65
+						}
+					}
+					add = 5
+				}
+				modifier = {
+					any_country  = {
+						ROOT = {
+							is_subject_of = PREV
+						}
+						set_temp_variable = { ROOT.enemy_power = num_divisions}
+					}
+					ROOT = {
+						set_temp_variable = { my_power = num_divisions}
+						divide_temp_variable = {
+							my_power = enemy_power
+						}
+						check_variable = {
+							my_power > 0.8
+						}
+					}
+					add = 5
+				}
+				modifier = {
+					any_country  = {
+						ROOT = {
+							is_subject_of = PREV
+						}
+						set_temp_variable = { ROOT.enemy_power = num_divisions}
+					}
+					ROOT = {
+						set_temp_variable = { my_power = num_divisions}
+						divide_temp_variable = {
+							my_power = enemy_power
+						}
+						check_variable = {
+							my_power > 1
+						}
+					}
+					add = 10
+				}
+				modifier = {
+					any_country  = {
+						ROOT = {
+							is_subject_of = PREV
+						}
+						set_temp_variable = { ROOT.enemy_power = num_divisions}
+					}
+					ROOT = {
+						set_temp_variable = { my_power = num_divisions}
+						divide_temp_variable = {
+							my_power = enemy_power
+						}
+						check_variable = {
+							my_power > 1.25
+						}
+					}
+					add = 15
+				}
+				modifier = {
+					any_country  = {
+						ROOT = {
+							is_subject_of = PREV
+						}
+						set_temp_variable = { ROOT.enemy_power = num_divisions}
+					}
+					ROOT = {
+						set_temp_variable = { my_power = num_divisions}
+						divide_temp_variable = {
+							my_power = enemy_power
+						}
+						check_variable = {
+							my_power > 1.5
+						}
+					}
+					add = 15
+				}
+			}
+			condition_ai = {
+				base = 0 
+				modifier = {
+					ROOT = { is_ai = no }
+					add = 5
+				}
+				modifier = {
+					ROOT = { has_country_flag = SSI_ziji_xiangyaoduli }
+					add = 15
+				}
+				modifier = {
+					ROOT = { not = { has_country_flag = SSI_ziji_xiangyaoduli } }
+					add = -10
+				}
+				modifier = {
+					any_country = {
+						ROOT = {
+							is_subject_of = PREV
+						}
+						has_country_flag = SS_zongzhugonggu
+					}
+					add = -10
+				}
+			}
+		}
+
+		# ai_will_do to decide if AI should send this action or not
+		ai_desire = {
+			factor = -50
+			modifier = {
+				FROM = {
+					any_country = {
+						ROOT = {
+							is_subject_of = PREV
+						}
+						not = {
+							is_same_view = yes
+						}
+					}
+				}
+				add = 15
+			}
+			modifier = {
+				FROM = {
+					any_country = {
+						ROOT = {
+							is_subject_of = PREV
+						}
+						not = {
+							has_government = ROOT
+						}
+					}
+				}
+				add = 10
+			}
+			modifier = {
+				FROM = {
+					any_country = {
+						ROOT = {
+							is_subject_of = PREV
+						}
+						not = {
+							is_same_race = yes
+						}
+					}
+				}
+				add = 5
+			}
+			modifier = {
+				any_country  = {
+					ROOT = {
+						is_subject_of = PREV
+					}
+					set_temp_variable = { ROOT.enemy_power = num_divisions}
+				}
+				ROOT = {
+					set_temp_variable = { my_power = num_divisions}
+					divide_temp_variable = {
+						my_power = enemy_power
+					}
+					check_variable = {
+						my_power > 0.5
+					}
+				}
+				add = 5
+			}
+			modifier = {
+				any_country  = {
+					ROOT = {
+						is_subject_of = PREV
+					}
+					set_temp_variable = { ROOT.enemy_power = num_divisions}
+				}
+				ROOT = {
+					set_temp_variable = { my_power = num_divisions}
+					divide_temp_variable = {
+						my_power = enemy_power
+					}
+					check_variable = {
+						my_power > 0.75
+					}
+				}
+				add = 10
+			}
+			modifier = {
+				any_country  = {
+					ROOT = {
+						is_subject_of = PREV
+					}
+					set_temp_variable = { ROOT.enemy_power = num_divisions}
+				}
+				ROOT = {
+					set_temp_variable = { my_power = num_divisions}
+					divide_temp_variable = {
+						my_power = enemy_power
+					}
+					check_variable = {
+						my_power > 1
+					}
+				}
+				add = 15
+			}
+			modifier = {
+				has_country_flag = SSI_ziji_xiangyaoduli
+				add = 40
+			}
+			modifier = {
+				has_country_flag = SSI_sujiduli
+				add = 100
+			}
+		}
+	}
+
+	SSI_declare_inpendence = { # will be used in most localizations
+	
+		allowed = { #if action is valid
+			always = yes
+		}
+		visible = { #if action is visible on gui
+			ROOT = {
+				is_subject = yes
+			}
+			FROM = {
+				ROOT = {
+					is_subject_of = PREV
+				}
+			}
+		}
+		selectable = { #if action is selectable on gui
+
+			or = {
+				custom_trigger_tooltip = {
+					tooltip = SS_zhunbeiduli_tt
+					ROOT = {
+						has_country_flag = SSI_can_independence
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = SS_lingwai
+					and = {
+						ROOT = {
+							has_country_flag = SSI_xiangyaoduli
+						}
+						FROM = { has_war = yes}
+					}
+				}
+			}
+			ROOT = { has_war = no }
+			
+			custom_trigger_tooltip = {
+				tooltip = SS_lingwai2
+				FROM = {
+					ROOT = { has_country_flag = SSI_xiangduli_from_@PREV }
+					# num_subjects > 1
+				}
+			}
+		}
+
+		requires_acceptance = no # if true the action will require acceptance of target country
+		# cost = 10 # pp cost, can be zero
+		# command_power = 10 # cp cost, can be zero
+
+		# cost_string = loc_key # if you have a custom cost, use this loc to display it
+		show_acceptance_on_action_button = no # set to no if acceptance shouldn't be displayed on the action button
+
+		icon = 1 # icon frame to use in notification
+
+      #for effects/triggers/variables, from is the sender and this is receiver
+
+		# runs when the action is properly sent and accepted
+		complete_effect = {	
+			SS_subject_independence_war = yes
+			# clr_country_flag = SSI_xiangduli_from_@FROM
+		}
+
+		# ai_will_do to decide if AI should send this action or not
+		ai_desire = {
+			base = 50
+		}
+	}
+
+	SSI_release = { # will be used in most localizations
+	
+		allowed = { #if action is valid
+			always = yes
+		}
+		visible = { #if action is visible on gui
+			FROM = {
+				is_subject_of = ROOT
+			}
+		}
+		selectable = { #if action is selectable on gui
+			ROOT = {
+				has_war = no
+			}
+		}
+
+		requires_acceptance = no # if true the action will require acceptance of target country
+		cost = 25 # pp cost, can be zero
+		# command_power = 10 # cp cost, can be zero
+
+		# cost_string = loc_key # if you have a custom cost, use this loc to display it
+		show_acceptance_on_action_button = no # set to no if acceptance shouldn't be displayed on the action button
+
+		icon = 1 # icon frame to use in notification
+
+      #for effects/triggers/variables, from is the sender and this is receiver
+
+		# runs when the action is properly sent and accepted
+		complete_effect = {	
+			FROM = {
+				diplomatic_relation = {
+				    country = ROOT
+				    relation = non_aggression_pact
+				    active = yes
+				}
+				ROOT = {
+					add_stability = -0.1
+					add_war_support = -0.05
+					end_puppet = PREV
+				}
+				clr_country_flag = SSI_xiangduli_from_@ROOT
+			}
+		}
+
+		# ai_will_do to decide if AI should send this action or not
+		ai_desire = {
+			base = -50
+		}
+	}
+}
+

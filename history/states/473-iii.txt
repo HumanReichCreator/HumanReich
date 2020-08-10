@@ -1,0 +1,30 @@
+state={
+	id=473
+	name="STATE_473"
+	provinces={
+		6183 6186 6188 6201 6207 6212 6213 6223 6231 6235 6241 6243 
+	}
+	resources={
+		energy = 0
+		powder=5.000
+		metal=5.000
+		gas=2.000
+		crystal=5.000
+	}
+	history={
+		146.1.1 = {
+			owner = KCC
+			add_core_of = KCC
+			buildings = {
+				infrastructure = 5
+				industrial_complex = 5
+				arms_factory = 2
+
+			}
+
+		}
+	}
+	manpower=53428.0
+	state_category=s10
+	buildings_max_level_factor=1.000
+}

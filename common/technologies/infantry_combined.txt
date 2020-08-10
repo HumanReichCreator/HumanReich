@@ -1,0 +1,670 @@
+technologies = {
+	lingliqiangxie150 = {
+		xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+		
+		 path = {
+			 leads_to_tech = lingliqiangxie154
+			 research_cost_coeff = 1
+		 }
+
+		 path = {
+			 leads_to_tech = linglidanxiagailiang152
+			 research_cost_coeff = 1
+		 }
+
+		 path = {
+			 leads_to_tech = dandaoxiuzhengzidan152
+			 research_cost_coeff = 1
+		 }
+
+		 enable_equipments = {
+			new_buqiang150
+		 }
+		 enable_subunits = {
+		 	new_infantry
+		 }
+
+
+
+
+		research_cost = 3
+		start_year = 150
+		folder = {
+			name = infantry_combined_folder
+			position = { x = 4 y = 1 }
+		}
+		
+		categories = {
+			military
+			infantry
+			combined_weapons
+			combined
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	lingliqiangxie154 = {
+		xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+		
+		 path = {
+			 leads_to_tech = lingliqiangxie158
+			 research_cost_coeff = 1
+		 }
+
+		 enable_equipments = {
+			new_buqiang154
+		 }
+
+
+
+
+		research_cost = 3
+		start_year = 154
+		folder = {
+			name = infantry_combined_folder
+			position = { x = 4 y = 3 }
+		}
+		
+		categories = {
+			military
+			infantry
+			combined_weapons
+			combined
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	lingliqiangxie158 = {
+		xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+		
+		 path = {
+			 leads_to_tech = lingliqiangxie162
+			 research_cost_coeff = 1
+		 }
+
+		 enable_equipments = {
+			new_buqiang158
+		 }
+
+
+
+
+		research_cost = 3
+		start_year = 158
+		folder = {
+			name = infantry_combined_folder
+			position = { x = 4 y = 5 }
+		}
+		
+		categories = {
+			military
+			infantry
+			combined_weapons
+			combined
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	lingliqiangxie162 = {
+		xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+
+		 enable_equipments = {
+			new_buqiang162
+		 }
+
+
+
+
+		research_cost = 3
+		start_year = 162
+		folder = {
+			name = infantry_combined_folder
+			position = { x = 4 y = 7 }
+		}
+		
+		categories = {
+			military
+			infantry
+			combined_weapons
+			combined
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	linglidanxiagailiang152 = {
+		
+		 path = {
+			 leads_to_tech = linglidanxiagailiang156
+			 research_cost_coeff = 1
+		 }
+
+		 new_infantry = {
+		     soft_attack = 0.09
+		     hard_attack = 0.09
+		 }
+
+		 # enable_equipments = {
+			# spell_card_weapon
+		 # }
+
+
+
+
+		research_cost = 2.5
+		start_year = 152
+		folder = {
+			name = infantry_combined_folder
+			position = { x = 1 y = 2 }
+		}
+		
+		categories = {
+			military
+			infantry
+			combined_weapons_improve
+			combined
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	linglidanxiagailiang156 = {
+		
+		 path = {
+			 leads_to_tech = linglidanxiagailiang160
+			 research_cost_coeff = 1
+		 }
+
+		 new_infantry = {
+		     soft_attack = 0.09
+		     hard_attack = 0.09
+		 }
+
+		 # enable_equipments = {
+			# spell_card_weapon
+		 # }
+
+
+
+
+		research_cost = 2.5
+		start_year = 156
+		folder = {
+			name = infantry_combined_folder
+			position = { x = 1 y = 4 }
+		}
+		
+		categories = {
+			military
+			infantry
+			combined_weapons_improve
+			combined
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	linglidanxiagailiang160 = {
+
+		 new_infantry = {
+		     soft_attack = 0.09
+		     hard_attack = 0.09
+		 }
+
+
+
+
+		research_cost = 2.5
+		start_year = 160
+		folder = {
+			name = infantry_combined_folder
+			position = { x = 1 y = 6 }
+		}
+		
+		categories = {
+			military
+			infantry
+			combined_weapons_improve
+			combined
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	dandaoxiuzhengzidan152 = {
+		
+		 path = {
+			 leads_to_tech = dandaoxiuzhengzidan156
+			 research_cost_coeff = 1
+		 }
+
+		 new_infantry = {
+		     breakthrough = 0.09
+		     defense = 0.09
+		 }
+
+		 # enable_equipments = {
+			# spell_card_weapon
+		 # }
+
+
+
+
+		research_cost = 2.5
+		start_year = 152
+		folder = {
+			name = infantry_combined_folder
+			position = { x = 7 y = 2 } 
+		}
+		
+		categories = {
+			military
+			infantry
+			combined_weapons_improve
+			combined
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	dandaoxiuzhengzidan156 = {
+		
+		 path = {
+			 leads_to_tech = dandaoxiuzhengzidan160
+			 research_cost_coeff = 1
+		 }
+
+		 new_infantry = {
+		     breakthrough = 0.09
+		     defense = 0.09
+		 }
+
+
+
+
+		research_cost = 2.5
+		start_year = 156
+		folder = {
+			name = infantry_combined_folder
+			position = { x = 7 y = 4 }
+		}
+		
+		categories = {
+			military
+			infantry
+			combined_weapons_improve
+			combined
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	dandaoxiuzhengzidan160 = {
+
+		 new_infantry = {
+		     breakthrough = 0.09
+		     defense = 0.09
+		 }
+
+
+
+
+		research_cost = 2.5
+		start_year = 160
+		folder = {
+			name = infantry_combined_folder
+			position = { x = 7 y = 6 }
+		}
+		
+		categories = {
+			military
+			infantry
+			combined_weapons_improve
+			combined
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	yindaohuopao150 = {
+		xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+		
+		 path = {
+			 leads_to_tech = yindaohuopao158
+			 research_cost_coeff = 1
+		 }
+
+		 path = {
+			 leads_to_tech = yindaoxiuzheng152
+			 research_cost_coeff = 1
+		 }
+
+		 enable_subunits = {
+		 	new_artillery_brigade
+		 }
+
+		 enable_equipments = {
+			new_artillery150
+		 }
+
+
+
+
+		research_cost = 3.5
+		start_year = 150
+		folder = {
+			name = infantry_combined_folder
+			position = { x = 15 y = 1 }
+		}
+		
+		categories = {
+			military
+			artillery_tech
+			combined_artillery_weapons
+			combined
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+	yindaohuopao158 = {
+		xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+		
+
+		 enable_equipments = {
+			new_artillery158
+		 }
+
+
+
+
+		research_cost = 3.5
+		start_year = 158
+		folder = {
+			name = infantry_combined_folder
+			position = { x = 15 y = 5 }
+		}
+		
+		categories = {
+			military
+			artillery_tech
+			combined_artillery_weapons
+			combined
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+
+	yindaoxiuzheng152 = {
+		
+		 path = {
+			 leads_to_tech = yindaoxiuzheng156
+			 research_cost_coeff = 1
+		 }
+
+		 new_artillery_brigade = {
+		     soft_attack = 0.1
+		     hard_attack = 0.1
+		     supply_consumption = 0.1
+		 }
+
+
+
+
+		research_cost = 2.5
+		start_year = 152
+		folder = {
+			name = infantry_combined_folder
+			position = { x = 12 y = 2 } 
+		}
+		
+		categories = {
+			military
+			artillery_tech
+			combined_artillery_improve
+			combined
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	yindaoxiuzheng156 = {
+		
+		 path = {
+			 leads_to_tech = yindaoxiuzheng160
+			 research_cost_coeff = 1
+		 }
+
+		 new_artillery_brigade = {
+		     soft_attack = 0.1
+		     hard_attack = 0.1
+		     supply_consumption = 0.1
+		 }
+
+
+
+
+		research_cost = 2.5
+		start_year = 156
+		folder = {
+			name = infantry_combined_folder
+			position = { x = 12 y = 4 }
+		}
+		
+		categories = {
+			military
+			artillery_tech
+			combined_artillery_improve
+			combined
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	yindaoxiuzheng160 = {
+
+		 new_artillery_brigade = {
+		     soft_attack = 0.1
+		     hard_attack = 0.1
+		     supply_consumption = 0.1
+		 }
+
+
+
+
+		research_cost = 2.5
+		start_year = 160
+		folder = {
+			name = infantry_combined_folder
+			position = { x = 12 y = 6 }
+		}
+		
+		categories = {
+			military
+			artillery_tech
+			combined_artillery_improve
+			combined
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	danmuzhuangjiache151 = {
+		
+		 path = {
+			 leads_to_tech = danmuzhuangjiache158
+			 research_cost_coeff = 1
+		 }
+
+		 enable_subunits = {
+		 	ma_mechanized
+		 	sc_mechanized
+		 }
+
+		 enable_equipments = {
+			new_armorcar151
+		 }
+
+
+		research_cost = 3.5
+		start_year = 151
+		folder = {
+			name = infantry_combined_folder
+			position = { x = 7 y = 10 }
+		}
+		
+		categories = {
+			combined_vehicle_weapons
+			combined
+			vehicle
+			military
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	danmuzhuangjiache158 = {
+
+		 enable_equipments = {
+		 	new_armorcar158
+		 }
+
+		research_cost = 3.5
+		start_year = 158
+		folder = {
+			name = infantry_combined_folder
+			position = { x = 7 y = 12 }
+		}
+		
+		categories = {
+			combined_vehicle_weapons
+			combined
+			vehicle
+			military
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	danmutanke151 = {
+		xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+		
+		 path = {
+			 leads_to_tech = danmutanke158
+			 research_cost_coeff = 1
+		 }
+
+		 enable_subunits = {	
+		 	new_light_armor 
+		 }
+		 enable_equipments = {
+		 	new_tank151
+		 }
+
+
+
+
+		research_cost = 3.5
+		start_year = 151
+		folder = {
+			name = infantry_combined_folder
+			position = { x = 12 y = 10 }
+		}
+		
+		categories = {
+			combined_vehicle_weapons
+			combined
+			vehicle
+			military
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	danmutanke158 = {
+		xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+
+		 enable_equipments = {
+		 	new_tank158
+		 }
+
+
+
+
+		research_cost = 3.5
+		start_year = 158
+		folder = {
+			name = infantry_combined_folder
+			position = { x = 12 y = 12 }
+		}
+		
+		categories = {
+			combined_vehicle_weapons
+			combined
+			vehicle
+			military
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

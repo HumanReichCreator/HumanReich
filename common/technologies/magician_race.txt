@@ -1,0 +1,505 @@
+technologies = {
+	magician_tech = {
+    
+	    research_cost = 1
+
+	    path = {
+			leads_to_tech = dulichengzu1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = linglixiulian1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = xiandaiwunvban1
+			research_cost_coeff = 1
+		}
+
+	   folder = {
+	      name = Magician_race_tech_folder
+	      position = { x = 10 y = 0 }
+	    }
+	    
+	    categories = {
+	      secret
+	    }
+	    dependencies = {
+	       abandoned = 1
+	    }
+	    
+	    ai_will_do = {
+	      factor = 1
+	    }
+	}
+
+	dulichengzu1 = {
+	
+		path = {
+			leads_to_tech = dulichengzu2
+			research_cost_coeff = 1
+		}
+
+		stability_factor = 0.05
+		political_power_gain = 0.15
+		
+		research_cost = 2.2
+		start_year = 144
+
+		folder = {
+			name = Magician_race_tech_folder
+			position = { x = 4 y = 2 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	dulichengzu2 = {
+	
+		path = {
+			leads_to_tech = dulichengzu3
+			research_cost_coeff = 1
+		}
+
+		stability_factor = 0.05
+		political_power_gain = 0.15
+
+		
+		research_cost = 2.2
+		start_year = 148
+
+		folder = {
+			name = Magician_race_tech_folder
+			position = { x = 4 y = 4 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	dulichengzu3 = {
+	
+		path = {
+			leads_to_tech = dulichengzu4
+			research_cost_coeff = 1
+		}
+
+		stability_factor = 0.05
+		political_power_gain = 0.15
+
+		
+		research_cost = 2.2
+		start_year = 152
+
+		folder = {
+			name = Magician_race_tech_folder
+			position = { x = 4 y = 6 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	dulichengzu4 = {
+	
+		path = {
+			leads_to_tech = dulichengzu5
+			research_cost_coeff = 1
+		}
+
+		stability_factor = 0.05
+		political_power_gain = 0.15
+
+		
+		research_cost = 2.2
+		start_year = 156
+
+		folder = {
+			name = Magician_race_tech_folder
+			position = { x = 4 y = 8 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	dulichengzu5 = {
+
+		research_speed_factor = 0.03
+		
+		research_cost = 2.2
+		start_year = 160
+
+		stability_factor = 0.05
+		political_power_gain = 0.15
+
+		folder = {
+			name = Magician_race_tech_folder
+			position = { x = 4 y = 10 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	linglixiulian1 = {
+	
+		path = {
+			leads_to_tech = linglixiulian2
+			research_cost_coeff = 1
+		}
+
+		ma_militia = {
+			hardness = 0.5
+		}
+		ma_infantry = {
+			hardness = 0.5
+		}
+		ma_light_infantry = {
+			hardness = 0.5
+		}
+		ma_motorized = {
+			hardness = 0.5
+		}
+		sc_militia = {
+			hardness = 6.5
+		}
+		sc_infantry = {
+			hardness = 6.5
+		}
+		sc_light_infantry = {
+			hardness = 6.5
+		}
+		sc_motorized = {
+			hardness = 6.5
+		}
+		
+		research_cost = 2.2
+		start_year = 144
+
+		
+
+		folder = {
+			name = Magician_race_tech_folder
+			position = { x = 10 y = 2 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	linglixiulian2 = {
+	
+		path = {
+			leads_to_tech = linglixiulian3
+			research_cost_coeff = 1
+		}
+
+		category_science_infantry = {
+			max_organisation = 10
+		}
+		category_magic_infantry = {
+			max_organisation = 10
+		}
+
+		
+		research_cost = 2.2
+		start_year = 148
+
+		folder = {
+			name = Magician_race_tech_folder
+			position = { x = 10 y = 4 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	linglixiulian3 = {
+	
+		path = {
+			leads_to_tech = linglixiulian4
+			research_cost_coeff = 1
+		}
+
+		category_science_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		category_magic_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+
+		
+		research_cost = 2.2
+		start_year = 152
+
+		folder = {
+			name = Magician_race_tech_folder
+			position = { x = 10 y = 6 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	linglixiulian4 = {
+	
+		path = {
+			leads_to_tech = linglixiulian5
+			research_cost_coeff = 1
+		}
+
+		category_science_infantry = {
+			max_organisation = 10
+		}
+		category_magic_infantry = {
+			max_organisation = 10
+		}
+
+
+		
+		research_cost = 2.2
+		start_year = 156
+
+		folder = {
+			name = Magician_race_tech_folder
+			position = { x = 10 y = 8 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	linglixiulian5 = {
+
+		
+		research_cost = 2.2
+		start_year = 160
+
+		category_science_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		category_magic_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+
+		folder = {
+			name = Magician_race_tech_folder
+			position = { x = 10 y = 10 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	xiandaiwunvban1 = {
+	
+		path = {
+			leads_to_tech = xiandaiwunvban2
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			Magician_special_1
+		}
+
+		enable_subunits = {
+			Magician_special
+		}
+		
+		research_cost = 2.2
+		start_year = 144
+
+		folder = {
+			name = Magician_race_tech_folder
+			position = { x = 16 y = 2 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	xiandaiwunvban2 = {
+	
+		path = {
+			leads_to_tech = xiandaiwunvban3
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			Magician_special_2
+		}
+
+		Magician_special = {
+			combat_width = -5
+		}
+		
+		research_cost = 2.2
+		start_year = 148
+
+		folder = {
+			name = Magician_race_tech_folder
+			position = { x = 16 y = 4 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	xiandaiwunvban3 = {
+	
+		path = {
+			leads_to_tech = xiandaiwunvban4
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			Magician_special_3
+		}
+
+		Magician_special = {
+			combat_width = -5
+		}
+
+		
+		research_cost = 2.2
+		start_year = 152
+
+		folder = {
+			name = Magician_race_tech_folder
+			position = { x = 16 y = 6 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	xiandaiwunvban4 = {
+	
+		path = {
+			leads_to_tech = xiandaiwunvban5
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			Magician_special_4
+		}
+
+		Magician_special = {
+			combat_width = -5
+		}
+		
+		research_cost = 2.2
+		start_year = 156
+
+		folder = {
+			name = Magician_race_tech_folder
+			position = { x = 16 y = 8 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	xiandaiwunvban5 = {
+		
+		research_cost = 2.2
+		start_year = 160
+
+		enable_equipments = {
+			Magician_special_5
+		}
+
+		Magician_special = {
+			combat_width = -5
+		}
+
+		folder = {
+			name = Magician_race_tech_folder
+			position = { x = 16 y = 10 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,343 @@
+HMIF_defines = {
+	set_variable = { global.HMIF_view_type0_increase = 0.05 }
+	set_variable = { global.HMIF_view_type1_increase = 0.07 }
+	set_variable = { global.HMIF_view_type2_increase = 0.05 }
+
+	set_variable = { global.HMIF_hum_op_positive = 0.4 }
+	set_variable = { global.HMIF_hum_op_negative = 0.75 }
+
+	set_variable = { global.HMIF_control_hum = 1 }
+	set_variable = { global.HMIF_not_control_hum = -0.5 }
+
+	set_variable = { global.HMIF_power_positive = 0.4 }
+	set_variable = { global.HMIF_power_negative = 0.9 }
+
+	set_variable = { global.HMIF_distance_lowest = 200 }
+	set_variable = { global.HMIF_distance_highest = 1400 }
+
+	set_variable = { global.HMIF_distance_min_influ = 0.2 }
+	set_variable = { global.HMIF_distance_max_influ = 2 }
+
+	set_variable = { global.HMIF_neworder_factor = 1.25 }
+	set_variable = { global.HMIF_oldorder_factor = 1.1 }
+	set_variable = { global.HMIF_other_factor = 1 }
+
+	set_variable = { global.HMIF_notgensokyo_factor = 0.25 }
+
+
+}
+
+HMIF_onset = {
+	##########ideo###########·
+	if = {
+		limit = {
+			has_government = neworder
+		}
+		set_variable = { HMIF_government = global.HMIF_neworder_factor}
+	}
+	if = {
+		limit = {
+			has_government = oldorder
+		}
+		set_variable = { HMIF_government = global.HMIF_oldorder_factor}
+	}
+	if = {
+		limit = {
+			or = {
+				has_government = guli
+				has_government = qinwai
+				has_government = fandong
+			}
+		}
+		set_variable = { HMIF_government = global.HMIF_other_factor}
+	}
+	##########ideo###########
+
+	##########view###########
+	if = {
+		limit = {
+			check_variable = { OL_view_type = 0}
+		}
+		set_variable = { HMIF_view = global.HMIF_view_type0_increase}
+	}
+	if = {
+		limit = {
+			check_variable = { OL_view_type = 1}
+		}
+		set_variable = { HMIF_view = global.HMIF_view_type1_increase}
+	}
+	if = {
+		limit = {
+			check_variable = { OL_view_type = 2}
+		}
+		set_variable = { HMIF_view = global.HMIF_view_type2_increase}
+	}
+	##########view###########
+}
+
+HMIF_daily_changer = {
+	#########opinion#############
+	if = {
+		limit = {
+			country_exists = HUM
+		}
+		set_temp_variable = { hmif_op_hum = HUM.opinion@ROOT}
+		set_variable = { HMIF_hum_op = hmif_op_hum }
+		divide_temp_variable = { hmif_op_hum = 200}
+
+		if = {
+			limit = {
+				check_variable = { hmif_op_hum > 0}
+			}
+			multiply_temp_variable = { hmif_op_hum = global.HMIF_hum_op_positive}
+			else = {
+				multiply_temp_variable = { hmif_op_hum = global.HMIF_hum_op_negative}
+			}
+		}
+
+		# else = {
+		# 	if = {
+		# 		limit = {
+		# 			246 = {
+		# 				is_owned_by = ROOT
+		# 			}
+		# 		}
+		# 		set_temp_variable = { hmif_op_hum = global.HMIF_control_hum }
+		# 		else = {
+		# 			set_temp_variable = { hmif_op_hum = global.HMIF_not_control_hum }
+		# 		}
+		# 	}
+		# }
+	}
+
+	if = {
+		limit = {
+			not = { country_exists = HUM }
+		}
+		if = {
+			limit = {
+				246 = {
+					is_owned_by = ROOT
+				}
+			}
+			set_temp_variable = { hmif_op_hum = global.HMIF_control_hum }
+			else = {
+				set_temp_variable = { hmif_op_hum = global.HMIF_not_control_hum }
+			}
+		}
+	}
+	
+	set_variable = { HMIF_op_hum = hmif_op_hum}
+	#######power###########
+	set_temp_variable = { hmif_po = PO_average_mp}
+	add_to_temp_variable = { hmif_po = -50}
+	if = {
+		limit = {
+			check_variable = { hmif_po > 0}
+		}
+		set_temp_variable = { hmif_temp_border = global.PO_highest}
+		add_to_temp_variable = { hmif_temp_border = -50}
+		divide_temp_variable = { hmif_po = hmif_temp_border}
+		multiply_temp_variable = { hmif_po = global.HMIF_power_positive}
+		else = {
+			set_temp_variable = { hmif_temp_border = global.PO_lowest}
+			add_to_temp_variable = { hmif_temp_border = -50}
+			divide_temp_variable = { hmif_po = hmif_temp_border}
+			multiply_temp_variable = { hmif_po = global.HMIF_power_negative}
+			multiply_temp_variable = { hmif_po = -1}
+		}
+	}
+	set_variable = { HMIF_po = hmif_po}
+	######distance########
+	# if = {
+	# 	limit = {
+	# 		country_exists = HUM
+	# 	}
+	# 	HUM = {
+	# 		capital_scope = {
+	# 			ROOT = { 
+	# 				capital_scope = { 
+	# 					ROOT = {
+	# 						set_variable = {HMIF_distance = PREV.distance_to@PREV.PREV.PREV}
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# 	else = {
+			capital_scope = { 
+				ROOT = {
+					set_variable = {HMIF_distance = PREV.distance_to@246}
+				}
+			}
+	# 	}
+	# }
+	
+	set_temp_variable = { hmif_distance1 = HMIF_distance}
+	clamp_temp_variable = {
+		var = hmif_distance1
+		min = global.HMIF_distance_lowest
+		max = global.HMIF_distance_highest
+	}
+	set_temp_variable = { hmif_mid = global.HMIF_distance_lowest }
+	# multiply_temp_variable = { hmif_mid = -1 }
+	add_to_temp_variable = { hmif_mid = global.HMIF_distance_highest }
+	divide_temp_variable = { hmif_mid = 2 }
+	subtract_from_temp_variable = { hmif_distance1 = hmif_mid}
+	set_temp_variable = { hmif_qujian = hmif_mid}
+	subtract_from_temp_variable = { hmif_qujian = global.HMIF_distance_min_influ}
+	if = {
+		limit = {
+			check_variable = { hmif_distance1 > 0}
+		}
+		#-2x/15 + 130 = y
+		multiply_temp_variable = { hmif_distance1 = -2 }
+		divide_temp_variable = { hmif_distance1 = 15 }
+		add_to_temp_variable = { hmif_distance1 = 130 }
+
+		else = {
+			#-x/6 + 100 = y
+			multiply_temp_variable = { hmif_distance1 = -1 }
+			divide_temp_variable = { hmif_distance1 = 6 }
+			add_to_temp_variable = { hmif_distance1 = 100 }
+		}
+	}
+	multiply_temp_variable = { hmif_distance1 = 0.01 }
+
+	set_variable = { HMIF_distance_influ = hmif_distance1}
+	
+
+	#########location###########
+	if = {
+		limit = {
+			capital_scope = {
+				is_on_continent = Gensokyo
+			}
+		}
+		set_variable = { HMIF_continent = 1}
+		else = {
+			set_variable = { HMIF_continent = global.HMIF_notgensokyo_factor}
+		}
+	}
+	#########caculate###########
+
+	set_variable = { HMIF_daily_changer_factor = 1}
+	add_to_variable = { HMIF_daily_changer_factor = HMIF_op_hum}
+	add_to_variable = { HMIF_daily_changer_factor = HMIF_po}
+	multiply_variable = { HMIF_daily_changer_factor = HMIF_government }
+	multiply_variable = { HMIF_daily_changer_factor = HMIF_distance_influ }
+	multiply_variable = { HMIF_daily_changer_factor = HMIF_continent }
+	set_variable = { HMIF_daily_add = HMIF_view }
+	multiply_variable = { HMIF_daily_add = HMIF_daily_changer_factor }
+	set_temp_variable = { HMIF_daily_add_factor = 1}
+	add_to_temp_variable = { HMIF_daily_add_factor = HMIF_daily_add_factor_add }
+	multiply_variable = { HMIF_daily_add = HMIF_daily_add_factor}
+
+	add_to_variable = { HMIF_influence = HMIF_daily_add}
+
+	add_to_variable = { HMIF_influence = HMIF_daily_add_cons }
+
+	add_to_variable = { HMIF_daily_add = HMIF_daily_add_cons }
+
+	
+
+	clamp_variable = { 
+		var = HMIF_influence
+		min = 0
+		max = 100
+	}
+	
+}
+
+HMIF_daily_add0.01 = {
+	custom_effect_tooltip = HMIF_daily_add_0.01_tt
+	add_to_variable = { HMIF_daily_add_cons = 0.01}
+}
+HMIF_daily_add0.02 = {
+	custom_effect_tooltip = HMIF_daily_add_0.02_tt
+	add_to_variable = { HMIF_daily_add_cons = 0.02}
+}
+HMIF_daily_add0.03 = {
+	custom_effect_tooltip = HMIF_daily_add_0.03_tt
+	add_to_variable = { HMIF_daily_add_cons = 0.03}
+}
+HMIF_daily_add0.04 = {
+	custom_effect_tooltip = HMIF_daily_add_0.04_tt
+	add_to_variable = { HMIF_daily_add_cons = 0.04}
+}
+HMIF_daily_add0.05 = {
+	custom_effect_tooltip = HMIF_daily_add_0.05_tt
+	add_to_variable = { HMIF_daily_add_cons = 0.05}
+}
+
+HMIF_daily_factor_add0.1 = {
+	custom_effect_tooltip = HMIF_daily_add_factor_add0.1_tt
+	add_to_variable = { HMIF_daily_add_factor_add = 0.1 }
+}
+HMIF_daily_factor_add0.2 = {
+	custom_effect_tooltip = HMIF_daily_add_factor_add0.2_tt
+	add_to_variable = { HMIF_daily_add_factor_add = 0.2 }
+}
+HMIF_daily_factor_add0.3 = {
+	custom_effect_tooltip = HMIF_daily_add_factor_add0.3_tt
+	add_to_variable = { HMIF_daily_add_factor_add = 0.3 }
+}
+HMIF_daily_factor_add0.4 = {
+	custom_effect_tooltip = HMIF_daily_add_factor_add0.4_tt
+	add_to_variable = { HMIF_daily_add_factor_add = 0.4 }
+}
+HMIF_daily_factor_add0.5 = {
+	custom_effect_tooltip = HMIF_daily_add_factor_add0.5_tt
+	add_to_variable = { HMIF_daily_add_factor_add = 0.5 }
+}
+
+HMIF_daily_factor_minus0.1 = {
+	custom_effect_tooltip = HMIF_daily_add_factor_minus0.1_tt
+	add_to_variable = { HMIF_daily_add_factor_add = -0.1 }
+}
+HMIF_daily_factor_minus0.2 = {
+	custom_effect_tooltip = HMIF_daily_add_factor_minus0.2_tt
+	add_to_variable = { HMIF_daily_add_factor_add = -0.2 }
+}
+HMIF_daily_factor_minus0.3 = {
+	custom_effect_tooltip = HMIF_daily_add_factor_minus0.3_tt
+	add_to_variable = { HMIF_daily_add_factor_add = -0.3 }
+}
+HMIF_daily_factor_minus0.4 = {
+	custom_effect_tooltip = HMIF_daily_add_factor_minus0.4_tt
+	add_to_variable = { HMIF_daily_add_factor_add = -0.4 }
+}
+HMIF_daily_factor_minus0.5 = {
+	custom_effect_tooltip = HMIF_daily_add_factor_minus0.5_tt
+	add_to_variable = { HMIF_daily_add_factor_add = -0.5 }
+}
+
+HMIF_influenced = {
+	set_variable = { global.HMIF_influenced = 0}	
+	set_variable = { global.HMIF_influenced_goods = 0 }
+	set_variable = { global.HMIF_influenced_factory = 0}
+	every_country = {
+		limit = {
+			has_country_flag = human_influencing
+		}
+		add_to_variable = { global.HMIF_influenced = 1}
+	}
+
+	clamp_variable = {
+		var = global.HMIF_influenced
+		min = 0
+		max = 35
+	}
+	while_loop_effect = {
+		limit = {
+			check_variable = { global.HMIF_influenced > 15}
+		}
+		add_to_variable = { global.HMIF_influenced = -1}
+		add_to_variable = { global.HMIF_influenced_factory = 1}
+	}
+	set_variable = { global.HMIF_influenced_goods = global.HMIF_influenced}
+
+	multiply_variable = { global.HMIF_influenced_goods = 0.02 }
+	multiply_variable = { global.HMIF_influenced_factory = -0.025 }
+
+}

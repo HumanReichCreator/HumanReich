@@ -1,0 +1,37 @@
+
+state={
+	id=186
+	name="STATE_186"
+	resources={
+
+		powder=0.000
+		metal=0.000
+		gas=5.000
+		crystal=30.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = ZYD
+			controller = GH1
+			add_claim_by = GH1
+			add_core_of = ZYD
+			add_core_of = MEL
+			buildings = {
+				infrastructure = 1
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		275 1223 2825 2840 4784 4787 4789 4795 4803 4807 4812 4814 4837 4841 4844 
+	}
+	manpower=621.0
+	buildings_max_level_factor=1.000
+	state_category=s2
+}

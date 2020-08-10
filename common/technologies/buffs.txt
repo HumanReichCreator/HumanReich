@@ -1,0 +1,420 @@
+technologies = {
+    CIR_yaojingyoujidui_tech = {
+        allow = {
+          always = no   
+        }
+        # folder = {
+        #   name = secret_folder
+        #   position = { x = @x1 y = 1 }
+        # }
+        category_light_inf = {
+          maximum_speed = 0.15
+          soft_attack = 0.15
+          defense = 0.15
+        }
+    }
+    SCA_xianjinlinglijiejing_tech = {
+        allow = {
+          always = no   
+        }
+        # folder = {
+        #   name = secret_folder
+        #   position = { x = @x1 y = 1 }
+        # }
+        ma_infantry = {
+          plains = {
+            attack = 0.05
+            defence = 0.05
+          }
+        }
+        sc_infantry = {
+          plains = {
+            attack = 0.05
+            defence = 0.05
+          }
+        }
+        new_infantry = {
+          plains = {
+            attack = 0.05
+            defence = 0.05
+          }
+        }
+    }
+    SEI_shiyingfuzadixing_tech = {
+        allow = {
+          always = no   
+        }
+        # folder = {
+        #   name = secret_folder
+        #   position = { x = @x1 y = 1 }
+        # }
+        new_infantry = {
+          jungle = {
+            attack = 0.05
+            defence = 0.1
+          }
+          forest = {
+            attack = 0.05
+            defence = 0.1
+          }
+          hills = {
+            attack = 0.05
+            defence = 0.1
+          }
+          mountain = {
+            attack = 0.05
+            defence = 0.1
+          }
+        }
+        ma_infantry = {
+          jungle = {
+            attack = 0.05
+            defence = 0.1
+          }
+          forest = {
+            attack = 0.05
+            defence = 0.1
+          }
+          hills = {
+            attack = 0.05
+            defence = 0.1
+          }
+          mountain = {
+            attack = 0.05
+            defence = 0.1
+          }
+        }
+        sc_infantry = {
+          jungle = {
+            attack = 0.05
+            defence = 0.1
+          }
+          forest = {
+            attack = 0.05
+            defence = 0.1
+          }
+          hills = {
+            attack = 0.05
+            defence = 0.1
+          }
+          mountain = {
+            attack = 0.05
+            defence = 0.1
+          }
+        }
+        ma_light_infantry = {
+          jungle = {
+            attack = 0.05
+            defence = 0.1
+          }
+          forest = {
+            attack = 0.05
+            defence = 0.1
+          }
+          hills = {
+            attack = 0.05
+            defence = 0.1
+          }
+          mountain = {
+            attack = 0.05
+            defence = 0.1
+          }
+        }
+        sc_light_infantry = {
+          jungle = {
+            attack = 0.05
+            defence = 0.1
+          }
+          forest = {
+            attack = 0.05
+            defence = 0.1
+          }
+          hills = {
+            attack = 0.05
+            defence = 0.1
+          }
+          mountain = {
+            attack = 0.05
+            defence = 0.1
+          }
+        }
+    }
+
+    TEG_shandigongjianzhunbei_tech = {
+        allow = {
+          always = no   
+        }
+        # folder = {
+        #   name = secret_folder
+        #   position = { x = @x1 y = 1 }
+        # }
+        ma_light_infantry = {
+          mountain = {
+            attack = 0.15
+          }
+        }
+        sc_light_infantry = {
+          mountain = {
+            attack = 0.15
+          }
+        }
+        sc_infantry = {
+          mountain = {
+            attack = 0.15
+          }
+        }
+        ma_infantry = {
+          mountain = {
+            attack = 0.15
+          }
+        }
+        new_infantry = {
+          mountain = {
+            attack = 0.15
+          }
+        }
+    }
+    HKR_mengxiangtiansheng_tech = {
+        allow = {
+          always = no   
+        }
+        # folder = {
+        #   name = secret_folder
+        #   position = { x = @x1 y = 1 }
+        # }
+        ma_light_infantry = {
+          breakthrough = 0.15
+          defense = 0.15
+        }
+        sc_light_infantry = {
+          breakthrough = 0.15
+          defense = 0.15
+        }
+        sc_infantry = {
+          breakthrough = 0.15
+          defense = 0.15
+        }
+        ma_infantry = {
+          breakthrough = 0.15
+          defense = 0.15
+        }
+        new_infantry = {
+          breakthrough = 0.15
+          defense = 0.15
+        }
+    }
+
+    MRS_liangchangeliya_tech = {
+        allow = {
+          always = no   
+        }
+        # folder = {
+        #   name = secret_folder
+        #   position = { x = @x1 y = 1 }
+        # }
+        engineer = {
+          breakthrough = 0.5
+          defense = 0.5
+          fort = {
+            attack = 0.5
+          }
+        }
+    }
+    ALI_tezhonggeliyarenou_tech = {
+      allow = {
+        always = no
+      }
+      category_sf_infantry = {
+        breakthrough = 0.05
+        defense = 0.05
+      }
+    }
+    ALI_jingjianrenoushengchanxian_tech = {
+      allow = {
+        always = no
+      }
+      ma_militia = {
+        need = {
+          spell_card_a = -5
+        }
+      }
+      ma_infantry = {
+        need = {
+          spell_card_a = -10
+        }
+      }
+      ma_light_infantry = {
+        need = {
+          spell_card_a = -10
+        }
+      }
+      ma_sf_infantry = {
+        need = {
+          spell_card_a = -10
+        }
+      }
+    }
+    
+    ALI_gaoxiaorenouzhanshu_tech = {
+      allow = {
+        always = no
+      }
+      ma_militia = {
+        combat_width = -10
+      }
+      ma_infantry = {
+        combat_width = -5
+      }
+      ma_light_infantry = {
+        combat_width = -5
+      }
+    }
+
+    AKI_shandiliebing_tech = {
+        allow = {
+          always = no   
+        }
+        # folder = {
+        #   name = secret_folder
+        #   position = { x = @x1 y = 1 }
+        # }
+        new_infantry = {
+          forest = {
+            attack = 0.05
+            defence = 0.05
+            movement = 0.10
+          }
+          hills = {
+            attack = 0.05
+            defence = 0.05
+            movement = 0.10
+          }
+          mountain = {
+            attack = 0.05
+            defence = 0.05
+            movement = 0.10
+          }
+        }
+        ma_infantry = {
+          forest = {
+            attack = 0.05
+            defence = 0.05
+            movement = 0.10
+          }
+          hills = {
+            attack = 0.05
+            defence = 0.05
+          }
+          mountain = {
+            attack = 0.05
+            defence = 0.05
+            movement = 0.10
+          }
+        }
+        sc_infantry = {
+          forest = {
+            attack = 0.05
+            defence = 0.05
+            movement = 0.10
+          }
+          hills = {
+            attack = 0.05
+            defence = 0.05
+            movement = 0.10
+          }
+          mountain = {
+            attack = 0.05
+            defence = 0.05
+            movement = 0.10
+          }
+        }
+        ma_light_infantry = {
+          forest = {
+            attack = 0.05
+            defence = 0.05
+            movement = 0.10
+          }
+          hills = {
+            attack = 0.05
+            defence = 0.05
+            movement = 0.10
+          }
+          mountain = {
+            attack = 0.05
+            defence = 0.05
+            movement = 0.10
+          }
+        }
+        sc_light_infantry = {
+          forest = {
+            attack = 0.05
+            defence = 0.05
+            movement = 0.10
+          }
+          hills = {
+            attack = 0.05
+            defence = 0.05
+            movement = 0.10
+          }
+          mountain = {
+            attack = 0.05
+            defence = 0.05
+            movement = 0.10
+          }
+        }
+    }
+
+    AKI_shanpao_tech = {
+        allow = {
+          always = no   
+        }
+        # folder = {
+        #   name = secret_folder
+        #   position = { x = @x1 y = 1 }
+        # }
+        ma_artillery_brigade = {
+          forest = {
+            movement = 0.10
+          }
+          hills = {
+            movement = 0.10
+          }
+          mountain = {
+            movement = 0.10
+          }
+        }
+        ma_rocket_artillery_brigade = {
+          forest = {
+            movement = 0.10
+          }
+          hills = {
+            movement = 0.10
+          }
+          mountain = {
+            movement = 0.10
+          }
+        }
+        sc_artillery_brigade = {
+          forest = {
+            movement = 0.10
+          }
+          hills = {
+            movement = 0.10
+          }
+          mountain = {
+            movement = 0.10
+          }
+        }
+        new_artillery_brigade = {
+          forest = {
+            movement = 0.10
+          }
+          hills = {
+            movement = 0.10
+          }
+          mountain = {
+            movement = 0.10
+          }
+        }
+    }
+}

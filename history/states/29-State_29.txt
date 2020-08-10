@@ -1,0 +1,34 @@
+
+state={
+	id=29
+	name="STATE_29"
+	resources={
+		energy = 5
+		powder=5.000
+		metal=0.000
+		gas=5.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = SPG
+			add_core_of = SPG
+			buildings = {
+				infrastructure = 3
+				industrial_complex = 3
+				arms_factory = 2
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		20 547 577 757 1038 1556 1878 2535 2536 2564 2603 3429 5382 5395 5396 5401 5402 5404 5409 5411 5412 5416 5889 
+	}
+	manpower=50246.0
+	buildings_max_level_factor=1.000
+	state_category=s5
+}

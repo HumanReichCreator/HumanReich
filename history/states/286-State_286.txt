@@ -1,0 +1,32 @@
+
+state={
+	id=286
+	name="STATE_286"
+
+	resources={
+		powder=8.000
+		metal=5.000
+		gas=0.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = BYA
+			add_core_of = BYA
+			add_claim_by = INB
+			buildings = {
+				infrastructure = 3
+				industrial_complex = 1
+				arms_factory = 1
+			}
+		}
+	}
+
+	provinces={
+		645 711 1554 2010 2326 5520 5527 5529 5546 5570 
+	}
+	state_category=s5
+	manpower=805.0
+	buildings_max_level_factor=1.000
+}

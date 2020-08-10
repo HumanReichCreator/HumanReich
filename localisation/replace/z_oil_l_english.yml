@@ -1,0 +1,61 @@
+﻿l_english:
+ AIRBASE_LACKS_FUEL_PENALTY_DETAIL:0 "缺乏纯灵气：§Rx$PERC|%1-$§!"
+ 
+ fuel_silo:0 "纯灵气压缩罐"
+ fuel_silo_plural:0 "纯灵气压缩罐"
+ fuel_silo_desc:0 "此建筑可为国家储存更多的§H纯灵气§!"
+
+ FUEL_TITLE:0 "§H纯灵气§!"
+ FUEL:0 "纯灵气"
+ CURRENT_FUEL:0 "当前纯灵气：$NUM|H$"
+
+ FUEL_CAPACITY:0 "纯灵气容量：$NUM|H$"
+
+ OUT_OF_FUEL_INFO:0 "以当前的消耗速度，$DUR|R$后将耗尽纯灵气"
+ FUEL_GAIN_BY_STATES_FACTOR_TOOLTIP:0 "纯灵气增长修正将改变$FACTOR|+%.0$，总修正变为$TOTAL|.2H$"
+ MAX_FUEL_BY_STATES_FACTOR_TOOLTIP:0 "纯灵气容量修正将改变$FACTOR|+%.0$，总修正变为$TOTAL|.2H$"
+ FUEL_CAPACITY_FILL_INFO:0 "以当前的生成速度，$DUR|G$后将存满纯灵气容量。"
+
+ FUEL_DESC:0 "§H纯灵气§!由你国正增长的高能灵气资源生成。每个国家都有一个最大的§H纯灵气§!存储量，这个可以通过建造§H储油罐§!增加。§H纯灵气§!被坦克、机械化部队、飞机和舰艇使用，会通过§H补给线§!运至前线。"
+ LACK_OF_FUEL:0 "缺乏纯灵气：$VAL|%0R$"
+ FUEL_STOCKPILE_HEADER:0 "\n§H纯灵气储备容量：$NUM$§!"
+
+ POLITICS_ADD_FUEL:0 "纯灵气：$VAL|=+0$"
+ EFFECT_SCOPED_SOUND_DESC:0 "为$COUNTRY|H$播放$SOUND_NAME$"
+ EFFECT_SET_FUEL_RATIO:0 "设定纯灵气比率为$VAL|%.0H$。"
+
+ LOGISTICS_FUEL_PRIORITIZATION:0 "纯灵气优先"
+
+ FUEL_LOW_PRIORITY_DESC:0 "低纯灵气优先级"
+ FUEL_MEDIUM_PRIORITY_DESC:0 "中等纯灵气优先级"
+ FUEL_HIGH_PRIORITY_DESC:0 "高纯灵气优先级"
+ LOGISTICS_FUEL_PERCENTAGE:0 "需要满足§H$VALUE|0$%§!的纯灵气"
+
+ MODIFIER_ARMY_FUEL_CAPACITY_FACTOR:0 "陆军纯灵气容量"
+
+ MODIFIER_FUEL_GAIN_FACTOR:0 "高能灵气转换纯灵气效率"
+ MODIFIER_FUEL_GAIN_FACTOR_FROM_STATES:0 "炼油厂转换纯灵气效率"
+ MODIFIER_FUEL_GAIN_FROM_STATES:0 "炼油厂转换纯灵气效率"
+ MODIFIER_FUEL_GAIN_ADD:0 "高能灵气转换纯灵气效率"
+ MODIFIER_MAX_FUEL_FACTOR:0 "纯灵气容量"
+ MODIFIER_MAX_FUEL_ADD:1 "纯灵气容量（K）"
+ MODIFIER_MAX_FUEL_ADD_FROM_STATES:1 "纯灵气容量（K）"
+ MODIFIER_BASE_FUEL_GAIN_FACTOR:0 "纯灵气获得"
+ MODIFIER_BASE_FUEL_GAIN_ADD:0 "纯灵气获得"
+ MODIFIER_FUEL_COST:0 "纯灵气消耗"
+
+ STAT_ARMY_FUEL_CONSUMPTION:0 "纯灵气使用："
+ STAT_ARMY_FUEL_CONSUMPTION_DESC:0 "单位每日使用的纯灵气。"
+
+ STAT_ARMY_FUEL_CAPACITY:0 "纯灵气容量："
+ STAT_ARMY_FUEL_CAPACITY_DESC:0 "这个单位可以储存燃料的量。更高的纯灵气容量意味着在缺乏燃料供应的时候，该单位拥有更长的自持力。"
+ STAT_ARMY_FUEL_CAPACITY_VALUE:0 "$VALUE|H1$"
+ STAT_ARMY_FUEL_CAPACITY_DIFF:0 "$VALUE|=+$"
+ STAT_COMMON_FUEL_CONSUMPTION:0 "纯灵气使用："
+ STAT_COMMON_FUEL_CONSUMPTION_DESC:0 "这个单位在行动时使用的纯灵气量。空军和海军单位在执行任务或训练期间会消耗纯灵气。拥有纯灵气消耗的陆军单位在闲置时也会消耗纯灵气，但是战斗、移动或训练将进一步增加纯灵气消耗。"
+ STAT_COMMON_FUEL_CONSUMPTION_VALUE:0 "$VALUE|H1$"
+ STAT_COMMON_FUEL_CONSUMPTION_DIFF:0 "$VALUE|=-$"
+ STAT_COMMON_FUEL_CONSUMPTION_FACTOR:0 "纯灵气使用："
+ STAT_COMMON_FUEL_CONSUMPTION_FACTOR_DESC:0 "这个单位在行动时使用的纯灵气量。空军和海军单位在执行任务或训练期间会消耗纯灵气。拥有纯灵气消耗的陆军单位在闲置时也会消耗纯灵气，但是战斗、移动或训练将进一步增加纯灵气消耗。"
+ STAT_COMMON_FUEL_CONSUMPTION_FACTOR_VALUE:0 "$VALUE|H2%$"
+ STAT_COMMON_FUEL_CONSUMPTION_FACTOR_DIFF:0 "$VALUE|=-2%$"

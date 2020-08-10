@@ -1,0 +1,558 @@
+SCA_jiechusaodong = {
+    SCA_zaohe1 = {
+        visible = {
+            tag = SCA
+            has_country_flag = SCA_zaohejueyi
+            110 = {
+                not = {
+                    is_core_of = ROOT
+                }   
+                is_controlled_by = ROOT
+                is_owned_by = ROOT
+            }
+            117 = {
+                not = {
+                    is_core_of = ROOT
+                }   
+                is_controlled_by = ROOT
+                is_owned_by = ROOT
+            }
+            116 = {
+                not = {
+                    is_core_of = ROOT
+                }   
+                is_controlled_by = ROOT
+                is_owned_by = ROOT
+            }
+        }
+        available = {
+            is_subject = no
+            has_war = no
+        }
+
+        fire_only_once = no
+
+        days_remove = SCA_zaoheshijian1
+
+        cost = SCA_zaohePP1
+
+        modifier = {
+
+        }
+
+        complete_effect = {   
+
+        }
+
+        remove_effect = {
+            add_state_core = 116
+            add_state_core = 117
+            add_state_core = 110
+            if = {
+                limit = {
+                    has_completed_focus = SCA_shaixuanyaojing
+                }
+                116 = {
+                    set_temp_variable = { man = state_population}
+                    multiply_temp_variable = { man = -0.5 }
+                    add_manpower = man
+                    # add_manpower = 
+                }
+                117 = {
+                    set_temp_variable = { man = state_population}
+                    multiply_temp_variable = { man = -0.5 }
+                    add_manpower = man
+                    # add_manpower = 
+                }
+                110 = {
+                    set_temp_variable = { man = state_population}
+                    multiply_temp_variable = { man = -0.5 }
+                    add_manpower = man
+                    # add_manpower = 
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+    }
+    SCA_zaohe2 = {
+        visible = {
+            tag = SCA
+            has_country_flag = SCA_zaohejueyi
+            77 = {
+                not = {
+                    is_core_of = ROOT
+                }   
+                is_controlled_by = ROOT
+                is_owned_by = ROOT
+            }
+            90 = {
+                not = {
+                    is_core_of = ROOT
+                }   
+                is_controlled_by = ROOT
+                is_owned_by = ROOT
+            }
+            308 = {
+                not = {
+                    is_core_of = ROOT
+                }   
+                is_controlled_by = ROOT
+                is_owned_by = ROOT
+            }
+        }
+        available = {
+            is_subject = no
+            has_war = no
+        }
+
+        fire_only_once = no
+
+        days_remove = SCA_zaoheshijian1
+
+        cost = SCA_zaohePP1
+
+        modifier = {
+
+        }
+
+        complete_effect = {   
+
+        }
+
+        remove_effect = {
+            add_state_core = 77
+            add_state_core = 90
+            add_state_core = 308
+            if = {
+                limit = {
+                    has_completed_focus = SCA_shaixuanyaojing
+                }
+                77 = {
+                    set_temp_variable = { man = state_population}
+                    multiply_temp_variable = { man = -0.5 }
+                    add_manpower = man
+                    # add_manpower = 
+                }
+                90 = {
+                    set_temp_variable = { man = state_population}
+                    multiply_temp_variable = { man = -0.5 }
+                    add_manpower = man
+                    # add_manpower = 
+                }
+                308 = {
+                    set_temp_variable = { man = state_population}
+                    multiply_temp_variable = { man = -0.5 }
+                    add_manpower = man
+                    # add_manpower = 
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+    }
+    SCA_zaohe3 = {
+        visible = {
+            tag = SCA
+            has_country_flag = SCA_zaohejueyi
+            76 = {
+                not = {
+                    is_core_of = ROOT
+                }   
+                is_controlled_by = ROOT
+                is_owned_by = ROOT
+            }
+            312 = {
+                not = {
+                    is_core_of = ROOT
+                }   
+                is_controlled_by = ROOT
+                is_owned_by = ROOT
+            }
+            59 = {
+                not = {
+                    is_core_of = ROOT
+                }   
+                is_controlled_by = ROOT
+                is_owned_by = ROOT
+            }
+            313 = {
+                not = {
+                    is_core_of = ROOT
+                }   
+                is_controlled_by = ROOT
+                is_owned_by = ROOT
+            }
+            45 = {
+                not = {
+                    is_core_of = ROOT
+                }   
+                is_controlled_by = ROOT
+                is_owned_by = ROOT
+            }
+        }
+        available = {
+            is_subject = no
+            has_war = no
+        }
+
+        fire_only_once = no
+
+        days_remove = SCA_zaoheshijian2
+
+        cost = SCA_zaohePP2
+
+        modifier = {
+
+        }
+
+        complete_effect = {   
+
+        }
+
+        remove_effect = {
+            add_state_core = 76
+            add_state_core = 312
+            add_state_core = 59
+            add_state_core = 313
+            add_state_core = 45
+            if = {
+                limit = {
+                    has_completed_focus = SCA_shaixuanyaojing
+                }
+                76 = {
+                    set_temp_variable = { man = state_population}
+                    multiply_temp_variable = { man = -0.5 }
+                    add_manpower = man
+                    # add_manpower = 
+                }
+                312 = {
+                    set_temp_variable = { man = state_population}
+                    multiply_temp_variable = { man = -0.5 }
+                    add_manpower = man
+                    # add_manpower = 
+                }
+                59 = {
+                    set_temp_variable = { man = state_population}
+                    multiply_temp_variable = { man = -0.5 }
+                    add_manpower = man
+                    # add_manpower = 
+                }
+                313 = {
+                    set_temp_variable = { man = state_population}
+                    multiply_temp_variable = { man = -0.5 }
+                    add_manpower = man
+                    # add_manpower = 
+                }
+                45 = {
+                    set_temp_variable = { man = state_population}
+                    multiply_temp_variable = { man = -0.5 }
+                    add_manpower = man
+                    # add_manpower = 
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+    }
+
+    SCA_zaohe4 = {
+        visible = {
+            tag = SCA
+            has_country_flag = SCA_zaohejueyi
+            91 = {
+                not = {
+                    is_core_of = ROOT
+                }   
+                is_controlled_by = ROOT
+                is_owned_by = ROOT
+            }
+            310 = {
+                not = {
+                    is_core_of = ROOT
+                }   
+                is_controlled_by = ROOT
+                is_owned_by = ROOT
+            }
+        }
+        available = {
+            is_subject = no
+            has_war = no
+        }
+
+        fire_only_once = no
+
+        days_remove = SCA_zaoheshijian2
+
+        cost = SCA_zaohePP2
+
+        modifier = {
+
+        }
+
+        complete_effect = {   
+
+        }
+
+        remove_effect = {
+            add_state_core = 91
+            add_state_core = 310
+            if = {
+                limit = {
+                    has_completed_focus = SCA_shaixuanyaojing
+                }
+                91 = {
+                    set_temp_variable = { man = state_population}
+                    multiply_temp_variable = { man = -0.5 }
+                    add_manpower = man
+                    # add_manpower = 
+                }
+                310 = {
+                    set_temp_variable = { man = state_population}
+                    multiply_temp_variable = { man = -0.5 }
+                    add_manpower = man
+                    # add_manpower = 
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+    }
+    SCA_zaohe5 = {
+        visible = {
+            tag = SCA
+            has_country_flag = SCA_zaohejueyi
+            85 = {
+                not = {
+                    is_core_of = ROOT
+                }   
+                is_controlled_by = ROOT
+                is_owned_by = ROOT
+            }
+            64 = {
+                not = {
+                    is_core_of = ROOT
+                }   
+                is_controlled_by = ROOT
+                is_owned_by = ROOT
+            }
+        }
+        available = {
+            is_subject = no
+            has_war = no
+        }
+
+        fire_only_once = no
+
+        days_remove = SCA_zaoheshijian2
+
+        cost = SCA_zaohePP2
+
+        modifier = {
+
+        }
+
+        complete_effect = {   
+
+        }
+
+        remove_effect = {
+            add_state_core = 85
+            add_state_core = 64
+            if = {
+                limit = {
+                    has_completed_focus = SCA_shaixuanyaojing
+                }
+                85 = {
+                    set_temp_variable = { man = state_population}
+                    multiply_temp_variable = { man = -0.5 }
+                    add_manpower = man
+                    # add_manpower = 
+                }
+                64 = {
+                    set_temp_variable = { man = state_population}
+                    multiply_temp_variable = { man = -0.5 }
+                    add_manpower = man
+                    # add_manpower = 
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+    }
+
+    SCA_zaohe6 = {
+        visible = {
+            tag = SCA
+            has_country_flag = SCA_zaohejueyi
+            61 = {
+                not = {
+                    is_core_of = ROOT
+                }   
+                is_controlled_by = ROOT
+                is_owned_by = ROOT
+            }
+        }
+        available = {
+            is_subject = no
+            has_war = no
+        }
+
+        fire_only_once = no
+
+        days_remove = SCA_zaoheshijian3
+
+        cost = SCA_zaohePP3
+
+        modifier = {
+
+        }
+
+        complete_effect = {   
+
+        }
+
+        highlight_states = {
+            state = 61
+        }
+
+        remove_effect = {
+            add_state_core = 61
+            if = {
+                limit = {
+                    has_completed_focus = SCA_shaixuanyaojing
+                }
+                61 = {
+                    set_temp_variable = { man = state_population}
+                    multiply_temp_variable = { man = -0.5 }
+                    add_manpower = man
+                    # add_manpower = 
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+    }
+
+    SCA_zaohe7 = {
+        visible = {
+            tag = SCA
+            has_country_flag = SCA_zaohejueyi
+            311 = {
+                not = {
+                    is_core_of = ROOT
+                }   
+                is_controlled_by = ROOT
+                is_owned_by = ROOT
+            }
+        }
+        available = {
+            is_subject = no
+            has_war = no
+        }
+
+        fire_only_once = no
+
+        days_remove = SCA_zaoheshijian4
+
+        cost = SCA_zaohePP4
+
+        modifier = {
+
+        }
+
+        highlight_states = {
+            state = 311
+        }
+
+        complete_effect = {   
+
+        }
+
+        remove_effect = {
+            add_state_core = 311
+            if = {
+                limit = {
+                    has_completed_focus = SCA_shaixuanyaojing
+                }
+                311 = {
+                    set_temp_variable = { man = state_population}
+                    multiply_temp_variable = { man = -0.5 }
+                    add_manpower = man
+                    # add_manpower = 
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+    }
+
+    SCA_zaohe8 = {
+        visible = {
+            tag = SCA
+            has_country_flag = SCA_zaohejueyi
+            70 = {
+                not = {
+                    is_core_of = ROOT
+                }   
+                is_controlled_by = ROOT
+                is_owned_by = ROOT
+            }
+        }
+        available = {
+            is_subject = no
+            has_war = no
+        }
+
+        fire_only_once = no
+
+        days_remove = SCA_zaoheshijian5
+
+        cost = SCA_zaohePP5
+
+        highlight_states = {
+            state = 70
+        }
+
+        modifier = {
+
+        }
+
+        complete_effect = {   
+
+        }
+
+        remove_effect = {
+            add_state_core = 70
+            if = {
+                limit = {
+                    has_completed_focus = SCA_shaixuanyaojing
+                }
+                70 = {
+                    set_temp_variable = { man = state_population}
+                    multiply_temp_variable = { man = -0.5 }
+                    add_manpower = man
+                    # add_manpower = 
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+    }
+}

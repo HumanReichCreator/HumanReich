@@ -1,0 +1,31 @@
+﻿capital = 415
+
+138.1.1={
+
+    oob = "TEST"
+    set_politics = {
+        ruling_party = guli
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 0
+        guli = 100
+        neworder = 0
+        oldorder = 0
+        fandong = 0
+    }
+    set_major = no
+
+    #others#
+}
+
+create_country_leader = {
+    name = "Unknown"
+    picture = "gfx/leaders/leader_unknown.dds"
+    ideology = guli_type
+    traits = {
+
+    }
+}
+

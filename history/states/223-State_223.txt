@@ -1,0 +1,44 @@
+
+state={
+	id=223
+	name="STATE_223"
+	resources={
+
+		powder=0.000
+		metal=0.000
+		gas=15.000
+		crystal=1.000
+	}
+
+	history={
+		143.7.1 = {
+			owner = NMS
+			add_core_of = NMS
+			buildings = {
+				infrastructure =5
+				industrial_complex = 5
+				arms_factory = 1
+
+			}
+		}
+		146.1.1 = {
+			owner = NMS
+			add_core_of = NMS
+			buildings = {
+				infrastructure = 6
+				industrial_complex = 8
+				arms_factory = 2
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		232 656 1048 1307 2088 2844 3612 3618 3623 5452 
+	}
+	manpower=3169.0
+	buildings_max_level_factor=1.000
+	state_category=s12
+}

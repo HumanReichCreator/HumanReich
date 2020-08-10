@@ -1,0 +1,42 @@
+scripted_gui = {
+
+	introduce_ui = {
+		context_type = player_context
+		window_name = "introduce_window"
+
+		visible = {
+			has_country_flag = introduce_not_closed
+		}
+		effects = {
+			exitButton_click = { clr_country_flag = introduce_not_closed }
+			switchPage_click = { set_variable = { introduce_page = i } }
+		}
+		triggers = {
+			picShow_visible = { introduce_show_pic = yes }
+			switchPage_visible = { introduce_show_page_button = yes }
+		}
+		properties = {
+			picShow = { image = "[introducePic]" }
+		}
+		dynamic_lists = {
+			introduce_ui_grid = {
+				array = global.introducePageArray
+				entry_container = introduce_ui_grid_entry
+			}
+		}
+	}
+	introduce_ui_text_w_pic = {
+		context_type = player_context
+		window_name = "introduce_text_w_pic_window"
+		parent_window_name = "introduce_window"
+		visible = { introduce_show_pic = yes }
+	}
+	introduce_ui_text_only = {
+		context_type = player_context
+		window_name = "introduce_text_only_window"
+		parent_window_name = "introduce_window"
+		visible = { not = { introduce_show_pic = yes } }
+		properties = { stylePic = { image = "[introduceStylePic]" } }
+	}
+}
+

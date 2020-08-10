@@ -1,0 +1,127 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+PO_influ = {
+		# icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+		# enable = { always = yes } #optional, the modifier won't apply if not enabled
+		# remove_trigger = { always = no } #optional, will remove the modifier if true
+	
+	army_attack_factor = PO_attack_defence
+	army_defence_factor = PO_attack_defence
+	conscription_factor = PO_conscription
+	
+	research_speed_factor = PO_research
+	army_morale_factor = PO_org_recover
+	
+
+	#type2 
+	# research_speed_factor = PO_research_speed
+	# production_speed_buildings_factor = PO_production_speed
+	# global_building_slots_factor = PO_slots
+
+}
+
+EXH_influ = {
+		# icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+		# enable = { always = yes } #optional, the modifier won't apply if not enabled
+		# remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+	stability_factor = EXH_stability
+	war_support_factor = EXH_war_support
+	# army_speed_factor = EXH_speed
+	army_org_factor = EXH_org
+	# ai_join_ally_desire_factor = EXH_war_support
+}
+
+OL_influ = {
+		# icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+		# enable = { always = yes } #optional, the modifier won't apply if not enabled
+		# remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+	stability_factor = OL_stability
+}
+
+LS_pp = {
+		# icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+		# enable = { always = yes } #optional, the modifier won't apply if not enabled
+		# remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+	political_power_cost = LS_lowing_pp_cost
+}
+
+Monthly_manpower = {
+		# icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+		# enable = { always = yes } #optional, the modifier won't apply if not enabled
+		# remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+	weekly_manpower = manpower_added
+}
+
+
+# KOG_xinshengdeshili = {
+# 	icon = "GFX_idea_generic_disjointed_gov" # optional, will show up in guis if icon is specified
+# 		# enable = { always = yes } #optional, the modifier won't apply if not enabled
+# 		# remove_trigger = { always = no } #optional, will remove the modifier if true
+# #
+# 	political_power_gain = KOG_xinsheng_pp
+# 	drift_defence_factor = KOG_xinsheng_den
+# }
+
+SS_subject_influence = {
+	# icon = "GFX_idea_unknown"
+
+	conscription_factor = SS_Ghost_power
+	supply_consumption_factor = SS_Fairy_power
+	army_org_factor = SS_Human_power
+	army_morale_factor = SS_Pri_youkai_power
+	army_attack_factor = SS_Youkai_power
+	army_defence_factor = SS_Youkai_power
+	army_speed_factor = SS_Tengu_power
+	industrial_capacity_factory = SS_Kappa_power
+	encryption = SS_God_power
+	decryption = SS_God_power
+	research_speed_factor = SS_Magician_power
+	land_night_attack = SS_Beast_power
+}
+
+HUM_influenced = {
+	# icon = "GFX_idea_unknown"
+
+	# industrial_factory_donations = HMIF_influenced
+	# army_org_factor = HMIF_influenced
+	consumer_goods_factor = global.HMIF_influenced_goods
+	industrial_capacity_factory = global.HMIF_influenced_factory
+}
+
+KOG_manpower = {
+	# icon = "GFX_generic_production_bonus"
+	weekly_manpower = KOG_weekly
+	# conscription_factor = -0.5
+}
+ALI_manpower = {
+	# icon = "GFX_generic_production_bonus"
+	weekly_manpower = ALI_weekly
+	# conscription_factor = -0.5
+}

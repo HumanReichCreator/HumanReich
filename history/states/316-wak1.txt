@@ -1,0 +1,44 @@
+
+state={
+	id=316
+	name="STATE_316"
+	resources={
+
+		powder=0.000
+		metal=0.000
+		gas=0.000
+		crystal=0.000
+	}
+
+	history={
+		143.7.1 = {
+			owner = KOG
+			add_core_of = KOG
+			buildings = {
+				infrastructure =0
+				industrial_complex = 0
+				arms_factory = 0
+			}
+		}
+		146.1.1 = {
+			owner = WAK
+			add_core_of = WAK
+			remove_core_of = KOG
+			buildings = {
+				infrastructure =1
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		2362 3230 4333 4335 4343 4350 4353 
+	}
+	manpower=46.0
+	buildings_max_level_factor=1.000
+	state_category=s2
+}

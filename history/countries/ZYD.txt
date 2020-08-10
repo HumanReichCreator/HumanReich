@@ -1,0 +1,358 @@
+﻿capital = 142
+138.8.13 = {
+
+}
+141.6.2 = {
+    
+}
+142.3.8 = {
+    
+}
+144.2.5 = {
+    
+}
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card = 1
+        linglijiejing139 = 1
+        buqiang117 = 1
+            
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+            
+        #专用工业
+
+        #种族
+            
+    }
+}
+146.1.1={
+    oob = "ZYD_146"
+    
+    add_ideas = {
+    Magician
+    Village
+    open1
+    dove2
+    strict_border
+    limit_magic
+    type2_manpowerlv7
+    AKI_tudijiaoyisuode_idea
+    }
+    add_timed_idea = {
+        idea = SW_youlingsaodong_idea
+        days = 912
+    }
+    
+    set_politics = {
+    	ruling_party = guli
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 2
+        guli = 94
+        neworder = 0
+        oldorder = 0
+        fandong = 4
+    }
+
+    
+    
+    
+}
+create_country_leader = {
+    # name = "Council"
+    name = "商业委员会"
+    desc = ""
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    ideology = guli_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Council"
+    name = "商业委员会"
+    desc = ""
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    ideology = fandong_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Council"
+    name = "商业委员会"
+    desc = ""
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    ideology = neworder_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Council"
+    name = "商业委员会"
+    desc = ""
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    ideology = qinwai_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Council"
+    name = "商业委员会"
+    desc = ""
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    ideology = oldorder_type
+    traits = {
+        #warrior_code
+    }
+}
+
+#small scenario data
+138.1.1 = {
+    if = {
+        limit = {
+            date < 139.12.12
+        }
+        OTG = {
+            set_cosmetic_tag = OTG_s
+            declare_war_on = {
+                target = SCA
+                type = annex_everything
+            }
+        }
+
+        SCA = {
+            puppet = SC1
+   			puppet = SC2
+            create_faction = fanyaoguaishan
+            add_to_faction = SC1
+            add_to_faction = SC2
+        }
+        
+        
+        SC1 = { add_to_war = { targeted_alliance = SCA enemy = OTG } }
+        SC2 = { add_to_war = { targeted_alliance = SCA enemy = OTG } }
+    }
+}
+
+141.1.1 = {
+    if = {
+        limit = {
+            date < 141.12.12
+        }
+        TEG = {
+            declare_war_on = {
+                target = OTG
+                type = civil_war
+            }
+        }
+    }
+}
+
+142.1.1 = {
+    if = {
+        limit = {
+            date < 142.12.12
+        }
+        KOG = {
+            create_faction = fanrenleitongmeng
+            add_to_faction = KAG
+        }
+        HKR = { 
+            create_faction = renleitongmeng 
+            add_to_faction = MRS 
+            # load_oob = "HKR_142"
+            # load_oob = "HKR_142"
+            # load_oob = "HKR_142"
+            # load_oob = "HKR_142"
+            # add_to_faction = HKM
+            
+            # HKM = { add_to_war = { targeted_alliance = MRS enemy = SEI } }
+            diplomatic_relation = {
+                country = HUM
+                relation = military_access
+                active = yes
+            }
+            # declare_war_on = {
+            #     target = SEI
+            #     type = annex_everything
+            # }
+        }
+
+        HUM = {
+            diplomatic_relation = {
+                country = MRS
+                relation = military_access
+                active = yes
+            }
+        }  
+
+        SEI = {
+            create_faction = xiakeshanggemingyundong
+            add_to_faction = NIB
+            add_to_faction = RMI
+            add_to_faction = CIR
+    		NIB = {
+                subject_level4 = yes
+            }
+            RMI = {
+                subject_level4 = yes
+            }
+            add_manpower = 1600
+            
+            declare_war_on = {
+                target = MRS
+                type = annex_everything
+            }
+            NIB = { add_to_war = { targeted_alliance = SEI enemy = MRS } }
+            RMI = { add_to_war = { targeted_alliance = SEI enemy = MRS } }
+        }
+            
+        CIR = {
+            add_to_war = { targeted_alliance = SEI enemy = MRS }
+        }
+
+        HKR = {
+            add_to_war = { targeted_alliance = MRS enemy = SEI }
+        }
+        
+         
+    }
+}
+
+144.1.1 = {
+    if = {
+        limit = {
+            date > 143.1.1
+            date < 145.1.1
+        }
+        SCA = {
+	       	WAK = {
+                subject_level4 = yes
+            }
+        }
+        SEI = {
+            dismantle_faction = yes
+	    	RMI = {
+                subject_level4 = yes
+            }
+        }
+        MRS = {
+            set_truce = {target = SEI days = 300}
+            set_truce = {target = RMI days = 300}
+        }
+
+        KOG = {
+            dismantle_faction = yes
+        }
+        NMS = {
+            KOG = {
+                subject_level4 = yes
+            }
+            KOG = {
+                set_politics = {
+                    ruling_party = guli
+                    election_frequency = 48
+                    elections_allowed = no
+                }
+                set_popularities = {
+                    qinwai = 29
+                    guli = 50
+                    neworder = 1
+                    oldorder = 0
+                    fandong = 20
+                }
+            }
+        }
+        HKM = {
+            create_faction = "妖怪联军"
+            add_to_faction = KAG
+            add_to_faction = NMS
+            add_to_faction = SEI
+            add_to_faction = RMI
+            add_to_faction = CHE
+            add_to_faction = MSD
+            add_to_faction = SCA
+            add_to_faction = WAK
+            add_to_faction = KOG
+            declare_war_on = {
+                target = HUM
+                type = annex_everything
+            }
+
+            
+            
+            KAG = { add_to_war = { targeted_alliance = HKM enemy = HUM } }
+            NMS = { add_to_war = { targeted_alliance = HKM enemy = HUM } }
+            SEI = { add_to_war = { targeted_alliance = HKM enemy = HUM } }
+            RMI = { add_to_war = { targeted_alliance = HKM enemy = HUM } }
+            CHE = { add_to_war = { targeted_alliance = HKM enemy = HUM } }
+            MSD = { add_to_war = { targeted_alliance = HKM enemy = HUM } }
+            SCA = { add_to_war = { targeted_alliance = HKM enemy = HUM } }
+            WAK = { add_to_war = { targeted_alliance = HKM enemy = HUM } }
+            KOG = {add_to_war = { targeted_alliance = HKM enemy = HUM } }
+   
+
+            HUM = {create_faction = renleitongmeng }
+            HUM = {
+                add_to_faction = HKR
+                # add_ideas = renlidebuff
+            }
+            HKR = {add_to_war = { targeted_alliance = HUM enemy = HKM } }
+
+            every_country = {
+                limit = {
+                    has_war_with = HUM
+                }
+                # add_ideas = qingbaobuff2
+                diplomatic_relation = {
+                    country = MRS
+                    relation = military_access
+                    active = yes
+                }
+            }
+        }
+        KOG = {set_major = yes}
+        WAK = {set_major = yes}
+        NMS = {set_major = yes}
+        SEI = {set_major = yes}
+        HKR = {set_major = yes}
+
+        # HUM = { 
+        #     set_state_controller = 492 
+        #     set_state_controller = 280
+        # }
+    }   
+}
+
+
+
+
+
+

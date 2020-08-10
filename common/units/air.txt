@@ -1,0 +1,46 @@
+sub_units = {
+	sc_fighter = {
+		sprite = light_plane
+		priority = 1
+		active = yes
+		type = { fighter }
+		need = { sc_fighter_equipment = 1 }
+		categories = { category_fighter }
+	}
+
+	ma_fighter = {
+		sprite = light_plane
+		priority = 1
+		active = yes
+		type = { fighter }
+		need = { ma_fighter_equipment = 1 }
+		categories = { category_fighter }
+	}
+	
+	sc_cas = {
+		sprite = light_plane
+		priority = 2
+		active = yes
+		type = { cas }
+		need = { sc_CAS_equipment = 1 }
+		categories = { category_cas }
+	}
+
+	ma_cas = {
+		sprite = light_plane
+		priority = 2
+		active = yes
+		type = { cas }
+		need = { ma_CAS_equipment = 1 }
+		categories = { category_cas }
+	}
+
+	# transport_plane = {
+	# 	sprite = heavy_plane
+	# 	priority = 1
+	# 	active = yes
+	# 	type = { air_transport }
+	# 	need = { transport_plane_equipment = 1 }
+	# }
+
+}

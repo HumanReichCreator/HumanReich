@@ -1,0 +1,231 @@
+ideas = {
+
+	trade_laws = { 
+		law = yes
+		use_list_view = yes
+		
+		open5 = {
+									
+			available = {
+			 always = no
+			}
+			on_add = {
+
+			}
+			cost = 0
+			cancel_if_invalid = no
+			removal_cost = -1
+
+			modifier = {
+			compliance_growth = 0.25
+			research_speed_factor = 0.15
+			encryption = -1
+			min_export = 0.65
+			manufacturer_cost_factor = -0.25
+			}
+			
+		}
+		open4 = {
+									
+			available = {
+			 always = no
+			}
+			on_add = {
+
+			}
+			cost = 0
+			cancel_if_invalid = no
+			removal_cost = -1
+
+			modifier = {
+			compliance_growth = 0.2
+			research_speed_factor = 0.12
+			encryption = -0.8
+			min_export = 0.6
+			manufacturer_cost_factor = -0.2
+			}
+			
+		}
+		open3 = {
+									
+			available = {
+			 always = no
+			}
+			on_add = {
+
+			}
+			cost = 0
+			cancel_if_invalid = no
+			removal_cost = -1
+
+			modifier = {
+			compliance_growth = 0.15
+			research_speed_factor = 0.09
+			encryption = -0.6
+			min_export = 0.55
+			manufacturer_cost_factor = -0.15
+			}
+			
+		}
+		open2 = {
+									
+			available = {
+			 always = no
+			}
+			on_add = {
+
+			}
+			default = yes
+			cost = 0
+			cancel_if_invalid = no
+			removal_cost = -1
+
+			modifier = {
+			compliance_growth = 0.1
+			research_speed_factor = 0.06
+			encryption = -0.4
+			min_export = 0.5
+			manufacturer_cost_factor = -0.1
+			}
+		}
+		open1 = {
+									
+			available = {
+			 always = no
+			}
+			on_add = {
+			}
+			modifier = {
+			compliance_growth = 0.05
+			research_speed_factor = 0.03
+			encryption = -0.2
+			min_export = 0.45
+			manufacturer_cost_factor = -0.05
+			}
+			cost = 0
+			cancel_if_invalid = no
+			removal_cost = -1
+		}
+		open0 = {
+									
+			available = {
+			 always = no
+			
+			}
+			modifier = {
+			min_export = 0.4
+			}
+			on_add = {
+
+			}
+			cost = 0
+			cancel_if_invalid = no
+			removal_cost = -1
+		}
+		close1 = {
+									
+			available = {
+
+			 always = no
+			}
+			modifier = {
+			research_speed_factor = -0.03
+			encryption = 0.5
+			stability_factor = 0.06
+			min_export = 0.35
+			drift_defence_factor = 0.1
+			}
+			on_add = {
+
+			}
+			cost = 0
+			cancel_if_invalid = no
+			removal_cost = -1
+		}
+		close2 = {
+									
+			available = {
+
+			 always = no
+			
+			}
+			modifier = {
+			research_speed_factor = -0.06
+			encryption = 1
+			stability_factor = 0.12
+			min_export = 0.3
+			drift_defence_factor = 0.2
+			}
+			on_add = {
+
+			}
+			cost = 0
+			cancel_if_invalid = no
+			removal_cost = -1
+		}
+		close3 = {
+									
+			available = {
+
+			  always = no
+			}
+			modifier = {
+			research_speed_factor = -0.09
+			encryption = 1.5
+			stability_factor = 0.18
+			min_export = 0.25
+			drift_defence_factor = 0.3
+			}
+			on_add = {
+
+			}
+			cost = 0
+			cancel_if_invalid = no
+			removal_cost = -1
+		}
+
+		close4 = {
+									
+			available = {
+
+			  always = no
+			}
+			modifier = {
+			research_speed_factor = -0.12
+			encryption = 2
+			stability_factor = 0.24
+			min_export = 0.2
+			drift_defence_factor = 0.4
+			}
+			on_add = {
+
+			}
+			cost = 0
+			cancel_if_invalid = no
+			removal_cost = -1
+		}
+
+		close5 = {
+									
+			available = {
+
+			  always = no
+			}
+			modifier = {
+			research_speed_factor = -0.15
+			encryption = 2.5
+			stability_factor = 0.3
+			min_export = 0.15
+			drift_defence_factor = 0.5
+			}
+			on_add = {
+
+			}
+			cost = 0
+			cancel_if_invalid = no
+			removal_cost = -1
+		}
+
+
+	}
+}

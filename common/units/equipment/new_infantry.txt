@@ -1,0 +1,157 @@
+# All infantry equipment
+
+equipments = {
+
+	new_buqiang_a = {
+		year = 150
+	
+		is_archetype = yes
+		picture = archetype_infantry_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+
+		upgrades = {
+			upgrade_reliability
+          	upgrade_softattack
+          	upgrade_hardattack
+          	upgrade_aaattack
+          	upgrade_defense
+          	upgrade_breakthrough
+          	upgrade_ic
+          	upgrade_ic_reverse
+          	upgrade_reliability_reverse
+		}
+		
+		
+
+		
+		
+		#Defensive Abilities
+		defense = 64
+		breakthrough = 3
+		hardness = 0
+		armor_value = 0
+
+		#Offensive Abilities
+		soft_attack = 18
+		hard_attack = 8
+		ap_attack = 1
+		air_attack = 1
+
+		#Misc Abilities
+		reliability = 0.7
+		maximum_speed = 5.3#2.5
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 1
+
+		
+		
+	}
+
+	new_buqiang150 = {
+		year = 150
+	
+		archetype = new_buqiang_a
+		
+		priority = 10
+		visual_level = 4
+
+		resources = {
+			metal = 1
+			powder = 2
+			gas = 2
+			crystal = 1
+		}
+	}
+
+	new_buqiang154 = {
+		year = 154
+	
+		archetype = new_buqiang_a
+		parent = new_buqiang150
+		priority = 10
+		visual_level = 5
+
+		resources = {
+			metal = 1
+			powder = 2
+			gas = 2
+			crystal = 1
+		}
+		
+		#Defensive Abilities
+		defense = 74
+		breakthrough = 3.5
+
+		#Offensive Abilities
+		soft_attack = 23
+		hard_attack = 10
+		ap_attack = 1
+		air_attack = 1.2
+		
+		build_cost_ic = 1.1
+	}
+
+	new_buqiang158 = {
+		year = 158
+	
+		archetype = new_buqiang_a
+		parent = new_buqiang150
+		priority = 10
+		visual_level = 6
+
+		resources = {
+			metal = 2
+			powder = 2
+			gas = 2
+			crystal = 2
+		}
+		
+		#Defensive Abilities
+		defense = 84
+		breakthrough = 4
+
+		#Offensive Abilities
+		soft_attack = 28
+		hard_attack = 12
+		ap_attack = 1
+		air_attack = 1.4
+		
+		build_cost_ic = 1.2
+	}
+
+	new_buqiang162 = {
+		year = 162
+	
+		archetype = new_buqiang_a
+		parent = new_buqiang150
+		priority = 10
+		visual_level = 7
+
+		resources = {
+			metal = 2
+			powder = 2
+			gas = 2
+			crystal = 2
+		}
+		
+		#Defensive Abilities
+		defense = 94
+		breakthrough = 4.5
+
+		#Offensive Abilities
+		soft_attack = 33
+		hard_attack = 14
+		ap_attack = 1
+		air_attack = 1.6
+		
+		build_cost_ic = 1.3
+	}
+
+}

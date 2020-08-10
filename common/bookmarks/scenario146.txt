@@ -1,0 +1,207 @@
+bookmarks = {
+	bookmark = { #146
+		name = "DAWN_NAME"
+		desc = "DAWN_DESCS"
+		date = 146.1.1.7
+		picture = "GFX_Scenario146"
+		default_country = "SCA"
+		default = no
+		
+
+		"SCA"={
+			history = "SCA_DAWN_DESC"
+			ideas = { 
+				SCA_xixueguitiaoyue_idea
+    			pingmingehe_idea
+				SCA_yaojingsaodong_idea
+			}
+			focuses = {
+				SCA_chongzhengdiguozhuangkuang
+				SCA_renliqiyue
+				SCA_pantuyaojing
+			}
+		}
+		
+		"YSK"={
+			history = "YSK_DAWN_DESC"
+			ideas = { 
+				YSK_kejizhishen_idea
+    			YSK_shenmingdeweiji_idea
+    			YSK_fugushenwei_idea
+			}
+			focuses = {
+				YSK_shenmingyongyuanshishen
+				YSK_xiangtiangouxuanzhan
+				YSK_chengweiyaoguaishanzhizhu
+			}
+		}
+		
+		"TEG"={
+			history = "TEG_DAWN_DESC"
+		#	ideology = gexin
+			ideas = { 
+    			TEG_otg_problem_idea
+    			TEG_minzhuzhidu_idea
+    			TEG_canmouzongbu_idea
+			}
+			focuses = {
+				TEG_tongyidekenengxing
+				TEG_zhuanzhuyishixingtaishuchu
+				TEG_tongyiyaoguaishan
+			}
+		}
+		
+		"SEI"={
+			history = "SEI_DAWN_DESC"
+			ideas = { 
+				SEI_zhengzhiweiji_idea
+				gensokyo_primary_idea
+			}
+			focuses = {
+				SEI_xinshidaixiakeshang
+				SEI_yuyaojinghezuo
+				SEI_emoyapozhe
+			}
+		}
+
+		"CIR"={
+			history = "CIR_DAWN_DESC"
+			ideas = { 
+				cir_yaojinglingxiu_idea 
+				cir_yaoguaidediwei_idea
+			}
+			focuses = {
+				CIR_yaojingzhongzuzhuyi
+				CIR_zhenduiemo
+				CIR_juezhanshike
+			}
+		}
+
+		"NMS"={
+			history = "NMS_DAWN_DESC"
+			ideas = { 
+				nms_shenglizhezhongdeshibaizhe_idea
+			    nms_yaoguaifojiaokuangrezhe_idea
+			    nms_yaoguaifojiaokuangrezhedebaodong_idea
+			}
+			focuses = {
+				NMS_zhudaotuolirenlei
+				NMS_jianshirenlei
+				NMS_muhouyouhao
+
+			}
+		}
+
+		"KOG"={
+			history = "KOG_DAWN_DESC"
+			ideas = { 
+				kog_jixingdegongye_idea
+				kog_xinshengdeshili_idea
+				kog_manpower_puppet
+			}
+			focuses = {
+				KOG_kejigexindeqishi
+				KOG_caogenyaoguaigongrongquan
+				KOG_quankaowomenziji
+			}
+		}
+		
+		
+
+		"---"={
+			history = "OTHER_DAWN_DESC"
+			ideas = { 
+			}
+		}
+
+		"HKR"={
+		    minor = yes
+			history = "HKR_DAWN_DESC"		#sca
+			ideas={ 
+				hkr_treaty
+				hkr_bolifendui
+				hkr_bayunzi
+			}	
+            focuses = {
+            	HKR_chongshenbayunziguanxi
+            	HKR_jiaqiangxianzhezaihuanxiangxiangdeyingxiang
+            	HKR_zhenyayaoguaijiefangyundong
+			}			
+		}
+
+		"MRS"={
+		    minor = yes
+			history = "MRS_DAWN_DESC"		#sca
+			ideas={ 
+				mrs_bushimofashi
+				mrs_fenliedemofashi
+				mrs_ziyuanfengfu
+			}	
+            focuses = {
+            	MRS_jingguanqibian
+            	MRS_fangyuyaojing
+            	MRS_feihongtiaoyue
+			}			
+		}
+		"TEN"={
+		    minor = yes
+			history = "TEN_DAWN_DESC"		#sca
+			ideas={ 
+				not_gensoukyo_idea
+				God
+			}	
+            focuses = {
+            	TEN_zhuanyishoudou
+            	TEN_binamingjuducai
+            	TEN_kuodayingxianglidaodiyu
+			}			
+		}
+		"SRB"={
+		    minor = yes
+			history = "SRB_DAWN_DESC"		#sca
+			ideas={ 
+				Shrine
+				God
+			}	
+            focuses = {
+            	SRB_xuanchengtianhuang
+            	SRB_quderenleilingdaoquan
+            	SRB_huoshaomingliansi
+			}			
+		}
+
+		"ALI"={
+		    minor = yes
+			history = "ALI_DAWN_DESC"		#sca
+			ideas={ 
+				ali_renoujuntuan_idea
+        		ali_zhenduidaojudeliliang_idea
+			}	
+            focuses = {
+            	ALI_tonglingmofashixiehui
+            	ALI_jianlirenougongfang
+            	ALI_lingrenxiaiderenouzhixiang
+			}			
+		}
+
+		"AKI"={
+		    minor = yes
+			history = "AKI_DAWN_DESC"		#sca
+			ideas={ 
+            AKI_tudijianbing_idea
+            AKI_jiduanzhuyiyundong_idea
+            AKI_renyushendemohujiexian_idea
+			}	
+            focuses = {
+            	AKI_cunluodalianhe
+            	AKI_xirenlidechengli
+            	AKI_tongyiwuyuanzhong
+			}			
+		}
+		
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

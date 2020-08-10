@@ -1,0 +1,3904 @@
+focus_tree = {
+	id = KOG_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = KOG
+		}
+	}
+
+	shared_focus = ty_medium_main 
+
+	continuous_focus_position = { x = 2800 y = 20 }
+
+# GFX_goal_continuous_air_production
+# GFX_goal_continuous_non_factory_construct
+# GFX_goal_continuous_reduce_training_time
+# GFX_goal_continuous_boost_freedom
+# GFX_goal_continuous_suppression
+# GFX_goal_continuous_restrict_freedom
+# GFX_goal_continuous_def_against_influence
+# GFX_goal_continuous_research
+# GFX_goal_continuous_increase_nu
+# GFX_goal_continuous_repairments
+# GFX_goal_continuous_naval_production
+# GFX_goal_continuous_armor_production
+# GFX_focus_generic_steel
+# GFX_focus_generic_aluminum
+# GFX_focus_generic_tungsten
+# GFX_focus_research2
+# GFX_focus_generic_treaty
+# GFX_focus_generic_military_academy
+# GFX_focus_generic_military_mission
+# GFX_focus_generic_concessions
+# GFX_focus_generic_self_management
+# GFX_focus_generic_license_production
+# GFX_focus_smiling_buddha
+# GFX_focus_generic_join_comintern
+# GFX_focus_generic_home_defense
+# GFX_focus_generic_the_giant_wakes
+# GFX_focus_generic_cryptologic_bomb
+# GFX_focus_generic_socialist_science
+# GFX_focus_generic_italy_first
+# GFX_focus_generic_little_entente
+# GFX_focus_generic_soviet_politics
+# GFX_focus_generic_strike_at_democracy3
+# GFX_focus_generic_strike_at_democracy2
+# GFX_focus_generic_strike_at_democracy1
+# GFX_focus_generic_anti_fascist_diplomacy
+# GFX_focus_generic_japanese_imperial_glory
+# GFX_focus_generic_support_the_left_right
+# GFX_focus_generic_polish_deal
+# GFX_focus_generic_air_defense
+# GFX_focus_generic_coastal_fort
+# GFX_focus_generic_paratrooper
+# GFX_focus_generic_diplomatic_treaty
+# GFX_focus_NZL_bob_semple_tank
+# GFX_goal_unknown
+# GFX_goal_generic_production
+# GFX_goal_shine_test
+# GFX_goal_generic_attack_allies
+# GFX_goal_generic_oil_refinery
+# GFX_goal_generic_positive_trade_relations
+# GFX_goal_generic_military_deal
+# GFX_goal_generic_wolf_pack
+# GFX_goal_generic_amphibious_assault
+# GFX_goal_generic_dangerous_deal
+# GFX_goal_generic_military_sphere
+# GFX_goal_generic_major_alliance
+# GFX_goal_generic_more_territorial_claims
+# GFX_goal_generic_major_war
+# GFX_goal_generic_soviet_construction
+# GFX_goal_generic_fortify_city
+# GFX_goal_generic_war_with_comintern
+# GFX_goal_generic_territory_or_war
+# GFX_goal_generic_forceful_treaty
+# GFX_goal_generic_scientific_exchange
+# GFX_goal_generic_intelligence_exchange
+# GFX_goal_generic_small_arms
+# GFX_goal_generic_trade
+# GFX_goal_generic_consumer_goods
+# GFX_goal_generic_defence
+# GFX_goal_generic_air_production
+# GFX_goal_generic_radar
+# GFX_goal_generic_alliance
+# GFX_goal_generic_construction2
+# GFX_goal_generic_air_fighter2
+# GFX_goal_generic_cavalry
+# GFX_goal_generic_construction
+# GFX_goal_generic_production2
+# GFX_goal_generic_neutrality_focus
+# GFX_goal_generic_secret_weapon
+# GFX_goal_generic_navy_cruiser
+# GFX_goal_generic_construct_naval_dockyard
+# GFX_goal_generic_air_naval_bomber
+# GFX_goal_generic_national_unity
+# GFX_goal_generic_construct_infrastructure
+# GFX_goal_generic_construct_mil_factory
+# GFX_goal_generic_construct_civ_factory
+# GFX_goal_generic_army_artillery2
+# GFX_goal_generic_army_artillery
+# GFX_goal_generic_army_doctrines
+# GFX_goal_generic_army_tanks
+# GFX_goal_generic_army_motorized
+# GFX_goal_generic_navy_doctrines_tactics
+# GFX_goal_generic_navy_anti_submarine
+# GFX_goal_generic_navy_submarine
+# GFX_goal_generic_navy_carrier
+# GFX_goal_generic_navy_battleship
+# GFX_goal_generic_air_doctrine
+# GFX_goal_generic_CAS
+# GFX_goal_generic_air_fighter
+# GFX_goal_generic_air_bomber
+# GFX_goal_generic_propaganda
+# GFX_goal_generic_special_forces
+# GFX_focus_wonderweapons
+# GFX_focus_research
+# GFX_focus_rocketry
+# GFX_goal_support_fascism
+# GFX_goal_support_communism
+# GFX_goal_support_fourth_int
+# GFX_goal_support_democracy
+# GFX_goal_generic_allies_build_infantry
+# GFX_goal_generic_build_tank
+# GFX_goal_generic_build_airforce
+# GFX_goal_generic_axis_build_infantry
+# GFX_goal_generic_build_navy
+# GFX_goal_generic_improve_relations
+# GFX_goal_generic_political_pressure
+# GFX_goal_generic_demand_territory
+# GFX_goal_generic_occupy_start_war
+# GFX_goal_generic_occupy_states_coastal
+# GFX_goal_generic_occupy_states_ongoing_war
+# GFX_goal_generic_position_armies
+# GFX_goal_generic_construct_military
+# GFX_goal_generic_construct_civilian
+# GFX_focus_generic_cruiser2
+# GFX_focus_generic_destroyer
+# GFX_focus_generic_navy_battleship2
+# GFX_focus_generic_industry_3
+# GFX_focus_generic_industry_2
+# GFX_focus_generic_industry_1
+# GFX_focus_generic_combined_arms
+# GFX_focus_generic_tank_production
+# GFX_focus_generic_army_tanks2
+# GFX_goal_fortify_the_westwall
+# GFX_goal_reichsautobahn
+# GFX_goal_panzerwaffe
+# GFX_goal_expand_the_luftwaffe
+# GFX_goal_molotov_ribbentrop_pact
+# GFX_goal_anschluss
+# GFX_goal_rhineland
+# GFX_goal_poland_goal
+# GFX_goal_demand_sudetenland
+# GFX_goal_tripartite_pact
+# GFX_goal_anti_comintern_pact
+# GFX_focus_ger_reichskommisariats
+# GFX_focus_generic_rubber
+# GFX_focus_ger_revive_kaiserreich
+# GFX_focus_ger_return_of_the_kaiser
+# GFX_focus_ger_assassinate_mussolini
+# GFX_focus_ger_great_red_menace
+# GFX_focus_ger_oppose_hitler
+# GFX_focus_ger_bulwark_against_bolshevism
+# GFX_focus_ger_strike_at_the_source
+# GFX_focus_ger_accept_british_naval_dominance
+# GFX_focus_ger_break_anglo_french_colonial_hegemony
+# GFX_goal_tfv_sever_ties_with_uk
+# GFX_goal_tfv_strengthen_commonwealth_ties
+# GFX_goal_tfv_generic_tech_sharing
+# GFX_goal_tfv_burn_the_royal_portraits
+# GFX_goal_tfv_can_forced_quebec_conscription
+# GFX_goal_tfv_can_compromise_with_quebec
+# GFX_focus_AST_never_gallipoli
+# GFX_focus_generic_provoke_border_clashes
+# GFX_focus_AST_rats_tobruk
+# GFX_focus_AST_squander_bug
+# GFX_focus_AST_war_japan
+# GFX_goal_tfv_saf_anti_colonialist_crusade
+# GFX_goal_tfv_saf_support_german_coup
+# GFX_goal_tfv_saf_secure_interests_in_africa
+# GFX_goal_tfv_saf_support_ossebrandwag
+# GFX_focus_rom_preserve_romania
+# GFX_focus_rom_abdicate
+# GFX_focus_rom_coup
+# GFX_focus_rom_handle_king
+# GFX_focus_rom_royal_dictatorship
+# GFX_focus_rom_parties_end
+# GFX_focus_hun_elect_a_king
+# GFX_focus_hun_assassinate_horthy
+# GFX_focus_secret_rearmament
+# GFX_focus_proclaim_the_restauration_of_Austria_Hungary
+# GFX_focus_renounce_the_treaty_of_trianon
+# GFX_focus_attack_switzerland
+# GFX_focus_CZE_military_aeronautical_institute
+# GFX_focus_CZE_german_puppet
+# GFX_focus_CZE_military_research_institute
+# GFX_focus_YUG_zmaj
+# GFX_focus_YUG_rogozarski
+# GFX_focus_YUG_ikarus
+# GFX_focus_YUG_banovina_of_croatia
+# GFX_focus_YUG_pan_slavic_congress
+# GFX_focus_RAJ_all_india_forward_bloc
+# GFX_focus_RAJ_british_investors
+# GFX_focus_RAJ_clamp_down_on_corruption
+# GFX_focus_RAJ_indian_gentlemen_offcers
+# GFX_focus_RAJ_indian_gurkhas
+# GFX_focus_RAJ_indianisation_of_army
+# GFX_focus_RAJ_lions_of_the_great_war
+# GFX_focus_RAJ_seek_help_from_germany
+# GFX_focus_RAJ_seek_help_from_soviet
+# GFX_focus_RAJ_two_nation_theory
+# GFX_focus_generic_commonwealth_build_infantry
+# GFX_focus_chi_legislative_yuan
+# GFX_focus_chi_examination_yuan
+# GFX_focus_chi_united_front
+# GFX_focus_chi_army_reform
+# GFX_focus_chi_flying_tigers
+# GFX_focus_chi_whampoa_military_academy
+# GFX_focus_chi_one_china_policy
+# GFX_focus_chi_mission_to_germany
+# GFX_focus_chi_mission_to_the_soviet_union
+# GFX_focus_chi_reach_out_to_france
+# GFX_focus_chi_british_cooperation
+# GFX_focus_chi_mission_to_the_us
+# GFX_focus_chi_collaboration_with_the_japanese
+# GFX_focus_chi_cooperation_with_the_nationalists
+# GFX_focus_chi_proclaim_rival_government
+# GFX_focus_chi_cooperation_with_the_communists
+# GFX_focus_man_claim_the_mandate_of_heaven
+# GFX_focus_prc_proclaim_the_peoples_republic
+# GFX_focus_prc_infiltration
+# GFX_focus_prc_remove_chiang_kai_shek
+# GFX_focus_prc_social_democracy
+# GFX_focus_prc_agrarian_socialism
+# GFX_focus_prc_maoism
+# GFX_focus_generic_china1
+# GFX_focus_jap_strike_south
+# GFX_focus_jap_cast_the_die
+# GFX_focus_jap_zaibatsu
+# GFX_focus_jap_showa_restoration
+# GFX_focus_jap_pacific_guardian
+# GFX_focus_jap_manchurian_project
+# GFX_focus_jap_spiritual_mobilization
+# GFX_focus_jap_zero
+# GFX_focus_mex_restore_the_army_of_christ
+# GFX_focus_mex_soldaderas
+# GFX_focus_mex_jefe_maximo
+# GFX_focus_mex_exile_calles
+# GFX_focus_mex_triumph_over_the_cristeros
+# GFX_focus_mex_support_general_cedillo
+# GFX_focus_mex_arrest_general_cedillo
+# GFX_focus_mex_caudillo_private_armies
+# GFX_focus_mex_redeem_aztlan
+# GFX_focus_mex_privatisation
+# GFX_focus_eng_special_air_service
+# GFX_focus_eng_chiefs_of_staff_committee
+# GFX_focus_eng_decolonization
+# GFX_focus_eng_global_defense
+# GFX_focus_eng_motion_of_no_confidence
+# GFX_focus_eng_the_kings_party
+# GFX_focus_eng_unite_the_anglosphere
+# GFX_focus_eng_the_sun_never_sets
+# GFX_focus_eng_liberate_the_home_of_marx
+# GFX_focus_eng_expose_the_belly_of_the_bear
+# GFX_focus_eng_move_to_secure_the_dominions
+# GFX_focus_eng_crush_the_dream
+# GFX_focus_eng_organise_the_blackshirts
+# GFX_focus_eng_concessions_to_the_trade_unions
+# GFX_focus_eng_bring_the_dominions_back_into_the_fold
+# GFX_focus_eng_god_save_the_king
+# GFX_focus_eng_imperial_federation
+# GFX_focus_usa_reestablish_the_gold_standard
+# GFX_focus_usa_focus_on_europe
+# GFX_focus_usa_focus_on_asia
+# GFX_focus_usa_escort_fighters
+# GFX_focus_usa_build_the_pentagon
+# GFX_focus_usa_voter_registration_act
+# GFX_focus_usa_union_representation_act
+# GFX_focus_usa_honor_the_confederacy
+# GFX_focus_usa_guarantee_the_american_dream
+# GFX_focus_usa_recruit_the_free_corps
+# GFX_focus_usa_tank_destroyer_doctrine
+# GFX_focus_attack_britain
+# GFX_focus_attack_germany
+# GFX_focus_attack_japan
+# GFX_focus_attack_italy
+# GFX_focus_attack_soviet
+# GFX_focus_attack_france
+# GFX_focus_attack_mexico
+# GFX_focus_attack_china
+# GFX_focus_attack_australia
+# GFX_focus_attack_india
+# GFX_focus_attack_canada
+# GFX_focus_hol_abandon_the_gold_standard
+# GFX_focus_hol_continue_the_war_in_batavia
+# GFX_focus_hol_war_on_pacifism
+# GFX_focus_hol_philips
+# GFX_focus_hol_fokker
+# GFX_focus_hol_daf
+# GFX_focus_hol_prepare_the_inundation_lines
+# GFX_focus_hol_gateway_to_europe
+# GFX_focus_hol_united_netherlands
+# GFX_focus_hol_legacy_of_the_de_zeven_provincien_mutiny
+# GFX_focus_hol_oranje_boven
+# GFX_focus_hol_the_only_man_in_the_dutch_government
+# GFX_focus_hol_the_fourth_ally
+# GFX_focus_hol_the_zuiderzee_works
+# GFX_focus_hol_the_foundations_of_defense
+# GFX_focus_hol_liberation
+# GFX_focus_focus_fra_third_empire
+# GFX_focus_focus_fra_revolution_utmost
+# GFX_focus_focus_fra_ratify_stresa
+# GFX_focus_focus_fra_orleans_restoration
+# GFX_focus_focus_fra_national_resistance_council
+# GFX_focus_focus_fra_maquis
+# GFX_focus_focus_fra_liberte_egalite_solidarite
+# GFX_focus_focus_fra_intervention_spain
+# GFX_focus_focus_fra_fascist_threat
+# GFX_focus_focus_fra_down_marianne
+# GFX_focus_focus_fra_border
+# GFX_focus_up_joan_of_arc
+# GFX_focus_spa_caudillo_of_spain
+# GFX_focus_spa_eliminate_the_carlists
+# GFX_focus_spa_fuse_the_parties
+# GFX_focus_spa_no_compromise_on_carlist_ideals
+# GFX_focus_spa_save_the_alcazar
+# GFX_focus_spa_strengthen_the_supreme_reality_of_spain
+# GFX_focus_spa_supremacy_of_the_communion
+# GFX_focus_spa_the_phalanx_ascendant
+# GFX_focus_spa_the_spanish_miracle
+# GFX_focus_spa_the_war_of_vengeance
+# GFX_focus_spa_unify_the_nationalist_front
+# GFX_focus_spr_anarchism_knows_no_borders
+# GFX_focus_spr_class_war
+# GFX_focus_spr_crush_the_revolution
+# GFX_focus_spr_maintain_the_republic
+# GFX_focus_spr_masters_of_our_own_fate
+# GFX_focus_spr_no_pasaran
+# GFX_focus_spr_regional_defense_council_of_aragon
+# GFX_focus_spr_the_anti_fascist_workers_revolution
+# GFX_focus_spr_torchbearers_of_tomorrow
+# GFX_focus_spr_unify_the_london_bureau
+# GFX_focus_spr_war_of_independence
+# GFX_focus_generic_befriend_portugal
+# GFX_focus_generic_attack_portugal
+# GFX_focus_fra_devalue_the_franc
+# GFX_focus_fra_le_deluge
+# GFX_focus_fra_loyalty_stalin
+# GFX_focus_fra_loyalty_trotzky
+# GFX_focus_befriend_italy
+# GFX_focus_intervention_spain_republic
+# GFX_focus_intervention_spain_nationalists
+# GFX_focus_generic_manpower
+# GFX_focus_fra_regiment_normandie
+# GFX_focus_fra_milice
+# GFX_focus_fra_french_union
+# GFX_focus_invite_finland
+# GFX_focus_invite_yugoslavia
+# GFX_focus_invite_romania
+# GFX_focus_generic_africa_infrastructure
+# GFX_focus_generic_africa_factory
+# GFX_focus_generic_africa_naval
+# GFX_focus_generic_africa_production
+# GFX_focus_generic_monarchy_1
+# GFX_focus_generic_monarchy_2
+# GFX_focus_generic_royal_wedding
+# GFX_focus_por_estado_novo
+# GFX_focus_por_limited_self_rule
+# GFX_focus_por_luso_tropicalism
+# GFX_focus_por_portuguese_legion
+# GFX_focus_por_reclaim_crown_jewel
+# GFX_focus_por_recover_brazil
+# GFX_focus_por_remember_olivenca
+# GFX_focus_por_the_fifth_empire
+# GFX_focus_por_the_kingdom_reunited
+# GFX_focus_por_the_pink_map
+# GFX_focus_por_workers_of_iberia
+# GFX_focus_por_recover_latin_america
+# GFX_focus_por_latin_american_communism
+# GFX_focus_por_iberian_summit
+# GFX_focus_por_salazar
+# GFX_focus_por_concordat
+		# ai_will_do = {
+		# 	factor = 1
+		# }
+
+		# bypass = {
+			
+		# }
+
+		# cancel_if_invalid = no
+		# continue_if_invalid = yes
+		# available_if_capitulated = yes
+	# default = no
+  ##########经济线#########
+  focus = {
+      id = KOG_gongyefusujihua
+      icon = GFX_goal_generic_production
+      cost = 12
+      x = 4
+      y = 0
+
+      # prerequisite = {
+      #    focus = ty_kejichuangxin
+      # }
+
+
+      # relative_position_id = ty_medium_main
+
+      available ={
+         has_global_flag = main_scenario
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          add_tech_bonus = {
+            category = industrys
+            bonus = 0.25
+            uses = 1
+          }
+          add_tech_bonus = {
+            category = build
+            bonus = 0.25
+            uses = 1
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_jiansheminyonggongchang
+      icon = GFX_goal_generic_construct_civ_factory
+      cost = 12
+      x = -1
+      y = 1
+
+      prerequisite = {
+         focus = KOG_gongyefusujihua
+      }
+
+
+      relative_position_id = KOG_gongyefusujihua
+
+      available ={
+         # has_global_flag = main_scenario
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 3
+            add_building_construction = {
+              instant_build = yes
+              type = industrial_complex
+              level = 3
+            }
+         }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_gongyejiegouyouhua
+      icon = GFX_goal_generic_production2
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+         focus = KOG_jiansheminyonggongchang
+      }
+
+
+      relative_position_id = KOG_jiansheminyonggongchang
+
+      available ={
+         # has_global_flag = main_scenario
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+        add_tech_bonus = {
+          uses = 2
+          category = jiegou
+          bonus = 0.5
+        } 
+        every_owned_state = {
+          add_building_construction = {
+            instant_build = yes
+            type = infrastructure
+            level = 1
+          }
+        }
+        
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_jianshejunyonggongchang
+      icon = GFX_goal_generic_construct_mil_factory
+      cost = 12
+      x = 1
+      y = 1
+
+      prerequisite = {
+         focus = KOG_gongyefusujihua
+      }
+
+
+      relative_position_id = KOG_gongyefusujihua
+
+      available ={
+         # has_global_flag = main_scenario
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+        random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 3
+            add_building_construction = {
+              instant_build = yes
+              type = arms_factory
+              level = 3
+            }
+         }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_changqijungongmubiao
+      icon = GFX_goal_generic_construct_mil_factory
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+         focus = KOG_jianshejunyonggongchang
+      }
+
+
+      relative_position_id = KOG_jianshejunyonggongchang
+
+      available ={
+         # has_global_flag = main_scenario
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+              instant_build = yes
+              type = arms_factory
+              level = 1
+            }
+          }
+          add_timed_idea = {days = 365 idea = jungong_long_focus}
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_zhongshiminyongyanjiu
+      icon = GFX_focus_generic_industry_3
+      cost = 12
+      x = -2
+      y = 1
+
+      prerequisite = {
+         focus = KOG_gongyejiegouyouhua
+         focus = KOG_changqijungongmubiao
+      }
+
+
+      relative_position_id = KOG_gongyejiegouyouhua
+
+      mutually_exclusive = {
+        focus = KOG_suoyoudaojujiewuqi
+        focus = KOG_yanxujunshigongyequ
+        focus = KOG_herenleihubu
+      }
+
+      available ={
+        or = {
+          custom_trigger_tooltip = {
+            tooltip = KOG_guge_tt
+            has_government = qinwai
+            has_country_flag = KOG_gugelvse
+          }
+          custom_trigger_tooltip = {
+            tooltip = KOG_qinxin_tt
+            has_government = guli
+          }
+        }
+        
+      }
+
+      bypass = {
+        
+      }
+
+      completion_reward = {
+          swap_ideas = { add_idea = KOG_zhongshiminyongyanjiu_idea remove_idea = kog_jixingdegongye_idea}
+          add_tech_bonus = {
+              category = industrys
+              uses = 3
+              bonus = 0.5
+              ahead_reduction = 1
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_suoyoudaojujiewuqi
+      icon = GFX_focus_generic_combined_arms
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+         focus = KOG_gongyejiegouyouhua
+         focus = KOG_changqijungongmubiao
+      }
+
+
+      relative_position_id = KOG_gongyejiegouyouhua
+
+      mutually_exclusive = {
+        focus = KOG_zhongshiminyongyanjiu
+        focus = KOG_yanxujunshigongyequ
+        focus = KOG_herenleihubu
+      }
+
+      available ={
+         or = {
+          custom_trigger_tooltip = {
+            tooltip = KOG_baqiao_tt
+            has_government = fandong
+          }
+          custom_trigger_tooltip = {
+            tooltip = KOG_qinxin_tt
+            has_government = guli
+          }
+        }
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          swap_ideas = { add_idea = KOG_suoyoudaojujiewuqi_idea remove_idea = kog_jixingdegongye_idea}
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_yanxujunshigongyequ
+      icon = GFX_goal_generic_military_sphere
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+         focus = KOG_gongyejiegouyouhua
+         focus = KOG_changqijungongmubiao
+      }
+
+
+      relative_position_id = KOG_changqijungongmubiao
+
+      mutually_exclusive = {
+        focus = KOG_zhongshiminyongyanjiu
+        focus = KOG_suoyoudaojujiewuqi
+        focus = KOG_herenleihubu
+      }
+
+      available ={
+        or = {
+          custom_trigger_tooltip = {
+            tooltip = KOG_bianbian_tt
+            has_government = neworder
+          }
+          custom_trigger_tooltip = {
+            tooltip = KOG_qinxin_tt
+            has_government = guli
+          }
+        }
+         # has_global_flag = main_scenario
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          add_offsite_building = {
+              type = arms_factory
+              level = 8
+          }
+          swap_ideas = { add_idea = KOG_yanxujunshigongyequ_idea remove_idea = kog_jixingdegongye_idea}
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_herenleihubu
+      icon = GFX_goal_generic_intelligence_exchange
+      cost = 12
+      x = 2
+      y = 1
+
+      prerequisite = {
+         focus = KOG_gongyejiegouyouhua
+         focus = KOG_changqijungongmubiao
+      }
+
+
+      relative_position_id = KOG_changqijungongmubiao
+
+      mutually_exclusive = {
+        focus = KOG_zhongshiminyongyanjiu
+        focus = KOG_suoyoudaojujiewuqi
+        focus = KOG_yanxujunshigongyequ
+      }
+
+      available ={
+        or = {
+          custom_trigger_tooltip = {
+            tooltip = KOG_xiaosan_tt
+            has_government = qinwai
+            not ={
+              has_country_flag = KOG_gugelvse
+            }
+          }
+          custom_trigger_tooltip = {
+            tooltip = KOG_qinxin_tt
+            has_government = guli
+          }
+        }
+         # has_global_flag = main_scenario
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          OL_add2 = yes
+          HMIF_daily_factor_add0.1 = yes
+          remove_ideas = kog_jixingdegongye_idea
+          # swap_ideas = { add_idea = KOG_herenleihubu_idea remove_idea = kog_jixingdegongye_idea}
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_yanjiulitisheng
+      icon = GFX_focus_research
+      cost = 12
+      x = 1
+      y = 1
+
+      prerequisite = {
+         focus = KOG_zhongshiminyongyanjiu
+         focus = KOG_suoyoudaojujiewuqi
+         focus = KOG_yanxujunshigongyequ
+         focus = KOG_herenleihubu
+      }
+
+
+      relative_position_id = KOG_suoyoudaojujiewuqi
+
+      available ={
+         # has_global_flag = main_scenario
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          add_research_slot = 1
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  #军事线
+
+  focus = {
+      id = KOG_wuqixinghaochongzheng
+      icon = GFX_focus_generic_license_production
+      cost = 12
+      x = 9
+      y = 0
+
+      prerequisite = {
+
+      }
+
+
+      relative_position_id = KOG_gongyefusujihua
+
+      available ={
+         has_global_flag = main_scenario
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+
+          add_tech_bonus = {
+              category = science_weapons_improve
+              uses = 1
+              bonus = 0.35
+          }
+          custom_effect_tooltip = KOG_wuqixinghaochongzheng_tt
+          add_to_variable = { sc_p_s = 1}
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.7 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 0.6
+          and = {
+            has_war = no
+            date < 150.6.1
+          }
+        }
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_qiangxietidaifangan
+      icon = GFX_goal_generic_small_arms
+      cost = 12
+      x = -1
+      y = 1
+
+      prerequisite = {
+          focus = KOG_wuqixinghaochongzheng
+      }
+
+
+      relative_position_id = KOG_wuqixinghaochongzheng
+
+      available ={
+         # has_global_flag = main_scenario
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          add_tech_bonus = {
+              category = science_weapons
+              uses = 2
+              bonus = 0.5
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 0.6
+          and = {
+            has_war = no
+            date < 150.6.1
+          }
+        }
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_xuexiluzhanlinian
+      icon = GFX_goal_generic_army_doctrines
+      cost = 12
+      x = 1
+      y = 1
+
+      prerequisite = {
+          focus = KOG_wuqixinghaochongzheng
+      }
+
+
+      relative_position_id = KOG_wuqixinghaochongzheng
+
+      available ={
+         # has_global_flag = main_scenario
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          add_tech_bonus = {
+              category = basic_doctrine
+              uses = 2
+              bonus = 0.3
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 0.6
+          and = {
+            has_war = no
+            date < 150.6.1
+          }
+        }
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_jienarenleilaobing
+      icon = GFX_focus_generic_concessions
+      cost = 12
+      x = -1
+      y = 1
+
+      prerequisite = {
+          focus = KOG_qiangxietidaifangan
+      }
+
+
+      relative_position_id = KOG_qiangxietidaifangan
+
+      available ={
+         # has_global_flag = main_scenario
+      }
+
+      bypass = {
+          
+      }
+
+      completion_reward = {
+          army_experience = 10
+          add_manpower = 500
+          add_tech_bonus = {
+              category = land_doctrine
+              bonus = 0.5
+              uses = 1
+          }
+          custom_effect_tooltip = KOG_1_tt
+          hidden_effect = {
+            load_oob = KOG_1
+          }
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.8 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 0.6
+          and = {
+            has_war = no
+            date < 150.6.1
+          }
+        }
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_guyongwunvfuzhubudui
+      icon = GFX_focus_generic_little_entente
+      cost = 12
+      x = 1
+      y = 1
+
+      prerequisite = {
+          focus = KOG_qiangxietidaifangan
+          focus = KOG_xuexiluzhanlinian
+      }
+
+
+      relative_position_id = KOG_qiangxietidaifangan
+
+      available ={
+         # has_global_flag = main_scenario
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          army_experience = 5
+          add_manpower = 100
+          add_tech_bonus = {
+              technology = wunvzhiyuan146
+              technology = wunvzhiyuan151
+              technology = wunvzhiyuan156
+              technology = wunvzhiyuan161
+              bonus = 0.5
+              uses = 1
+              ahead_reduction = 1
+          }
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.9 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 0.6
+          and = {
+            has_war = no
+            date < 150.6.1
+          }
+        }
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_chongzhengfusangshenjundui
+      icon = GFX_focus_generic_military_mission
+      cost = 12
+      x = 1
+      y = 1
+
+      prerequisite = {
+          focus = KOG_xuexiluzhanlinian
+      }
+
+
+      relative_position_id = KOG_xuexiluzhanlinian
+
+      available ={
+         # has_global_flag = main_scenario
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          army_experience = 25
+          add_ideas = KOG_chongzhengfusangshenjundui_idea
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_leigudegaizaofangan
+      icon = GFX_focus_generic_license_production
+      cost = 12
+      x = -1
+      y = 1
+
+      prerequisite = {
+          focus = KOG_jienarenleilaobing
+          focus = KOG_guyongwunvfuzhubudui
+          focus = KOG_chongzhengfusangshenjundui
+      }
+
+      mutually_exclusive = {
+          focus = KOG_baqiaodegaizaofangan
+          focus = KOG_bianbiandegaizaofangan
+          focus = KOG_xiaosandegaizaofangan
+      }
+
+
+      relative_position_id = KOG_jienarenleilaobing
+
+      available ={
+         or = {
+          custom_trigger_tooltip = {
+            tooltip = KOG_guge_tt
+            has_government = qinwai
+            has_country_flag = KOG_gugelvse
+          }
+          custom_trigger_tooltip = {
+            tooltip = KOG_qinxin_tt
+            has_government = guli
+          }
+        }
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          custom_effect_tooltip = KOG_leigudegaizaofangan_tt
+          add_to_variable = { sc_p_s = 1}
+          add_to_variable = { sc_a_s = 1}
+          
+      }
+
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 0.6
+          and = {
+            has_war = no
+            date < 150.6.1
+          }
+        }
+      }
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_baqiaodegaizaofangan
+      icon = GFX_focus_generic_license_production
+      cost = 12
+      x = 1
+      y = 1
+
+      prerequisite = {
+          focus = KOG_jienarenleilaobing
+          focus = KOG_guyongwunvfuzhubudui
+          focus = KOG_chongzhengfusangshenjundui
+      }
+
+      mutually_exclusive = {
+          focus = KOG_leigudegaizaofangan
+          focus = KOG_bianbiandegaizaofangan
+          focus = KOG_xiaosandegaizaofangan
+      }
+
+
+      relative_position_id = KOG_jienarenleilaobing
+
+      available ={
+         or = {
+          custom_trigger_tooltip = {
+            tooltip = KOG_baqiao_tt
+            has_government = fandong
+          }
+          custom_trigger_tooltip = {
+            tooltip = KOG_qinxin_tt
+            has_government = guli
+          }
+        }
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          custom_effect_tooltip = KOG_baqiaodegaizaofangan_tt
+          add_to_variable = { sc_p_d = 1}
+          add_to_variable = { sc_a_d = 1}
+          add_to_variable = { sc_p_h = 1}
+          add_to_variable = { sc_a_h = 1}
+      }
+
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 0.6
+          and = {
+            has_war = no
+            date < 150.6.1
+          }
+        }
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_bianbiandegaizaofangan
+      icon = GFX_focus_generic_license_production
+      cost = 12
+      x = -1
+      y = 1
+
+      prerequisite = {
+          focus = KOG_jienarenleilaobing
+          focus = KOG_guyongwunvfuzhubudui
+          focus = KOG_chongzhengfusangshenjundui
+      }
+
+      mutually_exclusive = {
+          focus = KOG_leigudegaizaofangan
+          focus = KOG_baqiaodegaizaofangan
+          focus = KOG_xiaosandegaizaofangan
+      }
+
+
+      relative_position_id = KOG_chongzhengfusangshenjundui
+
+      available ={
+         or = {
+          custom_trigger_tooltip = {
+            tooltip = KOG_bianbian_tt
+            has_government = neworder
+          }
+          custom_trigger_tooltip = {
+            tooltip = KOG_qinxin_tt
+            has_government = guli
+          }
+        }
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          custom_effect_tooltip = KOG_bianbiandegaizaofangan_tt
+          add_to_variable = { sc_p_b = 1}
+          add_to_variable = { sc_a_b = 1}
+      }
+
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 0.6
+          and = {
+            has_war = no
+            date < 150.6.1
+          }
+        }
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_xiaosandegaizaofangan
+      icon = GFX_focus_generic_license_production
+      cost = 12
+      x = 1
+      y = 1
+
+      prerequisite = {
+          focus = KOG_jienarenleilaobing
+          focus = KOG_guyongwunvfuzhubudui
+          focus = KOG_chongzhengfusangshenjundui
+      }
+
+      mutually_exclusive = {
+          focus = KOG_leigudegaizaofangan
+          focus = KOG_baqiaodegaizaofangan
+          focus = KOG_bianbiandegaizaofangan
+      }
+
+
+      relative_position_id = KOG_chongzhengfusangshenjundui
+
+      available ={
+         or = {
+          custom_trigger_tooltip = {
+            tooltip = KOG_xiaosan_tt
+            has_government = qinwai
+            not = { has_country_flag = KOG_gugelvse }
+          }
+          custom_trigger_tooltip = {
+            tooltip = KOG_qinxin_tt
+            has_government = guli
+          }
+        }
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          custom_effect_tooltip = KOG_xiaosandegaizaofangan_tt
+          add_to_variable = { sc_p_i = 1}
+          add_to_variable = { sc_a_i = 1}
+          add_to_variable = { sc_p_r = 1}
+          add_to_variable = { sc_a_r = 1}
+      }
+
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 0.6
+          and = {
+            has_war = no
+            date < 150.6.1
+          }
+        }
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+
+  #内政线
+  focus = {
+      id = KOG_neizhengbianhua
+      icon = GFX_goal_generic_propaganda
+      cost = 12
+      x = 9
+      y = 0
+
+      prerequisite = {
+
+      }
+
+      relative_position_id = KOG_wuqixinghaochongzheng
+
+      available ={
+         has_global_flag = main_scenario
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          add_political_power = 100
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_huifuzhanzhengdesunshang
+      icon = GFX_goal_continuous_repairments
+      cost = 12
+      x = -2
+      y = 1
+
+      prerequisite = {
+          focus = KOG_neizhengbianhua
+      }
+
+      relative_position_id = KOG_neizhengbianhua
+
+      available ={
+
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          EXHC_exhaustion_minus15 = yes
+          add_stability = 0.05
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_wendinggedangpaizhenglun
+      icon = GFX_goal_generic_national_unity
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+          focus = KOG_neizhengbianhua
+      }
+
+      relative_position_id = KOG_neizhengbianhua
+
+      available ={
+
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          add_stability = 0.1
+          add_timed_idea { idea = KOG_wendinggedangpaizhenglun_idea days = 365}
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_gaishanshouduzhuangkuang
+      icon = GFX_goal_generic_construct_infrastructure
+      cost = 12
+      x = 2
+      y = 1
+
+      prerequisite = {
+          focus = KOG_neizhengbianhua
+      }
+
+      relative_position_id = KOG_neizhengbianhua
+
+      available ={
+
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          capital_scope = {
+              add_extra_state_shared_building_slots = 2
+              add_building_construction = {
+                  instant_build = yes
+                  type = infrastructure
+                  level = 2
+              }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_fusangshenxinyaoli
+      icon = GFX_goal_continuous_research
+      cost = 12
+      x = -1
+      y = 1
+
+      prerequisite = {
+          focus = KOG_huifuzhanzhengdesunshang
+      }
+      prerequisite = {
+          focus = KOG_wendinggedangpaizhenglun
+      }
+      prerequisite = {
+          focus = KOG_gaishanshouduzhuangkuang
+      }
+
+      relative_position_id = KOG_huifuzhanzhengdesunshang
+
+      available ={
+        or = {
+          custom_trigger_tooltip = {
+            tooltip = KOG_guge_tt
+            has_government = qinwai
+            has_country_flag = KOG_gugelvse
+          }
+          custom_trigger_tooltip = {
+            tooltip = KOG_qinxin_tt
+            has_government = guli
+          }
+        }
+        has_country_flag = KOG_xuanjujieshu
+      }
+
+      mutually_exclusive = {
+          focus = KOG_xiuzhengjiudaoju
+          focus = KOG_shulishenmingweiyan
+          focus = KOG_kaifangherenleibianjing
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          set_country_flag = OL_to_pingheng
+          add_ideas = KOG_fusangshenxinyaoli_idea
+          conservativeincrease = yes
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.13 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_leiguyaolizhuanyikecheng
+      icon = GFX_focus_generic_manpower
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+          focus = KOG_fusangshenxinyaoli
+      }
+
+      relative_position_id = KOG_fusangshenxinyaoli
+
+      available ={
+
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          custom_effect_tooltip = KOG_leiguyaolizhuanyikecheng_tt
+          add_ideas = KOG_leiguyaolizhuanyikecheng_idea
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.14 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_kejigexindeqishi
+      icon = GFX_goal_continuous_research
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+          focus = KOG_leiguyaolizhuanyikecheng
+      }
+
+      relative_position_id = KOG_leiguyaolizhuanyikecheng
+
+      available ={
+
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          add_ideas = KOG_kejigexindeqishi_idea
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.15 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_xiuzhengjiudaoju
+      icon = GFX_focus_focus_fra_maquis
+      cost = 12
+      x = 1
+      y = 1
+
+      prerequisite = {
+          focus = KOG_huifuzhanzhengdesunshang
+      }
+      prerequisite = {
+          focus = KOG_wendinggedangpaizhenglun
+      }
+      prerequisite = {
+          focus = KOG_gaishanshouduzhuangkuang
+      }
+
+      relative_position_id = KOG_huifuzhanzhengdesunshang
+
+      available ={
+        or = {
+          custom_trigger_tooltip = {
+            tooltip = KOG_baqiao_tt
+            has_government = fandong
+          }
+          custom_trigger_tooltip = {
+            tooltip = KOG_qinxin_tt
+            has_government = guli
+          }
+        }
+        has_country_flag = KOG_xuanjujieshu
+      }
+
+      mutually_exclusive = {
+          focus = KOG_fusangshenxinyaoli
+          focus = KOG_shulishenmingweiyan
+          focus = KOG_kaifangherenleibianjing
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          set_country_flag = OL_to_pingheng
+          set_country_flag = KOG_xiuzhengjiudaoju
+          custom_effect_tooltip = KOG_xiuzhengjiudaoju_tt
+          # hidden_effect = {
+          #     news_event = { days = 2 id = kog2.16 }
+          # }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_budiuqirenheyigejiudaoju
+      icon = GFX_focus_focus_fra_liberte_egalite_solidarite
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+          focus = KOG_xiuzhengjiudaoju
+      }
+
+      relative_position_id = KOG_xiuzhengjiudaoju
+
+      available ={
+
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          add_war_support = 0.2
+          conservativeincrease = yes
+          
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.17 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_jiefangbeiyaoguaishiyongdedaoju
+      icon = GFX_goal_generic_propaganda
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+          focus = KOG_budiuqirenheyigejiudaoju
+      }
+
+
+
+      relative_position_id = KOG_budiuqirenheyigejiudaoju
+
+      available ={
+
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          add_tech_bonus = {
+            category = science_weapons_improve
+            category = science_artillery_improve
+            uses = 2
+            bonus = 0.3
+          }
+          add_ideas = KOG_jiefangbeiyaoguaishiyongdedaoju_idea
+          lobbyincrease = yes
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.18 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  
+
+  focus = {
+      id = KOG_shulishenmingweiyan
+      icon = GFX_goal_generic_political_pressure
+      cost = 12
+      x = -1
+      y = 1
+
+      prerequisite = {
+          focus = KOG_huifuzhanzhengdesunshang
+      }
+      prerequisite = {
+          focus = KOG_wendinggedangpaizhenglun
+      }
+      prerequisite = {
+          focus = KOG_gaishanshouduzhuangkuang
+      }
+
+      relative_position_id = KOG_gaishanshouduzhuangkuang
+
+      available ={
+        or = {
+          custom_trigger_tooltip = {
+            tooltip = KOG_bianbian_tt
+            has_government = neworder
+          }
+          custom_trigger_tooltip = {
+            tooltip = KOG_qinxin_tt
+            has_government = guli
+          }
+        }
+        has_country_flag = KOG_xuanjujieshu
+      }
+
+      mutually_exclusive = {
+          focus = KOG_fusangshenxinyaoli
+          focus = KOG_xiuzhengjiudaoju
+          focus = KOG_kaifangherenleibianjing
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          set_country_flag = OL_to_weixin
+          add_war_support = 0.05
+          EXHC_exhaustion_factor_add15 = yes
+          lobbyincrease = yes
+
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_zichengjiushijiushen
+      icon = GFX_goal_generic_special_forces
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+          focus = KOG_shulishenmingweiyan
+      }
+
+      relative_position_id = KOG_shulishenmingweiyan
+
+      available ={
+
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          add_ideas = KOG_zichengjiushijiushen_idea
+          add_stability = 0.05
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.20 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_chengweizhenzhengdeshenming
+      icon = GFX_goal_generic_dangerous_deal
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+          focus = KOG_zichengjiushijiushen
+      }
+
+      relative_position_id = KOG_zichengjiushijiushen
+
+      available ={
+          custom_trigger_tooltip = {
+              tooltip = KOG_chengweizhenzhengdeshenming_tt
+              or = {
+                check_variable = { HMIF_influence > 99.99}
+                is_ai = yes
+              }
+          }
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          custom_effect_tooltip = KOG_chengweizhenzhengdeshenming_tt2
+          add_ideas = God
+          add_ideas = KOG_chengweizhenzhengdeshenming_idea
+          set_variable = { HMIF_influence = 0}
+          hidden_effect = {
+            set_technology = {
+              pri_youkai_tech = 0
+            }
+            tech_initialize = yes
+            country_event = glo.3000
+          }
+
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.21 }
+          }
+
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = yes
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_kaifangherenleibianjing
+      icon = GFX_goal_generic_national_unity
+      cost = 12
+      x = 1
+      y = 1
+
+      prerequisite = {
+          focus = KOG_huifuzhanzhengdesunshang
+      }
+      prerequisite = {
+          focus = KOG_wendinggedangpaizhenglun
+      }
+      prerequisite = {
+          focus = KOG_gaishanshouduzhuangkuang
+      }
+
+      relative_position_id = KOG_gaishanshouduzhuangkuang
+
+      available ={
+        or = {
+          custom_trigger_tooltip = {
+            tooltip = KOG_xiaosan_tt
+            has_government = qinwai
+            not = { has_country_flag = KOG_gugelvse }
+          }
+          custom_trigger_tooltip = {
+            tooltip = KOG_qinxin_tt
+            has_government = guli
+          }
+        }
+        has_country_flag = KOG_xuanjujieshu
+      } 
+
+      mutually_exclusive = {
+          focus = KOG_fusangshenxinyaoli
+          focus = KOG_xiuzhengjiudaoju
+          focus = KOG_shulishenmingweiyan
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          set_country_flag = OL_to_weixin
+          conservativeincrease = yes
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.22 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_jianlidaojurenlingsuo
+      icon = GFX_focus_hol_the_foundations_of_defense
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+          focus = KOG_kaifangherenleibianjing
+      }
+
+      relative_position_id = KOG_kaifangherenleibianjing
+
+      available ={
+
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          PO_add3 = yes
+          OL_add5 = yes
+          add_opinion_modifier = { target = HUM modifier = KOG_jianlidaojurenlingsuo_op}
+          reverse_add_opinion_modifier = { target = HUM modifier = KOG_jianlidaojurenlingsuo_op}
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.23 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_wuguiyuanzhu
+      icon = GFX_goal_generic_improve_relations
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+          focus = KOG_jianlidaojurenlingsuo
+      }
+
+      relative_position_id = KOG_jianlidaojurenlingsuo
+
+      available ={
+
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          HMIF_daily_add0.02 = yes
+          conservativeincrease = yes
+          HUM = {
+            remove_opinion_modifier = {
+                target = KOG
+                modifier = background_enemy2
+            }
+          }
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.24 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  #外交线
+
+  focus = {
+      id = KOG_xindewaijiaocelve
+      icon = GFX_goal_generic_improve_relations
+      cost = 6
+      x = 0
+      y = 5
+
+      prerequisite = {
+
+      }
+
+      relative_position_id = KOG_wuqixinghaochongzheng
+
+      available ={
+        has_country_flag = KOG_xuanjujieshu
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          add_political_power = 10
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_zhongshihexiaoyaoguaideguanxi
+      icon = GFX_goal_generic_improve_relations
+      cost = 12
+      x = -8
+      y = 1
+
+      prerequisite = {
+          focus = KOG_xindewaijiaocelve
+      }
+      mutually_exclusive = {
+          focus = KOG_jiangxiaoyaoguainarushiliquan
+      }
+
+      relative_position_id = KOG_xindewaijiaocelve
+
+      available ={
+          is_subject = no
+          or = {
+            custom_trigger_tooltip = {
+              tooltip = KOG_xiaosan_tt
+              has_government = qinwai
+              not = { has_country_flag = KOG_gugelvse }
+            }
+            custom_trigger_tooltip = {
+              tooltip = KOG_guge_tt
+              has_government = qinwai
+              has_country_flag = KOG_gugelvse
+            }
+            custom_trigger_tooltip = {
+              tooltip = KOG_qinxin_tt
+              has_government = guli
+            }
+          }
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          custom_effect_tooltip = focus_warning3
+          give_guarantee = MSD
+          give_guarantee = RNS
+          give_guarantee = KAG
+          give_guarantee = SBK
+          if = {
+            limit = {
+              AVE = { is_subject = no}
+            }
+            give_guarantee = AVE
+          }
+          every_country = {
+            limit = {
+              or = {
+                has_idea = Pri_youkai
+                has_idea = Beast
+              }
+            }
+            add_ai_strategy = {
+              type = support
+              id = ROOT
+              value = 15
+            }
+            ROOT = {
+              add_ai_strategy = {
+                type = support
+                id = PREV
+                value = 15
+              }
+            }
+            add_opinion_modifier = { modifier = KOG_zhongshihexiaoyaoguaideguanxi_op target = ROOT}
+            reverse_add_opinion_modifier = { modifier = KOG_zhongshihexiaoyaoguaideguanxi_op target = ROOT}
+          }
+          lobbydecrease = yes
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_caogenyaoguaigongrongquan
+      icon = GFX_goal_generic_alliance
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+          focus = KOG_zhongshihexiaoyaoguaideguanxi
+      }
+
+      relative_position_id = KOG_zhongshihexiaoyaoguaideguanxi
+
+      available ={
+          is_subject = no
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          create_faction = KOG_caogenyaoguaigongrongquan_faction
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.27 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_lalongruoxiaoyaoguai
+      icon = GFX_goal_generic_improve_relations
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+          focus = KOG_caogenyaoguaigongrongquan
+      }
+
+      relative_position_id = KOG_caogenyaoguaigongrongquan
+
+      available ={
+          is_subject = no
+      } 
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          custom_effect_tooltip = focus_warning3
+          every_country = {
+            limit = {
+              or = {
+                tag = RNS
+                tag = KAG
+                tag = MSD
+                tag = SBK
+                and = {
+                  tag = AVE
+                  is_subject = no
+                }
+              }
+            }
+            jiemeng = yes
+          }
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.28 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_jiefangzhulinyaoguai
+      icon = GFX_goal_generic_demand_territory
+      cost = 12
+      x = -1
+      y = 1
+
+      prerequisite = {
+          focus = KOG_lalongruoxiaoyaoguai
+      }
+
+      will_lead_to_war_with = KAG
+
+      relative_position_id = KOG_lalongruoxiaoyaoguai
+
+      available ={
+        is_subject = no
+        threat > 0.3
+        num_faction_members > 1
+        or = {
+          KAG = { is_neighbor_of = ROOT }
+          SBK = {
+            is_subject_of = ROOT
+            is_in_faction_with = ROOT
+          }
+        }
+      }
+
+      bypass = {
+        or = {
+            KAG = { is_subject = no }
+            KAG = { is_subject_of = ROOT }
+        }
+      }
+
+      completion_reward = {
+          every_country = {
+              limit = {
+                  KAG = { is_subject_of = PREV}
+              }
+              ROOT = {
+                declare_war_on = {
+                    type = liberate_wargoal
+                    target = PREV
+                }
+              }
+          }
+          
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.29 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          has_war = yes
+          factor = 0
+        }
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_duohuizhulinyaoguaidetudi
+      icon = GFX_goal_generic_major_war
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+          focus = KOG_jiefangzhulinyaoguai
+      }
+
+      will_lead_to_war_with = EET
+      will_lead_to_war_with = INB
+
+      relative_position_id = KOG_jiefangzhulinyaoguai
+
+      available ={
+          is_subject = no 
+          or = {
+            and = {
+              country_exists = KAG
+              KAG = { is_in_faction_with = ROOT }
+            }
+            any_controlled_state = {
+              any_neighbor_state = { 
+                or = {
+                  state = 288
+                  state = 293
+                }
+              }
+            }
+            
+          }
+          threat > 0.5
+      }
+
+      bypass = {
+
+      }
+
+      completion_reward = {
+          every_country = {
+              limit = {
+                  not = {
+                      tag = KAG
+                  }
+                  any_owned_state = {
+                      or = {  
+                          is_core_of = KAG
+                          is_claimed_by = KAG
+                      }
+                  }
+              }
+              ROOT = {
+                declare_war_on = {
+                    type = annex_everything
+                    target = PREV
+                }
+              }
+          }
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.30 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          has_war = yes
+          factor = 0
+        }
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_jiefangshoudaoyaoguai
+      icon = GFX_goal_generic_demand_territory
+      cost = 12
+      x = 1
+      y = 1
+
+      prerequisite = {
+          focus = KOG_lalongruoxiaoyaoguai
+      }
+
+      relative_position_id = KOG_lalongruoxiaoyaoguai
+
+      will_lead_to_war_with = MSD
+
+      available ={
+        is_subject = no
+        threat > 0.3
+        num_faction_members > 1
+        or = {
+          MSD = { is_neighbor_of = ROOT }
+          RNS = {
+            is_subject_of = ROOT
+            is_in_faction_with = ROOT
+          }
+          SBK = {
+            is_subject_of = ROOT
+            is_in_faction_with = ROOT
+          }
+        }
+      }
+
+      bypass = {
+        or = {
+            MSD = { is_subject = no }
+            MSD = { is_subject_of = ROOT }
+        }
+      }
+
+      completion_reward = {
+          every_country = {
+              limit = {
+                  MSD = { is_subject_of = PREV}
+              }
+              ROOT = {
+                declare_war_on = {
+                    type = liberate_wargoal
+                    target = PREV
+                }
+              }
+          }
+          
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.31 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          has_war = yes
+          factor = 0
+        }
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_duohuishoudaoyaoguaitudi
+      icon = GFX_goal_generic_major_war
+      cost = 12
+      x = 0
+      y = 1
+
+      will_lead_to_war_with = HKR
+
+      prerequisite = {
+          focus = KOG_jiefangshoudaoyaoguai
+      }
+
+      relative_position_id = KOG_jiefangshoudaoyaoguai
+
+      available ={
+          is_subject = no 
+          or = {
+            and = {
+              country_exists = MSD
+              MSD = { is_in_faction_with = ROOT }
+            }
+            any_controlled_state = {
+              any_neighbor_state = { 
+                  state = 207
+              }
+            }
+          }
+          threat > 0.5
+      }
+
+      bypass = {
+
+      }
+
+      completion_reward = {
+          every_country = {
+              limit = {
+                  not = {
+                      tag = MSD
+                  }
+                  any_owned_state = {
+                      or = {  
+                          is_core_of = MSD
+                          is_claimed_by = MSD
+                      }
+                  }
+              }
+              ROOT = {
+                declare_war_on = {
+                    type = annex_everything
+                    target = PREV
+                }
+              }
+          }
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.32 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          has_war = yes
+          factor = 0
+        }
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_jiangxiaoyaoguainarushiliquan
+      icon = GFX_goal_generic_demand_territory
+      cost = 12
+      x = -3
+      y = 1
+
+      prerequisite = {
+          focus = KOG_xindewaijiaocelve
+      }
+      mutually_exclusive = {
+          focus = KOG_zhongshihexiaoyaoguaideguanxi
+      }
+
+      relative_position_id = KOG_xindewaijiaocelve
+
+      available ={
+          is_subject = no
+          threat > 0.15
+          or = {
+            custom_trigger_tooltip = {
+              tooltip = KOG_bianbian_tt
+              has_government = neworder
+            }
+            custom_trigger_tooltip = {
+              tooltip = KOG_baqiao_tt
+              has_government = fandong
+            }
+            custom_trigger_tooltip = {
+              tooltip = KOG_qinxin_tt
+              has_government = guli
+            }
+          }
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          add_named_threat = {
+              name = KOG_jiangxiaoyaoguainarushiliquan
+              threat = 0.5
+          }
+          add_political_power = 50
+          lobbyincrease = yes
+
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.33 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_yaoqiuxiaozhenjiaru
+      icon = GFX_goal_generic_political_pressure
+      cost = 12
+      x = -2
+      y = 1
+
+      prerequisite = {
+          focus = KOG_jiangxiaoyaoguainarushiliquan
+      }
+      mutually_exclusive = {
+
+      }
+
+      will_lead_to_war_with = SBK
+
+      relative_position_id = KOG_jiangxiaoyaoguainarushiliquan
+
+      available ={
+          is_subject = no
+      }
+
+      bypass = {
+          SBK = {
+              bypass_declare_war = yes
+          }
+      }
+
+      completion_reward = {
+        if = {
+          limit = {
+            SBK = { is_subject = no}
+          }
+          SBK = { country_event = { days = 2 id = kog2.35} }
+          custom_effect_tooltip = TEG_accept
+          effect_tooltip = {
+            if = {
+              limit = {
+                ROOT = {
+                  or = {
+                    has_government = fandong
+                    has_government = guli
+                  }
+                }
+              }
+              ROOT = {
+                SBK = {
+                  can_core = yes
+                  subject_level2 = yes
+                }
+              }
+              else = {
+                ROOT = {
+                  annex_country ={
+                    target = SBK
+                  }
+                }
+              }
+            }
+          }
+          else = {
+            declare_war_on = {
+              target = SBK
+              type = puppet_wargoal_focus
+            }
+          }
+        }
+          
+      }
+
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          has_war = yes
+          factor = 0
+        }
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_yaoqiuxianglintangjiaru
+      icon = GFX_goal_generic_political_pressure
+      cost = 12
+      x = 0
+      y = 1
+
+      will_lead_to_war_with = RNS
+
+      prerequisite = {
+          focus = KOG_jiangxiaoyaoguainarushiliquan
+      }
+      mutually_exclusive = {
+
+      }
+
+      relative_position_id = KOG_jiangxiaoyaoguainarushiliquan
+
+      available ={
+          is_subject = no
+      }
+
+      bypass = {
+          RNS = {
+              bypass_declare_war = yes
+          }
+      }
+
+      completion_reward = {
+          if = {
+            limit = {
+              RNS = { is_subject = no}
+            }
+            RNS = { country_event = { days = 2 id = kog2.35} }
+            custom_effect_tooltip = TEG_accept
+            effect_tooltip = {
+              if = {
+                limit = {
+                  ROOT = {
+                    or = {
+                      has_government = fandong
+                      has_government = guli
+                    }
+                  }
+                }
+                ROOT = {
+                  RNS = {
+                    can_core = yes
+                    subject_level2 = yes
+                  }
+                }
+                else = {
+                  ROOT = {
+                    annex_country ={
+                      target = RNS
+                    }
+                  }
+                }
+              }
+            }
+            else = {
+              declare_war_on = {
+                target = RNS
+                type = puppet_wargoal_focus
+              }
+            }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          has_war = yes
+          factor = 0
+        }
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_yaoqiushifangdaojuzizhiti
+      icon = GFX_goal_generic_political_pressure
+      cost = 12
+      x = 2
+      y = 1
+
+      will_lead_to_war_with = MRS
+      will_lead_to_war_with = ALI
+      will_lead_to_war_with = MTM
+
+      prerequisite = {
+          focus = KOG_jiangxiaoyaoguainarushiliquan
+      }
+      mutually_exclusive = {
+
+      }
+
+      relative_position_id = KOG_jiangxiaoyaoguainarushiliquan
+
+      available ={
+          is_subject = no
+      }
+
+      bypass = {
+          or = {
+              owns_state = 185
+              any_country = {
+                  is_subject_of = ROOT
+                  owns_state = 185
+              }
+              any_country = {
+                  owns_state = 185
+                  has_war_with = ROOT
+              }
+              185 = {
+                owner = {
+                  bypass_declare_war = yes
+                }
+              }
+          }
+      }
+
+      completion_reward = {
+          if = {
+              limit = {
+                  MTM = { is_subject = yes}
+                  country_exists = MTM
+              }
+              every_country = {
+                  limit = {
+                      MTM = { is_subject_of = PREV}
+                  }
+                  country_event = { days = 2 id = kog2.56} 
+              }
+              else = {
+                  MTM = { country_event = { days = 2 id = kog2.56} }
+              }
+          }
+          if = {
+              limit = {
+                  not = { country_exists = MTM }
+              }
+              every_country = {
+                  limit = {
+                      owns_state = 185
+                  }
+                  country_event = { days = 2 id = kog2.56}
+              }
+          }
+          custom_effect_tooltip = TEG_accept
+          effect_tooltip = {
+            MTM = {
+              can_core = yes
+              subject_level2 = yes
+            }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          has_war = yes
+          factor = 0
+        }
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_jianlijiushijiuguo
+      icon = GFX_focus_generic_home_defense
+      cost = 12
+      x = -1
+      y = 1
+
+      prerequisite = {
+          focus = KOG_yaoqiuxianglintangjiaru
+      }
+      prerequisite = {
+          focus = KOG_yaoqiuxiaozhenjiaru
+      }
+      mutually_exclusive = {
+          focus = KOG_jianlidaojugongtuan
+      }
+
+      relative_position_id = KOG_yaoqiuxianglintangjiaru
+
+      available ={
+          is_subject = no
+          or = {
+            custom_trigger_tooltip = {
+              tooltip = KOG_bianbian_tt
+              has_government = neworder
+            }
+            custom_trigger_tooltip = {
+              tooltip = KOG_qinxin_tt
+              has_government = guli
+            }
+          }
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          set_cosmetic_tag = KOG_great
+          add_ideas = Country
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.37 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_jianlidaojugongtuan
+      icon = GFX_goal_support_communism
+      cost = 12
+      x = 1
+      y = 1
+
+      prerequisite = {
+          focus = KOG_yaoqiuxianglintangjiaru
+      }
+      prerequisite = {
+          focus = KOG_yaoqiushifangdaojuzizhiti
+      }
+      mutually_exclusive = {
+          focus = KOG_jianlijiushijiuguo
+      }
+
+      relative_position_id = KOG_yaoqiuxianglintangjiaru
+
+      available ={
+          is_subject = no
+          or = {
+            custom_trigger_tooltip = {
+              tooltip = KOG_baqiao_tt
+              has_government = fandong
+            }
+            custom_trigger_tooltip = {
+              tooltip = KOG_qinxin_tt
+              has_government = guli
+            }
+          }
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          set_cosmetic_tag = KOG_gongtuan
+          add_war_support = 0.1
+          add_popularity = {
+            ideology = fandong
+            popularity = 0.05
+          }
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.38 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_duoquxixueguishiliquan
+      icon = GFX_goal_generic_major_war
+      cost = 12
+      x = 1
+      y = 1
+
+      will_lead_to_war_with = WAK
+
+      prerequisite = {
+          focus = KOG_jianlijiushijiuguo
+          focus = KOG_jianlidaojugongtuan
+      }
+
+      relative_position_id = KOG_jianlijiushijiuguo
+
+      available ={
+          is_subject = no
+          SCA = {
+            has_war = yes
+          }
+          threat > 0.5
+      }
+
+      bypass = {
+          173 = { 
+              is_core_of = ROOT 
+              is_owned_by = ROOT
+          }
+          177 = { 
+              is_core_of = ROOT 
+              is_owned_by = ROOT
+          }
+          316 = { 
+              is_core_of = ROOT 
+              is_owned_by = ROOT
+          }
+          165 = { 
+              is_core_of = ROOT 
+              is_owned_by = ROOT
+          }
+      }
+
+      completion_reward = {
+          add_state_core = 173
+          add_state_core = 177
+          add_state_core = 316
+          add_state_core = 165
+          declare_war_on = {
+            target = WAK
+            type = take_core_state
+            generator = { 173 177 316 165}
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          has_war = yes
+          factor = 0
+        }
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_duirenleiyouhao
+      icon = GFX_goal_generic_improve_relations
+      cost = 12
+      x = 3
+      y = 1
+
+      prerequisite = {
+          focus = KOG_xindewaijiaocelve
+      }
+
+      mutually_exclusive = {
+          focus = KOG_shuyuanrenlei
+      }
+
+      relative_position_id = KOG_xindewaijiaocelve
+
+      available ={
+          is_subject = no
+          or = {
+            custom_trigger_tooltip = {
+              tooltip = KOG_xiaosan_tt
+              has_government = qinwai
+              not = { has_country_flag = KOG_gugelvse }
+            }
+            custom_trigger_tooltip = {
+              tooltip = KOG_bianbian_tt
+              has_government = neworder
+            }
+            custom_trigger_tooltip = {
+              tooltip = KOG_qinxin_tt
+              has_government = guli
+            }
+          }
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+
+          HUM = {
+              add_opinion_modifier = { modifier = KOG_duirenleiyouhao_op target = ROOT}
+              reverse_add_opinion_modifier = { modifier = KOG_duirenleiyouhao_op target = ROOT}
+              ROOT = {
+                add_ai_strategy = {
+                  type = befriend
+                  id = PREV
+                  value = 30
+                }
+              }
+              add_ai_strategy = {
+                type = befriend
+                id = ROOT
+                value = 30
+              }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_renleimenhukaifang
+      icon = GFX_focus_generic_treaty
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+          focus = KOG_duirenleiyouhao
+      }
+
+      relative_position_id = KOG_duirenleiyouhao
+
+      available ={
+          is_subject = no
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          custom_effect_tooltip = KOG_renleikaifang_tt
+          every_country = {
+            limit = {
+              or = {
+                has_idea = Tenggu
+                has_idea = Kappa
+                has_idea = Youkai
+                has_idea = Pri_youkai
+                has_idea = God
+                tag = SCA
+              }
+              capital_scope = {
+                is_on_continent = Gensokyo
+              }
+              not = {
+                tag = OKI
+                tag = YKR
+                tag = KAS
+                tag = KOG
+              }
+            }
+            country_event = { id = kog2.55 days = 2}
+          }
+          hidden_effect = {
+            news_event = { id = kog2.41 days = 32}
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_jianliduoduolangduanzaogongsi
+      icon = GFX_focus_generic_industry_1
+      cost = 12
+      x = -1
+      y = 1
+
+      prerequisite = {
+          focus = KOG_renleimenhukaifang
+      }
+
+      mutually_exclusive = {
+          focus = KOG_shentoukongzhirenlei
+      }
+
+      relative_position_id = KOG_renleimenhukaifang
+
+      available ={
+          is_subject = no
+          or = {
+            custom_trigger_tooltip = {
+              tooltip = KOG_xiaosan_tt
+              has_government = qinwai
+              not = { has_country_flag = KOG_gugelvse }
+            }
+            custom_trigger_tooltip = {
+              tooltip = KOG_qinxin_tt
+              has_government = guli
+            }
+          }
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          add_ideas = KOG_jianliduoduolangduanzaogongsi_idea
+          HUM = {
+              add_ideas = KOG_jianliduoduolangduanzaogongsi_idea
+          }
+          
+          
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.42 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_shentoukongzhirenlei
+      icon = GFX_focus_prc_infiltration
+      cost = 12
+      x = 1
+      y = 1
+
+      prerequisite = {
+          focus = KOG_renleimenhukaifang
+      }
+
+      mutually_exclusive = {
+          focus = KOG_jianliduoduolangduanzaogongsi
+      }
+
+      relative_position_id = KOG_renleimenhukaifang
+
+      available ={
+          is_subject = no
+          or = {
+            custom_trigger_tooltip = {
+              tooltip = KOG_bianbian_tt
+              has_government = neworder
+            }
+            custom_trigger_tooltip = {
+              tooltip = KOG_qinxin_tt
+              has_government = guli
+            }
+          }
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          PO_add10 = yes
+          # hidden_effect = {
+          #     news_event = { days = 2 id = kog2.43 }
+          # }
+      } 
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_bangzhurenleichengweifusangshenshi
+      icon = GFX_focus_jap_zaibatsu
+      cost = 12
+      x = 1
+      y = 1
+
+      prerequisite = {
+          focus = KOG_jianliduoduolangduanzaogongsi
+          focus = KOG_shentoukongzhirenlei
+      }
+
+      relative_position_id = KOG_jianliduoduolangduanzaogongsi
+
+      available ={
+          is_subject = no
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          PO_add5 = yes
+          HUM = {
+              ROOT = {
+                add_ai_strategy = {
+                  type = befriend
+                  id = PREV
+                  value = 60
+                }
+              }
+              add_ai_strategy = {
+                type = befriend
+                id = ROOT
+                value = 60
+              }
+              add_opinion_modifier = { target = ROOT modifier = KOG_bangzhurenleichengweifusangshenshi_op}
+              reverse_add_opinion_modifier = { target = ROOT modifier = KOG_bangzhurenleichengweifusangshenshi_op}
+          }
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.44 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_qingchuqianzaiweixie
+      icon = GFX_goal_generic_major_war
+      cost = 12
+      x = 0
+      y = 1
+
+      will_lead_to_war_with = NMS
+      will_lead_to_war_with = AVE
+
+      prerequisite = {
+          focus = KOG_bangzhurenleichengweifusangshenshi
+      }
+
+      relative_position_id = KOG_bangzhurenleichengweifusangshenshi
+
+      available ={
+        is_subject = no
+        threat > 0.5 
+      }
+
+      bypass = {
+        NMS = {
+          bypass_declare_war = yes
+        }
+      }
+
+      completion_reward = {
+          declare_war_on = {
+              type = puppet_wargoal_focus
+              target = NMS
+          }
+          declare_war_on = {
+              type = puppet_wargoal_focus
+              target = AVE
+          }
+          
+      }
+
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          has_war = yes
+          factor = 0
+        }
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_chengweishouhushen
+      icon = GFX_goal_molotov_ribbentrop_pact
+      cost = 12
+      x = -1
+      y = 1
+
+      prerequisite = {
+          focus = KOG_qingchuqianzaiweixie
+      }
+      prerequisite = {
+          focus = KOG_jianliduoduolangduanzaogongsi
+      }
+      mutually_exclusive = {
+          focus = KOG_renleishiwomendedaoju
+      }
+
+      relative_position_id = KOG_qingchuqianzaiweixie
+
+      available ={
+        is_subject = no
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          add_ideas = God
+          hidden_effect = {
+            set_technology = {
+              pri_youkai_tech = 0
+            }
+            tech_initialize = yes
+            country_event = glo.3000
+          }
+          custom_effect_tooltip = KOG_chengweishouhushen_tt
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.46 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_renleishiwomendedaoju
+      icon = GFX_focus_smiling_buddha
+      cost = 12
+      x = 1
+      y = 1
+
+      will_lead_to_war_with = HUM
+
+      prerequisite = {
+          focus = KOG_qingchuqianzaiweixie
+      }
+      prerequisite = {
+          focus = KOG_shentoukongzhirenlei
+      }
+      mutually_exclusive = {
+          focus = KOG_chengweishouhushen
+      }
+
+      relative_position_id = KOG_qingchuqianzaiweixie
+
+      available ={
+        is_subject = no
+      }
+
+      bypass = {
+          HUM = {
+              bypass_declare_war = yes
+          }
+      }
+
+      completion_reward = {
+          HUM = {
+              country_event = { days = 2 id = kog2.58}
+          }
+          custom_effect_tooltip = TEG_accept
+          effect_tooltip = {
+            HUM = {
+              subject_level4 = yes
+            }
+          }
+          custom_effect_tooltip = KOG_renleishiwomendedaoju_tt
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_shuyuanrenlei
+      icon = GFX_focus_generic_air_defense
+      cost = 12
+      x = 8
+      y = 1
+
+      prerequisite = {
+          focus = KOG_xindewaijiaocelve
+      }
+      mutually_exclusive = {
+          focus = KOG_duirenleiyouhao
+      }
+
+      relative_position_id = KOG_xindewaijiaocelve
+
+      available ={
+        is_subject = no
+        or = {
+            custom_trigger_tooltip = {
+              tooltip = KOG_guge_tt
+              has_government = qinwai
+              has_country_flag = KOG_gugelvse
+            }
+            custom_trigger_tooltip = {
+              tooltip = KOG_baqiao_tt
+              has_government = fandong
+            }
+            custom_trigger_tooltip = {
+              tooltip = KOG_qinxin_tt
+              has_government = guli
+            }
+          }
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          add_stability = 0.05
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_jianlihegengduoyaoguaideguanxi
+      icon = GFX_goal_generic_major_alliance
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+          focus = KOG_shuyuanrenlei
+      }
+
+      relative_position_id = KOG_shuyuanrenlei
+
+      available ={
+        is_subject = no
+      }
+
+      bypass = {
+          
+      }
+
+      completion_reward = {
+          add_political_power = 150
+          # hidden_effect = {
+          #     news_event = { days = 2 id = kog2.49 }
+          # }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_kaolongzi
+      icon = GFX_goal_generic_improve_relations
+      cost = 12
+      x = -1
+      y = 1
+
+      prerequisite = {
+          focus = KOG_jianlihegengduoyaoguaideguanxi
+      }
+      mutually_exclusive = {
+          focus = KOG_zili
+      }
+
+      relative_position_id = KOG_jianlihegengduoyaoguaideguanxi
+
+      available ={
+        is_subject = no
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          YKR = {
+              add_opinion_modifier = { target = ROOT modifier = KOG_kaolongzi_op}
+              reverse_add_opinion_modifier = { target = ROOT modifier = KOG_kaolongzi_op}
+              can_use = yes
+              ROOT = {
+                 can_use = yes
+              }
+          }
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.50 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_zili
+      icon = GFX_goal_generic_demand_territory
+      cost = 12
+      x = 1
+      y = 1
+
+      prerequisite = {
+          focus = KOG_jianlihegengduoyaoguaideguanxi
+      }
+      mutually_exclusive = {
+          focus = KOG_kaolongzi
+      }
+
+      relative_position_id = KOG_jianlihegengduoyaoguaideguanxi
+
+      available ={
+        is_subject = no
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          add_ideas = KOG_zili_idea 
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.51 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_bangzhulinglanyuanjianshe
+      icon = GFX_goal_generic_improve_relations
+      cost = 12
+      x = 1
+      y = 1
+
+      prerequisite = {
+          focus = KOG_kaolongzi
+          focus = KOG_zili
+      }
+
+      relative_position_id = KOG_kaolongzi
+
+      available ={
+        is_subject = no
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          MEL = {
+              add_opinion_modifier = { target = ROOT modifier = KOG_bangzhulinglanyuanjianshe_op}
+              reverse_add_opinion_modifier = { target = ROOT modifier = KOG_bangzhulinglanyuanjianshe_op}
+              can_use = yes
+              ROOT = {
+                 can_use = yes
+              }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_womendexinluxian
+      icon = GFX_goal_generic_propaganda
+      cost = 12
+      x = -1
+      y = 1
+
+      prerequisite = {
+          focus = KOG_bangzhulinglanyuanjianshe
+      }
+
+      relative_position_id = KOG_bangzhulinglanyuanjianshe
+
+      available ={
+        is_subject = no
+      }
+
+      mutually_exclusive = {
+        focus = KOG_quankaowomenziji
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          custom_effect_tooltip = focus_warning
+          if = {
+              limit = {
+                  has_government = qinwai
+              }
+              add_ideas = qinwaijiaqiang
+          }
+          if = {
+              limit = {
+                  has_government = fandong
+              }
+              add_ideas = fandongjiaqiang
+          }
+          PO_influence_factor0.1 = yes
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.53 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+
+  focus = {
+      id = KOG_quankaowomenziji
+      icon = GFX_goal_generic_national_unity
+      cost = 12
+      x = 1
+      y = 1
+
+      prerequisite = {
+          focus = KOG_bangzhulinglanyuanjianshe
+      }
+
+      relative_position_id = KOG_bangzhulinglanyuanjianshe
+
+      available ={
+        is_subject = no
+      }
+
+      mutually_exclusive = {
+        focus = KOG_womendexinluxian
+      }
+
+      bypass = {
+      
+      }
+
+      completion_reward = {
+          add_ideas = KOG_quankaowomenziji_idea
+          hidden_effect = {
+              news_event = { days = 2 id = kog2.54 }
+          }
+      }
+
+      ai_will_do = {
+        factor = 1
+      }
+
+      cancel_if_invalid = no
+      continue_if_invalid = yes
+      available_if_capitulated = yes
+  }
+}

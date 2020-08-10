@@ -1,0 +1,24 @@
+﻿#Generic Operative list
+GENERIC_NAME_OPERATIVE_CODENAME_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_OPERATIVES
+
+	# for all English speaking countries
+	for_countries = { }
+
+	type = codename
+
+	fallback_name = "Leader %d"
+
+	unique = {
+		"One"
+		"Two"
+		"Three"
+		"Four"
+		"Five"
+		"Six"
+		"Seven"
+		"Eight"
+		"Nine"
+		"Ten"
+	}
+}

@@ -1,0 +1,36 @@
+
+state={
+	id=175
+	name="STATE_175"
+
+	resources={
+
+		powder=0.000
+		metal=0.000
+		gas=5.000
+		crystal=5.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = MYK
+			add_core_of = MYK
+			add_core_of = RMI
+			buildings = {
+				infrastructure =0
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		14 667 1237 2177 2433 2788 2800 2802 3042 4522 4524 4526 4529 4532 
+	}
+	manpower=871.0
+	buildings_max_level_factor=1.000
+	state_category=s2
+}

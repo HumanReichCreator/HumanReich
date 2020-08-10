@@ -1,0 +1,167 @@
+﻿division_template = {
+	name = "常规编制"
+
+	regiments = {
+		sc_infantry = { x = 0 y = 0 }
+		sc_infantry = { x = 0 y = 1 }
+		sc_infantry = { x = 0 y = 2 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "民兵编制"
+
+	regiments = {
+		sc_militia = { x = 0 y = 0 }
+		sc_militia = { x = 0 y = 1 }
+	}
+	support = {
+	}
+}
+
+units = {
+	division = {
+		name = "常规编制"
+		location = 3131
+		division_template = "常规编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常规编制"
+		location = 3131
+		division_template = "常规编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常规编制"
+		location = 3131
+		division_template = "常规编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "民兵编制"
+		location = 3131
+		division_template = "民兵编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "民兵编制"
+		location = 3131
+		division_template = "民兵编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "民兵编制"
+		location = 3131
+		division_template = "民兵编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "民兵编制"
+		location = 3131
+		division_template = "民兵编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "民兵编制"
+		location = 3131
+		division_template = "民兵编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "常规编制"
+		location = 5338
+		division_template = "常规编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常规编制"
+		location = 5338
+		division_template = "常规编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "民兵编制"
+		location = 5338
+		division_template = "民兵编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "民兵编制"
+		location = 5338
+		division_template = "民兵编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "民兵编制"
+		location = 5338
+		division_template = "民兵编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "民兵编制"
+		location = 5338
+		division_template = "民兵编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "常规编制"
+		location = 4198
+		division_template = "常规编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "民兵编制"
+		location = 4198
+		division_template = "民兵编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "民兵编制"
+		location = 4198
+		division_template = "民兵编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "常规编制"
+		location = 4196
+		division_template = "常规编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "民兵编制"
+		location = 4196
+		division_template = "民兵编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "民兵编制"
+		location = 4196
+		division_template = "民兵编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+}

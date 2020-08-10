@@ -1,0 +1,454 @@
+technologies = {
+	god_tech = {
+	    folder = {
+	      name = God_race_tech_folder
+	      position = { x = 10 y = 0 }
+	    }
+
+	    path = {
+			leads_to_tech = shengetansuo1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = shengge1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = shenmingdaixingzhe1
+			research_cost_coeff = 1
+		}
+
+		category_science_infantry = {
+	    	max_strength = 15
+	    }
+	    category_magic_infantry = {
+	    	max_strength = 15
+	    }
+	    category_combined_infantry = {
+	    	max_strength = 15
+	    }
+
+		research_cost = 1
+	    
+	    categories = {
+	      secret
+	    }
+	    dependencies = {
+	       abandoned = 1
+	    }
+	    ai_will_do = {
+	      factor = 1
+	    }
+	}
+	shengetansuo1 = {
+	
+		path = {
+			leads_to_tech = shengetansuo2
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.2
+		start_year = 144
+
+		consumer_goods_factor = -0.03
+
+		folder = {
+			name = God_race_tech_folder
+			position = { x = 4 y = 2 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	shengetansuo2 = {
+	
+		path = {
+			leads_to_tech = shengetansuo3
+			research_cost_coeff = 1
+		}
+
+		consumer_goods_factor = -0.03
+		
+		research_cost = 2.2
+		start_year = 148
+
+		folder = {
+			name = God_race_tech_folder
+			position = { x = 4 y = 4 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	shengetansuo3 = {
+	
+		path = {
+			leads_to_tech = shengetansuo4
+			research_cost_coeff = 1
+		}
+
+		consumer_goods_factor = -0.03
+		
+		research_cost = 2.2
+		start_year = 152
+
+		folder = {
+			name = God_race_tech_folder
+			position = { x = 4 y = 6 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	shengetansuo4 = {
+	
+		path = {
+			leads_to_tech = shengetansuo5
+			research_cost_coeff = 1
+		}
+
+		consumer_goods_factor = -0.03
+		
+		research_cost = 2.2
+		start_year = 156
+
+		folder = {
+			name = God_race_tech_folder
+			position = { x = 4 y = 8 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	shengetansuo5 = {
+
+		consumer_goods_factor = -0.03
+		
+		research_cost = 2.2
+		start_year = 160
+
+		folder = {
+			name = God_race_tech_folder
+			position = { x = 4 y = 10 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	shengge1 = {
+	
+		path = {
+			leads_to_tech = shengge2
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.2
+		start_year = 144
+
+		encryption = 2.5
+		decryption = 2.5
+
+		folder = {
+			name = God_race_tech_folder
+			position = { x = 10 y = 2 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	shengge2 = {
+	
+		path = {
+			leads_to_tech = shengge3
+			research_cost_coeff = 1
+		}
+
+		encryption = 2.5
+		decryption = 2.5
+		
+		research_cost = 2.2
+		start_year = 148
+
+		folder = {
+			name = God_race_tech_folder
+			position = { x = 10 y = 4 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	shengge3 = {
+	
+		path = {
+			leads_to_tech = shengge4
+			research_cost_coeff = 1
+		}
+
+		encryption = 2.5
+		decryption = 2.5
+
+		
+		research_cost = 2.2
+		start_year = 152
+
+		folder = {
+			name = God_race_tech_folder
+			position = { x = 10 y = 6 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	shengge4 = {
+	
+		path = {
+			leads_to_tech = shengge5
+			research_cost_coeff = 1
+		}
+
+		encryption = 2.5
+		decryption = 2.5
+		
+		research_cost = 2.2
+		start_year = 156
+
+		folder = {
+			name = God_race_tech_folder
+			position = { x = 10 y = 8 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	shengge5 = {
+
+		encryption = 2.5
+		decryption = 2.5
+		
+		research_cost = 2.2
+		start_year = 160
+
+		folder = {
+			name = God_race_tech_folder
+			position = { x = 10 y = 10 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	shenmingdaixingzhe1 = {
+	
+		path = {
+			leads_to_tech = shenmingdaixingzhe2
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			God_special_1
+		}
+
+		enable_subunits = {
+			God_special
+		}
+		
+		research_cost = 2.2
+		start_year = 144
+
+		folder = {
+			name = God_race_tech_folder
+			position = { x = 16 y = 2 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	shenmingdaixingzhe2 = {
+	
+		path = {
+			leads_to_tech = shenmingdaixingzhe3
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			God_special_2
+		}
+
+		God_special = {
+			combat_width = -5
+		}
+		
+		research_cost = 2.2
+		start_year = 148
+
+		folder = {
+			name = God_race_tech_folder
+			position = { x = 16 y = 4 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	shenmingdaixingzhe3 = {
+	
+		path = {
+			leads_to_tech = shenmingdaixingzhe4
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			God_special_3
+		}
+
+		God_special = {
+			combat_width = -5
+		}
+
+		
+		research_cost = 2.2
+		start_year = 152
+
+		folder = {
+			name = God_race_tech_folder
+			position = { x = 16 y = 6 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	shenmingdaixingzhe4 = {
+	
+		path = {
+			leads_to_tech = shenmingdaixingzhe5
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			God_special_4
+		}
+
+		God_special = {
+			combat_width = -5
+		}
+		
+		research_cost = 2.2
+		start_year = 156
+
+		folder = {
+			name = God_race_tech_folder
+			position = { x = 16 y = 8 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	shenmingdaixingzhe5 = {
+		
+		research_cost = 2.2
+		start_year = 160
+
+		enable_equipments = {
+			God_special_5
+		}
+
+		God_special = {
+			combat_width = -5
+		}
+
+		folder = {
+			name = God_race_tech_folder
+			position = { x = 16 y = 10 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

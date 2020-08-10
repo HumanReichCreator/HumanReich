@@ -1,0 +1,144 @@
+﻿capital = 298
+138.8.13 = {
+
+}
+141.6.2 = {
+    
+}
+142.3.8 = {
+    
+}
+144.2.5 = {
+    
+}
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card = 1
+        linglijiejing139 = 1
+        danmujingque139 = 1
+        gaosudanmu139 = 1
+        buqiang117 = 1
+            
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+        zuzhihuazhanzheng142 = 1
+            
+        #工程学 
+        jichushuxue = 1
+        tongxunlilun = 1
+        jiemi137 = 1
+        jiemi142 = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+            
+        #专用工业
+
+        #种族
+            
+    }
+}
+146.1.1={
+    oob = "SAT_146"
+    set_major = yes
+
+    
+    add_ideas = {
+        manpowerlv1
+        Youkai
+        Village
+        close3
+        dove2
+        strict_border
+        free_magic
+    }
+    
+    RUH = {
+        subject_level2 = yes
+        set_cosmetic_tag = RUH_SAT
+    }
+    
+    RUH = {
+      set_politics = {
+        ruling_party = guli
+        election_frequency = 48
+        elections_allowed = no
+     }
+     set_popularities = {
+        qinwai = 0
+        guli = 80
+        neworder = 0
+        oldorder = 0
+        fandong = 20
+     }
+    }
+    set_politics = {
+    	ruling_party = oldorder
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 0
+        guli = 0
+        neworder = 6
+        oldorder = 92
+        fandong = 2
+    }
+    
+    
+    
+}
+create_country_leader = {
+	# name = "Komeiji Satori"
+    name = "古明地觉"
+	picture = "SAT_sat.dds"
+	ideology = guli_type
+	traits = { }
+}
+
+create_country_leader = {
+    # name = "Komeiji Koishi"
+    name = "古明地恋"
+    picture = "SAT_sat.dds"
+    ideology = qinwai_type
+    traits = { }
+}
+
+create_country_leader = {
+    # name = "Komeiji Satori"
+    name = "古明地觉"
+    picture = "SAT_sat.dds"
+    ideology = oldorder_type
+    traits = { }
+}
+
+create_country_leader = {
+    # name = "Komeiji Koishi"
+    name = "古明地恋"
+    picture = "SAT_koishi.dds"
+    ideology = fandong_type
+    traits = { }
+}
+
+create_country_leader = {
+    # name = "Komeiji Koishi"
+    name = "古明地恋"
+    picture = "SAT_koishi.dds"
+    ideology = neworder_type
+    traits = { }
+}

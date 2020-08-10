@@ -1,0 +1,807 @@
+ideas = {
+	country = {
+		SRB_xianjiemingongjianshe_idea = {
+			picture = man_five_year_plan_industry
+	    	allowed = {
+				always = no
+			}
+
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				# stability_factor = -0.15
+				# war_support_factor = -0.1
+				# surrender_limit = -0.3
+			}
+			research_bonus = {
+				civil = 0.1
+			}
+	    }
+	    SRB_xintuxiulianjiaocheng_idea1 = {
+			picture = generic_goods_red_bonus
+	    	allowed = {
+				always = no
+			}
+
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				consumer_goods_factor = -0.06
+			}
+
+	    }
+	    SRB_xintuxiulianjiaocheng_idea2 = {
+			picture = generic_disjointed_gov
+	    	allowed = {
+				always = no
+			}
+
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				political_power_factor = -0.33
+			}
+
+	    }
+	    SRB_jiashengerenchongbai_idea = {
+			picture = vittoria_mutilata
+	    	allowed = {
+				always = no
+			}
+
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				political_power_factor = 0.2
+			}
+
+	    }
+	    SRB_jiadaduijunshidetouru_idea = {
+			picture = man_five_year_plan_tank
+	    	allowed = {
+				always = no
+			}
+
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				# political_power_factor = 0.2
+			}
+			research_bonus = {
+				military = 0.075
+			}
+
+	    }
+	    SRB_shiyongrenleikeji_idea = {
+			picture = generic_research_bonus
+	    	allowed = {
+				always = no
+			}
+
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				# political_power_factor = 0.2
+			}
+			research_bonus = {
+				science = 0.075
+			}
+	    }
+	    SRB_zuodakuodayingxianglidezhunbei_idea = {
+			picture = warrior_traditions_idea
+	    	allowed = {
+				always = no
+			}
+
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				justify_war_goal_time = -0.33
+				generate_wargoal_tension = -0.15
+				drift_defence_factor = -0.25
+			}
+			research_bonus = {
+				# science = 0.075
+			}
+	    }
+	    SRB_daojiaotansuojingshen_idea = {
+
+			picture = generic_research_bonus
+
+	    	allowed = {
+				always = no
+			}
+
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				research_speed_factor = -0.3
+			}
+	    }	
+	    SRB_zhunbeizhonghouqizhanzheng_idea = {
+			picture = ast_naval_auxiliary_patrol
+	    	allowed = {
+				always = no
+			}
+
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				drift_defence_factor = -0.15
+			}
+			research_bonus = {
+				# science = 0.075
+			}
+	    }
+	    SRB_zouxianghunluandeluxian_idea = {
+
+			picture = generic_communism_drift_bonus
+
+	    	allowed = {
+				always = no
+			}
+
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				fandong_drift = 0.1
+			}
+			research_bonus = {
+				# science = 0.075
+			}
+	    }
+	    SRB_zouxiangtongzhideluxian_idea = {
+
+			picture = generic_fascism_drift_bonus
+
+	    	allowed = {
+				always = no
+			}
+
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				neworder_drift = 0.1
+			}
+			research_bonus = {
+				# science = 0.075
+			}
+	    }
+	    SRB_fangyuzhunbei_idea = {
+
+			picture = FRA_fortification_focus
+
+	    	allowed = {
+				always = no
+			}
+
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				production_speed_bunker_factor = 0.15
+			}
+			research_bonus = {
+				# science = 0.075
+			}
+	    }
+	    SRB_jianlijiangshijundui_idea = {
+
+			picture = generic_manpower_bonus
+
+	    	allowed = {
+				always = no
+			}
+
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				conscription = 0.06
+			}
+			research_bonus = {
+				# science = 0.075
+			}
+	    }
+
+	    SRB_qinshimingliansizhoubian_idea = {
+
+			picture = generic_acquire_tanks
+
+	    	allowed = {
+				always = no
+			}
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				# conscription = 0.06
+			}
+			targeted_modifier = { 
+				tag = AVE
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = { 
+				tag = MAM
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			research_bonus = {
+				# science = 0.075
+			}
+	    }
+	    SRB_tansuohuanxiangxiangzhendi1_idea = {
+
+			picture = generic_research_bonus
+
+	    	allowed = {
+				always = no
+			}
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				research_speed_factor = 0.05
+			}
+	
+			research_bonus = {
+				# science = 0.075
+			}
+	    }
+	    SRB_tansuohuanxiangxiangzhendi2_idea = {
+
+			picture = generic_research_bonus
+
+	    	allowed = {
+				always = no
+			}
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				research_speed_factor = 0.1
+			}
+	
+			research_bonus = {
+				# science = 0.075
+			}
+	    }
+	    SRB_tansuohuanxiangxiangzhendi3_idea = {
+
+			picture = generic_research_bonus
+
+	    	allowed = {
+				always = no
+			}
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				research_speed_factor = 0.15
+			}
+	
+			research_bonus = {
+				# science = 0.075
+			}
+	    }
+	    SRB_faxianhuanxiangxiangdemaodundian1_idea = {
+
+	    	picture = jap_supremacy_of_will
+
+	    	allowed = {
+				always = no
+			}
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				army_infantry_attack_factor = 0.04
+				army_infantry_defence_factor = 0.04
+			}
+	
+			research_bonus = {
+				# science = 0.075
+			}
+	    }
+	    SRB_faxianhuanxiangxiangdemaodundian2_idea = {
+
+	    	picture = jap_supremacy_of_will
+
+	    	allowed = {
+				always = no
+			}
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				army_infantry_attack_factor = 0.08
+				army_infantry_defence_factor = 0.08
+			}
+	
+			research_bonus = {
+				# science = 0.075
+			}
+	    }
+	    SRB_faxianhuanxiangxiangdemaodundian3_idea = {
+
+	    	picture = jap_supremacy_of_will
+
+	    	allowed = {
+				always = no
+			}
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				army_infantry_attack_factor = 0.14
+				army_infantry_defence_factor = 0.14
+			}
+	
+			research_bonus = {
+				# science = 0.075
+			}
+	    }
+
+	    SRB_anzhongshentourenli11_idea = {
+
+	    	picture = generic_acquire_tanks
+
+	    	allowed = {
+				always = no
+			}
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			targeted_modifier = { 
+				tag = HUM
+				attack_bonus_against = 0.06
+				defense_bonus_against = 0.06
+			}
+	
+			research_bonus = {
+				# science = 0.075
+			}
+	    }
+	    SRB_anzhongshentourenli12_idea = {
+
+	    	picture = chi_war_of_resistance3
+
+	    	allowed = {
+				always = no
+			}
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			targeted_modifier = { 
+				tag = SRB
+				attack_bonus_against = -0.05
+				defense_bonus_against = -0.05
+			}
+	
+			research_bonus = {
+				# science = 0.075
+			}
+	    }
+
+	    SRB_anzhongshentourenli21_idea = {
+
+	    	picture = generic_acquire_tanks
+
+	    	allowed = {
+				always = no
+			}
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			targeted_modifier = { 
+				tag = HUM
+				attack_bonus_against = 0.12
+				defense_bonus_against = 0.12
+			}
+	
+			research_bonus = {
+				# science = 0.075
+			}
+	    }
+	    SRB_anzhongshentourenli22_idea = {
+
+	    	picture = chi_war_of_resistance3
+
+	    	allowed = {
+				always = no
+			}
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			targeted_modifier = { 
+				tag = SRB
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.1
+			}
+	
+			research_bonus = {
+				# science = 0.075
+			}
+	    }
+
+	    SRB_anzhongshentourenli31_idea = {
+
+	    	picture = generic_acquire_tanks
+
+	    	allowed = {
+				always = no
+			}
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			targeted_modifier = { 
+				tag = HUM
+				attack_bonus_against = 0.18
+				defense_bonus_against = 0.18
+			}
+	
+			research_bonus = {
+				# science = 0.075
+			}
+	    }
+	    SRB_anzhongshentourenli32_idea = {
+
+	    	picture = chi_war_of_resistance3
+
+	    	allowed = {
+				always = no
+			}
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			targeted_modifier = { 
+				tag = SRB
+				attack_bonus_against = -0.2
+				defense_bonus_against = -0.2
+			}
+	
+			research_bonus = {
+				# science = 0.075
+			}
+	    }
+
+	    SRB_anzhongkuishimingliansi1_idea = {
+
+	    	picture = generic_acquire_tanks
+
+	    	allowed = {
+				always = no
+			}
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			targeted_modifier = { 
+				tag = NMS
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+	
+			research_bonus = {
+				# science = 0.075
+			}
+	    }
+	    SRB_anzhongkuishimingliansi2_idea = {
+
+	    	picture = generic_acquire_tanks
+
+	    	allowed = {
+				always = no
+			}
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			targeted_modifier = { 
+				tag = NMS
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+	
+			research_bonus = {
+				# science = 0.075
+			}
+	    }
+	    SRB_anzhongkuishimingliansi3_idea = {
+
+	    	picture = generic_acquire_tanks
+
+	    	allowed = {
+				always = no
+			}
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			targeted_modifier = { 
+				tag = NMS
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.2
+			}
+	
+			research_bonus = {
+				# science = 0.075
+			}
+	    }
+	    SRB_zaimingliansishangmianjian_idea = {
+
+	    	picture = generic_agrarian_society
+
+	    	allowed = {
+				always = no
+			}
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = { 
+				army_morale_factor = 0.15
+			}
+	
+			research_bonus = {
+				# science = 0.075
+			}
+	    }
+
+	    SRB_jieshougengduorenleixintu_idea = {
+
+	    	picture = SPA_fet_y_de_las_jons
+
+	    	allowed = {
+				always = no
+			}
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = { 
+				army_infantry_defence_factor = 0.05
+				army_infantry_attack_factor = 0.05
+				research_speed_factor = 0.05
+			}
+	
+			research_bonus = {
+				# science = 0.075
+			}
+	    }
+
+	    SRB_huanxiangxiangjiangshihua_idea = {
+
+	    	picture = ENG_the_war_to_end_all_wars
+
+	    	allowed = {
+				always = no
+			}
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = { 
+				conscription = 0.1
+				army_attack_factor = -0.3
+				army_defence_factor = -0.3
+			}
+	
+			research_bonus = {
+				# science = 0.075
+			}
+	    }
+
+	}
+}

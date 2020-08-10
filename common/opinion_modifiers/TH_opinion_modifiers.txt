@@ -1,0 +1,130 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+    background_enemy = {
+		value = -500
+		trade = no
+	}
+	background_enemy2 = {
+		value = -75
+		decay = 1
+	}
+	set_enemy = {
+		value = -500
+		trade = no
+	}
+	background_friend = {
+		value = 100
+	}
+	jiemeng = {
+		value = 60
+	}
+
+	same_ruling_party = { #-changed
+		value = 10
+	}
+	
+	different_party_types = { #-changed
+		value = -20
+	}
+
+	same_view = {
+		value = 15
+	}
+
+	different_view = {
+		value = -30
+	}
+
+	gailiang_view = {
+		value = 40
+	}
+
+	same_race = {
+		value = 5
+	}
+
+	different_race = {
+		value = -25
+	}
+
+	different_world = {
+		value = -20
+	}
+
+	zhichiweiquan = {
+		value = 30
+	}
+
+	fanduiweiquan = {
+		value = -30
+	}
+
+
+	# old_vs_new = {
+	# 	value = -30
+	# }
+	
+	
+#	is_oracle_vs = {
+#		value = -15
+#	}
+	# old_vs_fan = {
+	# 	value = -60
+	# }
+	# old_vs_old = {
+	# 	value = 100
+	# }
+	# fan_vs_old = {
+	# 	value = -30
+	# }
+	# fan_vs_new = {
+	# 	value = -30
+	# }
+	# fan_vs_fan = {
+	# 	value = 40
+	# }
+	# new_vs_fan = {
+	# 	value = -25
+	# }
+	# vs_qin = {
+	# 	value = 20
+	# }
+	# qin_vs_qin = {
+	# 	value = 40
+	# }
+	# gu_vs_old = {
+	# 	value = 50
+	# }
+	# qin_vs_old = {
+	# 	value = 50
+	# }
+#	enemy_ideo = {
+#		value = -50
+#	}
+#==========通用==========
+    yaoxianfocus = {
+	    value = 20
+	}
+	easy_s = {
+	    value = 5
+	}
+	hard_s = {
+	    value = -5
+	}
+	lunatic_s = {
+	    value = -15
+	}
+
+	waibulianxi_o = {
+	    value = 10
+	}
+}	

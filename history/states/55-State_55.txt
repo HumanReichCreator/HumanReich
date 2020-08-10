@@ -1,0 +1,32 @@
+
+state={
+	id=55
+	name="STATE_55"
+
+	resources={
+
+		powder = 5.0
+		metal = 0
+		gas = 5.0
+		crystal = 15.0
+	}
+
+	history={
+       	146.1.1 = {
+			owner = UUG
+			add_core_of = UUG
+			buildings = {
+				infrastructure =3
+				industrial_complex = 1
+				arms_factory = 4
+			}
+       	}
+	}
+
+	provinces={
+		839 1128 1145 1157 1256 1622 1718 1884 1922 2076 2090 2108 2308 2630 2648 3063 
+	}
+	state_category=s5
+	manpower=39468.0
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,36 @@
+
+state={
+	id=93
+	name="STATE_93"
+	resources={
+		energy = 1
+		powder=5.000
+		metal=0.000
+		gas=0.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = GRS
+			add_core_of = GRS
+			add_core_of = KAP
+			add_core_of = NIT
+			buildings = {
+				infrastructure =4
+				industrial_complex = 4
+				arms_factory = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		207 629 780 1044 1803 2059 2244 3449 3451 3452 3453 3454 4033 4035 4050 4053 4061 4062 4070 
+	}
+	manpower=1244.0
+	buildings_max_level_factor=1.000
+	state_category=s7
+}

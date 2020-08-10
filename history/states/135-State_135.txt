@@ -1,0 +1,33 @@
+
+state={
+	id=135
+	name="STATE_135"
+	resources={
+		powder=5.000
+		metal=5.000
+		gas=15.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = RMI
+			add_core_of = RMI
+			buildings = {
+				infrastructure =5
+				industrial_complex = 4
+				arms_factory = 4
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		422 433 751 782 847 1050 2343 5753 5757 5758 5760 5761 5766 5767 5768 5769 5771 5773 5945 5946 5947 5948 
+	}
+	manpower=3061
+	buildings_max_level_factor=1.000
+	state_category=s10
+}

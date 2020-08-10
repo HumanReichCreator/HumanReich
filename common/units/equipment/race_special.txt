@@ -1,0 +1,1843 @@
+# All infantry equipment
+
+equipments = {
+
+	Human_special_a = {
+		year = 144
+	
+		is_archetype = yes	
+		is_buildable = no
+		picture = archetype_artillery_equipment		
+		type = {
+			artillery
+			infantry
+		}
+		group_by = archetype
+		
+		interface_category = interface_category_land
+
+		upgrades = {
+			upgrade_reliability
+          	upgrade_softattack
+          	upgrade_hardattack
+          	upgrade_aaattack
+          	upgrade_defense
+          	upgrade_breakthrough
+          	upgrade_ic
+          	upgrade_ic_reverse
+          	upgrade_reliability_reverse
+		}
+		#Defensive Abilities
+		defense = 8
+		breakthrough = 8
+		hardness = 0
+		armor_value = 0
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 80
+		ap_attack = 13
+		air_attack = 0
+
+		#Misc Abilities
+		reliability = 0.7
+		maximum_speed = 5.3#3.5
+
+		#Space taken in convoy
+		build_cost_ic = 4
+
+		lend_lease_cost = 1
+	}
+
+	Human_special_1 = {
+		year = 144
+	
+		archetype = Human_special_a
+		
+		priority = 10
+		visual_level = 0
+
+		resources = {
+			gas = 1
+			powder = 1
+		}
+	}
+
+	Human_special_2 = {
+		year = 148
+	
+		archetype = Human_special_a
+		parent = Human_special_1
+		priority = 10
+		visual_level = 1
+
+		resources = {
+			gas = 1
+			powder = 1
+		}
+		
+		#Defensive Abilities
+		defense = 11
+		breakthrough = 11
+
+		#Offensive Abilities
+		hard_attack = 97
+
+		#Misc Abilities
+
+		#Space taken in convoy
+		build_cost_ic = 4.8
+	}
+
+	Human_special_3 = {
+		year = 152
+	
+		archetype = Human_special_a
+		parent = Human_special_2
+		priority = 10
+		visual_level = 2
+
+		resources = {
+			gas = 2
+			powder = 2
+		}
+
+		#Defensive Abilities
+		defense = 13
+		breakthrough = 13
+
+		#Offensive Abilities
+		hard_attack = 114
+
+		#Misc Abilities
+
+		#Space taken in convoy
+		build_cost_ic = 5.6
+		
+
+	}
+
+	Human_special_4 = {
+		year = 156
+	
+		archetype = Human_special_a
+		parent = Human_special_3
+		priority = 10
+		visual_level = 3
+
+		resources = {
+			gas = 2
+			powder = 2
+		}
+
+		#Defensive Abilities
+		defense = 17
+		breakthrough = 17
+
+		#Offensive Abilities
+		hard_attack = 131
+
+		#Misc Abilities
+
+		#Space taken in convoy
+		build_cost_ic = 6.4
+
+	}
+
+	Human_special_5 = {
+		year = 160
+	
+		archetype = Human_special_a
+		parent = Human_special_4
+		priority = 10
+		visual_level = 4
+
+		resources = {
+			gas = 2
+			crystal = 1
+			powder = 2
+			metal = 1
+		}
+
+		#Defensive Abilities
+		defense = 19
+		breakthrough = 19
+
+		#Offensive Abilities
+		hard_attack = 148
+
+		#Misc Abilities
+
+		#Space taken in convoy
+		build_cost_ic = 7.2
+		
+
+	}
+}
+
+# All infantry equipment
+
+equipments = {
+
+	Fairy_special_a = {
+		year = 144
+	
+		is_archetype = yes
+		picture = archetype_infantry_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+
+		upgrades = {
+			upgrade_reliability
+          	upgrade_softattack
+          	upgrade_hardattack
+          	upgrade_aaattack
+          	upgrade_defense
+          	upgrade_breakthrough
+          	upgrade_ic
+          	upgrade_ic_reverse
+          	upgrade_reliability_reverse
+		}
+		#Defensive Abilities
+		defense = 13
+		breakthrough = 13
+		hardness = 0.2
+		armor_value = 0
+
+		#Offensive Abilities
+		soft_attack = 2.9
+		hard_attack = 2.9
+		ap_attack = 1
+		air_attack = 1
+
+		#Misc Abilities
+		reliability = 0.5
+		maximum_speed = 7.5	#5
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 0.35
+
+		
+		
+	}
+
+	Fairy_special_1 = {
+		year = 144
+	
+		archetype = Fairy_special_a
+		
+		priority = 10
+		visual_level = 0
+
+		resources = {
+			gas = 1
+			powder = 1
+		}
+
+
+	}
+
+	Fairy_special_2 = {
+		year = 148
+	
+		archetype = Fairy_special_a
+		parent = Fairy_special_1
+		priority = 10
+		visual_level = 1
+
+		resources = {
+			gas = 1
+			powder = 1
+		}
+
+		#Defensive Abilities
+		defense = 15.6
+		breakthrough = 15.1
+
+		#Offensive Abilities
+		soft_attack = 3.6
+		hard_attack = 3.6
+		air_attack = 1.5
+
+		#Misc Abilities
+
+		#Space taken in convoy
+		
+		build_cost_ic = 0.4
+		
+		
+
+	}
+
+	Fairy_special_3 = {
+		year = 152
+	
+		archetype = Fairy_special_a
+		parent = Fairy_special_2
+		priority = 10
+		visual_level = 2
+
+		resources = {
+			gas = 2
+			powder = 2
+		}
+		
+		#Defensive Abilities
+		defense = 18.2
+		breakthrough = 17.2
+
+		#Offensive Abilities
+		soft_attack = 4.3
+		hard_attack = 4.3
+		air_attack = 2
+
+		#Misc Abilities
+
+		#Space taken in convoy
+		
+		build_cost_ic = 0.45
+
+		
+
+	}
+
+	Fairy_special_4 = {
+		year = 156
+	
+		archetype = Fairy_special_a
+		parent = Fairy_special_3
+		priority = 10
+		visual_level = 3
+
+		resources = {
+			gas = 2
+			powder = 2
+		}
+
+		#Defensive Abilities
+		defense = 20.8
+		breakthrough = 19.2
+
+		#Offensive Abilities
+		soft_attack = 4
+		hard_attack = 4
+		air_attack = 2.5
+
+		#Misc Abilities
+
+		#Space taken in convoy
+		
+		build_cost_ic = 0.5
+
+		
+
+
+	}
+
+	Fairy_special_5 = {
+		year = 160
+	
+		archetype = Fairy_special_a
+		parent = Fairy_special_4
+		priority = 10
+		visual_level = 4
+
+		resources = {
+			gas = 2
+			crystal = 1
+			powder = 2
+			metal = 1
+		}
+
+		#Defensive Abilities
+		defense = 20.8
+		breakthrough = 19.2
+
+		#Offensive Abilities
+		soft_attack = 4.7
+		hard_attack = 4.7
+		air_attack = 2.5
+
+		#Misc Abilities
+
+		#Space taken in convoy
+		
+		build_cost_ic = 0.5
+		
+		
+	}
+}
+
+equipments = {
+
+	Beast_special_a = {
+		year = 144
+	
+		is_archetype = yes
+		picture = archetype_infantry_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+
+		upgrades = {
+			upgrade_reliability
+          	upgrade_softattack
+          	upgrade_hardattack
+          	upgrade_aaattack
+          	upgrade_defense
+          	upgrade_breakthrough
+          	upgrade_ic
+          	upgrade_ic_reverse
+          	upgrade_reliability_reverse
+		}
+		#Defensive Abilities
+		defense = 26
+		breakthrough = 9.1
+		hardness = 0.1
+		armor_value = 0
+
+		#Offensive Abilities
+		soft_attack = 5.8
+		hard_attack = 1
+		ap_attack = 0.1
+		air_attack = 4
+
+		#Misc Abilities
+		reliability = 0.5
+		maximum_speed = 7.5#5
+
+		#Space taken in convoy
+		build_cost_ic = 0.5
+
+		lend_lease_cost = 1
+
+		
+		
+	}
+
+	Beast_special_1 = {
+		year = 144
+	
+		archetype = Beast_special_a
+		
+		priority = 10
+		visual_level = 0
+
+		resources = {
+			gas = 1
+			powder = 1
+		}
+
+	}
+
+	Beast_special_2 = {
+		year = 148
+	
+		archetype = Beast_special_a
+		parent = Beast_special_1
+		priority = 10
+		visual_level = 1
+
+		resources = {
+			gas = 1
+			powder = 1
+		}
+
+		#Defensive Abilities
+		defense = 31.2
+		breakthrough = 10.4
+
+		#Offensive Abilities
+		soft_attack = 7.2
+		hard_attack = 1.3
+		air_attack = 5.5
+
+		#Misc Abilities
+
+		#Space taken in convoy
+		build_cost_ic = 0.6
+		
+
+	}
+
+	Beast_special_3 = {
+		year = 152
+	
+		archetype = Beast_special_a
+		parent = Beast_special_2
+		priority = 10
+		visual_level = 2
+
+		resources = {
+			gas = 2
+			powder = 2
+		}
+
+		#Defensive Abilities
+		defense = 36.4
+		breakthrough = 11.7
+
+		#Offensive Abilities
+		soft_attack = 8.6
+		hard_attack = 1.6
+		air_attack = 7
+
+		#Misc Abilities
+
+		#Space taken in convoy
+		build_cost_ic = 0.7
+		
+
+	}
+
+	Beast_special_4 = {
+		year = 156
+	
+		archetype = Beast_special_a
+		parent = Beast_special_3
+		priority = 10
+		visual_level = 3
+
+		resources = {
+			gas = 2
+			powder = 2
+		}
+
+		#Defensive Abilities
+		defense = 41.6
+		breakthrough = 13
+
+		#Offensive Abilities
+		soft_attack = 10
+		hard_attack = 2
+		air_attack = 8.5
+
+		#Misc Abilities	
+
+		#Space taken in convoy
+		build_cost_ic = 0.8
+
+
+	}
+
+	Beast_special_5 = {
+		year = 160
+	
+		archetype = Beast_special_a
+		parent = Beast_special_4
+		priority = 10
+		visual_level = 4
+
+		resources = {
+			gas = 2
+			crystal = 1
+			powder = 2
+			metal = 1
+		}
+
+		#Defensive Abilities
+		defense = 46.8
+		breakthrough = 14.3
+
+		#Offensive Abilities
+		soft_attack = 11.4
+		hard_attack = 2.3
+		air_attack = 10
+
+		#Misc Abilities
+
+		#Space taken in convoy
+		build_cost_ic = 0.9
+		
+		
+	}
+}
+
+equipments = {
+
+	Ghost_special_a = {
+		year = 144
+	
+		is_archetype = yes
+		picture = archetype_infantry_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+
+		upgrades = {
+			upgrade_reliability
+          	upgrade_softattack
+          	upgrade_hardattack
+          	upgrade_aaattack
+          	upgrade_defense
+          	upgrade_breakthrough
+          	upgrade_ic
+          	upgrade_ic_reverse
+          	upgrade_reliability_reverse
+		}
+		#Defensive Abilities
+		defense = 7.8
+		breakthrough = 9.1
+		hardness = 0.8
+		armor_value = 0
+
+		#Offensive Abilities
+		soft_attack = 3.9
+		hard_attack = 7.8
+		ap_attack = 0.1
+		air_attack = 1
+
+		#Misc Abilities
+		reliability = 0.65
+		maximum_speed = 7.5#5
+
+		#Space taken in convoy
+		build_cost_ic = 0.4
+
+		lend_lease_cost = 1
+
+		
+		
+	}
+
+	Ghost_special_1 = {
+		year = 144
+	
+		archetype = Ghost_special_a
+		
+		priority = 10
+		visual_level = 0
+
+		resources = {
+			gas = 1
+			powder = 1
+		}
+
+
+
+
+	}
+
+	Ghost_special_2 = {
+		year = 148
+	
+		archetype = Ghost_special_a
+		parent = Ghost_special_1
+		priority = 10
+		visual_level = 1
+
+		resources = {
+			gas = 1
+			powder = 1
+		}
+
+		#Defensive Abilities
+		defense = 10.4
+		breakthrough = 10.4
+
+		#Offensive Abilities
+		soft_attack = 4.8
+		hard_attack = 10.4
+		air_attack = 1.5
+
+		#Space taken in convoy
+		build_cost_ic = 0.45
+		
+
+	}
+
+	Ghost_special_3 = {
+		year = 152
+	
+		archetype = Ghost_special_a
+		parent = Ghost_special_2
+		priority = 10
+		visual_level = 2
+
+		resources = {
+			gas = 2
+			powder = 2
+		}
+
+		#Defensive Abilities
+		defense = 13
+		breakthrough = 11.7
+
+		#Offensive Abilities
+		soft_attack = 5.7
+		hard_attack = 13
+		air_attack = 2
+
+		#Space taken in convoy
+		build_cost_ic = 0.5
+		
+
+	}
+
+	Ghost_special_4 = {
+		year = 156
+	
+		archetype = Ghost_special_a
+		parent = Ghost_special_3
+		priority = 10
+		visual_level = 3
+
+		resources = {
+			gas = 2
+			powder = 2
+		}
+
+		#Defensive Abilities
+		defense = 15.6
+		breakthrough = 13
+
+		#Offensive Abilities
+		soft_attack = 6.6
+		hard_attack = 15.6
+		air_attack = 2.5
+
+		#Space taken in convoy
+		build_cost_ic = 0.55
+
+
+	}
+
+	Ghost_special_5 = {
+		year = 160
+	
+		archetype = Ghost_special_a
+		parent = Ghost_special_4
+		priority = 10
+		visual_level = 4
+
+		resources = {
+			gas = 2
+			crystal = 1
+			powder = 2
+			metal = 1
+		}
+		
+		#Defensive Abilities
+		defense = 18.2
+		breakthrough = 14.3
+
+		#Offensive Abilities
+		soft_attack = 7.5
+		hard_attack = 18.2
+		air_attack = 3
+
+		#Space taken in convoy
+		build_cost_ic = 0.6
+		
+	}
+}
+
+equipments = {
+
+	Magician_special_a = {
+		year = 144
+	
+		is_archetype = yes
+		picture = archetype_infantry_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+
+		upgrades = {
+			upgrade_reliability
+          	upgrade_softattack
+          	upgrade_hardattack
+          	upgrade_aaattack
+          	upgrade_defense
+          	upgrade_breakthrough
+          	upgrade_ic
+          	upgrade_ic_reverse
+          	upgrade_reliability_reverse
+		}
+		#Defensive Abilities
+		defense = 20.8
+		breakthrough = 7.8
+		hardness = 0.55
+		armor_value = 0
+
+		#Offensive Abilities
+		soft_attack = 4.8
+		hard_attack = 3.6
+		ap_attack = 1
+		air_attack = 5
+
+		#Misc Abilities
+		reliability = 0.7
+		maximum_speed = 7.5#5
+
+		#Space taken in convoy
+		build_cost_ic = 0.5
+
+		lend_lease_cost = 1
+
+		
+		
+	}
+
+	Magician_special_1 = {
+		year = 144
+	
+		archetype = Magician_special_a
+		
+		priority = 10
+		visual_level = 0
+
+		resources = {
+			gas = 1
+			powder = 1
+		}
+
+
+	}
+
+	Magician_special_2 = {
+		year = 148
+	
+		archetype = Magician_special_a
+		parent = Magician_special_1
+		priority = 10
+		visual_level = 1
+
+		resources = {
+			gas = 1
+			powder = 1
+		}
+
+		#Defensive Abilities
+		defense = 26
+		breakthrough = 8.6
+
+		#Offensive Abilities
+		soft_attack = 5.2
+		hard_attack = 4.5
+		ap_attack = 1.2
+		air_attack = 6.5
+
+		#Space taken in convoy
+		build_cost_ic = 0.6
+		
+
+	}
+
+	Magician_special_3 = {
+		year = 152
+	
+		archetype = Magician_special_a
+		parent = Magician_special_2
+		priority = 10
+		visual_level = 2
+
+		resources = {
+			gas = 2
+			powder = 2
+		}
+
+		#Defensive Abilities
+		defense = 31.2
+		breakthrough = 9.4
+
+		#Offensive Abilities
+		soft_attack = 5.6
+		hard_attack = 5.4
+		ap_attack = 1.4
+		air_attack = 8
+
+		#Space taken in convoy
+		build_cost_ic = 0.7
+		
+
+	}
+
+	Magician_special_4 = {
+		year = 156
+	
+		archetype = Magician_special_a
+		parent = Magician_special_3
+		priority = 10
+		visual_level = 3
+
+		resources = {
+			gas = 2
+			powder = 2
+		}
+
+		#Defensive Abilities
+		defense = 36.4
+		breakthrough = 10.1
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 6.3
+		ap_attack = 1.6
+		air_attack = 9.5
+
+		#Space taken in convoy
+		build_cost_ic = 0.8
+
+
+	}
+
+	Magician_special_5 = {
+		year = 160
+	
+		archetype = Magician_special_a
+		parent = Magician_special_4
+		priority = 10
+		visual_level = 4
+
+		resources = {
+			gas = 2
+			crystal = 1
+			powder = 2
+			metal = 1
+		}
+		
+		#Defensive Abilities
+		defense = 41.6
+		breakthrough = 11
+
+		#Offensive Abilities
+		soft_attack = 6.4
+		hard_attack = 7.2
+		ap_attack = 1.8
+		air_attack = 11
+
+		#Space taken in convoy
+		build_cost_ic = 1
+		
+	}
+}
+
+equipments = {
+
+	Kappa_special_a = {
+		year = 144
+	
+		is_archetype = yes
+		is_buildable = no
+		is_convertable = yes
+		picture = archetype_light_tank_equipment			
+		type = armor
+		group_by = archetype
+		
+		interface_category = interface_category_armor
+
+		upgrades = {
+			upgrade_reliability
+          	upgrade_softattack
+          	upgrade_hardattack
+          	upgrade_aaattack
+          	upgrade_defense
+          	upgrade_breakthrough
+          	upgrade_ic
+          	upgrade_ic_reverse
+          	upgrade_reliability_reverse
+		}
+		#Defensive Abilities
+		defense = 38.4
+		breakthrough = 24
+		hardness = 0.5
+		armor_value = 16
+
+		#Offensive Abilities
+		soft_attack = 24
+		hard_attack = 19.2
+		ap_attack = 10
+		air_attack = 5
+
+		#Misc Abilities
+		reliability = 0.7
+		maximum_speed = 13.5#9
+
+		#Space taken in convoy
+		build_cost_ic = 4
+
+		lend_lease_cost = 1
+
+		
+		
+	}
+
+	Kappa_special_1 = {
+		year = 144
+	
+		archetype = Kappa_special_a
+		
+		priority = 10
+		visual_level = 0
+
+		resources = {
+			gas = 1
+			powder = 1
+		}
+
+		
+
+
+	}
+
+	Kappa_special_2 = {
+		year = 148
+	
+		archetype = Kappa_special_a
+		parent = Kappa_special_1
+		priority = 10
+		visual_level = 1
+
+		resources = {
+			gas = 1
+			powder = 1
+		}
+
+		#Defensive Abilities
+		defense = 44.4
+		breakthrough = 30
+		armor_value = 20
+
+		#Offensive Abilities
+		soft_attack = 30
+		hard_attack = 25.2
+		ap_attack = 12
+		air_attack = 7
+
+
+		#Space taken in convoy
+		build_cost_ic = 6
+		
+
+	}
+
+	Kappa_special_3 = {
+		year = 152
+	
+		archetype = Kappa_special_a
+		parent = Kappa_special_2
+		priority = 10
+		visual_level = 2
+
+		resources = {
+			gas = 2
+			powder = 2
+		}
+
+		#Defensive Abilities
+		defense = 50.4
+		breakthrough = 36
+		armor_value = 24
+
+		#Offensive Abilities
+		soft_attack = 36
+		hard_attack = 31.2
+		ap_attack = 14
+		air_attack = 9
+
+
+		#Space taken in convoy
+		build_cost_ic = 8
+		
+
+	}
+
+	Kappa_special_4 = {
+		year = 156
+	
+		archetype = Kappa_special_a
+		parent = Kappa_special_3
+		priority = 10
+		visual_level = 3
+
+		resources = {
+			gas = 2
+			powder = 2
+		}
+
+		#Defensive Abilities
+		defense = 56.4
+		breakthrough = 42
+		armor_value = 28
+
+		#Offensive Abilities
+		soft_attack = 42
+		hard_attack = 37.2
+		ap_attack = 16
+		air_attack = 11
+
+
+		#Space taken in convoy
+		build_cost_ic = 10
+
+
+	}
+
+	Kappa_special_5 = {
+		year = 160
+	
+		archetype = Kappa_special_a
+		parent = Kappa_special_4
+		priority = 10
+		visual_level = 4
+
+		resources = {
+			gas = 2
+			crystal = 1
+			powder = 2
+			metal = 1
+		}
+
+		#Defensive Abilities
+		defense = 62.4
+		breakthrough = 48
+		armor_value = 32
+
+		#Offensive Abilities
+		soft_attack = 48
+		hard_attack = 43.2
+		ap_attack = 18
+		air_attack = 13
+
+
+		#Space taken in convoy
+		build_cost_ic = 12
+		
+		
+	}
+}
+
+
+# All infantry equipment
+
+equipments = {
+
+	Tengu_special_a = {
+		year = 144
+	
+		is_archetype = yes
+		picture = archetype_infantry_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+
+		upgrades = {
+			upgrade_reliability
+          	upgrade_softattack
+          	upgrade_hardattack
+          	upgrade_aaattack
+          	upgrade_defense
+          	upgrade_breakthrough
+          	upgrade_ic
+          	upgrade_ic_reverse
+          	upgrade_reliability_reverse
+		}
+		#Defensive Abilities
+		defense = 20.8
+		breakthrough = 8.5
+		hardness = 0.2
+		armor_value = 0
+
+		#Offensive Abilities
+		soft_attack = 4.6
+		hard_attack = 3.6
+		ap_attack = 0.1
+		air_attack = 1
+
+		#Misc Abilities
+		reliability = 0.7
+		maximum_speed = 9#6
+
+		#Space taken in convoy
+		build_cost_ic = 0.5
+
+		lend_lease_cost = 1
+
+		
+		
+	}
+
+	Tengu_special_1 = {
+		year = 144
+	
+		archetype = Tengu_special_a
+		
+		priority = 10
+		visual_level = 0
+
+		resources = {
+			gas = 1
+			powder = 1
+		}
+
+		
+
+	}
+
+	Tengu_special_2 = {
+		year = 148
+	
+		archetype = Tengu_special_a
+		parent = Tengu_special_1
+		priority = 10
+		visual_level = 1
+
+		resources = {
+			gas = 1
+			powder = 1
+		}
+
+		#Defensive Abilities
+		defense = 23.4
+		breakthrough = 10.4
+
+		#Offensive Abilities
+		soft_attack = 5.6
+		hard_attack = 4.6
+		air_attack = 1.5
+
+		#Space taken in convoy
+		build_cost_ic = 0.6
+
+		
+		
+
+	}
+
+	Tengu_special_3 = {
+		year = 152
+	
+		archetype = Tengu_special_a
+		parent = Tengu_special_2
+		priority = 10
+		visual_level = 2
+
+		resources = {
+			gas = 2
+			powder = 2
+		}
+
+		#Defensive Abilities
+		defense = 26
+		breakthrough = 12.4
+
+		#Offensive Abilities
+		soft_attack = 6.6
+		hard_attack = 5.6
+		air_attack = 2
+
+		#Space taken in convoy
+		build_cost_ic = 0.7
+		
+
+	}
+
+	Tengu_special_4 = {
+		year = 156
+	
+		archetype = Tengu_special_a
+		parent = Tengu_special_3
+		priority = 10
+		visual_level = 3
+
+		resources = {
+			gas = 2
+			powder = 2
+		}
+
+		#Defensive Abilities
+		defense = 28.6
+		breakthrough = 14.3
+
+		#Offensive Abilities
+		soft_attack = 7.6
+		hard_attack = 6.6
+		air_attack = 2.5
+
+		#Space taken in convoy
+		build_cost_ic = 0.8
+
+
+	}
+
+	Tengu_special_5 = {
+		year = 160
+	
+		archetype = Tengu_special_a
+		parent = Tengu_special_4
+		priority = 10
+		visual_level = 4
+
+		resources = {
+			gas = 2
+			crystal = 1
+			powder = 2
+			metal = 1
+		}
+
+		#Defensive Abilities
+		defense = 31.2
+		breakthrough = 16.3
+
+		#Offensive Abilities
+		soft_attack = 8.6
+		hard_attack = 7.6
+		air_attack = 3
+
+		#Space taken in convoy
+		build_cost_ic = 0.9
+		
+		
+	}
+}
+
+# All infantry equipment
+
+equipments = {
+
+	Pri_youkai_special_a = {
+		year = 144
+	
+		is_archetype = yes
+		picture = archetype_infantry_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+
+		upgrades = {
+			upgrade_reliability
+          	upgrade_softattack
+          	upgrade_hardattack
+          	upgrade_aaattack
+          	upgrade_defense
+          	upgrade_breakthrough
+          	upgrade_ic
+          	upgrade_ic_reverse
+          	upgrade_reliability_reverse
+		}
+		#Defensive Abilities
+		defense = 20.8
+		breakthrough = 9.1
+		hardness = 0.65
+		armor_value = 0
+
+		#Offensive Abilities
+		soft_attack = 4.6
+		hard_attack = 4.6
+		ap_attack = 1
+		air_attack = 2
+
+		#Misc Abilities
+		reliability = 0.65
+		maximum_speed = 7.5#5
+
+		#Space taken in convoy
+		build_cost_ic = 0.5
+
+		lend_lease_cost = 1
+
+		
+	}
+
+	Pri_youkai_special_1 = {
+		year = 144
+	
+		archetype = Pri_youkai_special_a
+		
+		priority = 10
+		visual_level = 0
+
+		resources = {
+			gas = 1
+			powder = 1
+		}
+	}
+
+	Pri_youkai_special_2 = {
+		year = 148
+	
+		archetype = Pri_youkai_special_a
+		parent = Pri_youkai_special_1
+		priority = 10
+		visual_level = 1
+
+		resources = {
+			gas = 1
+			powder = 1
+		}
+
+		#Defensive Abilities
+		defense = 23.4
+		breakthrough = 10.4
+
+		#Offensive Abilities
+		soft_attack = 5.2
+		hard_attack = 5.2
+		air_attack = 3.5
+
+		#Space taken in convoy
+		build_cost_ic = 0.6
+		
+
+	}
+
+	Pri_youkai_special_3 = {
+		year = 152
+	
+		archetype = Pri_youkai_special_a
+		parent = Pri_youkai_special_2
+		priority = 10
+		visual_level = 2
+
+		resources = {
+			gas = 2
+			powder = 2
+		}
+
+		#Defensive Abilities
+		defense = 26
+		breakthrough = 11.7
+
+		#Offensive Abilities
+		soft_attack = 5.8
+		hard_attack = 5.8
+		air_attack = 5
+
+		#Space taken in convoy
+		build_cost_ic = 0.7
+		
+
+	}
+
+	Pri_youkai_special_4 = {
+		year = 156
+	
+		archetype = Pri_youkai_special_a
+		parent = Pri_youkai_special_3
+		priority = 10
+		visual_level = 3
+
+		#Defensive Abilities
+		defense = 28.6
+		breakthrough = 13
+
+		#Offensive Abilities
+		soft_attack = 6.4
+		hard_attack = 6.4
+		air_attack = 6.5
+
+		build_cost_ic = 0.8
+
+		resources = {
+			gas = 2
+			powder = 2
+		}
+	}
+
+	Pri_youkai_special_5 = {
+		year = 160
+	
+		archetype = Pri_youkai_special_a
+		parent = Pri_youkai_special_4
+		priority = 10
+		visual_level = 4
+
+		resources = {
+			gas = 2
+			crystal = 1
+			powder = 2
+			metal = 1
+		}
+
+		#Defensive Abilities
+		defense = 31.2
+		breakthrough = 14.3
+
+		#Offensive Abilities
+		soft_attack = 7
+		hard_attack = 7
+		air_attack = 8
+
+		build_cost_ic = 0.9
+
+		resources = {
+			gas = 2
+			crystal = 1
+			powder = 2
+			metal = 1
+		}
+	}
+}
+
+equipments = {
+
+	God_special_a = {
+		year = 144
+	
+		is_archetype = yes
+		picture = archetype_infantry_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+
+		upgrades = {
+			upgrade_reliability
+          	upgrade_softattack
+          	upgrade_hardattack
+          	upgrade_aaattack
+          	upgrade_defense
+          	upgrade_breakthrough
+          	upgrade_ic
+          	upgrade_ic_reverse
+          	upgrade_reliability_reverse
+		}
+		#Defensive Abilities
+		defense = 20.8
+		breakthrough = 7.8
+		hardness = 0.65
+		armor_value = 0
+
+		#Offensive Abilities
+		soft_attack = 4.6
+		hard_attack = 8.2
+		ap_attack = 1
+		air_attack = 2
+
+		#Misc Abilities
+		reliability = 0.65
+		maximum_speed = 7.5#5
+
+		#Space taken in convoy
+		build_cost_ic = 0.6
+
+		lend_lease_cost = 1
+
+		
+	}
+
+	God_special_1 = {
+		year = 144
+	
+		archetype = God_special_a
+		
+		priority = 10
+		visual_level = 0
+
+		resources = {
+			gas = 1
+			powder = 1
+		}
+
+
+	}
+
+	God_special_2 = {
+		year = 148
+	
+		archetype = God_special_a
+		parent = God_special_1
+		priority = 10
+		visual_level = 1
+
+		resources = {
+			gas = 1
+			powder = 1
+		}
+
+		#Defensive Abilities
+		defense = 23.4
+		breakthrough = 8.7
+
+		#Offensive Abilities
+		soft_attack = 5.2
+		hard_attack = 9.9
+		air_attack = 3.5
+
+		#Space taken in convoy
+		build_cost_ic = 0.75
+
+	}
+
+	God_special_3 = {
+		year = 152
+	
+		archetype = God_special_a
+		parent = God_special_2
+		priority = 10
+		visual_level = 2
+
+		resources = {
+			gas = 2
+			powder = 2
+		}
+
+		#Defensive Abilities
+		defense = 26
+		breakthrough = 9.6
+
+		#Offensive Abilities
+		soft_attack = 5.8
+		hard_attack = 11.6
+		air_attack = 5
+
+		#Space taken in convoy
+		build_cost_ic = 0.9
+		
+
+	}
+
+	God_special_4 = {
+		year = 156
+	
+		archetype = God_special_a
+		parent = God_special_3
+		priority = 10
+		visual_level = 3
+
+		resources = {
+			gas = 2
+			powder = 2
+		}
+
+		#Defensive Abilities
+		defense = 28.6
+		breakthrough = 10.5
+
+		#Offensive Abilities
+		soft_attack = 6.4
+		hard_attack = 13.3
+		air_attack = 6.5
+
+		#Space taken in convoy
+		build_cost_ic = 1.05
+
+
+	}
+
+	God_special_5 = {
+		year = 160
+	
+		archetype = God_special_a
+		parent = God_special_4
+		priority = 10
+		visual_level = 4
+
+		resources = {
+			gas = 2
+			crystal = 1
+			powder = 2
+			metal = 1
+		}
+
+		#Defensive Abilities
+		defense = 31.2
+		breakthrough = 11.4
+
+		#Offensive Abilities
+		soft_attack = 7
+		hard_attack = 15
+		air_attack = 8
+
+		#Space taken in convoy
+		build_cost_ic = 1.2
+		
+		
+	}
+}
+
+
+equipments = {
+
+	Youkai_special_a = {
+		year = 144
+	
+		is_archetype = yes
+		picture = archetype_infantry_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+
+		upgrades = {
+			upgrade_reliability
+          	upgrade_softattack
+          	upgrade_hardattack
+          	upgrade_aaattack
+          	upgrade_defense
+          	upgrade_breakthrough
+          	upgrade_ic
+          	upgrade_ic_reverse
+          	upgrade_reliability_reverse
+		}
+		#Defensive Abilities
+		defense = 20.8
+		breakthrough = 9.1
+		hardness = 0.65
+		armor_value = 0
+
+		#Offensive Abilities
+		soft_attack = 5.9
+		hard_attack = 4.6
+		ap_attack = 1
+		air_attack = 2
+
+		#Misc Abilities
+		reliability = 0.65
+		maximum_speed = 7.5#5
+
+		#Space taken in convoy
+		build_cost_ic = 0.6
+
+		lend_lease_cost = 1
+
+		
+	}
+
+	Youkai_special_1 = {
+		year = 144
+	
+		archetype = Youkai_special_a
+		
+		priority = 10
+		visual_level = 0
+
+		resources = {
+			gas = 1
+			powder = 1
+		}
+
+
+	}
+
+	Youkai_special_2 = {
+		year = 148
+	
+		archetype = Youkai_special_a
+		parent = Youkai_special_1
+		priority = 10
+		visual_level = 1
+
+		resources = {
+			gas = 1
+			powder = 1
+		}
+
+		#Defensive Abilities
+		defense = 23.4
+		breakthrough = 10.4
+
+		#Offensive Abilities
+		soft_attack = 7.2
+		hard_attack = 5.2
+		air_attack = 3.5
+
+		#Space taken in convoy
+		build_cost_ic = 0.75
+
+	}
+
+	Youkai_special_3 = {
+		year = 152
+	
+		archetype = Youkai_special_a
+		parent = Youkai_special_2
+		priority = 10
+		visual_level = 2
+
+		resources = {
+			gas = 2
+			powder = 2
+		}
+
+		#Defensive Abilities
+		defense = 26
+		breakthrough = 11.7
+
+		#Offensive Abilities
+		soft_attack = 8.5
+		hard_attack = 5.8
+		air_attack = 5
+
+		#Space taken in convoy
+		build_cost_ic = 0.9
+		
+
+	}
+
+	Youkai_special_4 = {
+		year = 156
+	
+		archetype = Youkai_special_a
+		parent = Youkai_special_3
+		priority = 10
+		visual_level = 3
+
+		resources = {
+			gas = 2
+			powder = 2
+		}
+
+		#Defensive Abilities
+		defense = 28.6
+		breakthrough = 13
+
+		#Offensive Abilities
+		soft_attack = 9.8
+		hard_attack = 6.4
+		air_attack = 6.5
+
+		#Space taken in convoy
+		build_cost_ic = 1.05
+
+
+	}
+
+	Youkai_special_5 = {
+		year = 160
+	
+		archetype = Youkai_special_a
+		parent = Youkai_special_4
+		priority = 10
+		visual_level = 4
+
+		resources = {
+			gas = 2
+			crystal = 1
+			powder = 2
+			metal = 1
+		}
+
+		#Defensive Abilities
+		defense = 31.2
+		breakthrough = 14.3
+
+		#Offensive Abilities
+		soft_attack = 11.1
+		hard_attack = 7
+		air_attack = 8
+
+		#Space taken in convoy
+		build_cost_ic = 1.2
+		
+		
+	}
+}

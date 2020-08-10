@@ -1,0 +1,391 @@
+science_light_infantry_generic = {
+
+	roles = {
+		science_light_infantry
+	}
+	
+	upgrade_prio = {
+		factor = 10
+
+		modifier = {
+			factor = 0
+			has_tech = lingben
+		}
+	}
+
+	match_to_count = 0.10
+
+	sc_light_infantry147 = {
+	
+		upgrade_prio = {
+			factor = 1.8
+
+			modifier = {
+				factor = 0
+				has_tech = zhanchangzhihui150
+			}
+		}
+
+		production_prio = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+				has_tech = lingben
+			}
+			modifier = {
+				factor = 0
+				has_tech = zhanchangzhihui150
+			}
+		}
+		
+		target_width = 500.0
+		width_weight = 1.0
+		column_swap_factor = 0.5
+		
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			1.00 #-- breakthrough
+			0.00 #-- hardness
+			4.00 #-- soft_attack
+			0.00 #-- hard_attack
+			0.00 #-- recon
+			1.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			0.00 #-- equipment_capture_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			0.60 #-- max_organisation
+			0.40 #-- max_strength
+			250.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- build_cost_ic
+		}
+		
+		target_template = {
+			weight = 0.9
+			match_value = 500
+			
+			support = {
+				sc_artillery = 1
+				sp_zhihuidui = 1
+				sp_duzhanxiaodui = 1
+				sp_zhanchanggongbing = 1
+				sp_houfangyiliao = 1
+				sp_wunv = 1
+				sp_gongjianpao = 1
+			}
+			
+			regiments = {
+				sc_sf_infantry = 14
+			}
+		}
+		
+		allowed_types = {
+			sc_sf_infantry	
+			sc_light_infantry	
+			sc_artillery
+
+			sp_zhihuidui
+			sp_duzhanxiaodui
+			sp_zhanchanggongbing
+			sp_houfangyiliao
+			sp_wunv
+			sp_gongjianpao
+		}
+	}
+	
+	sc_light_infantry150 = {
+	
+		upgrade_prio = {
+			factor = 1.8
+
+			modifier = {
+				factor = 0
+				has_tech = zhanchangzhihui155
+			}
+		}
+
+		production_prio = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+				has_tech = lingben
+			}
+			modifier = {
+				factor = 0
+				has_tech = zhanchangzhihui155
+			}
+		}
+		
+		target_width = 500.0
+		width_weight = 1.0
+		column_swap_factor = 0.5
+		
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			1.00 #-- breakthrough
+			0.00 #-- hardness
+			4.00 #-- soft_attack
+			0.00 #-- hard_attack
+			0.00 #-- recon
+			1.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			0.00 #-- equipment_capture_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			0.60 #-- max_organisation
+			0.40 #-- max_strength
+			250.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- build_cost_ic
+		}
+		
+		target_template = {
+			weight = 0.9
+			match_value = 500
+			
+			support = {
+				sc_artillery = 1
+				sp_zhihuidui = 1
+				sp_duzhanxiaodui = 1
+				sp_zhanchanggongbing = 1
+				sp_houfangyiliao = 1
+				sp_wunv = 1
+				sp_gongjianpao = 1
+			}
+			
+			regiments = {
+				sc_sf_infantry = 16
+			}
+		}
+
+		production_prio = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+				has_tech = lingben
+			}
+		}
+		
+		allowed_types = {
+			sc_sf_infantry		
+			sc_light_infantry
+			sc_artillery
+
+			sp_zhihuidui
+			sp_duzhanxiaodui
+			sp_zhanchanggongbing
+			sp_houfangyiliao
+			sp_wunv
+			sp_gongjianpao
+			
+		}
+	}
+
+	sc_light_infantry155 = {
+	
+		upgrade_prio = {
+			factor = 1.8
+
+			modifier = {
+				factor = 0
+				has_tech = zhanchangzhihui160
+			}
+		}
+
+		production_prio = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+				has_tech = lingben
+			}
+			modifier = {
+				factor = 0
+				has_tech = zhanchangzhihui160
+			}
+		}
+		
+		target_width = 500.0
+		width_weight = 1.0
+		column_swap_factor = 0.5
+		
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			1.00 #-- breakthrough
+			0.00 #-- hardness
+			4.00 #-- soft_attack
+			0.00 #-- hard_attack
+			0.00 #-- recon
+			1.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			0.00 #-- equipment_capture_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			0.60 #-- max_organisation
+			0.40 #-- max_strength
+			250.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- build_cost_ic
+		}
+		
+		target_template = {
+			weight = 0.9
+			match_value = 500
+			
+			support = {
+				sc_artillery = 1
+				sp_zhihuidui = 1
+				sp_duzhanxiaodui = 1
+				sp_zhanchanggongbing = 1
+				sp_houfangyiliao = 1
+				sp_wunv = 1
+				sp_gongjianpao = 1
+			}
+
+			regiments = {
+				sc_sf_infantry = 20
+			}
+		}
+		
+		allowed_types = {
+			sc_sf_infantry		
+			sc_light_infantry
+			sc_artillery
+
+			sp_zhihuidui
+			sp_duzhanxiaodui
+			sp_zhanchanggongbing
+			sp_houfangyiliao
+			sp_wunv
+			sp_gongjianpao
+		}
+	}
+
+	sc_light_infantry160 = {
+	
+		upgrade_prio = {
+			factor = 1.8
+
+			modifier = {
+				add = 0
+				not = { has_tech = zhanchangzhihui160}
+			}
+		}
+
+		production_prio = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+				has_tech = lingben
+			}
+		}
+		
+		target_width = 500.0
+		width_weight = 1.0
+		column_swap_factor = 0.5
+		
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			1.00 #-- breakthrough
+			0.00 #-- hardness
+			4.00 #-- soft_attack
+			0.00 #-- hard_attack
+			0.00 #-- recon
+			1.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			0.00 #-- equipment_capture_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			0.60 #-- max_organisation
+			0.40 #-- max_strength
+			250.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- build_cost_ic
+		}
+		
+		target_template = {
+			weight = 0.9
+			match_value = 500
+			
+			support = {
+				sc_artillery = 1
+				sp_zhihuidui = 1
+				sp_duzhanxiaodui = 1
+				sp_zhanchanggongbing = 1
+				sp_houfangyiliao = 1
+				sp_wunv = 1
+				sp_gongjianpao = 1
+			}
+			
+			regiments = {
+				sc_sf_infantry = 25
+			}
+		}
+		
+		allowed_types = {
+			sc_sf_infantry		
+			sc_light_infantry
+			sc_artillery
+
+			sp_zhihuidui
+			sp_duzhanxiaodui
+			sp_zhanchanggongbing
+			sp_houfangyiliao
+			sp_wunv
+			sp_gongjianpao
+		}
+	}
+}

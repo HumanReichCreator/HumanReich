@@ -1,0 +1,509 @@
+# unit_base is the base value used for evaluating how important it is to deploy the various categories
+# Written by Henrik "Groogy" Hansson
+#AI 倾向
+# 0 [12545] conquer
+#  1 [12552] colonize
+#  2 [12546] explore
+#  3 [11199] antagonize
+#  4 [11200] befriend
+#  5 [11198] protect
+#  6 [14731] consider_weak
+#  7 [10878] influence
+#  8 [10457] alliance
+#  9 [12547] build_ship
+# 10 [14291] build_airplane
+# 11 [12548] build_army
+# 12 [12550] build_building
+# 13 [12551] research_tech
+# 15 [10536] garrison
+# 17 [13331] contain
+# 18 [13903] invade
+# 19 [13808] unit_ratio
+# 20 [14277] role_ratio
+# 21 [14321] land_xp_spend_priority
+# 22 [14322] pp_spend_priority
+# 23 [14186] template_prio
+# 24 [14222] template_xp_reserve
+# 25 [14236] equipment_stockpile_surplus_ratio
+# 27 [13988] air_factory_balance
+# 28 [13990] equipment_production_factor
+# 29 [14920] equipment_variant_production_factor
+# 30 [14919] equipment_production_min_factories
+# 31 [11736] ignore
+# 32 [14143] area_priority
+# 33 [14171] send_volunteers_desire
+# 34 [12569] occupation_policy
+# 35 [12188] support
+# 36 [14353] naval_avoid_region
+# 38 [14879] save_equipment
+# 39 [14916] pp_spend_amount
+# 40 [10111] declare_war
+# 41 [14900] ignore_army_incompetence
+# 42 [14968] spare_unit_factor
+# 43 [14902] dont_join_wars_with
+# 44 [14904] added_military_to_civilian_factory_ratio
+# 45 [14903] factory_build_score_factor
+# 46 [14905] ignore_claim
+# 47 [14907] dockyard_to_military_factory_ratio
+# 48 [14983] dont_defend_ally_borders
+# 49 [14984] force_defend_ally_borders
+
+MRS_xianzheyouhao1 = { #YKR
+	# reversed = yes
+	enable = {
+		tag = MRS
+		is_subject = no
+		has_opinion_modifier = MRS_xianzheyouhao_op
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+
+	ai_strategy = {
+		type = befriend
+		id = "YKR"			
+		value = 50
+	}
+}
+
+MRS_xianzheyouhao2 = { #YKR
+	# reversed = yes
+	enable = {
+		tag = YKR
+		is_subject = no
+		has_opinion_modifier = MRS_xianzheyouhao_op
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+
+	ai_strategy = {
+		type = befriend
+		id = "MRS"			
+		value = 50
+	}
+	ai_strategy = {
+		type = support
+		id = "MRS"			
+		value = 10
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "MRS"			
+		value = 10
+	}
+}
+
+MRS_jiarufeihong1 = { 
+	# reversed = yes
+	enable = {
+		tag = MRS
+		is_subject = no
+		or = {
+			has_completed_focus = MRS_jiarufeihongtixi
+			has_completed_focus = MRS_feihongtiaoyue
+		}
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+
+	ai_strategy = {
+		type = befriend
+		id = "SCA"			
+		value = 50
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SCA"			
+		value = 50
+	}
+}
+
+MRS_jiarufeihong2 = { 
+	reversed = yes
+	enable = {
+		tag = MRS
+		is_subject = no
+		or = {
+			has_completed_focus = MRS_jiarufeihongtixi
+			has_completed_focus = MRS_feihongtiaoyue
+		}
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+
+	ai_strategy = {
+		type = befriend
+		id = "SCA"			
+		value = 50
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SCA"			
+		value = 50
+	}
+}
+
+
+MRS_huizhencheng1 = { 
+	# reversed = yes
+	enable = {
+		tag = MRS
+		is_subject = no
+		or = {
+			has_completed_focus = MRS_huizhenchengjiemeng
+			has_completed_focus = MRS_huizhenchengyiyuan
+		}
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+
+	ai_strategy = {
+		type = befriend
+		id = "SEI"			
+		value = 25
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SEI"			
+		value = 10
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "SEI"			
+		value = 10
+	}
+}
+MRS_huizhencheng2 = { 
+	reversed = yes
+	enable = {
+		tag = MRS
+		is_subject = no
+		or = {
+			has_completed_focus = MRS_huizhenchengjiemeng
+			has_completed_focus = MRS_huizhenchengyiyuan
+		}
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+
+	ai_strategy = {
+		type = befriend
+		id = "SEI"			
+		value = 25
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SEI"			
+		value = 10
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "SEI"			
+		value = 10
+	}
+}
+
+MRS_fusangshen1 = { 
+	# reversed = yes
+	enable = {
+		tag = MRS
+		is_subject = no
+		or = {
+			has_completed_focus = MRS_fusangshenjiemeng
+			has_completed_focus = MRS_fusangshenbangzhu
+		}
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+
+	ai_strategy = {
+		type = befriend
+		id = "KOG"			
+		value = 25
+	}
+	ai_strategy = {
+		type = alliance
+		id = "KOG"			
+		value = 10
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "KOG"			
+		value = 10
+	}
+}
+MRS_fusangshen2 = { 
+	reversed = yes
+	enable = {
+		tag = MRS
+		is_subject = no
+		or = {
+			has_completed_focus = MRS_fusangshenjiemeng
+			has_completed_focus = MRS_fusangshenbangzhu
+		}
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+
+	ai_strategy = {
+		type = befriend
+		id = "KOG"			
+		value = 25
+	}
+	ai_strategy = {
+		type = alliance
+		id = "KOG"			
+		value = 10
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "KOG"			
+		value = 10
+	}
+}
+
+MRS_yaojing1 = { 
+	# reversed = yes
+	enable = {
+		tag = MRS
+		is_subject = no
+		or = {
+			has_completed_focus = MRS_yaojingjiemeng
+			has_completed_focus = MRS_yaojingbangzhu
+		}
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+
+	ai_strategy = {
+		type = befriend
+		id = "CIR"			
+		value = 25
+	}
+	ai_strategy = {
+		type = alliance
+		id = "CIR"			
+		value = 10
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "CIR"			
+		value = 10
+	}
+}
+MRS_yaojing2 = { 
+	reversed = yes
+	enable = {
+		tag = MRS
+		is_subject = no
+		or = {
+			has_completed_focus = MRS_yaojingjiemeng
+			has_completed_focus = MRS_yaojingbangzhu
+		}
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+
+	ai_strategy = {
+		type = befriend
+		id = "CIR"			
+		value = 25
+	}
+	ai_strategy = {
+		type = alliance
+		id = "CIR"			
+		value = 10
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "CIR"			
+		value = 10
+	}
+}
+
+MRS_fuchou1 = { 
+	# reversed = yes
+	enable = {
+		tag = MRS
+		is_subject = no
+		MRS = {
+			has_completed_focus = MRS_yaoguaifuchou
+		}
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+
+	ai_strategy = {
+		type = antagonize
+		id = "SEI"			
+		value = 100
+	}
+}
+MRS_fuchou2 = { 
+	reversed = yes
+	enable = {
+		tag = MRS
+		is_subject = no
+		MRS = {
+			has_completed_focus = MRS_yaoguaifuchou
+		}
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+
+	ai_strategy = {
+		type = antagonize
+		id = "SEI"			
+		value = 100
+	}
+}
+
+MRS_wuzhihu1 = { 
+	# reversed = yes
+	enable = {
+		tag = MRS
+		is_subject = no
+		MRS = {
+			has_completed_focus = MRS_jiefangwuzhihunanan
+		}
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+
+	ai_strategy = {
+		type = antagonize
+		id = "SCA"			
+		value = 100
+	}
+}
+MRS_wuzhihu2 = { 
+	reversed = yes
+	enable = {
+		tag = MRS
+		is_subject = no
+		MRS = {
+			has_completed_focus = MRS_jiefangwuzhihunanan
+		}
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+
+	ai_strategy = {
+		type = antagonize
+		id = "SCA"			
+		value = 100
+	}
+}
+
+MRS_wuzhihu1 = { 
+	# reversed = yes
+	enable = {
+		tag = MRS
+		is_subject = no
+		MRS = {
+			has_completed_focus = MRS_jiejueyaojingweixie
+		}
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+
+	ai_strategy = {
+		type = antagonize
+		id = "CIR"			
+		value = 100
+	}
+}
+MRS_wuzhihu2 = { 
+	reversed = yes
+	enable = {
+		tag = MRS
+		is_subject = no
+		MRS = {
+			has_completed_focus = MRS_jiejueyaojingweixie
+		}
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+
+	ai_strategy = {
+		type = antagonize
+		id = "CIR"			
+		value = 100
+	}
+}
+
+MRS_zhunbeikuozhang1 = { 
+	reversed = yes
+	enable = {
+		all_country = {
+
+		}
+		MRS = {
+			has_completed_focus = MRS_zhunbeikuozhang
+			is_subject = no
+		}
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+
+	ai_strategy = {
+		type = antagonize
+		id = "MRS"			
+		value = 250
+	}
+}
+MRS_zhunbeikuozhang2 = { 
+	# reversed = yes
+	enable = {
+		all_country = {
+		
+		}
+		MRS = {
+			has_completed_focus = MRS_zhunbeikuozhang
+			is_subject = no
+		}
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+
+	ai_strategy = {
+		type = antagonize
+		id = "MRS"			
+		value = 250
+	}
+}

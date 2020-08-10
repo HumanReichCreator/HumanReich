@@ -1,0 +1,34 @@
+
+state={
+	id=106
+	name="STATE_106"
+	resources={
+
+		powder=1.000
+		metal=0.000
+		gas=10.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = NIB
+			add_core_of = NIB
+			buildings = {
+				infrastructure =4
+				industrial_complex = 2
+				arms_factory = 3
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		556 565 597 924 1015 1063 1717 2048 2078 2479 3926 3927 3928 3929 3930 3932 3933 3941 3942 5780 5781 5785 5786 5789 5791 5793 5797 5805 
+	}
+	manpower=1946.0
+	buildings_max_level_factor=1.000
+	state_category=s7
+}

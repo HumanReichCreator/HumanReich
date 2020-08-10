@@ -1,0 +1,479 @@
+ideas = {
+	ideo_slot = { 
+		# law = yes
+		#HUM
+		kaifangjiaqiang = {
+
+		    available = {
+				has_country_flag = {
+	      			flag = openvalue
+	      			value > 3
+				}
+				not = {
+					has_idea = baoshoujiaqiang
+				}                                 	    
+		    }
+
+									
+			on_add = {
+
+			}
+			removal_cost = 0
+			cost = 300
+			cancel_if_invalid = no
+
+			modifier = {
+				encryption = 0.5
+				resistance_growth = -0.2
+				manufacturer_cost_factor = -0.2
+				# production_speed_buildings_factor = 0.1
+				# production_speed_infrastructure_factor = 0.1
+				# industry_repair_factor = 0.15
+			}
+			# equipment_bonus = {
+			# 	artillery_equipment = {
+			# 		build_cost_ic = -0.1 
+			# 		soft_attack = 0.05
+			# 		instant = no
+			# 	}
+			# }
+			research_bonus = {
+			    # build = 0.05
+			}
+
+			#通用花费增加
+			traits = { ideo_slot_increase }
+
+			ai_will_do = {
+				factor = 5
+			}
+			
+		}
+
+		baoshoujiaqiang = {
+
+		    available = { 
+				has_country_flag = {
+	      			flag = openvalue
+	      			value < -3
+				}    
+				not = {
+					has_idea = kaifangjiaqiang
+				}                             	    
+		    }
+
+									
+			on_add = {
+
+			}
+			removal_cost = 0
+			cost = 300
+			cancel_if_invalid = no
+
+			modifier = {
+				research_speed_factor = 0.06
+				encryption = 6
+				stability_factor = 0.28
+			}
+			# equipment_bonus = {
+			# 	artillery_equipment = {
+			# 		build_cost_ic = -0.1 
+			# 		soft_attack = 0.05
+			# 		instant = no
+			# 	}
+			# }
+			research_bonus = {
+			    # build = 0.05
+			}
+
+			#通用花费增加
+			traits = { ideo_slot_increase }
+
+			ai_will_do = {
+				factor = 5
+			}
+			
+		}
+
+		gepaijiaqiang = {
+
+		    available = {
+				has_country_flag = {
+	      			flag = lobbyvalue
+	      			value < -3
+				}      
+				not = {
+					has_idea = yingpaijiaqiang
+				}                             	    
+		    }
+
+									
+			on_add = {
+
+			}
+			removal_cost = 0
+			cost = 300
+			cancel_if_invalid = no
+
+			modifier = {
+				consumer_goods_factor = -0.08
+				war_support_factor = 0.08
+				enemy_justify_war_goal_time = 0.2
+				# production_speed_buildings_factor = 0.1
+				# production_speed_infrastructure_factor = 0.1
+				# industry_repair_factor = 0.15
+			}
+			# equipment_bonus = {
+			# 	artillery_equipment = {
+			# 		build_cost_ic = -0.1 
+			# 		soft_attack = 0.05
+			# 		instant = no
+			# 	}
+			# }
+			research_bonus = {
+			    # build = 0.05
+			}
+
+			#通用花费增加
+			traits = { ideo_slot_increase }
+
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		yingpaijiaqiang = {
+
+		    available = {
+				has_country_flag = {
+	      			flag = lobbyvalue
+	      			value > 3
+				}     
+				not = {
+					has_idea = gepaijiaqiang
+				}                             	    
+		    }
+
+									
+			on_add = {
+
+			}
+			removal_cost = 0
+			cost = 300
+			cancel_if_invalid = no
+
+			modifier = {
+				war_support_factor = 0.28
+		   		justify_war_goal_time = -0.24
+		   		consumer_goods_factor = -0.02
+				# production_speed_buildings_factor = 0.1
+				# production_speed_infrastructure_factor = 0.1
+				# industry_repair_factor = 0.15
+			}
+			# equipment_bonus = {
+			# 	artillery_equipment = {
+			# 		build_cost_ic = -0.1 
+			# 		soft_attack = 0.05
+			# 		instant = no
+			# 	}
+			# }
+			research_bonus = {
+			    # build = 0.05
+			}
+
+			#通用花费增加
+			traits = { ideo_slot_increase }
+
+			ai_will_do = {
+				factor = 5
+			}
+			
+		}
+
+		neworderjiaqiang = {
+
+		    available = {
+				has_government = neworder
+				neworder > 0.9  
+				has_country_flag = {
+	      			flag = openvalue
+	      			value < -3
+				}         
+				has_country_flag = {
+	      			flag = lobbyvalue
+	      			value > 3
+				}                                	    
+		    }
+
+									
+			on_add = {
+
+			}
+			removal_cost = 0
+			cost = 600
+			# cancel_if_invalid = no
+
+			modifier = {
+				ARMY_ORG_FACTOR = 0.5
+				offensive_war_stability_factor = 0.2
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+
+				ai_focus_aggressive_factor = 0.3
+
+				army_leader_start_level = 1
+				command_power_gain = 0.2
+				production_speed_arms_factory_factor = 0.1
+
+				neworder_drift = 0.05
+			}
+			# equipment_bonus = {
+			# 	artillery_equipment = {
+			# 		build_cost_ic = -0.1 
+			# 		soft_attack = 0.05
+			# 		instant = no
+			# 	}
+			# }
+			research_bonus = {
+			    # build = 0.05
+			}
+
+			#通用花费增加
+			traits = { ideo_slot_increase }
+
+			ai_will_do = {
+				factor = 5
+			}
+			
+		}
+
+		oldorderjiaqiang = {
+
+		    available = {
+				has_government = oldorder
+				oldorder > 0.9 
+				has_country_flag = {
+	      			flag = openvalue
+	      			value < -4
+				}         
+				has_country_flag = {
+	      			flag = lobbyvalue
+	      			value > 4
+				}                                 	    
+		    }
+
+									
+			on_add = {
+
+			}
+			removal_cost = 0
+			cost = 600
+			# cancel_if_invalid = no
+
+			modifier = {
+				ARMY_CORE_ATTACK_FACTOR = 0.05
+				ARMY_CORE_DEFENCE_FACTOR = 0.05
+
+				ai_focus_aggressive_factor = 0.3
+
+				drift_defence_factor = 10
+				conscription_factor = 0.1
+				SEND_VOLUNTEER_FACTOR = 0.2
+				supply_consumption_factor = -0.2
+
+				decryption_factor = 0.25
+				encryption_factor = 0.25
+				resistance_growth = -0.2
+				war_support_factor = 0.2
+
+				oldorder_drift = 0.05
+			}
+			# equipment_bonus = {
+			# 	artillery_equipment = {
+			# 		build_cost_ic = -0.1 
+			# 		soft_attack = 0.05
+			# 		instant = no
+			# 	}
+			# }
+			research_bonus = {
+			    # build = 0.05
+			}
+
+			#通用花费增加
+			traits = { ideo_slot_increase }
+
+			ai_will_do = {
+				factor = 5
+			}
+			
+		}
+
+		qinwaijiaqiang = {
+
+		    available = {
+				has_government = qinwai
+				qinwai > 0.9          
+				has_country_flag = {
+	      			flag = openvalue
+	      			value > 3
+				}         
+				has_country_flag = {
+	      			flag = lobbyvalue
+	      			value < -3
+				}                        	    
+		    }
+
+									
+			on_add = {
+
+			}
+			removal_cost = 0
+			cost = 600
+			# cancel_if_invalid = no
+
+			modifier = {
+				send_volunteer_factor = 1
+				conscription_factor = 0.35
+				political_power_gain = 0.2
+
+				research_speed_factor = 0.15
+				MONTHLY_POPULATION = 0.3
+
+				qinwai_drift = 0.05
+			}
+			# equipment_bonus = {
+			# 	artillery_equipment = {
+			# 		build_cost_ic = -0.1 
+			# 		soft_attack = 0.05
+			# 		instant = no
+			# 	}
+			# }
+			research_bonus = {
+			    # build = 0.05
+			}
+
+			#通用花费增加
+			traits = { ideo_slot_increase }
+
+			ai_will_do = {
+				factor = 5
+			}
+			
+		}
+
+		fandongjiaqiang = {
+
+		    available = {
+				has_government = fandong
+				fandong > 0.9     
+				has_country_flag = {
+	      			flag = openvalue
+	      			value > 3
+				}         
+				has_country_flag = {
+	      			flag = lobbyvalue
+	      			value > 3
+				}                            	    
+		    }
+
+									
+			on_add = {
+
+			}
+			removal_cost = 0
+			cost = 600
+			# cancel_if_invalid = no
+
+			modifier = {
+				ARMY_CORE_ATTACK_FACTOR = 0.1
+				ARMY_CORE_DEFENCE_FACTOR = 0.1
+				supply_consumption_factor = -0.2
+
+				ai_focus_aggressive_factor = 0.15
+				land_reinforce_rate = 0.05
+				army_morale_factor = 0.4
+
+				fandong_drift = 0.05
+			}
+			# equipment_bonus = {
+			# 	artillery_equipment = {
+			# 		build_cost_ic = -0.1 
+			# 		soft_attack = 0.05
+			# 		instant = no
+			# 	}
+			# }
+			research_bonus = {
+			    # build = 0.05
+			}
+
+			#通用花费增加
+			traits = { ideo_slot_increase }
+
+			ai_will_do = {
+				factor = 5
+			}
+			
+		}
+
+		gulijiaqiang = {
+
+		    available = {
+				has_government = guli
+				guli > 0.9     
+				has_country_flag = {
+	      			flag = openvalue
+	      			value < -3
+				}         
+				has_country_flag = {
+	      			flag = lobbyvalue
+	      			value < -3
+				}                            	    
+		    }
+
+									
+			on_add = {
+
+			}
+			removal_cost = 0
+			cost = 600
+			# cancel_if_invalid = no
+
+			modifier = {
+				defensive_war_stability_factor = 0.2
+
+				stability_factor = 0.35
+				ARMY_CORE_ATTACK_FACTOR = 0.3
+				ARMY_CORE_DEFENCE_FACTOR = 0.3
+
+				production_speed_bunker_factor = 0.25
+				production_speed_anti_air_building_factor = 0.25
+				production_speed_radar_station_factor = 0.25
+				production_speed_buildings_factor = 0.25
+
+				ai_focus_defense_factor = 0.3
+				# production_speed_infrastructure_factor = 0.1
+				# industry_repair_factor = 0.15
+				guli_drift = 0.05
+			}
+			# equipment_bonus = {
+			# 	artillery_equipment = {
+			# 		build_cost_ic = -0.1 
+			# 		soft_attack = 0.05
+			# 		instant = no
+			# 	}
+			# }
+			research_bonus = {
+			    # build = 0.05
+			}
+
+			#通用花费增加
+			traits = { ideo_slot_increase }
+
+			ai_will_do = {
+				factor = 5
+			}
+			
+		}
+
+		
+	}
+}

@@ -1,0 +1,30 @@
+state={
+	id=50
+	name="STATE_50"
+
+	resources={
+
+		powder = 0.0
+		metal = 0
+		gas = 0.0
+		crystal = 20.0
+	}
+
+	history={
+       	146.1.1 = {
+			owner = UUG
+			add_core_of = UUG
+			buildings = {
+				infrastructure =1
+				industrial_complex = 1
+				arms_factory = 0
+			}
+       	}
+	}
+	provinces={
+		6 286 300 701 961 1085 1290 1404 1592 1791 1809 1963 2055 2103 2200 2634 2640 2662 2663 
+	}
+	state_category=s2
+	manpower=12196.0
+	buildings_max_level_factor=1.000
+}

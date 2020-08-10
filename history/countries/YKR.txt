@@ -1,0 +1,157 @@
+﻿capital = 257
+138.8.13 = {
+
+}
+141.6.2 = {
+    
+}
+142.3.8 = {
+    
+}
+144.2.5 = {
+    
+}
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card = 1
+        linglijiejing139 = 1
+        linglijiejing144 = 1
+        linglijiejing147 = 1
+        danmujingque139 = 1
+        gaosudanmu139 = 1
+        buqiang117 = 1
+        tezhong149 = 1
+            
+        #辅助
+        zhiyuanzhuangbei = 1
+
+        #专用辅助
+        fanyongmopao144 = 1
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+        zuzhihuazhanzheng142 = 1
+        zhanchangzhihui145 = 1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        lingben = 1
+        tongxunlilun = 1
+        jiemi137 = 1
+
+        jiami137 = 1
+        jiami142 = 1
+        jiami147 = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+        jianzaojishu140 = 1
+            
+        #专用工业
+        linglishengchan130 = 1
+
+        #种族
+        yaoguaitezhongbudui1 = 1
+    }
+}
+146.1.1={
+    oob = "YKR_146"
+    
+    give_guarantee = HKR
+    add_ideas = {
+    Youkai
+    Country
+    close5
+    hawk3
+    close_border
+    sc_rule
+    gensoukyo_creator_idea
+    }
+    HMIF_daily_add0.02 = yes
+    puppet = CHE
+    CHE = {
+    set_politics = {
+    	ruling_party = qinwai
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 85
+        guli = 12
+        neworder = 0
+        oldorder = 0
+        fandong = 3
+    }
+    CHE = { set_truce = {target = HKR days = 300} }
+    }
+    set_politics = {
+        ruling_party = oldorder
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 0
+        guli = 0
+        neworder = 15
+        oldorder = 85
+        fandong = 0
+    }
+    
+}
+create_country_leader = {
+	name = "八云紫"
+    # name = "Yakumo Yukari"
+	picture = "YKR_ykr.dds"
+	ideology = neworder_type
+	traits = {  
+        
+    }
+}
+create_country_leader = {
+	# name = "Yakumo Yukari"
+    name = "八云紫"
+	picture = "YKR_ykr.dds"
+	ideology = oldorder_type
+	traits = {  
+        
+    }
+}
+create_country_leader = {
+    # name = "Yakumo Yukari"
+    name = "八云紫"
+    picture = "YKR_ykr.dds"
+    ideology = qinwai_type
+    traits = {  
+        
+    }
+}
+create_country_leader = {
+    # name = "Yakumo Yukari"
+    name = "八云紫"
+    picture = "YKR_ykr.dds"
+    ideology = fandong_type
+    traits = {  
+        
+    }
+}
+create_country_leader = {
+    # name = "Yakumo Yukari"
+    name = "八云紫"
+    picture = "YKR_ykr.dds"
+    ideology = guli_type
+    traits = {  
+        
+    }
+}

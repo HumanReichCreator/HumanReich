@@ -1,0 +1,44 @@
+
+state={
+	id=177
+	name="STATE_177"
+	resources={
+
+		powder=5.000
+		metal=2.000
+		gas=1.000
+		crystal=0.000
+	}
+
+	history={
+		143.7.1 = {
+			owner = KOG
+			add_core_of = KOG
+			buildings = {
+				infrastructure =4
+				industrial_complex = 0
+				arms_factory = 0
+			}
+		}
+		146.1.1 = {
+			owner = WAK
+			remove_core_of = KOG
+			add_core_of = WAK
+			buildings = {
+				infrastructure =5
+				industrial_complex = 1
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		337 610 1372 2508 2820 3226 3235 4332 4338 4356 4357 4372 
+	}
+	manpower=816.0
+	buildings_max_level_factor=1.000
+	state_category=s5
+}

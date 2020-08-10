@@ -1,0 +1,31 @@
+state={
+	id=38
+	name="STATE_38"
+
+	resources={
+
+		powder = 1.0
+		metal = 0
+		gas = 5.0
+		crystal = 0.0
+	}
+
+	history={
+       	146.1.1 = {
+			owner = IKU
+			add_core_of = IKU
+			add_core_of = CCA
+			buildings = {
+				infrastructure =4
+				industrial_complex = 1
+				arms_factory = 1
+			}
+       	}
+	}
+	provinces={
+		229 237 368 911 992 1040 1263 1493 2060 2189 2292 2516 
+	}
+	state_category=s5
+	manpower=496.0
+	buildings_max_level_factor=1.000
+}

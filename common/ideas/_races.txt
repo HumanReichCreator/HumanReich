@@ -1,0 +1,250 @@
+ideas = {
+
+	races = { 
+		law = yes
+		Beast = {
+									
+			allowed_to_remove = {
+				always = no
+			}
+			modifier = {
+				land_night_attack = 0.25
+				conscription = 0.14
+				improve_relations_maintain_cost_factor = 0.25
+				mobilization_laws_cost_factor = -0.1
+			# ENCRYPTION = -2
+			# DECRYPTION = -2
+			
+			# army_org_Factor = 0.2
+			# stability_factor = 0.1
+			# land_night_attack = -0.3
+			}
+
+			research_bonus = {
+				# science = 0.05
+			}
+
+			cost = 0
+			
+			cancel_if_invalid = no
+		}
+		
+		Human = {
+									
+			allowed_to_remove = {
+				always = no
+			}
+			modifier = {
+			conscription = 0.04
+			mobilization_laws_cost_factor = 0.25
+			ENCRYPTION = -2
+			DECRYPTION = -2
+			
+			army_org_Factor = 0.2
+			stability_factor = 0.1
+			land_night_attack = -0.3
+			}
+
+			research_bonus = {
+				science = 0.05
+			}
+
+			cost = 0
+			
+			cancel_if_invalid = no
+		}
+		
+		Pri_youkai = {
+									
+			allowed_to_remove = {
+				always = no
+			}
+			modifier = {
+				conscription = 0.2
+				ARMY_MORALE_FACTOR = 0.25
+				training_time_factor = -0.1
+				land_night_attack = 0.1
+			}
+			cost = 0
+			cancel_if_invalid = no
+		}
+
+		Youkai = {
+									
+			allowed_to_remove = {
+				always = no
+			}
+
+			modifier = {		
+				EXPERIENCE_LOSS_FACTOR = -0.2
+				conscription = 0.25
+				army_infantry_attack_factor = 0.1
+				army_infantry_defence_factor = 0.1
+				land_night_attack = 0.1
+			}
+			cost = 0
+			cancel_if_invalid = no
+			default = yes
+		}
+
+		Magician = {
+									
+			allowed_to_remove = {
+				always = no
+			}
+			research_bonus = {
+				magic = 0.05
+			}
+			modifier = {
+			conscription = 0.08
+			INDUSTRIAL_CAPACITY_factory = -0.06
+			ARMY_ORG_FACTOR = -0.02
+			army_infantry_ATTACK_FACTOR = 0.1
+			army_artillery_attack_factor = 0.05
+			# LOCAL_RESOURCES_FACTOR = -0.1
+			stability_factor = -0.05
+			land_night_attack = -0.05
+			
+			}
+			cost = 0
+			cancel_if_invalid = no
+		}
+
+		Kappa = {
+									
+			allowed_to_remove = {
+				always = no
+			}
+			modifier = {
+			conscription = 0.125
+			INDUSTRIAL_CAPACITY_factory = 0.05
+			# conscription_factor = -0.1
+			ARMY_ORG_FACTOR = 0.05
+			army_infantry_ATTACK_FACTOR = -0.02
+			army_artillery_attack_factor = 0.025
+		#	army_armor_factor = 0.05
+			research_speed_factor = 0.1
+
+			}
+			cost = 0
+			cancel_if_invalid = no
+		}
+
+		Tenggu = {
+									
+			available = {
+				 always = no
+			}
+			
+			modifier = {
+			conscription = 0.25
+			EXPERIENCE_LOSS_FACTOR = -0.2
+			
+			ARMY_ORG_FACTOR = 0.1
+			DIG_IN_SPEED_FACTOR = -0.1
+			SUPPLY_CONSUMPTION_FACTOR = 0.05
+			army_infantry_attack_factor = 0.1
+			army_infantry_defence_factor = 0.1
+			war_support_factor = 0.1
+			manufacturer_cost_factor = 0.5
+			improve_relations_maintain_cost_factor = 1
+			trade_opinion_factor = -0.5
+
+			}
+			cost = 0
+			cancel_if_invalid = no
+		}
+
+		God = {
+									
+			allowed_to_remove = {
+				always = no
+			}
+			
+			modifier = {
+			conscription = 0.16
+			ENCRYPTION = 2
+			DECRYPTION = 2
+			SUPPLY_CONSUMPTION_FACTOR = -0.05
+			land_night_attack = -0.15
+
+
+			}
+			cost = 0
+			cancel_if_invalid = no
+		}
+
+
+		Fairy = {
+									
+			allowed_to_remove = {
+				always = no
+			}
+			
+			modifier = {
+			conscription = 0.01
+			mobilization_laws_cost_factor = 0.75
+			ARMY_ORG_FACTOR = -0.1
+			CONSUMER_GOODS_FACTOR = -0.03
+			EXPERIENCE_LOSS_FACTOR = 0.3
+			SUPPLY_CONSUMPTION_FACTOR = -0.12
+			attrition = -0.1
+			ARMY_infantry_ATTACK_FACTOR = -0.25
+			ARMY_infantry_defence_FACTOR = -0.25
+			# conscription_factor = -0.6
+			ORG_LOSS_WHEN_MOVING = 0.2
+			# land_night_attack = -0.75
+			}
+			
+			
+
+			cost = 0
+			
+			cancel_if_invalid = no
+		}
+		
+		Ghost = {
+									
+			allowed_to_remove = {
+				always = no
+			}
+			
+			modifier = {
+			conscription = 0.002
+			mobilization_laws_cost_factor = 0.5
+			training_time_factor = 0.75
+			ARMY_ORG_FACTOR = -0.05
+			ORG_LOSS_WHEN_MOVING = 0.05
+			ARMY_MORALE_FACTOR = 0.1
+			LOCAL_RESOURCES_FACTOR = 0.1
+			SUPPLY_CONSUMPTION_FACTOR = -0.15
+			attrition = -0.2
+			# conscription_factor = -0.9
+			ARMY_infantry_ATTACK_FACTOR = -0.4
+			ARMY_infantry_defence_FACTOR = -0.4
+			# land_night_attack = -0.25
+
+			}
+			cost = 0
+			cancel_if_invalid = no
+		}
+
+		No = {
+			allowed = {
+				always = no
+			}				
+			available = {
+				always = no
+			 }
+			
+			modifier = {
+
+			}
+			cost = 0
+			cancel_if_invalid = no
+		}
+		
+		
+		
+	}
+}

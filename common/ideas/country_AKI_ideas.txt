@@ -1,0 +1,1204 @@
+ideas = {
+	country = {
+
+		AKI_zhuanzhuneibu_idea = {
+			picture = FRA_matignon_agreements
+			modifier = {
+				generate_wargoal_tension = 0.5
+				send_volunteer_factor = -0.50
+			}
+			available = {
+
+			}
+		}
+
+		AKI_tudijianbing_idea = {
+	    	picture = raj_risk_of_famine
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				stability_factor = -0.5
+
+			}
+
+			research_bonus = {
+				civil = 0.15
+			}
+
+	    }
+
+		AKI_houtudijianbingshidai_idea = {
+	    	picture = raj_risk_of_famine
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				political_power_factor = -0.10
+				stability_weekly = -0.002
+
+			}
+
+	    }
+
+		AKI_renyushendemohujiexian_idea = {
+	    	picture = generic_deal_with_the_devil2
+
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+			ENCRYPTION = -2
+			DECRYPTION = -2
+			
+			army_org_Factor = 0.05
+			stability_factor = 0.05
+			}
+
+			research_bonus = {
+				science = 0.05
+			}
+
+		}
+
+		AKI_tongyiderenleirentong_idea = {
+	    	picture = generic_deal_with_the_devil2
+
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				conscription = 0.12
+			}
+
+		}
+	    
+		AKI_jiduanzhuyiyundong_idea = {
+	    	picture = SPR_political_violence
+
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				political_power_factor = -0.75
+                conscription_factor = -0.30
+				production_speed_buildings_factor = -0.15
+                industrial_capacity_factory = -0.15
+				research_speed_factor = -0.15
+		        experience_gain_army = 0.10
+			}
+
+		}
+		AKI_jingshengongyehua_idea = {
+	    	picture = man_five_year_plan_industry
+	
+			modifier = {
+				production_speed_buildings_factor = 0.10
+			}
+
+		}
+		AKI_nonggengjingshen_idea = {
+
+	    	picture = generic_agrarian_society
+
+			modifier = {
+				stability_factor = 0.10
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		AKI_gaosugongyehua_idea = {
+	    	picture = man_five_year_plan_industry
+	
+			modifier = {
+				production_speed_buildings_factor = 0.35
+			}
+
+		}
+
+		AKI_huangyeqiusheng_idea = {
+
+			picture = prc_the_long_march2
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+		        no_supply_grace = 24
+		        supply_consumption_factor = -0.10
+			}
+
+		}
+
+		AKI_xirenligouxiang_idea = {
+			picture = generic_research_bonus
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				weekly_manpower = 5
+			}
+
+			research_bonus = {
+				science = 0.05
+			}
+
+		}
+
+		AKI_daohuijiqi_idea = {
+			picture = eng_tackle_capitalism
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				production_speed_buildings_factor = -0.10
+				production_speed_buildings_factor = -0.10
+			}
+
+			research_bonus = {
+				civil = -0.1
+			}
+
+		}
+
+		AKI_juntiandi_idea = {
+			picture = generic_agrarian_society
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+			    stability_factor = 0.30
+				local_resources_factor = 0.1
+			}
+
+		}
+
+		AKI_gengduodetudi_idea = {
+			picture = man_militarism
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				generate_wargoal_tension = -0.15
+                justify_war_goal_time = -0.15
+			    mobilization_laws_cost_factor = -0.25
+				war_support_factor = 0.15
+			}
+
+		}
+
+		AKI_ducaizhe_idea = {
+			picture = state_shintoism
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				political_power_factor = 0.25
+			}
+
+		}
+
+		AKI_mofangrenlijunzhi_idea = {
+
+			picture = german_advisors
+
+			modifier = {
+				planning_speed = 0.25
+				max_planning = 0.15
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}	
+
+		AKI_tuntian_idea = {
+
+			picture = generic_agrarian_reform
+
+			modifier = {
+				stability_factor = 0.1
+				production_speed_buildings_factor = 0.10
+				industrial_capacity_factory = 0.10
+                conscription_factor = -0.30
+			}
+		}	
+
+		AKI_zhengmu_idea = {
+
+			picture = por_volunteers_in_the_war3
+
+			modifier = {
+				war_support_factor = 0.10
+                training_time_factor = -0.25
+                mobilization_speed = 0.25
+			}
+		}	
+
+		AKI_luorixingdong_idea = {
+
+			picture = generic_acquire_tanks
+
+			modifier = {
+		        no_supply_grace = 48
+		        supply_consumption_factor = -0.20
+			}
+
+			targeted_modifier = {
+				tag = YUK
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+
+		}
+
+		AKI_duiyaojingdezuozhanjingyan_idea = {
+
+			picture = generic_acquire_tanks
+
+			modifier = {
+		        no_supply_grace = 24
+		        supply_consumption_factor = -0.10
+			}
+
+			targeted_modifier = {
+				tag = SCA
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.05
+			}
+
+		}
+
+		AKI_shenfa_idea = {
+
+			picture = generic_acquire_tanks
+
+			targeted_modifier = {
+				tag = HU1
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.10
+			}
+
+			targeted_modifier = {
+				tag = HU2
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.10
+			}
+
+		}
+
+		AKI_taofajiduanzuzhi_idea = {
+
+			picture = generic_acquire_tanks
+
+			targeted_modifier = {
+				tag = HU4
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.10
+			}
+
+		}
+
+		AKI_diaolingzhejingshen_idea = {
+
+			picture = SPA_crusade_against_democracy
+
+			modifier = {
+				army_org_factor = -0.05
+				army_morale_factor = -0.05
+				army_attack_factor = 0.08
+				army_defence_factor = 0.08
+			}
+		}
+
+		AKI_yirenyiba_idea = {
+
+			picture = generic_army_problems
+
+			equipment_bonus = {
+				buqiang_a = {
+                    reliability = -0.05
+
+                    build_cost_ic = -0.20
+
+                    instant = yes
+				}
+			}
+		}
+
+		AKI_quanmindongyuan_idea = {
+
+			picture = SPA_la_division_azul
+
+			modifier = {
+				conscription = 0.04
+			}
+		}
+
+		AKI_gansijun_idea = {
+
+			picture = ROM_iron_guard
+
+			modifier = {
+				army_org_factor = -0.05
+				army_morale_factor = -0.05
+                experience_loss_factor = 0.08
+				army_attack_factor = 0.16
+				army_defence_factor = 0.12
+                org_loss_when_moving = -0.10
+			}
+		}
+
+		AKI_jueqidegaigepai_idea = {
+
+			picture = generic_democratic_drift_bonus
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+	        NOT = { has_global_flag = AKI_jiejuegongyehua_FLAG }
+			}
+
+			allowed_civil_war = {
+			}
+
+			modifier = {
+                qinwai_drift = 0.03	
+			}
+		}
+
+		AKI_zhangquandejiduanpai_idea = {
+
+			picture = generic_fascism_drift_bonus
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+	        NOT = { has_global_flag = AKI_jiejuediaolingzhe_FLAG }
+			}
+
+			allowed_civil_war = {
+			}
+
+			modifier = {
+                neworder_drift = 0.05	
+				army_attack_factor = 0.03
+				army_defence_factor = 0.03
+				research_speed_factor = -0.05
+			}
+		}
+
+		AKI_chukoujiqidelirun_idea = {
+
+			picture = generic_economic_increase
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+			is_subject = no
+	        NOT = { has_global_flag = AKI_buxuyaojiqi_FLAG }
+			}
+
+			allowed_civil_war = {
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.03
+			}
+		}
+
+		AKI_tudijiaoyisuode_idea = {
+
+			picture = generic_economic_increase
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+			is_subject = no
+	        NOT = { has_global_flag = AKI_yizhitudijianbing_FLAG }
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.03
+			}
+		}
+
+		AKI_maoyitiaoli_idea = {
+			
+			available = {
+	        NOT = { has_war_with = ZYD }
+			}
+
+			picture = generic_agrarian_society
+
+			removal_cost = -1
+			
+			targeted_modifier = { 
+				tag = ZYD
+				
+				trade_opinion_factor = 0.50
+				extra_trade_to_target_factor = 0.1
+				trade_cost_for_target_factor = -0.15
+			}
+			
+			modifier = {
+
+                industrial_capacity_factory = 0.05
+				
+				local_resources_factor = 0.10
+				
+			}
+		}
+
+		AKI_ZYD_maoyitiaoli_idea = {
+			
+			available = {
+	        NOT = { has_war_with = AKI }
+			}
+
+			picture = generic_economic_increase
+
+			removal_cost = -1
+			
+			targeted_modifier = { 
+				tag = AKI
+				
+				trade_opinion_factor = 0.50
+				extra_trade_to_target_factor = 0.1
+				trade_cost_for_target_factor = -0.15
+			}
+			
+			modifier = {
+
+				consumer_goods_factor = -0.03
+				
+			}
+		}
+
+		AKI_laiziqiushendezhichi_idea = {
+
+			picture = por_volunteers_in_the_war2
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+			is_subject = no
+	        AKI = { has_idea = AKI_zhanlipin_idea }
+	        NOT = { has_war_with = AKI }
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+				army_attack_factor = 0.03
+				army_defence_factor = 0.03
+			}
+		}
+
+		AKI_laiziqiushendeyuanzhu_idea = {
+
+			picture = generic_production_bonus
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+			is_subject = no
+	        AKI = { has_idea = AKI_zhanlipin_idea }
+	        NOT = { has_war_with = AKI }
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+                industrial_capacity_factory = 0.05
+			}
+		}
+
+		AKI_zhichibuji_idea = {
+
+			picture = SPR_relocate_the_gold_reserves
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+			is_subject = no
+	        HU3 = { has_idea = AKI_laiziqiushendezhichi_idea }
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.03
+			}
+		}
+
+		AKI_buji_idea = {
+
+			picture = por_hydroelectric_power
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+			is_subject = no
+	        HU3 = { has_idea = AKI_laiziqiushendezhichi_idea }
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.20
+			}
+		}
+
+		AKI_gongshi_idea = {
+
+			picture = por_colonial_assimilation
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+			is_subject = no
+	        HU3 = { has_idea = AKI_laiziqiushendezhichi_idea }
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.10
+				army_defence_factor = 0.10
+			}
+		}
+
+		AKI_zhichigongshi_idea = {
+
+			picture = SPR_relocate_the_gold_reserves
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+			is_subject = no
+	        HU3 = { has_idea = AKI_laiziqiushendezhichi_idea }
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.03
+			}
+		}
+
+		AKI_zhanlipin_idea = {
+
+			picture = SPR_seize_the_gold_reserves
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+			is_subject = no
+	        HU3 = { has_idea = AKI_laiziqiushendezhichi_idea }
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.01
+				production_speed_buildings_factor = 0.03
+                industrial_capacity_factory = 0.03
+			}
+		}
+
+		AKI_zhanlipin_touzijianshe_idea = {
+
+			picture = SPR_seize_the_gold_reserves
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+			is_subject = no
+	        HU3 = { has_idea = AKI_laiziqiushendezhichi_idea }
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.15
+			}
+		}
+
+		AKI_zhanlipin_touzishengchan_idea = {
+
+			picture = SPR_seize_the_gold_reserves
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+			is_subject = no
+	        HU3 = { has_idea = AKI_laiziqiushendezhichi_idea }
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+                industrial_capacity_factory = 0.15
+			}
+		}
+
+		AKI_gongchengjishudaxue_idea = {
+	    	picture = jap_supremacy_of_technology
+	
+			allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			research_bonus = {
+				civil = 0.1
+			}
+		}
+
+		AKI_jinzhizhishichuanbo_idea = {
+	    	picture = imperial_glory_idea
+	
+			allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+		        surrender_limit = 0.10
+                training_time_factor = -0.15
+                mobilization_speed = 0.15
+				conscription_factor = 0.1
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				army_org_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+				research_speed_factor = -0.15
+			}
+
+		}
+
+		AKI_zhengfuzhe_idea = {
+	    	picture = triumphant_will
+	
+			allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+                justify_war_goal_time = -0.35
+		        resistance_damage_to_garrison = -0.30
+		        max_command_power = 20
+		        command_power_gain_mult = 0.25
+                terrain_penalty_reduction = 0.15
+				attrition = -0.10
+			}
+
+		}
+
+		AKI_nongyemaoyixieding_idea = {
+	    	picture = generic_economic_increase
+	
+			allowed = {
+				always = no
+			}
+
+			available = {
+	        NOT = { has_war_with = YUK }
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+
+			MONTHLY_POPULATION = 0.1
+    
+			}
+
+		}
+
+		AKI_YUK_nongyemaoyixieding_idea = {
+	    	picture = generic_agrarian_society
+	
+			allowed = {
+				always = no
+			}
+
+			available = {
+	        NOT = { has_war_with = AKI }
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+			production_speed_buildings_factor = 0.05
+		    local_resources_factor = 0.10    
+			}
+
+		}
+
+        AKI_yaoguaishanwaijiao_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			removal_cost = -1
+
+			picture = wilkies_new_deal
+
+			modifier = {				
+			    improve_relations_maintain_cost_factor = -0.33
+				manufacturer_cost_factor = -0.33
+			}
+		}
+
+		AKI_jingtifojiaotu_idea = {
+
+			picture = generic_acquire_tanks
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+	        country_exists = NMS
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = NMS
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.15
+			}
+
+
+		}
+
+		AKI_weirenleifuchou_idea = {
+
+			picture = generic_acquire_tanks
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+	        country_exists = NMS
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = NMS
+				attack_bonus_against = 0.10
+			}
+
+
+		}
+
+		AKI_fulizhengce_idea = {
+
+			picture = SPR_seize_the_gold_reserves
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+			is_subject = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.03
+				political_power_factor = 0.10
+				stability_weekly = 0.001
+			}
+		}
+
+		AKI_touzikuifa_idea = {
+
+            picture = can_wartime_prices_and_trade_board
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}		
+
+		AKI_xinanliancun_idea = {
+
+	    	picture = YUG_federal_defense_council
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+            is_in_faction_with = AKI
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+		        ai_call_ally_desire_factor = 20
+		        ai_join_ally_desire_factor = 20
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.10
+			}
+		}
+
+		AKI_xinancunluodeshouhuzhe_idea = {
+
+	    	picture = YUG_federal_defense_council
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+            is_faction_leader = yes
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				ai_get_ally_desire_factor = -30
+		        surrender_limit = 0.05
+			}
+		}
+
+		AKI_fengshoucunluodeshoucheng_idea = {
+
+            picture = generic_agrarian_reform
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+            is_in_faction_with = HU1
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+						MONTHLY_POPULATION = 0.1
+			}
+		}
+
+		AKI_duanzaocunluodechanchu_idea = {
+
+            picture = can_wartime_prices_and_trade_board
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+            is_in_faction_with = HU2
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+                industrial_capacity_factory = 0.10
+			}
+		}
+
+		AKI_quguicunluodeyanjiu_idea = {
+
+			picture = generic_research_bonus
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+            is_in_faction_with = HU4
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			research_bonus = {
+				military = 0.1
+			}
+		}
+
+		AKI_touzizengzhang_idea = {
+
+            picture = can_wartime_prices_and_trade_board
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.03
+			}
+		}	
+
+		AKI_qiangxingzhenghe_idea = {
+
+            picture = generic_purge
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.10
+			    stability_factor = -0.15
+				civilian_factory_use = 10
+			}
+		}	
+		
+	}
+}

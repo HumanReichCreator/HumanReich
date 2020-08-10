@@ -1,0 +1,119 @@
+﻿capital = 264
+138.8.13 = {
+
+}
+141.6.2 = {
+    
+}
+142.3.8 = {
+    
+}
+144.2.5 = {
+    
+}
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card = 1
+            
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+            
+        #工程学 
+        jichushuxue = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+            
+        #专用工业
+
+        #种族
+            
+    }
+}
+set_technology = {
+    ghost_tech = 1
+}
+146.1.1={
+    oob = "NG2_146"
+    # set_research_slots = 2
+    add_ideas = {
+    Ghost
+    Tribal
+    close1
+    hawk3
+    strict_border
+    sc_rule
+    }
+    set_politics = {
+    	ruling_party = fandong
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 0
+        guli = 0
+        neworder = 35
+        oldorder = 0
+        fandong = 65
+    }
+    
+    set_convoys = 2
+    
+}
+create_country_leader = {
+    name = "未知亡灵"
+    desc = ""
+    picture = "gfx/leaders/leader_unknown.dds"
+    ideology = fandong_type
+    traits = {
+
+    }
+}
+create_country_leader = {
+    name = "未知亡灵"
+    desc = ""
+    picture = "gfx/leaders/leader_unknown.dds"
+    ideology = neworder_type
+    traits = {
+
+    }
+}
+create_country_leader = {
+    name = "未知亡灵"
+    desc = ""
+    picture = "gfx/leaders/leader_unknown.dds"
+    ideology = guli_type
+    traits = {
+
+    }
+}
+create_country_leader = {
+    name = "未知亡灵"
+    desc = ""
+    picture = "gfx/leaders/leader_unknown.dds"
+    ideology = qinwai_type
+    traits = {
+
+    }
+}
+create_country_leader = {
+    name = "未知亡灵"
+    desc = ""
+    picture = "gfx/leaders/leader_unknown.dds"
+    ideology = oldorder_type
+    traits = {
+
+    }
+}

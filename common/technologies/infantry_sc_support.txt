@@ -1,0 +1,760 @@
+technologies = {
+	###################
+	wunvzhiyuan146 = {
+
+		dependencies = {
+		   zhiyuanzhuangbei = 1
+		}
+
+		enable_subunits = {
+			sp_wunv
+		}
+
+		path = {
+			leads_to_tech = wunvzhiyuan151
+			research_cost_coeff = 1
+		}
+
+		start_year = 146
+		research_cost = 2
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 1 y = 3 }
+		}
+		
+		categories = {
+			science_support
+			support_tech
+			science
+			military
+			
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	wunvzhiyuan151 = {
+		path = {
+			leads_to_tech = wunvzhiyuan156
+			research_cost_coeff = 1
+		}
+
+		sp_wunv = {
+			supply_consumption_factor = -0.05
+		}
+
+		start_year = 151
+		research_cost = 2
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 1 y = 5 }
+		}
+		
+		categories = {
+			science_support
+			support_tech
+			science
+			military
+			
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	wunvzhiyuan156 = {
+		path = {
+			leads_to_tech = wunvzhiyuan161
+			research_cost_coeff = 1
+		}
+
+		sp_wunv = {
+			reliability_factor = 0.05
+			equipment_capture_factor = 0.05
+		}
+
+		start_year = 156
+		research_cost = 2
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 1 y = 7 }
+		}
+		
+		categories = {
+			science_support
+			support_tech
+			science
+			military
+			
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	wunvzhiyuan161 = {
+
+		start_year = 161
+		research_cost = 2
+
+		sp_wunv = {
+			breakthrough = 0.2
+			defense = 0.2
+		}
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 1 y = 9 }
+		}
+		
+		categories = {
+			science_support
+			support_tech
+			science
+			military
+			
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	gongjianpao146 = {
+
+		dependencies = {
+		   zhiyuanzhuangbei = 1
+		}
+
+		path = {
+			leads_to_tech = gongjianpao151
+			research_cost_coeff = 1
+		}
+
+		enable_subunits = {
+			sp_gongjianpao
+		}
+
+		start_year = 146
+		research_cost = 2
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 6 y = 3 }
+		}
+		
+		categories = {
+			science_support
+			support_tech
+			science
+			military
+			
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	gongjianpao151 = {
+		path = {
+			leads_to_tech = gongjianpao156
+			research_cost_coeff = 1
+		}
+
+		sp_gongjianpao = {
+			hills = {
+				attack = 0.05
+			}
+			fort = {
+				attack = 0.05
+			}
+		}
+
+		start_year = 151
+		research_cost = 2
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 6 y = 5 }
+		}
+		
+		categories = {
+			science_support
+			support_tech
+			science
+			military
+			
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	gongjianpao156 = {
+		path = {
+			leads_to_tech = gongjianpao161
+			research_cost_coeff = 1
+		}
+
+		sp_gongjianpao = {
+			mountain = {
+				attack = 0.05
+			}
+			urban = {
+				attack = 0.05
+			}
+		}
+
+		start_year = 156
+		research_cost = 2
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 6 y = 7 }
+		}
+		
+		categories = {
+			science_support
+			support_tech
+			science
+			military
+			
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	gongjianpao161 = {
+
+		start_year = 161
+		research_cost = 2
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 6 y = 9 }
+		}
+
+		sp_gongjianpao = {
+			maximum_speed = 0.1
+		}
+		
+		categories = {
+			science_support
+			support_tech
+			science
+			military
+			
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	fangzhihuopao143 = {
+		xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+
+
+		path = {
+			leads_to_tech = huoyaogailiang146
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = fangzhihuopao148
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = paojiagailiang146
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+		  	sc_artillery143
+		 }
+		enable_subunits = {
+			sc_artillery_brigade
+		}
+		enable_subunits = {
+			sc_artillery
+		}
+
+		on_research_complete = {
+			sc_a143 = yes
+		}
+		
+		
+		start_year = 143
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 14 y = 2 }
+		}
+		
+		categories = {
+			science_artillery_weapons
+			artillery_tech
+			military
+			science
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	kuaisuhuopao151 = {
+		xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+		
+		start_year = 146
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 20 y = 5 }
+		}
+
+		sc_artillery = {
+			soft_attack = 0.05
+		    supply_consumption = -0.25
+		}
+		
+		categories = {
+			science_artillery_weapons
+			artillery_tech
+			military
+			science
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	fangzhihuopao148 = {
+		xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+		
+		path = {
+			leads_to_tech = fangzhihuopao153
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+		  	sc_artillery148
+		 }
+
+		 on_research_complete = {
+			sc_a148 = yes
+		}
+		
+		
+		start_year = 148
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 14 y = 4 }
+		}
+		
+		categories = {
+			science_artillery_weapons
+			artillery_tech
+			military
+			science
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	fangzhihuopao153 = {
+		xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+
+	     enable_equipments = {
+		  	sc_artillery153
+		 }
+
+		 on_research_complete = {
+			sc_a153 = yes
+		}
+		
+		path = {
+			leads_to_tech = fangzhihuopao158
+			research_cost_coeff = 1
+		}
+		
+		
+		start_year = 153
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 14 y = 6 }
+		}
+		
+		categories = {
+			science_artillery_weapons
+			artillery_tech
+			military
+			science
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	fangzhihuopao158 = {
+		xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+		
+		enable_equipments = {
+		  	sc_artillery158
+		 }
+
+		 on_research_complete = {
+			sc_a158 = yes
+		}
+
+		start_year = 158
+		research_cost = 2.5
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 14 y = 8 }
+		}
+		
+		categories = {
+			science_artillery_weapons
+			artillery_tech
+			military
+			science
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	huoyaogailiang146 = {
+
+		path = {
+			leads_to_tech = huoyaogailiang151
+			research_cost_coeff = 1
+		}
+
+		sc_artillery_brigade = {
+		    soft_attack = 0.1
+		    supply_consumption = 0.05
+		}
+		sc_mot_artillery_brigade = {
+			soft_attack = 0.1
+		    supply_consumption = 0.05
+		}
+		sc_artillery = {
+			soft_attack = 0.1
+		    supply_consumption = 0.05
+		}
+		Human_special = {
+			soft_attack = 0.1
+		    supply_consumption = 0.05
+		}
+
+		
+		
+		start_year = 146
+		research_cost = 2
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 11 y = 3 }
+		}
+		
+		categories = {
+			science_artillery_improve
+			science
+			military
+			artillery_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	huoyaogailiang151 = {
+
+		path = {
+			leads_to_tech = huoyaogailiang156
+			research_cost_coeff = 1
+		}
+
+		sc_artillery_brigade = {
+		    soft_attack = 0.1
+		    supply_consumption = 0.05
+		}
+		sc_mot_artillery_brigade = {
+			soft_attack = 0.1
+		    supply_consumption = 0.05
+		}
+		sc_artillery = {
+			soft_attack = 0.1
+		    supply_consumption = 0.05
+		}
+		Human_special = {
+			soft_attack = 0.1
+		    supply_consumption = 0.05
+		}
+
+		
+		
+		start_year = 151
+		research_cost = 2
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 11 y = 5 }
+		}
+		
+		categories = {
+			science_artillery_improve
+			science
+			military
+			artillery_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	huoyaogailiang156 = {
+
+		
+		start_year = 156
+		research_cost = 2
+
+		path = {
+			leads_to_tech = huoyaogailiang161
+			research_cost_coeff = 1
+		}
+
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 11 y = 7 }
+		}
+
+		sc_artillery_brigade = {
+		    soft_attack = 0.1
+		    supply_consumption = 0.05
+		}
+		sc_mot_artillery_brigade = {
+			soft_attack = 0.1
+		    supply_consumption = 0.05
+		}
+		sc_artillery = {
+			soft_attack = 0.1
+		    supply_consumption = 0.05
+		}
+		Human_special = {
+			soft_attack = 0.1
+		    supply_consumption = 0.05
+		}
+		
+		categories = {
+			science_artillery_improve
+			science
+			military
+			artillery_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	huoyaogailiang161 = {
+
+		
+		start_year = 161
+		research_cost = 2
+
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 11 y = 9 }
+		}
+
+		sc_artillery_brigade = {
+		    soft_attack = 0.1
+		    supply_consumption = 0.05
+		}
+		sc_mot_artillery_brigade = {
+			soft_attack = 0.1
+		    supply_consumption = 0.05
+		}
+		sc_artillery = {
+			soft_attack = 0.1
+		    supply_consumption = 0.05
+		}
+		Human_special = {
+			soft_attack = 0.1
+		    supply_consumption = 0.05
+		}
+		
+		categories = {
+			science_artillery_improve
+			science
+			military
+			artillery_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+	paojiagailiang146 = {
+		
+		path = {
+			leads_to_tech = paojiagailiang151
+			research_cost_coeff = 1
+		}
+
+		sc_artillery_brigade = {
+		    maximum_speed = 0.1
+		}
+		
+		
+		start_year = 146
+		research_cost = 2
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 17 y = 3 }
+		}
+		
+		categories = {
+			science_artillery_improve
+			science
+			military
+			artillery_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	paojiagailiang151 = {
+		
+		path = {
+			leads_to_tech = paojiagailiang156
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = kuaisuhuopao151
+			research_cost_coeff = 1
+		}
+
+		sc_artillery_brigade = {
+		    maximum_speed = 0.1
+		}
+		
+		
+		start_year = 151
+		research_cost = 2
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 17 y = 5 }
+		}
+		
+		categories = {
+			science_artillery_improve
+			science
+			military
+			artillery_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	paojiagailiang156 = {
+		
+		path = {
+			leads_to_tech = paojiagailiang161
+			research_cost_coeff = 1
+		}
+
+		sc_artillery_brigade = {
+		    maximum_speed = 0.1
+		}
+		
+		
+		start_year = 156
+		research_cost = 2
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 17 y = 7 }
+		}
+		
+		categories = {
+			science_artillery_improve
+			science
+			military
+			artillery_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	paojiagailiang161 = {
+		
+
+		sc_artillery_brigade = {
+		    maximum_speed = 0.1
+		}
+		
+		
+		start_year = 161
+		research_cost = 2
+		
+		folder = {
+			name = infantry_sc_support_folder
+			position = { x = 17 y = 9 }
+		}
+		
+		categories = {
+			science_artillery_improve
+			science
+			military
+			artillery_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

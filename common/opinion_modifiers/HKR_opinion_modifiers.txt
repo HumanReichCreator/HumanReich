@@ -1,0 +1,40 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+	HKR_fazhanguanxi_op = {
+		value = 10
+	}
+	HKR_yiqibuzuoren_op = {
+		value = 30
+	}
+	HKR_yinqinai_op = {
+		value = 70
+	}
+	HKR_yinqinai2_op = {
+		value = -70
+	}
+	HKR_zaiduguanxi_op = {
+		value = 30
+	}
+	HKR_huashanxiulian_op = {
+		value = 50
+	}
+	HKR_tichuqitashili_op = {
+		value = -100
+	}
+	HKR_bianyuanbangzhu_op = {
+		value = 30
+	}
+	HKR_zuzhirenleibianyaoguai_op = {
+		value = -100
+	}
+}	
+

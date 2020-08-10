@@ -1,0 +1,1489 @@
+state_value_calculator = {
+    # set_variable = { X1 = state_population }
+    # set_variable = { X2 = state_population_k }
+	set_variable = { state_value = infrastructure_level }
+	set_temp_variable = { lv_arms = arms_factory_level }
+	multiply_temp_variable = { lv_arms = 12 }
+	set_temp_variable = { lv_industrial = industrial_complex_level }
+	multiply_temp_variable = { lv_industrial = 8 }
+
+	multiply_variable = { state_value = 1 }
+	add_to_variable = { state_value = lv_arms}
+	add_to_variable = { state_value = lv_industrial}
+}
+
+reduce_one_slot = {
+    add_research_slot = -1
+    add_to_variable = { ic_level = -1}
+}
+
+research_slot_generator = {
+    if = {
+        limit = {
+            check_variable = { factory_num > 14}
+            check_variable = { ic_level < 1}
+        }
+        add_research_slot = 1
+        set_variable = { ic_level = 1}
+    }
+    if = {
+        limit = {
+            check_variable = { factory_num > 39}
+            check_variable = { ic_level < 2}
+        }
+        add_research_slot = 1
+        add_to_variable = { ic_level = 1}
+    }
+    if = {
+        limit = {
+            check_variable = { factory_num > 79}
+            check_variable = { ic_level < 3}
+        }
+        add_research_slot = 1
+        add_to_variable = { ic_level = 1}
+    }
+    if = {
+        limit = {
+            check_variable = { factory_num > 129}
+            check_variable = { ic_level < 4}
+        }
+        add_research_slot = 1
+        add_to_variable = { ic_level = 1}
+    }
+}
+
+country_value_calculator_and_manpower_gainer = {
+	set_variable = { all_value = 0}
+    set_variable = { all_value_plus_manpower = 0}
+    set_variable = { manpower_value = 0}
+    set_variable = { factory_num = 0 }
+
+    every_owned_state = {
+    	limit = {
+    		is_core_of = ROOT
+    	}
+    	add_to_variable = { ROOT.all_value = state_value}
+        add_to_variable = { ROOT.factory_num = industrial_complex_level }
+        add_to_variable = { ROOT.factory_num = arms_factory_level }
+        if = {
+            limit = {
+                check_variable = { ST_present_race = 0}
+            }
+            set_temp_variable = { manpower_ratio = 14}
+        }
+        if = {
+            limit = {
+                check_variable = { ST_present_race = 1}
+            }
+            set_temp_variable = { manpower_ratio = 20 }
+        }
+        if = {
+            limit = {
+                check_variable = { ST_present_race = 2}
+            }
+            set_temp_variable = { manpower_ratio = 25 }
+        }
+        if = {
+            limit = {
+                check_variable = { ST_present_race = 3}
+            }
+            set_temp_variable = { manpower_ratio = 16 }
+        }
+        if = {
+            limit = {
+                check_variable = { ST_present_race = 4}
+            }
+            set_temp_variable = { manpower_ratio = 4 }
+        }
+        if = {
+            limit = {
+                check_variable = { ST_present_race = 5}
+            }
+            set_temp_variable = { manpower_ratio = 8 }
+        }
+        if = {
+            limit = {
+                check_variable = { ST_present_race = 6}
+            }
+            set_temp_variable = { manpower_ratio = 1 }
+        }
+        if = {
+            limit = {
+                check_variable = { ST_present_race = 7}
+            }
+            set_temp_variable = { manpower_ratio = 0.2 }
+        }
+        if = {
+            limit = {
+                check_variable = { ST_present_race = 8}
+            }
+            set_temp_variable = { manpower_ratio = 12.5 }
+        }
+        if = {
+            limit = {
+                check_variable = { ST_present_race = 9}
+            }
+            set_temp_variable = { manpower_ratio = 25 }
+        }
+        set_temp_variable = { manpower_a = state_population_k }
+        multiply_temp_variable = { manpower_a = manpower_ratio}
+        add_to_variable = { ROOT.manpower_value = manpower_a }
+    }
+    clamp_variable = { var = manpower_value min = 0 max = 2000}
+    divide_variable = { manpower_value = 1.25}
+
+    set_variable = { all_value_plus_manpower = manpower_value}
+    add_to_variable = { all_value_plus_manpower = all_value}
+
+    if = {
+        limit = {
+            has_war = no
+            check_variable = { manpower_value < 40}
+            has_army_manpower = {
+                size < 1200
+            }
+            has_manpower < 1200            
+        }
+        set_variable = { manpower_added = 1}
+    }
+    if = {
+        limit = {
+            has_war = yes       
+        }
+        set_variable = { manpower_added = 0}
+    }
+}
+
+situation_change = {
+    if = {
+        limit = {
+            or = {
+                tag = SAP
+                tag = NIT
+            }
+        }
+        set_variable = { OL_view_type = 1}
+        set_variable = { OL_view_value = 0}
+    }
+}
+
+go_qinwai = {
+    set_country_flag = go_qinwai
+    clr_country_flag = go_fandong
+    clr_country_flag = go_guli
+    clr_country_flag = go_neworder
+}
+
+go_guli = {
+    set_country_flag = go_guli
+    clr_country_flag = go_fandong
+    clr_country_flag = go_qinwai
+    clr_country_flag = go_neworder
+}
+
+go_fandong = {
+    set_country_flag = go_fandong
+    clr_country_flag = go_qinwai
+    clr_country_flag = go_guli
+    clr_country_flag = go_neworder
+}
+
+go_neworder = {
+    set_country_flag = go_neworder
+    clr_country_flag = go_fandong
+    clr_country_flag = go_guli
+    clr_country_flag = go_qinwai
+}
+
+go_oldorder = {
+    clr_country_flag = go_neworder
+    clr_country_flag = go_fandong
+    clr_country_flag = go_guli
+    clr_country_flag = go_qinwai
+}
+
+subject_situation_change_list = {
+    if = {
+        limit = {
+            tag = GRS
+            not = {
+                is_subject_of = SCA
+            }
+            # is_subject = no
+        }
+        drop_cosmetic_tag = yes
+    }
+    if = {
+        limit = {
+            tag = SCA
+            is_subject = yes
+            # is_subject = no
+        }
+        set_cosmetic_tag = SCA_s
+    }
+    if = {
+        limit = {
+            tag = SCA
+            is_subject = no
+            # is_subject = no
+        }
+        drop_cosmetic_tag = yes
+    }
+    if = {
+        limit = {
+            tag = SHO
+            not = {
+                is_subject_of = SCA
+            }
+            # is_subject = no
+        }
+        drop_cosmetic_tag = yes
+    }
+    if = {
+        limit = {
+            tag = WAK
+            not = {
+                is_subject_of = SCA
+            }
+            # is_subject = no
+        }
+        drop_cosmetic_tag = yes
+    }
+    if = {
+        limit = {
+            tag = INB
+            not = {
+                is_subject_of = EET
+            }
+        }
+        drop_cosmetic_tag = yes
+    }
+    if = {
+        limit = {
+            tag = UDO
+            not = {
+                is_subject_of = EET
+            }
+        }
+        drop_cosmetic_tag = yes
+    }
+    if = {
+        limit = {
+            tag = RGO
+            not = {
+                is_subject_of = EET
+            }
+        }
+        drop_cosmetic_tag = yes
+    }
+    if = {
+        limit = {
+            tag = RUH
+            not = {
+                is_subject_of = SAT
+            }
+        }
+        drop_cosmetic_tag = yes
+    }
+}
+
+delcare_war_events = {
+    if = {
+        limit = {
+            tag = CIR
+        }
+        if = {
+            limit = {
+                or = {
+                    FROM = {tag = MRS }
+                    FROM = {tag = MFA }
+                }
+                
+            }
+            news_event = { id = cir.6 days = 2 }
+        }
+        if = {
+            limit = {
+                or = {
+                    FROM = {tag = SEI}
+                    FROM = {tag = NIB}
+                    FROM = {tag = RMI}
+                }
+            }
+            news_event = { id = cir.5 days = 2 }
+        }
+        if = {
+            limit = {
+                FROM = {tag = SCA}
+            }
+            news_event = { id = cir.4 days = 2}
+        }
+    }
+    if = {
+        limit = {
+            tag = SEI
+        }
+        if = {
+            limit = {
+                FROM = {tag = MSD}
+            }
+            news_event = { id = sei.18 days = 2}
+        }
+        if = {
+            limit = {
+                FROM = {tag = MRS}
+            }
+            news_event = { id = sei.23 days = 2}
+        }
+        if = {
+            limit = {
+                FROM = {tag = CIR}
+            }
+            news_event = { id = sei.26 days = 2}
+        }
+        if = {
+            limit = {
+                not = { has_government = qinwai }
+                FROM = {tag = YKR}
+            }
+            news_event = { id = sei.42 days = 2}
+        }
+        if = {
+            limit = {
+                has_government = qinwai
+                FROM = {tag = YKR}
+            }
+            news_event = { id = sei.54 days = 2}
+        }
+        if = {
+            limit = {
+                FROM = {tag = KUT}
+            }
+            news_event = { id = sei.55 days = 2}
+        }
+    }
+    if = {
+        limit = {
+            tag = YSK
+        }
+        if = {
+            limit = {
+                FROM = {tag = NIT}
+            }
+            news_event = { days = 2 id = ysk.12}
+        }
+        if = {
+            limit = {
+                FROM = {tag = TEG}
+            }
+            news_event = { days = 2 id = ysk.16}
+        }
+        if = {
+            limit = {
+                or = {
+                    FROM = {tag = SCA}
+                    FROM = {tag = GRS}
+                }
+            }
+            news_event = { days = 2 id = ysk.28}
+        }
+        if = {
+            limit = {
+                FROM = {tag = HU5}
+            }
+            news_event = { days = 2 id = ysk.32}
+        }
+    }
+
+    if = {
+        limit = {
+            tag = TEG
+        }
+        if = {
+            limit = {
+                FROM = {tag = OTG}
+            }
+            news_event = { id = teg.7 days = 2}
+        }
+        if = {
+            limit = {
+                FROM = {tag = TEN}
+            }
+            news_event = { id = teg.26 days = 2}
+        }
+        if = {
+            limit = {
+                FROM = {tag = YSK}
+            }
+            news_event = { id = teg.27 days = 2}
+        }
+        if = {
+            limit = {
+                FROM = {tag = SCA}
+            }
+            news_event = { id = teg.28 days = 2}
+        }
+        
+    }
+    
+    if = {
+        limit = {
+            tag = SAK
+        }
+        if = {
+            limit = {
+                FROM = {tag = YSK}
+            }
+            news_event = { id = teg.52 days = 2}
+        }
+    }
+    if = {
+        limit = {
+            tag = NMS
+        }
+        if = {
+            limit = {
+                FROM = {tag = SCA}
+            }
+            news_event = { id = nms.13 days = 2}
+        }
+        if = {
+            limit = {
+                FROM = {tag = HUM}
+            }
+            news_event = { id = nms.11 days = 2}
+        }
+        if = {
+            limit = {
+                FROM = {tag = SRB}
+            }
+            news_event = { id = nms.12 days = 2}
+        }
+        if = {
+            limit = {
+                FROM = {tag = HU4}
+            }
+            news_event = { days = 2 id = nms.23 }
+        }
+        if = {
+            limit = {
+                FROM = {tag = YUK}
+            }
+            news_event = { days = 2 id = nms.34 }
+        }
+        if = {
+            limit = {
+                FROM = {tag = AVE}
+            }
+            news_event = { days = 2 id = nms.35 }
+        }
+        if = {
+            limit = {
+                FROM = {tag = KOG}
+            }
+            news_event = { days = 2 id = nms.70 }
+        }
+    }
+    if = {
+        limit = {
+            tag = KOG
+        }
+        if = {
+            limit = {
+                FROM = {
+                    tag = WAK
+                }
+            }
+            news_event = { id = kog2.39 days = 2}
+        }
+        if = {
+            limit = {
+                FROM = {tag = MRS}
+            }
+            news_event = { id = kog2.36 days = 2}
+        }
+        if = {
+            limit = {
+                FROM = {tag = NMS}
+            }
+            news_event = { id = kog2.45 days = 2}
+        }
+        if = {
+            limit = {
+                FROM = {tag = HUM}
+            }
+            news_event = { id = kog2.71 days = 2}
+        }
+    }
+
+    if = {
+        limit = {
+            tag = HKR
+        }
+        if = {
+            limit = {
+                FROM = {tag = MSD}
+            }
+            news_event = { id = hkr.22 days = 2}
+        }
+        if = {
+            limit = {
+                FROM = {tag = HUM}
+            }
+            news_event = { id = hkr.31 days = 2}
+        }
+        if = {
+            limit = {
+                FROM = {tag = SEI}
+            }
+            news_event = { id = hkr.34 days = 2}
+        }
+        if = {
+            limit = {
+                not = { has_completed_focus = HKR_yaoguaizennengweinu }
+                FROM = {tag = YKR}
+            }
+            news_event = { id = hkr.36 days = 2}
+        }
+        if = {
+            limit = {
+                FROM = {tag = NMS}
+            }
+            news_event = { id = hkr.42 days = 2}
+        }
+        if = {
+            limit = {
+                FROM = {tag = CIR}
+            }
+            news_event = { id = hkr.46 days = 2}
+        }
+        if = {
+            limit = {
+                has_completed_focus = HKR_yaoguaizennengweinu
+                FROM = {tag = YKR}
+            }
+            news_event = { id = hkr.56 days = 2}
+        }
+    }
+
+    if = {
+        limit = {
+            tag = MRS
+        }
+        if = {
+            limit = {
+                FROM = {tag = SEI}
+            }
+            news_event = { id = mrs.9 days = 2}
+        }
+        if = {
+            limit = {
+                FROM = {tag = CIR}
+            }
+            news_event = { id = mrs.22 days = 2}
+        }
+        if = {
+            limit = {
+                FROM = {tag = RMI}
+            }
+            news_event = { id = mrs.65 days = 2}
+        }
+        if = {
+            limit = {
+                FROM = {tag = KOG}
+            }
+            news_event = { id = mrs.64 days = 2}
+        }
+    }
+
+    if = {
+        limit = {
+            tag = TEN
+        }
+        if = {
+            limit = {
+                FROM = {tag = CCA}
+            }
+            news_event = { id = ten.1 days = 2}
+        }
+    }
+
+    if = {
+        limit = {
+            tag = SRB
+        }
+        if = {
+            limit = {
+                FROM = {tag = MAM}
+            }
+            news_event = { id = srb.19 days = 2}
+        }
+        if = {
+            limit = {
+                FROM = {tag = AVE}
+            }
+            news_event = { id = srb.20 days = 2}
+        }
+        if = {
+            limit = {
+                FROM = {tag = NMS}
+            }
+            news_event = { id = srb.21 days = 2}
+        }
+        if = {
+            limit = {
+                FROM = {tag = HUM}
+            }
+            news_event = { id = srb.24 days = 2}
+        }
+    }
+
+    if = {
+        limit = {
+            tag = USZ
+        }
+        if = {
+            limit = {
+                FROM = {tag = WAI}
+            }
+            news_event = { days = 2 id = hel.2}
+        }
+    }
+    if = {
+        limit = {
+            tag = WAI
+        }
+        if = {
+            limit = {
+                FROM = {tag = SKI}
+            }
+            news_event = { days = 2 id = hel.25}
+        }
+    }
+    if = {
+        limit = {
+            tag = SKI
+        }
+        if = {
+            limit = {
+                FROM = {tag = WAI}
+            }
+            news_event = { days = 2 id = hel.9}
+        }
+    }
+    if = {
+        limit = {
+            tag = HCT
+        }
+        if = {
+            limit = {
+                FROM = {tag = CLO}
+            }
+            news_event = { days = 2 id = hel.14}
+        }
+    }
+    if = {
+        limit = {
+            tag = ALI
+        }
+        if = {
+            limit = {
+                FROM = {tag = KOG}
+                ROOT = { has_government = qinwai}
+            }
+            news_event = { days = 2 id = ali.43}
+        }
+        if = {
+            limit = {
+                FROM = {tag = KOG}
+                ROOT = { not = { has_government = qinwai} }
+            }
+            news_event = { days = 2 id = ali.59}
+        }
+        if = {
+            limit = {
+                FROM = {tag = SCA}
+            }
+            news_event = { days = 2 id = ali.47}
+        }
+        if = {
+            limit = {
+                FROM = { tag = CIR}
+                ROOT = { has_government = fandong } 
+            }
+            news_event = { days = 2 id = ali.53}
+        }
+        if = {
+            limit = {
+                FROM = { tag = RMI}
+                ROOT = { has_government = fandong } 
+            }
+            news_event = { days = 2 id = ali.54}
+        }
+        if = {
+            limit = {
+                FROM = { tag = RMI}
+                ROOT = { not = { has_government = fandong } }
+            }
+            news_event = { days = 2 id = ali.60}
+        }
+    } 
+    if = {
+        limit = {
+            tag = AKI
+        }
+        if = {
+            limit = {
+                FROM = {tag = SGS}
+            }
+            news_event = { id = aki.60 days = 2}
+        }
+        if = {
+            limit = {
+                FROM = {tag = YUK}
+                AKI = {has_government = neworder}
+            }
+            news_event = { id = aki.61 days = 2}
+        }
+        if = {
+            limit = {
+                FROM = {tag = HU3}
+                AKI = {has_government = qinwai}
+                HU3 = {is_subject = no}
+            }
+            news_event = { id = aki.62 days = 2}
+        }
+        if = {
+            limit = {
+                FROM = {tag = HU3}
+                AKI = {has_government = neworder}
+                HU3 = {is_subject = no}
+            }
+            news_event = { id = aki.91 days = 2}
+        }
+        if = {
+            limit = {
+                FROM = {tag = ZYD}
+                AKI = {has_government = neworder}
+                ZYD = {is_subject = no}
+            }
+            news_event = { id = aki.92 days = 2}
+        }
+    }
+}
+
+lingben = {
+    custom_effect_tooltip = lingben_change
+    if = {
+        limit = {
+            or = {
+                any_country = {
+                    has_idea = big_youkai_tech
+                    is_neighbor_of = ROOT
+                }
+                capital_scope = {
+                    not = {
+                        is_on_continent = Gensokyo
+                    }
+                }
+                has_idea = gensoukyo_creator_idea
+            }  
+        }
+        add_ideas = big_youkai_tech
+        else = {
+            add_ideas = p_youkai_tech
+        }
+    }
+}
+waike = {
+    custom_effect_tooltip = waike_change
+    if = {
+        limit = {
+            or = {
+                any_country = {
+                    has_idea = kap_tech
+                    is_neighbor_of = ROOT
+                }
+                youkai_mountain_country = yes
+                tag = HNY
+            }
+            
+        }
+        add_ideas = kap_tech
+        else = {
+            add_ideas = hum_tech
+        }
+    }
+}
+
+background_friend = {
+    add_opinion_modifier = {target = PREV modifier = background_friend}
+}
+
+startup_opinion = {
+    #FRIEND
+    KAS = {
+        KUT = {
+            background_friend = yes
+            KAS = {
+                background_friend = yes
+            }
+        }
+    }
+    CIR = {
+        SPG = {
+            background_friend = yes
+            CIR = {
+                background_friend = yes
+            }
+        }
+    }
+    YUK = {
+        SPG = {
+            background_friend = yes
+            YUK = {
+                background_friend = yes
+            }
+        }
+    }
+    YYK = {
+        YKR = {
+            background_friend = yes
+            YYK = {
+                background_friend = yes
+            }
+        }
+    }
+    RNS = {
+        MRS = {
+            background_friend = yes
+            RNS = {
+                background_friend = yes
+            }
+        }
+    }
+    HKR = {
+        HUM = {
+            background_friend = yes
+            HKR = {
+                background_friend = yes
+            }
+        }
+    }
+    HUM = {
+        KOG = {
+            background_friend = yes
+        }
+
+    }
+    SRB = {
+        HUM = {
+            background_friend = yes
+        }
+    }
+    EET = {
+        HUM = {
+            background_friend = yes
+        }
+    }
+
+    #ENEMY
+    CIR = {
+        SCA = {
+            background_enemy = yes
+            CIR = {
+                background_enemy = yes
+            }
+        }
+    }
+    SPG = {
+        SCA = {
+            background_enemy = yes
+            SPG = {
+                background_enemy = yes
+            }
+        }
+    }
+    NMS = {
+        HUM = {
+            background_enemy = yes
+        }
+    }
+    HKR = {
+        MSD = {
+            background_enemy = yes
+            HKR = {
+                background_enemy = yes
+            }
+        }
+    }
+    KAG = {
+        INB = {
+            background_enemy = yes
+            KAG = {
+                background_enemy = yes
+            }
+        }
+    }
+    TEG = {
+        YSK = {
+            background_enemy = yes
+            TEG = {
+                background_enemy = yes
+            }
+        }
+    }
+    NIT = {
+        KAP = {
+            background_enemy = yes
+            NIT = {
+                background_enemy = yes
+            }
+        }
+    }
+    HU3 = {
+        MEL = {
+            background_enemy = yes
+            HU3 = {
+                background_enemy = yes
+            }
+        }
+    }
+    ZYD = {
+        GH1 = {
+            background_enemy = yes
+            ZYD = {
+                background_enemy = yes
+            }
+        }
+    }
+    WAI = {
+        GH1 = {
+            background_enemy = yes
+            WAI = {
+                background_enemy = yes
+            }
+        }
+    }
+    USZ = {
+        GH1 = {
+            background_enemy = yes
+            USZ = {
+                background_enemy = yes
+            }
+        }
+    }
+    ONS = {
+        SEI = {
+            background_enemy = yes
+            ONS = {
+                background_enemy = yes
+            }
+        }
+    }
+    UUG = {
+        UNL = {
+            background_enemy = yes
+            UUG = {
+                background_enemy = yes
+            }
+        }
+    }
+    GYK = {
+        HNY = {
+            background_enemy = yes
+            GYK = {
+                background_enemy = yes
+            }
+        }
+    }
+    KCC = {
+        HNY = {
+            background_enemy = yes
+            KCC = {
+                background_enemy = yes
+            }
+        }
+    }
+    KRK = {
+        HNY = {
+            background_enemy = yes
+            KRK = {
+                background_enemy = yes
+            }
+        }
+    }
+
+
+    SCA = { reverse_add_opinion_modifier = {target = KAP modifier = background_enemy2} }
+    SCA = { reverse_add_opinion_modifier = {target = TEG modifier = background_enemy2} }
+    SCA = { reverse_add_opinion_modifier = {target = OTG modifier = background_enemy2} }
+    SCA = { reverse_add_opinion_modifier = {target = AKI modifier = background_enemy2} }
+
+    KOG = { add_opinion_modifier = {target = HUM modifier = background_enemy2} }
+    KOG = { reverse_add_opinion_modifier = {target = HUM modifier = background_enemy2} }
+
+    HUM = { add_opinion_modifier = {target = NMS modifier = background_enemy} } 
+    HUM = { reverse_add_opinion_modifier = {target = SCA modifier = background_enemy2} }
+    HUM = { add_opinion_modifier = {target = SCA modifier = background_enemy2} }
+    HUM = { reverse_add_opinion_modifier = {target = SCA modifier = background_enemy2} }
+    HUM = { add_opinion_modifier = {target = RMI modifier = background_enemy2} }
+    HUM = { reverse_add_opinion_modifier = {target = RMI modifier = background_enemy2} }
+    HUM = { add_opinion_modifier = {target = NIB modifier = background_enemy2} }
+    HUM = { reverse_add_opinion_modifier = {target = NIB modifier = background_enemy2} }
+    HUM = { add_opinion_modifier = {target = SEI modifier = background_enemy2} }
+    HUM = { reverse_add_opinion_modifier = {target = SEI modifier = background_enemy2} }
+    HUM = { add_opinion_modifier = {target = MSD modifier = background_enemy2} }
+    HUM = { reverse_add_opinion_modifier = {target = MSD modifier = background_enemy2} }
+    HUM = { add_opinion_modifier = {target = KAG modifier = background_enemy2} }
+    HUM = { reverse_add_opinion_modifier = {target = KAG modifier = background_enemy2} }
+
+    MRS = { add_opinion_modifier = {target = SEI modifier = background_enemy2} } 
+    MRS = { reverse_add_opinion_modifier = {target = SEI modifier = background_enemy2} } 
+    MRS = { add_opinion_modifier = {target = NIB modifier = background_enemy2} } 
+    MRS = { reverse_add_opinion_modifier = {target = NIB modifier = background_enemy2} } 
+    MRS = { add_opinion_modifier = {target = RMI modifier = background_enemy2} } 
+    MRS = { reverse_add_opinion_modifier = {target = RMI modifier = background_enemy2} } 
+
+    HKR = { add_opinion_modifier = {target = SEI modifier = background_enemy2} } 
+    TEG = { add_opinion_modifier = {target = KAP modifier = background_enemy2} } 
+}
+
+startup_outlook = {
+    #WN
+    TEG = {
+        set_variable = { OL_view_type = 1}
+        set_variable = { OL_view_value = 30}
+    }
+    OTG = {
+        set_variable = { OL_view_value = 40}
+        set_variable = { OL_view_type = 1}
+    }
+    YSK = {
+        set_variable = { OL_view_value = 60}
+    }
+    KAP = {
+        set_variable = { OL_view_type = 1}
+        set_variable = { OL_view_value = -5}
+    }
+    GRS = {
+        set_variable = { OL_view_type = 1}
+        set_variable = { OL_view_value = -5}
+    }
+    AKI = {
+        set_variable = { OL_view_value = 60}
+    }
+    KAS = {
+        set_variable = { OL_view_type = 0}
+        set_variable = { OL_view_value = 80}
+    }
+
+    #EN
+    CIR = {
+        set_variable = { OL_view_value = 75}
+    }
+    SCA = {
+        set_variable = { OL_view_value = 65}
+    }
+    SEI = {
+        set_variable = { OL_view_value = 55}
+    }
+    RMI = {
+        set_variable = { OL_view_value = 65}
+    }
+    CHE = {
+        set_variable = { OL_view_value = 70}
+    }
+    YKR = {
+        set_variable = { OL_view_type = 0}
+        set_variable = { OL_view_value = 90}
+    }
+    HU7 = {
+        set_variable = { OL_view_type = 1}
+        set_variable = { OL_view_value = 25}
+    }
+
+    #SE
+    HUM = {
+        set_variable = { OL_view_type = 1}
+        set_variable = { OL_view_value = 25}
+    }
+    EMB = {
+        set_variable = { OL_view_type = 1}
+        set_variable = { OL_view_value = 25}
+    }
+    KOG = {
+        set_variable = { OL_view_type = 1}
+        set_variable = { OL_view_value = 40}
+    }
+    KAG = {
+        set_variable = { OL_view_type = 0}
+        set_variable = { OL_view_value = 55}
+    }
+    SBK = {
+        set_variable = { OL_view_type = 1}
+        set_variable = { OL_view_value = 45}
+    }
+    RNS = {
+        set_variable = { OL_view_type = 1}
+        set_variable = { OL_view_value = 50}
+    }
+    WAK = {
+        set_variable = { OL_view_type = 1}
+        set_variable = { OL_view_value = 50}
+    }
+    NMS = {
+        set_variable = { OL_view_type = 0}
+        set_variable = { OL_view_value = 70}
+    }
+    SRB = {
+        set_variable = { OL_view_type = 0}
+        set_variable = { OL_view_value = 85}
+    }
+    EET = {
+        set_variable = { OL_view_type = 1}
+        set_variable = { OL_view_value = 35}
+    }
+    UDO = {
+        set_variable = { OL_view_type = 1}
+        set_variable = { OL_view_value = 10}
+    }
+    RGO = {
+        set_variable = { OL_view_type = 1}
+        set_variable = { OL_view_value = 10}
+    }
+    INB = {
+        set_variable = { OL_view_type = 1}
+        set_variable = { OL_view_value = 30}
+    }
+    HU8 = {
+        set_variable = { OL_view_type = 1}
+        set_variable = { OL_view_value = 25}
+    }
+    
+    #SW
+    OKI = {
+        set_variable = { OL_view_type = 0}
+        set_variable = { OL_view_value = 90}
+    }
+    MEL = {
+        set_variable = { OL_view_type = 0}
+        set_variable = { OL_view_value = 55}
+    }
+    YUK = {
+        set_variable = { OL_view_type = 0}
+        set_variable = { OL_view_value = 70}
+    }
+    HU6 = {
+        set_variable = { OL_view_type = 1}
+        set_variable = { OL_view_value = 25}
+    }
+}
+
+startup_manu = {
+    ###manufacture
+    AKI = {
+        add_ideas = AKI_manu2
+    }
+    CFA = {
+        add_ideas = CFA_manu2
+    }
+    CHE = {
+        add_ideas = CHE_manu2
+    }
+    CIR = {
+        add_ideas = CIR_manu2
+    }
+    EET = {
+        add_ideas = EET_manu2
+    }
+    HKR = {
+        add_ideas = HKR_manu2
+    }
+    HUM = {
+        add_ideas = HUM_manu2
+    }
+    INB = {
+        add_ideas = INB_manu2
+    }
+    KAG = {
+        add_ideas = KAG_manu2
+    }
+    KAP = {
+        add_ideas = KAP_manu2
+    }
+    KAS = {
+        add_ideas = KAS_manu2
+    }
+    KOG = {
+        add_ideas = KOG_manu2
+    }
+    KUT = {
+        add_ideas = KUT_manu2
+    }
+    MAM = {
+        add_ideas = MAM_manu2
+    }
+    MEL = {
+        add_ideas = MEL_manu2
+    }
+    MHP = {
+        add_ideas = MHP_manu2
+    }
+    MRS = {
+        add_ideas = MRS_manu2
+    }
+    MSD = {
+        add_ideas = MSD_manu2
+    }
+    NIB = {
+        add_ideas = NIB_manu2
+    }
+    NIT = {
+        add_ideas = NIT_manu2
+    }
+    NMS = {
+        add_ideas = NMS_manu2
+    }
+    OKI = {
+        add_ideas = OKI_manu2
+    }
+    OTG = {
+        add_ideas = OTG_manu2
+    }
+    RMI = {
+        add_ideas = RMI_manu2
+    }
+    RUH = {
+        add_ideas = RUH_manu2
+    }
+    SAK = {
+        add_ideas = SAK_manu2
+    }
+    SAT = {
+        add_ideas = SAT_manu2
+    }
+    SCA = {
+        add_ideas = SCA_manu2
+    }
+    SEI = {
+        add_ideas = SEI_manu2
+    }
+    SGS = {
+        add_ideas = SGS_manu2
+    }
+    SHO = {
+        add_ideas = SHO_manu2
+    }
+    SKI = {
+        add_ideas = SKI_manu2
+    }
+    SPG = {
+        add_ideas = SPG_manu2
+    }
+    SRB = {
+        add_ideas = SRB_manu2
+    }
+    TEG = {
+        add_ideas = TEG_manu2
+    }
+    TEN = {
+        add_ideas = TEN_manu2
+    }
+    UDO = {
+        add_ideas = UDO_manu2
+    }
+    UUG = {
+        add_ideas = UUG_manu2
+    }
+    WAK = {
+        add_ideas = WAK_manu2
+    }
+    YKR = {
+        add_ideas = YKR_manu2
+    }
+    YSK = {
+        add_ideas = YSK_manu2
+    }
+    YUK = {
+        add_ideas = YUK_manu2
+    }
+    YYK = {
+        add_ideas = YYK_manu2
+    }
+    FUJ = {
+        add_ideas = FUJ_manu2
+    }
+    RGO = {
+        add_ideas = RGO_manu2
+    }
+    ALI = {
+        add_ideas = ALI_manu2
+    }
+    WAI = {
+        add_ideas = WAI_manu2
+    }
+    USZ = {
+        add_ideas = USZ_manu2
+    }
+    CLO = {
+        add_ideas = CLO_manu2
+    }
+    HCT = {
+        add_ideas = HCT_manu2
+    }
+    HNY = {
+        add_ideas = HNY_manu2
+    }
+    KCC = {
+        add_ideas = KCC_manu2
+    }
+    KRK = {
+        add_ideas = KRK_manu2
+    }
+}
+
+startup_weapon_pro = {
+    SCA = {
+        set_variable = { ma_p_i = 2}
+        set_variable = { ma_p_s = 2}
+        set_variable = { ma_p_d = 2}
+        set_variable = { ma_p_rr = 1}
+
+        set_variable = { ma_a_ir = 1}
+        set_variable = { ma_a_s = 1}
+        set_variable = { ma_a_h = 1}
+        set_variable = { ma_a_rr = 2}
+
+        set_variable = { ma_ra_ir = 1}
+        set_variable = { ma_ra_s = 1}
+        set_variable = { ma_ra_h = 1}
+        set_variable = { ma_ra_rr = 2}
+    }
+    TEG = {
+        set_variable = { sc_p_ir = 2}
+        set_variable = { sc_p_s = 2}
+        set_variable = { sc_p_h = 1}
+        set_variable = { sc_p_b = 1}
+
+        set_variable = { sc_a_b = 1}
+        set_variable = { sc_a_rr = 1}
+
+        # set_variable = { sc_ra_b = 1}
+        # set_variable = { sc_ra_rr = 1}
+    }
+    CIR = {
+        set_variable = { ma_p_i = 1}
+        set_variable = { ma_p_s = 1}
+        set_variable = { ma_p_a = 2}
+        set_variable = { ma_p_d = 1}
+
+        set_variable = { ma_a_i = 1}
+        set_variable = { ma_a_s = 1}
+
+        set_variable = { ma_ra_i = 1}
+        set_variable = { ma_ra_s = 1}
+    }
+    SEI = {
+        set_variable = { ma_p_rr = 1}
+        set_variable = { ma_p_ir = 1}
+        set_variable = { ma_p_s = 1}
+        set_variable = { ma_p_h = 1}
+
+        set_variable = { ma_a_s = 1}
+        set_variable = { ma_a_ir = 1}
+        set_variable = { ma_a_b = 1}
+
+        set_variable = { ma_ra_s = 1}
+        set_variable = { ma_ra_ir = 1}
+        set_variable = { ma_ra_b = 1}
+    }
+    NMS = {
+        set_variable = { ma_p_r = 2}
+        set_variable = { ma_p_b = 3}
+
+        set_variable = { ma_a_b = 3}
+        set_variable = { ma_a_rr = 1}
+
+        set_variable = { ma_ra_b = 3}
+        set_variable = { ma_ra_rr = 1}
+    }
+
+    YSK = {
+        set_variable = { sc_p_s = 1}
+        set_variable = { sc_p_d = 3}
+
+        set_variable = { sc_a_b = 2}
+        set_variable = { sc_a_i = 1}
+        set_variable = { sc_a_rr = 1}
+    }
+    KOG = {
+        set_variable = { sc_p_r = 3}
+        set_variable = { sc_p_h = 1}
+        set_variable = { sc_p_d = 1}
+        set_variable = { sc_p_b = 1}
+
+        set_variable = { sc_a_r = 3}
+        set_variable = { sc_a_s = 1}
+    }
+}
+
+scenario_setting = {
+    if = {
+        limit = {
+            has_start_date < 146.1.1
+        }
+        every_country = {
+            PO_add8 = yes
+        }
+    }
+}
+
+achievement_setting = {
+    for_loop_effect = { 
+        start = 1
+        end = 14
+        compare = less_than_or_equals
+        add_to_array = { global.achievement_number = v}
+    }
+
+    every_country = {
+        for_each_loop = {
+            array = global.achievement_number
+            if = {
+                limit = { 
+                    achievement_available = yes
+                }
+                add_to_array = { current_array = v }
+                else = {
+                    add_to_array = { other_array = v }
+                }
+            }
+        }
+        for_each_loop = {
+            array = other_array
+            add_to_array = { current_array = v }
+        }
+    }
+    
+}
+
+AC_daily_check = {
+    for_each_loop = {
+        array = global.achievement_number
+
+        if = {
+            limit = {
+                achievement_condition = yes 
+                achievement_available = yes
+            }
+
+            meta_effect = {
+                text = {
+                    set_country_flag = AC_completed_number_[AC]
+                }
+                AC = "[?v]"
+            }
+        }
+    }
+}

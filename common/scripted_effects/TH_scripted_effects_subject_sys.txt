@@ -1,0 +1,436 @@
+SS_defines = {
+  set_variable = { global.SS_Ghost_influ_max = 0.3 }
+  set_variable = { global.SS_Fairy_influ_max = -0.5 }
+  set_variable = { global.SS_Human_influ_max = 0.5 }
+  set_variable = { global.SS_Pri_youkai_influ_max = 0.3 }
+  set_variable = { global.SS_Youkai_influ_max = 0.25 }
+  set_variable = { global.SS_Tengu_influ_max = 0.15 }
+  set_variable = { global.SS_Kappa_influ_max = 0.35 }
+  set_variable = { global.SS_God_influ_max = 10 }
+  set_variable = { global.SS_Magician_influ_max = 0.15 }
+  set_variable = { global.SS_Beast_influ_max = 0.2 }
+
+  # set_variable = { global.SS_subject_to_overlord_power_min = 0.2 }
+  # set_variable = { global.SS_subject_to_overlord_power_max = 0.8 }
+
+  # set_variable = { global.SS_subject_to_overlord_power_factor_min = 0.4 }
+  # set_variable = { global.SS_subject_to_overlord_power_factor_max = 0.1 }
+  #20~80 to 40~10
+  #0.2k+b = 0.4
+  #0.8k+b = 0.1
+  #k = -0.5
+  #b = 0.5
+  set_variable = { global.SS_subject_to_overlord_power_k = -0.5}
+  set_variable = { global.SS_subject_to_overlord_power_b = 0.5}
+
+  #100~1000 to 10~100
+  #100k+b = 10
+  #1000k+b = 100
+  #k = 0.1
+  #b = 0
+  set_variable = { global.SS_subject_power_k = 0.1}
+  set_variable = { global.SS_subject_power_b = 0}
+
+
+  set_variable = { global.SS_subject_level1_power_factor = 0.1 }
+  set_variable = { global.SS_subject_level2_power_factor = 0.35 }
+  set_variable = { global.SS_subject_level3_power_factor = 0.6 }
+  set_variable = { global.SS_subject_level4_power_factor = 0.8 }
+  set_variable = { global.SS_subject_level5_power_factor = 0.5 }
+
+  set_variable = { global.SS_given_from_overlord_level3_factor = 0.1}
+  set_variable = { global.SS_given_from_overlord_level4_factor = 0.25}
+  set_variable = { global.SS_given_from_overlord_level5_factor = 0.5}
+}
+
+SS_power_calculator = {
+  set_variable = { SS_Ghost_power = 0}
+  set_variable = { SS_Fairy_power = 0}
+  set_variable = { SS_Human_power = 0}
+  set_variable = { SS_Pri_youkai_power = 0}
+  set_variable = { SS_Youkai_power = 0}
+  set_variable = { SS_Tengu_power = 0}
+  set_variable = { SS_Kappa_power = 0}
+  set_variable = { SS_God_power = 0}
+  set_variable = { SS_Magician_power = 0}
+  set_variable = { SS_Beast_power = 0}
+
+  #从附庸收益
+  if = {
+    limit = {
+      num_subjects > 0
+    }
+    every_country = {
+      limit = {
+        is_subject_of = ROOT
+      }
+      #power ratio
+
+      set_temp_variable = {
+        SS_subject_power = all_value_plus_manpower
+      }
+      divide_temp_variable = {
+        SS_subject_power = ROOT.all_value_plus_manpower
+      }
+      set_variable = { SS_subject_give_power_ratio = SS_subject_power}
+      multiply_variable = { SS_subject_give_power_ratio = global.SS_subject_to_overlord_power_k}
+      add_to_variable = { SS_subject_give_power_ratio = global.SS_subject_to_overlord_power_b}
+      clamp_variable = {
+        var = SS_subject_give_power_ratio 
+        min = 0.1
+        max = 0.4
+      }
+      #subject power
+      set_temp_variable = {
+        SS_subject_power = all_value_plus_manpower
+      }
+      multiply_temp_variable = {
+        SS_subject_power = global.SS_subject_power_k
+      }
+      add_to_temp_variable = {
+        SS_subject_power = global.SS_subject_power_k
+      }
+      clamp_temp_variable = {
+        var = SS_subject_power
+        min = 0.1
+        max = 1
+      }
+      multiply_variable = {
+        SS_subject_give_power_ratio = SS_subject_power
+      }
+
+      #subject level
+      if = {
+        limit = {
+          has_autonomy_state = autonomy_dominion
+        }
+        multiply_variable = { SS_subject_give_power_ratio = global.SS_subject_level4_power_factor }
+      }
+      if = {
+        limit = {
+          has_autonomy_state = autonomy_colony
+        }
+        multiply_variable = { SS_subject_give_power_ratio = global.SS_subject_level3_power_factor }
+      }
+      if = {
+        limit = {
+          has_autonomy_state = autonomy_puppet
+        }
+        multiply_variable = { SS_subject_give_power_ratio = global.SS_subject_level2_power_factor }
+      }
+      if = {
+        limit = {
+          has_autonomy_state = autonomy_integrated_puppet
+        }
+        multiply_variable = { SS_subject_give_power_ratio = global.SS_subject_level1_power_factor }
+      }
+
+
+      #add factor
+      set_variable = { SS_gain_base = 1} 
+      add_to_variable = { SS_gain_base = PREV.SS_gain_factor_add }
+      multiply_variable = { SS_subject_give_power_ratio = SS_gain_base }
+
+      #race
+      if = {
+        limit = {
+          has_idea = Ghost
+        }
+        set_variable = { SS_give_power_Ghost = SS_subject_give_power_ratio}
+        multiply_variable = { SS_give_power_Ghost = global.SS_Ghost_influ_max}
+      }
+      if = {
+        limit = {
+          has_idea = Fairy
+        }
+        set_variable = { SS_give_power_Fairy = SS_subject_give_power_ratio}
+        multiply_variable = { SS_give_power_Fairy = global.SS_Fairy_influ_max}
+      }
+      if = {
+        limit = {
+          has_idea = Human
+        }
+        set_variable = { SS_give_power_Human = SS_subject_give_power_ratio}
+        multiply_variable = { SS_give_power_Human = global.SS_Human_influ_max}
+      }
+      if = {
+        limit = {
+          has_idea = Pri_youkai
+        }
+        set_variable = { SS_give_power_Pri_youkai = SS_subject_give_power_ratio}
+        multiply_variable = { SS_give_power_Pri_youkai = global.SS_Pri_youkai_influ_max}
+      }
+      if = {
+        limit = {
+          has_idea = Youkai
+        }
+        set_variable = { SS_give_power_Youkai = SS_subject_give_power_ratio}
+        multiply_variable = { SS_give_power_Youkai = global.SS_Youkai_influ_max}
+      }
+      if = {
+        limit = {
+          has_idea = Tenggu
+        }
+        set_variable = { SS_give_power_Tengu = SS_subject_give_power_ratio}
+        multiply_variable = { SS_give_power_Tengu = global.SS_Tengu_influ_max}
+      }
+      if = {
+        limit = {
+          has_idea = Kappa
+        }
+        set_variable = { SS_give_power_Kappa = SS_subject_give_power_ratio}
+        multiply_variable = { SS_give_power_Kappa = global.SS_Kappa_influ_max}
+      }
+      if = {
+        limit = {
+          has_idea = God
+        }
+        set_variable = { SS_give_power_God = SS_subject_give_power_ratio}
+        multiply_variable = { SS_give_power_God = global.SS_God_influ_max}
+      }
+      if = {
+        limit = {
+          has_idea = Magician
+        }
+        set_variable = { SS_give_power_Magician = SS_subject_give_power_ratio}
+        multiply_variable = { SS_give_power_Magician = global.SS_Magician_influ_max}
+      }
+      if = {
+        limit = {
+          has_idea = Beast
+        }
+        set_variable = { SS_give_power_Beast = SS_subject_give_power_ratio}
+        multiply_variable = { SS_give_power_Beast = global.SS_Beast_influ_max}
+      }
+      ROOT = {
+        add_to_variable = {
+          SS_Ghost_power = PREV.SS_give_power_Ghost
+        }
+        add_to_variable = {
+          SS_Fairy_power = PREV.SS_give_power_Fairy
+        }
+        add_to_variable = {
+          SS_Human_power = PREV.SS_give_power_Human
+        }
+        add_to_variable = {
+          SS_Pri_youkai_power = PREV.SS_give_power_Pri_youkai
+        }
+        add_to_variable = {
+          SS_Youkai_power = PREV.SS_give_power_Youkai
+        }
+        add_to_variable = {
+          SS_Tengu_power = PREV.SS_give_power_Tengu
+        }
+        add_to_variable = {
+          SS_Kappa_power = PREV.SS_give_power_Kappa
+        }
+        add_to_variable = {
+          SS_God_power = PREV.SS_give_power_God
+        }
+        add_to_variable = {
+          SS_Magician_power = PREV.SS_give_power_Magician
+        }
+        add_to_variable = {
+          SS_Beast_power = PREV.SS_give_power_Beast
+        }
+      }
+    }
+  }
+
+  #从宗主收益
+  if = {
+    limit = {
+      has_autonomy_state = autonomy_colony
+    }
+    set_variable = { SS_given_power = global.SS_given_from_overlord_level3_factor}
+  }
+  if = {
+    limit = {
+      has_autonomy_state = autonomy_dominion
+    }
+    set_variable = { SS_given_power = global.SS_given_from_overlord_level4_factor}
+  }
+  if = {
+    limit = {
+      is_subject = yes
+    }
+    if = {
+      limit = {
+        OVERLORD = { has_idea = Ghost }
+      }
+      set_variable = { SS_Ghost_power = SS_given_power}
+      multiply_variable = { SS_Ghost_power = global.SS_Ghost_influ_max}
+    }
+    if = {
+      limit = {
+        OVERLORD = { has_idea = Fairy }
+      }
+      set_variable = { SS_Fairy_power = SS_given_power}
+      multiply_variable = { SS_Fairy_power = global.SS_Fairy_influ_max}
+    }
+    if = {
+      limit = {
+        OVERLORD = { has_idea = Human }
+      }
+      set_variable = { SS_Human_power = SS_given_power}
+      multiply_variable = { SS_Human_power = global.SS_Human_influ_max}
+    }
+    if = {
+      limit = {
+        OVERLORD = { has_idea = Pri_youkai }
+      }
+      set_variable = { SS_Pri_youkai_power = SS_given_power}
+      multiply_variable = { SS_Pri_youkai_power = global.SS_Pri_youkai_influ_max}
+    }
+    if = {
+      limit = {
+        OVERLORD = { has_idea = Youkai }
+      }
+      set_variable = { SS_Youkai_power = SS_given_power}
+      multiply_variable = { SS_Youkai_power = global.SS_Youkai_influ_max}
+    }
+    if = {
+      limit = {
+        OVERLORD = { has_idea = Tenggu}
+      }
+      set_variable = { SS_Tengu_power = SS_given_power}
+      multiply_variable = { SS_Tengu_power = global.SS_Tengu_influ_max}
+    }
+    if = {
+      limit = {
+        OVERLORD = { has_idea = Kappa }
+      }
+      set_variable = { SS_Kappa_power = SS_given_power}
+      multiply_variable = { SS_Kappa_power = global.SS_Kappa_influ_max}
+    }
+    if = {
+      limit = {
+        OVERLORD = { has_idea = God }
+      }
+      set_variable = { SS_God_power = SS_given_power}
+      multiply_variable = { SS_God_power = global.SS_God_influ_max}
+    }
+    if = {
+      limit = {
+        OVERLORD = { has_idea = Magician }
+      }
+      set_variable = { SS_Magician_power = SS_given_power}
+      multiply_variable = { SS_Magician_power = global.SS_Magician_influ_max}
+    }
+    if = {
+      limit = {
+        OVERLORD = { has_idea = Beast }
+      }
+      set_variable = { SS_Beast_power = SS_given_power}
+      multiply_variable = { SS_Beast_power = global.SS_Beast_influ_max}
+    }
+  }
+  
+
+  ######################
+  clamp_variable = {
+    var = SS_Ghost_power
+    min = 0
+    max = global.SS_Ghost_influ_max
+  }
+  clamp_variable = {
+    var = SS_Fairy_power
+    min = global.SS_Fairy_influ_max
+    max = 0
+  }
+  clamp_variable = {
+    var = SS_Human_power
+    min = 0
+    max = global.SS_Human_influ_max
+  }
+  clamp_variable = {
+    var = SS_Pri_youkai_power
+    min = 0
+    max = global.SS_Pri_youkai_influ_max
+  }
+  clamp_variable = {
+    var = SS_Youkai_power
+    min = 0
+    max = global.SS_Youkai_influ_max
+  }
+  clamp_variable = {
+    var = SS_Tengu_power
+    min = 0
+    max = global.SS_Tengu_influ_max
+  }
+  clamp_variable = {
+    var = SS_Kappa_power
+    min = 0
+    max = global.SS_Kappa_influ_max
+  }
+  clamp_variable = {
+    var = SS_God_power
+    min = 0
+    max = global.SS_God_influ_max
+  }
+  clamp_variable = {
+    var = SS_Magician_power
+    min = 0
+    max = global.SS_Magician_influ_max
+  }
+  clamp_variable = {
+    var = SS_Beast_power
+    min = 0
+    max = global.SS_Beast_influ_max
+  }
+
+  
+}
+
+SS_subject_independence_war = {
+  FROM = {
+    every_country = {
+      limit = {
+        has_country_flag = SSI_against_@PREV
+      }
+      clr_country_flag = SSI_against_@PREV
+      declare_war_on = {
+        target = PREV
+        type = help_duli_wargoal
+      }
+    }
+    every_country = {
+      limit = {
+        is_subject_of = PREV
+        has_country_flag = SSI_xiangduli_from_@PREV
+      }
+      clr_country_flag = SSI_xiangduli_from_@PREV
+      PREV = {
+        end_puppet = PREV
+      }
+      leave_faction = yes
+      declare_war_on = {
+        target = PREV
+        type = duli_wargoal
+      }
+      subject_situation_change_list = yes
+    }
+    
+  }
+}
+
+SS_gain_factor_add0.1 = {
+  add_to_variable = { SS_gain_factor_add = 0.1 }
+  custom_effect_tooltip = SS_gain_factor_add0.1_tt
+} 
+SS_gain_factor_add0.2 = {
+  add_to_variable = { SS_gain_factor_add = 0.2 }
+  custom_effect_tooltip = SS_gain_factor_add0.2_tt
+} 
+SS_gain_factor_add0.3 = {
+  add_to_variable = { SS_gain_factor_add = 0.3 }
+  custom_effect_tooltip = SS_gain_factor_add0.3_tt
+} 
+SS_gain_factor_add0.4 = {
+  add_to_variable = { SS_gain_factor_add = 0.4 }
+  custom_effect_tooltip = SS_gain_factor_add0.4_tt
+} 
+SS_gain_factor_add0.5 = {
+  add_to_variable = { SS_gain_factor_add = 0.5 }
+  custom_effect_tooltip = SS_gain_factor_add0.5_tt
+} 

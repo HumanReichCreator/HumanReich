@@ -1,0 +1,30 @@
+
+state={
+	id=487
+	name="STATE_487"
+	resources={
+		powder=0.000
+		metal=0.000
+		gas=10.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = MRS
+			add_core_of = MRS
+			buildings = {
+				infrastructure = 4
+				industrial_complex = 1
+				arms_factory = 0
+			}
+		}
+	}
+
+	provinces={
+		247 3218 3220 4309 4319 
+	}
+	manpower=1229
+	buildings_max_level_factor=1.000
+	state_category=s5
+}

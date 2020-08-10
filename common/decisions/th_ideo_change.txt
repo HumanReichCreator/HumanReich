@@ -1,0 +1,853 @@
+government_change = {
+    lobby_CDtime = {
+	      activation = {
+	        has_country_flag = lobbyCD
+	      }
+
+	      available = {
+	          always = no
+	      }
+
+	      timeout_effect = {
+	          clr_country_flag = lobbyCD
+	      }
+
+	      fire_only_once = no
+
+	      days_mission_timeout = lobby_time_cost
+
+	      is_good = yes
+
+	}
+	lobby_increase = {
+	      visible = {
+	          always = yes
+	      }
+
+	      available = {
+	          NOT = {has_country_flag = lobbyCD}
+	          has_country_flag = {
+	             flag = lobbyvalue
+	             value < 5
+	          }
+	      }
+
+	      complete_effect = {
+	          lobbyincrease = yes
+	          set_country_flag = lobbyCD
+	          country_event = sys.1
+	      }
+
+	      fire_only_once = no
+
+	      cost = hawk_cost
+
+	      ai_will_do = {
+	         factor = 0
+	         modifier = {
+	         	add = 1
+	         	or = {
+	         		and = {
+	         			not = { has_government = neworder }
+	         			has_country_flag = go_neworder
+	         		}
+	         		and = {
+	         			not = { has_government = fandong }
+	         			has_country_flag = go_fandong
+	         		}
+	         	}
+	         	not = { has_government = oldorder}
+	         }
+	         modifier = {
+	         	add = 5
+	         	tag = KOG
+	         	or = {
+	         		and = {
+	         			has_government = fandong
+	         			has_country_flag = go_fandong
+	         			fandong < 0.85
+	         		}
+	         		and = {
+	         			has_government = neworder
+	         			has_country_flag = go_neworder
+	         			neworder < 0.85
+	         		}
+	         	}
+	         }
+	         modifier = {
+	         	add = 0.1
+	         	date > 150.1.1
+	         	or = {
+	         		has_government = oldorder
+	         		has_government = neworder
+	         		has_government = fandong
+	         	}
+	         }
+	         modifier = {
+				is_subject = yes
+				factor = 0
+			 }
+	      }
+	}
+	lobby_decrease = {
+	      visible = {
+	          always = yes
+	      }
+
+	      available = {
+	          NOT = {has_country_flag = lobbyCD}
+	          has_country_flag = {
+	             flag = lobbyvalue
+	             value > -5
+	          }
+	      }
+
+	      complete_effect = {
+	          lobbydecrease = yes
+	          set_country_flag = lobbyCD
+	          country_event = sys.2
+	          
+	      }
+
+	      fire_only_once = no
+
+	      cost = dove_cost
+
+	      ai_will_do = {
+	         factor = 0
+	         modifier = {
+	         	add = 1
+	         	or = {
+	         		and = {
+	         			not = { has_government = guli }
+	         			has_country_flag = go_guli
+	         		}
+	         		and = {
+	         			not = { has_government = qinwai }
+	         			has_country_flag = go_qinwai
+	         		}
+	         	}
+	         	not = { has_government = oldorder}
+	         }
+	         modifier = {
+				is_subject = yes
+				factor = 0
+			 }
+			 modifier = {
+	         	add = 5
+	         	tag = KOG
+	         	or = {
+	         		and = {
+	         			has_government = qinwai
+	         			has_country_flag = go_qinwai
+	         			qinwai < 0.85
+	         		}
+	         		and = {
+	         			has_government = guli
+	         			has_country_flag = go_guli
+	         			guli < 0.85
+	         		}
+	         	}
+	         }
+			 modifier = {
+	         	add = 0.1
+	         	date > 150.1.1
+	         	or = {
+	         		has_government = qinwai
+	         		has_government = guli
+	         	}
+	         }
+	      }
+	}
+	conservative_CDtime = {
+	      activation = {
+	        has_country_flag = conservativeCD
+	      }
+
+	      available = {
+	          always = no
+	      }
+
+	      timeout_effect = {
+	          clr_country_flag = conservativeCD
+	      }
+
+	      fire_only_once = no
+
+	      days_mission_timeout = conservative_time_cost
+
+	      is_good = yes
+
+
+	}
+	conservative_increase = {
+	      visible = {
+	          always = yes
+	      }
+
+	      available = {
+	          NOT = {has_country_flag = conservativeCD}
+	          has_country_flag = {
+	             flag = openvalue
+	             value < 5
+	          }
+	      }
+
+	      complete_effect = {
+	          conservativeincrease = yes
+	          set_country_flag = conservativeCD
+	          country_event = sys.4
+	      }
+
+	      fire_only_once = no
+
+	      cost = open_cost
+
+	      ai_will_do = {
+	         factor = 0
+	         modifier = {
+	         	add = 1
+	         	or = {
+	         		and = {
+	         			not = { has_government = qinwai }
+	         			has_country_flag = go_qinwai
+	         		}
+	         		and = {
+	         			not = { has_government = fandong }
+	         			has_country_flag = go_fandong
+	         		}
+	         	}
+	         	not = { has_government = oldorder}
+	         }
+	         modifier = {
+				is_subject = yes
+				factor = 0
+			 }
+			 modifier = {
+	         	add = 0.1
+	         	date > 150.1.1
+	         	or = {
+	         		has_government = qinwai
+	         		has_government = fandong
+	         	}
+	         }
+	         modifier = {
+	         	add = 5
+	         	tag = KOG
+	         	or = {
+	         		and = {
+	         			has_government = qinwai
+	         			has_country_flag = go_qinwai
+	         			qinwai < 0.85
+	         		}
+	         		and = {
+	         			has_government = fandong
+	         			has_country_flag = go_fandong
+	         			fandong < 0.85
+	         		}
+	         	}
+	         }
+	      }
+	}
+	conservative_decrease = {
+	      visible = {
+	          always = yes
+	      }
+
+	      available = {
+	          NOT = {has_country_flag = conservativeCD}
+	          has_country_flag = {
+	             flag = openvalue
+	             value > -5
+	          }
+	      }
+
+	      complete_effect = {
+	          conservativedecrease = yes
+	          set_country_flag = conservativeCD
+	          country_event = sys.3
+	      }
+
+	      fire_only_once = no
+
+	      cost = close_cost
+
+	      ai_will_do = {
+	         factor = 0
+	         modifier = {
+	         	add = 1
+	         	or = {
+	         		and = {
+	         			not = { has_government = guli }
+	         			has_country_flag = go_guli
+	         		}
+	         		and = {
+	         			not = { has_government = neworder }
+	         			has_country_flag = go_neworder
+	         		}
+	         	}
+	         	not = { has_government = oldorder}
+	         }
+	         modifier = {
+				is_subject = yes
+				factor = 0
+			 }
+			 modifier = {
+	         	add = 0.1
+	         	date > 150.1.1
+	         	or = {
+	         		has_government = guli
+	         		has_government = neworder
+	         		has_government = oldorder
+	         	}
+	         }
+	         modifier = {
+	         	add = 5
+	         	tag = KOG
+	         	or = {
+	         		and = {
+	         			has_government = neworder
+	         			has_country_flag = go_neworder
+	         			neworder < 0.85
+	         		}
+	         		and = {
+	         			has_government = guli
+	         			has_country_flag = go_guli
+	         			guli < 0.85
+	         		}
+	         	}
+	         }
+	      }
+	}
+}
+ideo_change = {
+	
+	getting_to_oldorder = {
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		visible = {
+			has_government = oldorder
+			oldorder < 1
+		}
+
+		cost = 45
+
+		days_re_enable = 365
+		days_remove = 182
+
+		available = {
+			
+		}
+
+		modifier = {
+			oldorder_drift = 0.1
+		}
+
+		complete_effect = {
+			add_stability = 0.03
+			add_popularity = {
+				ideology = oldorder
+				popularity = 0.02
+			}
+		}
+	}
+
+	getting_to_fandong = {
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_country_flag = go_fandong
+				add = 1
+			}
+			modifier = {
+				is_subject = yes
+				factor = 0
+			}
+			modifier = {
+	         	add = 1.5
+	         	date > 150.1.1
+	         	has_government = fandong
+	        }
+	        modifier = {
+	         	add = 5
+	         	tag = KOG
+	         	has_government = fandong
+	         	has_country_flag = go_fandong
+	         	fandong < 0.85
+	        }
+		}
+
+		visible = {
+			has_country_flag = {
+				flag = openvalue
+				value > -1
+			}
+			has_country_flag = {
+				flag = lobbyvalue
+				value > -1
+			}
+			not = { 
+				has_government = oldorder
+			}
+			not = {
+				has_country_flag = bunengqie_fandong
+			}
+			fandong < 1
+		}
+
+		cost = 45
+
+		days_re_enable = 365
+		days_remove = 182
+
+		available = {
+
+		}
+
+		modifier = {
+			fandong_drift = 0.18
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_government = fandong
+				}
+				add_stability = 0.03
+				else = {
+					add_stability = -0.06
+				}
+			}
+			go_fandong = yes
+			if = {
+				limit = {
+					fandong < 0.5
+				}
+				add_popularity = {
+					ideology = fandong
+					popularity = 0.06
+				}
+			}
+		}
+	}
+
+
+	getting_to_guli = {
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_country_flag = go_guli
+				add = 1
+			}
+			modifier = {
+				is_subject = yes
+				factor = 0
+			}
+			modifier = {
+	         	add = 1.5
+	         	date > 150.1.1
+	         	has_government = guli
+	        }
+	        modifier = {
+	         	add = 5
+	         	tag = KOG
+	         	has_government = guli
+	         	has_country_flag = go_guli
+	         	guli < 0.85
+	        }
+		}
+
+		visible = {
+			has_country_flag = {
+				flag = openvalue
+				value < 1
+			}
+			has_country_flag = {
+				flag = lobbyvalue
+				value < 1
+			}
+			not = { 
+				has_government = oldorder
+			}
+			not = {
+				has_country_flag = bunengqie_guli
+			}
+			guli < 1
+		}
+
+		cost = 45
+
+		days_re_enable = 365
+		days_remove = 182
+
+		available = {
+
+		}
+
+		modifier = {
+			guli_drift = 0.18
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_government = guli
+				}
+				add_stability = 0.03
+				else = {
+					add_stability = -0.06
+				}
+			}
+			go_guli = yes
+			if = {
+				limit = {
+					guli < 0.5
+				}
+				add_popularity = {
+					ideology = guli
+					popularity = 0.06
+				}
+			}
+			
+		}
+	}
+
+
+	getting_to_qinwai = {
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_country_flag = go_qinwai
+				add = 1
+			}
+			modifier = {
+				is_subject = yes
+				factor = 0
+			}
+			modifier = {
+	         	add = 1.5
+	         	date > 150.1.1
+	         	has_government = qinwai
+	        }
+	        modifier = {
+	         	add = 5
+	         	tag = KOG
+	         	has_government = qinwai
+	         	has_country_flag = go_qinwai
+	         	qinwai < 0.85
+	        }
+		}
+
+		visible = {
+			has_country_flag = {
+				flag = openvalue
+				value > -1
+			}
+			has_country_flag = {
+				flag = lobbyvalue
+				value < 1
+			}
+			not = { 
+				has_government = oldorder
+			}
+			not = {
+				has_country_flag = bunengqie_qinwai
+			}
+			qinwai < 1
+		}
+
+		cost = 45
+
+		days_re_enable = 365
+		days_remove = 182
+
+		available = {
+
+		}
+
+		modifier = {
+			qinwai_drift = 0.18
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_government = qinwai
+				}
+				add_stability = 0.03
+				else = {
+					add_stability = -0.06
+				}
+			}
+			go_qinwai = yes
+			if = {
+				limit = {
+					qinwai < 0.5
+				}
+				add_popularity = {
+					ideology = qinwai
+					popularity = 0.06
+				}
+			}
+			
+		}
+	}
+
+	getting_to_neworder = {
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_country_flag = go_neworder
+				add = 1
+			}
+			modifier = {
+				is_subject = yes
+				factor = 0
+			}
+			modifier = {
+	         	add = 1.5
+	         	date > 150.1.1
+	         	has_government = neworder
+	        }
+	        modifier = {
+	         	add = 5
+	         	tag = KOG
+	         	has_government = neworder
+	         	has_country_flag = go_neworder
+	         	neworder < 0.85
+	        }
+		}
+
+		visible = {
+			has_country_flag = {
+				flag = openvalue
+				value < 1
+			}
+			has_country_flag = {
+				flag = lobbyvalue
+				value > -1
+			}
+			not = { 
+				has_government = oldorder
+			}
+			not = {
+				has_country_flag = bunengqie_neworder
+			}
+
+			neworder < 1
+		}
+
+		cost = 45
+
+		days_re_enable = 365
+		days_remove = 182
+
+		available = {
+
+		}
+
+		modifier = {
+			neworder_drift = 0.18
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_government = neworder
+				}
+				add_stability = 0.03
+				else = {
+					add_stability = -0.06
+				}
+			}
+			go_neworder = yes
+			if = {
+				limit = {
+					neworder < 0.5
+				}
+				add_popularity = {
+					ideology = neworder
+					popularity = 0.06
+				}
+			}
+			
+		}
+	}
+
+	change_to_fandong = {
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_country_flag = go_fandong
+				add = 1
+			}
+		}
+
+		visible = {
+			has_country_flag = {
+				flag = openvalue
+				value > -1
+			}
+			has_country_flag = {
+				flag = lobbyvalue
+				value > -1
+			}
+			not = { 
+				has_government = oldorder
+				has_government = fandong
+			}
+			not = {
+				has_country_flag = bunengsuiyiqiehuanzhengti
+				has_country_flag = bunengqie_fandong
+			}
+		}
+
+		available = {
+			fandong > 0.55
+			is_subject = no
+			# has_war = no
+		}
+
+		complete_effect = {
+			set_politics = {
+				ruling_party = fandong
+			}
+			add_stability = 0.05
+			go_fandong = yes
+		}
+	}
+
+	change_to_guli = {
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_country_flag = go_guli
+				add = 1
+			}
+		}
+
+		visible = {
+			has_country_flag = {
+				flag = openvalue
+				value < 1
+			}
+			has_country_flag = {
+				flag = lobbyvalue
+				value < 1
+			}
+			not = { 
+				has_government = oldorder
+				has_government = guli
+			}
+			not = {
+				has_country_flag = bunengsuiyiqiehuanzhengti
+				has_country_flag = bunengqie_guli
+			}
+		}
+
+		available = {
+			guli > 0.55
+			is_subject = no
+			# has_war = no
+		}
+
+		complete_effect = {
+			set_politics = {
+				ruling_party = guli
+			}
+			add_stability = 0.05
+			go_guli = yes
+		}
+	}
+
+
+	change_to_qinwai = {
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_country_flag = go_qinwai
+				add = 1
+			}
+		}
+
+		visible = {
+			has_country_flag = {
+				flag = openvalue
+				value > -1
+			}
+			has_country_flag = {
+				flag = lobbyvalue
+				value < 1
+			}
+			not = { 
+				has_government = oldorder
+				has_government = qinwai
+			}
+			not = {
+				has_country_flag = bunengsuiyiqiehuanzhengti
+				has_country_flag = bunengqie_qinwai
+			}
+		}
+
+		available = {
+			qinwai > 0.55
+			is_subject = no
+			# has_war = no
+		}
+
+		complete_effect = {
+			set_politics = {
+				ruling_party = qinwai
+			}
+			add_stability = 0.05
+			go_qinwai = yes
+		}
+	}
+
+	change_to_neworder = {
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_country_flag = go_neworder
+				add = 1
+			}
+		}
+
+		visible = {
+			has_country_flag = {
+				flag = openvalue
+				value < 1
+			}
+			has_country_flag = {
+				flag = lobbyvalue
+				value > -1
+			}
+			not = { 
+				has_government = oldorder
+				has_government = neworder
+			}
+			not = {
+				has_country_flag = bunengsuiyiqiehuanzhengti
+				has_country_flag = bunengqie_neworder
+			}
+		}
+
+		available = {
+			neworder > 0.55
+			is_subject = no
+			# has_war = no
+		}
+
+		complete_effect = {
+			set_politics = {
+				ruling_party = neworder
+			}
+			add_stability = 0.05
+			go_neworder = yes
+		}
+	}
+
+	
+}

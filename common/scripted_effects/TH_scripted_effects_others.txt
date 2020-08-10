@@ -1,0 +1,855 @@
+#annex_event
+annex_news_event = {
+	news_event = gen.3
+}
+
+subject_level4 = {
+	custom_effect_tooltip = subject_level4_tt
+	puppet_party_save = yes
+	hidden_effect = {
+		every_country = {
+			limit = {
+				has_war_with = PREV
+				not = {
+					tag = PREV.PREV
+				}
+			}
+			PREV.PREV = {
+				add_to_war = { 
+				    targeted_alliance = PREV.PREV
+				    enemy = PREV 
+				}
+			}
+		}
+		PREV = {
+			set_autonomy = {
+				target = PREV
+				autonomous_state = autonomy_dominion
+			}
+		}
+	}
+	puppet_load = yes
+}
+subject_level3 = {
+	custom_effect_tooltip = subject_level3_tt
+	puppet_party_save = yes
+	hidden_effect = {
+		every_country = {
+			limit = {
+				has_war_with = PREV
+				not = {
+					tag = PREV.PREV
+				}
+			}
+			PREV.PREV = {
+				add_to_war = { 
+				    targeted_alliance = PREV.PREV
+				    enemy = PREV 
+				}
+			}
+		}
+		PREV = {
+			set_autonomy = {
+				target = PREV
+				autonomous_state = autonomy_colony
+			}
+		}
+	}
+	puppet_load = yes
+	
+}
+subject_level2 = {
+	custom_effect_tooltip = subject_level2_tt
+	puppet_party_save = yes
+	hidden_effect = {
+		every_country = {
+			limit = {
+				has_war_with = PREV
+				not = {
+					tag = PREV.PREV
+				}
+			}
+			PREV.PREV = {
+				add_to_war = { 
+				    targeted_alliance = PREV.PREV
+				    enemy = PREV 
+				}
+			}
+		}
+		PREV = {
+			set_autonomy = {
+				target = PREV
+				autonomous_state = autonomy_puppet
+			}
+		}
+	}
+	puppet_load = yes
+}
+subject_level1 = {
+	custom_effect_tooltip = subject_level1_tt
+	puppet_party_save = yes
+	hidden_effect = {
+		every_country = {
+			limit = {
+				has_war_with = PREV
+				not = {
+					tag = PREV.PREV
+				}
+			}
+			PREV.PREV = {
+				add_to_war = { 
+				    targeted_alliance = PREV.PREV
+				    enemy = PREV 
+				}
+			}
+		}
+		PREV = {
+			set_autonomy = {
+				target = PREV
+				autonomous_state = autonomy_integrated_puppet
+			}
+		}
+	}
+	puppet_load = yes
+}
+
+low_puppet_level = {
+	custom_effect_tooltip = low_puppet
+	hidden_effect = {
+		if = {
+			limit = {
+				has_autonomy_state = autonomy_integrated_puppet
+			}
+
+			OVERLORD = {
+				PREV = {
+					every_owned_state = {
+						limit = {
+							is_core_of = PREV
+						}
+						set_state_flag = will_be_annex
+					}
+					every_state = {
+						limit = {
+							or = {
+								is_core_of = PREV
+								is_claimed_by = PREV
+							}
+						}
+						add_claim_by = PREV.PREV
+					}
+					if = {
+						limit ={
+							PREV = {
+								or = {
+									has_country_flag = wusuntunbing_@PREV
+									has_country_flag = ALI_shijierenouhua
+								}
+							}
+						}
+						every_state = {
+							limit = {
+								is_core_of = PREV
+							}
+							add_core_of = PREV.PREV
+						}
+					}
+					every_state = {
+						limit = {
+							is_core_of = PREV.PREV
+							is_claimed_by = PREV.PREV
+						}
+						remove_claim_by = PREV.PREV
+					}
+				}			
+			}
+			
+			save_event_target_as = annexed_subject
+			OVERLORD = { 
+				save_event_target_as = annexed_overlord
+				add_named_threat = { threat = 0.5 name = tunbingfuyong}
+				annex_news_event = yes		
+				remove_ideas = annex_subject_idea
+				army_leader_inherit_146 = yes
+				annex_country = {target = PREV transfer_troops = yes} 
+				every_state = {
+					limit = {
+						has_state_flag = will_be_annex
+					}
+					clr_state_flag = will_be_annex
+					add_compliance = 35
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_autonomy_state = autonomy_puppet
+			}
+			OVERLORD = {
+				PREV = {
+					subject_level1 = yes
+				}
+				remove_ideas = annex_subject_idea
+			}
+		}
+		if = {
+			limit = {
+				has_autonomy_state = autonomy_colony
+			}
+			OVERLORD = {
+				PREV = {
+					subject_level2 = yes
+				}
+				remove_ideas = annex_subject_idea
+			}
+		}
+		if = {
+			limit = {
+				has_autonomy_state = autonomy_dominion
+			}
+			OVERLORD = {
+				PREV = {
+					subject_level3 = yes
+				}
+				remove_ideas = annex_subject_idea
+			}
+		}
+	}
+}
+
+increase_puppet_level = {
+	custom_effect_tooltip = increase_puppet
+	hidden_effect = {
+		if = {
+			limit = {
+				has_autonomy_state = autonomy_dominion
+			}
+			OVERLORD = {
+				end_puppet = PREV
+			}
+			 
+		}
+		if = {
+			limit = {
+				has_autonomy_state = autonomy_colony
+			}
+			OVERLORD = {
+				PREV = {
+					subject_level4 = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_autonomy_state = autonomy_puppet
+			}
+			OVERLORD = {
+				PREV = {
+					subject_level3 = yes
+				}
+			}
+		}
+		
+		
+		if = {
+			limit = {
+				has_autonomy_state = autonomy_integrated_puppet
+			}
+			OVERLORD = {
+				PREV = {
+					subject_level2 = yes
+				}
+			}
+		}
+	}
+}
+
+
+puppet_party_save = {
+	hidden_effect = {
+		set_variable = { jiugui = party_popularity@oldorder }
+		set_variable = { xingui = party_popularity@neworder }
+		set_variable = { jijin = party_popularity@fandong }
+		set_variable = { qinwai = party_popularity@qinwai }
+		set_variable = { guli = party_popularity@guli }
+		# multiply_variable = { guli = 100 }
+		# multiply_variable = { jiugui = 100 }
+		# multiply_variable = { xingui = 100 }
+		# multiply_variable = { jijin = 100 }
+		# multiply_variable = { qinwai = 100 }
+
+		if = {
+			limit = {
+				has_government = oldorder
+			}
+			set_country_flag = { flag = government_type value = 1}
+		}
+		if = {
+			limit = {
+				has_government = neworder
+			}
+			set_country_flag = { flag = government_type value = 2}
+		}
+		if = {
+			limit = {
+				has_government = fandong
+			}
+			set_country_flag = { flag = government_type value = 3}
+		}
+		if = {
+			limit = {
+				has_government = qinwai
+			}
+			set_country_flag = { flag = government_type value = 4}
+		}
+		if = {
+			limit = {
+				has_government = guli
+			}
+			set_country_flag = { flag = government_type value = 5}
+		}
+	}
+}
+
+puppet_load = {
+	hidden_effect = {
+		meta_effect = {
+            text = {
+            	set_popularities = {
+            		oldorder = 0
+            		neworder = 0
+					guli = 100
+					qinwai = 0
+					fandong = 0
+				}
+				add_popularity = {
+					ideology = oldorder
+					popularity = [oldorder_p]
+				}
+				add_popularity = {
+					ideology = neworder
+					popularity = [neworder_p]
+				}
+				add_popularity = {
+					ideology = qinwai
+					popularity = [qinwai_p]
+				}
+				add_popularity = {
+					ideology = fandong
+					popularity = [fandong_p]
+				}
+            }
+            oldorder_p = "[?THIS.jiugui]"
+            neworder_p = "[?THIS.xingui]"
+            guli_p = "[?THIS.guli]"
+            qinwai_p = "[?THIS.qinwai]"
+            fandong_p = "[?THIS.jijin]"
+        }
+
+		if = {
+			limit = {
+				has_country_flag = {
+					flag = government_type
+					value < 2
+				}
+				has_country_flag = {
+					flag = government_type
+					value > 0
+				}
+			}
+			set_politics = {
+	        	ruling_party = oldorder
+	        }
+		}
+		if = {
+			limit = {
+				has_country_flag = {
+					flag = government_type
+					value < 3
+				}
+				has_country_flag = {
+					flag = government_type
+					value > 1
+				}
+			}
+			set_politics = {
+	        	ruling_party = neworder
+	        }
+		}
+		if = {
+			limit = {
+				has_country_flag = {
+					flag = government_type
+					value < 4
+				}
+				has_country_flag = {
+					flag = government_type
+					value > 2
+				}
+			}
+			set_politics = {
+	        	ruling_party = fandong
+	        }
+		}
+		if = {
+			limit = {
+				has_country_flag = {
+					flag = government_type
+					value < 5
+				}
+				has_country_flag = {
+					flag = government_type
+					value > 3
+				}
+			}
+			set_politics = {
+	        	ruling_party = qinwai
+	        }
+		}
+		if = {
+			limit = {
+				has_country_flag = {
+					flag = government_type
+					value > 4
+				}
+			}
+			set_politics = {
+	        	ruling_party = guli
+	        }
+		}
+
+		clr_country_flag = government_type
+		clear_variable = jiugui
+		clear_variable = qinwai
+		clear_variable = xingui
+		clear_variable = qinwai
+		clear_variable = guli
+	}
+}
+
+huxiangbaodu = {
+	diplomatic_relation = {
+	    country = PREV
+	    relation = non_aggression_pact
+	    active = yes
+	}
+	custom_effect_tooltip = huxiangbaodu_tt
+	hidden_effect = {
+		give_guarantee = PREV
+		give_military_access = PREV
+		PREV = {
+			give_guarantee = PREV
+			give_military_access = PREV
+		}
+	}
+}
+
+xianghubaodu = {
+	diplomatic_relation = {
+	    country = PREV
+	    relation = non_aggression_pact
+	    active = yes
+	}
+	custom_effect_tooltip = huxiangbaodu_tt
+	hidden_effect = {
+		give_guarantee = PREV
+		give_military_access = PREV
+		PREV = {
+			give_guarantee = PREV
+			give_military_access = PREV
+		}
+	}
+
+}
+
+jiemeng = {
+	diplomatic_relation = {
+	    country = PREV
+	    relation = non_aggression_pact
+	    active = yes
+	}
+	add_opinion_modifier = {
+		target = PREV modifier = jiemeng
+	}
+	reverse_add_opinion_modifier = {
+		target = PREV modifier = jiemeng
+	}
+	add_ai_strategy = {
+		type = befriend
+		id = PREV
+		value = 75
+	}
+	add_ai_strategy = {
+		type = support 
+		id = PREV
+		value = 75
+	}
+	add_ai_strategy = {
+		type = alliance
+		id = PREV
+		value = 75
+	}
+	add_ai_strategy = {
+		type = send_volunteers_desire
+		id = PREV
+		value = 75
+	}
+	
+	PREV = {
+		add_ai_strategy = {
+			type = befriend
+			id = PREV
+			value = 75
+		}
+		add_ai_strategy = {
+			type = support 
+			id = PREV
+			value = 75
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = PREV
+			value = 75
+		}
+		add_ai_strategy = {
+			type = send_volunteers_desire
+			id = PREV
+			value = 75
+		}
+	}
+}
+
+didui = {
+	add_opinion_modifier = {
+		target = PREV modifier = set_enemy
+	}
+	reverse_add_opinion_modifier = {
+		target = PREV modifier = set_enemy
+	}
+	add_ai_strategy = {
+		type = antagonize
+		id = PREV
+		value = 75
+	}
+	add_ai_strategy = {
+		type = conquer 
+		id = PREV
+		value = 75
+	}
+	add_ai_strategy = {
+		type = invade
+		id = PREV
+		value = 75
+	}
+	add_ai_strategy = {
+		type = alliance
+		id = PREV
+		value = -1000
+	}
+	PREV = {
+		add_ai_strategy = {
+			type = antagonize
+			id = PREV
+			value = 75
+		}
+		add_ai_strategy = {
+			type = conquer 
+			id = PREV
+			value = 75
+		}
+		add_ai_strategy = {
+			type = invade
+			id = PREV
+			value = 75
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = PREV
+			value = -1000
+		}
+	}
+}
+
+background_friend = {
+	add_opinion_modifier = {target = PREV modifier = background_friend}
+	add_ai_strategy = {
+		type = befriend
+		id = PREV
+		value = 100
+	}
+	add_ai_strategy = {
+		type = support 
+		id = PREV
+		value = 100
+	}
+	add_ai_strategy = {
+		type = alliance
+		id = PREV
+		value = 100
+	}
+	add_ai_strategy = {
+		type = send_volunteers_desire
+		id = PREV
+		value = 100
+	}
+}
+
+background_enemy = {
+	add_opinion_modifier = {target = PREV modifier = background_enemy}
+	add_ai_strategy = {
+		type = antagonize
+		id = PREV
+		value = 100
+	}
+	add_ai_strategy = {
+		type = conquer 
+		id = PREV
+		value = 10
+	}
+	add_ai_strategy = {
+		type = alliance
+		id = PREV
+		value = -5000
+	}
+}
+
+linglikaifang = {
+	if = {
+		limit = {
+			has_idea = sc_rule
+		}
+		swap_ideas = { remove_idea = sc_rule add_idea = free_magic}
+	}
+	if = {
+		limit = {
+			has_idea = limit_magic
+		}
+		swap_ideas = { remove_idea = limit_magic add_idea = sc_rule}
+	}
+	if = {
+		limit = {
+			has_idea = forbidden_magic
+		}
+		swap_ideas = { remove_idea = forbidden_magic add_idea = limit_magic}
+	}
+}
+
+
+linglibaoshou = {
+	if = {
+		limit = {
+			has_idea = limit_magic
+		}
+		swap_ideas = { remove_idea = limit_magic add_idea = forbidden_magic}
+	}
+	if = {
+		limit = {
+			has_idea = sc_rule
+		}
+		swap_ideas = { remove_idea = sc_rule add_idea = limit_magic}
+	}
+	if = {
+		limit = {
+			has_idea = free_magic
+		}
+		swap_ideas = { remove_idea = free_magic add_idea = sc_rule}
+	}
+}
+
+bianjiekaifang = {
+	if = {
+		limit = {
+			has_idea = normal_border
+		}
+		swap_ideas = { remove_idea = normal_border add_idea = loose_border}
+	}
+	if = {
+		limit = {
+			has_idea = strict_border
+		}
+		swap_ideas = { remove_idea = strict_border add_idea = normal_border}
+	}
+	if = {
+		limit = {
+			has_idea = close_border
+		}
+		swap_ideas = { remove_idea = close_border add_idea = strict_border}
+	}
+}
+
+bianjiebaoshou = {
+	if = {
+		limit = {
+			has_idea = strict_border
+		}
+		swap_ideas = { remove_idea = strict_border add_idea = close_border}
+	}
+	if = {
+		limit = {
+			has_idea = normal_border
+		}
+		swap_ideas = { remove_idea = normal_border add_idea = strict_border}
+	}
+	if = {
+		limit = {
+			has_idea = loose_border
+		}
+		swap_ideas = { remove_idea = loose_border add_idea = normal_border}
+	}
+}
+
+teshudibiao = {
+	231 = { #白玉楼
+		add_province_modifier = {
+			static_modifiers = { terrain_baiyulou }
+			province = { id = 1343	}
+		}
+	}
+	192 = { #博丽神社
+		add_province_modifier = {
+			static_modifiers = { terrain_bolishenshe }
+			province = { id = 2128	}
+		}
+	}
+	298 = { #地灵殿
+		add_province_modifier = {
+			static_modifiers = { terrain_dilingdian }
+			province = { id = 3059	}
+		}
+	}
+	122 = { #红魔馆
+		add_province_modifier = {
+			static_modifiers = { terrain_hongmoguan }
+			province = { id = 1473	}
+		}
+	}
+	119 = { #辉针城
+		add_province_modifier = {
+			static_modifiers = { terrain_huizhencheng }
+			province = { id = 7	}
+		}
+	}
+	223 = { #命莲寺
+		add_province_modifier = {
+			static_modifiers = { terrain_mingliansi }
+			province = { id = 2088	}
+		}
+	}
+	339 = { #太阳花田
+		add_province_modifier = {
+			static_modifiers = { terrain_taiyanghuatian }
+			province = { id = 4591	}
+		}
+	}
+	225 = { #香霖堂
+		add_province_modifier = {
+			static_modifiers = { terrain_xianglintang }
+			province = { id = 444	}
+		}
+	}
+	524 = { #永远亭
+		add_province_modifier = {
+			static_modifiers = { terrain_yongyuanting }
+			province = { id = 6567	}
+		}
+	}
+	291 = { #神灵庙
+		add_province_modifier = {
+			static_modifiers = { terrain_shenlingmiao }
+			province = { id = 504	}
+		}
+	}
+	28 = { #守矢神社
+		add_province_modifier = {
+			static_modifiers = { terrain_shoushishenshe}
+			province = { id = 2263	}
+		}
+	}
+	# 273 = { #后户之国
+	# 	add_province_modifier = {
+	# 		static_modifiers = { terrain_houhuzhiguo}
+	# 		province = { id = 2425	}
+	# 	}
+	# }
+	# 419 = { #华扇邸
+	# 	add_province_modifier = {
+	# 		static_modifiers = { terrain_huashandi}
+	# 		province = { id = 5204	}
+	# 	}
+	# }
+	# 257 = { #八云之巢
+	# 	add_province_modifier = {
+	# 		static_modifiers = { terrain_bayunzhichao}
+	# 		province = { id = 1332	}
+	# 	}
+	# }
+
+	
+}
+
+english_leader_on = {
+	if = {
+		limit = {
+			has_global_flag =  main_scenario
+		}
+		if = {
+			limit = {
+				english_leaders = yes
+			}
+			english_leader_set_146 = yes
+
+			else = {
+				chinese_leader_set_146 = yes
+			}
+		}
+	}
+}
+
+current_government = {
+	if = {
+		limit = {
+			has_government = qinwai
+		}
+		set_variable = { current_government = 1}
+	}
+	if = {
+		limit = {
+			has_government = oldorder
+		}
+		set_variable = { current_government = 2}
+	}
+	if = {
+		limit = {
+			has_government = fandong
+		}
+		set_variable = { current_government = 3}
+	}
+	if = {
+		limit = {
+			has_government = neworder
+		}
+		set_variable = { current_government = 4}
+	}
+	if = {
+		limit = {
+			has_government = guli
+		}
+		set_variable = { current_government = 5}
+	}
+}
+
+can_core = {
+    PREV = { set_country_flag = wusuntunbing_@PREV }
+    custom_effect_tooltip = can_core_tt
+}
+
+can_use = {
+    custom_effect_tooltip = can_use_tt
+    PREV = {
+        set_country_flag = use_by_focus_@PREV
+    }
+}
+
+claim_a_region = {
+	
+}

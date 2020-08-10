@@ -1,0 +1,642 @@
+ideas = {
+	country = {
+		TEG_zhuanyiderenlei_idea = {
+	    	picture = SOV_scientist_defect
+	    	allowed = {
+				always = no
+			}
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			research_bonus = {
+				math = 0.08
+			}
+	    }
+		TEG_otg_problem_idea = {
+	    	picture = generic_disjointed_gov
+	    	allowed = {
+				always = no
+			}
+
+			available = {
+				not = {
+					OTG = { is_subject_of = ROOT}
+					owns_state = 41
+				}
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				stability_factor = -0.2
+				improve_relations_maintain_cost_factor = 0.3
+			}
+	    }
+	    TEG_minzhuzhidu_idea = {
+	    	picture = vittoria_mutilata
+	    	allowed = {
+				always = no
+			}
+
+			available = {
+				has_idea = manpowerlv1
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				POLITICAL_POWER_FACTOR = -0.3
+				manufacturer_cost_factor = 1
+				mobilization_laws_cost_factor = 0.5
+				economy_cost_factor = 0.5
+				research_speed_factor = 0.05
+				generate_wargoal_tension = 0.35
+			}
+	    }
+	    TEG_neizhandejianshexiaohao_idea = {
+	    	picture = usa_great_depression_3
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				production_speed_buildings_factor = -0.15
+				industrial_capacity_factory = -0.15
+				# local_building_slots_factor = 0.5
+			}
+	    }
+	    TEG_junshiyanjiuhunluan_idea = {
+	    	picture = generic_army_problems
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			research_bonus = {
+				military = -0.08
+			}
+	    }
+	    TEG_canmouzongbu_idea = {
+	    	picture = general_staff
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				max_planning = 0.2
+				planning_speed = 0.1
+				military_leader_cost_factor = 0.15
+			}
+	    }
+	    TEG_tiangoutezhongbudui_idea = {
+	    	picture = FRA_army_of_aggression_focus
+	    	allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				special_forces_attack_factor = 0.1
+				special_forces_defence_factor = 0.1
+		 		special_forces_cap = 0.1
+		 		send_volunteer_size = 6
+			}
+	    }
+
+
+
+	    #####################
+		
+
+		TEG_xinjidongtixi_idea = {
+	    	picture = MEX_politicised_army_2
+	
+			modifier = {
+				planning_speed = 0.15
+				land_reinforce_rate = 0.02
+			}
+			equipment_bonus = {
+
+			}
+		}
+
+		TEG_gongyedongyuantixi_idea = {
+	    	picture = generic_flexible_foreign_policy2
+	
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.2
+			}
+
+			equipment_bonus = {
+
+			}
+		}
+
+		
+
+		
+
+		TEG_tianmodelinglijiexi_idea = {
+			picture = generic_research_bonus
+	
+			modifier = {
+				research_speed_factor = -0.3
+			}
+
+			equipment_bonus = {
+
+			}
+		}
+
+		
+
+		TEG_bangzhuwomendehetongpengyou_idea = {
+	    	picture = chi_chinese_support
+	
+			modifier = {
+				send_volunteer_size = 4
+			}
+
+			equipment_bonus = {
+
+			}
+		}
+		
+
+		TEG_jienahetongnanmin_idea = {
+
+			picture = YUG_all_yugoslavian_regiments
+
+			modifier = {
+				monthly_population = 0.5
+			}
+		}
+
+		
+
+		
+
+		
+
+		TEG_zhiyinyaoguaiduli_idea = {
+
+			picture = SPR_torchbearers_of_tomorrow
+
+			modifier = {
+				political_power_factor = 0.2
+			}
+		}
+
+		TEG_yaojingzhenduixingxunlian_idea = {
+
+			picture = generic_acquire_tanks
+
+			targeted_modifier = { 
+				tag = SCA
+				attack_bonus_against = 0.1 
+				defense_bonus_against = 0.1 
+			}
+		}
+
+		TEG_gailiangdeyingxiang_idea = {
+
+			picture = generic_democratic_drift_bonus
+
+			modifier = {
+				qinwai_drift = 0.02
+			}
+		}
+
+		TEG_xiangshenmingyouhao_idea = {
+
+			picture = ROM_king_carol_ii_hedonist
+
+			modifier = {
+				improve_relations_maintain_cost_factor = -0.25
+			}
+		}
+
+		TEG_kaifangyaoguaishanjiaoliu_idea = {
+
+			picture = generic_production_bonus
+
+			modifier = {
+				production_speed_buildings_factor = 0.07
+			}
+		}
+
+		TEG_xiangshenmingyouhao2_idea = {
+
+			picture = generic_production_bonus
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		
+		
+		TEG_kejilongduanjihua_idea = {
+
+			picture = generic_research_bonus
+
+			modifier = {
+				research_speed_factor = 0.06
+			}
+		}
+		TEG_lalongyaojinghezhongguo_idea = {
+
+			picture = raj_risk_of_famine
+
+			modifier = {
+				global_building_slots_factor = 0.1
+			}
+		}
+		TEG_xianghetongchuanbominzhu_idea = {
+
+			picture = generic_acquire_tanks
+
+			targeted_modifier = { 
+				tag = KAP
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+		#############新政治线####
+		TEG_jianlitiangouqingbaoju_idea = {
+
+			picture = SOV_scientist_defect
+
+			modifier = {
+				decryption_factor = 0.05
+			}
+			research_bonus = {
+				jiemi = 0.1
+			}
+		}
+		TEG_jiejideliudongkaifang_idea = {
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				monthly_population = 0.1
+				weekly_manpower = 1
+			}
+		}
+		TEG_quanmindongyuan_idea = {
+			picture = generic_manpower_bonus
+	
+			modifier = {
+				mobilization_speed = 0.25
+			}
+
+			equipment_bonus = {
+
+			}
+		}
+		TEG_jianshaozhengbing_idea = {
+
+			picture = new_deal
+
+			modifier = {
+				conscription_factor = -0.25
+				war_support_factor = -0.25
+				mobilization_speed = -0.25
+				research_speed_factor = 0.15
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		TEG_pingxifennu_idea = {
+
+			picture = ROM_king_carol_ii_hedonist
+
+			modifier = {
+				political_power_factor = 0.35
+			}
+		}
+		TEG_bameitizouweishuchushouduan_idea = {
+
+	    	picture = HUN_treaty_of_triannon
+
+			modifier = {
+				political_power_gain = 0.15
+			}
+			research_bonus = {
+
+			}
+		}
+		TEG_touzitiangouyinshua_idea = {
+
+			picture = generic_build_infrastructure
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		TEG_zhuanzhuyishixingtaishuchu_idea = {
+
+			picture = ROM_king_carol_ii_hedonist
+
+			modifier = {
+				improve_relations_maintain_cost_factor = -0.25
+				political_power_gain = 0.2
+			}
+		}
+		TEG_huanxiangxiangdeminzhubinggongchang_idea = {
+
+			picture = CZE_skoda_works
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+				conversion_cost_mil_to_civ_factor = -0.05
+				production_speed_industrial_complex_factor = 0.05
+			}
+		}
+		TEG_xuanyangjiejidouzheng_idea = {
+
+			picture = trotskyite_plot
+
+			modifier = {
+				army_org_factor = 0.1
+			}
+		}
+		TEG_yaoguaishanmaoyitongmeng_idea = {
+
+			picture = generic_democratic_drift_bonus
+
+			modifier = {
+				trade_opinion_factor = 0.25
+			}
+		}
+
+		TEG_hetongqingbaogongxiang_idea = {
+
+			picture = generic_research_bonus
+
+			modifier = {
+				research_speed_factor = 0.03
+			}
+		}
+		TEG_tiangoudegemingsiwei_idea = {
+
+			picture = jap_the_unthinkable_option
+
+			modifier = {
+				army_morale_factor = 0.1
+			}
+		}
+		TEG_liaojieyaoguaishandediren_idea = {
+
+			picture = generic_acquire_tanks
+
+			targeted_modifier = {
+				tag = KAP
+				attack_bonus_against = 0.06
+				defense_bonus_against = 0.06
+			}
+			targeted_modifier = {
+				tag = YSK
+				attack_bonus_against = 0.06
+				defense_bonus_against = 0.06
+			}
+		}
+		TEG_direnbianbuhuanxiangxiang_idea = {
+
+			picture = ROM_iron_guard
+
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		TEG_zhunbeiquanmianzhanzheng_idea = {
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				mobilization_laws_cost_factor = -0.25
+			}
+		}
+		TEG_tiangoudezhongzuaomi_idea = {
+
+			picture = generic_research_bonus
+
+			modifier = {
+
+			}
+			research_bonus = {
+				race = 0.02
+			}
+		}
+		TEG_tianmogongdebaowu_idea = {
+
+			picture = generic_research_bonus
+
+			modifier = {
+
+			}
+			research_bonus = {
+				combined = 0.05
+			}
+		}
+		####工业线
+		TEG_kejigongxiang_idea = {
+
+			picture = generic_research_bonus
+
+			modifier = {
+				research_speed_factor = 0.04
+			}
+		}
+		TEG_touzihetongjianshe_idea = {
+
+			picture = generic_production_bonus
+
+			modifier = {
+				production_speed_buildings_factor = 0.08
+			}
+		}
+		TEG_touzihetongshengchan_idea = {
+
+			picture = generic_foreign_capital
+
+			modifier = {
+				industrial_capacity_factory = 0.08
+			}
+		}
+		TEG_touzihetong_idea = {
+
+			picture = generic_foreign_capital
+
+			modifier = {
+				political_power_factor = -0.1
+			}
+		}
+
+
+		#####军事线1
+		TEG_dongyuantixitiaozheng_idea = {
+			picture = generic_manpower_bonus
+	
+			modifier = {
+				conscription_factor = 0.05
+			}
+			equipment_bonus = {
+
+			}
+		}
+		TEG_zhongshijichuxueshuo_idea = {
+			picture = generic_research_bonus
+	
+			# modifier = {
+			# 	trade_opinion_factor = 0.2
+			# }
+			equipment_bonus = {
+
+			}
+			research_bonus = {
+				basic_doctrine = 0.05
+			}
+		}
+		TEG_zhongshixinxingxueshuo_idea = {
+			picture = generic_research_bonus
+	
+			# modifier = {
+			# 	trade_opinion_factor = 0.2
+			# }
+			equipment_bonus = {
+
+			}
+			research_bonus = {
+				land_doctrine = 0.05
+			}
+		}
+		TEG_jiaqiangjihuazhiding_idea = {
+	    	picture = CZE_planning_bonus
+	
+			modifier = {
+				max_planning = 0.1
+			}
+
+			equipment_bonus = {
+
+			}
+		}
+		TEG_biaozhunhuaxunlian_idea = {
+			picture = por_colonial_army
+	
+			modifier = {
+				training_time_factor = -0.1
+			}
+			equipment_bonus = {
+
+			}
+		}
+		TEG_gaigejunzhi_idea = {
+	    	picture = generic_reserve_divisions
+	
+			modifier = {
+				experience_gain_army = 0.01
+			}
+
+			equipment_bonus = {
+
+			}
+		}
+		TEG_yizhibaozhangshengli_idea = {
+	    	picture = generic_reserve_divisions
+	
+			modifier = {
+				COMMAND_POWER_GAIN_MULT = 0.2
+			}
+
+			equipment_bonus = {
+
+			}
+		}
+
+		#####军事线2
+		TEG_tongyiyanfa_idea = {
+			picture = generic_research_bonus
+	
+			modifier = {
+				
+			}
+			equipment_bonus = {
+
+			}
+			research_bonus = {
+				air_equipment = 0.06
+			}
+		}
+		TEG_canmoutuandegaizu_idea = {
+	    	picture = general_staff
+	
+			modifier = {
+				max_command_power = 10
+			}
+			equipment_bonus = {
+
+			}
+		}
+		TEG_kuodacanmoubu_idea = {
+	    	picture = general_staff
+	
+			modifier = {
+				military_leader_cost_factor = -0.1
+				max_command_power = 10
+			}
+			equipment_bonus = {
+
+			}
+		}
+		TEG_lianhezhihuizhongxin_idea = {
+	    	picture = general_staff
+	
+			modifier = {
+				military_leader_cost_factor = -0.1
+				max_command_power = 35
+				
+				
+			}
+			equipment_bonus = {
+
+			}
+		}
+		
+
+		
+	}
+}

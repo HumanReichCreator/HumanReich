@@ -1,0 +1,35 @@
+
+state={
+	id=148
+	name="STATE_148"
+	resources={
+
+		powder=5.000
+		metal=1.000
+		gas=5.000
+		crystal=5.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = HU3
+			add_core_of = MEL
+			add_core_of = HU3
+			buildings = {
+				infrastructure =3
+				industrial_complex = 1
+				arms_factory = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		488 636 1218 2767 4942 4949 4951 4960 4968 4980 4982 4994 
+	}
+	manpower=595.0
+	buildings_max_level_factor=1.000
+	state_category=s5
+}

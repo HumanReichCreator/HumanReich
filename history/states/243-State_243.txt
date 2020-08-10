@@ -1,0 +1,37 @@
+
+state={
+	id=243
+	name="STATE_243"
+	resources={
+		powder=2.000
+		metal=0.000
+		gas=5.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = MSD
+			add_core_of = MSD
+			add_claim_by = HUM
+			add_claim_by = HU6
+			add_claim_by = HU7
+			add_claim_by = HU8
+			buildings = {
+				infrastructure =1
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		738 1109 1536 2465 4275 4280 4480 4482 4485 4486 4488 4490 4494 4500 
+	}
+	manpower=306.0
+	buildings_max_level_factor=1.000
+	state_category=s2
+}

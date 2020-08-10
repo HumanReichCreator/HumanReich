@@ -1,0 +1,194 @@
+﻿capital = 1
+
+138.1.1={
+    oob = "TEST"
+    # set_research_slots = 0
+    add_ideas = cannot_build_idea
+    add_ideas = hawk0
+    add_ideas = open0
+    add_ideas = Fairy
+    set_politics = {
+        ruling_party = guli
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 0
+        guli = 100
+        neworder = 0
+        oldorder = 0
+        fandong = 0
+    }
+    set_major = no
+
+    every_country = {
+        limit = {
+            random_leader = yes
+        }
+        retire_country_leader = yes 
+    }
+
+    startup_manu = yes
+    startup_weapon_pro = yes
+    every_country = {
+        ma_weapons = yes
+        sc_weapons = yes
+        ma_weapons_art = yes
+        sc_weapons_art = yes
+        ma_weapons_art2 = yes
+    }
+
+    #for display
+    every_country = {
+        custom_situation_initialize = yes
+    }
+
+    #focus
+    every_country = {
+        limit = {
+            date > 145.1.1
+            not = { tag = XXX}
+        }
+        complete_national_focus = ty_early_main 
+    }
+
+    ST_race_setting = yes
+
+
+    #idea
+    every_country = {
+        limit = {
+            capital_scope = {
+                is_on_continent = Gensokyo
+            }
+            not = {
+                has_idea = gensoukyo_creator_idea
+            }
+            not = {
+                tag = RNS
+                tag = YSK
+                tag = SAK
+                tag = UNA
+                tag = ONS
+                tag = INB
+                tag = EET
+                tag = UDO
+                tag = MYK
+                tag = MTM
+                tag = MFA
+            }
+            or = {
+                not = {
+                    has_idea = Fairy
+                    has_idea = God
+                    has_idea = Ghost
+                    has_idea = Magician
+                    has_idea = Human
+                }
+                tag = SCA
+                tag = SHO
+                tag = OTG
+            }
+            
+        }
+        add_ideas = gensokyo_primary_idea
+    }
+
+    every_country = {
+        limit = {
+            capital_scope = {
+                not = { is_on_continent = Gensokyo }
+            }
+        }
+        add_ideas = not_gensoukyo_idea
+    }
+
+    #others#
+    set_research_slots = 0
+
+    #jiaqiang
+    KAS = {
+        add_ideas = great_presige_idea
+    }
+    YKR = {
+        add_ideas = great_presige_idea
+    }
+    OKI = {
+        add_ideas = great_presige_idea
+    }
+    YUK = {
+        add_ideas = great_presige_idea
+    }
+    EET = {
+        add_ideas = great_presige_idea
+    }
+    FUJ = {
+        add_ideas = great_presige_idea
+    }
+    YYK = {
+        add_ideas = great_presige_idea
+    }
+    SAT = {
+        add_ideas = great_presige_idea
+    }
+    KUT = {
+        add_ideas = great_presige_idea
+    }
+    HCT = {
+        add_ideas = great_presige_idea
+    }
+    SKI = {
+        add_ideas = great_presige_idea
+    }
+    HNY = {
+        add_ideas = great_presige_idea
+    }
+
+}
+
+if = {
+    limit = {
+        has_start_date < 143.7.2
+        has_start_date > 143.6.30
+    }
+    SHO = {
+        set_cosmetic_tag = SHO_SCA
+    }
+    AVE = {
+        set_cosmetic_tag = AVE_HUM
+        retire_country_leader = yes
+    }
+    KOG = {
+        set_cosmetic_tag = KOG_HUM
+        retire_country_leader = yes
+    }
+    HUM = {
+        KOG = {
+            subject_level4 = yes
+        }
+        AVE = {
+            subject_level1 = yes
+        }
+    }
+
+    SCA = {
+        add_ideas = qingbaoxielu143_idea 
+    }
+    NMS = {
+        add_ideas = qingbaoxielu143_idea 
+    }
+    SHO = {
+        add_ideas = qingbaoxielu143_idea 
+    }
+
+}
+
+create_country_leader = {
+    name = "Unknown"
+    picture = "gfx/leaders/leader_unknown.dds"
+    ideology = guli_type
+    traits = {
+
+    }
+}
+

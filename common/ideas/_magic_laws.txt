@@ -1,0 +1,140 @@
+ideas = {
+
+	magic_laws = { 
+		law = yes
+		free_magic = {
+									
+			available = {
+			    OR = {
+			    	NOT = {
+				        capital_scope = {
+				        	is_on_continent = Gensokyo
+				        }
+				    }
+				    custom_trigger_tooltip = {
+				    	tooltip = free_magic_trigger
+				    	check_variable = { OL_view_type = 0}
+				    }
+			    }
+
+			}
+			on_add = {
+				add_stability = -0.15
+			}
+			level = 1
+			cost = 300
+			cancel_if_invalid = no
+			removal_cost = -1
+		#	research_bonus = {
+		#		magic = 0.1
+		#		science = -0.1		
+		#	}
+			modifier = {
+				stability_factor = -0.2
+				consumer_goods_factor = 0.05
+				POLITICAL_POWER_GAIN = -0.2
+				custom_modifier_tooltip = free_magic_tt
+			}
+			research_bonus = {
+				magic = 0.1			
+		    }
+			
+		}
+		sc_rule = {
+									
+			available = {
+	
+			}
+			on_add = {
+				add_stability = -0.15
+			}
+			level = 2
+			default = yes
+			cost = 200
+			cancel_if_invalid = no
+			removal_cost = -1
+		#	research_bonus = {
+		#		magic = 0.05
+		#		science = -0.05	
+		#	}
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = 0.02
+				POLITICAL_POWER_GAIN = -0.1
+				custom_modifier_tooltip = sc_rule_tt
+			}
+			research_bonus = {
+				magic = 0.05		
+		    }
+		}
+		limit_magic = {
+									
+			available = {
+			
+			}
+			on_add = {
+				add_stability = -0.15
+			}
+		#	research_bonus = {
+		#		magic = -0.05
+		#		science = 0.05	
+		#	}
+			modifier = {
+			# stability_factor = 0.0
+			# army_org_factor = -0.02
+				consumer_goods_factor = -0.01
+				custom_modifier_tooltip = limit_magic_tt
+			#POLITICAL_POWER_GAIN = -0.3
+			}
+
+			research_bonus = {
+				science = 0.05			
+		    }
+
+		    level = 3
+			cost = 200
+			cancel_if_invalid = no
+			removal_cost = -1
+		}
+		forbidden_magic = {
+									
+		#	research_bonus = {
+		#		magic = -0.1
+		#		science = 0.1	
+		#	}
+
+			on_add = {
+				add_stability = -0.15
+			}
+			modifier = {
+				# stability_factor = 0.06
+				# army_org_factor = -0.05
+				stability_factor = 0.1
+				consumer_goods_factor = -0.04
+				POLITICAL_POWER_GAIN = 0.15
+				custom_modifier_tooltip = forbidden_magic_tt
+			}
+			research_bonus = {
+				science = 0.1			
+		    }
+			available = {
+			  	custom_trigger_tooltip = {
+			    	tooltip = forbidden_magic_trigger
+			    	or = {
+			    		check_variable = { OL_view_type = 1}
+			    		check_variable = { OL_view_type = 2}
+			    	}
+			    }
+			    capital_scope = {
+		        	is_on_continent = Gensokyo
+		        }
+			}
+			cost = 300
+			level = 4
+			cancel_if_invalid = no
+			removal_cost = -1
+		}
+
+
+	}
+}

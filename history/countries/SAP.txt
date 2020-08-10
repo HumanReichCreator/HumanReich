@@ -1,0 +1,102 @@
+﻿capital = 411
+138.8.13 = {
+
+}
+141.6.2 = {
+    
+}
+142.3.8 = {
+    
+}
+144.2.5 = {
+    
+}
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card = 1
+        linglijiejing139 = 1
+        danmujingque139 = 1
+         #外界
+        buqiang117 = 1
+        buqiang140 = 1
+        tangxiangailiang140 = 1
+        jiandanmiaozhunjing140 = 1
+            
+        #辅助
+
+        #专用辅助
+        fangzhihuopao143 = 1
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+        zuzhihuazhanzheng142 = 1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        waike = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+        jianzaojishu140 = 1
+        jijianjianzao140 = 1
+            
+        #专用工业
+        fangwaijieshengchan130 = 1
+        fangwaijieshengchan140 = 1
+
+        #种族
+        yanjiujingshen1 = 1
+            
+    }
+}
+146.1.1={
+    oob = "SAP_146"
+
+    #########局势修改
+    
+    add_ideas = {
+    Kappa
+    Village
+    dove1
+    open2
+    strict_border
+    limit_magic
+     
+    }
+    
+    set_politics = {
+    	ruling_party = guli
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 15
+        guli = 83
+        neworder = 0
+        oldorder = 0
+        fandong = 2
+    }
+    
+}
+
+create_country_leader = {
+    name = "正在商讨。。。"
+    desc = ""
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    ideology = qinwai_type
+    traits = {
+
+    }
+}

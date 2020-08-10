@@ -1,0 +1,41 @@
+﻿division_template = {
+	name = "天狗共和国志愿编制"
+	regiments = {
+		sc_militia = { x = 0 y = 0 }
+		sc_artillery_brigade = { x = 0 y = 1 }
+	}
+	support = {
+	}
+}
+
+units = {
+	#4X2个
+	division = {
+		name = "天狗共和国志愿编制"
+		location = 2070
+		division_template = "天狗共和国志愿编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "河童重组编制"
+		location = 2070
+		division_template = "河童重组编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "天狗共和国志愿编制"
+		location = 2070
+		division_template = "天狗共和国志愿编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "河童重组编制"
+		location = 2070
+		division_template = "河童重组编制"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+}

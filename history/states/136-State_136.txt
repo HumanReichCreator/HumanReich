@@ -1,0 +1,30 @@
+state={
+	id=136
+	name="STATE_136"
+	provinces={
+		283 496 818 1161 1413 1633 1762 1780 1893 1918 2148 2371 2483 2500 
+	}
+
+	resources={
+
+		powder = 0.0
+		metal = 0
+		gas = 0.0
+		crystal = 25.0
+	}
+
+	history={
+       	146.1.1 = {
+			owner = NG3
+			add_core_of = NG3
+			buildings = {
+				infrastructure =1
+				industrial_complex = 1
+				arms_factory = 0
+			}
+       	}
+	}
+	state_category=s5
+	manpower=297438.0
+	buildings_max_level_factor=1.000
+}

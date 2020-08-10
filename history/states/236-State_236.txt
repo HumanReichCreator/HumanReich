@@ -1,0 +1,30 @@
+state={
+	id=236
+	name="STATE_236"
+
+	resources={
+
+		powder = 0.0
+		metal = 0
+		gas = 5.0
+		crystal = 20.0
+	}
+
+	history={
+       	146.1.1 = {
+			owner = YYK
+			add_core_of = YYK
+			buildings = {
+				infrastructure =1
+				industrial_complex = 0
+				arms_factory = 0
+			}
+       	}
+	}
+	provinces={
+		350 809 1300 1485 1619 1987 2374 2858 
+	}
+	state_category=s2
+	manpower=104695.0
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,56 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+	TEG_gongguxianyoutongmeng_op = {
+		value = 30
+	}
+	TEG_zhunbeijiejuetianmowenti_op = {
+		value = 10
+		decay = 1
+	}
+	TEG_kaifangyaoguaishanjiaoliu_op = {
+		value = 15
+	}
+	# TEG_tianmodelinglijiexi_op = {
+	# 	value = -100
+	# }
+	# TEG_yumingliansidejiaoliu_op = {
+	# 	value = 30
+	# }
+	# TEG_zhiyinyaoguaiduli_op = {
+	# 	value = 10
+	# }
+	# TEG_lalongyaojinghezhongguo_op = {
+	# 	value = 30
+	# }
+	# TEG_chengnuoshanxiashenming_op = {
+	# 	value = 30
+	# }
+	# TEG_huifuheshoushideguanxi_op = {
+	# 	value = 30
+	# }
+	# TEG_zanshixiaochuhongmoguan_op = {
+	# 	value = 10
+	# }
+	
+	# TEG_xiangshenmingyouhao_op = {
+	# 	value = 20
+	# }
+	# TEG_yuyaoguaixianzhejiaoyi_op = {
+	# 	value = 20
+	# }
+	# TEG_yudidijiaoyi_op = {
+	# 	value = 20
+	# }
+	# TEG_yijiantongyi_op = {
+	# 	value = 100
+	# }
+}	

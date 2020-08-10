@@ -1,0 +1,33 @@
+state={
+	id=421
+	name="STATE_421"
+	provinces={
+		358 1316 3115 4084 4188 4193 4195 5317 
+	}
+	resources={
+
+		powder=0.000
+		metal=0.000
+		gas=0.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = NIT
+			add_core_of = NIT
+			add_core_of = KAP
+			buildings = {
+				infrastructure =6
+				industrial_complex = 6
+				arms_factory = 3
+
+			}
+
+		}
+
+	}
+	state_category=s10
+	manpower=2378.0
+	buildings_max_level_factor=1.000
+}

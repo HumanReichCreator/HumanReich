@@ -1,0 +1,31 @@
+state={
+	id=474
+	name="STATE_474"
+	provinces={
+		6217 6222 6234 6238 6245 6249 6251 6255 6268 
+	}
+	resources={
+		energy = 0
+		powder=0.000
+		metal=0.000
+		gas=0.000
+		crystal=9.000
+	}
+	history={
+		146.1.1 = {
+			owner = HNY
+			add_core_of = HNY
+			add_core_of = KCC
+			buildings = {
+				infrastructure = 6
+				industrial_complex = 3
+				arms_factory = 1
+
+			}
+
+		}
+	}
+	manpower=34898.0
+	state_category=s10
+	buildings_max_level_factor=1.000
+}

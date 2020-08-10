@@ -1,0 +1,32 @@
+state={
+	id=333
+	name="STATE_333"
+	provinces={
+		506 913 1029 2734 3344 3347 
+	}
+	resources={
+
+		powder=0.000
+		metal=1.000
+		gas=5.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = CIR
+			add_core_of = CIR
+			buildings = {
+				infrastructure =3
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+	manpower=1024.0
+	buildings_max_level_factor=1.000
+	state_category=s2
+}

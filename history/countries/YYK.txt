@@ -1,0 +1,133 @@
+﻿capital = 231
+138.8.13 = {
+
+}
+141.6.2 = {
+    
+}
+142.3.8 = {
+    
+}
+144.2.5 = {
+    
+}
+146.1.1 = {
+    # set_cosmetic_tag = YYK_B
+    set_technology = {
+        #通用武器线
+        spell_card = 1
+        linglijiejing139 = 1
+        danmujingque139 = 1
+        gaosudanmu139 = 1
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+        zuzhihuazhanzheng142 = 1
+            
+        #工程学 
+        jichushuxue = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+            
+        #专用工业
+
+        #种族
+            
+    }
+}
+set_technology = {
+    ghost_tech = 1
+}
+146.1.1={
+    oob = "YYK_146"
+    set_major = yes
+    
+    puppet = NG1
+    puppet = NG2
+    puppet = NG3
+    puppet = NG4
+    give_guarantee = HUB
+    
+    add_ideas = {
+    Ghost
+    Village
+    open0
+    dove2
+    loose_border
+    free_magic
+    manpowerlv1
+    pingmingehe_idea
+    }
+    set_politics = {
+    	ruling_party = oldorder
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 0
+        guli = 15
+        neworder = 3
+        oldorder = 82
+        fandong = 0
+    }
+    
+}
+create_country_leader = {
+	# name = "Saigyouji Yuyuko"
+	name = "西行寺幽幽子"
+    picture = "YYK_yyk.dds"
+	ideology = guli_type
+	traits = {
+
+	}
+}
+create_country_leader = {
+    # name = "Saigyouji Yuyuko"
+    name = "西行寺幽幽子"
+    picture = "YYK_yyk.dds"
+    ideology = neworder_type
+    traits = {
+
+    }
+}
+create_country_leader = {
+    # name = "Saigyouji Yuyuko"
+    name = "西行寺幽幽子"
+    picture = "YYK_yyk.dds"
+    ideology = fandong_type
+    traits = {
+
+    }
+}
+create_country_leader = {
+    # name = "Saigyouji Yuyuko"
+    name = "西行寺幽幽子"
+    picture = "YYK_yyk.dds"
+    ideology = neworder_type
+    traits = {
+
+    }
+}
+
+create_country_leader = {
+    # name = "Saigyouji Yuyuko"
+    name = "西行寺幽幽子"
+    picture = "YYK_yyk.dds"
+    ideology = oldorder_type
+    traits = {
+
+    }
+}

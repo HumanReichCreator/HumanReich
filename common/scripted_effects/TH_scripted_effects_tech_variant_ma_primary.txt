@@ -1,0 +1,1258 @@
+ma_weapons = {
+    if = {
+        limit = {
+            has_tech = spell_card
+        }
+        ma_p135 = yes
+    }
+    if = {
+        limit = {
+            has_tech = linglijiejing139
+        }
+        ma_p139 = yes
+    }
+    if = {
+        limit = {
+            has_tech = linglijiejing144
+        }
+        ma_p144 = yes
+    }
+    if = {
+        limit = {
+            has_tech = linglijiejing147
+        }
+        ma_p144 = yes
+    }
+    if = {
+        limit = {
+            has_tech = linglijiejing153
+        }
+        ma_p153 = yes
+    }
+    if = {
+        limit = {
+            has_tech = linglijiejing156
+        }
+        ma_p156 = yes
+    }
+    if = {
+        limit = {
+            has_tech = linglijiejing159
+        }
+        ma_p159 = yes
+    }
+    if = {
+        limit = {
+            has_tech = linglijiejing162
+        }
+        ma_p162 = yes
+    }
+}
+ma_p_teshufenzhi = {
+    if = {
+        limit = {
+            not = {
+                and = {
+                    check_variable = { ma_p_r = 0}
+                    check_variable = { ma_p_s = 0}
+                    check_variable = { ma_p_h = 0}
+                    check_variable = { ma_p_a = 0}
+                    check_variable = { ma_p_d = 0}
+                    check_variable = { ma_p_b = 0}
+                    check_variable = { ma_p_i = 0}
+                    check_variable = { ma_p_ir = 0}
+                    check_variable = { ma_p_rr = 0}
+                }
+            }
+        }
+        custom_effect_tooltip = tech_special
+    }
+}
+
+ma_p135 = {
+    
+}
+
+ma_p139 = {
+    ma_p_teshufenzhi = yes
+    if = {
+        limit = {
+            tag = SCA
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "Belphegor Mk IV" 
+                    type = spell_card139
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    # if = {
+    #     limit = {
+    #         tag = TEG
+    #     }
+    #     meta_effect = {
+    #         text = {
+    #             create_equipment_variant = { 
+    #                 name = "风弹" 
+    #                 type = spell_card139
+    #                 upgrades = {
+    #                   upgrade_reliability = [ma_p_r]
+    #                   upgrade_softattack = [ma_p_s]
+    #                   upgrade_hardattack = [ma_p_h]
+    #                   upgrade_aaattack = [ma_p_a]
+    #                   upgrade_defense = [ma_p_d]
+    #                   upgrade_breakthrough = [ma_p_b]
+    #                   upgrade_ic = [ma_p_i]
+    #                   upgrade_ic_reverse = [ma_p_ir]
+    #                   upgrade_reliability_reverse = [ma_p_rr]
+    #                }
+    #             }
+    #         }
+    #         ma_p_r = "[?THIS.ma_p_r]"
+    #         ma_p_s = "[?THIS.ma_p_s]"
+    #         ma_p_h = "[?THIS.ma_p_h]"
+    #         ma_p_a = "[?THIS.ma_p_a]"
+    #         ma_p_d = "[?THIS.ma_p_d]"
+    #         ma_p_b = "[?THIS.ma_p_b]"
+    #         ma_p_i = "[?THIS.ma_p_i]"
+    #         ma_p_ir = "[?THIS.ma_p_ir]"
+    #         ma_p_rr = "[?THIS.ma_p_rr]"
+    #     }
+    # }
+    if = {
+        limit = {
+            tag = CIR
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "Belphegor Mk II" 
+                    type = spell_card139
+                    upgrades = {
+                      # upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = 1
+                      # upgrade_hardattack = [ma_p_h]
+                      # upgrade_aaattack = [ma_p_a]
+                      # upgrade_defense = [ma_p_d]
+                      # upgrade_breakthrough = [ma_p_b]
+                      # upgrade_ic = [ma_p_i]
+                      # upgrade_ic_reverse = [ma_p_ir]
+                      # upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            # ma_p_r = "[?THIS.ma_p_r]"
+            # ma_p_s = "[?THIS.ma_p_s]"
+            # ma_p_h = "[?THIS.ma_p_h]"
+            # ma_p_a = "[?THIS.ma_p_a]"
+            # ma_p_d = "[?THIS.ma_p_d]"
+            # ma_p_b = "[?THIS.ma_p_b]"
+            # ma_p_i = "[?THIS.ma_p_i]"
+            # ma_p_ir = "[?THIS.ma_p_ir]"
+            # ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = SEI
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "Belphegor Mk II" 
+                    type = spell_card139
+                    upgrades = {
+                      # upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = 1
+                      # upgrade_hardattack = [ma_p_h]
+                      # upgrade_aaattack = [ma_p_a]
+                      # upgrade_defense = [ma_p_d]
+                      # upgrade_breakthrough = [ma_p_b]
+                      # upgrade_ic = [ma_p_i]
+                      # upgrade_ic_reverse = [ma_p_ir]
+                      # upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            # ma_p_r = "[?THIS.ma_p_r]"
+            # ma_p_s = "[?THIS.ma_p_s]"
+            # ma_p_h = "[?THIS.ma_p_h]"
+            # ma_p_a = "[?THIS.ma_p_a]"
+            # ma_p_d = "[?THIS.ma_p_d]"
+            # ma_p_b = "[?THIS.ma_p_b]"
+            # ma_p_i = "[?THIS.ma_p_i]"
+            # ma_p_ir = "[?THIS.ma_p_ir]"
+            # ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = NMS
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "气功增幅拳套" 
+                    type = spell_card139
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+}
+
+
+ma_p144 = {
+    ma_p_teshufenzhi = yes
+    if = {
+        limit = {
+            tag = SCA
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "Leviathan Mark V" 
+                    type = spell_card144
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    # if = {
+    #     limit = {
+    #         tag = TEG
+    #     }
+    #     meta_effect = {
+    #         text = {
+    #             create_equipment_variant = { 
+    #                 name = "强风弹" 
+    #                 type = spell_card144
+    #                 upgrades = {
+    #                   upgrade_reliability = [ma_p_r]
+    #                   upgrade_softattack = [ma_p_s]
+    #                   upgrade_hardattack = [ma_p_h]
+    #                   upgrade_aaattack = [ma_p_a]
+    #                   upgrade_defense = [ma_p_d]
+    #                   upgrade_breakthrough = [ma_p_b]
+    #                   upgrade_ic = [ma_p_i]
+    #                   upgrade_ic_reverse = [ma_p_ir]
+    #                   upgrade_reliability_reverse = [ma_p_rr]
+    #                }
+    #             }
+    #         }
+    #         ma_p_r = "[?THIS.ma_p_r]"
+    #         ma_p_s = "[?THIS.ma_p_s]"
+    #         ma_p_h = "[?THIS.ma_p_h]"
+    #         ma_p_a = "[?THIS.ma_p_a]"
+    #         ma_p_d = "[?THIS.ma_p_d]"
+    #         ma_p_b = "[?THIS.ma_p_b]"
+    #         ma_p_i = "[?THIS.ma_p_i]"
+    #         ma_p_ir = "[?THIS.ma_p_ir]"
+    #         ma_p_rr = "[?THIS.ma_p_rr]"
+    #     }
+    # }
+    if = {
+        limit = {
+            tag = CIR
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "妖精强化装置Alpha" 
+                    type = spell_card144
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = SEI
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "镜国弹幕" 
+                    type = spell_card144
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = NMS
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "碎击拳套" 
+                    type = spell_card144
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+}
+
+ma_p147 = {
+    ma_p_teshufenzhi = yes
+    if = {
+        limit = {
+            tag = SCA
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "Beelzebub Mark VII" 
+                    type = spell_card147
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    # if = {
+    #     limit = {
+    #         tag = TEG
+    #     }
+    #     meta_effect = {
+    #         text = {
+    #             create_equipment_variant = { 
+    #                 name = "烈风弹" 
+    #                 type = spell_card147
+    #                 upgrades = {
+    #                   upgrade_reliability = [ma_p_r]
+    #                   upgrade_softattack = [ma_p_s]
+    #                   upgrade_hardattack = [ma_p_h]
+    #                   upgrade_aaattack = [ma_p_a]
+    #                   upgrade_defense = [ma_p_d]
+    #                   upgrade_breakthrough = [ma_p_b]
+    #                   upgrade_ic = [ma_p_i]
+    #                   upgrade_ic_reverse = [ma_p_ir]
+    #                   upgrade_reliability_reverse = [ma_p_rr]
+    #                }
+    #             }
+    #         }
+    #         ma_p_r = "[?THIS.ma_p_r]"
+    #         ma_p_s = "[?THIS.ma_p_s]"
+    #         ma_p_h = "[?THIS.ma_p_h]"
+    #         ma_p_a = "[?THIS.ma_p_a]"
+    #         ma_p_d = "[?THIS.ma_p_d]"
+    #         ma_p_b = "[?THIS.ma_p_b]"
+    #         ma_p_i = "[?THIS.ma_p_i]"
+    #         ma_p_ir = "[?THIS.ma_p_ir]"
+    #         ma_p_rr = "[?THIS.ma_p_rr]"
+    #     }
+    # }
+    if = {
+        limit = {
+            tag = CIR
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "制式妖精强化装置" 
+                    type = spell_card147
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = SEI
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "逆击弹幕" 
+                    type = spell_card147
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = NMS
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "问答无用拳套" 
+                    type = spell_card147
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+}
+
+ma_p153 = {
+    ma_p_teshufenzhi = yes
+    if = {
+        limit = {
+            tag = SCA
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "Samael Mark X" 
+                    type = spell_card153
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    # if = {
+    #     limit = {
+    #         tag = TEG
+    #     }
+    #     meta_effect = {
+    #         text = {
+    #             create_equipment_variant = { 
+    #                 name = "黑鸦烈风弹" 
+    #                 type = spell_card153
+    #                 upgrades = {
+    #                   upgrade_reliability = [ma_p_r]
+    #                   upgrade_softattack = [ma_p_s]
+    #                   upgrade_hardattack = [ma_p_h]
+    #                   upgrade_aaattack = [ma_p_a]
+    #                   upgrade_defense = [ma_p_d]
+    #                   upgrade_breakthrough = [ma_p_b]
+    #                   upgrade_ic = [ma_p_i]
+    #                   upgrade_ic_reverse = [ma_p_ir]
+    #                   upgrade_reliability_reverse = [ma_p_rr]
+    #                }
+    #             }
+    #         }
+    #         ma_p_r = "[?THIS.ma_p_r]"
+    #         ma_p_s = "[?THIS.ma_p_s]"
+    #         ma_p_h = "[?THIS.ma_p_h]"
+    #         ma_p_a = "[?THIS.ma_p_a]"
+    #         ma_p_d = "[?THIS.ma_p_d]"
+    #         ma_p_b = "[?THIS.ma_p_b]"
+    #         ma_p_i = "[?THIS.ma_p_i]"
+    #         ma_p_ir = "[?THIS.ma_p_ir]"
+    #         ma_p_rr = "[?THIS.ma_p_rr]"
+    #     }
+    # }
+    if = {
+        limit = {
+            tag = CIR
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "冷冻洒水器" 
+                    type = spell_card153
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = SEI
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "刺目针" 
+                    type = spell_card153
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = NMS
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "天网破沙拳套" 
+                    type = spell_card153
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+}
+
+ma_p156 = {
+    ma_p_teshufenzhi = yes
+    if = {
+        limit = {
+            tag = SCA
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "Asmodeus Mark XII" 
+                    type = spell_card156
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    # if = {
+    #     limit = {
+    #         tag = TEG
+    #     }
+    #     meta_effect = {
+    #         text = {
+    #             create_equipment_variant = { 
+    #                 name = "天狗烈风弹" 
+    #                 type = spell_card156
+    #                 upgrades = {
+    #                   upgrade_reliability = [ma_p_r]
+    #                   upgrade_softattack = [ma_p_s]
+    #                   upgrade_hardattack = [ma_p_h]
+    #                   upgrade_aaattack = [ma_p_a]
+    #                   upgrade_defense = [ma_p_d]
+    #                   upgrade_breakthrough = [ma_p_b]
+    #                   upgrade_ic = [ma_p_i]
+    #                   upgrade_ic_reverse = [ma_p_ir]
+    #                   upgrade_reliability_reverse = [ma_p_rr]
+    #                }
+    #             }
+    #         }
+    #         ma_p_r = "[?THIS.ma_p_r]"
+    #         ma_p_s = "[?THIS.ma_p_s]"
+    #         ma_p_h = "[?THIS.ma_p_h]"
+    #         ma_p_a = "[?THIS.ma_p_a]"
+    #         ma_p_d = "[?THIS.ma_p_d]"
+    #         ma_p_b = "[?THIS.ma_p_b]"
+    #         ma_p_i = "[?THIS.ma_p_i]"
+    #         ma_p_ir = "[?THIS.ma_p_ir]"
+    #         ma_p_rr = "[?THIS.ma_p_rr]"
+    #     }
+    # }
+    if = {
+        limit = {
+            tag = CIR
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "冰柱机枪" 
+                    type = spell_card156
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = SEI
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "杀鬼针" 
+                    type = spell_card156
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = NMS
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "天上天下拳套" 
+                    type = spell_card156
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+}
+
+ma_p159 = {
+    ma_p_teshufenzhi = yes
+    if = {
+        limit = {
+            tag = SCA
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "Mammon Mark XIV" 
+                    type = spell_card159
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    # if = {
+    #     limit = {
+    #         tag = TEG
+    #     }
+    #     meta_effect = {
+    #         text = {
+    #             create_equipment_variant = { 
+    #                 name = "鸦天狗烈风弹" 
+    #                 type = spell_card159
+    #                 upgrades = {
+    #                   upgrade_reliability = [ma_p_r]
+    #                   upgrade_softattack = [ma_p_s]
+    #                   upgrade_hardattack = [ma_p_h]
+    #                   upgrade_aaattack = [ma_p_a]
+    #                   upgrade_defense = [ma_p_d]
+    #                   upgrade_breakthrough = [ma_p_b]
+    #                   upgrade_ic = [ma_p_i]
+    #                   upgrade_ic_reverse = [ma_p_ir]
+    #                   upgrade_reliability_reverse = [ma_p_rr]
+    #                }
+    #             }
+    #         }
+    #         ma_p_r = "[?THIS.ma_p_r]"
+    #         ma_p_s = "[?THIS.ma_p_s]"
+    #         ma_p_h = "[?THIS.ma_p_h]"
+    #         ma_p_a = "[?THIS.ma_p_a]"
+    #         ma_p_d = "[?THIS.ma_p_d]"
+    #         ma_p_b = "[?THIS.ma_p_b]"
+    #         ma_p_i = "[?THIS.ma_p_i]"
+    #         ma_p_ir = "[?THIS.ma_p_ir]"
+    #         ma_p_rr = "[?THIS.ma_p_rr]"
+    #     }
+    # }
+    if = {
+        limit = {
+            tag = CIR
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "冷冻射线" 
+                    type = spell_card159
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = SEI
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "杀鬼刺目针" 
+                    type = spell_card159
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = NMS
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "凌云地狱拳套" 
+                    type = spell_card159
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+}
+
+ma_p162 = {
+    ma_p_teshufenzhi = yes
+    if = {
+        limit = {
+            tag = SCA
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "Lucifer Mark XIX" 
+                    type = spell_card162
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    # if = {
+    #     limit = {
+    #         tag = TEG
+    #     }
+    #     meta_effect = {
+    #         text = {
+    #             create_equipment_variant = { 
+    #                 name = "大天狗烈风弹" 
+    #                 type = spell_card162
+    #                 upgrades = {
+    #                   upgrade_reliability = [ma_p_r]
+    #                   upgrade_softattack = [ma_p_s]
+    #                   upgrade_hardattack = [ma_p_h]
+    #                   upgrade_aaattack = [ma_p_a]
+    #                   upgrade_defense = [ma_p_d]
+    #                   upgrade_breakthrough = [ma_p_b]
+    #                   upgrade_ic = [ma_p_i]
+    #                   upgrade_ic_reverse = [ma_p_ir]
+    #                   upgrade_reliability_reverse = [ma_p_rr]
+    #                }
+    #             }
+    #         }
+    #         ma_p_r = "[?THIS.ma_p_r]"
+    #         ma_p_s = "[?THIS.ma_p_s]"
+    #         ma_p_h = "[?THIS.ma_p_h]"
+    #         ma_p_a = "[?THIS.ma_p_a]"
+    #         ma_p_d = "[?THIS.ma_p_d]"
+    #         ma_p_b = "[?THIS.ma_p_b]"
+    #         ma_p_i = "[?THIS.ma_p_i]"
+    #         ma_p_ir = "[?THIS.ma_p_ir]"
+    #         ma_p_rr = "[?THIS.ma_p_rr]"
+    #     }
+    # }
+    if = {
+        limit = {
+            tag = CIR
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "钻石风暴" 
+                    type = spell_card162
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = SEI
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "杀鬼刺双目之针" 
+                    type = spell_card162
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = NMS
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "凌云地狱脉冲拳套" 
+                    type = spell_card162
+                    upgrades = {
+                      upgrade_reliability = [ma_p_r]
+                      upgrade_softattack = [ma_p_s]
+                      upgrade_hardattack = [ma_p_h]
+                      upgrade_aaattack = [ma_p_a]
+                      upgrade_defense = [ma_p_d]
+                      upgrade_breakthrough = [ma_p_b]
+                      upgrade_ic = [ma_p_i]
+                      upgrade_ic_reverse = [ma_p_ir]
+                      upgrade_reliability_reverse = [ma_p_rr]
+                   }
+                }
+            }
+            ma_p_r = "[?THIS.ma_p_r]"
+            ma_p_s = "[?THIS.ma_p_s]"
+            ma_p_h = "[?THIS.ma_p_h]"
+            ma_p_a = "[?THIS.ma_p_a]"
+            ma_p_d = "[?THIS.ma_p_d]"
+            ma_p_b = "[?THIS.ma_p_b]"
+            ma_p_i = "[?THIS.ma_p_i]"
+            ma_p_ir = "[?THIS.ma_p_ir]"
+            ma_p_rr = "[?THIS.ma_p_rr]"
+        }
+    }
+}

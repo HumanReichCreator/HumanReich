@@ -1,0 +1,49 @@
+helpKAP = {
+	enable = {
+		has_global_flag = main_scenario
+		has_country_flag = bangzhuzhanglaohui
+		KAP = {
+			has_war_with = NIT
+		}
+	}
+	abort = {
+		KAP = {
+			not = { has_war_with = NIT }
+		}
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "KAP"			
+		value = 150
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "NIT"			
+		value = 150
+	}
+}
+
+helpNIT = {
+	enable = {
+		has_global_flag = main_scenario
+		has_country_flag = bangzhugongheguo
+		NIT = {
+			has_war_with = KAP
+		}
+	}
+	abort = {
+		NIT = {
+			not = { has_war_with = KAP }
+		}
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "NIT"			
+		value = 150
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "KAP"			
+		value = 150
+	}
+}

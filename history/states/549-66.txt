@@ -1,0 +1,34 @@
+
+state={
+	id=549
+	name="STATE_549"
+	resources={
+		energy=0.000
+		powder=3.000
+		metal=0.000
+		gas=10.000
+		crystal=5.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = AKO
+			add_core_of = AKO
+			buildings = {
+				infrastructure = 4
+				industrial_complex = 4
+				arms_factory = 2
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		6999 7003 7007 7014 7015 7018 7020 7023 7024 7025 7026 7033 7034 7035 7036 7037 7039 7040 7041 7042 7043 7044 7047 7050 7051 
+	}
+	manpower=6922
+	buildings_max_level_factor=1.000
+	state_category=s10
+}

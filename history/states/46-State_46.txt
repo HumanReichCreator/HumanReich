@@ -1,0 +1,34 @@
+
+state={
+	id=46
+	name="STATE_46"
+	resources={
+
+		powder=0.000
+		metal=0.000
+		gas=15.000
+		crystal=1.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = SPG
+			add_core_of = SPG
+			buildings = {
+				infrastructure =2
+				industrial_complex = 3
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		734 852 1546 2327 2621 2636 5375 5380 5384 5387 5391 5393 5397 
+	}
+	manpower=13935.0
+	buildings_max_level_factor=1.000
+	state_category=s5
+}

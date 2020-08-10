@@ -1,0 +1,24 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_mbtn_123x34"
+		texturefile = "gfx/interface/button_123x34.dds"
+	}
+	spriteType = {
+		name = "GFX_mhd_long"
+		texturefile = "gfx/introduce/header.dds"
+	}
+	spriteType = {
+		name = "GFX_introduce_bg_World"
+		texturefile = "gfx/introduce/bg_world.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_tiled_introduce_frame"
+		size= { x=615 y=186 }
+		textureFile = "gfx//introduce//frame.dds"
+		borderSize = { x=200 y=20 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+		#alwaystransparent = yes			
+	}
+	
+}

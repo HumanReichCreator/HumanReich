@@ -1,0 +1,179 @@
+technologies = {
+	linglilichangjiaqiang148 = {
+		
+		dependencies = {
+		   linglijiejie146  = 1
+		}
+
+		path = {
+			leads_to_tech = linglilichangjiaqiang154
+			research_cost_coeff = 1
+		}
+
+		sp_jiaqiangban = {
+			soft_attack = 1.5
+		}
+		
+		research_cost = 2
+		start_year = 148
+
+		folder = {
+			name = p_youkai_tech_folder
+			position = { x = 4 y = 2 }
+		}
+		
+		categories = {
+			techtree_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	linglilichangjiaqiang154 = {
+	
+		path = {
+			leads_to_tech = linglilichangjiaqiang160
+			research_cost_coeff = 1
+		}
+
+		sp_jiaqiangban = {
+			hard_attack = 1.5
+		}
+		
+		research_cost = 2
+		start_year = 154
+
+		folder = {
+			name = p_youkai_tech_folder
+			position = { x = 4 y = 4 }
+		}
+		
+		categories = {
+			techtree_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	linglilichangjiaqiang160 = {
+		
+		research_cost = 2
+		start_year = 160
+
+		sp_jiaqiangban = {
+			soft_attack = 0.75
+			hard_attack = 0.75
+		}
+
+		folder = {
+			name = p_youkai_tech_folder
+			position = { x = 4 y = 6 }
+		}
+		
+		categories = {
+			techtree_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	jinglianshimo148 = {
+	
+		path = {
+			leads_to_tech = jinglianshimo154
+			research_cost_coeff = 1
+		}
+
+		category_magic_infantry = {
+			need = {
+				spell_card_a = -6
+			}
+		}
+		on_research_complete = {
+			custom_effect_tooltip = jinglianshimo_tt
+		}
+		
+		research_cost = 2
+		start_year = 148
+
+		folder = {
+			name = p_youkai_tech_folder
+			position = { x = 10 y = 2 }
+		}
+		
+		categories = {
+			techtree_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	jinglianshimo154 = {
+	
+		path = {
+			leads_to_tech = jinglianshimo160
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 154
+
+		category_magic_infantry = {
+			need = {
+				spell_card_a = -6
+			}
+		}
+		on_research_complete = {
+			custom_effect_tooltip = jinglianshimo_tt
+		}
+
+		folder = {
+			name = p_youkai_tech_folder
+			position = { x = 10 y = 4 }
+		}
+		
+		categories = {
+			techtree_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	jinglianshimo160 = {
+		
+		research_cost = 2
+		start_year = 160
+
+		category_magic_infantry = {
+			need = {
+				spell_card_a = -6
+			}
+		}
+		on_research_complete = {
+			custom_effect_tooltip = jinglianshimo_tt
+		}
+
+		folder = {
+			name = p_youkai_tech_folder
+			position = { x = 10 y = 6 }
+		}
+		
+		categories = {
+			techtree_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

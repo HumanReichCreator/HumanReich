@@ -1,0 +1,33 @@
+state={
+	id=408
+	name="STATE_408"
+	provinces={
+		1510 2693 5185 5191 5193 5202 5211 5219 5236 5239 5247 
+	}
+	resources={
+
+		powder=5.000
+		metal=5.000
+		gas=5.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = TEG
+			add_core_of = TEG
+			add_core_of = OTG
+			buildings = {
+				infrastructure =7
+				industrial_complex = 9
+				arms_factory = 6
+
+			}
+
+		}
+
+	}
+	state_category=s15
+	manpower=2877.0
+	buildings_max_level_factor=1.000
+}

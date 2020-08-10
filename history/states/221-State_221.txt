@@ -1,0 +1,35 @@
+
+state={
+	id=221
+	name="STATE_221"
+	resources={
+
+		powder=2.000
+		metal=0.000
+		gas=8.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = MSD
+			add_core_of = MSD
+			add_claim_by = HKR
+			buildings = {
+				infrastructure =1
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		558 885 1204 1726 2854 3251 3254 3812 4276 4501 4504 4507 5731 
+	}
+	manpower=541.0
+	buildings_max_level_factor=1.000
+	state_category=s2
+}

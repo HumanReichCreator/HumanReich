@@ -1,0 +1,45 @@
+
+state={
+	id=320
+	name="STATE_320"
+	resources={
+
+		powder=0.000
+		metal=0.000
+		gas=5.000
+		crystal=5.000
+	}
+
+	history={
+		143.7.1 = {
+			owner = SHO
+			add_core_of = SHO
+			buildings = {
+				infrastructure =2
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+		146.1.1 = {
+			owner = SHO
+			add_core_of = SHO
+			buildings = {
+				infrastructure =3
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		592 2387 3247 3583 3585 3587 3589 
+	}
+	manpower=4606.0
+	buildings_max_level_factor=1.000
+	state_category=s2
+}

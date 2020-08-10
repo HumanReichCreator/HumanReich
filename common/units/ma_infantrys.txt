@@ -1,0 +1,707 @@
+# options for map_icon_category:
+# For land units: infantry,armored,other
+# For sea units: ship,transport,uboat
+
+sub_units = {
+
+	ma_militia = {
+		sprite = infantry
+		map_icon_category = infantry
+		
+		priority = 600
+		ai_priority = 200
+
+		active = yes
+		
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+		
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+
+			category_magic_infantry
+			category_militia
+
+		}
+
+		forest = {
+			attack = 0.05
+			defence = 0.05
+		}
+
+		hills = {
+			attack = 0.05
+			defence = 0.05
+		}
+
+		mountain = {
+			attack = 0.05
+			defence = 0.05
+		}
+
+		jungle = {
+			attack = 0.05
+			defence = 0.05
+		}
+
+		bamboo = {
+			attack = 0.05
+			defence = 0.05
+		}
+
+		soft_attack = -0.08
+		hard_attack = -0.08
+		defense = -0.08
+		breakthrough = -0.08
+		
+		weight = 0.5
+		
+		#Size Definitions
+		max_strength = 45
+		max_organisation = 10
+		default_morale = 0.08
+		
+
+		#Misc Abilities
+		suppression = 2.5
+		combat_width = 45
+		manpower = 5
+		training_time = 80
+
+		supply_consumption = 0.04
+		
+		need = {
+			spell_card_a = 60
+		}
+	}
+
+	ma_infantry = {
+		sprite = infantry
+		map_icon_category = infantry
+		
+		priority = 600
+		ai_priority = 200
+
+		active = yes
+		
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+		
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+
+			category_magic_infantry
+
+			category_main_infantry
+
+		}
+
+		forest = {
+			attack = 0.05
+			defence = 0.05
+		}
+
+		hills = {
+			attack = 0.05
+			defence = 0.05
+		}
+
+		mountain = {
+			attack = 0.05
+			defence = 0.05
+		}
+
+		jungle = {
+			attack = 0.05
+			defence = 0.05
+		}
+
+		bamboo = {
+			attack = 0.05
+			defence = 0.05
+		}
+		
+		weight = 0.5
+		
+		#Size Definitions
+		max_strength = 60
+		max_organisation = 20
+		default_morale = 0.08
+		
+
+		#Misc Abilities
+		suppression = 5
+		combat_width = 45
+		manpower = 5
+		training_time = 180
+
+		supply_consumption = 0.07
+		
+		need = {
+			spell_card_a = 100
+		}
+	}
+
+	ma_light_infantry = {
+		sprite = infantry
+		map_icon_category = infantry
+		
+		priority = 600
+		ai_priority = 200
+
+		active = yes
+		
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+		
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+
+			category_magic_infantry
+
+			category_light_inf
+
+		}
+
+		forest = {
+			attack = 0.15
+			defence = 0.15
+			movement = 0.1
+		}
+
+		hills = {
+			attack = 0.15
+			defence = 0.15
+			movement = 0.1
+		}
+
+		mountain = {
+			attack = 0.15
+			defence = 0.15
+			movement = 0.1
+		}
+
+		jungle = {
+			attack = 0.15
+			defence = 0.15
+			movement = 0.1
+		}
+
+		bamboo = {
+			attack = 0.15
+			defence = 0.15
+			movement = 0.1
+		}
+
+		soft_attack = -0.1
+		hard_attack = -0.1
+		breakthrough = 0.25
+		maximum_speed = 0.15
+		
+		weight = 0.5
+		
+		#Size Definitions
+		max_strength = 45
+		max_organisation = 5
+		default_morale = 0.08
+		
+
+		#Misc Abilities
+		suppression = 6
+		combat_width = 45
+		manpower = 5
+		training_time = 180
+
+		supply_consumption = 0.07
+		
+		need = {
+			spell_card_a = 100
+		}
+	}
+
+	ma_sf_infantry = {
+		sprite = infantry
+		map_icon_category = infantry
+		
+		priority = 1001
+		ai_priority = 200
+		
+		active = no
+		special_forces = yes
+		
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+			
+			category_sf_infantry
+			category_magic_infantry
+		}
+
+		forest = {
+			attack = 0.25
+			defence = 0.25
+		}
+
+		hills = {
+			attack = 0.25
+			defence = 0.25
+		}
+
+		mountain = {
+			attack = 0.25
+			defence = 0.25
+		}
+
+		jungle = {
+			attack = 0.25
+			defence = 0.25
+		}
+
+		bamboo = {
+			attack = 0.25
+			defence = 0.25
+		}
+
+		soft_attack = 1
+		hard_attack = 1
+		breakthrough = 0.5
+		maximum_speed = 0.15
+		
+		hardness = 1
+
+		weight = 0.5
+		
+		#Size Definitions
+		max_strength = 60
+		max_organisation = 38
+		default_morale = 0.08
+		
+
+		#Misc Abilities
+		suppression = 5
+		combat_width = 35
+		manpower = 5
+		training_time = 300
+
+		supply_consumption = 0.08
+		
+		need = {
+			spell_card_a = 150
+			support_equipment = 15
+		}
+	}
+
+	ma_artillery_brigade = {
+		sprite = artillery
+		map_icon_category = infantry
+		priority = 1198
+		ai_priority = 100
+
+		active = yes
+		
+		
+		type = {
+			infantry
+			artillery
+		}
+
+		group = infantry
+		
+		categories = {
+			category_army
+			category_line_artillery
+			category_artillery
+
+			category_art
+		}
+
+		combat_width = 50
+
+		manpower = 3
+		need = {
+			ma_artillery_a = 30
+		}
+		
+		max_strength = 1
+		max_organisation = -25
+		default_morale = 0.02
+		training_time = 200
+		weight = 0.5
+		supply_consumption = 0.22
+
+		#Line artillery bonuses
+		# soft_attack = 0.25
+		
+		forest = {
+			attack = -0.2
+			movement = -0.2
+		}
+
+		hills = {
+			movement = -0.05
+		}
+
+		mountain = {
+			movement = -0.2
+		}
+
+		jungle = {
+			attack = -0.25
+			movement = -0.2
+		}
+
+		marsh = {
+			attack = -0.2
+			movement = -0.3
+		}
+
+		fort = {
+			attack = 0.1
+		}
+
+		river = {
+			attack = -0.2
+			movement = -0.2
+		}
+
+		amphibious = {
+			attack = -0.4
+		}
+	}
+
+	ma_mot_artillery_brigade = {
+		sprite = artillery
+		map_icon_category = infantry
+		priority = 1198
+		ai_priority = 100
+		active = yes
+		
+		type = {
+			motorized
+			artillery
+		}
+
+		group = mobile
+		
+		categories = {
+			category_army
+			category_line_artillery
+			category_artillery
+
+			category_art
+		}
+
+		combat_width = 50
+		transport = motorized_a
+		manpower = 3
+		need = {
+			ma_artillery_a = 30
+			motorized_a = 50
+		}
+		
+		max_strength = 1
+		max_organisation = -25
+		default_morale = 0.02
+		training_time = 200
+		weight = 0.5
+		supply_consumption = 0.32
+
+		#Line artillery bonuses
+		# soft_attack = 0.25
+		
+		forest = {
+			attack = -0.2
+			movement = -0.5
+		}
+
+		hills = {
+			movement = -0.05
+		}
+
+		mountain = {
+			movement = -0.2
+		}
+
+		jungle = {
+			attack = -0.25
+			movement = -0.5
+		}
+
+		marsh = {
+			attack = -0.2
+			movement = -0.3
+		}
+
+		fort = {
+			attack = 0.1
+		}
+
+		river = {
+			attack = -0.2
+			movement = -0.2
+		}
+
+		amphibious = {
+			attack = -0.4
+		}
+	}
+
+	ma_rocket_artillery_brigade = {
+		sprite = "artillery"
+		map_icon_category = infantry
+		priority = 1199
+		ai_priority = 100
+
+		active = no
+		
+		
+		type = {
+			infantry
+			artillery
+		}
+
+		group = infantry
+		
+		categories = {
+			category_army
+			category_line_artillery
+
+			category_art
+		}		
+
+		combat_width = 50
+
+		need = {
+			ma_rocket_artillery_a = 30
+		}
+		
+		manpower = 3
+		max_organisation = -5
+		default_morale = 0.05
+		max_strength = 0.5
+		training_time = 200
+		weight = 0.5
+
+		supply_consumption = 0.22
+		
+		forest = {
+			attack = -0.2
+			movement = -0.2
+		}
+
+		hills = {
+			movement = -0.05
+		}
+
+		mountain = {
+			movement = -0.2
+		}
+
+		jungle = {
+			attack = -0.25
+			movement = -0.2
+		}
+
+		marsh = {
+			attack = -0.2
+			movement = -0.3
+		}
+
+		fort = {
+			attack = 0.1
+		}
+
+		river = {
+			attack = -0.2
+			movement = -0.2
+		}
+
+		amphibious = {
+			attack = -0.4
+		}
+	}
+
+	ma_motorized = {
+		sprite = motorized
+		map_icon_category = infantry
+
+		priority = 599
+		ai_priority = 200
+
+		active = yes
+		
+
+		type = {
+			motorized
+		}
+		
+		group = mobile
+		
+		categories = {
+			category_front_line
+			category_all_infantry
+			category_army
+			category_magic_infantry
+
+			category_motor_infantry
+		}
+		
+		combat_width = 45
+		
+		#Size Definitions
+		max_strength = 60
+		max_organisation = 20
+		default_morale = 0.08
+		manpower = 5
+
+		#Misc Abilities
+		training_time = 250
+		suppression = 7.5
+		weight = 0.5
+		supply_consumption = 0.12
+	
+		# this is what moves us and sets speed
+		transport = motorized_a
+	
+		need = {
+			spell_card_a = 100
+			motorized_a = 50
+		}
+
+		forest = {
+			attack = -0.1
+			movement = -0.5
+		}
+		mountain = {
+			attack = -0.05
+		}
+		jungle = {
+			attack = -0.2
+			movement = -0.5
+		}
+		marsh = {
+			attack = -0.1
+			movement = -0.3
+		}
+		urban = {
+			attack = -0.1
+		}
+		river = {
+			attack = -0.1
+			movement = -0.1
+		}
+		amphibious = {
+			attack = -0.2
+		}
+	}
+
+	ma_mechanized = {
+		sprite = mechanized
+		map_icon_category = infantry
+
+		priority = 599
+		ai_priority = 200
+
+		active = no
+		
+
+		type = {
+			mechanized
+		}
+		
+		group = mobile
+		
+		categories = {
+			category_front_line
+			category_all_infantry
+			category_magic_infantry
+			category_mech_infantry
+		}
+		
+		max_strength = 90
+		max_organisation = 40
+		default_morale = 0.05
+		suppression = 5
+		combat_width = 30
+		manpower = 5
+		training_time = 250
+		supply_consumption = 0.18
+
+		soft_attack = 0.35
+		hard_attack = 0.35
+	
+		weight = 0.5
+		# this is what moves us and sets speed
+		transport = new_armorcar_a
+	
+		need = {
+			spell_card_a = 100
+			new_armorcar_a = 50
+		}
+
+		essential = {
+			spell_card_a
+			new_armorcar_a
+		}
+
+		forest = {
+			attack = -0.2
+		}
+		mountain = {
+			attack = -0.05
+		}
+		jungle = {
+			attack = -0.3
+		}
+		marsh = {
+			attack = -0.1
+		}
+		urban = {
+			attack = -0.2
+			defence = -0.05
+		}
+		river = {
+			attack = -0.2
+			movement = -0.2
+		}
+		amphibious = {
+			attack = -0.4
+		}
+
+		# hardness = 0.2
+	}
+
+}

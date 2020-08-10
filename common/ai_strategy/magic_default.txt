@@ -1,0 +1,149 @@
+# # Written by Henrik "Groogy" Hansson
+# # Modified by Daniel "Da9L" Sjöberg
+
+# # befriend
+# # conquer
+# # antagonize
+# # build_ship
+# # build_army
+# # unit_ratio
+# # build_building
+# # research_tech
+# # garrison
+# # protect
+# # influence
+# # contain
+# # area_priority
+
+#out
+default_magic_unit_production = {
+	 enable = {
+		 has_global_flag = main_scenario
+		 not = { has_tech = waike }
+	 }
+	 ai_strategy = {
+		 type = role_ratio
+		 id = magic_infantry
+		 value = 55
+	 }
+
+	 ai_strategy = {
+		 type = role_ratio
+		 id = magic_reserve_infantry
+		 value = 30
+	 }
+
+	 ai_strategy = {
+		 type = role_ratio
+		 id = magic_light_infantry
+		 value = 15
+	 }
+
+	 ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = 90
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = cas
+		value = 10
+	}
+
+	 ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 10
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 30
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 60
+	}
+}
+
+default_magic_garrison_production = {
+	enable = {
+		ai_wants_divisions >  100 #Massively decreasing the amount of garrison and suppression the AI wants
+		is_major = yes
+		not = { has_tech = waike }
+	}
+	abort = {
+		ai_wants_divisions < 100 #Massively decreasing the amount of garrison and suppression the AI wants
+		is_major = no
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = magic_garrison
+		value = 0.5
+	}
+	 
+	ai_strategy = {
+		type = role_ratio
+		id = magic_suppression
+		value = 0.1
+	}
+}
+
+default_magic_mobile_production = {
+	enable = {
+		ai_wants_divisions > 200
+		or = {
+			has_tech = qiyouche146
+			has_tech = yaoshiche147
+		}
+		not = { has_tech = waike }
+	}
+	abort = {
+		ai_wants_divisions < 200
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = magic_mobile
+		value = 2
+	}
+}
+
+default_magic_armored_production = {
+	enable = {
+		ai_wants_divisions > 200
+		has_tech = danmutanke151
+		has_tech = danmuzhuangjiache151
+		not = { has_tech = waike }
+	}
+	abort = {
+		ai_wants_divisions < 200
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = magic_armor
+		value = 1
+	}
+}
+
+default_stockpile_management = {
+	enable = {
+		num_divisions > 150
+		not = { has_tech = waike }
+	}
+
+	abort = {
+		num_divisions < 130
+	}
+
+	ai_strategy = {
+		type = equipment_stockpile_surplus_ratio
+		value = 35 # double base stockpile #from 25 to 35
+	}
+}

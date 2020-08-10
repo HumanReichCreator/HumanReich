@@ -1,0 +1,146 @@
+ideas = {
+
+	scale = { 
+		law = yes
+
+		Tribal = {
+			allowed_to_remove = {
+				always = no
+			}
+			cost = 0
+			cancel_if_invalid = no
+			modifier = {
+				conscription_factor = 0.3
+				mobilization_speed = 0.1
+				army_org_factor = -0.3
+				PRODUCTION_SPEED_BUILDINGS_FACTOR = -0.25
+				industrial_capacity_factory = -0.25
+				research_speed_factor = -0.4
+				army_attack_factor = 0.25
+				army_defence_factor = 0.25
+				stability_weekly = -0.002
+
+				justify_war_goal_time = -0.5
+				enemy_justify_war_goal_time = -0.25
+				generate_wargoal_tension = -1
+			}
+			default = yes
+		}
+
+		Town = {
+									
+			allowed_to_remove = {
+				always = no
+			}
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.25
+				stability_factor = 0.1
+				conscription_factor = 0.05
+				operative_slot = 1
+			}
+			cost = 0
+			cancel_if_invalid = no
+		}
+		
+		Village = {
+									
+			allowed_to_remove = {
+				always = no
+			}
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.1
+				stability_factor = 0.05
+			}
+			cost = 0
+			cancel_if_invalid = no
+		}
+		Shrine = {
+									
+			allowed_to_remove = {
+				always = no
+			}
+			
+			modifier = {
+				conscription_factor = 0.1
+				CONSUMER_GOODS_FACTOR = -0.05
+				PRODUCTION_SPEED_BUILDINGS_FACTOR = -0.15
+				industrial_capacity_factory = -0.15
+				TRAINING_TIME_ARMY_FACTOR = -0.2
+				army_org_factor = 0.25
+				ARMY_MORALE_factor = 0.15
+				research_speed_factor = -0.25
+				stability_factor = 0.35
+				war_support_factor = 0.05
+
+			}
+			cost = 0
+			cancel_if_invalid = no
+		}
+		
+		# Organization = {
+									
+		# 	available = {
+		# 		 always = no
+		# 	 }
+			
+		# 	modifier = {
+		# 	#	UNITY_FACTOR = -0.05
+		# 		TRAINING_TIME_ARMY_FACTOR = 0.1
+		# 		CONSUMER_GOODS_FACTOR = -0.02
+		# 		army_org_factor = -0.1
+
+		# 	}
+		# 	cost = 0
+		# 	default = yes
+		# 	cancel_if_invalid = no
+		# }
+		
+		Country = {
+									
+			allowed_to_remove = {
+				always = no
+			}
+			
+			modifier = {
+			MONTHLY_POPULATION = 0.3
+			CONSUMER_GOODS_FACTOR = 0.01
+			# UNITY_FACTOR = 0.05
+			TRAINING_TIME_FACTOR = -0.05
+			POLITICAL_POWER_GAIN = 0.1
+			army_org_factor = 0.1
+			stability_factor = 0.15
+			conscription_factor = 0.1
+			operative_slot = 2
+			
+	#	    war_impact_on_world_tension = 0.25			
+	#	    faction_impact_on_world_tension = 0.25
+			
+			}
+			cost = 0
+			cancel_if_invalid = no
+		}
+		Empire = {
+									
+			allowed_to_remove = {
+				always = no
+			}
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.3
+				# CONSUMER_GOODS_FACTOR = 0.01
+				POLITICAL_POWER_GAIN = 0.35
+				TRAINING_TIME_FACTOR = -0.05
+				stability_factor = 0.25
+				# UNITY_FACTOR = 0.1
+				army_org_factor = 0.1
+				conscription_factor = 0.15
+				operative_slot = 2
+			}
+			cost = 0
+			cancel_if_invalid = no
+		}
+
+	}
+}

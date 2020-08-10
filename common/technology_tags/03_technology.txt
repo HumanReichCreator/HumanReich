@@ -1,0 +1,260 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new technology, make sure they are uniquely named.
+
+technology_categories = {
+	#########
+	#通用
+	science
+	magic
+	combined
+	
+	civil
+	military
+	
+
+	#武器系
+	infantry
+	science_weapons
+	science_weapons_improve
+	magic_weapons
+	magic_weapons_improve
+	combined_weapons
+	combined_weapons_improve
+
+	vehicle
+	science_vehicle_weapons
+	science_vehicle_improve
+	magic_vehicle_weapons
+	combined_vehicle_weapons
+
+	air_equipment
+	science_fighter
+	science_CAS
+	magic_fighter
+	magic_CAS
+
+	magic_support
+	science_support
+
+	artillery_tech
+	magic_artillery_weapons
+	magic_rocket_artillery
+	magic_artillery_improve
+	science_artillery_weapons
+	science_artillery_improve
+	combined_artillery_weapons
+	combined_artillery_improve
+	
+	basic_doctrine
+
+	sf_force
+
+	##########
+	#工业类	
+	industrys
+	jiegou
+	
+	main
+	fuzhu
+
+	build
+
+	resource
+	resource_mining
+	resource_building
+
+	oil_res
+	metal_res
+	powder_res
+	gas_res
+	crystal_res
+	###########
+	#工业2
+	math
+	jiemi
+	jiami
+	radio
+
+	##############
+	race
+	
+	secret
+
+	techtree_tech
+}
+
+technology_folders = {
+	# infantry_general_folder = {
+		
+	# }
+	electronics_sc_folder = {
+		available = {
+			or = {
+				has_idea = hum_tech
+				has_idea = kap_tech
+			}
+		}
+	}
+	electronics_ma_folder = {
+		available = {
+			or = {
+				has_idea = p_youkai_tech
+				has_idea = big_youkai_tech
+			}
+		}
+	}
+	industry_sc_folder = {
+		available = {
+			or = {
+				has_idea = hum_tech
+				has_idea = kap_tech
+			}
+		}
+	}
+	industry_ma_folder = {
+		available = {
+			or = {
+				has_idea = p_youkai_tech
+				has_idea = big_youkai_tech
+			}
+		}
+	}
+	hum_tech_folder = {
+		available = {
+			has_idea = hum_tech
+		}
+	}
+	kap_tech_folder = {
+		available = {
+			has_idea = kap_tech
+		}
+	}
+	p_youkai_tech_folder = {
+		available = {
+			has_idea = p_youkai_tech
+		}
+	}
+	youkai_tech_folder = {
+		available = {
+			has_idea = big_youkai_tech
+		}
+	}
+
+	Beast_race_tech_folder = {
+		available = {
+			has_idea = Beast
+		}
+	}
+	Human_race_tech_folder = {
+		available = {
+			has_idea = Human
+		}
+	}
+	Pri_youkai_race_tech_folder = {
+		available = {
+			has_idea = Pri_youkai
+		}
+	}
+	Youkai_race_tech_folder = {
+		available = {
+			has_idea = Youkai
+		}
+	}
+	Magician_race_tech_folder = {
+		available = {
+			has_idea = Magician
+		}
+	}
+	Kappa_race_tech_folder = {
+		available = {
+			has_idea = Kappa
+		}
+	}
+	Tenggu_race_tech_folder = {
+		available = {
+			has_idea = Tenggu
+		}
+	}
+	God_race_tech_folder = {
+		available = {
+			has_idea = God
+		}
+	}
+	Fairy_race_tech_folder = {
+		available = {
+			has_idea = Fairy
+		}
+	}
+	Ghost_race_tech_folder = {
+		available = {
+			has_idea = Ghost
+		}
+	}
+
+	secret_folder = {
+		available = {
+			always = no
+		}
+	}
+
+	infantry_general_folder = {
+		
+	}
+	infantry_sc_support_folder = {
+		available = {
+			or = {
+				has_idea = hum_tech
+				has_idea = kap_tech
+			}
+		}
+	}
+	infantry_sc_primary_folder = {
+		available = {
+			or = {
+				has_idea = hum_tech
+				has_idea = kap_tech
+			}
+		}
+	}
+	infantry_sc_advanced_folder = {
+		available = {
+			or = {
+				has_idea = hum_tech
+				has_idea = kap_tech
+			}
+		}
+	}
+	infantry_ma_support_folder = {
+		available = {
+			or = {
+				has_idea = p_youkai_tech
+				has_idea = big_youkai_tech
+			}
+		}
+	}
+	infantry_ma_primary_folder = {
+		available = {
+			or = {
+				has_idea = p_youkai_tech
+				has_idea = big_youkai_tech
+			}
+		}
+	}
+	infantry_ma_advanced_folder = {
+		available = {
+			or = {
+				has_idea = p_youkai_tech
+				has_idea = big_youkai_tech
+			}
+		}
+	}
+	infantry_combined_folder = {
+		available = {
+			or = {
+				has_tech = lingkejiehe149
+			}
+		}
+	}
+}
+
+ 

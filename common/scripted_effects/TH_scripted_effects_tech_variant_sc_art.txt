@@ -1,0 +1,460 @@
+sc_weapons_art = {
+    if = {
+        limit = {
+            has_tech = fangzhihuopao143
+        }
+        sc_a143 = yes
+    }
+    if = {
+        limit = {
+            has_tech = fangzhihuopao148
+        }
+        sc_a148 = yes
+    }
+    if = {
+        limit = {
+            has_tech = fangzhihuopao153
+        }
+        sc_a153 = yes
+    }
+    if = {
+        limit = {
+            has_tech = fangzhihuopao158
+        }
+        sc_a158 = yes
+    }
+}
+
+sc_a_teshufenzhi = {
+    if = {
+        limit = {
+            not = {
+                and = {
+                    check_variable = { sc_a_r = 0}
+                    check_variable = { sc_a_s = 0}
+                    check_variable = { sc_a_h = 0}
+                    check_variable = { sc_a_a = 0}
+                    check_variable = { sc_a_d = 0}
+                    check_variable = { sc_a_b = 0}
+                    check_variable = { sc_a_i = 0}
+                    check_variable = { sc_a_ir = 0}
+                    check_variable = { sc_a_rr = 0}
+                }
+            }
+        }
+        custom_effect_tooltip = tech_special
+    }
+}
+
+sc_a143 = {
+    sc_a_teshufenzhi = yes
+    if = {
+        limit = {
+            tag = YSK
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "灵力火炮" 
+                    type = sc_artillery143
+                    upgrades = {
+                      upgrade_reliability = [sc_a_r]
+                      upgrade_softattack = [sc_a_s]
+                      upgrade_hardattack = [sc_a_h]
+                      upgrade_aaattack = [sc_a_a]
+                      upgrade_defense = [sc_a_d]
+                      upgrade_breakthrough = [sc_a_b]
+                      upgrade_ic = [sc_a_i]
+                      upgrade_ic_reverse = [sc_a_ir]
+                      upgrade_reliability_reverse = [sc_a_rr]
+                   }
+                }
+            }
+            sc_a_r = "[?THIS.sc_a_r]"
+            sc_a_s = "[?THIS.sc_a_s]"
+            sc_a_h = "[?THIS.sc_a_h]"
+            sc_a_a = "[?THIS.sc_a_a]"
+            sc_a_d = "[?THIS.sc_a_d]"
+            sc_a_b = "[?THIS.sc_a_b]"
+            sc_a_i = "[?THIS.sc_a_i]"
+            sc_a_ir = "[?THIS.sc_a_ir]"
+            sc_a_rr = "[?THIS.sc_a_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = KOG
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "太鼓炮" 
+                    type = sc_artillery143
+                    upgrades = {
+                      upgrade_reliability = [sc_a_r]
+                      upgrade_softattack = [sc_a_s]
+                      upgrade_hardattack = [sc_a_h]
+                      upgrade_aaattack = [sc_a_a]
+                      upgrade_defense = [sc_a_d]
+                      upgrade_breakthrough = [sc_a_b]
+                      upgrade_ic = [sc_a_i]
+                      upgrade_ic_reverse = [sc_a_ir]
+                      upgrade_reliability_reverse = [sc_a_rr]
+                   }
+                }
+            }
+            sc_a_r = "[?THIS.sc_a_r]"
+            sc_a_s = "[?THIS.sc_a_s]"
+            sc_a_h = "[?THIS.sc_a_h]"
+            sc_a_a = "[?THIS.sc_a_a]"
+            sc_a_d = "[?THIS.sc_a_d]"
+            sc_a_b = "[?THIS.sc_a_b]"
+            sc_a_i = "[?THIS.sc_a_i]"
+            sc_a_ir = "[?THIS.sc_a_ir]"
+            sc_a_rr = "[?THIS.sc_a_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = TEG
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "黑鸦炮"
+                    type = sc_artillery143
+                    upgrades = {
+                      upgrade_reliability = [sc_a_r]
+                      upgrade_softattack = [sc_a_s]
+                      upgrade_hardattack = [sc_a_h]
+                      upgrade_aaattack = [sc_a_a]
+                      upgrade_defense = [sc_a_d]
+                      upgrade_breakthrough = [sc_a_b]
+                      upgrade_ic = [sc_a_i]
+                      upgrade_ic_reverse = [sc_a_ir]
+                      upgrade_reliability_reverse = [sc_a_rr]
+                   }
+                }
+            }
+            sc_a_r = "[?THIS.sc_a_r]"
+            sc_a_s = "[?THIS.sc_a_s]"
+            sc_a_h = "[?THIS.sc_a_h]"
+            sc_a_a = "[?THIS.sc_a_a]"
+            sc_a_d = "[?THIS.sc_a_d]"
+            sc_a_b = "[?THIS.sc_a_b]"
+            sc_a_i = "[?THIS.sc_a_i]"
+            sc_a_ir = "[?THIS.sc_a_ir]"
+            sc_a_rr = "[?THIS.sc_a_rr]"
+        }
+    }
+}
+
+
+sc_a148 = {
+    sc_a_teshufenzhi = yes
+    if = {
+        limit = {
+            tag = YSK
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "御柱火炮" 
+                    type = sc_artillery148
+                    upgrades = {
+                      upgrade_reliability = [sc_a_r]
+                      upgrade_softattack = [sc_a_s]
+                      upgrade_hardattack = [sc_a_h]
+                      upgrade_aaattack = [sc_a_a]
+                      upgrade_defense = [sc_a_d]
+                      upgrade_breakthrough = [sc_a_b]
+                      upgrade_ic = [sc_a_i]
+                      upgrade_ic_reverse = [sc_a_ir]
+                      upgrade_reliability_reverse = [sc_a_rr]
+                   }
+                }
+            }
+            sc_a_r = "[?THIS.sc_a_r]"
+            sc_a_s = "[?THIS.sc_a_s]"
+            sc_a_h = "[?THIS.sc_a_h]"
+            sc_a_a = "[?THIS.sc_a_a]"
+            sc_a_d = "[?THIS.sc_a_d]"
+            sc_a_b = "[?THIS.sc_a_b]"
+            sc_a_i = "[?THIS.sc_a_i]"
+            sc_a_ir = "[?THIS.sc_a_ir]"
+            sc_a_rr = "[?THIS.sc_a_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = KOG
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "低音炮" 
+                    type = sc_artillery148
+                    upgrades = {
+                      upgrade_reliability = [sc_a_r]
+                      upgrade_softattack = [sc_a_s]
+                      upgrade_hardattack = [sc_a_h]
+                      upgrade_aaattack = [sc_a_a]
+                      upgrade_defense = [sc_a_d]
+                      upgrade_breakthrough = [sc_a_b]
+                      upgrade_ic = [sc_a_i]
+                      upgrade_ic_reverse = [sc_a_ir]
+                      upgrade_reliability_reverse = [sc_a_rr]
+                   }
+                }
+            }
+            sc_a_r = "[?THIS.sc_a_r]"
+            sc_a_s = "[?THIS.sc_a_s]"
+            sc_a_h = "[?THIS.sc_a_h]"
+            sc_a_a = "[?THIS.sc_a_a]"
+            sc_a_d = "[?THIS.sc_a_d]"
+            sc_a_b = "[?THIS.sc_a_b]"
+            sc_a_i = "[?THIS.sc_a_i]"
+            sc_a_ir = "[?THIS.sc_a_ir]"
+            sc_a_rr = "[?THIS.sc_a_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = TEG
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "天狗炮" 
+                    type = sc_artillery148
+                    upgrades = {
+                      upgrade_reliability = [sc_a_r]
+                      upgrade_softattack = [sc_a_s]
+                      upgrade_hardattack = [sc_a_h]
+                      upgrade_aaattack = [sc_a_a]
+                      upgrade_defense = [sc_a_d]
+                      upgrade_breakthrough = [sc_a_b]
+                      upgrade_ic = [sc_a_i]
+                      upgrade_ic_reverse = [sc_a_ir]
+                      upgrade_reliability_reverse = [sc_a_rr]
+                   }
+                }
+            }
+            sc_a_r = "[?THIS.sc_a_r]"
+            sc_a_s = "[?THIS.sc_a_s]"
+            sc_a_h = "[?THIS.sc_a_h]"
+            sc_a_a = "[?THIS.sc_a_a]"
+            sc_a_d = "[?THIS.sc_a_d]"
+            sc_a_b = "[?THIS.sc_a_b]"
+            sc_a_i = "[?THIS.sc_a_i]"
+            sc_a_ir = "[?THIS.sc_a_ir]"
+            sc_a_rr = "[?THIS.sc_a_rr]"
+        }
+    }
+}
+
+sc_a153 = {
+    sc_a_teshufenzhi = yes
+    if = {
+        limit = {
+            tag = YSK
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "神德火炮" 
+                    type = sc_artillery153
+                    upgrades = {
+                      upgrade_reliability = [sc_a_r]
+                      upgrade_softattack = [sc_a_s]
+                      upgrade_hardattack = [sc_a_h]
+                      upgrade_aaattack = [sc_a_a]
+                      upgrade_defense = [sc_a_d]
+                      upgrade_breakthrough = [sc_a_b]
+                      upgrade_ic = [sc_a_i]
+                      upgrade_ic_reverse = [sc_a_ir]
+                      upgrade_reliability_reverse = [sc_a_rr]
+                   }
+                }
+            }
+            sc_a_r = "[?THIS.sc_a_r]"
+            sc_a_s = "[?THIS.sc_a_s]"
+            sc_a_h = "[?THIS.sc_a_h]"
+            sc_a_a = "[?THIS.sc_a_a]"
+            sc_a_d = "[?THIS.sc_a_d]"
+            sc_a_b = "[?THIS.sc_a_b]"
+            sc_a_i = "[?THIS.sc_a_i]"
+            sc_a_ir = "[?THIS.sc_a_ir]"
+            sc_a_rr = "[?THIS.sc_a_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = KOG
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "交替打击炮" 
+                    type = sc_artillery153
+                    upgrades = {
+                      upgrade_reliability = [sc_a_r]
+                      upgrade_softattack = [sc_a_s]
+                      upgrade_hardattack = [sc_a_h]
+                      upgrade_aaattack = [sc_a_a]
+                      upgrade_defense = [sc_a_d]
+                      upgrade_breakthrough = [sc_a_b]
+                      upgrade_ic = [sc_a_i]
+                      upgrade_ic_reverse = [sc_a_ir]
+                      upgrade_reliability_reverse = [sc_a_rr]
+                   }
+                }
+            }
+            sc_a_r = "[?THIS.sc_a_r]"
+            sc_a_s = "[?THIS.sc_a_s]"
+            sc_a_h = "[?THIS.sc_a_h]"
+            sc_a_a = "[?THIS.sc_a_a]"
+            sc_a_d = "[?THIS.sc_a_d]"
+            sc_a_b = "[?THIS.sc_a_b]"
+            sc_a_i = "[?THIS.sc_a_i]"
+            sc_a_ir = "[?THIS.sc_a_ir]"
+            sc_a_rr = "[?THIS.sc_a_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = TEG
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "鸦天狗炮" 
+                    type = sc_artillery153
+                    upgrades = {
+                      upgrade_reliability = [sc_a_r]
+                      upgrade_softattack = [sc_a_s]
+                      upgrade_hardattack = [sc_a_h]
+                      upgrade_aaattack = [sc_a_a]
+                      upgrade_defense = [sc_a_d]
+                      upgrade_breakthrough = [sc_a_b]
+                      upgrade_ic = [sc_a_i]
+                      upgrade_ic_reverse = [sc_a_ir]
+                      upgrade_reliability_reverse = [sc_a_rr]
+                   }
+                }
+            }
+            sc_a_r = "[?THIS.sc_a_r]"
+            sc_a_s = "[?THIS.sc_a_s]"
+            sc_a_h = "[?THIS.sc_a_h]"
+            sc_a_a = "[?THIS.sc_a_a]"
+            sc_a_d = "[?THIS.sc_a_d]"
+            sc_a_b = "[?THIS.sc_a_b]"
+            sc_a_i = "[?THIS.sc_a_i]"
+            sc_a_ir = "[?THIS.sc_a_ir]"
+            sc_a_rr = "[?THIS.sc_a_rr]"
+        }
+    }
+}
+
+sc_a158 = {
+    sc_a_teshufenzhi = yes
+    if = {
+        limit = {
+            tag = YSK
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "神罚火炮" 
+                    type = sc_artillery158
+                    upgrades = {
+                      upgrade_reliability = [sc_a_r]
+                      upgrade_softattack = [sc_a_s]
+                      upgrade_hardattack = [sc_a_h]
+                      upgrade_aaattack = [sc_a_a]
+                      upgrade_defense = [sc_a_d]
+                      upgrade_breakthrough = [sc_a_b]
+                      upgrade_ic = [sc_a_i]
+                      upgrade_ic_reverse = [sc_a_ir]
+                      upgrade_reliability_reverse = [sc_a_rr]
+                   }
+                }
+            }
+            sc_a_r = "[?THIS.sc_a_r]"
+            sc_a_s = "[?THIS.sc_a_s]"
+            sc_a_h = "[?THIS.sc_a_h]"
+            sc_a_a = "[?THIS.sc_a_a]"
+            sc_a_d = "[?THIS.sc_a_d]"
+            sc_a_b = "[?THIS.sc_a_b]"
+            sc_a_i = "[?THIS.sc_a_i]"
+            sc_a_ir = "[?THIS.sc_a_ir]"
+            sc_a_rr = "[?THIS.sc_a_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = KOG
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "太鼓火箭炮" 
+                    type = sc_artillery158
+                    upgrades = {
+                      upgrade_reliability = [sc_a_r]
+                      upgrade_softattack = [sc_a_s]
+                      upgrade_hardattack = [sc_a_h]
+                      upgrade_aaattack = [sc_a_a]
+                      upgrade_defense = [sc_a_d]
+                      upgrade_breakthrough = [sc_a_b]
+                      upgrade_ic = [sc_a_i]
+                      upgrade_ic_reverse = [sc_a_ir]
+                      upgrade_reliability_reverse = [sc_a_rr]
+                   }
+                }
+            }
+            sc_a_r = "[?THIS.sc_a_r]"
+            sc_a_s = "[?THIS.sc_a_s]"
+            sc_a_h = "[?THIS.sc_a_h]"
+            sc_a_a = "[?THIS.sc_a_a]"
+            sc_a_d = "[?THIS.sc_a_d]"
+            sc_a_b = "[?THIS.sc_a_b]"
+            sc_a_i = "[?THIS.sc_a_i]"
+            sc_a_ir = "[?THIS.sc_a_ir]"
+            sc_a_rr = "[?THIS.sc_a_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = TEG
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "天狗开风炮" 
+                    type = sc_artillery158
+                    upgrades = {
+                      upgrade_reliability = [sc_a_r]
+                      upgrade_softattack = [sc_a_s]
+                      upgrade_hardattack = [sc_a_h]
+                      upgrade_aaattack = [sc_a_a]
+                      upgrade_defense = [sc_a_d]
+                      upgrade_breakthrough = [sc_a_b]
+                      upgrade_ic = [sc_a_i]
+                      upgrade_ic_reverse = [sc_a_ir]
+                      upgrade_reliability_reverse = [sc_a_rr]
+                   }
+                }
+            }
+            sc_a_r = "[?THIS.sc_a_r]"
+            sc_a_s = "[?THIS.sc_a_s]"
+            sc_a_h = "[?THIS.sc_a_h]"
+            sc_a_a = "[?THIS.sc_a_a]"
+            sc_a_d = "[?THIS.sc_a_d]"
+            sc_a_b = "[?THIS.sc_a_b]"
+            sc_a_i = "[?THIS.sc_a_i]"
+            sc_a_ir = "[?THIS.sc_a_ir]"
+            sc_a_rr = "[?THIS.sc_a_rr]"
+        }
+    }
+}

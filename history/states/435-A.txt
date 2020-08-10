@@ -1,0 +1,31 @@
+state={
+	id=435
+	name="STATE_435"
+	resources={
+		energy = 0
+		powder = 0.0
+		metal = 0
+		gas = 0.0
+		crystal = 5.0
+	}
+	provinces={
+		5955 5956 5957 5958 5959 5960 5961 5962 5963 5964 5965 5966 5972 5973 5976 5978 5980 5982 5985 5989 5992 5997 
+	}
+	history={
+		146.1.1 = {
+			owner = OKI
+			add_core_of = OKI
+			buildings = {
+				infrastructure = 5
+				industrial_complex = 1
+				arms_factory = 1
+
+			}
+
+		}
+
+	}
+	manpower=1033.0
+	state_category=s5
+	buildings_max_level_factor=1.000
+}

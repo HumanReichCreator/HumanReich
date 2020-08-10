@@ -1,0 +1,444 @@
+technologies = {
+	beast_tech = {
+
+	    dependencies = {
+	       abandoned = 1
+	    }
+
+	    path = {
+			leads_to_tech = yaohuakecheng1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = yeguangzhili1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = qianxingtujidui1
+			research_cost_coeff = 1
+		}
+	    
+	    research_cost = 1
+	    allow = {
+	      always = no
+	    }
+	    folder = {
+	      name = Beast_race_tech_folder
+	      position = { x = 10 y = 0 }
+	    }
+	    
+	    categories = {
+	      secret
+	    }
+	    
+	    ai_will_do = {
+	      factor = 1
+	    }
+	}
+	yaohuakecheng1 = {
+	
+		path = {
+			leads_to_tech = yaohuakecheng2
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.2
+		start_year = 144
+
+		conscription_factor = 0.02
+
+		folder = {
+			name = Beast_race_tech_folder
+			position = { x = 4 y = 2 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	yaohuakecheng2 = {
+	
+		path = {
+			leads_to_tech = yaohuakecheng3
+			research_cost_coeff = 1
+		}
+
+		conscription_factor = 0.02
+		
+		research_cost = 2.2
+		start_year = 148
+
+		folder = {
+			name = Beast_race_tech_folder
+			position = { x = 4 y = 4 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	yaohuakecheng3 = {
+	
+		path = {
+			leads_to_tech = yaohuakecheng4
+			research_cost_coeff = 1
+		}
+
+		conscription_factor = 0.02
+		
+		research_cost = 2.2
+		start_year = 152
+
+		folder = {
+			name = Beast_race_tech_folder
+			position = { x = 4 y = 6 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	yaohuakecheng4 = {
+	
+		path = {
+			leads_to_tech = yaohuakecheng5
+			research_cost_coeff = 1
+		}
+
+		conscription_factor = 0.02
+		
+		research_cost = 2.2
+		start_year = 156
+
+		folder = {
+			name = Beast_race_tech_folder
+			position = { x = 4 y = 8 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	yaohuakecheng5 = {
+
+		conscription_factor = 0.02
+		
+		research_cost = 2.2
+		start_year = 160
+
+		folder = {
+			name = Beast_race_tech_folder
+			position = { x = 4 y = 10 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	yeguangzhili1 = {
+	
+		path = {
+			leads_to_tech = yeguangzhili2
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.2
+		start_year = 144
+
+		LAND_NIGHT_ATTACK = 0.06
+
+		folder = {
+			name = Beast_race_tech_folder
+			position = { x = 10 y = 2 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	yeguangzhili2 = {
+	
+		path = {
+			leads_to_tech = yeguangzhili3
+			research_cost_coeff = 1
+		}
+
+		LAND_NIGHT_ATTACK = 0.06
+		
+		research_cost = 2.2
+		start_year = 148
+
+		folder = {
+			name = Beast_race_tech_folder
+			position = { x = 10 y = 4 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	yeguangzhili3 = {
+	
+		path = {
+			leads_to_tech = yeguangzhili4
+			research_cost_coeff = 1
+		}
+
+		LAND_NIGHT_ATTACK = 0.06
+		
+		research_cost = 2.2
+		start_year = 152
+
+		folder = {
+			name = Beast_race_tech_folder
+			position = { x = 10 y = 6 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	yeguangzhili4 = {
+	
+		path = {
+			leads_to_tech = yeguangzhili5
+			research_cost_coeff = 1
+		}
+
+		LAND_NIGHT_ATTACK = 0.06
+		
+		research_cost = 2.2
+		start_year = 156
+
+		folder = {
+			name = Beast_race_tech_folder
+			position = { x = 10 y = 8 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	yeguangzhili5 = {
+
+		LAND_NIGHT_ATTACK = 0.06
+		
+		research_cost = 2.2
+		start_year = 160
+
+		folder = {
+			name = Beast_race_tech_folder
+			position = { x = 10 y = 10 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	qianxingtujidui1 = {
+	
+		path = {
+			leads_to_tech = qianxingtujidui2
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			Beast_special_1
+		}
+
+		enable_subunits = {
+			Beast_special
+		}
+		
+		research_cost = 2.2
+		start_year = 144
+
+		folder = {
+			name = Beast_race_tech_folder
+			position = { x = 16 y = 2 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	qianxingtujidui2 = {
+	
+		path = {
+			leads_to_tech = qianxingtujidui3
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			Beast_special_2
+		}
+
+		Beast_special = {
+			combat_width = -5
+		}
+		
+		research_cost = 2.2
+		start_year = 148
+
+		folder = {
+			name = Beast_race_tech_folder
+			position = { x = 16 y = 4 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	qianxingtujidui3 = {
+	
+		path = {
+			leads_to_tech = qianxingtujidui4
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			Beast_special_3
+		}
+
+		Beast_special = {
+			combat_width = -5
+		}
+
+
+		
+		research_cost = 2.2
+		start_year = 152
+
+		folder = {
+			name = Beast_race_tech_folder
+			position = { x = 16 y = 6 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	qianxingtujidui4 = {
+	
+		path = {
+			leads_to_tech = qianxingtujidui5
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			Beast_special_4
+		}
+
+		Beast_special = {
+			combat_width = -5
+		}
+		
+		research_cost = 2.2
+		start_year = 156
+
+		folder = {
+			name = Beast_race_tech_folder
+			position = { x = 16 y = 8 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	qianxingtujidui5 = {
+		
+		research_cost = 2.2
+		start_year = 160
+
+		enable_equipments = {
+			Beast_special_5
+		}
+
+		Beast_special = {
+			combat_width = -5
+		}
+
+		folder = {
+			name = Beast_race_tech_folder
+			position = { x = 16 y = 10 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

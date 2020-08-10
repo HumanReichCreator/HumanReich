@@ -1,0 +1,58 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+	AKI_ganbei_op = {
+		value = 75
+	}
+	AKI_xiwangzhidi_op = {
+		value = 15
+	}
+	AKI_youdianguotou_op = {
+		value = -5
+	}
+	AKI_liyishousun_op = {
+		value = -30
+	}
+
+	AKI_maoyixieding_op = {
+		value = 30
+	}
+
+	AKI_dishiwomen_op = {
+		value = -50
+	}
+
+	AKI_kaoshan_op = {
+		value = 50
+	}
+
+	AKI_chuanjiaotexu_op = {
+		value = 30
+	}
+
+	AKI_kuajingxiji_op = {
+		value = -30
+	}
+
+	AKI_shayaojingfan_op = {
+		value = -20
+	}
+
+	AKI_xuanchengwuyuanzhong_op = {
+		value = -30
+	}
+
+	AKI_fanlian_op = {
+		value = -75
+	}
+
+}	
+

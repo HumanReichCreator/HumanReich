@@ -1,0 +1,41 @@
+
+state={
+	id=203
+	name="STATE_203"
+
+	history={
+		143.7.1 = {
+			owner = AVE
+			add_core_of = AVE
+			buildings = {
+				infrastructure =3
+				industrial_complex = 1
+				arms_factory = 0
+
+			}
+		}
+		146.1.1 = {
+			owner = AVE
+			add_core_of = AVE
+			add_claim_by = HUM
+			add_claim_by = HU6
+			add_claim_by = HU7
+			add_claim_by = HU8
+			buildings = {
+				infrastructure =3
+				industrial_complex = 1
+				arms_factory = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		136 1905 2546 3194 3622 3627 5709 5716 
+	}
+	manpower=755.0
+	buildings_max_level_factor=1.000
+	state_category=s5
+}

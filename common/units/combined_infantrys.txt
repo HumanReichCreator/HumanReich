@@ -1,0 +1,198 @@
+# options for map_icon_category:
+# For land units: infantry,armored,other
+# For sea units: ship,transport,uboat
+
+sub_units = {
+	new_infantry = {
+		sprite = infantry
+		map_icon_category = infantry
+		
+		priority = 600
+		ai_priority = 200
+
+		active = yes
+		
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+		
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+			category_combined_infantry
+			category_main_infantry
+
+		}
+		
+		weight = 0.5
+		
+		#Size Definitions
+		max_strength = 60
+		max_organisation = 35
+		default_morale = 0.05
+		
+
+		#Minew Abilities
+		suppression = 5
+		combat_width = 45
+		manpower = 5
+		training_time = 250
+
+		supply_consumption = 0.4
+		
+		need = {
+			new_buqiang_a = 100
+		}
+	}
+
+	new_artillery_brigade = {
+		sprite = artillery
+		map_icon_category = infantry
+		priority = 1198
+		ai_priority = 100
+
+		active = yes
+		
+		
+		type = {
+			infantry
+			artillery
+		}
+
+		group = infantry
+		
+		categories = {
+			category_army
+			category_line_artillery
+			category_artillery
+			category_art
+		}
+
+		combat_width = 50
+
+		manpower = 3
+		need = {
+			new_artillery_a = 30
+		}
+		
+		max_strength = 0.5
+		max_organisation = -25
+		default_morale = 0.02
+		training_time = 220
+		weight = 0.5
+		supply_consumption = 0.8
+
+		#Line artillery bonuses
+		# soft_attack = 0.25
+		
+		forest = {
+			attack = -0.2
+			movement = -0.2
+		}
+
+		hills = {
+			movement = -0.05
+		}
+
+		mountain = {
+			movement = -0.2
+		}
+
+		jungle = {
+			attack = -0.25
+			movement = -0.2
+		}
+
+		marsh = {
+			attack = -0.2
+			movement = -0.3
+		}
+
+		fort = {
+			attack = 0.1
+		}
+
+		river = {
+			attack = -0.2
+			movement = -0.2
+		}
+
+		amphibious = {
+			attack = -0.4
+		}
+	}
+
+	new_light_armor = {
+		sprite = light_armor
+		map_icon_category = armored
+		priority = 2501
+		ai_priority = 2000
+
+		active = no
+		
+		
+		type = {
+			armor
+		}
+		
+		group = armor
+		
+		categories = {
+			category_tanks
+			category_front_line
+			category_all_armor
+			category_army
+		}
+
+
+		combat_width = 50
+
+		need = {
+			new_tank_a = 60
+		}
+		manpower = 5
+		max_organisation = 5
+		default_morale = 0.05
+		training_time = 300
+		max_strength = 5
+		weight = 0.5
+		supply_consumption = 0.4
+
+		#Tanks are awesome
+		# soft_attack = 0.5
+
+		forest = {
+		    attack = -0.2
+			movement = -0.4
+		}
+		mountain = 	{
+		    attack = -0.1
+		}
+		jungle = {
+		    attack = -0.3
+			movement = -0.4
+		}
+		marsh = {
+		    attack = -0.1 
+			movement = -0.1
+		}
+		urban = {
+			attack = -0.4
+			defence = -0.1
+		}
+		river = { 
+			attack = -0.2 
+			movement = -0.2
+		}
+		amphibious = { 
+			attack = -0.4
+		}	
+	}
+
+}

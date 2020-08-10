@@ -1,0 +1,172 @@
+setup_introductions = { #介绍
+	priority = 0
+}
+scenario_introduction = { #小剧本介绍
+	priority = 1
+}
+ideo_change = { #理念切换
+	priority = 2
+}
+government_change = { #政治状态切换
+	priority = 3
+}
+view_change = { #世界观切换
+	priority = 4
+}
+warexhaustion = { #厌战系统
+	priority = 5
+}
+luanzhan_decision = { #乱战决议（菜单）
+	priority = 5
+}
+region_category = { ###地区宣称决议
+	priority = 6
+}
+custom_leader_cate = {
+	priority = 7
+}
+common_category = { #通用决议
+	priority = 8
+}
+scale_change = { #规模转化转移
+	priority = 9
+}
+human_influ = { #人里影响系统
+	priority = 10
+}
+scenario_decision = { #小剧本决议
+	priority = 19
+}
+#20以上为国家特有
+SW_battle = { #
+	priority = 20
+}
+CLO_battle = { #
+	priority = 20
+}
+TH_bamboo = { #
+	priority = 20
+}
+SCA_jiechusaodong = { 
+	priority = 20
+}
+YSK_kejigexin = {
+	priority = 20
+}
+TEG_category = {
+	priority = 20
+}
+HKR_category = { #灵梦二手工业
+	priority = 20
+}
+SEI_category = { #灵梦二手工业
+	priority = 20
+}
+KOG_category = { 
+	priority = 20
+}
+SRB_category = {
+	priority = 20
+}
+ALI_category = {
+	priority = 20
+}
+CIR_category = {
+	priority = 20
+}
+AKI_bingtongyiti_category = {
+	priority = 20
+}
+AKI_tongyiwuyuanzhong_category = {
+	priority = 20
+}
+AKI_kaifawuyuanzhong_category = {
+	priority = 20
+}
+HU3_category = {
+	priority = 20
+}
+bianshen_category = { ###变身国家决议
+	priority = 25
+}
+HUM_qianzhai = {
+	priority = 30
+}
+SS_situation = {
+	priority = 50
+}
+
+
+
+lar_local_recruitment = {
+	allowed = { has_dlc = "La Resistance" }
+
+	visible = { has_done_agency_upgrade = upgrade_training_centers }
+
+	visibility_type = map_and_decisions_view
+	
+	on_map_area = {
+		state = 122
+		name = LAR_TH_recruitment_Gensokyo
+		zoom = 850
+		
+		target_root_trigger = {
+			OR = {
+				has_country_flag = Gensokyo_recruitment_unlocked
+				capital_scope = { is_on_continent = Gensokyo }
+			}
+		}
+	}
+
+	on_map_area = {
+		state = 58
+		name = LAR_recruitment_Underground
+		zoom = 850
+
+		target_root_trigger = {
+			OR = {
+				has_country_flag = Underground_recruitment_unlocked
+				capital_scope = { is_on_continent = Underground }
+			}
+		}
+	}
+
+	on_map_area = {
+		state = 49
+		name = LAR_recruitment_Celestial
+		zoom = 850
+
+		target_root_trigger = {
+			OR = {
+				has_country_flag = Celestial_recruitment_unlocked
+				capital_scope = { is_on_continent = Celestial }
+			}
+		}
+	}
+
+	on_map_area = {
+		state = 231
+		name = LAR_recruitment_Netherworld
+		zoom = 850
+
+		target_root_trigger = {
+			OR = {
+				has_country_flag = Netherworld_recruitment_unlocked
+				capital_scope = { is_on_continent = Netherworld }
+			}
+		}
+	}
+
+	on_map_area = {
+		state = 200
+		name = LAR_recruitment_Hell
+		zoom = 850
+
+		target_root_trigger = {
+			OR = {
+				has_country_flag = Hell_recruitment_unlocked
+				capital_scope = { is_on_continent = Hell }
+			}
+		}
+	}
+}

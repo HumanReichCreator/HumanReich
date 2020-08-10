@@ -1,0 +1,449 @@
+technologies = {
+	human_tech = {
+
+	    dependencies = {
+	       abandoned = 1
+	    }
+
+	    path = {
+			leads_to_tech = kongjuyizhiji1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = shengchandongli1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = chuanchongpao1
+			research_cost_coeff = 1
+		}
+
+	    research_cost = 1
+	    allow = {
+	      always = no
+	    }
+	    folder = {
+	      name = Human_race_tech_folder
+	      position = { x = 10 y = 0 }
+	    }
+	    
+	    categories = {
+	      secret
+	    }
+	    
+	    ai_will_do = {
+	      factor = 1
+	    }
+	}
+
+	kongjuyizhiji1 = {
+	
+		path = {
+			leads_to_tech = kongjuyizhiji2
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.2
+		start_year = 144
+
+		army_org_factor = 0.1
+		army_morale_factor = 0.04
+
+		folder = {
+			name = Human_race_tech_folder
+			position = { x = 4 y = 2 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	kongjuyizhiji2 = {
+	
+		path = {
+			leads_to_tech = kongjuyizhiji3
+			research_cost_coeff = 1
+		}
+
+		army_org_factor = 0.1
+		army_morale_factor = 0.04
+		
+		research_cost = 2.2
+		start_year = 148
+
+		folder = {
+			name = Human_race_tech_folder
+			position = { x = 4 y = 4 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	kongjuyizhiji3 = {
+	
+		path = {
+			leads_to_tech = kongjuyizhiji4
+			research_cost_coeff = 1
+		}
+
+		army_org_factor = 0.1
+		army_morale_factor = 0.04
+		
+		research_cost = 2.2
+		start_year = 152
+
+		folder = {
+			name = Human_race_tech_folder
+			position = { x = 4 y = 6 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	kongjuyizhiji4 = {
+	
+		path = {
+			leads_to_tech = kongjuyizhiji5
+			research_cost_coeff = 1
+		}
+
+		army_org_factor = 0.1
+		army_morale_factor = 0.04
+		
+		research_cost = 2.2
+		start_year = 156
+
+		folder = {
+			name = Human_race_tech_folder
+			position = { x = 4 y = 8 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	kongjuyizhiji5 = {
+
+		army_org_factor = 0.1
+		army_morale_factor = 0.04
+		
+		research_cost = 2.2
+		start_year = 160
+
+		folder = {
+			name = Human_race_tech_folder
+			position = { x = 4 y = 10 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	shengchandongli1 = {
+	
+		path = {
+			leads_to_tech = shengchandongli2
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.2
+		start_year = 144
+
+		industrial_capacity_factory = 0.1
+
+		folder = {
+			name = Human_race_tech_folder
+			position = { x = 10 y = 2 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	shengchandongli2 = {
+	
+		path = {
+			leads_to_tech = shengchandongli3
+			research_cost_coeff = 1
+		}
+
+		industrial_capacity_factory = 0.1
+		
+		research_cost = 2.2
+		start_year = 148
+
+		folder = {
+			name = Human_race_tech_folder
+			position = { x = 10 y = 4 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	shengchandongli3 = {
+	
+		path = {
+			leads_to_tech = shengchandongli4
+			research_cost_coeff = 1
+		}
+
+		industrial_capacity_factory = 0.1
+		
+		research_cost = 2.2
+		start_year = 152
+
+		folder = {
+			name = Human_race_tech_folder
+			position = { x = 10 y = 6 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	shengchandongli4 = {
+	
+		path = {
+			leads_to_tech = shengchandongli5
+			research_cost_coeff = 1
+		}
+
+		industrial_capacity_factory = 0.1
+		
+		research_cost = 2.2
+		start_year = 156
+
+		folder = {
+			name = Human_race_tech_folder
+			position = { x = 10 y = 8 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	shengchandongli5 = {
+
+		industrial_capacity_factory = 0.1
+		
+		research_cost = 2.2
+		start_year = 160
+
+		folder = {
+			name = Human_race_tech_folder
+			position = { x = 10 y = 10 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	chuanchongpao1 = {
+	
+		path = {
+			leads_to_tech = chuanchongpao2
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			Human_special_1
+		}
+
+		enable_subunits = {
+			Human_special
+		}
+		
+		research_cost = 2.2
+		start_year = 144
+
+		folder = {
+			name = Human_race_tech_folder
+			position = { x = 16 y = 2 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	chuanchongpao2 = {
+	
+		path = {
+			leads_to_tech = chuanchongpao3
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			Human_special_2
+		}
+
+		Human_special = {
+			combat_width = -5
+		}
+		
+		research_cost = 2.2
+		start_year = 148
+
+		folder = {
+			name = Human_race_tech_folder
+			position = { x = 16 y = 4 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	chuanchongpao3 = {
+	
+		path = {
+			leads_to_tech = chuanchongpao4
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			Human_special_3
+		}
+
+		Human_special = {
+			combat_width = -5
+		}
+
+		
+		research_cost = 2.2
+		start_year = 152
+
+		folder = {
+			name = Human_race_tech_folder
+			position = { x = 16 y = 6 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	chuanchongpao4 = {
+	
+		path = {
+			leads_to_tech = chuanchongpao5
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			Human_special_4
+		}
+
+		Human_special = {
+			combat_width = -5
+		}
+		
+		research_cost = 2.2
+		start_year = 156
+
+		folder = {
+			name = Human_race_tech_folder
+			position = { x = 16 y = 8 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	chuanchongpao5 = {
+		
+		research_cost = 2.2
+		start_year = 160
+
+		enable_equipments = {
+			Human_special_5
+		}
+
+		Human_special = {
+			combat_width = -5
+		}
+
+		folder = {
+			name = Human_race_tech_folder
+			position = { x = 16 y = 10 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

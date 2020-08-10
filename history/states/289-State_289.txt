@@ -1,0 +1,36 @@
+
+state={
+	id=289
+	name="STATE_289"
+
+	resources={
+		energy = 5
+		powder = 0.0
+		metal = 0
+		gas = 5.0
+		crystal = 0.0
+	}
+
+	history={
+		146.1.1 = {
+			owner = KAG
+			add_core_of = KAG
+			add_claim_by = INB
+			buildings = {
+				infrastructure = 3
+				industrial_complex = 1
+				arms_factory = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		1059 1134 1169 1277 1419 1544 1811 2945 3134 3140 3141 3146 
+	}
+	state_category=s5
+	manpower=1843.0
+	buildings_max_level_factor=1.000
+}

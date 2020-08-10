@@ -1,0 +1,46 @@
+
+state={
+	id=116
+	name="STATE_116"
+	resources={
+
+		powder=0.000
+		metal=0.000
+		gas=5.000
+		crystal=0.000
+	}
+
+	history={
+		143.7.1 = {
+			owner = SCA
+			add_core_of = SCA
+			add_core_of = SC1
+			buildings = {
+				infrastructure =2
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+		}
+		146.1.1 = {
+			owner = SCA
+			add_core_of = SCA
+			add_core_of = SC1
+			buildings = {
+				infrastructure =2
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		106 532 802 1474 1523 2161 2399 2723 3362 3363 3961 3966 3975 3992 4015 5453 5454 5455 
+	}
+	manpower=545.0
+	buildings_max_level_factor=1.000
+	state_category=s5
+}

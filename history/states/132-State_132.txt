@@ -1,0 +1,34 @@
+
+state={
+	id=132
+	name="STATE_132"
+	resources={
+
+		powder=0.000
+		metal=0.000
+		gas=15.000
+		crystal=5.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = CIR
+			add_core_of = CIR
+			buildings = {
+				infrastructure =5
+				industrial_complex = 3
+				arms_factory = 2
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		213 336 790 2461 2498 2740 3336 3337 3339 3341 3342 
+	}
+	manpower=23981.0
+	buildings_max_level_factor=1.000
+	state_category=s10
+}

@@ -1,0 +1,31 @@
+state={
+	id=441
+	name="STATE_441"
+	provinces={
+		6108 6115 6117 6118 6119 6124 6125 6128 6131 6136 
+	}
+	resources={
+		energy = 0
+		powder=0.000
+		metal=0.000
+		gas=6.000
+		crystal=3.000
+	}
+	history={
+		146.1.1 = {
+			owner = GH1
+			add_core_of = GH1
+			add_claim_by = USZ
+			add_core_of = WAI	
+			buildings = {
+				infrastructure = 3
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+		}
+	}
+	manpower=30833.0
+	state_category=s2
+	buildings_max_level_factor=1.000
+}

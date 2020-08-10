@@ -1,0 +1,1363 @@
+ideas = {
+
+	mobilization_laws = { 
+		law = yes
+		use_list_view = yes
+
+		manpowerlv1 = {
+						
+			cost = 150
+			removal_cost = -1
+			level = 7
+
+			allowed = {
+				# Human_country = yes
+			}
+			
+			available = {
+				#has_manpower_for_recruit_change_to = { value = 0.005 group = mobilization_laws }
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				training_time_factor = 0.1
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		#Ghost Type
+		
+		type0_manpowerlv2 = {
+
+						
+			cost = 150
+			removal_cost = -1
+			level = 6
+
+			picture = manpowerlv2
+
+			allowed = {
+				Ghost_country = yes
+			}
+			
+			available = {
+				lv2_manpower = yes
+			}
+
+			ai_will_do = {
+   				factor = 1
+   				modifier = {
+					factor = 60 # being disarmed is bad in a wargame yo
+					has_idea = manpowerlv1 
+				}
+			}
+
+			modifier = {
+				conscription = 0.001
+				consumer_goods_factor = -0.02
+			}
+			
+			cancel_if_invalid = no
+
+			default = yes
+		}
+		
+		type0_manpowerlv3 = {
+					
+			cost = 150
+			removal_cost = -1
+			level = 5
+
+			picture = manpowerlv3
+
+			allowed = {
+				Ghost_country = yes
+			}
+
+			available = {
+				lv3_manpower = yes
+				#has_manpower_for_recruit_change_to =  { value = 0.025 group = mobilization_laws }
+				# has_war_support > 0.1
+				# NOT = { has_idea = isolation }
+			}
+
+			modifier = {
+				conscription = 0.002
+				training_time_factor = -0.05
+			}
+
+			ai_will_do = {
+   				factor = 100
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		type0_manpowerlv4 = {
+			
+			available = {
+				lv4_manpower = yes
+				#has_manpower_for_recruit_change_to = { value = 0.05 group = mobilization_laws }
+				# OR = {
+				# 	has_government = neworder
+				# 	has_government = oldorder
+				# 	has_government = fandong
+				# 	has_war_support > 0.5
+				# 	AND = {
+				# 		has_war = yes
+				# 		enemies_strength_ratio > 0.5
+				# 		#any_enemy_country = {
+				# 		#	strength_ratio = {
+				# 		#		tag = ROOT 
+				# 		#		ratio > 0.5
+				# 		#	}
+				# 		#}
+				# 	}					
+				# }
+				# has_war_support > 0.2
+			}
+
+			ai_will_do = {
+   				factor = 10
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory <  10
+				}
+
+
+			}
+			
+			cost = 150
+			removal_cost = -1
+			level = 4
+
+			picture = manpowerlv4
+
+			allowed = {
+				Ghost_country = yes
+			}
+			
+			modifier = {
+				conscription = 0.004
+				#industrial_capacity_factory = -0.1
+				#production_speed_buildings_factor = -0.1
+				training_time_factor = 0.05
+				consumer_goods_factor = 0.02
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		type0_manpowerlv5 = {
+			
+			
+			available = {
+				#has_manpower_for_recruit_change_to =  { value = 0.1 group = mobilization_laws }
+				lv5_manpower = yes
+				# has_war = yes
+				# enemies_strength_ratio > 0.6
+				# OR = {
+				# 	has_war_support > 0.6
+				# 	surrender_progress > 0
+				# }
+				
+			}
+
+			ai_will_do = {
+   				factor = 10
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory <  15
+				}
+				modifier = {
+					#Lower chance if has decent amount
+					factor = 0.5
+					manpower_per_military_factory >  10
+				}
+
+
+			}
+			
+			cost = 200
+			removal_cost = -1
+			level = 3
+
+			picture = manpowerlv5
+
+			allowed = {
+				Ghost_country = yes
+			}
+
+			modifier = {
+				conscription = 0.006
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.1
+				consumer_goods_factor = 0.05
+				training_time_factor = 0.2
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		type0_manpowerlv6 = {
+			
+			
+			available = {
+				lv6_manpower = yes
+				# has_war = yes
+				# OR = {
+				# 	has_war_support > 0.7
+				# 	surrender_progress > 0
+				# }
+				# enemies_strength_ratio > 0.75
+			}
+
+			ai_will_do = {
+   				factor = 10
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory <  20
+				}
+				modifier = {
+					#Lower chance if has decent amount
+					factor = 0.5
+					manpower_per_military_factory >  10
+				}
+
+
+
+			}
+		
+			cost = 250
+			removal_cost = -1
+			level = 2
+
+			picture = manpowerlv6
+
+			allowed = {
+				Ghost_country = yes
+			}
+			
+			modifier = {
+				conscription = 0.008
+				industrial_capacity_factory = -0.3
+				production_speed_buildings_factor = -0.3
+				#XP from reinforcement penalty (small)
+				consumer_goods_factor = 0.08
+				training_time_factor = 0.3
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		type0_manpowerlv7 = {
+			
+			
+			available = {
+				lv7_manpower = yes
+				#has_manpower_for_recruit_change_to =  { value = 0.25 group = mobilization_laws }
+				# has_war = yes
+
+				# OR = {
+				# 	has_war_support > 0.85
+				# 	surrender_progress > 0.25
+				# }
+				
+				# enemies_strength_ratio > 1
+				#any_enemy_country = {
+				#	strength_ratio = {
+				#		tag = ROOT 
+				#		ratio > 1
+				#	}
+				#}
+			}
+
+			ai_will_do = {
+   				factor = 10
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory <  25
+				}				
+				modifier = {
+					#Lower chance if has decent amount
+					factor = 0.5
+					manpower_per_military_factory >  10
+				}
+				modifier = {
+					#Block has plenty manpower
+					factor = 0
+					manpower_per_military_factory >  50
+				}
+			}
+
+			cost = 300
+			removal_cost = -1
+			level = 1
+
+			picture = manpowerlv7
+
+			allowed = {
+				Ghost_country = yes
+			}
+
+			modifier = {
+				conscription = 0.01
+				industrial_capacity_factory = -0.4
+				production_speed_buildings_factor = -0.4
+				consumer_goods_factor = 0.1
+				training_time_factor = 0.5
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		#Fairy Type
+		type1_manpowerlv2 = {
+
+						
+			cost = 150
+			removal_cost = -1
+			level = 6
+
+			picture = manpowerlv2
+
+			allowed = {
+				or = {
+					Fairy_country = yes
+				}
+			}
+			
+			available = {
+				lv2_manpower = yes
+			}
+
+			ai_will_do = {
+   				factor = 1
+   				modifier = {
+					factor = 60 # being disarmed is bad in a wargame yo
+					has_idea = manpowerlv1 
+				}
+			}
+
+			modifier = {
+				conscription = 0.002
+				consumer_goods_factor = -0.02
+			}
+			
+			cancel_if_invalid = no
+
+			default = yes
+		}
+		
+		type1_manpowerlv3 = {
+					
+			cost = 150
+			removal_cost = -1
+			level = 5
+
+			picture = manpowerlv3
+
+			allowed = {
+				or = {
+					Fairy_country = yes
+				}
+			}
+
+			available = {
+				lv3_manpower = yes
+			}
+
+			modifier = {
+				conscription = 0.004
+				training_time_factor = -0.05
+			}
+
+			ai_will_do = {
+   				factor = 100
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		type1_manpowerlv4 = {
+			
+			available = {
+				lv4_manpower = yes
+			}
+
+			ai_will_do = {
+   				factor = 10
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory <  10
+				}
+
+
+			}
+			
+			cost = 150
+			removal_cost = -1
+			level = 4
+
+			picture = manpowerlv4
+
+			allowed = {
+				or = {
+					Fairy_country = yes
+				}
+			}
+			
+			modifier = {
+				conscription = 0.008
+				#industrial_capacity_factory = -0.1
+				#production_speed_buildings_factor = -0.1
+				training_time_factor = 0.05
+				consumer_goods_factor = 0.02
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		type1_manpowerlv5 = {
+			
+			
+			available = {
+				lv5_manpower = yes
+			}
+
+			ai_will_do = {
+   				factor = 10
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory <  15
+				}
+				modifier = {
+					#Lower chance if has decent amount
+					factor = 0.5
+					manpower_per_military_factory >  10
+				}
+
+
+			}
+			
+			cost = 200
+			removal_cost = -1
+			level = 3
+
+			picture = manpowerlv5
+
+			allowed = {
+				or = {
+					Fairy_country = yes
+				}
+			}
+
+			modifier = {
+				conscription = 0.02
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.1
+				consumer_goods_factor = 0.05
+				training_time_factor = 0.2
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		type1_manpowerlv6 = {
+			
+			
+			available = {
+				lv6_manpower = yes
+			}
+
+			ai_will_do = {
+   				factor = 10
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory <  20
+				}
+				modifier = {
+					#Lower chance if has decent amount
+					factor = 0.5
+					manpower_per_military_factory >  10
+				}
+
+
+
+			}
+		
+			cost = 250
+			removal_cost = -1
+			level = 2
+
+			picture = manpowerlv6
+
+			allowed = {
+				or = {
+					Fairy_country = yes
+				}
+			}
+			
+			modifier = {
+				conscription = 0.04
+				industrial_capacity_factory = -0.3
+				production_speed_buildings_factor = -0.3
+				#XP from reinforcement penalty (small)
+				consumer_goods_factor = 0.08
+				training_time_factor = 0.3
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		type1_manpowerlv7 = {
+			
+			
+			available = {
+				lv7_manpower = yes
+			}
+
+			ai_will_do = {
+   				factor = 10
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory <  25
+				}				
+				modifier = {
+					#Lower chance if has decent amount
+					factor = 0.5
+					manpower_per_military_factory >  10
+				}
+				modifier = {
+					#Block has plenty manpower
+					factor = 0
+					manpower_per_military_factory >  50
+				}
+			}
+
+			cost = 300
+			removal_cost = -1
+			level = 1
+
+			picture = manpowerlv7
+
+			allowed = {
+				or = {
+					Fairy_country = yes
+				}
+			}
+
+			modifier = {
+				conscription = 0.06
+				industrial_capacity_factory = -0.4
+				production_speed_buildings_factor = -0.4
+				consumer_goods_factor = 0.1
+				training_time_factor = 0.5
+			}
+			
+			cancel_if_invalid = no
+		}
+		#Human Magician Type
+		type2_manpowerlv2 = {
+
+						
+			cost = 150
+			removal_cost = -1
+			level = 6
+
+			picture = manpowerlv2
+
+			allowed = {
+				or = {
+					Magician_country = yes
+					Human_country = yes
+				}
+			}
+			
+			available = {
+				lv2_manpower = yes
+			}
+
+			ai_will_do = {
+   				factor = 1
+   				modifier = {
+					factor = 60 # being disarmed is bad in a wargame yo
+					has_idea = manpowerlv1 
+				}
+			}
+
+			modifier = {
+				conscription = 0.012
+				consumer_goods_factor = -0.02
+			}
+			
+			cancel_if_invalid = no
+
+			default = yes
+		}
+		
+		type2_manpowerlv3 = {
+					
+			cost = 150
+			removal_cost = -1
+			level = 5
+
+			picture = manpowerlv3
+
+			allowed = {
+				or = {
+					Magician_country = yes
+					Human_country = yes
+				}
+			}
+
+			available = {
+				lv3_manpower = yes
+			}
+
+			modifier = {
+				conscription = 0.024
+				training_time_factor = -0.05
+			}
+
+			ai_will_do = {
+   				factor = 100
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		type2_manpowerlv4 = {
+			
+			available = {
+				lv4_manpower = yes
+			}
+
+			ai_will_do = {
+   				factor = 10
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory <  10
+				}
+
+
+			}
+			
+			cost = 150
+			removal_cost = -1
+			level = 4
+
+			picture = manpowerlv4
+
+			allowed = {
+				or = {
+					Magician_country = yes
+					Human_country = yes
+				}
+			}
+			
+			modifier = {
+				conscription = 0.048
+				#industrial_capacity_factory = -0.1
+				#production_speed_buildings_factor = -0.1
+				training_time_factor = 0.05
+				consumer_goods_factor = 0.02
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		type2_manpowerlv5 = {
+			
+			
+			available = {
+				lv5_manpower = yes
+			}
+
+			ai_will_do = {
+   				factor = 10
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory <  15
+				}
+				modifier = {
+					#Lower chance if has decent amount
+					factor = 0.5
+					manpower_per_military_factory >  10
+				}
+
+
+			}
+			
+			cost = 200
+			removal_cost = -1
+			level = 3
+
+			picture = manpowerlv5
+
+			allowed = {
+				or = {
+					Magician_country = yes
+					Human_country = yes
+				}
+			}
+
+			modifier = {
+				conscription = 0.12
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.1
+				consumer_goods_factor = 0.05
+				training_time_factor = 0.2
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		type2_manpowerlv6 = {
+			
+			
+			available = {
+				lv6_manpower = yes
+			}
+
+			ai_will_do = {
+   				factor = 10
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory <  20
+				}
+				modifier = {
+					#Lower chance if has decent amount
+					factor = 0.5
+					manpower_per_military_factory >  10
+				}
+
+
+
+			}
+		
+			cost = 250
+			removal_cost = -1
+			level = 2
+
+			picture = manpowerlv6
+
+			allowed = {
+				or = {
+					Magician_country = yes
+					Human_country = yes
+				}
+			}
+			
+			modifier = {
+				conscription = 0.24
+				industrial_capacity_factory = -0.3
+				production_speed_buildings_factor = -0.3
+				#XP from reinforcement penalty (small)
+				consumer_goods_factor = 0.08
+				training_time_factor = 0.3
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		type2_manpowerlv7 = {
+			
+			
+			available = {
+				lv7_manpower = yes
+			}
+
+			ai_will_do = {
+   				factor = 10
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory <  25
+				}				
+				modifier = {
+					#Lower chance if has decent amount
+					factor = 0.5
+					manpower_per_military_factory >  10
+				}
+				modifier = {
+					#Block has plenty manpower
+					factor = 0
+					manpower_per_military_factory >  50
+				}
+			}
+
+			cost = 300
+			removal_cost = -1
+			level = 1
+
+			picture = manpowerlv7
+
+			allowed = {
+				or = {
+					Magician_country = yes
+					Human_country = yes
+				}
+			}
+
+			modifier = {
+				conscription = 0.30
+				industrial_capacity_factory = -0.4
+				production_speed_buildings_factor = -0.4
+				consumer_goods_factor = 0.1
+				training_time_factor = 0.5
+			}
+			
+			cancel_if_invalid = no
+		}
+		#Pri Youkai Tenggu Youkai Type
+		type3_manpowerlv2 = {
+
+						
+			cost = 150
+			removal_cost = -1
+			level = 6
+
+			picture = manpowerlv2
+
+			allowed = {
+				or = {
+					Tenggu_country = yes
+					Youkai_country = yes
+					Pri_youkai_country = yes
+				}
+			}
+			
+			available = {
+				lv2_manpower = yes
+			}
+
+			ai_will_do = {
+   				factor = 1
+   				modifier = {
+					factor = 60 # being disarmed is bad in a wargame yo
+					has_idea = manpowerlv1 
+				}
+			}
+
+			modifier = {
+				conscription = 0.044
+				consumer_goods_factor = -0.02
+			}
+			
+			cancel_if_invalid = no
+
+			default = yes
+		}
+		
+		type3_manpowerlv3 = {
+					
+			cost = 150
+			removal_cost = -1
+			level = 5
+
+			picture = manpowerlv3
+
+			allowed = {
+				or = {
+					Tenggu_country = yes
+					Youkai_country = yes
+					Pri_youkai_country = yes
+					
+				}
+			}
+
+			available = {
+				lv3_manpower = yes
+			}
+
+			modifier = {
+				conscription = 0.088
+				training_time_factor = -0.05
+			}
+
+			ai_will_do = {
+   				factor = 100
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		type3_manpowerlv4 = {
+			
+			available = {
+				lv4_manpower = yes
+			}
+
+			ai_will_do = {
+   				factor = 10
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory <  10
+				}
+
+
+			}
+			
+			cost = 150
+			removal_cost = -1
+			level = 4
+
+			picture = manpowerlv4
+
+			allowed = {
+				or = {
+					Tenggu_country = yes
+					Youkai_country = yes
+					Pri_youkai_country = yes
+					
+				}
+			}
+			
+			modifier = {
+				conscription = 0.176
+				#industrial_capacity_factory = -0.1
+				#production_speed_buildings_factor = -0.1
+				training_time_factor = 0.05
+				consumer_goods_factor = 0.02
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		type3_manpowerlv5 = {
+			
+			
+			available = {
+				lv5_manpower = yes
+			}
+
+			ai_will_do = {
+   				factor = 10
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory <  15
+				}
+				modifier = {
+					#Lower chance if has decent amount
+					factor = 0.5
+					manpower_per_military_factory >  10
+				}
+
+
+			}
+			
+			cost = 200
+			removal_cost = -1
+			level = 3
+
+			picture = manpowerlv5
+
+			allowed = {
+				or = {
+					Tenggu_country = yes
+					Youkai_country = yes
+					Pri_youkai_country = yes
+					
+				}
+			}
+
+			modifier = {
+				conscription = 0.44
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.1
+				consumer_goods_factor = 0.05
+				training_time_factor = 0.2
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		type3_manpowerlv6 = {
+			
+			
+			available = {
+				lv6_manpower = yes
+			}
+
+			ai_will_do = {
+   				factor = 10
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory <  20
+				}
+				modifier = {
+					#Lower chance if has decent amount
+					factor = 0.5
+					manpower_per_military_factory >  10
+				}
+
+
+
+			}
+		
+			cost = 250
+			removal_cost = -1
+			level = 2
+
+			picture = manpowerlv6
+
+			allowed = {
+				or = {
+					Tenggu_country = yes
+					Youkai_country = yes
+					Pri_youkai_country = yes
+					
+				}
+			}
+			
+			modifier = {
+				conscription = 0.55
+				industrial_capacity_factory = -0.3
+				production_speed_buildings_factor = -0.3
+				#XP from reinforcement penalty (small)
+				consumer_goods_factor = 0.08
+				training_time_factor = 0.3
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		type3_manpowerlv7 = {
+			
+			
+			available = {
+				lv7_manpower = yes
+			}
+
+			ai_will_do = {
+   				factor = 10
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory <  25
+				}				
+				modifier = {
+					#Lower chance if has decent amount
+					factor = 0.5
+					manpower_per_military_factory >  10
+				}
+				modifier = {
+					#Block has plenty manpower
+					factor = 0
+					manpower_per_military_factory >  50
+				}
+			}
+
+			cost = 300
+			removal_cost = -1
+			level = 1
+
+			picture = manpowerlv7
+
+			allowed = {
+				or = {
+					Tenggu_country = yes
+					Youkai_country = yes
+					Pri_youkai_country = yes
+					
+				}
+			}
+
+			modifier = {
+				conscription = 0.66
+				industrial_capacity_factory = -0.4
+				production_speed_buildings_factor = -0.4
+				consumer_goods_factor = 0.1
+				training_time_factor = 0.5
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		#Kappa God Beast Type
+		type4_manpowerlv2 = {
+
+						
+			cost = 150
+			removal_cost = -1
+			level = 6
+
+			picture = manpowerlv2
+
+			allowed = {
+				or = {
+					Beast_country = yes
+					God_country = yes
+					Kappa_country = yes
+				}
+			}
+			
+			available = {
+				lv2_manpower = yes
+			}
+
+			ai_will_do = {
+   				factor = 1
+   				modifier = {
+					factor = 60 # being disarmed is bad in a wargame yo
+					has_idea = manpowerlv1 
+				}
+			}
+
+			modifier = {
+				conscription = 0.028
+				consumer_goods_factor = -0.02
+			}
+			
+			cancel_if_invalid = no
+
+			default = yes
+		}
+		
+		type4_manpowerlv3 = {
+					
+			cost = 150
+			removal_cost = -1
+			level = 5
+
+			picture = manpowerlv3
+
+			allowed = {
+				or = {
+					Beast_country = yes
+					God_country = yes
+					Kappa_country = yes
+					
+				}
+			}
+
+			available = {
+				lv3_manpower = yes
+			}
+
+			modifier = {
+				conscription = 0.056
+				training_time_factor = -0.05
+			}
+
+			ai_will_do = {
+   				factor = 100
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		type4_manpowerlv4 = {
+			
+			available = {
+				lv4_manpower = yes
+			}
+
+			ai_will_do = {
+   				factor = 10
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory <  10
+				}
+
+
+			}
+			
+			cost = 150
+			removal_cost = -1
+			level = 4
+
+			picture = manpowerlv4
+
+			allowed = {
+				or = {
+					Beast_country = yes
+					God_country = yes
+					Kappa_country = yes
+					
+				}
+			}
+			
+			modifier = {
+				conscription = 0.112
+				#industrial_capacity_factory = -0.1
+				#production_speed_buildings_factor = -0.1
+				training_time_factor = 0.05
+				consumer_goods_factor = 0.02
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		type4_manpowerlv5 = {
+			
+			
+			available = {
+				lv5_manpower = yes
+			}
+
+			ai_will_do = {
+   				factor = 10
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory <  15
+				}
+				modifier = {
+					#Lower chance if has decent amount
+					factor = 0.5
+					manpower_per_military_factory >  10
+				}
+
+
+			}
+			
+			cost = 200
+			removal_cost = -1
+			level = 3
+
+			picture = manpowerlv5
+
+			allowed = {
+				or = {
+					Beast_country = yes
+					God_country = yes
+					Kappa_country = yes
+					
+				}
+			}
+
+			modifier = {
+				conscription = 0.28
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.1
+				consumer_goods_factor = 0.05
+				training_time_factor = 0.2
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		type4_manpowerlv6 = {
+			
+			
+			available = {
+				lv6_manpower = yes
+			}
+
+			ai_will_do = {
+   				factor = 10
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory <  20
+				}
+				modifier = {
+					#Lower chance if has decent amount
+					factor = 0.5
+					manpower_per_military_factory >  10
+				}
+
+
+
+			}
+		
+			cost = 250
+			removal_cost = -1
+			level = 2
+
+			picture = manpowerlv6
+
+			allowed = {
+				or = {
+					Beast_country = yes
+					God_country = yes
+					Kappa_country = yes
+					
+				}
+			}
+			
+			modifier = {
+				conscription = 0.42
+				industrial_capacity_factory = -0.3
+				production_speed_buildings_factor = -0.3
+				#XP from reinforcement penalty (small)
+				consumer_goods_factor = 0.08
+				training_time_factor = 0.3
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		type4_manpowerlv7 = {
+			
+			
+			available = {
+				lv7_manpower = yes
+			}
+
+			ai_will_do = {
+   				factor = 10
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory <  25
+				}				
+				modifier = {
+					#Lower chance if has decent amount
+					factor = 0.5
+					manpower_per_military_factory >  10
+				}
+				modifier = {
+					#Block has plenty manpower
+					factor = 0
+					manpower_per_military_factory >  50
+				}
+			}
+
+			cost = 300
+			removal_cost = -1
+			level = 1
+
+			picture = manpowerlv7
+
+			allowed = {
+				or = {
+					Beast_country = yes
+					God_country = yes
+					Kappa_country = yes
+					
+				}
+			}
+
+			modifier = {
+				conscription = 0.56
+				industrial_capacity_factory = -0.4
+				production_speed_buildings_factor = -0.4
+				consumer_goods_factor = 0.1
+				training_time_factor = 0.5
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+
+
+}

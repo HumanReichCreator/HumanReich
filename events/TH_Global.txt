@@ -1,0 +1,433 @@
+﻿add_namespace = glo
+
+country_event = {
+	id = glo.1
+	title = glo.1.t
+	desc = glo.1.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+	country_event = glo.10000
+	name = glo.1.a
+	}
+	# option = {
+	# country_event = glo.3
+	# name = glo.1.b
+	# }
+}
+country_event = {
+	id = glo.10000
+	title = glo.10000.t
+	desc = glo.10000.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+	# country_event = glo.2
+		name = glo.1.a
+		hidden_effect = {
+			country_event = { id = gen.7 days = 2}
+		}
+	# country_event = glo.2
+	}
+	# option = {
+	# country_event = glo.3
+	# name = glo.1.b
+	# }
+}
+
+country_event = {
+	id = glo.2#FAQ1
+	title = glo.2.t
+	desc = glo.2.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = glo.2.a#138
+	# country_event = glo.21
+	}
+	# option = {
+	# name = glo.2.b#141
+	# country_event = glo.22
+	# }
+	# option = {
+	# name = glo.2.c#142
+	# country_event = glo.23
+	# }
+	# option = {
+	# name = glo.200.d#next page
+	# country_event = glo.20
+	# }
+}
+
+country_event = {
+	id = glo.20#FAQ2
+	title = glo.20.t
+	desc = glo.20.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = glo.20.a#144
+	country_event = glo.24
+	}
+	option = {
+	name = glo.20.b#大背景
+	country_event = glo.25
+	}
+	option = {
+	name = glo.20.c#吹逼
+	country_event = glo.26
+	}
+	option = {
+	name = glo.2000.d#上一页
+	country_event = glo.2
+	}
+}
+
+country_event = {
+	id = glo.3
+	title = glo.3.t
+	desc = glo.3.d
+
+	is_triggered_only = yes
+	
+	option = {
+	name = glo.3.a
+	country_event = glo.4
+	}
+	
+}
+##############difficulty选择#################
+country_event = {
+	id = glo.4#
+	title = glo.4.t
+	desc = glo.4.desc
+
+	is_triggered_only = yes
+	
+	option = {
+	name = glo.4.a#E
+	custom_effect_tooltip = tooltip_Ed
+	add_ideas = E_s
+	set_country_flag = E_s
+	  every_country = {
+		    add_opinion_modifier = {target = ROOT modifier = easy_s}
+	  }
+		if = {
+			limit = {
+				has_global_flag = scnario144
+			}
+			country_event = scn144.2
+		}
+	}
+	option = {
+	name = glo.4.b#N
+	custom_effect_tooltip = tooltip_Nd
+	add_ideas = N_s
+	set_country_flag = N_s
+		if = {
+			limit = {
+				has_global_flag = scnario144
+			}
+			country_event = scn144.2
+		}
+	}
+	option = {
+	name = glo.4.c#H
+	custom_effect_tooltip = tooltip_Hd
+	add_ideas = H_s
+	set_country_flag = H_s
+	  every_country = {
+		    add_opinion_modifier = {target = ROOT modifier = hard_s}
+	  }
+		if = {
+			limit = {
+				has_global_flag = scnario144
+			}
+			country_event = scn144.2
+		}
+	}
+	option = {
+	name = glo.4.d#L
+	custom_effect_tooltip = tooltip_Ld
+	add_ideas = L_s
+	set_country_flag = L_s
+	  every_country = {
+		    add_opinion_modifier = {target = ROOT modifier = lunatic_s}
+	  }
+		if = {
+			limit = {
+				has_global_flag = scnario144
+			}
+			country_event = scn144.2
+		}
+	}
+}
+#================================
+
+country_event = {
+	id = glo.21
+	title = glo.21.t
+	desc = glo.21.d
+
+	is_triggered_only = yes
+	
+	option = {
+	name = glo.21.da#上一页
+	country_event = glo.2
+	}
+	option = {
+	name = glo.21.a
+	}
+}
+country_event = {
+	id = glo.22
+	title = glo.22.t
+	desc = glo.22.d
+
+	is_triggered_only = yes
+	
+	option = {
+	name = glo.21.da#上一页
+	country_event = glo.2
+	}
+	option = {
+	name = glo.21.a
+	}
+}
+country_event = {
+	id = glo.23
+	title = glo.23.t
+	desc = glo.23.d
+
+	is_triggered_only = yes
+	
+	option = {
+	name = glo.21.da#上一页
+	country_event = glo.2
+	}
+	option = {
+	name = glo.21.a
+	}
+}
+#################
+country_event = {
+	id = glo.24
+	title = glo.24.t
+	desc = glo.24.d
+
+	is_triggered_only = yes
+	
+	option = {
+	name = glo.21.da#上一页
+	country_event = glo.20
+	}
+	option = {
+	name = glo.21.a
+	}
+}
+country_event = {
+	id = glo.25
+	title = glo.25.t
+	desc = glo.25.d
+
+	is_triggered_only = yes
+	
+	option = {
+	name = glo.21.da#上一页
+	country_event = glo.20
+	}
+	option = {
+	name = glo.21.a
+	}
+}
+country_event = {
+	id = glo.26
+	title = glo.26.t
+	desc = glo.26.d
+
+	is_triggered_only = yes
+	
+	option = {
+	name = glo.21.da#上一页
+	country_event = glo.20
+	}
+	option = {
+	name = glo.21.a
+	}
+}
+#############新释放的国家调整观点和支持度#############
+country_event = {
+	id = glo.2000
+	title = glo.2000.t
+	desc = glo.2000.d
+	fire_only_once = no
+	hidden = yes
+	trigger = {
+		 NOT = { has_country_flag = initialled }
+	}
+	mean_time_to_happen = {
+        days = 0
+    }
+	immediate = {
+		set_country_flag = initialled
+
+		set_variable = { factory_num = num_of_factories}
+
+		add_manpower = 650
+
+		if = {
+			limit = {
+				not = { has_country_flag = initialled_facs}
+			}
+			custom_situation_initialize = yes
+		}
+
+		add_dynamic_modifier = { modifier = PO_influ }
+		add_dynamic_modifier = { modifier = EXH_influ }
+		add_dynamic_modifier = { modifier = OL_influ }
+		add_dynamic_modifier = { modifier = LS_pp }
+		add_dynamic_modifier = { modifier = Monthly_manpower }
+		add_dynamic_modifier = { modifier = SS_subject_influence }
+		if = {
+			limit = {
+				tag = HUM
+			}
+			add_dynamic_modifier = { modifier = HUM_influenced }
+		}
+		
+		
+		open_reset = yes
+		lobby_reset = yes
+
+		custom_defines_initialize = yes	
+
+		set_variable = { HMIF_influence = 0}
+		
+		set_variable = { OL_view_type = 0}
+		set_variable = { OL_view_value = 60}
+
+		situation_change = yes
+
+		research_slot_generator = yes
+
+		controller_race_manpower = yes
+		
+		CO_factor_refresh = yes
+
+		CONV_modifier = yes
+
+		exhuastion_base_seton = yes
+
+		country_event = glo.3000 #种族关系观点修正
+	}
+
+	option = {
+
+	}
+}
+
+country_event = { #同意
+	id = glo.2001
+	title = glo.2001.t
+	desc = glo.2001.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = glo.2001.a
+	}
+}
+
+country_event = { #未同意
+	id = glo.2002
+	title = glo.2002.t
+	desc = glo.2002.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = glo.2002.a
+	}
+}
+
+country_event = {
+	id = glo.3000
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	hidden = yes
+
+	immediate = {
+		
+
+		custom_defines_changer = yes	
+
+		# 
+		exhuastion_modifier = yes
+
+		power_ratio_seton = yes
+		power_change_modifier = yes
+
+		outlook_modifier = yes
+
+		HMIF_onset = yes
+		
+		race_opinion_changed = yes
+		opinion_change = yes
+
+		continent_faction = yes
+
+		if = {
+			limit = {
+				tag = HUM
+			}
+			add_to_variable = { global.HMIF_influenced = -1}
+		}
+
+		
+		
+	}
+
+	option = {
+
+	}
+}
+
+# country_event = { #吞掉看海国
+# 	id = glo.3001
+
+# 	fire_only_once = yes
+# 	is_triggered_only = no
+
+# 	trigger = {
+# 		XXX = { is_ai = yes }
+# 		date > 148.1.1
+# 		tag = XXX
+# 	}
+
+# 	mean_time_to_happen = {
+# 		days = 2
+# 	}
+
+# 	immediate = {
+# 		random_country = {
+# 			limit = {
+# 				is_ai = no
+# 			}
+# 			transfer_state = 304
+# 		}
+# 	}
+
+# 	option = {
+
+# 	}
+
+# 	hidden = yes
+# }

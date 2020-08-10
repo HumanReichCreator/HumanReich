@@ -1,0 +1,89 @@
+ideas = {
+
+    techfocus = {
+	    law = yes
+		none_theory = {
+			allowed_to_remove = {
+				always = no
+			}
+			modifier = {
+
+			}
+			default = yes
+
+			cost = 0
+		}
+
+		p_youkai_tech = {
+			allowed_to_remove = {
+				always = no
+			}
+			modifier = {
+
+			}
+			
+			research_bonus = {
+
+				magic = 0.05
+				military = 0.05
+				civil = 0.05	
+				combined = 0.03
+
+		    }
+
+		    cost = 0
+		}
+		hum_tech = {
+			allowed_to_remove = {
+				always = no
+			}
+			modifier = {
+
+			}
+			
+			research_bonus = {
+				science = 0.05
+				military = 0.05
+				civil = 0.05	
+
+		    }
+
+		    cost = 0
+		}
+		kap_tech = {
+			allowed_to_remove = {
+				always = no
+			}
+			modifier = {
+
+			}
+			
+			research_bonus = {
+
+				science = 0.05
+				civil = 0.1
+				combined = 0.03
+
+		    }
+
+		    cost = 0
+		}
+		big_youkai_tech = {
+			allowed_to_remove = {
+				always = no
+			}
+			modifier = {
+
+			}
+			
+			research_bonus = {
+
+				magic = 0.05
+				military = 0.1	
+
+		    }
+
+		    cost = 0
+		}
+	}
+}

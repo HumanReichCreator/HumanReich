@@ -1,0 +1,31 @@
+state={
+	id=71
+	name="STATE_71"
+
+	resources={
+
+		powder = 0.0
+		metal = 0
+		gas = 5.0
+		crystal = 20.0
+	}
+
+	history={
+       	146.1.1 = {
+			owner = UUG
+			add_core_of = UUG
+			add_claim_by = UNL
+			buildings = {
+				infrastructure =1
+				industrial_complex = 0
+				arms_factory = 0
+			}
+       	}
+	}
+	provinces={
+		1309 1783 2290 2349 2671 
+	}
+	state_category=s2
+	manpower=64468.0
+	buildings_max_level_factor=1.000
+}

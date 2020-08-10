@@ -1,0 +1,30 @@
+state={
+	id=16
+	name="STATE_16"
+
+	resources={
+		energy = 15
+		powder = 15.0
+		metal = 25
+		gas = 0.0
+		crystal = 0.0
+	}
+
+	provinces={
+		800 916 1317 1666 1672 1928 2544 2580 
+	}
+	history={
+       	146.1.1 = {
+			owner = GOL
+			add_core_of = GOL
+			buildings = {
+				infrastructure =5
+				industrial_complex = 3
+				arms_factory = 2
+			}
+       	}
+	}
+	state_category=s7
+	manpower=1950.0
+	buildings_max_level_factor=1.000
+}

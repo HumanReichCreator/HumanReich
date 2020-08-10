@@ -1,0 +1,497 @@
+ideas = {
+	country = {
+		SCA_yaojingsaodong_idea = {
+	    	picture = chi_war_of_resistance3
+
+			available = {
+				country_exists = CIR
+				CIR = { is_subject = no}
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				stability_factor = -0.25
+				mobilization_laws_cost_factor = 0.2
+				conscription_factor = -0.1
+				consumer_goods_factor = 0.05
+			}
+
+		}
+
+		SCA_xixueguitiaoyue_idea = {
+	    	picture = HUN_treaty_of_triannon
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				oldorder_acceptance = 40
+				political_power_factor = -0.1
+				war_support_factor = -0.1
+				training_time_factor = 0.2
+				guli_drift = 0.04
+				generate_wargoal_tension = 0.4
+			}
+		}
+
+		SCA_bufentuolitiaoyue_idea = {
+	    	picture = HUN_treaty_of_triannon
+
+			available = {
+
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				oldorder_accpetance = 10
+				political_power_factor = -0.025
+				war_support_factor = -0.025
+				training_time_factor = 0.05
+				guli_drift = 0.01
+				generate_wargoal_tension = 0.1
+			}
+
+		}
+		
+		SCA_pachydaili_idea = {
+
+			picture = generic_democratic_drift_bonus
+	
+			modifier = {
+				qinwai_drift = 0.12
+			}
+		}
+
+		SCA_flandredaili_idea = {
+
+			picture = generic_fascism_drift_2
+	
+			modifier = {
+				neworder_drift = 0.12
+			}
+		}
+
+		SCA_zhongzuzhuyizhe_idea = {
+	    	picture = chi_war_of_resistance2
+	
+			modifier = {
+				fandong_drift = 0.06
+				army_org_factor = -0.5
+				industrial_capacity_factory = -0.5
+			}
+		}
+
+		SCA_dailizhengfu_idea = {
+	    	picture = great_depression
+	
+			modifier = {
+				drift_defence_factor = -0.33
+			}
+		}
+
+	#focus idea
+		SCA_quanminjingji_idea = {
+			picture = generic_foreign_capital
+
+			available = {
+				
+			}
+
+			modifier = {		
+				consumer_goods_factor = -0.05
+				# production_speed_arms_factory_factor = -0.05
+			}
+		}
+
+		SCA_diguojingji_idea = {
+			picture = generic_foreign_capital
+
+			available = {
+				
+			}
+			
+			modifier = {		
+				consumer_goods_factor = -0.02
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		SCA_weilescarlet_idea = {
+
+			picture = generic_production_bonus
+
+			available = {
+				
+			}
+			
+			modifier = {		
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		SCA_wuzhihushili_idea = {
+
+			picture = generic_research_bonus
+
+			modifier = {
+				research_speed_factor = 0.02
+			}
+		}
+
+		SCA_gongtongshenghuo = {
+
+			picture = raj_risk_of_famine
+
+			modifier = {
+				global_building_slots_factor = 0.05
+			}
+			research_bonus = {		
+				jiegou = 0.15
+			}
+		}
+
+		SCA_wuzhihujingji = {
+
+			picture = hol_prepare_the_inundation_lines
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.03
+				production_speed_industrial_complex_factor = 0.03
+			}
+		}
+
+		SCA_rengjinshenchanxian_idea = {
+
+			picture = generic_production_bonus
+
+			available = {
+				
+			}
+			
+			modifier = {		
+				production_factory_efficiency_gain_factor = -0.05
+				industrial_capacity_factory = 0.15
+			}
+		}
+
+		SCA_wuzhihushiji_idea = {
+
+			picture = generic_research_bonus
+
+			available = {
+				is_subject_of = SCA
+			}
+			
+			modifier = {		
+				research_speed_factor = 0.04
+			}
+		}
+
+		SCA_qianghuajunshishili_idea = {
+
+			picture = por_colonial_army
+
+			available = {
+				is_subject_of = SCA
+			}
+			
+			modifier = {		
+				training_time_factor = -0.1
+			}
+		}
+
+		SCA_yishijiagu_idea = {
+
+			picture = YUG_orthodox_church_support
+
+			available = {
+				is_subject_of = SCA
+			}
+			
+			targeted_modifier = { 
+				tag = KOG
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = { 
+				tag = NMS
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+		}
+
+		SCA_hetongyanjiu_idea = {
+
+			picture = generic_acquire_tanks
+
+			targeted_modifier = { 
+				tag = NIT
+				attack_bonus_against = 0.08
+				defense_bonus_against = 0.08
+			}
+			targeted_modifier = { 
+				tag = KAP
+				attack_bonus_against = 0.08
+				defense_bonus_against = 0.08
+			}
+			targeted_modifier = { 
+				tag = SAP
+				attack_bonus_against = 0.08
+				defense_bonus_against = 0.08
+			}
+		}
+
+		SCA_eshazongjiaozhashili_idea = {
+
+			picture = generic_acquire_tanks
+
+			targeted_modifier = { 
+				tag = NMS
+				attack_bonus_against = 0.04
+				defense_bonus_against = 0.04
+			}
+		}
+
+		SCA_yazhinananfusangshen_idea = {
+
+			picture = generic_acquire_tanks
+
+			targeted_modifier = { 
+				tag = KOG
+				attack_bonus_against = 0.06
+				defense_bonus_against = 0.06
+			}
+		}
+
+		SCA_jiadakongyongwuqishengchan_idea = {
+
+			picture = generic_fighter_production_diverted
+
+			available = {
+				
+			}
+			
+			equipment_bonus = {
+				ma_fighter_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+				ma_CAS_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
+
+		SCA_kongjunzhunbei1_idea = {
+
+			picture = generic_fighter_production_diverted
+
+			equipment_bonus = {
+				ma_fighter_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				ma_CAS_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+
+		SCA_kongjunzhunbei2_idea = {
+
+			picture = generic_fighter_production_diverted
+
+			equipment_bonus = {
+				ma_fighter_equipment = {
+					build_cost_ic = -0.2 instant = yes
+				}
+				ma_CAS_equipment = {
+					build_cost_ic = -0.2 instant = yes
+				}
+			}
+		}
+
+		SCA_kuodajunxushengchan_idea = {
+
+			picture = HUN_secret_rearmament
+
+			available = {
+				
+			}
+			
+			modifier = {
+				industrial_capacity_factory = 0.25
+			}
+		}
+
+		SCA_fanSCAjiqing_idea = {
+
+			picture = generic_acquire_tanks
+
+			modifier = {
+				training_time_factor = -0.1
+				industrial_capacity_factory = 0.05
+			}
+			targeted_modifier = { 
+				tag = SCA 
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+		}
+
+		SCA_rongheyaoguai_idea = {
+
+			picture = jap_supremacy_of_will
+
+			modifier = {
+				army_infantry_attack_factor = 0.14
+				army_infantry_defence_factor = 0.14
+				mobilization_laws_cost_factor = 0.15
+				conscription_factor = -0.15
+			}
+		}
+
+		SCA_rongheyaojing_idea = {
+
+			picture = jap_supremacy_of_will
+
+			modifier = {
+				army_infantry_attack_factor = 0.09
+				army_infantry_defence_factor = 0.09
+			}
+		}
+
+		SCA_kuodaxuezu_idea = {
+
+			picture = officers_purged
+
+			modifier = {
+				political_power_gain = 0.3
+			}
+		}
+
+		SCA_tichumingliansi_idea = {
+
+	    	picture = great_depression
+
+			modifier = {
+				political_power_factor = -0.3
+			}
+		}
+
+		SCA_zhenduiyaojingruodian_idea = {
+
+			picture = generic_acquire_tanks
+
+			targeted_modifier = { 
+				tag = SC2
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = { 
+				tag = CIR
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = { 
+				tag = SPG
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+		}
+
+		SCA_gongguyaojingxinnian_idea = {
+
+			picture = SPA_la_division_azul
+
+			modifier = {
+				army_org_factor = 0.1
+			}
+		}
+
+		SCA_kuozhanyaoguaijun_idea = {
+
+			picture = SPA_la_division_azul
+
+			modifier = {
+				army_attack_factor = 0.08
+				army_defence_factor = 0.08
+				mobilization_laws_cost_factor = -0.05
+				conscription_factor = -0.1
+			}
+		}
+
+		SCA_nvpujinweijun_idea = {
+
+			picture = SPA_la_division_azul
+
+			modifier = {
+				army_morale_factor = 0.1
+			}
+		}
+		SCA_anfuzhengce_idea = {
+
+			picture = ROM_king_carol_ii_hedonist
+
+			modifier = {
+				political_power_factor = -0.25
+				war_support_weekly = -0.001
+			}
+		}
+		SCA_shoushikejibangzhu_idea = {
+
+			picture = generic_research_bonus
+
+			research_bonus = {
+				combined = 0.05
+			}
+		}
+		SCA_renliyingzizhengfu_idea = {
+
+			picture = generic_research_bonus
+
+			research_bonus = {
+				combined = 0.02
+			}
+		}
+		SCA_xinhongmoxiang_idea = {
+
+			picture = raj_marginalized_muslim_community_angry
+
+			available = {
+				country_exists = SCA
+				SCA = { is_subject = no }
+			}
+			modifier = {
+				encryption = -5
+				decryption = -5
+			}
+
+			targeted_modifier = {
+				tag = SCA
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.1
+			}
+		}
+
+		SCA_zhongyusikaleite_idea = {
+			picture = imperial_glory_idea
+			modifier = {
+				political_power_factor = 0.25
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+			}
+		}
+	}
+}

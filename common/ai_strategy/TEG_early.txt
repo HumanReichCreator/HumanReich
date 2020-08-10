@@ -1,0 +1,508 @@
+# # unit_base is the base value used for evaluating how important it is to deploy the various categories
+# # Written by Henrik "Groogy" Hansson
+# #AI 倾向
+TEG_YSK_set = {
+	enable = {
+		has_global_flag = main_scenario
+	}
+	abort = {
+		or = {
+			has_global_flag = xinshidai
+			YSK = { is_subject = yes }
+		}
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "YSK"			
+		value = 100
+	}	
+}
+TEG_xindetongmeng1 = {
+	enable = {
+		TEG = {
+			has_completed_focus = TEG_xindetongmeng
+		}
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = alliance 
+		id = "TEG"			
+		value = 100
+	}	
+}
+TEG_xindetongmeng2 = {
+	reversed = yes
+	enable = {
+		TEG = {
+			has_completed_focus = TEG_xindetongmeng
+		}
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = alliance 
+		id = "TEG"			
+		value = 100
+	}	
+}
+
+TEG_hetong1 = {
+	enable = {
+		or = {
+			tag = NIT
+			tag = SAP
+		}
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = alliance 
+		id = "TEG"			
+		value = 200
+	}	
+}
+
+TEG_hetong2 = {
+	reversed = yes
+	enable = {
+		or = {
+			tag = NIT
+			tag = SAP
+		}
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = alliance 
+		id = "TEG"			
+		value = 200
+	}	
+}
+
+# TEG_tianmojiexi = {
+# 	# reversed = yes
+
+# 	enable = {
+# 		has_idea = gensoukyo_creator_idea
+# 		has_opinion_modifier = TEG_tianmodelinglijiexi_op
+# 	}
+# 	abort = {
+# 		not = { has_idea = gensoukyo_creator_idea }
+# 	}
+
+# 	ai_strategy = {
+# 		type = antagonize
+# 		id = "TEG"			
+# 		value = 100
+# 	}
+# 	ai_strategy = {
+# 		type = ignore
+# 		id = "TEG"			
+# 		value = -1000
+# 	}
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "TEG"			
+# 		value = -200
+# 	}
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "TEG"			
+# 		value = -200
+# 	}
+# }
+
+# TEG_mingliansijiaoliu1 = {
+# 	# reversed = yes
+
+# 	enable = {
+# 		tag = NMS
+# 		has_opinion_modifier = TEG_yumingliansidejiaoliu_op
+# 	}
+# 	abort = {
+# 		not = { has_opinion_modifier = TEG_yumingliansidejiaoliu_op }
+# 	}
+
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "TEG"			
+# 		value = 30
+# 	}
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "TEG"			
+# 		value = 30
+# 	}
+# 	ai_strategy = {
+# 		type = support
+# 		id = "TEG"			
+# 		value = 50
+# 	}
+# }
+# TEG_mingliansijiaoliu2 = {
+# 	# reversed = yes
+
+# 	enable = {
+# 		tag = TEG
+# 		has_opinion_modifier = TEG_yumingliansidejiaoliu_op
+# 	}
+# 	abort = {
+# 		not = { has_opinion_modifier = TEG_yumingliansidejiaoliu_op }
+# 	}
+
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "NMS"			
+# 		value = 30
+# 	}
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "NMS"			
+# 		value = 30
+# 	}
+# 	ai_strategy = {
+# 		type = support
+# 		id = "NMS"			
+# 		value = 50
+# 	}
+# }
+
+# TEG_befriend1_NIT = {
+# 	enable = {
+# 		tag = TEG
+# 		TEG = { has_country_flag = TEG_befriend_NIT}
+# 	}
+
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "NIT"			
+# 		value = 200
+# 	}
+
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "NIT"			
+# 		value = 200
+# 	}
+
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "SAP"			
+# 		value = 200
+# 	}
+
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "SAP"			
+# 		value = 200
+# 	}
+# }
+
+# TEG_befriend2_NIT = {
+# 	enable = {
+# 		or = {
+# 			tag = NIT
+# 			tag = SAP
+# 		}
+		
+# 		TEG = { has_country_flag = TEG_befriend_NIT}
+# 	}
+
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "TEG"			
+# 		value = 200
+# 	}
+
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "TEG"			
+# 		value = 200
+# 	}
+
+# }
+
+# TEG_lalong91 = {
+# 	# reversed = yes
+
+# 	enable = {
+# 		tag = CIR
+# 		has_opinion_modifier = TEG_lalongyaojinghezhongguo_op
+# 	}
+# 	abort = {
+# 		or = {
+# 			not = { has_opinion_modifier = TEG_lalongyaojinghezhongguo_op }
+# 			SCA = { is_subject = yes }
+# 		}
+		
+# 	}
+
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "TEG"			
+# 		value = 100
+# 	}
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "TEG"			
+# 		value = 100
+# 	}
+# }
+
+# TEG_lalong92 = {
+# 	# reversed = yes
+
+# 	enable = {
+# 		tag = TEG
+# 		has_opinion_modifier = TEG_lalongyaojinghezhongguo_op
+# 	}
+# 	abort = {
+# 		or = {
+# 			not = { has_opinion_modifier = TEG_lalongyaojinghezhongguo_op }
+# 			SCA = { is_subject = yes }
+# 		}
+		
+# 	}
+
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "CIR"			
+# 		value = 100
+# 	}
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "CIR"			
+# 		value = 100
+# 	}
+# }
+
+# TEG_lalongAKI1 = {
+# 	# reversed = yes
+
+# 	enable = {
+# 		tag = AKI
+# 		has_opinion_modifier = TEG_chengnuoshanxiashenming_op
+# 	}
+# 	abort = {
+# 		or = {
+# 			not = { has_opinion_modifier = TEG_chengnuoshanxiashenming_op }
+# 			SCA = { is_subject = yes }
+# 		}
+# 	}
+
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "TEG"			
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "TEG"			
+# 		value = 200
+# 	}
+# }
+# TEG_lalongAKI2 = {
+# 	# reversed = yes
+
+# 	enable = {
+# 		tag = TEG
+# 		has_opinion_modifier = TEG_chengnuoshanxiashenming_op
+# 	}
+# 	abort = {
+# 		or = {
+# 			not = { has_opinion_modifier = TEG_chengnuoshanxiashenming_op }
+# 			SCA = { is_subject = yes }
+# 		}
+# 	}
+
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "AKI"			
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "AKI"			
+# 		value = 200
+# 	}
+# }
+
+# TEG_huifuYSK = {
+# 	# reversed = yes
+
+# 	enable = {
+# 		tag = YSK
+# 		has_opinion_modifier = TEG_huifuheshoushideguanxi_op
+# 	}
+# 	abort = {
+# 		not = { has_opinion_modifier = TEG_huifuheshoushideguanxi_op }
+# 	}
+
+# 	ai_strategy = {
+# 		type = ignore
+# 		id = "TEG"			
+# 		value = 50
+# 	}
+# }
+
+# TEG_zanshixiaochuSCA1 = {
+# 	# reversed = yes
+
+# 	enable = {
+# 		tag = SCA
+# 		has_opinion_modifier = TEG_zanshixiaochuhongmoguan_op
+# 	}
+# 	abort = {
+# 		not = { has_opinion_modifier = TEG_zanshixiaochuhongmoguan_op }
+# 	}
+
+# 	ai_strategy = {
+# 		type = ignore
+# 		id = "TEG"			
+# 		value = 50
+# 	}
+# }
+# TEG_zanshixiaochuSCA2 = {
+# 	# reversed = yes
+
+# 	enable = {
+# 		tag = TEG
+# 		has_opinion_modifier = TEG_zanshixiaochuhongmoguan_op
+# 	}
+# 	abort = {
+# 		not = { has_opinion_modifier = TEG_zanshixiaochuhongmoguan_op }
+# 	}
+
+# 	ai_strategy = {
+# 		type = ignore
+# 		id = "SCA"			
+# 		value = 50
+# 	}
+# }
+
+# TEG_yijiantongyi1 = {
+# 	# reversed = yes
+
+# 	enable = {
+# 		has_opinion_modifier = TEG_yijiantongyi_op
+# 	}
+# 	abort = {
+# 		not = { has_opinion_modifier = TEG_yijiantongyi_op }
+# 	}
+
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "TEG"			
+# 		value = 150
+# 	}
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "TEG"			
+# 		value = 150
+# 	}	
+# }
+
+# TEG_yijiantongyi2 = {
+# 	reversed = yes
+
+# 	enable = {
+# 		has_opinion_modifier = TEG_yijiantongyi_op
+# 	}
+# 	abort = {
+# 		not = { has_opinion_modifier = TEG_yijiantongyi_op }
+# 	}
+
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "TEG"			
+# 		value = 150
+# 	}
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "TEG"			
+# 		value = 150
+# 	}	
+# }
+
+# TEG_yudidijiaoyi = {
+# 	# reversed = yes
+
+# 	enable = {
+# 		has_opinion_modifier = TEG_yudidijiaoyi_op
+# 	}
+# 	abort = {
+# 		not = { has_opinion_modifier = TEG_yudidijiaoyi_op }
+# 	}
+
+# 	ai_strategy = {
+# 		type = support
+# 		id = "TEG"			
+# 		value = 50
+# 	}	
+# }
+
+# TEG_yuxianzhejiaoyi = {
+# 	# reversed = yes
+
+# 	enable = {
+# 		has_opinion_modifier = TEG_yuyaoguaixianzhejiaoyi_op
+# 	}
+# 	abort = {
+# 		not = { has_opinion_modifier = TEG_yuyaoguaixianzhejiaoyi_op }
+# 	}
+
+# 	ai_strategy = {
+# 		type = support
+# 		id = "TEG"			
+# 		value = 60
+# 	}	
+# }
+
+# TEG_yaoguaishangemingjidi = {
+# 	enable = {
+# 		has_country_flag = TEG_yaoguaishanminzhutongmeng
+# 		tag = TEG
+# 	}
+# 	abort = {
+# 		not = { has_country_flag = TEG_yaoguaishanminzhutongmeng }
+# 	}
+
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "NIT"			
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "SAP"			
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = antagonize
+# 		id = "KAP"			
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = antagonize
+# 		id = "YSK"			
+# 		value = 200
+# 	}
+# }

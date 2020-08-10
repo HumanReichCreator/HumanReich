@@ -1,0 +1,28 @@
+state={
+	id=86
+	name="STATE_86"
+	resources={
+
+		powder = 0.0
+		metal = 0
+		gas = 5.0
+		crystal = 0.0
+	}
+	history={
+       	146.1.1 = {
+			owner = SAT
+			add_core_of = SAT
+			buildings = {
+				infrastructure =4
+				industrial_complex = 3
+				arms_factory = 0
+			}
+       	}
+	}
+	provinces={
+		65 93 717 890 1879 1996 
+	}
+	state_category=s5
+	manpower=1695.0
+	buildings_max_level_factor=1.000
+}

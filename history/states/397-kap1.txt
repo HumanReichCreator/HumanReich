@@ -1,0 +1,33 @@
+state={
+	id=397
+	name="STATE_397"
+	provinces={
+		244 622 3113 4190 4196 4199 4200 5316 5319 5419 
+	}
+	resources={
+
+		powder=0.000
+		metal=0.000
+		gas=0.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = SAP
+			add_core_of = KAP
+			add_core_of = SAP
+			buildings = {
+				infrastructure =2
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+	state_category=s2
+	manpower=27.0
+	buildings_max_level_factor=1.000
+}

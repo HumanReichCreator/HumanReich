@@ -1,0 +1,725 @@
+
+ma_weapons_art = {
+    if = {
+        limit = {
+            has_tech = fanyongmopao144
+        }
+        ma_a144 = yes
+    }
+    if = {
+        limit = {
+            has_tech = fangzhihuopao148
+        }
+        ma_a148 = yes
+    }
+    if = {
+        limit = {
+            has_tech = fangzhihuopao153
+        }
+        ma_a153 = yes
+    }
+    if = {
+        limit = {
+            has_tech = fangzhihuopao158
+        }
+        ma_a158 = yes
+    }
+}
+
+ma_a_teshufenzhi = {
+    if = {
+        limit = {
+            not = {
+                and = {
+                    check_variable = { ma_a_r = 0}
+                    check_variable = { ma_a_s = 0}
+                    check_variable = { ma_a_h = 0}
+                    check_variable = { ma_a_a = 0}
+                    check_variable = { ma_a_d = 0}
+                    check_variable = { ma_a_b = 0}
+                    check_variable = { ma_a_i = 0}
+                    check_variable = { ma_a_ir = 0}
+                    check_variable = { ma_a_rr = 0}
+                }
+            }
+        }
+        custom_effect_tooltip = tech_special
+    }
+}
+
+ma_a144 = {
+    ma_a_teshufenzhi = yes
+    if = {
+        limit = {
+            tag = SCA
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "禁果炮" 
+                    type = ma_artillery144
+                    upgrades = {
+                      upgrade_reliability = [ma_a_r]
+                      upgrade_softattack = [ma_a_s]
+                      upgrade_hardattack = [ma_a_h]
+                      upgrade_aaattack = [ma_a_a]
+                      upgrade_defense = [ma_a_d]
+                      upgrade_breakthrough = [ma_a_b]
+                      upgrade_ic = [ma_a_i]
+                      upgrade_ic_reverse = [ma_a_ir]
+                      upgrade_reliability_reverse = [ma_a_rr]
+                   }
+                }
+            }
+            ma_a_r = "[?THIS.ma_a_r]"
+            ma_a_s = "[?THIS.ma_a_s]"
+            ma_a_h = "[?THIS.ma_a_h]"
+            ma_a_a = "[?THIS.ma_a_a]"
+            ma_a_d = "[?THIS.ma_a_d]"
+            ma_a_b = "[?THIS.ma_a_b]"
+            ma_a_i = "[?THIS.ma_a_i]"
+            ma_a_ir = "[?THIS.ma_a_ir]"
+            ma_a_rr = "[?THIS.ma_a_rr]"
+        }
+    }
+    # if = {
+    #     limit = {
+    #         tag = TEG
+    #     }
+    #     meta_effect = {
+    #         text = {
+    #             create_equipment_variant = { 
+    #                 name = "黑鸦炮" 
+    #                 type = ma_artillery144
+    #                 upgrades = {
+    #                   upgrade_reliability = [ma_a_r]
+    #                   upgrade_softattack = [ma_a_s]
+    #                   upgrade_hardattack = [ma_a_h]
+    #                   upgrade_aaattack = [ma_a_a]
+    #                   upgrade_defense = [ma_a_d]
+    #                   upgrade_breakthrough = [ma_a_b]
+    #                   upgrade_ic = [ma_a_i]
+    #                   upgrade_ic_reverse = [ma_a_ir]
+    #                   upgrade_reliability_reverse = [ma_a_rr]
+    #                }
+    #             }
+    #         }
+    #         ma_a_r = "[?THIS.ma_a_r]"
+    #         ma_a_s = "[?THIS.ma_a_s]"
+    #         ma_a_h = "[?THIS.ma_a_h]"
+    #         ma_a_a = "[?THIS.ma_a_a]"
+    #         ma_a_d = "[?THIS.ma_a_d]"
+    #         ma_a_b = "[?THIS.ma_a_b]"
+    #         ma_a_i = "[?THIS.ma_a_i]"
+    #         ma_a_ir = "[?THIS.ma_a_ir]"
+    #         ma_a_rr = "[?THIS.ma_a_rr]"
+    #     }
+    # }
+    if = {
+        limit = {
+            tag = CIR
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "冷冻炮" 
+                    type = ma_artillery144
+                    upgrades = {
+                      upgrade_reliability = [ma_a_r]
+                      upgrade_softattack = [ma_a_s]
+                      upgrade_hardattack = [ma_a_h]
+                      upgrade_aaattack = [ma_a_a]
+                      upgrade_defense = [ma_a_d]
+                      upgrade_breakthrough = [ma_a_b]
+                      upgrade_ic = [ma_a_i]
+                      upgrade_ic_reverse = [ma_a_ir]
+                      upgrade_reliability_reverse = [ma_a_rr]
+                   }
+                }
+            }
+            ma_a_r = "[?THIS.ma_a_r]"
+            ma_a_s = "[?THIS.ma_a_s]"
+            ma_a_h = "[?THIS.ma_a_h]"
+            ma_a_a = "[?THIS.ma_a_a]"
+            ma_a_d = "[?THIS.ma_a_d]"
+            ma_a_b = "[?THIS.ma_a_b]"
+            ma_a_i = "[?THIS.ma_a_i]"
+            ma_a_ir = "[?THIS.ma_a_ir]"
+            ma_a_rr = "[?THIS.ma_a_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = SEI
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "细针剑" 
+                    type = ma_artillery144
+                    upgrades = {
+                      upgrade_reliability = [ma_a_r]
+                      upgrade_softattack = [ma_a_s]
+                      upgrade_hardattack = [ma_a_h]
+                      upgrade_aaattack = [ma_a_a]
+                      upgrade_defense = [ma_a_d]
+                      upgrade_breakthrough = [ma_a_b]
+                      upgrade_ic = [ma_a_i]
+                      upgrade_ic_reverse = [ma_a_ir]
+                      upgrade_reliability_reverse = [ma_a_rr]
+                   }
+                }
+            }
+            ma_a_r = "[?THIS.ma_a_r]"
+            ma_a_s = "[?THIS.ma_a_s]"
+            ma_a_h = "[?THIS.ma_a_h]"
+            ma_a_a = "[?THIS.ma_a_a]"
+            ma_a_d = "[?THIS.ma_a_d]"
+            ma_a_b = "[?THIS.ma_a_b]"
+            ma_a_i = "[?THIS.ma_a_i]"
+            ma_a_ir = "[?THIS.ma_a_ir]"
+            ma_a_rr = "[?THIS.ma_a_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = NMS
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "回声炮" 
+                    type = ma_artillery144
+                    upgrades = {
+                      upgrade_reliability = [ma_a_r]
+                      upgrade_softattack = [ma_a_s]
+                      upgrade_hardattack = [ma_a_h]
+                      upgrade_aaattack = [ma_a_a]
+                      upgrade_defense = [ma_a_d]
+                      upgrade_breakthrough = [ma_a_b]
+                      upgrade_ic = [ma_a_i]
+                      upgrade_ic_reverse = [ma_a_ir]
+                      upgrade_reliability_reverse = [ma_a_rr]
+                   }
+                }
+            }
+            ma_a_r = "[?THIS.ma_a_r]"
+            ma_a_s = "[?THIS.ma_a_s]"
+            ma_a_h = "[?THIS.ma_a_h]"
+            ma_a_a = "[?THIS.ma_a_a]"
+            ma_a_d = "[?THIS.ma_a_d]"
+            ma_a_b = "[?THIS.ma_a_b]"
+            ma_a_i = "[?THIS.ma_a_i]"
+            ma_a_ir = "[?THIS.ma_a_ir]"
+            ma_a_rr = "[?THIS.ma_a_rr]"
+        }
+    }
+}
+
+
+ma_a148 = {
+    ma_a_teshufenzhi = yes
+    if = {
+        limit = {
+            tag = SCA
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "禁忌炮" 
+                    type = ma_artillery148
+                    upgrades = {
+                      upgrade_reliability = [ma_a_r]
+                      upgrade_softattack = [ma_a_s]
+                      upgrade_hardattack = [ma_a_h]
+                      upgrade_aaattack = [ma_a_a]
+                      upgrade_defense = [ma_a_d]
+                      upgrade_breakthrough = [ma_a_b]
+                      upgrade_ic = [ma_a_i]
+                      upgrade_ic_reverse = [ma_a_ir]
+                      upgrade_reliability_reverse = [ma_a_rr]
+                   }
+                }
+            }
+            ma_a_r = "[?THIS.ma_a_r]"
+            ma_a_s = "[?THIS.ma_a_s]"
+            ma_a_h = "[?THIS.ma_a_h]"
+            ma_a_a = "[?THIS.ma_a_a]"
+            ma_a_d = "[?THIS.ma_a_d]"
+            ma_a_b = "[?THIS.ma_a_b]"
+            ma_a_i = "[?THIS.ma_a_i]"
+            ma_a_ir = "[?THIS.ma_a_ir]"
+            ma_a_rr = "[?THIS.ma_a_rr]"
+        }
+    }
+    # if = {
+    #     limit = {
+    #         tag = TEG
+    #     }
+    #     meta_effect = {
+    #         text = {
+    #             create_equipment_variant = { 
+    #                 name = "天狗炮" 
+    #                 type = ma_artillery148
+    #                 upgrades = {
+    #                   upgrade_reliability = [ma_a_r]
+    #                   upgrade_softattack = [ma_a_s]
+    #                   upgrade_hardattack = [ma_a_h]
+    #                   upgrade_aaattack = [ma_a_a]
+    #                   upgrade_defense = [ma_a_d]
+    #                   upgrade_breakthrough = [ma_a_b]
+    #                   upgrade_ic = [ma_a_i]
+    #                   upgrade_ic_reverse = [ma_a_ir]
+    #                   upgrade_reliability_reverse = [ma_a_rr]
+    #                }
+    #             }
+    #         }
+    #         ma_a_r = "[?THIS.ma_a_r]"
+    #         ma_a_s = "[?THIS.ma_a_s]"
+    #         ma_a_h = "[?THIS.ma_a_h]"
+    #         ma_a_a = "[?THIS.ma_a_a]"
+    #         ma_a_d = "[?THIS.ma_a_d]"
+    #         ma_a_b = "[?THIS.ma_a_b]"
+    #         ma_a_i = "[?THIS.ma_a_i]"
+    #         ma_a_ir = "[?THIS.ma_a_ir]"
+    #         ma_a_rr = "[?THIS.ma_a_rr]"
+    #     }
+    # }
+    if = {
+        limit = {
+            tag = CIR
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "冻结炮" 
+                    type = ma_artillery148
+                    upgrades = {
+                      upgrade_reliability = [ma_a_r]
+                      upgrade_softattack = [ma_a_s]
+                      upgrade_hardattack = [ma_a_h]
+                      upgrade_aaattack = [ma_a_a]
+                      upgrade_defense = [ma_a_d]
+                      upgrade_breakthrough = [ma_a_b]
+                      upgrade_ic = [ma_a_i]
+                      upgrade_ic_reverse = [ma_a_ir]
+                      upgrade_reliability_reverse = [ma_a_rr]
+                   }
+                }
+            }
+            ma_a_r = "[?THIS.ma_a_r]"
+            ma_a_s = "[?THIS.ma_a_s]"
+            ma_a_h = "[?THIS.ma_a_h]"
+            ma_a_a = "[?THIS.ma_a_a]"
+            ma_a_d = "[?THIS.ma_a_d]"
+            ma_a_b = "[?THIS.ma_a_b]"
+            ma_a_i = "[?THIS.ma_a_i]"
+            ma_a_ir = "[?THIS.ma_a_ir]"
+            ma_a_rr = "[?THIS.ma_a_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = SEI
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "穿甲细针剑" 
+                    type = ma_artillery148
+                    upgrades = {
+                      upgrade_reliability = [ma_a_r]
+                      upgrade_softattack = [ma_a_s]
+                      upgrade_hardattack = [ma_a_h]
+                      upgrade_aaattack = [ma_a_a]
+                      upgrade_defense = [ma_a_d]
+                      upgrade_breakthrough = [ma_a_b]
+                      upgrade_ic = [ma_a_i]
+                      upgrade_ic_reverse = [ma_a_ir]
+                      upgrade_reliability_reverse = [ma_a_rr]
+                   }
+                }
+            }
+            ma_a_r = "[?THIS.ma_a_r]"
+            ma_a_s = "[?THIS.ma_a_s]"
+            ma_a_h = "[?THIS.ma_a_h]"
+            ma_a_a = "[?THIS.ma_a_a]"
+            ma_a_d = "[?THIS.ma_a_d]"
+            ma_a_b = "[?THIS.ma_a_b]"
+            ma_a_i = "[?THIS.ma_a_i]"
+            ma_a_ir = "[?THIS.ma_a_ir]"
+            ma_a_rr = "[?THIS.ma_a_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = NMS
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "山谷回声" 
+                    type = ma_artillery148
+                    upgrades = {
+                      upgrade_reliability = [ma_a_r]
+                      upgrade_softattack = [ma_a_s]
+                      upgrade_hardattack = [ma_a_h]
+                      upgrade_aaattack = [ma_a_a]
+                      upgrade_defense = [ma_a_d]
+                      upgrade_breakthrough = [ma_a_b]
+                      upgrade_ic = [ma_a_i]
+                      upgrade_ic_reverse = [ma_a_ir]
+                      upgrade_reliability_reverse = [ma_a_rr]
+                   }
+                }
+            }
+            ma_a_r = "[?THIS.ma_a_r]"
+            ma_a_s = "[?THIS.ma_a_s]"
+            ma_a_h = "[?THIS.ma_a_h]"
+            ma_a_a = "[?THIS.ma_a_a]"
+            ma_a_d = "[?THIS.ma_a_d]"
+            ma_a_b = "[?THIS.ma_a_b]"
+            ma_a_i = "[?THIS.ma_a_i]"
+            ma_a_ir = "[?THIS.ma_a_ir]"
+            ma_a_rr = "[?THIS.ma_a_rr]"
+        }
+    }
+}
+
+ma_a153 = {
+    ma_a_teshufenzhi = yes
+    if = {
+        limit = {
+            tag = SCA
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "星弧炮" 
+                    type = ma_artillery153
+                    upgrades = {
+                      upgrade_reliability = [ma_a_r]
+                      upgrade_softattack = [ma_a_s]
+                      upgrade_hardattack = [ma_a_h]
+                      upgrade_aaattack = [ma_a_a]
+                      upgrade_defense = [ma_a_d]
+                      upgrade_breakthrough = [ma_a_b]
+                      upgrade_ic = [ma_a_i]
+                      upgrade_ic_reverse = [ma_a_ir]
+                      upgrade_reliability_reverse = [ma_a_rr]
+                   }
+                }
+            }
+            ma_a_r = "[?THIS.ma_a_r]"
+            ma_a_s = "[?THIS.ma_a_s]"
+            ma_a_h = "[?THIS.ma_a_h]"
+            ma_a_a = "[?THIS.ma_a_a]"
+            ma_a_d = "[?THIS.ma_a_d]"
+            ma_a_b = "[?THIS.ma_a_b]"
+            ma_a_i = "[?THIS.ma_a_i]"
+            ma_a_ir = "[?THIS.ma_a_ir]"
+            ma_a_rr = "[?THIS.ma_a_rr]"
+        }
+    }
+    # if = {
+    #     limit = {
+    #         tag = TEG
+    #     }
+    #     meta_effect = {
+    #         text = {
+    #             create_equipment_variant = { 
+    #                 name = "鸦天狗炮" 
+    #                 type = ma_artillery153
+    #                 upgrades = {
+    #                   upgrade_reliability = [ma_a_r]
+    #                   upgrade_softattack = [ma_a_s]
+    #                   upgrade_hardattack = [ma_a_h]
+    #                   upgrade_aaattack = [ma_a_a]
+    #                   upgrade_defense = [ma_a_d]
+    #                   upgrade_breakthrough = [ma_a_b]
+    #                   upgrade_ic = [ma_a_i]
+    #                   upgrade_ic_reverse = [ma_a_ir]
+    #                   upgrade_reliability_reverse = [ma_a_rr]
+    #                }
+    #             }
+    #         }
+    #         ma_a_r = "[?THIS.ma_a_r]"
+    #         ma_a_s = "[?THIS.ma_a_s]"
+    #         ma_a_h = "[?THIS.ma_a_h]"
+    #         ma_a_a = "[?THIS.ma_a_a]"
+    #         ma_a_d = "[?THIS.ma_a_d]"
+    #         ma_a_b = "[?THIS.ma_a_b]"
+    #         ma_a_i = "[?THIS.ma_a_i]"
+    #         ma_a_ir = "[?THIS.ma_a_ir]"
+    #         ma_a_rr = "[?THIS.ma_a_rr]"
+    #     }
+    # }
+    if = {
+        limit = {
+            tag = CIR
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "急冻炮" 
+                    type = ma_artillery153
+                    upgrades = {
+                      upgrade_reliability = [ma_a_r]
+                      upgrade_softattack = [ma_a_s]
+                      upgrade_hardattack = [ma_a_h]
+                      upgrade_aaattack = [ma_a_a]
+                      upgrade_defense = [ma_a_d]
+                      upgrade_breakthrough = [ma_a_b]
+                      upgrade_ic = [ma_a_i]
+                      upgrade_ic_reverse = [ma_a_ir]
+                      upgrade_reliability_reverse = [ma_a_rr]
+                   }
+                }
+            }
+            ma_a_r = "[?THIS.ma_a_r]"
+            ma_a_s = "[?THIS.ma_a_s]"
+            ma_a_h = "[?THIS.ma_a_h]"
+            ma_a_a = "[?THIS.ma_a_a]"
+            ma_a_d = "[?THIS.ma_a_d]"
+            ma_a_b = "[?THIS.ma_a_b]"
+            ma_a_i = "[?THIS.ma_a_i]"
+            ma_a_ir = "[?THIS.ma_a_ir]"
+            ma_a_rr = "[?THIS.ma_a_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = SEI
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "辉针剑" 
+                    type = ma_artillery153
+                    upgrades = {
+                      upgrade_reliability = [ma_a_r]
+                      upgrade_softattack = [ma_a_s]
+                      upgrade_hardattack = [ma_a_h]
+                      upgrade_aaattack = [ma_a_a]
+                      upgrade_defense = [ma_a_d]
+                      upgrade_breakthrough = [ma_a_b]
+                      upgrade_ic = [ma_a_i]
+                      upgrade_ic_reverse = [ma_a_ir]
+                      upgrade_reliability_reverse = [ma_a_rr]
+                   }
+                }
+            }
+            ma_a_r = "[?THIS.ma_a_r]"
+            ma_a_s = "[?THIS.ma_a_s]"
+            ma_a_h = "[?THIS.ma_a_h]"
+            ma_a_a = "[?THIS.ma_a_a]"
+            ma_a_d = "[?THIS.ma_a_d]"
+            ma_a_b = "[?THIS.ma_a_b]"
+            ma_a_i = "[?THIS.ma_a_i]"
+            ma_a_ir = "[?THIS.ma_a_ir]"
+            ma_a_rr = "[?THIS.ma_a_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = NMS
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "扩大回声" 
+                    type = ma_artillery153
+                    upgrades = {
+                      upgrade_reliability = [ma_a_r]
+                      upgrade_softattack = [ma_a_s]
+                      upgrade_hardattack = [ma_a_h]
+                      upgrade_aaattack = [ma_a_a]
+                      upgrade_defense = [ma_a_d]
+                      upgrade_breakthrough = [ma_a_b]
+                      upgrade_ic = [ma_a_i]
+                      upgrade_ic_reverse = [ma_a_ir]
+                      upgrade_reliability_reverse = [ma_a_rr]
+                   }
+                }
+            }
+            ma_a_r = "[?THIS.ma_a_r]"
+            ma_a_s = "[?THIS.ma_a_s]"
+            ma_a_h = "[?THIS.ma_a_h]"
+            ma_a_a = "[?THIS.ma_a_a]"
+            ma_a_d = "[?THIS.ma_a_d]"
+            ma_a_b = "[?THIS.ma_a_b]"
+            ma_a_i = "[?THIS.ma_a_i]"
+            ma_a_ir = "[?THIS.ma_a_ir]"
+            ma_a_rr = "[?THIS.ma_a_rr]"
+        }
+    }
+}
+
+ma_a158 = {
+    ma_a_teshufenzhi = yes
+    if = {
+        limit = {
+            tag = SCA
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "破碎炮" 
+                    type = ma_artillery158
+                    upgrades = {
+                      upgrade_reliability = [ma_a_r]
+                      upgrade_softattack = [ma_a_s]
+                      upgrade_hardattack = [ma_a_h]
+                      upgrade_aaattack = [ma_a_a]
+                      upgrade_defense = [ma_a_d]
+                      upgrade_breakthrough = [ma_a_b]
+                      upgrade_ic = [ma_a_i]
+                      upgrade_ic_reverse = [ma_a_ir]
+                      upgrade_reliability_reverse = [ma_a_rr]
+                   }
+                }
+            }
+            ma_a_r = "[?THIS.ma_a_r]"
+            ma_a_s = "[?THIS.ma_a_s]"
+            ma_a_h = "[?THIS.ma_a_h]"
+            ma_a_a = "[?THIS.ma_a_a]"
+            ma_a_d = "[?THIS.ma_a_d]"
+            ma_a_b = "[?THIS.ma_a_b]"
+            ma_a_i = "[?THIS.ma_a_i]"
+            ma_a_ir = "[?THIS.ma_a_ir]"
+            ma_a_rr = "[?THIS.ma_a_rr]"
+        }
+    }
+    # if = {
+    #     limit = {
+    #         tag = TEG
+    #     }
+    #     meta_effect = {
+    #         text = {
+    #             create_equipment_variant = { 
+    #                 name = "天狗开风炮" 
+    #                 type = ma_artillery158
+    #                 upgrades = {
+    #                   upgrade_reliability = [ma_a_r]
+    #                   upgrade_softattack = [ma_a_s]
+    #                   upgrade_hardattack = [ma_a_h]
+    #                   upgrade_aaattack = [ma_a_a]
+    #                   upgrade_defense = [ma_a_d]
+    #                   upgrade_breakthrough = [ma_a_b]
+    #                   upgrade_ic = [ma_a_i]
+    #                   upgrade_ic_reverse = [ma_a_ir]
+    #                   upgrade_reliability_reverse = [ma_a_rr]
+    #                }
+    #             }
+    #         }
+    #         ma_a_r = "[?THIS.ma_a_r]"
+    #         ma_a_s = "[?THIS.ma_a_s]"
+    #         ma_a_h = "[?THIS.ma_a_h]"
+    #         ma_a_a = "[?THIS.ma_a_a]"
+    #         ma_a_d = "[?THIS.ma_a_d]"
+    #         ma_a_b = "[?THIS.ma_a_b]"
+    #         ma_a_i = "[?THIS.ma_a_i]"
+    #         ma_a_ir = "[?THIS.ma_a_ir]"
+    #         ma_a_rr = "[?THIS.ma_a_rr]"
+    #     }
+    # }
+    if = {
+        limit = {
+            tag = CIR
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "巨冰破碎炮" 
+                    type = ma_artillery158
+                    upgrades = {
+                      upgrade_reliability = [ma_a_r]
+                      upgrade_softattack = [ma_a_s]
+                      upgrade_hardattack = [ma_a_h]
+                      upgrade_aaattack = [ma_a_a]
+                      upgrade_defense = [ma_a_d]
+                      upgrade_breakthrough = [ma_a_b]
+                      upgrade_ic = [ma_a_i]
+                      upgrade_ic_reverse = [ma_a_ir]
+                      upgrade_reliability_reverse = [ma_a_rr]
+                   }
+                }
+            }
+            ma_a_r = "[?THIS.ma_a_r]"
+            ma_a_s = "[?THIS.ma_a_s]"
+            ma_a_h = "[?THIS.ma_a_h]"
+            ma_a_a = "[?THIS.ma_a_a]"
+            ma_a_d = "[?THIS.ma_a_d]"
+            ma_a_b = "[?THIS.ma_a_b]"
+            ma_a_i = "[?THIS.ma_a_i]"
+            ma_a_ir = "[?THIS.ma_a_ir]"
+            ma_a_rr = "[?THIS.ma_a_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = SEI
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "辉针破城炮" 
+                    type = ma_artillery158
+                    upgrades = {
+                      upgrade_reliability = [ma_a_r]
+                      upgrade_softattack = [ma_a_s]
+                      upgrade_hardattack = [ma_a_h]
+                      upgrade_aaattack = [ma_a_a]
+                      upgrade_defense = [ma_a_d]
+                      upgrade_breakthrough = [ma_a_b]
+                      upgrade_ic = [ma_a_i]
+                      upgrade_ic_reverse = [ma_a_ir]
+                      upgrade_reliability_reverse = [ma_a_rr]
+                   }
+                }
+            }
+            ma_a_r = "[?THIS.ma_a_r]"
+            ma_a_s = "[?THIS.ma_a_s]"
+            ma_a_h = "[?THIS.ma_a_h]"
+            ma_a_a = "[?THIS.ma_a_a]"
+            ma_a_d = "[?THIS.ma_a_d]"
+            ma_a_b = "[?THIS.ma_a_b]"
+            ma_a_i = "[?THIS.ma_a_i]"
+            ma_a_ir = "[?THIS.ma_a_ir]"
+            ma_a_rr = "[?THIS.ma_a_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = NMS
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "混乱回声" 
+                    type = ma_artillery158
+                    upgrades = {
+                      upgrade_reliability = [ma_a_r]
+                      upgrade_softattack = [ma_a_s]
+                      upgrade_hardattack = [ma_a_h]
+                      upgrade_aaattack = [ma_a_a]
+                      upgrade_defense = [ma_a_d]
+                      upgrade_breakthrough = [ma_a_b]
+                      upgrade_ic = [ma_a_i]
+                      upgrade_ic_reverse = [ma_a_ir]
+                      upgrade_reliability_reverse = [ma_a_rr]
+                   }
+                }
+            }
+            ma_a_r = "[?THIS.ma_a_r]"
+            ma_a_s = "[?THIS.ma_a_s]"
+            ma_a_h = "[?THIS.ma_a_h]"
+            ma_a_a = "[?THIS.ma_a_a]"
+            ma_a_d = "[?THIS.ma_a_d]"
+            ma_a_b = "[?THIS.ma_a_b]"
+            ma_a_i = "[?THIS.ma_a_i]"
+            ma_a_ir = "[?THIS.ma_a_ir]"
+            ma_a_rr = "[?THIS.ma_a_rr]"
+        }
+    }
+}

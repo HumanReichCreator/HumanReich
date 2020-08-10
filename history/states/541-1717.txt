@@ -1,0 +1,33 @@
+
+state={
+	id=541
+	name="STATE_541"
+	resources={
+		energy = 0
+		powder=1.000
+		metal=0.000
+		gas=0.000
+		crystal=3.000
+	}
+	history={
+		146.1.1 = {
+			owner = HGH
+			add_core_of = HGH
+			buildings = {
+				infrastructure = 3
+				industrial_complex = 1
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		6896 6899 6909 6911 6916 6917 6924 6926 6927 6930 6931 6944 6947 6948 6955 6958 
+	}
+	manpower=93549
+	buildings_max_level_factor=1.000
+	state_category=s5
+}

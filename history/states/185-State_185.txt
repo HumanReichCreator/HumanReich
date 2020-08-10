@@ -1,0 +1,37 @@
+
+state={
+	id=185
+	name="STATE_185"
+
+	resources={
+
+		powder=0.000
+		metal=0.000
+		gas=5.000
+		crystal=0.000
+	}
+
+	
+
+	history={
+		146.1.1 = {
+			owner = MTM
+			add_core_of = MTM
+			buildings = {
+				infrastructure =1
+				industrial_complex = 1
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		1498 1742 2025 2817 2818 3221 4312 4315 4316 4318 4321 4323 4325 4329 4334 4337 4341 4347 
+	}
+	manpower=328.0
+	buildings_max_level_factor=1.000
+	state_category=s2
+}

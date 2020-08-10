@@ -1,0 +1,380 @@
+#=============2.观点变换=============
+
+opinion_change = {
+	hidden_effect = {
+		every_country = {
+			remove_opinion_modifier = {target = ROOT modifier = same_view }
+			remove_opinion_modifier = {target = ROOT modifier = different_view }
+			remove_opinion_modifier = {target = ROOT modifier = gailiang_view }
+			remove_opinion_modifier = {target = ROOT modifier = different_world }
+			ROOT = {
+				remove_opinion_modifier = {target = PREV modifier = same_view }
+				remove_opinion_modifier = {target = PREV modifier = different_view }
+				remove_opinion_modifier = {target = PREV modifier = gailiang_view }
+				remove_opinion_modifier = {target = PREV modifier = different_world }
+			}
+		}
+		if = {
+			limit = {
+				has_government = qinwai
+			}
+			every_country = {
+				limit = {
+					has_government = qinwai
+				}
+				add_opinion_modifier = {target = ROOT modifier = gailiang_view}
+				reverse_add_opinion_modifier = {target = ROOT modifier = gailiang_view}
+			}
+		}
+
+		if = {
+			limit = {
+				capital_scope = {
+					is_on_continent = Gensokyo
+				}
+			}
+			every_country = {
+				limit = {
+					capital_scope = {
+						not = { is_on_continent = Gensokyo }
+					}
+				}
+				add_opinion_modifier = {target = ROOT modifier = different_world}
+				reverse_add_opinion_modifier = {target = ROOT modifier = different_world}
+			}
+		}
+		if = {
+			limit = {
+				capital_scope = {
+					is_on_continent = Underground
+				}
+			}
+			every_country = {
+				limit = {
+					capital_scope = {
+						not = { is_on_continent = Underground }
+					}
+				}
+				add_opinion_modifier = {target = ROOT modifier = different_world}
+				reverse_add_opinion_modifier = {target = ROOT modifier = different_world}
+			}
+		}
+		if = {
+			limit = {
+				capital_scope = {
+					is_on_continent = Celestial
+				}
+			}
+			every_country = {
+				limit = {
+					capital_scope = {
+						not = { is_on_continent = Celestial }
+					}
+				}
+				add_opinion_modifier = {target = ROOT modifier = different_world}
+				reverse_add_opinion_modifier = {target = ROOT modifier = different_world}
+			}
+		}
+		if = {
+			limit = {
+				capital_scope = {
+					is_on_continent = Netherworld
+				}
+			}
+			every_country = {
+				limit = {
+					capital_scope = {
+						not = { is_on_continent = Netherworld }
+					}
+				}
+				add_opinion_modifier = {target = ROOT modifier = different_world}
+				reverse_add_opinion_modifier = {target = ROOT modifier = different_world}
+			}
+		}
+		if = {
+			limit = {
+				capital_scope = {
+					is_on_continent = Hell
+				}
+			}
+			every_country = {
+				limit = {
+					capital_scope = {
+						not = { is_on_continent = Hell }
+					}
+				}
+				add_opinion_modifier = {target = ROOT modifier = different_world}
+				reverse_add_opinion_modifier = {target = ROOT modifier = different_world}
+			}
+		}
+
+		every_country = {
+			if = {
+				limit = {
+					check_variable = { THIS.OL_view_type = ROOT.OL_view_type}
+				}
+				add_opinion_modifier = {target = ROOT modifier = same_view}		
+			 	reverse_add_opinion_modifier = {target = ROOT modifier = same_view}	
+			 	else = {
+			 		if = {
+			 			limit = {
+			 				or = {
+			 					and = {
+			 						check_variable = { THIS.OL_view_type = 0}
+			 						check_variable = { ROOT.OL_view_type = 2}
+			 					}
+			 					and = {
+			 						check_variable = { THIS.OL_view_type = 2}
+			 						check_variable = { ROOT.OL_view_type = 0}
+			 					}
+			 				}
+			 			}
+			 			add_opinion_modifier = {target = ROOT modifier = different_view}		
+			 			reverse_add_opinion_modifier = {target = ROOT modifier = different_view}
+			 		}
+			 	}
+			}
+		}
+	}
+}
+
+race_opinion_changed = {
+	hidden_effect = {
+		every_country = {
+			remove_opinion_modifier = {
+			    target = ROOT
+			    modifier = same_race
+			}
+			remove_opinion_modifier = {
+			    target = ROOT
+			    modifier = different_race
+			}
+			ROOT = {
+				remove_opinion_modifier = {
+				    target = PREV
+				    modifier = same_race
+				}
+				remove_opinion_modifier = {
+				    target = PREV
+				    modifier = different_race
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				has_idea = Human
+			}
+			every_country = {
+				if = {
+					limit = {
+						has_idea = Human
+					}
+					add_opinion_modifier = { modifier = same_race target = ROOT }
+					reverse_add_opinion_modifier = { modifier = same_race target = ROOT }
+					else = {
+						add_opinion_modifier = { modifier = different_race target = ROOT }
+						reverse_add_opinion_modifier = { modifier = different_race target = ROOT }
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				has_idea = Fairy
+			}
+			every_country = {
+				if = {
+					limit = {
+						has_idea = Fairy
+					}
+					add_opinion_modifier = { modifier = same_race target = ROOT }
+					reverse_add_opinion_modifier = { modifier = same_race target = ROOT }
+					else = {
+						add_opinion_modifier = { modifier = different_race target = ROOT }
+						reverse_add_opinion_modifier = { modifier = different_race target = ROOT }
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				has_idea = God
+			}
+			every_country = {
+				if = {
+					limit = {
+						has_idea = God
+					}
+					add_opinion_modifier = { modifier = same_race target = ROOT }
+					reverse_add_opinion_modifier = { modifier = same_race target = ROOT }
+					else = {
+						add_opinion_modifier = { modifier = different_race target = ROOT }
+						reverse_add_opinion_modifier = { modifier = different_race target = ROOT }
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				has_idea = Ghost
+			}
+			every_country = {
+				if = {
+					limit = {
+						has_idea = Ghost
+					}
+					add_opinion_modifier = { modifier = same_race target = ROOT }
+					reverse_add_opinion_modifier = { modifier = same_race target = ROOT }
+					else = {
+						add_opinion_modifier = { modifier = different_race target = ROOT }
+						reverse_add_opinion_modifier = { modifier = different_race target = ROOT }
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				has_idea = Pri_youkai
+			}
+			every_country = {
+				if = {
+					limit = {
+						has_idea = Pri_youkai
+					}
+					add_opinion_modifier = { modifier = same_race target = ROOT }
+					reverse_add_opinion_modifier = { modifier = same_race target = ROOT }
+					else = {
+						add_opinion_modifier = { modifier = different_race target = ROOT }
+						reverse_add_opinion_modifier = { modifier = different_race target = ROOT }
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				has_idea = Youkai
+			}
+			every_country = {
+				if = {
+					limit = {
+						has_idea = Youkai
+					}
+					add_opinion_modifier = { modifier = same_race target = ROOT }
+					reverse_add_opinion_modifier = { modifier = same_race target = ROOT }
+					else = {
+						add_opinion_modifier = { modifier = different_race target = ROOT }
+						reverse_add_opinion_modifier = { modifier = different_race target = ROOT }
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				has_idea = Kappa
+			}
+			every_country = {
+				if = {
+					limit = {
+						has_idea = Kappa
+					}
+					add_opinion_modifier = { modifier = same_race target = ROOT }
+					reverse_add_opinion_modifier = { modifier = same_race target = ROOT }
+					else = {
+						add_opinion_modifier = { modifier = different_race target = ROOT }
+						reverse_add_opinion_modifier = { modifier = different_race target = ROOT }
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				has_idea = Tenggu
+			}
+			every_country = {
+				if = {
+					limit = {
+						has_idea = Tenggu
+					}
+					add_opinion_modifier = { modifier = same_race target = ROOT }
+					reverse_add_opinion_modifier = { modifier = same_race target = ROOT }
+					else = {
+						add_opinion_modifier = { modifier = different_race target = ROOT }
+						reverse_add_opinion_modifier = { modifier = different_race target = ROOT }
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				has_idea = Magician
+			}
+			every_country = {
+				if = {
+					limit = {
+						has_idea = Magician
+					}
+					add_opinion_modifier = { modifier = same_race target = ROOT }
+					reverse_add_opinion_modifier = { modifier = same_race target = ROOT }
+					else = {
+						add_opinion_modifier = { modifier = different_race target = ROOT }
+						reverse_add_opinion_modifier = { modifier = different_race target = ROOT }
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				has_idea = Beast
+			}
+			every_country = {
+				if = {
+					limit = {
+						has_idea = Beast
+					}
+					add_opinion_modifier = { modifier = same_race target = ROOT }
+					reverse_add_opinion_modifier = { modifier = same_race target = ROOT }
+					else = {
+						add_opinion_modifier = { modifier = different_race target = ROOT }
+						reverse_add_opinion_modifier = { modifier = different_race target = ROOT }
+					}
+				}
+			}
+		}
+	}
+}
+
+continent_faction = {
+	every_country = {
+		limit = {
+			not = {
+				tag = ROOT
+				has_country_flag = not_ally_to_@ROOT
+				ROOT = { has_country_flag = not_ally_to_@PREV}
+				is_same_continent = yes
+			}
+		}
+		set_country_flag = not_ally_to_@ROOT
+		add_ai_strategy = {
+			type = alliance
+			id = ROOT
+			value = -1000
+		}
+		ROOT = {
+			add_ai_strategy = {
+				type = alliance
+				id = PREV
+				value = -1000
+			}
+		}
+	}
+}

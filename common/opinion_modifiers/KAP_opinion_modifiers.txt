@@ -1,0 +1,16 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+	KAP_jianmaichanpin_op = {
+		value = -15
+		years = 1
+	}
+}	

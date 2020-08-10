@@ -1,0 +1,49 @@
+
+state={
+	id=204
+	name="STATE_204"
+	resources={
+
+		powder=0.000
+		metal=0.000
+		gas=5.000
+		crystal=0.000
+	}
+
+	history={
+		143.7.1 = {
+			owner = KOG
+			add_core_of = KOG
+			buildings = {
+				infrastructure =3
+				industrial_complex = 1
+				arms_factory = 1
+			}
+		}
+		146.1.1 = {
+			owner = AVE
+			add_core_of = AVE
+			add_claim_by = HUM
+			add_core_of = KOG
+			add_claim_by = WAK
+			add_claim_by = HU6
+			add_claim_by = HU7
+			add_claim_by = HU8
+			buildings = {
+				infrastructure =3
+				industrial_complex = 1
+				arms_factory = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		455 1476 1950 1978 2838 3504 3507 3511 3512 3514 3519 
+	}
+	manpower=917.0
+	buildings_max_level_factor=1.000
+	state_category=s5
+}

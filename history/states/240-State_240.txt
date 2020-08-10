@@ -1,0 +1,47 @@
+
+state={
+	id=240
+	name="STATE_240"
+	resources={
+
+		powder=0.000
+		metal=0.000
+		gas=0.000
+		crystal=0.000
+	}
+
+	history={
+		143.7.1 = {
+			owner = HUM
+			add_core_of = HUM
+			buildings = {
+				infrastructure =2
+				industrial_complex = 0
+				arms_factory = 0
+			}
+		}
+		146.1.1 = {
+			owner = SBK
+			add_core_of = SBK
+			add_core_of = HUM
+			add_core_of = HU6
+			add_core_of = HU7
+			add_core_of = HU8
+			buildings = {
+				infrastructure =3
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		303 1910 2866 3189 3906 3907 3908 3910 3912 3913 3914 3915 5457 
+	}
+	manpower=1013.0
+	buildings_max_level_factor=1.000
+	state_category=s5
+}

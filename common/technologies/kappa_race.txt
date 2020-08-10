@@ -1,0 +1,565 @@
+technologies = {
+	kappa_tech = {
+    
+	    research_cost = 1
+
+	    path = {
+			leads_to_tech = yanjiujingshen1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = gaonenglinglihuoyao1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = zhinengjiqiren1
+			research_cost_coeff = 1
+		}
+
+	   folder = {
+	      name = Kappa_race_tech_folder
+	      position = { x = 10 y = 0 }
+	    }
+	    
+	    categories = {
+	      secret
+	    }
+	    dependencies = {
+	       abandoned = 1
+	    }
+	    
+	    ai_will_do = {
+	      factor = 1
+	    }
+	}
+
+	yanjiujingshen1 = {
+	
+		path = {
+			leads_to_tech = yanjiujingshen2
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.2
+		start_year = 144
+
+		research_speed_factor = 0.03
+
+		folder = {
+			name = Kappa_race_tech_folder
+			position = { x = 4 y = 2 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	yanjiujingshen2 = {
+	
+		path = {
+			leads_to_tech = yanjiujingshen3
+			research_cost_coeff = 1
+		}
+
+		research_speed_factor = 0.03
+		
+		research_cost = 2.2
+		start_year = 148
+
+		folder = {
+			name = Kappa_race_tech_folder
+			position = { x = 4 y = 4 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	yanjiujingshen3 = {
+	
+		path = {
+			leads_to_tech = yanjiujingshen4
+			research_cost_coeff = 1
+		}
+
+		research_speed_factor = 0.03
+		
+		research_cost = 2.2
+		start_year = 152
+
+		folder = {
+			name = Kappa_race_tech_folder
+			position = { x = 4 y = 6 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	yanjiujingshen4 = {
+	
+		path = {
+			leads_to_tech = yanjiujingshen5
+			research_cost_coeff = 1
+		}
+
+		research_speed_factor = 0.03
+		
+		research_cost = 2.2
+		start_year = 156
+
+		folder = {
+			name = Kappa_race_tech_folder
+			position = { x = 4 y = 8 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	yanjiujingshen5 = {
+
+		research_speed_factor = 0.03
+		
+		research_cost = 2.2
+		start_year = 160
+
+		folder = {
+			name = Kappa_race_tech_folder
+			position = { x = 4 y = 10 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	gaonenglinglihuoyao1 = {
+	
+		path = {
+			leads_to_tech = gaonenglinglihuoyao2
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.2
+		start_year = 144
+
+		sc_artillery_brigade = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		sc_artillery = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		sc_mot_artillery_brigade = {
+		    soft_attack = 0.05
+		    hard_attack = 0.05
+		}
+
+		ma_artillery_brigade = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		ma_rocket_artillery_brigade = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		ma_mot_artillery_brigade = {
+		    soft_attack = 0.05
+		    hard_attack = 0.05
+		}
+
+		
+
+		folder = {
+			name = Kappa_race_tech_folder
+			position = { x = 10 y = 2 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	gaonenglinglihuoyao2 = {
+	
+		path = {
+			leads_to_tech = gaonenglinglihuoyao3
+			research_cost_coeff = 1
+		}
+
+		sc_artillery_brigade = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		sc_artillery = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		sc_mot_artillery_brigade = {
+		    soft_attack = 0.05
+		    hard_attack = 0.05
+		}
+
+		ma_artillery_brigade = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		ma_rocket_artillery_brigade = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		ma_mot_artillery_brigade = {
+		    soft_attack = 0.05
+		    hard_attack = 0.05
+		}
+		
+		research_cost = 2.2
+		start_year = 148
+
+		folder = {
+			name = Kappa_race_tech_folder
+			position = { x = 10 y = 4 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	gaonenglinglihuoyao3 = {
+	
+		path = {
+			leads_to_tech = gaonenglinglihuoyao4
+			research_cost_coeff = 1
+		}
+
+		sc_artillery_brigade = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		sc_artillery = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		sc_mot_artillery_brigade = {
+		    soft_attack = 0.05
+		    hard_attack = 0.05
+		}
+
+		ma_artillery_brigade = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		ma_rocket_artillery_brigade = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		ma_mot_artillery_brigade = {
+		    soft_attack = 0.05
+		    hard_attack = 0.05
+		}
+		
+		research_cost = 2.2
+		start_year = 152
+
+		folder = {
+			name = Kappa_race_tech_folder
+			position = { x = 10 y = 6 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	gaonenglinglihuoyao4 = {
+	
+		path = {
+			leads_to_tech = gaonenglinglihuoyao5
+			research_cost_coeff = 1
+		}
+
+		sc_artillery_brigade = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		sc_artillery = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		sc_mot_artillery_brigade = {
+		    soft_attack = 0.05
+		    hard_attack = 0.05
+		}
+
+		ma_artillery_brigade = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		ma_rocket_artillery_brigade = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		ma_mot_artillery_brigade = {
+		    soft_attack = 0.05
+		    hard_attack = 0.05
+		}
+		
+		research_cost = 2.2
+		start_year = 156
+
+		folder = {
+			name = Kappa_race_tech_folder
+			position = { x = 10 y = 8 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	gaonenglinglihuoyao5 = {
+
+
+		sc_artillery_brigade = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		sc_artillery = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		sc_mot_artillery_brigade = {
+		    soft_attack = 0.05
+		    hard_attack = 0.05
+		}
+
+		
+		ma_artillery_brigade = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		ma_rocket_artillery_brigade = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		ma_mot_artillery_brigade = {
+		    soft_attack = 0.05
+		    hard_attack = 0.05
+		}
+		
+		research_cost = 2.2
+		start_year = 160
+
+		folder = {
+			name = Kappa_race_tech_folder
+			position = { x = 10 y = 10 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	zhinengjiqiren1 = {
+	
+		path = {
+			leads_to_tech = zhinengjiqiren2
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			Kappa_special_1
+		}
+
+		enable_subunits = {
+			Kappa_special
+		}
+		
+		research_cost = 2.2
+		start_year = 144
+
+		folder = {
+			name = Kappa_race_tech_folder
+			position = { x = 16 y = 2 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	zhinengjiqiren2 = {
+	
+		path = {
+			leads_to_tech = zhinengjiqiren3
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			Kappa_special_2
+		}
+
+		Kappa_special = {
+			combat_width = -5
+		}
+		
+		research_cost = 2.2
+		start_year = 148
+
+		folder = {
+			name = Kappa_race_tech_folder
+			position = { x = 16 y = 4 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	zhinengjiqiren3 = {
+	
+		path = {
+			leads_to_tech = zhinengjiqiren4
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			Kappa_special_3
+		}
+
+		Kappa_special = {
+			combat_width = -5
+		}
+
+		
+		research_cost = 2.2
+		start_year = 152
+
+		folder = {
+			name = Kappa_race_tech_folder
+			position = { x = 16 y = 6 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	zhinengjiqiren4 = {
+	
+		path = {
+			leads_to_tech = zhinengjiqiren5
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			Kappa_special_4
+		}
+
+		Kappa_special = {
+			combat_width = -5
+		}
+		
+		research_cost = 2.2
+		start_year = 156
+
+		folder = {
+			name = Kappa_race_tech_folder
+			position = { x = 16 y = 8 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	zhinengjiqiren5 = {
+		
+		research_cost = 2.2
+		start_year = 160
+
+		enable_equipments = {
+			Kappa_special_5
+		}
+
+		Kappa_special = {
+			combat_width = -5
+		}
+
+		folder = {
+			name = Kappa_race_tech_folder
+			position = { x = 16 y = 10 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

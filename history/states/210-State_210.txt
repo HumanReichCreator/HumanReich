@@ -1,0 +1,34 @@
+
+state={
+	id=210
+	name="STATE_210"
+	resources={
+		energy = 5
+		powder=0.000
+		metal=0.000
+		gas=10.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = HKR
+			add_core_of = HKR
+			buildings = {
+				infrastructure =3
+				industrial_complex = 2
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		923 1140 1294 1472 1838 2837 2856 3250 3253 4154 5721 5728 
+	}
+	manpower=1018.0
+	buildings_max_level_factor=1.000
+	state_category=s5
+}

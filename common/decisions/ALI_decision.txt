@@ -1,0 +1,263 @@
+ALI_category = {
+	ALI_renoujiaqiang = {
+
+		available = {
+			
+		}
+
+		visible = {
+			tag = ALI
+			has_country_flag = ALI_jianlirenougongfang
+		}
+
+		fire_only_once = no
+		cost = 150
+
+		days_re_enable = 1
+		days_remove = 365
+
+		complete_effect = {
+			set_country_flag = ALI_renoujiaqiang
+			custom_effect_tooltip = ALI_renoujiaqiang_tt
+		}
+		remove_effect = {
+			clr_country_flag = ALI_renoujiaqiang
+		}
+		modifier = {
+			political_power_gain = -0.15
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	ALI_renou = {
+
+		icon = onmap_recruit_operative
+
+		available = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+				is_core_of = ROOT
+				industrial_complex > 0 
+			}
+		}
+		visible = {
+			tag = ALI
+			has_country_flag = ALI_jianlirenougongfang
+			not = {
+				has_country_flag = ALI_renoujiaqiang
+			}
+			not = {
+				has_country_flag = ALI_gailiangrenougongfang
+			}
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		days_re_enable = 100
+		days_remove = 140
+
+		on_map_mode = map_only
+		complete_effect = {
+			FROM = {
+				remove_building = { type = industrial_complex  level = 1 }
+			}
+			add_manpower = 20
+		}
+		remove_effect = {
+			FROM = {
+				add_building_construction = {
+		          type = industrial_complex 
+		          level = 1
+		          instant_build = yes
+		        }
+			}
+		}
+		modifier = {
+			weekly_manpower = 4
+			production_speed_industrial_complex_factor = -0.01
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	ALI_renou2 = {
+
+		icon = onmap_recruit_operative
+
+		available = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+				is_core_of = ROOT
+				industrial_complex > 0 
+			}
+		}
+		visible = {
+			tag = ALI
+			has_country_flag = ALI_jianlirenougongfang
+			has_country_flag = ALI_renoujiaqiang
+			not = {
+				has_country_flag = ALI_gailiangrenougongfang
+			}
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		days_re_enable = 100
+		days_remove = 140
+
+		on_map_mode = map_only
+		complete_effect = {
+			FROM = {
+				remove_building = { type = industrial_complex  level = 1 }
+			}
+			add_manpower = 40
+		}
+		remove_effect = {
+			FROM = {
+				add_building_construction = {
+		          type = industrial_complex 
+		          level = 1
+		          instant_build = yes
+		        }
+			}
+		}
+		modifier = {
+			weekly_manpower = 6
+			production_speed_industrial_complex_factor = -0.01
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	ALI_renou_fanbei = {
+
+		icon = onmap_recruit_operative
+
+		available = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+				is_core_of = ROOT
+				industrial_complex > 0 
+			}
+		}
+		visible = {
+			tag = ALI
+			has_country_flag = ALI_jianlirenougongfang
+			not = {
+				has_country_flag = ALI_renoujiaqiang
+			}
+			has_country_flag = ALI_gailiangrenougongfang
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		days_re_enable = 100
+		days_remove = 140
+
+		on_map_mode = map_only
+		complete_effect = {
+			FROM = {
+				remove_building = { type = industrial_complex  level = 1 }
+			}
+			add_manpower = 40
+		}
+		remove_effect = {
+			FROM = {
+				add_building_construction = {
+		          type = industrial_complex 
+		          level = 1
+		          instant_build = yes
+		        }
+			}
+		}
+		modifier = {
+			weekly_manpower = 8
+			production_speed_industrial_complex_factor = -0.01
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	ALI_renou_fanbei2 = {
+
+		icon = onmap_recruit_operative
+
+		available = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+				is_core_of = ROOT
+				industrial_complex > 0 
+			}
+		}
+		visible = {
+			tag = ALI
+			has_country_flag = ALI_jianlirenougongfang
+			has_country_flag = ALI_renoujiaqiang
+			has_country_flag = ALI_gailiangrenougongfang
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		days_re_enable = 100
+		days_remove = 140
+
+		on_map_mode = map_only
+		complete_effect = {
+			FROM = {
+				remove_building = { type = industrial_complex  level = 1 }
+			}
+			add_manpower = 80
+		}
+		remove_effect = {
+			FROM = {
+				add_building_construction = {
+		          type = industrial_complex 
+		          level = 1
+		          instant_build = yes
+		        }
+			}
+		}
+		modifier = {
+			weekly_manpower = 12
+			production_speed_industrial_complex_factor = -0.01
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+}

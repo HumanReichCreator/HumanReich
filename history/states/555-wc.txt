@@ -1,0 +1,34 @@
+
+state={
+	id=555
+	name="STATE_555"
+	resources={
+		energy=0.000
+		powder=5.000
+		metal=0.000
+		gas=0.000
+		crystal=2.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = AOO
+			add_core_of = AOO
+			buildings = {
+				infrastructure = 0
+				industrial_complex = 0
+				arms_factory = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		297 390 854 1067 1288 2187 2311 2348 2775 6247 6261 6269 6281 6288 6450 6451 6452 7078 
+	}
+	manpower=1672
+	buildings_max_level_factor=1.000
+	state_category=s2
+}

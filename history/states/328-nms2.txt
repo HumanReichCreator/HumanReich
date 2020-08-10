@@ -1,0 +1,44 @@
+
+state={
+	id=328
+	name="STATE_328"
+	resources={
+		powder=0.000
+		metal=5.000
+		gas=5.000
+		crystal=0.000
+	}
+
+	history={
+		# 143.7.1 = {
+		# 	owner = NMS
+		# 	add_core_of = NMS
+		# 	buildings = {
+		# 		infrastructure = 4
+		# 		industrial_complex = 1
+		# 		arms_factory = 0
+
+		# 	}
+
+		# }
+		146.1.1 = {
+			owner = MNM
+			add_core_of = MNM
+			buildings = {
+				infrastructure = 5
+				industrial_complex = 2
+				arms_factory = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		166 945 2431 3641 3642 3645 3648 3649 3651 3652 5426 5431 5432 5434 
+	}
+	manpower=994
+	buildings_max_level_factor=1.000
+	state_category=s7
+}

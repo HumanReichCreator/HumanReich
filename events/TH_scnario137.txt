@@ -1,0 +1,104 @@
+﻿# add_namespace = scn138
+
+# country_event = {
+# 	id = scn138.1
+# 	title = scn138.1.title
+# 	desc = scn138.1.desc
+
+# 	is_triggered_only = yes
+ 
+# 		 option = {
+# 		   trigger = {tag = SCA}
+# 		   name = scn138.1.a
+# 		   country_event = {days = 1 id = scn138.201}
+# 		 }
+	  
+	   
+#          option = {	 	 
+# 	       trigger = {tag = OTG}
+# 		   name = scn138.1.b
+# 		   country_event = {days = 1 id = scn138.101}
+# 		 }
+	
+	   
+	     
+	     
+# 		 option = {
+# 		    trigger = { NOT ={
+# 		                  tag = OTG
+# 						  tag = SCA}
+# 	        }
+# 		    name = scn138.1.c
+# 		 }
+	  
+# }
+# country_event = {
+#    id = scn138.101
+#    title = scn138.101.title
+#    desc = scn138.101.desc
+#    fire_only_once = yes
+#    is_triggered_only = yes
+#    option = {
+#       name = scn138.101.a
+# 	  country_event = {days = 1 id = scn138.102}
+#    }
+# }
+# country_event ={
+#    id = scn138.102
+#    title = scn138.102.title
+#    desc = scn138.102.desc
+#    fire_only_once = yes
+#    is_triggered_only = yes
+#    option = {
+#       name = scn138.102.a
+# 	  hidden_effect = {
+# 	  country_event = {days = 30 id = scn138.103}
+# 	  }
+#    }
+# }
+# country_event = {
+#    id = scn138.103
+#    title = scn138.103.title
+#    desc = scn138.103.desc
+#    fire_only_once = yes
+#    is_triggered_only = yes
+#    option = {
+#       name = scn138.103.a
+# 	  SCA = { country_event = {days = 2 id = scn138.202} }
+#    }
+# }
+# country_event = {
+#    id = scn138.201
+#    title = scn138.201.title
+#    desc = scn138.201.desc
+#    fire_only_once = yes
+#    is_triggered_only = yes
+#    option = {
+#       name = scn138.201.a
+#    }
+# }
+# country_event = {
+#    id = scn138.202
+#    title = scn138.202.title
+#    desc = scn138.202.desc
+#    fire_only_once = yes
+#    is_triggered_only = yes
+#    option = {
+#       name = scn138.202.a
+# 	  hidden_effect ={
+# 	   news_event = {id = scn138.301 days = 7 }
+# 	  }
+#    }
+# }
+
+# news_event = {
+#    id = scn138.301
+#    title = scn138.301.title
+#    desc = scn138.301.desc
+   
+#    is_triggered_only = yes
+   
+# 	option = {
+# 		 name = scn138.301.a
+# 	}
+# }

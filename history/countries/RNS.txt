@@ -1,0 +1,128 @@
+﻿capital = 225
+138.8.13 = {
+
+}
+141.6.2 = {
+    
+}
+142.3.8 = {
+    
+}
+144.2.5 = {
+    
+}
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card = 1
+        buqiang117 = 1
+        buqiang140 = 1
+        tangxiangailiang140 = 1
+            
+        #辅助
+
+        #专用辅助
+        fangzhihuopao143 = 1
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+        zuzhihuazhanzheng142 = 1
+        zhanchangzhihui145 = 1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        waike = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+            
+        #专用工业
+        fangwaijieshengchan130 = 1
+
+        #种族
+            
+    }
+}
+146.1.1 = {
+    
+    oob = "RNS_146"
+    
+    # set_research_slots = 4
+    add_ideas = {
+    Beast
+    Village
+    hawk0
+    open2
+    limit_magic
+    normal_border
+    }
+    
+    
+    set_politics = {
+        ruling_party = guli
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 7
+        guli = 93
+        neworder = 0
+        oldorder = 0
+        fandong = 0
+    }
+}
+create_country_leader = {
+    # name = "Morichika Rinnosuke"
+    name = "森近霖之助"
+    picture = "RNS_rns.dds"
+    ideology = guli_type
+    traits = {
+
+    }
+}
+create_country_leader = {
+    # name = "Tokiko"
+    name = "朱鷺子"
+    picture = "RNS_tokiko.dds"
+    ideology = qinwai_type
+    traits = {
+
+    }
+}
+create_country_leader = {
+    # name = "Tokiko"
+    name = "朱鷺子"
+    picture = "RNS_tokiko.dds"
+    ideology = neworder_type
+    traits = {
+
+    }
+}
+create_country_leader = {
+    # name = "Tokiko"
+    name = "朱鷺子"
+    picture = "RNS_tokiko.dds"
+    ideology = fandong_type
+    traits = {
+
+    }
+}
+create_country_leader = {
+    # name = "Tokiko"
+    name = "朱鷺子"
+    picture = "RNS_tokiko.dds"
+    ideology = oldorder_type
+    traits = {
+
+    }
+}

@@ -1,0 +1,192 @@
+technologies = {
+	wuxiandian147 = {
+	    research_cost = 2
+	    folder = {
+			name = electronics_sc_folder
+			position = { x = 4 y = 2 }
+		}
+		path = {
+			leads_to_tech = wuxiandian152
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = jiamigai149
+			research_cost_coeff = 1
+		}
+
+		land_reinforce_rate = 0.02
+		army_org_factor = 0.02
+
+		start_year = 147
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			radio
+			science
+			civil
+		}
+
+	}
+	wuxiandian152 = {
+	    research_cost = 2
+	    folder = {
+			name = electronics_sc_folder
+			position = { x = 4 y = 6 }
+		}
+		path = {
+			leads_to_tech = wuxiandian157
+			research_cost_coeff = 1
+		}
+
+		land_reinforce_rate = 0.02
+		army_org_factor = 0.02
+		
+		start_year = 152
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			radio
+			science
+			civil
+		}
+
+	}
+	wuxiandian157 = {
+	    research_cost = 2
+
+	    path = {
+			leads_to_tech = wuxiandian162
+			research_cost_coeff = 1
+		}
+	    folder = {
+			name = electronics_sc_folder
+			position = { x = 4 y = 10 }
+		}
+
+		land_reinforce_rate = 0.02
+		army_org_factor = 0.02
+		
+		start_year = 157
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			radio
+			science
+			civil
+		}
+
+	}
+
+	wuxiandian162 = {
+	    research_cost = 2
+	    folder = {
+			name = electronics_sc_folder
+			position = { x = 4 y = 14 }
+		}
+
+		land_reinforce_rate = 0.02
+		army_org_factor = 0.02
+		
+		start_year = 162
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			radio
+			science
+			civil
+		}
+
+	}
+
+	jiamigai149 = {
+	    research_cost = 2.5
+	    folder = {
+			name = electronics_sc_folder
+			position = { x = 7 y = 4 }
+		}
+
+		path = {
+			leads_to_tech = jiamigai154
+			research_cost_coeff = 1
+		}
+
+		encryption_factor = 0.1
+		
+		start_year = 149
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			jiami
+			science
+			civil
+		}
+
+	}
+
+	jiamigai154= {
+	    research_cost = 2.5
+	    folder = {
+			name = electronics_sc_folder
+			position = { x = 7 y = 8 }
+		}
+
+		path = {
+			leads_to_tech = jiamigai159
+			research_cost_coeff = 1
+		}
+
+		encryption_factor = 0.1
+		
+		start_year = 154
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			jiami
+			science
+			civil
+		}
+
+	}
+
+	jiamigai159 = {
+	    research_cost = 2.5
+	    folder = {
+			name = electronics_sc_folder
+			position = { x = 7 y = 12 }
+		}
+
+
+		encryption_factor = 0.1
+		
+		start_year = 159
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			jiami
+			science
+			civil
+		}
+
+	}
+}

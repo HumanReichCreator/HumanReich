@@ -1,0 +1,73 @@
+guiTypes = {
+	###########subject and low sys############
+	containerWindowType = {
+		name = "th_subject_sys_gui"
+		position = { x = 488 y = 19 }
+
+		iconType ={
+			  name ="th_subject_sys_cant"
+			  spriteType = "GFX_low_cant"
+			  position = { x= 0 y = 0 } 
+			  Orientation = "UPPER_LEFT"
+			  pdx_tooltip = "LS_subject_sys_cant_tt"
+			  pdx_tooltip_delayed = "LS_subject_sys_cant_delayed_tt"
+			  # shortcut = "ctrl+x"
+		}
+
+		buttonType ={
+			  name ="th_subject_sys_can"
+			  spriteType = "GFX_low_can"
+			  position = { x= 0 y = 0 } 
+			  Orientation = "UPPER_LEFT"
+			  pdx_tooltip = "LS_subject_sys_can_tt"
+			  pdx_tooltip_delayed = "LS_subject_sys_can_delayed_tt"
+			  # shortcut = "ctrl+x"
+		}
+
+		buttonType ={
+			  name ="th_subject_sys_stop"
+			  spriteType = "GFX_low_stop"
+			  position = { x= 0 y = 0 }  
+			  Orientation = "UPPER_LEFT"
+			  pdx_tooltip = "LS_subject_sys_stop_tt"
+			  pdx_tooltip_delayed = "LS_subject_sys_stop_delayed_tt"
+			  # shortcut = "ctrl+x"
+		}
+
+		
+
+		instantTextBoxType = {
+			name ="th_subject_progress"
+			position = { x= -48 y = -20 }
+			font = "hoi_18mbs"
+			text = "LS_progress_show"
+			format = right
+			maxWidth = 90
+			maxHeight = 24
+			fixedsize = yes
+		#	alwaystransparent = yes	
+			pdx_tooltip = "LS_progress_show_tt"
+			pdx_tooltip_delayed = "LS_progress_show_delayed_tt"
+		}
+	}
+	
+	containerWindowType = {
+		name = "th_self_sys_gui"
+		position = { x = 0 y = 0 }
+
+		instantTextBoxType = {
+			name ="th_self_display"
+			position = { x= 418 y = 260 }
+			font = "hoi_18mbs"
+			# text = "吞并花费:[?all_value]"
+			text = "development_show"
+			format = right
+			maxWidth = 110
+			maxHeight = 24
+			fixedsize = yes
+		#	alwaystransparent = yes	
+			pdx_tooltip = "development_show_tt"
+			pdx_tooltip_delayed = "development_show_delayed_tt"
+		}
+	}
+}

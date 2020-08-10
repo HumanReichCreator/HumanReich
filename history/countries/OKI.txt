@@ -1,0 +1,152 @@
+﻿capital = 273
+138.8.13 = {
+
+}
+141.6.2 = {
+    
+}
+142.3.8 = {
+    
+}
+144.2.5 = {
+    
+}
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card = 1
+        linglijiejing139 = 1
+        linglijiejing144 = 1
+        linglijiejing147 = 1
+        danmujingque139 = 1
+        danmujingque144 = 1
+        gaosudanmu139 = 1
+        gaosudanmu144 = 1
+        buqiang117 = 1
+        tezhong149 = 1
+            
+        #辅助
+        zhiyuanzhuangbei = 1
+
+        #专用辅助
+        fanyongmopao144 = 1
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+        zuzhihuazhanzheng142 = 1
+        zhanchangzhihui145 = 1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        lingben = 1
+        jisuangongju144 = 1
+        tongxunlilun = 1
+        jiemi137 = 1
+        jiemi142 = 1
+
+        jiami137 = 1
+        jiami142 = 1
+        jiami147 = 1
+
+        lingganleida142 = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+        jianzaojishu140 = 1
+            
+        #专用工业
+        linglishengchan130 = 1
+        linglishengchan140 = 1
+        linglishengchan145 = 1
+
+        #种族
+        shengetansuo1 = 1
+        shengetansuo2 = 1
+        shengge1 = 1
+        shengge2 = 1
+            
+    }
+}
+146.1.1={
+    oob = "OKI_146"
+    add_ideas = {
+    God
+    Country
+    hawk0
+    close5
+    close_border
+    sc_rule
+    gensoukyo_creator_idea
+    }
+    set_politics = {
+        ruling_party = guli
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 0
+        guli = 92
+        neworder = 4
+        oldorder = 0
+        fandong = 4
+    }
+
+    HMIF_daily_add0.02 = yes
+    
+}
+create_country_leader = {
+	# name = "Matara Okina"
+    name = "摩多罗隐岐奈"
+	picture = "OKI_oki.dds"
+	ideology = oldorder_type
+	traits = {  
+        
+    }
+}
+create_country_leader = {
+    # name = "Matara Okina"
+    name = "摩多罗隐岐奈"
+    picture = "OKI_oki.dds"
+    ideology = fandong_type
+    traits = {  
+        
+    }
+}
+create_country_leader = {
+    # name = "Matara Okina"
+    name = "摩多罗隐岐奈"
+    picture = "OKI_oki.dds"
+    ideology = neworder_type
+    traits = {  
+        
+    }
+}
+create_country_leader = {
+    # name = "Matara Okina"
+    name = "摩多罗隐岐奈"
+    picture = "OKI_oki.dds"
+    ideology = guli_type
+    traits = {  
+        
+    }
+}
+create_country_leader = {
+    # name = "Matara Okina"
+    name = "摩多罗隐岐奈"
+    picture = "OKI_oki.dds"
+    ideology = qinwai_type
+    traits = {  
+        
+    }
+}

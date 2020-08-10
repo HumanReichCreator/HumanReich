@@ -1,0 +1,597 @@
+# unit_base is the base value used for evaluating how important it is to deploy the various categories
+# Written by Henrik "Groogy" Hansson
+#AI 倾向
+NMS_HUm_start = {
+	enable = {
+		tag = HUM
+	}
+	abort = {
+		or = {
+			has_opinion_modifier = NMS_changshiherenleihejie_op
+			has_global_flag = xinshidai
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "NMS"			
+		value = -100
+	}	
+	ai_strategy = {
+		type = alliance
+		id = "NMS"			
+		value = -100
+	}	
+	ai_strategy = {
+		type = antagonize
+		id = "NMS"			
+		value = 15
+	}
+	ai_strategy = {
+		type = befriend
+		id = "AVE"			
+		value = -100
+	}	
+	ai_strategy = {
+		type = alliance
+		id = "AVE"			
+		value = -100
+	}	
+	ai_strategy = {
+		type = antagonize
+		id = "AVE"			
+		value = 15
+	}
+}
+
+NMS_chuanjiaoshi = {
+	enable = {
+		has_idea = NMS_kuangredechuanjiaoshi_idea
+	}
+	abort = {
+		not = {
+			has_idea = NMS_kuangredechuanjiaoshi_idea
+		}
+	}
+	# reversed = yes
+
+	ai_strategy = {
+		type = antagonize
+		id = "NMS"			
+		value = 180
+	}
+
+}
+
+NMS_SRB_liangbang1 = {
+	enable = {
+		has_country_flag = NMS_SRB_friend
+		tag = NMS
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "SRB"			
+		value = 100
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "SRB"			
+		value = 100
+	}
+
+}
+
+NMS_SRB_liangbang2 = {
+	enable = {
+		NMS = { has_country_flag = NMS_SRB_friend }
+		tag = SRB
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "NMS"			
+		value = 100
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "NMS"			
+		value = 100
+	}
+
+}
+
+NMS_HU4_qufu = {
+	enable = {
+		has_completed_focus = NMS_cunluoqufu
+		tag = NMS
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "HU4"			
+		value = 100
+	}
+
+	ai_strategy = {
+		type = invade
+		id = "HU4"			
+		value = 100
+	}
+
+	ai_strategy = {
+		type = conquer
+		id = "HU4"			
+		value = 100
+	}
+
+}
+
+NMS_HU4_qufu = {
+	enable = {
+		NMS = { has_completed_focus = NMS_cunluoqufu }
+		tag = HU4
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "NMS"			
+		value = 50
+	}
+
+}
+
+# NMS_YUK_pingdeng1 = {
+# 	enable = {
+# 		has_completed_focus = NMS_yaojingpingdeng
+# 		tag = NMS
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+
+# 	ai_strategy = {
+# 		type = antagonize
+# 		id = "YUK"			
+# 		value = 50
+# 	}
+# }
+
+# NMS_YUK_pingdeng2 = {
+# 	enable = {
+# 		NMS = { has_completed_focus = NMS_yaojingpingdeng }
+# 		tag = YUK
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+
+# 	ai_strategy = {
+# 		type = antagonize
+# 		id = "NMS"			
+# 		value = 50
+# 	}
+# }
+
+NMS_YUK_youhao1 = {
+	enable = {
+		has_opinion_modifier = NMS_huatianyouhao_op
+		tag = NMS
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "YUK"			
+		value = 20
+	}
+	ai_strategy = {
+		type = alliance
+		id = "YUK"			
+		value = 20
+	}
+	ai_strategy = {
+		type = send_volunteers_desire 
+		id = "YUK"			
+		value = 20
+	}
+	ai_strategy = {
+		type = support
+		id = "YUK"			
+		value = 20
+	}
+}
+
+NMS_YUK_youhao2 = {
+	enable = {
+		has_opinion_modifier = NMS_huatianyouhao_op
+		tag = YUK
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "NMS"			
+		value = 20
+	}
+	ai_strategy = {
+		type = alliance
+		id = "NMS"			
+		value = 20
+	}
+	ai_strategy = {
+		type = send_volunteers_desire 
+		id = "NMS"		
+		value = 20
+	}
+	ai_strategy = {
+		type = support
+		id = "NMS"		
+		value = 20
+	}
+}
+
+# NMS_SCA_enemy1 = {
+# 	enable = {
+# 		or = {
+# 			has_completed_focus = NMS_yingxiangyouling
+# 			has_completed_focus = NMS_yingxiangyaoguai
+# 		}
+		
+# 		tag = NMS
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+
+# 	ai_strategy = {
+# 		type = antagonize
+# 		id = "SCA"			
+# 		value = 100
+# 	}
+
+# 	ai_strategy = {
+# 		type = invade
+# 		id = "SCA"			
+# 		value = 100
+# 	}
+
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = "SCA"			
+# 		value = 100
+# 	}
+# }
+
+# NMS_SCA_enemy2 = {
+# 	enable = {
+# 		NMS = {
+# 			or = {
+# 				has_completed_focus = NMS_yingxiangyouling
+# 				has_completed_focus = NMS_yingxiangyaoguai
+# 			}
+# 		}
+# 		tag = SCA
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+
+# 	ai_strategy = {
+# 		type = antagonize
+# 		id = "NMS"			
+# 		value = 100
+# 	}
+
+# 	ai_strategy = {
+# 		type = invade
+# 		id = "NMS"			
+# 		value = 100
+# 	}
+
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = "NMS"			
+# 		value = 100
+# 	}
+# }
+
+NMS_muhouyouhao1 = {
+	enable = {
+		has_opinion_modifier = NMS_muhouyouhao_op
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "NMS"			
+		value = 10
+	}
+	ai_strategy = {
+		type = alliance
+		id = "NMS"			
+		value = 10
+	}
+	ai_strategy = {
+		type = send_volunteers_desire 
+		id = "NMS"		
+		value = 10
+	}
+	ai_strategy = {
+		type = support
+		id = "NMS"		
+		value = 10
+	}
+}
+
+NMS_muhouyouhao2 = {
+	enable = {
+		has_opinion_modifier = NMS_muhouyouhao_op
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	reversed = yes
+
+	ai_strategy = {
+		type = befriend
+		id = "NMS"			
+		value = 10
+	}
+	ai_strategy = {
+		type = alliance
+		id = "NMS"			
+		value = 10
+	}
+	ai_strategy = {
+		type = send_volunteers_desire 
+		id = "NMS"		
+		value = 10
+	}
+	ai_strategy = {
+		type = support
+		id = "NMS"		
+		value = 10
+	}
+}
+
+# NMS_HUM_enemy1 = {
+# 	enable = {
+# 		has_completed_focus = NMS_zhenduirenlei
+# 		tag = NMS
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+
+# 	ai_strategy = {
+# 		type = antagonize
+# 		id = "HUM"			
+# 		value = 100
+# 	}
+
+# 	ai_strategy = {
+# 		type = invade
+# 		id = "HUM"			
+# 		value = 100
+# 	}
+
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = "HUM"			
+# 		value = 100
+# 	}
+# }
+
+# NMS_HUM_enemy2 = {
+# 	enable = {
+# 		NMS = {
+# 			has_completed_focus = NMS_zhenduirenlei
+# 		}
+# 		tag = SCA
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+
+# 	ai_strategy = {
+# 		type = antagonize
+# 		id = "NMS"			
+# 		value = 100
+# 	}
+# }
+
+# NMS_muhou_enemy1 = {
+# 	enable = {
+# 		has_completed_focus = NMS_zhenduimuhou
+# 		tag = NMS
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+
+# 	ai_strategy = {
+# 		type = antagonize
+# 		id = "SRB"			
+# 		value = 100
+# 	}
+
+# 	ai_strategy = {
+# 		type = invade
+# 		id = "SRB"			
+# 		value = 100
+# 	}
+
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = "SRB"			
+# 		value = 100
+# 	}
+# 	ai_strategy = {
+# 		type = antagonize
+# 		id = "EET"			
+# 		value = 100
+# 	}
+
+# 	ai_strategy = {
+# 		type = invade
+# 		id = "EET"			
+# 		value = 100
+# 	}
+
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = "EET"			
+# 		value = 100
+# 	}
+# }
+
+# NMS_muhou_enemy2 = {
+# 	enable = {
+# 		NMS = {
+# 			has_completed_focus = NMS_zhenduimuhou
+# 		}
+# 		or = {
+# 			tag = EET
+# 			tag = SRB
+# 		}
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+
+# 	ai_strategy = {
+# 		type = antagonize
+# 		id = "NMS"			
+# 		value = 100
+# 	}
+# }
+
+# NMS_jienayaoguai = {
+# 	enable = {
+# 		has_opinion_modifier = NMS_rangrenleijienayaoguai_op
+# 		or = {
+# 			tag = SRB
+# 			tag = YKR
+# 		}
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+
+# 	ai_strategy = {
+# 		type = antagonize
+# 		id = "NMS"			
+# 		value = 250
+# 	}
+# }
+# NMS_exit_early = {
+# 	enable = {
+# 		has_country_flag = CIR_leaveearly
+# 		tag = CIR
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+
+
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "NIB"			
+# 		value = -50
+# 	}	
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "RMI"			
+# 		value = -50
+# 	}	
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "SEI"			
+# 		value = -50
+# 	}	
+
+# 	ai_strategy = {
+# 		type = protect
+# 		id = "NIB"			
+# 		value = -50
+# 	}	
+# 	ai_strategy = {
+# 		type = protect
+# 		id = "RMI"			
+# 		value = -50
+# 	}	
+# 	ai_strategy = {
+# 		type = protect
+# 		id = "SEI"			
+# 		value = -50
+# 	}
+
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "NIB"			
+# 		value = -50
+# 	}	
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "RMI"			
+# 		value = -50
+# 	}	
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "SEI"			
+# 		value = -50
+# 	}
+
+# 	ai_strategy = {
+# 		type = send_volunteers_desire 
+# 		id = "NIB"			
+# 		value = -50
+# 	}	
+# 	ai_strategy = {
+# 		type = send_volunteers_desire 
+# 		id = "RMI"			
+# 		value = -50
+# 	}	
+# 	ai_strategy = {
+# 		type = send_volunteers_desire 
+# 		id = "SEI"			
+# 		value = -50
+# 	}
+
+# 	ai_strategy = {
+# 		type = ignore 
+# 		id = "NIB"			
+# 		value = 20
+# 	}	
+# 	ai_strategy = {
+# 		type = ignore 
+# 		id = "RMI"			
+# 		value = 20
+# 	}	
+# 	ai_strategy = {
+# 		type = ignore 
+# 		id = "SEI"			
+# 		value = 20
+# 	}
+# }

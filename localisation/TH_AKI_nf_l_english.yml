@@ -1,0 +1,486 @@
+﻿ l_english:
+  AKI_zhunbeifengshoudahui:0 "准备丰收大会"
+  AKI_zhunbeifengshoudahui_desc:0 "这可能是近年来气氛最紧张的一次丰收大会，其主题早就从庆祝大丰收歪到了纯粹的政治讨论，目前新崛起的地主和保守的贫民们的敌意已经到了明面上流血冲突的地步，然而秋穰子还是决意要在会上结束这一切。"
+  AKI_tudijianbingwenti:0 "问题：土地兼并"
+  AKI_tudijianbingwenti_desc:0 "生产力的进步在带来更多粮食的同时也带来了这个无形的恶魔，依靠率先取得的机器发家致富的地主们大量买进贫民的土地，在做出实际行动前总得向贫民表示点什么。"  
+  AKI_diaolingzhewenti:0 "问题：凋零者"
+  AKI_diaolingzhewenti_desc:0 "由秋穰子之姐秋静叶领导的民兵组织“凋零者”正在乡间大行其道，已有几个兼并土地较多的地主被他们挂在树上绞死，他们的家属正在神社前哭诉，必须对这种暴力行为做出回应！"    
+  AKI_lianxizhuanzhuan:0 "与键山雏会面"
+  AKI_lianxizhuanzhuan_desc:0 "支持生产力革新的人类正团结在厄神键山雏旗下，话说为什么她会和这种想法扯上关系？难道是因为同样作为商人的缘故？"  
+  AKI_lianxijiejie:0 "与姐姐会面"
+  AKI_lianxijiejie_desc:0 "好不容易秋穰子才找到了远在乡下进行农民运动的姐姐，至少还是得..."    
+  AKI_zhunbeiyiti:0 "准备议题"  
+  AKI_zhunbeiyiti_desc:0 "各方的诉求差不多也明白了，将议题整理整体就可以准备明天的丰收大会。"    
+  AKI_kaihui:0 "开会"  
+  AKI_kaihui_desc:0 "只要平衡得当，那就一定..."   
+
+  AKI_qiurangzizhengquanweichi:0 "不用受稻田姬的斥责了"  
+  AKI_qiurangzizhengquanweichi_desc:0 "总之是和平解决。" 
+  AKI_chengnuofenquangaige:0 "承诺改革"  
+  AKI_chengnuofenquangaige_desc:0 "我们将进行大多数人都能接受的温和政策，而且在实际行动还没做出来之前就已经得到了广泛的积极回应，看来这确实是绝大部分人都能接受的方案。"  
+  AKI_yizhitudijianbing:0 "抑制土地兼并"  
+  AKI_yizhitudijianbing_desc:0 "土地兼并是无法阻止的，很可能这会在幻想乡的其他地方也发生，但是我们绝对不会容忍它愈演愈烈，通过出自香霖堂的一些外界历史书籍可以让我们找到一些解决方案。" 
+  AKI_zhenghediaolingzhe:0 "整合“凋零者”"  
+  AKI_zhenghediaolingzhe_desc:0 "秋静叶组织的“凋零者”虽然犯下了种种恶行，可也必须考虑地主剥夺他们田产时的恶行，综合来看最终决定将其全部并入军队，在那儿更方便他们发挥作用。"  
+  AKI_jinshengongyehua:0 "谨慎工业化"  
+  AKI_jinshengongyehua_desc:0 "工业化是必须要做的，否则人类将永远在生死线上挣扎，不过这将在二位秋神的严格监督下进行，尽量不对环境造成最大的破坏。" 
+  AKI_guihuagongyeyongdi:0 "城乡社区发展"  
+  AKI_guihuagongyeyongdi_desc:0 "在改善了居住环境后我们才有理由去谈论环境保护，改革派的筑路计划我们将推广至除[HU3.GetName]以外的整个大秋神领地。"  
+  AKI_laodongzhedezhihui:0 "劳动者的智慧"
+  AKI_laodongzhedezhihui_desc:0 "不一定要依靠天狗和河童的技术，我们的农业从事者同样有着朴素的智慧，否则我们也不会是幻想乡的一大资源区。"
+  AKI_kuojianwuqizuofang:0 "扩建武器工坊"
+  AKI_kuojianwuqizuofang_desc:0 "军工产业应当是重点关注的方向，基本上幻想乡还是不会回到往昔的日子，必须时刻做好准备。"
+  AKI_nonggenjingshen:0 "农耕精神"  
+  AKI_nonggenjingshen_desc:0 "即使是在后农业社会也不能忘记收获的不易，通过宣传农耕精神能够促进社会的节俭风尚，同时加深秋神之信仰。" 
+ 
+  liancunkeyan:0 "联村科研"  
+  liancunkeyan_name:0 "联村科研"  
+  liancunkeyan_desc:0 "联村科研[AKI.GetName]主导下帮扶周边人类村落科技进步的组织。"  
+
+  AKI_wanshanrenleiquanli:0 "完善人类权利"  
+  AKI_wanshanrenleiquanli_desc:0 "其实秋神对人类的干涉本就微乎其微，那么现在二位秋神将完全放开神权，只要人类保持信仰就行，除此之外他们将可以做任何公序良俗允许的事情。"  
+  AKI_zhichigaigepaidejihua:0 "支持村落民用建设"  
+  AKI_zhichigaigepaidejihua_desc:0 "我们会鼎力支持[HU1.GetName]与[HU2.GetName]原有的工业发展与资源开采计划。"  
+  AKI_zhichijunbeikuozhang:0 "支持村落军工建设" 
+  AKI_zhichijunbeikuozhang_desc:0 "我们会为[HU4.GetName]的扩军计划提供全力支持。" 
+
+  AKI_cunluodalianhe:0 "村落大联合"  
+  AKI_cunluodalianhe_desc:0 "是时候了，人类早已证明他们在不需要神明的情况下也能自主，那么从现在开始人神之间便不再有差异，我们将作为“西南联村组织”的一员与所有人类村落平等相处。"  
+  AKI_womenshidaideheping:0 "我们时代的和平"  
+  AKI_womenshidaideheping_desc:0 "和平或许不是这个时代的主题，但是在我们的时代中和平永存，未来除了进行“正义之战”外我们将不会发动任何形式的战争。"   
+  AKI_qiushenxueyuan:0 "创立秋神学院" 
+  AKI_qiushenxueyuan_desc:0 "学校这个概念将被引入妖怪山山脚，它在传达幻想乡愈加增多的知识的同时也会宣扬传统的秋神信仰。" 
+ 
+  
+  AKI_zhuanzhuanzhangquan:0 "共和降临之路"  
+  AKI_zhuanzhuanzhangquan_desc:0 "一场冲突后键山雏代表改革派掌权。" 
+  AKI_baifangwomendepengyou:0 "拜访我们的朋友"  
+  AKI_baifangwomendepengyou_desc:0 "妖怪山山脚下的人类革新运动离不开山上革新妖怪的支持，就连我们的领导者都是亦神亦妖的存在，即使过去常有冲突但那都过去了，自然我们在取得了政权后也该回访一下他们。"  
+  AKI_zhidingjiagebiaozhun:0 "制定地价标准"  
+  AKI_zhidingjiagebiaozhun_desc:0 "在我们的制度下想要彻底消灭土地兼并是不可能的，那么至少应当制定一套完善的土地使用法则使其以更合理的方式运作，而我们的神明键山雏会对任何一笔交易过目确保公平公正。" 
+  AKI_dajijiduanzuzhi:0 "打击极端思想"  
+  AKI_dajijiduanzuzhi_desc:0 "“凋零者”已经无法在物理层面上造成威胁，但是人们心中的极端思想不除的话迟早又会出现下一个它。"  
+  AKI_xingjiangongyequ:0 "兴建工业区" 
+  AKI_xingjiangongyequ_desc:0 "我们将在靠近[TEG.GetName]边界的妖怪山山脚下构建一个不亚于她们的工业区。" 
+  AKI_gaosugongyehua:0 "高速工业化"  
+  AKI_gaosugongyehua_desc:0 "通过查阅外界的书籍我们得知工业化是一个残酷的过程，可为了实现我们共同的理想社会这是不可避免的过程，就让我们这一代如同厄神那般多背负些东西吧。" 
+  AKI_tiangouzhonggongtouzi:0 "天狗工业投资" 
+  AKI_tiangouzhonggongtouzi_desc:0 "在我们逐渐奉行亲天狗政策后，天狗终于有理由扩大对口援助，现在他们的工业专家将会来指导我们的工业技术进步。" 
+  AKI_guyonghetongjishi:0 "邀请河童技师"  
+  AKI_guyonghetongjishi_desc:0 "在早期科技革命时部分人与北边的河童取得了联系并从那里购得了先进的农机率先致富，现在我们将邀请更多的河童技师促使所有的土地使用机械化耕作。"  
+  AKI_shanjiaoxiadeqiji:0 "山脚下的奇迹"  
+  AKI_shanjiaoxiadeqiji_desc:0 "为了今天我们付出了太多，一场内战与随后无止境的抱怨和破坏活动，可最终我们收获了结果。妖怪山山脚下的人类现在建成了堪比河童的城市！我们已经有了足够的实力建设心中的理想社会！" 
+  AKI_xirenlimengxiang:0 "“西人里”梦想"  
+  AKI_xirenlimengxiang_desc:0 "改革派在政治上的理想是构建一个囊括所有西幻想乡人类的“西人间之里”，也许我们之中确实存在些许打算攫取更多利益的野心家，可是拥有这个梦想的人类可不只有所谓的“地主”。不能再让人间之里的悲剧重演了，即使我们不去侵略那也由不得野心家将这里的人类各个击破！"  
+  AKI_rangtiangouweiwomenxuanchuan:0 "与天狗的联合宣传"  
+  AKI_rangtiangouweiwomenxuanchuan_desc:0 "天狗向来在报纸方面有一手，那么以我们目前的关系自然可以通过她们的关系进行宣传，不仅促进了“西人里”观念的广泛认同，而且同时扩散了我们各自的共和理念。"  
+  AKI_shixingfulizhengce:0 "实行福利政策"
+  AKI_shixingfulizhengce_desc:0 "口说无凭，我们必须通过行动让前来的人类明白共和制的优越与“西人里”的美好，我们的强大的工业能力足以保障每一个人生活需要。"
+  AKI_sixiangtongyi:0 "思想统一"  
+  AKI_sixiangtongyi_desc:0 "通过一系列宣传活动“西人里”的概念愈加深入人心，我们距离那一天已经不远了。"  
+  AKI_xirenlidechengli:0 "宣称西人间之里"  
+  AKI_xirenlidechengli_desc:0 "终于！现在绝大多数人类都对“西人里”表示认同，而我们的工业实力也足以跻身幻想乡的强者之林。现在就是宣称西人里的时候了！不用在乎一些妖怪的看法，如果他们有意见那就让他们有吧。"     
+  AKI_gongchengjishuxueyuan:0 "创立工程技术学院" 
+  AKI_gongchengjishuxueyuan_desc:0 "现在我们可以自力更生了，原本手持锄头的农民几乎都拿过了扳手，拧出来的螺丝钉构成的机械已经可以代替人力去完成沉重的农活。那接下来要做的就是继续更新机械！创立一所专门学校能够促进技术的传承与革新。" 
+
+  sanfangkeyanzu:0 "三方研究组"  
+  sanfangkeyanzu_name:0 "三方研究组"  
+  sanfangkeyanzu_desc:0 "三方研究组是[TEG.GetName][NIT.GetName]与[AKI.GetName]之间的技术专家组成的研究团队，旨在促进妖怪山共和派的技术进步。"  
+
+  
+  AKI_qiujingyeduoquan:0 "寂灭众生之神"  
+  AKI_qiujingyeduoquan_desc:0 "一场冲突后秋静叶率领极端保守派夺得权力。" 
+  AKI_xuanbujinjizhuangtai:0 "宣布紧急状态"  
+  AKI_xuanbujinjizhuangtai_desc:0 "我们的传统价值观正在遭遇前所未有的挑战！每个信徒都该站起来保卫它！"  
+  AKI_tongtongguashu:0 "统统上绞架"  
+  AKI_tongtongguashu_desc:0 "土地兼并？！做过这种事情的人统统挂在树上绞死！" 
+  AKI_kuobiandiaolingzhe:0 "扩编“凋零者”"  
+  AKI_kuobiandiaolingzhe_desc:0 "“凋零者”对秋静叶的无限忠诚使得他们无所畏惧，对这种精神理应赞赏！继续扩大他们的队伍！"  
+  AKI_daohuijiqi:0 "捣毁机器"  
+  AKI_daohuijiqi_desc:0 "就是这些铁疙瘩夺走了你们的土地！杀光它们！" 
+  AKI_daguimokaikennanbuhuangdi:0 "准备南下基地"  
+  AKI_daguimokaikennanbuhuangdi_desc:0 "组织大规模开垦南部荒地可以为未来的军事行动做准备，同时垦出来的新田更可以为我们的均田政策做保障。"  
+  AKI_wuzhuangjiuxu:0 "武装就绪"
+  AKI_wuzhuangjiuxu_desc:0 "秋静叶并没有真正摧毁农机的打算，实际上这些私人拥有的机械大多被重组为军用生产设备或者直接熔了变枪，由此能迅速扩充我们的武装部队。"
+  AKI_juntiandi:0 "均田地"  
+  AKI_juntiandi_desc:0 "现在那些“地主”存在的一切痕迹都不存在了，是时候将土地平均分配个每一个忠于我主秋静叶的战士！"  
+  AKI_xunuogengduodetudi:0 "许诺更多的土地"  
+  AKI_xunuogengduodetudi_desc:0 "为什么我们要永远在这片土地上耕种呢？明明我们可以拥有更多啊！整个无缘冢！还有那布满向日葵的肥沃土地！甚至是天狗占据的山间！在我主秋静叶的领导下这些都不会是梦！今天妖怪山是我们的！明天幻想乡也是我们的！" 
+  AKI_jueduishenquan:0 "绝对神权"  
+  AKI_jueduishenquan_desc:0 "过去秋神对人类不管不问的悠哉日子该结束了！妹妹！你我从今天开始就是这片土地说一不二的神明！"  
+  AKI_zhenshenchongbai:0 "真神崇拜"  
+  AKI_zhenshenchongbai_desc:0 "秋神并不是这里唯一的神...然而她们是唯二的真神！真神的力量凌驾于所谓八百万神明之上！"  
+  AKI_diaolingzheyaosai:0 "凋零者壁垒"  
+  AKI_diaolingzheyaosai_desc:0 "我们的政治中心需要完美的安保！不仅是为了体现吾等之真神的崇高地位，更是由于地理原因...我们必须盯紧北部的天狗。"  
+  AKI_laodongdailaiziyou:0 "劳动带来自由"  
+  AKI_laodongdailaiziyou_desc:0 "劳动永远是我们向农民宣扬的美德，当然同时这也是射向那些试图不劳而获的家伙们的一支利箭！所有不服从我们统治的人类都将在田里无限的劳动直到求饶！"  
+  AKI_qiushenliliangdezaidingyi:0 "秋神力量的再定义"  
+  AKI_qiushenliliangdezaidingyi_desc:0 "我们的力量仅仅是让农作物成熟吗？当然不是了，很快我们会向幻想乡宣扬何为“秋之神真正的力量！”所有人都将在我们面前瑟瑟发抖！"  
+  AKI_rangjiaoyuxiaowang:0 "让教育消亡"  
+  AKI_rangjiaoyuxiaowang_desc:0 "知识越多越反动！为了不让什么“革新派”再度成为主流，秋静叶准备禁止一切人类间的知识交流。目前这个概念还很抽象，不过可以确定的是如果可行且有必要，她将禁止人类使用书面文字。"  
+
+  diaolingzhezhizuo:0 "凋零者之座"
+
+  AKI_mofangrenlijunzhi:0 "模仿人里军制"  
+  AKI_mofangrenlijunzhi_desc:0 "不能继续民兵路线了！像人里那样组织起正规军才是我们该做的！" 
+  AKI_jingzhunderenligongyi:0 "精准的人里工艺"  
+  AKI_jingzhunderenligongyi_desc:0 "有部分前人里的工程师正在妖怪山一带流亡，自然他们会为我军武器的更新提供的帮助的。"  
+  AKI_shanpao:0 "山炮"  
+  AKI_shanpao_desc:0 "火炮是战争之神！而我们的火炮将会是幻想乡独树一帜的，它将采用更加轻量化的设计已方便适应这一带的山地与丘陵。" 
+  AKI_shandiliebing:0 "山地猎兵"  
+  AKI_shandiliebing_desc:0 "我们不仅是耕种为生！妖怪山一带的人类自古都是好猎手，自然他们的才能不仅仅是用来对付野兽的。"  
+  AKI_bingtongyiti:0 "兵农一体"  
+  AKI_bingtongyiti_desc:0 "和平时期耕种，战争时期服役，在这套体系下我军完美了适应了各种突发情况。" 
+  AKI_diaolingzhejingshen:0 "宣扬“凋零者”精神"  
+  AKI_diaolingzhejingshen_desc:0 "“凋零者”们所代表的精神，也就是将个人利益与传统价值观结合所迸发出来的大无畏精神才是最重要的！有这种精神在就够了不需要什么组织化！"  
+  AKI_yirenyiba:0 "一人一把"  
+  AKI_yirenyiba_desc:0 "每个人都拥有自卫权！那么每个人都需要一把武器！那么手工枪械作坊的标准可以降低一点，只要产量够足矣。" 
+  AKI_quanmindongyuan:0 "全民动员"  
+  AKI_quanmindongyuan_desc:0 "每个人都有义务保卫自己的农田！！"  
+  AKI_gansijun:0 "敢死军"  
+  AKI_gansijun_desc:0 "“敢死军”是往昔“凋零者”民兵部队中的精英，他们效忠真神秋静叶并愿意为之付出生命，这种伟大的集体主义奉献精神理应被大力推广！！"  
+  AKI_gexinjunshisixiang:0 "革新军事思想" 
+  AKI_gexinjunshisixiang_desc:0 "最后让我们把目光回到战略战术上来。" 
+
+  AKI_waijiaofanglue:0 "骰子已经掷下" 
+  AKI_waijiaofanglue_desc:0 "幻想乡已然大乱，我们也该直面自己的命运了。" 
+  
+  AKI_renleiwaijiao:0 "人类外交" 
+  AKI_renleiwaijiao_desc:0 "附近除了远居于妖怪山山顶的那帮人以外的人类基本都受我们的影响，也许该改变一下对他们的态度了？" 
+  
+  AKI_jixuzhichishenyoucunluo:0 "继续支持[HU3.GetName]" 
+  AKI_jixuzhichishenyoucunluo_desc:0 "[HU3.GetName]完全可以作为我们的西方缓冲区存在，应当加大对他们的支持才对。尽管它的理念与我们当前是有些冲突，然而我们早就说好了不再干预人类的选择。" 
+  
+  AKI_jiejueshenyoucunluo:0 "解决[HU3.GetName]" 
+  AKI_jiejueshenyoucunluo_desc:0 "[HU3.GetName]必须被解决掉，他们与我们的思想完全不通，不能任由这些家伙在隔壁肆意蛊惑我们的人民。" 
+  
+  AKI_xirenleilianmengguo:0 "与[HU3.GetName]军阀妥协" 
+  AKI_xirenleilianmengguo_desc:0 "[HU3.GetName]的诉求很简单，他们最根源的理想是仿照过去的[HUM.GetName]构建一个人类强权国家，关于神权的部分我们可以做出让步，这样就能顺理成章令其归顺。" 
+  
+  AKI_zhengheshenyoucunluo:0 "整合[HU3.GetName]" 
+  AKI_zhengheshenyoucunluo_desc:0 "加快统一人类的步伐。" 
+  
+  AKI_bubiqinzidongshou:0 "不必亲自动手" 
+  AKI_bubiqinzidongshou_desc:0 "[ZYD.GetName]的商人操控土地价格进行剥削的证据已然确凿，当然我们不会干涉人类的事务...那会有人帮我们这么做的。" 
+  
+  AKI_duishangtuanyouhao:0 "与[ZYD.GetName]签订贸易协定" 
+  AKI_duishangtuanyouhao_desc:0 "[ZYD.GetName]的商人们愿意在我们新出台的法案下进行交易，那么过去的事情就既往不咎了。他们长期控制着通往地狱的要道，与其合作自然大有所得。" 
+  
+  AKI_zibenzhuyiqusi:0 "资本主义去死" 
+  AKI_zibenzhuyiqusi_desc:0 "外界书籍中用“资本主义”来称呼[ZYD.GetName]的商人，完全没想到外界早已接受了这种概念，此等荼毒人心的肮脏心态必须被铲除。" 
+  
+  AKI_zhenghezhongyoudao:0 "整合[ZYD.GetName]" 
+  AKI_zhenghezhongyoudao_desc:0 "加快统一人类的步伐。" 
+  
+  AKI_womenzaiwuyuanzhongdeliyi:0 "看向无缘冢" 
+  AKI_womenzaiwuyuanzhongdeliyi_desc:0 "各势力混战的无缘冢中也有我们失去的东西，该把它拿回来了。" 
+  
+  AKI_gouzhunanbufangxian:0 "构筑南部防线" 
+  AKI_gouzhunanbufangxian_desc:0 "长期处于战争状态的各路妖精妖怪早就积累了丰富的战争经验，我们最好还是先最好防御准备。" 
+  
+  AKI_duohuiwomendehefalingtu:0 "夺回合法领土" 
+  AKI_duohuiwomendehefalingtu_desc:0 "一群妖精在幻想乡大乱时突然涌入前[HU4.GetName]的领地并强行霸占，现在她们该滚出去了！" 
+  
+  AKI_tongyiwuyuanzhong:0 "统一无缘冢" 
+  AKI_tongyiwuyuanzhong_desc:0 "无缘冢自古就是一篇充满危机的土地...也是充满了机遇的土地。诸位！响应在吾之真神秋静叶的召唤！将这片肥沃的土地收入囊中吧！" 
+  
+  AKI_wuyuanzhongdezhengfuzhe:0 "荣耀属于真神" 
+  AKI_wuyuanzhongdezhengfuzhe_desc:0 "最终我们征服了这片蛮荒之地，如今的[AKI.GetName]可以说是比任何时期都要伟大，幻想乡的历史中也没有哪一个势力过去曾统一了整个大西南，毕竟除了吾之真神外还有谁呢？" 
+
+  AKI_wuzhihudaluan:0 "雾之湖大乱" 
+  AKI_wuzhihudaluan_desc:0 "庞大的[SCA.GetName]已经在与列强交战，我们也该行动了。" 
+  
+  AKI_suoyaowomendehefalingdi:0 "一雪前耻" 
+  AKI_suoyaowomendehefalingdi_desc:0 "[SCA.GetName]在过去对妖怪山的战争中狠狠羞辱了我们，那么现在我们就要..." 
+
+  AKI_wushifasheng:0 "无事发生" 
+  AKI_wushifasheng_desc:0 "[SCA.GetName]并不一定会战败，为了避免更恐怖的结局我们应当不管那些割让的土地。" 
+  
+  AKI_hetiangouyiqigan:0 "共赴胜利" 
+  AKI_hetiangouyiqigan_desc:0 "过去的天狗上层为了向贤者施压而去雾之湖“打草谷”的行为我们也参与了，也付出了惨痛的代价，但是现在[TEG.GetName]已然重生，而[SCA.GetName]继续着我们当年的错误无法自拔，那么现在就是纠正错误的时候了，与我们的盟友一起碾碎吸血鬼的缝合帝国！" 
+
+  AKI_napianguangmaodehuatian:0 "那片广袤的花田" 
+  AKI_napianguangmaodehuatian_desc:0 "太阳花田，危险而又美丽。" 
+  
+  AKI_rangwomenlaihezuokaifa:0 "让我们共同开发" 
+  AKI_rangwomenlaihezuokaifa_desc:0 "往昔极端主义者曾鼓吹在征服无缘冢后对花田主人下最后通牒...这怕不是脑子坏了。而据称花田主人其实也没在这片土地上种满花，部分受到流亡妖精骚扰的边境区域以及没几朵花了，我们可以提议帮助她种花...以及种我们的农作物。" 
+  
+  AKI_doushiwomende:0 "都是我们的！" 
+  AKI_doushiwomende_desc:0 "那老妖婆有什么理由霸占这片良田？真神的命令明确，驱逐所有妖精，铲除所有无关紧要的向日葵，这里就是[AKI.GetName]未来的农业区！" 
+
+  AKI_huiwangyaoguaishan:0 "回望妖怪山" 
+  AKI_huiwangyaoguaishan_desc:0 "山脚下该做的都完成了，那么我们是不是也该加入妖怪山上的乱局？总之天狗和神明总得决出一番胜负，很难不得出她们的下个目标就是我们的结论。当然我们也可以不管她们，举办一次庆典显示我们的强盛或者乘势收拾掉旁边曾有数次摩擦的山姥都可以，总之一切取决于你的决定。" 
+
+  AKI_womenhefojiaotudeguanxi:0 "处理佛教妖怪" 
+  AKI_womenhefojiaotudeguanxi_desc:0 "[NMS.GetName]为代表的佛教妖怪长期以来在边界袭扰，可迫于她们的强大实力我们在当时并未做出回应，而在幻想乡再度陷入混乱之际她们亦是停止了往昔的敌对行为...这不代表她们的威胁就此消失了，我们仍然需要保持警惕。" 
+
+
+  
+  AKI_tudijianbing_idea:0 "土地兼并"  
+  AKI_tudijianbing_idea_desc:0 "愈加严重的土地兼并是我们一切问题的根源，地主通过压倒性的财力逐步将穷困农民的土地完全支配，大量无地游民的出现导致了后面的另一种极端情况..."  
+  
+  AKI_jiduanzhuyiyundong_idea:0 "极端主义运动"  
+  AKI_jiduanzhuyiyundong_idea_desc:0 "无地者团结在秋神之一秋静叶的旗下组成了民兵组织“凋零者”开始袭击地主，几乎每个社会组织架构中都有他们的参与者，这进而导致整个社会运转崩溃。"  
+
+  AKI_renyushendemohujiexian_idea:0 "人与神的模糊界限"
+  AKI_renyushendemohujiexian_idea_desc:0 "妖怪山山脚下信奉的神明远不止有两位秋神，秋神只是大部分神明推举出来的领导者而已，而这一带的神明的泛滥程度是远超那些一神教信徒所想象的。很多时候一个人今天是人明天就能成神，自然这类神的力量相对较弱且在与人类的长期混居显得更加像人，例如采取人类的思维模式或者干脆就忘了自己的身份。固然这种情况促使人神长期和平共存，坏的方面则...神也开始积极地参与兴起于人类间的各种政治运动。"
+
+  AKI_jueqidegaigepai_idea:0 "崛起的改革派"     
+  AKI_jueqidegaigepai_idea_desc:0 "山上妖怪的新理念对东北方的两个人类村庄一直有很大影响力，同时由于“富农（地主的前身）”大多住在秋神脚下的缘故所以这儿的农民并未受到他们的迫害，因而键山雏的人类自由运动在这儿更受欢迎。"    
+
+  AKI_zhangquandejiduanpai_idea:0 "掌权的极端势力"     
+  AKI_zhangquandejiduanpai_idea_desc:0 "驱鬼村落所拥有的土地远远不及秋神直属地和东北二村，并且在受到了流亡妖精的入侵后原本的村落领地仅仅剩下了三分之一，因而当地村民目前是秋静叶“凋零者”的铁杆支持者。"   
+
+  AKI_chukoujiqidelirun_idea:0 "出口机械所得" 
+  AKI_chukoujiqidelirun_idea_desc:0 "河童分裂后经济每况愈下，幸好南方的人类近来非常需要我们的重工产品完成工业化，那还能在这个混乱的世道搞点小钱。" 
+  
+  AKI_tudijiaoyisuode_idea:0 "土地交易所得" 
+  AKI_tudijiaoyisuode_idea_desc:0 "实际上我们才是东边村落土地交易的最大买家兼卖家，似乎目前他们的情况有点不太好并且开始对我们产生敌意，可是商人不就该这样吗？！"   
+
+  AKI_laiziqiushendezhichi_idea:0 "来自[AKI.GetName]的支持" 
+  AKI_laiziqiushendezhichi_idea_desc:0 "不同于[AKI.GetName]属下的其他村庄，[HU3.GetName]仅仅保持着与[AKI.GetName]名义上的从属关系并进行着利益上的合作。秋神默许部分相对好战的人类前往这里进行对南方妖怪的“收复失地”运动，而[HU3.GetName]要做的则是将部分战利品上交给秋神即可，似乎这是秋穰子解决人类鹰派的一个手段，毫无疑问这只是将威胁转嫁给了无缘冢的妖怪而已。[HU3.GetName]无意参与[AKI.GetName]内部的纷争，无论谁当权都可以只要别干涉这里的征服行动...由于在鹰派方面的一致性他们在部分层面上亲近于秋静叶及“凋零者”，可或许他们并不了解这位神明的真实想法吧。" 
+
+  AKI_zhanlipin_idea:0 "来自[HU3.GetName]的战利品" 
+  AKI_zhanlipin_idea_desc:0 "[HU3.GetName]一直对秋神保持着奇怪的感情，他们从来都会将最好的无缘冢产外界垃圾上缴，尽管总是些真正的垃圾。" 
+
+  AKI_jingshengongyehua_idea:0 "谨慎工业化" 
+  
+  AKI_nonggengjingshen_idea:0 "农耕精神"
+  
+  AKI_xinanliancun_idea:0 "西南联村组织成员"
+  
+  AKI_fengshoucunluodeshoucheng_idea:0 "丰收村落的收成"
+  
+  AKI_duanzaocunluodechanchu_idea:0 "锻造村落的产出"
+  
+  AKI_quguicunluodeyanjiu_idea:0 "驱鬼村落的研究"
+ 
+  AKI_gaosugongyehua_idea:0 "高速工业化"
+ 
+  AKI_xirenligouxiang_idea:0 "人类移民"
+ 
+  AKI_daohuijiqi_idea:0 "捣毁机器运动"
+ 
+  AKI_juntiandi_idea:0 "均田制"
+ 
+  AKI_gengduodetudi_idea:0 "领土扩张主义"
+ 
+  AKI_ducaizhe_idea:0 "至高神权"
+ 
+  AKI_mofangrenlijunzhi_idea:0 "接纳人里参谋团"
+ 
+  AKI_tuntian_idea:0 "屯田"
+ 
+  AKI_zhengmu_idea:0 "征募"
+ 
+  AKI_diaolingzhejingshen_idea:0 "“凋零者”精神"
+ 
+  AKI_yirenyiba_idea:0 "一人一把"
+ 
+  AKI_quanmindongyuan_idea:0 "全民动员"
+ 
+  AKI_gansijun_idea:0 "敢死军"
+
+  AKI_gongchengjishudaxue_idea:0 "工程技术学院" 
+
+  AKI_jinzhizhishichuanbo_idea:0 "为了真神！" 
+
+  AKI_laiziqiushendeyuanzhu_idea:0 "来自[AKI.GetName]工业援助" 
+ 
+  AKI_maoyitiaoli_idea:0 "与[ZYD.GetName]的贸易协定"
+  
+  AKI_ZYD_maoyitiaoli_idea:0 "与[AKI.GetName]的贸易协定"
+
+  AKI_zhengfuzhe_idea:0 "征服者"
+
+  AKI_shenfa_idea:0 "神罚"
+  
+  AKI_taofajiduanzuzhi_idea:0 "讨伐极端分子"
+
+  AKI_jingtifojiaotu_idea:0 "警惕佛教徒"
+  
+  AKI_weirenleifuchou_idea:0 "向佛教徒复仇"
+
+  AKI_fulizhengce_idea:0 "福利政策"
+
+  AKI_zhuanzhuneibu_idea:0 "专注内部"
+
+  AKI_touzikuifa_idea:0 "投资匮乏"
+  AKI_xinancunluodeshouhuzhe_idea:0 "西南联村组织理事"
+  AKI_touzizengzhang_idea:0 "投资增长"
+  AKI_qiangxingzhenghe_idea:0 "强行整合"
+  AKI_duiyaojingdezuozhanjingyan_idea:0 "一号作战"
+
+  AKI_houtudijianbingshidai_idea:0 "后土地兼并时代"
+  AKI_houtudijianbingshidai_idea_desc:0 "围绕着掠夺式土地兼并构造的不稳定秩序已经瓦解，然而它的影响仍然需要一段时间才能彻底消除..."  
+
+  AKI_YUK_nongyemaoyixieding_idea:0 "农业贸易协定"
+
+  AKI_nongyemaoyixieding_idea:0 "农业贸易协定"
+
+
+
+  AKI_kuangxin_flag:0 "秋神之权威到达顶点"
+ 
+  AKI_neizhengwancheng_FLAG:0 "内政结束"
+ 
+  AKI_lv_win_FLAG:0 "改革派当权"  
+  AKI_he_win_FLAG:0 "极端保守派夺权"  
+  AKI_bai_win_FLAG:0 "保守派维持政权"  
+
+  AKI_zhunbeijingong_flag:0 "准备进攻"  
+
+  AKI_kaihui_tt:0 "§R秋穰子试图说服所有人来维持政权，其结果...不可预料§!"
+
+  AKI_lv_win_tt:0 "§R我们会在一个月后后向极端组织宣战§!"
+
+  AKI_he_win_tt:0 "§R我们会在一个月后向叛徒宣战§!"
+
+  AKI_zhenghediaolingzhe_tt:0 "§Y将会出现四个精英民兵师§!\n"  
+  AKI_kuobiandiaolingzhe_tt:0 "§Y将会出现八个准精英民兵师§!\n" 
+  AKI_diaolingzheyaosai_tt:0 "§Y将在首都部署三个精英民兵师§!\n" 
+  AKI_shanpao_tt:0 "§Y采用我们独家设计的山炮§!\n" 
+  AKI_shandiliebing_tt:0 "§Y善于狩猎的山民会向所有人传授技巧§!\n" 
+  AKI_bingtongyiti_tt:0 "§Y你可以通过决议来动员屯田士兵或者回去种田§!\n"   
+
+  AKI_qiurangzizhengquanweichi_tt:0 "§Y如果丰收大会上没有炸弹引爆的话§!\n"   
+
+  AKI_zhuanzhuanzhangquan_tt:0 "§R如果键山雏的改革派在冲突中胜出§!\n"
+
+  AKI_qiujingyeduoquan_tt:0 "§R如果秋静叶的极端保守派赢得了冲突§!\n"   
+
+  AKI_jimiezhe_tt:0 "§R你可以获得上面选项两倍的灵力加成，但是某个贤者会敌视你§!"  
+  
+  AKI_jujuelehu3_tt:0 "§R一共拒绝三次的话[HU3.GetName]会很生气§!"  
+  
+  
+  AKI_waijiaofanglue_tt:0 "§Y我们的内政改革结束了§!\n"  
+  AKI_waijiaofanglue_neworder_1_tt:0 "§R极端势力可以提前干涉外部§!\n" 
+  AKI_waijiaofanglue_neworder_2_tt:0 "§R[HU3.GetName]的覆灭对于极端势力来说是一个极大的刺激§!\n" 
+  AKI_neizhengwancheng_tt:0 "§Y完成这个国策后我们的眼光可以投向外部§!\n"  
+  AKI_tongyiwuyuanzhong_tt:0 "§Y获得整个大西南地区的宣称并解锁决议予以征服§!\n"  
+
+  AKI_zhongzuzhuanhua_tt:0 "§Y所有人类地块会变为神明。§!\n"  
+
+  AKI_xirenlidechengli_tt:0 "§Y自此我们中的绝大多数已经有意无意的放弃了八百万神明的身份。§!\n"
+
+ 
+  AKI_ganbei_op:0 "干杯"  
+  AKI_xiwangzhidi_op:0 "希望之地？" 
+  AKI_youdianguotou_op:0 "有点过分？！"
+  AKI_liyishousun_op:0 "利益受损"  
+  AKI_maoyixieding_op:0 "贸易协定"  
+  AKI_dishiwomen_op:0 "敌视" 
+  AKI_kaoshan_op:0 "平等互利的朋友"
+  AKI_chuanjiaotexu_op:0 "传教特许"
+  AKI_kuajingxiji_op:0 "跨境袭击"
+  AKI_shayaojingfan_op:0 "杀妖精犯"
+  AKI_xuanchengwuyuanzhong_op:0 "宣称无缘冢"
+  AKI_fanlian_op:0 "翻脸"
+
+  
+  AKI_faction:0 "西南联村" 
+  
+  AKI_shandiliebing_tech:0 "山地猎兵" 
+  AKI_shanpao_tech:0 "山炮" 
+  
+  AKI_bingtongyiti_category:0 "调节屯田状态" 
+  AKI_zhanshidongyuan:0 "战时征募" 
+  AKI_huiquganhuo:0 "回去干活" 
+
+  AKI_tongyiwuyuanzhong_category:0 "统一无缘冢" 
+  AKI_SGS_attack:0 "进攻[SGS.GetName]" 
+  AKI_MEL_attack:0 "进攻[MEL.GetName]" 
+  AKI_GH1_attack:0 "进攻[GH1.GetName]" 
+  AKI_GH2_attack:0 "进攻[GH2.GetName]" 
+  AKI_GH3_attack:0 "进攻[GH3.GetName]" 
+  AKI_HU6_attack:0 "进攻[HU6.GetName]" 
+  
+  AKI_jimiezhe:0 "寂灭者"
+  AKI_jimiezhe_long:0 "寂灭者——神明复兴运动"
+  
+  HU3_category:0 "与[AKI.GetName]的关系"
+
+  HU3_womenxuyaobangzhu:0 "回归[AKI.GetName]的庇护" 
+
+  HU3_jiaruxinanliancun:0 "加入西南联村" 
+  
+  HU3_sangejungong_qingqiu:0 "请求补给" 
+  
+  HU3_liugejungong_qingqiu:0 "请求支援" 
+  
+  HU3_sangejungong:0 "获取补给" 
+  
+  HU3_liugejungong:0 "加强攻势" 
+  
+  AKI_yunxusangejungong_flag:0 "提供补给" 
+  
+  AKI_yunxuliugejungong_flag:0 "支持攻势" 
+  
+  HU3_shangjiaogongpin_diyici:0 "第一次上缴贡品" 
+  
+  AKI_nagong_flag:0 "开始纳贡" 
+  
+  AKI_diycinagong_flag:0 "第一次纳贡" 
+  
+  HU3_shangjiaogongpin:0 "上缴贡品" 
+  
+  AKI_shouchengbuhao_tt:0 "§R有时候我们没法准备好贡品...§!" 
+  
+  AKI_zhanlipin_touzijianshe_idea:0 "使用战利品投资建设" 
+  
+  AKI_zhanlipin_touzishengchan_idea:0 "使用战利品投资生产" 
+  
+  AKI_zhichibuji_idea:0 "支持补给" 
+  
+  AKI_zhichigongshi_idea:0 "支持攻势" 
+  
+  AKI_buji_idea:0 "来自[AKI.GetName]的补给"
+  
+  AKI_gongshi_idea:0 "来自[AKI.GetName]的支援"
+ 
+  AKI_yaoguaishanwaijiao_idea:0 "妖怪山外交"
+  
+  AKI_luorixingdong_idea:0 "落日行动"
+ 
+  AKI_huangyeqiusheng_idea:0 "荒野求生"
+
+  AKI_tongyiderenleirentong_idea:0 "八百万神的遗产"
+  AKI_tongyiderenleirentong_idea_desc:0 "有些东西不会随着神力的消散而消亡，我们永远将高昂着头颅前行。"  
+
+  AKI_kaifawuyuanzhong_category:0 "开垦南部荒地" 
+  AKI_kaifayingguaidao:0 "开荒" 
+  AKI_kaifayingtongletu:0 "开荒"
+  AKI_kaifanaxuan:0 "开荒"
+  AKI_kaifaqianqu:0 "开荒"
+  AKI_kaifalujiu:0 "开荒"
+  AKI_kaifadangbie:0 "开荒"
+  AKI_kaifaxingguangxiaojing:0 "开荒"
+  AKI_kaifariguanghuayuan:0 "开荒"
+  AKI_kaifayueguangsenlin:0 "开荒"
+  AKI_kaifazhanguan:0 "开荒"
+  AKI_kaifayingzhuang:0 "开荒"
+  AKI_kaifahuiting:0 "开荒"
+  AKI_kaifashihe:0 "开荒"
+  AKI_kaifaguangru:0 "开荒"
+  AKI_kaifajinjin:0 "开荒"
+  AKI_kaifayongfu:0 "开荒"
+  AKI_kaifafeiqihuatian:0 "开荒"
+  AKI_kaifamuyuanling:0 "开荒"
+  AKI_kaifafeiqicaishichang:0 "开荒"
+  AKI_kaifanaoguimofang:0 "开荒"
+  AKI_kaifazhongqihuahai:0 "开荒"
+  AKI_kaifafubaihuatian:0 "开荒"
+  AKI_kaifamanhuangjiaojie:0 "开荒"
+  AKI_kaifayanzouwutai:0 "开荒"
+  AKI_kaifaxiangrikuilin:0 "开荒"
+  AKI_kaifayianrizhidi:0 "开荒"
+  AKI_kaifajinrizhidi:0 "开荒"
+  AKI_kaifaererliui:0 "开荒"
+  AKI_kaifahuazhongcangku:0 "开荒"
+  AKI_kaifadongxiangrikuilin:0 "开荒"
+  AKI_kaifafeiliaoduijichang:0 "开荒"
+  AKI_kaifahuatianguaiquandi:0 "开荒"
+  AKI_kaifalaerwa:0 "开荒"
+  AKI_kaifaxiaojing:0 "开荒"
+  AKI_kaifalubiao:0 "开荒"

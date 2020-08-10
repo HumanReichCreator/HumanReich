@@ -1,0 +1,48 @@
+
+state={
+	id=258
+	name="STATE_258"
+	resources={
+
+		powder=5.000
+		metal=5.000
+		gas=0.000
+		crystal=0.000
+	}
+
+	history={
+		143.7.1 = {
+			owner = HUM
+			add_core_of = HUM
+			buildings = {
+				infrastructure =6
+				industrial_complex = 0
+				arms_factory = 7
+			}
+		}
+		146.1.1 = {
+			owner = EMB
+			add_core_of = EMB
+			add_claim_by = SBK
+			add_core_of = HUM
+			add_core_of = HU6
+			add_core_of = HU7
+			add_core_of = HU8
+			buildings = {
+				infrastructure =7
+				industrial_complex = 6
+				arms_factory = 2
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		231 539 616 1158 1712 1897 2172 2510 3154 3164 3166 5622 5627 5674 5687 
+	}
+	manpower=16606.0
+	buildings_max_level_factor=1.000
+	state_category=s10
+}

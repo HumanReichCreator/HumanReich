@@ -1,0 +1,375 @@
+exhuastion_defines = {
+	set_variable = { global.EXH_floor_base_Ghost_define = -25 }
+	set_variable = { global.EXH_floor_base_Fairy_define = -5 }
+	set_variable = { global.EXH_floor_base_Human_define = -25 }
+	set_variable = { global.EXH_floor_base_Magician_define = -10 }
+	set_variable = { global.EXH_floor_base_Kappa_define = -10 }
+	set_variable = { global.EXH_floor_base_Pri_youkai_define = -15 }
+	set_variable = { global.EXH_floor_base_Youkai_define = -25 }
+	set_variable = { global.EXH_floor_base_Tenggu_define = -25 }
+	set_variable = { global.EXH_floor_base_God_define = -25 }
+	set_variable = { global.EXH_floor_base_Beast_define = -15 }
+
+	set_variable = { global.EXH_increase_level1_base = 0.03}
+	set_variable = { global.EXH_increase_level2_base = 0.07}
+	set_variable = { global.EXH_increase_level3_base = 0.12}
+	set_variable = { global.EXH_increase_level4_base = 0.17}
+	set_variable = { global.EXH_increase_level5_base = 0.25}
+
+	set_variable = { global.EXH_exhaustion_increase_base = 400}
+
+	set_variable = { global.EXH_peace_base = 0.05}
+	set_variable = { global.EXH_low_base = 0.1}
+
+	set_variable = { global.EXH_low_cost_base = 100}
+
+	set_variable = { global.EXH_war_support_ratio = -0.75}
+	set_variable = { global.EXH_org_ratio = -0.1}
+	set_variable = { global.EXH_stability_ratio = -0.5}
+
+}
+
+exhuastion_base_seton = {
+	if = {
+		limit = {
+			has_idea = Ghost
+		}
+		set_variable = { EXHC_floor_base = global.EXH_floor_base_Ghost_define}
+	}
+	if = {
+		limit = {
+			has_idea = Fairy
+		}
+		set_variable = { EXHC_floor_base = global.EXH_floor_base_Fairy_define}
+	}
+	if = {
+		limit = {
+			has_idea = Human
+		}
+		set_variable = { EXHC_floor_base = global.EXH_floor_base_Human_define}
+	}
+	if = {
+		limit = {
+			has_idea = Magician
+		}
+		set_variable = { EXHC_floor_base = global.EXH_floor_base_Magician_define}
+	}
+	if = {
+		limit = {
+			has_idea = Pri_youkai
+		}
+		set_variable = { EXHC_floor_base = global.EXH_floor_base_Pri_youkai_define}
+	}
+	if = {
+		limit = {
+			has_idea = Youkai
+		}
+		set_variable = { EXHC_floor_base = global.EXH_floor_base_Youkai_define}
+	}
+	if = {
+		limit = {
+			has_idea = Tenggu
+		}
+		set_variable = { EXHC_floor_base = global.EXH_floor_base_Tenggu_define}
+	}
+	if = {
+		limit = {
+			has_idea = God
+		}
+		set_variable = { EXHC_floor_base = global.EXH_floor_base_God_define}
+	}
+	if = {
+		limit = {
+			has_idea = Kappa
+		}
+		set_variable = { EXHC_floor_base = global.EXH_floor_base_Kappa_define}
+	}
+	if = {
+		limit = {
+			has_idea = Beast
+		}
+		set_variable = { EXHC_floor_base = global.EXH_floor_base_Beast_define}
+	}
+
+	set_variable = { EXHC_current_exhaustion = EXHC_floor_base}
+}
+
+exhuastion_modifier = {
+
+	set_variable = { EXHC_time_increase = global.EXH_exhaustion_increase_base}
+	set_variable = { EXHC_time_base_modifier = 1}
+	add_to_variable	= { EXHC_time_base_modifier = EXHC_time_base_add}
+	multiply_variable = { EXHC_time_increase = EXHC_time_base_modifier}
+
+	set_variable = { EXHC_floor =  EXHC_floor_base}
+
+	set_variable = { EXHC_peace =  global.EXH_peace_base}
+	set_variable = { EXHC_low = global.EXH_low_base}
+
+	set_variable = { EXHC_low_cost = global.EXH_low_cost_base}
+	set_variable = { EXHC_low_cost_base_modifier = 1}
+	add_to_variable = { EXHC_low_cost_base_modifier = EXHC_low_cost_base_add}
+	multiply_variable = { EXHC_low_cost = EXHC_low_cost_base_modifier}
+
+	set_variable = { EXHC_root_base_modifier = 1}
+	add_to_variable	= { EXHC_root_base_modifier = EXHC_root_base_add}
+
+	set_variable = { EXHC_low_effect_modifier = 1}
+	add_to_variable = { EXHC_low_effect_modifier = EXHC_low_effect_modifier_add}
+
+}
+
+exhuastion_increase_level_up = {
+	custom_effect_tooltip = exhuastion_increase_level_up_tt
+	if = {
+		limit = {
+			has_country_flag = {
+				flag = exhuastion_level
+				value > 4 
+			}
+		}
+		add_political_power = -50
+	}
+	if = {
+		limit = {
+			and = {
+				has_country_flag = {
+					flag = exhuastion_level
+					value > 3
+				}
+				has_country_flag = {
+					flag = exhuastion_level
+					value < 5
+				}
+			}
+		}
+		set_variable = { EXHC_increase_speed = global.EXH_increase_level5_base}
+		modify_country_flag = {
+		    flag = exhuastion_level
+		    value = 1
+		}
+	}
+	if = {
+		limit = {
+			and = {
+				has_country_flag = {
+					flag = exhuastion_level
+					value > 2
+				}
+				has_country_flag = {
+					flag = exhuastion_level
+					value < 4
+				}
+			}
+		}
+		set_variable = { EXHC_increase_speed = global.EXH_increase_level4_base}
+		modify_country_flag = {
+		    flag = exhuastion_level
+		    value = 1
+		}
+	}
+	if = {
+		limit = {
+			and = {
+				has_country_flag = {
+					flag = exhuastion_level
+					value > 1
+				}
+				has_country_flag = {
+					flag = exhuastion_level
+					value < 3
+				}
+			}
+		}
+		set_variable = { EXHC_increase_speed = global.EXH_increase_level3_base}
+		modify_country_flag = {
+		    flag = exhuastion_level
+		    value = 1
+		}
+	}
+	if = {
+		limit = {
+			and = {
+				has_country_flag = {
+					flag = exhuastion_level
+					value > 0
+				}
+				has_country_flag = {
+					flag = exhuastion_level
+					value < 2
+				}
+			}
+		}
+		set_variable = { EXHC_increase_speed = global.EXH_increase_level2_base}
+		modify_country_flag = {
+		    flag = exhuastion_level
+		    value = 1
+		}
+	}
+	if = {
+		limit = {
+			or = {
+				has_country_flag = {
+					flag = exhuastion_level
+					value < 1
+				}
+				not = {
+					has_country_flag = exhuastion_level
+				}
+			}
+		}
+		set_variable = { EXHC_increase_speed = global.EXH_increase_level1_base}
+		if = {
+			limit = {
+				has_country_flag = exhuastion_level
+			}
+			modify_country_flag = {
+			    flag = exhuastion_level
+			    value = 1
+			}
+			else = {
+				set_country_flag = {
+				    flag = exhuastion_level
+				    value = 1
+				}
+			}
+		}
+		
+	}
+
+	# set_variable = { EXHC_increase_speed = }
+}
+
+exhuastion_daily_change = {
+	set_variable = { EXHC_daily = 0}
+	#at war?
+	if = {
+		limit = {
+			has_war = yes
+		}
+		set_variable = { EXHC_daily = EXHC_increase_speed}
+		else = {
+			subtract_from_variable = { EXHC_daily = EXHC_peace}
+		}
+	}
+	#is lowwing?
+	if = {
+		limit = {
+			has_country_flag = EXHC_lowing_exhaustion
+		}
+		set_temp_variable = { EXHC_low_current = EXHC_low }
+		multiply_temp_variable = { EXHC_low_current = EXHC_low_effect_modifier }
+		subtract_from_variable = { EXHC_daily = EXHC_low_current}
+	}
+
+	add_to_variable = { EXHC_current_exhaustion = EXHC_daily}
+	clamp_variable = {
+	    var = EXHC_current_exhaustion
+	    min = EXHC_floor
+	    max = 100
+	}
+
+	if = {
+		limit = { check_variable = { EXHC_current_exhaustion > 0} }
+		set_temp_variable = { EXHC_exhaustion = 0.01}
+		multiply_temp_variable = { EXHC_exhaustion = EXHC_current_exhaustion }
+
+		set_variable = { EXH_speed = EXHC_exhaustion }
+		set_variable = { EXH_org = EXHC_exhaustion }
+		set_variable = { EXH_war_support = EXHC_exhaustion }
+		set_variable = { EXH_stability = EXHC_exhaustion }
+		
+		multiply_variable = { EXH_war_support = global.EXH_war_support_ratio }
+		multiply_variable = { EXH_stability = global.EXH_stability_ratio }
+		multiply_variable = { EXH_speed = global.EXH_speed_ratio }
+		multiply_variable = { EXH_org = global.EXH_org_ratio }
+		else = {
+			set_variable = { EXH_speed = 0 }
+			set_variable = { EXH_org = 0 }
+			set_variable = { EXH_war_support = 0 }
+			set_variable = { EXH_stability = 0 }
+		}
+		
+	}
+	
+}
+
+EXHC_exhaustion_add5 = {
+	add_to_variable = { EXHC_current_exhaustion = 5}
+	custom_effect_tooltip = EXHC_exhaustion_add5_tt
+}
+
+EXHC_exhaustion_add10 = {
+	add_to_variable = { EXHC_current_exhaustion = 10}
+	custom_effect_tooltip = EXHC_exhaustion_add10_tt
+}
+
+EXHC_exhaustion_add15 = {
+	add_to_variable = { EXHC_current_exhaustion = 15}
+	custom_effect_tooltip = EXHC_exhaustion_add15_tt
+}
+
+EXHC_exhaustion_add20 = {
+	add_to_variable = { EXHC_current_exhaustion = 20}
+	custom_effect_tooltip = EXHC_exhaustion_add20_tt
+}
+
+EXHC_exhaustion_add25 = {
+	add_to_variable = { EXHC_current_exhaustion = 25}
+	custom_effect_tooltip = EXHC_exhaustion_add25_tt
+}
+
+EXHC_exhaustion_minus5 = {
+	add_to_variable = { EXHC_current_exhaustion = -5}
+	custom_effect_tooltip = EXHC_exhaustion_minus5_tt
+}
+
+EXHC_exhaustion_minus10 = {
+	add_to_variable = { EXHC_current_exhaustion = -10}
+	custom_effect_tooltip = EXHC_exhaustion_minus10_tt
+}
+
+EXHC_exhaustion_minus15 = {
+	add_to_variable = { EXHC_current_exhaustion = -15}
+	custom_effect_tooltip = EXHC_exhaustion_minus15_tt
+}
+
+EXHC_exhaustion_minus20 = {
+	add_to_variable = { EXHC_current_exhaustion = -20}
+	custom_effect_tooltip = EXHC_exhaustion_minus20_tt
+}
+
+EXHC_exhaustion_minus25 = {
+	add_to_variable = { EXHC_current_exhaustion = -25}
+	custom_effect_tooltip = EXHC_exhaustion_minus25_tt
+}
+
+EXHC_exhaustion_factor_add5 = {
+	add_to_variable = { EXHC_time_base_add = 0.05}
+	custom_effect_tooltip = EXHC_exhaustion_factor_add5_tt
+	exhuastion_modifier = yes
+}
+
+EXHC_exhaustion_factor_add10 = {
+	add_to_variable = { EXHC_time_base_add = 0.1}
+	custom_effect_tooltip = EXHC_exhaustion_factor_add10_tt
+	exhuastion_modifier = yes
+}
+
+EXHC_exhaustion_factor_add15 = {
+	add_to_variable = { EXHC_time_base_add = 0.15}
+	custom_effect_tooltip = EXHC_exhaustion_factor_add15_tt
+	exhuastion_modifier = yes
+}
+
+EXHC_exhaustion_factor_add20 = {
+	add_to_variable = { EXHC_time_base_add = 0.2}
+	custom_effect_tooltip = EXHC_exhaustion_factor_add20_tt
+	exhuastion_modifier = yes
+}
+
+EXHC_exhaustion_factor_add25 = {
+	add_to_variable = { EXHC_time_base_add = 0.25}
+	custom_effect_tooltip = EXHC_exhaustion_factor_add25_tt
+	exhuastion_modifier = yes
+}

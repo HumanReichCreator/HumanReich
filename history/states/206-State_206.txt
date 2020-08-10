@@ -1,0 +1,35 @@
+
+state={
+	id=206
+	name="STATE_206"
+	resources={
+
+		powder=0.000
+		metal=0.000
+		gas=0.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = ALI
+			add_core_of = ALI
+			add_core_of = MSD
+			buildings = {
+				infrastructure =2
+				industrial_complex = 1
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		9 446 937 1565 2212 2839 3044 3318 3322 4298 4299 4508 4512 
+	}
+	manpower=701.0
+	buildings_max_level_factor=1.000
+	state_category=s2
+}

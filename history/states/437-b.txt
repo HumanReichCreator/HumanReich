@@ -1,0 +1,31 @@
+state={
+	id=437
+	name="STATE_437"
+	provinces={
+		6039 6046 6050 6061 6064 6066 6072 
+	}
+	resources={
+		energy = 0
+		powder=0.000
+		metal=0.000
+		gas=0.000
+		crystal=2.000
+	}
+	history={
+		146.1.1 = {
+			owner = WAI
+			add_core_of = WAI
+			add_claim_by = GH1
+			add_claim_by = USZ
+			buildings = {
+				infrastructure = 0
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+		}
+	}
+	manpower=10033.0
+	state_category=s2
+	buildings_max_level_factor=1.000
+}

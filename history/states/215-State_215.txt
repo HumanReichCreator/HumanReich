@@ -1,0 +1,44 @@
+
+state={
+	id=215
+	name="STATE_215"
+	resources={
+
+		powder=5.000
+		metal=1.000
+		gas=20.000
+		crystal=5.000
+	}
+
+	history={
+		# 143.7.1 = {
+		# 	owner = NMS
+		# 	add_core_of = NMS
+		# 	buildings = {
+		# 		infrastructure =5
+		# 		industrial_complex = 6
+		# 		arms_factory = 2
+
+		# 	}
+		# }
+		146.1.1 = {
+			owner = ICR
+			add_core_of = ICR
+			buildings = {
+				infrastructure =6
+				industrial_complex = 8
+				arms_factory = 3
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		403 733 920 2066 2472 2863 3211 3617 3819 3821 3824 3825 3827 4759 5710 5712 5713 5717 
+	}
+	manpower=6138.0
+	buildings_max_level_factor=1.000
+	state_category=s17
+}

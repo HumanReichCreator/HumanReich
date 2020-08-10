@@ -1,0 +1,34 @@
+
+state={
+	id=104
+	name="STATE_104"
+	resources={
+
+		powder=5.000
+		metal=0.000
+		gas=5.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = SCA
+			add_core_of = SCA
+			buildings = {
+				infrastructure =4
+				industrial_complex = 2
+				arms_factory = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		222 503 767 956 1550 2160 2242 3067 3450 3991 3996 3998 4000 4006 4009 4014 4017 4021 4025 4029 4042 4055 
+	}
+	manpower=13887.0
+	buildings_max_level_factor=1.000
+	state_category=s7
+}

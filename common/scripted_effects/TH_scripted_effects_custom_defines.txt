@@ -1,0 +1,103 @@
+#17 custom value defines
+custom_defines_initialize = {
+	#core 
+	set_variable = { global.CO_cost_factor = 1 }
+
+    #open close
+	set_variable = { global.DF_conservative_time_cost = 260 }
+	set_variable = { global.DF_open_cost = 120 }
+	set_variable = { global.DF_close_cost = 120 }
+
+	#hawk dove
+	set_variable = { global.DF_lobby_time_cost = 260 }
+	set_variable = { global.DF_hawk_cost = 120 }
+	set_variable = { global.DF_dove_cost = 120 }
+}
+custom_defines_changer = { 
+    #open close
+    set_variable = { conservative_time_cost = global.DF_conservative_time_cost }
+	set_variable = { open_cost = global.DF_open_cost }
+	set_variable = { close_cost = global.DF_close_cost }
+
+	#hawk dove
+	set_variable = { lobby_time_cost = global.DF_lobby_time_cost }
+	set_variable = { hawk_cost = global.DF_hawk_cost }
+	set_variable = { dove_cost = global.DF_dove_cost }
+	
+	if = {
+		limit = {
+		  OR = {
+		    has_government = neworder
+		    has_government = guli
+		  }
+		}
+		multiply_variable = { var = close_cost value = 0.5 }
+	}
+	if = {
+		limit = {
+		  OR = {
+		    has_government = qinwai
+		    has_government = fandong
+		  }
+		}
+		multiply_variable = { var = open_cost value = 0.5 }
+	}
+	
+	if = {
+		limit = {
+		     OR = {
+		        has_government = neworder
+		        has_government = fandong
+		     }
+		}
+		multiply_variable = { var = hawk_cost value = 0.5 }
+	}
+	if = {
+		limit = {
+		    OR = {
+		        has_government = guli
+		        has_government = qinwai
+		    }
+		}
+		multiply_variable = { var = dove_cost value = 0.5 }
+	}
+
+	set_temp_variable = { lobby_time_factor = 1 }
+	set_temp_variable = { conservative_time_factor = 1}
+	add_to_temp_variable = { lobby_time_factor = lobby_time_cost_add }
+	add_to_temp_variable = { conservative_time_factor = conservative_time_cost_add }
+	multiply_variable = { lobby_time_cost = lobby_time_factor }
+	multiply_variable = { conservative_time_cost = conservative_time_factor }
+
+	set_temp_variable = { hawk_cost_factor = 1 }
+	set_temp_variable = { dove_cost_factor = 1 }
+	set_temp_variable = { open_cost_factor = 1 }
+	set_temp_variable = { close_cost_factor = 1 }
+	add_to_temp_variable = { hawk_cost_factor = hawk_cost_factor_cost_add }
+	multiply_variable = { hawk_cost = hawk_cost_factor }
+	add_to_temp_variable = { dove_cost_factor = dove_cost_factor_cost_add }
+	multiply_variable = { dove_cost = dove_cost_factor }
+	add_to_temp_variable = { open_cost_factor = open_cost_factor_cost_add }
+	multiply_variable = { open_cost = open_cost_factor }
+	add_to_temp_variable = { close_cost_factor = close_cost_factor_cost_add }
+	multiply_variable = { close_cost = close_cost_factor }
+
+	outlook_modifier = yes
+	power_change_modifier = yes
+	exhuastion_modifier = yes
+	FAPO_modifier_change = yes
+	HMIF_onset = yes
+}
+
+custom_situation_initialize = {
+	add_stability = -0.5
+	add_war_support = -0.5
+    set_country_flag = initialled_facs
+    add_offsite_building = { type = industrial_complex level = 3 }
+    add_offsite_building = { type = arms_factory level = 1 }
+    tech_initialize = yes
+}
+
+
+
+

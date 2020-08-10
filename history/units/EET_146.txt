@@ -1,0 +1,63 @@
+﻿division_template = {
+	name = "永远亭禁卫队"
+	regiments = {
+		sc_infantry = { x = 0 y = 0 }
+		sc_infantry = { x = 0 y = 1 }
+		sc_infantry = { x = 0 y = 2 }
+		sc_artillery_brigade = {x = 1 y = 0 }
+	}
+}
+division_template = {
+	name = "永远亭灵力禁卫队"
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 2 }
+		sc_artillery_brigade = {x = 1 y = 0 }
+	}
+}
+
+units = {
+	division = {
+		name = "永远亭禁卫队"
+		location = 6567
+		division_template = "永远亭禁卫队"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "永远亭禁卫队"
+		location = 6567
+		division_template = "永远亭禁卫队"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "永远亭禁卫队"
+		location = 6567
+		division_template = "永远亭禁卫队"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "永远亭灵力禁卫队"
+		location = 6567
+		division_template = "永远亭灵力禁卫队"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "永远亭灵力禁卫队"
+		location = 6567
+		division_template = "永远亭灵力禁卫队"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "永远亭灵力禁卫队"
+		location = 6567
+		division_template = "永远亭灵力禁卫队"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+}

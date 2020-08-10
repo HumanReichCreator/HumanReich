@@ -1,0 +1,45 @@
+
+state={
+	id=168
+	name="STATE_168"
+	resources={
+		powder=0.000
+		metal=0.000
+		gas=0.000
+		crystal=0.000
+	}
+
+	history={
+		# 143.7.1 = {
+		# 	owner = NMS
+		# 	add_core_of = NMS
+		# 	buildings = {
+		# 		infrastructure = 2
+		# 		industrial_complex = 0
+		# 		arms_factory = 0
+
+		# 	}
+
+		# }
+		146.1.1 = {
+			owner = MNM
+			add_core_of = MNM
+			add_claim_by = SHO
+			buildings = {
+				infrastructure = 3
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		30 380 708 3534 3539 3540 3546 3548 3552 5437 5440 5442 5443 
+	}
+	manpower=52
+	buildings_max_level_factor=1.000
+	state_category=s2
+}

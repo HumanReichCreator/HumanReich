@@ -1,0 +1,30 @@
+state={
+	id=49
+	name="STATE_49"
+
+	resources={
+
+		powder = 5.0
+		metal = 2
+		gas = 20.0
+		crystal = 0.0
+	}
+
+	history={
+       	146.1.1 = {
+			owner = CCA
+			add_core_of = CCA
+			buildings = {
+				infrastructure =8
+				industrial_complex = 5
+				arms_factory = 3
+			}
+       	}
+	}
+	provinces={
+		836 1509 1660 2626 
+	}
+	state_category=s12
+	manpower=2969.0
+	buildings_max_level_factor=1.000
+}

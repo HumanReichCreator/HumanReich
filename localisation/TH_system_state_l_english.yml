@@ -1,0 +1,64 @@
+﻿l_english:
+ #############掠夺土地
+ root_sys_cant_tt:0 "§R[root_sys_cant_sl]§!"
+ root_sys_is_owner:0 "这是你拥有的省份"
+ root_sys_not_full_controlled:0 "你未完全控制这个省份"
+ root_sys_recent_action:0 "你在182天内执行过掠夺操作"
+ root_sys_recent_rooted:0 "这个省份在365天以内被掠夺过"
+ root_sys_can_tt:0 "点击掠夺这个省份"
+ root_sys_can_delayed_tt:0 "§g掠夺会降低这个省份的基础设施、民用工厂、军用工厂和人口数，但你能因此获得一定的政治点数和[th_power_word_type]以及降低一部分厌战，不过你若是§R人类、妖精或者幽灵§!，会得到双倍政治点数，但不能获得[th_power_word_type]。§g§!"
+ big_rooting:0 "大规模掠夺洗劫行为"
+
+ progressing:0 "[progress_type]"
+ core_progress:0 "核心 [?in_core_progress_of_@ROOT]/[?CO_current_core_time|0]"
+ convert_progress:0 "转换 [?in_convert_progress_of_@ROOT]/[?CONV_current_convert_time|0]"
+ core_value:0 "省份价值 [?state_value]"
+ 
+ #############核心
+ 
+
+ 
+ core_sys_cant_tt:0 "§R[CO_core_cant]§!"
+ CO_core_cant_1:0 "顺从度未高于80"
+ CO_core_cant_11:0 "顺从度未高于40"
+ CO_core_cant_2:0 "处于战争状态"
+ CO_core_cant_3:0 "正在转换这个省份的种族"
+ CO_core_cant_4:0 "政治点数不足[?CO_core_time|1]"
+ CO_core_cant_5:0 "正在建造这个省份的核心"
+ CO_sys_can_tt:0 "建造这个省份的核心"
+ CO_sys_can_delayed_tt:0 "建造这个核心需要花费[?CO_core_time]天和[?CO_core_time]点政治点数。"
+
+ CO_state_can:0 "如果该省份有你拥有的核心省份相临，则可以对顺从度高于80的省份建造核心。"
+
+ convert_sys_cant_tt:0 "§R[CONV_cant_tt]§!"
+ CONV_cant_1:0 "处于战争状态"
+ CONV_cant_2:0 "正在建造这个省份的核心"
+ CONV_cant_3:0 "政治点数不足[?CONV_convert_cost|1]"
+ CONV_cant_4:0 "正在转换这个省份的种族"
+ CONV_cant_5:0 "叛乱未低于高于5"
+ CONV_cant_6:0 "你的国家禁止这种行为"
+ CONV_can_tt:0 "转换这个省份的种族"
+ CONV_can_delayed_tt:0 "将这个省份的种族转换为你的种族，需要花费[?CONV_convert_time]天和[?CONV_convert_cost]点政治点数，完成后会获得[?CONV_convert_PO]点灵力，并改变该省份的人口，这会由你的主体种族和该省份当前种族决定。"
+
+ CO_factor_minus0.1_tt:0 "§G造核政治点数消耗-10%§!\n"
+ CO_factor_minus0.2_tt:0 "§G造核政治点数消耗-20%§!\n"
+ CO_factor_minus0.3_tt:0 "§G造核政治点数消耗-30%§!\n"
+ CO_factor_minus0.4_tt:0 "§G造核政治点数消耗-40%§!\n"
+ CO_factor_minus0.5_tt:0 "§G造核政治点数消耗-50%§!\n"
+
+ CONV_convert_cost_factor_minus0.1_tt:0 "§G转化种族消耗-10%§!\n"
+ CONV_convert_cost_factor_minus0.2_tt:0 "§G转化种族消耗-20%§!\n"
+ CONV_convert_cost_factor_minus0.3_tt:0 "§G转化种族消耗-30%§!\n"
+ CONV_convert_cost_factor_minus0.4_tt:0 "§G转化种族消耗-40%§!\n"
+ CONV_convert_cost_factor_minus0.5_tt:0 "§G转化种族消耗-50%§!\n"
+
+ CO_core_Pri_youkai_tt:0 "§G所有当前种族为§!§Y草根妖怪§!§G的地块当你获得时自动获得其核心。§!"
+ CO_core_Magician_tt:0 "§G所有当前种族为§!§Y法师§!§G的地块当你获得时自动获得其核心。§!"
+ CO_core_Human_tt:0 "§G所有当前种族为§!§Y人类§!§G的地块当你获得时自动获得其核心。§!"
+ CO_core_Beast_tt:0 "§G所有当前种族为§!§Y妖兽§!§G的地块当你获得时自动获得其核心。§!"
+ CO_core_Youkai_tt:0 "§G所有当前种族为§!§Y妖怪§!§G的地块当你获得时自动获得其核心。§!"
+ CO_core_Tengu_tt:0 "§G所有当前种族为§!§Y天狗§!§G的地块当你获得时自动获得其核心。§!"
+ CO_core_Kappa_tt:0 "§G所有当前种族为§!§Y河童§!§G的地块当你获得时自动获得其核心。§!"
+ CO_core_Ghost_tt:0 "§G所有当前种族为§!§Y幽灵§!§G的地块当你获得时自动获得其核心。§!"
+ CO_core_Fairy_tt:0 "§G所有当前种族为§!§Y妖精§!§G的地块当你获得时自动获得其核心。§!"
+ CO_core_God_tt:0 "§G所有当前种族为§!§Y神明§!§G的地块当你获得时自动获得其核心。§!"

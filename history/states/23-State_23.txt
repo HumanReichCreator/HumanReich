@@ -1,0 +1,30 @@
+state={
+	id=23
+	name="STATE_23"
+
+	resources={
+
+		powder = 0.0
+		metal = 0
+		gas = 10.0
+		crystal = 0.0
+	}
+
+	history={
+       	146.1.1 = {
+			owner = MHP
+			add_core_of = MHP
+			buildings = {
+				infrastructure = 3
+				industrial_complex = 1
+				arms_factory = 0
+			}
+       	}
+	}
+	provinces={
+		1 314 462 520 561 830 1293 1329 1425 1519 1831 1981 2302 2383 2529 2601 2604 2613 2642 
+	}
+	state_category=s5
+	manpower=1618.0
+	buildings_max_level_factor=1.000
+}

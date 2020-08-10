@@ -1,0 +1,35 @@
+
+state={
+	id=84
+	name="STATE_84"
+	resources={
+
+		powder=0.000
+		metal=1.000
+		gas=5.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = TEG
+			add_core_of = TEG
+			add_core_of = OTG
+			buildings = {
+				infrastructure =5
+				industrial_complex = 3
+				arms_factory = 3
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		1708 1948 3107 3112 5246 5249 5257 5267 5271 5279 5287 5288 5289 
+	}
+	manpower=897.0
+	buildings_max_level_factor=1.000
+	state_category=s7
+}

@@ -1,0 +1,94 @@
+ideas = {
+    #===========难度精神==============
+    country = {	
+	    E_d = {
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+
+			}
+		}
+		N_d = {
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+
+			}
+		}
+		H_d = {
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+
+			}
+		}
+		L_d = {
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+
+			}
+		}
+		E_s = {
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+			  opinion_gain_monthly_factor = 0.1
+
+			}
+		}
+		N_s = {
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+
+			}
+		}
+		H_s = {
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+			  opinion_gain_monthly_factor = -0.4
+			}
+		}
+		L_s = {
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+			  opinion_gain_monthly_factor = -0.8
+			}
+		}
+	}
+}

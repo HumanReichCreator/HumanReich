@@ -1,0 +1,79 @@
+scripted_gui = {
+	th_claim_sys_effect = {
+		context_type = selected_state_context
+
+		window_name = "th_race_gui"
+
+		parent_window_token = selected_state_view
+
+		visible = {
+			# NOT = {
+			# 	is_core_of = ROOT
+			# 	is_claimed_by = ROOT
+			# }
+			# ROOT = { has_country_flag = can_claim_state } #没有任何一个国家给了这个flag
+			# OR = {
+			# 	ROOT = {
+			# 		any_neighbor_country = {
+			# 			owns_state = PREV.PREV
+			# 		}
+			# 	}
+			# 	is_owned_by = ROOT
+			# }	
+		}
+
+		triggers = {
+			# th_claim_sys_can_visible = {
+			# 	NOT = {				
+			# 		has_variable = in_claim_progress_of_@ROOT
+			# 	}
+			# 	owner = {
+			# 		NOT = { is_subject_of = ROOT }
+			# 	}
+			# 	ROOT = {
+			# 		set_temp_variable = { a = ROOT.political_power }
+			# 		check_variable = { ROOT.political_power > claim_cost }
+			# 		has_war = no
+			# 		NOT = { has_country_flag = recent_claim_action }
+					
+					
+ 		# 		}
+
+			# }
+			# th_claim_progress_visible = {
+			# 	has_variable = in_claim_progress_of_@ROOT
+			# }
+			# th_claim_sys_cant_visible = {
+			# 	is_neighbor_of = ROOT #broken?
+			# }
+		}
+
+		effects = {
+			# th_claim_sys_can_click = {
+			# 	set_variable = {
+			# 		var = in_claim_progress_of_@ROOT
+			# 		value = 0
+			# 	}
+			# 	ROOT = {
+			# 		set_temp_variable = { b = ROOT.claim_cost }
+			# 		multiply_temp_variable = { b = -1 }
+			# 		add_political_power = b
+			# 		# set_country_flag = {
+			# 		# 	flag = recent_claim_action
+			# 		# 	days = 10
+			# 		# 	value = 1
+			# 		# }
+			# 	}
+			# }
+		}
+
+		properties = {
+            th_origin_race = {
+                image = "[origin_race_get]"
+            }
+            th_present_race = {
+                image = "[present_race_get]"
+            }
+		}
+	}
+}

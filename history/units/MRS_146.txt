@@ -1,0 +1,242 @@
+﻿division_template = {
+	name = "武装魔法使"
+	regiments = {
+		ma_militia = { x = 0 y = 0 }
+		ma_militia = { x = 0 y = 1 }
+		ma_militia = { x = 0 y = 2 }
+	}
+}
+
+
+
+division_template = {
+	name = "人类散兵"
+	regiments = {
+		sc_militia = { x = 0 y = 0 }
+		sc_militia = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "人偶军团"
+	regiments = {
+		ma_militia = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "魔理沙地方军"
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+	}
+}
+
+
+######################
+units = {
+	division = {
+		name = "人类散兵"
+		location = 2025
+		division_template = "人类散兵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类散兵"
+		location = 999
+		division_template = "人类散兵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "人类散兵"
+		location = 2253
+		division_template = "人类散兵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "人类散兵"
+		location = 969
+		division_template = "人类散兵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "人类散兵"
+		location = 2197
+		division_template = "人类散兵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "人类散兵"
+		location = 465
+		division_template = "人类散兵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "人类散兵"
+		location = 3261
+		division_template = "人类散兵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "人类散兵"
+		location = 2272
+		division_template = "人类散兵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "人类散兵"
+		location = 1237
+		division_template = "人类散兵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "人偶军团"
+		location = 1904
+		division_template = "人偶军团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人偶军团"
+		location = 1904
+		division_template = "人偶军团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	
+	division = {
+		name = "人偶军团"
+		location = 3259
+		division_template = "人偶军团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人偶军团"
+		location = 3259
+		division_template = "人偶军团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人偶军团"
+		location = 3259
+		division_template = "人偶军团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人偶军团"
+		location = 3259
+		division_template = "人偶军团"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "人类散兵"
+		location = 1565
+		division_template = "人类散兵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类散兵"
+		location = 1565
+		division_template = "人类散兵"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	
+
+	division = {
+		name = "武装魔法使"
+		location = 208
+		division_template = "武装魔法使"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "武装魔法使"
+		location = 3271
+		division_template = "武装魔法使"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "武装魔法使"
+		location = 2380
+		division_template = "武装魔法使"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔理沙地方军"
+		location = 3258
+		division_template = "魔理沙地方军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "魔理沙地方军"
+		location = 1565
+		division_template = "魔理沙地方军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "魔理沙地方军"
+		location = 2455
+		division_template = "魔理沙地方军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "魔理沙地方军"
+		location = 3218
+		division_template = "魔理沙地方军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "魔理沙地方军"
+		location = 3218
+		division_template = "魔理沙地方军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "魔理沙地方军"
+		location = 2795
+		division_template = "魔理沙地方军"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+}

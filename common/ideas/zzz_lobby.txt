@@ -1,0 +1,283 @@
+ideas = {
+
+	lobby = { 
+		law = yes
+		hawk5 = {
+									
+			available = {
+
+			always = no
+
+			}
+			on_add = {
+
+			}
+			cost = 0
+			cancel_if_invalid = no
+			removal_cost = -1
+
+			modifier = {
+			war_support_factor = 0.65
+			consumer_goods_factor = 0.05
+			trade_opinion_factor = -0.75
+			improve_relations_maintain_cost_factor = 1
+			mobilization_laws_cost_factor = -0.5
+		    economy_cost_factor = -0.5
+		    justify_war_goal_time = -0.25
+
+			}
+			
+		}
+		hawk4 = {
+									
+			available = {
+
+			always = no
+
+			}
+			on_add = {
+
+			}
+			cost = 0
+			cancel_if_invalid = no
+			removal_cost = -1
+
+			modifier = {
+			war_support_factor = 0.6
+			consumer_goods_factor = 0.04
+			trade_opinion_factor = -0.6
+			improve_relations_maintain_cost_factor = 0.8
+			mobilization_laws_cost_factor = -0.4
+		    economy_cost_factor = -0.4
+		    justify_war_goal_time = -0.2
+
+			}
+			
+		}
+		hawk3 = {
+									
+			available = {
+
+			always = no
+
+			}
+			on_add = {
+
+			}
+			cost = 0
+			cancel_if_invalid = no
+			removal_cost = -1
+
+			modifier = {
+			war_support_factor = 0.55
+			consumer_goods_factor = 0.03
+			trade_opinion_factor = -0.45
+			improve_relations_maintain_cost_factor = 0.6
+			mobilization_laws_cost_factor = -0.3
+		    economy_cost_factor = -0.3
+		    justify_war_goal_time = -0.15
+
+			}
+			
+		}
+		hawk2 = {
+									
+			available = {
+			 always = no
+
+			}
+			on_add = {
+
+			}
+			default = yes
+			cost = 0
+			cancel_if_invalid = no
+			removal_cost = -1
+
+			modifier = {
+			war_support_factor = 0.5
+			consumer_goods_factor = 0.02
+			trade_opinion_factor = -0.3
+			improve_relations_maintain_cost_factor = 0.4
+			mobilization_laws_cost_factor = -0.2
+		    economy_cost_factor = -0.2
+		    justify_war_goal_time = -0.1
+
+			}
+		}
+		hawk1 = {
+									
+			available = {
+			 always = no
+			}
+			on_add = {
+
+			}
+			modifier = {
+			war_support_factor = 0.45
+			consumer_goods_factor = 0.01	
+			trade_opinion_factor = -0.15
+			improve_relations_maintain_cost_factor = 0.2
+			mobilization_laws_cost_factor = -0.1
+		    economy_cost_factor = -0.1
+		    justify_war_goal_time = -0.05
+
+			}
+			cost = 0
+			cancel_if_invalid = no
+			removal_cost = -1
+		}
+		hawk0 = {
+									
+			available = {
+
+			 always = no
+			
+			}
+			modifier = {
+				war_support_factor = 0.4
+			}
+			on_add = {
+
+			}
+			cost = 0
+			cancel_if_invalid = no
+			removal_cost = -1
+		}
+		dove1 = {
+									
+			available = {
+
+			 always = no
+			
+			}
+			modifier = {
+			war_support_factor = 0.35
+			consumer_goods_factor = -0.02
+			improve_relations_maintain_cost_factor = -0.1
+			trade_opinion_factor = 0.2
+			global_building_slots_factor = 0.1
+			magic_laws_cost_factor = -0.1
+			border_policy_cost_factor = -0.1
+			justify_war_goal_time = 0.05
+		    enemy_justify_war_goal_time = 0.05
+			# research_allowance_cost_factor = -0.1
+			#与战争无关的法案消耗-0.2
+			}
+			on_add = {
+
+			}
+			cost = 0
+			cancel_if_invalid = no
+			removal_cost = -1
+		}
+		dove2 = {
+									
+			available = {
+
+			 always = no
+
+			
+			}
+			modifier = {
+			war_support_factor = 0.3
+			consumer_goods_factor = -0.04
+			improve_relations_maintain_cost_factor = -0.2
+			trade_opinion_factor = 0.4
+			global_building_slots_factor = 0.2
+			magic_laws_cost_factor = -0.2
+			border_policy_cost_factor = -0.2
+			justify_war_goal_time = 0.1
+		    enemy_justify_war_goal_time = 0.1
+			# research_allowance_cost_factor = -0.2
+			#与战争无关的法案消耗-0.4
+			}
+			on_add = {
+
+			}
+			cost = 0
+			cancel_if_invalid = no
+			removal_cost = -1
+		}
+		dove3 = {
+									
+			available = {
+
+			  always = no
+			}
+			modifier = {
+			war_support_factor = 0.25
+			consumer_goods_factor = -0.06
+			improve_relations_maintain_cost_factor = -0.3
+			trade_opinion_factor = 0.6
+			global_building_slots_factor = 0.3
+			magic_laws_cost_factor = -0.3
+			border_policy_cost_factor = -0.3
+			justify_war_goal_time = 0.15
+		    enemy_justify_war_goal_time = 0.15
+			# research_allowance_cost_factor = -0.3
+			#与战争无关的法案消耗-0.6
+			}
+			on_add = {
+
+			}
+			cost = 0
+			cancel_if_invalid = no
+			removal_cost = -1
+		}
+		dove4 = {
+									
+			available = {
+
+			  always = no
+			}
+			modifier = {
+			war_support_factor = 0.2
+			consumer_goods_factor = -0.08
+			improve_relations_maintain_cost_factor = -0.4
+			trade_opinion_factor = 0.8
+			global_building_slots_factor = 0.4
+			magic_laws_cost_factor = -0.3
+			border_policy_cost_factor = -0.3
+			justify_war_goal_time = 0.2
+		    enemy_justify_war_goal_time = 0.2
+			# research_allowance_cost_factor = -0.3
+			#与战争无关的法案消耗-0.6
+			}
+			on_add = {
+
+			}
+			cost = 0
+			cancel_if_invalid = no
+			removal_cost = -1
+		}
+		dove5 = {
+									
+			available = {
+
+			  always = no
+			}
+			modifier = {
+			war_support_factor = 0.15
+			consumer_goods_factor = -0.1
+			improve_relations_maintain_cost_factor = -0.5
+			trade_opinion_factor = 1
+			global_building_slots_factor = 0.5
+			magic_laws_cost_factor = -0.3
+			border_policy_cost_factor = -0.3
+			justify_war_goal_time = 0.25
+		    enemy_justify_war_goal_time = 0.25
+			# research_allowance_cost_factor = -0.3
+			#与战争无关的法案消耗-0.6
+			}
+			on_add = {
+
+			}
+			cost = 0
+			cancel_if_invalid = no
+			removal_cost = -1
+		}
+
+
+	}
+}

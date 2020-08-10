@@ -1,0 +1,18 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			add_to_array = { global.introducePageArray = 0 } # value doesn't matter
+			add_to_array = { global.introducePageArray = 0 }
+			add_to_array = { global.introducePageArray = 0 } # 设置按钮总数，做成全球的省的给每个页数多的国家都要加
+			add_to_array = { global.introducePageArray = 0 }
+			add_to_array = { global.introducePageArray = 0 }
+			
+			every_country = { # 开局国家跳介绍
+				limit = {
+					is_ai = no
+				}
+				set_country_flag = introduce_not_closed
+			}
+		}
+	}
+}

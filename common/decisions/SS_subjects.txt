@@ -1,0 +1,190 @@
+SS_situation = {
+  SS_gonggushiliquan = {
+      visible = {
+        num_subjects > 0
+      }
+      available = {
+
+      }
+      cost = 150
+      complete_effect = {
+          set_country_flag = {
+            flag = SS_zongzhugonggu
+            value = 1
+            days = 365
+          }
+      }
+
+      days_remove = 365
+      days_re_enable = 182
+
+      modifier = {
+        stability_weekly = -0.002
+      }
+
+      remove_effect = {
+
+      }
+      ai_will_do = {
+        base = 0
+      }
+  }
+	SS_changshiduli = {
+      visible = {
+        is_subject = yes
+      }
+  		available = {
+  			custom_trigger_tooltip = {
+  				tooltip = SSI_ziji_xiangyaoduli
+  				not = {
+  					has_country_flag = SSI_ziji_xiangyaoduli
+  				}
+  			}
+  		}
+  		cost = 100
+  		complete_effect = {
+  			set_country_flag = {
+  				flag = SSI_ziji_xiangyaoduli
+  				value = 1
+  				days = 365
+  			}
+  		}
+
+  		days_remove = 365
+      days_re_enable = 182
+
+  		modifier = {
+  			political_power_gain = -0.25
+  		}
+
+  		remove_effect = {
+
+  		}
+  		ai_will_do = {
+  			base = 0.25
+        modifier = {
+          factor = 1.25
+          or = {
+            has_autonomy_state = autonomy_puppet
+            has_autonomy_state = autonomy_colony
+          }
+        }
+        modifier = {
+          has_country_flag = SSI_sujiduli
+          factor = 20
+        }
+        modifier = {
+          factor = 0
+          tag = KAP
+          OVERLORD = {
+            tag = YSK
+          }
+        }
+  		}
+	}
+	SS_zhunbeiduli = {
+    # allowed = { always = no }                 
+      available = {                           
+           is_subject = no                      
+      }
+      activation = {                          
+           has_country_flag = SSI_xiangyaoduli                   
+      }
+      is_good = yes                          
+      days_mission_timeout = 365           
+      timeout_effect = {                      
+        set_country_flag = {
+       		value = 1
+       		flag = SSI_can_independence 
+       		days = 182
+        }       
+      }      
+	}
+
+	SS_zhunbeiduli_over = {
+      # allowed = { always = no }                 
+        available = {                           
+             is_subject = no                      
+        }
+        activation = {                          
+             has_country_flag = SSI_can_independence                     
+        }
+        is_good = no                        
+        days_mission_timeout = 182            
+        timeout_effect = {                      
+    
+        }
+	}
+
+	SS_subject_duli = {
+    target_trigger = {
+    		num_subjects > 0
+        FROM = {
+            is_subject_of = ROOT
+            has_country_flag = SSI_xiangyaoduli
+        }
+      }            
+      available = {                           
+           always = no                     
+      }
+      activation = {      
+            
+      }
+      is_good = no                        
+      days_mission_timeout = 365          
+      timeout_effect = {                      
+  
+      }
+	}
+
+  SS_subject_dikangduli = {
+    target_trigger = {
+        num_subjects > 0
+        FROM = {
+            is_subject_of = ROOT
+            has_country_flag = SS_country_flag
+        }
+      }            
+      available = {                           
+        always = no                     
+      }
+      activation = {      
+            
+      }
+      is_good = no                        
+      days_mission_timeout = 365          
+      timeout_effect = {                      
+  
+      }
+  }
+
+  SS_dikangduli = {
+      # allowed = { always = no }   
+      visible = {
+        is_subject = yes
+      }              
+
+      complete_effect = {
+        set_country_flag = {
+          flag = SS_dikangduli
+          days = 365
+          value = 1
+        }
+        custom_effect_tooltip = SS_dikangduli_tt
+      }  
+
+      cost = 100
+
+      days_remove = 365
+      days_re_enable = 0   
+
+      modifier = {
+          political_power_gain = -0.3
+      }
+
+      timeout_effect = {                      
+
+      }
+  }
+  
+}

@@ -1,0 +1,189 @@
+technologies = {
+	gongjianzhiyuanpao148 = {
+		
+		dependencies = {
+		   gongjianpao146 = 1
+		}
+
+		path = {
+			leads_to_tech = gongjianzhiyuanpao154
+			research_cost_coeff = 1
+		}
+
+		sp_gongjianpao = {
+			hills = {
+				attack = 0.1
+			}
+			fort = {
+				attack = 0.1
+			}
+		}
+		
+		research_cost = 2
+		start_year = 148
+
+		folder = {
+			name = kap_tech_folder
+			position = { x = 4 y = 2 }
+		}
+		
+		categories = {
+			techtree_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	gongjianzhiyuanpao154 = {
+	
+		path = {
+			leads_to_tech = gongjianzhiyuanpao160
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 154
+
+		sp_gongjianpao = {
+			mountain = {
+				attack = 0.1
+			}
+			urban = {
+				attack = 0.1
+			}
+		}
+
+		folder = {
+			name = kap_tech_folder
+			position = { x = 4 y = 4 }
+		}
+		
+		categories = {
+			techtree_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	gongjianzhiyuanpao160 = {
+		
+		research_cost = 2
+		start_year = 160
+
+		folder = {
+			name = kap_tech_folder
+			position = { x = 4 y = 6 }
+		}
+
+		sp_gongjianpao = {
+			maximum_speed = 0.1
+		}
+		
+		categories = {
+			techtree_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	linglibuqiang148 = {
+	
+		path = {
+			leads_to_tech = linglibuqiang154
+			research_cost_coeff = 1
+		}
+
+		category_science_infantry = {
+			hard_attack = 1
+			hardness = 1.5
+		}
+
+		sc_mechanized = {
+			hardness = -1.5
+		}
+		
+
+		research_cost = 2
+		start_year = 148
+
+		folder = {
+			name = kap_tech_folder
+			position = { x = 10 y = 2 }
+		}
+		
+		categories = {
+			techtree_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	linglibuqiang154 = {
+	
+		path = {
+			leads_to_tech = linglibuqiang160
+			research_cost_coeff = 1
+		}
+
+		category_science_infantry = {
+			hard_attack = 1
+			hardness = 1.5
+		}
+
+		sc_mechanized = {
+			hardness = -1.5
+		}
+		
+		research_cost = 2
+		start_year = 154
+
+		folder = {
+			name = kap_tech_folder
+			position = { x = 10 y = 4 }
+		}
+		
+		categories = {
+			techtree_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	linglibuqiang160 = {
+		
+		research_cost = 2
+		start_year = 160
+
+		category_science_infantry = {
+			hard_attack = 1
+			hardness = 1.5
+		}
+
+		sc_mechanized = {
+			hardness = -1.5
+		}
+
+		folder = {
+			name = kap_tech_folder
+			position = { x = 10 y = 6 }
+		}
+		
+		categories = {
+			techtree_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

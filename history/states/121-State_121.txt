@@ -1,0 +1,35 @@
+
+state={
+	id=121
+	name="STATE_121"
+	resources={
+		energy = 10
+		powder=5.000
+		metal=5.000
+		gas=5.000
+		crystal=5.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = ONS
+			add_core_of = ONS
+			# add_claim_by = SEI
+			buildings = {
+				infrastructure =4
+				industrial_complex = 4
+				arms_factory = 2
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		219 1670 1911 2003 3874 3875 3880 3885 3886 3888 3889 
+	}
+	manpower=2447.0
+	buildings_max_level_factor=1.000
+	state_category=s10
+}

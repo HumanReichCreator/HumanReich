@@ -1,0 +1,151 @@
+ai_focus_defense = {
+	research = {
+		defensive = 5.0	
+
+		infantry = 25
+
+		science_weapons_improve = 15
+		magic_weapons_improve = 15
+		combined_weapons_improve = 15
+
+		science_artillery_improve = 15
+		magic_artillery_improve = 15
+		combined_artillery_improve = 15
+
+		basic_doctrine = 5
+
+		air_equipment = 10
+
+		offensive = 5.0
+
+		artillery_tech = 5
+
+		vehicle = 1
+
+	}
+}
+
+ai_focus_aggressive = {
+	research = {
+		offensive = 5.0
+
+		infantry = 5
+
+		science_weapons_improve = 20
+		magic_weapons_improve = 20
+		combined_weapons_improve = 20
+
+		science_artillery_improve = 20
+		magic_artillery_improve = 20
+		combined_artillery_improve = 20
+
+		land_doctrine = 5
+
+		air_equipment = 10
+
+		artillery_tech = 10
+
+		vehicle = 15
+
+	}
+}
+
+ai_focus_war_production = {
+	research = {
+		military = 5
+
+		jiegou = 30
+		main = 20
+
+	    radio = 15
+	    jiami = 10
+	    jiemi = 10
+
+	    race = 10
+	}
+}
+
+ai_focus_military_equipment = {
+	research = {
+	
+		infantry = 15
+
+		artillery_tech = 20
+
+		support_tech = 5
+
+	}
+}
+
+ai_focus_military_advancements = {
+	research = {
+		radio = 10
+
+		support_tech = 10
+
+		science_weapons_improve = 5
+		magic_weapons_improve = 5 
+		combined_weapons_improve = 5
+
+		science_artillery_improve = 5 
+		magic_artillery_improve = 5
+		combined_artillery_improve = 5
+
+		vehicle = 10
+		science_vehicle_improve = 5
+
+		air_equipment = 25
+
+		basic_doctrine = 50
+
+		land_doctrine = 5
+
+		combined = 5
+
+	}
+}
+
+
+ai_focus_peaceful = {
+	research = {
+		civil = 5
+
+		industrys = 10
+		jiegou = 5
+		main = 5
+		fuzhu = 1
+		build = 25
+
+		resource = 5
+		resource_mining = 1
+		resource_building = 1
+	    #######math
+	    math = 5
+	    radio = 1
+	    jiami = 1
+	    jiemi = 1
+
+	    basic_doctrine = 5
+
+		race = 2
+	}
+	
+}
+
+ai_focus_naval = {
+	research = {
+
+	}
+}
+
+ai_focus_naval_air = {
+	research = {
+	
+	}
+}
+
+ai_focus_aviation = {
+	research = {
+		air_equipment = 45
+	}
+}

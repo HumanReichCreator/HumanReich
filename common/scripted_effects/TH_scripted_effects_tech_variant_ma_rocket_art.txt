@@ -1,0 +1,550 @@
+
+ma_weapons_art2 = {
+    if = {
+        limit = {
+            has_tech = hongzhashimo151
+        }
+        ma_ra151 = yes
+    }
+    if = {
+        limit = {
+            has_tech = hongzhashimo156
+        }
+        ma_ra156 = yes
+    }
+    if = {
+        limit = {
+            has_tech = hongzhashimo161
+        }
+        ma_ra161 = yes
+    }
+}
+
+ma_ra_teshufenzhi = {
+    if = {
+        limit = {
+            not = {
+                and = {
+                    check_variable = { ma_ra_r = 0}
+                    check_variable = { ma_ra_s = 0}
+                    check_variable = { ma_ra_h = 0}
+                    check_variable = { ma_ra_a = 0}
+                    check_variable = { ma_ra_d = 0}
+                    check_variable = { ma_ra_b = 0}
+                    check_variable = { ma_ra_i = 0}
+                    check_variable = { ma_ra_ir = 0}
+                    check_variable = { ma_ra_rr = 0}
+                }
+            }
+        }
+        custom_effect_tooltip = tech_special
+    }
+}
+
+ma_ra151 = {
+    ma_ra_teshufenzhi = yes
+    if = {
+        limit = {
+            tag = SCA
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "星弧破碎" 
+                    type = ma_rocket_artillery151
+                    upgrades = {
+                      upgrade_reliability = [ma_ra_r]
+                      upgrade_softattack = [ma_ra_s]
+                      upgrade_hardattack = [ma_ra_h]
+                      upgrade_aaattack = [ma_ra_a]
+                      upgrade_defense = [ma_ra_d]
+                      upgrade_breakthrough = [ma_ra_b]
+                      upgrade_ic = [ma_ra_i]
+                      upgrade_ic_reverse = [ma_ra_ir]
+                      upgrade_reliability_reverse = [ma_ra_rr]
+                   }
+                }
+            }
+            ma_ra_r = "[?THIS.ma_ra_r]"
+            ma_ra_s = "[?THIS.ma_ra_s]"
+            ma_ra_h = "[?THIS.ma_ra_h]"
+            ma_ra_a = "[?THIS.ma_ra_a]"
+            ma_ra_d = "[?THIS.ma_ra_d]"
+            ma_ra_b = "[?THIS.ma_ra_b]"
+            ma_ra_i = "[?THIS.ma_ra_i]"
+            ma_ra_ir = "[?THIS.ma_ra_ir]"
+            ma_ra_rr = "[?THIS.ma_ra_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = TEG
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "相机型灵能炮" 
+                    type = ma_rocket_artillery151
+                    upgrades = {
+                      upgrade_reliability = [ma_ra_r]
+                      upgrade_softattack = [ma_ra_s]
+                      upgrade_hardattack = [ma_ra_h]
+                      upgrade_aaattack = [ma_ra_a]
+                      upgrade_defense = [ma_ra_d]
+                      upgrade_breakthrough = [ma_ra_b]
+                      upgrade_ic = [ma_ra_i]
+                      upgrade_ic_reverse = [ma_ra_ir]
+                      upgrade_reliability_reverse = [ma_ra_rr]
+                   }
+                }
+            }
+            ma_ra_r = "[?THIS.ma_ra_r]"
+            ma_ra_s = "[?THIS.ma_ra_s]"
+            ma_ra_h = "[?THIS.ma_ra_h]"
+            ma_ra_a = "[?THIS.ma_ra_a]"
+            ma_ra_d = "[?THIS.ma_ra_d]"
+            ma_ra_b = "[?THIS.ma_ra_b]"
+            ma_ra_i = "[?THIS.ma_ra_i]"
+            ma_ra_ir = "[?THIS.ma_ra_ir]"
+            ma_ra_rr = "[?THIS.ma_ra_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = CIR
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "冰袭方阵" 
+                    type = ma_rocket_artillery151
+                    upgrades = {
+                      upgrade_reliability = [ma_ra_r]
+                      upgrade_softattack = [ma_ra_s]
+                      upgrade_hardattack = [ma_ra_h]
+                      upgrade_aaattack = [ma_ra_a]
+                      upgrade_defense = [ma_ra_d]
+                      upgrade_breakthrough = [ma_ra_b]
+                      upgrade_ic = [ma_ra_i]
+                      upgrade_ic_reverse = [ma_ra_ir]
+                      upgrade_reliability_reverse = [ma_ra_rr]
+                   }
+                }
+            }
+            ma_ra_r = "[?THIS.ma_ra_r]"
+            ma_ra_s = "[?THIS.ma_ra_s]"
+            ma_ra_h = "[?THIS.ma_ra_h]"
+            ma_ra_a = "[?THIS.ma_ra_a]"
+            ma_ra_d = "[?THIS.ma_ra_d]"
+            ma_ra_b = "[?THIS.ma_ra_b]"
+            ma_ra_i = "[?THIS.ma_ra_i]"
+            ma_ra_ir = "[?THIS.ma_ra_ir]"
+            ma_ra_rr = "[?THIS.ma_ra_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = SEI
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "天逆弓" 
+                    type = ma_rocket_artillery151
+                    upgrades = {
+                      upgrade_reliability = [ma_ra_r]
+                      upgrade_softattack = [ma_ra_s]
+                      upgrade_hardattack = [ma_ra_h]
+                      upgrade_aaattack = [ma_ra_a]
+                      upgrade_defense = [ma_ra_d]
+                      upgrade_breakthrough = [ma_ra_b]
+                      upgrade_ic = [ma_ra_i]
+                      upgrade_ic_reverse = [ma_ra_ir]
+                      upgrade_reliability_reverse = [ma_ra_rr]
+                   }
+                }
+            }
+            ma_ra_r = "[?THIS.ma_ra_r]"
+            ma_ra_s = "[?THIS.ma_ra_s]"
+            ma_ra_h = "[?THIS.ma_ra_h]"
+            ma_ra_a = "[?THIS.ma_ra_a]"
+            ma_ra_d = "[?THIS.ma_ra_d]"
+            ma_ra_b = "[?THIS.ma_ra_b]"
+            ma_ra_i = "[?THIS.ma_ra_i]"
+            ma_ra_ir = "[?THIS.ma_ra_ir]"
+            ma_ra_rr = "[?THIS.ma_ra_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = NMS
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "光辉之宝" 
+                    type = ma_rocket_artillery151
+                    upgrades = {
+                      upgrade_reliability = [ma_ra_r]
+                      upgrade_softattack = [ma_ra_s]
+                      upgrade_hardattack = [ma_ra_h]
+                      upgrade_aaattack = [ma_ra_a]
+                      upgrade_defense = [ma_ra_d]
+                      upgrade_breakthrough = [ma_ra_b]
+                      upgrade_ic = [ma_ra_i]
+                      upgrade_ic_reverse = [ma_ra_ir]
+                      upgrade_reliability_reverse = [ma_ra_rr]
+                   }
+                }
+            }
+            ma_ra_r = "[?THIS.ma_ra_r]"
+            ma_ra_s = "[?THIS.ma_ra_s]"
+            ma_ra_h = "[?THIS.ma_ra_h]"
+            ma_ra_a = "[?THIS.ma_ra_a]"
+            ma_ra_d = "[?THIS.ma_ra_d]"
+            ma_ra_b = "[?THIS.ma_ra_b]"
+            ma_ra_i = "[?THIS.ma_ra_i]"
+            ma_ra_ir = "[?THIS.ma_ra_ir]"
+            ma_ra_rr = "[?THIS.ma_ra_rr]"
+        }
+    }
+}
+
+
+ma_ra156 = {
+    ma_ra_teshufenzhi = yes
+    if = {
+        limit = {
+            tag = SCA
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "无人生还" 
+                    type = ma_rocket_artillery156
+                    upgrades = {
+                      upgrade_reliability = [ma_ra_r]
+                      upgrade_softattack = [ma_ra_s]
+                      upgrade_hardattack = [ma_ra_h]
+                      upgrade_aaattack = [ma_ra_a]
+                      upgrade_defense = [ma_ra_d]
+                      upgrade_breakthrough = [ma_ra_b]
+                      upgrade_ic = [ma_ra_i]
+                      upgrade_ic_reverse = [ma_ra_ir]
+                      upgrade_reliability_reverse = [ma_ra_rr]
+                   }
+                }
+            }
+            ma_ra_r = "[?THIS.ma_ra_r]"
+            ma_ra_s = "[?THIS.ma_ra_s]"
+            ma_ra_h = "[?THIS.ma_ra_h]"
+            ma_ra_a = "[?THIS.ma_ra_a]"
+            ma_ra_d = "[?THIS.ma_ra_d]"
+            ma_ra_b = "[?THIS.ma_ra_b]"
+            ma_ra_i = "[?THIS.ma_ra_i]"
+            ma_ra_ir = "[?THIS.ma_ra_ir]"
+            ma_ra_rr = "[?THIS.ma_ra_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = TEG
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "抓拍型灵能炮" 
+                    type = ma_rocket_artillery156
+                    upgrades = {
+                      upgrade_reliability = [ma_ra_r]
+                      upgrade_softattack = [ma_ra_s]
+                      upgrade_hardattack = [ma_ra_h]
+                      upgrade_aaattack = [ma_ra_a]
+                      upgrade_defense = [ma_ra_d]
+                      upgrade_breakthrough = [ma_ra_b]
+                      upgrade_ic = [ma_ra_i]
+                      upgrade_ic_reverse = [ma_ra_ir]
+                      upgrade_reliability_reverse = [ma_ra_rr]
+                   }
+                }
+            }
+            ma_ra_r = "[?THIS.ma_ra_r]"
+            ma_ra_s = "[?THIS.ma_ra_s]"
+            ma_ra_h = "[?THIS.ma_ra_h]"
+            ma_ra_a = "[?THIS.ma_ra_a]"
+            ma_ra_d = "[?THIS.ma_ra_d]"
+            ma_ra_b = "[?THIS.ma_ra_b]"
+            ma_ra_i = "[?THIS.ma_ra_i]"
+            ma_ra_ir = "[?THIS.ma_ra_ir]"
+            ma_ra_rr = "[?THIS.ma_ra_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = CIR
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "破冰龙卷" 
+                    type = ma_rocket_artillery156
+                    upgrades = {
+                      upgrade_reliability = [ma_ra_r]
+                      upgrade_softattack = [ma_ra_s]
+                      upgrade_hardattack = [ma_ra_h]
+                      upgrade_aaattack = [ma_ra_a]
+                      upgrade_defense = [ma_ra_d]
+                      upgrade_breakthrough = [ma_ra_b]
+                      upgrade_ic = [ma_ra_i]
+                      upgrade_ic_reverse = [ma_ra_ir]
+                      upgrade_reliability_reverse = [ma_ra_rr]
+                   }
+                }
+            }
+            ma_ra_r = "[?THIS.ma_ra_r]"
+            ma_ra_s = "[?THIS.ma_ra_s]"
+            ma_ra_h = "[?THIS.ma_ra_h]"
+            ma_ra_a = "[?THIS.ma_ra_a]"
+            ma_ra_d = "[?THIS.ma_ra_d]"
+            ma_ra_b = "[?THIS.ma_ra_b]"
+            ma_ra_i = "[?THIS.ma_ra_i]"
+            ma_ra_ir = "[?THIS.ma_ra_ir]"
+            ma_ra_rr = "[?THIS.ma_ra_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = SEI
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "天壤弓" 
+                    type = ma_rocket_artillery156
+                    upgrades = {
+                      upgrade_reliability = [ma_ra_r]
+                      upgrade_softattack = [ma_ra_s]
+                      upgrade_hardattack = [ma_ra_h]
+                      upgrade_aaattack = [ma_ra_a]
+                      upgrade_defense = [ma_ra_d]
+                      upgrade_breakthrough = [ma_ra_b]
+                      upgrade_ic = [ma_ra_i]
+                      upgrade_ic_reverse = [ma_ra_ir]
+                      upgrade_reliability_reverse = [ma_ra_rr]
+                   }
+                }
+            }
+            ma_ra_r = "[?THIS.ma_ra_r]"
+            ma_ra_s = "[?THIS.ma_ra_s]"
+            ma_ra_h = "[?THIS.ma_ra_h]"
+            ma_ra_a = "[?THIS.ma_ra_a]"
+            ma_ra_d = "[?THIS.ma_ra_d]"
+            ma_ra_b = "[?THIS.ma_ra_b]"
+            ma_ra_i = "[?THIS.ma_ra_i]"
+            ma_ra_ir = "[?THIS.ma_ra_ir]"
+            ma_ra_rr = "[?THIS.ma_ra_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = NMS
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "光辉宝枪" 
+                    type = ma_rocket_artillery156
+                    upgrades = {
+                      upgrade_reliability = [ma_ra_r]
+                      upgrade_softattack = [ma_ra_s]
+                      upgrade_hardattack = [ma_ra_h]
+                      upgrade_aaattack = [ma_ra_a]
+                      upgrade_defense = [ma_ra_d]
+                      upgrade_breakthrough = [ma_ra_b]
+                      upgrade_ic = [ma_ra_i]
+                      upgrade_ic_reverse = [ma_ra_ir]
+                      upgrade_reliability_reverse = [ma_ra_rr]
+                   }
+                }
+            }
+            ma_ra_r = "[?THIS.ma_ra_r]"
+            ma_ra_s = "[?THIS.ma_ra_s]"
+            ma_ra_h = "[?THIS.ma_ra_h]"
+            ma_ra_a = "[?THIS.ma_ra_a]"
+            ma_ra_d = "[?THIS.ma_ra_d]"
+            ma_ra_b = "[?THIS.ma_ra_b]"
+            ma_ra_i = "[?THIS.ma_ra_i]"
+            ma_ra_ir = "[?THIS.ma_ra_ir]"
+            ma_ra_rr = "[?THIS.ma_ra_rr]"
+        }
+    }
+}
+
+ma_ra161 = {
+    ma_ra_teshufenzhi = yes
+    if = {
+        limit = {
+            tag = SCA
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "禁忌莱瓦汀" 
+                    type = ma_rocket_artillery161
+                    upgrades = {
+                      upgrade_reliability = [ma_ra_r]
+                      upgrade_softattack = [ma_ra_s]
+                      upgrade_hardattack = [ma_ra_h]
+                      upgrade_aaattack = [ma_ra_a]
+                      upgrade_defense = [ma_ra_d]
+                      upgrade_breakthrough = [ma_ra_b]
+                      upgrade_ic = [ma_ra_i]
+                      upgrade_ic_reverse = [ma_ra_ir]
+                      upgrade_reliability_reverse = [ma_ra_rr]
+                   }
+                }
+            }
+            ma_ra_r = "[?THIS.ma_ra_r]"
+            ma_ra_s = "[?THIS.ma_ra_s]"
+            ma_ra_h = "[?THIS.ma_ra_h]"
+            ma_ra_a = "[?THIS.ma_ra_a]"
+            ma_ra_d = "[?THIS.ma_ra_d]"
+            ma_ra_b = "[?THIS.ma_ra_b]"
+            ma_ra_i = "[?THIS.ma_ra_i]"
+            ma_ra_ir = "[?THIS.ma_ra_ir]"
+            ma_ra_rr = "[?THIS.ma_ra_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = TEG
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "望远型灵能炮" 
+                    type = ma_rocket_artillery161
+                    upgrades = {
+                      upgrade_reliability = [ma_ra_r]
+                      upgrade_softattack = [ma_ra_s]
+                      upgrade_hardattack = [ma_ra_h]
+                      upgrade_aaattack = [ma_ra_a]
+                      upgrade_defense = [ma_ra_d]
+                      upgrade_breakthrough = [ma_ra_b]
+                      upgrade_ic = [ma_ra_i]
+                      upgrade_ic_reverse = [ma_ra_ir]
+                      upgrade_reliability_reverse = [ma_ra_rr]
+                   }
+                }
+            }
+            ma_ra_r = "[?THIS.ma_ra_r]"
+            ma_ra_s = "[?THIS.ma_ra_s]"
+            ma_ra_h = "[?THIS.ma_ra_h]"
+            ma_ra_a = "[?THIS.ma_ra_a]"
+            ma_ra_d = "[?THIS.ma_ra_d]"
+            ma_ra_b = "[?THIS.ma_ra_b]"
+            ma_ra_i = "[?THIS.ma_ra_i]"
+            ma_ra_ir = "[?THIS.ma_ra_ir]"
+            ma_ra_rr = "[?THIS.ma_ra_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = CIR
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "完美冻结" 
+                    type = ma_rocket_artillery161
+                    upgrades = {
+                      upgrade_reliability = [ma_ra_r]
+                      upgrade_softattack = [ma_ra_s]
+                      upgrade_hardattack = [ma_ra_h]
+                      upgrade_aaattack = [ma_ra_a]
+                      upgrade_defense = [ma_ra_d]
+                      upgrade_breakthrough = [ma_ra_b]
+                      upgrade_ic = [ma_ra_i]
+                      upgrade_ic_reverse = [ma_ra_ir]
+                      upgrade_reliability_reverse = [ma_ra_rr]
+                   }
+                }
+            }
+            ma_ra_r = "[?THIS.ma_ra_r]"
+            ma_ra_s = "[?THIS.ma_ra_s]"
+            ma_ra_h = "[?THIS.ma_ra_h]"
+            ma_ra_a = "[?THIS.ma_ra_a]"
+            ma_ra_d = "[?THIS.ma_ra_d]"
+            ma_ra_b = "[?THIS.ma_ra_b]"
+            ma_ra_i = "[?THIS.ma_ra_i]"
+            ma_ra_ir = "[?THIS.ma_ra_ir]"
+            ma_ra_rr = "[?THIS.ma_ra_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = SEI
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "天壌梦弓" 
+                    type = ma_rocket_artillery161
+                    upgrades = {
+                      upgrade_reliability = [ma_ra_r]
+                      upgrade_softattack = [ma_ra_s]
+                      upgrade_hardattack = [ma_ra_h]
+                      upgrade_aaattack = [ma_ra_a]
+                      upgrade_defense = [ma_ra_d]
+                      upgrade_breakthrough = [ma_ra_b]
+                      upgrade_ic = [ma_ra_i]
+                      upgrade_ic_reverse = [ma_ra_ir]
+                      upgrade_reliability_reverse = [ma_ra_rr]
+                   }
+                }
+            }
+            ma_ra_r = "[?THIS.ma_ra_r]"
+            ma_ra_s = "[?THIS.ma_ra_s]"
+            ma_ra_h = "[?THIS.ma_ra_h]"
+            ma_ra_a = "[?THIS.ma_ra_a]"
+            ma_ra_d = "[?THIS.ma_ra_d]"
+            ma_ra_b = "[?THIS.ma_ra_b]"
+            ma_ra_i = "[?THIS.ma_ra_i]"
+            ma_ra_ir = "[?THIS.ma_ra_ir]"
+            ma_ra_rr = "[?THIS.ma_ra_rr]"
+        }
+    }
+    if = {
+        limit = {
+            tag = NMS
+        }
+        meta_effect = {
+            text = {
+                create_equipment_variant = { 
+                    name = "正义威光" 
+                    type = ma_rocket_artillery161
+                    upgrades = {
+                      upgrade_reliability = [ma_ra_r]
+                      upgrade_softattack = [ma_ra_s]
+                      upgrade_hardattack = [ma_ra_h]
+                      upgrade_aaattack = [ma_ra_a]
+                      upgrade_defense = [ma_ra_d]
+                      upgrade_breakthrough = [ma_ra_b]
+                      upgrade_ic = [ma_ra_i]
+                      upgrade_ic_reverse = [ma_ra_ir]
+                      upgrade_reliability_reverse = [ma_ra_rr]
+                   }
+                }
+            }
+            ma_ra_r = "[?THIS.ma_ra_r]"
+            ma_ra_s = "[?THIS.ma_ra_s]"
+            ma_ra_h = "[?THIS.ma_ra_h]"
+            ma_ra_a = "[?THIS.ma_ra_a]"
+            ma_ra_d = "[?THIS.ma_ra_d]"
+            ma_ra_b = "[?THIS.ma_ra_b]"
+            ma_ra_i = "[?THIS.ma_ra_i]"
+            ma_ra_ir = "[?THIS.ma_ra_ir]"
+            ma_ra_rr = "[?THIS.ma_ra_rr]"
+        }
+    }
+}

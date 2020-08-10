@@ -1,0 +1,32 @@
+state={
+	id=380
+	name="STATE_380"
+	provinces={
+		375 2256 2341 3216 4758 4760 4802 
+	}
+	resources={
+
+		powder=0.000
+		metal=0.000
+		gas=0.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = MEL
+			add_core_of = MEL
+			buildings = {
+				infrastructure =0
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+	state_category=s2
+	manpower=218.0
+	buildings_max_level_factor=1.000
+}

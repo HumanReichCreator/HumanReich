@@ -1,0 +1,139 @@
+# unit_base is the base value used for evaluating how important it is to deploy the various categories
+# Written by Henrik "Groogy" Hansson
+#AI 倾向
+# changing = {
+
+# 	# reversed = yes
+
+# 	enable = {
+# 		always = yes
+# 	}
+# 	abort = {
+# 		always = no
+
+# 	}
+
+# 	ai_strategy = {
+# 		type = added_military_to_civilian_factory_ratio			
+# 		value = 500
+# 	}	
+
+# }
+
+HUM_start= {
+
+	# reversed = yes
+
+	enable = {
+		has_idea = HUM_youkai_influence
+	}
+	abort = {
+		not = { has_idea = HUM_youkai_influence }
+		# date > "152.1.1"
+		#消除debuff时
+
+	}
+
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio			
+		value = -100
+	}	
+
+}
+
+HUM_defense= {
+
+	# reversed = yes
+
+	enable = {
+		or = {
+			tag = OKI
+			tag = YKR
+			tag = KAS
+		}
+		HUM = { 
+			has_government = guli 
+			has_war = yes
+		} 
+	}
+	abort = {
+		not = { HUM ={ has_idea = HUM_youkai_influence } }
+		# date > "152.1.1"
+		#消除debuff时
+
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "HUM"			
+		value = 100
+	}
+
+	ai_strategy = {
+		type = support
+		id = "HUM"			
+		value = 100
+	}
+
+}
+
+HUM_defense2= {
+
+	# reversed = yes
+
+	enable = {
+		or = {
+			tag = KOG
+			tag = SRB
+			tag = EET
+		}
+		HUM = { 
+			has_government = guli 
+			has_war = yes
+			is_subject = no
+		} 
+	}
+	abort = {
+		not = { HUM ={ has_idea = HUM_youkai_influence } }
+		# date > "152.1.1"
+		#消除debuff时
+
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "HUM"			
+		value = 100
+	}
+
+	ai_strategy = {
+		type = support
+		id = "HUM"			
+		value = 100
+	}
+
+	ai_strategy = {
+		type = protect
+		id = "HUM"			
+		value = 25
+	}
+
+}
+
+other = {
+	enable = {
+		all_country = {
+
+		}
+	}
+	abort = {
+		always = no
+
+	}
+
+	ai_strategy = {
+		type = ignore
+		id = "XXX"			
+		value = 500
+	}
+}

@@ -1,0 +1,235 @@
+CO_defines = {
+    set_variable = { global.CO_claim_factor = 0.5}
+    set_variable = { global.CO_origin_race_factor = 0.15}
+    set_variable = { global.CO_present_race_factor = 0.35}
+}
+
+CO_factor_minus0.1 = {
+	add_to_variable = { CO_factor_add = -0.1}
+	custom_effect_tooltip = CO_factor_minus0.1_tt
+	CO_factor_refresh = yes
+}
+CO_factor_minus0.2 = {
+	add_to_variable = { CO_factor_add = -0.2}
+	custom_effect_tooltip = CO_factor_minus0.2_tt
+	CO_factor_refresh = yes
+}
+CO_factor_minus0.3 = {
+	add_to_variable = { CO_factor_add = -0.3}
+	custom_effect_tooltip = CO_factor_minus0.3_tt
+	CO_factor_refresh = yes
+}
+CO_factor_minus0.4 = {
+	add_to_variable = { CO_factor_add = -0.4}
+	custom_effect_tooltip = CO_factor_minus0.4_tt
+	CO_factor_refresh = yes
+}
+CO_factor_minus0.5 = {
+	add_to_variable = { CO_factor_add = -0.5}
+	custom_effect_tooltip = CO_factor_minus0.5_tt
+	CO_factor_refresh = yes
+}
+
+CO_factor_refresh = {
+	set_variable = { CO_current_core_factor = 1}
+	add_to_variable = { CO_current_core_factor = CO_factor_add }
+}
+
+CO_coring_daily = {
+    #core progress
+	every_state = {
+        limit = {
+        	has_variable = in_core_progress_of_@ROOT
+        }
+        add_to_variable = { in_core_progress_of_@ROOT = 1 }
+        if = {
+        	limit = {
+        		NOT = { is_controlled_by = ROOT}
+        	}
+        	clear_variable = in_core_progress_of_@ROOT
+        }
+        if = {
+        	limit = {
+        		check_variable = { in_core_progress_of_@ROOT > CO_current_core_time }	
+        	}
+        	add_core_of = ROOT
+        	remove_claim_by = ROOT
+        	clear_variable = in_core_progress_of_@ROOT
+        }
+    }
+    #core time display
+    every_owned_state = {
+        limit = {
+            not = {
+                is_core_of = ROOT
+            }
+        }
+        set_variable = { CO_core_changing = 1}
+        if = {
+            limit = {
+                is_claimed_by = ROOT
+            }
+            subtract_from_variable = { CO_core_changing = global.CO_claim_factor}
+        }
+        if = {
+            limit = {
+                ST_present_same_race = yes
+            }
+            subtract_from_variable = { CO_core_changing = global.CO_present_race_factor}
+            else = {
+                if = {
+                    limit = {
+                        ST_origin_same_race = yes
+                    }
+                    subtract_from_variable = { CO_core_changing = global.CO_origin_race_factor}
+                }
+            }
+        }
+        set_variable = {
+            var = CO_core_time
+            value = state_value
+        }
+
+        multiply_variable = { CO_core_time = CO_core_changing }
+        multiply_variable = { CO_core_time = 2 }
+        multiply_variable = { CO_core_time = ROOT.CO_current_core_factor }
+
+        clamp_variable = { var = CO_core_time min = 10 }
+    }
+
+    #auto core
+    every_owned_state = {
+        if = {
+            limit = {
+                ROOT = { has_country_flag = CO_core_Beast }
+                is_owned_by = ROOT
+                check_variable = { ST_present_race = 0 }
+                not = { is_core_of = ROOT}
+            }
+            add_core_of = ROOT
+        }
+        if = {
+            limit = {
+                ROOT = { has_country_flag = CO_core_Pri_youkai }
+                is_owned_by = ROOT
+                check_variable = { ST_present_race = 1 }
+                not = { is_core_of = ROOT}
+            }
+            add_core_of = ROOT
+        }
+        if = {
+            limit = {
+                ROOT = { has_country_flag = CO_core_Youkai }
+                is_owned_by = ROOT
+                check_variable = { ST_present_race = 2 }
+                not = { is_core_of = ROOT}
+            }
+            add_core_of = ROOT
+        }
+        if = {
+            limit = {
+                ROOT = { has_country_flag = CO_core_God }
+                is_owned_by = ROOT
+                check_variable = { ST_present_race = 3 }
+                not = { is_core_of = ROOT}
+            }
+            add_core_of = ROOT
+        }
+        if = {
+            limit = {
+                ROOT = { has_country_flag = CO_core_Human }
+                is_owned_by = ROOT
+                check_variable = { ST_present_race = 4 }
+                not = { is_core_of = ROOT}
+            }
+            add_core_of = ROOT
+        }
+        if = {
+            limit = {
+                ROOT = { has_country_flag = CO_core_Magician }
+                is_owned_by = ROOT
+                check_variable = { ST_present_race = 5 }
+                not = { is_core_of = ROOT}
+            }
+            add_core_of = ROOT
+        }
+        if = {
+            limit = {
+                ROOT = { has_country_flag = CO_core_Fairy }
+                is_owned_by = ROOT
+                check_variable = { ST_present_race = 6 }
+                not = { is_core_of = ROOT}
+            }
+            add_core_of = ROOT
+        }
+        if = {
+            limit = {
+                ROOT = { has_country_flag = CO_core_Ghost }
+                is_owned_by = ROOT
+                check_variable = { ST_present_race = 7 }
+                not = { is_core_of = ROOT}
+            }
+            add_core_of = ROOT
+        }
+        if = {
+            limit = {
+                ROOT = { has_country_flag = CO_core_Kappa }
+                is_owned_by = ROOT
+                check_variable = { ST_present_race = 8 }
+                not = { is_core_of = ROOT}
+            }
+            add_core_of = ROOT
+        }
+        if = {
+            limit = {
+                ROOT = { has_country_flag = CO_core_Tengu }
+                is_owned_by = ROOT
+                check_variable = { ST_present_race = 9 }
+                not = { is_core_of = ROOT}
+            }
+            add_core_of = ROOT
+        }
+    }
+    
+}
+
+CO_core_Pri_youkai = {
+    set_country_flag = CO_core_Pri_youkai
+    custom_effect_tooltip = CO_core_Pri_youkai_tt
+}
+CO_core_Magician = {
+    set_country_flag = CO_core_Magician
+    custom_effect_tooltip = CO_core_Magician_tt
+}
+CO_core_Youkai = {
+    set_country_flag = CO_core_Youkai
+    custom_effect_tooltip = CO_core_Youkai_tt
+}
+CO_core_Human = {
+    set_country_flag = CO_core_Human
+    custom_effect_tooltip = CO_core_Human_tt
+}
+CO_core_Beast = {
+    set_country_flag = CO_core_Beast
+    custom_effect_tooltip = CO_core_Beast_tt
+}
+CO_core_Tengu = {
+    set_country_flag = CO_core_Tengu
+    custom_effect_tooltip = CO_core_Tengu_tt
+}
+CO_core_Kappa = {
+    set_country_flag = CO_core_Kappa
+    custom_effect_tooltip = CO_core_Kappa_tt
+}
+CO_core_Ghost = {
+    set_country_flag = CO_core_Ghost
+    custom_effect_tooltip = CO_core_Ghost_tt
+}
+CO_core_Fairy = {
+    set_country_flag = CO_core_Fairy
+    custom_effect_tooltip = CO_core_Fairy_tt
+}
+CO_core_God = {
+    set_country_flag = CO_core_God
+    custom_effect_tooltip = CO_core_God_tt
+}

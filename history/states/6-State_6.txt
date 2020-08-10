@@ -1,0 +1,34 @@
+
+state={
+	id=6
+	name="STATE_6"
+	resources={
+		powder=5.000
+		metal=0.000
+		gas=5.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = UNA
+			add_core_of = UNA
+			add_claim_by = SPG
+			buildings = {
+				infrastructure = 4
+				industrial_complex = 4
+				arms_factory = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		188 630 1407 2209 2583 5856 5857 5858 5859 5900 
+	}
+	manpower=769.0
+	buildings_max_level_factor=1.000
+	state_category=s10
+}

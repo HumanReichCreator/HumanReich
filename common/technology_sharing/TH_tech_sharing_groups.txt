@@ -1,0 +1,104 @@
+ technology_sharing_group = {
+
+	id = wuzhihuyanjiu
+	name = wuzhihuyanjiu_name
+	desc = wuzhihuyanjiu_desc
+	picture = GFX_commonwealth_research
+    
+	research_sharing_per_country_bonus = 0.05
+
+	#categories = { electronics radar_tech }
+
+	#is_faction_sharing = yes
+
+    available = {
+        is_in_faction_with = SCA
+    }
+
+}
+
+technology_sharing_group = {
+
+	id = yaoguaishanyanjiu
+	name = yaoguaishanyanjiu_name
+	desc = yaoguaishanyanjiu_desc
+	picture = GFX_commonwealth_research
+    
+	research_sharing_per_country_bonus = 0.05
+
+	#categories = { electronics radar_tech }
+
+	#is_faction_sharing = yes
+
+    available = {
+        is_in_faction_with = TEG
+    }
+
+}
+
+technology_sharing_group = {
+
+	id = yaoguaishanziweiyanjiuzu
+	name = yaoguaishanziweiyanjiuzu
+	desc = yaoguaishanziweiyanjiuzu
+	picture = GFX_commonwealth_research
+    
+	research_sharing_per_country_bonus = 0.05
+
+	#categories = { electronics radar_tech }
+
+	#is_faction_sharing = yes
+
+    available = {
+        is_in_faction_with = YSK
+    }
+
+}
+
+technology_sharing_group = {
+
+	id = sanfangkeyanzu
+	name = sanfangkeyanzu_name
+	desc = sanfangkeyanzu_desc
+	picture = GFX_commonwealth_research
+    
+	research_sharing_per_country_bonus = 0.05
+
+	#categories = { electronics radar_tech }
+
+	#is_faction_sharing = yes
+
+    available = {
+    or = {
+        TAG = TEG
+        TAG = NIT
+        TAG = AKI
+    }
+    }
+
+}
+
+technology_sharing_group = {
+
+	id = liancunkeyan
+	name = liancunkeyan_name
+	desc = liancunkeyan_desc
+	picture = GFX_commonwealth_research
+    
+	research_sharing_per_country_bonus = 0.05
+
+	#categories = { electronics radar_tech }
+
+	#is_faction_sharing = yes
+
+    available = {
+    or = {
+        TAG = AKI
+        TAG = HU1
+        TAG = HU2
+        TAG = HU3
+        TAG = HU4
+    }
+    }
+
+}

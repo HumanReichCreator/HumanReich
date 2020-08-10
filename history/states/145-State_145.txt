@@ -1,0 +1,30 @@
+state={
+	id=145
+	name="STATE_145"
+	provinces={
+		16 62 89 164 178 269 288 423 681 713 750 769 853 977 1009 1087 1252 1436 1444 1501 1611 1807 1991 2036 2350 2466 2527 2756 2758 2770 2772 2777 2807 2824 
+	}
+
+	resources={
+
+		powder = 0.0
+		metal = 0
+		gas = 0.0
+		crystal = 50.0
+	}
+
+	history={
+       	146.1.1 = {
+			owner = NG3
+			add_core_of = NG3
+			buildings = {
+				infrastructure =1
+				industrial_complex = 0
+				arms_factory = 1
+			}
+       	}
+	}
+	state_category=s5
+	manpower=351970.0
+	buildings_max_level_factor=1.000
+}

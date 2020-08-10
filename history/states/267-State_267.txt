@@ -1,0 +1,30 @@
+
+state={
+	id=267
+	name="STATE_267"
+	resources={
+		powder=10.000
+		metal=6.000
+		gas=0.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = KAG
+			add_core_of = KAG
+			buildings = {
+				infrastructure = 4
+				industrial_complex = 3
+				arms_factory = 2
+			}
+		}
+	}
+
+	provinces={
+		1061 1106 1575 2089 2106 2898 2915 5601 5603 5608 5619 5638 5651 5654 5656 5666 5677 
+	}
+	manpower=4010.0
+	buildings_max_level_factor=1.000
+	state_category=s7
+}

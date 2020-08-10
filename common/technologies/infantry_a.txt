@@ -1,0 +1,1072 @@
+technologies = {
+############start let's go#########
+    spell_card = {
+    	xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+		
+		 path = {
+			 leads_to_tech = danmujingque139
+			 research_cost_coeff = 1
+		 }
+		 path = {
+			 leads_to_tech = gaosudanmu139
+			 research_cost_coeff = 1
+		 }
+         path = {
+			 leads_to_tech = linglijiejing139
+			 research_cost_coeff = 1
+		 }		
+		 enable_equipments = {
+			spell_card135
+		 }
+
+		 enable_subunits = {
+		 	ma_militia
+		 	ma_light_infantry
+		 	ma_infantry
+		 	ma_motorized
+		 }
+
+		 on_research_complete = {
+			ma_p135 = yes
+		}
+
+
+		research_cost = 1
+		start_year = 135
+		folder = {
+			name = infantry_general_folder
+			position = { x = 4 y = 1 }
+		}
+
+		
+		categories = {
+		military
+		infantry
+		magic_weapons
+		magic
+		}
+
+		ai_will_do = {
+			factor = 1.2
+		}
+	}
+
+	linglijiejing139 = {
+		xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+
+         path = {
+			 leads_to_tech = linglijiejing144
+			 research_cost_coeff = 1
+		 }
+		 path = {
+			 leads_to_tech = gongjishimo141
+			 research_cost_coeff = 1
+		 }	
+
+		 
+		 
+		enable_equipments = {
+			spell_card139
+		 }	
+
+		 on_research_complete = {
+			ma_p139 = yes
+		}
+		 
+
+		 	 	
+
+
+		research_cost = 1.8
+		start_year = 139
+		folder = {
+			name = infantry_general_folder
+			position = { x = 4 y = 3 }
+		}
+		
+		categories = {
+			military
+			infantry
+			magic_weapons
+			magic
+		}
+		ai_will_do = {
+			factor = 1.2
+			modifier = {
+				or = {
+					is_researching_technology = waike
+					has_tech = waike
+				}
+				factor = 0.25
+			}
+		}
+	}
+
+	linglijiejing144 = {
+		xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+
+         path = {
+			 leads_to_tech = linglijiejing147
+			 research_cost_coeff = 1
+		 }
+
+		 enable_equipments = {
+			spell_card144
+		 }		
+
+		 on_research_complete = {
+			ma_p144 = yes
+		}	 	
+
+
+		research_cost = 1.8
+		start_year = 144
+		folder = {
+			name = infantry_general_folder
+			position = { x = 4 y = 5 }
+		}
+		
+		categories = {
+			military
+			infantry
+			magic_weapons
+			magic
+		}
+		ai_will_do = {
+			factor = 1.2
+			modifier = {
+				or = {
+					is_researching_technology = waike
+					has_tech = waike
+				}
+				factor = 0.25
+			}
+		}
+	}
+
+	linglijiejing147 = {
+		xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+
+		 enable_equipments = {
+			spell_card147
+		 }		
+
+		 on_research_complete = {
+			ma_p147 = yes
+		}	
+
+
+
+		research_cost = 1.8
+		start_year = 147
+		folder = {
+			name = infantry_general_folder
+			position = { x = 4 y = 7 }
+		}
+		
+		categories = {
+			military
+			infantry
+			magic_weapons
+			magic
+		}
+		ai_will_do = {
+			factor = 1.25
+			modifier = {
+				or = {
+					is_researching_technology = waike
+					has_tech = waike
+				}
+				factor = 0.25
+			}
+		}
+	}
+
+
+	danmujingque139 = {		 	
+        
+        path = {
+			 leads_to_tech = danmujingque144
+			 research_cost_coeff = 1
+		}
+
+		category_magic_infantry = {
+		     soft_attack = 0.05
+		     hard_attack = 0.05
+		}
+
+		research_cost = 1.5
+		start_year = 139
+		folder = {
+			name = infantry_general_folder
+			position = { x = 1 y = 3 }
+		}
+		
+		categories = {
+			military
+			infantry
+			magic_weapons_improve
+			magic
+		}
+		ai_will_do = {
+			factor = 1.25
+			modifier = {
+				or = {
+					is_researching_technology = waike
+					has_tech = waike
+				}
+				factor = 0.05
+			}
+		}
+	}
+
+	danmujingque144 = {		 		
+
+		research_cost = 1.5
+		start_year = 144
+
+		path = {
+			 leads_to_tech = danmujingque147
+			 research_cost_coeff = 1
+		}
+
+		folder = {
+			name = infantry_general_folder
+			position = { x = 1 y = 5 }
+		}
+
+		category_magic_infantry = {
+		     soft_attack = 0.05
+		     hard_attack = 0.05
+		}
+
+		
+		categories = {
+			military
+			infantry
+			magic_weapons_improve
+			magic
+		}
+		ai_will_do = {
+			factor = 1.25
+			modifier = {
+				or = {
+					is_researching_technology = waike
+					has_tech = waike
+				}
+				factor = 0.05
+			}
+		}
+	}
+
+	danmujingque147 = {		 		
+
+		research_cost = 1.5
+		start_year = 147
+
+		folder = {
+			name = infantry_general_folder
+			position = { x = 1 y = 7 }
+		}
+
+		category_magic_infantry = {
+		     soft_attack = 0.05
+		     hard_attack = 0.05
+		}
+
+		
+
+		
+		categories = {
+			military
+			infantry
+			magic_weapons_improve
+			magic
+		}
+		ai_will_do = {
+			factor = 1.25
+			modifier = {
+				or = {
+					is_researching_technology = waike
+					has_tech = waike
+				}
+				factor = 0.05
+			}
+		}
+	}
+
+	gaosudanmu139 = {		 	
+        
+        path = {
+			 leads_to_tech = gaosudanmu144
+			 research_cost_coeff = 1
+		}
+
+		category_magic_infantry = {
+		     breakthrough = 0.1
+		     defense = 0.1
+		}
+
+
+		research_cost = 1.5
+		start_year = 139
+		folder = {
+			name = infantry_general_folder
+			position = { x = 7 y = 3 }
+		}
+		
+		categories = {
+			military
+			infantry
+			magic_weapons_improve
+			magic
+		}
+		ai_will_do = {
+			factor = 1.25
+			modifier = {
+				or = {
+					is_researching_technology = waike
+					has_tech = waike
+				}
+				factor = 0.05
+			}
+		}
+	}
+
+	gaosudanmu144 = {		
+
+		path = {
+			 leads_to_tech = gaosudanmu147
+			 research_cost_coeff = 1
+		} 		
+
+		research_cost = 1.5
+		start_year = 144
+		folder = {
+			name = infantry_general_folder
+			position = { x = 7 y = 5 }
+		}
+
+		category_magic_infantry = {
+		     breakthrough = 0.1
+		     defense = 0.1
+		}
+		
+		categories = {
+		military
+		infantry
+		magic_weapons_improve
+		magic
+		}
+		ai_will_do = {
+			factor = 1.25
+			modifier = {
+				or = {
+					is_researching_technology = waike
+					has_tech = waike
+				}
+				factor = 0.05
+			}
+		}
+	}
+
+	gaosudanmu147 = {		
+	
+
+		research_cost = 1.5
+		start_year = 147
+		folder = {
+			name = infantry_general_folder
+			position = { x = 7 y = 7 }
+		}
+
+		category_magic_infantry = {
+		     breakthrough = 0.1
+		     defense = 0.1
+		}
+		
+		categories = {
+		military
+		infantry
+		magic_weapons_improve
+		magic
+		}
+		ai_will_do = {
+			factor = 1.25
+			modifier = {
+				or = {
+					is_researching_technology = waike
+					has_tech = waike
+				}
+				factor = 0.05
+			}
+		}
+	}
+
+########外界枪械########
+    buqiang117 = {
+    	xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+		
+		 path = {
+			 leads_to_tech = buqiang140
+			 research_cost_coeff = 1
+		 }	
+		 enable_equipments = {
+		      buqiang135
+		 }
+		 enable_subunits = {
+		 	sc_militia
+		 	sc_light_infantry
+		 	sc_infantry
+		 	sc_motorized
+		 }	
+		 on_research_complete = {
+		 	sc_p135 = yes
+		 }
+
+
+		research_cost = 1.5
+		start_year = 135
+		folder = {
+			name = infantry_general_folder
+			position = { x = 16 y = 1 }
+		}
+		
+		categories = {
+		military
+		science_weapons
+		science
+		infantry
+
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				or = {
+					is_researching_technology = lingben
+					has_tech = lingben
+				}
+				factor = 0.25
+			}
+		}
+	}
+
+	buqiang140 = {
+		xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+		
+		 path = {
+			 leads_to_tech = buqiang145
+			 research_cost_coeff = 1
+		 }
+		 path = {
+			 leads_to_tech = tangxiangailiang140
+			 research_cost_coeff = 1
+		 }	
+		 path = {
+			 leads_to_tech = jiandanmiaozhunjing140
+			 research_cost_coeff = 1
+		 }
+
+		 
+
+		 enable_equipments = {
+		      buqiang140
+		 }	 	
+
+		 on_research_complete = {
+		 	sc_p140 = yes
+		 }
+		 
+
+
+
+
+		research_cost = 2.2
+		start_year = 140
+		folder = {
+			name = infantry_general_folder
+			position = { x = 16 y = 3 }
+		}
+		
+		categories = {
+		military
+		science_weapons
+		science
+		infantry
+
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				or = {
+					is_researching_technology = lingben
+					has_tech = lingben
+				}
+				factor = 0.25
+			}
+		}
+	}
+
+	buqiang145 = {
+		xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+		
+		 path = {
+			 leads_to_tech = buqiang148
+			 research_cost_coeff = 1
+		 }	
+
+		 enable_equipments = {
+		      buqiang145
+		 }	
+
+		 on_research_complete = {
+		 	sc_p145 = yes
+		 }
+	
+
+
+		research_cost = 2.2
+		start_year = 145
+		folder = {
+			name = infantry_general_folder
+			position = { x = 16 y = 5 }
+		}
+		
+		categories = {
+		military
+		science_weapons
+		science
+		infantry
+
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				or = {
+					is_researching_technology = lingben
+					has_tech = lingben
+				}
+				factor = 0.25
+			}
+		}
+	}
+
+	buqiang148 = {
+		xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+
+		 enable_equipments = {
+		      buqiang148
+		 }	
+
+		 on_research_complete = {
+		 	sc_p148 = yes
+		 }
+
+
+
+		research_cost = 2.2
+		start_year = 148
+		folder = {
+			name = infantry_general_folder
+			position = { x = 16 y = 7 }
+		}
+		
+		categories = {
+		military
+		science_weapons
+		science
+		infantry
+
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				or = {
+					is_researching_technology = lingben
+					has_tech = lingben
+				}
+				factor = 0.25
+			}
+		}
+	}
+
+	tangxiangailiang140 = {
+
+	    path = {
+			 leads_to_tech = tangxiangailiang145
+			 research_cost_coeff = 1
+		 }
+
+		category_science_infantry = {
+		     soft_attack = 0.1
+		}
+		
+		research_cost = 1.8
+		start_year = 140
+		folder = {
+			name = infantry_general_folder
+			position = { x = 13 y = 3 }
+		}
+		
+		categories = {
+		military
+		science_weapons_improve
+		science
+		infantry
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				or = {
+					is_researching_technology = lingben
+					has_tech = lingben
+				}
+				factor = 0.1
+			}
+		}
+	}
+
+	tangxiangailiang145 = {
+		
+		research_cost = 2.2
+		start_year = 145
+		folder = {
+			name = infantry_general_folder
+			position = { x = 13 y = 5 }
+		}
+
+		path = {
+			 leads_to_tech = tangxiangailiang148
+			 research_cost_coeff = 1
+		 }
+
+		category_science_infantry = {
+		     soft_attack = 0.1
+		}
+		
+		categories = {
+		military
+		science_weapons_improve
+		science
+		infantry
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				or = {
+					is_researching_technology = lingben
+					has_tech = lingben
+				}
+				factor = 0.1
+			}
+		}
+	}
+
+	tangxiangailiang148 = {
+		
+		research_cost = 1.8
+		start_year = 148
+		folder = {
+			name = infantry_general_folder
+			position = { x = 13 y = 7 }
+		}
+
+
+		category_science_infantry = {
+		     soft_attack = 0.1
+		}
+		
+		categories = {
+		military
+		science_weapons_improve
+		science
+		infantry
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				or = {
+					is_researching_technology = lingben
+					has_tech = lingben
+				}
+				factor = 0.1
+			}
+		}
+	}
+
+	jiandanmiaozhunjing140 = {
+		
+		path = {
+			 leads_to_tech = qijumiaozhunjing145
+			 research_cost_coeff = 1
+		 }
+
+		category_science_infantry = {
+		     breakthrough = 0.05
+		     defense = 0.05
+		}
+
+		research_cost = 1.8
+		start_year = 140
+		folder = {
+			name = infantry_general_folder
+			position = { x = 19 y = 3 }
+		}
+		
+		categories = {
+		military
+		science_weapons_improve
+		science
+		infantry
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				or = {
+					is_researching_technology = lingben
+					has_tech = lingben
+				}
+				factor = 0.1
+			}
+		}
+	}
+
+	qijumiaozhunjing145 = {
+		
+		path = {
+			 leads_to_tech = guangxuemiaozhunjing148
+			 research_cost_coeff = 1
+		 }
+
+		category_science_infantry = {
+		     breakthrough = 0.05
+		     defense = 0.05
+		}
+
+		research_cost = 1.8
+		start_year = 145
+		folder = {
+			name = infantry_general_folder
+			position = { x = 19 y = 5 }
+		}
+		
+		categories = {
+		military
+		science_weapons_improve
+		science
+		infantry
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				or = {
+					is_researching_technology = lingben
+					has_tech = lingben
+				}
+				factor = 0.1
+			}
+		}
+	}
+
+	guangxuemiaozhunjing148 = {
+		
+		category_science_infantry = {
+		     breakthrough = 0.05
+		     defense = 0.05
+		}
+
+		research_cost = 1.8
+		start_year = 148
+		folder = {
+			name = infantry_general_folder
+			position = { x = 19 y = 7 }
+		}
+		
+		categories = {
+		military
+		science_weapons_improve
+		science
+		infantry
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				or = {
+					is_researching_technology = lingben
+					has_tech = lingben
+				}
+				factor = 0.1
+			}
+		}
+	}
+
+	####sf
+	tezhong149 = {
+    	xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+
+
+		dependencies = {
+		   zhiyuanzhuangbei = 1
+		}
+		
+		 path = {
+			 leads_to_tech = shuliangkuochong152
+			 research_cost_coeff = 1
+		 }
+		 path = {
+			 leads_to_tech = xunlianjiaqiang152
+			 research_cost_coeff = 1
+		 }	
+
+		 enable_subunits = {
+		 	ma_sf_infantry
+		 	sc_sf_infantry
+		 }
+
+		research_cost = 2.5
+		start_year = 149
+		folder = {
+			name = infantry_general_folder
+			position = { x = 10 y = 9 }
+		}
+
+		
+		categories = {
+			military
+			infantry
+			sf_force
+		}
+
+		ai_will_do = {
+			factor = 1.2
+		}
+	}
+
+	shuliangkuochong152 = {
+    	xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+		
+		 path = {
+			 leads_to_tech = shuliangkuochong156
+			 research_cost_coeff = 1
+		 }
+
+		 xor = {
+		 	xunlianjiaqiang152
+		 }
+
+		 special_forces_cap = 0.15
+		 special_forces_training_time_factor = -0.05
+		 sc_sf_infantry = {
+			combat_width = -5
+		}
+		ma_sf_infantry = {
+			combat_width = -5
+		}
+
+		research_cost = 2.5
+		start_year = 152
+		folder = {
+			name = infantry_general_folder
+			position = { x = 8 y = 11 }
+		}
+
+		
+		categories = {
+			military
+			infantry
+			sf_force
+		}
+
+		ai_will_do = {
+			factor = 1.2
+		}
+	}
+
+	shuliangkuochong156 = {
+    	xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+		
+		 path = {
+			 leads_to_tech = tezhongxunlian160
+			 research_cost_coeff = 1
+		 }
+
+		 special_forces_cap = 0.15
+		 special_forces_training_time_factor = -0.05
+		 sc_sf_infantry = {
+			combat_width = -5
+		}
+		ma_sf_infantry = {
+			combat_width = -5
+		}
+
+		research_cost = 2.5
+		start_year = 156
+		folder = {
+			name = infantry_general_folder
+			position = { x = 8 y = 13 }
+		}
+
+		
+		categories = {
+			military
+			infantry
+			sf_force
+		}
+
+		ai_will_do = {
+			factor = 1.2
+		}
+	}
+
+	xunlianjiaqiang152 = {
+    	xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+		
+		 path = {
+			 leads_to_tech = xunlianjiaqiang156
+			 research_cost_coeff = 1
+		 }
+
+		 xor = {
+		 	shuliangkuochong152 
+		 }
+
+
+		research_cost = 2.5
+		start_year = 152
+		folder = {
+			name = infantry_general_folder
+			position = { x = 12 y = 11 }
+		}
+
+		category_sf_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			max_organisation = 15
+			
+		}
+		sc_sf_infantry = {
+			combat_width = -5
+		}
+		ma_sf_infantry = {
+			combat_width = -5
+		}
+		special_forces_training_time_factor = 0.1
+
+		
+		categories = {
+			military
+			infantry
+			sf_force
+		}
+
+		ai_will_do = {
+			factor = 1.2
+		}
+	}
+
+	xunlianjiaqiang156 = {
+    	xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+		
+		 path = {
+			 leads_to_tech = tezhongxunlian160
+			 research_cost_coeff = 1
+		 }
+
+		 category_sf_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			max_organisation = 15
+		}
+		sc_sf_infantry = {
+			combat_width = -5
+		}
+		ma_sf_infantry = {
+			combat_width = -5
+		}
+		special_forces_training_time_factor = 0.1
+
+
+		research_cost = 2.5
+		start_year = 156
+		folder = {
+			name = infantry_general_folder
+			position = { x = 12 y = 13 }
+		}
+
+		
+		categories = {
+			military
+			infantry
+			sf_force
+		}
+
+		ai_will_do = {
+			factor = 1.2
+		}
+	}
+
+	tezhongxunlian160 = {
+    	xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+
+		research_cost = 2.5
+		start_year = 160
+		folder = {
+			name = infantry_general_folder
+			position = { x = 10 y = 15 }
+		}
+
+		special_forces_cap = 0.15
+		category_sf_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			max_organisation = 15
+		}
+		sc_sf_infantry = {
+			combat_width = -5
+		}
+		ma_sf_infantry = {
+			combat_width = -5
+		}
+
+		
+		categories = {
+			military
+			infantry
+			sf_force
+		}
+
+		ai_will_do = {
+			factor = 1.2
+		}
+	}
+
+}

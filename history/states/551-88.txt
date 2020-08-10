@@ -1,0 +1,30 @@
+state={
+	id=551
+	name="STATE_551"
+	provinces={
+		6975 6977 6981 6987 6988 6990 6992 6994 6996 6997 7000 7001 7006 7008 
+	}
+	resources={
+		energy = 0
+		powder=0.000
+		metal=0.000
+		gas=0.000
+		crystal=5.000
+	}
+	history={
+		146.1.1 = {
+			owner = AKO
+			add_core_of = AKO
+			buildings = {
+				infrastructure = 2
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+	}
+	manpower=1877.0
+	state_category=s2
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,63 @@
+bookmarks = {
+	bookmark = {
+		name = "scenario138_NAME"
+		desc = "scenario138_DESCS"
+		date = 138.9.18.7
+		picture = "GFX_Scenario138"
+		default_country = "SCA"
+		default = yes
+		
+
+		# "---"={
+			# history = "JINYONG_DESC"
+			# ideas = { 
+			# }
+		# }
+		
+		# "---"={
+			# history = "JINYONG_DESC"
+			# ideas = { 
+			# }
+		# }
+		
+		"SCA"={
+			history = "SCA_scnario138_DESC"
+			ideas = { 
+			}
+		}
+		
+		# "---"={
+			# history = "JINYONG_DESC"
+			# ideas = { 
+			# }
+		# }
+		
+		# "---"={
+			# history = "JINYONG_DESC"
+			# ideas = { 
+			# }
+		# }
+		
+		# "OTG"={
+		# 	history = "OTG_scnario138_DESC"
+		# 	ideas = { 
+		# 	}
+		# }
+		
+		# "---"={
+			# history = "JINYONG_DESC"
+			# ideas = { 
+			# }
+		# }
+
+
+		# "---"={
+			# history = "JINYONG_DESC"
+		# }
+		
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

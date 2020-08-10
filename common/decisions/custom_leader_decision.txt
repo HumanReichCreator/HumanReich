@@ -1,0 +1,4233 @@
+custom_leader_cate = {
+    ###AKI
+    AKI_szh = {
+        visible = {
+            tag = AKI
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Aki Minoriko"
+                            picture = "AKI_szh.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                name = "秋穰子"
+                                picture = "AKI_szh.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    AKI_hin = {
+        visible = {
+            tag = AKI
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Kagiyama Hina"
+                            # name = "键山雏"
+                            picture = "AKI_hin.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Kagiyama Hina"
+                                name = "键山雏"
+                                picture = "AKI_hin.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    AKI_sizuha = {
+        visible = {
+            tag = AKI
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Aki Sizuha"
+                            # name = "秋静叶"
+                            picture = "AKI_sizuha.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Aki Sizuha"
+                                name = "秋静叶"
+                                picture = "AKI_sizuha.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    CIR_cir = {
+        visible = {
+            tag = CIR
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Cirno"
+                            # name = "琪露诺"
+                            picture ="CIR_cir.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Cirno"
+                                name = "琪露诺"
+                                picture ="CIR_cir.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    # CIR_clown = {
+    #     visible = {
+    #         tag = CIR
+    #         custom_leader_on = yes
+    #     }
+
+    #     fire_only_once = no
+    #     complete_effect = {
+    #         current_government = yes
+    #         meta_effect = {
+    #             text = {
+    #                 if = {
+    #                     limit = {
+    #                         english_leaders = yes
+    #                     }
+    #                     create_country_leader = {
+    #                         name = "Clownpiece"
+    #                         # name = "克劳恩皮丝"
+    #                         picture ="CIR_clown.dds"
+    #                         ideology = [IDO]
+    #                     }
+    #                     else = {
+    #                         create_country_leader = {
+    #                             # name = "Clownpiece"
+    #                             name = "克劳恩皮丝"
+    #                             picture ="CIR_clown.dds"
+    #                             ideology = [IDO]
+    #                         }
+    #                     }
+    #                 }
+    #             }
+    #             IDO = "[THIS.government_type]"
+    #         }
+    #     }
+
+    #     ai_will_do = {
+    #         factor = 0
+    #         modifier = {
+    #             add = 1
+    #             caidankaiqi = yes
+    #         }
+    #     }
+    # }
+    CIR_dys = {
+        visible = {
+            tag = CIR
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Daiyousei"
+                            # name = "大妖精"
+                            picture ="CIR_dys.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Daiyousei"
+                                name = "大妖精"
+                                picture ="CIR_dys.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    EET_eri = {
+        visible = {
+            tag = EET
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Yagokoro Eirin"
+                            # name = "八意永琳"
+                            picture = "EET_eri.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Yagokoro Eirin"
+                                name = "八意永琳"
+                                picture = "EET_eri.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    EET_reisen = {
+        visible = {
+            tag = EET
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Reisen Udongein Inaba"
+                            # name = "铃仙·优昙华院·因幡"
+                            picture = "EET_reisen.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Reisen Udongein Inaba"
+                                name = "铃仙·优昙华院·因幡"
+                                picture = "EET_reisen.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    EET_kaguya = {
+        visible = {
+            tag = EET
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Houraisan Kaguya"
+                            # name = "蓬莱山辉夜"
+                            picture = "EET_kaguya.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Houraisan Kaguya"
+                                name = "蓬莱山辉夜"
+                                picture = "EET_kaguya.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    HKR_hkr = {
+        visible = {
+            tag = HKR
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Hakurei Reimu"
+                            # name = "博丽灵梦"
+                            picture = "HKR_hkr.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Hakurei Reimu"
+                                name = "博丽灵梦"
+                                picture = "HKR_hkr.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    HKR_aunn = {
+        visible = {
+            tag = HKR
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Komano Aunn"
+                            # name = "高丽野阿吽"
+                            picture = "HKR_aunn.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Komano Aunn"
+                                name = "高丽野阿吽"
+                                picture = "HKR_aunn.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    HKR_son = {
+        visible = {
+            tag = HKR
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Yorigami Shion"
+                            # name = "依神紫苑"
+                            picture = "HKR_son.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Yorigami Shion"
+                                name = "依神紫苑"
+                                picture = "HKR_son.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    HKR_jyo = {
+        visible = {
+            tag = HKR
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Yorigami Jyoon"
+                            # name = "依神女苑"
+                            picture = "HKR_jyo.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                #name = "Yorigami Jyoon"
+                                name = "依神女苑"
+                                picture = "HKR_jyo.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    SUK_suk = {
+        visible = {
+            tag = HKR
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Ibuki Suika"
+                            # name = "伊吹萃香"
+                            picture = "SUK_suk.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                name = "Ibuki Suika"
+                                # name = "伊吹萃香"
+                                picture = "SUK_suk.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    HUM_aky = {
+        visible = {
+            tag = HUM
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Hieda no Akyu"
+                            # name = "稗田阿求"
+                            picture = "HUM_aky.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                #name = "Hieda no Akyu"
+                                name = "稗田阿求"
+                                picture = "HUM_aky.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    # HUM_mokou = {
+    #     visible = {
+    #         tag = HUM
+    #         custom_leader_on = yes
+    #     }
+
+    #     fire_only_once = no
+    #     complete_effect = {
+    #         current_government = yes
+    #         meta_effect = {
+    #             text = {
+    #                 if = {
+    #                     limit = {
+    #                         english_leaders = yes
+    #                     }
+    #                     create_country_leader = {
+    #                         name = "Fujiwara no Mokou"
+    #                         # name = "藤原妹红"
+    #                         picture = "HUM_mokou.dds"
+    #                         ideology = [IDO]
+    #                     }
+    #                     else = {
+    #                         create_country_leader = {
+    #                             # name = "Fujiwara no Mokou"
+    #                             name = "藤原妹红"
+    #                             picture = "HUM_mokou.dds"
+    #                             ideology = [IDO]
+    #                         }
+    #                     }
+    #                 }
+    #             }
+    #             IDO = "[THIS.government_type]"
+    #         }
+    #     }
+
+    #     ai_will_do = {
+    #         factor = 0
+    #         modifier = {
+    #             add = 1
+    #             caidankaiqi = yes
+    #         }
+    #     }
+    # }
+    HUM_keine = {
+        visible = {
+            tag = HUM
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Kamishirasawa Keine"
+                            # name = "上白泽慧音"
+                            picture = "HUM_keine.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                #name = "Kamishirasawa Keine"
+                                name = "上白泽慧音"
+                                picture = "HUM_keine.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    HUM_kosuzu = {
+        visible = {
+            tag = HUM
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Motoori Kosuzu"
+                            # name = "本居小铃"
+                            picture = "HUM_kosuzu.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                #name = "Motoori Kosuzu"
+                                name = "本居小铃"
+                                picture = "HUM_kosuzu.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    HUM_myoi = {
+        visible = {
+            tag = HUM
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Okunoda Miyoi"
+                            # name = "奥野田美宵"
+                            picture = "HUM_myoi.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                #name = "Okunoda Miyoi"
+                                name = "奥野田美宵"
+                                picture = "HUM_myoi.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+
+    KOG_kog = {
+        visible = {
+            tag = KOG
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Tatara Kogasa"
+                            # name = "多多良小伞"
+                            picture = "KOG_kog.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Tatara Kogasa"
+                                name = "多多良小伞"
+                                picture = "KOG_kog.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    KOG_raiko = {
+        visible = {
+            tag = KOG
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Horikawa Raiko"
+                            # name = "堀川雷鼓"
+                            picture = "KOG_raiko.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Horikawa Raiko"
+                                name = "堀川雷鼓"
+                                picture = "KOG_raiko.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    KOG_yatsuhashi = {
+        visible = {
+            tag = KOG
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Tsukumo Yatsuhashi"
+                            # name = "九十九八桥"
+                            picture = "KOG_yatsuhashi.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Tsukumo Yatsuhashi"
+                                name = "九十九八桥"
+                                picture = "KOG_yatsuhashi.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    KOG_benben = {
+        visible = {
+            tag = KOG
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Tsukumo Benben"
+                            # name = "九十九弁弁"
+                            picture = "KOG_benben.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Tsukumo Benben"
+                                name = "九十九弁弁"
+                                picture = "KOG_benben.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    KOG_kokoro = {
+        visible = {
+            tag = KOG
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Hata no Kokoro"
+                            # name = "秦心"
+                            picture = "KOG_kokoro.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Hata no Kokoro"
+                                name = "秦心"
+                                picture = "KOG_kokoro.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    MAM_mam = {
+        visible = {
+            tag = MAM
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Hutatsuiwa Mamizou"
+                            #name = "二岩猯藏"
+                            picture = "MAM_mam.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Hutatsuiwa Mamizou"
+                                name = "二岩猯藏"
+                                picture = "MAM_mam.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    MAM_nue = {
+        visible = {
+            or = {
+                tag = MAM
+                tag = NMS
+            }
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Houjuu Nue"
+                            #name = "封兽鵺"
+                            picture = "gfx/leaders/MAM/MAM_nue.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Houjuu Nue"
+                                name = "封兽鵺"
+                                picture = "gfx/leaders/MAM/MAM_nue.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    # MHP_mhp = {
+    #     visible = {
+    #         tag = MHP
+    #         custom_leader_on = yes
+    #     }
+
+    #     fire_only_once = no
+    #     complete_effect = {
+    #         current_government = yes
+    #         meta_effect = {
+    #             text = {
+    #                 if = {
+    #                     limit = {
+    #                         english_leaders = yes
+    #                     }
+    #                     create_country_leader = {
+    #                         name = "Mizuhashi Parsee"
+    #                         #name = "水桥帕露西"
+    #                         picture = "MHP_mhp.dds"
+    #                         ideology = [IDO]
+    #                     }
+    #                     else = {
+    #                         create_country_leader = {
+    #                             # name = "Mizuhashi Parsee"
+    #                             name = "水桥帕露西"
+    #                             picture = "MHP_mhp.dds"
+    #                             ideology = [IDO]
+    #                         }
+    #                     }
+    #                 }
+    #             }
+    #             IDO = "[THIS.government_type]"
+    #         }
+    #     }
+
+    #     ai_will_do = {
+    #         factor = 0
+    #         modifier = {
+    #             add = 1
+    #             caidankaiqi = yes
+    #         }
+    #     }
+    # }
+    # MHP_yamame = {
+    #     visible = {
+    #         tag = MHP
+    #         custom_leader_on = yes
+    #     }
+
+    #     fire_only_once = no
+    #     complete_effect = {
+    #         current_government = yes
+    #         meta_effect = {
+    #             text = {
+    #                 if = {
+    #                     limit = {
+    #                         english_leaders = yes
+    #                     }
+    #                     create_country_leader = {
+    #                         name = "Kurodani Yamame"
+    #                         #name = "黑谷山女"
+    #                         picture = "MHP_yamame.dds"
+    #                         ideology = [IDO]
+    #                     }
+    #                     else = {
+    #                         create_country_leader = {
+    #                             # name = "Kurodani Yamame"
+    #                             name = "黑谷山女"
+    #                             picture = "MHP_yamame.dds"
+    #                             ideology = [IDO]
+    #                         }
+    #                     }
+    #                 }
+    #             }
+    #             IDO = "[THIS.government_type]"
+    #         }
+    #     }
+
+    #     ai_will_do = {
+    #         factor = 0
+    #         modifier = {
+    #             add = 1
+    #             caidankaiqi = yes
+    #         }
+    #     }
+    # }
+    # MHP_kisume = {
+    #     visible = {
+    #         tag = MHP
+    #         custom_leader_on = yes
+    #     }
+
+    #     fire_only_once = no
+    #     complete_effect = {
+    #         current_government = yes
+    #         meta_effect = {
+    #             text = {
+    #                 if = {
+    #                     limit = {
+    #                         english_leaders = yes
+    #                     }
+    #                     create_country_leader = {
+    #                         name = "Kisume"
+    #                         #name = "琪斯美"
+    #                         picture = "MHP_kisume.dds"
+    #                         ideology = [IDO]
+    #                     }
+    #                     else = {
+    #                         create_country_leader = {
+    #                             # name = "Kisume"
+    #                             name = "琪斯美"
+    #                             picture = "MHP_kisume.dds"
+    #                             ideology = [IDO]
+    #                         }
+    #                     }
+    #                 }
+    #             }
+    #             IDO = "[THIS.government_type]"
+    #         }
+    #     }
+
+    #     ai_will_do = {
+    #         factor = 0
+    #         modifier = {
+    #             add = 1
+    #             caidankaiqi = yes
+    #         }
+    #     }
+    # }
+    MRS_mrs = {
+        visible = {
+            tag = MRS
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Kirisame Marisa"
+                            # name = "雾雨魔理沙"
+                            picture = "MRS_mrs.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Kirisame Marisa"
+                                name = "雾雨魔理沙"
+                                picture = "MRS_mrs.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    MRS_narumi = {
+        visible = {
+            tag = MRS
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Yatadera Narumi"
+                            # name = "矢田寺成美"
+                            picture = "gfx/leaders/MRS/MRS_narumi.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Yatadera Narumi"
+                                name = "矢田寺成美"
+                                picture = "gfx/leaders/MRS/MRS_narumi.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    ALI_ali = {
+        visible = {
+            tag = ALI
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Alice Margatroid"
+                            # name = "爱丽丝·玛格特罗伊德"
+                            picture = "gfx/leaders/ALI/ALI_ali.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Alice Margatroid"
+                                name = "爱丽丝·玛格特罗伊德"
+                                picture = "gfx/leaders/ALI/ALI_ali.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    ALI_ski = {
+        visible = {
+            tag = ALI
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Shinki"
+                            # name = "神绮"
+                            picture = "ALI_ski.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Shinki"
+                                name = "神绮"
+                                picture = "ALI_ski.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+
+    ALI_hor = {
+        visible = {
+            tag = ALI
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Shinki"
+                            # name = "神绮"
+                            picture = "ALI_hor.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Shinki"
+                                name = "蓬莱人偶"
+                                picture = "ALI_hor.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+
+    ALI_shh = {
+        visible = {
+            tag = ALI
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Shinki"
+                            # name = "神绮"
+                            picture = "ALI_shh.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Shinki"
+                                name = "上海人偶"
+                                picture = "ALI_shh.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+
+    NMS_bkr = {
+        visible = {
+            tag = NMS
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Hijiri Byakuren"
+                            # name = "圣白莲"
+                            picture = "NMS_bkr.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Hijiri Byakuren"
+                                name = "圣白莲"
+                                picture = "NMS_bkr.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    NMS_kumoi = {
+        visible = {
+            tag = NMS
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Kumoi Ichirin"
+                            #name = "云居一轮"
+                            picture = "NMS_kumoi.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Kumoi Ichirin"
+                                name = "云居一轮"
+                                picture = "NMS_kumoi.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    NMS_murasa = {
+        visible = {
+            tag = NMS
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Murasa Minamitsu"
+                            #name = "村纱水蜜"
+                            picture = "NMS_murasa.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Murasa Minamitsu"
+                                name = "村纱水蜜"
+                                picture = "NMS_murasa.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    NMS_syou = {
+        visible = {
+            tag = NMS
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Toramaru Syou"
+                            #name = "寅丸星"
+                            picture = "NMS_syou.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Toramaru Syou"
+                                name = "寅丸星"
+                                picture = "NMS_syou.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    NMS_mouse = {
+        visible = {
+            tag = NMS
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Nazrin"
+                            #name = "娜兹玲"
+                            picture = "NMS_mouse.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Nazrin"
+                                name = "娜兹玲"
+                                picture = "NMS_mouse.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    OKI_oki = {
+        visible = {
+            tag = OKI
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Matara Okina"
+                            # name = "摩多罗隐岐奈"
+                            picture = "OKI_oki.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Matara Okina"
+                                name = "摩多罗隐岐奈"
+                                picture = "OKI_oki.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    OKI_mai = {
+        visible = {
+            tag = OKI
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Teireida Mai"
+                           #name = "丁礼田舞"
+                            picture = "OKI_mai.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Teireida Mai"
+                                name = "丁礼田舞"
+                                picture = "OKI_mai.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    OKI_satono = {
+        visible = {
+            tag = OKI
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Nishida Satono"
+                            #name = "尔子田里乃"
+                            picture = "OKI_satono.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Nishida Satono"
+                                name = "尔子田里乃"
+                                picture = "OKI_satono.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    RNS_rns = {
+        visible = {
+            tag = RNS
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Morichika Rinnosuke"
+                            # name = "森近霖之助"
+                            picture = "RNS_rns.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Morichika Rinnosuke"
+                                name = "森近霖之助"
+                                picture = "RNS_rns.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    RNS_tokiko = {
+        visible = {
+            tag = RNS
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Tokiko"
+                            #name = "朱鷺子"
+                            picture = "RNS_tokiko.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Tokiko"
+                                name = "朱鷺子"
+                                picture = "RNS_tokiko.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    RUH_ruh = {
+        visible = {
+            tag = RUH
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Reiuji Utsuho"
+                            # name = "灵乌路空"
+                            picture = "RUH_ruh.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Reiuji Utsuho"
+                                name = "灵乌路空"
+                                picture = "RUH_ruh.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    RUH_rin = {
+        visible = {
+            tag = RUH
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Kaenbyou Rin"
+                            #name = "火焰猫燐"
+                            picture = "RUH_rin.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                name = "Kaenbyou Rin"
+                                #name = "火焰猫燐"
+                                picture = "RUH_rin.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    SAT_sat = {
+        visible = {
+            tag = SAT
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Komeiji Satori"
+                            # name = "古明地觉"
+                            picture = "SAT_sat.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Komeiji Satori"
+                                name = "古明地觉"
+                                picture = "SAT_sat.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    SAT_koishi = {
+        visible = {
+            tag = SAT
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Komeiji Koishi"
+                            # name = "古明地恋"
+                            picture = "SAT_koishi.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Komeiji Koishi"
+                                name = "古明地恋"
+                                picture = "SAT_koishi.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    SCA_pachy1 = {
+        visible = {
+            tag = SCA
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Patchouli Knowledge"
+                            # name = "帕秋莉 诺蕾姬"
+                            picture = "SCA_pachy.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Patchouli Knowledge"
+                                name = "帕秋莉 诺蕾姬"
+                                picture = "SCA_pachy.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    SCA_rem = {
+        visible = {
+            tag = SCA
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Remilia Scarlet"
+                            # name = "蕾米莉亚·斯卡蕾特"
+                            picture = "SCA_rem.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Remilia Scarlet"
+                                name = "蕾米莉亚·斯卡蕾特"
+                                picture = "SCA_rem.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    SCA_flan = {
+        visible = {
+            tag = SCA
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Flandre Scarlet"
+                            # name = "芙兰朵露·斯卡蕾特"
+                            picture = "SCA_flan.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Flandre Scarlet"
+                                name = "芙兰朵露·斯卡蕾特"
+                                picture = "SCA_flan.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    SCA_kak = {
+        visible = {
+            tag = SCA
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Koakuma"
+                            # name = "小恶魔"
+                            picture = "SCA_kak.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Koakuma"
+                                name = "小恶魔"
+                                picture = "SCA_kak.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    SSL_sky = {
+        visible = {
+            tag = SCA
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Izayoi Sakuya"
+                           #name = "十六夜咲夜"
+                            picture = "gfx/leaders/SSL/SSL_sky.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Izayoi Sakuya"
+                                name = "十六夜咲夜"
+                                picture = "gfx/leaders/SSL/SSL_sky.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    SWL_mli = {
+        visible = {
+            tag = SCA
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Hong Meirin"
+                           #name = "红美铃"
+                            picture = "gfx/leaders/SWL/SWL_mli.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Hong Meirin"
+                                name = "红美铃"
+                                picture = "gfx/leaders/SWL/SWL_mli.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    SEI_sei = {
+        visible = {
+            tag = SEI
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Kijin Seija"
+                            # name = "鬼人正邪"
+                            picture = "SEI_sei.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Kijin Seija"
+                                name = "鬼人正邪"
+                                picture = "SEI_sei.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    SEI_smm = {
+        visible = {
+            tag = SEI
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Sukuna Shinmyoumaru"
+                            # name = "少名针妙丸"
+                            picture = "SEI_smm.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Sukuna Shinmyoumaru"
+                                name = "少名针妙丸"
+                                picture = "SEI_smm.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    SGS_sun = {
+        visible = {
+            tag = SGS
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Sunny Milk"
+                            # name = "桑尼·米尔克"
+                            picture = "SGS_sun.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Sunny Milk"
+                                name = "桑尼·米尔克"
+                                picture = "SGS_sun.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    SGS_lunar = {
+        visible = {
+            tag = SGS
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Lunar Child"
+                            # name = "露娜·切露德"
+                            picture = "SGS_lunar.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                               # name = "Lunar Child"
+                                name = "露娜·切露德"
+                                picture = "SGS_lunar.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    SGS_star = {
+        visible = {
+            tag = SGS
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Star Sapphire"
+                            # name = "斯塔·萨菲雅"
+                            picture = "SGS_star.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Star Sapphire"
+                                name = "斯塔·萨菲雅"
+                                picture = "SGS_star.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    SHO_lyrica = {
+        visible = {
+            tag = SHO
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Lyrica Prismriver"
+                            # name = "莉莉卡·普莉兹姆利巴"
+                            picture = "SHO_lyrica.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Lyrica Prismriver"
+                                name = "莉莉卡·普莉兹姆利巴"
+                                picture = "SHO_lyrica.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    SHO_luna = {
+        visible = {
+            tag = SHO
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Lunasa Prismriver"
+                            # name = "露娜萨·普莉兹姆利巴"
+                            picture = "SHO_luna.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Lunasa Prismriver"
+                                name = "露娜萨·普莉兹姆利巴"
+                                picture = "SHO_luna.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    SHO_merlin = {
+        visible = {
+            tag = SHO
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Merlin Prismriver"
+                            # name = "梅露兰·普莉兹姆利巴"
+                            picture = "SHO_merlin.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Merlin Prismriver"
+                                name = "梅露兰·普莉兹姆利巴"
+                                picture = "SHO_merlin.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    SKI_ski = {
+        visible = {
+            tag = SKI
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Shikieiki Yamaxanadu"
+                            # name = "四季映姬·亚玛萨那度"
+                            picture = "SKI_ski.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Shikieiki Yamaxanadu"
+                                name = "四季映姬·亚玛萨那度"
+                                picture = "SKI_ski.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    WAI_kom = {
+        visible = {
+            tag = SKI
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Onozuka Komachi"
+                            # name = "小野塚小町"
+                            picture = "gfx/leaders/WAI/WAI_kom.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Onozuka Komachi"
+                            name = "小野塚小町"
+                            picture = "gfx/leaders/WAI/WAI_kom.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    SRB_mik = {
+        visible = {
+            tag = SRB
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Toyosatomimi no Miko"
+                            # name = "丰聪耳神子"
+                            picture = "SRB_mik.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Toyosatomimi no Miko"
+                                name = "丰聪耳神子"
+                                picture = "SRB_mik.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    SRB_seiga = {
+        visible = {
+            tag = SRB
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Kaku Seiga"
+                            # name = "霍青娥"
+                            picture = "SRB_seiga.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Kaku Seiga"
+                                name = "霍青娥"
+                                picture = "SRB_seiga.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    SRB_yoshika = {
+        visible = {
+            tag = SRB
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Miyako Yoshika"
+                            #name = "宫古芳香"
+                            picture = "SRB_yoshika.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Miyako Yoshika"
+                                name = "宫古芳香"
+                                picture = "SRB_yoshika.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    SRB_toziko = {
+        visible = {
+            tag = SRB
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Soga no Toziko"
+                            #name = "苏我屠自古"
+                            picture = "SRB_toziko.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Soga no Toziko"
+                                name = "苏我屠自古"
+                                picture = "SRB_toziko.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    SRB_futo = {
+        visible = {
+            tag = SRB
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Mononobe no Futo"
+                            #name = "物部布都"
+                            picture = "SRB_futo.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Mononobe no Futo"
+                                name = "物部布都"
+                                picture = "SRB_futo.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    TEG_aya = {
+        visible = {
+            tag = TEG
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            # name = "射命丸文"
+                            name = "Shameimaru Aya" 
+                            picture = "TEG_aya.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                name = "射命丸文"
+                                # name = "Shameimaru Aya"
+                                picture = "TEG_aya.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    TEG_mom = {
+        visible = {
+            tag = TEG
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Inubashiri Momiji"
+                            # name = "犬走椛" 
+                            picture = "TEG_mom.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Inubashiri Momiji"
+                                name = "犬走椛"
+                                picture = "TEG_mom.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    TEG_hatate = {
+        visible = {
+            tag = TEG
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Himekaidou Hatate"
+                            # name = "姬海棠果"
+                            
+                            picture = "TEG_hatate.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Himekaidou Hatate"
+                                name = "姬海棠果"
+                                
+                                picture = "TEG_hatate.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    TEN_ten = {
+        visible = {
+            tag = TEN
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Hinanawi Tenshi"
+                            # name = "比那名居天子"
+                            picture = "TEN_ten.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Hinanawi Tenshi"
+                                name = "比那名居天子"
+                                picture = "TEN_ten.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    TEN_iku = {
+        visible = {
+            tag = TEN
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Nagae Iku"
+                            # name = "永江衣玖"
+                            picture = "TEN_iku.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Nagae Iku"
+                                name = "永江衣玖"
+                                picture = "TEN_iku.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    # UDO_reisen = {
+    #     visible = {
+    #         tag = UDO
+    #         custom_leader_on = yes
+    #     }
+
+    #     fire_only_once = no
+    #     complete_effect = {
+    #         current_government = yes
+    #         meta_effect = {
+    #             text = {
+    #                 if = {
+    #                     limit = {
+    #                         english_leaders = yes
+    #                     }
+    #                     create_country_leader = {
+    #                         name = "Reisen Udongein Inaba"
+    #                         # name = "铃仙·优昙华院·因幡"
+    #                         picture ="UDO_reisen.dds"
+    #                         ideology = [IDO]
+    #                     }
+    #                     else = {
+    #                         create_country_leader = {
+    #                             # name = "Reisen Udongein Inaba"
+    #                             name = "铃仙·优昙华院·因幡"
+    #                             picture ="UDO_reisen.dds"
+    #                             ideology = [IDO]
+    #                         }
+    #                     }
+    #                 }
+    #             }
+    #             IDO = "[THIS.government_type]"
+    #         }
+    #     }
+
+    #     ai_will_do = {
+    #         factor = 0
+    #         modifier = {
+    #             add = 1
+    #             caidankaiqi = yes
+    #         }
+    #     }
+    # }
+    # UDO_ser = {
+    #     visible = {
+    #         tag = UDO
+    #         custom_leader_on = yes
+    #     }
+
+    #     fire_only_once = no
+    #     complete_effect = {
+    #         current_government = yes
+    #         meta_effect = {
+    #             text = {
+    #                 if = {
+    #                     limit = {
+    #                         english_leaders = yes
+    #                     }
+    #                     create_country_leader = {
+    #                         name = "Seiran"
+    #                         # name = "清兰"
+    #                         picture = "UDO_ser.dds"
+    #                         ideology = [IDO]
+    #                     }
+    #                     else = {
+    #                         create_country_leader = {
+    #                             # name = "Seiran"
+    #                             name = "清兰"
+    #                             picture = "UDO_ser.dds"
+    #                             ideology = [IDO]
+    #                         }
+    #                     }
+    #                 }
+    #             }
+    #             IDO = "[THIS.government_type]"
+    #         }
+    #     }
+
+    #     ai_will_do = {
+    #         factor = 0
+    #         modifier = {
+    #             add = 1
+    #             caidankaiqi = yes
+    #         }
+    #     }
+    # }
+    # UDO_rgo = {
+    #     visible = {
+    #         tag = UDO
+    #         custom_leader_on = yes
+    #     }
+
+    #     fire_only_once = no
+    #     complete_effect = {
+    #         current_government = yes
+    #         meta_effect = {
+    #             text = {
+    #                 if = {
+    #                     limit = {
+    #                         english_leaders = yes
+    #                     }
+    #                     create_country_leader = {
+    #                         name = "Ringo"
+    #                         # name = "铃瑚"
+    #                         picture = "UDO_rgo.dds"
+    #                         ideology = [IDO]
+    #                     }
+    #                     else = {
+    #                         create_country_leader = {
+    #                             # name = "Ringo"
+    #                             name = "铃瑚"
+    #                             picture = "UDO_rgo.dds"
+    #                             ideology = [IDO]
+    #                         }
+    #                     }
+    #                 }
+    #             }
+    #             IDO = "[THIS.government_type]"
+    #         }
+    #     }
+
+    #     ai_will_do = {
+    #         factor = 0
+    #         modifier = {
+    #             add = 1
+    #             caidankaiqi = yes
+    #         }
+    #     }
+    # }
+    YKR_ykr = {
+        visible = {
+            tag = YKR
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Yakumo Yukari"
+                            #name = "八云紫"
+                            picture = "YKR_ykr.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Yakumo Yukari"
+                                name = "八云紫"
+                                picture = "YKR_ykr.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    YKR_ykm = {
+        visible = {
+            tag = YKR
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Yakumo Ran"
+                            #name = "八云蓝"
+                            picture = "YKR_ykm.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Yakumo Ran"
+                                name = "八云蓝"
+                                picture = "YKR_ykm.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    YSK_ysk = {
+        visible = {
+            tag = YSK
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Yasaka Kanako"  
+                            # name = "八坂神奈子"
+                            picture = "YSK_ysk.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Yasaka Kanako"  
+                                name = "八坂神奈子"
+                                picture = "YSK_ysk.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    YSK_mry = {
+        visible = {
+            tag = YSK
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Moriya Suwako" 
+                            # name = "泄矢诹访子"
+                            picture = "YSK_mry.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Moriya Suwako" 
+                                name = "泄矢诹访子"
+                                picture = "YSK_mry.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    YSK_sanae = {
+        visible = {
+            tag = YSK
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Kochiya Sanae"
+                            # name = "东风谷早苗"  
+                            picture = "YSK_sanae.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Kochiya Sanae"
+                                name = "东风谷早苗"  
+                                picture = "YSK_sanae.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    YUK_yuk = {
+        visible = {
+            tag = YUK
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Kazami Yuka"
+                            # name = "风见幽香"
+                            picture = "YUK_yuk.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Kazami Yuka"
+                                name = "风见幽香"
+                                picture = "YUK_yuk.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    YUK_larva = {
+        visible = {
+            tag = YUK
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Eternity Larva"
+                            # name = "爱塔妮缇·拉尔瓦"
+                            picture = "YUK_larva.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Eternity Larva"
+                                name = "爱塔妮缇·拉尔瓦"
+                                picture = "YUK_larva.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    YYK_yyk = {
+        visible = {
+            tag = YYK
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Saigyouji Yuyuko"
+                            # name = "西行寺幽幽子"
+                            picture = "YYK_yyk.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Saigyouji Yuyuko"
+                                name = "西行寺幽幽子"
+                                picture = "YYK_yyk.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    YYK_youmu = {
+        visible = {
+            tag = YYK
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Konpaku Youmu"
+                            #name = "魂魄妖梦"
+                            picture = "YYK_youmu.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Konpaku Youmu"
+                                name = "魂魄妖梦"
+                                picture = "YYK_youmu.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+
+
+
+    ###
+    USZ_usz = {
+        visible = {
+            tag = USZ
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Urumi Ushizaki"
+                            # name = "牛崎润美"
+                            picture = "USZ_usz.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                #name = "Ushizaki Urumi"
+                                name = "牛崎润美"
+                                picture = "USZ_usz.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    USZ_ebs = {
+        visible = {
+            tag = USZ
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Eika Ebisu"
+                            # name = "戎璎花"
+                            picture = "USZ_ebs.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                #name = "Ebisu Eika"
+                                name = "戎璎花"
+                                picture = "USZ_ebs.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    USZ_nwt = {
+        visible = {
+            tag = USZ
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Kutaka Niwatari"
+                            # name = "庭渡久侘歌"
+                            picture = "USZ_nwt.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Niwatari Kutaka"
+                                name = "庭渡久侘歌"
+                                picture = "USZ_nwt.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+
+    HNY_hny = {
+        visible = {
+            tag = HNY
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Keiki Haniyasushin"
+                            # name = "埴安神袿姬"
+                            picture = "HNY_hny.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Haniyasushin Keiki"
+                                name = "埴安神袿姬"
+                                picture = "HNY_hny.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    HNY_jtg = {
+        visible = {
+            tag = HNY
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Mayumi Joutougu"
+                            # name = "杖刀偶磨弓"
+                            picture = "HNY_jtg.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Joutougu Mayumi"
+                                name = "杖刀偶磨弓"
+                                picture = "HNY_jtg.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+
+    HCT_hct = {
+        visible = {
+            tag = HCT
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Hecatia Lapislazuli"
+                            # name = "赫卡提亚·拉碧斯拉祖利"
+                            picture = "HCT_hct.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Hecatia Lapislazuli"
+                                name = "赫卡提亚·拉碧斯拉祖利"
+                                picture = "HCT_hct.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    HCT_juk = {
+        visible = {
+            tag = HCT
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Junko"
+                            # name = "纯狐"
+                            picture = "HCT_juk.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Junko"
+                                name = "纯狐"
+                                picture = "HCT_juk.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+
+    RGO_ser = {
+        visible = {
+            tag = RGO
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Seiran"
+                            # name = "清兰"
+                            picture = "RGO_ser.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Seiran"
+                                name = "清兰"
+                                picture = "RGO_ser.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    RGO_rgo = {
+        visible = {
+            tag = RGO
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Ringo"
+                            # name = "铃瑚"
+                            picture = "RGO_rgo.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Ringo"
+                                name = "铃瑚"
+                                picture = "RGO_rgo.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+
+    YMM_yamame = {
+        visible = {
+            tag = YMM
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Yamame Kurodani"
+                            #name = "黑谷山女"
+                            picture = "YMM_yamame.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Kurodani Yamame"
+                                name = "黑谷山女"
+                                picture = "YMM_yamame.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+    YMM_kisume = {
+        visible = {
+            tag = YMM
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Kisume"
+                            #name = "琪斯美"
+                            picture = "YMM_kisume.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Kisume"
+                                name = "琪斯美"
+                                picture = "YMM_kisume.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+
+}

@@ -1,0 +1,46 @@
+state={
+	id=330
+	name="STATE_330"
+	provinces={
+		215 1315 2836 3217 3621 3625 3628 3635 3636 3640 3644 
+	}
+	resources={
+
+		powder=1.000
+		metal=0.000
+		gas=5.000
+		crystal=0.000
+	}
+
+	history={
+		143.7.1 = {
+			owner = AVE
+			add_core_of = AVE
+			buildings = {
+				infrastructure =3
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+		}
+		146.1.1 = {
+			owner = AVE
+			add_core_of = AVE
+			add_claim_by = HUM
+			add_claim_by = HU6
+			add_claim_by = HU7
+			add_claim_by = HU8
+			buildings = {
+				infrastructure =3
+				industrial_complex = 1
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+	manpower=210.0
+	buildings_max_level_factor=1.000
+	state_category=s2
+}

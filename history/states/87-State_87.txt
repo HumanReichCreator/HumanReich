@@ -1,0 +1,35 @@
+
+state={
+	id=87
+	name="STATE_87"
+	resources={
+
+		powder=0.000
+		metal=0.000
+		gas=0.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = TEG
+			add_core_of = TEG
+			add_core_of = OTG
+			buildings = {
+				infrastructure =3
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		25 285 748 2686 4396 5252 5266 5269 5276 5278 5280 5296 
+	}
+	manpower=93.0
+	buildings_max_level_factor=1.000
+	state_category=s2
+}

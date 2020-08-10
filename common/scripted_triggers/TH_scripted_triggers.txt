@@ -1,0 +1,912 @@
+manufacture_conditions = {
+	custom_trigger_tooltip = {
+    	tooltip = manufacturer_condition
+    	#下面这些如果无特殊需求请不要改	
+		not = {
+			tag = ROOT
+			has_war_with = ROOT
+			has_opinion = {
+              target = PREV
+              value < -100
+            }
+		}
+    	or = {
+	    	ROOT = {
+		    	has_country_flag = use_by_focus_@PREV
+	    	}
+	    	and = {
+				or = {
+			        and = {
+			        	or = {
+			        		is_in_faction_with = ROOT
+			        		is_subject_of = ROOT
+			        		ROOT = { is_subject_of = PREV}
+			        	}
+			        }
+			        and = {
+			        	has_country_flag = {
+			                flag = openvalue
+			                value > -1
+			            }
+			            ROOT = {
+			                has_country_flag = {
+				                flag = openvalue     
+				                value > -1
+			                }
+			            } 
+			            has_opinion = { target = ROOT value > 39 }  
+			        }
+			        has_opinion = { target = ROOT value > 99 }  
+				    
+				}
+				ROOT = {
+					not = { has_country_flag = owns_core_state@PREV }
+				}
+		    }     
+    	}	
+	}
+}
+
+
+shiyaojingzijide = {
+	and = {
+		has_idea = Fairy
+		or = {
+			not = {
+				tag = SCA
+				tag = YUK
+			}
+			and = {
+				tag = SCA
+				or = {
+					is_subject = yes
+					has_country_flag = ducaibeituifan
+				}
+			}
+			and = {
+				tag = YUK
+				or = {
+					is_subject = yes
+					has_country_flag = ducaibeituifan
+				}
+			}
+		}
+	}
+}
+# is_pure_waike_tech = {
+#     OR = {
+#         is_researching_technology = waike
+#         has_tech = waike
+#     }
+#     NOT = {has_tech = lingkejiehe154}
+# }
+
+# is_pure_lingben_tech = {
+#     OR = {
+#         is_researching_technology = lingben
+#         has_tech = lingben
+#     }
+#     NOT = {has_tech = lingkejiehe154}  
+# }
+
+# is_combined_tech = {
+#     has_tech = lingkejiehe154
+# }
+
+bypass_declare_war = {
+	or = {
+		has_war_with = PREV
+  		is_subject_of = ROOT
+  		not = { country_exists = THIS }
+  		# has_non_aggression_pact_with = PREV
+	}
+}
+
+is_same_race = {
+	or = {
+		and = {
+			has_idea = Human
+			PREV = {
+				has_idea = Human
+			}
+		}
+		and = {
+			has_idea = Ghost
+			PREV = {
+				has_idea = Ghost
+			}
+		}
+		and = {
+			has_idea = Fairy
+			PREV = {
+				has_idea = Fairy
+			}
+		}
+		and = {
+			has_idea = Pri_youkai
+			PREV = {
+				has_idea = Pri_youkai
+			}
+		}
+		and = {
+			has_idea = Youkai
+			PREV = {
+				has_idea = Youkai
+			}
+		}
+		and = {
+			has_idea = Tenggu
+			PREV = {
+				has_idea = Tenggu
+			}
+		}
+		and = {
+			has_idea = Kappa
+			PREV = {
+				has_idea = Kappa
+			}
+		}
+		and = {
+			has_idea = God
+			PREV = {
+				has_idea = God
+			}
+		}
+		and = {
+			has_idea = Magician
+			PREV = {
+				has_idea = Magician
+			}
+		}
+		and = {
+			has_idea = Beast
+			PREV = {
+				has_idea = Beast
+			}
+		}
+	}
+}
+
+is_same_view = {
+	or = {
+		and = {
+			check_variable = { OL_view_type = 0}
+			PREV = {
+				check_variable = { OL_view_type = 0}
+			}
+		}
+		and = {
+			check_variable = { OL_view_type = 1}
+			PREV = {
+				check_variable = { OL_view_type = 1}
+			}
+		}
+		and = {
+			check_variable = { OL_view_type = 2}
+			PREV = {
+				check_variable = { OL_view_type = 2}
+			}
+		}
+	}
+}
+
+is_same_government = {
+	or = {
+		and = {
+			has_government = guli
+			PREV = {
+				has_government = guli
+			}
+		}
+		and = {
+			has_government = qinwai
+			PREV = {
+				has_government = qinwai
+			}
+		}
+		and = {
+			has_government = fandong
+			PREV = {
+				has_government = fandong
+			}
+		}
+		and = {
+			has_government = neworder
+			PREV = {
+				has_government = neworder
+			}
+		}
+		and = {
+			has_government = oldorder
+			PREV = {
+				has_government = oldorder
+			}
+		}
+	}
+}
+
+faqiqingqiu = {
+	country_exists = THIS
+	# or = {
+	# 	is_subject = no
+	# 	and = {
+	# 		is_subject = yes
+	# 		is_subject_of = ROOT
+	# 	}
+	# }
+	not = {
+   		has_war_with = ROOT
+  	}
+}
+
+youkai_mountain_country = {
+	or = {
+		tag = TEG
+		tag = OTG
+
+		tag = YSK
+
+		tag = UNA
+		tag = SPG
+
+		tag = KAP
+		tag = SAP
+		tag = GRS
+		tag = NIT
+
+		tag = KAS
+
+		tag = SAK
+		tag = ZYD
+
+		tag = AKI
+		
+		tag = NUC
+		tag = HU5
+		tag = KTK
+
+		tag = HU7
+	}
+}
+
+Ghost_country = {
+	or = {
+		tag = YYK
+		tag = NG1
+		tag = NG2
+		tag = NG3
+		tag = NG4
+		tag = SHO
+		tag = UUG
+		tag = ACE
+		tag = GH1
+		tag = GH2
+		tag = GH3
+
+		tag = KCC
+		tag = KRK
+		tag = GYK
+		tag = HGH
+	}
+}
+
+Fairy_country = {
+	or = {
+		#8
+		tag = CFA
+		tag = CIR
+		tag = HKM
+		tag = SC2
+		tag = SCA
+		tag = SGS
+		tag = SPG
+		tag = YUK
+		tag = MFA
+
+		tag = UFA
+		tag = CLO
+	}
+}
+
+Human_country = {
+	or = {
+		#6
+		# tag = HKR
+		tag = HUM
+		tag = HU1
+		tag = HU2
+		tag = HU3
+		tag = HU4
+		tag = EMB
+		# tag = HU4
+		# tag = ZYD
+		tag = HU6
+		tag = HU7
+		tag = HU8
+		tag = MHV
+	}
+}
+
+Magician_country = {
+	or = {
+		#5
+		tag = MRS
+		tag = HKR
+		tag = ZYD
+		tag = ALI
+		tag = HU5
+
+		tag = FUJ
+	}
+}
+
+Kappa_country = {
+	or = {
+		#4
+		tag = GRS
+		tag = KAP
+		tag = NIT
+		tag = SAP
+	}
+}
+
+God_country = {
+	or = {
+		#8
+		tag = AKI
+		tag = OKI
+		tag = SKI
+		tag = SRB
+		tag = TEN
+		tag = CCA
+		tag = KTK
+		# tag = IKU
+		tag = WAI
+		tag = HCT
+		tag = HNY
+	}
+}
+
+Pri_youkai_country = {
+	or = {
+		#9
+		# tag = AVE
+		# tag = CHE
+		# tag = EET
+		# tag = INB
+		# tag = KAG
+		tag = KOG
+		tag = MEL
+		# tag = MSD
+		# tag = NIB
+		tag = NMS
+		tag = NUC
+		tag = ONS
+		tag = RMI
+		# tag = RNS
+		# tag = RUH
+		tag = SC1
+		tag = SEI
+		# tag = UDO
+		# tag = WAK
+		tag = SBK
+		tag = MTM
+		tag = MYK
+		
+		tag = MNM
+		tag = ICR
+	}
+}
+
+Beast_country = {
+	or = {
+		#12
+		tag = AVE
+		tag = CHE
+		tag = EET
+		tag = INB
+		tag = KAG
+		# tag = KOG
+		# tag = MEL
+		tag = MSD
+		tag = NIB
+		# tag = NMS
+		# tag = NUC
+		# tag = ONS
+		# tag = RMI
+		tag = RNS
+		tag = RUH
+		# tag = SC1
+		# tag = SEI
+		tag = UDO
+		tag = WAK
+		# tag = SBK
+		tag = KAS
+
+		tag = BYA
+		tag = RGO
+		
+	}
+}
+
+Youkai_country = {
+	or = {
+		#14
+		tag = IKU
+		
+		tag = KUT
+		tag = MAM
+		tag = MHP
+		# tag = ONI
+		tag = SAK
+		tag = SAT
+		tag = UNA
+		tag = UNL
+		tag = YKR
+		tag = YSK
+
+		tag = GOL
+		tag = HUB
+		tag = HB1
+		tag = USZ
+		tag = YMM
+
+		tag = AKO
+		tag = AOO
+		tag = ONI
+	}
+}
+
+Tenggu_country = {
+	or = {
+		#2
+		tag = OTG
+		tag = TEG
+	}
+}
+go_weiwu_condition = {
+	or = {
+        and = {
+            check_variable = { PO_average_mp < 30}
+        }
+
+        and = {
+        	check_variable = { PO_average_mp < 35}
+        	check_variable = { OL_view_value < 65}
+        }
+        
+        and = {
+            has_country_flag = OL_to_pingheng
+            check_variable = { OL_view_type = 0 }
+        }
+
+        and = {
+            has_country_flag = OL_to_weiwu
+            not = { check_variable = { OL_view_type = 2} }
+        }
+
+    }
+}
+
+go_weixin_condition = {
+	or = {
+        and = {
+            check_variable = { PO_average_mp > 70}
+        }
+
+        and = {
+            check_variable = { PO_average_mp > 65}
+            check_variable = { OL_view_value > 50}
+        }
+
+        
+        and = {
+            has_country_flag = OL_to_pingheng
+            check_variable = { OL_view_type = 2 }
+        }
+
+        and = {
+            has_country_flag = OL_to_weixin
+            not = { check_variable = { OL_view_type = 0} }
+        }
+            
+    }
+}
+
+random_leader = {
+	or = {
+		tag = CFA
+		# tag = GH1
+		# tag = GH2
+		# tag = GH3
+		tag = SAP
+		tag = MTM
+		tag = MYK
+		tag = MFA
+		# tag = HKM
+		tag = BYA
+		# tag = ONI
+		tag = UFA
+		tag = GYK
+		# tag = UUG
+		# tag = ACE
+		# tag = NG1
+		# tag = NG2
+		# tag = NG3
+		# tag = NG4
+		# tag = ONS
+	}
+}
+
+lv2_manpower = {
+	NOT = { has_idea = isolation }
+}
+lv3_manpower = {
+	or = {
+		has_war_support > 0.2
+		and = {
+			has_offensive_war = yes
+			has_war_support > 0.15
+		}
+		and = {
+			has_defensive_war = yes
+			has_war_support > 0
+		}
+		
+	}
+	NOT = { has_idea = isolation }
+}
+lv4_manpower = {
+	or = {
+		has_war_support > 0.4
+		and = {
+			has_offensive_war = yes
+			has_war_support > 0.35
+		}
+		and = {
+			has_defensive_war = yes
+			has_war_support > 0.2
+		}
+		
+	}
+	NOT = { has_idea = isolation }
+}
+lv5_manpower = {
+	or = {
+		has_war_support > 0.6
+		and = {
+			has_offensive_war = yes
+			has_war_support > 0.55
+		}
+		and = {
+			has_defensive_war = yes
+			has_war_support > 0.4
+		}
+	}
+	NOT = { has_idea = isolation }
+}
+lv6_manpower = {
+	or = {
+		has_war_support > 0.8
+		and = {
+			has_offensive_war = yes
+			has_war_support > 0.75
+		}
+		and = {
+			has_defensive_war = yes
+			has_war_support > 0.6
+		}
+	}
+	NOT = { has_idea = isolation }
+}
+lv7_manpower = {
+	or = {
+		has_war_support > 1
+		and = {
+			has_offensive_war = yes
+			has_war_support > 0.95
+		}
+		and = {
+			has_defensive_war = yes
+			has_war_support > 0.8
+		}
+	}
+	NOT = { has_idea = isolation }
+}
+
+caidankaiqi = {
+	always = no
+}
+
+ST_origin_same_race = {
+	or = {
+		and = {
+			owner = {
+				has_idea = Beast
+			}
+			check_variable = { ST_origin_race = 0}
+		}
+		and = {
+			owner = {
+				has_idea = Pri_youkai
+			}
+			check_variable = { ST_origin_race = 1}
+		}
+		and = {
+			owner = {
+				has_idea = Youkai
+			}
+			check_variable = { ST_origin_race = 2}
+		}
+		and = {
+			owner = {
+				has_idea = God
+			}
+			check_variable = { ST_origin_race = 3}
+		}
+		and = {
+			owner = {
+				has_idea = Human
+			}
+			check_variable = { ST_origin_race = 4}
+		}
+		and = {
+			owner = {
+				has_idea = Magician
+			}
+			check_variable = { ST_origin_race = 5}
+		}
+		and = {
+			owner = {
+				has_idea = Fairy
+			}
+			check_variable = { ST_origin_race = 6}
+		}
+		and = {
+			owner = {
+				has_idea = Ghost
+			}
+			check_variable = { ST_origin_race = 7}
+		}
+		and = {
+			owner = {
+				has_idea = Kappa
+			}
+			check_variable = { ST_origin_race = 8}
+		}
+		and = {
+			owner = {
+				has_idea = Tenggu
+			}
+			check_variable = { ST_origin_race = 9}
+		}
+	}
+}
+ST_present_same_race = {
+	or = {
+		and = {
+			owner = {
+				has_idea = Beast
+			}
+			check_variable = { ST_present_race = 0}
+		}
+		and = {
+			owner = {
+				has_idea = Pri_youkai
+			}
+			check_variable = { ST_present_race = 1}
+		}
+		and = {
+			owner = {
+				has_idea = Youkai
+			}
+			check_variable = { ST_present_race = 2}
+		}
+		and = {
+			owner = {
+				has_idea = God
+			}
+			check_variable = { ST_present_race = 3}
+		}
+		and = {
+			owner = {
+				has_idea = Human
+			}
+			check_variable = { ST_present_race = 4}
+		}
+		and = {
+			owner = {
+				has_idea = Magician
+			}
+			check_variable = { ST_present_race = 5}
+		}
+		and = {
+			owner = {
+				has_idea = Fairy
+			}
+			check_variable = { ST_present_race = 6}
+		}
+		and = {
+			owner = {
+				has_idea = Ghost
+			}
+			check_variable = { ST_present_race = 7}
+		}
+		and = {
+			owner = {
+				has_idea = Kappa
+			}
+			check_variable = { ST_present_race = 8}
+		}
+		and = {
+			owner = {
+				has_idea = Tenggu
+			}
+			check_variable = { ST_present_race = 9}
+		}
+	}
+}
+
+dont_annex = {
+	or = {
+		and = {
+			ROOT = { 
+				tag = SEI
+
+				not = { has_country_flag = SEI_fankangchenggong }
+
+				not = {
+					has_completed_focus = SEI_sixianggonggu
+					has_completed_focus = SEI_shuliweiyan
+				}
+			}
+		}
+		
+
+		and = {
+			ROOT = { 
+				tag = MRS
+
+				has_country_flag = MRS_lvse
+
+				not = {
+					has_completed_focus = MRS_xiaochuzhongzugehe
+				}
+			}
+		}
+
+		and = {
+			ROOT = { 
+				tag = MRS
+
+				has_country_flag = MRS_hongse
+
+				not = {
+					has_completed_focus = MRS_mofashiyaoguailianbang
+				}
+			}
+		}
+
+		and = {
+			ROOT = { 
+				tag = SCA
+
+				PREV = {
+					tag = CIR
+				}
+
+				has_completed_focus = SCA_gongjizhunbei
+
+				not = {
+					has_completed_focus = SCA_shouhuidongbeiwuzhihu
+				}
+
+				
+			}
+		}
+
+		and = {
+			ROOT = { 
+				tag = YSK
+
+				PREV = {
+					tag = KAP
+				}
+
+				not = {
+					has_completed_focus = YSK_ronghehetong
+				}
+			}
+		}
+
+		and = {
+			ROOT = { 
+				tag = NMS
+
+				PREV = {
+					or = {
+						tag = AVE
+						tag = MAM
+					}
+				}
+
+				not = {
+					has_completed_focus = NMS_duineiyingxianglikuoda
+				}
+			}
+		}
+
+		and = {
+			ROOT = { 
+				tag = NMS
+
+				PREV = {
+					or = {
+						tag = ICR
+						tag = MNM
+					}
+				}
+
+				not = {
+					has_completed_focus = NMS_jiuzhengyaoguaidecuowulinian
+				}
+			}
+		}
+	}
+	
+}
+
+is_same_continent = {
+	or = {
+		and = {
+			capital_scope = {
+				is_on_continent = Gensokyo
+			}
+			PREV = {
+				capital_scope = {
+					is_on_continent = Gensokyo
+				}
+			}
+		}
+		and = {
+			capital_scope = {
+				is_on_continent = Underground
+			}
+			PREV = {
+				capital_scope = {
+					is_on_continent = Underground
+				}
+			}
+		}
+		and = {
+			capital_scope = {
+				is_on_continent = Celestial
+			}
+			PREV = {
+				capital_scope = {
+					is_on_continent = Celestial
+				}
+			}
+		}
+		and = {
+			capital_scope = {
+				is_on_continent = Netherworld
+			}
+			PREV = {
+				capital_scope = {
+					is_on_continent = Netherworld
+				}
+			}
+		}
+		and = {
+			capital_scope = {
+				is_on_continent = Hell
+			}
+			PREV = {
+				capital_scope = {
+					is_on_continent = Hell
+				}
+			}
+		}
+	}
+}

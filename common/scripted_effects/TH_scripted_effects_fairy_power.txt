@@ -1,0 +1,125 @@
+FAPO_defines = {
+	set_variable = { global.FAPO_fp_to_po_ratio_type0 = 0.01}
+	set_variable = { global.FAPO_cons_type0 = 4.5}
+
+	set_variable = { global.FAPO_fp_to_po_ratio_view0 = 0.007}
+	set_variable = { global.FAPO_cons_type1 = 6}
+
+	set_variable = { global.FAPO_fp_to_po_ratio_view0 = 0.004}
+	set_variable = { global.FAPO_cons_type1 = 7.5}
+
+	set_variable = { global.FAPO_extra_gain_cd = 60 }
+	set_variable = { global.FAPO_country_reduced_cd = 121 }
+	set_variable = { global.FAPO_state_reduced_cd = 182 }
+	set_variable = { global.FAPO_reduced_power_gain = 0.4 }
+	set_variable = { global.FAPO_extra_gain = 0.003 }
+	set_variable = { global.FAPO_ROOT_gain_ratio = 0.0008 }
+	set_variable = { global.FAPO_ROOT_gain_days = 100 }
+}
+
+FAPO_modifier_change = {
+	set_variable = { FAPO_extra_gain_cd = global.FAPO_extra_gain_cd}
+	set_variable = { FAPO_country_reduced_cd = global.FAPO_country_reduced_cd}
+	set_variable = { FAPO_state_reduced_cd = global.FAPO_state_reduced_cd}
+	set_variable = { FAPO_reduced_power_gain = global.FAPO_reduced_power_gain}
+	set_variable = { FAPO_extra_gain = global.FAPO_extra_gain}
+	set_variable = { FAPO_ROOT_gain_ratio = global.FAPO_ROOT_gain_ratio}
+	set_variable = { FAPO_ROOT_gain_days = global.FAPO_ROOT_gain_days}
+
+	set_temp_variable = { FAPO_extra_gain_cd_factor_temp = 1}
+	set_temp_variable = { FAPO_country_reduced_cd_factor_temp = 1}
+	set_temp_variable = { FAPO_state_reduced_cd_factor_temp = 1}
+	set_temp_variable = { FAPO_extra_gain_factor_temp = 1}
+	set_temp_variable = { FAPO_ROOT_gain_ratio_factor_temp = 1}
+	set_temp_variable = { FAPO_ROOT_gain_days_factor_temp = 1}
+	add_to_temp_variable = { FAPO_extra_gain_cd_factor_temp = FAPO_extra_gain_cd_factor_add}
+	add_to_temp_variable = { FAPO_country_reduced_cd_factor_temp = FAPO_country_reduced_cd_factor_add}
+	add_to_temp_variable = { FAPO_state_reduced_cd_factor_temp = FAPO_state_reduced_cd_factor_add}
+	add_to_temp_variable = { FAPO_extra_gain_factor_temp = FAPO_extra_gain_factor_add}
+	add_to_temp_variable = { FAPO_ROOT_gain_ratio_factor_temp = FAPO_ROOT_gain_ratio_factor_add}
+	add_to_temp_variable = { FAPO_ROOT_gain_days_factor_temp = FAPO_ROOT_gain_days_factor_add}
+
+	multiply_variable = { FAPO_extra_gain_cd = FAPO_extra_gain_cd_factor_temp}
+	multiply_variable = { FAPO_country_reduced_cd = FAPO_country_reduced_cd_factor_temp}
+	multiply_variable = { FAPO_state_reduced_cd = FAPO_state_reduced_cd_factor_temp}
+	multiply_variable = { FAPO_reduced_power_gain = FAPO_reduced_power_gain_factor_temp}
+	multiply_variable = { FAPO_extra_gain = FAPO_extra_gain_factor_temp}
+	multiply_variable = { FAPO_ROOT_gain_ratio = FAPO_ROOT_gain_ratio_factor_temp}
+	multiply_variable = { FAPO_ROOT_gain_days = FAPO_ROOT_gain_days_factor_temp}
+}
+
+#19 power calculator
+FAPO_calculator = {
+	# set_variable = { global.FAPO_world_num_of_states = 0}
+	# set_variable = { global.FAPO_world_states_infra = 0}
+	set_variable = { FAPO_num_of_states = 0}
+	set_variable = { FAPO_states_infra = 0}
+	# every_state = {
+	# 	add_to_variable = { global.FAPO_world_num_of_states = 1}
+ #    	add_to_variable = { global.FAPO_world_states_infra = 10}
+ #    	subtract_from_variable = { global.FAPO_world_states_infra = infrastructure_level}
+	# }
+    every_owned_state = {
+        limit = {
+        	is_core_of = ROOT
+        }
+		add_to_variable = { PREV.FAPO_num_of_states = 1}
+		add_to_variable = { PREV.FAPO_states_infra = infrastructure_level}	  
+	}
+
+	# value = n-(a1+a2+a3+...+an)/4
+
+	# set_variable = { FAPO_to_po = FAPO_states_infra}
+	# divide_variable = { FAPO_to_po = 5}
+	# divide_variable = { FAPO_to_po = -1}
+	# add_to_variable = { FAPO_to_po = FAPO_num_of_states }
+	# multiply_variable = { FAPO_to_po = global.FAPO_fp_to_po_ratio}
+
+	# value = constype-(a1+a2+a3+...+an)/n
+
+	set_variable = { FAPO_to_po = FAPO_states_infra}
+	divide_variable = { FAPO_to_po = FAPO_num_of_states}
+	set_variable = {  FAPO_average = FAPO_to_po }
+	divide_variable = { FAPO_to_po = -1}
+
+	#ratio *
+
+	if = {
+		limit = {
+			check_variable = { OL_view_type = 0}
+		}
+		add_to_variable = { FAPO_to_po = global.FAPO_cons_type0 }
+		multiply_variable = { FAPO_to_po = global.FAPO_fp_to_po_ratio_type0}
+	}
+	if = {
+		limit = {
+			check_variable = { OL_view_type = 1}
+		}
+		add_to_variable = { FAPO_to_po = global.FAPO_cons_type1 }
+		multiply_variable = { FAPO_to_po = global.FAPO_fp_to_po_ratio_type1}
+	}
+	if = {
+		limit = {
+			check_variable = { OL_view_type = 2}
+		}
+		add_to_variable = { FAPO_to_po = global.FAPO_cons_type2 }
+		multiply_variable = { FAPO_to_po = global.FAPO_fp_to_po_ratio_type2}
+	}
+	
+
+ 
+	if = {
+		limit = {
+			has_country_flag = FAPO_extra_gain_cd
+		}
+		add_to_variable = { FAPO_to_po = FAPO_extra_gain }
+	}
+
+	if = {
+		limit = {
+			has_country_flag = FAPO_ROOT_gain_days
+		}
+		add_to_variable = { FAPO_to_po = FAPO_ROOT_extra_gain }
+	}
+
+}

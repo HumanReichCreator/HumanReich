@@ -1,0 +1,46 @@
+
+state={
+	id=252
+	name="STATE_252"
+	resources={
+
+		powder=5.000
+		metal=5.000
+		gas=0.000
+		crystal=0.000
+	}
+
+	history={
+		143.7.1 = {
+			owner = HUM
+			add_core_of = HUM
+			buildings = {
+				infrastructure =9
+				industrial_complex = 8
+				arms_factory = 2
+			}
+		}
+		146.1.1 = {
+			owner = HUM
+			add_core_of = HUM
+			add_core_of = HU6
+			add_core_of = HU7
+			add_core_of = HU8
+			buildings = {
+				infrastructure =8
+				industrial_complex = 8
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		230 848 1217 1804 2419 2891 3168 3169 3171 3172 3173 3177 3185 3470 3472 3474 3475 
+	}
+	manpower=8706.0
+	buildings_max_level_factor=1.000
+	state_category=s10
+}

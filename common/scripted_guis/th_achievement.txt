@@ -1,0 +1,139 @@
+scripted_gui = {
+	th_achievements_window_button_open_effect = {
+		context_type = player_context
+		
+		window_name = "th_achievements_window_button_open"
+
+		parent_window_token = top_bar
+        
+		visible = {
+
+		}
+		
+		effects = {
+			th_achievements_window_button_click = {
+				if = {
+					limit = {
+						check_variable = { AC_visible = 1}
+					}
+					set_variable = { AC_visible = 0}
+					else = {
+						set_variable = { AC_visible = 1}
+					}
+				}
+			}
+		}
+
+		triggers = {
+			th_achievements_window_button_visible = {
+				always = no
+			}
+		}
+        
+	}
+
+	th_achievements_window_effect = {
+		context_type = player_context
+		
+		window_name = "th_achievements_window"
+
+		parent_window_token = top_bar
+        
+		visible = {
+            check_variable = {
+            	AC_visible = 1
+            }
+		}
+		
+		effects = {
+			close_button_click = {
+				if = {
+					limit = {
+						check_variable = { AC_visible = 1}
+					}
+					set_variable = { AC_visible = 0}
+					else = {
+						set_variable = { AC_visible = 1}
+					}
+				}
+			}
+		}
+
+		triggers = {
+			achievements_cant_get1_visible = {
+				is_ironman = no
+			}
+			achievements_cant_get2_visible = {
+				is_ironman = no
+			}
+
+
+
+			achievement_entry_bg_completed_visible = {
+				meta_trigger = {
+			        text = {
+			            has_country_flag = AC_completed_number_[AC]
+			        }
+			        AC = "[?v]"
+			    }
+			}
+			achievement_entry_bg_cant_visible = {
+				not = {
+					achievement_available = yes
+				}
+			}
+
+
+
+
+			achievement_icon3_visible = {
+				achievement_available = yes
+			}
+			achievement_icon2_visible = {
+				achievement_available = yes
+			}
+			achievement_icon1_click_enabled = {
+				achievement_available = yes
+				
+				hidden_trigger = {
+					always = no
+				}
+			}
+			achievement_icon2_click_enabled = {
+				achievement_condition = yes
+				
+				hidden_trigger = {
+					always = no
+				}
+			}
+		}
+
+		dynamic_lists = {
+			# this is the main grid that contains added countries
+			achievement_grid = {
+				array = current_array #the array that will be used for populating the array
+				change_scope = no # since our array contains scope objects (countries) we can set change_scope to yes, which will chance current scope to array element while displaying the lists
+				# index = i current index and value is also stored as temp variables and can be used in effects/triggers if wanted. You can rename them to another temp variables
+				# value = v
+				entry_container = th_achievement_entry # gui container name of the entry (this is actually scripted localization. you can have different containers depending on scope)
+			}
+		}
+
+		properties = {
+            achievement_icon1 = {
+                image = "[achievement_flag_get]"
+            }
+            achievement_icon2= {
+                image = "[achievement_flag_get]"
+            }
+            achievement_icon3= {
+                image = "[achievement_flag_get]"
+            }
+            achievement_difficult = {
+                image = "[achievement_difficult_get]"
+            }
+		}
+        
+	}
+}
+

@@ -1,0 +1,113 @@
+﻿# capital = 412
+capital = 415
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+            spell_card = 1
+            buqiang117 = 1
+            
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+            zhanchangzhihui140 = 1
+            
+        #工程学 
+            jichushuxue = 1
+
+        #专用工程学
+
+        #工业
+            production_theory = 1
+            org_production = 1
+            
+        #专用工业
+
+        #种族
+            
+    }
+}
+146.1.1={
+    add_ideas = {
+    Magician
+    Village
+    close4
+    dove3
+    close_border
+     
+    }
+    oob = "HU5_146"
+    set_politics = {
+        ruling_party = guli
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 0
+        guli = 100
+        neworder = 0
+        oldorder = 0
+        fandong = 0
+    }
+
+    #others#
+}
+
+create_country_leader = {
+    # name = "Council"
+    name = "村委会"
+    desc = ""
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    ideology = guli_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Council"
+    name = "村委会"
+    desc = ""
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    ideology = fandong_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Council"
+    name = "村委会"
+    desc = ""
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    ideology = neworder_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Council"
+    name = "村委会"
+    desc = ""
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    ideology = qinwai_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Council"
+    name = "村委会"
+    desc = ""
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    ideology = oldorder_type
+    traits = {
+        #warrior_code
+    }
+}
+

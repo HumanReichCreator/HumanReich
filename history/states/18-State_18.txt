@@ -1,0 +1,30 @@
+state={
+	id=18
+	name="STATE_18"
+
+	resources={
+		energy = 0
+		powder = 0.0
+		metal = 0
+		gas = 3.0
+		crystal = 3.0
+	}
+
+	history={
+       	146.1.1 = {
+			owner = MHP
+			add_core_of = MHP
+			buildings = {
+				infrastructure = 3
+				industrial_complex = 1
+				arms_factory = 1
+			}
+       	}
+	}
+	provinces={
+		5 326 356 684 744 904 925 1041 1152 1206 1338 1376 1467 1527 1586 1668 1930 1936 2164 2511 2528 2576 2592 2596 
+	}
+	state_category=s7
+	manpower=2696.0
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,576 @@
+# unit_base is the base value used for evaluating how important it is to deploy the various categories
+# Written by Henrik "Groogy" Hansson
+#AI 倾向
+# 0 [12545] conquer
+#  1 [12552] colonize
+#  2 [12546] explore
+#  3 [11199] antagonize
+#  4 [11200] befriend
+#  5 [11198] protect
+#  6 [14731] consider_weak
+#  7 [10878] influence
+#  8 [10457] alliance
+#  9 [12547] build_ship
+# 10 [14291] build_airplane
+# 11 [12548] build_army
+# 12 [12550] build_building
+# 13 [12551] research_tech
+# 15 [10536] garrison
+# 17 [13331] contain
+# 18 [13903] invade
+# 19 [13808] unit_ratio
+# 20 [14277] role_ratio
+# 21 [14321] land_xp_spend_priority
+# 22 [14322] pp_spend_priority
+# 23 [14186] template_prio
+# 24 [14222] template_xp_reserve
+# 25 [14236] equipment_stockpile_surplus_ratio
+# 27 [13988] air_factory_balance
+# 28 [13990] equipment_production_factor
+# 29 [14920] equipment_variant_production_factor
+# 30 [14919] equipment_production_min_factories
+# 31 [11736] ignore
+# 32 [14143] area_priority
+# 33 [14171] send_volunteers_desire
+# 34 [12569] occupation_policy
+# 35 [12188] support
+# 36 [14353] naval_avoid_region
+# 38 [14879] save_equipment
+# 39 [14916] pp_spend_amount
+# 40 [10111] declare_war
+# 41 [14900] ignore_army_incompetence
+# 42 [14968] spare_unit_factor
+# 43 [14902] dont_join_wars_with
+# 44 [14904] added_military_to_civilian_factory_ratio
+# 45 [14903] factory_build_score_factor
+# 46 [14905] ignore_claim
+# 47 [14907] dockyard_to_military_factory_ratio
+# 48 [14983] dont_defend_ally_borders
+# 49 [14984] force_defend_ally_borders
+
+AKI_taofajiduanshili = { #
+	# reversed = yes
+	enable = {
+		tag = AKI
+        has_country_flag = AKI_lv_win_FLAG
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "HU4"			
+		value = 100
+	}
+}
+
+AKI_taofapantu = { #
+	# reversed = yes
+	enable = {
+		tag = AKI
+        has_country_flag = AKI_he_win_FLAG
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "HU1"			
+		value = 100
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "HU2"			
+		value = 100
+	}
+}
+
+AKI_prepare_for_war = {
+	enable = {
+        has_country_flag = AKI_jingong_flag
+	}
+	
+	abort = {
+		has_war_with = AKI
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "AKI"
+		value = 100
+	}
+
+}
+
+AKI_prepare_for_war_SGS = {
+	enable = {
+		tag = AKI
+        has_country_flag = AKI_jingong_SGS_flag
+	}
+	
+	abort = {
+		has_war_with = SGS
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "SGS"
+		value = 100
+	}
+
+}
+
+AKI_prepare_for_war_MEL = {
+	enable = {
+		tag = AKI
+        has_country_flag = AKI_jingong_MEL_flag
+	}
+	
+	abort = {
+		has_war_with = MEL
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "MEL"
+		value = 100
+	}
+
+}
+
+AKI_prepare_for_war_GH1 = {
+	enable = {
+		tag = AKI
+        has_country_flag = AKI_jingong_GH1_flag
+	}
+	
+	abort = {
+		has_war_with = GH1
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "GH1"
+		value = 100
+	}
+
+}
+
+AKI_prepare_for_war_GH2 = {
+	enable = {
+		tag = AKI
+        has_country_flag = AKI_jingong_GH2_flag
+	}
+	
+	abort = {
+		has_war_with = GH2
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "GH2"
+		value = 100
+	}
+
+}
+
+AKI_prepare_for_war_GH3 = {
+	enable = {
+		tag = AKI
+        has_country_flag = AKI_jingong_GH3_flag
+	}
+	
+	abort = {
+		has_war_with = GH3
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "GH3"
+		value = 100
+	}
+
+}
+
+AKI_prepare_for_war_HU6 = {
+	enable = {
+		tag = AKI
+        has_country_flag = AKI_jingong_HU6_flag
+	}
+	
+	abort = {
+		has_war_with = HU6
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "HU6"
+		value = 100
+	}
+
+}
+
+AKI_help_for_war_renlei = {
+	enable = {
+		tag = AKI
+		AKI = { is_in_faction_with = HU1 }
+		AKI = { is_in_faction_with = HU2 }
+		AKI = { is_in_faction_with = HU4 }
+	}
+	
+	abort = {
+		AKI = { is_subject = yes }
+	}
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = "HU1"
+		value = 100
+	}
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = "HU2"
+		value = 100
+	}
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = "HU4"
+		value = 100
+	}
+
+}
+
+HU1_help_for_AKI = {
+	enable = {
+		tag = HU1
+		HU1 = { is_in_faction_with = AKI }
+	}
+	abort = {
+		AKI = { is_subject = yes }
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "AKI"			
+		value = 200
+	}
+	
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = "AKI"
+		value = 100
+	}
+}
+
+HU2_help_for_AKI = {
+	enable = {
+		tag = HU2
+		HU2 = { is_in_faction_with = AKI }
+	}
+	abort = {
+		AKI = { is_subject = yes }
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "AKI"			
+		value = 200
+	}
+	
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = "AKI"
+		value = 100
+	}
+}
+
+HU3_help_for_AKI = {
+	enable = {
+		tag = HU3
+		HU3 = { is_in_faction_with = AKI }
+	}
+	abort = {
+		AKI = { is_subject = yes }
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "AKI"			
+		value = 200
+	}
+	
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = "AKI"
+		value = 100
+	}
+}
+
+HU4_help_for_AKI = {
+	enable = {
+		tag = HU4
+		HU4 = { is_in_faction_with = AKI }
+	}
+	abort = {
+		AKI = { is_subject = yes }
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "AKI"			
+		value = 200
+	}
+	
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = "AKI"
+		value = 100
+	}
+}
+
+HU3_volunteers_support_AKI = {
+
+	# reversed = yes
+
+	enable = {
+
+			tag = HU3
+
+            has_idea = AKI_laiziqiushendezhichi_idea
+	}
+
+	abort = {
+	or = {
+        NOT = { HU3 = { has_idea = AKI_laiziqiushendezhichi_idea } }
+		HU3 = { is_subject = yes }
+		AKI = { is_subject = yes }
+	}
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "AKI"			
+		value = 100
+	}
+
+	ai_strategy = {
+		type = support
+		id = "AKI"			
+		value = 100
+	}
+
+}
+
+AKI_volunteers_support_HU3 = {
+
+	# reversed = yes
+
+	enable = {
+
+			tag = AKI
+
+            HU3 = { has_idea = AKI_laiziqiushendezhichi_idea }
+	}
+	abort = {
+	or = {
+        NOT = { HU3 = { has_idea = AKI_laiziqiushendezhichi_idea } }
+		HU3 = { is_subject = yes }
+		AKI = { is_subject = yes }
+	}
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "HU3"			
+		value = 100
+	}
+
+	ai_strategy = {
+		type = support
+		id = "HU3"			
+		value = 100
+	}
+
+}
+
+TEG_volunteers_support_AKI = {
+
+	# reversed = yes
+
+	enable = {
+
+			tag = TEG
+
+            AKI = { has_government = qinwai }
+	}
+
+	abort = {
+	or = {
+		TEG = { is_subject = yes }
+		AKI = { is_subject = yes }
+	}
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "AKI"			
+		value = 50
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "AKI"			
+		value = 100
+	}
+
+	ai_strategy = {
+		type = support
+		id = "AKI"			
+		value = 100
+	}
+
+}
+
+NIT_volunteers_support_AKI = {
+
+	# reversed = yes
+
+	enable = {
+
+			tag = NIT
+
+            AKI = { has_government = qinwai }
+	}
+
+	abort = {
+	or = {
+		NIT = { is_subject = yes }
+		AKI = { is_subject = yes }
+	}
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "AKI"			
+		value = 50
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "AKI"			
+		value = 100
+	}
+
+	ai_strategy = {
+		type = support
+		id = "AKI"			
+		value = 100
+	}
+
+}
+
+AKI_cursed_HU4 = {
+	enable = {
+		tag = AKI
+		has_war_with = HU4	
+	}
+	abort = {
+		NOT = { has_war_with = HU4 }	
+	}
+	
+
+	ai_strategy = {
+		type = ignore
+		id = "TEG"
+		value = 100
+	}
+	ai_strategy = {
+		type = ignore
+		id = "SAK"
+		value = 100
+	}
+	ai_strategy = {
+		type = ignore
+		id = "HU3"
+		value = 100
+	}
+	ai_strategy = {
+		type = ignore
+		id = "SGS"
+		value = 100
+	}
+}
+
+AKI_cursed_HU1 = {
+	enable = {
+		tag = AKI
+		has_war_with = HU1	
+	}
+	abort = {
+		NOT = { has_war_with = HU1 }	
+	}
+	
+
+	ai_strategy = {
+		type = ignore
+		id = "TEG"
+		value = 100
+	}
+	ai_strategy = {
+		type = ignore
+		id = "SAK"
+		value = 100
+	}
+	ai_strategy = {
+		type = ignore
+		id = "HU3"
+		value = 100
+	}
+	ai_strategy = {
+		type = ignore
+		id = "SGS"
+		value = 100
+	}
+}
+
+AKI_xinanliancun = { #
+	# reversed = yes
+	enable = {
+		tag = AKI
+        has_completed_focus = AKI_cunluodalianhe
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "HU1"			
+		value = 200
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "HU2"			
+		value = 200
+	}
+	ai_strategy = {
+		type = befriend
+		id = "HU3"			
+		value = 200
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "HU4"			
+		value = 200
+	}
+
+}
+

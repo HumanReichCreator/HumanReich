@@ -1,0 +1,34 @@
+
+state={
+	id=201
+	name="STATE_201"
+	resources={
+		energy = 8
+		powder=0.000
+		metal=0.000
+		gas=35.000
+		crystal=0.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = YKR
+			add_core_of = YKR
+			buildings = {
+				infrastructure =4
+				industrial_complex = 7
+				arms_factory = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		95 99 793 866 1233 1566 1624 1968 2258 5722 5724 5726 5727 5730 5732 5733 5734 5735 5736 5737 5738 5739 
+	}
+	manpower=1743.0
+	buildings_max_level_factor=1.000
+	state_category=s10
+}

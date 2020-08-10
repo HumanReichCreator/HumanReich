@@ -1,0 +1,35 @@
+
+state={
+	id=198
+	name="STATE_198"
+	resources={
+
+		powder=0.000
+		metal=0.000
+		gas=5.000
+		crystal=5.000
+	}
+
+	history={
+		146.1.1 = {
+			owner = MSD
+			add_core_of = MSD
+			add_claim_by = HKR
+			buildings = {
+				infrastructure =2
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		78 206 862 1355 2375 3828 3829 3831 4167 4168 4169 4519 
+	}
+	manpower=631.0
+	buildings_max_level_factor=1.000
+	state_category=s2
+}

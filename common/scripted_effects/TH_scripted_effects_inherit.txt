@@ -1,0 +1,3152 @@
+# buffs_inherit = {
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = CIR_yaojingyoujidui_tech }
+# 		}
+# 		set_technology = {
+# 			CIR_yaojingyoujidui_tech = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = SEI_shiyingfuzadixing_tech }
+# 		}
+# 		set_technology = {
+# 			SEI_shiyingfuzadixing_tech = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = TEG_shandigongjianzhunbei_tech }
+# 		}
+# 		set_technology = {
+# 			TEG_shandigongjianzhunbei_tech = 1
+# 		}
+# 	}
+# }
+
+# discover_race_inherit = {
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = yanjiujingshen1 }
+# 		}
+# 		set_technology = {
+# 			yanjiujingshen1 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = yanjiujingshen2 }
+# 		}
+# 		set_technology = {
+# 			yanjiujingshen2 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = yanjiujingshen3 }
+# 		}
+# 		set_technology = {
+# 			yanjiujingshen3 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = yanjiujingshen4 }
+# 		}
+# 		set_technology = {
+# 			yanjiujingshen4 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = yanjiujingshen5 }
+# 		}
+# 		set_technology = {
+# 			yanjiujingshen5 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = gaonenglinglihuoyao1 }
+# 		}
+# 		set_technology = {
+# 			gaonenglinglihuoyao1 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = gaonenglinglihuoyao2 }
+# 		}
+# 		set_technology = {
+# 			gaonenglinglihuoyao2 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = gaonenglinglihuoyao3 }
+# 		}
+# 		set_technology = {
+# 			gaonenglinglihuoyao3 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = gaonenglinglihuoyao4 }
+# 		}
+# 		set_technology = {
+# 			gaonenglinglihuoyao4 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = gaonenglinglihuoyao5 }
+# 		}
+# 		set_technology = {
+# 			gaonenglinglihuoyao5 = 1
+# 		}
+# 	}
+# }
+
+# electronic_ma_inherit = {
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = lingliganying147 }
+# 		}
+# 		set_technology = {
+# 			lingliganying147 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = lingliganying152 }
+# 		}
+# 		set_technology = {
+# 			lingliganying152 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = lingliganying157 }
+# 		}
+# 		set_technology = {
+# 			lingliganying157 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = lingliganying162 }
+# 		}
+# 		set_technology = {
+# 			lingliganying162 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jiemigai149 }
+# 		}
+# 		set_technology = {
+# 			jiemigai149 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jiemigai154 }
+# 		}
+# 		set_technology = {
+# 			jiemigai154 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jiemigai159 }
+# 		}
+# 		set_technology = {
+# 			jiemigai159 = 1
+# 		}
+# 	}
+# }
+
+# electronic_mechanical_engineering_inherit = {
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jichushuxue }
+# 		}
+# 		set_technology = {
+# 			jichushuxue = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shuxuegongju }
+# 		}
+# 		set_technology = {
+# 			shuxuegongju = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = lingben }
+# 		}
+# 		set_technology = {
+# 			lingben = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = waike }
+# 		}
+# 		set_technology = {
+# 			waike = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jisuangongju144 }
+# 		}
+# 		set_technology = {
+# 			jisuangongju144 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jisuangongju154 }
+# 		}
+# 		set_technology = {
+# 			jisuangongju154 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jisuangongju159 }
+# 		}
+# 		set_technology = {
+# 			jisuangongju159 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = lingkejiehe149 }
+# 		}
+# 		set_technology = {
+# 			lingkejiehe149 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = tongyililun144 }
+# 		}
+# 		set_technology = {
+# 			tongyililun144 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = tongyililun154 }
+# 		}
+# 		set_technology = {
+# 			tongyililun154 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = tongyililun159 }
+# 		}
+# 		set_technology = {
+# 			tongyililun159 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = tongxunlilun }
+# 		}
+# 		set_technology = {
+# 			tongxunlilun = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jiami137 }
+# 		}
+# 		set_technology = {
+# 			jiami137 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jiami142 }
+# 		}
+# 		set_technology = {
+# 			jiami142 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jiami147 }
+# 		}
+# 		set_technology = {
+# 			jiami147 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jiami152 }
+# 		}
+# 		set_technology = {
+# 			jiami152 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jiami157 }
+# 		}
+# 		set_technology = {
+# 			jiami157 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jiami162 }
+# 		}
+# 		set_technology = {
+# 			jiami162 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jiemi137 }
+# 		}
+# 		set_technology = {
+# 			jiemi137 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jiemi142 }
+# 		}
+# 		set_technology = {
+# 			jiemi142 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jiemi147 }
+# 		}
+# 		set_technology = {
+# 			jiemi147 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jiemi152 }
+# 		}
+# 		set_technology = {
+# 			jiemi152 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jiemi157 }
+# 		}
+# 		set_technology = {
+# 			jiemi157 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jiemi162 }
+# 		}
+# 		set_technology = {
+# 			jiemi162 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = lingganleida142 }
+# 		}
+# 		set_technology = {
+# 			lingganleida142 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = dimianjiance }
+# 		}
+# 		set_technology = {
+# 			dimianjiance = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = lingganleida152 }
+# 		}
+# 		set_technology = {
+# 			lingganleida152 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = kongzhongjiance }
+# 		}
+# 		set_technology = {
+# 			kongzhongjiance = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = lingganleida162 }
+# 		}
+# 		set_technology = {
+# 			lingganleida162 = 1
+# 		}
+# 	}
+# }
+
+# electronic_sc_inherit = {
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = wuxiandian147 }
+# 		}
+# 		set_technology = {
+# 			wuxiandian147 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = wuxiandian152 }
+# 		}
+# 		set_technology = {
+# 			wuxiandian152 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = wuxiandian157 }
+# 		}
+# 		set_technology = {
+# 			wuxiandian157 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = wuxiandian162 }
+# 		}
+# 		set_technology = {
+# 			wuxiandian162 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jiamigai149 }
+# 		}
+# 		set_technology = {
+# 			jiamigai149 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jiamigai154 }
+# 		}
+# 		set_technology = {
+# 			jiamigai154 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jiamigai159 }
+# 		}
+# 		set_technology = {
+# 			jiamigai159 = 1
+# 		}
+# 	}
+# }
+
+# fairy_race_inherit = {
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = ziranronghe1 }
+# 		}
+# 		set_technology = {
+# 			ziranronghe1 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = ziranronghe2 }
+# 		}
+# 		set_technology = {
+# 			ziranronghe2 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = ziranronghe3 }
+# 		}
+# 		set_technology = {
+# 			ziranronghe3 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = ziranronghe4 }
+# 		}
+# 		set_technology = {
+# 			ziranronghe4 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = ziranronghe5 }
+# 		}
+# 		set_technology = {
+# 			ziranronghe5 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = ziranenhui1 }
+# 		}
+# 		set_technology = {
+# 			ziranenhui1 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = ziranenhui2 }
+# 		}
+# 		set_technology = {
+# 			ziranenhui2 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = ziranenhui3 }
+# 		}
+# 		set_technology = {
+# 			ziranenhui3 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = ziranenhui4 }
+# 		}
+# 		set_technology = {
+# 			ziranenhui4 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = ziranenhui5 }
+# 		}
+# 		set_technology = {
+# 			ziranenhui5 = 1
+# 		}
+# 	}
+# }
+
+# ghost_race_inherit = {
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shitihua1 }
+# 		}
+# 		set_technology = {
+# 			shitihua1 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shitihua2 }
+# 		}
+# 		set_technology = {
+# 			shitihua2 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shitihua3 }
+# 		}
+# 		set_technology = {
+# 			shitihua3 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shitihua4 }
+# 		}
+# 		set_technology = {
+# 			shitihua4 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shitihua5 }
+# 		}
+# 		set_technology = {
+# 			shitihua5 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = ziyuanshentou1 }
+# 		}
+# 		set_technology = {
+# 			ziyuanshentou1 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = ziyuanshentou2 }
+# 		}
+# 		set_technology = {
+# 			ziyuanshentou2 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = ziyuanshentou3 }
+# 		}
+# 		set_technology = {
+# 			ziyuanshentou3 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = ziyuanshentou4 }
+# 		}
+# 		set_technology = {
+# 			ziyuanshentou4 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = ziyuanshentou5 }
+# 		}
+# 		set_technology = {
+# 			ziyuanshentou5 = 1
+# 		}
+# 	}
+# }
+
+# god_race_inherit = {
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shengetansuo1 }
+# 		}
+# 		set_technology = {
+# 			shengetansuo1 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shengetansuo2 }
+# 		}
+# 		set_technology = {
+# 			shengetansuo2 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shengetansuo3 }
+# 		}
+# 		set_technology = {
+# 			shengetansuo3 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shengetansuo4 }
+# 		}
+# 		set_technology = {
+# 			shengetansuo4 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shengetansuo5 }
+# 		}
+# 		set_technology = {
+# 			shengetansuo5 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shengge1 }
+# 		}
+# 		set_technology = {
+# 			shengge1 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shengge2 }
+# 		}
+# 		set_technology = {
+# 			shengge2 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shengge3 }
+# 		}
+# 		set_technology = {
+# 			shengge3 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shengge4 }
+# 		}
+# 		set_technology = {
+# 			shengge4 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shengge5 }
+# 		}
+# 		set_technology = {
+# 			shengge5 = 1
+# 		}
+# 	}
+# }
+
+# human_race_inherit = {
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = kongjuyizhiji1 }
+# 		}
+# 		set_technology = {
+# 			kongjuyizhiji1 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = kongjuyizhiji2 }
+# 		}
+# 		set_technology = {
+# 			kongjuyizhiji2 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = kongjuyizhiji3 }
+# 		}
+# 		set_technology = {
+# 			kongjuyizhiji3 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = kongjuyizhiji4 }
+# 		}
+# 		set_technology = {
+# 			kongjuyizhiji4 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = kongjuyizhiji5 }
+# 		}
+# 		set_technology = {
+# 			kongjuyizhiji5 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shengchandongli1 }
+# 		}
+# 		set_technology = {
+# 			shengchandongli1 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shengchandongli2 }
+# 		}
+# 		set_technology = {
+# 			shengchandongli2 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shengchandongli3 }
+# 		}
+# 		set_technology = {
+# 			shengchandongli3 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shengchandongli4 }
+# 		}
+# 		set_technology = {
+# 			shengchandongli4 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shengchandongli5 }
+# 		}
+# 		set_technology = {
+# 			shengchandongli5 = 1
+# 		}
+# 	}
+# }
+
+# industry_inherit = {
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = production_theory }
+# 		}
+# 		set_technology = {
+# 			production_theory = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = org_production }
+# 		}
+# 		set_technology = {
+# 			org_production = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jizhongshenchan145 }
+# 		}
+# 		set_technology = {
+# 			jizhongshenchan145 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jizhongshenchan148 }
+# 		}
+# 		set_technology = {
+# 			jizhongshenchan148 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jizhongshenchan151 }
+# 		}
+# 		set_technology = {
+# 			jizhongshenchan151 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jizhongshenchan156 }
+# 		}
+# 		set_technology = {
+# 			jizhongshenchan156 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jizhongshenchan161 }
+# 		}
+# 		set_technology = {
+# 			jizhongshenchan161 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = fensanshenchan145 }
+# 		}
+# 		set_technology = {
+# 			fensanshenchan145 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = fensanshenchan148 }
+# 		}
+# 		set_technology = {
+# 			fensanshenchan148 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = fensanshenchan151 }
+# 		}
+# 		set_technology = {
+# 			fensanshenchan151 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = fensanshenchan156 }
+# 		}
+# 		set_technology = {
+# 			fensanshenchan156 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = fensanshenchan161 }
+# 		}
+# 		set_technology = {
+# 			fensanshenchan161 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jianzaojishu130 }
+# 		}
+# 		set_technology = {
+# 			jianzaojishu130 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jianzaojishu140 }
+# 		}
+# 		set_technology = {
+# 			jianzaojishu140 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jianzaojishu146 }
+# 		}
+# 		set_technology = {
+# 			jianzaojishu146 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jianzaojishu151 }
+# 		}
+# 		set_technology = {
+# 			jianzaojishu151 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jianzaojishu156 }
+# 		}
+# 		set_technology = {
+# 			jianzaojishu156 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jianzaojishu161 }
+# 		}
+# 		set_technology = {
+# 			jianzaojishu161 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jijianjianzao140 }
+# 		}
+# 		set_technology = {
+# 			jijianjianzao140 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jijianjianzao146 }
+# 		}
+# 		set_technology = {
+# 			jijianjianzao146 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jijianjianzao151 }
+# 		}
+# 		set_technology = {
+# 			jijianjianzao151 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jijianjianzao156 }
+# 		}
+# 		set_technology = {
+# 			jijianjianzao156 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jijianjianzao161 }
+# 		}
+# 		set_technology = {
+# 			jijianjianzao161 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = minyongjianzao146 }
+# 		}
+# 		set_technology = {
+# 			minyongjianzao146 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = junyongjianzao151 }
+# 		}
+# 		set_technology = {
+# 			junyongjianzao151 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = minyongjianzao156 }
+# 		}
+# 		set_technology = {
+# 			minyongjianzao156 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = junyongjianzao161 }
+# 		}
+# 		set_technology = {
+# 			junyongjianzao161 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = fangkongpao151 }
+# 		}
+# 		set_technology = {
+# 			fangkongpao151 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = fangkongpao161 }
+# 		}
+# 		set_technology = {
+# 			fangkongpao161 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = ziyuankaifa130 }
+# 		}
+# 		set_technology = {
+# 			ziyuankaifa130 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = ziyuankaifa140 }
+# 		}
+# 		set_technology = {
+# 			ziyuankaifa140 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = ziyuankaifa146 }
+# 		}
+# 		set_technology = {
+# 			ziyuankaifa146 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = ziyuankaifa150 }
+# 		}
+# 		set_technology = {
+# 			ziyuankaifa150 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = ziyuankaifa155 }
+# 		}
+# 		set_technology = {
+# 			ziyuankaifa155 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = ziyuankaifa160 }
+# 		}
+# 		set_technology = {
+# 			ziyuankaifa160 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shiyou146 }
+# 		}
+# 		set_technology = {
+# 			shiyou146 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shiyou150 }
+# 		}
+# 		set_technology = {
+# 			shiyou150 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shiyou155 }
+# 		}
+# 		set_technology = {
+# 			shiyou155 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shiyou160 }
+# 		}
+# 		set_technology = {
+# 			shiyou160 = 1
+# 		}
+# 	}
+# }
+
+# industry_ma_inherit = {
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = linglishengchan130 }
+# 		}
+# 		set_technology = {
+# 			linglishengchan130 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = linglishengchan140 }
+# 		}
+# 		set_technology = {
+# 			linglishengchan140 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = linglishengchan145 }
+# 		}
+# 		set_technology = {
+# 			linglishengchan145 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = linglishengchan150 }
+# 		}
+# 		set_technology = {
+# 			linglishengchan150 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = linglishengchan155 }
+# 		}
+# 		set_technology = {
+# 			linglishengchan155 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = linglishengchan160 }
+# 		}
+# 		set_technology = {
+# 			linglishengchan160 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = waijiefuzhushengchan147 }
+# 		}
+# 		set_technology = {
+# 			waijiefuzhushengchan147 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = waijiefuzhushengchan152 }
+# 		}
+# 		set_technology = {
+# 			waijiefuzhushengchan152 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = waijiefuzhushengchan157 }
+# 		}
+# 		set_technology = {
+# 			waijiefuzhushengchan157 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = waijiefuzhushengchan162 }
+# 		}
+# 		set_technology = {
+# 			waijiefuzhushengchan162 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = lingqi140 }
+# 		}
+# 		set_technology = {
+# 			lingqi140 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = lingqi145 }
+# 		}
+# 		set_technology = {
+# 			lingqi145 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = lingqi149 }
+# 		}
+# 		set_technology = {
+# 			lingqi149 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = lingqi154 }
+# 		}
+# 		set_technology = {
+# 			lingqi154 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = lingqi159 }
+# 		}
+# 		set_technology = {
+# 			lingqi159 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = yaoshi145 }
+# 		}
+# 		set_technology = {
+# 			yaoshi145 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = yaoshi149 }
+# 		}
+# 		set_technology = {
+# 			yaoshi149 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = yaoshi154 }
+# 		}
+# 		set_technology = {
+# 			yaoshi154 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = yaoshi159 }
+# 		}
+# 		set_technology = {
+# 			yaoshi159 = 1
+# 		}
+# 	}
+# }
+
+# industry_sc_inherit = {
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = fangwaijieshengchan130 }
+# 		}
+# 		set_technology = {
+# 			fangwaijieshengchan130 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = fangwaijieshengchan140 }
+# 		}
+# 		set_technology = {
+# 			fangwaijieshengchan140 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = fangwaijieshengchan145 }
+# 		}
+# 		set_technology = {
+# 			fangwaijieshengchan145 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = fangwaijieshengchan150 }
+# 		}
+# 		set_technology = {
+# 			fangwaijieshengchan150 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = fangwaijieshengchan155 }
+# 		}
+# 		set_technology = {
+# 			fangwaijieshengchan155 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = fangwaijieshengchan160 }
+# 		}
+# 		set_technology = {
+# 			fangwaijieshengchan160 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = linglifuzhushengchan147 }
+# 		}
+# 		set_technology = {
+# 			linglifuzhushengchan147 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = linglifuzhushengchan152 }
+# 		}
+# 		set_technology = {
+# 			linglifuzhushengchan152 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = linglifuzhushengchan157 }
+# 		}
+# 		set_technology = {
+# 			linglifuzhushengchan157 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = linglifuzhushengchan162 }
+# 		}
+# 		set_technology = {
+# 			linglifuzhushengchan162 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jinshu140 }
+# 		}
+# 		set_technology = {
+# 			jinshu140 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jinshu145 }
+# 		}
+# 		set_technology = {
+# 			jinshu145 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jinshu149 }
+# 		}
+# 		set_technology = {
+# 			jinshu149 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jinshu154 }
+# 		}
+# 		set_technology = {
+# 			jinshu154 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jinshu159 }
+# 		}
+# 		set_technology = {
+# 			jinshu159 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = meitan145 }
+# 		}
+# 		set_technology = {
+# 			meitan145 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = meitan149 }
+# 		}
+# 		set_technology = {
+# 			meitan149 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = meitan154 }
+# 		}
+# 		set_technology = {
+# 			meitan154 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = meitan159 }
+# 		}
+# 		set_technology = {
+# 			meitan159 = 1
+# 		}
+# 	}
+# }
+
+# infantry_a_inherit = {
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = spell_card }
+# 		}
+# 		set_technology = {
+# 			spell_card = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = linglijiejing139 }
+# 		}
+# 		set_technology = {
+# 			linglijiejing139 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = linglijiejing144 }
+# 		}
+# 		set_technology = {
+# 			linglijiejing144 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = linglijiejing147 }
+# 		}
+# 		set_technology = {
+# 			linglijiejing147 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = danmujingque139 }
+# 		}
+# 		set_technology = {
+# 			danmujingque139 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = danmujingque144 }
+# 		}
+# 		set_technology = {
+# 			danmujingque144 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = danmujingque147 }
+# 		}
+# 		set_technology = {
+# 			danmujingque147 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = gaosudanmu139 }
+# 		}
+# 		set_technology = {
+# 			gaosudanmu139 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = gaosudanmu144 }
+# 		}
+# 		set_technology = {
+# 			gaosudanmu144 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = gaosudanmu147 }
+# 		}
+# 		set_technology = {
+# 			gaosudanmu147 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = buqiang117 }
+# 		}
+# 		set_technology = {
+# 			buqiang117 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = buqiang140 }
+# 		}
+# 		set_technology = {
+# 			buqiang140 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = buqiang145 }
+# 		}
+# 		set_technology = {
+# 			buqiang145 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = buqiang148 }
+# 		}
+# 		set_technology = {
+# 			buqiang148 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = tangxiangailiang140 }
+# 		}
+# 		set_technology = {
+# 			tangxiangailiang140 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = tangxiangailiang145 }
+# 		}
+# 		set_technology = {
+# 			tangxiangailiang145 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = tangxiangailiang148 }
+# 		}
+# 		set_technology = {
+# 			tangxiangailiang148 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jiandanmiaozhunjing140 }
+# 		}
+# 		set_technology = {
+# 			jiandanmiaozhunjing140 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = qijumiaozhunjing145 }
+# 		}
+# 		set_technology = {
+# 			qijumiaozhunjing145 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = guangxuemiaozhunjing148 }
+# 		}
+# 		set_technology = {
+# 			guangxuemiaozhunjing148 = 1
+# 		}
+# 	}
+# }
+
+# infantry_combined_inherit = {
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = lingliqiangxie150 }
+# 		}
+# 		set_technology = {
+# 			lingliqiangxie150 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = lingliqiangxie154 }
+# 		}
+# 		set_technology = {
+# 			lingliqiangxie154 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = lingliqiangxie158 }
+# 		}
+# 		set_technology = {
+# 			lingliqiangxie158 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = lingliqiangxie162 }
+# 		}
+# 		set_technology = {
+# 			lingliqiangxie162 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = linglidanxiagailiang152 }
+# 		}
+# 		set_technology = {
+# 			linglidanxiagailiang152 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = linglidanxiagailiang156 }
+# 		}
+# 		set_technology = {
+# 			linglidanxiagailiang156 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = linglidanxiagailiang160 }
+# 		}
+# 		set_technology = {
+# 			linglidanxiagailiang160 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = dandaoxiuzhengzidan152 }
+# 		}
+# 		set_technology = {
+# 			dandaoxiuzhengzidan152 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = dandaoxiuzhengzidan156 }
+# 		}
+# 		set_technology = {
+# 			dandaoxiuzhengzidan156 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = dandaoxiuzhengzidan160 }
+# 		}
+# 		set_technology = {
+# 			dandaoxiuzhengzidan160 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = yindaohuopao150 }
+# 		}
+# 		set_technology = {
+# 			yindaohuopao150 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = yindaohuopao158 }
+# 		}
+# 		set_technology = {
+# 			yindaohuopao158 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = yindaoxiuzheng152 }
+# 		}
+# 		set_technology = {
+# 			yindaoxiuzheng152 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = yindaoxiuzheng156 }
+# 		}
+# 		set_technology = {
+# 			yindaoxiuzheng156 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = yindaoxiuzheng160 }
+# 		}
+# 		set_technology = {
+# 			yindaoxiuzheng160 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = danmuzhuangjiache151 }
+# 		}
+# 		set_technology = {
+# 			danmuzhuangjiache151 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = danmuzhuangjiache158 }
+# 		}
+# 		set_technology = {
+# 			danmuzhuangjiache158 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = danmutanke151 }
+# 		}
+# 		set_technology = {
+# 			danmutanke151 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = danmutanke158 }
+# 		}
+# 		set_technology = {
+# 			danmutanke158 = 1
+# 		}
+# 	}
+# }
+
+# infantry_ma_advanced_inherit = {
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = yaoshiche147 }
+# 		}
+# 		set_technology = {
+# 			yaoshiche147 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = yaoshiche154 }
+# 		}
+# 		set_technology = {
+# 			yaoshiche154 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = yaoshiche161 }
+# 		}
+# 		set_technology = {
+# 			yaoshiche161 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zhiyuanxiugaixing147 }
+# 		}
+# 		set_technology = {
+# 			zhiyuanxiugaixing147 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = chijiulinglijiejing153 }
+# 		}
+# 		set_technology = {
+# 			chijiulinglijiejing153 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = chijiulinglijiejing159 }
+# 		}
+# 		set_technology = {
+# 			chijiulinglijiejing159 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zhiyuanxiugaixing153 }
+# 		}
+# 		set_technology = {
+# 			zhiyuanxiugaixing153 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zhiyuanxiugaixing159 }
+# 		}
+# 		set_technology = {
+# 			zhiyuanxiugaixing159 = 1
+# 		}
+# 	}
+# }
+
+# infantry_ma_primary_inherit = {
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zidongshimo150 }
+# 		}
+# 		set_technology = {
+# 			zidongshimo150 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = linglijiejing153 }
+# 		}
+# 		set_technology = {
+# 			linglijiejing153 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = linglijiejing156 }
+# 		}
+# 		set_technology = {
+# 			linglijiejing156 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = mihuodanmu156 }
+# 		}
+# 		set_technology = {
+# 			mihuodanmu156 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = linglijiejing159 }
+# 		}
+# 		set_technology = {
+# 			linglijiejing159 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = linglijiejing162 }
+# 		}
+# 		set_technology = {
+# 			linglijiejing162 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = gongjishimo150 }
+# 		}
+# 		set_technology = {
+# 			gongjishimo150 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = gongjishimo153 }
+# 		}
+# 		set_technology = {
+# 			gongjishimo153 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = gongjishimo156 }
+# 		}
+# 		set_technology = {
+# 			gongjishimo156 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = gongjishimo159 }
+# 		}
+# 		set_technology = {
+# 			gongjishimo159 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = gongjishimo162 }
+# 		}
+# 		set_technology = {
+# 			gongjishimo162 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zibaoshimo150 }
+# 		}
+# 		set_technology = {
+# 			zibaoshimo150 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zibaoshimo153 }
+# 		}
+# 		set_technology = {
+# 			zibaoshimo153 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zibaoshimo156 }
+# 		}
+# 		set_technology = {
+# 			zibaoshimo156 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zibaoshimo159 }
+# 		}
+# 		set_technology = {
+# 			zibaoshimo159 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zibaoshimo162 }
+# 		}
+# 		set_technology = {
+# 			zibaoshimo162 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = yejianlinggan150 }
+# 		}
+# 		set_technology = {
+# 			yejianlinggan150 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = yejianlinggan153 }
+# 		}
+# 		set_technology = {
+# 			yejianlinggan153 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = yejianlinggan156 }
+# 		}
+# 		set_technology = {
+# 			yejianlinggan156 = 1
+# 		}
+# 	}
+# }
+
+# infantry_ma_support_inherit = {
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = linglijiejie146 }
+# 		}
+# 		set_technology = {
+# 			linglijiejie146 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = linglijiejie151 }
+# 		}
+# 		set_technology = {
+# 			linglijiejie151 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = linglijiejie156 }
+# 		}
+# 		set_technology = {
+# 			linglijiejie156 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = linglijiejie161 }
+# 		}
+# 		set_technology = {
+# 			linglijiejie161 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = feixingzhencha146 }
+# 		}
+# 		set_technology = {
+# 			feixingzhencha146 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = feixingzhencha151 }
+# 		}
+# 		set_technology = {
+# 			feixingzhencha151 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = feixingzhencha156 }
+# 		}
+# 		set_technology = {
+# 			feixingzhencha156 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = feixingzhencha161 }
+# 		}
+# 		set_technology = {
+# 			feixingzhencha161 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = fanyongmopao144 }
+# 		}
+# 		set_technology = {
+# 			fanyongmopao144 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = fanyongmopao148 }
+# 		}
+# 		set_technology = {
+# 			fanyongmopao148 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = fanyongmopao153 }
+# 		}
+# 		set_technology = {
+# 			fanyongmopao153 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = fanyongmopao158 }
+# 		}
+# 		set_technology = {
+# 			fanyongmopao158 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = ranliaogailiang146 }
+# 		}
+# 		set_technology = {
+# 			ranliaogailiang146 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = ranliaogailiang151 }
+# 		}
+# 		set_technology = {
+# 			ranliaogailiang151 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = ranliaogailiang156 }
+# 		}
+# 		set_technology = {
+# 			ranliaogailiang156 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = ranliaogailiang161 }
+# 		}
+# 		set_technology = {
+# 			ranliaogailiang161 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = hongzhashimo151 }
+# 		}
+# 		set_technology = {
+# 			hongzhashimo151 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = hongzhashimo156 }
+# 		}
+# 		set_technology = {
+# 			hongzhashimo156 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = hongzhashimo161 }
+# 		}
+# 		set_technology = {
+# 			hongzhashimo161 = 1
+# 		}
+# 	}
+# }
+
+# infantry_sc_advanced_inherit = {
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = qiyouche146 }
+# 		}
+# 		set_technology = {
+# 			qiyouche146 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = qiyouche153 }
+# 		}
+# 		set_technology = {
+# 			qiyouche153 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = qiyouche160 }
+# 		}
+# 		set_technology = {
+# 			qiyouche160 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = houqinggailiang149 }
+# 		}
+# 		set_technology = {
+# 			houqinggailiang149 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = houqinggailiang155 }
+# 		}
+# 		set_technology = {
+# 			houqinggailiang155 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = houqinggailiang161 }
+# 		}
+# 		set_technology = {
+# 			houqinggailiang161 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zhiyuanji149 }
+# 		}
+# 		set_technology = {
+# 			zhiyuanji149 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zhandouji153 }
+# 		}
+# 		set_technology = {
+# 			zhandouji153 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zhandouji160 }
+# 		}
+# 		set_technology = {
+# 			zhandouji160 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zhiyuanji153 }
+# 		}
+# 		set_technology = {
+# 			zhiyuanji153 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zhiyuanji160 }
+# 		}
+# 		set_technology = {
+# 			zhiyuanji160 = 1
+# 		}
+# 	}
+# }
+
+# infantry_sc_primary_inherit = {
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zidongzhuangtian151 }
+# 		}
+# 		set_technology = {
+# 			zidongzhuangtian151 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = buqiang154 }
+# 		}
+# 		set_technology = {
+# 			buqiang154 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = buqiang157 }
+# 		}
+# 		set_technology = {
+# 			buqiang157 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = jiguangmiaozhunqi157 }
+# 		}
+# 		set_technology = {
+# 			jiguangmiaozhunqi157 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = buqiang160 }
+# 		}
+# 		set_technology = {
+# 			buqiang160 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = buqiang163 }
+# 		}
+# 		set_technology = {
+# 			buqiang163 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = danyaogailiang151 }
+# 		}
+# 		set_technology = {
+# 			danyaogailiang151 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = danyaogailiang154 }
+# 		}
+# 		set_technology = {
+# 			danyaogailiang154 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = danyaogailiang157 }
+# 		}
+# 		set_technology = {
+# 			danyaogailiang157 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = danyaogailiang160 }
+# 		}
+# 		set_technology = {
+# 			danyaogailiang160 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = danyaogailiang163 }
+# 		}
+# 		set_technology = {
+# 			danyaogailiang163 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shoulei151 }
+# 		}
+# 		set_technology = {
+# 			shoulei151 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shoulei154 }
+# 		}
+# 		set_technology = {
+# 			shoulei154 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shoulei157 }
+# 		}
+# 		set_technology = {
+# 			shoulei157 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shoulei160 }
+# 		}
+# 		set_technology = {
+# 			shoulei160 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = shoulei163 }
+# 		}
+# 		set_technology = {
+# 			shoulei163 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = hongdianmiaozhunjing151 }
+# 		}
+# 		set_technology = {
+# 			hongdianmiaozhunjing151 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = fanshemiaozhunjing154 }
+# 		}
+# 		set_technology = {
+# 			fanshemiaozhunjing154 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = quanximiaozhunjing157 }
+# 		}
+# 		set_technology = {
+# 			quanximiaozhunjing157 = 1
+# 		}
+# 	}
+# }
+
+# infantry_sc_support_inherit = {
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = wunvzhiyuan146 }
+# 		}
+# 		set_technology = {
+# 			wunvzhiyuan146 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = wunvzhiyuan151 }
+# 		}
+# 		set_technology = {
+# 			wunvzhiyuan151 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = wunvzhiyuan156 }
+# 		}
+# 		set_technology = {
+# 			wunvzhiyuan156 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = wunvzhiyuan161 }
+# 		}
+# 		set_technology = {
+# 			wunvzhiyuan161 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = gongjianpao146 }
+# 		}
+# 		set_technology = {
+# 			gongjianpao146 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = gongjianpao151 }
+# 		}
+# 		set_technology = {
+# 			gongjianpao151 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = gongjianpao156 }
+# 		}
+# 		set_technology = {
+# 			gongjianpao156 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = gongjianpao161 }
+# 		}
+# 		set_technology = {
+# 			gongjianpao161 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = fangzhihuopao143 }
+# 		}
+# 		set_technology = {
+# 			fangzhihuopao143 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = kuaisuhuopao151 }
+# 		}
+# 		set_technology = {
+# 			kuaisuhuopao151 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = fangzhihuopao148 }
+# 		}
+# 		set_technology = {
+# 			fangzhihuopao148 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = fangzhihuopao153 }
+# 		}
+# 		set_technology = {
+# 			fangzhihuopao153 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = fangzhihuopao158 }
+# 		}
+# 		set_technology = {
+# 			fangzhihuopao158 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = huoyaogailiang146 }
+# 		}
+# 		set_technology = {
+# 			huoyaogailiang146 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = huoyaogailiang151 }
+# 		}
+# 		set_technology = {
+# 			huoyaogailiang151 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = huoyaogailiang156 }
+# 		}
+# 		set_technology = {
+# 			huoyaogailiang156 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = huoyaogailiang161 }
+# 		}
+# 		set_technology = {
+# 			huoyaogailiang161 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = paojiagailiang146 }
+# 		}
+# 		set_technology = {
+# 			paojiagailiang146 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = paojiagailiang151 }
+# 		}
+# 		set_technology = {
+# 			paojiagailiang151 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = paojiagailiang156 }
+# 		}
+# 		set_technology = {
+# 			paojiagailiang156 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = paojiagailiang161 }
+# 		}
+# 		set_technology = {
+# 			paojiagailiang161 = 1
+# 		}
+# 	}
+# }
+
+# land_doctrine_inherit = {
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zhanchangzhihui140 }
+# 		}
+# 		set_technology = {
+# 			zhanchangzhihui140 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zhanchangzhihui145 }
+# 		}
+# 		set_technology = {
+# 			zhanchangzhihui145 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zhanchangzhihui150 }
+# 		}
+# 		set_technology = {
+# 			zhanchangzhihui150 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zhanchangzhihui155 }
+# 		}
+# 		set_technology = {
+# 			zhanchangzhihui155 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zhanchangzhihui160 }
+# 		}
+# 		set_technology = {
+# 			zhanchangzhihui160 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zuzhihuazhanzheng142 }
+# 		}
+# 		set_technology = {
+# 			zuzhihuazhanzheng142 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zuzhihuazhanzheng147 }
+# 		}
+# 		set_technology = {
+# 			zuzhihuazhanzheng147 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zuzhihuazhanzheng152 }
+# 		}
+# 		set_technology = {
+# 			zuzhihuazhanzheng152 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zuzhihuazhanzheng157 }
+# 		}
+# 		set_technology = {
+# 			zuzhihuazhanzheng157 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zuzhihuazhanzheng162 }
+# 		}
+# 		set_technology = {
+# 			zuzhihuazhanzheng162 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = superior_firepower }
+# 		}
+# 		set_technology = {
+# 			superior_firepower = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = sup_delay }
+# 		}
+# 		set_technology = {
+# 			sup_delay = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = mobile_defence }
+# 		}
+# 		set_technology = {
+# 			mobile_defence = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = intergrated_support }
+# 		}
+# 		set_technology = {
+# 			intergrated_support = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = regimental_combat_teams }
+# 		}
+# 		set_technology = {
+# 			regimental_combat_teams = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = dispersed_support }
+# 		}
+# 		set_technology = {
+# 			dispersed_support = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = overwhelming_firepower }
+# 		}
+# 		set_technology = {
+# 			overwhelming_firepower = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = sup_mechanized_offensive }
+# 		}
+# 		set_technology = {
+# 			sup_mechanized_offensive = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = trench_warfare }
+# 		}
+# 		set_technology = {
+# 			trench_warfare = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = grand_battle_plan }
+# 		}
+# 		set_technology = {
+# 			grand_battle_plan = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = prepared_defense }
+# 		}
+# 		set_technology = {
+# 			prepared_defense = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = grand_assault }
+# 		}
+# 		set_technology = {
+# 			grand_assault = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = grand_mechanized_offensive }
+# 		}
+# 		set_technology = {
+# 			grand_mechanized_offensive = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = assault_concentration }
+# 		}
+# 		set_technology = {
+# 			assault_concentration = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = infantry_offensive }
+# 		}
+# 		set_technology = {
+# 			infantry_offensive = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = armored_operations }
+# 		}
+# 		set_technology = {
+# 			armored_operations = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = mass_assault }
+# 		}
+# 		set_technology = {
+# 			mass_assault = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = pocket_defence }
+# 		}
+# 		set_technology = {
+# 			pocket_defence = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = defence_in_depth }
+# 		}
+# 		set_technology = {
+# 			defence_in_depth = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = large_front_operations }
+# 		}
+# 		set_technology = {
+# 			large_front_operations = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = deep_operations }
+# 		}
+# 		set_technology = {
+# 			deep_operations = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = operational_concentration }
+# 		}
+# 		set_technology = {
+# 			operational_concentration = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = peoples_army }
+# 		}
+# 		set_technology = {
+# 			peoples_army = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = human_infantry_offensive }
+# 		}
+# 		set_technology = {
+# 			human_infantry_offensive = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = large_front_offensive }
+# 		}
+# 		set_technology = {
+# 			large_front_offensive = 1
+# 		}
+# 	}
+# }
+
+# secret_inherit = {
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = abandoned }
+# 		}
+# 		set_technology = {
+# 			abandoned = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = human_tech }
+# 		}
+# 		set_technology = {
+# 			human_tech = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = pri_youkai_tech }
+# 		}
+# 		set_technology = {
+# 			pri_youkai_tech = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = youkai_tech }
+# 		}
+# 		set_technology = {
+# 			youkai_tech = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = magician_tech }
+# 		}
+# 		set_technology = {
+# 			magician_tech = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = kappa_tech }
+# 		}
+# 		set_technology = {
+# 			kappa_tech = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = tengu_tech }
+# 		}
+# 		set_technology = {
+# 			tengu_tech = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = god_tech }
+# 		}
+# 		set_technology = {
+# 			god_tech = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = fairy_tech }
+# 		}
+# 		set_technology = {
+# 			fairy_tech = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = ghost_tech }
+# 		}
+# 		set_technology = {
+# 			ghost_tech = 1
+# 		}
+# 	}
+# }
+
+# support_inherit = {
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zhiyuanzhuangbei }
+# 		}
+# 		set_technology = {
+# 			zhiyuanzhuangbei = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zhihuixiaodui147 }
+# 		}
+# 		set_technology = {
+# 			zhihuixiaodui147 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zhihuixiaodui152 }
+# 		}
+# 		set_technology = {
+# 			zhihuixiaodui152 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zhihuixiaodui157 }
+# 		}
+# 		set_technology = {
+# 			zhihuixiaodui157 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zhihuixiaodui162 }
+# 		}
+# 		set_technology = {
+# 			zhihuixiaodui162 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = duzhanxiaodui147 }
+# 		}
+# 		set_technology = {
+# 			duzhanxiaodui147 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = duzhanxiaodui152 }
+# 		}
+# 		set_technology = {
+# 			duzhanxiaodui152 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = duzhanxiaodui157 }
+# 		}
+# 		set_technology = {
+# 			duzhanxiaodui157 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = duzhanxiaodui162 }
+# 		}
+# 		set_technology = {
+# 			duzhanxiaodui162 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zhanchanggongbing147 }
+# 		}
+# 		set_technology = {
+# 			zhanchanggongbing147 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zhanchanggongbing152 }
+# 		}
+# 		set_technology = {
+# 			zhanchanggongbing152 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zhanchanggongbing157 }
+# 		}
+# 		set_technology = {
+# 			zhanchanggongbing157 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = zhanchanggongbing162 }
+# 		}
+# 		set_technology = {
+# 			zhanchanggongbing162 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = houfangyiliao147 }
+# 		}
+# 		set_technology = {
+# 			houfangyiliao147 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = houfangyiliao152 }
+# 		}
+# 		set_technology = {
+# 			houfangyiliao152 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = houfangyiliao157 }
+# 		}
+# 		set_technology = {
+# 			houfangyiliao157 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = houfangyiliao162 }
+# 		}
+# 		set_technology = {
+# 			houfangyiliao162 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = tech_signal_company }
+# 		}
+# 		set_technology = {
+# 			tech_signal_company = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = tech_signal_company2 }
+# 		}
+# 		set_technology = {
+# 			tech_signal_company2 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = tech_signal_company3 }
+# 		}
+# 		set_technology = {
+# 			tech_signal_company3 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = tech_signal_company4 }
+# 		}
+# 		set_technology = {
+# 			tech_signal_company4 = 1
+# 		}
+# 	}
+# }
+
+# youkai_race_inherit = {
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = kongjujuxianhua1 }
+# 		}
+# 		set_technology = {
+# 			kongjujuxianhua1 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = kongjujuxianhua2 }
+# 		}
+# 		set_technology = {
+# 			kongjujuxianhua2 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = kongjujuxianhua3 }
+# 		}
+# 		set_technology = {
+# 			kongjujuxianhua3 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = kongjujuxianhua4 }
+# 		}
+# 		set_technology = {
+# 			kongjujuxianhua4 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = kongjujuxianhua5 }
+# 		}
+# 		set_technology = {
+# 			kongjujuxianhua5 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = yeguangzhili1 }
+# 		}
+# 		set_technology = {
+# 			yeguangzhili1 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = yeguangzhili2 }
+# 		}
+# 		set_technology = {
+# 			yeguangzhili2 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = yeguangzhili3 }
+# 		}
+# 		set_technology = {
+# 			yeguangzhili3 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = yeguangzhili4 }
+# 		}
+# 		set_technology = {
+# 			yeguangzhili4 = 1
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			PREV = { has_tech = yeguangzhili5 }
+# 		}
+# 		set_technology = {
+# 			yeguangzhili5 = 1
+# 		}
+# 	}
+# }
+

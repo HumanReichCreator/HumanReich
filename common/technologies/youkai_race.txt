@@ -1,0 +1,591 @@
+technologies = {
+	youkai_tech = {
+    
+	    research_cost = 1
+
+	    path = {
+			leads_to_tech = bentixuhua1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = yaoguaitezhongbudui1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = waijiebushiban1
+			research_cost_coeff = 1
+		}
+
+		category_science_infantry = {
+	    	max_strength = 10
+	    }
+	    category_magic_infantry = {
+	    	max_strength = 10
+	    }
+	    category_combined_infantry = {
+	    	max_strength = 10
+	    }
+
+		
+
+	   folder = {
+	      name = Youkai_race_tech_folder
+	      position = { x = 10 y = 0 }
+	    }
+	    
+	    categories = {
+	      secret
+	    }
+	    dependencies = {
+	       abandoned = 1
+	    }
+	    
+	    ai_will_do = {
+	      factor = 1
+	    }
+	}
+
+	bentixuhua1 = {
+	
+		path = {
+			leads_to_tech = bentixuhua2
+			research_cost_coeff = 1
+		}
+
+		ma_militia = {
+			hardness = 0.2
+		}
+		ma_infantry = {
+			hardness = 0.2
+		}
+		ma_light_infantry = {
+			hardness = 0.2
+		}
+		ma_motorized = {
+			hardness = 0.2
+		}
+		sc_militia = {
+			hardness = 2
+		}
+		sc_infantry = {
+			hardness = 2
+		}
+		sc_light_infantry = {
+			hardness = 2
+		}
+		sc_motorized = {
+			hardness = 2
+		}
+		
+		research_cost = 2.2
+		start_year = 144
+
+		folder = {
+			name = Youkai_race_tech_folder
+			position = { x = 4 y = 2 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	bentixuhua2 = {
+	
+		path = {
+			leads_to_tech = bentixuhua3
+			research_cost_coeff = 1
+		}
+
+		ma_militia = {
+			hardness = 0.2
+		}
+		ma_infantry = {
+			hardness = 0.2
+		}
+		ma_light_infantry = {
+			hardness = 0.2
+		}
+		ma_motorized = {
+			hardness = 0.2
+		}
+		sc_militia = {
+			hardness = 2
+		}
+		sc_infantry = {
+			hardness = 2
+		}
+		sc_light_infantry = {
+			hardness = 2
+		}
+		sc_motorized = {
+			hardness = 2
+		}
+
+		
+		research_cost = 2.2
+		start_year = 148
+
+		folder = {
+			name = Youkai_race_tech_folder
+			position = { x = 4 y = 4 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	bentixuhua3 = {
+	
+		path = {
+			leads_to_tech = bentixuhua4
+			research_cost_coeff = 1
+		}
+
+		ma_militia = {
+			hardness = 0.2
+		}
+		ma_infantry = {
+			hardness = 0.2
+		}
+		ma_light_infantry = {
+			hardness = 0.2
+		}
+		ma_motorized = {
+			hardness = 0.2
+		}
+		sc_militia = {
+			hardness = 2
+		}
+		sc_infantry = {
+			hardness = 2
+		}
+		sc_light_infantry = {
+			hardness = 2
+		}
+		sc_motorized = {
+			hardness = 2
+		}
+
+		
+		research_cost = 2.2
+		start_year = 152
+
+		folder = {
+			name = Youkai_race_tech_folder
+			position = { x = 4 y = 6 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	bentixuhua4 = {
+	
+		path = {
+			leads_to_tech = bentixuhua5
+			research_cost_coeff = 1
+		}
+
+		ma_militia = {
+			hardness = 0.2
+		}
+		ma_infantry = {
+			hardness = 0.2
+		}
+		ma_light_infantry = {
+			hardness = 0.2
+		}
+		ma_motorized = {
+			hardness = 0.2
+		}
+		sc_militia = {
+			hardness = 2
+		}
+		sc_infantry = {
+			hardness = 2
+		}
+		sc_light_infantry = {
+			hardness = 2
+		}
+		sc_motorized = {
+			hardness = 2
+		}
+
+		
+		research_cost = 2.2
+		start_year = 156
+
+		folder = {
+			name = Youkai_race_tech_folder
+			position = { x = 4 y = 8 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	bentixuhua5 = {
+
+		research_speed_factor = 0.03
+		
+		research_cost = 2.2
+		start_year = 160
+
+		ma_militia = {
+			hardness = 0.2
+		}
+		ma_infantry = {
+			hardness = 0.2
+		}
+		ma_light_infantry = {
+			hardness = 0.2
+		}
+		ma_motorized = {
+			hardness = 0.2
+		}
+		sc_militia = {
+			hardness = 2
+		}
+		sc_infantry = {
+			hardness = 2
+		}
+		sc_light_infantry = {
+			hardness = 2
+		}
+		sc_motorized = {
+			hardness = 2
+		}
+
+		folder = {
+			name = Youkai_race_tech_folder
+			position = { x = 4 y = 10 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	yaoguaitezhongbudui1 = {
+	
+		path = {
+			leads_to_tech = yaoguaitezhongbudui2
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.2
+		start_year = 144
+
+		category_sf_infantry = {
+			max_organisation = 20
+		}
+
+		
+
+		folder = {
+			name = Youkai_race_tech_folder
+			position = { x = 10 y = 2 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	yaoguaitezhongbudui2 = {
+	
+		path = {
+			leads_to_tech = yaoguaitezhongbudui3
+			research_cost_coeff = 1
+		}
+
+		category_sf_infantry = {
+			maximum_speed = 0.07
+		}
+
+		
+		research_cost = 2.2
+		start_year = 148
+
+		folder = {
+			name = Youkai_race_tech_folder
+			position = { x = 10 y = 4 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	yaoguaitezhongbudui3 = {
+	
+		path = {
+			leads_to_tech = yaoguaitezhongbudui4
+			research_cost_coeff = 1
+		}
+
+		category_sf_infantry = {
+			breakthrough = 0.15
+			defense = 0.15
+		}
+
+		
+		research_cost = 2.2
+		start_year = 152
+
+		folder = {
+			name = Youkai_race_tech_folder
+			position = { x = 10 y = 6 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	yaoguaitezhongbudui4 = {
+	
+		path = {
+			leads_to_tech = yaoguaitezhongbudui5
+			research_cost_coeff = 1
+		}
+
+		category_sf_infantry = {
+			max_organisation = 20
+		}
+
+		
+		research_cost = 2.2
+		start_year = 156
+
+		folder = {
+			name = Youkai_race_tech_folder
+			position = { x = 10 y = 8 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	yaoguaitezhongbudui5 = {
+
+		
+		research_cost = 2.2
+		start_year = 160
+
+		category_sf_infantry = {
+			maximum_speed = 0.07
+		}
+
+		folder = {
+			name = Youkai_race_tech_folder
+			position = { x = 10 y = 10 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	waijiebushiban1 = {
+	
+		path = {
+			leads_to_tech = waijiebushiban2
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			Youkai_special_1
+		}
+
+		enable_subunits = {
+			Youkai_special
+		}
+
+		
+		research_cost = 2.2
+		start_year = 144
+
+		folder = {
+			name = Youkai_race_tech_folder
+			position = { x = 16 y = 2 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	waijiebushiban2 = {
+	
+		path = {
+			leads_to_tech = waijiebushiban3
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			Youkai_special_2
+		}
+
+		Youkai_special = {
+			combat_width = -5
+		}
+		
+		research_cost = 2.2
+		start_year = 148
+
+		folder = {
+			name = Youkai_race_tech_folder
+			position = { x = 16 y = 4 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	waijiebushiban3 = {
+	
+		path = {
+			leads_to_tech = waijiebushiban4
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			Youkai_special_3
+		}
+
+		Youkai_special = {
+			combat_width = -5
+		}
+
+		
+		research_cost = 2.2
+		start_year = 152
+
+		folder = {
+			name = Youkai_race_tech_folder
+			position = { x = 16 y = 6 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	waijiebushiban4 = {
+	
+		path = {
+			leads_to_tech = waijiebushiban5
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			Youkai_special_4
+		}
+
+		Youkai_special = {
+			combat_width = -5
+		}
+		
+		research_cost = 2.2
+		start_year = 156
+
+		folder = {
+			name = Youkai_race_tech_folder
+			position = { x = 16 y = 8 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	waijiebushiban5 = {
+		
+		research_cost = 2.2
+		start_year = 160
+
+		enable_equipments = {
+			Youkai_special_5
+		}
+
+		Youkai_special = {
+			combat_width = -5
+		}
+
+		folder = {
+			name = Youkai_race_tech_folder
+			position = { x = 16 y = 10 }
+		}
+		
+		categories = {
+			race
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

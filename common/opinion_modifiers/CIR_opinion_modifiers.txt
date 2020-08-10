@@ -1,0 +1,30 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+	CIR_duifazhandegaibian_op = {
+		value = 10
+	}
+	CIR_mianliansijiaoliu_op = {
+		value = 20
+	}
+	CIR_tiangoujiaoliu_op = {
+		value = 30
+	}
+	CIR_panluanjiaoliu_op = {
+		value = 30
+	}
+	CIR_mofashihejie1_op = {
+		value = 15
+	}
+	CIR_mofashihejie2_op = {
+		value = 35
+	}
+}	

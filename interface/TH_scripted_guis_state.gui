@@ -1,0 +1,211 @@
+guiTypes = {
+	#new state view sys
+	#core sys
+	containerWindowType = {
+		name = "th_core_sys_gui"
+		position = { x = 20 y = 300 }
+		iconType ={
+			  name ="th_core_sys_cant"
+			  spriteType = "GFX_core_cant"
+			  position = { x= 0 y = 0 } 
+			  Orientation = "UPPER_LEFT"
+			  pdx_tooltip = "core_sys_cant_tt"
+		}
+
+		buttonType ={
+			  name ="th_core_sys_can"
+			  spriteType = "GFX_core_can"
+			  position = { x= 0 y = 0 } 
+			  Orientation = "UPPER_LEFT"
+			  pdx_tooltip = "CO_sys_can_tt"
+			  pdx_tooltip_delayed = "CO_sys_can_delayed_tt"
+			  shortcut = "ctrl+a"
+		}
+
+		# instantTextBoxType = {
+		# 	name ="th_core_value"
+		# 	position = { x= 0 y = 45 }
+		# 	font = "hoi_18mbs"
+		# 	text = "core_value"
+		# 	# text = "view_type_value"
+		# 	format = center
+		# 	maxWidth = 100
+		# 	maxHeight = 24
+		# 	fixedsize = yes
+		# 	alwaystransparent = yes	
+		# }
+	}
+	#fairy sys
+	containerWindowType = {
+		name = "th_fairy_sys_gui"
+		position = { x = 50 y = 300 }
+		iconType ={
+			  name ="th_fairy_sys_cant"
+			  spriteType = "GFX_fairy_cant_reduce_infrastructure"
+			  position = { x= 0 y = 0 } 
+			  Orientation = "UPPER_LEFT"
+			  pdx_tooltip = "fairy_sys_cant_tt"
+		}
+
+		buttonType ={
+			  name ="th_fairy_sys_can"
+			  spriteType = "GFX_fairy_reduce_infrastructure"
+			  position = { x= 0 y = 0 } 
+			  Orientation = "UPPER_LEFT"
+			  pdx_tooltip = "fairy_sys_can_tt"
+			  pdx_tooltip_delayed = "fairy_sys_can_delayed_tt"
+			  shortcut = "ctrl+s"
+		}
+	}
+	#root sys
+	containerWindowType = {
+		name = "th_root_sys_gui"
+		position = { x = 80 y = 300 }
+		iconType ={
+			  name ="th_root_sys_cant"
+			  spriteType = "GFX_root_cant"
+			  position = { x= 0 y = 0 } 
+			  Orientation = "UPPER_LEFT"
+			  pdx_tooltip = "root_sys_cant_tt"
+		}
+
+		buttonType ={
+			  name ="th_root_sys_can"
+			  spriteType = "GFX_root_can"
+			  position = { x= 0 y = 0 } 
+			  Orientation = "UPPER_LEFT"
+			  pdx_tooltip = "root_sys_can_tt"
+			  pdx_tooltip_delayed = "root_sys_can_delayed_tt"
+			  shortcut = "ctrl+d"
+		}
+	}
+	#convert sys
+	containerWindowType = {
+		name = "th_convert_sys_gui"
+		position = { x = 110 y = 300 }
+		iconType ={
+			  name ="th_convert_sys_cant"
+			  spriteType = "GFX_convert_cant"
+			  position = { x= 0 y = 0 } 
+			  Orientation = "UPPER_LEFT"
+			  pdx_tooltip = "convert_sys_cant_tt"
+		}
+
+		buttonType ={
+			  name ="th_convert_sys_can"
+			  spriteType = "GFX_convert_can"
+			  position = { x= 0 y = 0 } 
+			  Orientation = "UPPER_LEFT"
+			  pdx_tooltip = "CONV_can_tt"
+			  pdx_tooltip_delayed = "CONV_can_delayed_tt"
+			  shortcut = "ctrl+f"
+		}
+
+		
+	}
+	#claim sys
+	# containerWindowType = {
+	# 	name = "th_claim_sys_gui"
+	# 	position = { x = 30 y = 320 }
+	# 	iconType ={
+	# 		  name ="th_claim_sys_cant"
+	# 		  spriteType = "GFX_claim_cant"
+	# 		  position = { x= 0 y = 0 } 
+	# 		  Orientation = "UPPER_LEFT"
+	# 		  pdx_tooltip = "claim_sys_cant_tt"
+	# 	}
+
+	# 	buttonType ={
+	# 		  name ="th_claim_sys_can"
+	# 		  spriteType = "GFX_claim_can"
+	# 		  position = { x= 0 y = 0 } 
+	# 		  Orientation = "UPPER_LEFT"
+	# 		  pdx_tooltip = "claim_sys_can_tt"
+	# 		  pdx_tooltip_delayed = "claim_sys_can_delayed_tt"
+	# 		  shortcut = "ctrl+z"
+	# 	}
+
+	# 	instantTextBoxType = {
+	# 		name ="th_claim_progress"
+	# 		position = { x= 26 y = 10 }
+	# 		font = "hoi_18mbs"
+	# 		text = "claim_progress"
+	# 		# text = "0"
+	# 		# text = "view_type_value"
+	# 		format = center
+	# 		maxWidth = 100
+	# 		maxHeight = 24
+	# 		fixedsize = yes
+	# 		alwaystransparent = yes	
+	# 	}
+	# }
+
+	
+
+	#state value
+	containerWindowType = {
+		name = "th_value_gui"
+		position = { x = 30 y = 505 }
+
+		instantTextBoxType = {
+			name ="th_core_value"
+			position = { x= 0 y = 45 }
+			font = "hoi_18mbs"
+			text = "progressing"
+			# text = "view_type_value"
+			format = center
+			maxWidth = 100
+			maxHeight = 24
+			fixedsize = yes
+			# alwaystransparent = yes	
+		}
+	}
+	####race 
+	containerWindowType = {
+		name = "th_race_gui"
+		position = { x = 30 y = 350 }
+
+		instantTextBoxType = {
+			name ="th_origin_race_display"
+			position = { x= -25 y = 15 }
+			font = "hoi_18mbs"
+			text = "th_origin_race_z"
+			# text = "view_type_value"
+			format = center
+			maxWidth = 100
+			maxHeight = 24
+			fixedsize = yes
+			pdx_tooltip = "th_origin_race_z_tt"
+			pdx_tooltip_delayed = "th_origin_race_z_delayed_tt"
+		}
+		iconType ={
+		  	name ="th_origin_race"
+		  	spriteType = "GFX_state_Beast"
+		  	position = { x= 60 y = 5 } 
+		  	Orientation = "UPPER_LEFT"
+		  	pdx_tooltip = "th_origin_race_d"
+		}
+
+		instantTextBoxType = {
+			name ="th_present_race_display"
+			position = { x= -25 y = 60 }
+			font = "hoi_18mbs"
+			text = "th_present_race_z"
+			# text = "view_type_value"
+			format = center
+			maxWidth = 100
+			maxHeight = 24
+			fixedsize = yes
+			pdx_tooltip = "th_present_race_z_tt"
+			pdx_tooltip_delayed = "th_present_race_z_delayed_tt"
+		}
+		iconType ={
+		  	name ="th_present_race"
+		  	spriteType = "GFX_state_Beast"
+		  	position = { x= 60 y = 50 } 
+		  	Orientation = "UPPER_LEFT"
+		  	pdx_tooltip = "th_present_race_d"
+		}
+	}
+	
+}

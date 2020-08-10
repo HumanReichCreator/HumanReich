@@ -1,0 +1,681 @@
+technologies = {
+	linglishengchan130 = {
+	
+		
+		path = {
+			leads_to_tech = linglishengchan140
+			research_cost_coeff = 1
+		}
+
+		production_factory_max_efficiency_factor = 0.025
+		production_factory_start_efficiency_factor = 0.025
+		production_factory_efficiency_gain_factor = 0.025
+		line_change_production_efficiency_factor = 0.05
+		
+		research_cost = 1.5
+		folder = {
+			name = industry_ma_folder
+			position = { x = 2 y = 2 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			industrys
+			main
+			magic
+		}
+	}
+
+	linglishengchan140 = {
+	
+		
+		path = {
+			leads_to_tech = linglishengchan145
+			research_cost_coeff = 1
+		}
+
+
+		production_factory_max_efficiency_factor = 0.025
+		production_factory_start_efficiency_factor = 0.025
+		production_factory_efficiency_gain_factor = 0.025
+		line_change_production_efficiency_factor = 0.05
+
+		start_year = 140
+
+		
+		
+		research_cost = 1.5
+		folder = {
+			name = industry_ma_folder
+			position = { x = 2 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			industrys
+			main
+			magic
+		}
+	}
+	linglishengchan145 = {
+
+	    
+		
+		path = {
+			leads_to_tech = linglishengchan150
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = waijiefuzhushengchan147
+			research_cost_coeff = 1
+		}
+
+
+		start_year = 145
+
+		
+
+		production_factory_max_efficiency_factor = 0.05
+		production_factory_start_efficiency_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.05
+		line_change_production_efficiency_factor = 0.2
+		
+		
+		
+		research_cost = 1.5
+
+		
+
+		folder = {
+			name = industry_ma_folder
+			position = { x = 2 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			industrys
+			main
+			magic
+		}
+	}
+	linglishengchan150 = {
+	
+		
+		path = {
+			leads_to_tech = linglishengchan155
+			research_cost_coeff = 1
+		}
+
+		start_year = 150
+
+		production_factory_max_efficiency_factor = 0.05
+		production_factory_start_efficiency_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.05
+		line_change_production_efficiency_factor = 0.2
+		
+		
+		research_cost = 2
+		folder = {
+			name = industry_ma_folder
+			position = { x = 2 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			industrys
+			main
+			magic
+		}
+	}
+	linglishengchan155 = {
+	
+		
+		path = {
+			leads_to_tech = linglishengchan160
+			research_cost_coeff = 1
+		}
+		
+		start_year = 155
+
+		production_factory_max_efficiency_factor = 0.05
+		production_factory_start_efficiency_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.05
+		line_change_production_efficiency_factor = 0.2
+
+		research_cost = 2
+		folder = {
+			name = industry_ma_folder
+			position = { x = 2 y = 10 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			industrys
+			main
+			magic
+		}
+	}
+	linglishengchan160 = {
+	
+		
+		
+		research_cost = 2
+		folder = {
+			name = industry_ma_folder
+			position = { x = 2 y = 12 }
+		}
+		
+		production_factory_max_efficiency_factor = 0.05
+		production_factory_start_efficiency_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.05
+		line_change_production_efficiency_factor = 0.2
+
+		start_year = 160
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			industrys
+			main
+			magic
+		}
+	}
+
+	waijiefuzhushengchan147 = {
+	
+		
+		path = {
+			leads_to_tech = waijiefuzhushengchan152
+			research_cost_coeff = 1
+		}
+		
+		start_year = 147
+		
+		research_cost = 1.8
+		folder = {
+			name = industry_ma_folder
+			position = { x = 5 y = 7 }
+		}
+
+		production_factory_max_efficiency_factor = 0.02
+		production_factory_efficiency_gain_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			industrys
+			combined
+			fuzhu
+		}
+	}
+	waijiefuzhushengchan152 = {
+	
+		
+		path = {
+			leads_to_tech = waijiefuzhushengchan157
+			research_cost_coeff = 1
+		}
+		
+		start_year = 152
+
+		production_factory_max_efficiency_factor = 0.02
+		production_factory_efficiency_gain_factor = 0.05
+
+		research_cost = 1.8
+		folder = {
+			name = industry_ma_folder
+			position = { x = 5 y = 9 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			industrys
+			combined
+			fuzhu
+		}
+	}
+	waijiefuzhushengchan157 = {
+	
+		
+		path = {
+			leads_to_tech = waijiefuzhushengchan162
+			research_cost_coeff = 1
+		}
+
+		start_year = 157
+
+		production_factory_max_efficiency_factor = 0.02
+		production_factory_efficiency_gain_factor = 0.05
+		
+		
+		research_cost = 1.8
+		folder = {
+			name = industry_ma_folder
+			position = { x = 5 y = 11 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			industrys
+			combined
+			fuzhu
+		}
+	}
+	waijiefuzhushengchan162 = {
+			
+		research_cost = 1.8
+		folder = {
+			name = industry_ma_folder
+			position = { x = 5 y = 13 }
+		}
+
+		production_factory_max_efficiency_factor = 0.02
+		production_factory_efficiency_gain_factor = 0.05
+
+		start_year = 162
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			industrys
+			combined
+			fuzhu
+		}
+	}
+
+	lingqi140 = {
+
+		research_cost = 3
+
+		path = {
+			leads_to_tech = lingqi145
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = yaoshi145
+			research_cost_coeff = 1
+		}
+
+		enable_building = {
+			building = gas_factory
+		    level = 1
+		}
+
+		start_year = 145
+
+		folder = {
+			name = industry_ma_folder
+			position = { x = 10 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			resource
+			gas_res
+			resource_building
+			magic
+		}
+	}
+
+	lingqi145 = {
+
+		research_cost = 3
+
+		path = {
+			leads_to_tech = lingqi149
+			research_cost_coeff = 1
+		}
+
+		enable_building = {
+			building = gas_factory
+		    level = 2
+		}
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = gas_factory
+				resource = gas
+				amount = 15
+			}
+		}
+
+		start_year = 145
+
+		folder = {
+			name = industry_ma_folder
+			position = { x = 10 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			resource
+			gas_res
+			resource_building
+			magic
+		}
+	}
+
+	lingqi149 = {
+
+		research_cost = 3
+
+		path = {
+			leads_to_tech = lingqi154
+			research_cost_coeff = 1
+		}
+
+		enable_building = {
+			building = gas_factory
+		    level = 3
+		}
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = gas_factory
+				resource = gas
+				amount = 15
+			}
+		}
+
+		start_year = 149
+
+		folder = {
+			name = industry_ma_folder
+			position = { x = 10 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			resource
+			gas_res
+			resource_building
+			magic
+		}
+	}
+
+	lingqi154 = {
+
+		research_cost = 3
+
+		path = {
+			leads_to_tech = lingqi159
+			research_cost_coeff = 1
+		}
+
+		enable_building = {
+			building = gas_factory
+		    level = 4
+		}
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = gas_factory
+				resource = gas
+				amount = 15
+			}
+		}
+
+		start_year = 154
+
+		folder = {
+			name = industry_ma_folder
+			position = { x = 10 y = 10 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			resource
+			gas_res
+			resource_building
+			magic
+		}
+	}
+
+	lingqi159 = {
+
+		research_cost = 3
+
+		enable_building = {
+			building = gas_factory
+		    level = 5
+		}
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = gas_factory
+				resource = gas
+				amount = 15
+			}
+		}
+
+		start_year = 159
+
+		folder = {
+			name = industry_ma_folder
+			position = { x = 10 y = 12 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			resource
+			gas_res
+			resource_building
+			magic
+		}
+	}
+
+	yaoshi145 = {
+
+		research_cost = 3
+
+		path = {
+			leads_to_tech = yaoshi149
+			research_cost_coeff = 1
+		}
+
+		enable_building = {
+			building = rock_factory
+		    level = 2
+		}
+
+		start_year = 149
+
+		folder = {
+			name = industry_ma_folder
+			position = { x = 13 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			resource
+			crystal_res
+			resource_building
+			magic
+		}
+	}
+
+	yaoshi149 = {
+
+		research_cost = 3
+
+		path = {
+			leads_to_tech = yaoshi154
+			research_cost_coeff = 1
+		}
+
+		enable_building = {
+			building = rock_factory
+		    level = 3
+		}
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = rock_factory
+				resource = crystal
+				amount = 8
+			}
+		}
+
+		start_year = 149
+
+		folder = {
+			name = industry_ma_folder
+			position = { x = 13 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			resource
+			crystal_res
+			resource_building
+			magic
+		}
+	}
+
+	yaoshi154 = {
+
+		research_cost = 3
+
+		path = {
+			leads_to_tech = yaoshi159
+			research_cost_coeff = 1
+		}
+
+		enable_building = {
+			building = rock_factory
+		    level = 4
+		}
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = rock_factory
+				resource = crystal
+				amount = 8
+			}
+		}
+
+		start_year = 154
+
+		folder = {
+			name = industry_ma_folder
+			position = { x = 13 y = 10 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			resource
+			crystal_res
+			resource_building
+			magic
+		}
+	}
+
+	yaoshi159 = {
+
+		research_cost = 3
+
+		enable_building = {
+			building = rock_factory
+		    level = 5
+		}
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = rock_factory
+				resource = crystal
+				amount = 8
+			}
+		}
+
+		start_year = 159
+
+		folder = {
+			name = industry_ma_folder
+			position = { x = 13 y = 12 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			resource
+			resource_building
+			crystal_res
+			magic
+		}
+	}
+
+
+}

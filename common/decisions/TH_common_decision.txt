@@ -1,0 +1,398 @@
+ common_category = {
+	chengnuoheping = {
+        visible = {
+            # NOT = { has_government = neworder}
+        }
+        available = {
+            # has_political_power < 1
+            has_war_support > 0
+            has_war = no
+        }
+
+        modifier = {
+        	war_support_weekly = -0.002
+            stability_weekly = 0.003
+        	political_power_gain = 0.5
+        }
+
+        days_remove = 182
+        days_re_enable = 365
+
+        fire_only_once = no
+
+     #    complete_effect = {
+		   #  declare_war_on = {target = FROM type = annex_everything}
+	    # }
+    }
+
+    tigaowending1 = {
+        visible = {
+            always = yes
+        }
+        available = {
+            has_stability < 0.8
+            # political_power_daily > 0.4
+            has_war = no
+        }
+
+        modifier = {
+            stability_weekly = 0.003
+            # political_power_gain = -0.4
+        }
+
+        days_remove = 182
+        days_re_enable = 365
+
+        complete_effect = {
+            add_stability = 0.08
+        }
+
+        cost = 90
+
+        fire_only_once = no
+
+        ai_will_do = {
+            factor = 0.01
+        }
+
+     #    complete_effect = {
+           #  declare_war_on = {target = FROM type = annex_everything}
+        # }
+    }
+
+    tigaowending2 = {
+        visible = {
+            always = yes
+        }
+        available = {
+            has_stability < 0.8
+            political_power_daily > 0.2
+            has_war = no
+        }
+
+        modifier = {
+            stability_weekly = 0.01
+            political_power_gain = -0.2
+        }
+
+        cost = 115
+
+        days_remove = 182
+        days_re_enable = 365
+
+        fire_only_once = no
+
+        ai_will_do = {
+            factor = 0.01
+        }
+
+     #    complete_effect = {
+           #  declare_war_on = {target = FROM type = annex_everything}
+        # }
+    }
+
+    tigaozhanzhengzhichidu1 = {
+        visible = {
+            always = yes
+        }
+        available = {
+            has_war_support < 0.8
+            or = {
+                has_war = yes
+                threat > 0.15
+                has_government = oldorder
+                has_government = neworder
+                has_government = fandong
+            }
+            custom_trigger_tooltip = {
+                tooltip = EXH_influ_below_15
+                check_variable = { EXHC_current_exhaustion < 15}
+            }
+        }
+
+        modifier = {
+            war_support_weekly = 0.003
+        }
+
+        complete_effect = {
+            add_war_support = 0.08
+        }
+
+        cost = 125
+
+        days_remove = 182
+        days_re_enable = 365
+
+        fire_only_once = no
+
+        ai_will_do = {
+            factor = 0.01
+        }
+
+     #    complete_effect = {
+           #  declare_war_on = {target = FROM type = annex_everything}
+        # }
+    }
+
+    tigaozhanzhengzhichidu2 = {
+        visible = {
+            always = yes
+        }
+        available = {
+            has_war_support < 0.8
+            and = {
+                has_war = yes
+                threat > 0.7
+            }
+            custom_trigger_tooltip = {
+                tooltip = EXH_influ_below_15
+                check_variable = { EXHC_current_exhaustion < 15}
+            }
+            political_power_daily > 0.25
+        }
+
+        modifier = {
+            war_support_weekly = 0.01
+            political_power_gain = -0.25
+        }
+
+        cost = 175
+
+        days_remove = 182
+        days_re_enable = 365
+
+        fire_only_once = no
+
+        ai_will_do = {
+            factor = 0.01
+        }
+
+     #    complete_effect = {
+           #  declare_war_on = {target = FROM type = annex_everything}
+        # }
+    }
+
+    gaishanbianyuandiqu = {
+        visible = {
+            always = yes
+        }
+        available = {
+            any_owned_state = {
+                is_controlled_by = ROOT
+                infrastructure < 5
+            }
+        }
+
+        modifier = {
+            production_speed_buildings_factor = -0.03
+        }
+
+        cost = 40
+
+        days_remove = 90
+        days_re_enable = 365
+
+        fire_only_once = no
+
+        ai_will_do = {
+            factor = 0.001
+            modifier = {
+                factor = 0
+                has_war = yes
+            }
+        }
+
+        complete_effect = {
+            random_owned_controlled_state = {
+                limit = {
+                    infrastructure < 5
+                }
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    gaishanshiqu = {
+        visible = {
+            always = yes
+        }
+        available = {
+            any_owned_state = {
+                is_controlled_by = ROOT
+                infrastructure > 8
+            }
+        }
+
+        modifier = {
+            production_speed_buildings_factor = -0.05
+            consumer_goods_factor = 0.01
+        }
+
+        cost = 100
+
+        days_remove = 90
+        days_re_enable = 365
+
+        fire_only_once = no
+
+        ai_will_do = {
+            factor = 0.001
+            modifier = {
+                factor = 0
+                has_war = yes
+            }
+        }
+
+        complete_effect = {
+            random_owned_controlled_state = {
+                limit = {
+                    infrastructure > 8
+                }
+                add_extra_state_shared_building_slots = 1
+            }
+        }
+    }
+
+    fadongxiaoguimozhanzheng = {
+        visible = {
+            or = {
+                has_country_flag = ty_gonggusixiang_fandong
+                has_country_flag = ty_gonggusixiang_neworder
+            }
+            
+        }
+        available = {
+            is_subject = no
+        }
+
+        target_trigger = {
+            FROM = {
+                is_neighbor_of = ROOT
+                not = {
+                    is_subject_of = ROOT
+                    has_war_with = ROOT
+                }
+            }
+            or = {
+                and = {
+                    ROOT = {
+                        has_country_flag = ty_gonggusixiang_fandong
+                    }
+                    FROM = {
+                        not = { has_government = ROOT }
+                    }
+                }
+                and = {
+                    ROOT = {
+                        has_country_flag = ty_gonggusixiang_neworder
+                    }
+                    FROM = {
+                        not = { is_same_race = yes }
+                    }
+                }
+            }
+        }
+
+        war_with_target_on_remove = yes
+
+        modifier = {
+
+        }
+
+        cost = 0
+
+        days_remove = 60
+        days_re_enable = 0
+
+        fire_only_once = no
+
+        ai_will_do = {
+            factor = 10
+            modifier = {
+                factor = 0
+                has_war = yes
+            }
+            modifier = {
+                factor = 0.1
+                FROM = {
+                    is_major = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                FROM = {
+                    or = {
+                        tag = HUM
+                        tag = EMB
+                    } 
+                }
+            }
+            modifier = {
+                has_non_aggression_pact_with = FROM
+                factor = 0
+            }
+            modifier = {
+                has_non_aggression_pact_with = FROM
+                factor = 0
+            }
+            modifier = {
+                strength_ratio = {
+                    tag = FROM
+                    ratio < 0.2
+                }
+                factor = 1.5
+            }
+            modifier = {
+                strength_ratio = {
+                    tag = FROM
+                    ratio < 0.5
+                }
+                factor = 1.5
+            }
+            modifier = {
+                strength_ratio = {
+                    tag = FROM
+                    ratio > 1.5
+                }
+                factor = 0.5
+            }
+            modifier = {
+                strength_ratio = {
+                    tag = FROM
+                    ratio > 2
+                }
+                factor = 0.5
+            }
+            modifier = {
+                strength_ratio = {
+                    tag = FROM
+                    ratio > 2.5
+                }
+                factor = 0.1
+            }
+            modifier = {
+                FROM = {
+                    has_war = yes
+                }
+                factor = 2
+            }
+            
+        }
+
+        complete_effect = {
+            clr_country_flag = ty_gonggusixiang_fandong
+            clr_country_flag = ty_gonggusixiang_neworder
+        }
+
+        remove_effect = {
+            create_wargoal = {
+                target = FROM
+                type = take_state
+            }
+        }
+    }
+}

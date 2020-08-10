@@ -1,0 +1,354 @@
+technologies = {
+	qiyouche146 = {
+		xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+		
+		enable_equipments = {
+		 	sc_motorized146
+		}
+
+		on_research_complete = {
+			load_oob = "unlock_armor_car_oob"
+			custom_effect_tooltip = "unlock_armor_car_oob"
+		}
+
+		research_cost = 2.5
+		start_year = 146
+
+		path = {
+			leads_to_tech = qiyouche153
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = houqinggailiang149
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = infantry_sc_advanced_folder
+			position = { x = 1 y = 2 }
+		}
+
+		enable_subunits = {
+
+		}
+		
+
+		
+		ai_will_do = {
+			factor = 1
+
+		}
+		
+		categories = {
+			science_vehicle_weapons
+			vehicle
+			science
+			military
+		}
+	}
+
+	qiyouche153 = {
+		xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+		
+		research_cost = 2.5
+		start_year = 153
+
+		
+
+		enable_equipments = {
+		 	sc_motorized153
+		}
+
+		path = {
+			leads_to_tech = qiyouche160
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = infantry_sc_advanced_folder
+			position = { x = 1 y = 7 }
+		}
+		
+
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			science_vehicle_weapons
+			vehicle
+			science
+			military
+		}
+	}
+	qiyouche160 = {
+		xp_research_type = army
+		xp_research_cost = 25
+		xp_research_bonus = 0.25
+		
+		research_cost = 2.5
+		start_year = 160
+
+		enable_equipments = {
+		 	sc_motorized160
+		}
+
+		folder = {
+			name = infantry_sc_advanced_folder
+			position = { x = 1 y = 11 }
+		}
+		
+
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			science_vehicle_weapons
+			vehicle
+			science
+			military
+		}
+	}
+
+	houqinggailiang149= {
+		
+		research_cost = 2
+		start_year = 149
+
+		path = {
+			leads_to_tech = houqinggailiang155
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = infantry_sc_advanced_folder
+			position = { x = 4 y = 5 }
+		}
+
+		supply_consumption_factor = -0.05
+		
+
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			vehicle
+			science_vehicle_improve
+			military
+			science
+		}
+	}
+	houqinggailiang155 = {
+		
+		research_cost = 2
+		start_year = 155
+
+		path = {
+			leads_to_tech = houqinggailiang161
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = infantry_sc_advanced_folder
+			position = { x = 4 y = 9 }
+		}
+
+		supply_consumption_factor = -0.05
+		
+
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			vehicle
+			science_vehicle_improve
+			military
+			science
+		}
+	}
+
+	houqinggailiang161 = {
+		
+		research_cost = 2
+		start_year = 161
+
+		folder = {
+			name = infantry_sc_advanced_folder
+			position = { x = 4 y = 12 }
+		}
+
+		supply_consumption_factor = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			vehicle
+			science_vehicle_improve
+			military
+			science
+		}
+	}
+
+	zhiyuanji149 = {
+	
+		path = {
+			leads_to_tech = zhandouji153
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = zhiyuanji153
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+		 	sc_CAS149
+		}
+
+		dependencies = {
+		   # abandoned = 1
+		}
+		
+		research_cost = 2.5
+		start_year = 149
+		folder = {
+			name = infantry_sc_advanced_folder
+			position = { x = 12 y = 5 }
+		}
+		
+		categories = {
+			science
+			military
+			air_equipment
+			science_CAS
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	zhandouji153 = {
+	
+		path = {
+			leads_to_tech = zhandouji160
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+		 	sc_fighter153
+		}
+
+		
+		research_cost = 2.5
+		start_year = 153
+		folder = {
+			name = infantry_sc_advanced_folder
+			position = { x = 9 y = 7 }
+		}
+		
+		categories = {
+			science
+			military
+			air_equipment
+			science_fighter
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	zhandouji160 = {
+
+	    enable_equipments = {
+		 	sc_fighter160
+		}
+	
+		
+		research_cost = 2.5
+		start_year = 160
+		folder = {
+			name = infantry_sc_advanced_folder
+			position = { x = 9 y = 11 }
+		}
+		
+		categories = {
+			science
+			military
+			air_equipment
+			science_fighter
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	zhiyuanji153 = {
+
+	    enable_equipments = {
+		 	sc_CAS153
+		}
+	
+		path = {
+			leads_to_tech = zhiyuanji160
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.5
+		start_year = 153
+		folder = {
+			name = infantry_sc_advanced_folder
+			position = { x = 15 y = 7 }
+		}
+		
+		categories = {
+			science
+			military
+			air_equipment
+			science_CAS
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	zhiyuanji160 = {
+	
+		enable_equipments = {
+		 	sc_CAS160
+		}
+
+		research_cost = 2.5
+		start_year = 160
+		folder = {
+			name = infantry_sc_advanced_folder
+			position = { x = 15 y = 11 }
+		}
+		
+		categories = {
+			science
+			military
+			air_equipment
+			science_CAS
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

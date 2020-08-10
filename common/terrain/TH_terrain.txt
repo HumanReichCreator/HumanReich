@@ -1,0 +1,34 @@
+
+##################################################################
+### Terrain Categories
+###
+###
+	# ocean = {
+	# lakes = {
+	# forest = {
+	# hills = {
+	# mountain = {
+	# plains = {
+	# urban = {
+	# jungle = {	
+	# marsh = {
+	# desert = {
+	# farms = {
+	# bamboo = {
+##################################################################
+### Graphical terrain
+###		type	=	refers to the terrain defined above, "terrain category"'s 
+### 	color 	= 	index in bitmap color table (see terrain.bmp)
+###
+
+terrain = {
+	# terrain_0					= { type = plains			color = { 	0	 } texture = 1 }
+	# terrain_1					= { type = forest			color = { 	1	 } texture = 4 } 
+	# desert_mountain				= { type = hills			color = { 	2	 } texture = 3 }
+	# terrain_5					= { type = farms	 		color = { 	5	 } texture = 0 }
+	# terrain_6					= { type = mountain			color = { 	6	 } texture = 11 }
+	# terrain_9					= { type = marsh			color = { 	9	 } texture = 6 }
+	# forest_13					= { type = urban			color = { 	13	 } texture = 10 spawn_city = no }
+	# bamboo_test			= { type = bamboo		color = { 	23	 } texture = 1 }
+	
+}

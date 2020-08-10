@@ -1,0 +1,501 @@
+ideas = {
+#===============================
+    country = {
+        allsmallscenario = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {		
+				political_power_factor = -0.5
+				
+			}
+		}
+	#=========================
+	    yumouzhanzheng = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {		
+				SUPPLY_CONSUMPTION_FACTOR = -0.35
+			#	PLANNING_SPEED = 0.25
+			#	ARMY_ORG_FACTOR = 0.1
+
+				
+				
+			}
+		}
+	#=============141============
+	gemingbuff1 = {
+	       allowed = {
+	           always = no
+	       }
+
+	       modifier = {
+	           army_attack_factor = 0.1
+			   army_defence_factor = 0.1
+			   planning_speed = 0.2
+			   ARMY_SPEED_FACTOR = 0.1
+	           army_morale_factor = 0.4
+
+	       }
+	}
+	gemingbuff2 = {
+	       allowed = {
+	           always = no
+	       }
+
+	       modifier = {
+	           army_attack_factor = 0.1
+			   army_defence_factor = 0.1
+			   planning_speed = 0.1
+			   ARMY_SPEED_FACTOR = 0.1
+	           army_morale_factor = 0.3
+
+	       }
+	}
+	gemingbuff3 = {
+	       allowed = {
+	           always = no
+	       }
+
+	       modifier = {
+	           army_attack_factor = 0.05
+			   army_defence_factor = 0.05
+			   planning_speed = 0.05
+			   ARMY_SPEED_FACTOR = 0.1
+	           army_morale_factor = 0.25
+
+	       }
+	}
+    #=============142============
+	rem142 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {		
+				industrial_capacity_factory = 0.5
+				production_factory_efficiency_gain_factor = 0.5
+				local_resources_factor = 10
+			}
+	}
+	in142 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			rule = {
+			   can_join_factions = yes
+			}
+	}
+	tushabuff1 = {
+	        allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {		
+				army_morale_factor = 0.3
+			}
+	}
+	tushabuff2 = {
+	        allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {		
+				army_morale_factor = 0.15
+			}
+	}
+	tushadebuff = {
+	        allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {		
+				army_morale_factor = -0.05
+			}
+	}
+	#通用144
+	qingbaobuff1 = {
+	        allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {		
+				planning_speed = 0.25
+				decryption = 15
+				ai_focus_aggressive_factor = 0.25
+			}
+			
+
+			targeted_modifier = { 
+			tag = HUM
+			attack_bonus_against = 1.25
+			defense_bonus_against = 1.25
+			}
+			targeted_modifier = { 
+			tag = HKR
+			attack_bonus_against =  1.25
+			defense_bonus_against =  1.25
+			}
+			targeted_modifier = { 
+			tag = MRS
+			attack_bonus_against =  1.25
+			defense_bonus_against = 1.25
+			}
+	}
+	qingbaobuff2 = {
+	        allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			
+	
+			modifier = {		
+				planning_speed = 0.15
+				decryption = 10
+				ai_focus_aggressive_factor = 0.25
+			}
+			targeted_modifier = { 
+			tag = HUM
+			attack_bonus_against = 1
+			defense_bonus_against = 1
+			}
+			targeted_modifier = { 
+			tag = HKR
+			attack_bonus_against = 1
+			defense_bonus_against = 1
+			}
+			targeted_modifier = { 
+			tag = MRS
+			attack_bonus_against = 1
+			defense_bonus_against = 1
+			}
+	}
+	qingbaobuff3 = {
+	        allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+
+	
+			modifier = {		
+				planning_speed = 0.05
+				decryption = 5
+				ai_focus_aggressive_factor = 0.25
+			}
+			targeted_modifier = { 
+			tag = HUM
+			attack_bonus_against = 0.75
+			defense_bonus_against = 0.75
+			}
+			targeted_modifier = { 
+			tag = HKR
+			attack_bonus_against = 0.75
+			defense_bonus_against = 0.75
+			}
+			targeted_modifier = { 
+			tag = MRS
+			attack_bonus_against = 0.75
+			defense_bonus_against = 0.75
+			}
+	}
+
+
+	#==========144============
+	    renlidebuff_n = {
+	        allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			targeted_modifier = { 
+			tag = HKM
+			attack_bonus_against = -0.15
+			defense_bonus_against = -0.15
+			}
+			targeted_modifier = { 
+			tag = CHE
+			attack_bonus_against = -0.15
+			defense_bonus_against = -0.15
+			}
+			targeted_modifier = { 
+			tag = SEI
+			attack_bonus_against = -0.15
+			defense_bonus_against = -0.15
+			}
+			targeted_modifier = { 
+			tag = RMI
+			attack_bonus_against = -0.15
+			defense_bonus_against = -0.15
+			}
+			targeted_modifier = { 
+			tag = MSD
+			attack_bonus_against = -0.15
+			defense_bonus_against = -0.15
+			}
+			targeted_modifier = { 
+			tag = KOG
+			attack_bonus_against = -0.15
+			defense_bonus_against = -0.15
+			}
+			targeted_modifier = { 
+			tag = KAG
+			attack_bonus_against = -0.15
+			defense_bonus_against = -0.15
+			}
+			targeted_modifier = { 
+			tag = NMS
+			attack_bonus_against = -0.15
+			defense_bonus_against = -0.15
+			}
+			targeted_modifier = { 
+			tag = WAK
+			attack_bonus_against = -0.15
+			defense_bonus_against = -0.15
+			}
+			targeted_modifier = { 
+			tag = SCA
+			attack_bonus_against = -0.15
+			defense_bonus_against = -0.15
+			}
+		}
+
+		renlidebuff_h_l = {
+	        allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			targeted_modifier = { 
+			tag = HKM
+			attack_bonus_against = -0.25
+			defense_bonus_against = -0.25
+			}
+			targeted_modifier = { 
+			tag = CHE
+			attack_bonus_against = -0.25
+			defense_bonus_against = -0.25
+			}
+			targeted_modifier = { 
+			tag = SEI
+			attack_bonus_against = -0.25
+			defense_bonus_against = -0.25
+			}
+			targeted_modifier = { 
+			tag = RMI
+			attack_bonus_against = -0.25
+			defense_bonus_against = -0.25
+			}
+			targeted_modifier = { 
+			tag = MSD
+			attack_bonus_against = -0.25
+			defense_bonus_against = -0.25
+			}
+			targeted_modifier = { 
+			tag = KOG
+			attack_bonus_against = -0.25
+			defense_bonus_against = -0.25
+			}
+			targeted_modifier = { 
+			tag = KAG
+			attack_bonus_against = -0.25
+			defense_bonus_against = -0.25
+			}
+			targeted_modifier = { 
+			tag = NMS
+			attack_bonus_against = -0.25
+			defense_bonus_against = -0.25
+			}
+			targeted_modifier = { 
+			tag = WAK
+			attack_bonus_against = -0.25
+			defense_bonus_against = -0.25
+			}
+			targeted_modifier = { 
+			tag = SCA
+			attack_bonus_against = -0.25
+			defense_bonus_against = -0.25
+			}
+		}
+
+		renlidebuff2_e_n = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {		
+				war_support_weekly = -0.01
+				stability_weekly = -0.005
+				army_morale_factor = -0.4
+				mobilization_speed = -0.2
+			}
+		}
+		renlidebuff2_h = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {		
+				war_support_weekly = -0.015
+				stability_weekly = -0.005
+				army_morale_factor = -0.5
+				mobilization_speed = -0.3
+			}
+		}
+		
+		renlidebuff2_l = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {		
+				war_support_weekly = -0.015
+				stability_weekly = -0.005
+				army_morale_factor = -0.6
+				mobilization_speed = -0.4
+			}
+		}
+
+		renlidebuff2_e_n_c = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {		
+				war_support_weekly = -0.01
+				stability_weekly = -0.005
+				mobilization_speed = -0.1
+			}
+		}
+		renlidebuff2_h_c = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {		
+				war_support_weekly = -0.015
+				stability_weekly = -0.005
+				mobilization_speed = -0.15
+			}
+		}
+		
+		renlidebuff2_l_c = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {		
+				war_support_weekly = -0.015
+				stability_weekly = -0.005
+				mobilization_speed = -0.2
+			}
+		}
+
+	    renli144 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {		
+				conscription_factor = -0.4
+			}
+		}
+		
+    }
+}
