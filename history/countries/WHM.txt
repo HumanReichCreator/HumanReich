@@ -1,0 +1,167 @@
+﻿capital = 375
+
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card = 1
+        buqiang117 = 1
+        buqiang140 = 1
+        buqiang145 = 1
+        tangxiangailiang140 = 1
+        jiandanmiaozhunjing140 = 1
+        tangxiangailiang145 = 1
+        qijumiaozhunjing145 = 1
+            
+        #辅助
+
+        #专用辅助
+        fangzhihuopao143 = 1
+
+        #专用基础
+
+        #专用进阶
+        qiyouche146 = 1
+
+        #混合系
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+        zuzhihuazhanzheng142 = 1
+        zhanchangzhihui145=  1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        waike = 1
+        jisuangongju144 = 1
+        tongxunlilun = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+            
+        #专用工业
+        fangwaijieshengchan130 = 1
+        fangwaijieshengchan140 = 1
+        fangwaijieshengchan145 = 1
+
+        #种族
+        kongjuyizhiji1 = 1
+            
+    }
+}
+
+146.1.1={
+    oob = "WHM_146"
+    set_research_slots = 6
+    # Starting tech
+    set_party_name = { ideology = neworder long_name = HUM_neworder_main_party name = HUM_neworder_main_party }
+    remove_ideas = {
+        renli144
+    }
+    set_truce = {target = EMB days = 1095}
+    set_truce = {target = WAK days = 1095}
+    set_truce = {target = CHE days = 1095}
+    set_truce = {target = KAG days = 1095}
+    set_truce = {target = KOG days = 1095}
+    set_truce = {target = NMS days = 1095}
+    set_truce = {target = SCA days = 1095}
+    set_truce = {target = NMS days = 1095}
+    set_truce = {target = RMI days = 1095}
+    set_truce = {target = SEI days = 1095}
+    set_truce = {target = MSD days = 1095}
+    set_truce = {target = SHO days = 1095}
+    set_truce = {target = SBK days = 1095}
+    set_truce = {target = NIB days = 1095}
+    set_truce = {target = HKM days = 1095}
+    set_truce = {target = AVE days = 1095}
+    set_truce = {target = MAM days = 1095}
+
+    add_ideas = {
+        Human
+        Town
+
+        manpowerlv1
+         
+        isolation
+        
+        dove3
+        open3
+        normal_border
+        forbidden_magic
+    }
+    #########调整
+    SRB = { give_guarantee = HUM}
+    KOG = { give_guarantee = HUM}
+    
+    set_politics = {
+
+    	ruling_party = qinwai
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 89
+        guli = 8
+        neworder = 2
+        oldorder = 0
+        fandong = 1
+    }
+
+    
+}
+
+
+
+create_country_leader = {
+    # name = "Fujiwara no Mokou"
+    name = "藤原妹红"
+    picture = "HUM_mokou.dds"
+    ideology = neworder_type
+    traits = {
+        
+    }
+}
+
+create_country_leader = {
+	#name = "Kamishirasawa Keine"
+    name = "上白泽慧音"
+	picture = "HUM_keine.dds"
+	ideology = guli_type
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+    #name = "Kamishirasawa Keine"
+    name = "上白泽慧音"
+    picture = "HUM_keine.dds"
+    ideology = oldorder_type
+    traits = {
+        
+    }
+}
+
+create_country_leader = {
+	#name = "Kamishirasawa Keine"
+    name = "上白泽慧音"
+	picture = "HUM_keine.dds"
+	ideology = qinwai_type
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+    #name = "Motoori Kosuzu"
+    name = "本居小铃"
+    picture = "HUM_kosuzu.dds"
+    ideology = fandong_type
+    traits = {
+        
+    }
+}
