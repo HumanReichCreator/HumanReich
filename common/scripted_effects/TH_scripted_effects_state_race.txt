@@ -568,6 +568,14 @@ Ge_race_setting = {
 		set_variable = { ST_origin_race = 4 }
 		set_variable = { ST_present_race = 4 }
 	}
+	299 = {
+		set_variable = { ST_origin_race = 1 }
+		set_variable = { ST_present_race = 4 }
+	}
+	237 = {
+		set_variable = { ST_origin_race = 1 }
+		set_variable = { ST_present_race = 4 }
+	}
 	#SBK EMB HUM
 	every_state = {
 		limit = {
@@ -699,7 +707,7 @@ Ge_race_setting = {
 	}
 	394 = {
 		set_variable = { ST_origin_race = 6 }
-		set_variable = { ST_present_race = 7 }
+		set_variable = { ST_present_race = 6 }
 	}
 
 	#OKI
@@ -755,15 +763,15 @@ Ge_race_setting = {
 	}
 	179 = {
 		set_variable = { ST_origin_race = 1 }
-		set_variable = { ST_present_race = 7 }
+		set_variable = { ST_present_race = 1 }
 	}
 	393 = {
 		set_variable = { ST_origin_race = 1 }
-		set_variable = { ST_present_race = 7 }
+		set_variable = { ST_present_race = 1 }
 	}
 	279 = {
 		set_variable = { ST_origin_race = 1 }
-		set_variable = { ST_present_race = 6 }
+		set_variable = { ST_present_race = 1 }
 	}
 
 
@@ -779,7 +787,7 @@ Ge_race_setting = {
 	}
 	384 = {
 		set_variable = { ST_origin_race = 4 }
-		set_variable = { ST_present_race = 7 }
+		set_variable = { ST_present_race = 4 }
 	}
 	167 = {
 		set_variable = { ST_origin_race = 4 }

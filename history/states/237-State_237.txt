@@ -22,8 +22,10 @@ state={
 			}
 		}
 		146.1.1 = {
-			owner = KOG
-			add_core_of = KOG
+			owner = HUM
+			add_core_of = HUM
+			remove_core_of = KOG
+			add_claim_by = KOG
 			buildings = {
 				infrastructure =4
 				industrial_complex = 2
