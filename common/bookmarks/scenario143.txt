@@ -1,29 +1,29 @@
-# bookmarks = {
-# 	bookmark = {
-# 		name = "scenario143_NAME"
-# 		desc = "scenario143_DESCS"
-# 		date = 143.7.1.7
-# 		picture = "GFX_Scenario143"
-# 		default_country = "NMS"
-# 		default = no
+ bookmarks = {
+ 	bookmark = {
+ 		name = "scenario143_NAME"
+ 		desc = "scenario143_DESCS"
+ 		date = 143.7.1.7
+ 		picture = "GFX_Scenario143"
+ 		default_country = "NMS"
+ 		default = no
 		
 
-# 		# "--0"={
-# 			# history = "JINYONG_DESC"
-# 			# ideas = { 
-# 			# }
-# 		# }
-		
-# 		"NMS"={
-# 			history = "NMS_scnario143_DESC"
-# 			ideas = { 
-# 			}
-# 		}
+ 		# "--0"={
+ 			# history = "JINYONG_DESC"
+ 			# ideas = { 
+ 			# }
+ 		# }
+	
+ 		"NMS"={
+ 			history = "NMS_scnario143_DESC"
+ 			ideas = { 
+ 			}
+ 		}
 
 		
-# 		effect = {
-# 			randomize_weather = 22345 # <- Obligatory in every bookmark !
-# 			#123 = { rain_light = yes }
-# 		}
-# 	}
-# }
+ 		effect = {
+ 			randomize_weather = 22345 # <- Obligatory in every bookmark !
+ 			#123 = { rain_light = yes }
+ 		}
+ 	}
+ }
