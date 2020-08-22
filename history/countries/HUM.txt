@@ -306,16 +306,19 @@
     
     set_politics = {
 
-    	ruling_party = guli
+    	ruling_party = authordemo
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 8
-        guli = 89
+        qinwai = 7
+        guli = 20
         neworder = 2
         oldorder = 0
         fandong = 1
+        lienin = 10
+        humanfirst = 17
+        authordemo = 43
     }
 
     
@@ -370,3 +373,14 @@ create_country_leader = {
         
     }
 }
+
+create_country_leader = {
+    #name = "Motoori Kosuzu"
+    name = "本居小铃"
+    picture = "HUM_kosuzu.dds"
+    ideology = authordemo_type
+    traits = {
+        
+    }
+}
+

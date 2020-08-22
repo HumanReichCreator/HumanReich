@@ -22,8 +22,8 @@ NDefines.NDiplomacy.TENSION_TIME_SCALE_START_DATE = "147.1.1.12"--changed-- Star
 NDefines.NDiplomacy.FRONT_IS_DANGEROUS = 0 --changed-- AI should be unwilling to enter accept a call to war if front is too dangerous.
 NDefines.NDiplomacy.IDEOLOGY_JOIN_FACTION_MIN_LEVEL = -1--changed-- ideology limit required to join faction
 NDefines.NDiplomacy.WARGOAL_VERSUS_MAJOR_AT_WAR_REDUCTION = 0 	-- reduction of pp cost for wargoal vs major at war.
-NDefines.NDiplomacy.BASE_IMPROVE_RELATION_SAME_IDEOLOGY_GROUP_MAINTAIN_COST = 0.35 -- Political power cost each update when boosting relations with nation of same ideology
-NDefines.NDiplomacy.BASE_IMPROVE_RELATION_DIFFERENT_IDEOLOGY_GROUP_MAINTAIN_COST = 0.7    -- Political power cost each update when boosting relations with nation of different ideology
+NDefines.NDiplomacy.BASE_IMPROVE_RELATION_SAME_IDEOLOGY_GROUP_MAINTAIN_COST = 0.25 -- Political power cost each update when boosting relations with nation of same ideology
+NDefines.NDiplomacy.BASE_IMPROVE_RELATION_DIFFERENT_IDEOLOGY_GROUP_MAINTAIN_COST = 0.5    -- Political power cost each update when boosting relations with nation of different ideology
 
 -- NDefines.NDiplomacy.WARGOAL_WORLD_TENSION_REDUCTION = -0.25			-- Reduction of pp cost for wargoal at 100% world tension, scales linearly
 NDefines.NCountry.POPULATION_YEARLY_GROWTH_BASE = 0.03			-- basic population growth per year, used for monthly manpower gain

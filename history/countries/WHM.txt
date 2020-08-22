@@ -104,11 +104,14 @@
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 89
+        qinwai = 70
         guli = 8
         neworder = 2
         oldorder = 0
-        fandong = 1
+        fandong = 4
+        lienin = 10
+        humanfirst = 3
+        authordemo = 3
     }
 
     
@@ -161,6 +164,16 @@ create_country_leader = {
     name = "本居小铃"
     picture = "HUM_kosuzu.dds"
     ideology = fandong_type
+    traits = {
+        
+    }
+}
+
+create_country_leader = {
+    #name = "Motoori Kosuzu"
+    name = "本居小铃"
+    picture = "HUM_kosuzu.dds"
+    ideology = authordemo_type
     traits = {
         
     }

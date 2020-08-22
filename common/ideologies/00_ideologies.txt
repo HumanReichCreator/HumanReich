@@ -1,5 +1,5 @@
 ideologies = {
-	guli = { #孤立
+	guli = { #孤立-自由和平主义
 	
 		types = {
 		
@@ -14,9 +14,9 @@ ideologies = {
 		color = { 75 75 75 }
 		rules = {
 			can_force_government = no
-			can_puppet = yes
+			can_puppet = no
 			can_join_factions = yes
-			can_send_volunteers = yes
+			can_send_volunteers = no
 		}
 		modifiers = {
 			join_faction_tension = 0.25
@@ -33,7 +33,42 @@ ideologies = {
 		can_be_boosted = no
 	}
 	
-	qinwai = { #亲外
+	authordemo = { #威权民主主义
+	
+		types = {
+		
+			authordemo_type = {
+			
+			}
+		}
+		
+		dynamic_faction_names = {
+		}
+		
+		color = { 205 205 25 }
+		rules = {
+			can_force_government = no
+			can_puppet = yes
+			can_join_factions = yes
+			can_send_volunteers = yes
+		}
+		modifiers = {
+			join_faction_tension = 0.25
+			generate_wargoal_tension = 0.5
+			justify_war_goal_time = 0.1
+			trade_opinion_factor = 0.25 
+			non_core_manpower = 0.02 
+
+			
+		}
+
+		war_impact_on_world_tension = 0.05
+		
+		ai_communist = yes	
+		ai_neutral = yes	
+		can_be_boosted = no
+	}
+	qinwai = { #亲外-社民
 	
 		types = {
 		
@@ -45,7 +80,7 @@ ideologies = {
 		dynamic_faction_names = {
 		}
 		
-		color = { 5 80 5 }
+		color = { 205 80 15 }
 		rules = {
 			can_force_government = no
 			can_puppet = yes
@@ -59,14 +94,16 @@ ideologies = {
 			join_faction_tension = 0.25
 			generate_wargoal_tension = 0.6
 
-			send_volunteer_factor = 0.5
+			send_volunteer_factor = 0.55
 			conscription_factor = 0.05
 			political_power_gain = 0.15
+			supply_consumption_factor = 0.15
+			opinion_gain_monthly_factor = 0.15 
 
 			custom_modifier_tooltip = qinwai_modifier
 		}
 
-		war_impact_on_world_tension = 0.25
+		war_impact_on_world_tension = 0.2
 		
 		
 		ai_communist = yes	
@@ -74,7 +111,7 @@ ideologies = {
 		can_be_boosted = no
 	}
 
-	fandong = { #反动
+	fandong = { #反动-工团主义
 	
 		types = {
 		
@@ -86,9 +123,44 @@ ideologies = {
 		dynamic_faction_names = {
 		}
 		
-		color = { 100 10 10 }
+		color = { 200 50 50 }
 		rules = {
 			can_force_government = no
+			can_puppet = yes
+			can_join_factions = yes
+			can_send_volunteers = yes
+		}
+		can_collaborate = yes
+		modifiers = {
+			join_faction_tension = 0.25
+			generate_wargoal_tension = 0.15
+			political_power_gain = 0.1
+			ARMY_CORE_DEFENCE_FACTOR = 0.2
+			resistance_growth_on_our_occupied_states = -0.1
+		}
+
+		war_impact_on_world_tension = 0.15
+		
+
+		ai_communist = yes	
+		can_be_boosted = no
+	}
+
+	lienin = { #社会集体主义
+	
+		types = {
+		
+			lienin_type = {
+			
+			}
+		}
+		
+		dynamic_faction_names = {
+		}
+		
+		color = { 100 10 10 }
+		rules = {
+			can_force_government = yes
 			can_puppet = yes
 			can_join_factions = yes
 			can_send_volunteers = yes
@@ -100,8 +172,9 @@ ideologies = {
 
 			ARMY_CORE_ATTACK_FACTOR = 0.1
 			ARMY_CORE_DEFENCE_FACTOR = 0.1
-			supply_consumption_factor = -0.1
-			resistance_growth_on_our_occupied_states = 0.25
+			supply_consumption_factor = -0.15
+			resistance_growth_on_our_occupied_states = 0.1
+			army_org_factor = 0.05 
 		}
 
 		war_impact_on_world_tension = 0.15
@@ -111,7 +184,7 @@ ideologies = {
 		can_be_boosted = no
 	}
 
-	neworder = { #新秩序
+	neworder = { #新秩序-斗争主义
 	
 		types = {
 		
@@ -123,7 +196,7 @@ ideologies = {
 		dynamic_faction_names = {
 		}
 		
-		color = { 50 25 0 }
+		color = { 50 125 150 }
 		rules = {
 			can_force_government = no
 			can_puppet = yes
@@ -134,10 +207,10 @@ ideologies = {
 		modifiers = {
 			join_faction_tension = 0.25
 			generate_wargoal_tension = 0.35
-
+			supply_consumption_factor = -0.20 
 			ARMY_ORG_FACTOR = 0.1
 			offensive_war_stability_factor = 0.1
-
+			send_volunteer_size = 5 
 			custom_modifier_tooltip = neworder_modifier
 		}
 
@@ -152,7 +225,7 @@ ideologies = {
 	
 	
 	
-	oldorder = { #旧秩序
+	oldorder = { #旧秩序-妖怪霸权
 	
 		types = {
 		
@@ -181,8 +254,9 @@ ideologies = {
 
 			drift_defence_factor = 5
 			conscription_factor = 0.05
-			supply_consumption_factor = -0.1
-
+			military_leader_cost_factor = -0.20 
+ 			army_leader_start_attack_level= 1 
+ 			resistance_target = -0.05 
 			custom_modifier_tooltip = oldorder_modifier
 		}
 
@@ -195,5 +269,86 @@ ideologies = {
 		can_be_boosted = no
 	}
 
+	humanfirst = { #人类同化
+	
+		types = {
+		
+			humanfirst _type = {
+			
+			}
+		}
+		
+		dynamic_faction_names = {
+		}
+		
+		color = { 75 100 15 }
+		rules = {
+			can_force_government = no
+			can_puppet = yes
+			can_join_factions = yes
+			can_send_volunteers = yes
+		}
+
+		can_collaborate = yes
+
+		modifiers = {
+			join_faction_tension = 0.25
+			generate_wargoal_tension = 0.6
+			justify_war_goal_time = -0.15
+			enemy_justify_war_goal_time = 0.1 
+
+
+			drift_defence_factor = 5
+			conscription_factor = 0.05
+ 			army_leader_start_logistics_level = 1 
+ 			resistance_target = -0.05 
+			planning_speed = 0.10 
+			custom_modifier_tooltip = oldorder_modifier
+		}
+
+		war_impact_on_world_tension = 0.25
+		
+		ai_fascist = yes
+		ai_communist = yes	
+		ai_democratic = yes	
+		# ai_communist = yes		
+		can_be_boosted = no
+	}
+	destroy = { #幻想乡灭世
+	
+		types = {
+		
+			destroy_type = {
+			
+			}
+		}
+		
+		dynamic_faction_names = {
+		}
+		
+		color = { 0 0 0 }
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+			can_send_volunteers = no
+		}
+
+		can_collaborate = yes
+
+		modifiers = {
+			weekly_manpower = -1000
+			stability_factor = -1
+			army_org_factor = -1
+		}
+
+		war_impact_on_world_tension = 0.25
+		
+		ai_fascist = yes
+		ai_communist = yes	
+		ai_democratic = yes	
+		# ai_communist = yes		
+		can_be_boosted = no
+	}
 
 }
