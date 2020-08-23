@@ -241,9 +241,9 @@ is_same_government = {
 			}
 		}
 		and = {
-			has_government = destroy
+			has_government = destroyid
 			PREV = {
-				has_government = destroy
+				has_government = destroyid
 			}
 		}
 	}

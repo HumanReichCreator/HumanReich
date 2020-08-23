@@ -29,8 +29,8 @@ has_same_government_as_ROOT = {
 			ROOT = { has_government = humanfirst }
 		}
 		AND = {
-			has_government = destroy
-			ROOT = { has_government = destroy }
+			has_government = destroyid
+			ROOT = { has_government = destroyid }
 		}
 	}
 }

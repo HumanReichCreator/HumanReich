@@ -175,7 +175,7 @@ go_qinwai = {
 	clr_country_flag = go_authordemo
 	clr_country_flag = go_lienin
 	clr_country_flag = go_humanfirst
-	clr_country_flag = go_destroy
+	clr_country_flag = go_destroyid
 	clr_country_flag = go_oldorder
 }
 
@@ -188,7 +188,7 @@ go_guli = {
 	clr_country_flag = go_authordemo
 	clr_country_flag = go_lienin
 	clr_country_flag = go_humanfirst
-	clr_country_flag = go_destroy
+	clr_country_flag = go_destroyid
 	clr_country_flag = go_oldorder
 }
 
@@ -200,7 +200,7 @@ go_fandong = {
 	clr_country_flag = go_authordemo
 	clr_country_flag = go_lienin
 	clr_country_flag = go_humanfirst
-	clr_country_flag = go_destroy
+	clr_country_flag = go_destroyid
 	clr_country_flag = go_oldorder
 }
 
@@ -212,7 +212,7 @@ go_neworder = {
 	clr_country_flag = go_authordemo
 	clr_country_flag = go_lienin
 	clr_country_flag = go_humanfirst
-	clr_country_flag = go_destroy
+	clr_country_flag = go_destroyid
 	clr_country_flag = go_oldorder
 }
 
@@ -225,7 +225,7 @@ go_oldorder = {
 	clr_country_flag = go_authordemo
 	clr_country_flag = go_lienin
 	clr_country_flag = go_humanfirst
-	clr_country_flag = go_destroy
+	clr_country_flag = go_destroyid
 }
 
 go_authordemo = {
@@ -237,7 +237,7 @@ go_authordemo = {
 	clr_country_flag = go_oldorder
 	clr_country_flag = go_lienin
 	clr_country_flag = go_humanfirst
-	clr_country_flag = go_destroy
+	clr_country_flag = go_destroyid
 }
 
 go_lienin = {
@@ -249,7 +249,7 @@ go_lienin = {
 	clr_country_flag = go_authordemo
 	clr_country_flag = go_oldorder
 	clr_country_flag = go_humanfirst
-	clr_country_flag = go_destroy
+	clr_country_flag = go_destroyid
 }
 
 go_humanfirst = {
@@ -261,11 +261,11 @@ go_humanfirst = {
 	clr_country_flag = go_authordemo
 	clr_country_flag = go_lienin
 	clr_country_flag = go_oldorder
-	clr_country_flag = go_destroy
+	clr_country_flag = go_destroyid
 }
 
-go_destroy = {
-	set_country_flag = go_destroy
+go_destroyid = {
+	set_country_flag = go_destroyid
     clr_country_flag = go_neworder
     clr_country_flag = go_fandong
     clr_country_flag = go_guli

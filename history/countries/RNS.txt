@@ -69,7 +69,7 @@
     
     
     set_politics = {
-        ruling_party = destroy
+        ruling_party = destroyid
         election_frequency = 48
         elections_allowed = no
     }
@@ -79,7 +79,7 @@
         neworder = 0
         oldorder = 0
         fandong = 0
-        destroy = 90
+        destroyid = 90
     }
 }
 create_country_leader = {
@@ -95,7 +95,7 @@ create_country_leader = {
     # name = "Morichika Rinnosuke"
     name = "雾雨家"
     picture = "RNS_rns.dds"
-    ideology = destroy_type
+    ideology = destroyid_type
     traits = {
 
     }
