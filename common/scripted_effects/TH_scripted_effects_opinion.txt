@@ -4,6 +4,8 @@ opinion_change = {
 	hidden_effect = {
 		every_country = {
 			remove_opinion_modifier = {target = ROOT modifier = same_view }
+			remove_opinion_modifier = {target = ROOT modifier = same_gov }
+			remove_opinion_modifier = {target = ROOT modifier = similar_gov }
 			remove_opinion_modifier = {target = ROOT modifier = different_view }
 			remove_opinion_modifier = {target = ROOT modifier = gailiang_view }
 			remove_opinion_modifier = {target = ROOT modifier = different_world }
@@ -12,15 +14,17 @@ opinion_change = {
 				remove_opinion_modifier = {target = PREV modifier = different_view }
 				remove_opinion_modifier = {target = PREV modifier = gailiang_view }
 				remove_opinion_modifier = {target = PREV modifier = different_world }
+				remove_opinion_modifier = {target = ROOT modifier = same_gov }
+				remove_opinion_modifier = {target = ROOT modifier = similar_gov }
 			}
 		}
 		if = {
 			limit = {
-				has_government = qinwai
+				has_government = fandong
 			}
 			every_country = {
 				limit = {
-					has_government = qinwai
+					has_government = fandong
 				}
 				add_opinion_modifier = {target = ROOT modifier = gailiang_view}
 				reverse_add_opinion_modifier = {target = ROOT modifier = gailiang_view}
