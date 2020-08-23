@@ -137,6 +137,94 @@ ideas = {
 			     guli_drift = 0.05
 			}
 		}
+		
+		oldorder_drift1 = {
+			 picture = generic_fascism_drift_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			     oldorder_drift = 0.05
+			}
+		}
+		
+		authordemo_drift1 = {
+			 picture = generic_neutrality_drift_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			     authordemo_drift = 0.05
+			}
+		}
+		
+		lienin_drift1 = {
+			 picture = generic_communism_drift_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			     lienin_drift = 0.05
+			}
+		}
+		humanfirst_drift1 = {
+			 picture = generic_fascism_drift_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			     humanfirst_drift = 0.05
+			}
+		}
+		destroy_drift1 = {
+			 picture = generic_fascism_drift_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			     destroy_drift = 0.05
+			}
+		}
 
 		jungong_long_focus = {
 			picture = man_five_year_plan_air

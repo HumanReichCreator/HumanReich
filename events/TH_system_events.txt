@@ -1,7 +1,7 @@
 ﻿add_namespace = sys
 
 country_event = {
-	#拉鹰
+	#拉鹰-个人
 	id = sys.1
 	title = sys.1.t
 	desc = sys.1.desc
@@ -9,7 +9,14 @@ country_event = {
 	fire_only_once = no
 	is_triggered_only = yes
 
-	option = {
+	option = {#增加工团
+		trigger = {
+			or = {
+				has_government = guli
+				has_government = qinwai
+				has_government = fandong
+			}
+		}
 		if = {
 			limit = {
 				fandong < 0.5
@@ -36,7 +43,8 @@ country_event = {
 		name = sys.1.a
 		if = {
 			limit = {
-				not = { has_government = oldorder }
+				not = { has_government = destroy }
+				
 			}
 			go_fandong = yes
 		}
@@ -72,7 +80,14 @@ country_event = {
 		}
 	}
 
-	option = {
+	option = {#增加斗争
+		trigger = {
+			or = {
+				has_government = guli
+				has_government = authordemo
+				has_government = neworder
+			}
+		}
 		if = {
 			limit = {
 				neworder < 0.5
@@ -100,7 +115,7 @@ country_event = {
 
 		if = {
 			limit = {
-				not = { has_government = oldorder }
+				not = { has_government = destroy }
 			}
 			go_neworder = yes
 		}
@@ -136,28 +151,183 @@ country_event = {
 		}
 	}
 
-	option = {
+	option = {#保持现状
 		name = sys.1.c
 
-		add_popularity = {
-			ideology = oldorder
-			popularity = 0.01
-		}
 
 		trigger = {
-			has_government = oldorder
+			or = {
+				has_government = guli
+				has_government = destroy
+			}
 		}
 
 
 		ai_chance = {
 			base = 1
 			modifier = {
-				has_government = oldorder
+				or = {
+					has_government = guli
+					has_government = destroy
+				}
 				factor = 100
 			}
 		}
 	}
+	option = {#增加威民
+		trigger = {
+			or = {
+				has_government = oldorder
+				has_government = humanfirst
+				has_government = authordemo
+				and= {
+					has_country_flag = {
+						flag = lobbyvalue
+						value < 2
+					}
+					has_government = guli
+				}
+			}
+		}
+		if = {
+			limit = {
+				authordemo < 0.5
+			}
+			add_popularity = {
+				ideology = authordemo
+				popularity = 0.03
+			}
+			else = {
+				add_popularity = {
+					ideology = authordemo
+					popularity = 0.01
+				}
+			}
+		}
 
+		if = {
+			limit = {
+				not = { has_government = authordemo}
+			}
+			add_stability = -0.04
+		}
+
+		name = sys.1.d
+
+		if = {
+			limit = {
+				not = { has_government = destroy }
+			}
+			go_authordemo = yes
+		}
+
+		if = {
+			limit = {
+				has_idea = authordemo_drift1
+			}
+			modify_timed_idea = {
+				idea = authordemo_drift1 days = 92
+			}
+			else = {
+				add_timed_idea = { idea = authordemo_drift1 days = 92}
+			}
+		}
+		
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_government = authordemo
+				factor = 2.5
+			}
+			modifier = {
+				has_country_flag = go_authordemo
+				factor = 1000
+			}
+			modifier = {
+				date > 150.1.1
+				has_government = authordemo
+				factor = 100
+			}
+		}
+	}
+	
+	option = {#增加社民
+		trigger = {
+			or = {
+				has_government = lienin
+				has_government = qinwai
+				and= {
+					has_country_flag = {
+						flag = lobbyvalue
+						value < 2
+					}
+					has_government = guli
+				}
+			}
+		}
+		if = {
+			limit = {
+				qinwai < 0.5
+			}
+			add_popularity = {
+				ideology = qinwai
+				popularity = 0.03
+			}
+			else = {
+				add_popularity = {
+					ideology = qinwai
+					popularity = 0.01
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				not = { has_government = qinwai}
+			}
+			add_stability = -0.04
+		}
+
+		name = sys.1.e
+
+		if = {
+			limit = {
+				not = { has_government = destroy }
+			}
+			go_qinwai = yes
+		}
+
+		if = {
+			limit = {
+				has_idea = qinwai_drift1
+			}
+			modify_timed_idea = {
+				idea = qinwai_drift1 days = 92
+			}
+			else = {
+				add_timed_idea = { idea = qinwai_drift1 days = 92}
+			}
+		}
+		
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_government = qinwai
+				factor = 2.5
+			}
+			modifier = {
+				has_country_flag = go_qinwai
+				factor = 1000
+			}
+			modifier = {
+				date > 150.1.1
+				has_government = qinwai
+				factor = 100
+			}
+		}
+	}
 }
 
 country_event = {

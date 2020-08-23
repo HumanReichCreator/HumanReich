@@ -69,16 +69,17 @@
     
     
     set_politics = {
-        ruling_party = guli
+        ruling_party = destroy
         election_frequency = 48
         elections_allowed = no
     }
     set_popularities = {
         qinwai = 7
-        guli = 93
+        guli = 3
         neworder = 0
         oldorder = 0
         fandong = 0
+        destroy = 90
     }
 }
 create_country_leader = {
@@ -86,6 +87,15 @@ create_country_leader = {
     name = "森近霖之助"
     picture = "RNS_rns.dds"
     ideology = guli_type
+    traits = {
+
+    }
+}
+create_country_leader = {
+    # name = "Morichika Rinnosuke"
+    name = "雾雨家"
+    picture = "RNS_rns.dds"
+    ideology = destroy_type
     traits = {
 
     }

@@ -77,16 +77,17 @@
     }
     
     set_politics = {
-    	ruling_party = qinwai
+    	ruling_party = lienin
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 65
+        qinwai = 25
         guli = 0
         neworder = 25
         oldorder = 0
         fandong = 10
+        lienin = 50
     }
 
     SAP = {
@@ -119,6 +120,13 @@ create_country_leader = {
     name = "河城荷取"
     picture = "NIT_nit.dds"
     ideology = neworder_type
+    traits = {  }
+}
+create_country_leader = {
+    # name = "Kawasiro Nitori"
+    name = "河城荷取"
+    picture = "NIT_nit.dds"
+    ideology = lienin_type
     traits = {  }
 }
 create_country_leader = {

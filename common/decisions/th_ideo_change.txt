@@ -19,7 +19,7 @@ government_change = {
 	      is_good = yes
 
 	}
-	lobby_increase = {
+	lobby_increase = {#走向个人
 	      visible = {
 	          always = yes
 	      }
@@ -78,7 +78,6 @@ government_change = {
 	         	add = 0.1
 	         	date > 150.1.1
 	         	or = {
-	         		has_government = oldorder
 	         		has_government = neworder
 	         		has_government = fandong
 	         	}
