@@ -43,7 +43,7 @@ country_event = {
 		name = sys.1.a
 		if = {
 			limit = {
-				not = { has_government = destroy }
+				not = { has_government = destroyid }
 				
 			}
 			go_fandong = yes
@@ -115,7 +115,7 @@ country_event = {
 
 		if = {
 			limit = {
-				not = { has_government = destroy }
+				not = { has_government = destroyid }
 			}
 			go_neworder = yes
 		}
@@ -158,7 +158,7 @@ country_event = {
 		trigger = {
 			or = {
 				has_government = guli
-				has_government = destroy
+				has_government = destroyid
 			}
 		}
 
@@ -168,7 +168,7 @@ country_event = {
 			modifier = {
 				or = {
 					has_government = guli
-					has_government = destroy
+					has_government = destroyid
 				}
 				factor = 100
 			}
@@ -216,7 +216,7 @@ country_event = {
 
 		if = {
 			limit = {
-				not = { has_government = destroy }
+				not = { has_government = destroyid }
 			}
 			go_authordemo = yes
 		}
@@ -293,7 +293,7 @@ country_event = {
 
 		if = {
 			limit = {
-				not = { has_government = destroy }
+				not = { has_government = destroyid }
 			}
 			go_qinwai = yes
 		}
