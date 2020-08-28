@@ -1,14 +1,13 @@
 ideas = {
 	country = {
-		TEN_tiantingruodian_idea = {
+		SGS_battle_fairy_talent_idea = {
 
-			picture = generic_intel_bonus
-
-	    	
+			picture = can_send_in_the_zombies
 	
 			modifier = {
 				army_attack_factor = 0.06
 				army_defence_factor = 0.06
+				war_support_weekly = 0.02
 				# fandong_drift = 0.01
 			}
 		}
