@@ -1,16 +1,35 @@
 ideas = {
 	country = {
 		SGS_battle_fairy_talent_idea = {
-
 			picture = can_send_in_the_zombies
-	
 			modifier = {
 				army_attack_factor = 0.06
-				army_defence_factor = 0.06
-				war_support_weekly = 0.02
+				war_support_weekly = 0.005
+				army_org_factor = 0.1
 				# fandong_drift = 0.01
 			}
 		}
-		
+		SGS_battle_fairy_restlessness_idea = {
+			picture = chi_war_of_resistance3
+			modifier = {
+				stability_weekly = -0.01
+				# fandong_drift = 0.01
+			}
+		}
+		SGS_hurry_mic_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.2
+				industrial_capacity_factory = 0.1
+				# fandong_drift = 0.01
+			}
+		}
+		SGS_mic_spoil0_idea = {
+			picture = chi_hyper_inflation
+			modifier = {
+				
+				# fandong_drift = 0.01
+			}
+		}
 	}
 }

@@ -1,0 +1,31 @@
+add_namespace = sgs
+country_event = { #骚乱
+	id = sgs.1
+	title = sgs.1.t
+	desc = sgs.1.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	mean_time_to_happen = {
+		days = 20
+	}
+
+	trigger = {
+		date > 146.6.1
+		tag = SGS
+		has_stability < 0.5
+		has_war_support > 0.5
+
+	}
+
+	option = { #革命
+		name = sgs.1.1
+		add_stability = 0.02
+		add_political_power = -20
+		ai_chance = {
+			base = 35
+		}
+	}
+	
+}

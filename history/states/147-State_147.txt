@@ -1,36 +1,44 @@
-
-state={
-	id=147
-	name="STATE_147"
-
-	resources={
-
-		powder=0.000
-		metal=0.000
-		gas=0.000
-		crystal=0.000
+state = {
+	id = 147
+	name = "STATE_147"
+	resources = {
+		powder = 0
+		metal = 0
+		gas = 0
+		crystal = 0
 	}
-
-	history={
-			owner = RMI
+	history = {
+		owner = SEI
 		146.1.1 = {
-			owner = RMI
+			owner = SEI
 			add_core_of = RMI
+			add_core_of = SEI
 			buildings = {
-				infrastructure =1
+				infrastructure = 1
 				industrial_complex = 0
 				arms_factory = 0
-
 			}
-
 		}
-
 	}
-
-	provinces={
-		113 844 882 1159 2214 2228 2796 3848 3851 3853 3855 3861 4546 4547 4550 4552 
+	provinces = {
+		113
+		844
+		882
+		1159
+		2214
+		2228
+		2796
+		3848
+		3851
+		3853
+		3855
+		3861
+		4546
+		4547
+		4550
+		4552
 	}
-	manpower=131.0
-	buildings_max_level_factor=1.000
-	state_category=s2
+	manpower = 131
+	buildings_max_level_factor = 1
+	state_category = s2
 }
