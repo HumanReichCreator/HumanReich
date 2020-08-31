@@ -211,11 +211,7 @@ set_country_flag = forbidden_fairy_sys
         oldorder = 0
         fandong = 25
     }
-    SCA = {
-        SHO = {
-            subject_level4 = yes
-        }
-    }
+    
 }
 146.1.1={
     set_country_flag = bunengqie_fandong
@@ -225,11 +221,7 @@ set_country_flag = forbidden_fairy_sys
     drop_cosmetic_tag = yes
     create_faction = feihongtixi
     add_to_faction = WAK
-    add_to_faction = SHO
 
-    SHO = {
-        set_cosmetic_tag = SHO_SCA
-    }
     WAK = {
         set_cosmetic_tag = WAK_SCA
     }
@@ -253,9 +245,6 @@ set_country_flag = forbidden_fairy_sys
     }
     remove_ideas = {
        rem142
-    }
-    SHO = {
-        subject_level4 = yes
     }
     GRS = {
         subject_level4 = yes

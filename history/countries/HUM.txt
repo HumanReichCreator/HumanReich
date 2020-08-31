@@ -267,6 +267,17 @@
     remove_ideas = {
         renli144
     }
+    create_faction = human_repower
+    add_to_faction = WHM
+    add_to_faction = HKR
+    add_to_faction = SEI
+
+    HUM = {
+        KOG = {
+            subject_level4 = yes
+        }
+    }
+
     set_truce = {target = EMB days = 1095}
     set_truce = {target = WAK days = 1095}
     set_truce = {target = CHE days = 1095}
@@ -295,8 +306,8 @@
         HUM_youkai_influence
         HUM_war_fear
         
-        dove5
-        open1
+        dove2
+        close4
         normal_border
         forbidden_magic
     }
@@ -376,8 +387,8 @@ create_country_leader = {
 
 create_country_leader = {
     #name = "Motoori Kosuzu"
-    name = "本居小铃"
-    picture = "HUM_kosuzu.dds"
+    name = "稗田阿求"
+    picture = "HUM_aky.dds"
     ideology = authordemo_type
     traits = {
         
