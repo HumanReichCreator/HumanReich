@@ -166,16 +166,17 @@
     }
     
 	set_politics = {
-    	ruling_party = fandong
+    	ruling_party = qinwai
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 0
+        qinwai = 80
         guli = 0
         neworder = 0
         oldorder = 0
-        fandong = 100
+        fandong = 10
+
     }
     # create_equipment_variant = {
     #    name = "SCAR Mammon Mark II F-mode"
@@ -233,33 +234,21 @@
     }
 
     add_ideas = SEI_zhengzhiweiji_idea
-    # declare_war_on = {
-    #   target = ONS
-    #   type = take_state_focus
-    #   generator = { 121 }
-    # }
     
-	NIB = {
-        subject_level3 = yes
-    }
-    RMI = {
-        subject_level3 = yes
-    }
 
-    # NIB = { add_to_war = { targeted_alliance = SEI enemy = ONS }}
-    # RMI = { add_to_war = { targeted_alliance = SEI enemy = ONS }}
-    # CIR = { add_to_war = { targeted_alliance = SEI enemy = ONS }}
+
     set_politics = {
-    	ruling_party = fandong
+    	ruling_party = qinwai
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 15
+        qinwai = 50
         guli = 0
-        neworder = 50
+        neworder = 15
         oldorder = 0
-        fandong = 35
+        fandong = 15
+        lienin = 20
     }
     set_major = no
     

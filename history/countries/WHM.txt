@@ -68,6 +68,10 @@
             subject_level4 = yes
         }
     }
+
+    SHO = {
+        set_cosmetic_tag = SHO_WHM
+    }
     set_truce = {target = EMB days = 1095}
     set_truce = {target = WAK days = 1095}
     set_truce = {target = CHE days = 1095}
@@ -100,8 +104,7 @@
         forbidden_magic
     }
     #########调整
-    SRB = { give_guarantee = HUM}
-    KOG = { give_guarantee = HUM}
+    AKI = { give_guarantee = WHM}
     
     set_politics = {
 

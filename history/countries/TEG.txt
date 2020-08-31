@@ -106,7 +106,7 @@
 
     create_faction = TEG_faction1
     add_to_faction = NIT
-    add_to_faction = SAP
+    add_to_faction = KAP
         
     add_ideas = {
     Tenggu
@@ -129,16 +129,17 @@
     # set_war_support = 0.5
 
     set_politics = {
-    	ruling_party = qinwai
+    	ruling_party = fandong
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 40
-        guli = 25
+        qinwai = 25
+        guli = 5
         neworder = 0
         oldorder = 0
-        fandong = 35
+        fandong = 55
+        lienin = 15
     }
     
     
@@ -152,6 +153,15 @@ create_country_leader = {
 	ideology = qinwai_type
 	traits = {  }
 }
+
+create_country_leader = {
+	name = "射命丸文"
+    # name = "Shameimaru Aya"
+	
+	picture = "TEG_aya.dds"
+	ideology = humanfirst_type
+	traits = {  }
+}
 create_country_leader = {
 	# name = "Inubashiri Momiji"
     name = "犬走椛"
@@ -162,10 +172,18 @@ create_country_leader = {
 }
 create_country_leader = {
     # name = "Inubashiri Momiji"
+    name = "射命丸文"
+    
+    picture = "TEG_aya.dds"
+    ideology = fandong_type
+    traits = {  }
+}
+create_country_leader = {
+    # name = "Inubashiri Momiji"
     name = "犬走椛"
     
     picture = "TEG_mom.dds"
-    ideology = fandong_type
+    ideology = lienin_type
     traits = {  }
 }
 create_country_leader = {
@@ -174,6 +192,15 @@ create_country_leader = {
 	
 	picture = "TEG_hatate.dds"
 	ideology = guli_type
+	traits = {  }
+}
+
+create_country_leader = {
+	# name = "Himekaidou Hatate"
+    name = "姬海棠果"
+	
+	picture = "TEG_hatate.dds"
+	ideology = authordemo_type
 	traits = {  }
 }
 create_country_leader = {

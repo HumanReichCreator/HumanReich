@@ -271,13 +271,16 @@
     add_to_faction = WHM
     add_to_faction = HKR
     add_to_faction = SEI
+    add_to_faction = RNS
 
     HUM = {
         KOG = {
             subject_level4 = yes
         }
     }
-
+    KOG = {
+        set_cosmetic_tag = KOG_HUM
+    }
     set_truce = {target = EMB days = 1095}
     set_truce = {target = WAK days = 1095}
     set_truce = {target = CHE days = 1095}

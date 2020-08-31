@@ -219,15 +219,12 @@ set_country_flag = forbidden_fairy_sys
     # give_guarantee = GRS
     set_major = yes
     drop_cosmetic_tag = yes
-    create_faction = feihongtixi
-    add_to_faction = WAK
+    
+    set_truce = {target = SPG days = 180}
+    set_truce = {target = SC2 days = 180}
+    set_truce = {target = CIR days = 180}
 
-    WAK = {
-        set_cosmetic_tag = WAK_SCA
-    }
-    GRS = {
-        set_cosmetic_tag = GRS_SCA
-    }
+   
 
 	
     
@@ -246,13 +243,7 @@ set_country_flag = forbidden_fairy_sys
     remove_ideas = {
        rem142
     }
-    GRS = {
-        subject_level4 = yes
-    }
-    WAK = {
-        subject_level4 = yes
-    }
-        
+
     set_politics = {
     	ruling_party = guli
     	election_frequency = 48
@@ -261,9 +252,10 @@ set_country_flag = forbidden_fairy_sys
     set_popularities = {
         qinwai = 20
         guli = 60
-        neworder = 20
+        neworder = 10
         oldorder = 0
-        fandong = 0
+        fandong = 5
+        authordemo = 5
     }
 
 
@@ -277,7 +269,7 @@ set_country_flag = forbidden_fairy_sys
 }
 create_country_leader = {
     # name = "Patchouli Knowledge"
-    name = "帕秋莉 诺蕾姬"
+    name = "红美铃"
     picture = "SCA_pachy.dds"
     ideology = qinwai_type
     traits = {
@@ -286,8 +278,8 @@ create_country_leader = {
 }
 create_country_leader = {
 	# name = "Remilia Scarlet"
-    name = "蕾米莉亚·斯卡蕾特"
-	picture = "SCA_rem.dds"
+    name = "十六夜咲夜"
+	picture = "SCA_sky.dds"
 	ideology = guli_type
 	traits = { 
 	}
@@ -303,8 +295,8 @@ create_country_leader = {
 }
 create_country_leader = {
     # name = "Remilia Scarlet"
-    name = "蕾米莉亚·斯卡蕾特"
-    picture = "SCA_rem.dds"
+    name = "芙兰朵露·斯卡蕾特"
+    picture = "SCA_flan.dds"
     ideology = oldorder_type
     traits = { 
     }
@@ -314,6 +306,33 @@ create_country_leader = {
     name = "小恶魔"
     picture = "SCA_kak.dds"
     ideology = fandong_type
+    traits = { 
+    }
+}
+
+create_country_leader = {
+    # name = "Koakuma"
+    name = "十六夜咲夜"
+    picture = "SCA_sky.dds"
+    ideology = authordemo_type
+    traits = { 
+    }
+}
+
+create_country_leader = {
+    # name = "Koakuma"
+    name = "小恶魔"
+    picture = "SCA_kak.dds"
+    ideology = lienin_type
+    traits = { 
+    }
+}
+
+create_country_leader = {
+    # name = "Koakuma"
+    name = "十六夜咲夜"
+    picture = "SCA_sky.dds"
+    ideology = humanfirst_type
     traits = { 
     }
 }

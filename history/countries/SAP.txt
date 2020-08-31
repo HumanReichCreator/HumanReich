@@ -75,7 +75,14 @@
     limit_magic
      
     }
-    
+    SAP = {
+        HU5 = {
+            subject_level3 = yes
+        }
+    }
+
+    set_truce = {target = NIT days = 1095}
+    set_truce = {target = KAP days = 1095}
     set_politics = {
     	ruling_party = guli
     	election_frequency = 48

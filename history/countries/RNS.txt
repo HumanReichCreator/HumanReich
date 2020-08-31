@@ -67,7 +67,11 @@
     normal_border
     }
     
-    
+    RNS = {
+        SBK = {
+            subject_level3 = yes
+        }
+    }
     set_politics = {
         ruling_party = destroyid
         election_frequency = 48
@@ -132,6 +136,36 @@ create_country_leader = {
     name = "朱鷺子"
     picture = "RNS_tokiko.dds"
     ideology = oldorder_type
+    traits = {
+
+    }
+}
+
+create_country_leader = {
+    # name = "Tokiko"
+    name = "朱鷺子"
+    picture = "RNS_tokiko.dds"
+    ideology = authordemo_type
+    traits = {
+
+    }
+}
+
+create_country_leader = {
+    # name = "Tokiko"
+    name = "朱鷺子"
+    picture = "RNS_tokiko.dds"
+    ideology = lienin_type
+    traits = {
+
+    }
+}
+
+create_country_leader = {
+    # name = "Tokiko"
+    name = "朱鷺子"
+    picture = "RNS_tokiko.dds"
+    ideology = humanfirst_type
     traits = {
 
     }

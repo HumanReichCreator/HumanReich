@@ -164,27 +164,78 @@ capital = 40
     }
     
     set_politics = {
-    	ruling_party = guli
+    	ruling_party = fandong
     	election_frequency = 48
     	elections_allowed = no
     }
 
     set_popularities = {
         qinwai = 15
-        guli = 50
-        neworder = 10
+        guli = 5
+        neworder = 0
         oldorder = 0
-        fandong = 25
+        fandong = 80
     }
 
-    set_truce = {target = NIT days = 1095}
-    set_truce = {target = SAP days = 1095}
+    
+    
     
 }
+
 create_country_leader = {
-	# name = "Council"
-    name = "长老会"
+	name = "河童议会"
+    # name = "Shameimaru Aya"
+	
+	picture = "KAP_council.dds"
+	ideology = humanfirst_type
+	traits = {  }
+}
+create_country_leader = {
+	# name = "Inubashiri Momiji"
+    name = "河童议会"
+	
+	picture = "KAP_council.dds"
+	ideology = neworder_type
+	traits = {  }
+}
+create_country_leader = {
+    # name = "Inubashiri Momiji"
+    name = "河童公社大会"
+    
+    picture = "KAP_council.dds"
+    ideology = fandong_type
+    traits = {  }
+}
+create_country_leader = {
+    # name = "Inubashiri Momiji"
+    name = "河童议会"
+    
+    picture = "KAP_council.dds"
+    ideology = lienin_type
+    traits = {  }
+}
+create_country_leader = {
+	# name = "Himekaidou Hatate"
+    name = "河童议会"
+	
 	picture = "KAP_council.dds"
 	ideology = guli_type
 	traits = {  }
+}
+
+create_country_leader = {
+	# name = "Himekaidou Hatate"
+    name = "河童议会"
+	
+	picture = "KAP_council.dds"
+	ideology = authordemo_type
+	traits = {  }
+}
+create_country_leader = {
+    # name = "Himekaidou Hatate"
+    name = "河童议会"
+    
+    picture = "KAP_council.dds"
+    ideology = oldorder_type
+    traits = {  }
 }
