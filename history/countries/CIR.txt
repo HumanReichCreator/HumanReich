@@ -161,25 +161,25 @@
         country = SPG relation = non_aggression_pact 
     }
 
+    create_faction = fairy_common_defence
+    add_to_faction = SPG
+    add_to_faction = SC2
     #########局势修改
     #set_stability = 0.8
 
     set_politics = {
-    	ruling_party = fandong
+    	ruling_party = guli
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
         qinwai = 15
-        guli = 0
-        neworder = 27
+        guli = 60
+        neworder = 15
         oldorder = 0
-        fandong = 58
+        authordemo = 10
     }
-    set_truce = {target = SCA days = 730}
-    set_truce = {target = WAK days = 730}
-    set_truce = {target = GRS days = 730}
-    set_truce = {target = SHO days = 730}
+    
     
 }
 create_country_leader = {
@@ -202,8 +202,8 @@ create_country_leader = {
 }
 create_country_leader = {
     # name = "Daiyousei"
-    name = "大妖精"
-    picture ="CIR_dys.dds"
+    name = "琪露诺"
+    picture ="CIR_cir.dds"
     ideology = guli_type
     traits = {
         #

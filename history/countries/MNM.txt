@@ -65,16 +65,17 @@
     free_magic
     }
     set_politics = {
-        ruling_party = neworder
+        ruling_party = guli
         election_frequency = 48
         elections_allowed = no
     }
     set_popularities = {
         qinwai = 0
-        guli = 0
-        neworder = 100
+        guli = 80
+        neworder = 0
         oldorder = 0
-        fandong = 0
+        fandong = 10
+        lienin = 10
     }
 }
 

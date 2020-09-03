@@ -51,16 +51,16 @@
     oob = "SC2_138"
 	# # set_research_slots = 1
 	set_politics = {
-        ruling_party = fandong
+        ruling_party = guli
         election_frequency = 48
         elections_allowed = no
     } 
     set_popularities = {
         qinwai = 5
-        guli = 0
+        guli = 95
         neworder = 0
         oldorder = 0
-        fandong = 95
+        fandong = 0
     }
     
     add_ideas={
@@ -75,4 +75,12 @@
 
 
 }
-
+create_country_leader = {
+	# name = "Hijiri Byakuren"
+    name = "草原妖精"
+	picture = "gfx/leaders/gen/fai1.dds"
+	ideology = guli_type
+    traits = {
+        # nms_bkr
+    }
+}

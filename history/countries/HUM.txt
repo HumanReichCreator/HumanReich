@@ -281,23 +281,9 @@
     KOG = {
         set_cosmetic_tag = KOG_HUM
     }
-    set_truce = {target = EMB days = 1095}
-    set_truce = {target = WAK days = 1095}
+
     set_truce = {target = CHE days = 1095}
-    set_truce = {target = KAG days = 1095}
-    set_truce = {target = KOG days = 1095}
-    set_truce = {target = NMS days = 1095}
-    set_truce = {target = SCA days = 1095}
-    set_truce = {target = NMS days = 1095}
-    set_truce = {target = RMI days = 1095}
-    set_truce = {target = SEI days = 1095}
-    set_truce = {target = MSD days = 1095}
-    set_truce = {target = SHO days = 1095}
-    set_truce = {target = SBK days = 1095}
-    set_truce = {target = NIB days = 1095}
-    set_truce = {target = HKM days = 1095}
-    set_truce = {target = AVE days = 1095}
-    set_truce = {target = MAM days = 1095}
+
 
     add_ideas = {
         Human
@@ -315,8 +301,7 @@
         forbidden_magic
     }
     #########调整
-    SRB = { give_guarantee = HUM}
-    KOG = { give_guarantee = HUM}
+    
     
     set_politics = {
 

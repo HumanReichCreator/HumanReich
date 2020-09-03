@@ -147,11 +147,15 @@
     # set_research_slots = 5
     # Starting tech
     
+    create_faction = Buddi_Tao_ally
+    add_to_faction = SRB
+
     diplomatic_relation = { 
-        country = KOG relation = non_aggression_pact 
+        country = WHM relation = non_aggression_pact 
     }
-    AVE = {
-        subject_level3 = yes
+
+    diplomatic_relation = { 
+        country = HUM relation = non_aggression_pact 
     }
     MAM = {
         subject_level4 = yes
@@ -181,15 +185,16 @@
     }
     set_politics = {
     
-    	ruling_party = qinwai
+    	ruling_party = authordemo
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 65
+        authordemo = 65
+        qinwai = 20
         guli = 5
-        neworder = 30
-        oldorder = 0
+        neworder = 0
+        oldorder = 10
         fandong = 0
     }
 }
@@ -236,6 +241,33 @@ create_country_leader = {
     name = "圣白莲"
 	picture = "NMS_bkr.dds"
 	ideology = oldorder_type
+    traits = {
+        # nms_bkr
+    }
+}
+create_country_leader = {
+	# name = "Hijiri Byakuren"
+    name = "圣白莲"
+	picture = "NMS_bkr.dds"
+	ideology = authordemo_type
+    traits = {
+        # nms_bkr
+    }
+}
+create_country_leader = {
+	# name = "Hijiri Byakuren"
+    name = "圣白莲"
+	picture = "NMS_bkr.dds"
+	ideology = lienin_type
+    traits = {
+        # nms_bkr
+    }
+}
+create_country_leader = {
+	# name = "Hijiri Byakuren"
+    name = "圣白莲"
+	picture = "NMS_bkr.dds"
+	ideology = humanfirst_type
     traits = {
         # nms_bkr
     }
