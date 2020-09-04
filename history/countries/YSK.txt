@@ -135,33 +135,34 @@ capital = 28
         days = 1825
     }
     set_politics = {
-    	ruling_party = neworder
+    	ruling_party = authordemo
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 25
-        guli = 5
-        neworder = 70
+        qinwai = 10
+        guli = 10
+        neworder = 10
         oldorder = 0
         fandong = 0
+        authordemo = 70
     }
-    give_guarantee = KAP
+    
     
     
     
 }
 create_country_leader = {
 	# name = "Yasaka Kanako"  
-    name = "八坂神奈子"
-	picture = "YSK_ysk.dds"
+    name = "泄矢诹访子"
+	picture = "YSK_mry.dds"
 	ideology = neworder_type
 	traits = {  }
 }
 create_country_leader = {
 	# name = "Moriya Suwako" 
-    name = "泄矢诹访子"
-    picture = "YSK_mry.dds"
+    name = "东风谷早苗"
+    picture = "YSK_sanae.dds"
 	ideology = guli_type
 	traits = {  }
 }
@@ -174,15 +175,36 @@ create_country_leader = {
 }
 create_country_leader = {
     # name = "Kochiya Sanae"
-    name = "东风谷早苗"  
-    picture = "YSK_sanae.dds"
+    name = "八坂神奈子"  
+    picture = "YSK_ysk.dds"
     ideology = fandong_type
+    traits = {  }
+}
+create_country_leader = {
+    # name = "Yasaka Kanako"  
+    name = "泄矢诹访子"
+    picture = "YSK_mry.dds"
+    ideology = oldorder_type
     traits = {  }
 }
 create_country_leader = {
     # name = "Yasaka Kanako"  
     name = "八坂神奈子"
     picture = "YSK_ysk.dds"
-    ideology = oldorder_type
+    ideology = authordemo_type
+    traits = {  }
+}
+create_country_leader = {
+    # name = "Yasaka Kanako"  
+    name = "八坂神奈子"
+    picture = "YSK_ysk.dds"
+    ideology = lienin_type
+    traits = {  }
+}
+create_country_leader = {
+    # name = "Yasaka Kanako"  
+    name = "东风谷早苗"
+    picture = "YSK_sanae.dds"
+    ideology = humanfirst_type
     traits = {  }
 }
