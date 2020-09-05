@@ -162,10 +162,11 @@
     }
     set_popularities = {
         qinwai = 0
-        guli = 3
+        guli = 5
         neworder = 0
-        oldorder = 97
+        oldorder = 30
         fandong = 0
+        authordemo = 65
     }
     
 }
@@ -190,6 +191,14 @@ create_country_leader = {
     name = "大天狗议会"
     picture = "OTG_council.dds"
     ideology = oldorder_type
+    traits = {
+    }
+}
+create_country_leader = {
+    # name = "Council"
+    name = "大天狗议会"
+    picture = "OTG_council.dds"
+    ideology = authordemo_type
     traits = {
     }
 }

@@ -81,8 +81,8 @@
         }
     }
 
-    set_truce = {target = NIT days = 1095}
-    set_truce = {target = KAP days = 1095}
+    set_truce = {target = NIT days = 300}
+    set_truce = {target = KAP days = 300}
     set_politics = {
     	ruling_party = guli
     	election_frequency = 48
@@ -103,6 +103,15 @@ create_country_leader = {
     desc = ""
     picture = "gfx/leaders/ZYD/ZYD_council.dds"
     ideology = qinwai_type
+    traits = {
+
+    }
+}
+create_country_leader = {
+    name = "河童商会代表"
+    desc = ""
+    picture = "gfx/leaders/gen/kap1.dds"
+    ideology = guli_type
     traits = {
 
     }

@@ -48,7 +48,14 @@
 146.1.1={
     oob = "CCA_146"
     # set_research_slots = 5
-    
+    diplomatic_relation = {
+        country = OTG
+        relation = military_access
+        active = yes
+    }
+    diplomatic_relation = { 
+        country = OTG relation = non_aggression_pact 
+    }
     add_ideas = {
     God
     Town
@@ -67,9 +74,9 @@
     }
     set_popularities = {
         qinwai = 0
-        guli = 100
+        guli = 50
         neworder = 0
-        oldorder = 0
+        oldorder = 50
         fandong = 0
     }
     
