@@ -73,16 +73,17 @@
      
     }
     set_politics = {
-    	ruling_party = guli
+    	ruling_party = neworder
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 7
-        guli = 70
-        neworder = 3
-        oldorder = 0
-        fandong = 20
+        qinwai = 5
+        guli = 15
+        neworder = 70
+        oldorder = 5
+        fandong = 0
+        authordemo = 5
     }
     
 }
@@ -98,8 +99,8 @@ create_country_leader = {
 }
 create_country_leader = {
     # name = "Sunny Milk"
-    name = "桑尼·米尔克"
-    picture = "SGS_sun.dds"
+    name = "斯塔·萨菲雅"
+    picture = "SGS_star.dds"
     ideology = guli_type
     traits = {
         #warrior_code
@@ -107,8 +108,8 @@ create_country_leader = {
 }
 create_country_leader = {
     # name = "Lunar Child"
-    name = "露娜·切露德"
-    picture = "SGS_lunar.dds"
+    name = "斯塔·萨菲雅"
+    picture = "SGS_star.dds"
     ideology = qinwai_type
     traits = {
         #warrior_code
@@ -116,8 +117,8 @@ create_country_leader = {
 }
 create_country_leader = {
     # name = "Star Sapphire"
-    name = "斯塔·萨菲雅"
-    picture = "SGS_star.dds"
+    name = "桑尼·米尔克"
+    picture = "SGS_sun.dds"
     ideology = neworder_type
     traits = {
         #warrior_code
@@ -128,6 +129,33 @@ create_country_leader = {
     name = "露娜·切露德"
     picture = "SGS_lunar.dds"
     ideology = oldorder_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Lunar Child"
+    name = "露娜·切露德"
+    picture = "SGS_lunar.dds"
+    ideology = lienin_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Lunar Child"
+    name = "斯塔·萨菲雅"
+    picture = "SGS_star.dds"
+    ideology = authordemo_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Lunar Child"
+    name = "斯塔·萨菲雅"
+    picture = "SGS_star.dds"
+    ideology = humanfirst_type
     traits = {
         #warrior_code
     }
