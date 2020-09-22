@@ -1,0 +1,101 @@
+Spoil_battle = {
+	Spoil_battle_xiaxuanwucheng = {
+		visible = {
+			threat < 0.6
+			date < 151.1.1
+			is_subject = no
+			has_country_flag = neworder_Spoil
+			has_government = neworder
+			69 = {
+				not = {
+					is_controlled_by = ROOT
+				}
+				any_neighbor_state = {
+					is_controlled_by = ROOT
+				}
+			}
+		}
+		available = {
+			threat < 0.5
+			date < 150.1.1
+			controls_state = 77
+			any_country = {
+				is_neighbor_of = ROOT
+				not = {
+					is_subject_of = ROOT
+					has_war_with = ROOT
+					is_in_faction_with = ROOT
+				}
+				controls_state = 69
+			}
+		}
+		target_trigger = {
+			FROM = {
+				controls_state = 69
+				is_neighbor_of = ROOT
+				not = {
+					is_subject_of = ROOT
+					has_war_with = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+		days_remove = 20
+		days_re_enable = 40
+		war_with_target_on_remove = yes
+		remove_effect = {
+			declare_war_on = {
+				target = FROM
+				type = spoil_wargoal
+				generator = {
+					372
+				}
+            }
+            any_country = {
+                is_in_faction_with = FROM
+                add_ai_strategy = {
+                  type = dont_join_wars_with 
+                  id = ROOT
+                  value = 20000
+                }
+              }
+
+			set_country_flag = Spoil_xiaxuanwucheng
+		}
+		cost = 40
+		fire_only_once = no
+		ai_will_do = {
+			base = 100
+			modifier = {
+				FROM = {
+					is_same_race = yes
+					is_subject = no
+				}
+				factor = 0
+			}
+			modifier = {
+				FROM = {
+					or = {
+						tag = AKI
+						is_subject_of = AKI
+					}
+				}
+				factor = 0
+			}
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+			modifier = {
+				FROM = {
+					has_war = yes
+				}
+				factor = 2
+			}
+			modifier = {
+				has_non_aggression_pact_with = FROM
+				factor = 0
+			}
+		}
+	}
+}

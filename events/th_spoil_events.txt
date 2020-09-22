@@ -1,0 +1,131 @@
+add_namespace = spoil_event
+country_event = {
+	#xuanwuchuan
+	id = spoil_event.1
+	title = spoil_event.1.t
+	desc = spoil_event.1.d
+	fire_only_once = no
+	is_triggered_only = no
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		372 = {
+			is_controlled_by = ROOT
+		}
+		372 = {
+			NOT = {
+				is_owned_by = ROOT
+			}
+		}
+		ROOT = {
+			has_country_flag = Spoil_xiaxuanwucheng
+		}
+	}
+	option = {
+		#革命
+		name = spoil_event.1.1
+		clr_country_flag = Spoil_xiaxuanwucheng
+		if
+		{
+			limit = {
+				has_idea = SGS_mic_spoil0_idea
+			}
+			swap_ideas = {
+				remove_idea = SGS_mic_spoil0_idea
+				add_idea = SGS_mic_spoil5_idea
+			}
+		}
+		every_country = {
+			limit = {
+				or = {
+					owns_state = 372
+				}
+			}
+			white_peace = ROOT
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#xuanwuchuan
+	id = spoil_event.2
+	title = spoil_event.2.t
+	desc = spoil_event.2.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+
+	option = {
+		#革命
+		name = spoil_event.2.1
+		trigger = {
+			
+			not={controls_state = 69}
+		}
+		clr_country_flag = Spoil_xiaxuanwucheng
+		if
+		{
+			limit = {
+				has_idea = SGS_mic_spoil0_idea
+			}
+			swap_ideas = {
+				remove_idea = SGS_mic_spoil0_idea
+				add_idea = SGS_mic_spoil5_idea
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#革命
+		name = spoil_event.2.2
+		trigger = {
+			controls_state = 69
+		}
+		clr_country_flag = Spoil_xiaxuanwucheng
+		
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#xuanwuchuan
+	id = spoil_event.3
+	title = spoil_event.3.t
+	desc = spoil_event.3.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+
+	option = {
+		#革命
+		name = spoil_event.3.1
+		trigger = {
+			
+			not={controls_state = 69}
+		}
+		clr_country_flag = Spoil_xiaxuanwucheng
+		
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#革命
+		name = spoil_event.3.2
+		trigger = {
+			controls_state = 69
+		}
+		clr_country_flag = Spoil_xiaxuanwucheng
+		
+		ai_chance = {
+			base = 35
+		}
+	}
+}
