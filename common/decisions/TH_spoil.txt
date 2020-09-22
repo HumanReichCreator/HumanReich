@@ -50,16 +50,28 @@ Spoil_battle = {
 				generator = {
 					372
 				}
-            }
-            any_country = {
-                is_in_faction_with = FROM
-                add_ai_strategy = {
-                  type = dont_join_wars_with 
-                  id = ROOT
-                  value = 20000
+			}
+			every_country = {
+                limit = {
+                    is_in_faction_with = FROM
                 }
-              }
-
+                add_ai_strategy = {
+                    type = antagonize
+                    id = ROOT
+                    value = 100
+                }
+				FROM = {
+					#is_in_faction_with = FROM
+					add_ai_strategy = {
+						type = dont_join_wars_with
+						id = PREV
+						target_country = ROOT
+						value = 9999
+					}
+					
+				}
+			}
+			add_political_power = 97
 			set_country_flag = Spoil_xiaxuanwucheng
 		}
 		cost = 40
