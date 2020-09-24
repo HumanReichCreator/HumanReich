@@ -13,7 +13,19 @@ Spoil_battle = {
 					has_war_with = ROOT
 					is_in_faction_with = ROOT
 				}
-				controls_state = 69
+				owns_state = 69
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				owns_state = 69
+				is_neighbor_of = ROOT
+				not = {
+					is_subject_of = ROOT
+					has_war_with = ROOT
+					is_in_faction_with = ROOT
+				}
 			}
 		}
 		available = {
@@ -22,27 +34,17 @@ Spoil_battle = {
 			NOT = {
 				has_country_flag = spoilCD
 			}
-			any_country = {
-				is_neighbor_of = ROOT
-				not = {
-					is_subject_of = ROOT
-					has_war_with = ROOT
-					is_in_faction_with = ROOT
-				}
-				controls_state = 69
-			}
-		}
-		target_trigger = {
 			FROM = {
-				controls_state = 69
 				is_neighbor_of = ROOT
 				not = {
 					is_subject_of = ROOT
 					has_war_with = ROOT
 					is_in_faction_with = ROOT
 				}
+				owns_state = 69
 			}
 		}
+		
 		days_remove = 20
 		days_re_enable = 40
 		war_with_on_remove = FROM
@@ -50,6 +52,7 @@ Spoil_battle = {
 			set_country_flag = spoilCD
 		}
 		remove_effect = {
+			set_variable = { ROOT.spoil_xiaxuanwucheng_target = FROM.id }
 			declare_war_on = {
 				target = FROM
 				type = spoil_wargoal
@@ -126,7 +129,7 @@ Spoil_battle = {
 		selectable_mission = no		
 		days_mission_timeout = 100		
 		timeout_effect = {
-			add_political_power = -50
+			add_political_power = -51
 			set_country_flag = Spoil_xiaxuanwucheng_failed
 			country_event = { id = spoil_event.3 days = 1 random = 1 }	
 

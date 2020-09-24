@@ -3,10 +3,12 @@ ideas = {
 		SGS_battle_fairy_talent_idea = {
 			picture = can_send_in_the_zombies
 			modifier = {
-				army_attack_factor = 0.06
+				army_attack_factor = 60
 				army_defence_factor = 60
 				war_support_weekly = 0.005
-				army_org_factor = 0.1
+				army_org_factor = 60
+				army_org_regain = 60
+				#army_org_factor = 0.1
 				# fandong_drift = 0.01
 			}
 		}
