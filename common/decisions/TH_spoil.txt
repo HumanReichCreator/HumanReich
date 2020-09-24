@@ -6,19 +6,22 @@ Spoil_battle = {
 			is_subject = no
 			has_country_flag = neworder_Spoil
 			has_government = neworder
-			69 = {
+			any_country = {
+				is_neighbor_of = ROOT
 				not = {
-					is_controlled_by = ROOT
+					is_subject_of = ROOT
+					has_war_with = ROOT
+					is_in_faction_with = ROOT
 				}
-				any_neighbor_state = {
-					is_controlled_by = ROOT
-				}
+				controls_state = 69
 			}
 		}
 		available = {
 			threat < 0.5
 			date < 150.1.1
-			controls_state = 77
+			NOT = {
+				has_country_flag = spoilCD
+			}
 			any_country = {
 				is_neighbor_of = ROOT
 				not = {
@@ -42,24 +45,24 @@ Spoil_battle = {
 		}
 		days_remove = 20
 		days_re_enable = 40
-		war_with_target_on_remove = yes
+		war_with_on_remove = FROM
+		complete_effect = {
+			set_country_flag = spoilCD
+		}
 		remove_effect = {
 			declare_war_on = {
 				target = FROM
 				type = spoil_wargoal
 				generator = {
-					372
+					69
 				}
 			}
 			every_country = {
-                limit = {
-                    is_in_faction_with = FROM
-                }
-                add_ai_strategy = {
-                    type = antagonize
-                    id = ROOT
-                    value = 100
-                }
+				add_ai_strategy = {
+					type = antagonize
+					id = ROOT
+					value = 100
+				}
 				FROM = {
 					#is_in_faction_with = FROM
 					add_ai_strategy = {
@@ -68,10 +71,9 @@ Spoil_battle = {
 						target_country = ROOT
 						value = 9999
 					}
-					
 				}
 			}
-			add_political_power = 97
+			#add_political_power = 97
 			set_country_flag = Spoil_xiaxuanwucheng
 		}
 		cost = 40
@@ -82,15 +84,6 @@ Spoil_battle = {
 				FROM = {
 					is_same_race = yes
 					is_subject = no
-				}
-				factor = 0
-			}
-			modifier = {
-				FROM = {
-					or = {
-						tag = AKI
-						is_subject_of = AKI
-					}
 				}
 				factor = 0
 			}
@@ -109,5 +102,52 @@ Spoil_battle = {
 				factor = 0
 			}
 		}
+	}
+	Spoil_mission_xiaxuanwucheng = {
+		# This is our mission id
+		allowed = {
+			threat < 0.6
+			date < 151.1.1
+			is_subject = no
+			has_country_flag = neworder_Spoil
+			has_government = neworder
+		}
+		
+		available = {# 任务目标
+			
+			controls_state = 69			
+		}
+		activation = {
+			has_country_flag = Spoil_xiaxuanwucheng			
+		}
+
+
+		is_good = no		
+		selectable_mission = no		
+		days_mission_timeout = 100		
+		timeout_effect = {
+			add_political_power = -50
+			set_country_flag = Spoil_xiaxuanwucheng_failed
+			country_event = { id = spoil_event.3 days = 1 random = 1 }	
+
+		}
+		complete_effect = {
+			add_political_power = 50	
+					
+		}
+	}
+	Spoil_CDtime = {
+		activation = {
+			has_country_flag = spoilCD
+		}
+		available = {
+			always = no
+		}
+		timeout_effect = {
+			clr_country_flag = spoilCD
+		}
+		fire_only_once = no
+		days_mission_timeout = 128
+		is_good = no
 	}
 }
