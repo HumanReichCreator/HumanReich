@@ -16,7 +16,6 @@ Spoil_battle = {
 				owns_state = 69
 			}
 		}
-
 		target_trigger = {
 			FROM = {
 				owns_state = 69
@@ -44,15 +43,19 @@ Spoil_battle = {
 				owns_state = 69
 			}
 		}
-		
 		days_remove = 20
 		days_re_enable = 40
 		war_with_on_remove = FROM
 		complete_effect = {
+			set_variable = {
+				ROOT.spoil_MyCD = 50
+			}
 			set_country_flag = spoilCD
 		}
 		remove_effect = {
-			set_variable = { ROOT.spoil_xiaxuanwucheng_target = FROM.id }
+			set_variable = {
+				ROOT.spoil_xiaxuanwucheng_target = FROM.id
+			}
 			declare_war_on = {
 				target = FROM
 				type = spoil_wargoal
@@ -64,7 +67,7 @@ Spoil_battle = {
 				add_ai_strategy = {
 					type = antagonize
 					id = ROOT
-					value = 100
+					value = 1
 				}
 				FROM = {
 					#is_in_faction_with = FROM
@@ -115,28 +118,40 @@ Spoil_battle = {
 			has_country_flag = neworder_Spoil
 			has_government = neworder
 		}
-		
-		available = {# 任务目标
-			
-			controls_state = 69			
+		available = {
+			# 任务目标
+			controls_state = 69
 		}
 		activation = {
-			has_country_flag = Spoil_xiaxuanwucheng			
+			has_country_flag = Spoil_xiaxuanwucheng
 		}
-
-
-		is_good = no		
-		selectable_mission = no		
-		days_mission_timeout = 100		
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 100
 		timeout_effect = {
 			add_political_power = -51
 			set_country_flag = Spoil_xiaxuanwucheng_failed
-			country_event = { id = spoil_event.3 days = 1 random = 1 }	
-
+			effect_tooltip = {
+				country_event = {
+					id = spoil_event.2
+					days = 1
+					random = 1
+				}
+			}
 		}
 		complete_effect = {
-			add_political_power = 50	
-					
+			add_political_power = 50
+			effect_tooltip = {
+				country_event = {
+					id = spoil_event.1
+					days = 1
+					random = 1
+				}
+			}
+			set_variable = {
+				ROOT.spoil_MyCD = 32
+			}
+			set_country_flag = spoil_vic_CD
 		}
 	}
 	Spoil_CDtime = {
@@ -148,9 +163,19 @@ Spoil_battle = {
 		}
 		timeout_effect = {
 			clr_country_flag = spoilCD
+			custom_effect_tooltip = spoilCD_if_vic
+			if
+			{
+				limit = {
+					has_country_flag = spoil_vic_CD
+				}
+				set_country_flag = spoilCD
+				clr_country_flag = spoil_vic_CD
+				remove_mission = Spoil_CDtime
+			}
 		}
 		fire_only_once = no
-		days_mission_timeout = 128
+		days_mission_timeout = var:ROOT.spoil_MyCD
 		is_good = no
 	}
 }

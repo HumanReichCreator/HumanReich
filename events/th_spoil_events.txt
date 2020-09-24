@@ -5,7 +5,7 @@ country_event = {
 	title = spoil_event.1.t
 	desc = spoil_event.1.d
 	fire_only_once = no
-	is_triggered_only = yes
+	is_triggered_only = no
 	trigger = {
 		69 = {
 			is_controlled_by = ROOT
@@ -17,9 +17,11 @@ country_event = {
 			has_country_flag = Spoil_xiaxuanwucheng
 		}
 	}
-	
+	mean_time_to_happen = {
+		days = 2
+	}
 	option = {
-		#革命
+		#军工
 		name = spoil_event.1.1
 		clr_country_flag = Spoil_xiaxuanwucheng
 		if
@@ -44,6 +46,32 @@ country_event = {
 			base = 35
 		}
 	}
+	option = {
+		#装备
+		name = spoil_event.1.2
+		clr_country_flag = Spoil_xiaxuanwucheng
+		var:ROOT.spoil_xiaxuanwucheng_target = {
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = buqiang_a
+					amount = 500
+				}
+			}
+			send_equipment = {
+				equipment = buqiang_a
+				amount = 1000
+				target = ROOT
+			}
+			country_event = {
+				id = spoil_event.101
+				days = 1
+				random = 1
+			}
+		}
+		ai_chance = {
+			base = 25
+		}
+	}
 }
 
 country_event = {
@@ -52,7 +80,7 @@ country_event = {
 	title = spoil_event.2.t
 	desc = spoil_event.2.d
 	fire_only_once = no
-	is_triggered_only = yes
+	is_triggered_only = no
 	trigger = {
 		69 = {
 			NOT = {
@@ -67,7 +95,9 @@ country_event = {
 			has_country_flag = Spoil_xiaxuanwucheng_failed
 		}
 	}
-	
+	mean_time_to_happen = {
+		days = 2
+	}
 	option = {
 		#革命
 		name = spoil_event.2.1
@@ -99,7 +129,7 @@ country_event = {
 	title = spoil_event.3.t
 	desc = spoil_event.3.d
 	fire_only_once = no
-	is_triggered_only = yes
+	is_triggered_only = no
 	trigger = {
 		has_country_flag = Spoil_xiaxuanwucheng
 		or = {
@@ -119,7 +149,9 @@ country_event = {
 			}
 		}
 	}
-	
+	mean_time_to_happen = {
+		days = 2
+	}
 	option = {
 		#革命
 		name = spoil_event.3.1
@@ -253,6 +285,42 @@ country_event = {
 				}
 			}
 		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+
+country_event = {
+	#xuanwuchuan lose root
+	id = spoil_event.test
+	title = spoil_event.2.t
+	desc = spoil_event.2.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		69 = {
+			NOT = {
+				is_owned_by = ROOT
+			}
+		}
+		ROOT = {
+			has_country_flag = Spoil_xiaxuanwucheng
+		}
+		OR = {
+			surrender_progress > 0.3
+			has_country_flag = Spoil_xiaxuanwucheng_failed
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	option = {
+		#革命
+		name = spoil_event.2.1
+		remove_mission = Spoil_CDtime
+		clr_country_flag = spoilCD
 		ai_chance = {
 			base = 35
 		}
