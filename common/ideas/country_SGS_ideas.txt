@@ -30,7 +30,6 @@ ideas = {
 		SGS_mic_spoil0_idea = {
 			picture = chi_hyper_inflation
 			modifier = {
-				
 				# fandong_drift = 0.01
 			}
 		}
@@ -57,22 +56,32 @@ ideas = {
 		}
 		SGS_donot_attack_fairy_idea = {
 			picture = chi_chinese_unity
-			modifier = {
-				every_country = {
-					limit = {
-						has_idea = Fairy
-					}
-					ROOT={
-						targeted_modifier = { 
-							tag = PREV
-							attack_bonus_against = -0.5
-							defense_bonus_against = -0.5
-						}
-					}
-				}
-				
+			
+			targeted_modifier = {
+				tag = SCA
+				attack_bonus_against = -0.5
+				defense_bonus_against = -0.5
+			}
+			targeted_modifier = {
+				tag = CIR
+				attack_bonus_against = -0.5
+				defense_bonus_against = -0.5
+			}
+			targeted_modifier = {
+				tag = SC2
+				attack_bonus_against = -0.5
+				defense_bonus_against = -0.5
+			}
+			targeted_modifier = {
+				tag = SPG
+				attack_bonus_against = -0.5
+				defense_bonus_against = -0.5
+			}
+			targeted_modifier = {
+				tag = SGS
+				attack_bonus_against = -0.5
+				defense_bonus_against = -0.5
 			}
 		}
-
 	}
 }

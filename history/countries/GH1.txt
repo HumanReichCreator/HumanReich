@@ -66,11 +66,7 @@ set_technology = {
         oldorder = 0
         fandong = 75
     }
-    declare_war_on = {
-      target = ZYD
-      type = take_state_focus
-      generator = { 369 335 368 150 142 370 186}
-    }
+   
 }
 create_country_leader = {
     name = "未知幽灵"

@@ -170,19 +170,19 @@ bookmarks = {
 			}			
 		}
 
-		"ALI"={
-		    minor = yes
-			history = "ALI_DAWN_DESC"		#sca
-			ideas={ 
-				ali_renoujuntuan_idea
-        		ali_zhenduidaojudeliliang_idea
-			}	
-            focuses = {
-            	ALI_tonglingmofashixiehui
-            	ALI_jianlirenougongfang
-            	ALI_lingrenxiaiderenouzhixiang
-			}			
-		}
+		#"ALI"={
+		#    minor = yes
+		#	history = "ALI_DAWN_DESC"		#sca
+		#	ideas={ 
+		#		ali_renoujuntuan_idea
+        #		ali_zhenduidaojudeliliang_idea
+		#	}	
+         #   focuses = {
+          #  	ALI_tonglingmofashixiehui
+           # 	ALI_jianlirenougongfang
+            #	ALI_lingrenxiaiderenouzhixiang
+			#}			
+		#}
 
 		"AKI"={
 		    minor = yes
@@ -191,6 +191,21 @@ bookmarks = {
             AKI_tudijianbing_idea
             AKI_jiduanzhuyiyundong_idea
             AKI_renyushendemohujiexian_idea
+			}	
+            focuses = {
+            	AKI_cunluodalianhe
+            	AKI_xirenlidechengli
+            	AKI_tongyiwuyuanzhong
+			}			
+		}
+
+		"SGS"={
+		    minor = yes
+			history = "AKI_DAWN_DESC"		#sca
+			ideas={ 
+				SGS_battle_fairy_talent_idea
+				SGS_battle_fairy_restlessness_idea
+				SGS_hurry_mic_idea
 			}	
             focuses = {
             	AKI_cunluodalianhe

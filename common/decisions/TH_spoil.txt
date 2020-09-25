@@ -294,8 +294,10 @@ Spoil_battle = {
 			date < 150.1.1
 			NOT = {
 				has_country_flag = spoilCD
+			}
+			not = {
 				and = {
-					has_idea = SGS_donot_attack_fairy
+					has_idea = SGS_donot_attack_fairy_idea
 					has_idea = Fairy
 					FROM = {
 						has_idea = Fairy
