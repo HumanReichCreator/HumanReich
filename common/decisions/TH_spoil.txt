@@ -85,7 +85,7 @@ Spoil_battle = {
 		cost = 40
 		fire_only_once = no
 		ai_will_do = {
-			base = 100
+			base = 10
 			modifier = {
 				FROM = {
 					is_same_race = yes
@@ -376,7 +376,12 @@ Spoil_battle = {
 		# This is our mission id
 		available = {
 			# 任务目标
-			controls_state = 69
+			or = {
+				controls_state = 69
+				var:ROOT.spoil_xiaxuanwucheng_target = {
+					surrender_progress > 0.7
+				}
+			}
 		}
 		activation = {
 			has_country_flag = Spoil_xiaxuanwucheng
@@ -415,7 +420,12 @@ Spoil_battle = {
 		# This is our mission id
 		available = {
 			# 任务目标
-			controls_state = 88
+			or = {
+				controls_state = 88
+				var:ROOT.spoil_nanxuanwucheng_target = {
+					surrender_progress > 0.7
+				}
+			}
 		}
 		activation = {
 			has_country_flag = Spoil_nanxuanwucheng
@@ -454,7 +464,12 @@ Spoil_battle = {
 		# This is our mission id
 		available = {
 			# 任务目标
-			controls_state = 113
+			or = {
+				controls_state = 113
+				var:ROOT.spoil_xihongmoguan_target = {
+					surrender_progress > 0.7
+				}
+			}
 		}
 		activation = {
 			has_country_flag = Spoil_xihongmoguan

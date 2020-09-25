@@ -31,6 +31,7 @@ country_event = {
 		#军工
 		name = spoil_event.1.1
 		clr_country_flag = Spoil_xiaxuanwucheng
+		#remove_mission = Spoil_mission_xiaxuanwucheng
 		hidden_effect = {
 			remove_mission = micFact5_maintain
 			remove_mission = micFact2_maintain
@@ -89,6 +90,7 @@ country_event = {
 		#装备
 		name = spoil_event.1.2
 		clr_country_flag = Spoil_xiaxuanwucheng
+		#remove_mission = Spoil_mission_xiaxuanwucheng
 		var:ROOT.spoil_xiaxuanwucheng_target = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
@@ -363,6 +365,7 @@ country_event = {
 		#军工
 		name = spoil_event.1.1
 		clr_country_flag = Spoil_nanxuanwucheng
+		#remove_mission = Spoil_mission_nanxuanwucheng
 		hidden_effect = {
 			remove_mission = micFact5_maintain
 			remove_mission = micFact2_maintain
@@ -421,6 +424,7 @@ country_event = {
 		#装备
 		name = spoil_event.1.2
 		clr_country_flag = Spoil_nanxuanwucheng
+		#remove_mission = Spoil_mission_nanxuanwucheng
 		var:ROOT.spoil_nanxuanwucheng_target = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
