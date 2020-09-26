@@ -44,6 +44,13 @@ exhuastion_base_seton = {
 	}
 	if = {
 		limit = {
+			has_idea = Fairy
+			has_idea = SGS_battle_fairy_talent_idea
+		}
+		set_variable = { EXHC_floor_base = global.EXH_floor_base_Human_define}
+	}
+	if = {
+		limit = {
 			has_idea = Human
 		}
 		set_variable = { EXHC_floor_base = global.EXH_floor_base_Human_define}
