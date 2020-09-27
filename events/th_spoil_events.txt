@@ -4478,6 +4478,696 @@ country_event = {
 		}
 	}
 }
+#------chongcun----
+country_event = {
+	#xuanwuchuan win root
+	id = spoil_event.34
+	title = spoil_event.34.t
+	desc = spoil_event.1.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		ROOT = {
+			has_country_flag = Spoil_chongcun
+		}
+		or = {
+			and = {
+				106 = {
+					is_controlled_by = ROOT
+				}
+				106 = {
+					is_owned_by = var:ROOT.spoil_chongcun_target
+				}
+			}
+			var:ROOT.spoil_chongcun_target = {
+				surrender_progress > 0.7
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	option = {
+		#军工
+		name = spoil_event.1.1
+		clr_country_flag = Spoil_chongcun
+		
+		hidden_effect = {
+			remove_mission = micFact5_maintain
+			remove_mission = micFact2_maintain
+			remove_mission = micFact1_maintain
+		}
+		if
+		{
+			limit = {
+				has_idea = SGS_mic_spoil0_idea
+			}
+			swap_ideas = {
+				remove_idea = SGS_mic_spoil0_idea
+				add_idea = SGS_mic_spoil2_idea
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = SGS_mic_spoil1_idea
+			}
+			swap_ideas = {
+				remove_idea = SGS_mic_spoil1_idea
+				add_idea = SGS_mic_spoil5_idea
+			}
+			activate_mission = micFact5_maintain
+		}
+		else_if = {
+			limit = {
+				has_idea = SGS_mic_spoil2_idea
+			}
+			swap_ideas = {
+				remove_idea = SGS_mic_spoil2_idea
+				add_idea = SGS_mic_spoil5_idea
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = SGS_mic_spoil5_idea
+			}
+		}
+		else = {
+			add_ideas = SGS_mic_spoil5_idea
+		}
+		var:ROOT.spoil_chongcun_target = {
+			#white_peace = ROOT
+			country_event = {
+				id = spoil_event.134
+				days = 1
+				random = 1
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#装备
+		name = spoil_event.1.2
+		clr_country_flag = Spoil_chongcun
+		
+		var:ROOT.spoil_chongcun_target = {
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = buqiang_a
+					amount = 500
+				}
+			}
+			send_equipment = {
+				equipment = buqiang_a
+				amount = 1000
+				target = ROOT
+			}
+			country_event = {
+				id = spoil_event.134
+				days = 1
+				random = 1
+			}
+		}
+		ai_chance = {
+			base = 25
+		}
+	}
+}
+
+country_event = {
+	#xuanwuchuan lose root
+	id = spoil_event.35
+	title = spoil_event.35.t
+	desc = spoil_event.2.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		106 = {
+			NOT = {
+				is_owned_by = ROOT
+			}
+		}
+		ROOT = {
+			has_country_flag = Spoil_chongcun
+		}
+		OR = {
+			surrender_progress > 0.3
+			has_country_flag = Spoil_chongcun_failed
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	option = {
+		#革命
+		name = spoil_event.2.1
+		trigger = {
+			not = {
+				controls_state = 106
+			}
+		}
+		clr_country_flag = Spoil_chongcun
+		set_country_flag = Spoil_chongcun_failed
+		remove_mission = Spoil_mission_chongcun
+		var:ROOT.spoil_chongcun_target = {
+			#white_peace = ROOT
+			country_event = {
+				id = spoil_event.135
+				days = 1
+				random = 1
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#xuanwuchuan stop root
+	id = spoil_event.36
+	title = spoil_event.36.t
+	desc = spoil_event.3.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		has_country_flag = Spoil_chongcun
+		or = {
+			106 = {
+				not = {
+					is_controlled_by = ROOT
+					is_controlled_by = var:ROOT.spoil_chongcun_target
+				}
+			}
+			106 = {
+				not = {
+					is_owned_by = var:ROOT.spoil_chongcun_target
+				}
+			}
+			not = {
+				has_war_with = var:ROOT.spoil_chongcun_target
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	option = {
+		#革命
+		name = spoil_event.3.1
+		clr_country_flag = Spoil_chongcun
+		remove_mission = Spoil_mission_chongcun
+		var:ROOT.spoil_chongcun_target = {
+			#white_peace = ROOT
+			country_event = {
+				id = spoil_event.136
+				days = 1
+				random = 1
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#xuanwuchuan
+	id = spoil_event.134	# xuanwuchuan spoil win
+	title = spoil_event.134.t
+	desc = spoil_event.101.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		#革命
+		name = spoil_event.101.1
+		white_peace = FROM
+		every_country = {
+			limit = {
+				or={
+					has_guaranteed = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+				has_war_with = FROM
+			}
+			white_peace = FROM
+		}
+		every_country = {
+			add_ai_strategy = {
+				type = antagonize
+				id = FROM
+				value = -1
+			}
+			ROOT = {
+				#is_in_faction_with = FROM
+				add_ai_strategy = {
+					type = dont_join_wars_with
+					id = PREV
+					target_country = FROM
+					value = -9999
+				}
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#xuanwuchuan
+	id = spoil_event.135	# xuanwuchuan spoil lose
+	title = spoil_event.135.t
+	desc = spoil_event.102.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		#革命
+		name = spoil_event.102.1
+		white_peace = FROM
+		every_country = {
+			limit = {
+				or={
+					has_guaranteed = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+				has_war_with = FROM
+			}
+			white_peace = FROM
+		}
+		every_country = {
+			add_ai_strategy = {
+				type = antagonize
+				id = FROM
+				value = -1
+			}
+			ROOT = {
+				#is_in_faction_with = FROM
+				add_ai_strategy = {
+					type = dont_join_wars_with
+					id = PREV
+					target_country = FROM
+					value = -9999
+				}
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#xuanwuchuan
+	id = spoil_event.136	# xuanwuchuan spoil stop
+	title = spoil_event.136.t
+	desc = spoil_event.103.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		#革命
+		name = spoil_event.103.1
+		white_peace = FROM
+		every_country = {
+			limit = {
+				or={
+					has_guaranteed = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+				has_war_with = FROM
+			}
+			white_peace = FROM
+		}
+		every_country = {
+			add_ai_strategy = {
+				type = antagonize
+				id = FROM
+				value = -1
+			}
+			ROOT = {
+				#is_in_faction_with = FROM
+				add_ai_strategy = {
+					type = dont_join_wars_with
+					id = PREV
+					target_country = FROM
+					value = -9999
+				}
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+#------xinhuizhencheng----
+country_event = {
+	#xuanwuchuan win root
+	id = spoil_event.44
+	title = spoil_event.44.t
+	desc = spoil_event.1.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		ROOT = {
+			has_country_flag = Spoil_xinhuizhencheng
+		}
+		or = {
+			and = {
+				119 = {
+					is_controlled_by = ROOT
+				}
+				119 = {
+					is_owned_by = var:ROOT.spoil_xinhuizhencheng_target
+				}
+			}
+			var:ROOT.spoil_xinhuizhencheng_target = {
+				surrender_progress > 0.7
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	option = {
+		#军工
+		name = spoil_event.1.1
+		clr_country_flag = Spoil_xinhuizhencheng
+		
+		hidden_effect = {
+			remove_mission = micFact5_maintain
+			remove_mission = micFact2_maintain
+			remove_mission = micFact1_maintain
+		}
+		if
+		{
+			limit = {
+				has_idea = SGS_mic_spoil0_idea
+			}
+			swap_ideas = {
+				remove_idea = SGS_mic_spoil0_idea
+				add_idea = SGS_mic_spoil2_idea
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = SGS_mic_spoil1_idea
+			}
+			swap_ideas = {
+				remove_idea = SGS_mic_spoil1_idea
+				add_idea = SGS_mic_spoil5_idea
+			}
+			activate_mission = micFact5_maintain
+		}
+		else_if = {
+			limit = {
+				has_idea = SGS_mic_spoil2_idea
+			}
+			swap_ideas = {
+				remove_idea = SGS_mic_spoil2_idea
+				add_idea = SGS_mic_spoil5_idea
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = SGS_mic_spoil5_idea
+			}
+		}
+		else = {
+			add_ideas = SGS_mic_spoil5_idea
+		}
+		var:ROOT.spoil_xinhuizhencheng_target = {
+			#white_peace = ROOT
+			country_event = {
+				id = spoil_event.144
+				days = 1
+				random = 1
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#装备
+		name = spoil_event.1.2
+		clr_country_flag = Spoil_xinhuizhencheng
+		
+		var:ROOT.spoil_xinhuizhencheng_target = {
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = buqiang_a
+					amount = 500
+				}
+			}
+			send_equipment = {
+				equipment = buqiang_a
+				amount = 1000
+				target = ROOT
+			}
+			country_event = {
+				id = spoil_event.144
+				days = 1
+				random = 1
+			}
+		}
+		ai_chance = {
+			base = 25
+		}
+	}
+}
+
+country_event = {
+	#xuanwuchuan lose root
+	id = spoil_event.45
+	title = spoil_event.45.t
+	desc = spoil_event.2.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		119 = {
+			NOT = {
+				is_owned_by = ROOT
+			}
+		}
+		ROOT = {
+			has_country_flag = Spoil_xinhuizhencheng
+		}
+		OR = {
+			surrender_progress > 0.3
+			has_country_flag = Spoil_xinhuizhencheng_failed
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	option = {
+		#革命
+		name = spoil_event.2.1
+		trigger = {
+			not = {
+				controls_state = 119
+			}
+		}
+		clr_country_flag = Spoil_xinhuizhencheng
+		set_country_flag = Spoil_xinhuizhencheng_failed
+		remove_mission = Spoil_mission_xinhuizhencheng
+		var:ROOT.spoil_xinhuizhencheng_target = {
+			#white_peace = ROOT
+			country_event = {
+				id = spoil_event.145
+				days = 1
+				random = 1
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#xuanwuchuan stop root
+	id = spoil_event.46
+	title = spoil_event.46.t
+	desc = spoil_event.3.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		has_country_flag = Spoil_xinhuizhencheng
+		or = {
+			119 = {
+				not = {
+					is_controlled_by = ROOT
+					is_controlled_by = var:ROOT.spoil_xinhuizhencheng_target
+				}
+			}
+			119 = {
+				not = {
+					is_owned_by = var:ROOT.spoil_xinhuizhencheng_target
+				}
+			}
+			not = {
+				has_war_with = var:ROOT.spoil_xinhuizhencheng_target
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	option = {
+		#革命
+		name = spoil_event.3.1
+		clr_country_flag = Spoil_xinhuizhencheng
+		remove_mission = Spoil_mission_xinhuizhencheng
+		var:ROOT.spoil_xinhuizhencheng_target = {
+			#white_peace = ROOT
+			country_event = {
+				id = spoil_event.146
+				days = 1
+				random = 1
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#xuanwuchuan
+	id = spoil_event.144	# xuanwuchuan spoil win
+	title = spoil_event.144.t
+	desc = spoil_event.101.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		#革命
+		name = spoil_event.101.1
+		white_peace = FROM
+		every_country = {
+			limit = {
+				or={
+					has_guaranteed = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+				has_war_with = FROM
+			}
+			white_peace = FROM
+		}
+		every_country = {
+			add_ai_strategy = {
+				type = antagonize
+				id = FROM
+				value = -1
+			}
+			ROOT = {
+				#is_in_faction_with = FROM
+				add_ai_strategy = {
+					type = dont_join_wars_with
+					id = PREV
+					target_country = FROM
+					value = -9999
+				}
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#xuanwuchuan
+	id = spoil_event.145	# xuanwuchuan spoil lose
+	title = spoil_event.145.t
+	desc = spoil_event.102.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		#革命
+		name = spoil_event.102.1
+		white_peace = FROM
+		every_country = {
+			limit = {
+				or={
+					has_guaranteed = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+				has_war_with = FROM
+			}
+			white_peace = FROM
+		}
+		every_country = {
+			add_ai_strategy = {
+				type = antagonize
+				id = FROM
+				value = -1
+			}
+			ROOT = {
+				#is_in_faction_with = FROM
+				add_ai_strategy = {
+					type = dont_join_wars_with
+					id = PREV
+					target_country = FROM
+					value = -9999
+				}
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#xuanwuchuan
+	id = spoil_event.146	# xuanwuchuan spoil stop
+	title = spoil_event.146.t
+	desc = spoil_event.103.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		#革命
+		name = spoil_event.103.1
+		white_peace = FROM
+		every_country = {
+			limit = {
+				or={
+					has_guaranteed = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+				has_war_with = FROM
+			}
+			white_peace = FROM
+		}
+		every_country = {
+			add_ai_strategy = {
+				type = antagonize
+				id = FROM
+				value = -1
+			}
+			ROOT = {
+				#is_in_faction_with = FROM
+				add_ai_strategy = {
+					type = dont_join_wars_with
+					id = PREV
+					target_country = FROM
+					value = -9999
+				}
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
 country_event = {
 	#xuanwuchuan lose root
 	id = spoil_event.test

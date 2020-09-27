@@ -2081,6 +2081,321 @@ Spoil_battle = {
 			
 		}
 	}
+	Spoil_battle_chongcun = {
+		visible = {
+			threat < 0.6
+			date < 151.1.1
+			is_subject = no
+			has_country_flag = neworder_Spoil
+			has_government = neworder
+			any_country = {
+				is_neighbor_of = ROOT
+				not = {
+					is_subject_of = ROOT
+					has_war_with = ROOT
+					is_in_faction_with = ROOT
+				}
+				owns_state = 106
+			}
+		}
+		target_trigger = {
+			FROM = {
+				owns_state = 106
+				is_neighbor_of = ROOT
+				not = {
+					is_subject_of = ROOT
+					has_war_with = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+		available = {
+			threat < 0.5
+			date < 150.1.1
+			NOT = {
+				has_country_flag = spoilCD
+			}
+			FROM = {
+				is_neighbor_of = ROOT
+				not = {
+					is_subject_of = ROOT
+					has_war_with = ROOT
+					is_in_faction_with = ROOT
+				}
+				owns_state = 106
+			}
+		}
+		days_remove = 20
+		days_re_enable = 40
+		war_with_on_remove = FROM
+		complete_effect = {
+			set_variable = {
+				ROOT.spoil_MyCD = 128
+			}
+			set_country_flag = spoilCD
+		}
+		remove_effect = {
+			set_variable = {
+				ROOT.spoil_chongcun_target = FROM.id
+			}
+			declare_war_on = {
+				target = FROM
+				type = spoil_wargoal
+				generator = {
+					106
+				}
+			}
+			every_country = {
+				add_ai_strategy = {
+					type = antagonize
+					id = ROOT
+					value = 1
+				}
+				FROM = {
+					#is_in_faction_with = FROM
+					add_ai_strategy = {
+						type = dont_join_wars_with
+						id = PREV
+						target_country = ROOT
+						value = 9999
+					}
+				}
+			}
+			#add_political_power = 97
+			set_country_flag = Spoil_chongcun
+		}
+		cost = 40
+		fire_only_once = no
+		ai_will_do = {
+			base = 10
+			modifier = {
+				FROM = {
+					is_same_race = yes
+					is_subject = no
+				}
+				factor = 0.2
+			}
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+			modifier = {
+				FROM = {
+					has_war = yes
+				}
+				factor = 2
+			}
+			modifier = {
+				has_non_aggression_pact_with = FROM
+				factor = 0
+			}
+			modifier = {
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.8
+				}
+				factor = 0.3
+			}
+			modifier = {
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.4
+				}
+				factor = 0
+			}
+			modifier = {
+				strength_ratio = {
+					tag = FROM
+					ratio < 1.3
+				}
+				factor = 2
+			}
+			modifier = {
+				has_stability < 0.2
+				factor = 1.1
+			}
+			modifier = {
+				has_stability > 0.95
+				factor = 1.5
+			}
+			modifier = {
+				threat > 0.4
+				factor = 0.5
+			}
+			modifier = {
+				FROM = {
+					or = {
+						original_tag = HUM
+						is_in_faction_with = HUM
+					}
+				}
+				factor = 0.1
+			}
+			modifier = {
+				check_variable = { EXHC_current_exhaustion > 10 }
+				factor = 0.5
+			}
+			
+		}
+	}
+	Spoil_battle_xinhuizhencheng = {
+		visible = {
+			threat < 0.6
+			date < 151.1.1
+			is_subject = no
+			has_country_flag = neworder_Spoil
+			has_government = neworder
+			any_country = {
+				is_neighbor_of = ROOT
+				not = {
+					is_subject_of = ROOT
+					has_war_with = ROOT
+					is_in_faction_with = ROOT
+				}
+				owns_state = 119
+			}
+		}
+		target_trigger = {
+			FROM = {
+				owns_state = 119
+				is_neighbor_of = ROOT
+				not = {
+					is_subject_of = ROOT
+					has_war_with = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+		available = {
+			threat < 0.5
+			date < 150.1.1
+			NOT = {
+				has_country_flag = spoilCD
+			}
+			FROM = {
+				is_neighbor_of = ROOT
+				not = {
+					is_subject_of = ROOT
+					has_war_with = ROOT
+					is_in_faction_with = ROOT
+				}
+				owns_state = 119
+			}
+		}
+		days_remove = 20
+		days_re_enable = 40
+		war_with_on_remove = FROM
+		complete_effect = {
+			set_variable = {
+				ROOT.spoil_MyCD = 128
+			}
+			set_country_flag = spoilCD
+		}
+		remove_effect = {
+			set_variable = {
+				ROOT.spoil_xinhuizhencheng_target = FROM.id
+			}
+			declare_war_on = {
+				target = FROM
+				type = spoil_wargoal
+				generator = {
+					119
+				}
+			}
+			every_country = {
+				add_ai_strategy = {
+					type = antagonize
+					id = ROOT
+					value = 1
+				}
+				FROM = {
+					#is_in_faction_with = FROM
+					add_ai_strategy = {
+						type = dont_join_wars_with
+						id = PREV
+						target_country = ROOT
+						value = 9999
+					}
+				}
+			}
+			#add_political_power = 97
+			set_country_flag = Spoil_xinhuizhencheng
+		}
+		cost = 40
+		fire_only_once = no
+		ai_will_do = {
+			base = 10
+			modifier = {
+				FROM = {
+					is_same_race = yes
+					is_subject = no
+				}
+				factor = 0.2
+			}
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+			modifier = {
+				FROM = {
+					has_war = yes
+				}
+				factor = 2
+			}
+			modifier = {
+				has_non_aggression_pact_with = FROM
+				factor = 0
+			}
+			modifier = {
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.8
+				}
+				factor = 0.3
+			}
+			modifier = {
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.4
+				}
+				factor = 0
+			}
+			modifier = {
+				strength_ratio = {
+					tag = FROM
+					ratio < 1.3
+				}
+				factor = 2
+			}
+			modifier = {
+				has_stability < 0.2
+				factor = 1.1
+			}
+			modifier = {
+				has_stability > 0.95
+				factor = 1.5
+			}
+			modifier = {
+				threat > 0.4
+				factor = 0.5
+			}
+			modifier = {
+				FROM = {
+					or = {
+						original_tag = HUM
+						is_in_faction_with = HUM
+					}
+				}
+				factor = 0.1
+			}
+			modifier = {
+				check_variable = { EXHC_current_exhaustion > 10 }
+				factor = 0.5
+			}
+			
+		}
+	}
+
 	#------------------------Mission&CD---------------------
 	Spoil_mission_xiaxuanwucheng = {
 		# This is our mission id
@@ -2644,6 +2959,94 @@ Spoil_battle = {
 			effect_tooltip = {
 				country_event = {
 					id = spoil_event.24
+					days = 1
+					random = 1
+				}
+			}
+			set_variable = {
+				ROOT.spoil_MyCD = 32
+			}
+			set_country_flag = spoil_vic_CD
+		}
+	}
+	Spoil_mission_chongcun = {
+		# This is our mission id
+		available = {
+			# 任务目标
+			or = {
+				controls_state = 106
+				var:ROOT.spoil_chongcun_target = {
+					surrender_progress > 0.7
+				}
+			}
+		}
+		activation = {
+			has_country_flag = Spoil_chongcun
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 100
+		timeout_effect = {
+			add_political_power = -51
+			set_country_flag = Spoil_chongcun_failed
+			effect_tooltip = {
+				country_event = {
+					id = spoil_event.35
+					days = 1
+					random = 1
+				}
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = spoilCD_if_vic
+			add_political_power = 50
+			effect_tooltip = {
+				country_event = {
+					id = spoil_event.34
+					days = 1
+					random = 1
+				}
+			}
+			set_variable = {
+				ROOT.spoil_MyCD = 32
+			}
+			set_country_flag = spoil_vic_CD
+		}
+	}
+	Spoil_mission_xinhuizhencheng = {
+		# This is our mission id
+		available = {
+			# 任务目标
+			or = {
+				controls_state = 119
+				var:ROOT.spoil_xinhuizhencheng_target = {
+					surrender_progress > 0.7
+				}
+			}
+		}
+		activation = {
+			has_country_flag = Spoil_xinhuizhencheng
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 100
+		timeout_effect = {
+			add_political_power = -51
+			set_country_flag = Spoil_xinhuizhencheng_failed
+			effect_tooltip = {
+				country_event = {
+					id = spoil_event.45
+					days = 1
+					random = 1
+				}
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = spoilCD_if_vic
+			add_political_power = 50
+			effect_tooltip = {
+				country_event = {
+					id = spoil_event.44
 					days = 1
 					random = 1
 				}
