@@ -124,7 +124,7 @@ Spoil_battle = {
 			modifier = {
 				strength_ratio = {
 					tag = FROM
-					ratio < 1.3
+					ratio > 1.3
 				}
 				factor = 2
 			}
@@ -200,12 +200,12 @@ Spoil_battle = {
 				owns_state = 88
 			}
 		}
-		days_remove = 20
+		days_remove = 35
 		days_re_enable = 40
 		war_with_on_remove = FROM
 		complete_effect = {
 			set_variable = {
-				ROOT.spoil_MyCD = 128
+				ROOT.spoil_MyCD = 160
 			}
 			set_country_flag = spoilCD
 		}
@@ -239,10 +239,10 @@ Spoil_battle = {
 			#add_political_power = 97
 			set_country_flag = Spoil_nanxuanwucheng
 		}
-		cost = 40
+		cost = 60
 		fire_only_once = no
 		ai_will_do = {
-			base = 10
+			base = 7
 			modifier = {
 				FROM = {
 					is_same_race = yes
@@ -281,7 +281,14 @@ Spoil_battle = {
 			modifier = {
 				strength_ratio = {
 					tag = FROM
-					ratio < 1.3
+					ratio < 1.2
+				}
+				factor = 0.7
+			}
+			modifier = {
+				strength_ratio = {
+					tag = FROM
+					ratio > 1.4
 				}
 				factor = 2
 			}
@@ -329,6 +336,9 @@ Spoil_battle = {
 				}
 				owns_state = 113
 			}
+			113 ={
+				is_neighbor_of = ROOT
+			}
 		}
 		target_trigger = {
 			FROM = {
@@ -357,6 +367,7 @@ Spoil_battle = {
 				}
 				
 			}
+			
 			FROM = {
 				is_neighbor_of = ROOT
 				not = {
@@ -448,7 +459,7 @@ Spoil_battle = {
 			modifier = {
 				strength_ratio = {
 					tag = FROM
-					ratio < 1.3
+					ratio > 1.3
 				}
 				factor = 2
 			}
@@ -534,12 +545,12 @@ Spoil_battle = {
 				owns_state = 122
 			}
 		}
-		days_remove = 20
+		days_remove = 35
 		days_re_enable = 40
 		war_with_on_remove = FROM
 		complete_effect = {
 			set_variable = {
-				ROOT.spoil_MyCD = 128
+				ROOT.spoil_MyCD = 160
 			}
 			set_country_flag = spoilCD
 		}
@@ -573,10 +584,10 @@ Spoil_battle = {
 			#add_political_power = 97
 			set_country_flag = Spoil_hongmoguan
 		}
-		cost = 40
+		cost = 60
 		fire_only_once = no
 		ai_will_do = {
-			base = 10
+			base = 3
 			modifier = {
 				FROM = {
 					is_same_race = yes
@@ -615,7 +626,14 @@ Spoil_battle = {
 			modifier = {
 				strength_ratio = {
 					tag = FROM
-					ratio < 1.3
+					ratio < 1.2
+				}
+				factor = 0.7
+			}
+			modifier = {
+				strength_ratio = {
+					tag = FROM
+					ratio > 1.3
 				}
 				factor = 2
 			}
@@ -663,6 +681,9 @@ Spoil_battle = {
 				}
 				owns_state = 115
 			}
+			115 ={
+				is_neighbor_of = ROOT
+			}
 		}
 		target_trigger = {
 			FROM = {
@@ -691,6 +712,7 @@ Spoil_battle = {
 				}
 				
 			}
+			
 			FROM = {
 				is_neighbor_of = ROOT
 				not = {
@@ -706,7 +728,7 @@ Spoil_battle = {
 		war_with_on_remove = FROM
 		complete_effect = {
 			set_variable = {
-				ROOT.spoil_MyCD = 128
+				ROOT.spoil_MyCD = 96
 			}
 			set_country_flag = spoilCD
 		}
@@ -740,10 +762,10 @@ Spoil_battle = {
 			#add_political_power = 97
 			set_country_flag = Spoil_scagang
 		}
-		cost = 40
+		cost = 20
 		fire_only_once = no
 		ai_will_do = {
-			base = 10
+			base = 20
 			modifier = {
 				FROM = {
 					is_same_race = yes
@@ -782,7 +804,7 @@ Spoil_battle = {
 			modifier = {
 				strength_ratio = {
 					tag = FROM
-					ratio < 1.3
+					ratio > 1.3
 				}
 				factor = 2
 			}
@@ -830,6 +852,9 @@ Spoil_battle = {
 				}
 				owns_state = 100
 			}
+			100 ={
+				is_neighbor_of = ROOT
+			}
 		}
 		target_trigger = {
 			FROM = {
@@ -863,7 +888,7 @@ Spoil_battle = {
 		war_with_on_remove = FROM
 		complete_effect = {
 			set_variable = {
-				ROOT.spoil_MyCD = 128
+				ROOT.spoil_MyCD = 96
 			}
 			set_country_flag = spoilCD
 		}
@@ -897,10 +922,10 @@ Spoil_battle = {
 			#add_political_power = 97
 			set_country_flag = Spoil_fengshoucun
 		}
-		cost = 40
+		cost = 20
 		fire_only_once = no
 		ai_will_do = {
-			base = 10
+			base = 15
 			modifier = {
 				FROM = {
 					is_same_race = yes
@@ -939,7 +964,7 @@ Spoil_battle = {
 			modifier = {
 				strength_ratio = {
 					tag = FROM
-					ratio < 1.3
+					ratio > 1.3
 				}
 				factor = 2
 			}
@@ -988,6 +1013,9 @@ Spoil_battle = {
 				}
 				owns_state = 377
 			}
+			377 ={
+				is_neighbor_of = ROOT
+			}
 		}
 		target_trigger = {
 			FROM = {
@@ -1021,7 +1049,7 @@ Spoil_battle = {
 		war_with_on_remove = FROM
 		complete_effect = {
 			set_variable = {
-				ROOT.spoil_MyCD = 128
+				ROOT.spoil_MyCD = 96
 			}
 			set_country_flag = spoilCD
 		}
@@ -1055,10 +1083,10 @@ Spoil_battle = {
 			#add_political_power = 97
 			set_country_flag = Spoil_datiecun
 		}
-		cost = 40
+		cost = 20
 		fire_only_once = no
 		ai_will_do = {
-			base = 10
+			base = 15
 			modifier = {
 				FROM = {
 					is_same_race = yes
@@ -1097,7 +1125,7 @@ Spoil_battle = {
 			modifier = {
 				strength_ratio = {
 					tag = FROM
-					ratio < 1.3
+					ratio > 1.3
 				}
 				factor = 2
 			}
@@ -1144,6 +1172,9 @@ Spoil_battle = {
 					is_in_faction_with = ROOT
 				}
 				owns_state = 272
+			}
+			272 ={
+				is_neighbor_of = ROOT
 			}
 		}
 		target_trigger = {
@@ -1254,7 +1285,7 @@ Spoil_battle = {
 			modifier = {
 				strength_ratio = {
 					tag = FROM
-					ratio < 1.3
+					ratio > 1.3
 				}
 				factor = 2
 			}
@@ -1330,12 +1361,12 @@ Spoil_battle = {
 				owns_state = 385
 			}
 		}
-		days_remove = 20
+		days_remove = 35
 		days_re_enable = 40
 		war_with_on_remove = FROM
 		complete_effect = {
 			set_variable = {
-				ROOT.spoil_MyCD = 128
+				ROOT.spoil_MyCD = 160
 			}
 			set_country_flag = spoilCD
 		}
@@ -1369,10 +1400,10 @@ Spoil_battle = {
 			#add_political_power = 97
 			set_country_flag = Spoil_xibuzhongxin
 		}
-		cost = 40
+		cost = 60
 		fire_only_once = no
 		ai_will_do = {
-			base = 10
+			base = 3
 			modifier = {
 				FROM = {
 					is_same_race = yes
@@ -1411,9 +1442,16 @@ Spoil_battle = {
 			modifier = {
 				strength_ratio = {
 					tag = FROM
-					ratio < 1.3
+					ratio > 1.3
 				}
 				factor = 2
+			}
+			modifier = {
+				strength_ratio = {
+					tag = FROM
+					ratio < 1.2
+				}
+				factor = 0.7
 			}
 			modifier = {
 				has_stability < 0.2
@@ -1526,10 +1564,10 @@ Spoil_battle = {
 			#add_political_power = 97
 			set_country_flag = Spoil_wumingcun
 		}
-		cost = 40
+		cost = 45
 		fire_only_once = no
 		ai_will_do = {
-			base = 10
+			base = 7
 			modifier = {
 				FROM = {
 					is_same_race = yes
@@ -1568,7 +1606,7 @@ Spoil_battle = {
 			modifier = {
 				strength_ratio = {
 					tag = FROM
-					ratio < 1.3
+					ratio > 1.3
 				}
 				factor = 2
 			}
@@ -1616,6 +1654,9 @@ Spoil_battle = {
 				}
 				owns_state = 388
 			}
+			388 ={
+				is_neighbor_of = ROOT
+			}
 		}
 		target_trigger = {
 			FROM = {
@@ -1649,7 +1690,7 @@ Spoil_battle = {
 		war_with_on_remove = FROM
 		complete_effect = {
 			set_variable = {
-				ROOT.spoil_MyCD = 128
+				ROOT.spoil_MyCD = 96
 			}
 			set_country_flag = spoilCD
 		}
@@ -1683,10 +1724,10 @@ Spoil_battle = {
 			#add_political_power = 97
 			set_country_flag = Spoil_yanzouwutai
 		}
-		cost = 40
+		cost = 20
 		fire_only_once = no
 		ai_will_do = {
-			base = 10
+			base = 20
 			modifier = {
 				FROM = {
 					is_same_race = yes
@@ -1725,7 +1766,7 @@ Spoil_battle = {
 			modifier = {
 				strength_ratio = {
 					tag = FROM
-					ratio < 1.3
+					ratio > 1.3
 				}
 				factor = 2
 			}
@@ -1801,12 +1842,12 @@ Spoil_battle = {
 				owns_state = 339
 			}
 		}
-		days_remove = 20
+		days_remove = 35
 		days_re_enable = 40
 		war_with_on_remove = FROM
 		complete_effect = {
 			set_variable = {
-				ROOT.spoil_MyCD = 128
+				ROOT.spoil_MyCD = 160
 			}
 			set_country_flag = spoilCD
 		}
@@ -1840,10 +1881,10 @@ Spoil_battle = {
 			#add_political_power = 97
 			set_country_flag = Spoil_fengjiandi
 		}
-		cost = 40
+		cost = 60
 		fire_only_once = no
 		ai_will_do = {
-			base = 10
+			base = 3
 			modifier = {
 				FROM = {
 					is_same_race = yes
@@ -1882,9 +1923,16 @@ Spoil_battle = {
 			modifier = {
 				strength_ratio = {
 					tag = FROM
-					ratio < 1.3
+					ratio > 1.3
 				}
 				factor = 2
+			}
+			modifier = {
+				strength_ratio = {
+					tag = FROM
+					ratio < 1.2
+				}
+				factor = 0.7
 			}
 			modifier = {
 				has_stability < 0.2
@@ -1930,6 +1978,9 @@ Spoil_battle = {
 				}
 				owns_state = 310
 			}
+			310 ={
+				is_neighbor_of = ROOT
+			}
 		}
 		target_trigger = {
 			FROM = {
@@ -1973,7 +2024,7 @@ Spoil_battle = {
 		war_with_on_remove = FROM
 		complete_effect = {
 			set_variable = {
-				ROOT.spoil_MyCD = 128
+				ROOT.spoil_MyCD = 96
 			}
 			set_country_flag = spoilCD
 		}
@@ -2007,10 +2058,10 @@ Spoil_battle = {
 			#add_political_power = 97
 			set_country_flag = Spoil_yaojingbuji
 		}
-		cost = 40
+		cost = 20
 		fire_only_once = no
 		ai_will_do = {
-			base = 10
+			base = 20
 			modifier = {
 				FROM = {
 					is_same_race = yes
@@ -2049,7 +2100,7 @@ Spoil_battle = {
 			modifier = {
 				strength_ratio = {
 					tag = FROM
-					ratio < 1.3
+					ratio > 1.3
 				}
 				factor = 2
 			}
@@ -2097,6 +2148,9 @@ Spoil_battle = {
 				}
 				owns_state = 106
 			}
+			106 ={
+				is_neighbor_of = ROOT
+			}
 		}
 		target_trigger = {
 			FROM = {
@@ -2130,7 +2184,7 @@ Spoil_battle = {
 		war_with_on_remove = FROM
 		complete_effect = {
 			set_variable = {
-				ROOT.spoil_MyCD = 128
+				ROOT.spoil_MyCD = 96
 			}
 			set_country_flag = spoilCD
 		}
@@ -2164,10 +2218,10 @@ Spoil_battle = {
 			#add_political_power = 97
 			set_country_flag = Spoil_chongcun
 		}
-		cost = 40
+		cost = 20
 		fire_only_once = no
 		ai_will_do = {
-			base = 10
+			base = 20
 			modifier = {
 				FROM = {
 					is_same_race = yes
@@ -2206,7 +2260,7 @@ Spoil_battle = {
 			modifier = {
 				strength_ratio = {
 					tag = FROM
-					ratio < 1.3
+					ratio > 1.3
 				}
 				factor = 2
 			}
@@ -2282,12 +2336,12 @@ Spoil_battle = {
 				owns_state = 119
 			}
 		}
-		days_remove = 20
+		days_remove = 35
 		days_re_enable = 40
 		war_with_on_remove = FROM
 		complete_effect = {
 			set_variable = {
-				ROOT.spoil_MyCD = 128
+				ROOT.spoil_MyCD = 160
 			}
 			set_country_flag = spoilCD
 		}
@@ -2321,10 +2375,10 @@ Spoil_battle = {
 			#add_political_power = 97
 			set_country_flag = Spoil_xinhuizhencheng
 		}
-		cost = 40
+		cost = 60
 		fire_only_once = no
 		ai_will_do = {
-			base = 10
+			base = 3
 			modifier = {
 				FROM = {
 					is_same_race = yes
@@ -2363,9 +2417,16 @@ Spoil_battle = {
 			modifier = {
 				strength_ratio = {
 					tag = FROM
-					ratio < 1.3
+					ratio > 1.3
 				}
 				factor = 2
+			}
+			modifier = {
+				strength_ratio = {
+					tag = FROM
+					ratio < 1.2
+				}
+				factor = 0.7
 			}
 			modifier = {
 				has_stability < 0.2
@@ -2415,7 +2476,7 @@ Spoil_battle = {
 		selectable_mission = no
 		days_mission_timeout = 100
 		timeout_effect = {
-			add_political_power = -51
+			add_political_power = -50
 			set_country_flag = Spoil_xiaxuanwucheng_failed
 			effect_tooltip = {
 				country_event = {
@@ -2428,6 +2489,7 @@ Spoil_battle = {
 		complete_effect = {
 			custom_effect_tooltip = spoilCD_if_vic
 			add_political_power = 50
+			add_stability = 0.1
 			effect_tooltip = {
 				country_event = {
 					id = spoil_event.1
@@ -2457,9 +2519,9 @@ Spoil_battle = {
 		}
 		is_good = no
 		selectable_mission = no
-		days_mission_timeout = 100
+		days_mission_timeout = 128
 		timeout_effect = {
-			add_political_power = -51
+			add_political_power = -50
 			set_country_flag = Spoil_nanxuanwucheng_failed
 			effect_tooltip = {
 				country_event = {
@@ -2472,6 +2534,8 @@ Spoil_battle = {
 		complete_effect = {
 			custom_effect_tooltip = spoilCD_if_vic
 			add_political_power = 50
+			add_war_support = 0.1
+			add_stability = 0.2
 			effect_tooltip = {
 				country_event = {
 					id = spoil_event.11
@@ -2503,7 +2567,7 @@ Spoil_battle = {
 		selectable_mission = no
 		days_mission_timeout = 100
 		timeout_effect = {
-			add_political_power = -51
+			add_political_power = -50
 			set_country_flag = Spoil_xihongmoguan_failed
 			effect_tooltip = {
 				country_event = {
@@ -2516,6 +2580,7 @@ Spoil_battle = {
 		complete_effect = {
 			custom_effect_tooltip = spoilCD_if_vic
 			add_political_power = 50
+			add_stability = 0.1
 			effect_tooltip = {
 				country_event = {
 					id = spoil_event.21
@@ -2524,7 +2589,7 @@ Spoil_battle = {
 				}
 			}
 			set_variable = {
-				ROOT.spoil_MyCD = 64
+				ROOT.spoil_MyCD = 32
 			}
 			set_country_flag = spoil_vic_CD
 		}
@@ -2545,9 +2610,9 @@ Spoil_battle = {
 		}
 		is_good = no
 		selectable_mission = no
-		days_mission_timeout = 100
+		days_mission_timeout = 128
 		timeout_effect = {
-			add_political_power = -51
+			add_political_power = -50
 			set_country_flag = Spoil_hongmoguan_failed
 			effect_tooltip = {
 				country_event = {
@@ -2560,6 +2625,8 @@ Spoil_battle = {
 		complete_effect = {
 			custom_effect_tooltip = spoilCD_if_vic
 			add_political_power = 50
+			add_stability = 0.2
+			add_war_support = 0.1
 			effect_tooltip = {
 				country_event = {
 					id = spoil_event.31
@@ -2589,9 +2656,9 @@ Spoil_battle = {
 		}
 		is_good = no
 		selectable_mission = no
-		days_mission_timeout = 100
+		days_mission_timeout = 80
 		timeout_effect = {
-			add_political_power = -51
+			add_political_power = -50
 			set_country_flag = Spoil_scagang_failed
 			effect_tooltip = {
 				country_event = {
@@ -2604,6 +2671,7 @@ Spoil_battle = {
 		complete_effect = {
 			custom_effect_tooltip = spoilCD_if_vic
 			add_political_power = 50
+			add_stability = 0.05
 			effect_tooltip = {
 				country_event = {
 					id = spoil_event.41
@@ -2612,7 +2680,7 @@ Spoil_battle = {
 				}
 			}
 			set_variable = {
-				ROOT.spoil_MyCD = 64
+				ROOT.spoil_MyCD = 32
 			}
 			set_country_flag = spoil_vic_CD
 		}
@@ -2633,9 +2701,9 @@ Spoil_battle = {
 		}
 		is_good = no
 		selectable_mission = no
-		days_mission_timeout = 100
+		days_mission_timeout = 80
 		timeout_effect = {
-			add_political_power = -51
+			add_political_power = -50
 			set_country_flag = Spoil_fengshoucun_failed
 			effect_tooltip = {
 				country_event = {
@@ -2648,6 +2716,7 @@ Spoil_battle = {
 		complete_effect = {
 			custom_effect_tooltip = spoilCD_if_vic
 			add_political_power = 50
+			add_stability = 0.1
 			effect_tooltip = {
 				country_event = {
 					id = spoil_event.51
@@ -2656,7 +2725,7 @@ Spoil_battle = {
 				}
 			}
 			set_variable = {
-				ROOT.spoil_MyCD = 64
+				ROOT.spoil_MyCD = 32
 			}
 			set_country_flag = spoil_vic_CD
 		}
@@ -2677,9 +2746,9 @@ Spoil_battle = {
 		}
 		is_good = no
 		selectable_mission = no
-		days_mission_timeout = 100
+		days_mission_timeout = 80
 		timeout_effect = {
-			add_political_power = -51
+			add_political_power = -50
 			set_country_flag = Spoil_datiecun_failed
 			effect_tooltip = {
 				country_event = {
@@ -2692,6 +2761,7 @@ Spoil_battle = {
 		complete_effect = {
 			custom_effect_tooltip = spoilCD_if_vic
 			add_political_power = 50
+			add_stability = 0.1
 			effect_tooltip = {
 				country_event = {
 					id = spoil_event.61
@@ -2723,7 +2793,7 @@ Spoil_battle = {
 		selectable_mission = no
 		days_mission_timeout = 100
 		timeout_effect = {
-			add_political_power = -51
+			add_political_power = -50
 			set_country_flag = Spoil_kantanqu_failed
 			effect_tooltip = {
 				country_event = {
@@ -2736,6 +2806,7 @@ Spoil_battle = {
 		complete_effect = {
 			custom_effect_tooltip = spoilCD_if_vic
 			add_political_power = 50
+			add_stability = 0.1
 			effect_tooltip = {
 				country_event = {
 					id = spoil_event.71
@@ -2765,9 +2836,9 @@ Spoil_battle = {
 		}
 		is_good = no
 		selectable_mission = no
-		days_mission_timeout = 100
+		days_mission_timeout = 128
 		timeout_effect = {
-			add_political_power = -51
+			add_political_power = -50
 			set_country_flag = Spoil_xibuzhongxin_failed
 			effect_tooltip = {
 				country_event = {
@@ -2780,6 +2851,8 @@ Spoil_battle = {
 		complete_effect = {
 			custom_effect_tooltip = spoilCD_if_vic
 			add_political_power = 50
+			add_stability = 0.2
+			add_war_support = 0.1
 			effect_tooltip = {
 				country_event = {
 					id = spoil_event.81
@@ -2788,7 +2861,7 @@ Spoil_battle = {
 				}
 			}
 			set_variable = {
-				ROOT.spoil_MyCD = 32
+				ROOT.spoil_MyCD = 64
 			}
 			set_country_flag = spoil_vic_CD
 		}
@@ -2811,7 +2884,7 @@ Spoil_battle = {
 		selectable_mission = no
 		days_mission_timeout = 100
 		timeout_effect = {
-			add_political_power = -51
+			add_political_power = -50
 			set_country_flag = Spoil_wumingcun_failed
 			effect_tooltip = {
 				country_event = {
@@ -2824,6 +2897,8 @@ Spoil_battle = {
 		complete_effect = {
 			custom_effect_tooltip = spoilCD_if_vic
 			add_political_power = 50
+			add_stability = 0.1
+			add_war_support = 0.1
 			effect_tooltip = {
 				country_event = {
 					id = spoil_event.91
@@ -2832,7 +2907,7 @@ Spoil_battle = {
 				}
 			}
 			set_variable = {
-				ROOT.spoil_MyCD = 32
+				ROOT.spoil_MyCD = 64
 			}
 			set_country_flag = spoil_vic_CD
 		}
@@ -2853,9 +2928,9 @@ Spoil_battle = {
 		}
 		is_good = no
 		selectable_mission = no
-		days_mission_timeout = 100
+		days_mission_timeout = 80
 		timeout_effect = {
-			add_political_power = -51
+			add_political_power = -50
 			set_country_flag = Spoil_yanzouwutai_failed
 			effect_tooltip = {
 				country_event = {
@@ -2868,6 +2943,7 @@ Spoil_battle = {
 		complete_effect = {
 			custom_effect_tooltip = spoilCD_if_vic
 			add_political_power = 50
+			add_stability = 0.05
 			effect_tooltip = {
 				country_event = {
 					id = spoil_event.4
@@ -2897,9 +2973,9 @@ Spoil_battle = {
 		}
 		is_good = no
 		selectable_mission = no
-		days_mission_timeout = 100
+		days_mission_timeout = 128
 		timeout_effect = {
-			add_political_power = -51
+			add_political_power = -50
 			set_country_flag = Spoil_fengjiandi_failed
 			effect_tooltip = {
 				country_event = {
@@ -2912,6 +2988,8 @@ Spoil_battle = {
 		complete_effect = {
 			custom_effect_tooltip = spoilCD_if_vic
 			add_political_power = 50
+			add_stability = 0.2
+			add_war_support = 0.1
 			effect_tooltip = {
 				country_event = {
 					id = spoil_event.14
@@ -2920,7 +2998,7 @@ Spoil_battle = {
 				}
 			}
 			set_variable = {
-				ROOT.spoil_MyCD = 32
+				ROOT.spoil_MyCD = 64
 			}
 			set_country_flag = spoil_vic_CD
 		}
@@ -2941,9 +3019,9 @@ Spoil_battle = {
 		}
 		is_good = no
 		selectable_mission = no
-		days_mission_timeout = 100
+		days_mission_timeout = 80
 		timeout_effect = {
-			add_political_power = -51
+			add_political_power = -50
 			set_country_flag = Spoil_yaojingbuji_failed
 			effect_tooltip = {
 				country_event = {
@@ -2956,6 +3034,7 @@ Spoil_battle = {
 		complete_effect = {
 			custom_effect_tooltip = spoilCD_if_vic
 			add_political_power = 50
+			add_stability = 0.05
 			effect_tooltip = {
 				country_event = {
 					id = spoil_event.24
@@ -2985,9 +3064,9 @@ Spoil_battle = {
 		}
 		is_good = no
 		selectable_mission = no
-		days_mission_timeout = 100
+		days_mission_timeout = 80
 		timeout_effect = {
-			add_political_power = -51
+			add_political_power = -50
 			set_country_flag = Spoil_chongcun_failed
 			effect_tooltip = {
 				country_event = {
@@ -3000,6 +3079,7 @@ Spoil_battle = {
 		complete_effect = {
 			custom_effect_tooltip = spoilCD_if_vic
 			add_political_power = 50
+			add_stability = 0.05
 			effect_tooltip = {
 				country_event = {
 					id = spoil_event.34
@@ -3029,9 +3109,9 @@ Spoil_battle = {
 		}
 		is_good = no
 		selectable_mission = no
-		days_mission_timeout = 100
+		days_mission_timeout = 128
 		timeout_effect = {
-			add_political_power = -51
+			add_political_power = -50
 			set_country_flag = Spoil_xinhuizhencheng_failed
 			effect_tooltip = {
 				country_event = {
@@ -3044,6 +3124,8 @@ Spoil_battle = {
 		complete_effect = {
 			custom_effect_tooltip = spoilCD_if_vic
 			add_political_power = 50
+			add_stability = 0.2
+			add_war_support = 0.1
 			effect_tooltip = {
 				country_event = {
 					id = spoil_event.44
@@ -3052,7 +3134,7 @@ Spoil_battle = {
 				}
 			}
 			set_variable = {
-				ROOT.spoil_MyCD = 32
+				ROOT.spoil_MyCD = 64
 			}
 			set_country_flag = spoil_vic_CD
 		}
