@@ -1,153 +1,123 @@
 focus_tree = {
-  id = SGS_focus
-  country = {
-    factor = 0
-    modifier = {
-      add = 10
-      tag = SGS
-    }
-  }
-
-  shared_focus = ty_medium_main 
-
-  continuous_focus_position = { x = 2800 y = 20 }
-
-  focus = {
-      id = SGS_battle_fariy_issue_focus
-      icon = GFX_goal_generic_propaganda
-      cost = 6
-      x = 6
-      y = 0
-
-      # prerequisite = {
-      #    focus = ty_kejichuangxin
-      # }
-
-
-      # relative_position_id = ty_medium_main
-
-      available ={
-         has_global_flag = main_scenario
-      }
-
-      bypass = {
-      
-      }
-
-      completion_reward = {
-        add_political_power = 15
-      }
-
-      ai_will_do = {
-        factor = 1
-      }
-
-      cancel_if_invalid = no
-      continue_if_invalid = no
-      available_if_capitulated = yes
-  }
-  focus = {
-    id = SGS_pacify_battle_fariy_focus
-    icon = GFX_goal_generic_neutrality_focus
-    cost = 12
-    x = -2
-    y = 1
-
-    prerequisite = {
-       focus = SGS_battle_fariy_issue_focus
-    }
-
-    mutually_exclusive = {
-      focus = SGS_develop_our_country_focus
-    }
-
-    relative_position_id = SGS_battle_fariy_issue_focus
-
-    available ={
-
-    }
-
-    bypass = {
-      
-    }
-
-    completion_reward = {
-      conservativedecrease = yes
-      add_popularity = {
-        ideology = guli
-        popularity = 0.05
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-
-    cancel_if_invalid = no
-    continue_if_invalid = no
-    available_if_capitulated = yes
-}
-
-focus = {
-    id = SGS_develop_our_country_focus
-    icon = GFX_goal_generic_political_pressure
-    cost = 12
-    x = 2
-    y = 1
-
-    prerequisite = {
-       focus = SGS_battle_fariy_issue_focus
-    }
-
-    mutually_exclusive = {
-      focus = SGS_pacify_battle_fariy_focus
-    }
-
-    relative_position_id = SGS_battle_fariy_issue_focus
-
-    available ={
-
-    }
-
-    bypass = {
-    
-    }
-
-    completion_reward = {
-      lobbyincrease = yes
-      add_popularity = {
-        ideology = neworder
-        popularity = 0.05
-      }
-      add_popularity = {
-        ideology = fandong
-        popularity = 0.05
-      }
-      if = {
-        limit = {
-          is_ai = yes
-        }
-        random_list = {
-          50 = {
-            go_fandong = yes
-          }
-          50 = {
-            go_neworder = yes
-          }
-        }
-      }
-      add_named_threat = {
-        threat = 0.05
-        name = SRB_zhunbeikuodajunshililiang
-      }
-    }
-
-    ai_will_do = {
-      factor = 1
-    }
-
-    cancel_if_invalid = no
-    continue_if_invalid = no
-    available_if_capitulated = yes
-}
+	id = SGS_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SGS
+		}
+	}
+	shared_focus = ty_medium_main
+	continuous_focus_position = {
+		x = 2800
+		y = 20
+	}
+	focus = {
+		id = SGS_battle_fariy_issue_focus
+		icon = GFX_goal_generic_propaganda
+		cost = 6
+		x = 6
+		y = 0
+		# prerequisite = {
+		#    focus = ty_kejichuangxin
+		# }
+		# relative_position_id = ty_medium_main
+		available = {
+			has_global_flag = main_scenario
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_political_power = 15
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = SGS_pacify_battle_fariy_focus
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 12
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = SGS_battle_fariy_issue_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_develop_our_country_focus
+		}
+		relative_position_id = SGS_battle_fariy_issue_focus
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			conservativedecrease = yes
+			add_popularity = {
+				ideology = guli
+				popularity = 0.05
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = SGS_develop_our_country_focus
+		icon = GFX_goal_generic_political_pressure
+		cost = 12
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = SGS_battle_fariy_issue_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_pacify_battle_fariy_focus
+		}
+		relative_position_id = SGS_battle_fariy_issue_focus
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			lobbyincrease = yes
+			add_popularity = {
+				ideology = neworder
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = fandong
+				popularity = 0.05
+			}
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				random_list = {
+					50 = {
+						go_fandong = yes
+					}
+					50 = {
+						go_neworder = yes
+					}
+				}
+			}
+			add_named_threat = {
+				threat = 0.05
+				name = SRB_zhunbeikuodajunshililiang
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
 }
