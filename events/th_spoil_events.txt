@@ -55,7 +55,7 @@ country_event = {
 				remove_idea = SGS_mic_spoil1_idea
 				add_idea = SGS_mic_spoil5_idea
 			}
-			activate_mission = micFact5_maintain
+			#activate_mission = micFact5_maintain
 		}
 		else_if = {
 			limit = {
@@ -70,9 +70,10 @@ country_event = {
 			limit = {
 				has_idea = SGS_mic_spoil5_idea
 			}
+			remove_mission = micFact5_maintain
 		}
 		else = {
-			add_ideas = SGS_mic_spoil5_idea
+			add_ideas = SGS_mic_spoil2_idea
 		}
 		var:ROOT.spoil_xiaxuanwucheng_target = {
 			#white_peace = ROOT
@@ -390,7 +391,7 @@ country_event = {
 			}
 			swap_ideas = {
 				remove_idea = SGS_mic_spoil0_idea
-				add_idea = SGS_mic_spoil2_idea
+				add_idea = SGS_mic_spoil5_idea
 			}
 		}
 		else_if = {
@@ -401,7 +402,7 @@ country_event = {
 				remove_idea = SGS_mic_spoil1_idea
 				add_idea = SGS_mic_spoil5_idea
 			}
-			activate_mission = micFact5_maintain
+			##activate_mission = micFact5_maintain
 		}
 		else_if = {
 			limit = {
@@ -416,6 +417,7 @@ country_event = {
 			limit = {
 				has_idea = SGS_mic_spoil5_idea
 			}
+			remove_mission = micFact5_maintain
 		}
 		else = {
 			add_ideas = SGS_mic_spoil5_idea
@@ -443,10 +445,19 @@ country_event = {
 					type = buqiang_a
 					amount = 500
 				}
+				add_equipment_to_stockpile = {
+					type = spell_card_a
+					amount = 250
+				}
 			}
 			send_equipment = {
 				equipment = buqiang_a
 				amount = 1000
+				target = ROOT
+			}
+			send_equipment = {
+				equipment = spell_card_a
+				amount = 500
 				target = ROOT
 			}
 			country_event = {
@@ -745,7 +756,7 @@ country_event = {
 				remove_idea = SGS_mic_spoil1_idea
 				add_idea = SGS_mic_spoil5_idea
 			}
-			activate_mission = micFact5_maintain
+			#activate_mission = micFact5_maintain
 		}
 		else_if = {
 			limit = {
@@ -760,9 +771,10 @@ country_event = {
 			limit = {
 				has_idea = SGS_mic_spoil5_idea
 			}
+			remove_mission = micFact5_maintain
 		}
 		else = {
-			add_ideas = SGS_mic_spoil5_idea
+			add_ideas = SGS_mic_spoil2_idea
 		}
 		var:ROOT.spoil_xihongmoguan_target = {
 			#white_peace = ROOT
@@ -783,12 +795,12 @@ country_event = {
 		var:ROOT.spoil_xihongmoguan_target = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
-					type = buqiang_a
+					type = spell_card_a
 					amount = 500
 				}
 			}
 			send_equipment = {
-				equipment = buqiang_a
+				equipment = spell_card_a
 				amount = 1000
 				target = ROOT
 			}
@@ -1077,7 +1089,7 @@ country_event = {
 			}
 			swap_ideas = {
 				remove_idea = SGS_mic_spoil0_idea
-				add_idea = SGS_mic_spoil2_idea
+				add_idea = SGS_mic_spoil5_idea
 			}
 		}
 		else_if = {
@@ -1088,7 +1100,7 @@ country_event = {
 				remove_idea = SGS_mic_spoil1_idea
 				add_idea = SGS_mic_spoil5_idea
 			}
-			activate_mission = micFact5_maintain
+			#activate_mission = micFact5_maintain
 		}
 		else_if = {
 			limit = {
@@ -1103,6 +1115,7 @@ country_event = {
 			limit = {
 				has_idea = SGS_mic_spoil5_idea
 			}
+			remove_mission = micFact5_maintain
 		}
 		else = {
 			add_ideas = SGS_mic_spoil5_idea
@@ -1127,11 +1140,20 @@ country_event = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = buqiang_a
+					amount = 250
+				}
+				add_equipment_to_stockpile = {
+					type = spell_card_a
 					amount = 500
 				}
 			}
 			send_equipment = {
 				equipment = buqiang_a
+				amount = 500
+				target = ROOT
+			}
+			send_equipment = {
+				equipment = spell_card_a
 				amount = 1000
 				target = ROOT
 			}
@@ -1420,7 +1442,7 @@ country_event = {
 			}
 			swap_ideas = {
 				remove_idea = SGS_mic_spoil0_idea
-				add_idea = SGS_mic_spoil2_idea
+				add_idea = SGS_mic_spoil1_idea
 			}
 		}
 		else_if = {
@@ -1429,9 +1451,9 @@ country_event = {
 			}
 			swap_ideas = {
 				remove_idea = SGS_mic_spoil1_idea
-				add_idea = SGS_mic_spoil5_idea
+				add_idea = SGS_mic_spoil2_idea
 			}
-			activate_mission = micFact5_maintain
+			#activate_mission = micFact5_maintain
 		}
 		else_if = {
 			limit = {
@@ -1446,9 +1468,10 @@ country_event = {
 			limit = {
 				has_idea = SGS_mic_spoil5_idea
 			}
+			remove_mission = micFact5_maintain
 		}
 		else = {
-			add_ideas = SGS_mic_spoil5_idea
+			add_ideas = SGS_mic_spoil1_idea
 		}
 		var:ROOT.spoil_scagang_target = {
 			#white_peace = ROOT
@@ -1469,13 +1492,13 @@ country_event = {
 		var:ROOT.spoil_scagang_target = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
-					type = buqiang_a
-					amount = 500
+					type = spell_card_a
+					amount = 250
 				}
 			}
 			send_equipment = {
-				equipment = buqiang_a
-				amount = 1000
+				equipment = spell_card_a
+				amount = 500
 				target = ROOT
 			}
 			country_event = {
@@ -1763,7 +1786,7 @@ country_event = {
 			}
 			swap_ideas = {
 				remove_idea = SGS_mic_spoil0_idea
-				add_idea = SGS_mic_spoil2_idea
+				add_idea = SGS_mic_spoil1_idea
 			}
 		}
 		else_if = {
@@ -1772,9 +1795,9 @@ country_event = {
 			}
 			swap_ideas = {
 				remove_idea = SGS_mic_spoil1_idea
-				add_idea = SGS_mic_spoil5_idea
+				add_idea = SGS_mic_spoil2_idea
 			}
-			activate_mission = micFact5_maintain
+			##activate_mission = micFact5_maintain
 		}
 		else_if = {
 			limit = {
@@ -1789,9 +1812,10 @@ country_event = {
 			limit = {
 				has_idea = SGS_mic_spoil5_idea
 			}
+			remove_mission = micFact5_maintain
 		}
 		else = {
-			add_ideas = SGS_mic_spoil5_idea
+			add_ideas = SGS_mic_spoil1_idea
 		}
 		var:ROOT.spoil_fengshoucun_target = {
 			#white_peace = ROOT
@@ -1813,12 +1837,21 @@ country_event = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = buqiang_a
-					amount = 500
+					amount = 200
+				}
+				add_equipment_to_stockpile = {
+					type = spell_card_a
+					amount = 50
 				}
 			}
 			send_equipment = {
 				equipment = buqiang_a
-				amount = 1000
+				amount = 400
+				target = ROOT
+			}
+			send_equipment = {
+				equipment = spell_card_a
+				amount = 100
 				target = ROOT
 			}
 			country_event = {
@@ -2107,7 +2140,7 @@ country_event = {
 			}
 			swap_ideas = {
 				remove_idea = SGS_mic_spoil0_idea
-				add_idea = SGS_mic_spoil2_idea
+				add_idea = SGS_mic_spoil1_idea
 			}
 		}
 		else_if = {
@@ -2116,9 +2149,9 @@ country_event = {
 			}
 			swap_ideas = {
 				remove_idea = SGS_mic_spoil1_idea
-				add_idea = SGS_mic_spoil5_idea
+				add_idea = SGS_mic_spoil2_idea
 			}
-			activate_mission = micFact5_maintain
+			#activate_mission = micFact5_maintain
 		}
 		else_if = {
 			limit = {
@@ -2133,9 +2166,10 @@ country_event = {
 			limit = {
 				has_idea = SGS_mic_spoil5_idea
 			}
+			remove_mission = micFact5_maintain
 		}
 		else = {
-			add_ideas = SGS_mic_spoil5_idea
+			add_ideas = SGS_mic_spoil1_idea
 		}
 		var:ROOT.spoil_datiecun_target = {
 			#white_peace = ROOT
@@ -2158,12 +2192,12 @@ country_event = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = buqiang_a
-					amount = 500
+					amount = 250
 				}
 			}
 			send_equipment = {
 				equipment = buqiang_a
-				amount = 1000
+				amount = 500
 				target = ROOT
 			}
 			country_event = {
@@ -2464,7 +2498,7 @@ country_event = {
 				remove_idea = SGS_mic_spoil1_idea
 				add_idea = SGS_mic_spoil5_idea
 			}
-			activate_mission = micFact5_maintain
+			#activate_mission = micFact5_maintain
 		}
 		else_if = {
 			limit = {
@@ -2479,6 +2513,7 @@ country_event = {
 			limit = {
 				has_idea = SGS_mic_spoil5_idea
 			}
+			remove_mission = micFact5_maintain
 		}
 		else = {
 			add_ideas = SGS_mic_spoil5_idea
@@ -2798,7 +2833,7 @@ country_event = {
 			}
 			swap_ideas = {
 				remove_idea = SGS_mic_spoil0_idea
-				add_idea = SGS_mic_spoil2_idea
+				add_idea = SGS_mic_spoil5_idea
 			}
 		}
 		else_if = {
@@ -2809,7 +2844,7 @@ country_event = {
 				remove_idea = SGS_mic_spoil1_idea
 				add_idea = SGS_mic_spoil5_idea
 			}
-			activate_mission = micFact5_maintain
+			#activate_mission = micFact5_maintain
 		}
 		else_if = {
 			limit = {
@@ -2824,6 +2859,7 @@ country_event = {
 			limit = {
 				has_idea = SGS_mic_spoil5_idea
 			}
+			remove_mission = micFact5_maintain
 		}
 		else = {
 			add_ideas = SGS_mic_spoil5_idea
@@ -2849,12 +2885,12 @@ country_event = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = buqiang_a
-					amount = 500
+					amount = 750
 				}
 			}
 			send_equipment = {
 				equipment = buqiang_a
-				amount = 1000
+				amount = 1500
 				target = ROOT
 			}
 			country_event = {
@@ -3154,7 +3190,7 @@ country_event = {
 				remove_idea = SGS_mic_spoil1_idea
 				add_idea = SGS_mic_spoil5_idea
 			}
-			activate_mission = micFact5_maintain
+			#activate_mission = micFact5_maintain
 		}
 		else_if = {
 			limit = {
@@ -3169,9 +3205,10 @@ country_event = {
 			limit = {
 				has_idea = SGS_mic_spoil5_idea
 			}
+			remove_mission = micFact5_maintain
 		}
 		else = {
-			add_ideas = SGS_mic_spoil5_idea
+			add_ideas = SGS_mic_spoil2_idea
 		}
 		var:ROOT.spoil_wumingcun_target = {
 			#white_peace = ROOT
@@ -3194,12 +3231,21 @@ country_event = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = buqiang_a
-					amount = 500
+					amount = 400
+				}
+				add_equipment_to_stockpile = {
+					type = spell_card_a
+					amount = 100
 				}
 			}
 			send_equipment = {
 				equipment = buqiang_a
-				amount = 1000
+				amount = 800
+				target = ROOT
+			}
+			send_equipment = {
+				equipment = spell_card_a
+				amount = 200
 				target = ROOT
 			}
 			country_event = {
@@ -3489,7 +3535,7 @@ country_event = {
 			}
 			swap_ideas = {
 				remove_idea = SGS_mic_spoil0_idea
-				add_idea = SGS_mic_spoil2_idea
+				add_idea = SGS_mic_spoil1_idea
 			}
 		}
 		else_if = {
@@ -3498,9 +3544,9 @@ country_event = {
 			}
 			swap_ideas = {
 				remove_idea = SGS_mic_spoil1_idea
-				add_idea = SGS_mic_spoil5_idea
+				add_idea = SGS_mic_spoil2_idea
 			}
-			activate_mission = micFact5_maintain
+			#activate_mission = micFact5_maintain
 		}
 		else_if = {
 			limit = {
@@ -3515,9 +3561,10 @@ country_event = {
 			limit = {
 				has_idea = SGS_mic_spoil5_idea
 			}
+			remove_mission = micFact5_maintain
 		}
 		else = {
-			add_ideas = SGS_mic_spoil5_idea
+			add_ideas = SGS_mic_spoil1_idea
 		}
 		var:ROOT.spoil_yanzouwutai_target = {
 			#white_peace = ROOT
@@ -3539,13 +3586,13 @@ country_event = {
 		var:ROOT.spoil_yanzouwutai_target = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
-					type = buqiang_a
-					amount = 500
+					type = spell_card_a
+					amount = 250
 				}
 			}
 			send_equipment = {
-				equipment = buqiang_a
-				amount = 1000
+				equipment = spell_card_a
+				amount = 500
 				target = ROOT
 			}
 			country_event = {
@@ -3834,7 +3881,7 @@ country_event = {
 			}
 			swap_ideas = {
 				remove_idea = SGS_mic_spoil0_idea
-				add_idea = SGS_mic_spoil2_idea
+				add_idea = SGS_mic_spoil5_idea
 			}
 		}
 		else_if = {
@@ -3845,7 +3892,7 @@ country_event = {
 				remove_idea = SGS_mic_spoil1_idea
 				add_idea = SGS_mic_spoil5_idea
 			}
-			activate_mission = micFact5_maintain
+			#activate_mission = micFact5_maintain
 		}
 		else_if = {
 			limit = {
@@ -3860,6 +3907,7 @@ country_event = {
 			limit = {
 				has_idea = SGS_mic_spoil5_idea
 			}
+			remove_mission = micFact5_maintain
 		}
 		else = {
 			add_ideas = SGS_mic_spoil5_idea
@@ -3884,13 +3932,13 @@ country_event = {
 		var:ROOT.spoil_fengjiandi_target = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
-					type = buqiang_a
-					amount = 500
+					type = spell_card_a
+					amount = 750
 				}
 			}
 			send_equipment = {
-				equipment = buqiang_a
-				amount = 1000
+				equipment = spell_card_a
+				amount = 1500
 				target = ROOT
 			}
 			country_event = {
@@ -4179,7 +4227,7 @@ country_event = {
 			}
 			swap_ideas = {
 				remove_idea = SGS_mic_spoil0_idea
-				add_idea = SGS_mic_spoil2_idea
+				add_idea = SGS_mic_spoil1_idea
 			}
 		}
 		else_if = {
@@ -4188,9 +4236,9 @@ country_event = {
 			}
 			swap_ideas = {
 				remove_idea = SGS_mic_spoil1_idea
-				add_idea = SGS_mic_spoil5_idea
+				add_idea = SGS_mic_spoil2_idea
 			}
-			activate_mission = micFact5_maintain
+			#activate_mission = micFact5_maintain
 		}
 		else_if = {
 			limit = {
@@ -4205,9 +4253,10 @@ country_event = {
 			limit = {
 				has_idea = SGS_mic_spoil5_idea
 			}
+			remove_mission = micFact5_maintain
 		}
 		else = {
-			add_ideas = SGS_mic_spoil5_idea
+			add_ideas = SGS_mic_spoil1_idea
 		}
 		var:ROOT.spoil_yaojingbuji_target = {
 			#white_peace = ROOT
@@ -4229,13 +4278,13 @@ country_event = {
 		var:ROOT.spoil_yaojingbuji_target = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
-					type = buqiang_a
-					amount = 500
+					type = spell_card_a
+					amount = 250
 				}
 			}
 			send_equipment = {
-				equipment = buqiang_a
-				amount = 1000
+				equipment = spell_card_a
+				amount = 500
 				target = ROOT
 			}
 			country_event = {
@@ -4524,7 +4573,7 @@ country_event = {
 			}
 			swap_ideas = {
 				remove_idea = SGS_mic_spoil0_idea
-				add_idea = SGS_mic_spoil2_idea
+				add_idea = SGS_mic_spoil1_idea
 			}
 		}
 		else_if = {
@@ -4533,9 +4582,9 @@ country_event = {
 			}
 			swap_ideas = {
 				remove_idea = SGS_mic_spoil1_idea
-				add_idea = SGS_mic_spoil5_idea
+				add_idea = SGS_mic_spoil2_idea
 			}
-			activate_mission = micFact5_maintain
+			#activate_mission = micFact5_maintain
 		}
 		else_if = {
 			limit = {
@@ -4550,9 +4599,10 @@ country_event = {
 			limit = {
 				has_idea = SGS_mic_spoil5_idea
 			}
+			remove_mission = micFact5_maintain
 		}
 		else = {
-			add_ideas = SGS_mic_spoil5_idea
+			add_ideas = SGS_mic_spoil1_idea
 		}
 		var:ROOT.spoil_chongcun_target = {
 			#white_peace = ROOT
@@ -4575,12 +4625,21 @@ country_event = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = buqiang_a
-					amount = 500
+					amount = 125
+				}
+				add_equipment_to_stockpile = {
+					type = spell_card_a
+					amount = 125
 				}
 			}
 			send_equipment = {
 				equipment = buqiang_a
-				amount = 1000
+				amount = 250
+				target = ROOT
+			}
+			send_equipment = {
+				equipment = spell_card_a
+				amount = 250
 				target = ROOT
 			}
 			country_event = {
@@ -4869,7 +4928,7 @@ country_event = {
 			}
 			swap_ideas = {
 				remove_idea = SGS_mic_spoil0_idea
-				add_idea = SGS_mic_spoil2_idea
+				add_idea = SGS_mic_spoil5_idea
 			}
 		}
 		else_if = {
@@ -4880,7 +4939,7 @@ country_event = {
 				remove_idea = SGS_mic_spoil1_idea
 				add_idea = SGS_mic_spoil5_idea
 			}
-			activate_mission = micFact5_maintain
+			#activate_mission = micFact5_maintain
 		}
 		else_if = {
 			limit = {
@@ -4895,6 +4954,7 @@ country_event = {
 			limit = {
 				has_idea = SGS_mic_spoil5_idea
 			}
+			remove_mission = micFact5_maintain
 		}
 		else = {
 			add_ideas = SGS_mic_spoil5_idea
@@ -4920,12 +4980,21 @@ country_event = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = buqiang_a
-					amount = 500
+					amount = 375
+				}
+				add_equipment_to_stockpile = {
+					type = spell_card_a
+					amount = 375
 				}
 			}
 			send_equipment = {
 				equipment = buqiang_a
-				amount = 1000
+				amount = 750
+				target = ROOT
+			}
+			send_equipment = {
+				equipment = spell_card_a
+				amount = 750
 				target = ROOT
 			}
 			country_event = {

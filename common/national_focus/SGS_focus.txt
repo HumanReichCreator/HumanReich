@@ -7,21 +7,13 @@ focus_tree = {
 			tag = SGS
 		}
 	}
-	shared_focus = ty_medium_main
-	continuous_focus_position = {
-		x = 2800
-		y = 20
-	}
+	default = no
 	focus = {
 		id = SGS_battle_fariy_issue_focus
-		icon = GFX_goal_generic_propaganda
+		icon = GFX_focus_cze_german_puppet
 		cost = 6
 		x = 6
 		y = 0
-		# prerequisite = {
-		#    focus = ty_kejichuangxin
-		# }
-		# relative_position_id = ty_medium_main
 		available = {
 			has_global_flag = main_scenario
 		}
@@ -39,16 +31,16 @@ focus_tree = {
 	}
 	focus = {
 		id = SGS_pacify_battle_fariy_focus
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
 		cost = 12
-		x = -2
-		y = 1
 		prerequisite = {
 			focus = SGS_battle_fariy_issue_focus
 		}
 		mutually_exclusive = {
 			focus = SGS_develop_our_country_focus
 		}
+		x = -2
+		y = 1
 		relative_position_id = SGS_battle_fariy_issue_focus
 		available = {
 		}
@@ -70,16 +62,16 @@ focus_tree = {
 	}
 	focus = {
 		id = SGS_develop_our_country_focus
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_generic_construct_civ_factory
 		cost = 12
-		x = 2
-		y = 1
 		prerequisite = {
 			focus = SGS_battle_fariy_issue_focus
 		}
 		mutually_exclusive = {
 			focus = SGS_pacify_battle_fariy_focus
 		}
+		x = 2
+		y = 1
 		relative_position_id = SGS_battle_fariy_issue_focus
 		available = {
 		}
