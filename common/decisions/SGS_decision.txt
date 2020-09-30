@@ -29,4 +29,70 @@ SGS_category = {
         }
 
     }
+
+    SGS_tannmakugokko_deci = {
+
+        visible = {
+            tag=sgs
+            check_variable = { sgs_uprise > 0 }
+        }
+        available = {
+            has_war = no
+            has_equipment = {
+                spell_card_a > 100
+            }
+            # has_idea = TEG_jianshaozhengbing_idea
+        }
+
+        modifier = {
+            stability_weekly = 0.04
+            war_support_weekly = 0.005
+        }
+
+        cost = 120
+
+        days_remove = 45
+        days_re_enable = 105
+        fire_only_once = no 
+
+
+        complete_effect = {
+            
+            custom_effect_tooltip = down_sgs_uprise_much
+            multiply_variable = { sgs_uprise = 0.75 } 
+            add_equipment_to_stockpile = {
+                type = spell_card_a
+                amount = -100
+            }
+            country_event = {
+                id = sgs.100
+            }
+
+        }
+        remove_effect = {
+
+        }
+        ai_will_do = {
+            factor = 40
+            modifier = {
+				has_equipment = {
+                    spell_card_a < 250
+                }
+				factor = 0.6
+            }
+            modifier = {
+				has_equipment = {
+                    spell_card_a > 1000
+                }
+				factor = 1.5
+            }
+            modifier = {
+				check_variable = { sgs_uprise > 100 }
+				factor = 2
+            }
+        }
+
+    }
+
+
 }

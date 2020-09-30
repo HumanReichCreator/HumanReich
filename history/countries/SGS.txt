@@ -73,9 +73,10 @@
     SGS_donot_attack_fairy_idea
     }
     set_country_flag = neworder_Spoil
-    set_variable = {
-        sgs_uprise= 10
-    }
+    set_variable = {sgs_uprise= 50}
+    set_variable = {sgs_sunny_infl= 20}
+    set_variable = {sgs_star_infl= 5}
+    set_variable = {sgs_luna_infl= 5}
     set_politics = {
     	ruling_party = neworder
     	election_frequency = 48

@@ -1,25 +1,27 @@
 add_namespace = sgs
-country_event = { #骚乱
+country_event = {
+	#骚乱
 	id = sgs.1
 	title = sgs.1.t
 	desc = sgs.1.d
-
 	fire_only_once = no
 	is_triggered_only = no
-
+	immediate = {
+		add_to_variable = {
+			sgs_uprise = 10
+		}
+	}
 	mean_time_to_happen = {
 		days = 20
 	}
-
 	trigger = {
 		date > 146.6.1
 		tag = SGS
 		has_stability < 0.5
 		has_war_support > 0.5
-
 	}
-
-	option = { #革命
+	option = {
+		#革命
 		name = sgs.1.1
 		add_stability = 0.02
 		add_political_power = -20
@@ -27,10 +29,58 @@ country_event = { #骚乱
 			base = 35
 		}
 	}
-	
+}
+country_event = {
+	#弹幕大会开幕
+	id = sgs.100
+	title = sgs.100.t
+	desc = sgs.100.d
+	fire_only_once = no
+	is_triggered_only = yes
+	immediate = {
+		add_to_variable = {
+			sgs_uprise = 10
+		}
+	}
+	trigger = {
+
+	}
+	option = {
+		#革命
+		name = sgs.100.1
+		add_stability = 0.2
+        add_war_support = 0.1
+		ai_chance = {
+			base = 35
+		}
+	}
 }
 
-
-
-
-
+country_event = {
+	#学到了战术
+	id = sgs.101
+	title = sgs.101.t
+	desc = sgs.101.d
+	fire_only_once = no
+	is_triggered_only = no
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	trigger = {
+		date > 146.6.1
+		tag = SGS
+		has_decision = SGS_tannmakugokko_deci 
+	}
+	option = {
+		#革命
+		name = sgs.101.1
+		custom_effect_tooltip = down_sgs_uprise_little
+		subtract_from_variable = { sgs_uprise = 10 } 
+		add_command_power = 20
+		army_experience = 10
+		ai_chance = {
+			base = 35
+		}
+	}
+}
