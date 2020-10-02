@@ -9,7 +9,7 @@
   warexhaustion_low_tt:0 "§Y以每日§!§G[?EXHC_low|1]%§!§Y下降厌战§!"
   warexhaustion_clear:0 "厌战清除"
   warexhaustion_desc:0 "在和平状态时，厌战会以§G[?EXHC_peace|2]%§!自然下降。进入战争时，厌战会开始上涨，每过§Y[?EXHC_time_increase|0]天§!会更快的上升。\n§Y需要注意的是，进攻战争和防守战争的初始上升速度是不同的。§!\n\n§R如果在"厌战清除"期间内再次开战将不会清除原来的厌战上涨等级！（即按原来的厌战上涨速度上涨）§!"
-  th_top_exhaustion_tt:0 "§Y厌战值§!\n当前厌战值为[exhaustion_current]\n\n§Y当前厌战度的影响为：§!\n陆军师组织度：[?EXH_org|+%]\n稳定度：[?EXH_stability|+%]\n战争支持度：[?EXH_war_support|+%]\n\n§Y每日变化值为§![exhaustion_increase]\n变化因素有[exhaustion_war_or_not][exhaustion_low_or_not]"
+  th_top_exhaustion_tt:0 "§Y厌战值§!\n当前厌战值为[exhaustion_current]\n\n§Y当前厌战度的影响为：§!\n陆军师组织度：[?EXH_org|+%]\n稳定度：[?EXH_stability|+%]\n战争支持度：[?EXH_war_support|+%]\n\n§Y每日变化值为§![exhaustion_increase]\n变化因素有[exhaustion_war_or_not][exhaustion_low_or_not][exhaustion_battle_fairy_or_not]"
   exhaustion_current.a:0 "§G[?EXHC_current_exhaustion|1]%§!"
   exhaustion_current.b:0 "§Y[?EXHC_current_exhaustion|1]%§!"
   exhaustion_current.c:0 "§R[?EXHC_current_exhaustion|1]%§!"

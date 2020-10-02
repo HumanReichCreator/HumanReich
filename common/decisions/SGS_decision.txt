@@ -1,98 +1,83 @@
 SGS_category = {
-    SGS_see_deci = {
-
-        visible = {
-            tag=sgs
-        }
-        available = {
-            has_war = no
-            # has_idea = TEG_jianshaozhengbing_idea
-        }
-
-        modifier = {
-            industrial_capacity_factory = -0.3
-            weekly_manpower = 10
-        }
-
-        cost = 100
-
-        days_remove = 182
-        # days_re_enable = 365
-        fire_only_once = no 
-
-
-        complete_effect = {
-
-        }
-        remove_effect = {
-
-        }
-
-    }
-
-    SGS_tannmakugokko_deci = {
-
-        visible = {
-            tag=sgs
-            check_variable = { sgs_uprise > 0 }
-        }
-        available = {
-            has_war = no
-            has_equipment = {
-                spell_card_a > 100
-            }
-            # has_idea = TEG_jianshaozhengbing_idea
-        }
-
-        modifier = {
-            stability_weekly = 0.04
-            war_support_weekly = 0.005
-        }
-
-        cost = 120
-
-        days_remove = 45
-        days_re_enable = 105
-        fire_only_once = no 
-
-
-        complete_effect = {
-            
-            custom_effect_tooltip = down_sgs_uprise_much
-            multiply_variable = { sgs_uprise = 0.75 } 
-            add_equipment_to_stockpile = {
-                type = spell_card_a
-                amount = -100
-            }
-            country_event = {
-                id = sgs.100
+	SGS_see_deci = {
+		visible = {
+			tag = sgs
+		}
+		available = {
+			has_war = no
+			# has_idea = TEG_jianshaozhengbing_idea
+		}
+		modifier = {
+			industrial_capacity_factory = -0.3
+			weekly_manpower = 10
+		}
+		cost = 100
+		days_remove = 182
+		# days_re_enable = 365
+		fire_only_once = no
+		complete_effect = {
+		}
+		remove_effect = {
+		}
+	}
+	SGS_tannmakugokko_deci = {
+		visible = {
+			tag = sgs
+			check_variable = {
+				sgs_uprise > 0
+			}
+		}
+		available = {
+			has_war = no
+			has_equipment = {
+				spell_card_a > 119
+			}
+			# has_idea = TEG_jianshaozhengbing_idea
+		}
+		modifier = {
+			stability_weekly = 0.035
+			war_support_weekly = 0.005
+		}
+		cost = 150
+		days_remove = 45
+		days_re_enable = 60
+		fire_only_once = no
+		complete_effect = {
+			custom_effect_tooltip = down_sgs_uprise_much
+			multiply_variable = {
+				sgs_uprise = 0.75
+			}
+			add_equipment_to_stockpile = {
+				type = spell_card_a
+				amount = -120
+			}
+			country_event = {
+				id = sgs.100
             }
 
-        }
-        remove_effect = {
-
-        }
-        ai_will_do = {
-            factor = 40
-            modifier = {
+		}
+		remove_effect = {
+		}
+		ai_will_do = {
+			factor = 75
+			modifier = {
 				has_equipment = {
-                    spell_card_a < 250
-                }
+					spell_card_a < 250
+				}
 				factor = 0.6
-            }
-            modifier = {
+			}
+			modifier = {
 				has_equipment = {
-                    spell_card_a > 1000
-                }
+					spell_card_a > 1000
+				}
 				factor = 1.5
-            }
-            modifier = {
-				check_variable = { sgs_uprise > 100 }
+			}
+			modifier = {
+				check_variable = {
+					sgs_uprise > 100
+				}
 				factor = 2
-            }
-        }
-
-    }
-
-
+			}
+		}
+	}
 }

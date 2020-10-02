@@ -16,9 +16,20 @@ ideas = {
 			picture = chi_war_of_resistance3
 			modifier = {
 				stability_weekly = -0.01
+				political_power_gain = -0.2 
 				# fandong_drift = 0.01
 			}
 		}
+		SGS_battle_fairy_restlessness_at_war_idea = {
+			picture = chi_war_of_resistance3
+			
+			modifier = {
+				
+				
+				experience_gain_army = 0.06 
+			}
+		}
+		
 		SGS_hurry_mic_idea = {
 			picture = generic_local_self_management
 			modifier = {

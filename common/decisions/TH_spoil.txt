@@ -336,9 +336,11 @@ Spoil_battle = {
 				}
 				owns_state = 113
 			}
-			113 ={
-				is_neighbor_of = ROOT
+			any_state = { 
+				any_neighbor_state = {state = 113}
+				is_owned_by = ROOT
 			}
+			
 		}
 		target_trigger = {
 			FROM = {
@@ -357,6 +359,7 @@ Spoil_battle = {
 			NOT = {
 				has_country_flag = spoilCD
 			}
+			
 			not = {
 				and = {
 					has_idea = SGS_donot_attack_fairy_idea
@@ -681,8 +684,10 @@ Spoil_battle = {
 				}
 				owns_state = 115
 			}
-			115 ={
-				is_neighbor_of = ROOT
+			
+			any_state = { 
+				any_neighbor_state = {state = 115}
+				is_owned_by = ROOT
 			}
 		}
 		target_trigger = {
@@ -852,8 +857,10 @@ Spoil_battle = {
 				}
 				owns_state = 100
 			}
-			100 ={
-				is_neighbor_of = ROOT
+			
+			any_state = { 
+				any_neighbor_state = {state = 100}
+				is_owned_by = ROOT
 			}
 		}
 		target_trigger = {
@@ -1013,8 +1020,10 @@ Spoil_battle = {
 				}
 				owns_state = 377
 			}
-			377 ={
-				is_neighbor_of = ROOT
+			
+			any_state = { 
+				any_neighbor_state = {state = 377}
+				is_owned_by = ROOT
 			}
 		}
 		target_trigger = {
@@ -1173,8 +1182,10 @@ Spoil_battle = {
 				}
 				owns_state = 272
 			}
-			272 ={
-				is_neighbor_of = ROOT
+			
+			any_state = { 
+				any_neighbor_state = {state = 272}
+				is_owned_by = ROOT
 			}
 		}
 		target_trigger = {
@@ -1654,8 +1665,10 @@ Spoil_battle = {
 				}
 				owns_state = 388
 			}
-			388 ={
-				is_neighbor_of = ROOT
+			
+			any_state = { 
+				any_neighbor_state = {state = 388}
+				is_owned_by = ROOT
 			}
 		}
 		target_trigger = {
@@ -1978,8 +1991,10 @@ Spoil_battle = {
 				}
 				owns_state = 310
 			}
-			310 ={
-				is_neighbor_of = ROOT
+
+			any_state = { 
+				any_neighbor_state = {state = 310}
+				is_owned_by = ROOT
 			}
 		}
 		target_trigger = {
@@ -2148,8 +2163,9 @@ Spoil_battle = {
 				}
 				owns_state = 106
 			}
-			106 ={
-				is_neighbor_of = ROOT
+			any_state = { 
+				any_neighbor_state = {state = 106}
+				is_owned_by = ROOT
 			}
 		}
 		target_trigger = {

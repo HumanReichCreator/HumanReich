@@ -902,6 +902,21 @@ defined_text = {
 	   localization_key = exhaustion_low_or_not.b
 	}
 }
+defined_text = {
+	name = exhaustion_battle_fairy_or_not
+	text = {
+	   trigger = {
+	      has_country_flag = EXHC_lowing_battle_fairy
+	   }
+	   localization_key = exhaustion_lowing_by_battle_fairy
+	}
+	text = {
+	   trigger = {
+	      not = { has_country_flag = EXHC_lowing_battle_fairy }
+	   }
+	   localization_key = exhaustion_low_or_not.b
+	}
+}
 
 #Outlook viewtype
 defined_text = {

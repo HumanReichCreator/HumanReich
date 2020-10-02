@@ -259,6 +259,13 @@ exhuastion_daily_change = {
 			subtract_from_variable = { EXHC_daily = EXHC_peace}
 		}
 	}
+	#battle fairy
+	if = {
+		limit = {
+			has_country_flag = EXHC_lowing_battle_fairy
+		}
+		subtract_from_variable = { EXHC_daily = 0.02}
+	}
 	#is lowwing?
 	if = {
 		limit = {
