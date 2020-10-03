@@ -16,16 +16,23 @@ SGS_category = {
 		# days_re_enable = 365
 		fire_only_once = no
 		complete_effect = {
+            multiply_variable = {
+				sgs_uprise = 10
+            }
+            clamp_variable = {
+                var = sgs_uprise
+                min = 1
+                max = 150
+            }
 		}
 		remove_effect = {
 		}
-	}
-	SGS_tannmakugokko_deci = {
+    }
+    
+	SGS_dannmakugokko_deci = {
 		visible = {
 			tag = sgs
-			check_variable = {
-				sgs_uprise > 0
-			}
+            has_variable = sgs_uprise
 		}
 		available = {
 			has_war = no
@@ -57,6 +64,9 @@ SGS_category = {
 
 		}
 		remove_effect = {
+            country_event = {
+				id = sgs.104
+            }
 		}
 		ai_will_do = {
 			factor = 75

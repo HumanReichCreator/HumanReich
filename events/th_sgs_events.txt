@@ -10,9 +10,14 @@ country_event = {
 		add_to_variable = {
 			sgs_uprise = 10
 		}
+		clamp_variable = {
+			var = sgs_uprise
+			min = 1
+			max = 150
+		}
 	}
 	mean_time_to_happen = {
-		days = 20
+		days = 30
 	}
 	trigger = {
 		date > 146.6.1
@@ -30,6 +35,7 @@ country_event = {
 		}
 	}
 }
+
 country_event = {
 	#开战
 	id = sgs.2
@@ -41,6 +47,13 @@ country_event = {
 		subtract_from_variable = {
 			sgs_uprise = 10
 		}
+		clamp_variable = {
+			var = sgs_uprise
+			min = 1
+			max = 150
+		}
+		remove_decision = SGS_dannmakugokko_deci
+		clr_country_flag = sgs_dannmakugokko_unhappy
 	}
 	mean_time_to_happen = {
 		days = 2
@@ -72,11 +85,6 @@ country_event = {
 	desc = sgs.3.d
 	fire_only_once = no
 	is_triggered_only = no
-	immediate = {
-		subtract_from_variable = {
-			sgs_uprise = 10
-		}
-	}
 	mean_time_to_happen = {
 		days = 2
 	}
@@ -106,9 +114,7 @@ country_event = {
 	desc = sgs.100.d
 	fire_only_once = no
 	is_triggered_only = yes
-	
 	trigger = {
-
 	}
 	option = {
 		#革命
@@ -119,17 +125,18 @@ country_event = {
 		random_list = {
 			40 = {
 				country_event = {
-					id = my_event.101
+					id = sgs.101
 					days = 10
 					random = 720
 				}
 			}
-			60 = { }
+			60 = {
+			}
 		}
 		random_list = {
 			60 = {
 				country_event = {
-					id = my_event.102
+					id = sgs.102
 					days = 10
 					random = 720
 				}
@@ -140,9 +147,20 @@ country_event = {
 					}
 				}
 			}
-			40 = { }
+			40 = {
+			}
 		}
-
+		random_list = {
+			50 = {
+				country_event = {
+					id = sgs.103
+					days = 10
+					random = 720
+				}
+			}
+			50 = {
+			}
+		}
 		ai_chance = {
 			base = 35
 		}
@@ -156,17 +174,22 @@ country_event = {
 	desc = sgs.101.d
 	fire_only_once = no
 	is_triggered_only = yes
-	
+	trigger = {
+	}
 	option = {
 		#革命
 		name = sgs.101.1
 		custom_effect_tooltip = down_sgs_uprise_little
-		subtract_from_variable = { sgs_uprise = 7 } 
+		subtract_from_variable = {
+			sgs_uprise = 7
+		}
+		clamp_variable = {
+			var = sgs_uprise
+			min = 1
+			max = 150
+		}
 		add_command_power = 20
 		army_experience = 10
-		
-		
-
 		ai_chance = {
 			base = 35
 		}
@@ -185,41 +208,240 @@ country_event = {
 	#}
 	#trigger = {
 	#	tag = SGS
-	#	has_decision = SGS_tannmakugokko_deci 
+	#	has_decision = SGS_dannmakugokko_deci 
 	#}
+	trigger = {
+	}
 	immediate = {
 		add_to_variable = {
 			sgs_uprise = 5
 		}
+		clamp_variable = {
+			var = sgs_uprise
+			min = 1
+			max = 150
+		}
+		set_country_flag = sgs_dannmakugokko_unhappy
 	}
 	option = {
 		#不管
 		name = sgs.102.1
 		custom_effect_tooltip = down_sgs_uprise_little
-		subtract_from_variable = { sgs_uprise = 8 }  
-		add_to_variable = { sgs_sunny_infl = 5 } 
+		subtract_from_variable = {
+			sgs_uprise = 8
+		}
+		clamp_variable = {
+			var = sgs_uprise
+			min = 1
+			max = 150
+		}
+		add_to_variable = {
+			sgs_sunny_infl = 5
+		}
 		add_stability = -0.075
 		add_popularity = {
 			ideology = neworder
 			popularity = 0.03
 		}
 		ai_chance = {
-			base = 35
+			base = 30
 		}
 	}
 	option = {
 		#警告
 		name = sgs.102.2
 		custom_effect_tooltip = up_sgs_uprise
-		add_to_variable = { sgs_uprise = 4 } 
-		add_to_variable = { sgs_star_infl = 10 } 
+		add_to_variable = {
+			sgs_uprise = 4
+		}
+		clamp_variable = {
+			var = sgs_uprise
+			min = 1
+			max = 150
+		}
+		add_to_variable = {
+			sgs_star_infl = 10
+		}
 		add_stability = 0.05
 		add_popularity = {
 			ideology = guli
 			popularity = 0.15
 		}
 		ai_chance = {
-			base = 35
+			base = 20
+			modifier = {
+				add = 20
+				guli > 0.2
+			}
+		}
+	}
+}
+
+country_event = {
+	#要求更多
+	id = sgs.103
+	title = sgs.103.t
+	desc = sgs.103.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		#不给
+		name = sgs.103.1
+		add_political_power = 10
+		ai_chance = {
+			base = 30
+		}
+	}
+	option = {
+		#给
+		name = sgs.103.2
+		trigger = {
+			has_equipment = {
+				spell_card_a > 59
+			}
+		}
+		custom_effect_tooltip = down_sgs_uprise_little
+		subtract_from_variable = {
+			sgs_uprise = 7
+		}
+		clamp_variable = {
+			var = sgs_uprise
+			min = 1
+			max = 150
+		}
+		add_stability = 0.05
+		add_equipment_to_stockpile = {
+			type = spell_card_a
+			amount = -60
+		}
+		ai_chance = {
+			base = 40
+			modifier = {
+				add = 20
+				has_equipment = {
+					spell_card_a > 179
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	#大会结束
+	id = sgs.104
+	title = sgs.104.t
+	desc = {
+		text = sgs.104.d
+		trigger = {
+			not = {
+				has_country_flag = sgs_dannmakugokko_unhappy
+			}
+		}
+	}
+	desc = {
+		text = sgs.104.d_unhappy
+		trigger = {
+			has_country_flag = sgs_dannmakugokko_unhappy
+		}
+	}
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		#顺利
+		name = sgs.104.1
+		trigger = {
+			not = {
+				has_country_flag = sgs_dannmakugokko_unhappy
+			}
+		}
+		add_political_power = 60
+		ai_chance = {
+			base = 30
+		}
+	}
+	option = {
+		#不顺利
+		name = sgs.104.2
+		trigger = {
+			has_country_flag = sgs_dannmakugokko_unhappy
+		}
+		add_political_power = 30
+		clr_country_flag = sgs_dannmakugokko_unhappy
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+country_event = {
+	#弹幕大会大失控
+	id = sgs.105
+	title = sgs.105.t
+	desc = sgs.105.d
+	fire_only_once = yes
+	is_triggered_only = no
+	mean_time_to_happen = {
+		days = 25
+		modifier = {
+			factor = 0.4
+			has_country_flag = sgs_dannmakugokko_unhappy
+		}
+	}
+	trigger = {
+		#date > 146.11.1
+		tag = SGS
+		check_variable = {
+			sgs_uprise > 100
+		}
+		has_decision = SGS_dannmakugokko_deci 
+	}
+	immediate = {
+		clear_variable = sgs_uprise
+		remove_ideas = SGS_battle_fairy_restlessness_idea
+		#！！！内战开战！！！ 以后要写
+	}
+	option = {
+		#顺利
+		name = sgs.105.1
+		news_event = {
+			id = sgs.106
+			days = 1
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+news_event = {
+	#内战新闻
+	id = sgs.106
+	title = sgs.106.t
+	desc = sgs.106.d
+	#picture = GFX_news_event_nuke 
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+	}
+	option = {
+		name = sgs.106.1.a
+		trigger = {
+			tag = SGS
+		}
+	}
+	option = {
+		name = sgs.106.1.b
+		trigger = {
+			not = { tag = SGS}
 		}
 	}
 }
