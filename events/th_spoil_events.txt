@@ -223,6 +223,11 @@ country_event = {
 	option = {
 		#革命
 		name = spoil_event.101.1
+		add_political_power = -10
+		damage_building = {
+			type = infrastructure
+			damage = 2
+		}
 		white_peace = FROM
 		every_country = {
 			limit = {
