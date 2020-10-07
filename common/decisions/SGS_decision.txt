@@ -103,10 +103,10 @@ SGS_category = {
 			tag = sgs
             has_variable = sgs_uprise
             }
-		}
+		
 		available = {
 			has_war = no
-			not = { has_country_flag = sgs_selected_battle_fairy_deci 
+			not = { has_country_flag = sgs_selected_battle_fairy_deci }
 			# has_idea = TEG_jianshaozhengbing_idea
 		}
 		modifier = {

@@ -514,8 +514,7 @@ country_event = {
 				40 = {
 					country_event = {
 						id = sgs.102
-						days = 10
-						random = 720
+						days = 20
 					}
 				}
 				10 = {
@@ -619,6 +618,67 @@ country_event = {
 	option = {
 		name = sgs.109.1
 		add_political_power = 20
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#恶作剧成功-SGS
+	id = sgs.110
+	title = sgs.110.t
+	desc = {
+		text = sgs.110.d_nitori
+		trigger = {
+			var:ROOT.sgs_itazura_target = {
+				original_tag = NIT
+			}
+		}
+	}
+	desc = {
+		text = sgs.110.d
+		trigger = {
+			var:ROOT.sgs_itazura_target = {
+				NOT = {
+					original_tag = NIT
+				}
+			}
+		}
+	}
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		not = {
+			has_country_flag = sgs_events_interrupted
+		}
+	}
+	immediate = {
+		clr_country_flag = sgs_selected_battle_fairy_deci
+	}
+	option = {
+		#河童成功后果
+		name = sgs.110.1
+		trigger = {
+			var:ROOT.sgs_itazura_target = {
+				original_tag = NIT
+			}
+		}
+		custom_effect_tooltip = down_sgs_uprise_little
+		subtract_from_variable = {
+			sgs_uprise = 4
+		}
+		clamp_variable = {
+			var = sgs_uprise
+			min = 1
+			max = 150
+		}
+		
+		var:ROOT.sgs_itazura_target = {
+			country_event = {
+				id = sgs.111
+			}
+		}
 		ai_chance = {
 			base = 35
 		}
