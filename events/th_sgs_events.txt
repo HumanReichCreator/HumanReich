@@ -54,6 +54,7 @@ country_event = {
 		}
 		remove_decision = SGS_dannmakugokko_deci
 		remove_decision = SGS_itazura_deci
+		remove_decision = SGS_bettle_arena_deci
 		clr_country_flag = sgs_selected_battle_fairy_deci
 		clr_country_flag = sgs_dannmakugokko_unhappy
 		set_country_flag = sgs_events_interrupted
@@ -499,7 +500,7 @@ country_event = {
 			is_neighbor_of = NIT
 		}
 		add_to_variable = {
-			sgs_star_infl = 5
+			sgs_sunny_infl = 5
 		}
 		add_popularity = {
 			ideology = neworder
@@ -513,15 +514,139 @@ country_event = {
 			random_list = {
 				40 = {
 					country_event = {
-						id = sgs.102
-						days = 20
+						id = sgs.112						#看情况
+						days = 10
 					}
 				}
 				10 = {
+					#成功
+					country_event = {
+						id = sgs.110
+						days = 20
+					}
 				}
 				50 = {
 					country_event = {
-						id = sgs.107
+						#失败
+						id = sgs.108
+						days = 20
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#人类
+		name = sgs.107.2
+		trigger = {
+			or = {
+				is_neighbor_of = WHM
+				is_neighbor_of = HU1
+			}
+		}
+		add_to_variable = {
+			sgs_star_infl = 5
+		}
+		add_popularity = {
+			ideology = guli
+			popularity = 0.06
+		}
+		#按概率触发事件 30*24=720
+		hidden_effect = {
+			limit = {
+				if = {
+					is_neighbor_of = WHM
+				}
+				set_variable = {
+					ROOT.sgs_itazura_target = WHM.id
+				}
+			}
+			limit = {
+				if = {
+					is_neighbor_of = HU1
+				}
+				set_variable = {
+					ROOT.sgs_itazura_target = HU1.id
+				}
+			}
+			random_list = {
+				25 = {
+					country_event = {
+						id = sgs.113						#看情况
+						days = 10
+					}
+				}
+				55 = {
+					#成功
+					country_event = {
+						id = sgs.110
+						days = 20
+					}
+				}
+				20 = {
+					country_event = {
+						#失败
+						id = sgs.108
+						days = 20
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#红魔馆
+		name = sgs.107.3
+		trigger = {
+			is_neighbor_of = SCA
+		}
+		add_to_variable = {
+			sgs_luna_infl = 5
+		}
+		add_popularity = {
+			ideology = oldorder
+			popularity = 0.1
+		}
+		#按概率触发事件 30*24=720
+		hidden_effect = {
+			set_variable = {
+				ROOT.sgs_itazura_target = SCA.id
+			}
+			random_list = {
+				20 = {
+					country_event = {
+						id = sgs.115						#罢工
+						days = 10
+					}
+					modifier = {
+						factor = 1.5
+						oldorder < 0.25
+					}
+					modifier = {
+						factor = 0
+						SCA = {
+							not = {
+								has_idea = Fairy
+							}
+						}
+					}
+				}
+				50 = {
+					#成功
+					country_event = {
+						id = sgs.110
+						days = 20
+					}
+				}
+				30 = {
+					country_event = {
+						#失败
+						id = sgs.108
 						days = 20
 					}
 				}
@@ -593,9 +718,47 @@ country_event = {
 		add_war_support = -0.05
 		var:ROOT.sgs_itazura_target = {
 			country_event = {
-				id = sgs.108
+				id = sgs.109
 			}
 		}
+		clear_variable = ROOT.sgs_itazura_target
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#人类失败后果
+		name = sgs.108.2
+		trigger = {
+			var:ROOT.sgs_itazura_target = {
+				OR = {
+					original_tag = WHM
+					original_tag = HU1
+				}
+			}
+		}
+		custom_effect_tooltip = up_sgs_uprise
+		add_to_variable = {
+			sgs_uprise = 5
+		}
+		clamp_variable = {
+			var = sgs_uprise
+			min = 1
+			max = 150
+		}
+		add_stability = -0.1
+		add_war_support = -0.1
+		add_manpower = -10
+		add_opinion_modifier = {
+			target = ROOT.sgs_itazura_target
+			modifier = AKI_shayaojingfan_op
+		}
+		var:ROOT.sgs_itazura_target = {
+			country_event = {
+				id = sgs.109
+			}
+		}
+		clear_variable = ROOT.sgs_itazura_target
 		ai_chance = {
 			base = 35
 		}
@@ -613,7 +776,6 @@ country_event = {
 	trigger = {
 	}
 	immediate = {
-		clr_country_flag = sgs_selected_battle_fairy_deci
 	}
 	option = {
 		name = sgs.109.1
@@ -664,21 +826,683 @@ country_event = {
 				original_tag = NIT
 			}
 		}
+		add_timed_idea = {
+			idea = SGS_get_intel_from_NIT_idea
+			days = 180
+		}
+		add_political_power = 30
 		custom_effect_tooltip = down_sgs_uprise_little
 		subtract_from_variable = {
-			sgs_uprise = 4
+			sgs_uprise = 5
 		}
 		clamp_variable = {
 			var = sgs_uprise
 			min = 1
 			max = 150
 		}
-		
 		var:ROOT.sgs_itazura_target = {
 			country_event = {
 				id = sgs.111
 			}
 		}
+		clear_variable = ROOT.sgs_itazura_target
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#其他人成功后果
+		name = sgs.110.1
+		trigger = {
+			var:ROOT.sgs_itazura_target = {
+				NOT = {
+					original_tag = NIT
+				}
+			}
+		}
+		custom_effect_tooltip = down_sgs_uprise_little
+		subtract_from_variable = {
+			sgs_uprise = 5
+		}
+		clamp_variable = {
+			var = sgs_uprise
+			min = 1
+			max = 150
+		}
+		var:ROOT.sgs_itazura_target = {
+			country_event = {
+				id = sgs.111
+			}
+		}
+		clear_variable = ROOT.sgs_itazura_target
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#恶作剧成功-target
+	id = sgs.111
+	title = sgs.111.t
+	desc = sgs.111.d
+	fire_only_once = no
+	is_triggered_only = yes
+	timeout_days = 2
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		name = sgs.111.1
+		add_political_power = -10
+		add_stability = -0.03
+		add_opinion_modifier = {
+			target = SGS
+			modifier = SGS_get_itazuraed_op
+		}
+		add_ai_strategy = {
+			type = antagonize
+			id = SGS
+			value = 10
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#河童恶作剧选择
+	id = sgs.112
+	title = sgs.112.t
+	desc = sgs.112.d
+	fire_only_once = no
+	is_triggered_only = yes
+	timeout_days = 2
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		#不管
+		name = sgs.112.1
+		add_political_power = 10
+		FROM = {
+			country_event = {
+				id = sgs.110				#恶作剧成功
+				days = 10
+			}
+		}
+		ai_chance = {
+			base = 25
+		}
+	}
+	option = {
+		#管
+		name = sgs.112.2
+		add_political_power = -20
+		trigger = {
+			has_political_power > 19
+		}
+		FROM = {
+			country_event = {
+				id = sgs.108				#恶作剧失败
+				days = 10
+			}
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 2
+				has_political_power > 49
+			}
+		}
+	}
+}
+
+country_event = {
+	#人类恶作剧选择
+	id = sgs.113
+	title = sgs.113.t
+	desc = sgs.113.d
+	fire_only_once = no
+	is_triggered_only = yes
+	timeout_days = 2
+	trigger = {
+	}
+	immediate = {
+	}
+	option = {
+		#不管
+		name = sgs.113.1
+		add_political_power = 10
+		FROM = {
+			country_event = {
+				id = sgs.110				#恶作剧成功
+				days = 10
+			}
+		}
+		ai_chance = {
+			base = 30
+			modifier = {
+				factor = 1.5
+				has_war_support < 0.5
+			}
+		}
+	}
+	option = {
+		#管
+		name = sgs.113.2
+		add_command_power = -10
+		trigger = {
+			command_power > 9
+		}
+		FROM = {
+			country_event = {
+				id = sgs.108				#恶作剧失败
+				days = 10
+			}
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+country_event = {
+	#对象被消灭
+	id = sgs.114
+	title = sgs.114.t
+	desc = sgs.114.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		has_country_flag = sgs_selected_battle_fairy_deci
+		has_variable = ROOT.sgs_itazura_target
+		not = {
+			is_neighbor_of = var:ROOT.sgs_itazura_target
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	immediate = {
+	}
+	option = {
+		#不管
+		name = sgs.114.1
+		clr_country_flag = sgs_selected_battle_fairy_deci
+		clear_variable = ROOT.sgs_itazura_target
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+country_event = {
+	#拒绝恶作剧
+	id = sgs.115
+	title = sgs.115.t
+	desc = sgs.115.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		not = {
+			has_country_flag = sgs_events_interrupted
+		}
+	}
+	immediate = {
+		clr_country_flag = sgs_selected_battle_fairy_deci
+	}
+	option = {
+		#河童or红魔失败后果
+		name = sgs.115.1
+		custom_effect_tooltip = up_sgs_uprise
+		add_to_variable = {
+			sgs_uprise = 7
+		}
+		clamp_variable = {
+			var = sgs_uprise
+			min = 1
+			max = 150
+		}
+		add_popularity = {
+			ideology = oldorder
+			popularity = -0.15
+		}
+		clear_variable = ROOT.sgs_itazura_target
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#斗技大会开幕
+	id = sgs.116
+	title = sgs.116.t
+	desc = sgs.116.d
+	timeout_days = 2
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		not = {
+			has_country_flag = sgs_events_interrupted
+		}
+	}
+	immediate = {
+		#clr_country_flag = sgs_selected_battle_fairy_deci
+	}
+	option = {
+		#
+		name = sgs.116.1
+		custom_effect_tooltip = down_sgs_uprise_middle
+		subtract_from_variable = {
+			sgs_uprise = 8
+		}
+		clamp_variable = {
+			var = sgs_uprise
+			min = 1
+			max = 150
+		}
+		add_war_support = 0.05
+		hidden_effect = {
+			#5tianhou
+			random_list = {
+				33 = {
+					country_event = {
+						id = sgs.117						#出现伤亡
+						days = 5
+					}
+				}
+				33 = {
+					country_event = {
+						id = sgs.118						#新武器亮相
+						days = 5
+					}
+				}
+				33 = {
+					country_event = {
+						id = sgs.119						#桑尼来玩
+						days = 5
+					}
+				}
+			}
+			#10天后
+			random_list = {
+				50 = {
+					country_event = {
+						id = sgs.120						#兵王胜利
+						days = 10
+					}
+				}
+				50 = {
+					country_event = {
+						id = sgs.121						#小队胜利
+						days = 10
+					}
+				}
+			}
+			#15天后
+			random_list = {
+				40 = {
+					country_event = {
+						id = sgs.122						#精彩的决赛
+						days = 15
+					}
+				}
+				40 = {
+					country_event = {
+						id = sgs.123						#无聊的决赛
+						days = 15
+					}
+				}
+				20 = {
+					country_event = {
+						id = sgs.124						#争议判罚
+						days = 15
+					}
+				}
+			}
+			country_event = {
+				id = sgs.125				#比赛结束
+				days = 20
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#出现伤亡
+	id = sgs.117
+	title = sgs.117.t
+	desc = sgs.117.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		not = {
+			has_country_flag = sgs_events_interrupted
+		}
+	}
+	immediate = {
+	}
+	option = {
+		#
+		name = sgs.117.1
+		custom_effect_tooltip = down_sgs_uprise_little
+		subtract_from_variable = {
+			sgs_uprise = 3
+		}
+		clamp_variable = {
+			var = sgs_uprise
+			min = 1
+			max = 150
+		}
+		add_manpower = -15
+		add_war_support = -0.08
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#新武器亮相
+	id = sgs.118
+	title = sgs.118.t
+	desc = sgs.118.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		not = {
+			has_country_flag = sgs_events_interrupted
+		}
+	}
+	immediate = {
+	}
+	option = {
+		#
+		name = sgs.118.1
+		custom_effect_tooltip = down_sgs_uprise_middle
+		subtract_from_variable = {
+			sgs_uprise = 6
+		}
+		clamp_variable = {
+			var = sgs_uprise
+			min = 1
+			max = 150
+		}
+		add_stability = -0.05
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#桑尼来玩
+	id = sgs.119
+	title = sgs.119.t
+	desc = sgs.119.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		not = {
+			has_country_flag = sgs_events_interrupted
+		}
+	}
+	immediate = {
+	}
+	option = {
+		#
+		name = sgs.119.1
+		custom_effect_tooltip = up_sgs_uprise
+		add_to_variable = {
+			sgs_uprise = 3
+		}
+		clamp_variable = {
+			var = sgs_uprise
+			min = 1
+			max = 150
+		}
+		add_to_variable = {
+			sgs_sunny_infl = 5
+		}
+		add_popularity = {
+			ideology = neworder
+			popularity = 0.05
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#兵王赢
+	id = sgs.120
+	title = sgs.120.t
+	desc = sgs.120.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		not = {
+			has_country_flag = sgs_events_interrupted
+		}
+	}
+	immediate = {
+	}
+	option = {
+		#
+		name = sgs.120.1
+		add_to_variable = {
+			sgs_luna_infl = 5
+		}
+		add_popularity = {
+			ideology = oldorder
+			popularity = 0.08
+		}
+		add_stability = 0.05
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#小队赢
+	id = sgs.121
+	title = sgs.121.t
+	desc = sgs.121.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		not = {
+			has_country_flag = sgs_events_interrupted
+		}
+	}
+	immediate = {
+	}
+	option = {
+		#
+		name = sgs.121.1
+		custom_effect_tooltip = down_sgs_uprise_little
+		subtract_from_variable = {
+			sgs_uprise = 3
+		}
+		clamp_variable = {
+			var = sgs_uprise
+			min = 1
+			max = 150
+		}
+		add_to_variable = {
+			sgs_sunny_infl = 3
+		}
+		add_popularity = {
+			ideology = neworder
+			popularity = 0.05
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#精彩的决赛
+	id = sgs.122
+	title = sgs.122.t
+	desc = sgs.122.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		not = {
+			has_country_flag = sgs_events_interrupted
+		}
+	}
+	immediate = {
+	}
+	option = {
+		#
+		name = sgs.122.1
+		custom_effect_tooltip = down_sgs_uprise_middle
+		clr_country_flag = sgs_dispute
+		subtract_from_variable = {
+			sgs_uprise = 7
+		}
+		clamp_variable = {
+			var = sgs_uprise
+			min = 1
+			max = 150
+		}
+		add_stability = 0.08
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#无聊的决赛
+	id = sgs.123
+	title = sgs.123.t
+	desc = sgs.123.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		not = {
+			has_country_flag = sgs_events_interrupted
+		}
+	}
+	immediate = {
+	}
+	option = {
+		#
+		name = sgs.123.1
+		custom_effect_tooltip = down_sgs_uprise_little
+		subtract_from_variable = {
+			sgs_uprise = 3
+		}
+		clamp_variable = {
+			var = sgs_uprise
+			min = 1
+			max = 150
+		}
+		add_war_support = 0.06
+		clr_country_flag = sgs_dispute
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#争议判罚
+	id = sgs.124
+	title = sgs.124.t
+	desc = sgs.124.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		not = {
+			has_country_flag = sgs_events_interrupted
+		}
+	}
+	immediate = {
+	}
+	option = {
+		#
+		name = sgs.124.1
+		set_country_flag = sgs_dispute
+		custom_effect_tooltip = up_sgs_uprise
+		add_to_variable = {
+			sgs_uprise = 10
+		}
+		clamp_variable = {
+			var = sgs_uprise
+			min = 1
+			max = 150
+		}
+		add_stability = -0.09
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#结束
+	id = sgs.125
+	title = sgs.125.t
+	desc = {
+		text = sgs.125.d
+		trigger = {
+			not = {
+				has_country_flag = sgs_dispute
+			}
+		}
+	}
+	desc = {
+		text = sgs.125.d_dispute
+		trigger = {
+			has_country_flag = sgs_dispute
+		}
+	}
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		not = {
+			has_country_flag = sgs_events_interrupted
+		}
+	}
+	immediate = {
+		clr_country_flag = sgs_selected_battle_fairy_deci
+	}
+	option = {
+		#无事结束
+		name = sgs.125.1
+		trigger = {
+			not = {
+				has_country_flag = sgs_dispute
+			}
+		}
+		clr_country_flag = sgs_dispute
+		add_political_power = 40
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#有事结束
+		name = sgs.125.2
+		trigger = {
+			has_country_flag = sgs_dispute
+		}
+		clr_country_flag = sgs_dispute
 		ai_chance = {
 			base = 35
 		}

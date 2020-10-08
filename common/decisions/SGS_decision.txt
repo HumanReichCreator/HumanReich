@@ -130,7 +130,7 @@ SGS_category = {
                 max = 150
             }
             add_to_variable = {
-                sgs_star_infl = 3
+                sgs_star_infl = 5
             }
             add_to_variable = {
                 sgs_sunny_infl = 3
@@ -156,6 +156,61 @@ SGS_category = {
 			
 			modifier = {
 				guli > 0.3
+				factor = 1.5
+			}
+		}
+	}
+	SGS_bettle_arena_deci = {
+		visible = {
+			tag = sgs
+            has_variable = sgs_uprise
+            }
+		
+		available = {
+			has_war = no
+			not = { has_country_flag = sgs_selected_battle_fairy_deci }
+			num_of_civilian_factories > 1
+			# has_idea = TEG_jianshaozhengbing_idea
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		cost = 100
+		days_remove = 15
+		days_re_enable = 75
+		fire_only_once = no
+		complete_effect = {
+			clr_country_flag = sgs_events_interrupted
+			set_country_flag = sgs_selected_battle_fairy_deci
+			
+            add_to_variable = {
+                sgs_luna_infl = 5
+            }
+            add_to_variable = {
+                sgs_sunny_infl = 3
+            }
+            
+			
+			
+
+		}
+		remove_effect = {
+			country_event = {
+				id = sgs.116
+            }
+            
+		}
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				num_of_civilian_factories > 10
+				factor = 1.5
+			}
+			
+			modifier = {
+				check_variable = {
+					sgs_uprise > 50
+				}
 				factor = 1.5
 			}
 		}

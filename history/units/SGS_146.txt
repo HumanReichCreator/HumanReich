@@ -1,319 +1,311 @@
 ﻿division_template = {
 	name = "妖精转移编制"
 	regiments = {
-		ma_militia = { x = 0 y = 0 }
-		ma_militia = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 2 }
+
 	}
 }
 division_template = {
 	name = "妖精主力编制"
 	regiments = {
-		ma_militia = { x = 0 y = 0 }
-		ma_militia = { x = 0 y = 1 }
-		ma_militia = { x = 0 y = 2 }
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 2 }
+		ma_infantry = { x = 0 y = 3 }
+		ma_infantry = { x = 0 y = 4 }
 	}
 }
 
 
 units = {
 	division = {
-		name = "妖精主力编制"
-		location = 4827
+		name = "近卫第1师团 140-6-14 喀山 宫"
+		location = 2289
 		division_template = "妖精主力编制"
-		start_experience_factor = 0.2
+		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精主力编制"
-		location = 4827
+		name = "近卫第2师团 140-6-15 喀山 隅"
+		location = 3391
 		division_template = "妖精主力编制"
-		start_experience_factor = 0.2
+		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精转移编制"
-		location = 4827
+		name = "近卫第3师团 140-6-20 喀山 范"
+		location = 4272
+		division_template = "妖精主力编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "近卫第4师团 142-7-21 喀山 河"
+		location = 1713
+		division_template = "妖精主力编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "近卫第5师团 142-9-23 喀山 勲"
+		location = 892
+		division_template = "妖精主力编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "第1师团 140-6-14 喀山 玉"
+		location = 434
+		division_template = "妖精转移编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第2师团 140-6-14 喀山 勇"
+		location = 4112
+		division_template = "妖精转移编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "第3师团 140-6-14 喀山 幸"
+		location = 4101
 		division_template = "妖精转移编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精转移编制"
-		location = 4827
-		division_template = "妖精转移编制"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "妖精转移编制"
-		location = 4827
-		division_template = "妖精转移编制"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "妖精转移编制"
-		location = 4827
-		division_template = "妖精转移编制"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "妖精转移编制"
-		location = 4827
+		name = "第4师团 140-6-18 喀山 淀"
+		location = 1857
 		division_template = "妖精转移编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 
 	division = {
-		name = "妖精主力编制"
-		location = 4897
+		name = "第5师团 140-6-25 喀山 鲤"
+		location = 4105
 		division_template = "妖精主力编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精主力编制"
-		location = 4897
+		name = "第6师团 140-6-28 喀山 明"
+		location = 1044
 		division_template = "妖精主力编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精转移编制"
-		location = 4897
+		name = "第7师团 140-7-4 喀山 熊"
+		location = 2244
 		division_template = "妖精转移编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精转移编制"
-		location = 4897
+		name = "第8师团 140-7-4 喀山 杉"
+		location = 629
 		division_template = "妖精转移编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精转移编制"
-		location = 4897
+		name = "第9师团 140-7-4 喀山 武"
+		location = 4070
 		division_template = "妖精转移编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精转移编制"
-		location = 4897
+		name = "第10师团 140-7-15 喀山 鉄"
+		location = 3454
 		division_template = "妖精转移编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精转移编制"
-		location = 4897
+		name = "第11师团 140-7-15 喀山 锦"
+		location = 4050
 		division_template = "妖精转移编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 
 	division = {
-		name = "妖精主力编制"
-		location = 4850
+		name = "第12师团 140-8-12 玄武川 剣"
+		location = 1803
 		division_template = "妖精主力编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精主力编制"
-		location = 4850
+		name = "第13师团 140-8-12 玄武川 镜"
+		location = 4033
 		division_template = "妖精主力编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精转移编制"
-		location = 4850
+		name = "第14师团 140-8-12 玄武川 照"
+		location = 3449
 		division_template = "妖精转移编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精转移编制"
-		location = 4850
+		name = "第15师团 140-8-12 玄武川 祭"
+		location = 3452
 		division_template = "妖精转移编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精转移编制"
-		location = 4850
+		name = "第16师团 140-8-18 玄武川 垣"
+		location = 2059
 		division_template = "妖精转移编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精转移编制"
-		location = 4850
+		name = "第17师团 140-9-15 玄武川 月"
+		location = 82
 		division_template = "妖精转移编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精转移编制"
-		location = 4850
+		name = "第18师团 140-10-15 玄武川 菊"
+		location = 3448
 		division_template = "妖精转移编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 
 	division = {
-		name = "妖精主力编制"
-		location = 4891
+		name = "第19师团 140-11-15 玄武川 虎"
+		location = 1156
 		division_template = "妖精主力编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精主力编制"
-		location = 4891
+		name = "第20师团 140-12-15 喀山 朝"
+		location = 1749
 		division_template = "妖精主力编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精转移编制"
-		location = 4891
+		name = "第21师团 141-1-20 玄武川 讨"
+		location = 3090
 		division_template = "妖精转移编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精转移编制"
-		location = 4891
+		name = "第22师团 141-2-20 喀山 原"
+		location = 3089
 		division_template = "妖精转移编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精转移编制"
-		location = 4891
+		name = "第23师团 141-3-18 喀山 旭"
+		location = 3591
 		division_template = "妖精转移编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精转移编制"
-		location = 4891
+		name = "第24师团 141-3-18 喀山 山"
+		location = 217
 		division_template = "妖精转移编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精转移编制"
-		location = 4891
+		name = "第25师团 141-4-18 喀山 国"
+		location = 5449
 		division_template = "妖精转移编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 
 	division = {
-		name = "妖精主力编制"
-		location = 4832
+		name = "第26师团 141-5-21 喀山 泉"
+		location = 1043
 		division_template = "妖精主力编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精主力编制"
-		location = 4832
+		name = "第27师团 141-6-20 玄武川 极"
+		location = 1421
 		division_template = "妖精主力编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精转移编制"
-		location = 4832
+		name = "第28师团 141-7-21 喀山 豊"
+		location = 1975
 		division_template = "妖精转移编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精转移编制"
-		location = 4832
+		name = "第29师团 141-8-12 喀山 雷"
+		location = 1713
 		division_template = "妖精转移编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精转移编制"
-		location = 4832
+		name = "第30师团 141-9-15 喀山 豹"
+		location = 1713
 		division_template = "妖精转移编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精转移编制"
-		location = 4832
+		name = "第31师团 141-9-16 红魔城 烈"
+		location = 1713
 		division_template = "妖精转移编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精转移编制"
-		location = 4832
+		name = "第32师团 141-9-17 红魔城 枫"
+		location = 1713
 		division_template = "妖精转移编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 
 	division = {
-		name = "妖精主力编制"
-		location = 4840
+		name = "第33师团 141-10-3 红魔馆 弓"
+		location = 1713
 		division_template = "妖精主力编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精主力编制"
-		location = 4840
+		name = "第34师团 141-10-3 红魔馆 椿"
+		location = 1713
 		division_template = "妖精主力编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "妖精转移编制"
-		location = 4840
+		name = "第35师团 141-11-5 喀山 东"
+		location = 1713
 		division_template = "妖精转移编制"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1
 	}
-	division = {
-		name = "妖精转移编制"
-		location = 4840
-		division_template = "妖精转移编制"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "妖精转移编制"
-		location = 4840
-		division_template = "妖精转移编制"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "妖精转移编制"
-		location = 4840
-		division_template = "妖精转移编制"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "妖精转移编制"
-		location = 4840
-		division_template = "妖精转移编制"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1
-	}
+
 	
 }

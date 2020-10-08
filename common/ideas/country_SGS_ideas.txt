@@ -94,5 +94,15 @@ ideas = {
 				defense_bonus_against = -0.5
 			}
 		}
+		SGS_get_intel_from_NIT_idea = {
+			picture = generic_constitutional_guarantees
+			
+			targeted_modifier = {
+				tag = NIT
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.2
+			}
+			
+		}
 	}
 }
