@@ -104,5 +104,21 @@ ideas = {
 			}
 			
 		}
+		SGS_get_trained_get_strong_idea = {
+			picture = chi_war_of_resistance3
+			modifier = {
+				experience_gain_army_factor = 0.1 
+				army_org_regain = 0.06
+				army_speed_factor = 0.05 
+				#army_org_factor = 0.1
+				# fandong_drift = 0.01
+			}
+		}
+		SGS_get_trained_training_faster_idea = {
+			picture = generic_manpower_bonus
+			modifier = {
+				training_time_factor = -0.15 
+			}
+		}
 	}
 }
