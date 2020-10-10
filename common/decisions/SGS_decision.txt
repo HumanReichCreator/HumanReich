@@ -293,10 +293,7 @@ SGS_category = {
 			# has_idea = TEG_jianshaozhengbing_idea
 		}
 		modifier = {
-			stability_weekly = 0.035
-			supply_consumption_factor = 0.20 
-			consumer_goods_factor = 0.05
-			political_power_gain = -0.2 
+			
 		}
 		cost = 45
 		days_re_enable = 40 
@@ -304,9 +301,7 @@ SGS_category = {
 		complete_effect = {
 			clr_country_flag = sgs_events_interrupted
 			set_country_flag = sgs_selected_battle_fairy_deci
-			clr_country_flag = sgs_sunny_bad
-			clr_country_flag = sgs_star_bad
-			clr_country_flag = sgs_luna_bad
+			
 			
             add_to_variable = {
                 sgs_luna_infl = 3
@@ -326,6 +321,126 @@ SGS_category = {
 		ai_will_do = {
 			factor = 80
 			
+		}
+	}
+
+	SGS_producing_war_deci = {
+		visible = {
+			tag = sgs
+            has_variable = sgs_uprise
+            }
+		
+		available = {
+			has_war = no
+			not = { has_country_flag = sgs_selected_battle_fairy_deci }
+			
+			# has_idea = TEG_jianshaozhengbing_idea
+		}
+		modifier = {
+			industrial_capacity_factory = 0.15
+			production_speed_buildings_factor = 0.15 
+		}
+		cost = 90
+		days_remove = 40
+		days_re_enable = 30 
+		fire_only_once = no
+		complete_effect = {
+			clr_country_flag = sgs_events_interrupted
+			set_country_flag = sgs_selected_battle_fairy_deci
+			
+			custom_effect_tooltip = down_sgs_uprise_little
+			subtract_from_variable = {
+                sgs_uprise = 4
+            }
+            
+            clamp_variable = {
+                var = sgs_uprise
+                min = 1
+                max = 150
+            }
+            add_to_variable = {
+                sgs_sunny_infl = 5
+			}
+			
+			country_event = {
+				id = sgs.134
+            }
+
+		}
+		remove_effect = {
+            clr_country_flag = sgs_selected_battle_fairy_deci
+		}
+		ai_will_do = {
+			factor = 65
+			modifier = {
+				has_equipment = {
+					spell_card_a < 100
+				}
+				factor = 1.3
+			}
+			
+			modifier = {
+				has_equipment = {
+					buqiang_a < 100
+				}
+				factor = 1.3
+			}
+		}
+	}
+
+	SGS_picking_up_deci = {
+		visible = {
+			tag = sgs
+            has_variable = sgs_uprise
+            }
+		
+		available = {
+			has_war = no
+			not = { has_country_flag = sgs_selected_battle_fairy_deci }
+			
+			# has_idea = TEG_jianshaozhengbing_idea
+		}
+		modifier = {
+			industrial_capacity_factory = 0.15
+			production_speed_buildings_factor = 0.15 
+		}
+		cost = 60
+		days_remove = 30
+		days_re_enable = 30 
+		fire_only_once = no
+		complete_effect = {
+			clr_country_flag = sgs_events_interrupted
+			set_country_flag = sgs_selected_battle_fairy_deci
+
+            add_to_variable = {
+                sgs_luna_infl = 5
+			}
+			add_to_variable = {
+                sgs_star_infl = 6
+			}
+			set_variable = {sgs_num_picking = 0}
+
+		}
+		remove_effect = {
+			
+            country_event = {
+				id = sgs.139
+            }
+		}
+		ai_will_do = {
+			factor = 70
+			modifier = {
+				has_equipment = {
+					spell_card_a < 0
+				}
+				factor = 2
+			}
+			modifier = {
+				has_equipment = {
+					buqiang_a < 0
+				}
+				factor = 2
+			}
 		}
 	}
 }
