@@ -55,9 +55,16 @@ country_event = {
 		remove_decision = SGS_dannmakugokko_deci
 		remove_decision = SGS_itazura_deci
 		remove_decision = SGS_bettle_arena_deci
+		remove_decision = SGS_training_deci
+		remove_decision = SGS_show_power_deci
+		remove_decision = SGS_producing_war_deci
+		remove_decision = SGS_picking_up_deci
+		remove_decision = SGS_accept_now_deci
 		clr_country_flag = sgs_selected_battle_fairy_deci
+		clr_country_flag = sgs_deci_doing
 		clr_country_flag = sgs_dannmakugokko_unhappy
 		set_country_flag = sgs_events_interrupted
+		
 	}
 	mean_time_to_happen = {
 		days = 2
@@ -436,6 +443,13 @@ country_event = {
 		remove_ideas = SGS_battle_fairy_restlessness_idea
 		remove_decision = SGS_dannmakugokko_deci
 		remove_decision = SGS_itazura_deci
+		remove_decision = SGS_bettle_arena_deci
+		remove_decision = SGS_training_deci
+		remove_decision = SGS_show_power_deci
+		remove_decision = SGS_producing_war_deci
+		remove_decision = SGS_picking_up_deci
+		remove_decision = SGS_accept_now_deci
+		clr_country_flag = sgs_deci_doing
 		clr_country_flag = sgs_selected_battle_fairy_deci
 		clr_country_flag = sgs_dannmakugokko_unhappy
 		set_country_flag = sgs_events_interrupted
@@ -513,7 +527,7 @@ country_event = {
 			}
 			random_list = {
 				40 = {
-					ROOT.sgs_itazura_target = {
+					var:ROOT.sgs_itazura_target = {
 						country_event = {
 							id = sgs.112							#看情况
 							days = 10
@@ -576,7 +590,7 @@ country_event = {
 		hidden_effect = {
 			random_list = {
 				25 = {
-					ROOT.sgs_itazura_target = {
+					var:ROOT.sgs_itazura_target = {
 						country_event = {
 							id = sgs.113							#看情况
 							days = 10
@@ -1114,6 +1128,11 @@ country_event = {
 			max = 150
 		}
 		add_war_support = 0.05
+		set_variable = {
+			ROOT.sgs_doing_days = 20
+		}
+		set_country_flag = sgs_deci_doing
+
 		hidden_effect = {
 			#5tianhou
 			random_list = {
@@ -1599,9 +1618,7 @@ country_event = {
 	option = {
 		#
 		name = sgs.127.1
-		add_to_variable = {
-			sgs_luna_infl = 8
-		}
+		
 		add_popularity = {
 			ideology = oldorder
 			popularity = 0.05
@@ -1627,17 +1644,18 @@ country_event = {
 				}
 				60 = {
 					#无事发生
-					remove_idea = {
+					random_list = {
 						30 = {
 							clr_country_flag = sgs_train_big_success
 						}
 						20 = {
 							set_country_flag = sgs_train_big_success
+							modifier = {
+								factor = 2
+								has_war_support > 0.75
+							}
 						}
-						modifier = {
-							factor = 2
-							has_war_support > 0.75
-						}
+						
 					}
 					modifier = {
 						factor = 1.5
@@ -1739,7 +1757,7 @@ country_event = {
 		add_to_variable = {
 			sgs_luna_infl = 4
 		}
-		add_idea = {
+		add_timed_idea = {
 			idea = SGS_get_trained_get_strong_idea
 			days = 180
 		}
@@ -1772,11 +1790,11 @@ country_event = {
 		add_to_variable = {
 			sgs_luna_infl = 7
 		}
-		add_idea = {
+		add_timed_idea  = {
 			idea = SGS_get_trained_get_strong_idea
 			days = 180
 		}
-		add_idea = {
+		add_timed_idea  = {
 			idea = SGS_get_trained_training_faster_idea
 			days = 180
 		}
@@ -1815,6 +1833,11 @@ country_event = {
 			id = sgs.131
 			days = 14
 		}
+		set_variable = {
+			ROOT.sgs_doing_days = 14
+		}
+		set_country_flag = sgs_deci_doing
+
 		ai_chance = {
 			base = 35
 			modifier = {
@@ -1831,6 +1854,11 @@ country_event = {
 			id = sgs.131
 			days = 14
 		}
+		set_variable = {
+			ROOT.sgs_doing_days = 14
+		}
+		set_country_flag = sgs_deci_doing
+
 		ai_chance = {
 			base = 35
 			modifier = {
@@ -1843,6 +1871,11 @@ country_event = {
 		#露娜
 		name = sgs.130.3
 		set_country_flag = sgs_luna_show
+		set_variable = {
+			ROOT.sgs_doing_days = 14
+		}
+		set_country_flag = sgs_deci_doing
+
 		country_event = {
 			id = sgs.131
 			days = 14
@@ -1863,6 +1896,11 @@ country_event = {
 		}
 		add_political_power = -20
 		set_country_flag = sgs_all_show
+		set_variable = {
+			ROOT.sgs_doing_days = 21
+		}
+		set_country_flag = sgs_deci_doing
+
 		hidden_effect = {
 			random_list = {
 				40 = {
@@ -2274,7 +2312,7 @@ country_event = {
 		#斯塔
 		name = sgs.133.2
 		trigger = {
-			has_country_flag = sgs_sunny_bad
+			has_country_flag = sgs_star_bad
 		}
 		add_stability = -0.07
 		add_popularity = {
@@ -2293,7 +2331,7 @@ country_event = {
 		#露娜
 		name = sgs.133.3
 		trigger = {
-			has_country_flag = sgs_sunny_bad
+			has_country_flag = sgs_luna_bad
 		}
 		add_stability = -0.07
 		add_popularity = {
@@ -2433,7 +2471,7 @@ country_event = {
 		#
 		name = sgs.135.1
 		custom_effect_tooltip = down_sgs_uprise_middle
-		add_idea = {
+		add_timed_idea  = {
 			idea = SGS_pay_tension_in_product_idea
 			days = 40
 		}
@@ -2578,7 +2616,7 @@ country_event = {
 		has_decision = SGS_picking_up_deci
 	}
 	mean_time_to_happen = {
-		days = 25
+		days = 15
 	}
 	immediate = {
 	}
@@ -2631,7 +2669,7 @@ country_event = {
 		has_decision = SGS_picking_up_deci
 	}
 	mean_time_to_happen = {
-		days = 25
+		days = 15
 	}
 	immediate = {
 	}
@@ -2641,7 +2679,7 @@ country_event = {
 		trigger = {
 			num_of_civilian_factories > 1
 		}
-		add_idea = {
+		add_timed_idea = {
 			idea = SGS_use_a_factory_picking_idea
 			days = 9
 		}
@@ -2687,7 +2725,7 @@ country_event = {
 		has_decision = SGS_picking_up_deci
 	}
 	mean_time_to_happen = {
-		days = 25
+		days = 15
 	}
 	immediate = {
 	}
@@ -2744,6 +2782,7 @@ country_event = {
 		days = 2
 	}
 	immediate = {
+		clr_country_flag = sgs_lend_manpower
 	}
 	option = {
 		#
@@ -2777,7 +2816,7 @@ country_event = {
 				50 = {
 					#一无所获
 					country_event = {
-						id = sgs.142
+						id = sgs.144
 					}
 					modifier = {
 						add = -15
@@ -2801,7 +2840,7 @@ country_event = {
 				30 = {
 					#小成功
 					country_event = {
-						id = sgs.143
+						id = sgs.145
 					}
 					modifier = {
 						add = 5
@@ -2825,7 +2864,7 @@ country_event = {
 				20 = {
 					#成功
 					country_event = {
-						id = sgs.144
+						id = sgs.146
 					}
 					modifier = {
 						add = 5
@@ -2849,7 +2888,7 @@ country_event = {
 				1 = {
 					#大成功
 					country_event = {
-						id = sgs.145
+						id = sgs.147
 					}
 					modifier = {
 						add = 5
@@ -2958,13 +2997,14 @@ country_event = {
 	trigger = {
 		not = {
 			has_country_flag = sgs_events_interrupted
+			
 		}
 	}
 	immediate = {
 	}
 	option = {
 		#给
-		name = sgs.145.1
+		name = sgs.146.1
 		custom_effect_tooltip = down_sgs_uprise_middle
 		subtract_from_variable = {
 			sgs_uprise = 7
@@ -3024,7 +3064,7 @@ country_event = {
 			amount = 750
 		}
 
-		add_idea = {
+		add_timed_idea = {
 			idea = SGS_pay_tension_in_product_idea
 			days = 128
 		}
@@ -3067,6 +3107,143 @@ country_event = {
 		}
 		add_political_power = 20
 		add_stability = 0.1
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+country_event = {
+	#呼吁遭受抵制
+	id = sgs.148
+	title = sgs.148.t
+	desc = sgs.148.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		not = {
+			has_country_flag = sgs_events_interrupted
+		}
+		has_decision = SGS_accept_now_deci
+	}
+	mean_time_to_happen = {
+		days = 50
+		modifier = {
+			factor = 0.8
+			guli < 0.5
+		}
+		modifier = {
+			factor = 0.8
+			guli < 0.3
+		}
+	}
+	immediate = {
+	}
+	option = {
+		#策划游戏
+		name = sgs.148.1
+		trigger = {
+			has_political_power >29
+		}
+		add_political_power = -30
+		random_list = {
+			50 = {
+				country_event = {
+					id = sgs.149 #成功
+					days = 3
+				}
+				modifier = {
+					add = 20
+					check_variable = {
+						guli >0.3
+					}
+				}
+			}
+			50 = {
+				country_event = {
+					id = sgs.150 #失败
+					days = 3
+				}
+				modifier = {
+					add = 30
+					check_variable = {
+						neworder >0.75
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 70
+		}
+	}
+	option = {
+		#镇压
+		name = sgs.148.2
+		add_manpower = -80
+		add_popularity = {
+			ideology = neworder
+			popularity = -0.08
+		}
+		add_stability = -0.2
+
+
+		ai_chance = {
+			base = 30
+			modifier = {
+				factor = 1.5
+				has_political_power < 45
+			}
+		}
+	}
+}
+
+country_event = {
+	#游戏成功
+	id = sgs.149
+	title = sgs.149.t
+	desc = sgs.149.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		not = {
+			has_country_flag = sgs_events_interrupted
+		}
+	}
+	immediate = {
+	}
+	option = {
+		#给
+		name = sgs.149.1
+		add_stability = 0.05
+		add_to_variable = {
+			sgs_star_infl = 4
+		}
+
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+country_event = {
+	#游戏失败
+	id = sgs.150
+	title = sgs.150.t
+	desc = sgs.150.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		not = {
+			has_country_flag = sgs_events_interrupted
+		}
+	}
+	immediate = {
+	}
+	option = {
+		#给
+		name = sgs.149.1
+		add_stability = -0.1
+		
+		
 		ai_chance = {
 			base = 30
 		}

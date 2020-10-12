@@ -150,10 +150,11 @@ Spoil_battle = {
 				factor = 0.1
 			}
 			modifier = {
-				check_variable = { EXHC_current_exhaustion > 10 }
+				check_variable = {
+					EXHC_current_exhaustion > 10
+				}
 				factor = 0.5
 			}
-			
 		}
 	}
 	Spoil_battle_nanxuanwucheng = {
@@ -314,10 +315,11 @@ Spoil_battle = {
 				factor = 0.1
 			}
 			modifier = {
-				check_variable = { EXHC_current_exhaustion > 10 }
+				check_variable = {
+					EXHC_current_exhaustion > 10
+				}
 				factor = 0.5
 			}
-			
 		}
 	}
 	Spoil_battle_xihongmoguan = {
@@ -336,11 +338,12 @@ Spoil_battle = {
 				}
 				owns_state = 113
 			}
-			any_state = { 
-				any_neighbor_state = {state = 113}
+			any_state = {
+				any_neighbor_state = {
+					state = 113
+				}
 				is_owned_by = ROOT
 			}
-			
 		}
 		target_trigger = {
 			FROM = {
@@ -359,7 +362,6 @@ Spoil_battle = {
 			NOT = {
 				has_country_flag = spoilCD
 			}
-			
 			not = {
 				and = {
 					has_idea = SGS_donot_attack_fairy_idea
@@ -368,9 +370,7 @@ Spoil_battle = {
 						has_idea = Fairy
 					}
 				}
-				
 			}
-			
 			FROM = {
 				is_neighbor_of = ROOT
 				not = {
@@ -488,10 +488,11 @@ Spoil_battle = {
 				factor = 0.1
 			}
 			modifier = {
-				check_variable = { EXHC_current_exhaustion > 10 }
+				check_variable = {
+					EXHC_current_exhaustion > 10
+				}
 				factor = 0.5
 			}
-			
 		}
 	}
 	Spoil_battle_hongmoguan = {
@@ -536,7 +537,6 @@ Spoil_battle = {
 						has_idea = Fairy
 					}
 				}
-				
 			}
 			FROM = {
 				is_neighbor_of = ROOT
@@ -662,10 +662,11 @@ Spoil_battle = {
 				factor = 0.1
 			}
 			modifier = {
-				check_variable = { EXHC_current_exhaustion > 10 }
+				check_variable = {
+					EXHC_current_exhaustion > 10
+				}
 				factor = 0.5
 			}
-			
 		}
 	}
 	Spoil_battle_scagang = {
@@ -684,9 +685,10 @@ Spoil_battle = {
 				}
 				owns_state = 115
 			}
-			
-			any_state = { 
-				any_neighbor_state = {state = 115}
+			any_state = {
+				any_neighbor_state = {
+					state = 115
+				}
 				is_owned_by = ROOT
 			}
 		}
@@ -715,9 +717,7 @@ Spoil_battle = {
 						has_idea = Fairy
 					}
 				}
-				
 			}
-			
 			FROM = {
 				is_neighbor_of = ROOT
 				not = {
@@ -835,10 +835,11 @@ Spoil_battle = {
 				factor = 0.1
 			}
 			modifier = {
-				check_variable = { EXHC_current_exhaustion > 10 }
+				check_variable = {
+					EXHC_current_exhaustion > 10
+				}
 				factor = 0.5
 			}
-			
 		}
 	}
 	Spoil_battle_fengshoucun = {
@@ -857,9 +858,10 @@ Spoil_battle = {
 				}
 				owns_state = 100
 			}
-			
-			any_state = { 
-				any_neighbor_state = {state = 100}
+			any_state = {
+				any_neighbor_state = {
+					state = 100
+				}
 				is_owned_by = ROOT
 			}
 		}
@@ -997,11 +999,11 @@ Spoil_battle = {
 				factor = 0.1
 			}
 			modifier = {
-				check_variable = { EXHC_current_exhaustion > 10 }
-				
+				check_variable = {
+					EXHC_current_exhaustion > 10
+				}
 				factor = 0.5
 			}
-			
 		}
 	}
 	Spoil_battle_datiecun = {
@@ -1020,9 +1022,10 @@ Spoil_battle = {
 				}
 				owns_state = 377
 			}
-			
-			any_state = { 
-				any_neighbor_state = {state = 377}
+			any_state = {
+				any_neighbor_state = {
+					state = 377
+				}
 				is_owned_by = ROOT
 			}
 		}
@@ -1160,10 +1163,11 @@ Spoil_battle = {
 				factor = 0.1
 			}
 			modifier = {
-				check_variable = { EXHC_current_exhaustion > 10 }
+				check_variable = {
+					EXHC_current_exhaustion > 10
+				}
 				factor = 0.5
 			}
-			
 		}
 	}
 	Spoil_battle_kantanqu = {
@@ -1182,9 +1186,10 @@ Spoil_battle = {
 				}
 				owns_state = 272
 			}
-			
-			any_state = { 
-				any_neighbor_state = {state = 272}
+			any_state = {
+				any_neighbor_state = {
+					state = 272
+				}
 				is_owned_by = ROOT
 			}
 		}
@@ -1322,10 +1327,11 @@ Spoil_battle = {
 				factor = 0.1
 			}
 			modifier = {
-				check_variable = { EXHC_current_exhaustion > 10 }
+				check_variable = {
+					EXHC_current_exhaustion > 10
+				}
 				factor = 0.5
 			}
-			
 		}
 	}
 	Spoil_battle_xibuzhongxin = {
@@ -1486,10 +1492,11 @@ Spoil_battle = {
 				factor = 0.1
 			}
 			modifier = {
-				check_variable = { EXHC_current_exhaustion > 10 }
+				check_variable = {
+					EXHC_current_exhaustion > 10
+				}
 				factor = 0.5
 			}
-			
 		}
 	}
 	Spoil_battle_wumingcun = {
@@ -1643,10 +1650,11 @@ Spoil_battle = {
 				factor = 0.1
 			}
 			modifier = {
-				check_variable = { EXHC_current_exhaustion > 10 }
+				check_variable = {
+					EXHC_current_exhaustion > 10
+				}
 				factor = 0.5
 			}
-			
 		}
 	}
 	Spoil_battle_yanzouwutai = {
@@ -1665,9 +1673,10 @@ Spoil_battle = {
 				}
 				owns_state = 388
 			}
-			
-			any_state = { 
-				any_neighbor_state = {state = 388}
+			any_state = {
+				any_neighbor_state = {
+					state = 388
+				}
 				is_owned_by = ROOT
 			}
 		}
@@ -1805,10 +1814,11 @@ Spoil_battle = {
 				factor = 0.1
 			}
 			modifier = {
-				check_variable = { EXHC_current_exhaustion > 10 }
+				check_variable = {
+					EXHC_current_exhaustion > 10
+				}
 				factor = 0.5
 			}
-			
 		}
 	}
 	Spoil_battle_fengjiandi = {
@@ -1969,10 +1979,11 @@ Spoil_battle = {
 				factor = 0.1
 			}
 			modifier = {
-				check_variable = { EXHC_current_exhaustion > 10 }
+				check_variable = {
+					EXHC_current_exhaustion > 10
+				}
 				factor = 0.5
 			}
-			
 		}
 	}
 	Spoil_battle_yaojingbuji = {
@@ -1991,9 +2002,10 @@ Spoil_battle = {
 				}
 				owns_state = 310
 			}
-
-			any_state = { 
-				any_neighbor_state = {state = 310}
+			any_state = {
+				any_neighbor_state = {
+					state = 310
+				}
 				is_owned_by = ROOT
 			}
 		}
@@ -2022,7 +2034,6 @@ Spoil_battle = {
 						has_idea = Fairy
 					}
 				}
-				
 			}
 			FROM = {
 				is_neighbor_of = ROOT
@@ -2141,10 +2152,11 @@ Spoil_battle = {
 				factor = 0.1
 			}
 			modifier = {
-				check_variable = { EXHC_current_exhaustion > 10 }
+				check_variable = {
+					EXHC_current_exhaustion > 10
+				}
 				factor = 0.5
 			}
-			
 		}
 	}
 	Spoil_battle_chongcun = {
@@ -2163,8 +2175,10 @@ Spoil_battle = {
 				}
 				owns_state = 106
 			}
-			any_state = { 
-				any_neighbor_state = {state = 106}
+			any_state = {
+				any_neighbor_state = {
+					state = 106
+				}
 				is_owned_by = ROOT
 			}
 		}
@@ -2302,10 +2316,11 @@ Spoil_battle = {
 				factor = 0.1
 			}
 			modifier = {
-				check_variable = { EXHC_current_exhaustion > 10 }
+				check_variable = {
+					EXHC_current_exhaustion > 10
+				}
 				factor = 0.5
 			}
-			
 		}
 	}
 	Spoil_battle_xinhuizhencheng = {
@@ -2466,13 +2481,13 @@ Spoil_battle = {
 				factor = 0.1
 			}
 			modifier = {
-				check_variable = { EXHC_current_exhaustion > 10 }
+				check_variable = {
+					EXHC_current_exhaustion > 10
+				}
 				factor = 0.5
 			}
-			
 		}
 	}
-
 	#------------------------Mission&CD---------------------
 	Spoil_mission_xiaxuanwucheng = {
 		# This is our mission id
@@ -3165,14 +3180,13 @@ Spoil_battle = {
 		timeout_effect = {
 			clr_country_flag = spoilCD
 			custom_effect_tooltip = spoilCD_if_vic
-			if
-			{
+			if = {
 				limit = {
 					has_country_flag = spoil_vic_CD
 				}
-				set_country_flag = spoilCD
 				clr_country_flag = spoil_vic_CD
 				remove_mission = Spoil_CDtime
+				set_country_flag = spoilCD
 			}
 		}
 		fire_only_once = no
