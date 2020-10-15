@@ -257,6 +257,10 @@ SGS_category = {
 				factor = 1.2
 			}
 			modifier = {
+				has_stability < 0
+				factor = 1.8
+			}
+			modifier = {
 				has_stability < -0.2
 				factor = 1.8
 			}
@@ -423,8 +427,8 @@ SGS_category = {
 			# has_idea = TEG_jianshaozhengbing_idea
 		}
 		modifier = {
-			guli_drift = 0.02
-			stability_weekly = -0.1
+			guli_drift = 0.2
+			stability_weekly = -0.01
 		}
 		cost = 50
 		days_remove = 35

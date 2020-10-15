@@ -10,14 +10,16 @@ focus_tree = {
 	default = no
 	focus = {
 		id = SGS_battle_fariy_issue_focus
-		icon = GFX_focus_cze_german_puppet
-		cost = 6
-		x = 6
+		icon = GFX_focus_CZE_german_puppet
+		#GFX_focus_cze_german_puppet
+		cost = 6.00
+		x = 8
 		y = 0
 		available = {
 			has_global_flag = main_scenario
 		}
 		bypass = {
+
 		}
 		completion_reward = {
 			add_political_power = 15
@@ -28,42 +30,12 @@ focus_tree = {
 		cancel_if_invalid = no
 		continue_if_invalid = no
 		available_if_capitulated = yes
-	}
-	focus = {
-		id = SGS_pacify_battle_fariy_focus
-		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
-		cost = 12
-		prerequisite = {
-			focus = SGS_battle_fariy_issue_focus
-		}
-		mutually_exclusive = {
-			focus = SGS_develop_our_country_focus
-		}
-		x = -2
-		y = 1
-		relative_position_id = SGS_battle_fariy_issue_focus
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			conservativedecrease = yes
-			add_popularity = {
-				ideology = guli
-				popularity = 0.05
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		cancel_if_invalid = no
-		continue_if_invalid = no
-		available_if_capitulated = yes
+
 	}
 	focus = {
 		id = SGS_develop_our_country_focus
-		icon = GFX_goal_generic_construct_civ_factory
-		cost = 12
+		icon = GFX_focus_generic_industry_1
+		cost = 12.00
 		prerequisite = {
 			focus = SGS_battle_fariy_issue_focus
 		}
@@ -74,8 +46,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = SGS_battle_fariy_issue_focus
 		available = {
+
 		}
 		bypass = {
+
 		}
 		completion_reward = {
 			lobbyincrease = yes
@@ -111,5 +85,319 @@ focus_tree = {
 		cancel_if_invalid = no
 		continue_if_invalid = no
 		available_if_capitulated = yes
+
+	}
+	focus = {
+		id = SGS_develop_cic_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_develop_our_country_focus
+		}
+		x = 2
+		y = 1
+		relative_position_id = SGS_develop_our_country_focus
+
+	}
+	focus = {
+		id = SGS_develop_infra_focus
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_develop_cic_focus
+		}
+		x = 3
+		y = 2
+		relative_position_id = SGS_develop_our_country_focus
+
+	}
+	focus = {
+		id = SGS_develop_building_focus
+		icon = GFX_goal_generic_construction
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_develop_infra_focus
+		}
+		x = 2
+		y = 3
+		relative_position_id = SGS_develop_our_country_focus
+
+	}
+	focus = {
+		id = SGS_develop_resources_focus
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_develop_infra_focus
+		}
+		x = 4
+		y = 3
+		relative_position_id = SGS_develop_our_country_focus
+
+	}
+	focus = {
+		id = SGS_pacify_battle_fariy_focus
+		icon = GFX_focus_generic_self_management
+		cost = 12.00
+		prerequisite = {
+			focus = SGS_battle_fariy_issue_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_develop_our_country_focus
+		}
+		x = -2
+		y = 1
+		relative_position_id = SGS_battle_fariy_issue_focus
+		available = {
+
+		}
+		bypass = {
+
+		}
+		completion_reward = {
+			conservativedecrease = yes
+			add_popularity = {
+				ideology = guli
+				popularity = 0.05
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+	}
+	focus = {
+		id = SGS_try_new_ways_focus
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_battle_fariy_issue_focus
+		}
+		x = 11
+		y = 1
+		relative_position_id = SGS_battle_fariy_issue_focus
+
+	}
+	focus = {
+		id = SGS_fairy_withou_battle_focus
+		icon = GFX_goal_generic_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_try_new_ways_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_strong_fariy_be_youkai_focus
+		}
+		x = 2
+		y = 1
+		relative_position_id = SGS_try_new_ways_focus
+
+	}
+	focus = {
+		id = SGS_strong_fariy_be_youkai_focus
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_try_new_ways_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_fairy_withou_battle_focus
+		}
+		x = -2
+		y = 1
+		relative_position_id = SGS_try_new_ways_focus
+
+	}
+	focus = {
+		id = SGS_develop_mic_focus
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_develop_our_country_focus
+			focus = SGS_pacify_battle_fariy_focus
+		}
+		x = 2
+		y = 1
+		relative_position_id = SGS_pacify_battle_fariy_focus
+
+	}
+	focus = {
+		id = SGS_develop_tech_focus
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_knowlege_from_BaF_focus
+		}
+		x = 0
+		y = 3
+		relative_position_id = SGS_develop_our_country_focus
+
+	}
+	focus = {
+		id = SGS_communicate_with_others_focus
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_fairy_withou_battle_focus
+		}
+		x = -1
+		y = 1
+		relative_position_id = SGS_fairy_withou_battle_focus
+
+	}
+	focus = {
+		id = SGS_trade_with_other_fairy_focus
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_communicate_with_others_focus
+		}
+		x = 1
+		y = 1
+		relative_position_id = SGS_communicate_with_others_focus
+
+	}
+
+	focus = {
+		id = SGS_fairy_shrine_focus
+		icon = GFX_focus_jap_spiritual_mobilization
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_pacify_battle_fariy_focus
+		}
+		x = -3
+		y = 1
+		relative_position_id = SGS_pacify_battle_fariy_focus
+
+	}
+	focus = {
+		id = SGS_knowlege_from_BaF_focus
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_develop_cic_focus
+			focus = SGS_develop_mic_focus
+		}
+		x = 0
+		y = 2
+		relative_position_id = SGS_develop_our_country_focus
+
+	}
+	focus = {
+		id = SGS_trade_about_industry_focus
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_communicate_with_others_focus
+		}
+		x = -1
+		y = 1
+		relative_position_id = SGS_communicate_with_others_focus
+
+	}
+	focus = {
+		id = SGS_raise_potential_focus
+		icon = GFX_goal_generic_wolf_pack
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_strong_fariy_be_youkai_focus
+		}
+		x = -3
+		y = 2
+		relative_position_id = SGS_try_new_ways_focus
+
+	}
+	focus = {
+		id = SGS_surpress_bad_BaF_focus
+		icon = GFX_focus_spr_crush_the_revolution
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_fairy_withou_battle_focus
+		}
+		x = 1
+		y = 1
+		relative_position_id = SGS_fairy_withou_battle_focus
+
+	}
+	focus = {
+		id = SGS_analysis_spirit_focus
+		icon = GFX_focus_generic_steel
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_raise_potential_focus
+		}
+		prerequisite = {
+			focus = SGS_develop_resources_focus
+		}
+		x = -3
+		y = 4
+		relative_position_id = SGS_try_new_ways_focus
+
+	}
+	focus = {
+		id = SGS_war_school_focus
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_pacify_battle_fariy_focus
+		}
+		x = -1
+		y = 1
+		relative_position_id = SGS_pacify_battle_fariy_focus
+
+	}
+	focus = {
+		id = SGS_drill_in_the_mountain_focus
+		icon = GFX_focus_chi_army_reform
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_learning_weapon_blueprint_focus
+		}
+		x = 1
+		y = 3
+		relative_position_id = SGS_pacify_battle_fariy_focus
+
+	}
+	focus = {
+		id = SGS_be_stronger_focus
+		icon = GFX_focus_hol_united_netherlands
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_strong_fariy_be_youkai_focus
+		}
+		x = -1
+		y = 2
+		relative_position_id = SGS_try_new_ways_focus
+
+	}
+	focus = {
+		id = SGS_learning_weapon_blueprint_focus
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_war_school_focus
+		}
+		prerequisite = {
+			focus = SGS_develop_mic_focus
+		}
+		x = 1
+		y = 2
+		relative_position_id = SGS_pacify_battle_fariy_focus
+
+	}
+	focus = {
+		id = SGS_BaF_play_with_fairy_focus
+		icon = GFX_focus_AST_squander_bug
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_fairy_shrine_focus
+		}
+		x = -3
+		y = 3
+		relative_position_id = SGS_pacify_battle_fariy_focus
+
 	}
 }
