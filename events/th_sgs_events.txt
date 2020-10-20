@@ -118,6 +118,8 @@ country_event = {
 	}
 }
 
+#----------------------决议相关事件---------------------
+
 country_event = {
 	#弹幕大会开幕
 	id = sgs.100
@@ -285,7 +287,7 @@ country_event = {
 			max = 150
 		}
 		add_to_variable = {
-			sgs_star_infl = 10
+			sgs_star_infl = 8
 		}
 		add_stability = 0.05
 		add_popularity = {
@@ -3246,6 +3248,28 @@ country_event = {
 		
 		ai_chance = {
 			base = 30
+		}
+	}
+}
+
+
+#----------------------前期国策相关事件--------------------
+country_event = {
+	#战场妖精现状
+	id = sgs.200
+	title = sgs.200.t
+	desc = sgs.200.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.200.1
+		
+		ai_chance = {
+			base = 35
 		}
 	}
 }

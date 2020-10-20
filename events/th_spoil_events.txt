@@ -351,7 +351,22 @@ country_event = {
 		}
 	}
 }
-
+country_event = {
+	#xuanwuchuan
+	id = spoil_event.1101	# xuanwuchuan spoil win
+	title = spoil_event.1101.t
+	desc = spoil_event.1101.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		#革命
+		name = spoil_event.1101.1
+		
+		ai_chance = {
+			base = 35
+		}
+	}
+}
 #------nanxuanwuchuan----
 country_event = {
 	#xuanwuchuan win root
@@ -713,6 +728,7 @@ country_event = {
 		}
 	}
 }
+
 
 #------------xihongmoguan-------
 country_event = {

@@ -51,6 +51,32 @@ Spoil_battle = {
 				ROOT.spoil_MyCD = 152
 			}
 			set_country_flag = spoilCD
+			hidden_effect = {
+				if = {
+					limit = {
+						any_state = {
+							is_owned_by = ROOT
+							any_neighbor_state = {
+								FROM = {
+									divisions_in_state = {
+										type = infantry
+										size > 1
+										state = PREV
+									}
+								}	
+							}
+						}
+						
+					}
+					FROM = {
+						country_event = {
+							id = spoil_event.1101
+						}
+					}
+				}
+			}
+			
+			
 		}
 		remove_effect = {
 			set_variable = {
@@ -92,6 +118,11 @@ Spoil_battle = {
 					is_subject = no
 				}
 				factor = 0.2
+			}
+			modifier = {
+				tag = SGS
+				
+				factor = 200
 			}
 			modifier = {
 				has_war = yes
@@ -209,6 +240,30 @@ Spoil_battle = {
 				ROOT.spoil_MyCD = 185
 			}
 			set_country_flag = spoilCD
+			hidden_effect = {
+				if = {
+					limit = {
+						any_state = {
+							is_owned_by = ROOT
+							any_neighbor_state = {
+								FROM = {
+									divisions_in_state = {
+										type = infantry
+										size > 1
+										state = PREV
+									}
+								}	
+							}
+						}
+						
+					}
+					FROM = {
+						country_event = {
+							id = spoil_event.1101
+						}
+					}
+				}
+			}
 		}
 		remove_effect = {
 			set_variable = {
@@ -389,6 +444,30 @@ Spoil_battle = {
 				ROOT.spoil_MyCD = 152
 			}
 			set_country_flag = spoilCD
+			hidden_effect = {
+				if = {
+					limit = {
+						any_state = {
+							is_owned_by = ROOT
+							any_neighbor_state = {
+								FROM = {
+									divisions_in_state = {
+										type = infantry
+										size > 1
+										state = PREV
+									}
+								}	
+							}
+						}
+						
+					}
+					FROM = {
+						country_event = {
+							id = spoil_event.1101
+						}
+					}
+				}
+			}
 		}
 		remove_effect = {
 			set_variable = {
@@ -556,6 +635,30 @@ Spoil_battle = {
 				ROOT.spoil_MyCD = 185
 			}
 			set_country_flag = spoilCD
+			hidden_effect = {
+				if = {
+					limit = {
+						any_state = {
+							is_owned_by = ROOT
+							any_neighbor_state = {
+								FROM = {
+									divisions_in_state = {
+										type = infantry
+										size > 1
+										state = PREV
+									}
+								}	
+							}
+						}
+						
+					}
+					FROM = {
+						country_event = {
+							id = spoil_event.1101
+						}
+					}
+				}
+			}
 		}
 		remove_effect = {
 			set_variable = {
@@ -736,6 +839,30 @@ Spoil_battle = {
 				ROOT.spoil_MyCD = 120
 			}
 			set_country_flag = spoilCD
+			hidden_effect = {
+				if = {
+					limit = {
+						any_state = {
+							is_owned_by = ROOT
+							any_neighbor_state = {
+								FROM = {
+									divisions_in_state = {
+										type = infantry
+										size > 1
+										state = PREV
+									}
+								}	
+							}
+						}
+						
+					}
+					FROM = {
+						country_event = {
+							id = spoil_event.1101
+						}
+					}
+				}
+			}
 		}
 		remove_effect = {
 			set_variable = {
@@ -900,6 +1027,30 @@ Spoil_battle = {
 				ROOT.spoil_MyCD = 120
 			}
 			set_country_flag = spoilCD
+			hidden_effect = {
+				if = {
+					limit = {
+						any_state = {
+							is_owned_by = ROOT
+							any_neighbor_state = {
+								FROM = {
+									divisions_in_state = {
+										type = infantry
+										size > 1
+										state = PREV
+									}
+								}	
+							}
+						}
+						
+					}
+					FROM = {
+						country_event = {
+							id = spoil_event.1101
+						}
+					}
+				}
+			}
 		}
 		remove_effect = {
 			set_variable = {
@@ -1064,6 +1215,30 @@ Spoil_battle = {
 				ROOT.spoil_MyCD = 120
 			}
 			set_country_flag = spoilCD
+			hidden_effect = {
+				if = {
+					limit = {
+						any_state = {
+							is_owned_by = ROOT
+							any_neighbor_state = {
+								FROM = {
+									divisions_in_state = {
+										type = infantry
+										size > 1
+										state = PREV
+									}
+								}	
+							}
+						}
+						
+					}
+					FROM = {
+						country_event = {
+							id = spoil_event.1101
+						}
+					}
+				}
+			}
 		}
 		remove_effect = {
 			set_variable = {
@@ -1228,6 +1403,30 @@ Spoil_battle = {
 				ROOT.spoil_MyCD = 152
 			}
 			set_country_flag = spoilCD
+			hidden_effect = {
+				if = {
+					limit = {
+						any_state = {
+							is_owned_by = ROOT
+							any_neighbor_state = {
+								FROM = {
+									divisions_in_state = {
+										type = infantry
+										size > 1
+										state = PREV
+									}
+								}	
+							}
+						}
+						
+					}
+					FROM = {
+						country_event = {
+							id = spoil_event.1101
+						}
+					}
+				}
+			}
 		}
 		remove_effect = {
 			set_variable = {
@@ -1386,6 +1585,30 @@ Spoil_battle = {
 				ROOT.spoil_MyCD = 185
 			}
 			set_country_flag = spoilCD
+			hidden_effect = {
+				if = {
+					limit = {
+						any_state = {
+							is_owned_by = ROOT
+							any_neighbor_state = {
+								FROM = {
+									divisions_in_state = {
+										type = infantry
+										size > 1
+										state = PREV
+									}
+								}	
+							}
+						}
+						
+					}
+					FROM = {
+						country_event = {
+							id = spoil_event.1101
+						}
+					}
+				}
+			}
 		}
 		remove_effect = {
 			set_variable = {
@@ -1551,6 +1774,30 @@ Spoil_battle = {
 				ROOT.spoil_MyCD = 152
 			}
 			set_country_flag = spoilCD
+			hidden_effect = {
+				if = {
+					limit = {
+						any_state = {
+							is_owned_by = ROOT
+							any_neighbor_state = {
+								FROM = {
+									divisions_in_state = {
+										type = infantry
+										size > 1
+										state = PREV
+									}
+								}	
+							}
+						}
+						
+					}
+					FROM = {
+						country_event = {
+							id = spoil_event.1101
+						}
+					}
+				}
+			}
 		}
 		remove_effect = {
 			set_variable = {
@@ -1715,6 +1962,30 @@ Spoil_battle = {
 				ROOT.spoil_MyCD = 120
 			}
 			set_country_flag = spoilCD
+			hidden_effect = {
+				if = {
+					limit = {
+						any_state = {
+							is_owned_by = ROOT
+							any_neighbor_state = {
+								FROM = {
+									divisions_in_state = {
+										type = infantry
+										size > 1
+										state = PREV
+									}
+								}	
+							}
+						}
+						
+					}
+					FROM = {
+						country_event = {
+							id = spoil_event.1101
+						}
+					}
+				}
+			}
 		}
 		remove_effect = {
 			set_variable = {
@@ -1873,6 +2144,30 @@ Spoil_battle = {
 				ROOT.spoil_MyCD = 185
 			}
 			set_country_flag = spoilCD
+			hidden_effect = {
+				if = {
+					limit = {
+						any_state = {
+							is_owned_by = ROOT
+							any_neighbor_state = {
+								FROM = {
+									divisions_in_state = {
+										type = infantry
+										size > 1
+										state = PREV
+									}
+								}	
+							}
+						}
+						
+					}
+					FROM = {
+						country_event = {
+							id = spoil_event.1101
+						}
+					}
+				}
+			}
 		}
 		remove_effect = {
 			set_variable = {
@@ -2053,6 +2348,30 @@ Spoil_battle = {
 				ROOT.spoil_MyCD = 120
 			}
 			set_country_flag = spoilCD
+			hidden_effect = {
+				if = {
+					limit = {
+						any_state = {
+							is_owned_by = ROOT
+							any_neighbor_state = {
+								FROM = {
+									divisions_in_state = {
+										type = infantry
+										size > 1
+										state = PREV
+									}
+								}	
+							}
+						}
+						
+					}
+					FROM = {
+						country_event = {
+							id = spoil_event.1101
+						}
+					}
+				}
+			}
 		}
 		remove_effect = {
 			set_variable = {
@@ -2217,6 +2536,30 @@ Spoil_battle = {
 				ROOT.spoil_MyCD = 120
 			}
 			set_country_flag = spoilCD
+			hidden_effect = {
+				if = {
+					limit = {
+						any_state = {
+							is_owned_by = ROOT
+							any_neighbor_state = {
+								FROM = {
+									divisions_in_state = {
+										type = infantry
+										size > 1
+										state = PREV
+									}
+								}	
+							}
+						}
+						
+					}
+					FROM = {
+						country_event = {
+							id = spoil_event.1101
+						}
+					}
+				}
+			}
 		}
 		remove_effect = {
 			set_variable = {
@@ -2375,6 +2718,30 @@ Spoil_battle = {
 				ROOT.spoil_MyCD = 185
 			}
 			set_country_flag = spoilCD
+			hidden_effect = {
+				if = {
+					limit = {
+						any_state = {
+							is_owned_by = ROOT
+							any_neighbor_state = {
+								FROM = {
+									divisions_in_state = {
+										type = infantry
+										size > 1
+										state = PREV
+									}
+								}	
+							}
+						}
+						
+					}
+					FROM = {
+						country_event = {
+							id = spoil_event.1101
+						}
+					}
+				}
+			}
 		}
 		remove_effect = {
 			set_variable = {
