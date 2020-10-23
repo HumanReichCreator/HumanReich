@@ -19,7 +19,7 @@ ideas = {
 				war_support_weekly = 0.01
 				stability_weekly = 0.015
 				army_org_factor = 0.1
-				fandong_drift = 0.01
+				neworder_drift = 0.01
 			}
 		}
 		SGS_battle_fairy_restlessness_idea = {
@@ -131,17 +131,47 @@ ideas = {
 			}
 		}
 		SGS_country_building_idea = {
-			picture = spa_duty_to_work
+			picture = generic_build_infrastructure
 			modifier = {
 				production_speed_infrastructure_factor = 0.15
 				production_speed_industrial_complex_factor = 0.2
 				production_speed_arms_factory_factor = 0.1
 			}
 		}
+		SGS_country_building_mic_idea = {
+			picture = generic_build_infrastructure
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_arms_factory_factor = 0.15
+				conversion_cost_civ_to_mil_factor = 0.2
+			}
+		}
+		SGS_country_building_cic_idea = {
+			picture = generic_build_infrastructure
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				production_speed_industrial_complex_factor = 0.25
+				production_speed_arms_factory_factor = 0.1
+				conversion_cost_mil_to_civ_factor = 0.2
+			}
+		}
+		SGS_organize_smart_fairy_idea = {
+			picture = jap_supremacy_of_will
+			modifier = {
+				research_speed_factor = 0.2
+			}
+		}
 		SGS_use_a_factory_picking_idea = {
 			picture = man_five_year_plan_industry
 			modifier = {
 				civilian_factory_use = 1
+			}
+		}
+		SGS_use_a_factory_picking_2_idea = {
+			picture = man_five_year_plan_industry
+			modifier = {
+				civilian_factory_use = 3
 			}
 		}
 	}

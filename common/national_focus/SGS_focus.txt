@@ -24,14 +24,12 @@ focus_tree = {
 			add_political_power = 30
 			#出个事件介绍一下情况
 			country_event = {
-				id = sgs.200 
-				
+				id = sgs.200
 			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		
 		cancel_if_invalid = no
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -102,7 +100,29 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SGS_develop_our_country_focus
-		completion_reward = {#先点的话会给一个军转民的buff，小幅增躁动
+		completion_reward = {
+			#先点的话会给一个军转民的buff，小幅增躁动
+			custom_effect_tooltip = up_sgs_uprise
+			add_to_variable = {
+				sgs_uprise = 3
+			}
+			add_to_variable = {
+				sgs_star_infl = 3
+			}
+			clamp_variable = {
+				var = sgs_uprise
+				min = 1
+				max = 150
+			}
+			if = {
+				limit = {
+					has_idea = SGS_country_building_idea
+				}
+				swap_ideas = {
+					remove_idea = SGS_country_building_idea
+					add_idea = SGS_country_building_cic_idea
+				}
+			}
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -136,7 +156,8 @@ focus_tree = {
 		x = 3
 		y = 2
 		relative_position_id = SGS_develop_our_country_focus
-		completion_reward = {#加较多躁动
+		completion_reward = {
+			#加较多躁动
 			random_owned_controlled_state = {
 				add_building_construction = {
 					level = 1
@@ -171,7 +192,8 @@ focus_tree = {
 		x = 2
 		y = 3
 		relative_position_id = SGS_develop_our_country_focus
-		completion_reward = {#加少量躁动
+		completion_reward = {
+			#加少量躁动
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 			}
@@ -235,8 +257,7 @@ focus_tree = {
 			}
 			set_country_flag = sgs_tend_to_pacify_BaF
 		}
-		
-		#国家精神修正
+		#国家精神修正√
 		ai_will_do = {
 			factor = 1
 		}
@@ -254,6 +275,7 @@ focus_tree = {
 		x = 11
 		y = 1
 		relative_position_id = SGS_battle_fariy_issue_focus
+		#加政治点数，减斗争，加少量躁动
 	}
 	focus = {
 		id = SGS_fairy_withou_battle_focus
@@ -268,6 +290,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SGS_try_new_ways_focus
+		#+S，和平，加稳定和躁动，平等一格，AI修正
 	}
 	focus = {
 		id = SGS_strong_fariy_be_youkai_focus
@@ -282,8 +305,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SGS_try_new_ways_focus
+		##+L，妖怪，降稳定和躁动，集体一格。AI修正
 	}
-	focus = {#先点的话会给一个民转军的buff，小幅降躁动
+	focus = {
+		#先点的话会给一个民转军的buff，小幅降躁动
 		id = SGS_develop_mic_focus
 		icon = GFX_goal_generic_construct_mil_factory
 		cost = 5
@@ -295,6 +320,25 @@ focus_tree = {
 		y = 1
 		relative_position_id = SGS_pacify_battle_fariy_focus
 		completion_reward = {
+			custom_effect_tooltip = down_sgs_uprise_little
+			subtract_from_variable = {
+				sgs_uprise = 3
+			}
+			clamp_variable = {
+				var = sgs_uprise
+				min = 1
+				max = 150
+			}
+			if = {
+				limit = {
+					has_idea = SGS_country_building_idea
+					
+				}
+				swap_ideas = {
+					remove_idea = SGS_country_building_idea
+					add_idea = SGS_country_building_mic_idea
+				}
+			}
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -318,7 +362,8 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {#加科研槽，加躁动和稳定，追加全体科研加速
+	focus = {
+		#加科研槽，加躁动和稳定，追加全体科研加速
 		id = SGS_develop_tech_focus
 		icon = GFX_focus_research
 		cost = 5
@@ -328,6 +373,23 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = SGS_develop_our_country_focus
+		completion_reward = {
+			add_research_slot = 1
+			custom_effect_tooltip = up_sgs_uprise
+			subtract_from_variable = {
+				sgs_uprise = 8
+			}
+			clamp_variable = {
+				var = sgs_uprise
+				min = 1
+				max = 150
+			}
+			add_stability = 0.15
+			add_timed_idea = {
+				idea = SGS_organize_smart_fairy_idea
+				days = 180
+			}
+		}
 	}
 	focus = {
 		id = SGS_communicate_with_others_focus
@@ -352,9 +414,11 @@ focus_tree = {
 		relative_position_id = SGS_communicate_with_others_focus
 	}
 	focus = {
+		#事件选址和选形式，影响支持率，结果都降躁动，视选择变化战争支持率和稳定。当前省份人力增长提升
 		id = SGS_fairy_shrine_focus
 		icon = GFX_focus_jap_spiritual_mobilization
 		cost = 5
+		cancelable = no
 		prerequisite = {
 			focus = SGS_pacify_battle_fariy_focus
 		}
@@ -362,10 +426,21 @@ focus_tree = {
 		y = 1
 		relative_position_id = SGS_pacify_battle_fariy_focus
 		select_effect = {
-			#country_event = { id = ustates.500 days = 3 }
+			country_event = {
+				id = sgs.202
+				days = 1
+			}
+		}
+		completion_reward = {
+			add_political_power = 30
+			country_event = {
+				id = sgs.203
+				days = 1
+			}
 		}
 	}
-	focus = {#出个事件问建什么样的学校，提供不同buff和降低稳定和影响战争稳定。默认会给一些笼统的科学的加成
+	focus = {
+		#出个事件问建什么样的学校，提供不同buff和降低稳定和影响战争稳定。默认会给一些笼统的科学的加成
 		id = SGS_knowlege_from_BaF_focus
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		cost = 5
@@ -376,6 +451,23 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SGS_develop_our_country_focus
+		completion_reward = {
+			#custom_effect_tooltip = up_sgs_uprise
+			country_event = {
+				id = sgs.201
+			}
+			add_tech_bonus = {
+				bonus = 0.6
+				uses = 1
+				category = industrys
+			}
+			add_tech_bonus = {
+				bonus = 0.4
+				uses = 1
+				category = math
+			}
+		}
+		
 	}
 	focus = {
 		id = SGS_trade_about_industry_focus
@@ -398,6 +490,7 @@ focus_tree = {
 		x = -3
 		y = 2
 		relative_position_id = SGS_try_new_ways_focus
+		#参考原国策树
 	}
 	focus = {
 		id = SGS_surpress_bad_BaF_focus
@@ -409,6 +502,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SGS_fairy_withou_battle_focus
+		#降战争支持率和斗争，加稳定和star；一半概率问要不要继续镇压，继续的话减人力斗争，加躁动和稳定。AI的话star高且斗争高会做，军民有冲突会做
 	}
 	focus = {
 		id = SGS_analysis_spirit_focus
@@ -423,8 +517,10 @@ focus_tree = {
 		x = -3
 		y = 4
 		relative_position_id = SGS_try_new_ways_focus
+		#灵力进一步增强，魔法科技bonus，加妖怪，加唯心
 	}
 	focus = {
+		#加陆军经验、指挥点数。降躁动、加军事理论加成
 		id = SGS_war_school_focus
 		icon = GFX_focus_usa_guarantee_the_american_dream
 		cost = 5
@@ -434,8 +530,27 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SGS_pacify_battle_fariy_focus
+		completion_reward = {
+			army_experience = 35
+			add_tech_bonus = {
+				bonus = 0.35
+				uses = 2
+				category = land_doctrine
+			}
+			custom_effect_tooltip = down_sgs_uprise_middle
+			subtract_from_variable = {
+				sgs_uprise = 8
+			}
+			clamp_variable = {
+				var = sgs_uprise
+				min = 1
+				max = 150
+			}
+			add_command_power = 30
+		}
 	}
 	focus = {
+		#加军事经验，加斗争，降大量躁动，但会让人催着要打仗
 		id = SGS_drill_in_the_mountain_focus
 		icon = GFX_focus_chi_army_reform
 		cost = 5
@@ -445,8 +560,27 @@ focus_tree = {
 		x = 1
 		y = 3
 		relative_position_id = SGS_pacify_battle_fariy_focus
+		completion_reward = {
+			custom_effect_tooltip = down_sgs_uprise_much
+			multiply_variable = {
+				sgs_uprise = 0.3
+			}
+			add_popularity = {
+				ideology = neworder
+				popularity = 0.25
+			}
+			army_experience = 50
+			hidden_effect = {
+				country_event = {
+					id = sgs.4
+					days = 10
+					random = 720
+				}
+			}
+			
+		}
 	}
-	focus = {
+	focus = {#增强将领
 		id = SGS_be_stronger_focus
 		icon = GFX_focus_hol_united_netherlands
 		cost = 5
@@ -456,8 +590,10 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = SGS_try_new_ways_focus
+		#没想好
 	}
-	focus = {#给枪，给研究枪的加速，给生产枪的加速（降可靠性，如果可以的话可以解锁河童的武器制造虽然估计没有
+	focus = {
+		#给枪，给研究枪的加速，给生产枪的加速（降可靠性，如果可以的话可以解锁河童的武器制造虽然估计没有
 		id = SGS_learning_weapon_blueprint_focus
 		icon = GFX_goal_generic_small_arms
 		cost = 5
@@ -470,6 +606,23 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = SGS_pacify_battle_fariy_focus
+		completion_reward = {
+			set_technology = {
+				buqiang117 = 1
+			}
+			equipment_bonus = {
+				buqiang_a = {
+                    reliability = -0.05
+                    build_cost_ic = -0.20
+                    instant = yes
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = buqiang_a
+				amount = 400
+			}
+			#来个buff√
+		}
 	}
 	focus = {
 		id = SGS_BaF_play_with_fairy_focus
@@ -481,5 +634,40 @@ focus_tree = {
 		x = -3
 		y = 3
 		relative_position_id = SGS_pacify_battle_fariy_focus
+		completion_reward = {
+			#降稳定，降躁动，减斗争。 随后几率发生和解还是不和解
+			custom_effect_tooltip = down_sgs_uprise_much
+			subtract_from_variable = {
+				sgs_uprise = 10
+			}
+			clamp_variable = {
+				var = sgs_uprise
+				min = 1
+				max = 150
+			}
+			add_stability = -0.15
+			add_popularity = {
+				ideology = neworder
+				popularity = -0.2
+			}
+			random_list = {
+				50 = {
+					country_event = {
+						id = sgs.205
+						days = 1
+					}
+				}
+				50 = {
+					country_event = {
+						id = sgs.206
+						days = 1
+					}
+					modifier = {
+						factor = 1.5
+						neworder>0.5
+					}
+				}
+			}
+		}
 	}
 }

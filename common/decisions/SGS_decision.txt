@@ -484,4 +484,37 @@ SGS_category = {
 		days_mission_timeout = var:ROOT.sgs_doing_days
 		is_good = no
 	}
+
+	SGS_war_promise_deci = {
+		# This is our mission id
+		available = {
+			# 任务目标
+			has_war = yes
+		}
+		activation = {
+			#always = no
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 120
+		timeout_effect = {
+			country_event = {
+				id = spoil_event.5
+				days = 1
+				random = 1
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = down_sgs_uprise_middle
+			subtract_from_variable = {
+				sgs_uprise = 10
+			}
+			clamp_variable = {
+				var = sgs_uprise
+				min = 1
+				max = 150
+			}
+			add_stability = 0.1
+		}
+	}
 }
