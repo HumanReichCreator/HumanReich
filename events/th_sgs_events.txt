@@ -2676,6 +2676,7 @@ country_event = {
 		}
 		add_stability = -0.05
 		add_manpower = -30
+		set_country_flag = sgs_fairy_dont_like_BaF
 		ai_chance = {
 			base = 35
 		}
@@ -3631,7 +3632,7 @@ country_event = {
 				ideology = oldorder
 				popularity = 0.07
 			}
-			PO_influence_factor0.1 = yes
+			PO_influence_factor0.05 = yes
 			add_stability = 0.05
 		}
 		ai_chance = {
@@ -3822,4 +3823,274 @@ country_event = {
 			base = 35
 		}
 	}
+}
+country_event = {
+	#选择研究方向
+	id = sgs.207
+	title = sgs.207.t
+	desc = sgs.207.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	
+	option = {
+		#科技
+		name = sgs.207.1
+		
+		set_country_flag = sgs_magic_tech_focus
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#灵力+唯心
+		name = sgs.207.2
+		
+		set_country_flag = sgs_spirit_power_focus
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#资源产出
+		name = sgs.207.3
+		
+		set_country_flag = sgs_resources_output_focus
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#研究方向结果
+	id = sgs.208
+	title = sgs.208.t
+	desc = sgs.208.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	
+	option = {
+		#科技
+		name = sgs.208.1
+		trigger = {
+			has_country_flag = sgs_magic_tech_focus
+		}
+		add_tech_bonus = {
+			bonus = 0.1
+			uses = 3
+			category = magic
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#灵力+唯心
+		name = sgs.208.1
+		trigger = {
+			has_country_flag = sgs_spirit_power_focus
+		}
+		PO_influence_factor0.05 = yes
+		OL_add5 = yes
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#资源产出
+		name = sgs.208.1
+		trigger = {
+			has_country_flag = sgs_resources_output_focus
+		}
+		random_owned_controlled_state ={
+			add_resource = {
+				type = gas
+				amount = 3
+			}
+		}
+		random_owned_controlled_state ={
+			add_resource = {
+				type = crystal
+				amount = 2
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#使节出发
+	id = sgs.209
+	title = sgs.209.t
+	desc = sgs.209.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#祝你们好运
+		name = sgs.209.1
+		set_variable = { sgs_visited_fairy = 0 }
+		country_event = {
+			id = sgs.210
+			days = 1
+		}
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#草原妖精去不去
+	id = sgs.210
+	title = sgs.210.t
+	desc = sgs.210.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#去
+		name = sgs.210.1
+		
+		country_event = {
+			id = sgs.211
+			days = 5
+		}
+		ai_chance = {
+			base = 30
+			modifier = {
+				factor = 0.1
+				CIR = {
+					has_government = neworder
+				}
+			}
+			modifier = {
+				factor = 0.1
+				has_country_flag = sgs_trade_with_SCA_ind
+			}
+		}
+	}
+	option = {
+		#不去
+		name = sgs.210.1
+		country_event = {
+			id = sgs.212
+			days = 5
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+country_event = {
+	#草原妖精
+	id = sgs.211
+	title = sgs.211.t
+	desc = sgs.211.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#简单交流
+		name = sgs.211.1
+		add_political_power = 10
+		SC2 = {
+			add_ai_strategy = {
+				type = befriend
+				id = sgs
+				value = 10
+			}
+		}
+		#影响以后的拉拢倾向
+		add_to_variable = { sgs_visited_fairy = 1 }
+		country_event = {
+			id = sgs.212
+			days = 5
+		}
+		ai_chance = {
+			base = 30
+			
+		}
+	}
+	option = {
+		#承诺不进攻，换科技
+		name = sgs.211.2
+		diplomatic_relation = {
+			country = SC2
+			relation = non_aggression_pact
+		}
+		add_tech_bonus = {
+			bonus = 0.3
+			uses = 1
+			category = civil
+		}
+		SC2 = {
+			add_ai_strategy = {
+				type = befriend
+				id = sgs
+				value = 25
+			}
+		}
+		#影响以后的拉拢倾向
+		add_to_variable = { sgs_visited_fairy = 1 }
+		country_event = {
+			id = sgs.212
+			days = 5
+		}
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 1.5
+				guli > 0.3
+			}
+		}
+	}
+	option = {
+		#承诺不进攻且保障独立，换更多科技
+		name = sgs.211.3
+		add_tech_bonus = {
+			bonus = 0.3
+			uses = 2
+			category = civil
+		}
+		add_tech_bonus = {
+			bonus = 0.2
+			uses = 1
+			category = combined
+		}
+		SC2 = {
+			add_ai_strategy = {
+				type = befriend
+				id = sgs
+				value = 40
+			}
+		}
+		#影响以后的拉拢倾向
+		add_to_variable = { sgs_visited_fairy = 1 }
+		country_event = {
+			id = sgs.212
+			days = 5
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 5
+				guli > 0.5
+			}
+		}
+	}
+
 }
