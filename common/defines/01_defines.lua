@@ -3,6 +3,8 @@ NDefines.NGame.END_DATE = "165.1.1.1"
 NDefines.NGame.MAP_SCALE_PIXEL_TO_KM = 200
 NDefines.NGame.FUEL_RESOURCE = "energy"
 NDefines.NGame.HANDS_OFF_START_TAG = "SAK"
+NDefines.NGame.EVENT_TIMEOUT_DEFAULT = 2						-- Default days before an event times out if not scripted
+NDefines.NGame.MISSION_REMOVE_FROM_INTERFACE_DEFAULT = 2
 
 NDefines.NDiplomacy.MAX_OPINION_VALUE = 200--changed-- Max opinion value cap.
 NDefines.NDiplomacy.MIN_OPINION_VALUE = -200--changed-- Min opinion value cap.

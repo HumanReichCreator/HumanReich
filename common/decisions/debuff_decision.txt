@@ -1,0 +1,115 @@
+debuff_category = {
+	debuff_use_one_CIC_No1 = {
+		# This is our mission id
+		available = {
+			# 任务目标
+			always = no
+		}
+		activation = {
+			always = no
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+		modifier = {
+			civilian_factory_use = 1
+		}
+		timeout_effect = {
+			
+		}
+		complete_effect = {
+			
+		}
+	}
+	debuff_use_two_CIC_No1 = {
+		# This is our mission id
+		available = {
+			# 任务目标
+			always = no
+		}
+		activation = {
+			always = no
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+		modifier = {
+			civilian_factory_use = 2
+		}
+		timeout_effect = {
+			
+		}
+		complete_effect = {
+			
+		}
+	}
+	debuff_use_one_CIC_No2 = {
+		# This is our mission id
+		available = {
+			# 任务目标
+			always = no
+		}
+		activation = {
+			always = no
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+		modifier = {
+			civilian_factory_use = 2
+		}
+		timeout_effect = {
+			
+		}
+		complete_effect = {
+			
+		}
+	}
+	debuff_use_one_CIC_No3 = {
+		# This is our mission id
+		available = {
+			# 任务目标
+			always = no
+		}
+		activation = {
+			always = no
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+		modifier = {
+			civilian_factory_use = 3
+		}
+		timeout_effect = {
+			
+		}
+		complete_effect = {
+			
+		}
+	}
+
+
+	debuff_send_military_adviser = {
+		# This is our mission id
+		available = {
+			# 任务目标
+			always = no
+		}
+		activation = {
+			always = no
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 60
+		modifier = {
+			minimum_training_level = -0.05
+			training_time_army_factor = 0.2  
+		}
+		timeout_effect = {
+			
+		}
+		complete_effect = {
+			
+		}
+	}
+}
