@@ -492,14 +492,14 @@ SGS_category = {
 			has_war = yes
 		}
 		activation = {
-			#always = no
+			always = no
 		}
 		is_good = no
 		selectable_mission = no
 		days_mission_timeout = 120
 		timeout_effect = {
 			country_event = {
-				id = spoil_event.5
+				id = sgs.5
 				days = 1
 				random = 1
 			}

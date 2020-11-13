@@ -15,9 +15,16 @@ opinion_modifiers = {
 	SGS_show_peace_op = {
 		value = 10
 	}
+	SGS_fariy_friendship_op = {
+		value = 30
+	}
 	SGS_show_peace_trade_op = {
 		trade = yes
 		value = 30
+	}
+	SGS_dislike_BaF_trade_op = {
+		trade = yes
+		value = -60
 	}
 }	
 

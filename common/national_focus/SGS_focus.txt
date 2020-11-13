@@ -529,7 +529,7 @@ focus_tree = {
 				}
 				add_ai_strategy = {
 					type = antagonize
-					id = sgs
+					id = SGS
 					value = -5
 				}
 
@@ -555,8 +555,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_to_variable = {
-				sgs_star_infl = 3
+			country_event={
+				id = sgs.222
 			}
 			add_popularity = {
 				ideology = guli
@@ -775,7 +775,7 @@ focus_tree = {
 				country_event = {
 					id = sgs.4
 					days = 10
-					random = 720
+					random = 360
 				}
 			}
 		}
@@ -820,18 +820,14 @@ focus_tree = {
 			set_technology = {
 				buqiang117 = 1
 			}
-			equipment_bonus = {
-				buqiang_a = {
-					reliability = -0.05
-					build_cost_ic = -0.2
-					instant = yes
-				}
-			}
+		add_ideas = {
+			SGS_imitate_guns_idea
+		}
 			add_equipment_to_stockpile = {
 				type = buqiang_a
 				amount = 400
 			}
-			#来个buff√
+			#来个buff×
 		}
 	}
 	focus = {
@@ -855,7 +851,7 @@ focus_tree = {
 				min = 1
 				max = 150
 			}
-			add_stability = -0.15
+			add_stability = -0.08
 			add_popularity = {
 				ideology = neworder
 				popularity = -0.2
