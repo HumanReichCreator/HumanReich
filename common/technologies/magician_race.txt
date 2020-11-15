@@ -44,7 +44,7 @@ technologies = {
 		political_power_gain = 0.15
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
 		folder = {
 			name = Magician_race_tech_folder
@@ -72,7 +72,7 @@ technologies = {
 
 		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
 		folder = {
 			name = Magician_race_tech_folder
@@ -100,7 +100,7 @@ technologies = {
 
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = Magician_race_tech_folder
@@ -128,7 +128,7 @@ technologies = {
 
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
 		folder = {
 			name = Magician_race_tech_folder
@@ -149,7 +149,7 @@ technologies = {
 		research_speed_factor = 0.03
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
 		stability_factor = 0.05
 		political_power_gain = 0.15
@@ -175,33 +175,21 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		ma_militia = {
-			hardness = 0.5
-		}
 		ma_infantry = {
-			hardness = 0.5
+			hardness = 1
 		}
 		ma_light_infantry = {
-			hardness = 0.5
-		}
-		ma_motorized = {
-			hardness = 0.5
-		}
-		sc_militia = {
-			hardness = 6.5
+			hardness = 1
 		}
 		sc_infantry = {
-			hardness = 6.5
+			hardness = 9
 		}
 		sc_light_infantry = {
-			hardness = 6.5
-		}
-		sc_motorized = {
-			hardness = 6.5
+			hardness = 9
 		}
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
 		
 
@@ -226,16 +214,25 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		category_science_infantry = {
+		ma_infantry = {
 			max_organisation = 10
 		}
-		category_magic_infantry = {
+		sc_infantry = {
+			max_organisation = 10
+		}
+		melee_infantry = {
+			max_organisation = 10
+		}
+		sc_shield_infantry = {
+			max_organisation = 10
+		}
+		ma_shield_infantry = {
 			max_organisation = 10
 		}
 
 		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
 		folder = {
 			name = Magician_race_tech_folder
@@ -258,18 +255,30 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		category_science_infantry = {
+		ma_infantry = {
 			soft_attack = 0.05
 			hard_attack = 0.05
 		}
-		category_magic_infantry = {
+		sc_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		melee_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		sc_shield_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		ma_shield_infantry = {
 			soft_attack = 0.05
 			hard_attack = 0.05
 		}
 
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = Magician_race_tech_folder
@@ -292,17 +301,26 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		category_science_infantry = {
+		ma_infantry = {
 			max_organisation = 10
 		}
-		category_magic_infantry = {
+		sc_infantry = {
+			max_organisation = 10
+		}
+		melee_infantry = {
+			max_organisation = 10
+		}
+		sc_shield_infantry = {
+			max_organisation = 10
+		}
+		ma_shield_infantry = {
 			max_organisation = 10
 		}
 
 
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
 		folder = {
 			name = Magician_race_tech_folder
@@ -322,13 +340,25 @@ technologies = {
 
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
-		category_science_infantry = {
+		ma_infantry = {
 			soft_attack = 0.05
 			hard_attack = 0.05
 		}
-		category_magic_infantry = {
+		sc_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		melee_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		sc_shield_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		ma_shield_infantry = {
 			soft_attack = 0.05
 			hard_attack = 0.05
 		}
@@ -354,16 +384,25 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Magician_special_1
+		sc_mortar_brigade = {
+			max_organisation = 15
+			default_morale = 0.01
 		}
-
-		enable_subunits = {
-			Magician_special
+		ma_magic_energy_brigade = {
+			max_organisation = 15
+			default_morale = 0.01
+		}
+		sc_anti_shield_brigade = {
+			max_organisation = 15
+			default_morale = 0.01
+		}
+		ma_magic_focus_brigade = {
+			max_organisation = 15
+			default_morale = 0.01
 		}
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
 		folder = {
 			name = Magician_race_tech_folder
@@ -386,16 +425,25 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Magician_special_2
+		sc_mortar_brigade = {
+			soft_attack = 0.15
+			hard_attack = 0.15
 		}
-
-		Magician_special = {
-			combat_width = -5
+		ma_magic_energy_brigade = {
+			soft_attack = 0.15
+			hard_attack = 0.15
+		}
+		sc_anti_shield_brigade = {
+			soft_attack = 0.15
+			hard_attack = 0.15
+		}
+		ma_magic_focus_brigade = {
+			soft_attack = 0.15
+			hard_attack = 0.15
 		}
 		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
 		folder = {
 			name = Magician_race_tech_folder
@@ -418,17 +466,22 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Magician_special_3
+		sc_mortar_brigade = {
+			combat_width = -5
 		}
-
-		Magician_special = {
+		ma_magic_energy_brigade = {
+			combat_width = -5
+		}
+		sc_anti_shield_brigade = {
+			combat_width = -5
+		}
+		ma_magic_focus_brigade = {
 			combat_width = -5
 		}
 
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = Magician_race_tech_folder
@@ -451,16 +504,25 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Magician_special_4
+		sc_mortar_brigade = {
+			soft_attack = 0.15
+			hard_attack = 0.15
 		}
-
-		Magician_special = {
-			combat_width = -5
+		ma_magic_energy_brigade = {
+			soft_attack = 0.15
+			hard_attack = 0.15
+		}
+		sc_anti_shield_brigade = {
+			soft_attack = 0.15
+			hard_attack = 0.15
+		}
+		ma_magic_focus_brigade = {
+			soft_attack = 0.15
+			hard_attack = 0.15
 		}
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
 		folder = {
 			name = Magician_race_tech_folder
@@ -479,14 +541,19 @@ technologies = {
 	xiandaiwunvban5 = {
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
-		enable_equipments = {
-			Magician_special_5
+		sc_mortar_brigade = {
+			maximum_speed = 0.25
 		}
-
-		Magician_special = {
-			combat_width = -5
+		ma_magic_energy_brigade = {
+			maximum_speed = 0.25
+		}
+		sc_anti_shield_brigade = {
+			maximum_speed = 0.25
+		}
+		ma_magic_focus_brigade = {
+			maximum_speed = 0.25
 		}
 
 		folder = {

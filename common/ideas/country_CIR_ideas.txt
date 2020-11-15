@@ -3,7 +3,7 @@ ideas = {
 		cir_yaoguaidediwei_idea = {
 			picture = FRA_matignon_agreements
 			modifier = {
-				generate_wargoal_tension = 0.5
+				generate_wargoal_tension = 0.3
 			}
 			available = {
 
@@ -16,6 +16,11 @@ ideas = {
 				war_support_factor = 0.1
 				monthly_population = 0.25
 			}
+			targeted_modifier = { 
+				tag = SCA
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}	
 			available = {
 				is_subject = no
 			}
@@ -448,8 +453,8 @@ ideas = {
 
 			targeted_modifier = { 
 				tag = SCA
-				attack_bonus_against = 0.085
-				defense_bonus_against = 0.085
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
 			}			
 	    }
 
@@ -487,8 +492,8 @@ ideas = {
 
 			targeted_modifier = { 
 				tag = SCA
-				attack_bonus_against = 0.12
-				defense_bonus_against = 0.12
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.2
 			}			
 	    }
 

@@ -1,7 +1,10 @@
 ﻿division_template = {
-	name = "后方编制"
+	name = "扫荡编制"
 	regiments = {
-		ma_militia = { x = 0 y = 0 }
+		ma_light_infantry = { x = 0 y = 0 }
+		ma_light_infantry = { x = 0 y = 1 }
+		ma_light_infantry = { x = 0 y = 2 }
+		ma_light_infantry = { x = 0 y = 3 }
 	}
 	support = {
 	}
@@ -11,7 +14,8 @@ division_template = {
 	regiments = {
 		ma_infantry = { x = 0 y = 0 }
 		ma_infantry = { x = 0 y = 1 }
-		ma_militia = { x = 0 y = 2 }
+		melee_infantry = { x = 0 y = 2 }
+		melee_infantry = { x = 0 y = 3 }
 	}
 	support = {
 	}
@@ -20,65 +24,65 @@ division_template = {
 
 units = {
 	division = {
-		name = "后方编制"
+		name = "扫荡编制"
 		location = 5945
-		division_template = "后方编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "后方编制"
+		name = "扫荡编制"
 		location = 5945
-		division_template = "后方编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "后方编制"
+		name = "扫荡编制"
 		location = 5945
-		division_template = "后方编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "后方编制"
+		name = "扫荡编制"
 		location = 260
-		division_template = "后方编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "后方编制"
+		name = "扫荡编制"
 		location = 5945
-		division_template = "后方编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "后方编制"
+		name = "扫荡编制"
 		location = 5945
-		division_template = "后方编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "后方编制"
+		name = "扫荡编制"
 		location = 5945
-		division_template = "后方编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "后方编制"
+		name = "扫荡编制"
 		location = 5945
-		division_template = "后方编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "后方编制"
+		name = "扫荡编制"
 		location = 5945
-		division_template = "后方编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1
 	}
@@ -126,72 +130,72 @@ units = {
 	}
 
 	division = {
-		name = "后方编制"
+		name = "扫荡编制"
 		location = 5945
-		division_template = "后方编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "后方编制"
+		name = "扫荡编制"
 		location = 5945
-		division_template = "后方编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "后方编制"
+		name = "扫荡编制"
 		location = 5945
-		division_template = "后方编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "后方编制"
+		name = "扫荡编制"
 		location = 5945
-		division_template = "后方编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "后方编制"
+		name = "扫荡编制"
 		location = 323
-		division_template = "后方编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "后方编制"
+		name = "扫荡编制"
 		location = 5945
-		division_template = "后方编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "后方编制"
+		name = "扫荡编制"
 		location = 5945
-		division_template = "后方编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "后方编制"
+		name = "扫荡编制"
 		location = 5945
-		division_template = "后方编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "后方编制"
+		name = "扫荡编制"
 		location = 260
-		division_template = "后方编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "后方编制"
+		name = "扫荡编制"
 		location = 5945
-		division_template = "后方编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1
 	}
@@ -235,6 +239,14 @@ units = {
 		name = "新编革命编制"
 		location = 302
 		division_template = "新编革命编制"
+		start_experience_factor = 0.55
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "扫荡编制"
+		location = 1237
+		division_template = "扫荡编制"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1
 	}

@@ -79,5 +79,71 @@ upgrades = {
 		reliability = -0.1
 		
 	}
+
+	#############
+	up_sc_attack = {#1
+		max_level = 5
+
+		cost = land				
+		
+		soft_attack = 0.1
+		hard_attack = 0.1
+		ap_attack = -0.07
+		air_attack = -0.07
+	}
+	up_ma_attack = {#1
+		max_level = 5
+
+		cost = land				
+		
+		soft_attack = 0.1
+		hard_attack = 0.1
+		ap_attack = -0.07
+		air_attack = -0.07
+	}
+	up_defense = {#2
+		max_level = 5
+
+		cost = land				
+		
+		breakthrough = 0.1
+		defense = 0.1
+
+		air_attack = -0.05
+		reliability = -0.05
+	}
+	up_ap_attack = {#2
+		max_level = 5
+
+		cost = land				
+		
+		ap_attack = 0.15
+		
+		soft_attack = -0.03
+		hard_attack = -0.03
+		air_attack = -0.03
+	}
+	up_speed = {#3
+		max_level = 5
+		cost = land
+		maximum_speed = 0.04
+	}
+	up_speed_type2 = {#3
+		max_level = 5
+		cost = land
+		maximum_speed = 0.07
+	}
+	up_hardness = {#4
+		max_level = 5
+
+		cost = land				
+		
+		hardness = 0.1
+		soft_attack = -0.1
+		hard_attack = -0.1
+		breakthrough = -0.1
+		defense = -0.1
+	}
 	
+
 }

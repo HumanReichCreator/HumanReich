@@ -1,39 +1,30 @@
 ﻿capital = 273
-138.8.13 = {
-
-}
-141.6.2 = {
-    
-}
-142.3.8 = {
-    
-}
-144.2.5 = {
-    
-}
 146.1.1 = {
     set_technology = {
         #通用武器线
-        spell_card = 1
-        linglijiejing139 = 1
-        linglijiejing144 = 1
-        linglijiejing147 = 1
-        danmujingque139 = 1
-        danmujingque144 = 1
-        gaosudanmu139 = 1
-        gaosudanmu144 = 1
-        buqiang117 = 1
-        tezhong149 = 1
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        spell_card2 = 1
+        spear2 = 1
+        lingliliushuixian = 1
+        spell_card3 = 1
+        spear3 = 1
             
         #辅助
         zhiyuanzhuangbei = 1
 
         #专用辅助
-        fanyongmopao144 = 1
+        linglijiejie149 = 1
+        magic_energy1 = 1
 
         #专用基础
 
         #专用进阶
+        ma_shield1 = 1
+        tezhonglinglidanyuan1 = 1
 
         #混合系
 
@@ -49,10 +40,9 @@
         jisuangongju144 = 1
         tongxunlilun = 1
         jiemi137 = 1
-        jiemi142 = 1
+        
 
         jiami137 = 1
-        jiami142 = 1
         jiami147 = 1
 
         lingganleida142 = 1
@@ -75,8 +65,12 @@
         shengetansuo2 = 1
         shengge1 = 1
         shengge2 = 1
-            
+        
+        #秘密
+        shengmingxue = 1
+        jingshenxue = 1
     }
+    
 }
 146.1.1={
     oob = "OKI_146"

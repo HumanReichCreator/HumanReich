@@ -35,24 +35,24 @@ on_actions = {
 			}
 		}
 	}
-	on_daily_KOG = {
+	on_daily_TKM = {
 		effect = {
-			set_variable = { KOG_weekly = num_of_military_factories}
-			multiply_variable = { KOG_weekly = 0.2}
+			set_variable = { TKM_weekly = num_of_military_factories}
+			multiply_variable = { TKM_weekly = 0.2}
 			if = {
 				limit = {
-					has_completed_focus = KOG_leiguyaolizhuanyikecheng
+					has_completed_focus = TKM_leiguyaolizhuanyikecheng
 				}
-				multiply_variable = { KOG_weekly = 1.5}
+				multiply_variable = { TKM_weekly = 1.5}
 			}
 			if = {
 				limit = {
-					has_completed_focus = KOG_chengweizhenzhengdeshenming
+					has_completed_focus = TKM_chengweizhenzhengdeshenming
 				}
-				multiply_variable = { KOG_weekly = 0.8}
+				multiply_variable = { TKM_weekly = 0.8}
 			}
 			clamp_variable = {
-				var = KOG_weekly 
+				var = TKM_weekly 
 				min = 0
 				max = 20
 			}
@@ -60,7 +60,14 @@ on_actions = {
 				limit = {
 					has_war = yes
 				}
-				multiply_variable = { KOG_weekly = 0.5}
+				multiply_variable = { TKM_weekly = 0.5}
+			}
+			if = {
+				limit = {
+					has_war = yes
+					has_completed_focus = TKM_xiuzhengjiudaoju
+				}
+				set_variable = { TKM_weekly = 0}
 			}
 		}
 	}
@@ -82,26 +89,113 @@ on_actions = {
 			}
 		}
 	}
-	# on_weekly = {
-	# 	effect = {
-			
-	# 	}
-	# }
-	# on_monthly = {
-	# 	effect = {
-			
-		    
-	# 	}
-	# }
+  ### MEL effect
+  on_weekly_MEL = {
+		effect = {
+			if = {
+				limit = {
+					has_idea = MEL_Shared_military_refuse_center_idea
+				}
+				add_equipment_to_stockpile = {
+		            type = gun147
+		            amount = 50
+		            producer = MEL
+		        }
+		        add_equipment_to_stockpile = {
+		            type = mortar143
+		            amount = 2
+		            producer = MEL
+		        }
+			}
+      		if = {
+				limit = {
+			          OR = {
+			            has_idea = MEL_Shared_military_refuse_center_idea_2
+			            has_idea = MEL_Shared_military_refuse_center_idea_3
+			          }
+					
+				}
+				add_equipment_to_stockpile = {
+		            type = gun147
+		            amount = 75
+		            producer = MEL
+		        }
+		        add_equipment_to_stockpile = {
+		            type = mortar143
+		            amount = 3
+		            producer = MEL
+		        }
+			}
+		}
+	}
+
 	on_daily = {
 		effect = {
-			random_country = {
-			    every_state = {
+			##################only one country check
+			if = {
+				limit = {
+					has_country_flag = start_country
+				}
+				every_state = {
 			       	state_value_calculator = yes
 			    }
 			    power_global_value_generator = yes
-		    }
+			    set_variable = { global.z5 = 0}
+			    every_country = {
+			    	set_variable = {z1 = casualties_k }
+					if = {
+						limit = {
+							check_variable = { z1 > z2 }
+						}
+						set_temp_variable = { z4 = z1}
+						subtract_from_temp_variable = { z4 = z2}
+						add_to_variable = { z3 = z4}
+					}
+					set_variable = { z2 = z1}
+					add_to_variable = {global.z5 = z3}
+			    }
+			    if = {
+			    	limit = {
+			    		check_variable = { global.z5 > global.z6}
+			    	}
+			    	set_temp_variable = { global.z8 = global.z5}
+			    	subtract_from_temp_variable = { global.z8 = global.z6}
+			    	add_to_variable = { global.z7 = global.z8}
+			    }
+			    set_variable = { global.z6= global.z5 }
+			    set_global_flag = {
+			    	flag = is_checking
+			    	days = 2
+			    	value = 1
+			    }
+			}
+			if = {
+				limit = {
+					not = {
+						has_global_flag = is_checking
+					}
+				}
+				random_country = {
+					limit = {
+						is_ai = no
+					}
+					set_country_flag = start_country
+				}
+				if = {
+					limit = {
+						all_country = {
+							not = {
+								has_country_flag = start_country
+							}
+						}
+					}
+					random_country = {
+						set_country_flag = start_country
+					}
+				}
+			}
 
+			#################
 			if = {
 		    	limit = {
 		    		has_idea = Fairy
@@ -119,7 +213,7 @@ on_actions = {
 
 		    
 
-		    AC_daily_check = yes
+		    # AC_daily_check = yes
 
 		    country_value_calculator_and_manpower_gainer = yes
 
@@ -138,6 +232,8 @@ on_actions = {
 		    state_race_manpower = yes
 
 		    region_daily_check = yes
+
+		    FT_daily = yes
 
 		    if = {
 		    	limit = {
@@ -162,6 +258,19 @@ on_actions = {
 		    # }	
 
 		    # #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+			
+			# if = {
+			# 	limit = {
+			# 		has_war = no
+			# 		not = {
+			# 			has_country_flag = CAS_locked
+			# 		}
+			# 	}
+			# 	add_to_variable = {
+			# 		z2 = z1
+			# 	}
+			# 	set_country_flag = CAS_locked
+			# }
 		    
 		}
 	}

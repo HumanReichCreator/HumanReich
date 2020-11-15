@@ -61,13 +61,13 @@ Underground_alliance2 = {
 
 }
 
-SEI_MSD_help_temp_war1 = {
+SEJ_MSD_help_temp_war1 = {
 
 	# reversed = yes
 
 	enable = {
 		or = {
-			tag = SEI
+			tag = SEJ
 			tag = RMI
 			tag = NIB
 		}
@@ -135,13 +135,13 @@ HKR_MSD_help_temp_war1 = {
 
 }
 
-KOG_N_NMS_KAG_help_temp_war2 = {
+TKM_N_NMS_KAG_help_temp_war2 = {
 
 	# reversed = yes
 
 	enable = {
 		or = {
-			tag = KOG
+			tag = TKM
 			tag = NMS
 		}
 		
@@ -275,6 +275,7 @@ HUM_HKR_help_temp_war4 = {
 
 GH1_GH2_GH3_help = {
 	enable = {
+		date > 146.4.1
 		or = {
 			tag = GH1
 			tag = GH2

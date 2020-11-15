@@ -22,43 +22,118 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-	    sc_militia = {
-	      combat_width = -5
+	    melee_infantry = {
+	      max_strength = -15
+	      need = {
+			melee_a = -25
+		  }
 	    }
-	    ma_militia = {
-	      combat_width = -5
-	    }    
-	    sc_motorized = {
-	      combat_width = -5
-	    }
-	    ma_motorized = {
-	      combat_width = -5
+	    melee_cavalry = {
+	      max_strength = -15
+	      need = {
+			melee_a = -25
+		  }
 	    }     
 	    sc_infantry = {
-	      combat_width = -5
+	      max_strength = -15
+	      need = {
+			gun_a = -25
+		  }
 	    }
 	    ma_infantry = {
-	      combat_width = -5
+	      max_strength = -15
+	      need = {
+			magic_core_a = -25
+		  }
 	    }  
 	    sc_light_infantry = {
-	      combat_width = -5
+	      max_strength = -15
+	      need = {
+			gun_a = -25
+		  }
 	    }
 	    ma_light_infantry = {
-	      combat_width = -5
+	      max_strength = -15
+	      need = {
+			magic_core_a = -25
+		  }
 	    } 
-	    new_infantry = {
-			combat_width = -5
+	    sc_sf_infantry = {
+	      max_strength = -15
+	      need = {
+			smg_a = -25
+		  }
+	    }
+	    ma_sf_infantry = {
+	      max_strength = -15
+	      need = {
+			special_core_a = -25
+		  }
+	    } 
+	    sc_shield_infantry = {
+	      max_strength = -15
+	      need = {
+			speical_shield_a = -25
+		  }
+	    }
+	    ma_shield_infantry = {
+	      max_strength = -15
+	      need = {
+			core_shield_a = -25
+		  }
+	    } 
+	    on_research_complete = {
+			custom_effect_tooltip = ghost_tech_tt
 		}
 
-		category_science_infantry = {
-	    	max_strength = -20
-	    }
-	    category_magic_infantry = {
-	    	max_strength = -20
-	    }
-	    category_combined_infantry = {
-	    	max_strength = -20
-	    }
+	    melee_infantry = {
+			combat_width = -5
+		}
+		melee_cavalry = {
+			combat_width = -5
+		}
+		sc_infantry = {
+			combat_width = -5
+		}
+		sc_light_infantry = {
+			combat_width = -5
+		}
+		sc_sf_infantry = {
+			combat_width = -5
+		}
+		sc_shield_infantry = {
+			combat_width = -5
+		}
+		sc_mortar_brigade = {
+			combat_width = -5
+		}
+		sc_anti_shield_brigade = {
+			combat_width = -5
+		}
+		sc_shield_tank = {
+			combat_width = -5
+		}
+		ma_infantry = {
+			combat_width = -5
+		}
+		ma_light_infantry = {
+			combat_width = -5
+		}
+		ma_sf_infantry = {
+			combat_width = -5
+		}
+		ma_magic_energy_brigade = {
+			combat_width = -5
+		}
+		ma_magic_focus_brigade = {
+			combat_width = -5
+		}
+		ma_shield_infantry = {
+			combat_width = -5
+		}
+		ma_shield_tank = {
+			combat_width = -5
+		}
 
 	    
 	    dependencies = {
@@ -82,9 +157,9 @@ technologies = {
 		}
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
-		conscription_factor = -0.02
+		conscription_factor = -0.01
 		ARMY_infantry_ATTACK_FACTOR = 0.07
 		ARMY_infantry_defence_FACTOR = 0.07
 
@@ -109,12 +184,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		conscription_factor = -0.02
+		conscription_factor = -0.01
 		ARMY_infantry_ATTACK_FACTOR = 0.07
 		ARMY_infantry_defence_FACTOR = 0.07
 		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
 		folder = {
 			name = Ghost_race_tech_folder
@@ -137,12 +212,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		conscription_factor = -0.02
+		conscription_factor = -0.01
 		ARMY_infantry_ATTACK_FACTOR = 0.07
 		ARMY_infantry_defence_FACTOR = 0.07
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = Ghost_race_tech_folder
@@ -165,12 +240,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		conscription_factor = -0.02
+		conscription_factor = -0.01
 		ARMY_infantry_ATTACK_FACTOR = 0.06
 		ARMY_infantry_defence_FACTOR = 0.06
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
 		folder = {
 			name = Ghost_race_tech_folder
@@ -188,12 +263,12 @@ technologies = {
 
 	shitihua5 = {
 
-		conscription_factor = -0.02
+		conscription_factor = -0.01
 		ARMY_infantry_ATTACK_FACTOR = 0.06
 		ARMY_infantry_defence_FACTOR = 0.06
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
 		folder = {
 			name = Ghost_race_tech_folder
@@ -217,9 +292,9 @@ technologies = {
 		}
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
-		conscription_factor = -0.02
+		conscription_factor = -0.01
 		local_resources_factor = 0.1
 		attrition = -0.04
 
@@ -244,12 +319,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		conscription_factor = -0.02
+		conscription_factor = -0.01
 		local_resources_factor = 0.1
 		attrition = -0.04
 		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
 		folder = {
 			name = Ghost_race_tech_folder
@@ -272,12 +347,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		conscription_factor = -0.02
+		conscription_factor = -0.01
 		local_resources_factor = 0.1
 		attrition = -0.04
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = Ghost_race_tech_folder
@@ -300,12 +375,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		conscription_factor = -0.02
+		conscription_factor = -0.01
 		local_resources_factor = 0.1
 		attrition = -0.04
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
 		folder = {
 			name = Ghost_race_tech_folder
@@ -323,12 +398,12 @@ technologies = {
 
 	ziyuanshentou5 = {
 
-		conscription_factor = -0.02
+		conscription_factor = -0.01
 		local_resources_factor = 0.1
 		attrition = -0.04
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
 		folder = {
 			name = Ghost_race_tech_folder
@@ -351,20 +426,17 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Ghost_special_1
+		ma_infantry = {
+			soft_attack = 0.15
+			hard_attack = 0.05
 		}
-
-		enable_subunits = {
-			Ghost_special
+		sc_infantry = {
+			soft_attack = 0.15
+			hard_attack = 0.05
 		}
-
-		# Ghost_special = {
-		# 	combat_width = -5
-		# }
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
 		folder = {
 			name = Ghost_race_tech_folder
@@ -388,14 +460,13 @@ technologies = {
 		}
 		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
-		enable_equipments = {
-			Ghost_special_2
+		ma_infantry = {
+			ap_attack = 0.1
 		}
-
-		Ghost_special = {
-			combat_width = -5
+		sc_infantry = {
+			ap_attack = 0.1
 		}
 
 		folder = {
@@ -418,22 +489,22 @@ technologies = {
 			leads_to_tech = linghunqinshiban4
 			research_cost_coeff = 1
 		}
-
-		enable_equipments = {
-			Ghost_special_3
-		}
-
-		Ghost_special = {
-			combat_width = -5
-		}
-
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = Ghost_race_tech_folder
 			position = { x = 16 y = 6 }
+		}
+
+		ma_shield_infantry = {
+			soft_attack = 0.15
+			hard_attack = 0.05
+		}
+		sc_shield_infantry = {
+			soft_attack = 0.15
+			hard_attack = 0.05
 		}
 		
 		categories = {
@@ -453,14 +524,13 @@ technologies = {
 		}
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
-		enable_equipments = {
-			Ghost_special_4
+		ma_shield_infantry = {
+			ap_attack = 0.1
 		}
-
-		Ghost_special = {
-			combat_width = -5
+		sc_shield_infantry = {
+			ap_attack = 0.1
 		}
 
 		folder = {
@@ -480,13 +550,54 @@ technologies = {
 	linghunqinshiban5 = {
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
-		enable_equipments = {
-			Ghost_special_5
+		melee_infantry = {
+			combat_width = -5
 		}
-
-		Ghost_special = {
+		melee_cavalry = {
+			combat_width = -5
+		}
+		sc_infantry = {
+			combat_width = -5
+		}
+		ma_infantry = {
+			combat_width = -5
+		}
+		sc_light_infantry = {
+			combat_width = -5
+		}
+		ma_light_infantry = {
+			combat_width = -5
+		}
+		sc_sf_infantry = {
+			combat_width = -5
+		}
+		ma_sf_infantry = {
+			combat_width = -5
+		}
+		sc_shield_infantry = {
+			combat_width = -5
+		}
+		ma_shield_infantry = {
+			combat_width = -5
+		}
+		ma_shield_tank = {
+			combat_width = -5
+		}
+		sc_shield_tank = {
+			combat_width = -5
+		}
+		sc_mortar_brigade = {
+			combat_width = -5
+		}
+		ma_magic_energy_brigade = {
+			combat_width = -5
+		}
+		sc_anti_shield_brigade = {
+			combat_width = -5
+		}
+		ma_magic_focus_brigade = {
 			combat_width = -5
 		}
 

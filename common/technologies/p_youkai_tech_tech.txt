@@ -1,12 +1,12 @@
 technologies = {
-	linglilichangjiaqiang148 = {
+	linglilichangjiaqiang150 = {
 		
 		dependencies = {
-		   linglijiejie146  = 1
+		   linglijiejie149  = 1
 		}
 
 		path = {
-			leads_to_tech = linglilichangjiaqiang154
+			leads_to_tech = linglilichangjiaqiang160
 			research_cost_coeff = 1
 		}
 
@@ -15,7 +15,7 @@ technologies = {
 		}
 		
 		research_cost = 2
-		start_year = 148
+		start_year = 150
 
 		folder = {
 			name = p_youkai_tech_folder
@@ -31,10 +31,10 @@ technologies = {
 		}
 	}
 
-	linglilichangjiaqiang154 = {
+	linglilichangjiaqiang160 = {
 	
 		path = {
-			leads_to_tech = linglilichangjiaqiang160
+			leads_to_tech = linglilichangjiaqiang170
 			research_cost_coeff = 1
 		}
 
@@ -43,7 +43,7 @@ technologies = {
 		}
 		
 		research_cost = 2
-		start_year = 154
+		start_year = 160
 
 		folder = {
 			name = p_youkai_tech_folder
@@ -59,7 +59,7 @@ technologies = {
 		}
 	}
 
-	linglilichangjiaqiang160 = {
+	linglilichangjiaqiang170 = {
 		
 		research_cost = 2
 		start_year = 160
@@ -83,16 +83,21 @@ technologies = {
 		}
 	}
 
-	jinglianshimo148 = {
+	jinglianshimo150 = {
 	
 		path = {
-			leads_to_tech = jinglianshimo154
+			leads_to_tech = jinglianshimo160
 			research_cost_coeff = 1
 		}
 
-		category_magic_infantry = {
+		ma_infantry = {
 			need = {
-				spell_card_a = -6
+				magic_core_a = -10
+			}
+		}
+		ma_light_infantry = {
+			need = {
+				magic_core_a = -10
 			}
 		}
 		on_research_complete = {
@@ -100,7 +105,7 @@ technologies = {
 		}
 		
 		research_cost = 2
-		start_year = 148
+		start_year = 150
 
 		folder = {
 			name = p_youkai_tech_folder
@@ -116,19 +121,24 @@ technologies = {
 		}
 	}
 
-	jinglianshimo154 = {
+	jinglianshimo160 = {
 	
 		path = {
-			leads_to_tech = jinglianshimo160
+			leads_to_tech = jinglianshimo170
 			research_cost_coeff = 1
 		}
 		
 		research_cost = 2
-		start_year = 154
+		start_year = 160
 
-		category_magic_infantry = {
+		ma_infantry = {
 			need = {
-				spell_card_a = -6
+				magic_core_a = -10
+			}
+		}
+		ma_light_infantry = {
+			need = {
+				magic_core_a = -10
 			}
 		}
 		on_research_complete = {
@@ -149,14 +159,19 @@ technologies = {
 		}
 	}
 
-	jinglianshimo160 = {
+	jinglianshimo170 = {
 		
 		research_cost = 2
-		start_year = 160
+		start_year = 170
 
-		category_magic_infantry = {
+		ma_infantry = {
 			need = {
-				spell_card_a = -6
+				magic_core_a = -10
+			}
+		}
+		ma_light_infantry = {
+			need = {
+				magic_core_a = -10
 			}
 		}
 		on_research_complete = {

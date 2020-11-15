@@ -1,7 +1,8 @@
 ﻿capital = 61
 138.8.13 = {
     set_technology = {
-    spell_card = 1
+    spell_card1 = 1
+    spear1 = 1
 
     jichushuxue = 1
     shuxuegongju = 1
@@ -46,25 +47,26 @@
         #种族
             
     }
+    
 }
 138.8.13 = {
     oob = "SC2_138"
 	# # set_research_slots = 1
 	set_politics = {
-        ruling_party = guli
+        ruling_party = fandong
         election_frequency = 48
         elections_allowed = no
     } 
     set_popularities = {
         qinwai = 5
-        guli = 95
+        guli = 0
         neworder = 0
         oldorder = 0
-        fandong = 0
+        fandong = 95
     }
     
     add_ideas={
-    Village
+    Tribal
 	Fairy
     open1
     hawk3
@@ -75,12 +77,4 @@
 
 
 }
-create_country_leader = {
-	# name = "Hijiri Byakuren"
-    name = "草原妖精"
-	picture = "gfx/leaders/gen/fai1.dds"
-	ideology = guli_type
-    traits = {
-        # nms_bkr
-    }
-}
+

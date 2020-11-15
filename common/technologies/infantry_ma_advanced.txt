@@ -1,261 +1,435 @@
 technologies = {
-	yaoshiche147 = {
-		xp_research_type = army
-		xp_research_cost = 25
-		xp_research_bonus = 0.25
-		
-		enable_equipments = {
-		 	ma_motorized147
-		}
-
-		on_research_complete = {
-			load_oob = "unlock_armor_car_oob"
-			custom_effect_tooltip = "unlock_armor_car_oob"
-		}
-
-		research_cost = 2.5
-		start_year = 147
-
-		path = {
-			leads_to_tech = yaoshiche154
-			research_cost_coeff = 1
-		}
-
-		folder = {
-			name = infantry_ma_advanced_folder
-			position = { x = 1 y = 2 }
-		}
-
-		enable_subunits = {
-
-		}
-		
-
-		
-		ai_will_do = {
-			factor = 1
-
-		}
-		
-		categories = {
-			magic_vehicle_weapons
-			vehicle
-			magic
-			military
-		}
-	}
-
-	yaoshiche154 = {
-		xp_research_type = army
-		xp_research_cost = 25
-		xp_research_bonus = 0.25
-		
-		research_cost = 2.5
-		start_year = 154
-
-		
-
-		enable_equipments = {
-		 	ma_motorized154
-		}
-
-		path = {
-			leads_to_tech = yaoshiche161
-			research_cost_coeff = 1
-		}
-
-		folder = {
-			name = infantry_ma_advanced_folder
-			position = { x = 1 y = 7 }
-		}
-		
-
-		
-		ai_will_do = {
-			factor = 1
-		}
-		
-		categories = {
-			magic_vehicle_weapons
-			vehicle
-			magic
-			military
-		}
-	}
-	yaoshiche161 = {
-		xp_research_type = army
-		xp_research_cost = 25
-		xp_research_bonus = 0.25
-		
-		research_cost = 2.5
-		start_year = 161
-
-		enable_equipments = {
-		 	ma_motorized161
-		}
-
-
-		folder = {
-			name = infantry_ma_advanced_folder
-			position = { x = 1 y = 13 }
-		}
-		
-
-		
-		ai_will_do = {
-			factor = 1
-		}
-		
-		categories = {
-			magic_vehicle_weapons
-			vehicle
-			magic
-			military
-		}
-	}
-
-	zhiyuanxiugaixing147 = {
+	@x1 = 1
+	@x2 = 4
+	@x3 = 7
+	@x4 = 10
+	@x5 = 13
+	@x6 = 16
+	@x7 = 19
+	@y1 = 1
+	@y2 = 3
+	@y3 = 5
+	@y4 = 7
+	@y5 = 9
+	@y6 = 11
+	@y7 = 13
+	@y8 = 15
+	@y9 = 17
+	@y10 = 19
+	ma_fighter1 = {
 	
-		path = {
-			leads_to_tech = chijiulinglijiejing153
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = zhiyuanxiugaixing153
-			research_cost_coeff = 1
-		}
-
 		enable_equipments = {
-		 	ma_CAS147
+		 	ma_fighter148
 		}
 
-		dependencies = {
-		   # abandoned = 1
+		path = {
+			leads_to_tech = ma_fighter2
+			research_cost_coeff = 1
 		}
-		
+
 		research_cost = 2.5
-		start_year = 147
+		start_year = 148
 		folder = {
 			name = infantry_ma_advanced_folder
-			position = { x = 9 y = 2 }
+			position = { x = @x1 y = @y1 }
 		}
 		
 		categories = {
-			magic
+			science
 			military
 			air_equipment
-			magic_CAS
+			fighter
 		}
 		
 		ai_will_do = {
 			factor = 1
 		}
 	}
-	chijiulinglijiejing153 = {
+	ma_fighter2 = {
 	
-		path = {
-			leads_to_tech = chijiulinglijiejing159
-			research_cost_coeff = 1
-		}
-
 		enable_equipments = {
 		 	ma_fighter153
 		}
 
-		
-		research_cost = 2.5
-		start_year = 153
-		folder = {
-			name = infantry_ma_advanced_folder
-			position = { x = 6 y = 6 }
-		}
-		
-		categories = {
-			magic
-			military
-			air_equipment
-			magic_fighter
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	chijiulinglijiejing159 = {
-
-	    enable_equipments = {
-		 	ma_fighter159
-		}
-	
-		
-		research_cost = 2.5
-		start_year = 159
-		folder = {
-			name = infantry_ma_advanced_folder
-			position = { x = 6 y = 11 }
-		}
-		
-		categories = {
-			magic
-			military
-			air_equipment
-			magic_fighter
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	zhiyuanxiugaixing153 = {
-
-	    enable_equipments = {
-		 	ma_CAS153
-		}
-	
 		path = {
-			leads_to_tech = zhiyuanxiugaixing159
+			leads_to_tech = ma_fighter3
 			research_cost_coeff = 1
 		}
-		
+
 		research_cost = 2.5
 		start_year = 153
 		folder = {
 			name = infantry_ma_advanced_folder
-			position = { x = 12 y = 6 }
+			position = { x = @x1 y = @y2 }
 		}
 		
 		categories = {
-			magic
+			science
 			military
 			air_equipment
-			magic_CAS
+			fighter
 		}
 		
 		ai_will_do = {
 			factor = 1
 		}
 	}
-
-	zhiyuanxiugaixing159 = {
+	ma_fighter3 = {
 	
 		enable_equipments = {
-		 	ma_CAS159
+		 	ma_fighter158
+		}
+
+		path = {
+			leads_to_tech = ma_fighter4
+			research_cost_coeff = 1
 		}
 
 		research_cost = 2.5
-		start_year = 159
+		start_year = 158
 		folder = {
 			name = infantry_ma_advanced_folder
-			position = { x = 12 y = 11 }
+			position = { x = @x1 y = @y3 }
 		}
 		
 		categories = {
-			magic
+			science
 			military
 			air_equipment
-			magic_CAS
+			fighter
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ma_fighter4 = {
+	
+		enable_equipments = {
+		 	ma_fighter163
+		}
+
+		path = {
+			leads_to_tech = ma_fighter5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2.5
+		start_year = 163
+		folder = {
+			name = infantry_ma_advanced_folder
+			position = { x = @x1 y = @y4 }
+		}
+		
+		categories = {
+			science
+			military
+			air_equipment
+			fighter
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ma_fighter5 = {
+	
+		enable_equipments = {
+		 	ma_fighter168
+		}
+
+		research_cost = 2.5
+		start_year = 168
+		folder = {
+			name = infantry_ma_advanced_folder
+			position = { x = @x1 y = @y5 }
+		}
+		
+		categories = {
+			science
+			military
+			air_equipment
+			fighter
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ma_bomber1 = {
+	
+		enable_equipments = {
+		 	ma_bomber148
+		}
+
+		path = {
+			leads_to_tech = ma_bomber2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2.5
+		start_year = 148
+		folder = {
+			name = infantry_ma_advanced_folder
+			position = { x = @x2 y = @y1 }
+		}
+		
+		categories = {
+			science
+			military
+			air_equipment
+			bomber
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ma_bomber2 = {
+	
+		enable_equipments = {
+		 	ma_bomber153
+		}
+
+		path = {
+			leads_to_tech = ma_bomber3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2.5
+		start_year = 153
+		folder = {
+			name = infantry_ma_advanced_folder
+			position = { x = @x2 y = @y2 }
+		}
+		
+		categories = {
+			science
+			military
+			air_equipment
+			bomber
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ma_bomber3 = {
+	
+		enable_equipments = {
+		 	ma_bomber158
+		}
+
+		path = {
+			leads_to_tech = ma_bomber4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2.5
+		start_year = 158
+		folder = {
+			name = infantry_ma_advanced_folder
+			position = { x = @x2 y = @y3 }
+		}
+		
+		categories = {
+			science
+			military
+			air_equipment
+			bomber
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ma_bomber4 = {
+	
+		enable_equipments = {
+		 	ma_bomber163
+		}
+
+		path = {
+			leads_to_tech = ma_bomber5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2.5
+		start_year = 163
+		folder = {
+			name = infantry_ma_advanced_folder
+			position = { x = @x2 y = @y4 }
+		}
+		
+		categories = {
+			science
+			military
+			air_equipment
+			bomber
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ma_bomber5 = {
+	
+		enable_equipments = {
+		 	ma_bomber168
+		}
+
+		research_cost = 2.5
+		start_year = 168
+		folder = {
+			name = infantry_ma_advanced_folder
+			position = { x = @x2 y = @y5 }
+		}
+		
+		categories = {
+			science
+			military
+			air_equipment
+			bomber
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ma_st_bomber1 = {
+	
+		enable_equipments = {
+		 	ma_st_bomber148
+		}
+
+		path = {
+			leads_to_tech = ma_st_bomber2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2.5
+		start_year = 148
+		folder = {
+			name = infantry_ma_advanced_folder
+			position = { x = @x3 y = @y1 }
+		}
+		
+		categories = {
+			science
+			military
+			air_equipment
+			st_bomber
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ma_st_bomber2 = {
+	
+		enable_equipments = {
+		 	ma_st_bomber153
+		}
+
+		path = {
+			leads_to_tech = ma_st_bomber3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2.5
+		start_year = 153
+		folder = {
+			name = infantry_ma_advanced_folder
+			position = { x = @x3 y = @y2 }
+		}
+		
+		categories = {
+			science
+			military
+			air_equipment
+			st_bomber
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ma_st_bomber3 = {
+	
+		enable_equipments = {
+		 	ma_st_bomber158
+		}
+
+		path = {
+			leads_to_tech = ma_st_bomber4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2.5
+		start_year = 158
+		folder = {
+			name = infantry_ma_advanced_folder
+			position = { x = @x3 y = @y3 }
+		}
+		
+		categories = {
+			science
+			military
+			air_equipment
+			st_bomber
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ma_st_bomber4 = {
+	
+		enable_equipments = {
+		 	ma_st_bomber163
+		}
+
+		path = {
+			leads_to_tech = ma_st_bomber5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2.5
+		start_year = 163
+		folder = {
+			name = infantry_ma_advanced_folder
+			position = { x = @x3 y = @y4 }
+		}
+		
+		categories = {
+			science
+			military
+			air_equipment
+			st_bomber
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ma_st_bomber5 = {
+	
+		enable_equipments = {
+		 	ma_st_bomber168
+		}
+
+		research_cost = 2.5
+		start_year = 168
+		folder = {
+			name = infantry_ma_advanced_folder
+			position = { x = @x3 y = @y5 }
+		}
+		
+		categories = {
+			science
+			military
+			air_equipment
+			st_bomber
 		}
 		
 		ai_will_do = {

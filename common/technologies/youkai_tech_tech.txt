@@ -1,17 +1,17 @@
 technologies = {
-	feixingzhenchajiaqiang148 = {
+	feixingzhenchajiaqiang150 = {
 		
 		dependencies = {
-		   feixingzhencha146 = 1
+		   feixingzhencha149 = 1
 		}
 
 		path = {
-			leads_to_tech = feixingzhenchajiaqiang154
+			leads_to_tech = feixingzhenchajiaqiang160
 			research_cost_coeff = 1
 		}
 		
 		research_cost = 2
-		start_year = 148
+		start_year = 150
 
 		sp_feixingzhencha = {
 			recon = 1
@@ -32,15 +32,15 @@ technologies = {
 		}
 	}
 
-	feixingzhenchajiaqiang154 = {
+	feixingzhenchajiaqiang160 = {
 	
 		path = {
-			leads_to_tech = feixingzhenchajiaqiang160
+			leads_to_tech = feixingzhenchajiaqiang170
 			research_cost_coeff = 1
 		}
 		
 		research_cost = 2
-		start_year = 154
+		start_year = 160
 
 		sp_feixingzhencha = {
 			recon = 1
@@ -63,10 +63,10 @@ technologies = {
 		}
 	}
 
-	feixingzhenchajiaqiang160 = {
+	feixingzhenchajiaqiang170 = {
 		
 		research_cost = 2
-		start_year = 160
+		start_year = 170
 
 		sp_feixingzhencha = {
 			recon = 1
@@ -89,19 +89,22 @@ technologies = {
 		}
 	}
 
-	danmujiaqiangshimo148 = {
+	danmujiaqiangshimo150 = {
 	
 		path = {
-			leads_to_tech = danmujiaqiangshimo154
+			leads_to_tech = danmujiaqiangshimo160
 			research_cost_coeff = 1
 		}
 
-		category_magic_infantry = {
+		ma_magic_energy_brigade = {
+			soft_attack = 0.1
+		}
+		ma_magic_focus_brigade = {
 			soft_attack = 0.1
 		}
 		
 		research_cost = 2
-		start_year = 148
+		start_year = 150
 
 		folder = {
 			name = youkai_tech_folder
@@ -117,19 +120,22 @@ technologies = {
 		}
 	}
 
-	danmujiaqiangshimo154 = {
+	danmujiaqiangshimo160 = {
 	
 		path = {
-			leads_to_tech = danmujiaqiangshimo160
+			leads_to_tech = danmujiaqiangshimo170
 			research_cost_coeff = 1
 		}
 
-		category_magic_infantry = {
+		ma_magic_energy_brigade = {
+			soft_attack = 0.1
+		}
+		ma_magic_focus_brigade = {
 			soft_attack = 0.1
 		}
 		
 		research_cost = 2
-		start_year = 154
+		start_year = 160
 
 		folder = {
 			name = youkai_tech_folder
@@ -145,12 +151,15 @@ technologies = {
 		}
 	}
 
-	danmujiaqiangshimo160 = {
+	danmujiaqiangshimo170 = {
 		
 		research_cost = 2
-		start_year = 160
+		start_year = 170
 
-		category_magic_infantry = {
+		ma_magic_energy_brigade = {
+			soft_attack = 0.1
+		}
+		ma_magic_focus_brigade = {
 			soft_attack = 0.1
 		}
 

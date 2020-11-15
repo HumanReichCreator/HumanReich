@@ -1,0 +1,123 @@
+﻿capital = 88
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
+        spell_card2 = 1
+        spear2 = 1
+        gun2 = 1
+        lingliliushuixian = 1
+        spear3 = 1
+        gun3 = 1
+            
+        #辅助
+
+        #专用辅助
+        mortar1 = 1
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+        zuzhihuazhanzheng142 = 1
+        zhanchangzhihui145 = 1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        waike = 1
+
+        #专用工程学
+
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+        jianzaojishu140 = 1
+        jijianjianzao140 = 1
+            
+        #专用工业
+        fangwaijieshengchan130 = 1
+        fangwaijieshengchan140 = 1
+
+        #种族
+        yanjiujingshen1 = 1
+            
+    }
+    
+}
+146.1.1={
+    oob = "NTR_146"
+    
+    add_ideas = {
+    Kappa
+    Country
+    dove1
+    open2
+    strict_border
+    limit_magic
+    AKI_chukoujiqidelirun_idea    
+    }
+    
+    set_politics = {
+    	ruling_party = qinwai
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 65
+        guli = 0
+        neworder = 25
+        oldorder = 0
+        fandong = 10
+    }
+
+    SAP = {
+        subject_level4 = yes
+    }
+}
+create_country_leader = {
+	# name = "Kawasiro Nitori"
+    name = "河城荷取"
+    picture = "NTR_ntr.dds"
+	ideology = qinwai_type
+	traits = {  }
+}
+create_country_leader = {
+    # name = "Kawasiro Nitori"
+    name = "河城荷取"
+    picture = "NTR_ntr.dds"
+    ideology = fandong_type
+    traits = {  }
+}
+create_country_leader = {
+    # name = "Kawasiro Nitori"
+    name = "河城荷取"
+    picture = "NTR_ntr.dds"
+    ideology = guli_type
+    traits = {  }
+}
+create_country_leader = {
+    # name = "Kawasiro Nitori"
+    name = "河城荷取"
+    picture = "NTR_ntr.dds"
+    ideology = neworder_type
+    traits = {  }
+}
+create_country_leader = {
+    # name = "Kawasiro Nitori"
+    name = "河城荷取"
+    picture = "NTR_ntr.dds"
+    ideology = oldorder_type
+    traits = {  }
+}

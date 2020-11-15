@@ -314,6 +314,21 @@ put_garrisons_on_high_prio = {
 
 civ_factory_focus = {
 	enable = {
+		NOT = { tag = TKM }
+		NOT = { tag = CIR }
+		NOT = { tag = NMS }
+		NOT = { tag = AKI }
+		NOT = { tag = HU4 }
+		NOT = { tag = HU3 }
+		NOT = { tag = MEL }
+		NOT = { tag = SGS }
+		NOT = { tag = GH1 }
+		NOT = { tag = GH2 }
+		NOT = { tag = GH3 }
+		NOT = { tag = TES }
+		NOT = { tag = MRS }
+		NOT = { tag = ALI }
+		NOT = { tag = TEG }
 		has_war = no
 	}
 	abort = {
@@ -356,5 +371,34 @@ mil_factory_focus2 = {
 		type = building_target
 		id = arms_factory
 		value = 25
+	}
+}
+
+
+We_are_the_most_elegant_militarists = {
+	enable = {
+	  or = {
+		  tag = AKI
+		  tag = HU4
+ 		  tag = HU3
+	      tag = MEL
+	      tag = SGS
+	      tag = GH1
+	      tag = GH2
+	      tag = GH3
+	      tag = TES
+	      tag = MRS
+	      tag = ALI
+	  }
+	}
+
+	abort = { 
+		date > 148.4.1
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 75
 	}
 }

@@ -44,7 +44,7 @@ technologies = {
 		}
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
 		army_org_factor = 0.1
 		army_morale_factor = 0.04
@@ -74,7 +74,7 @@ technologies = {
 		army_morale_factor = 0.04
 		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
 		folder = {
 			name = Human_race_tech_folder
@@ -101,7 +101,7 @@ technologies = {
 		army_morale_factor = 0.04
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = Human_race_tech_folder
@@ -128,7 +128,7 @@ technologies = {
 		army_morale_factor = 0.04
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
 		folder = {
 			name = Human_race_tech_folder
@@ -150,7 +150,7 @@ technologies = {
 		army_morale_factor = 0.04
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
 		folder = {
 			name = Human_race_tech_folder
@@ -174,7 +174,7 @@ technologies = {
 		}
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
 		industrial_capacity_factory = 0.1
 
@@ -202,7 +202,7 @@ technologies = {
 		industrial_capacity_factory = 0.1
 		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
 		folder = {
 			name = Human_race_tech_folder
@@ -228,7 +228,7 @@ technologies = {
 		industrial_capacity_factory = 0.1
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = Human_race_tech_folder
@@ -254,7 +254,7 @@ technologies = {
 		industrial_capacity_factory = 0.1
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
 		folder = {
 			name = Human_race_tech_folder
@@ -275,7 +275,7 @@ technologies = {
 		industrial_capacity_factory = 0.1
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
 		folder = {
 			name = Human_race_tech_folder
@@ -298,16 +298,27 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Human_special_1
+		sc_infantry = {
+			hard_attack = 0.33
 		}
-
-		enable_subunits = {
-			Human_special
+		sc_light_infantry = {
+			hard_attack = 0.33
+		}
+		sc_sf_infantry = {
+			hard_attack = 0.33
+		}
+		ma_infantry = {
+			hard_attack = 0.33
+		}
+		ma_light_infantry = {
+			hard_attack = 0.33
+		}
+		ma_sf_infantry = {
+			hard_attack = 0.33
 		}
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
 		folder = {
 			name = Human_race_tech_folder
@@ -330,16 +341,27 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Human_special_2
+		sc_infantry = {
+			hard_attack = 0.33
+		}
+		sc_light_infantry = {
+			hard_attack = 0.33
+		}
+		sc_sf_infantry = {
+			hard_attack = 0.33
+		}
+		ma_infantry = {
+			hard_attack = 0.33
+		}
+		ma_light_infantry = {
+			hard_attack = 0.33
+		}
+		ma_sf_infantry = {
+			hard_attack = 0.33
 		}
 
-		Human_special = {
-			combat_width = -5
-		}
-		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
 		folder = {
 			name = Human_race_tech_folder
@@ -362,17 +384,28 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Human_special_3
+		sc_mortar_brigade = {
+			hard_attack = 0.25
 		}
-
-		Human_special = {
-			combat_width = -5
+		sc_anti_shield_brigade = {
+			hard_attack = 0.25
+		}
+		sc_shield_tank = {
+			hard_attack = 0.25
+		}
+		ma_magic_energy_brigade = {
+			hard_attack = 0.25
+		}
+		ma_magic_focus_brigade = {
+			hard_attack = 0.25
+		}
+		ma_shield_tank = {
+			hard_attack = 0.25
 		}
 
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = Human_race_tech_folder
@@ -395,16 +428,27 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Human_special_4
+		sc_mortar_brigade = {
+			hard_attack = 0.25
 		}
-
-		Human_special = {
-			combat_width = -5
+		sc_anti_shield_brigade = {
+			hard_attack = 0.25
+		}
+		sc_shield_tank = {
+			hard_attack = 0.25
+		}
+		ma_magic_energy_brigade = {
+			hard_attack = 0.25
+		}
+		ma_magic_focus_brigade = {
+			hard_attack = 0.25
+		}
+		ma_shield_tank = {
+			hard_attack = 0.25
 		}
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
 		folder = {
 			name = Human_race_tech_folder
@@ -423,14 +467,25 @@ technologies = {
 	chuanchongpao5 = {
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
-		enable_equipments = {
-			Human_special_5
+		sc_mortar_brigade = {
+			hard_attack = 0.25
 		}
-
-		Human_special = {
-			combat_width = -5
+		sc_anti_shield_brigade = {
+			hard_attack = 0.25
+		}
+		sc_shield_tank = {
+			hard_attack = 0.25
+		}
+		ma_magic_energy_brigade = {
+			hard_attack = 0.25
+		}
+		ma_magic_focus_brigade = {
+			hard_attack = 0.25
+		}
+		ma_shield_tank = {
+			hard_attack = 0.25
 		}
 
 		folder = {

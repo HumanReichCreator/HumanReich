@@ -1,4 +1,4 @@
-﻿capital = 1
+﻿capital = 129
 
 138.1.1={
     oob = "TEST"
@@ -35,12 +35,17 @@
         sc_weapons = yes
         ma_weapons_art = yes
         sc_weapons_art = yes
-        ma_weapons_art2 = yes
     }
 
     #for display
     every_country = {
         custom_situation_initialize = yes
+    }
+    #techtree only can be changed for one time
+    every_country = {
+        set_technology = {
+            tech_changed = 1
+        }
     }
 
     #focus
@@ -66,8 +71,8 @@
             }
             not = {
                 tag = RNS
-                tag = YSK
-                tag = SAK
+                tag = MRY
+                tag = NMN
                 tag = UNA
                 tag = ONS
                 tag = INB
@@ -76,6 +81,8 @@
                 tag = MYK
                 tag = MTM
                 tag = MFA
+                tag = BYA
+                tag = RGO
             }
             or = {
                 not = {
@@ -86,7 +93,7 @@
                     has_idea = Human
                 }
                 tag = SCA
-                tag = SHO
+                tag = PRI
                 tag = OTG
             }
             
@@ -101,6 +108,19 @@
             }
         }
         add_ideas = not_gensoukyo_idea
+    }
+
+    every_state = {
+        limit = {
+            not = {
+                is_owned_by = XXX
+            }
+        }
+        add_building_construction = {
+            type = air_base
+            level = 1
+            instant_build = yes
+        }
     }
 
     #others#
@@ -122,7 +142,7 @@
     EET = {
         add_ideas = great_presige_idea
     }
-    FUJ = {
+    MOK = {
         add_ideas = great_presige_idea
     }
     YYK = {
@@ -131,7 +151,7 @@
     SAT = {
         add_ideas = great_presige_idea
     }
-    KUT = {
+    YUG = {
         add_ideas = great_presige_idea
     }
     HCT = {
@@ -140,7 +160,7 @@
     SKI = {
         add_ideas = great_presige_idea
     }
-    HNY = {
+    KEK = {
         add_ideas = great_presige_idea
     }
 
@@ -151,22 +171,22 @@ if = {
         has_start_date < 143.7.2
         has_start_date > 143.6.30
     }
-    SHO = {
-        set_cosmetic_tag = SHO_SCA
+    PRI = {
+        set_cosmetic_tag = PRI_SCA
     }
-    AVE = {
-        set_cosmetic_tag = AVE_HUM
+    KYK = {
+        set_cosmetic_tag = KYK_HUM
         retire_country_leader = yes
     }
-    KOG = {
-        set_cosmetic_tag = KOG_HUM
+    TKM = {
+        set_cosmetic_tag = TKM_HUM
         retire_country_leader = yes
     }
     HUM = {
-        KOG = {
+        TKM = {
             subject_level4 = yes
         }
-        AVE = {
+        KYK = {
             subject_level1 = yes
         }
     }
@@ -177,7 +197,7 @@ if = {
     NMS = {
         add_ideas = qingbaoxielu143_idea 
     }
-    SHO = {
+    PRI = {
         add_ideas = qingbaoxielu143_idea 
     }
 

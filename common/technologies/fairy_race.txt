@@ -21,43 +21,69 @@ technologies = {
 	      position = { x = 10 y = 0 }
 	    }
 
-	    sc_militia = {
-	      combat_width = -5
+	    melee_infantry = {
+	      max_strength = -10
+	      need = {
+			melee_a = -10
+		  }
 	    }
-	    ma_militia = {
-	      combat_width = -5
-	    }    
-	    sc_motorized = {
-	      combat_width = -5
-	    }
-	    ma_motorized = {
-	      combat_width = -5
+	    melee_cavalry = {
+	      max_strength = -10
+	      need = {
+			melee_a = -10
+		  }
 	    }     
 	    sc_infantry = {
-	      combat_width = -5
+	      max_strength = -10
+	      need = {
+			gun_a = -10
+		  }
 	    }
 	    ma_infantry = {
-	      combat_width = -5
+	      max_strength = -10
+	      need = {
+			magic_core_a = -10
+		  }
 	    }  
 	    sc_light_infantry = {
-	      combat_width = -5
+	      max_strength = -10
+	      need = {
+			gun_a = -10
+		  }
 	    }
 	    ma_light_infantry = {
-	      combat_width = -5
+	      max_strength = -10
+	      need = {
+			magic_core_a = -10
+		  }
 	    } 
-	    new_infantry = {
-			combat_width = -5
+	    sc_sf_infantry = {
+	      max_strength = -15
+	      need = {
+			smg_a = -10
+		  }
+	    }
+	    ma_sf_infantry = {
+	      max_strength = -10
+	      need = {
+			special_core_a = -10
+		  }
+	    } 
+	    sc_shield_infantry = {
+	      max_strength = -10
+	      need = {
+			speical_shield_a = -10
+		  }
+	    }
+	    ma_shield_infantry = {
+	      max_strength = -10
+	      need = {
+			core_shield_a = -10
+		  }
+	    } 
+	    on_research_complete = {
+			custom_effect_tooltip = fairy_tech_tt
 		}
-
-	    category_science_infantry = {
-	    	max_strength = -15
-	    }
-	    category_magic_infantry = {
-	    	max_strength = -15
-	    }
-	    category_combined_infantry = {
-	    	max_strength = -15
-	    }
 
 	    dependencies = {
 	       abandoned = 1
@@ -79,7 +105,7 @@ technologies = {
 		}
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
 		supply_consumption_factor = -0.06
 		production_speed_buildings_factor = 0.04
@@ -109,7 +135,7 @@ technologies = {
 		production_speed_buildings_factor = 0.04
 		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
 		folder = {
 			name = Fairy_race_tech_folder
@@ -136,7 +162,7 @@ technologies = {
 		production_speed_buildings_factor = 0.04
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = Fairy_race_tech_folder
@@ -163,7 +189,7 @@ technologies = {
 		production_speed_buildings_factor = 0.04
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
 		folder = {
 			name = Fairy_race_tech_folder
@@ -185,7 +211,7 @@ technologies = {
 		production_speed_buildings_factor = 0.04
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
 		folder = {
 			name = Fairy_race_tech_folder
@@ -209,7 +235,7 @@ technologies = {
 		}
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
 		global_building_slots_factor = 0.15
 
@@ -237,7 +263,7 @@ technologies = {
 		global_building_slots_factor = 0.15
 		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
 		folder = {
 			name = Fairy_race_tech_folder
@@ -263,7 +289,7 @@ technologies = {
 		global_building_slots_factor = 0.15
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = Fairy_race_tech_folder
@@ -289,7 +315,7 @@ technologies = {
 		global_building_slots_factor = 0.15
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
 		folder = {
 			name = Fairy_race_tech_folder
@@ -310,7 +336,7 @@ technologies = {
 		global_building_slots_factor = 0.15
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
 		folder = {
 			name = Fairy_race_tech_folder
@@ -333,20 +359,25 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Fairy_special_1
+		ma_infantry = {
+			combat_width = -5
+			max_organisation = 15
 		}
-
-		enable_subunits = {
-			Fairy_special
+		sc_infantry = {
+			combat_width = -5
+			max_organisation = 15
 		}
-
-		# Fairy_special = {
-		# 	combat_width = -5
-		# }
+		melee_infantry = {
+			combat_width = -5
+			max_organisation = 15
+		}
+		melee_cavalry = {
+			combat_width = -5
+			max_organisation = 15
+		}
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
 		folder = {
 			name = Fairy_race_tech_folder
@@ -369,16 +400,21 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Fairy_special_2
+		ma_infantry = {
+			default_morale = 0.01
 		}
-
-		Fairy_special = {
-			combat_width = -5
+		sc_infantry = {
+			default_morale = 0.01
+		}
+		melee_infantry = {
+			default_morale = 0.01
+		}
+		melee_cavalry = {
+			default_morale = 0.01
 		}
 		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
 		folder = {
 			name = Fairy_race_tech_folder
@@ -401,17 +437,38 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Fairy_special_3
-		}
-
-		Fairy_special = {
+		ma_light_infantry = {
 			combat_width = -5
+			max_organisation = 15
+		}
+		sc_light_infantry = {
+			combat_width = -5
+			max_organisation = 15
+		}
+		ma_shield_infantry = {
+			combat_width = -5
+			max_organisation = 15
+		}
+		sc_shield_infantry = {
+			combat_width = -5
+			max_organisation = 15
+		}
+		ma_sf_infantry = {
+			combat_width = -5
+			max_organisation = 15
+		}
+		sc_sf_infantry = {
+			combat_width = -5
+			max_organisation = 15
+		}
+		melee_cavalry = {
+			combat_width = -5
+			max_organisation = 15
 		}
 
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = Fairy_race_tech_folder
@@ -434,16 +491,30 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Fairy_special_4
+		ma_light_infantry = {
+			default_morale = 0.01
 		}
-
-		Fairy_special = {
-			combat_width = -5
+		sc_light_infantry = {
+			default_morale = 0.01
+		}
+		ma_shield_infantry = {
+			default_morale = 0.01
+		}
+		sc_shield_infantry = {
+			default_morale = 0.01
+		}
+		ma_sf_infantry = {
+			default_morale = 0.01
+		}
+		sc_sf_infantry = {
+			default_morale = 0.01
+		}
+		melee_cavalry = {
+			default_morale = 0.01
 		}
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
 		folder = {
 			name = Fairy_race_tech_folder
@@ -462,13 +533,39 @@ technologies = {
 	yaojinggansiban5 = {
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
-		enable_equipments = {
-			Fairy_special_5
+		ma_infantry = {
+			combat_width = -5
 		}
-
-		Fairy_special = {
+		sc_infantry = {
+			combat_width = -5
+		}
+		melee_infantry = {
+			combat_width = -5
+		}
+		melee_cavalry = {
+			combat_width = -5
+		}
+		ma_light_infantry = {
+			combat_width = -5
+		}
+		sc_light_infantry = {
+			combat_width = -5
+		}
+		ma_shield_infantry = {
+			combat_width = -5
+		}
+		sc_shield_infantry = {
+			combat_width = -5
+		}
+		ma_sf_infantry = {
+			combat_width = -5
+		}
+		sc_sf_infantry = {
+			combat_width = -5
+		}
+		melee_cavalry = {
 			combat_width = -5
 		}
 

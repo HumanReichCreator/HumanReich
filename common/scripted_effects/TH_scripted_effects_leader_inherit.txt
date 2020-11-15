@@ -3,16 +3,16 @@ army_leader_inherit_146 = {
         limit = {
             has_global_flag =  main_scenario
         }
-        if = {
-            limit = {
-                english_leaders = yes
-            }
+        # if = {
+        #     limit = {
+        #         english_leaders = yes
+        #     }
             
-            army_english_leader_inherit_146 = yes
+        #     army_english_leader_inherit_146 = yes
 
-            else = {
+        #     else = {
                 army_chinese_leader_inherit_146 = yes
-            }
-        }
+        #     }
+        # }
     }
 }

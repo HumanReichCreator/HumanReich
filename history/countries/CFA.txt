@@ -1,20 +1,10 @@
 ﻿capital = 12
-138.8.13 = {
-
-}
-141.6.2 = {
-    
-}
-142.3.8 = {
-    
-}
-144.2.5 = {
-    
-}
 146.1.1 = {
     set_technology = {
         #通用武器线
-            spell_card = 1
+        spell_card1 = 1
+        spell_card2 = 1
+        spear1 = 1
         #辅助
             
         #专用辅助
@@ -39,17 +29,16 @@
         #种族
             
     }
+    
 }
 
 146.1.1={
-    oob = "CFA_146"
-    
     # set_research_slots = 3
     # Starting tech
     set_technology = {
     #步兵武器
      #灵力
-    spell_card = 1
+    spell_card1 = 1
      #外界
     #火炮
 
@@ -65,14 +54,16 @@
     }
     
     add_ideas = {
-    type1_manpowerlv3
-    Tribal
-    Fairy
-    hawk3
-    close2
-    normal_border
-    free_magic
+        type1_manpowerlv3
+        Tribal
+        Fairy
+        hawk3
+        close2
+        normal_border
+        free_magic
     }
+    add_manpower = 1000
+    oob = "CFA_146"
     set_politics = {
     
     	ruling_party = fandong

@@ -1,0 +1,175 @@
+# All infantry equipment
+
+equipments = {
+
+	melee_a = {
+		year = 117
+	
+		is_archetype = yes
+		picture = archetype_infantry_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+
+		upgrades = {
+			upgrade_reliability
+          	upgrade_softattack
+          	upgrade_hardattack
+          	upgrade_aaattack
+          	upgrade_defense
+          	upgrade_breakthrough
+          	upgrade_ic
+          	upgrade_ic_reverse
+          	upgrade_reliability_reverse
+		}
+		upgrades = {
+			up_ap_attack
+          	up_speed_type2
+		}
+		
+
+		
+		
+		#Defensive Abilities
+		defense = 11
+		breakthrough = 1.5
+		hardness = 0.01
+		armor_value = 0
+
+		#Offensive Abilities
+		soft_attack = 0.5
+		hard_attack = 0.5
+		ap_attack = 5
+		air_attack = 0
+
+		#Misc Abilities
+		reliability = 0.7
+		maximum_speed = 8
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 0.15
+
+		
+		
+	}
+
+	melee117 = {
+		year = 117
+	
+		archetype = melee_a
+		
+		priority = 10
+		visual_level = 0
+
+		resources = {
+			metal = 1
+		}
+	}
+
+	melee141 = {
+		year = 141
+	
+		archetype = melee_a
+		parent = melee117
+		priority = 10
+		visual_level = 1
+
+		resources = {
+			metal = 1
+		}
+		
+		defense = 15
+		breakthrough = 3.5
+		soft_attack = 1.3
+		hard_attack = 1.3
+		ap_attack = 6
+		build_cost_ic = 0.18
+	}
+
+	melee147 = {
+		year = 147
+	
+		archetype = melee_a
+		parent = melee141
+		priority = 10
+		visual_level = 2
+
+		resources = {
+			metal = 1
+		}
+		
+		defense = 19
+		breakthrough = 5.5
+		soft_attack = 1.5
+		hard_attack = 1.5
+		ap_attack = 7
+		build_cost_ic = 0.21
+	}
+
+	melee149 = {
+		year = 149
+	
+		archetype = melee_a
+		parent = melee147
+		priority = 10
+		visual_level = 3
+
+		resources = {
+			crystal = 1
+			metal = 1
+		}
+		
+		defense = 23
+		breakthrough = 7.5
+		soft_attack = 2.1
+		hard_attack = 2.1
+		ap_attack = 8
+		build_cost_ic = 0.24
+	}
+
+	melee157 = {
+		year = 157
+	
+		archetype = melee_a
+		parent = melee149
+		priority = 10
+		visual_level = 4
+
+		resources = {
+			crystal = 1
+			metal = 1
+		}
+		
+		defense = 27
+		breakthrough = 9.5
+		soft_attack = 2.9
+		hard_attack = 2.9
+		ap_attack = 9
+		build_cost_ic = 0.27
+	}
+
+	melee165 = {
+		year = 165
+	
+		archetype = melee_a
+		parent = melee157
+		priority = 10
+		visual_level = 5
+
+		resources = {
+			crystal = 1
+			metal = 1
+		}
+		
+		defense = 31
+		breakthrough = 11.5
+		soft_attack = 3.7
+		hard_attack = 3.7
+		ap_attack = 10
+		build_cost_ic = 0.3
+	}
+}

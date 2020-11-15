@@ -742,7 +742,7 @@ focus_tree = {
             has_country_flag = NMS_dongdangjieshu
             not = {
               has_war_with = ICR
-              has_war_with = AVE
+              has_war_with = KYK
             }
          }
 
@@ -988,13 +988,13 @@ focus_tree = {
       }
 
       bypass = {
-        AVE = {
+        KYK = {
           not = { is_subject_of = ROOT }
         }
       }
 
       completion_reward = {
-        AVE = {
+        KYK = {
           random_owned_controlled_state = {
             add_extra_state_shared_building_slots = 3
             add_building_construction = {
@@ -1358,7 +1358,7 @@ focus_tree = {
 
       available ={
         or = {
-          AVE = {
+          KYK = {
             is_subject_of = ROOT
           }
           MAM = {
@@ -1369,7 +1369,7 @@ focus_tree = {
       }
 
       completion_reward = {
-        AVE = {
+        KYK = {
           can_core = yes
         }
         MAM = {
@@ -1519,7 +1519,7 @@ focus_tree = {
             limit = {
               or = {
                 is_core_of = NMS
-                is_core_of = AVE
+                is_core_of = KYK
               }
             }
             remove_core_of = HUM
@@ -2145,11 +2145,11 @@ focus_tree = {
       x = 0
       y = 1
 
-      prerequisite = {
-        focus = NMS_duiwaixuanyanghepinglinian
-        focus = NMS_jianliyaoguaideguodu
-        focus = NMS_baochizongjiaoxianzhuang
-      }
+      # prerequisite = {
+      #   focus = NMS_duiwaixuanyanghepinglinian
+      #   focus = NMS_jianliyaoguaideguodu
+      #   focus = NMS_baochizongjiaoxianzhuang
+      # }
 
       mutually_exclusive = {
 
@@ -2159,6 +2159,8 @@ focus_tree = {
 
       available ={
           is_subject = no
+          has_completed_focus = NMS_zhuangtaidechubugaishan
+          date > 149.1.1
       } 
 
       completion_reward = {
@@ -2202,6 +2204,10 @@ focus_tree = {
 
       ai_will_do = {
         factor = 1
+        modifier = {
+          factor = 2.5
+          always = yes
+        }
       }
   }
 
@@ -2313,15 +2319,16 @@ focus_tree = {
           }
       }
       bypass = {
+        has_government = neworder
         HU4 = {
           bypass_declare_war = yes
         }
-        
       }
 
       completion_reward = {
         add_political_power = -70
-        HU4 = { country_event = { id = nms.22 days = 2}}
+        HU4 = { country_overlord_get = yes }
+        event_target:trigger_target = { country_event = {id = nms.22 days = 2} }
         custom_effect_tooltip = TEG_accept
         effect_tooltip = {
           HU4 = {
@@ -2463,6 +2470,10 @@ focus_tree = {
 
       ai_will_do = {
         factor = 1
+        modifier = {
+          factor = 2.5
+          always = yes
+        }
       }
   }
 
@@ -2526,6 +2537,14 @@ focus_tree = {
         modifier = {
           has_war = yes
           factor = 0
+        }
+        modifier = {
+          factor = 2.5
+          always = yes
+        }
+        modifier = {
+          SCA = { has_war = yes } 
+          factor = 100
         }
       }
   }
@@ -2898,7 +2917,7 @@ focus_tree = {
   }
  
   focus = {
-      id = NMS_shouhuiAVE
+      id = NMS_shouhuiKYK
       icon = GFX_goal_demand_sudetenland
       cost = 12
       x = 8
@@ -2914,25 +2933,24 @@ focus_tree = {
 
       relative_position_id = NMS_waijiaoliliang
 
-      will_lead_to_war_with = AVE
+      will_lead_to_war_with = KYK
 
       available ={
         is_subject = no
       }
       bypass = {
-        AVE = {
+        KYK = {
           bypass_declare_war = yes
         }
       }
 
       completion_reward = {
           add_political_power = -40
-          AVE = {
-            country_event = { id = nms.44 days = 2}
-          }
+          KYK = { country_overlord_get = yes }
+          event_target:trigger_target = {country_event = { id = nms.44 days = 2} }
           custom_effect_tooltip = TEG_accept
           effect_tooltip = {
-            AVE = {
+            KYK = {
               subject_level4 = yes
             }
           }
@@ -2976,9 +2994,8 @@ focus_tree = {
       }
 
       completion_reward = {
-          MAM = {
-            country_event = { id = nms.46 days = 2}
-          }
+          MAM = { country_overlord_get = yes }
+          event_target:trigger_target = {country_event = { id = nms.46 days = 2} }
           custom_effect_tooltip = TEG_accept
           effect_tooltip = {
             MAM = {
@@ -2996,7 +3013,7 @@ focus_tree = {
       y = 1
 
       prerequisite = {
-        focus = NMS_shouhuiAVE
+        focus = NMS_shouhuiKYK
         focus = NMS_shouhuiMAM
       }
 
@@ -3004,13 +3021,13 @@ focus_tree = {
 
       }
 
-      relative_position_id = NMS_shouhuiAVE
+      relative_position_id = NMS_shouhuiKYK
 
-      will_lead_to_war_with = KOG
+      will_lead_to_war_with = TKM
 
       available ={
         is_subject = no
-        KOG = {
+        TKM = {
           or = {
             has_government = fandong
             has_government = neworder
@@ -3018,14 +3035,14 @@ focus_tree = {
         }
       }
       bypass = {
-        KOG = {
+        TKM = {
           bypass_declare_war = yes
         }
       }
 
       completion_reward = {
         declare_war_on = {
-          target = KOG
+          target = TKM
           type = puppet_wargoal_focus
         }
       }
@@ -3089,7 +3106,7 @@ focus_tree = {
             uses = 2
             ahead_reduction = 2.5
             bonus = 1.25
-            category = magic_weapons
+            category = primary_weapons
          }
       }
 
@@ -3127,7 +3144,7 @@ focus_tree = {
             uses = 2
             ahead_reduction = 2.5
             bonus = 1.25
-            category = magic_weapons_improve
+            category = primary_weapons
          }
       }
 
@@ -3280,7 +3297,7 @@ focus_tree = {
             uses = 2
             bonus = 1
             ahead_reduction = 2
-            category = magic_vehicle_weapons
+            category = sf_force
          }
          add_ideas = NMS_motuopilianghua_idea
       }

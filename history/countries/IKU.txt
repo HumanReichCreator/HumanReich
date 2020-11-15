@@ -2,13 +2,13 @@
 146.1.1 = {
     set_technology = {
         #通用武器线
-        spell_card = 1
-        linglijiejing139 = 1
-        danmujingque139 = 1
-        danmujingque144 = 1
-        gaosudanmu139 = 1
-        gaosudanmu144 = 1
-        buqiang117 = 1
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        spell_card2 = 1
+        spear2 = 1
             
         #辅助
 
@@ -44,6 +44,7 @@
         #种族
             
     }
+    
 }
 146.1.1={
     oob = "IKU_146"
@@ -77,35 +78,35 @@
 create_country_leader = {
 	# name = "Nagae Iku"
     name = "永江衣玖"
-    picture = "gfx/leaders/TEN/TEN_iku.dds"
+    picture = "gfx/leaders/TES/TES_iku.dds"
 	ideology = neworder_type
 	traits = { }
 }
 create_country_leader = {
 	# name = "Nagae Iku"
     name = "永江衣玖"
-    picture = "gfx/leaders/TEN/TEN_iku.dds"
+    picture = "gfx/leaders/TES/TES_iku.dds"
 	ideology = guli_type
 	traits = { }
 }
 create_country_leader = {
     # name = "Nagae Iku"
     name = "永江衣玖"
-    picture = "gfx/leaders/TEN/TEN_iku.dds"
+    picture = "gfx/leaders/TES/TES_iku.dds"
     ideology = fandong_type
     traits = { }
 }
 create_country_leader = {
     # name = "Nagae Iku"
     name = "永江衣玖"
-    picture = "gfx/leaders/TEN/TEN_iku.dds"
+    picture = "gfx/leaders/TES/TES_iku.dds"
     ideology = qinwai_type
     traits = { }
 }
 create_country_leader = {
     # name = "Nagae Iku"
     name = "永江衣玖"
-    picture = "gfx/leaders/TEN/TEN_iku.dds"
+    picture = "gfx/leaders/TES/TES_iku.dds"
     ideology = oldorder_type
     traits = { }
 }

@@ -132,6 +132,9 @@ ideas = {
 					is_subject_of = YKR
 				}
 				country_exists = YKR
+				YKR = {
+					is_subject = no
+				}
 			}
 
 			allowed_civil_war = {
@@ -156,6 +159,9 @@ ideas = {
 					is_subject_of = YKR
 				}
 				country_exists = YKR
+				YKR = {
+					is_subject = no
+				}
 			}
 
 			allowed_civil_war = {
@@ -181,6 +187,9 @@ ideas = {
 					is_subject_of = YKR
 				}
 				country_exists = YKR
+				YKR = {
+					is_subject = no
+				}
 			}
 
 			allowed_civil_war = {
@@ -267,7 +276,7 @@ ideas = {
 			picture = vittoria_mutilata
 
 			modifier = {
-				political_power_factor = 0.15
+				political_power_factor = 0.3
 			}
 		}
 		HKR_yaoguaiwunv2_idea = {
@@ -282,7 +291,7 @@ ideas = {
 			picture = HUN_secret_rearmament
 
 		 	equipment_bonus = {
-				spell_card_a = {
+				magic_core_a = {
 					soft_attack = 0.05 hard_attack = 0.05
 					build_cost_ic = -0.05 instant = yes
 				}
@@ -395,7 +404,7 @@ ideas = {
 			picture = HUN_secret_rearmament
 
 			equipment_bonus = {
-				spell_card_a = {
+				magic_core_a = {
 					build_cost_ic = -0.075
 					soft_attack = 0.05
 					hard_attack = 0.05
@@ -410,7 +419,7 @@ ideas = {
 			picture = HUN_secret_rearmament
 
 			equipment_bonus = {
-				spell_card_a = {
+				magic_core_a = {
 					build_cost_ic = 0.05
 					soft_attack = 0.15
 					hard_attack = 0.15

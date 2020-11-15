@@ -1,10 +1,25 @@
 ﻿division_template = {
+	name = "扫荡编制"
+	regiments = {
+		ma_light_infantry = { x = 0 y = 0 }
+		ma_light_infantry = { x = 0 y = 1 }
+		ma_light_infantry = { x = 0 y = 2 }
+		ma_light_infantry = { x = 0 y = 3 }
+	}
+	support = {
+	}
+}
+division_template = {
 	name = "八云紫直属编制"
 	regiments = {
 		ma_infantry = { x = 0 y = 0 }
 		ma_infantry = { x = 0 y = 1 }
-		ma_militia = { x = 0 y = 2 }
-		ma_artillery_brigade = {x = 1 y = 0}
+		ma_infantry = { x = 0 y = 2 }
+		ma_infantry = { x = 0 y = 3 }
+		ma_magic_energy_brigade = {x = 0 y = 4}
+	}
+	support = {
+		sp_jiaqiangban = { x = 0 y = 0 }
 	}
 }
 division_template = {
@@ -13,17 +28,23 @@ division_template = {
 		ma_light_infantry = { x = 0 y = 0 }
 		ma_light_infantry = { x = 0 y = 1 }
 		ma_light_infantry = { x = 0 y = 2 }
-		ma_artillery_brigade = {x = 0 y = 3}
+		ma_light_infantry = {x = 0 y = 3}
+	}
+	support = {
+		sp_jiaqiangban = { x = 0 y = 0 }
 	}
 }
 division_template = {
 	name = "特种编制"
 	regiments = {
-		ma_light_infantry = { x = 0 y = 0 }
-		ma_sf_infantry = { x = 0 y = 1 }
-		ma_sf_infantry = { x = 0 y = 2 }
-		ma_sf_infantry = { x = 0 y = 3 }
-		ma_sf_infantry = { x = 0 y = 4 }
+		ma_shield_infantry = { x = 0 y = 0 }
+		ma_shield_infantry = { x = 0 y = 1 }
+		ma_light_infantry = { x = 0 y = 2 }
+		ma_light_infantry = { x = 0 y = 3 }
+		ma_light_infantry = { x = 0 y = 4 }
+	}
+	support = {
+		sp_jiaqiangban = { x = 0 y = 0 }
 	}
 }
 

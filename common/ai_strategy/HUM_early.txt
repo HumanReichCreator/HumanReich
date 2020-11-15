@@ -83,7 +83,7 @@ HUM_defense2= {
 
 	enable = {
 		or = {
-			tag = KOG
+			tag = TKM
 			tag = SRB
 			tag = EET
 		}
@@ -118,22 +118,4 @@ HUM_defense2= {
 		value = 25
 	}
 
-}
-
-other = {
-	enable = {
-		all_country = {
-
-		}
-	}
-	abort = {
-		always = no
-
-	}
-
-	ai_strategy = {
-		type = ignore
-		id = "XXX"			
-		value = 500
-	}
 }

@@ -1,9 +1,22 @@
 ﻿division_template = {
+	name = "扫荡编制"
+	regiments = {
+		ma_light_infantry = { x = 0 y = 0 }
+		ma_light_infantry = { x = 0 y = 1 }
+		ma_light_infantry = { x = 0 y = 2 }
+		ma_light_infantry = { x = 0 y = 3 }
+	}
+	support = {
+	}
+}
+division_template = {
 	name = "幽灵叛乱编制"
 	regiments = {
-		ma_militia = { x = 0 y = 0 }
-		ma_militia = { x = 0 y = 1 }
-
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		melee_infantry = { x = 0 y = 2 }
+		melee_infantry = { x = 0 y = 3 }
+		melee_infantry = { x = 0 y = 4 }
 	}
 	support = {
 	}
@@ -13,189 +26,357 @@ units = {
 		name = "叛乱队"
 		location = 4739
 		division_template = "幽灵叛乱编制"
-		start_experience_factor = 0.05
-		start_equipment_factor = 0.6
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
 	}
 	division = {
 		name = "叛乱队"
 		location = 4739
 		division_template = "幽灵叛乱编制"
-		start_experience_factor = 0.05
-		start_equipment_factor = 0.6
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
 	}
 	division = {
 		name = "叛乱队"
 		location = 4739
 		division_template = "幽灵叛乱编制"
-		start_experience_factor = 0.05
-		start_equipment_factor = 0.6
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
 	}
 	division = {
 		name = "叛乱队"
 		location = 4739
 		division_template = "幽灵叛乱编制"
-		start_experience_factor = 0.05
-		start_equipment_factor = 0.6
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
 	}
 
 	division = {
 		name = "叛乱队"
 		location = 4691
 		division_template = "幽灵叛乱编制"
-		start_experience_factor = 0.05
-		start_equipment_factor = 0.6
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
 	}
 	division = {
 		name = "叛乱队"
 		location = 4691
 		division_template = "幽灵叛乱编制"
-		start_experience_factor = 0.05
-		start_equipment_factor = 0.6
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
 	}
 	division = {
 		name = "叛乱队"
 		location = 4691
 		division_template = "幽灵叛乱编制"
-		start_experience_factor = 0.05
-		start_equipment_factor = 0.6
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
 	}
 	division = {
 		name = "叛乱队"
 		location = 4691
 		division_template = "幽灵叛乱编制"
-		start_experience_factor = 0.05
-		start_equipment_factor = 0.6
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
 	}
 
 	division = {
 		name = "叛乱队"
 		location = 4689
 		division_template = "幽灵叛乱编制"
-		start_experience_factor = 0.05
-		start_equipment_factor = 0.6
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
 	}
 	division = {
 		name = "叛乱队"
 		location = 4689
 		division_template = "幽灵叛乱编制"
-		start_experience_factor = 0.05
-		start_equipment_factor = 0.6
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
 	}
 	division = {
 		name = "叛乱队"
 		location = 4689
 		division_template = "幽灵叛乱编制"
-		start_experience_factor = 0.05
-		start_equipment_factor = 0.6
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
 	}
 	division = {
 		name = "叛乱队"
 		location = 4689
 		division_template = "幽灵叛乱编制"
-		start_experience_factor = 0.05
-		start_equipment_factor = 0.6
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
 	}
 
 	division = {
 		name = "叛乱队"
 		location = 1560
 		division_template = "幽灵叛乱编制"
-		start_experience_factor = 0.05
-		start_equipment_factor = 0.6
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
 	}
 	division = {
 		name = "叛乱队"
 		location = 1560
 		division_template = "幽灵叛乱编制"
-		start_experience_factor = 0.05
-		start_equipment_factor = 0.6
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
 	}
 	division = {
 		name = "叛乱队"
 		location = 1560
 		division_template = "幽灵叛乱编制"
-		start_experience_factor = 0.05
-		start_equipment_factor = 0.6
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
 	}
 	division = {
 		name = "叛乱队"
 		location = 1560
 		division_template = "幽灵叛乱编制"
-		start_experience_factor = 0.05
-		start_equipment_factor = 0.6
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "叛乱队"
+		location = 1560
+		division_template = "幽灵叛乱编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "叛乱队"
+		location = 1560
+		division_template = "幽灵叛乱编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "叛乱队"
+		location = 1560
+		division_template = "幽灵叛乱编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "叛乱队"
+		location = 1560
+		division_template = "幽灵叛乱编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "叛乱队"
+		location = 1560
+		division_template = "幽灵叛乱编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "叛乱队"
+		location = 1560
+		division_template = "幽灵叛乱编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "叛乱队"
+		location = 1560
+		division_template = "幽灵叛乱编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "叛乱队"
+		location = 1560
+		division_template = "幽灵叛乱编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "叛乱队"
+		location = 1560
+		division_template = "幽灵叛乱编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
 	}
 
 	division = {
 		name = "叛乱队"
 		location = 80
 		division_template = "幽灵叛乱编制"
-		start_experience_factor = 0.05
-		start_equipment_factor = 0.6
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
 	}
 	division = {
 		name = "叛乱队"
 		location = 80
 		division_template = "幽灵叛乱编制"
-		start_experience_factor = 0.05
-		start_equipment_factor = 0.6
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
 	}
 	division = {
 		name = "叛乱队"
 		location = 80
 		division_template = "幽灵叛乱编制"
-		start_experience_factor = 0.05
-		start_equipment_factor = 0.6
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
 	}
 	division = {
 		name = "叛乱队"
 		location = 80
 		division_template = "幽灵叛乱编制"
-		start_experience_factor = 0.05
-		start_equipment_factor = 0.6
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
 	}
 
 	division = {
 		name = "叛乱队"
 		location = 4615
 		division_template = "幽灵叛乱编制"
-		start_experience_factor = 0.05
-		start_equipment_factor = 0.6
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
 	}
 	division = {
 		name = "叛乱队"
 		location = 4615
 		division_template = "幽灵叛乱编制"
-		start_experience_factor = 0.05
-		start_equipment_factor = 0.6
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
 	}
 	division = {
 		name = "叛乱队"
 		location = 4615
 		division_template = "幽灵叛乱编制"
-		start_experience_factor = 0.05
-		start_equipment_factor = 0.6
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
 	}
 	division = {
 		name = "叛乱队"
 		location = 4615
 		division_template = "幽灵叛乱编制"
-		start_experience_factor = 0.05
-		start_equipment_factor = 0.6
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
 	}
 
 	division = {
 		name = "叛乱队"
 		location = 1560
 		division_template = "幽灵叛乱编制"
-		start_experience_factor = 0.05
-		start_equipment_factor = 0.6
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
 	}
 	division = {
 		name = "叛乱队"
 		location = 1560
 		division_template = "幽灵叛乱编制"
-		start_experience_factor = 0.05
-		start_equipment_factor = 0.6
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "叛乱队"
+		location = 1560
+		division_template = "幽灵叛乱编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "叛乱队"
+		location = 1560
+		division_template = "幽灵叛乱编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "叛乱队"
+		location = 1560
+		division_template = "幽灵叛乱编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "叛乱队"
+		location = 1560
+		division_template = "幽灵叛乱编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "叛乱队"
+		location = 1560
+		division_template = "幽灵叛乱编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "叛乱队"
+		location = 1560
+		division_template = "幽灵叛乱编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "叛乱队"
+		location = 1560
+		division_template = "幽灵叛乱编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "叛乱队"
+		location = 1560
+		division_template = "幽灵叛乱编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "叛乱队"
+		location = 1560
+		division_template = "幽灵叛乱编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "叛乱队"
+		location = 1560
+		division_template = "幽灵叛乱编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "叛乱队"
+		location = 1560
+		division_template = "幽灵叛乱编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "叛乱队"
+		location = 1560
+		division_template = "幽灵叛乱编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "叛乱队"
+		location = 1560
+		division_template = "幽灵叛乱编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "叛乱队"
+		location = 1560
+		division_template = "幽灵叛乱编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "叛乱队"
+		location = 1560
+		division_template = "幽灵叛乱编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
 	}
 
 }

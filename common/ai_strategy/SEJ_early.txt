@@ -1,0 +1,583 @@
+# unit_base is the base value used for evaluating how important it is to deploy the various categories
+# Written by Henrik "Groogy" Hansson
+#AI 倾向
+SEJ_MSD_help= {
+
+	reversed = yes
+
+	enable = {
+		SEJ = { has_idea = SEJ_zhengzhiweiji_idea }
+		has_war_with = SEJ
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = support 
+		id = "MSD"			
+		value = 100
+	}	
+	# ai_strategy = {
+	# 	type = support 
+	# 	id = "YKR"			
+	# 	value = 150
+	# }	
+
+}
+
+SEJ_friend_MSD1= {
+
+	enable = {
+		MSD = { has_opinion_modifier = SEJ_yaoqingshoudaotongmeng_op }
+		tag = SEJ
+		SEJ = { is_subject = no }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "MSD"			
+		value = 20
+	}
+	ai_strategy = {
+		type = alliance
+		id = "MSD"			
+		value = 20
+	}
+	ai_strategy = {
+		type = support
+		id = "MSD"			
+		value = 20
+	}	
+	
+}
+
+SEJ_friend_MSD2= {
+	reversed = yes
+	enable = {
+		MSD = { has_opinion_modifier = SEJ_yaoqingshoudaotongmeng_op }
+		tag = MSD
+		SEJ = { is_subject = no }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "MSD"			
+		value = 20
+	}
+	ai_strategy = {
+		type = alliance
+		id = "MSD"			
+		value = 20
+	}
+	ai_strategy = {
+		type = support
+		id = "MSD"			
+		value = 20
+	}		
+}
+
+SEJ_friend_MRS1= {
+
+	enable = {
+		MRS = { has_opinion_modifier = SEJ_xiangmofashihejie_op }
+		tag = SEJ
+		SEJ = { is_subject = no }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "MRS"			
+		value = 10
+	}
+	ai_strategy = {
+		type = alliance
+		id = "MRS"			
+		value = 10
+	}
+	ai_strategy = {
+		type = support
+		id = "MRS"			
+		value = 10
+	}	
+	
+}
+
+SEJ_friend_MRS2= {
+
+	enable = {
+		MRS = { has_opinion_modifier = SEJ_xiangmofashihejie_op }
+		tag = MRS
+		SEJ = { is_subject = no }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "SEJ"			
+		value = 10
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SEJ"			
+		value = 10
+	}
+	ai_strategy = {
+		type = support
+		id = "SEJ"			
+		value = 10
+	}	
+}
+
+SEJ_friend_jiumengyou1= {
+	# reversed = yes
+
+	enable = {
+		has_opinion_modifier = SEJ_xiangjiumengyouyouhao_op
+		not = { tag = SEJ }
+		SEJ = { is_subject = no }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "SEJ"			
+		value = 30
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SEJ"			
+		value = 30
+	}
+	ai_strategy = {
+		type = support
+		id = "SEJ"			
+		value = 30
+	}	
+	
+}
+
+SEJ_friend_jiumengyou2= {
+
+	enable = {
+		SEJ = { has_opinion_modifier = SEJ_xiangmofashihejie_op }
+		tag = SEJ
+		SEJ = { is_subject = no }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "TKM"			
+		value = 30
+	}
+	ai_strategy = {
+		type = alliance
+		id = "TKM"			
+		value = 30
+	}
+	ai_strategy = {
+		type = support
+		id = "TKM"			
+		value = 30
+	}	
+
+	ai_strategy = {
+		type = befriend
+		id = "KAG"			
+		value = 30
+	}
+	ai_strategy = {
+		type = alliance
+		id = "KAG"			
+		value = 30
+	}
+	ai_strategy = {
+		type = support
+		id = "KAG"			
+		value = 30
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "WAK"			
+		value = 30
+	}
+	ai_strategy = {
+		type = alliance
+		id = "WAK"			
+		value = 30
+	}
+	ai_strategy = {
+		type = support
+		id = "WAK"			
+		value = 30
+	}
+}
+
+
+SEJ_friend_NMS1= {
+
+	enable = {
+		NMS = { has_opinion_modifier = SEJ_xiangmingliansiyouhao_op }
+		tag = SEJ
+		SEJ = { is_subject = no }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "NMS"			
+		value = 50
+	}
+	ai_strategy = {
+		type = alliance
+		id = "NMS"			
+		value = 50
+	}
+	ai_strategy = {
+		type = support
+		id = "NMS"			
+		value = 50
+	}	
+	
+}
+
+SEJ_friend_NMS2= {
+
+	enable = {
+		NMS = { has_opinion_modifier = SEJ_xiangmingliansiyouhao_op }
+		tag = NMS
+		SEJ = { is_subject = no }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "SEJ"			
+		value = 50
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SEJ"			
+		value = 50
+	}
+	ai_strategy = {
+		type = support
+		id = "SEJ"			
+		value = 50
+	}	
+}
+
+SEJ_attack_SCA= {
+
+	enable = {
+		tag = SEJ
+		has_completed_focus = SEJ_emoyapozhe
+		SEJ = { is_subject = no }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "SCA"			
+		value = 75
+	}
+	ai_strategy = {
+		type = invade
+		id = "SCA"			
+		value = 75
+	}	
+}
+
+SEJ_attack_CIR= {
+
+	enable = {
+		tag = SEJ
+		CIR = { has_country_flag = SEJ_refused}
+		SEJ = { is_subject = no }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "CIR"			
+		value = 10
+	}
+	ai_strategy = {
+		type = invade
+		id = "CIR"			
+		value = 10
+	}	
+}
+
+SEJ_attack_MSD= {
+
+	enable = {
+		tag = SEJ
+		MSD = { has_country_flag = SEJ_refused}
+		SEJ = { is_subject = no }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "MSD"			
+		value = 10
+	}
+	ai_strategy = {
+		type = invade
+		id = "MSD"			
+		value = 10
+	}	
+}
+
+SEJ_attack_MRS = {
+
+	enable = {
+		tag = SEJ
+		MRS = { has_country_flag = SEJ_refused}
+		SEJ = { is_subject = no }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "MRS"			
+		value = 10
+	}
+	ai_strategy = {
+		type = invade
+		id = "MRS"			
+		value = 10
+	}	
+}
+
+SEJ_jiejin_YKR1= {
+
+	enable = {
+		YKR = { has_opinion_modifier = SEJ_jiejinbayunzi_op }
+		tag = SEJ
+		SEJ = { is_subject = no }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "YKR"			
+		value = 20
+	}
+	ai_strategy = {
+		type = alliance
+		id = "YKR"			
+		value = 20
+	}
+	ai_strategy = {
+		type = support
+		id = "YKR"			
+		value = 20
+	}
+	
+}
+
+SEJ_jiejin_YKR2= {
+
+	enable = {
+		YKR = { has_opinion_modifier = SEJ_jiejinbayunzi_op }
+		tag = YKR
+		SEJ = { is_subject = no }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "SEJ"			
+		value = 20
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SEJ"			
+		value = 20
+	}
+	ai_strategy = {
+		type = support
+		id = "SEJ"			
+		value = 20
+	}
+}
+
+SEJ_yizhi_YKR1= {
+
+	enable = {
+		YKR = { has_opinion_modifier = background_enemy }
+		tag = SEJ
+		SEJ = { is_subject = no }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "YKR"			
+		value = 100
+	}
+	ai_strategy = {
+		type = invade
+		id = "YKR"			
+		value = 100
+	}
+}
+
+SEJ_yizhi_YKR2= {
+
+	enable = {
+		YKR = { has_opinion_modifier = background_enemy }
+		tag = SEJ
+		SEJ = { is_subject = no }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	reversed = yes
+
+	ai_strategy = {
+		type = antagonize
+		id = "YKR"			
+		value = 100
+	}
+	ai_strategy = {
+		type = invade
+		id = "YKR"			
+		value = 100
+	}
+}
+
+
+SEJ_xuancheng_HKR1= {
+
+	enable = {
+		HKR = { has_opinion_modifier = SEJ_xuanchengbolizhize_op }
+		tag = SEJ
+		SEJ = { is_subject = no }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = antagonize 
+		id = "HKR"			
+		value = -10
+	}
+	ai_strategy = {
+		type =invade
+		id = "HKR"			
+		value = -10
+	}
+}
+
+SEJ_xuancheng_HKR2 = {
+
+	enable = {
+		HKR = { has_opinion_modifier = SEJ_xuanchengbolizhize_op }
+		tag = SEJ
+		SEJ = { is_subject = no }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	reversed = yes
+
+	ai_strategy = {
+		type = antagonize 
+		id = "HKR"			
+		value = -10
+	}
+	ai_strategy = {
+		type =invade
+		id = "HKR"			
+		value = -10
+	}
+}
+
+SEJ_yaojingqianzaiweixie_CIR1 = {
+
+	enable = {
+		CIR = { has_opinion_modifier = SEJ_yaojingqianzaiweixie_op }
+		tag = SEJ
+		SEJ = { is_subject = no }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "CIR"			
+		value = 100
+	}
+	ai_strategy = {
+		type = invade
+		id = "CIR"			
+		value = 100
+	}
+	
+}
+
+SEJ_yaojingqianzaiweixie_CIR1 = {
+
+	enable = {
+		CIR = { has_opinion_modifier = SEJ_yaojingqianzaiweixie_op }
+		tag = CIR
+		SEJ = { is_subject = no }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "SEJ"			
+		value = 100
+	}
+	ai_strategy = {
+		type = invade
+		id = "SEJ"			
+		value = 100
+	}
+	
+}

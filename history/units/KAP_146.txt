@@ -1,21 +1,24 @@
 ﻿division_template = {
+	name = "扫荡编制"
+	regiments = {
+		sc_light_infantry = { x = 0 y = 0 }
+		sc_light_infantry = { x = 0 y = 1 }
+		sc_light_infantry = { x = 0 y = 2 }
+		sc_light_infantry = { x = 0 y = 3 }
+	}
+	support = {
+	}
+}
+division_template = {
 	name = "常规编制"
 
 	regiments = {
 		sc_infantry = { x = 0 y = 0 }
 		sc_infantry = { x = 0 y = 1 }
 		sc_infantry = { x = 0 y = 2 }
-		sc_artillery_brigade = { x = 1 y = 0 }
-	}
-	support = {
-	}
-}
-division_template = {
-	name = "快速编制"
-
-	regiments = {
-		sc_light_infantry = { x = 0 y = 0 }
-		sc_light_infantry = { x = 0 y = 1 }
+		sc_infantry = { x = 0 y = 3 }
+		melee_infantry = { x = 0 y = 2 }
+		sc_mortar_brigade = { x = 1 y = 0 }
 	}
 	support = {
 	}
@@ -185,23 +188,23 @@ units = {
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "快速编制"
+		name = "扫荡编制"
 		location = 3127
-		division_template = "快速编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "快速编制"
+		name = "扫荡编制"
 		location = 3127
-		division_template = "快速编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "快速编制"
+		name = "扫荡编制"
 		location = 3127
-		division_template = "快速编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
@@ -228,23 +231,23 @@ units = {
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "快速编制"
+		name = "扫荡编制"
 		location = 415
-		division_template = "快速编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "快速编制"
+		name = "扫荡编制"
 		location = 415
-		division_template = "快速编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "快速编制"
+		name = "扫荡编制"
 		location = 415
-		division_template = "快速编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
@@ -271,23 +274,23 @@ units = {
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "快速编制"
+		name = "扫荡编制"
 		location = 3122
-		division_template = "快速编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "快速编制"
+		name = "扫荡编制"
 		location = 3122
-		division_template = "快速编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "快速编制"
+		name = "扫荡编制"
 		location = 3122
-		division_template = "快速编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
@@ -314,26 +317,103 @@ units = {
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "快速编制"
+		name = "扫荡编制"
 		location = 4225
-		division_template = "快速编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "快速编制"
+		name = "扫荡编制"
 		location = 4225
-		division_template = "快速编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "快速编制"
+		name = "扫荡编制"
 		location = 4225
-		division_template = "快速编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
 	
+	division = {
+		name = "常规编制"
+		location = 415
+		division_template = "常规编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常规编制"
+		location = 415
+		division_template = "常规编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常规编制"
+		location = 415
+		division_template = "常规编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常规编制"
+		location = 415
+		division_template = "常规编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常规编制"
+		location = 415
+		division_template = "常规编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常规编制"
+		location = 415
+		division_template = "常规编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常规编制"
+		location = 415
+		division_template = "常规编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常规编制"
+		location = 415
+		division_template = "常规编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常规编制"
+		location = 415
+		division_template = "常规编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常规编制"
+		location = 415
+		division_template = "常规编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "常规编制"
+		location = 415
+		division_template = "常规编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
 	
 }

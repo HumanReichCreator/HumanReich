@@ -258,7 +258,13 @@ HU1_help_for_AKI = {
 	ai_strategy = {
 		type = befriend
 		id = "AKI"			
-		value = 200
+		value = 100
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "AKI"			
+		value = 100
 	}
 	
 	ai_strategy = {
@@ -280,7 +286,13 @@ HU2_help_for_AKI = {
 	ai_strategy = {
 		type = befriend
 		id = "AKI"			
-		value = 200
+		value = 100
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "AKI"			
+		value = 100
 	}
 	
 	ai_strategy = {
@@ -302,7 +314,13 @@ HU3_help_for_AKI = {
 	ai_strategy = {
 		type = befriend
 		id = "AKI"			
-		value = 200
+		value = 100
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "AKI"			
+		value = 100
 	}
 	
 	ai_strategy = {
@@ -324,7 +342,13 @@ HU4_help_for_AKI = {
 	ai_strategy = {
 		type = befriend
 		id = "AKI"			
-		value = 200
+		value = 100
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "AKI"			
+		value = 100
 	}
 	
 	ai_strategy = {
@@ -437,20 +461,20 @@ TEG_volunteers_support_AKI = {
 
 }
 
-NIT_volunteers_support_AKI = {
+NTR_volunteers_support_AKI = {
 
 	# reversed = yes
 
 	enable = {
 
-			tag = NIT
+			tag = NTR
 
             AKI = { has_government = qinwai }
 	}
 
 	abort = {
 	or = {
-		NIT = { is_subject = yes }
+		NTR = { is_subject = yes }
 		AKI = { is_subject = yes }
 	}
 	}
@@ -492,7 +516,7 @@ AKI_cursed_HU4 = {
 	}
 	ai_strategy = {
 		type = ignore
-		id = "SAK"
+		id = "NMN"
 		value = 100
 	}
 	ai_strategy = {
@@ -524,7 +548,7 @@ AKI_cursed_HU1 = {
 	}
 	ai_strategy = {
 		type = ignore
-		id = "SAK"
+		id = "NMN"
 		value = 100
 	}
 	ai_strategy = {

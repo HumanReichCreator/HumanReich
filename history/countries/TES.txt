@@ -1,0 +1,163 @@
+﻿capital = 62
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        spell_card2 = 1
+        spear2 = 1
+            
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+        zuzhihuazhanzheng142 = 1
+        zhanchangzhihui145 = 1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        lingben = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+        jianzaojishu130 = 1
+            
+        #专用工业
+        linglishengchan130 = 1
+        linglishengchan140 = 1
+
+        #种族
+            
+    }
+    
+    
+}
+141.6.2 = {
+    if = {
+       limit = {
+         date < 142.1.1
+       }
+       add_manpower = 10000
+
+    }
+    oob = "TES_141"
+    
+    add_ideas = {
+    God
+    Village
+    hawk1
+    close1
+    normal_border
+    free_magic
+     
+    }
+	set_politics = {
+    	ruling_party = guli
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 35
+        guli = 65
+        neworder = 0
+        oldorder = 0
+        fandong = 0
+    }
+}
+146.1.1={
+    oob = "TES_146"
+    diplomatic_relation = {
+        country = OTG
+        relation = military_access
+        active = yes
+    }
+    IKU = {
+        subject_level4 = yes
+    }
+    
+    
+    
+
+    # set_research_slots = 5
+    
+    add_ideas = {
+    God
+    Village
+    hawk2
+    close2
+    strict_border
+    free_magic
+    type2_manpowerlv3
+     
+
+    }
+    
+    set_politics = {
+    
+    	ruling_party = neworder
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 5
+        guli = 15
+        neworder = 80
+        oldorder = 0
+        fandong = 0
+    }
+    
+}
+create_country_leader = {
+	# name = "Hinanawi Tenshi"
+    name = "比那名居天子"
+	picture = "TES_tes.dds"
+	ideology = neworder_type
+	traits = { }
+}
+create_country_leader = {
+	# name = "Nagae Iku"
+    name = "永江衣玖"
+    picture = "TES_iku.dds"
+	ideology = guli_type
+	traits = { }
+}
+create_country_leader = {
+    # name = "Nagae Iku"
+    name = "永江衣玖"
+    picture = "TES_iku.dds"
+    ideology = fandong_type
+    traits = { }
+}
+create_country_leader = {
+    # name = "Nagae Iku"
+    name = "永江衣玖"
+    picture = "TES_iku.dds"
+    ideology = qinwai_type
+    traits = { }
+}
+create_country_leader = {
+    # name = "Hinanawi Tenshi"
+    name = "比那名居天子"
+    picture = "TES_tes.dds"
+    ideology = oldorder_type
+    traits = { }
+}
+
+
+
+

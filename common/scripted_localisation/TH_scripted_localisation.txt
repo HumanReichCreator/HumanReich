@@ -209,10 +209,10 @@ defined_text = { # Country
 	##########
 	text = {
 		trigger = {
-			tag = SEI
+			tag = SEJ
 			#more trigger here
 		}
-		localization_key = sc142desc.SEI
+		localization_key = sc142desc.SEJ
 	}
 	text = {
 		trigger = {
@@ -233,7 +233,7 @@ defined_text = { # Country
 			NOT = {
 			   tag = RMI
 			   tag = CIR
-			   tag = SEI
+			   tag = SEJ
 			   tag = HUM
 			   tag = HKR
 			   tag = MRS
@@ -322,7 +322,7 @@ defined_text = {
 		trigger = {
 		   OR = {
 		     tag = CIR
-		     tag = SEI
+		     tag = SEJ
 		     tag = RMI
 		   }
 		   OR = {
@@ -338,7 +338,7 @@ defined_text = {
 		trigger = {
 		   OR = {
 		     tag = CIR
-		     tag = SEI
+		     tag = SEJ
 		     tag = RMI
 		   }
 		   MRS = {surrender_progress >0.35 }
@@ -356,7 +356,7 @@ defined_text = {
 		trigger = {
 		   OR = {
 		     tag = CIR
-		     tag = SEI
+		     tag = SEJ
 		     tag = RMI
 		   }
 		   MRS = {surrender_progress >0.49 }
@@ -373,7 +373,7 @@ defined_text = {
 		trigger = {
 		   OR = {
 		     tag = CIR
-		     tag = SEI
+		     tag = SEJ
 		     tag = RMI
 		   }
 		   MRS = {has_capitulated = yes}
@@ -898,21 +898,6 @@ defined_text = {
 	text = {
 	   trigger = {
 	      not = { has_country_flag = EXHC_lowing_exhaustion }
-	   }
-	   localization_key = exhaustion_low_or_not.b
-	}
-}
-defined_text = {
-	name = exhaustion_battle_fairy_or_not
-	text = {
-	   trigger = {
-	      has_country_flag = EXHC_lowing_battle_fairy
-	   }
-	   localization_key = exhaustion_lowing_by_battle_fairy
-	}
-	text = {
-	   trigger = {
-	      not = { has_country_flag = EXHC_lowing_battle_fairy }
 	   }
 	   localization_key = exhaustion_low_or_not.b
 	}
@@ -2166,7 +2151,7 @@ defined_text = {
 	   trigger = {
 	      compliance < 50
 	      ROOT = {
-	      	has_country_flag = SEI_half_core
+	      	has_country_flag = SEJ_half_core
 	      }
 	   }
 	   localization_key = CO_core_cant_11
@@ -2481,5 +2466,22 @@ defined_text = {
 	   		}
 	   }
 	   localization_key = LS_subject_sys_cant_delayed_tt3
+	}
+}
+defined_text = {
+	name = SS_subject_name0
+	text = {
+	   trigger = {
+	   		not = {
+	   			ROOT = { has_country_flag = wusuntunbing_@PREV }
+	   		}
+	   }
+	   localization_key = SS_subject_name1
+	}
+	text = {
+	   trigger = {
+	   		ROOT = { has_country_flag = wusuntunbing_@PREV }
+	   }
+	   localization_key = SS_subject_name2
 	}
 }

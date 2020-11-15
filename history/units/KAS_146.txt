@@ -1,21 +1,37 @@
 ﻿division_template = {
-	name = "动物主力编制"
+	name = "扫荡编制"
 	regiments = {
-		ma_infantry = { x = 0 y = 0 }
-		ma_infantry = { x = 0 y = 1 }
-		ma_infantry = { x = 0 y = 2 }
-		ma_infantry = { x = 1 y = 0 }
-		ma_infantry = { x = 1 y = 1 }
-		ma_infantry = { x = 1 y = 2 }
+		ma_light_infantry = { x = 0 y = 0 }
+		ma_light_infantry = { x = 0 y = 1 }
+		ma_light_infantry = { x = 0 y = 2 }
+		ma_light_infantry = { x = 0 y = 3 }
 	}
 	support = {
 	}
 }
 division_template = {
+	name = "动物主力编制"
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 2 }
+		melee_infantry = { x = 0 y = 3 }
+		melee_infantry = { x = 0 y = 4 }
+		ma_infantry = { x = 1 y = 0 }
+		ma_infantry = { x = 1 y = 1 }
+		ma_infantry = { x = 1 y = 2 }
+		melee_infantry = { x = 1 y = 3 }
+	}
+	support = {
+		sp_jiaqiangban = { x = 0 y = 0 }
+	}
+}
+division_template = {
 	name = "动物警备编制"
 	regiments = {
-		ma_militia = { x = 0 y = 0 }
-		ma_militia = { x = 0 y = 1 }
+		melee_infantry = { x = 0 y = 0 }
+		melee_infantry = { x = 0 y = 1 }
+		melee_infantry = { x = 0 y = 2 }
 	}
 	support = {
 	}
@@ -50,27 +66,6 @@ units = {
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "动物主力编制"
-		location = 805
-		division_template = "动物主力编制"
-		start_experience_factor = 0.8
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "动物主力编制"
-		location = 805
-		division_template = "动物主力编制"
-		start_experience_factor = 0.8
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "动物主力编制"
-		location = 805
-		division_template = "动物主力编制"
-		start_experience_factor = 0.8
-		start_equipment_factor = 1
-	}
-	division = {
 		name = "动物警备编制"
 		location = 805
 		division_template = "动物警备编制"
@@ -127,27 +122,6 @@ units = {
 		start_equipment_factor = 1
 	}
 
-	division = {
-		name = "动物主力编制"
-		location = 5273
-		division_template = "动物主力编制"
-		start_experience_factor = 0.8
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "动物主力编制"
-		location = 5273
-		division_template = "动物主力编制"
-		start_experience_factor = 0.8
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "动物主力编制"
-		location = 5273
-		division_template = "动物主力编制"
-		start_experience_factor = 0.8
-		start_equipment_factor = 1
-	}
 	division = {
 		name = "动物主力编制"
 		location = 5273
@@ -262,27 +236,6 @@ units = {
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "动物主力编制"
-		location = 5204
-		division_template = "动物主力编制"
-		start_experience_factor = 0.8
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "动物主力编制"
-		location = 5204
-		division_template = "动物主力编制"
-		start_experience_factor = 0.8
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "动物主力编制"
-		location = 5204
-		division_template = "动物主力编制"
-		start_experience_factor = 0.8
-		start_equipment_factor = 1
-	}
-	division = {
 		name = "动物警备编制"
 		location = 5204
 		division_template = "动物警备编制"
@@ -339,27 +292,6 @@ units = {
 		start_equipment_factor = 1
 	}
 
-	division = {
-		name = "动物主力编制"
-		location = 2720
-		division_template = "动物主力编制"
-		start_experience_factor = 0.8
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "动物主力编制"
-		location = 2720
-		division_template = "动物主力编制"
-		start_experience_factor = 0.8
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "动物主力编制"
-		location = 2720
-		division_template = "动物主力编制"
-		start_experience_factor = 0.8
-		start_equipment_factor = 1
-	}
 	division = {
 		name = "动物主力编制"
 		location = 2720
@@ -474,27 +406,6 @@ units = {
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "动物主力编制"
-		location = 5228
-		division_template = "动物主力编制"
-		start_experience_factor = 0.8
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "动物主力编制"
-		location = 5228
-		division_template = "动物主力编制"
-		start_experience_factor = 0.8
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "动物主力编制"
-		location = 5228
-		division_template = "动物主力编制"
-		start_experience_factor = 0.8
-		start_equipment_factor = 1
-	}
-	division = {
 		name = "动物警备编制"
 		location = 5228
 		division_template = "动物警备编制"
@@ -551,27 +462,6 @@ units = {
 		start_equipment_factor = 1
 	}
 
-	division = {
-		name = "动物主力编制"
-		location = 5201
-		division_template = "动物主力编制"
-		start_experience_factor = 0.8
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "动物主力编制"
-		location = 5201
-		division_template = "动物主力编制"
-		start_experience_factor = 0.8
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "动物主力编制"
-		location = 5201
-		division_template = "动物主力编制"
-		start_experience_factor = 0.8
-		start_equipment_factor = 1
-	}
 	division = {
 		name = "动物主力编制"
 		location = 5201

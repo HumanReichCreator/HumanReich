@@ -1,0 +1,126 @@
+# All infantry equipment
+
+equipments = {
+
+	core_shield_a = {
+		year = 150
+	
+		is_archetype = yes
+		picture = archetype_infantry_equipment		
+		is_buildable = no
+		type = armor
+		group_by = archetype
+		
+		interface_category = interface_category_land
+
+		upgrades = {
+			upgrade_reliability
+          	upgrade_softattack
+          	upgrade_hardattack
+          	upgrade_aaattack
+          	upgrade_defense
+          	upgrade_breakthrough
+          	upgrade_ic
+          	upgrade_ic_reverse
+          	upgrade_reliability_reverse
+		}
+		upgrades = {
+			up_ma_attack
+			up_defense
+			up_speed
+			up_hardness
+		}
+		
+		
+
+		
+		
+		#Defensive Abilities
+		defense = 24
+		breakthrough = 10
+		hardness = 0.25
+		armor_value = 30
+
+		#Offensive Abilities
+		soft_attack = 15
+		hard_attack = 11
+		ap_attack = 8
+		air_attack = 5
+
+		#Misc Abilities
+		reliability = 0.65
+		maximum_speed = 8
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 0.6
+
+		
+		
+	}
+
+	core_shield150 = {
+		year = 150
+	
+		archetype = core_shield_a
+		
+		priority = 10
+		visual_level = 0
+
+		resources = {
+			gas = 1
+			crystal = 1
+			powder = 1
+		}
+	}
+
+	core_shield159 = {
+		year = 159
+	
+		archetype = core_shield_a
+		parent = core_shield150
+		priority = 10
+		visual_level = 1
+
+		resources = {
+			gas = 1
+			crystal = 2
+			powder = 1
+		}
+		
+		defense = 31
+		breakthrough = 14
+		hardness = 0.3
+		armor_value = 45
+		soft_attack = 18
+		hard_attack = 14
+		ap_attack = 10
+		air_attack = 7
+		build_cost_ic = 0.7
+	}
+
+	core_shield168 = {
+		year = 168
+	
+		archetype = core_shield_a
+		parent = core_shield159
+		priority = 10
+		visual_level = 2
+
+		resources = {
+			gas = 2
+			crystal = 2
+			powder = 1
+		}
+		
+		defense = 38
+		breakthrough = 18
+		armor_value = 60
+		soft_attack = 21
+		hard_attack = 17
+		ap_attack = 12
+		air_attack = 9
+		build_cost_ic = 0.8
+	}
+}

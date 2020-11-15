@@ -1,0 +1,10 @@
+
+MEL_Pact_of_Union_Check = {
+  OR = {
+    tag = MEL
+    AND = {
+      tag = SGS
+      has_idea = SGS_tuanjiexieding_idea
+    }
+  }
+}

@@ -1096,8 +1096,8 @@ focus_tree = {
           bonus = 0.75
           ahead_reduction = 1.5
           uses = 2
-          category = magic_weapons_improve
-          category = magic_artillery_improve
+          category = primary_weapons
+          category = mortar
         }
 
       }
@@ -1398,7 +1398,7 @@ focus_tree = {
       }
 
       mutually_exclusive = {
-        focus = MRS_yichumolisha
+        # focus = MRS_yichumolisha
       }
 
       relative_position_id = MRS_neibuqingkuangdebianhua
@@ -1418,7 +1418,7 @@ focus_tree = {
       } 
 
       ai_will_do = {
-        factor = 1
+        factor = 2
       }
   }
 
@@ -1465,7 +1465,7 @@ focus = {
       }
     }
     ai_will_do = {
-      factor = 1
+      factor = 2
     }
     # cancel_if_invalid = no
     # continue_if_invalid = yes
@@ -1488,7 +1488,7 @@ focus = {
     relative_position_id = MRS_quelimofashiyuanshoudiwei
 
     available ={
-
+      is_subject = no
     }
 
     completion_reward = {
@@ -1509,7 +1509,7 @@ focus = {
 
     }
     ai_will_do = {
-      factor = 1
+      factor = 2
     }
     # cancel_if_invalid = no
     # continue_if_invalid = yes
@@ -1570,7 +1570,7 @@ focus = {
       EXHC_exhaustion_factor_add10 = yes
     }
     ai_will_do = {
-      factor = 1
+      factor = 2
     }
     # cancel_if_invalid = no
     # continue_if_invalid = yes
@@ -1607,7 +1607,7 @@ focus = {
           CONV_convert = yes
           add_resistance = -100
           add_manpower = -50
-          remove_claim_of = ROOT
+          remove_claim_by = ROOT
           add_core_of = ROOT
         }
       }
@@ -1626,7 +1626,7 @@ focus = {
       }
     }
     ai_will_do = {
-      factor = 1
+      factor = 2
     }
     # cancel_if_invalid = no
     # continue_if_invalid = yes
@@ -1660,7 +1660,7 @@ focus = {
       remove_ideas = mrs_bushimofashi
     }
     ai_will_do = {
-      factor = 1
+      factor = 2
     }
     # cancel_if_invalid = no
     # continue_if_invalid = yes
@@ -1780,7 +1780,7 @@ focus = {
       add_ideas = MRS_mofashifuchouzhuyi_idea
     }
     ai_will_do = {
-      factor = 1
+      factor = 2
     }
     # cancel_if_invalid = no
     # continue_if_invalid = yes
@@ -1834,7 +1834,7 @@ focus = {
       remove_ideas = mrs_fenliedemofashi
     }
     ai_will_do = {
-      factor = 1
+      factor = 2
     }
     # cancel_if_invalid = no
     # continue_if_invalid = yes
@@ -1853,7 +1853,7 @@ focus = {
     # mutually_exclusive = {
     #   focus = ty_tourububing
     # }
-    will_lead_to_war_with = KOG
+    will_lead_to_war_with = TKM
 
     relative_position_id = MRS_weidadezuguoweidademolisha
     
@@ -1861,7 +1861,7 @@ focus = {
       is_subject = no
     }
     bypass = {
-      KOG = {
+      TKM = {
         bypass_declare_war = yes
       }
     }
@@ -1869,7 +1869,7 @@ focus = {
     completion_reward = {
       add_ideas = MRS_fusangshenshiyongfangan_idea
       declare_war_on = {
-        target = KOG
+        target = TKM
         type = puppet_wargoal_focus
       }
     }
@@ -1927,6 +1927,7 @@ focus = {
           custom_effect_tooltip = TEG_accept
           effect_tooltip = {
             HUM = {
+              end_puppet = ZBT
               subject_level3 = yes
             }
             custom_effect_tooltip = MRS_jiechurenleideshufu_tt
@@ -1966,7 +1967,7 @@ focus = {
       is_subject = no
     }
 
-    will_lead_to_war_with = SEI
+    will_lead_to_war_with = SEJ
     will_lead_to_war_with = RMI
 
     completion_reward = {
@@ -2119,7 +2120,7 @@ focus = {
         focus = MRS_mofashiqingqiu
       }
       prerequisite = {
-        focus = MRS_yichumolisha
+        # focus = MRS_yichumolisha
         focus = MRS_pingxineiluan
       }
 
@@ -2152,13 +2153,14 @@ focus = {
         }
         remove_ideas = mrs_fenliedemofashi
         LS_low_per_PP_cost_minus0.3 = yes
+        add_ideas = Town
         hidden_effect = {
           news_event = { id = mrs.11 days = 2 }
         }
       }
 
       ai_will_do = {
-        factor = 1
+        factor = 2
       }
   }
 
@@ -2182,7 +2184,7 @@ focus = {
         focus = MRS_mofashiqingqiu
       }
       prerequisite = {
-        focus = MRS_yichumolisha
+        # focus = MRS_yichumolisha
         focus = MRS_pingxineiluan
       }
 
@@ -2219,7 +2221,7 @@ focus = {
       }
 
       ai_will_do = {
-        factor = 1
+        factor = 2
       }
   }
 
@@ -2243,7 +2245,7 @@ focus = {
         focus = MRS_mofashiqingqiu
       }
       prerequisite = {
-        focus = MRS_yichumolisha
+        # focus = MRS_yichumolisha
         focus = MRS_pingxineiluan
       }
 
@@ -2278,10 +2280,11 @@ focus = {
         hidden_effect = {
           news_event = { id = mrs.23 days = 2 }
         }
+        add_ideas = Village
       }
 
       ai_will_do = {
-        factor = 1
+        factor = 2
       }
   }
 
@@ -2302,7 +2305,7 @@ focus = {
       relative_position_id = MRS_duozhongzudatong
 
       available ={
-
+        is_subject = no
          # has_global_flag = main_scenario
       }
 
@@ -2312,15 +2315,15 @@ focus = {
           limit = {
             is_subject_of = ROOT
           }
-          # low_puppet_level = yes
           can_core = yes
+          low_puppet_level = yes
         }
         conservativeincrease = yes
-
+        remove_ideas = mrs_bushimofashi
       }
 
       ai_will_do = {
-        factor = 1
+        factor = 2
       }
   }
 
@@ -2338,6 +2341,7 @@ focus = {
       relative_position_id = MRS_xiaochuzhongzugehe
 
       available ={
+        is_subject = no
          # has_global_flag = main_scenario
       }
 
@@ -2352,7 +2356,7 @@ focus = {
       }
 
       ai_will_do = {
-        factor = 1
+        factor = 2
       }
   }
 
@@ -2373,6 +2377,7 @@ focus = {
       relative_position_id = MRS_xiaochuzhongzugehe
 
       available ={
+        is_subject = no
          # has_global_flag = main_scenario
       }
 
@@ -2384,7 +2389,7 @@ focus = {
       }
 
       ai_will_do = {
-        factor = 1
+        factor = 2
       }
   }
 
@@ -2406,6 +2411,7 @@ focus = {
       relative_position_id = MRS_xiaochuzhongzugehe
 
       available ={
+        is_subject = no
          # has_global_flag = main_scenario
       }
 
@@ -2419,7 +2425,7 @@ focus = {
       }
 
       ai_will_do = {
-        factor = 1
+        factor = 2
       }
   }
 
@@ -2440,6 +2446,7 @@ focus = {
       relative_position_id = MRS_bangzhugengduorenleixiulian
 
       available ={
+        is_subject = no
          has_completed_focus = MRS_duozhongzudatong
       }
 
@@ -2453,7 +2460,7 @@ focus = {
       }
 
       ai_will_do = {
-        factor = 1
+        factor = 2
       }
   }
 
@@ -2474,6 +2481,7 @@ focus = {
       relative_position_id = MRS_xiulianmofadeyaoguai
 
       available ={
+        is_subject = no
          # has_global_flag = main_scenario
       }
 
@@ -2484,7 +2492,7 @@ focus = {
       }
 
       ai_will_do = {
-        factor = 1
+        factor = 2
       }
   }
 
@@ -2505,6 +2513,7 @@ focus = {
       relative_position_id = MRS_jienawailaizhongzu
 
       available ={
+        is_subject = no
          # has_global_flag = main_scenario
       }
 
@@ -2515,7 +2524,7 @@ focus = {
       }
 
       ai_will_do = {
-        factor = 1
+        factor = 2
       }
   }
 
@@ -2539,6 +2548,7 @@ focus = {
       relative_position_id = MRS_zaiyongmofadaoju
 
       available ={
+        is_subject = no
          # has_global_flag = main_scenario
       }
 
@@ -2586,6 +2596,7 @@ focus = {
       relative_position_id = MRS_gezuningjuli
 
       available ={
+        is_subject = no
         not = {
           country_exists = MTM
           country_exists = MFA
@@ -2595,16 +2606,21 @@ focus = {
       }
 
       completion_reward = {
-        remove_ideas = mrs_bushimofashi
         add_ideas = Country
         set_cosmetic_tag = MRS_nanlianmeng
         hidden_effect = {
           news_event = { id = mrs.12 days = 2 }
         }
+        every_owned_state = {
+          limit = {
+            is_core_of = ROOT
+          }
+          add_manpower = 100
+        }
       }
 
       ai_will_do = {
-        factor = 1
+        factor = 2
       }
   }
 
@@ -2625,6 +2641,7 @@ focus = {
       relative_position_id = MRS_fazhandejihui
 
       available ={
+        is_subject = no
          # has_global_flag = main_scenario
       }
 
@@ -2675,6 +2692,7 @@ focus = {
       relative_position_id = MRS_fazhandejihui
 
       available ={
+        is_subject = no
          # has_global_flag = main_scenario
       }
 
@@ -2725,6 +2743,7 @@ focus = {
       relative_position_id = MRS_tiangouguanxi
 
       available ={
+        is_subject = no
          # has_global_flag = main_scenario
       }
 
@@ -2762,7 +2781,8 @@ focus = {
       relative_position_id = MRS_fazhandejihui
 
       available ={
-        SEI = {
+        is_subject = no
+        SEJ = {
           has_government = ROOT
         }
       }
@@ -2771,13 +2791,13 @@ focus = {
         custom_effect_tooltip = changing_effect2
         add_opinion_modifier = {
           modifier = MRS_fazhanguanxi_op
-          target = SEI
+          target = SEJ
         }
         reverse_add_opinion_modifier = {
           modifier = MRS_fazhanguanxi_op
-          target = SEI
+          target = SEJ
         }
-        SEI = {
+        SEJ = {
           if = {
             limit = {
               has_government = ROOT
@@ -2819,8 +2839,10 @@ focus = {
       }
 
       available ={
-        KOG = {
+        is_subject = no
+        TKM = {
           has_government = ROOT
+          has_country_flag = TKM_xuanjujieshu
         }
       }
 
@@ -2828,13 +2850,13 @@ focus = {
         custom_effect_tooltip = changing_effect2
         add_opinion_modifier = {
           modifier = MRS_fazhanguanxi_op
-          target = KOG
+          target = TKM
         }
         reverse_add_opinion_modifier = {
           modifier = MRS_fazhanguanxi_op
-          target = KOG
+          target = TKM
         }
-        KOG = {
+        TKM = {
           if = {
             limit = {
               has_government = ROOT
@@ -2876,6 +2898,7 @@ focus = {
       }
 
       available ={
+        is_subject = no
         CIR = {
           has_government = ROOT
         }
@@ -2931,14 +2954,15 @@ focus = {
         custom_effect_tooltip = changing_effect2
         if = {
           limit = {
-            SEI = { is_faction_leader = yes}
+            SEJ = { is_faction_leader = yes}
           }
-          SEI = {
-            add_to_faction = ROOT
+          SEJ = {
+            qiangjiemeng = yes
           }
           else = {
-            give_guarantee = SEI
-            SEI = { give_guarantee = ROOT }
+            SEJ = {
+              jiemeng = yes
+            }
           }
         }
       }
@@ -2970,14 +2994,15 @@ focus = {
         custom_effect_tooltip = changing_effect2
         if = {
           limit = {
-            KOG = { is_faction_leader = yes}
+            TKM = { is_faction_leader = yes}
           }
-          KOG = {
-            add_to_faction = ROOT
+          TKM = {
+            qiangjiemeng = yes
           }
           else = {
-            give_guarantee = KOG
-            KOG = { give_guarantee = ROOT }
+            TKM = {
+              jiemeng = yes
+            }
           }
         }
       }
@@ -3012,11 +3037,12 @@ focus = {
             CIR = { is_faction_leader = yes}
           }
           CIR = {
-            add_to_faction = ROOT
+            qiangjiemeng = yes
           }
           else = {
-            give_guarantee = CIR
-            CIR = { give_guarantee = ROOT }
+            CIR = {
+              jiemeng = yes
+            }
           }
         }
       }
@@ -3084,6 +3110,7 @@ focus = {
       relative_position_id = MRS_tongqingruozhe
 
       available ={
+        is_subject = no
          # has_global_flag = main_scenario
       }
 
@@ -3093,7 +3120,7 @@ focus = {
       }
 
       ai_will_do = {
-        factor = 1
+        factor = 2
       }
   }
 
@@ -3111,6 +3138,7 @@ focus = {
       relative_position_id = MRS_mofashiruozhelun
 
       available ={
+        is_subject = no
          # has_global_flag = main_scenario
       }
 
@@ -3130,7 +3158,7 @@ focus = {
       }
 
       ai_will_do = {
-        factor = 1
+        factor = 2
       }
   }
 
@@ -3152,6 +3180,7 @@ focus = {
       relative_position_id = MRS_caogenyaoguailianxi
 
       available ={
+        is_subject = no
         MSD = {
           not = { owns_state = 206 }
         }
@@ -3187,7 +3216,7 @@ focus = {
       }
 
       ai_will_do = {
-        factor = 1
+        factor = 2
       }
   }
 
@@ -3211,7 +3240,14 @@ focus = {
       relative_position_id = MRS_caogenyaoguailianxi
 
       available ={
+        is_subject = no
          # has_global_flag = main_scenario
+      }
+
+      bypass = {
+        MSD = {
+          bypass_declare_war = yes
+        }
       }
 
       completion_reward = {
@@ -3224,7 +3260,7 @@ focus = {
       }
 
       ai_will_do = {
-        factor = 1
+        factor = 2
         modifier = {
           has_war = yes
           factor = 0
@@ -3246,6 +3282,7 @@ focus = {
       relative_position_id = MRS_mofashiruozhelun
 
       available ={
+        is_subject = no
          # has_global_flag = main_scenario
       }
 
@@ -3272,6 +3309,7 @@ focus = {
       relative_position_id = MRS_yanxubuduishengmingli
 
       available ={
+        is_subject = no
         or = {
           owns_state = 169
           any_country = {
@@ -3283,6 +3321,7 @@ focus = {
       }
 
       completion_reward = {
+        remove_ideas = mrs_fenliedemofashi
         add_manpower = 1200
         169 = {
           add_extra_state_shared_building_slots = 2
@@ -3319,13 +3358,13 @@ focus = {
       relative_position_id = MRS_chongxinkaolvshoudaoguanxi
 
       available ={
+        is_subject = no
          # has_global_flag = main_scenario
       }
 
       completion_reward = {
         custom_effect_tooltip = changing_effect
         remove_ideas = mrs_bushimofashi
-        remove_ideas = mrs_fenliedemofashi
         every_country = {
           limit = {
             is_subject_of = ROOT
@@ -3348,7 +3387,7 @@ focus = {
       }
 
       ai_will_do = {
-        factor = 1
+        factor = 2
       }
   }
 
@@ -3366,6 +3405,7 @@ focus = {
       relative_position_id = MRS_mofashiyaoguailianbang
 
       available ={
+        is_subject = no
          # has_global_flag = main_scenario
       }
 
@@ -3403,6 +3443,7 @@ focus = {
       }
 
       completion_reward = {
+        add_ideas = can_create_faction_idea
         create_faction = MRS_geming
         add_named_threat = {
           name = MRS_mofashiyaoguailianbang
@@ -3541,19 +3582,19 @@ focus = {
 
       completion_reward = {
         random_owned_controlled_state = {
-          add_extra_state_shared_building_slots = 1
+          add_extra_state_shared_building_slots = 2
           add_building_construction = {
             instant_build = yes
             type = industrial_complex
-            level = 1
+            level = 2
           }
         }
         random_owned_controlled_state = {
-          add_extra_state_shared_building_slots = 1
+          add_extra_state_shared_building_slots = 2
           add_building_construction = {
             instant_build = yes
             type = industrial_complex
-            level = 1
+            level = 2
           }
         }
       }
@@ -3582,19 +3623,19 @@ focus = {
 
       completion_reward = {
         random_owned_controlled_state = {
-          add_extra_state_shared_building_slots = 1
+          add_extra_state_shared_building_slots = 2
           add_building_construction = {
             instant_build = yes
             type = arms_factory
-            level = 1
+            level = 2
           }
         }
         random_owned_controlled_state = {
-          add_extra_state_shared_building_slots = 1
+          add_extra_state_shared_building_slots = 2
           add_building_construction = {
             instant_build = yes
             type = arms_factory
-            level = 1
+            level = 2
           }
         }
       }
@@ -3623,7 +3664,7 @@ focus = {
 
       completion_reward = {
         add_tech_bonus = {
-          bonus = 0.55
+          bonus = 0.6
           uses = 2
           category = industrys
         }
@@ -3657,20 +3698,17 @@ focus = {
       relative_position_id = MRS_fazhanziyuanjingji
       
       available ={
+        CIR = {
+          has_government = qinwai
+          not = { has_war_with = ROOT }
          # has_global_flag = main_scenario
+        }
       }
 
       completion_reward = {
         CIR = {
           can_use = yes
-          add_opinion_modifier = {
-            modifier = MRS_bangzhu_op
-            target = ROOT
-          }
-          reverse_add_opinion_modifier = {
-            modifier = MRS_bangzhu_op
-            target = ROOT
-          }
+          jiemeng = yes
         }
         every_owned_state = {
           add_extra_state_shared_building_slots = 1
@@ -3708,20 +3746,17 @@ focus = {
       relative_position_id = MRS_mingongjiaqiang
       
       available ={
+        SEJ = {
+          has_government = qinwai
+          not = { has_war_with = ROOT }
          # has_global_flag = main_scenario
+        }
       }
 
       completion_reward = {
-        SEI = {
+        SEJ = {
           can_use = yes
-          add_opinion_modifier = {
-            modifier = MRS_bangzhu_op
-            target = ROOT
-          }
-          reverse_add_opinion_modifier = {
-            modifier = MRS_bangzhu_op
-            target = ROOT
-          }
+          jiemeng = yes
         }
         add_ideas = MRS_huizhenchengyiyuan_idea
         hidden_effect = {
@@ -3757,20 +3792,15 @@ focus = {
       relative_position_id = MRS_jungongjiaqiang
       
       available ={
-         # has_global_flag = main_scenario
+         SCA = {
+          not = { has_war_with = ROOT }
+         }
       }
 
       completion_reward = {
         SCA = {
           can_use = yes
-          add_opinion_modifier = {
-            modifier = MRS_bangzhu_op
-            target = ROOT
-          }
-          reverse_add_opinion_modifier = {
-            modifier = MRS_bangzhu_op
-            target = ROOT
-          }
+          jiemeng = yes
         }
         random_owned_controlled_state = {
           add_extra_state_shared_building_slots = 1
@@ -3825,20 +3855,18 @@ focus = {
       relative_position_id = MRS_gailiangshebei
       
       available ={
+        TKM = {
+          has_government = qinwai
+          not = { has_war_with = ROOT }
+          has_country_flag = TKM_xuanjujieshu
          # has_global_flag = main_scenario
+        }
       }
 
       completion_reward = {
-        KOG = {
+        TKM = {
           can_use = yes
-          add_opinion_modifier = {
-            modifier = MRS_bangzhu_op
-            target = ROOT
-          }
-          reverse_add_opinion_modifier = {
-            modifier = MRS_bangzhu_op
-            target = ROOT
-          }
+          jiemeng = yes
         }
         random_owned_controlled_state = {
           add_extra_state_shared_building_slots = 1
@@ -3906,7 +3934,7 @@ focus = {
       }
 
       completion_reward = {
-        add_political_power = -100
+        add_political_power = -10
         170 = {
           add_building_construction = {
             type = bunker
@@ -4134,7 +4162,7 @@ focus = {
               province = 4518
             }
           }
-          add_political_power = -30
+          add_political_power = -3
         }
         if = {
           limit = {
@@ -4154,7 +4182,7 @@ focus = {
               province = 632
             }
           }
-          add_political_power = -30
+          add_political_power = -3
         }
         if = {
           limit = {
@@ -4180,7 +4208,7 @@ focus = {
               province = 4518
             }
           }
-          add_political_power = -30
+          add_political_power = -3
         }
         if = {
           limit = {
@@ -4212,7 +4240,7 @@ focus = {
               province = 9
             }
           }
-          add_political_power = -30
+          add_political_power = -3
         }
         if = {
           limit = {
@@ -4244,7 +4272,7 @@ focus = {
               province = 4495
             }
           }
-          add_political_power = -30
+          add_political_power = -3
         }
         if = {
           limit = {
@@ -4282,7 +4310,7 @@ focus = {
               province = 3828
             }
           }
-          add_political_power = -30
+          add_political_power = -3
         }
         if = {
           limit = {
@@ -4332,7 +4360,7 @@ focus = {
               province = 3812
             }
           }
-          add_political_power = -30
+          add_political_power = -3
         }
 
       }
@@ -4367,10 +4395,11 @@ focus = {
       completion_reward = {
         remove_ideas = mrs_fenliedemofashi
         add_ideas = MRS_zhunbeiyingduidayaoguai_idea
+        conservativedecrease = yes
       }
 
       ai_will_do = {
-        factor = 1
+        factor = 2
       }
   }
 
@@ -4395,7 +4424,7 @@ focus = {
       relative_position_id = MRS_zhunbeiyingduidayaoguai
       
       available ={
-        has_completed_focus = MRS_jingguanqibian
+
          # has_global_flag = main_scenario
       }
 
@@ -4406,7 +4435,7 @@ focus = {
       }
 
       ai_will_do = {
-        factor = 1
+        factor = 2
       }
   }
 
@@ -4583,7 +4612,7 @@ focus = {
         PO_add2 = yes
         add_tech_bonus = {
           bonus = 0.75
-          category = magic_weapons
+          category = primary_weapons
           uses = 1
         }
         add_ideas = MRS_mofabuqiang_idea
@@ -4615,10 +4644,10 @@ focus = {
         PO_add1 = yes
         add_tech_bonus = {
           bonus = 0.6
-          category = magic_weapons_improve
+          category = primary_weapons
           uses = 2
         }
-        KOG = { add_ideas = MRS_daojuhuzhuxieyi_idea }
+        TKM = { add_ideas = MRS_daojuhuzhuxieyi_idea }
       }
 
       ai_will_do = {
@@ -4651,12 +4680,15 @@ focus = {
       completion_reward = {
         SCA = {
           add_to_faction = MRS
+          qiangjiemeng = yes
         }
         hidden_effect = {
           news_event = { id = mrs.28 days = 2 }
         }
         
       }
+
+      continue_if_invalid = yes
 
       ai_will_do = {
         factor = 1
@@ -4695,19 +4727,11 @@ focus = {
           modifier = MRS_xianzheyouhao_op
         }
         hidden_effect = {
-          if = {
-            limit = {
-              has_completed_focus = MRS_mojiehua
-            }
-            news_event = { id = mrs.55 days = 2 }
-            else = {
               news_event = { id = mrs.29 days = 2 }
-            }
-          }
-          
         }
-
       }
+
+      continue_if_invalid = yes
 
       ai_will_do = {
         factor = 1
@@ -4732,6 +4756,7 @@ focus = {
       relative_position_id = MRS_feihongtiaoyue
       
       available ={
+        is_subject = no
          # has_global_flag = main_scenario
       }
 
@@ -4789,7 +4814,7 @@ focus = {
       }
 
       ai_will_do = {
-        factor = 1
+        factor = 2
       }
   }
 
@@ -4808,12 +4833,31 @@ focus = {
       
       available ={
         or = {
-          threat > 0.75
+          threat > 0.6
           has_war = yes
+          TKM = {
+            or = {
+              has_government = fandong
+              has_government = neworder
+            }
+          }
+          SEJ = {
+            or = {
+              has_government = fandong
+              has_government = neworder
+            }
+          }
+          CIR = {
+            or = {
+              has_government = fandong
+              has_government = neworder
+            }
+          }
         }
-        
          # has_global_flag = main_scenario
       }
+
+      continue_if_invalid = yes
 
       completion_reward = {
         add_manpower = 2000

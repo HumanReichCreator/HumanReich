@@ -1,0 +1,205 @@
+# options for map_icon_category:
+# For land units: infantry,armored,other
+# For sea units: ship,transport,uboat
+
+sub_units = {
+	sc_shield_infantry = {
+		sprite = light_armor
+		map_icon_category = armored
+		special_forces = yes
+		# mountaineers = yes
+
+		priority = 2501
+		ai_priority = 2000
+		active = no
+
+		type = {
+			armor
+		}
+		
+		group = armor
+		
+		categories = {
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+			category_special_forces
+
+			#
+			category_primary
+			category_sc
+			category_shield
+		}
+		
+		combat_width = 45
+		
+		#Size Definitions
+		max_strength = 55
+		max_organisation = 70
+		default_morale = 0.07
+		manpower = 10
+
+		#Misc Abilities
+		training_time = 250
+		suppression = 4
+		weight = 0.5
+		
+		supply_consumption = 0.07
+
+		need = {
+			special_shield_a = 100
+			support_equipment = 10
+		}
+	}
+
+	ma_shield_infantry = {
+		sprite = light_armor
+		map_icon_category = armored
+		special_forces = yes
+		# mountaineers = yes
+
+		priority = 2501
+		ai_priority = 2000
+		active = no
+
+		type = {
+			armor
+		}
+		
+		group = armor
+		
+		categories = {
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+			category_special_forces
+
+			#
+			category_primary
+			category_ma
+			category_shield
+		}
+		
+		combat_width = 45
+		
+		#Size Definitions
+		max_strength = 65
+		max_organisation = 50
+		default_morale = 0.1
+		manpower = 10
+
+		#Misc Abilities
+		training_time = 250
+		suppression = 4.5
+		weight = 0.5
+		
+		supply_consumption = 0.06
+	
+		need = {
+			core_shield_a = 100
+			support_equipment = 10
+		}
+	}
+
+	ma_shield_tank = {
+		sprite = heavy_armor
+		map_icon_category = armored
+		special_forces = yes
+		# mountaineers = yes
+
+		priority = 2503
+		ai_priority = 2503
+		active = no
+
+		type = {
+			armor
+		}
+		
+		group = armor
+		
+		categories = {
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+			category_special_forces
+
+			#
+			category_primary
+			category_combined
+			category_shield
+		}
+		
+		combat_width = 50
+		
+		#Size Definitions
+		max_strength = 30
+		max_organisation = 30
+		default_morale = 0.04
+		manpower = 10
+
+		#Misc Abilities
+		training_time = 250
+		suppression = 10
+		weight = 0.5
+		
+		supply_consumption = 0.07
+
+		need = {
+			tactical_core_a = 40
+			shield_a = 50
+		}
+	}
+
+	sc_shield_tank = {
+		sprite = heavy_armor
+		map_icon_category = armored
+		special_forces = yes
+		# mountaineers = yes
+
+		priority = 2503
+		ai_priority = 2503
+		active = no
+
+		type = {
+			armor
+		}
+		
+		group = armor
+		
+		categories = {
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+			category_special_forces
+
+			#
+			category_primary
+			category_combined
+			category_shield
+		}
+		
+		combat_width = 50
+		
+		#Size Definitions
+		max_strength = 30
+		max_organisation = 30
+		default_morale = 0.04
+		manpower = 10
+
+		#Misc Abilities
+		training_time = 250
+		suppression = 10
+		weight = 0.5
+		
+		supply_consumption = 0.07
+
+		need = {
+			mecha_a = 40
+			shield_a = 50
+		}
+	}
+}

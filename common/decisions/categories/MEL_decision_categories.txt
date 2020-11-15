@@ -1,0 +1,49 @@
+
+MEL_Scorched_Earth = {
+
+	icon = generic_political_actions
+
+	priority = 90
+  
+  	allowed = {
+    	original_tag = MEL
+	}
+
+	visible = {
+	    original_tag = MEL
+	    has_completed_focus = MEL_Scorched_Earth
+	}
+}
+
+MEL_Colonization = {
+
+	icon = generic_political_actions
+
+	priority = 90
+  
+  	allowed = {
+    	original_tag = MEL
+	}
+
+	visible = {
+	    original_tag = MEL
+	    has_completed_focus = MEL_South_Construction
+	}
+}
+
+
+MEL_Emergency = {
+
+	icon = generic_political_actions
+
+	priority = 90
+  
+  	allowed = {
+    	original_tag = MEL
+	}
+
+	visible = {
+	    original_tag = MEL
+	    has_completed_focus = MEL_Emergency
+	}
+}

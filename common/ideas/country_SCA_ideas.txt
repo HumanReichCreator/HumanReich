@@ -19,6 +19,16 @@ ideas = {
 				conscription_factor = -0.1
 				consumer_goods_factor = 0.05
 			}
+			targeted_modifier = { 
+				tag = CIR
+				attack_bonus_against = -0.15
+				defense_bonus_against = -0.15
+			}
+			targeted_modifier = { 
+				tag = LIL
+				attack_bonus_against = -0.15
+				defense_bonus_against = -0.15
+			}
 
 		}
 
@@ -222,7 +232,7 @@ ideas = {
 			}
 			
 			targeted_modifier = { 
-				tag = KOG
+				tag = TKM
 				attack_bonus_against = 0.05
 				defense_bonus_against = 0.05
 			}
@@ -238,7 +248,7 @@ ideas = {
 			picture = generic_acquire_tanks
 
 			targeted_modifier = { 
-				tag = NIT
+				tag = NTR
 				attack_bonus_against = 0.08
 				defense_bonus_against = 0.08
 			}
@@ -270,7 +280,7 @@ ideas = {
 			picture = generic_acquire_tanks
 
 			targeted_modifier = { 
-				tag = KOG
+				tag = TKM
 				attack_bonus_against = 0.06
 				defense_bonus_against = 0.06
 			}
@@ -405,7 +415,7 @@ ideas = {
 				defense_bonus_against = 0.05
 			}
 			targeted_modifier = { 
-				tag = SPG
+				tag = LIL
 				attack_bonus_against = 0.05
 				defense_bonus_against = 0.05
 			}

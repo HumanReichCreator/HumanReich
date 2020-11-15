@@ -1,0 +1,1092 @@
+﻿add_namespace = hel
+##彼岸
+country_event = { #URM VS KMC
+	id = hel.1
+	title = hel.1.t
+	desc = hel.1.d
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		date > 147.8.1
+		has_global_flag = main_scenario
+		country_exists = URM
+		country_exists = KMC
+		tag = URM
+		is_subject = no
+	}
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	option = {
+		name = hel.1.1
+		ai_chance = {
+			base = 70
+			modifier = {
+				has_war = yes
+				factor = 0.25
+			}
+		}
+
+		army_experience = 10
+
+		declare_war_on = {
+		    target = KMC
+		    type = take_claimed_state
+		    generator = {
+		    	439 437
+		    }
+		}
+	}
+
+	option = {
+		name = hel.1.2
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+news_event = { #URM VS KMC
+	id = hel.2
+	title = hel.2.t
+	desc = hel.2.d
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = hel.2.1
+		trigger = {
+			tag = URM
+		}
+	}
+
+	option = {
+		name = hel.2.2
+		trigger = {
+			tag = KMC
+		}
+	}
+
+	option = {
+		name = hel.2.3
+		trigger = {
+			not = {
+				tag = URM
+				tag = KMC
+			}
+		}
+	}
+}
+
+country_event = { #SKI 和 KMC
+	id = hel.3
+	title = hel.3.t
+	desc = hel.3.d
+	fire_only_once = yes
+	is_triggered_only = no
+	hidden = yes
+	trigger = {
+		date > 150.1.1
+	}
+	mean_time_to_happen = {
+		days = 100
+	}
+
+	immediate = {
+		hidden_effect = {
+			KMC = {
+				if = {
+					limit = {
+						has_government = fandong
+						is_subject = no
+						not = { has_war_with = SKI}
+					}
+					country_event = { id = hel.4 days = 2}
+				}
+			}
+			SKI = {
+				if = {
+					limit = {
+						KMC = { 
+							not = { has_government = fandong } 
+							is_subject = no
+							not = { has_war_with = SKI}
+						}
+					}
+					country_event = { id = hel.5 days = 2}
+				}
+			}
+			# SKI = {
+			# 	if = {
+			# 		limit = {
+			# 			KMC = { is_subject = yes }
+			# 		}
+			# 		country_event = { id = hel.7 days = 2}
+			# 	}
+			# }
+		}
+	}
+
+	option = {
+
+	}
+}
+
+country_event = { #KMC宣SKI
+	id = hel.4
+	title = hel.4.t
+	desc = hel.4.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hel.4.1
+		declare_war_on = {
+			target = SKI
+			type = puppet_wargoal_focus
+		}
+		ai_chance = {
+			base = 75
+		}
+	}
+	option = {
+		name = hel.4.2
+		ai_chance = {
+			base = 25
+		}
+	}
+}
+
+country_event = { #SKI要求附庸KMC(SKI)
+	id = hel.5
+	title = hel.5.t
+	desc = hel.5.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hel.5.1
+		KMC = {
+			country_event = { days = 2 id = hel.6}
+		}
+		custom_effect_tooltip = TEG_accept
+		effect_tooltip = {
+			every_country = {
+				limit = {
+					is_subject_of = KMC
+				}
+				subject_level4 = yes
+			}
+			KMC = {
+				subject_level4 = yes
+			}
+		}
+		
+		ai_chance = {
+			base = 90
+		}
+	}
+	option = {
+		name = hel.5.2
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+country_event = { #SKI要求附庸KMC(KMC)
+	id = hel.6
+	title = hel.6.t
+	desc = hel.6.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hel.6.1
+		SKI = {
+			KMC = {
+				subject_level4 = yes
+			}
+			every_country = {
+				limit = {
+					is_subject_of = KMC
+				}
+				subject_level4 = yes
+			}
+			hidden_effect = {
+				country_event = { id = glo.2001 days = 2}
+				news_event = { id = hel.8 days = 2 }
+			}
+		}
+		
+		ai_chance = {
+			base = 90
+		}
+	}
+	option = {
+		name = hel.6.2
+		SKI = {
+			country_event = { id = hel.7 days = 2}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+country_event = { #SKI要求附庸KMC(SKI打KMC)
+	id = hel.7
+	title = hel.7.t
+	desc = hel.7.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hel.7.1
+		SKI = {
+			declare_war_on = {
+				target = KMC
+				type = puppet_wargoal_focus
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = hel.7.2
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+news_event = { #KMC打SKI(新闻)
+	id = hel.25
+	title = hel.25.t
+	desc = hel.25.d
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = hel.25.1
+		trigger = {
+			tag = SKI
+		}
+	}
+
+	option = {
+		name = hel.25.2
+		trigger = {
+			tag = KMC
+		}
+	}
+
+	option = {
+		name = hel.25.3
+		trigger = {
+			not = {
+				tag = KMC
+				tag = SKI
+			}
+		}
+	}
+}
+
+news_event = { #SKI附庸KMC（新闻）
+	id = hel.8
+	title = hel.8.t
+	desc = hel.8.d
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = hel.8.1
+		trigger = {
+			tag = KMC
+		}
+	}
+
+	option = {
+		name = hel.8.2
+		trigger = {
+			tag = SKI
+		}
+	}
+
+	option = {
+		name = hel.8.3
+		trigger = {
+			not = {
+				tag = SKI
+				tag = KMC
+			}
+		}
+	}
+}
+
+news_event = { #SKI宣KMC（新闻）
+	id = hel.9
+	title = hel.9.t
+	desc = hel.9.d
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = hel.9.1
+		trigger = {
+			tag = KMC
+		}
+	}
+
+	option = {
+		name = hel.9.2
+		trigger = {
+			tag = SKI
+		}
+	}
+	option = {
+		name = hel.9.3
+		trigger = {
+			not = {
+				tag = SKI
+				tag = KMC
+			}
+		}
+	}
+}
+
+country_event = { ##HCT放CLO独立
+	id = hel.10
+	title = hel.10.t
+	desc = hel.10.d
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		tag = HCT
+		date > 146.2.1
+		is_subject = no
+	}
+
+	option = {
+		name = hel.10.1
+		end_puppet = CLO
+		CLO = {
+			jiemeng = yes
+			xianghubaodu = yes
+		}
+		hidden_effect = {
+			news_event = { id = hel.24 days = 2}
+		}
+		ai_chance = {
+			base = 60
+		}
+	}
+
+	option = {
+		name = hel.10.2
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+news_event = { ##HCT独立CLO 新闻
+	id = hel.24
+	title = hel.24.t
+	desc = hel.24.d
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = hel.24.1
+		trigger = {
+			tag = HCT
+		}
+	}
+	option = {
+		name = hel.24.2
+		trigger = {
+			tag = CLO
+		}
+	}
+	option = {
+		name = hel.24.3
+		trigger = {
+			capital_scope = {
+				is_on_continent = Hell
+			}
+			not = {
+				tag = HCT
+				tag = CLO
+			}
+		}
+	}
+	option = {
+		name = hel.24.4
+		trigger = {
+			not = {
+				shiyaojingzijide = yes
+			}
+		}
+	}
+	option = {
+		name = hel.24.5
+		trigger = {
+			shiyaojingzijide = yes
+		}
+	}
+}
+
+country_event = { ##HCT收回CLO(HCT)
+	id = hel.11
+	title = hel.11.t
+	desc = hel.11.d
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		tag = HCT
+		is_subject = no
+		date > 151.2.1
+		country_exists = CLO
+		CLO = {
+			not = { is_subject_of = ROOT }
+		}
+	}
+
+	option = {
+		name = hel.11.1
+		CLO = { country_event = { days = 2 id = hel.12} }
+		custom_effect_tooltip = TEG_accept
+		effect_tooltip = {
+			CLO = {
+				subject_level1 = yes
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = {
+		name = hel.11.2
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = { ##HCT收回CLO(CLO)
+	id = hel.12
+	title = hel.12.t
+	desc = hel.12.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hel.12.1
+		FROM = {
+			ROOT = {
+				subject_level1 = yes
+			}
+			hidden_effect = {
+				country_event = { id = glo.2001 days = 2}
+			}
+		}
+		ai_chance = {
+			base = 90
+			modifier = {
+				has_government = fandong
+				factor = 0
+			}
+		}
+	}
+
+	option = {
+		name = hel.12.2
+		ai_chance = {
+			base = 10
+		}
+		FROM = {
+			hidden_effect = {
+				country_event = { id = hel.13 days = 2}
+			}
+		}
+	}
+}
+
+country_event = {  ##HCT收回CLO(HCT打CLO)
+	id = hel.13
+	title = hel.13.t
+	desc = hel.13.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hel.13.1
+		ROOT = {
+			declare_war_on = {
+				target = FROM
+				type = puppet_wargoal_focus
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = hel.13.2
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+news_event = { #HCT打CLO(新闻)
+	id = hel.14
+	title = hel.14.t
+	desc = hel.14.d
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = hel.14.1
+		trigger = {
+			tag = HCT
+		}
+	}
+	option = {
+		name = hel.14.2
+		trigger = {
+			tag = CLO
+		}
+	}
+	option = {
+		name = hel.14.3
+		trigger = {
+			capital_scope = {
+				is_on_continent = Hell
+			}
+			not = {
+				tag = HCT
+				tag = CLO
+			}
+		}
+	}
+	option = {
+		name = hel.14.4
+		trigger = {
+			not = {
+				shiyaojingzijide = yes
+			}
+		}
+	}
+	option = {
+		name = hel.14.5
+		trigger = {
+			shiyaojingzijide = yes
+		}
+	}
+}
+
+country_event = {  ##SAK宣HB1（krk)
+	id = hel.15
+	title = hel.15.t
+	desc = hel.15.d
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		is_subject = no
+		tag = SAK
+		date > 146.4.1
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	option = {
+		name = hel.15.1
+		declare_war_on = {
+			target = HB1
+			type = puppet_wargoal_focus
+		}
+		ai_chance = {
+			base = 75
+		}
+	}
+	option = {
+		name = hel.15.2
+		ai_chance = {
+			base = 25
+		}
+	}
+}
+
+country_event = {  ##AOO宣KEK
+	id = hel.16
+	title = hel.16.t
+	desc = hel.16.d
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		is_subject = no
+		tag = AOO
+		date > 146.12.15
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = hel.16.1
+		declare_war_on = {
+			target = KEK
+			type = puppet_wargoal_focus
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+	option = {
+		name = hel.16.2
+		ai_chance = {
+			base = 60
+		}
+	}
+}
+
+country_event = {  ##AOO希望和AKO一起进攻HCT(aoo)
+	id = hel.17
+	title = hel.17.t
+	desc = hel.17.d
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		tag = AOO
+		is_subject = no
+		date > 149.6.10
+		not = {
+			has_war_with = HCT
+			HCT = {
+				is_subject_of = ROOT
+				is_subject_of = AKO
+			}
+		}
+		country_exists = HCT
+	}
+	mean_time_to_happen = {
+		days = 120
+	}
+
+	option = {
+		name = hel.17.1
+		AKO = {
+			country_event = { days = 2 id = hel.18}
+		}
+		custom_effect_tooltip = TEG_accept
+		effect_tooltip = {
+			AKO = {
+				army_experience = 15
+				declare_war_on = {
+					target = HCT
+					type = puppet_wargoal_focus
+				}
+			}
+			AOO = {
+				army_experience = 15
+				declare_war_on = {
+					target = HCT
+					type = puppet_wargoal_focus
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = hel.17.2
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = {  ##AOO希望和AKO一起进攻HCT(ako)
+	id = hel.18
+	title = hel.18.t
+	desc = hel.18.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hel.18.1
+		AKO = {
+			army_experience = 15
+			declare_war_on = {
+				target = HCT
+				type = puppet_wargoal_focus
+			}
+		}
+		AOO = {
+			army_experience = 15
+			declare_war_on = {
+				target = HCT
+				type = puppet_wargoal_focus
+			}
+		}
+		hidden_effect = {
+			country_event = { id = glo.2001 days = 2 }
+			news_event = { id = hel.20 days = 2}
+		}
+
+		ai_chance = {
+			base = 60
+		}
+	}
+	option = {
+		name = hel.18.2
+		FROM = { country_event = { id = hel.19 days = 2 } }
+		ai_chance = {
+			base = 40
+			modifier = {
+				HCT = { has_war = YES}
+				factor = 0
+			}
+		}
+	}
+}
+
+country_event = {  ##AOO希望和AKO一起进攻HCT(aoo是否单挑)
+	id = hel.19
+	title = hel.19.t
+	desc = hel.19.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hel.19.1
+		declare_war_on = {
+			target = HCT
+			type = puppet_wargoal_focus
+		}
+		army_experience = 30
+
+		hidden_effect = {
+			news_event = { id = hel.20 days = 2}
+		}
+
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = hel.19.2
+		ai_chance = {
+			base = 90
+		}
+	}
+}
+
+news_event = { #鬼族打赫卡（新闻）
+	id = hel.20
+	title = hel.20.t
+	desc = hel.20.d
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = hel.20.1
+		trigger = {
+			tag = HCT
+		}
+	}
+
+	option = {
+		name = hel.20.2
+		trigger = {
+			tag = CLO
+			
+		}
+	}
+	option = {
+		name = hel.20.3
+		trigger = {
+			or = {
+				tag = AOO
+				tag = AKO
+			}
+		}
+	}
+	option = {
+		name = hel.20.4
+		trigger = {
+			tag = YUG
+		}
+	}
+	option = {
+		name = hel.20.3
+		trigger = {
+			not = {
+				tag = AOO
+				tag = AKO
+				tag = YUG
+				tag = CLO
+				tag = HCT
+			}
+		}
+	}
+}
+
+country_event = {  ##KEK打黑帮
+	id = hel.21
+	title = hel.21.t
+	desc = hel.21.d
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		tag = KEK
+		is_subject = no
+		date < 151.1.1
+		has_war = no
+		or = {
+			and = {
+				or = {
+					SAK = { has_war = yes }
+					YCE = { has_war = yes }
+					GYK = { has_war = yes }
+				}
+				date > 147.6.1
+			}
+			date > 149.6.1
+		}
+		or = {
+			country_exists = SAK
+			country_exists = YCE
+			country_exists = GYK
+		}
+		not = {
+			SAK = { is_subject_of = ROOT }
+			YCE = { is_subject_of = ROOT }
+			GYK = { is_subject_of = ROOT }
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 160
+		modifier = {
+			or = {
+				SAK = { has_war = yes }
+				YCE = { has_war = yes }
+				GYK = { has_war = yes }
+			}
+			factor = 0.25
+		}
+	}
+
+	option = {
+		name = hel.21.1
+		if = {
+			limit = {
+				country_exists = SAK
+				SAK = { not = { is_subject_of = ROOT}}
+			}
+			declare_war_on = {
+				target = SAK
+				type = puppet_wargoal_focus
+			}
+		}
+		if = {
+			limit = {
+				country_exists = YCE
+				YCE = { not = { is_subject_of = ROOT}}
+			}
+			declare_war_on = {
+				target = YCE
+				type = puppet_wargoal_focus
+			}
+		}
+		if = {
+			limit = {
+				country_exists = GYK
+				GYK = { not = { is_subject_of = ROOT}}
+			}
+			declare_war_on = {
+				target = GYK
+				type = puppet_wargoal_focus
+			}
+		}
+		
+		army_experience = 30
+
+		hidden_effect = {
+			if = {
+				limit = {
+					not = {
+						has_global_flag = HEL_war_on_KEK_first
+					}
+				}
+				news_event = { id = hel.23 days = 2}
+				set_global_flag = HEL_war_on_KEK_first
+			}
+		}
+
+		ai_chance = {
+			base = 80
+		}
+	}
+	option = {
+		name = hel.21.2
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+country_event = {  ##黑帮打KEK
+	id = hel.22
+	title = hel.22.t
+	desc = hel.22.d
+	fire_only_once = no
+	is_triggered_only = no
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = HEL_war_on_KEK
+		}
+	}
+
+	trigger = {
+		or = {
+			tag = GYK
+			tag = SAK
+			tag = YCE
+		}
+		not = {
+			has_country_flag = HEL_war_on_KEK
+		}
+		is_subject = no
+		date < 151.1.1
+		has_war = no
+		or = {
+			and = {
+				KEK = { has_war = yes}
+				date > 147.6.1
+			}
+			date > 149.6.1
+		}
+		country_exists = KEK
+		KEK = { is_subject = no }
+	}
+
+	mean_time_to_happen = {
+		days = 160
+		modifier = {
+			KEK = { has_war = yes }
+			factor = 0.25
+		}
+	}
+
+	option = {
+		name = hel.22.1
+		declare_war_on = {
+			target = KEK
+			type = puppet_wargoal_focus
+		}
+		
+		army_experience = 25
+
+		hidden_effect = {
+			if = {
+				limit = {
+					not = {
+						has_global_flag = HEL_war_on_KEK_first
+					}
+				}
+				news_event = { id = hel.23 days = 2}
+				set_global_flag = HEL_war_on_KEK_first
+			}
+		}
+		ai_chance = {
+			base = 80
+		}
+	}
+	option = {
+		name = hel.22.2
+		ai_chance = {
+			base = 20
+			modifier = {
+				KEK = { has_war = yes }
+				factor = 0
+			}
+		}
+	}
+}
+
+news_event = { #畜生界混战（新闻)
+	id = hel.23
+	title = hel.23.t
+	desc = hel.23.d
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = hel.23.1
+		trigger = {
+			or = {
+				has_war_with = KEK
+				has_war_with = YCE
+				has_war_with = SAK
+				has_war_with = GYK
+			}
+		}
+	}
+
+	option = {
+		name = hel.23.2
+		trigger = {
+			capital_scope = {
+				is_on_continent = Hell
+			}
+			not = {
+				tag = KMC
+			}
+		}
+	}
+	option = {
+		name = hel.23.3
+		trigger = {
+			tag = KMC
+		}
+	}
+	option = {
+		name = hel.23.4
+		trigger = {
+			not = {
+				has_war_with = KEK
+				has_war_with = YCE
+				has_war_with = SAK
+				has_war_with = GYK
+				capital_scope = {
+					is_on_continent = Hell
+				}
+			}
+		}
+	}
+}

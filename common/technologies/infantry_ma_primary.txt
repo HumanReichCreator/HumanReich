@@ -1,63 +1,71 @@
 technologies = {
-	zidongshimo150 = {
-
+	@x1 = 1
+	@x2 = 4
+	@x3 = 7
+	@x4 = 10
+	@x5 = 13
+	@x6 = 16
+	@x7 = 19
+	@y1 = 1
+	@y2 = 3
+	@y3 = 5
+	@y4 = 7
+	@y5 = 9
+	@y6 = 11
+	@y7 = 13
+	@y8 = 15
+	@y9 = 17
+	@y10 = 19
+	####
+	linglishimo  = {
 
 		dependencies = {
-		   linglijiejing147 = 1
+		   spell_card3 = 1
 		}
 		
-		 path = {
-			 leads_to_tech = linglijiejing153
-			 research_cost_coeff = 1
-		 }
-		 path = {
-			 leads_to_tech = gongjishimo150
-			 research_cost_coeff = 1
-		 }
+		path = {
+			leads_to_tech = spell_card4
+			research_cost_coeff = 1
+		}
 
-		 category_magic_infantry = {
-		     breakthrough = 0.1
-		     defense = 0.1
-		 }	
-
-		 category_race_infantry = {
-		     breakthrough = 0.1
-		     defense = 0.1
-		 }
+		ma_infantry = {
+			defense = 0.2
+			breakthrough = 0.2
+		}
+		ma_light_infantry = {
+			defense = 0.2
+			breakthrough = 0.2
+		}
 
 
 		research_cost = 2
 		start_year = 150
 		folder = {
 			name = infantry_ma_primary_folder
-			position = { x = 7 y = 1 }
+			position = { x = @x4 y = @y1 }
 		}
 		
 		categories = {
-		military
-		magic_weapons_improve
-		magic
-		infantry
-
+			military
+			primary_weapons
+			magic
+			infantry
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
-
-	linglijiejing153 = {
+	spell_card4  = {
 		xp_research_type = army
-		xp_research_cost = 25
-		xp_research_bonus = 0.25
-		
-		 path = {
-			 leads_to_tech = linglijiejing156
-			 research_cost_coeff = 1
-		 }
-		 
-		
+		xp_research_cost = 50
+		xp_research_bonus = 0.1
+		path = {
+			leads_to_tech = shimogailiang1
+			research_cost_coeff = 1
+		}
+
 		enable_equipments = {
-		  	spell_card153
+			magic_core153
 		}
 
 		on_research_complete = {
@@ -65,186 +73,204 @@ technologies = {
 		}
 
 
-
-		research_cost = 2.5
+		research_cost = 2
 		start_year = 153
 		folder = {
 			name = infantry_ma_primary_folder
-			position = { x = 7 y = 3 }
+			position = { x = @x4 y = @y2 }
 		}
 		
 		categories = {
-		military
-		magic_weapons
-		magic
-		infantry
-
+			military
+			primary_weapons
+			magic
+			infantry
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
-	linglijiejing156 = {
-		xp_research_type = army
-		xp_research_cost = 25
-		xp_research_bonus = 0.25
+	shimogailiang1  = {
 		
-		 path = {
-			 leads_to_tech = linglijiejing159
-			 research_cost_coeff = 1
-		 }
-
-		 path = {
-			 leads_to_tech = mihuodanmu156
-			 research_cost_coeff = 1
-		 }	
-
-		
-		enable_equipments = {
-		  	spell_card156
+		path = {
+			leads_to_tech = spell_card5
+			research_cost_coeff = 1
 		}
 
-		on_research_complete = {
-			ma_p156 = yes
+		ma_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		ma_light_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
 		}
 
-
-
-		research_cost = 2.5
-		start_year = 156
-		folder = {
-			name = infantry_ma_primary_folder
-			position = { x = 7 y = 5 }
-		}
-		
-		categories = {
-		military
-		magic_weapons
-		magic
-		infantry
-
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	mihuodanmu156 = {
-		
-
-		category_magic_infantry = {
-		     hard_attack = 0.1
-		 }	
 
 		research_cost = 2
 		start_year = 156
 		folder = {
 			name = infantry_ma_primary_folder
-			position = { x = 10 y = 5 }
+			position = { x = @x4 y = @y3 }
 		}
 		
 		categories = {
-		military
-		magic_weapons_improve
-		magic
-		infantry
-
+			military
+			primary_weapons
+			magic
+			infantry
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
-
-	linglijiejing159 = {
+	spell_card5  = {
 		xp_research_type = army
-		xp_research_cost = 25
-		xp_research_bonus = 0.25
-
+		xp_research_cost = 50
+		xp_research_bonus = 0.1
 		path = {
-			 leads_to_tech = linglijiejing162
-			 research_cost_coeff = 1
-		 }
+			leads_to_tech = shimogailiang2
+			research_cost_coeff = 1
+		}
 
-	    enable_equipments = {
-		  	spell_card159
+		enable_equipments = {
+			magic_core159
 		}
 
 		on_research_complete = {
 			ma_p159 = yes
 		}
-		
 
 
-		research_cost = 2.5
+		research_cost = 2
 		start_year = 159
 		folder = {
 			name = infantry_ma_primary_folder
-			position = { x = 7 y = 7 }
+			position = { x = @x4 y = @y4 }
 		}
 		
 		categories = {
-		military
-		magic_weapons
-		magic
-		infantry
-
+			military
+			primary_weapons
+			magic
+			infantry
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
-
-	linglijiejing162 = {
-		xp_research_type = army
-		xp_research_cost = 25
-		xp_research_bonus = 0.25
+	shimogailiang2  = {
 		
-		 
+		path = {
+			leads_to_tech = spell_card6
+			research_cost_coeff = 1
+		}
 
-		 enable_equipments = {
-		  	spell_card162
+		ma_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		ma_light_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+
+
+		research_cost = 2
+		start_year = 162
+		folder = {
+			name = infantry_ma_primary_folder
+			position = { x = @x4 y = @y5 }
+		}
+		
+		categories = {
+			military
+			primary_weapons
+			magic
+			infantry
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	spell_card6  = {
+		xp_research_type = army
+		xp_research_cost = 50
+		xp_research_bonus = 0.1
+		path = {
+			leads_to_tech = shimogailiang3
+			research_cost_coeff = 1
+		}
+
+		enable_equipments = {
+			magic_core165
 		}
 
 		on_research_complete = {
-			ma_p162 = yes
+			ma_p165 = yes
 		}
 
 
-
-		research_cost = 2.5
-		start_year = 162
+		research_cost = 2
+		start_year = 165
 		folder = {
 			name = infantry_ma_primary_folder
-			position = { x = 7 y = 9 }
+			position = { x = @x4 y = @y6 }
 		}
 		
 		categories = {
-		military
-		magic_weapons
-		magic
-		infantry
+			military
+			primary_weapons
+			magic
+			infantry
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	shimogailiang3  = {
 
+		ma_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		ma_light_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+
+
+		research_cost = 2
+		start_year = 168
+		folder = {
+			name = infantry_ma_primary_folder
+			position = { x = @x4 y = @y7 }
+		}
+		
+		categories = {
+			military
+			primary_weapons
+			magic
+			infantry
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
 
-	gongjishimo150 = {
+	huifushimo1  = {
 
-	    path = {
-			 leads_to_tech = gongjishimo153
-			 research_cost_coeff = 1
+		path = {
+			leads_to_tech = huifushimo2
+			research_cost_coeff = 1
 		}
-
-		category_magic_infantry = {
-		     soft_attack = 0.02
-		     hard_attack = 0.05
+		ma_infantry = {
+			defense = 0.1
+			breakthrough = 0.1
 		}
-
-		category_race_infantry = {
-		     soft_attack = 0.02
-		     hard_attack = 0.05
+		ma_light_infantry = {
+			defense = 0.1
+			breakthrough = 0.1
 		}
 
 
@@ -252,71 +278,32 @@ technologies = {
 		start_year = 150
 		folder = {
 			name = infantry_ma_primary_folder
-			position = { x = 4 y = 1 }
+			position = { x = @x5 y = @y1 }
 		}
 		
 		categories = {
-		military
-		magic_weapons_improve
-		magic
-		infantry
+			military
+			primary_weapons
+			magic
+			infantry
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
+	huifushimo2  = {
 
-	gongjishimo153 = {
-
-	    path = {
-			 leads_to_tech = gongjishimo156
-			 research_cost_coeff = 1
+		path = {
+			leads_to_tech = huifushimo3
+			research_cost_coeff = 1
 		}
-
-		category_magic_infantry = {
-		     soft_attack = 0.02
-		     hard_attack = 0.05
+		ma_infantry = {
+			defense = 0.1
+			breakthrough = 0.1
 		}
-
-		category_race_infantry = {
-		     soft_attack = 0.02
-		     hard_attack = 0.05
-		}
-
-
-		research_cost = 2
-		start_year = 153
-		folder = {
-			name = infantry_ma_primary_folder
-			position = { x = 4 y = 3 }
-		}
-		
-		categories = {
-		military
-		magic_weapons_improve
-		magic
-		infantry
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	gongjishimo156 = {
-
-	    path = {
-			 leads_to_tech = gongjishimo159
-			 research_cost_coeff = 1
-		}
-
-		category_magic_infantry = {
-		     soft_attack = 0.02
-		     hard_attack = 0.05
-		}
-
-		category_race_infantry = {
-		     soft_attack = 0.02
-		     hard_attack = 0.05
+		ma_light_infantry = {
+			defense = 0.1
+			breakthrough = 0.1
 		}
 
 
@@ -324,380 +311,452 @@ technologies = {
 		start_year = 156
 		folder = {
 			name = infantry_ma_primary_folder
-			position = { x = 4 y = 5 }
+			position = { x = @x5 y = @y3 }
 		}
 		
 		categories = {
-		military
-		magic_weapons_improve
-		magic
-		infantry
+			military
+			primary_weapons
+			magic
+			infantry
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	huifushimo3  = {
+
+		path = {
+			leads_to_tech = huifushimo4
+			research_cost_coeff = 1
+		}
+		ma_infantry = {
+			defense = 0.1
+			breakthrough = 0.1
+		}
+		ma_light_infantry = {
+			defense = 0.1
+			breakthrough = 0.1
+		}
+
+
+		research_cost = 2
+		start_year = 162
+		folder = {
+			name = infantry_ma_primary_folder
+			position = { x = @x5 y = @y5 }
+		}
+		
+		categories = {
+			military
+			primary_weapons
+			magic
+			infantry
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	huifushimo4  = {
+
+		ma_infantry = {
+			defense = 0.1
+			breakthrough = 0.1
+		}
+		ma_light_infantry = {
+			defense = 0.1
+			breakthrough = 0.1
+		}
+
+
+		research_cost = 2
+		start_year = 168
+		folder = {
+			name = infantry_ma_primary_folder
+			position = { x = @x5 y = @y7 }
+		}
+		
+		categories = {
+			military
+			primary_weapons
+			magic
+			infantry
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
 
-	gongjishimo159 = {
+	yejianlinggan1  = {
 
 		path = {
-			 leads_to_tech = gongjishimo162
-			 research_cost_coeff = 1
+			leads_to_tech = yejianlinggan2
+			research_cost_coeff = 1
 		}
+		
+		LAND_NIGHT_ATTACK = 0.1
 
+		research_cost = 2
+		start_year = 153
+		folder = {
+			name = infantry_ma_primary_folder
+			position = { x = @x6 y = @y2 }
+		}
+		
+		categories = {
+			military
+			primary_weapons
+			magic
+			infantry
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	yejianlinggan2  = {
+
+		path = {
+			leads_to_tech = yejianlinggan3
+			research_cost_coeff = 1
+		}
+		
+		LAND_NIGHT_ATTACK = 0.1
 
 		research_cost = 2
 		start_year = 159
 		folder = {
 			name = infantry_ma_primary_folder
-			position = { x = 4 y = 7 }
-		}
-
-		category_magic_infantry = {
-		     soft_attack = 0.02
-		     hard_attack = 0.05
-		}
-
-		category_race_infantry = {
-		     soft_attack = 0.02
-		     hard_attack = 0.05
+			position = { x = @x6 y = @y4 }
 		}
 		
 		categories = {
-		military
-		magic_weapons_improve
-		magic
-		infantry
+			military
+			primary_weapons
+			magic
+			infantry
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
-
-	gongjishimo162 = {
+	yejianlinggan3  = {
+		
+		LAND_NIGHT_ATTACK = 0.1
 
 		research_cost = 2
-		start_year = 162
+		start_year = 165
 		folder = {
 			name = infantry_ma_primary_folder
-			position = { x = 4 y = 9 }
-		}
-
-		category_magic_infantry = {
-		     soft_attack = 0.02
-		     hard_attack = 0.05
-		}
-
-		category_race_infantry = {
-		     soft_attack = 0.02
-		     hard_attack = 0.05
+			position = { x = @x6 y = @y6 }
 		}
 		
 		categories = {
-		military
-		magic_weapons_improve
-		magic
-		infantry
+			military
+			primary_weapons
+			magic
+			infantry
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
-
-	zibaoshimo150 = {
-		
+	core_shield1  = {
+		xp_research_type = army
+		xp_research_cost = 50
+		xp_research_bonus = 0.1
 		path = {
-			 leads_to_tech = zibaoshimo153
-			 research_cost_coeff = 1
-		 }
+			leads_to_tech = ma_fangyujizhongmokuai
+			research_cost_coeff = 1
+		}
+		enable_equipments = {
+			core_shield150
+		}
+		enable_subunits = {
+			ma_shield_infantry
+		}
+		dependencies = {
+			zhiyuanzhuangbei = 1
+		}
+		on_research_complete = {
+			custom_effect_tooltip = core_shield150_oob
+			hidden_effect = {
+				load_oob = ma_shield_infantry
+			}
+		}
 
-		 category_magic_infantry = {
-		     soft_attack = 0.03
-		     breakthrough = 0.05
-		     defense = 0.05
-		     ap_attack = 0.2
-		 }
-
-		 category_race_infantry = {
-		     soft_attack = 0.03
-		     breakthrough = 0.05
-		     defense = 0.05
-		     ap_attack = 0.2
-		 }
-
-		research_cost = 2
+		research_cost = 2.8
 		start_year = 150
 		folder = {
 			name = infantry_ma_primary_folder
-			position = { x = 1 y = 1 }
+			position = { x = @x2 y = @y1 }
 		}
 		
 		categories = {
-		military
-		magic_weapons_improve
-		magic
-		infantry
+			military
+			magic
+			shield_weapons
+			infantry
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
+	ma_fangyujizhongmokuai  = {
 
-	zibaoshimo153 = {
-		
 		path = {
-			 leads_to_tech = zibaoshimo156
-			 research_cost_coeff = 1
-		 }
+			leads_to_tech = ma_shuliangkuochong1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = ma_xunlianjiaqiang1
+			research_cost_coeff = 1
+		}
 
-		 category_magic_infantry = {
-		     soft_attack = 0.03
-		     breakthrough = 0.05
-		     defense = 0.05
-		     ap_attack = 0.2
-		 }
+		ma_shield_infantry = {
+			defense = 0.2
+			breakthrough = 0.2
+		}
 
-		 category_race_infantry = {
-		     soft_attack = 0.03
-		     breakthrough = 0.05
-		     defense = 0.05
-		     ap_attack = 0.2
-		 }
-
-		research_cost = 2
+		research_cost = 2.8
 		start_year = 153
 		folder = {
 			name = infantry_ma_primary_folder
-			position = { x = 1 y = 3 }
+			position = { x = @x2 y = @y2 }
 		}
 		
 		categories = {
-		military
-		magic_weapons_improve
-		magic
-		infantry
+			military
+			magic
+			shield_weapons
+			infantry
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
+	ma_shuliangkuochong1  = {
 
-	zibaoshimo156 = {
-		
 		path = {
-			 leads_to_tech = zibaoshimo159
-			 research_cost_coeff = 1
-		 }
+			leads_to_tech = core_shield2
+			research_cost_coeff = 1
+		}
 
-		research_cost = 2
+		xor = {
+			ma_xunlianjiaqiang1
+		}
+
+		special_forces_cap = 0.1
+		special_forces_training_time_factor = -0.1
+
+		research_cost = 2.8
 		start_year = 156
 		folder = {
 			name = infantry_ma_primary_folder
-			position = { x = 1 y = 5 }
+			position = { x = @x1 y = @y3 }
 		}
-
-		category_magic_infantry = {
-		     soft_attack = 0.03
-		     breakthrough = 0.05
-		     defense = 0.05
-		     ap_attack = 0.2
-		 }
-
-		 category_race_infantry = {
-		     soft_attack = 0.03
-		     breakthrough = 0.05
-		     defense = 0.05
-		     ap_attack = 0.2
-		 }
 		
 		categories = {
-		military
-		magic_weapons_improve
-		magic
-		infantry
+			military
+			magic
+			shield_weapons
+			infantry
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
+	ma_xunlianjiaqiang1  = {
 
-	zibaoshimo159 = {
-		
 		path = {
-			 leads_to_tech = zibaoshimo162
-			 research_cost_coeff = 1
-		 }
+			leads_to_tech = core_shield2
+			research_cost_coeff = 1
+		}
 
-		research_cost = 2
+		ma_shield_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			ap_attack = 0.1
+			max_organisation = 10
+		}
+
+		xor = {
+			ma_shuliangkuochong1
+		}
+
+		research_cost = 2.8
+		start_year = 156
+		folder = {
+			name = infantry_ma_primary_folder
+			position = { x = @x3 y = @y3 }
+		}
+		
+		categories = {
+			military
+			magic
+			shield_weapons
+			infantry
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	core_shield2  = {
+		xp_research_type = army
+		xp_research_cost = 50
+		xp_research_bonus = 0.1
+		path = {
+			leads_to_tech = ma_shuliangkuochong2
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = ma_xunlianjiaqiang2
+			research_cost_coeff = 1
+		}
+		enable_equipments = {
+			core_shield159
+		}
+
+		research_cost = 2.8
 		start_year = 159
 		folder = {
 			name = infantry_ma_primary_folder
-			position = { x = 1 y = 7 }
+			position = { x = @x2 y = @y4 }
 		}
-
-		category_magic_infantry = {
-		     soft_attack = 0.03
-		     breakthrough = 0.05
-		     defense = 0.05
-		     ap_attack = 0.2
-		 }
-
-		 category_race_infantry = {
-		     soft_attack = 0.03
-		     breakthrough = 0.05
-		     defense = 0.05
-		     ap_attack = 0.2
-		 }
 		
 		categories = {
-		military
-		magic_weapons_improve
-		magic
-		infantry
+			military
+			magic
+			shield_weapons
+			infantry
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
+	ma_shuliangkuochong2  = {
 
-	zibaoshimo162 = {
+		path = {
+			leads_to_tech = ma_gongjijizhongmokuai
+			research_cost_coeff = 1
+		}
 
+		xor = {
+			ma_xunlianjiaqiang2
+		}
 
-		research_cost = 2
+		special_forces_cap = 0.1
+		special_forces_training_time_factor = -0.1
+
+		research_cost = 2.8
 		start_year = 162
 		folder = {
 			name = infantry_ma_primary_folder
-			position = { x = 1 y = 9 }
+			position = { x = @x1 y = @y5 }
 		}
-
-		category_magic_infantry = {
-		     soft_attack = 0.03
-		     breakthrough = 0.05
-		     defense = 0.05
-		     ap_attack = 0.2
-		 }
-
-		 category_race_infantry = {
-		     soft_attack = 0.03
-		     breakthrough = 0.05
-		     defense = 0.05
-		     ap_attack = 0.2
-		 }
 		
 		categories = {
-		military
-		magic_weapons_improve
-		magic
-		infantry
+			military
+			magic
+			shield_weapons
+			infantry
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
+	ma_xunlianjiaqiang2  = {
 
-	yejianlinggan150 = {
-		
 		path = {
-			 leads_to_tech = yejianlinggan153
-			 research_cost_coeff = 1
-		 }
-
-		category_magic_infantry = {
-		     breakthrough = 0.05
-		     defense = 0.05
+			leads_to_tech = ma_gongjijizhongmokuai
+			research_cost_coeff = 1
 		}
 
-		category_race_infantry = {
-		     breakthrough = 0.05
-		     defense = 0.05
+		ma_shield_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			ap_attack = 0.1
+			max_organisation = 10
 		}
-		LAND_NIGHT_ATTACK = 0.05
 
-		research_cost = 2
-		start_year = 150
+		xor = {
+			ma_shuliangkuochong2
+		}
+
+		research_cost = 2.8
+		start_year = 162
 		folder = {
 			name = infantry_ma_primary_folder
-			position = { x = 13 y = 1 }
+			position = { x = @x3 y = @y5 }
 		}
 		
 		categories = {
-		military
-		magic_weapons_improve
-		magic
-		infantry
+			military
+			magic
+			shield_weapons
+			infantry
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
+	ma_gongjijizhongmokuai  = {
 
-	yejianlinggan153 = {
-		
 		path = {
-			 leads_to_tech = yejianlinggan156
-			 research_cost_coeff = 1
-		 }
-
-		category_magic_infantry = {
-		     breakthrough = 0.05
-		     defense = 0.05
+			leads_to_tech = core_shield3
+			research_cost_coeff = 1
 		}
 
-		category_race_infantry = {
-		     breakthrough = 0.05
-		     defense = 0.05
+		ma_shield_infantry = {
+			soft_attack = 0.2
+			hard_attack = 0.2
 		}
 
-		LAND_NIGHT_ATTACK = 0.05
-
-		research_cost = 2
-		start_year = 153
+		research_cost = 2.8
+		start_year = 165
 		folder = {
 			name = infantry_ma_primary_folder
-			position = { x = 13 y = 3 }
+			position = { x = @x2 y = @y6 }
 		}
 		
 		categories = {
-		military
-		magic_weapons_improve
-		magic
-		infantry
+			military
+			magic
+			shield_weapons
+			infantry
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
+	core_shield3  = {
+		xp_research_type = army
+		xp_research_cost = 50
+		xp_research_bonus = 0.1
+		path = {
+			leads_to_tech = core_shield3
+			research_cost_coeff = 1
+		}
 
-	yejianlinggan156 = {
-		
+		enable_equipments = {
+			core_shield168
+		}
 
-		research_cost = 2
-		start_year = 156
+		research_cost = 2.8
+		start_year = 168
 		folder = {
 			name = infantry_ma_primary_folder
-			position = { x = 13 y = 5 }
+			position = { x = @x2 y = @y7 }
 		}
-
-		category_magic_infantry = {
-		     breakthrough = 0.05
-		     defense = 0.05
-		}
-
-		category_race_infantry = {
-		     breakthrough = 0.05
-		     defense = 0.05
-		}
-		
-		LAND_NIGHT_ATTACK = 0.05
 		
 		categories = {
-		military
-		magic_weapons_improve
-		magic
-		infantry
+			military
+			magic
+			shield_weapons
+			infantry
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
+	######################
 }

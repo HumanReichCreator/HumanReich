@@ -1,0 +1,44 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+	SEJ_yaoqingshoudaotongmeng_op = {
+		value = 20
+	}
+	SEJ_xiangmofashihejie_op = {
+		value = 10
+	}
+	SEJ_duimuhoudezhunbei_op = {
+		value = -50
+	}
+	SEJ_bangzhuduli_op = {
+		value = 80
+	}
+	SEJ_xiangjiumengyouyouhao_op = {
+		value = 30
+	}
+	SEJ_xiangmingliansiyouhao_op = {
+		value = 40
+	}
+	SEJ_yaojingqianzaiweixie_op = {
+		value = -50
+	}
+	SEJ_huaqinghexianzhedejiexian_op = {
+		value = -75
+	}
+	SEJ_jiejinbayunzi_op = {
+		value = 20
+	}
+	SEJ_xuanchengbolizhize_op = {
+		value = -10
+	}
+
+	
+}	

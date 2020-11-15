@@ -1,0 +1,404 @@
+cavalry_generic = {
+
+	roles = {
+		cavalry_force
+	}
+	
+	upgrade_prio = {
+		factor = 10
+	}
+
+	match_to_count = 0.10
+
+	cavalry145 = {
+	
+		upgrade_prio = {
+			factor = 2
+
+			modifier = {
+				factor = 0
+				has_tech = zhanchangzhihui150
+			}
+		}
+
+		production_prio = {
+			factor = 10
+
+			modifier = {
+				factor = 0
+				has_tech = zhanchangzhihui150
+			}
+		}
+		
+		target_width = 500.0
+		width_weight = 1.0
+		column_swap_factor = 0.5
+		
+		stat_weights = {
+			0.00 #-- default_morale
+			1.10 #-- defense
+			1.10 #-- breakthrough
+			0.60 #-- hardness
+			1.00 #-- soft_attack
+			0.00 #-- hard_attack
+			0.10 #-- recon
+			0.01 #-- entrenchment
+			0.10 #-- initiative
+			0.01 #-- casualty_trickleback
+			-0.05 #-- supply_consumption_factor
+			-0.01 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.01 #-- experience_loss_factor
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+			#-- Air Values
+			0.02 #-- air_attack
+			#-- Common Values
+			30.00 #-- max_organisation
+			0.80 #-- max_strength
+			2.0 #-- maximum_speed
+			0.20 #-- armor_value
+			0.05 #-- ap_attack
+			0.10 #-- reliability
+			0.10 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- build_cost_ic
+		}
+		
+		target_template = {
+			weight = 0.9
+			match_value = 3000.0
+			
+			support = {
+				sp_zhihuidui = 1
+				sp_duzhanxiaodui = 1
+				sp_zhanchanggongbing = 1
+				sp_houfangyiliao = 1
+				sp_jiaqiangban = 1
+				sp_feixingzhencha = 1
+			}
+
+			
+			regiments = {
+				melee_cavalry = 14
+			}
+		}
+		
+		allowed_types = {
+			melee_infantry	
+			ma_light_infantry
+			sc_light_infantry
+			ma_sf_infantry
+			sc_sf_infantry
+			melee_cavalry
+
+			sp_zhihuidui
+			sp_duzhanxiaodui
+			sp_zhanchanggongbing
+			sp_houfangyiliao
+			sp_jiaqiangban
+			sp_feixingzhencha
+		}
+	}
+
+	cavalry150 = {
+	
+		upgrade_prio = {
+			factor = 2
+
+			modifier = {
+				factor = 0
+				has_tech = zhanchangzhihui155
+			}
+		}
+
+		production_prio = {
+			factor = 10
+
+			modifier = {
+				factor = 0
+				has_tech = zhanchangzhihui155
+			}
+		}
+		
+		target_width = 500.0
+		width_weight = 1.0
+		column_swap_factor = 0.5
+		
+		stat_weights = {
+			0.00 #-- default_morale
+			1.10 #-- defense
+			1.10 #-- breakthrough
+			0.60 #-- hardness
+			1.00 #-- soft_attack
+			0.00 #-- hard_attack
+			0.10 #-- recon
+			0.01 #-- entrenchment
+			0.10 #-- initiative
+			0.01 #-- casualty_trickleback
+			-0.05 #-- supply_consumption_factor
+			-0.01 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.01 #-- experience_loss_factor
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+			#-- Air Values
+			0.02 #-- air_attack
+			#-- Common Values
+			30.00 #-- max_organisation
+			0.80 #-- max_strength
+			2.0 #-- maximum_speed
+			0.20 #-- armor_value
+			0.05 #-- ap_attack
+			0.10 #-- reliability
+			0.10 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- build_cost_ic
+		}
+		
+		target_template = {
+			weight = 0.9
+			match_value = 3000.0
+			
+			support = {
+				sp_zhihuidui = 1
+				sp_duzhanxiaodui = 1
+				sp_zhanchanggongbing = 1
+				sp_houfangyiliao = 1
+				sp_jiaqiangban = 1
+				sp_feixingzhencha = 1
+			}
+
+			
+			regiments = {
+				melee_cavalry = 16
+			}
+		}
+		
+		allowed_types = {
+			melee_infantry	
+			ma_light_infantry
+			sc_light_infantry
+			ma_sf_infantry
+			sc_sf_infantry
+			melee_cavalry
+
+			sp_zhihuidui
+			sp_duzhanxiaodui
+			sp_zhanchanggongbing
+			sp_houfangyiliao
+			sp_jiaqiangban
+			sp_feixingzhencha
+		}
+	}
+
+	cavalry155 = {
+	
+		upgrade_prio = {
+			factor = 2
+
+			modifier = {
+				factor = 0
+				has_tech = zhanchangzhihui160
+			}
+		}
+
+		production_prio = {
+			factor = 10
+
+			modifier = {
+				factor = 0
+				has_tech = zhanchangzhihui160
+			}
+		}
+		
+		target_width = 500.0
+		width_weight = 1.0
+		column_swap_factor = 0.5
+		
+		stat_weights = {
+			0.00 #-- default_morale
+			1.10 #-- defense
+			1.10 #-- breakthrough
+			0.60 #-- hardness
+			1.00 #-- soft_attack
+			0.00 #-- hard_attack
+			0.10 #-- recon
+			0.01 #-- entrenchment
+			0.10 #-- initiative
+			0.01 #-- casualty_trickleback
+			-0.05 #-- supply_consumption_factor
+			-0.01 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.01 #-- experience_loss_factor
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+			#-- Air Values
+			0.02 #-- air_attack
+			#-- Common Values
+			30.00 #-- max_organisation
+			0.80 #-- max_strength
+			2.0 #-- maximum_speed
+			0.20 #-- armor_value
+			0.05 #-- ap_attack
+			0.10 #-- reliability
+			0.10 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- build_cost_ic
+		}
+		
+		target_template = {
+			weight = 0.9
+			match_value = 3000.0
+			
+			support = {
+				sp_zhihuidui = 1
+				sp_duzhanxiaodui = 1
+				sp_zhanchanggongbing = 1
+				sp_houfangyiliao = 1
+				sp_jiaqiangban = 1
+				sp_feixingzhencha = 1
+			}
+
+			
+			regiments = {
+				melee_cavalry = 20
+			}
+		}
+		
+		allowed_types = {
+			melee_infantry	
+			ma_light_infantry
+			sc_light_infantry
+			ma_sf_infantry
+			sc_sf_infantry
+			melee_cavalry
+
+			sp_zhihuidui
+			sp_duzhanxiaodui
+			sp_zhanchanggongbing
+			sp_houfangyiliao
+			sp_jiaqiangban
+			sp_feixingzhencha
+		}
+	}
+
+	cavalry160 = {
+	
+		upgrade_prio = {
+			factor = 2
+
+			modifier = {
+				factor = 0
+				not = { has_tech = zhanchangzhihui160}
+			}
+		}
+
+		production_prio = {
+			factor = 10
+
+			modifier = {
+				factor = 0
+				has_tech = zhanchangzhihui160
+			}
+		}
+		
+		target_width = 500.0
+		width_weight = 1.0
+		column_swap_factor = 0.5
+		
+		stat_weights = {
+			0.00 #-- default_morale
+			1.10 #-- defense
+			1.10 #-- breakthrough
+			0.60 #-- hardness
+			1.00 #-- soft_attack
+			0.00 #-- hard_attack
+			0.10 #-- recon
+			0.01 #-- entrenchment
+			0.10 #-- initiative
+			0.01 #-- casualty_trickleback
+			-0.05 #-- supply_consumption_factor
+			-0.01 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.01 #-- experience_loss_factor
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+			#-- Air Values
+			0.02 #-- air_attack
+			#-- Common Values
+			30.00 #-- max_organisation
+			0.80 #-- max_strength
+			2.0 #-- maximum_speed
+			0.20 #-- armor_value
+			0.05 #-- ap_attack
+			0.10 #-- reliability
+			0.10 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- build_cost_ic
+		}
+		
+		target_template = {
+			weight = 0.9
+			match_value = 3000.0
+			
+			support = {
+				sp_zhihuidui = 1
+				sp_duzhanxiaodui = 1
+				sp_zhanchanggongbing = 1
+				sp_houfangyiliao = 1
+				sp_jiaqiangban = 1
+				sp_feixingzhencha = 1
+			}
+
+			
+			regiments = {
+				melee_cavalry = 25
+			}
+		}
+		
+		allowed_types = {
+			melee_infantry	
+			ma_light_infantry
+			sc_light_infantry
+			ma_sf_infantry
+			sc_sf_infantry
+			melee_cavalry
+
+			sp_zhihuidui
+			sp_duzhanxiaodui
+			sp_zhanchanggongbing
+			sp_houfangyiliao
+			sp_jiaqiangban
+			sp_feixingzhencha
+		}
+	}
+}

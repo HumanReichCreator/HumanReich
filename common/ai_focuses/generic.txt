@@ -4,24 +4,19 @@ ai_focus_defense = {
 
 		infantry = 25
 
-		science_weapons_improve = 15
-		magic_weapons_improve = 15
-		combined_weapons_improve = 15
-
-		science_artillery_improve = 15
-		magic_artillery_improve = 15
-		combined_artillery_improve = 15
+		primary_weapons = 15
+		melee = 10
+		artillery_tech = 15
+		shield = 10
+		sf_force = 15
+		heavy = 5
+		shield_weapons = 15
 
 		basic_doctrine = 5
 
 		air_equipment = 10
 
 		offensive = 5.0
-
-		artillery_tech = 5
-
-		vehicle = 1
-
 	}
 }
 
@@ -31,22 +26,19 @@ ai_focus_aggressive = {
 
 		infantry = 5
 
-		science_weapons_improve = 20
-		magic_weapons_improve = 20
-		combined_weapons_improve = 20
-
-		science_artillery_improve = 20
-		magic_artillery_improve = 20
-		combined_artillery_improve = 20
+		primary_weapons = 25
+		melee = 20
+		artillery_tech = 25
+		shield = 20
+		sf_force = 25
+		heavy = 15
+		shield_weapons = 25
 
 		land_doctrine = 5
 
 		air_equipment = 10
 
 		artillery_tech = 10
-
-		vehicle = 15
-
 	}
 }
 
@@ -83,16 +75,13 @@ ai_focus_military_advancements = {
 
 		support_tech = 10
 
-		science_weapons_improve = 5
-		magic_weapons_improve = 5 
-		combined_weapons_improve = 5
-
-		science_artillery_improve = 5 
-		magic_artillery_improve = 5
-		combined_artillery_improve = 5
-
-		vehicle = 10
-		science_vehicle_improve = 5
+		primary_weapons = 5
+		melee = 1
+		artillery_tech = 5
+		shield = 1
+		sf_force = 5
+		heavy = 1
+		shield_weapons = 5
 
 		air_equipment = 25
 

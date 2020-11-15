@@ -8,6 +8,7 @@ news_event = { #NG2 or NG1 VS YYK(trigger)
 		date > 148.1.5
 		has_global_flag = main_scenario
 		country_exists = YYK
+		is_subject = no
 		or = {
 			country_exists = NG4
 			country_exists = NG3

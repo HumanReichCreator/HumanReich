@@ -1,8 +1,20 @@
 ﻿division_template = {
+	name = "扫荡编制"
+	regiments = {
+		ma_light_infantry = { x = 0 y = 0 }
+		ma_light_infantry = { x = 0 y = 1 }
+		ma_light_infantry = { x = 0 y = 2 }
+		ma_light_infantry = { x = 0 y = 3 }
+	}
+	support = {
+	}
+}
+division_template = {
 	name = "看护编制"
 	regiments = {
-		ma_militia = { x = 0 y = 0 }
-		ma_militia = { x = 0 y = 1 }
+		melee_infantry = { x = 0 y = 0 }
+		melee_infantry = { x = 0 y = 1 }
+		melee_infantry = { x = 0 y = 2 }
 	}
 	support = {
 	}
@@ -10,10 +22,9 @@
 division_template = {
 	name = "入侵防御编制"
 	regiments = {
-		ma_militia = { x = 0 y = 0 }
-		ma_militia = { x = 0 y = 1 }
-		ma_militia = { x = 0 y = 2 }
-		ma_militia = { x = 0 y = 3 }
+		ma_infantry = { x = 0 y = 0 }
+		melee_infantry = { x = 0 y = 1 }
+		melee_infantry = { x = 0 y = 2 }
 	}
 	support = {
 	}

@@ -1,0 +1,1236 @@
+﻿add_namespace = cir
+
+##########debuff事件###########
+country_event = { #针对恶魔 与恶魔交战时
+	id = cir.2
+	title = cir.2.t
+	desc = cir.2.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+
+	mean_time_to_happen = {
+		days = 45
+	}
+
+	trigger = {
+		tag = SCA
+		has_war_with = CIR
+		CIR = { has_completed_focus = CIR_zhenduiemo }
+	}
+
+	option = { 
+		name = cir.2.1
+
+		EXHC_exhaustion_add15 = yes
+
+		add_timed_idea = {idea = CIR_zhenduiemo_idea days = 365}
+
+		hidden_effect = {
+			CIR = { country_event = {id = cir.21 days = 2}}
+		}
+	}
+}
+country_event = { #针对恶魔 与恶魔交战时
+	id = cir.21
+	title = cir.21.t
+	desc = cir.21.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #为了所有的妖精！
+		name = cir.21.1
+		effect_tooltip = {
+			SCA = {
+				EXHC_exhaustion_add15 = yes
+				add_timed_idea = {idea = CIR_zhenduiemo_idea days = 365}
+			}
+		}
+	}
+}
+
+country_event = { #放眼世界
+	id = cir.3
+	title = cir.3.t
+	desc = cir.3.d
+
+	fire_only_once = no
+	is_triggered_only = no
+
+	trigger = {
+
+		country_exists = CIR
+
+		CIR = { 
+			has_completed_focus = CIR_fangyanshijie 
+			has_opinion = { target = ROOT value < 60 } 
+		}
+		capital_scope = {
+			is_on_continent = Gensokyo
+		}
+		not = {
+			shiyaojingzijide = yes
+			has_idea = CIR_fangyanshijie_idea
+		}
+
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	option = { #该死的妖精
+		name = cir.3.1
+		add_ideas = CIR_fangyanshijie_idea
+	}
+}
+
+##########焦点事件###########
+
+
+
+news_event = { #宣战红魔馆
+	id = cir.4
+	title = cir.4.t
+	desc = cir.4.d
+	# picture = {
+		# trigger = {
+		# 	FROM = { 
+		# 		or = {
+		# 			has_government = neworder 
+		# 			has_government = fandong
+		# 		}
+		# 	}
+		# }
+	# 	picture = GFX_news_event_cir.4_1
+	# }
+	# picture = {
+	# 	trigger = {
+	# 		FROM = { has_government = qinwai }
+	# 	}
+	# 	picture = GFX_news_event_cir.4_2
+	# }
+	picture = [CIR.cir4]
+	fire_only_once = no
+	is_triggered_only = yes
+
+	major = yes
+
+	option = { #
+		name = cir.4.1
+		trigger = {
+			tag = CIR
+		}
+	}
+
+	option = { #
+		name = cir.4.2
+		trigger = {
+			or = {
+				tag = SCA
+				is_subject_of = SCA
+			}
+		}
+	}
+
+	option = { #
+		name = cir.4.3
+		trigger = {
+			not = {
+				tag = CIR
+				tag = SCA
+				is_subject_of = SCA
+				shiyaojingzijide = yes
+			}
+		}
+	}
+	option = { #
+		name = cir.4.4
+		trigger = {
+			shiyaojingzijide = yes
+			not = {
+				tag = CIR
+			}
+		}
+	}
+}
+
+
+news_event = { #宣战sei
+	id = cir.5
+	title = cir.5.t
+	desc = cir.5.d
+	# picture = {
+		# trigger = {
+		# 	FROM = { 
+		# 		or = {
+		# 			has_government = neworder 
+		# 			has_government = fandong
+		# 		}
+		# 	}
+		# }
+	# 	picture = GFX_news_event_cir.5_1
+	# }
+	# picture = {
+	# 	trigger = {
+	# 		FROM = { has_government = qinwai }
+	# 	}
+	# 	picture = GFX_news_event_cir.5_2
+	# }
+	picture = [CIR.cir5]
+	fire_only_once = no
+	is_triggered_only = yes
+
+	major = yes
+
+	option = { #
+		name = cir.5.1
+		trigger = {
+			tag = CIR
+		}
+	}
+
+	option = { #
+		name = cir.5.2
+		trigger = {
+			not = {
+				tag = CIR
+				tag = SEJ
+				shiyaojingzijide = yes
+			}	
+		}
+	}
+
+	option = { #
+		name = cir.5.3
+		trigger = {
+			tag = SEJ
+		}
+	}
+
+	option = { #
+		name = cir.5.4
+		trigger = {
+			shiyaojingzijide = yes
+			not = {
+				tag = CIR
+			}
+		}
+	}
+}
+
+news_event = { #宣战魔法使
+	id = cir.6
+	title = cir.6.t
+	desc = cir.6.d
+	# picture = {
+		# trigger = {
+		# 	FROM = { 
+		# 		or = {
+		# 			has_government = neworder 
+		# 			has_government = fandong
+		# 		}
+		# 	}
+		# }
+	# 	picture = GFX_news_event_cir.6_1
+	# }
+	# picture = {
+	# 	trigger = {
+	# 		FROM = { has_government = qinwai }
+	# 	}
+	# 	picture = GFX_news_event_cir.6_2
+	# }
+	picture = [CIR.cir6]
+	fire_only_once = no
+	is_triggered_only = yes
+
+	major = yes
+
+	option = { #
+		name = cir.6.1
+		trigger = {
+			tag = CIR
+		}
+	}
+
+	option = { #
+		name = cir.6.2
+		trigger = {
+			not = {
+				tag = CIR
+				tag = SCA
+				tag = MRS
+			}	
+		}
+	}
+
+	option = { #
+		name = cir.6.3
+		trigger = {
+			tag = SCA
+		}
+	}
+
+	option = { #
+		name = cir.6.4
+		trigger = {
+			tag = MRS
+		}
+	}
+}
+
+news_event = { #妖精排外
+	id = cir.7
+	title = cir.7.t
+	desc = cir.7.d
+	picture = GFX_news_event_cir.7
+	fire_only_once = no
+	is_triggered_only = yes
+
+	major = yes
+
+	option = { #
+		name = cir.7.1
+		trigger = {
+			or = {
+				tag = CIR
+			}
+		}
+	}
+
+	option = { #
+		name = cir.7.2
+		trigger = {
+			not = {
+				tag = CIR
+			}	
+		}
+	}
+
+	option = { #
+		name = cir.7.3
+		trigger = {
+			shiyaojingzijide = yes
+			not = {
+				tag = CIR
+			}
+		}
+	}
+}
+
+news_event = { #提倡妖精革命斗争
+	id = cir.9
+	title = cir.9.t
+	desc = cir.9.d
+	picture = GFX_news_event_cir.9
+	fire_only_once = no
+	is_triggered_only = yes
+
+	major = yes
+
+	option = { #
+		name = cir.9.1
+		trigger = {
+			shiyaojingzijide = yes
+		}
+	}
+
+	option = { #
+		name = cir.9.2
+		trigger = {
+			not = {
+				shiyaojingzijide = yes
+			}	
+		}
+	}
+}
+
+news_event = { #重新进行下克上革命
+	id = cir.10
+	title = cir.10.t
+	desc = cir.10.d
+	picture = GFX_news_event_cir.10
+	fire_only_once = no
+	is_triggered_only = yes
+
+	major = yes
+
+	option = { #
+		name = cir.10.1
+		trigger = {
+			or = {
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+		}
+	}
+
+	option = { #
+		name = cir.10.2
+		trigger = {
+			not = {
+				tag = SEJ
+				is_subject_of = SEJ
+			}	
+		}
+	}
+}
+
+news_event = { #接起革命的旗帜
+	id = cir.11
+	title = cir.11.t
+	desc = cir.11.d
+	picture = GFX_news_event_cir.11
+	fire_only_once = no
+	is_triggered_only = yes
+
+	major = yes
+
+	option = { #
+		name = cir.11.1
+		trigger = {
+			or = {
+				tag = CIR
+			}
+		}
+	}
+
+	option = { #
+		name = cir.11.2
+		trigger = {
+			not = {
+				tag = CIR
+			}	
+		}
+	}
+}
+
+news_event = { #与命莲寺的交流
+	id = cir.12
+	title = cir.12.t
+	desc = cir.12.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	major = yes
+
+	option = { #
+		name = cir.12.1
+		trigger = {
+			or = {
+				tag = CIR
+				tag = NMS
+			}
+		}
+	}
+
+	option = { #
+		name = cir.12.2
+		trigger = {
+			not = {
+				tag = CIR
+				tag = NMS
+			}	
+		}
+	}
+}
+
+news_event = { #与天狗的交流
+	id = cir.13
+	title = cir.13.t
+	desc = cir.13.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	major = yes
+
+	option = { #
+		name = cir.13.1
+		trigger = {
+			or = {
+				tag = CIR
+				tag = TEG
+			}
+		}
+	}
+
+	option = { #
+		name = cir.13.2
+		trigger = {
+			not = {
+				tag = CIR
+				tag = TEG
+				shiyaojingzijide = yes
+			}	
+		}
+	}
+
+	option = { #
+		name = cir.13.3
+		trigger = {
+			not = {
+				tag = CIR
+			}	
+			shiyaojingzijide = yes
+		}
+	}
+}
+
+news_event = { #妖精和善化
+	id = cir.14
+	title = cir.14.t
+	desc = cir.14.d
+	picture = GFX_news_event_cir.14
+	fire_only_once = no
+	is_triggered_only = yes
+
+	major = yes
+
+	option = { #
+		name = cir.14.1
+		trigger = {
+			or = {
+				tag = CIR
+			}
+		}
+	}
+
+	option = { #
+		name = cir.14.2
+		trigger = {
+			not = {
+				tag = CIR
+				shiyaojingzijide = yes
+			}	
+		}
+	}
+
+	option = { #
+		name = cir.14.3
+		trigger = {
+			not = {
+				tag = CIR
+			}	
+			shiyaojingzijide = yes
+		}
+	}
+}
+
+news_event = { #妖精联邦的提议
+	id = cir.15
+	title = cir.15.t
+	desc = cir.15.d
+	picture = GFX_news_event_cir.15
+	fire_only_once = no
+	is_triggered_only = yes
+
+	major = yes
+
+	option = { #
+		name = cir.15.1
+		trigger = {
+			or = {
+				tag = CIR
+				tag = LIL
+			}
+		}
+	}
+
+	option = { #
+		name = cir.15.2
+		trigger = {
+			not = {
+				tag = CIR
+				tag = LIL
+				shiyaojingzijide = yes
+			}	
+
+		}
+	}
+
+	option = { #
+		name = cir.15.3
+		trigger = {
+			not = {
+				tag = CIR
+				tag = LIL
+			}	
+			shiyaojingzijide = yes
+		}
+	}
+}
+
+news_event = { #帮助魔法使的方法
+	id = cir.16
+	title = cir.16.t
+	desc = cir.16.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	major = yes
+
+	option = { #
+		name = cir.16.1
+		trigger = {
+			or = {
+				tag = CIR
+			}
+		}
+	}
+
+	option = { #
+		name = cir.16.2
+		trigger = {
+			not = {
+				tag = CIR
+			}	
+		}
+	}
+}
+
+country_event = { #帮助魔法使的方法
+	id = cir.17
+	title = cir.17.t
+	desc = cir.17.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { #
+		name = cir.17.1
+		ai_chance = {
+			base = 60
+		}
+		FROM = {
+			every_country = {
+				limit = {
+					is_subject_of = ROOT
+				}
+				subject_level4 = yes
+			}
+			ROOT = {
+	            subject_level4 = yes
+			}
+		}
+		hidden_effect = {
+			news_event = { id = cir.16 days = 2}
+		}
+	}
+
+	option = { #
+		name = cir.17.2
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0.5
+				has_government = qinwai
+			}
+		}
+		hidden_effect = {
+			CIR = { country_event = { id = glo.2002 hours = 11} }
+		}
+	}
+}
+
+country_event = { #魔法使和解
+	id = cir.18
+	title = cir.18.t
+	desc = cir.18.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { #
+		name = cir.18.1
+		ai_chance = {
+			base = 35
+		}
+		set_country_flag = {
+			flag = CIR_hejie
+			value = 1
+		}
+		138 = { state_owner_get = yes}
+		event_target:trigger_target = { country_event = {hours = 11 id = cir.19} }
+		custom_effect_tooltip = TEG_accept
+
+		effect_tooltip = {
+			CIR = {
+				remove_state_core = 331
+				remove_state_core = 153
+				remove_state_core = 138
+			}
+			event_target:trigger_target = {
+				if = {
+					limit = {
+						country_exists = MFA
+					}
+					MFA = {
+						transfer_state = 331
+					}
+					else = {
+						transfer_state = 331
+					}
+				}
+				add_opinion_modifier = { target = CIR modifier = CIR_mofashihejie2_op}
+				reverse_add_opinion_modifier = { target = CIR modifier = CIR_mofashihejie2_op}
+			}
+		}
+	}
+
+	option = { #
+		name = cir.18.3
+		ai_chance = {
+			base = 65
+		}
+		set_country_flag = {
+			flag = CIR_hejie
+			value = 3
+		}
+		138 = { state_owner_get = yes}
+		event_target:trigger_target = { country_event = {hours = 11 id = cir.19} }
+
+		custom_effect_tooltip = TEG_accept
+
+		effect_tooltip = {
+			CIR = {
+				remove_state_core = 153
+				remove_state_core = 138
+			}
+			event_target:trigger_target = {
+				remove_state_claim = 331
+			}
+			MFA = {
+				remove_state_core = 331
+			}
+		}
+	}
+}
+
+country_event = { #魔法使和解
+	id = cir.19
+	title = cir.19.t
+
+	desc = {
+		text = cir.19.d1
+		trigger = {
+			CIR = {
+				and = {
+					has_country_flag = {
+						flag = CIR_hejie
+						value > 0
+					}
+					has_country_flag = {
+						flag = CIR_hejie
+						value < 2
+					}
+				}
+			}
+		}
+	}
+
+	desc = {
+		text = cir.19.d3
+		trigger = {
+			CIR = {
+				and = {
+					has_country_flag = {
+						flag = CIR_hejie
+						value > 2
+					}
+					has_country_flag = {
+						flag = CIR_hejie
+						value < 4
+					}
+				}
+			}
+		}
+	}
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { #
+		name = cir.19.1
+		ai_chance = {
+			base = 80
+			modifier = {
+				and = {
+					CIR = {
+						has_country_flag = {
+							flag = CIR_hejie
+							value > 2
+						}
+						has_country_flag = {
+							flag = CIR_hejie
+							value < 4
+						}
+					}
+				}
+				add = -60
+			}
+		}
+
+		if = {
+			limit = {
+				CIR = {
+					and = {
+						has_country_flag = {
+							flag = CIR_hejie
+							value > 0
+						}
+						has_country_flag = {
+							flag = CIR_hejie
+							value < 2
+						}
+					}
+				}
+			}
+			CIR = {
+				remove_state_core = 331
+				remove_state_core = 138
+				remove_state_core = 153
+			}
+			MRS = {
+				if = {
+					limit = {
+						country_exists = MFA
+					}
+					MFA = {
+						transfer_state = 331
+					}
+					else = {
+						transfer_state = 331
+					}
+				}
+				add_opinion_modifier = { target = CIR modifier = CIR_mofashihejie2_op}
+				reverse_add_opinion_modifier = { target = CIR modifier = CIR_mofashihejie2_op}
+			}
+			else = {
+				CIR = {
+					remove_state_core = 153
+					remove_state_core = 138
+				}
+				event_target:trigger_target = {
+					remove_state_claim = 331
+				}
+				MFA = {
+					remove_state_core = 331
+				}
+			}
+		}
+		hidden_effect = {
+			CIR = {
+				country_event = { id = glo.2001 hours = 11 }
+				set_country_flag = CIR_hejiechenggong
+			}
+		}
+			
+		
+	}
+
+	option = { #
+		name = cir.19.2
+
+		ai_chance = {
+			base = 20
+		}
+
+		hidden_effect = {
+			CIR = {
+				country_event = { id = glo.2002 hours = 11 }
+			}
+		}
+	}
+}
+
+country_event = { #piece隐藏事件
+	id = cir.20
+	title = cir.20.t
+	desc = cir.20.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #
+		name = cir.20.1
+		ai_chance = {
+			base = 0
+		}
+		add_political_power = -35
+		if = {
+			limit = {
+				english_leaders = yes
+			}
+			create_country_leader = {
+			    name = "Clownpiece"
+			    # name = "克劳恩皮丝"
+			    picture ="CIR_clown.dds"
+			    ideology = neworder_type
+			    traits = {
+			        # cir_cirno_leader
+			    }
+			}
+			create_corps_commander = {
+				name = "Clownpiece"
+			    # name = "克劳恩皮丝"
+				picture ="CIR_clown.dds"
+
+				traits = {  th_character  }
+			    attack_skill = 5
+			    defense_skill = 2
+			    planning_skill = 5
+			    logistics_skill = 2
+			    
+				skill = 4
+			}
+			else = {
+				create_country_leader = {
+				    # name = "Clownpiece"
+				    name = "克劳恩皮丝"
+				    picture ="CIR_clown.dds"
+				    ideology = neworder_type
+				    traits = {
+				        # cir_cirno_leader
+				    }
+				}
+				create_corps_commander = {
+					# name = "Clownpiece"
+				    name = "克劳恩皮丝"
+					picture ="CIR_clown.dds"
+
+					traits = {  th_character  }
+				    attack_skill = 5
+				    defense_skill = 2
+				    planning_skill = 5
+				    logistics_skill = 2
+				    
+					skill = 4
+				}
+			}
+		}
+		
+		hidden_effect = {
+			news_event = { id = cir.22 days = 3}
+		}
+	}
+
+	option = { #
+		name = cir.20.2
+		ai_chance = {
+			base = 90
+		}
+		add_political_power = -35
+		if = {
+			limit = {
+				english_leaders = yes
+			}
+			create_corps_commander = {
+				name = "Clownpiece"
+			    # name = "克劳恩皮丝"
+				picture ="CIR_clown.dds"
+
+				traits = {  th_character  }
+			    attack_skill = 5
+			    defense_skill = 2
+			    planning_skill = 5
+			    logistics_skill = 2
+			    
+				skill = 4
+			}
+			else = {
+				create_corps_commander = {
+					# name = "Clownpiece"
+				    name = "克劳恩皮丝"
+					picture ="CIR_clown.dds"
+
+					traits = {  th_character  }
+				    attack_skill = 5
+				    defense_skill = 2
+				    planning_skill = 5
+				    logistics_skill = 2
+				    
+					skill = 4
+				}
+			}
+		}
+	}
+	option = { #
+		name = cir.20.3
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+news_event = { #piece上台事件
+	id = cir.22
+	title = cir.22.t
+	desc = cir.22.d
+	picture = GFX_news_event_cir.22
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = { #
+		name = cir.22.1
+		trigger = {
+			tag = CIR
+		}
+	}
+
+	option = { #
+		name = cir.22.2
+		trigger = {
+			not = { 
+				shiyaojingzijide = yes
+				tag = CIR
+			}
+		}
+	}
+
+	option = { #
+		name = cir.22.3
+		trigger = {
+			shiyaojingzijide = yes
+			not = { 
+				tag = CIR
+			}
+		}
+	}
+}
+
+news_event = { #成立妖精合众国
+	id = cir.23
+	title = cir.23.t
+	desc = cir.23.d
+	picture = [CIR.cir23]
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = { #
+		name = cir.23.1
+		trigger = {
+			tag = CIR
+		}
+	}
+
+	option = { #
+		name = cir.23.2
+		trigger = {
+			not = { 
+				shiyaojingzijide = yes
+				tag = CIR
+			}
+		}
+	}
+
+	option = { #
+		name = cir.23.3
+		trigger = {
+			shiyaojingzijide = yes
+			not = { 
+				tag = CIR
+			}
+		}
+	}
+}
+
+news_event = { #成立妖精之乡
+	id = cir.24
+	title = cir.24.t
+	desc = {
+		text = cir.24.d1
+		trigger = {
+			not = {
+				has_government = qinwai
+			}
+		}
+	}
+	desc = {
+		text = cir.24.d2
+		trigger = {
+			has_government = qinwai
+		}
+	}
+	# picture = [CIR.cir23]
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = { #
+		name = cir.24.1
+		trigger = {
+			tag = CIR
+		}
+	}
+
+	option = { #
+		name = cir.24.2
+		trigger = {
+			not = { 
+				shiyaojingzijide = yes
+				tag = CIR
+			}
+		}
+	}
+
+	option = { #
+		name = cir.24.3
+		trigger = {
+			shiyaojingzijide = yes
+			not = { 
+				tag = CIR
+			}
+		}
+	}
+}
+
+country_event = { #加入事件
+	id = cir.25
+	title = cir.25.t
+	desc = cir.25.d
+	# picture = [CIR.cir23]
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { #
+		name = cir.25.1
+		hidden_effect = {
+			news_event = { id = cir.26 days = 2}
+		}
+		ROOT = {
+			event_target:CIR_target = {
+				can_core = yes
+				subject_level2 = yes
+			}
+		}
+	}
+
+	option = { #
+		name = cir.25.2
+		hidden_effect = {
+			FROM = { country_event = { id = glo.2002 days = 2 } }
+		}
+	}
+}
+
+news_event = { #和妖精之乡的加入，以及LIL加入的新闻通用
+	id = cir.26
+	title = cir.26.t
+	desc = cir.26.d
+	major = yes
+	
+	# picture = [CIR.cir23]
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { #
+		name = cir.26.1
+		trigger = {
+			tag = CIR
+		}
+	}
+
+	option = { #
+		name = cir.26.2
+		trigger = {
+			not = { 
+				shiyaojingzijide = yes
+				tag = CIR
+			}
+		}
+	}
+
+	option = { #
+		name = cir.26.3
+		trigger = {
+			shiyaojingzijide = yes
+			not = { 
+				tag = CIR
+			}
+		}
+	}
+}
+
+country_event = { #迁都
+	id = cir.27
+	title = cir.27.t
+	desc = cir.27.d
+	# picture = [CIR.cir23]
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { #
+		name = cir.27.1
+		118 = {
+			add_extra_state_shared_building_slots = 2
+	        add_building_construction = {
+	          type = industrial_complex 
+	          level = 1
+	          instant_build = yes
+	        }
+	        add_building_construction = {
+	          type = arms_factory
+	          level = 1
+	          instant_build = yes
+	        }
+	        add_building_construction = {
+	          type = infrastructure
+	          level = 2
+	          instant_build = yes
+	        }
+		}
+	}
+
+	option = { #
+		name = cir.27.2
+		set_capital = 61
+		61 = {
+			add_extra_state_shared_building_slots = 2
+	        add_building_construction = {
+	          type = industrial_complex 
+	          level = 1
+	          instant_build = yes
+	        }
+	        add_building_construction = {
+	          type = arms_factory
+	          level = 1
+	          instant_build = yes
+	        }
+	        add_building_construction = {
+	          type = infrastructure
+	          level = 2
+	          instant_build = yes
+	        }
+		}
+	}
+
+	option = { #
+		name = cir.27.3
+		set_capital = 122
+		122 = {
+			set_state_name = CIR_dahuitang
+			add_extra_state_shared_building_slots = 2
+	        add_building_construction = {
+	          type = industrial_complex 
+	          level = 1
+	          instant_build = yes
+	        }
+	        add_building_construction = {
+	          type = arms_factory
+	          level = 1
+	          instant_build = yes
+	        }
+	        add_building_construction = {
+	          type = infrastructure
+	          level = 2
+	          instant_build = yes
+	        }
+		}
+	}
+}

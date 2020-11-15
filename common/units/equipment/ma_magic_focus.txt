@@ -1,0 +1,143 @@
+# All infantry equipment
+
+equipments = {
+
+	magic_focus_a = {
+		year = 152
+	
+		is_archetype = yes
+		picture = archetype_infantry_equipment		
+		is_buildable = no
+		type = {
+			anti_tank
+			infantry
+		}
+		group_by = archetype
+		
+		interface_category = interface_category_land
+
+		upgrades = {
+			upgrade_reliability
+          	upgrade_softattack
+          	upgrade_hardattack
+          	upgrade_aaattack
+          	upgrade_defense
+          	upgrade_breakthrough
+          	upgrade_ic
+          	upgrade_ic_reverse
+          	upgrade_reliability_reverse
+		}
+		upgrades = {
+			up_ma_attack
+			up_ap_attack
+			up_speed
+		}
+		
+		
+
+		
+		
+		#Defensive Abilities
+		breakthrough = 10
+		hardness = 0.01
+
+		#Offensive Abilities
+		soft_attack = 10
+		hard_attack = 8
+		ap_attack = 45
+
+		#Misc Abilities
+		reliability = 0.7
+		maximum_speed = 6.5
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 4.5
+
+		
+		
+	}
+
+	magic_focus152 = {
+		year = 152
+	
+		archetype = magic_focus_a
+		
+		priority = 10
+		visual_level = 0
+
+		resources = {
+			powder = 1
+			metal = 1
+			gas = 1
+			crystal = 1
+		}
+	}
+
+	magic_focus158 = {
+		year = 158
+	
+		archetype = magic_focus_a
+		parent = magic_focus152
+		priority = 10
+		visual_level = 1
+
+		resources = {
+			powder = 1
+			metal = 1
+			gas = 1
+			crystal = 2
+		}
+
+		breakthrough = 14
+		soft_attack = 12
+		hard_attack = 10
+		ap_attack = 65
+		build_cost_ic = 5.1
+	}
+
+	magic_focus164 = {
+		year = 164
+	
+		archetype = magic_focus_a
+		parent = magic_focus158
+		priority = 10
+		visual_level = 2
+
+		resources = {
+			powder = 1
+			metal = 1
+			gas = 2
+			crystal = 2
+		}
+		
+		breakthrough = 18
+		soft_attack = 14
+		hard_attack = 12
+		ap_attack = 85
+		build_cost_ic = 5.7
+	}
+
+	magic_focus170 = {
+		year = 170
+	
+		archetype = magic_focus_a
+		parent = magic_focus164
+		priority = 10
+		visual_level = 3
+
+		resources = {
+			powder = 1
+			metal = 1
+			gas = 2
+			crystal = 3
+		}
+
+		breakthrough = 22
+		soft_attack = 16
+		hard_attack = 14
+		ap_attack = 105
+		build_cost_ic = 6.3
+	}
+}

@@ -53,6 +53,7 @@
  Organization:0 "组织"
  Tribal:0 "游牧部落"
  Empire:0 "帝国"
+ World:0 "世界"
  ##############
 
  ##############
@@ -84,14 +85,14 @@
  ##############
  magic_laws:0 "灵力使用法案"
  free_magic:0 "自由灵力使用"
- free_magic_tt:0 "灵力对单位攻防和陆军组织度恢复修正的正面影响: §G+60%§!\n灵力对适宜人口修正和研究速度的正面影响: §R-100%§!\n灵力对适宜人口修正和研究速度的负面影响: §R+100%§!"
+ free_magic_tt:0 "灵力对单位攻防和[army_morale_factor]的正面影响: §G+60%§!\n灵力对[conscription_factor]和[research_speed_factor]的正面影响: §R-100%§!\n灵力对[conscription_factor]和[research_speed_factor]的负面影响: §R+100%§!"
  free_magic_trigger:0 "世界观为唯心"
  sc_rule:0 "SC符卡法则"
- sc_rule_tt:0 "灵力对单位攻防和陆军组织度恢复修正的影响: §Y标准§!\n灵力对适宜人口修正和研究速度的正面影响: §R-50%§!\n灵力对适宜人口修正和研究速度的负面影响: §R+50%§!"
+ sc_rule_tt:0 "灵力对单位攻防和[army_morale_factor]的影响: §Y标准§!\n灵力对[conscription_factor]和[research_speed_factor]的正面影响: §R-50%§!\n灵力对[conscription_factor]和[research_speed_factor]的负面影响: §R+50%§!"
  limit_magic:0 "限制灵力使用"
- limit_magic_tt:0 "灵力对单位攻防和陆军组织度恢复修正的正面影响: §R-35%§!\n灵力对单位攻防和陆军组织度恢复修正的负面影响: §R+35%§!\n灵力对适宜人口修正和研究速度的影响: §Y标准§!"
+ limit_magic_tt:0 "灵力对单位攻防和[army_morale_factor]的正面影响: §R-35%§!\n灵力对单位攻防和[army_morale_factor]的负面影响: §R+35%§!\n灵力对[conscription_factor]和[research_speed_factor]的影响: §Y标准§!"
  forbidden_magic:0 "禁止攻击性灵力"
- forbidden_magic_tt:0 "灵力对单位攻防和陆军组织度恢复修正的正面影响: §R-70%§!\n灵力对单位攻防和陆军组织度恢复修正的负面影响: §R+70%§!\n灵力对适宜人口修正和研究速度的正面影响: §G+75%§!"
+ forbidden_magic_tt:0 "灵力对单位攻防和[army_morale_factor]的正面影响: §R-70%§!\n灵力对单位攻防和[army_morale_factor]的负面影响: §R+70%§!\n灵力对[conscription_factor]和[research_speed_factor]的正面影响: §G+75%§!"
  forbidden_magic_trigger:0 "世界观为平衡或者唯物"
  ##############
  border_policy:0 "边界开放法则"

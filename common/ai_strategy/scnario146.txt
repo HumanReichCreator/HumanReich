@@ -3,12 +3,12 @@ helpKAP = {
 		has_global_flag = main_scenario
 		has_country_flag = bangzhuzhanglaohui
 		KAP = {
-			has_war_with = NIT
+			has_war_with = NTR
 		}
 	}
 	abort = {
 		KAP = {
-			not = { has_war_with = NIT }
+			not = { has_war_with = NTR }
 		}
 	}
 	ai_strategy = {
@@ -18,27 +18,27 @@ helpKAP = {
 	}
 	ai_strategy = {
 		type = antagonize
-		id = "NIT"			
+		id = "NTR"			
 		value = 150
 	}
 }
 
-helpNIT = {
+helpNTR = {
 	enable = {
 		has_global_flag = main_scenario
 		has_country_flag = bangzhugongheguo
-		NIT = {
+		NTR = {
 			has_war_with = KAP
 		}
 	}
 	abort = {
-		NIT = {
+		NTR = {
 			not = { has_war_with = KAP }
 		}
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
-		id = "NIT"			
+		id = "NTR"			
 		value = 150
 	}
 	ai_strategy = {

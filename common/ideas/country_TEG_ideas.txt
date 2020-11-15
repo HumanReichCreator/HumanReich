@@ -29,6 +29,7 @@ ideas = {
 				not = {
 					OTG = { is_subject_of = ROOT}
 					owns_state = 41
+					has_war_with = OTG
 				}
 			}
 
@@ -63,7 +64,7 @@ ideas = {
 				mobilization_laws_cost_factor = 0.5
 				economy_cost_factor = 0.5
 				research_speed_factor = 0.05
-				generate_wargoal_tension = 0.35
+				generate_wargoal_tension = 0.1
 			}
 	    }
 	    TEG_neizhandejianshexiaohao_idea = {
@@ -427,7 +428,7 @@ ideas = {
 				defense_bonus_against = 0.06
 			}
 			targeted_modifier = {
-				tag = YSK
+				tag = MRY
 				attack_bonus_against = 0.06
 				defense_bonus_against = 0.06
 			}
@@ -457,7 +458,7 @@ ideas = {
 
 			}
 			research_bonus = {
-				race = 0.02
+				race = 0.05
 			}
 		}
 		TEG_tianmogongdebaowu_idea = {
@@ -466,6 +467,17 @@ ideas = {
 
 			modifier = {
 
+			}
+			research_bonus = {
+				combined = 0.1
+			}
+		}
+		TEG_yinlinghuanxiangxianggexin_idea = {
+
+			picture = generic_research_bonus
+
+			modifier = {
+				research_speed_factor = 0.1
 			}
 			research_bonus = {
 				combined = 0.05
@@ -634,6 +646,13 @@ ideas = {
 			equipment_bonus = {
 
 			}
+		}
+		TEG_quanyaoguaishangeming_idea = {
+			picture = generic_acquire_tanks
+			
+	    	modifier = {
+	    		justify_war_goal_time = -0.15
+	    	}
 		}
 		
 

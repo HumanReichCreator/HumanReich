@@ -1,20 +1,9 @@
 ﻿capital = 58
-138.8.13 = {
-
-}
-141.6.2 = {
-    
-}
-142.3.8 = {
-    
-}
-144.2.5 = {
-    
-}
 146.1.1 = {
     set_technology = {
         #通用武器线
-        spell_card = 1
+        spell_card1 = 1
+        spear1 = 1
             
         #辅助
 
@@ -39,6 +28,7 @@
         #种族
             
     }
+    
 }
 set_technology = {
     ghost_tech = 1
@@ -48,7 +38,7 @@ set_technology = {
     
     add_ideas = {
     Ghost
-    Village
+    Tribal
     close2
     hawk0
     strict_border

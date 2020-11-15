@@ -4,17 +4,16 @@ state={
 	name="STATE_296"
 
 	resources={
-		powder=1.000
-		metal=0.000
+		powder = 1.0
+		metal = 0.0
 		gas=5.000
 		crystal=0.000
 	}
 
 	history={
-			owner = FUJ
 		146.1.1 = {
-			owner = FUJ
-			add_core_of = FUJ
+			owner = MOK
+			add_core_of = MOK
 			add_core_of = BYA
 			buildings = {
 				infrastructure = 1
@@ -28,6 +27,6 @@ state={
 		8 83 644 1656 5478 5487 5488 5489 5497 
 	}
 	state_category=s5
-	manpower=420.0
+	manpower=620.0
 	buildings_max_level_factor=1.000
 }

@@ -1,11 +1,182 @@
 luanzhan_decision = {
-	fuyong = {
+	set_checking_country = {
+		visible = {
+			is_debug = yes
+		}
+
+		complete_effect = {
+			every_country = {
+				clr_country_flag = start_country
+			}
+			set_country_flag = start_country
+		}
+	}
+	check_checking_country = {
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			every_country = {
+				limit = {
+					has_country_flag = start_country
+				}
+				log = "Checking country is [THIS.GetName]."
+			}
+		}
+	}
+	research_slot = {
+		fire_only_once = no
+		cost = 0
+
+		visible = {
+			is_debug = yes
+		}
+
+
+		days_re_enable = 0
+		days_remove = 0
+		complete_effect = {
+			add_research_slot = 1
+		}
+	}
+	lock_down = {
+		fire_only_once = no
+		cost = 0
+
+		visible = {
+			is_debug = yes
+		}
+
+
+		days_re_enable = 0
+		days_remove = 0
+		complete_effect = {
+			country_lock_all_division_template = yes
+		}
+	}
+	unlock = {
+		fire_only_once = no
+		cost = 0
+
+		visible = {
+			is_debug = yes
+		}
+
+
+		days_re_enable = 0
+		days_remove = 0
+		complete_effect = {
+			country_lock_all_division_template = no
+		}
+	}
+	minus_slot = {
+		fire_only_once = no
+		cost = 0
+
+		visible = {
+			is_debug = yes
+		}
+
+
+		days_re_enable = 0
+		days_remove = 0
+		
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+			}
+		}
+		complete_effect = {
+			FROM = {
+				add_extra_state_shared_building_slots = -1
+			}
+				
+		}
+	}
+	owns = {
 
 		icon = onmap_recruit_operative
 
-		available = {
+		visible = {
 			is_debug = yes
 		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				not = {
+					is_owned_by = ROOT
+				}
+			}
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		days_re_enable = 0
+		days_remove = 0
+
+		on_map_mode = map_only
+		complete_effect = {
+			ROOT = {
+				transfer_state = FROM
+			}
+		}
+		remove_effect = {
+
+		}
+		modifier = {
+
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	core = {
+
+		icon = onmap_recruit_operative
+
+		visible = {
+			is_debug = yes
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				not = {
+					is_core_of = ROOT
+				}
+			}
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		days_re_enable = 0
+		days_remove = 0
+
+		on_map_mode = map_only
+		complete_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+		remove_effect = {
+
+		}
+		modifier = {
+
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	fuyong = {
+
+		icon = onmap_recruit_operative
 
 		state_target = yes
 		target_trigger = {
@@ -62,10 +233,6 @@ luanzhan_decision = {
 
 		icon = onmap_recruit_operative
 
-		available = {
-			is_debug = yes
-		}
-
 		state_target = yes
 		target_trigger = {
 			FROM = {
@@ -91,6 +258,146 @@ luanzhan_decision = {
 				owner = {
 					low_puppet_level = yes
 				}	
+			}
+		}
+		remove_effect = {
+
+		}
+		modifier = {
+
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	fandong = {
+
+		visible = {
+			is_debug = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		days_re_enable = 0
+		days_remove = 0
+
+		complete_effect = {
+			set_politics = {
+				ruling_party = fandong
+			}
+		}
+		remove_effect = {
+
+		}
+		modifier = {
+
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	qinwai = {
+
+		visible = {
+			is_debug = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		days_re_enable = 0
+		days_remove = 0
+
+		complete_effect = {
+			set_politics = {
+				ruling_party = qinwai
+			}
+		}
+		remove_effect = {
+
+		}
+		modifier = {
+
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	guli = {
+
+		visible = {
+			is_debug = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		days_re_enable = 0
+		days_remove = 0
+
+		complete_effect = {
+			set_politics = {
+				ruling_party = guli
+			}
+		}
+		remove_effect = {
+
+		}
+		modifier = {
+
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	neworder = {
+
+		visible = {
+			is_debug = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		days_re_enable = 0
+		days_remove = 0
+
+		complete_effect = {
+			set_politics = {
+				ruling_party = neworder
+			}
+		}
+		remove_effect = {
+
+		}
+		modifier = {
+
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	oldorder = {
+	
+		visible = {
+			is_debug = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		days_re_enable = 0
+		days_remove = 0
+
+		complete_effect = {
+			set_politics = {
+				ruling_party = oldorder
 			}
 		}
 		remove_effect = {
@@ -205,7 +512,7 @@ luanzhan_decision = {
 	#       complete_effect = {
 	#           set_global_flag = caidanX
 	#           hidden_effect = {
-	#               SEI = { white_peace = ONS}
+	#               SEJ = { white_peace = ONS}
 
 	#               every_country = {
 	#                   limit = {

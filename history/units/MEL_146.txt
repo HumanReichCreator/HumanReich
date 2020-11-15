@@ -1,19 +1,22 @@
 ﻿division_template = {
-	name = "种植园警卫编制"
+	name = "扫荡编制"
 	regiments = {
-		sc_militia = { x = 0 y = 0 }
-		sc_militia = { x = 0 y = 1 }
-		ma_militia = { x = 0 y = 2 }
-
+		sc_light_infantry = { x = 0 y = 0 }
+		sc_light_infantry = { x = 0 y = 1 }
+		sc_light_infantry = { x = 0 y = 2 }
+		sc_light_infantry = { x = 0 y = 3 }
 	}
 	support = {
 	}
 }
 division_template = {
-	name = "种植园看护编制"
+	name = "种植园警卫编制"
 	regiments = {
-		sc_militia = { x = 0 y = 0 }
-		sc_militia = { x = 0 y = 1 }
+		sc_infantry = { x = 0 y = 0 }
+		sc_infantry = { x = 0 y = 1 }
+		sc_infantry = { x = 0 y = 2 }
+		sc_infantry = { x = 0 y = 3 }
+		melee_infantry = { x = 0 y = 2 }
 	}
 	support = {
 	}
@@ -64,21 +67,21 @@ units = {
 	division = {
 		name = "看护编制"
 		location = 4818	
-		division_template = "种植园看护编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "看护编制"
 		location = 4818	
-		division_template = "种植园看护编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "看护编制"
 		location = 4818	
-		division_template = "种植园看护编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
@@ -93,21 +96,21 @@ units = {
 	division = {
 		name = "看护编制"
 		location = 4887	
-		division_template = "种植园看护编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "看护编制"
 		location = 4887	
-		division_template = "种植园看护编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "看护编制"
 		location = 4887	
-		division_template = "种植园看护编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
@@ -122,21 +125,21 @@ units = {
 	division = {
 		name = "看护编制"
 		location = 4895	
-		division_template = "种植园看护编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "看护编制"
 		location = 4895	
-		division_template = "种植园看护编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "看护编制"
 		location = 4895	
-		division_template = "种植园看护编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
@@ -151,21 +154,21 @@ units = {
 	division = {
 		name = "看护编制"
 		location = 4864
-		division_template = "种植园看护编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "看护编制"
 		location = 4864
-		division_template = "种植园看护编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "看护编制"
 		location = 4864
-		division_template = "种植园看护编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
@@ -180,21 +183,21 @@ units = {
 	division = {
 		name = "看护编制"
 		location = 4838
-		division_template = "种植园看护编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "看护编制"
 		location = 4838
-		division_template = "种植园看护编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "看护编制"
 		location = 4838
-		division_template = "种植园看护编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
@@ -209,79 +212,79 @@ units = {
 	division = {
 		name = "看护编制"
 		location = 4719
-		division_template = "种植园看护编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "看护编制"
 		location = 4719
-		division_template = "种植园看护编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "看护编制"
 		location = 4719
-		division_template = "种植园看护编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
 
 	division = {
 		name = "警卫编制"
-		location = 2256
+		location = 4802
 		division_template = "种植园警卫编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "看护编制"
-		location = 2256
-		division_template = "种植园看护编制"
+		location = 4802
+		division_template = "扫荡编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "看护编制"
-		location = 2256
-		division_template = "种植园看护编制"
+		location = 4802
+		division_template = "扫荡编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "看护编制"
-		location = 2256
-		division_template = "种植园看护编制"
+		location = 4802
+		division_template = "扫荡编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
 
 	division = {
 		name = "警卫编制"
-		location = 1346
+		location = 4769
 		division_template = "种植园警卫编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "看护编制"
-		location = 1346
-		division_template = "种植园看护编制"
+		location = 4769
+		division_template = "扫荡编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "看护编制"
-		location = 1346
-		division_template = "种植园看护编制"
+		location = 4769
+		division_template = "扫荡编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "看护编制"
-		location = 1346
-		division_template = "种植园看护编制"
+		location = 4769
+		division_template = "扫荡编制"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}

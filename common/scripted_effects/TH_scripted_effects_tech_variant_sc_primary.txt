@@ -1,51 +1,27 @@
 sc_weapons = {
     if = {
         limit = {
-            has_tech = buqiang117
+            has_tech = gun3
         }
-        sc_p135 = yes
+        sc_p147 = yes
     }
     if = {
         limit = {
-            has_tech = buqiang140
+            has_tech = gun4
         }
-        sc_p140 = yes
+        sc_p153 = yes
     }
     if = {
         limit = {
-            has_tech = buqiang145
+            has_tech = gun5
         }
-        sc_p145 = yes
+        sc_p159 = yes
     }
     if = {
         limit = {
-            has_tech = buqiang148
+            has_tech = gun6
         }
-        sc_p148 = yes
-    }
-    if = {
-        limit = {
-            has_tech = buqiang154
-        }
-        sc_p154 = yes
-    }
-    if = {
-        limit = {
-            has_tech = buqiang157
-        }
-        sc_p157 = yes
-    }
-    if = {
-        limit = {
-            has_tech = buqiang160
-        }
-        sc_p160 = yes
-    }
-    if = {
-        limit = {
-            has_tech = buqiang163
-        }
-        sc_p163 = yes
+        sc_p165 = yes
     }
 }
 sc_p_teshufenzhi = {
@@ -69,21 +45,17 @@ sc_p_teshufenzhi = {
     }
 }
 
-sc_p135 = {
-    
-}
-
-sc_p140 = {
+sc_p147 = {
     sc_p_teshufenzhi = yes
     if = {
         limit = {
-            tag = YSK
+            tag = MRY
         }
         meta_effect = {
             text = {
                 create_equipment_variant = { 
-                    name = "制式型御神签步枪" 
-                    type = buqiang140
+                    name = "御神签步枪" 
+                    type = gun147
                     upgrades = {
                       upgrade_reliability = [sc_p_r]
                       upgrade_softattack = [sc_p_s]
@@ -110,13 +82,13 @@ sc_p140 = {
     }
     if = {
         limit = {
-            tag = KOG
+            tag = TKM
         }
         meta_effect = {
             text = {
                 create_equipment_variant = { 
-                    name = "仿制Kar98k" 
-                    type = buqiang140
+                    name = "音爆步枪" 
+                    type = gun147
                     upgrades = {
                       upgrade_reliability = [sc_p_r]
                       upgrade_softattack = [sc_p_s]
@@ -149,7 +121,7 @@ sc_p140 = {
             text = {
                 create_equipment_variant = { 
                     name = "风弹"
-                    type = buqiang140
+                    type = gun147
                     upgrades = {
                       upgrade_reliability = [sc_p_r]
                       upgrade_softattack = [sc_p_s]
@@ -176,18 +148,17 @@ sc_p140 = {
     }
 }
 
-
-sc_p145 = {
+sc_p153 = {
     sc_p_teshufenzhi = yes
     if = {
         limit = {
-            tag = YSK
+            tag = MRY
         }
         meta_effect = {
             text = {
                 create_equipment_variant = { 
-                    name = "试制型御神签步枪" 
-                    type = buqiang145
+                    name = "神樱步枪" 
+                    type = gun153
                     upgrades = {
                       upgrade_reliability = [sc_p_r]
                       upgrade_softattack = [sc_p_s]
@@ -214,13 +185,13 @@ sc_p145 = {
     }
     if = {
         limit = {
-            tag = KOG
+            tag = TKM
         }
         meta_effect = {
             text = {
                 create_equipment_variant = { 
-                    name = "试制型音爆步枪" 
-                    type = buqiang145
+                    name = "晚钟步枪" 
+                    type = gun153
                     upgrades = {
                       upgrade_reliability = [sc_p_r]
                       upgrade_softattack = [sc_p_s]
@@ -252,8 +223,8 @@ sc_p145 = {
         meta_effect = {
             text = {
                 create_equipment_variant = { 
-                    name = "强风弹"
-                    type = buqiang145
+                    name = "强风弹" 
+                    type = gun153
                     upgrades = {
                       upgrade_reliability = [sc_p_r]
                       upgrade_softattack = [sc_p_s]
@@ -280,17 +251,17 @@ sc_p145 = {
     }
 }
 
-sc_p148 = {
+sc_p159 = {
     sc_p_teshufenzhi = yes
     if = {
         limit = {
-            tag = YSK
+            tag = MRY
         }
         meta_effect = {
             text = {
                 create_equipment_variant = { 
-                    name = "御神签步枪改" 
-                    type = buqiang148
+                    name = "诹访步枪" 
+                    type = gun159
                     upgrades = {
                       upgrade_reliability = [sc_p_r]
                       upgrade_softattack = [sc_p_s]
@@ -317,13 +288,13 @@ sc_p148 = {
     }
     if = {
         limit = {
-            tag = KOG
+            tag = TKM
         }
         meta_effect = {
             text = {
                 create_equipment_variant = { 
-                    name = "音爆步枪改" 
-                    type = buqiang148
+                    name = "琴乐步枪" 
+                    type = gun159
                     upgrades = {
                       upgrade_reliability = [sc_p_r]
                       upgrade_softattack = [sc_p_s]
@@ -356,7 +327,7 @@ sc_p148 = {
             text = {
                 create_equipment_variant = { 
                     name = "烈风弹" 
-                    type = buqiang148
+                    type = gun159
                     upgrades = {
                       upgrade_reliability = [sc_p_r]
                       upgrade_softattack = [sc_p_s]
@@ -383,17 +354,17 @@ sc_p148 = {
     }
 }
 
-sc_p154 = {
+sc_p165 = {
     sc_p_teshufenzhi = yes
     if = {
         limit = {
-            tag = YSK
+            tag = MRY
         }
         meta_effect = {
             text = {
                 create_equipment_variant = { 
-                    name = "神樱步枪" 
-                    type = buqiang154
+                    name = "军神御射" 
+                    type = gun165
                     upgrades = {
                       upgrade_reliability = [sc_p_r]
                       upgrade_softattack = [sc_p_s]
@@ -420,116 +391,13 @@ sc_p154 = {
     }
     if = {
         limit = {
-            tag = KOG
+            tag = TKM
         }
         meta_effect = {
             text = {
                 create_equipment_variant = { 
-                    name = "晚钟步枪" 
-                    type = buqiang154
-                    upgrades = {
-                      upgrade_reliability = [sc_p_r]
-                      upgrade_softattack = [sc_p_s]
-                      upgrade_hardattack = [sc_p_h]
-                      upgrade_aaattack = [sc_p_a]
-                      upgrade_defense = [sc_p_d]
-                      upgrade_breakthrough = [sc_p_b]
-                      upgrade_ic = [sc_p_i]
-                      upgrade_ic_reverse = [sc_p_ir]
-                      upgrade_reliability_reverse = [sc_p_rr]
-                   }
-                }
-            }
-            sc_p_r = "[?THIS.sc_p_r]"
-            sc_p_s = "[?THIS.sc_p_s]"
-            sc_p_h = "[?THIS.sc_p_h]"
-            sc_p_a = "[?THIS.sc_p_a]"
-            sc_p_d = "[?THIS.sc_p_d]"
-            sc_p_b = "[?THIS.sc_p_b]"
-            sc_p_i = "[?THIS.sc_p_i]"
-            sc_p_ir = "[?THIS.sc_p_ir]"
-            sc_p_rr = "[?THIS.sc_p_rr]"
-        }
-    }
-    if = {
-        limit = {
-            tag = TEG
-        }
-        meta_effect = {
-            text = {
-                create_equipment_variant = { 
-                    name = "黑鸦烈风弹" 
-                    type = buqiang154
-                    upgrades = {
-                      upgrade_reliability = [sc_p_r]
-                      upgrade_softattack = [sc_p_s]
-                      upgrade_hardattack = [sc_p_h]
-                      upgrade_aaattack = [sc_p_a]
-                      upgrade_defense = [sc_p_d]
-                      upgrade_breakthrough = [sc_p_b]
-                      upgrade_ic = [sc_p_i]
-                      upgrade_ic_reverse = [sc_p_ir]
-                      upgrade_reliability_reverse = [sc_p_rr]
-                   }
-                }
-            }
-            sc_p_r = "[?THIS.sc_p_r]"
-            sc_p_s = "[?THIS.sc_p_s]"
-            sc_p_h = "[?THIS.sc_p_h]"
-            sc_p_a = "[?THIS.sc_p_a]"
-            sc_p_d = "[?THIS.sc_p_d]"
-            sc_p_b = "[?THIS.sc_p_b]"
-            sc_p_i = "[?THIS.sc_p_i]"
-            sc_p_ir = "[?THIS.sc_p_ir]"
-            sc_p_rr = "[?THIS.sc_p_rr]"
-        }
-    }
-}
-
-sc_p157 = {
-    sc_p_teshufenzhi = yes
-    if = {
-        limit = {
-            tag = YSK
-        }
-        meta_effect = {
-            text = {
-                create_equipment_variant = { 
-                    name = "吹雪步枪" 
-                    type = buqiang157
-                    upgrades = {
-                      upgrade_reliability = [sc_p_r]
-                      upgrade_softattack = [sc_p_s]
-                      upgrade_hardattack = [sc_p_h]
-                      upgrade_aaattack = [sc_p_a]
-                      upgrade_defense = [sc_p_d]
-                      upgrade_breakthrough = [sc_p_b]
-                      upgrade_ic = [sc_p_i]
-                      upgrade_ic_reverse = [sc_p_ir]
-                      upgrade_reliability_reverse = [sc_p_rr]
-                   }
-                }
-            }
-            sc_p_r = "[?THIS.sc_p_r]"
-            sc_p_s = "[?THIS.sc_p_s]"
-            sc_p_h = "[?THIS.sc_p_h]"
-            sc_p_a = "[?THIS.sc_p_a]"
-            sc_p_d = "[?THIS.sc_p_d]"
-            sc_p_b = "[?THIS.sc_p_b]"
-            sc_p_i = "[?THIS.sc_p_i]"
-            sc_p_ir = "[?THIS.sc_p_ir]"
-            sc_p_rr = "[?THIS.sc_p_rr]"
-        }
-    }
-    if = {
-        limit = {
-            tag = KOG
-        }
-        meta_effect = {
-            text = {
-                create_equipment_variant = { 
-                    name = "琴乐步枪" 
-                    type = buqiang157
+                    name = "合奏步枪" 
+                    type = gun165
                     upgrades = {
                       upgrade_reliability = [sc_p_r]
                       upgrade_softattack = [sc_p_s]
@@ -563,213 +431,7 @@ sc_p157 = {
             text = {
                 create_equipment_variant = { 
                     name = "天狗烈风弹" 
-                    type = buqiang157
-                    upgrades = {
-                      upgrade_reliability = [sc_p_r]
-                      upgrade_softattack = [sc_p_s]
-                      upgrade_hardattack = [sc_p_h]
-                      upgrade_aaattack = [sc_p_a]
-                      upgrade_defense = [sc_p_d]
-                      upgrade_breakthrough = [sc_p_b]
-                      upgrade_ic = [sc_p_i]
-                      upgrade_ic_reverse = [sc_p_ir]
-                      upgrade_reliability_reverse = [sc_p_rr]
-                   }
-                }
-            }
-            sc_p_r = "[?THIS.sc_p_r]"
-            sc_p_s = "[?THIS.sc_p_s]"
-            sc_p_h = "[?THIS.sc_p_h]"
-            sc_p_a = "[?THIS.sc_p_a]"
-            sc_p_d = "[?THIS.sc_p_d]"
-            sc_p_b = "[?THIS.sc_p_b]"
-            sc_p_i = "[?THIS.sc_p_i]"
-            sc_p_ir = "[?THIS.sc_p_ir]"
-            sc_p_rr = "[?THIS.sc_p_rr]"
-        }
-    }
-}
-
-sc_p160 = {
-    sc_p_teshufenzhi = yes
-    if = {
-        limit = {
-            tag = YSK
-        }
-        meta_effect = {
-            text = {
-                create_equipment_variant = { 
-                    name = "诹访步枪" 
-                    type = buqiang160
-                    upgrades = {
-                      upgrade_reliability = [sc_p_r]
-                      upgrade_softattack = [sc_p_s]
-                      upgrade_hardattack = [sc_p_h]
-                      upgrade_aaattack = [sc_p_a]
-                      upgrade_defense = [sc_p_d]
-                      upgrade_breakthrough = [sc_p_b]
-                      upgrade_ic = [sc_p_i]
-                      upgrade_ic_reverse = [sc_p_ir]
-                      upgrade_reliability_reverse = [sc_p_rr]
-                   }
-                }
-            }
-            sc_p_r = "[?THIS.sc_p_r]"
-            sc_p_s = "[?THIS.sc_p_s]"
-            sc_p_h = "[?THIS.sc_p_h]"
-            sc_p_a = "[?THIS.sc_p_a]"
-            sc_p_d = "[?THIS.sc_p_d]"
-            sc_p_b = "[?THIS.sc_p_b]"
-            sc_p_i = "[?THIS.sc_p_i]"
-            sc_p_ir = "[?THIS.sc_p_ir]"
-            sc_p_rr = "[?THIS.sc_p_rr]"
-        }
-    }
-    if = {
-        limit = {
-            tag = KOG
-        }
-        meta_effect = {
-            text = {
-                create_equipment_variant = { 
-                    name = "合奏步枪" 
-                    type = buqiang160
-                    upgrades = {
-                      upgrade_reliability = [sc_p_r]
-                      upgrade_softattack = [sc_p_s]
-                      upgrade_hardattack = [sc_p_h]
-                      upgrade_aaattack = [sc_p_a]
-                      upgrade_defense = [sc_p_d]
-                      upgrade_breakthrough = [sc_p_b]
-                      upgrade_ic = [sc_p_i]
-                      upgrade_ic_reverse = [sc_p_ir]
-                      upgrade_reliability_reverse = [sc_p_rr]
-                   }
-                }
-            }
-            sc_p_r = "[?THIS.sc_p_r]"
-            sc_p_s = "[?THIS.sc_p_s]"
-            sc_p_h = "[?THIS.sc_p_h]"
-            sc_p_a = "[?THIS.sc_p_a]"
-            sc_p_d = "[?THIS.sc_p_d]"
-            sc_p_b = "[?THIS.sc_p_b]"
-            sc_p_i = "[?THIS.sc_p_i]"
-            sc_p_ir = "[?THIS.sc_p_ir]"
-            sc_p_rr = "[?THIS.sc_p_rr]"
-        }
-    }
-    if = {
-        limit = {
-            tag = TEG
-        }
-        meta_effect = {
-            text = {
-                create_equipment_variant = { 
-                    name = "鸦天狗烈风弹" 
-                    type = buqiang160
-                    upgrades = {
-                      upgrade_reliability = [sc_p_r]
-                      upgrade_softattack = [sc_p_s]
-                      upgrade_hardattack = [sc_p_h]
-                      upgrade_aaattack = [sc_p_a]
-                      upgrade_defense = [sc_p_d]
-                      upgrade_breakthrough = [sc_p_b]
-                      upgrade_ic = [sc_p_i]
-                      upgrade_ic_reverse = [sc_p_ir]
-                      upgrade_reliability_reverse = [sc_p_rr]
-                   }
-                }
-            }
-            sc_p_r = "[?THIS.sc_p_r]"
-            sc_p_s = "[?THIS.sc_p_s]"
-            sc_p_h = "[?THIS.sc_p_h]"
-            sc_p_a = "[?THIS.sc_p_a]"
-            sc_p_d = "[?THIS.sc_p_d]"
-            sc_p_b = "[?THIS.sc_p_b]"
-            sc_p_i = "[?THIS.sc_p_i]"
-            sc_p_ir = "[?THIS.sc_p_ir]"
-            sc_p_rr = "[?THIS.sc_p_rr]"
-        }
-    }
-}
-
-sc_p163 = {
-    sc_p_teshufenzhi = yes
-    if = {
-        limit = {
-            tag = YSK
-        }
-        meta_effect = {
-            text = {
-                create_equipment_variant = { 
-                    name = "军神御射" 
-                    type = buqiang163
-                    upgrades = {
-                      upgrade_reliability = [sc_p_r]
-                      upgrade_softattack = [sc_p_s]
-                      upgrade_hardattack = [sc_p_h]
-                      upgrade_aaattack = [sc_p_a]
-                      upgrade_defense = [sc_p_d]
-                      upgrade_breakthrough = [sc_p_b]
-                      upgrade_ic = [sc_p_i]
-                      upgrade_ic_reverse = [sc_p_ir]
-                      upgrade_reliability_reverse = [sc_p_rr]
-                   }
-                }
-            }
-            sc_p_r = "[?THIS.sc_p_r]"
-            sc_p_s = "[?THIS.sc_p_s]"
-            sc_p_h = "[?THIS.sc_p_h]"
-            sc_p_a = "[?THIS.sc_p_a]"
-            sc_p_d = "[?THIS.sc_p_d]"
-            sc_p_b = "[?THIS.sc_p_b]"
-            sc_p_i = "[?THIS.sc_p_i]"
-            sc_p_ir = "[?THIS.sc_p_ir]"
-            sc_p_rr = "[?THIS.sc_p_rr]"
-        }
-    }
-    if = {
-        limit = {
-            tag = KOG
-        }
-        meta_effect = {
-            text = {
-                create_equipment_variant = { 
-                    name = "人琴俱亡" 
-                    type = buqiang163
-                    upgrades = {
-                      upgrade_reliability = [sc_p_r]
-                      upgrade_softattack = [sc_p_s]
-                      upgrade_hardattack = [sc_p_h]
-                      upgrade_aaattack = [sc_p_a]
-                      upgrade_defense = [sc_p_d]
-                      upgrade_breakthrough = [sc_p_b]
-                      upgrade_ic = [sc_p_i]
-                      upgrade_ic_reverse = [sc_p_ir]
-                      upgrade_reliability_reverse = [sc_p_rr]
-                   }
-                }
-            }
-            sc_p_r = "[?THIS.sc_p_r]"
-            sc_p_s = "[?THIS.sc_p_s]"
-            sc_p_h = "[?THIS.sc_p_h]"
-            sc_p_a = "[?THIS.sc_p_a]"
-            sc_p_d = "[?THIS.sc_p_d]"
-            sc_p_b = "[?THIS.sc_p_b]"
-            sc_p_i = "[?THIS.sc_p_i]"
-            sc_p_ir = "[?THIS.sc_p_ir]"
-            sc_p_rr = "[?THIS.sc_p_rr]"
-        }
-    }
-    if = {
-        limit = {
-            tag = TEG
-        }
-        meta_effect = {
-            text = {
-                create_equipment_variant = { 
-                    name = "大天狗烈风弹" 
-                    type = buqiang163
+                    type = gun165
                     upgrades = {
                       upgrade_reliability = [sc_p_r]
                       upgrade_softattack = [sc_p_s]

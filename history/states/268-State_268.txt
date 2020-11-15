@@ -4,12 +4,14 @@ state={
 	name="STATE_268"
 
 	history={
-			owner = HUM
 		146.1.1 = {
-			owner = HUM
+			owner = KAG
 			add_core_of = KAG
-			add_core_of = HUM
+			add_claim_by = HUM
 			add_claim_by = INB
+			add_claim_by = HU6
+			add_claim_by = HU7
+			add_claim_by = HU8
 			buildings = {
 				infrastructure = 3
 				industrial_complex = 1
@@ -24,7 +26,7 @@ state={
 	provinces={
 		353 369 1065 2556 2916 3147 3148 3150 3804 3805 5565 5586 5600 
 	}
-	manpower=995
+	manpower=425
 	buildings_max_level_factor=1.000
-	state_category=s5
+	state_category=s2
 }

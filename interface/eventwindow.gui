@@ -281,7 +281,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "EventWindow_News"
 		position = { x=-282 y=-310 }	
-		size = { width = 528 height = 764 }
+		size = { width = 528 height = 864 }
 		moveable = yes
 		Orientation = CENTER
 		show_sound = world_news_effect
@@ -302,7 +302,7 @@ guiTypes = {
 			{
 				name ="event_picture"
 				spriteType = "GFX_news_event_001"
-				position = { x = -270 y = 340 }
+				position = { x = -270 y = 440 }
 				Orientation = CENTER
 				# allwaystransparent = yes
 			}
@@ -361,7 +361,7 @@ guiTypes = {
 
 			gridBoxType = {
 				name = "options_grid"
-				position = { x = 20 y = -181 }
+				position = { x = 20 y = -81 }
 				size = { width = 300 height = 30 }
 				slotsize = { width = 300 height = 47 }
 				max_slots_horizontal = 1

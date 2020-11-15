@@ -34,13 +34,13 @@ CIR_yanshenbeibubianjie = {
 
 	ai_strategy = {
 		type = antagonize
-		id = "SEI"			
+		id = "SEJ"			
 		value = 100
 	}
 
 	ai_strategy = {
 		type = invade
-		id = "SEI"			
+		id = "SEJ"			
 		value = 100
 	}
 }
@@ -92,5 +92,111 @@ CIR_juezhanshike = {
 		type = invade
 		id = "SCA"			
 		value = 100
+	}
+}
+
+CIR_concentrate_fire_on_SCA = {
+	enable = {
+		tag = CIR
+    	has_war_with = SCA
+		OR = {
+		 	OR = {
+		 		is_in_faction_with = NIB
+     			NIB = { is_subject_of = CIR }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = SEJ
+     			SEJ = { is_subject_of = CIR }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = RMI
+     			RMI = { is_subject_of = CIR }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = MRS
+     			MRS = { is_subject_of = CIR }
+		 	}
+		 	OR = {
+			 	is_in_faction_with = TKM
+	     		TKM = { is_subject_of = CIR }
+		 	}
+		}
+
+	}
+	abort = {
+		OR = {
+	    	SCA = { has_capitulated = yes }
+			NOT = { country_exists = SCA }
+	    	SCA = { is_subject = yes }
+		}
+	}
+	
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "NIB"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "SEJ"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "RMI"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "MRS"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "TKM"
+		value = 100
+	}
+}
+
+CIR_We_just_need_a_little_bit_of_foundation = {
+	enable = {
+		tag = CIR
+		has_war = no
+	}
+
+	abort = { 
+		OR = {
+			date > 146.8.1
+			has_war = yes
+		}
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 60
+	}
+}
+
+CIR_wants_arms_to_fight_the_vampire = {
+	enable = {
+		tag = CIR
+		date < 148.4.1
+		date > 146.8.1
+		has_war = no
+	}
+
+	abort = { 
+		OR = {
+			date > 148.4.1
+			has_war = yes
+		}
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 75
 	}
 }

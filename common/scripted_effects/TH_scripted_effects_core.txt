@@ -94,7 +94,7 @@ CO_coring_daily = {
         multiply_variable = { CO_core_time = 2 }
         multiply_variable = { CO_core_time = ROOT.CO_current_core_factor }
 
-        clamp_variable = { var = CO_core_time min = 10 }
+        clamp_variable = { var = CO_core_time max = 500 min = 10 }
     }
 
     #auto core

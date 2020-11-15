@@ -4,9 +4,9 @@ defined_text = { # 某页内的文本
 	text = { 
 		trigger = { 
 			check_variable = { introduce_page = 0 } 
-			tag = KOG
+			tag = TKM
 		}
-		localization_key = introduce_KOG_page1
+		localization_key = introduce_TKM_page1
 	}
 	text = { 
 		trigger = { 
@@ -32,16 +32,16 @@ defined_text = { # 某页内的文本
 	text = { 
 		trigger = { 
 			check_variable = { introduce_page = 0 } 
-			tag = TEN
+			tag = TES
 		}
-		localization_key = introduce_TEN_page1
+		localization_key = introduce_TES_page1
 	}
 	text = { 
 		trigger = { 
 			check_variable = { introduce_page = 0 } 
-			tag = YSK
+			tag = MRY
 		}
-		localization_key = introduce_YSK_page1
+		localization_key = introduce_MRY_page1
 	}
 	text = { 
 		trigger = { 
@@ -60,9 +60,9 @@ defined_text = { # 某页内的文本
 	text = { 
 		trigger = { 
 			check_variable = { introduce_page = 0 } 
-			tag = SEI
+			tag = SEJ
 		}
-		localization_key = introduce_SEI_page1
+		localization_key = introduce_SEJ_page1
 	}
 	text = { 
 		trigger = { 
@@ -87,6 +87,13 @@ defined_text = { # 某页内的文本
 			tag = AKI
 		}
 		localization_key = introduce_AKI_page1
+	}
+	text = { 
+		trigger = { 
+			check_variable = { introduce_page = 0 } 
+			tag = MEL
+		}
+		localization_key = introduce_MEL_page1
 	}
 	text = { 
 		trigger = { 

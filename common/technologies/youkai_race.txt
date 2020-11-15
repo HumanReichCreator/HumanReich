@@ -16,14 +16,35 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		category_science_infantry = {
-	    	max_strength = 10
+		melee_infantry = {
+	      max_strength = 15
 	    }
-	    category_magic_infantry = {
-	    	max_strength = 10
+	    melee_cavalry = {
+	      max_strength = 15
+	    }     
+	    sc_infantry = {
+	      max_strength = 15
 	    }
-	    category_combined_infantry = {
-	    	max_strength = 10
+	    ma_infantry = {
+	      max_strength = 15
+	    }  
+	    sc_light_infantry = {
+	      max_strength = 15
+	    }
+	    ma_light_infantry = {
+	      max_strength = 15
+	    } 
+	    sc_sf_infantry = {
+	      max_strength = 15
+	    }
+	    ma_sf_infantry = {
+	      max_strength = 15
+	    } 
+	    sc_shield_infantry = {
+	      max_strength = 15
+	    }
+	    ma_shield_infantry = {
+	      max_strength = 15
 	    }
 
 		
@@ -52,33 +73,21 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		ma_militia = {
-			hardness = 0.2
-		}
 		ma_infantry = {
-			hardness = 0.2
+			hardness = 0.4
 		}
 		ma_light_infantry = {
-			hardness = 0.2
-		}
-		ma_motorized = {
-			hardness = 0.2
-		}
-		sc_militia = {
-			hardness = 2
+			hardness = 0.4
 		}
 		sc_infantry = {
-			hardness = 2
+			hardness = 4
 		}
 		sc_light_infantry = {
-			hardness = 2
-		}
-		sc_motorized = {
-			hardness = 2
+			hardness = 4
 		}
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
 		folder = {
 			name = Youkai_race_tech_folder
@@ -101,34 +110,22 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		ma_militia = {
-			hardness = 0.2
-		}
 		ma_infantry = {
-			hardness = 0.2
+			hardness = 0.4
 		}
 		ma_light_infantry = {
-			hardness = 0.2
-		}
-		ma_motorized = {
-			hardness = 0.2
-		}
-		sc_militia = {
-			hardness = 2
+			hardness = 0.4
 		}
 		sc_infantry = {
-			hardness = 2
+			hardness = 4
 		}
 		sc_light_infantry = {
-			hardness = 2
-		}
-		sc_motorized = {
-			hardness = 2
+			hardness = 4
 		}
 
 		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
 		folder = {
 			name = Youkai_race_tech_folder
@@ -151,34 +148,22 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		ma_militia = {
-			hardness = 0.2
-		}
 		ma_infantry = {
-			hardness = 0.2
+			hardness = 0.4
 		}
 		ma_light_infantry = {
-			hardness = 0.2
-		}
-		ma_motorized = {
-			hardness = 0.2
-		}
-		sc_militia = {
-			hardness = 2
+			hardness = 0.4
 		}
 		sc_infantry = {
-			hardness = 2
+			hardness = 4
 		}
 		sc_light_infantry = {
-			hardness = 2
-		}
-		sc_motorized = {
-			hardness = 2
+			hardness = 4
 		}
 
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = Youkai_race_tech_folder
@@ -201,34 +186,22 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		ma_militia = {
-			hardness = 0.2
-		}
 		ma_infantry = {
-			hardness = 0.2
+			hardness = 0.4
 		}
 		ma_light_infantry = {
-			hardness = 0.2
-		}
-		ma_motorized = {
-			hardness = 0.2
-		}
-		sc_militia = {
-			hardness = 2
+			hardness = 0.4
 		}
 		sc_infantry = {
-			hardness = 2
+			hardness = 4
 		}
 		sc_light_infantry = {
-			hardness = 2
-		}
-		sc_motorized = {
-			hardness = 2
+			hardness = 4
 		}
 
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
 		folder = {
 			name = Youkai_race_tech_folder
@@ -249,31 +222,19 @@ technologies = {
 		research_speed_factor = 0.03
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
-		ma_militia = {
-			hardness = 0.2
-		}
 		ma_infantry = {
-			hardness = 0.2
+			hardness = 0.4
 		}
 		ma_light_infantry = {
-			hardness = 0.2
-		}
-		ma_motorized = {
-			hardness = 0.2
-		}
-		sc_militia = {
-			hardness = 2
+			hardness = 0.4
 		}
 		sc_infantry = {
-			hardness = 2
+			hardness = 4
 		}
 		sc_light_infantry = {
-			hardness = 2
-		}
-		sc_motorized = {
-			hardness = 2
+			hardness = 4
 		}
 
 		folder = {
@@ -298,9 +259,24 @@ technologies = {
 		}
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
-		category_sf_infantry = {
+		sc_sf_infantry = {
+			max_organisation = 20
+		}
+		sc_shield_infantry = {
+			max_organisation = 20
+		}
+		sc_shield_tank = {
+			max_organisation = 20
+		}
+		ma_sf_infantry = {
+			max_organisation = 20
+		}
+		ma_shield_infantry = {
+			max_organisation = 20
+		}
+		ma_shield_tank = {
 			max_organisation = 20
 		}
 
@@ -327,13 +303,28 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		category_sf_infantry = {
+		sc_sf_infantry = {
+			maximum_speed = 0.07
+		}
+		sc_shield_infantry = {
+			maximum_speed = 0.07
+		}
+		sc_shield_tank = {
+			maximum_speed = 0.07
+		}
+		ma_sf_infantry = {
+			maximum_speed = 0.07
+		}
+		ma_shield_infantry = {
+			maximum_speed = 0.07
+		}
+		ma_shield_tank = {
 			maximum_speed = 0.07
 		}
 
 		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
 		folder = {
 			name = Youkai_race_tech_folder
@@ -356,14 +347,34 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		category_sf_infantry = {
+		sc_sf_infantry = {
+			breakthrough = 0.15
+			defense = 0.15
+		}
+		sc_shield_infantry = {
+			breakthrough = 0.15
+			defense = 0.15
+		}
+		sc_shield_tank = {
+			breakthrough = 0.15
+			defense = 0.15
+		}
+		ma_sf_infantry = {
+			breakthrough = 0.15
+			defense = 0.15
+		}
+		ma_shield_infantry = {
+			breakthrough = 0.15
+			defense = 0.15
+		}
+		ma_shield_tank = {
 			breakthrough = 0.15
 			defense = 0.15
 		}
 
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = Youkai_race_tech_folder
@@ -386,13 +397,28 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		category_sf_infantry = {
+		sc_sf_infantry = {
+			max_organisation = 20
+		}
+		sc_shield_infantry = {
+			max_organisation = 20
+		}
+		sc_shield_tank = {
+			max_organisation = 20
+		}
+		ma_sf_infantry = {
+			max_organisation = 20
+		}
+		ma_shield_infantry = {
+			max_organisation = 20
+		}
+		ma_shield_tank = {
 			max_organisation = 20
 		}
 
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
 		folder = {
 			name = Youkai_race_tech_folder
@@ -412,9 +438,24 @@ technologies = {
 
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
-		category_sf_infantry = {
+		sc_sf_infantry = {
+			maximum_speed = 0.07
+		}
+		sc_shield_infantry = {
+			maximum_speed = 0.07
+		}
+		sc_shield_tank = {
+			maximum_speed = 0.07
+		}
+		ma_sf_infantry = {
+			maximum_speed = 0.07
+		}
+		ma_shield_infantry = {
+			maximum_speed = 0.07
+		}
+		ma_shield_tank = {
 			maximum_speed = 0.07
 		}
 
@@ -439,17 +480,19 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Youkai_special_1
+		melee_cavalry = {
+			default_morale = 0.01
 		}
-
-		enable_subunits = {
-			Youkai_special
+		ma_sf_infantry = {
+			default_morale = 0.01
+		}
+		sc_sf_infantry = {
+			default_morale = 0.01
 		}
 
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
 		folder = {
 			name = Youkai_race_tech_folder
@@ -472,16 +515,21 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Youkai_special_2
+		melee_cavalry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
 		}
-
-		Youkai_special = {
-			combat_width = -5
+		ma_sf_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		sc_sf_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
 		}
 		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
 		folder = {
 			name = Youkai_race_tech_folder
@@ -504,17 +552,18 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Youkai_special_3
+		melee_cavalry = {
+			default_morale = 0.01
 		}
-
-		Youkai_special = {
-			combat_width = -5
+		ma_sf_infantry = {
+			default_morale = 0.01
 		}
-
+		sc_sf_infantry = {
+			default_morale = 0.01
+		}
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = Youkai_race_tech_folder
@@ -537,16 +586,18 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Youkai_special_4
+		melee_cavalry = {
+			default_morale = 0.01
 		}
-
-		Youkai_special = {
-			combat_width = -5
+		ma_sf_infantry = {
+			default_morale = 0.01
+		}
+		sc_sf_infantry = {
+			default_morale = 0.01
 		}
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
 		folder = {
 			name = Youkai_race_tech_folder
@@ -565,14 +616,19 @@ technologies = {
 	waijiebushiban5 = {
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
-		enable_equipments = {
-			Youkai_special_5
+		melee_cavalry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
 		}
-
-		Youkai_special = {
-			combat_width = -5
+		ma_sf_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		sc_sf_infantry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
 		}
 
 		folder = {

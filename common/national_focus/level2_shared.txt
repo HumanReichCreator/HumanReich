@@ -1165,8 +1165,7 @@ shared_focus = {
 		add_tech_bonus = {
 		    uses = 1
 		    bonus = 0.8
-		    category = science_weapons
-		    category = magic_weapons
+		    category = primary_weapons
 		}
 	}
 }
@@ -1288,9 +1287,7 @@ shared_focus = {
 		add_tech_bonus = {
 		    uses = 2
 		    bonus = 0.8
-		    category = science_vehicle_weapons
-		    category = magic_vehicle_weapons
-		    category = combined_vehicle_weapons
+		    category = mortar
 		}
 	}
 }
@@ -1412,7 +1409,7 @@ shared_focus = {
 		add_tech_bonus = {
 		    uses = 1
 		    bonus = 0.6
-		    category = vehicle
+		    category = shield_weapons
 		}
 	}
 }
@@ -1471,7 +1468,7 @@ shared_focus = {
 			focus = ty_kongjunzhuangbei
 		}
 		prerequisite = {
-			focus = ty_zaijuyanjiu
+			focus = ty_xunliandayaoguai
 		}
 		x = 8
 		y = 5
@@ -1504,7 +1501,7 @@ shared_focus = {
 	}
 }
 shared_focus = {
-		id = ty_zaijuyanjiu
+		id = ty_xunliandayaoguai
 		icon = GFX_focus_generic_tank_production
 		cost = 14.00
 		prerequisite = {
@@ -1540,9 +1537,7 @@ shared_focus = {
 		add_tech_bonus = {
 		    uses = 2
 		    bonus = 0.7
-		    category = science_vehicle_weapons
-		    category = magic_vehicle_weapons
-		    category = combined_vehicle_weapons
+		    category = heavy
 		}
 	}
 }

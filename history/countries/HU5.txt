@@ -1,10 +1,14 @@
 ﻿# capital = 412
-capital = 414
+capital = 415
 146.1.1 = {
     set_technology = {
         #通用武器线
-            spell_card = 1
-            buqiang117 = 1
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
             
         #辅助
 
@@ -33,8 +37,10 @@ capital = 414
         #种族
             
     }
+    
 }
 146.1.1={
+        add_manpower = 200
     add_ideas = {
     Magician
     Village

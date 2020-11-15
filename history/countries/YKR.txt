@@ -1,35 +1,29 @@
 ﻿capital = 257
-138.8.13 = {
-
-}
-141.6.2 = {
-    
-}
-142.3.8 = {
-    
-}
-144.2.5 = {
-    
-}
 146.1.1 = {
     set_technology = {
         #通用武器线
-        spell_card = 1
-        linglijiejing139 = 1
-        linglijiejing144 = 1
-        linglijiejing147 = 1
-        danmujingque139 = 1
-        gaosudanmu139 = 1
-        buqiang117 = 1
-        tezhong149 = 1
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
+        spell_card2 = 1
+        spear2 = 1
+        gun2 = 1
+        lingliliushuixian = 1
+        spell_card3 = 1
+        spear3 = 1
             
         #辅助
         zhiyuanzhuangbei = 1
 
         #专用辅助
-        fanyongmopao144 = 1
+        linglijiejie149 = 1
+        magic_energy1 = 1
 
         #专用基础
+        core_shield1 = 1
 
         #专用进阶
 
@@ -48,7 +42,6 @@
         jiemi137 = 1
 
         jiami137 = 1
-        jiami142 = 1
         jiami147 = 1
 
         #专用工程学
@@ -64,7 +57,12 @@
 
         #种族
         yaoguaitezhongbudui1 = 1
+
+        #秘密
+        kongjianxue = 1
+        jingjiexue = 1
     }
+    
 }
 146.1.1={
     oob = "YKR_146"
@@ -80,21 +78,8 @@
     gensoukyo_creator_idea
     }
     HMIF_daily_add0.02 = yes
-    puppet = CHE
     CHE = {
-    set_politics = {
-    	ruling_party = qinwai
-    	election_frequency = 48
-    	elections_allowed = no
-    }
-    set_popularities = {
-        qinwai = 85
-        guli = 12
-        neworder = 0
-        oldorder = 0
-        fandong = 3
-    }
-    CHE = { set_truce = {target = HKR days = 300} }
+        subject_level4 = yes
     }
     set_politics = {
         ruling_party = oldorder

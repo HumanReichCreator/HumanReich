@@ -9,1776 +9,29 @@ ideas = {
 ############
 
 	manufacturer_s = { 
-		#SRB
-		SCA_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_SCA#manufacturer_TEG(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
+		TES_manu2 = {
+		    picture = manufacturer_TES
+		    available = {   
+		    	TES = {
+		    		# manufacture_conditions = yes
+		    	}           	    
 		    }
-
 		    allowed = {
 		    	always = no
-		    }
-									
+		    }					
 			on_add = {
-			#暂时不需要
 			}
-			
 			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
+			removal_cost = -1
 			# modifier = {
 			# stability_factor = 0.05
 			# }
-			equipment_bonus = {
-				spell_card_a = {
-					build_cost_ic = -0.15
-					instant = yes
-				}
-				ma_fighter_equipment = {
-					build_cost_ic = -0.1
-					instant = yes
-				}
-			}
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-			ai_will_do = {
-				factor = 5
-			}
-
-			
-		}
-
-
-		KAP_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_KAP#manufacturer_TEG(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				industrial_capacity_factory = 0.2
-			}
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		NIT_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_NIT#manufacturer_TEG(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			# modifier = {
-			# 	industrial_capacity_factory = 0.1
-			# }
-			equipment_bonus = {
-				new_buqiang_a = {
-					build_cost_ic = -0.1
-					instant = yes
-				}
-				sc_artillery_a = {
-					build_cost_ic = -0.1
-					instant = yes
-				}
-				new_artillery_a = {
-					build_cost_ic = -0.1
-					instant = yes
-				}
-			}
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		AKI_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_AKI#manufacturer_TEG(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				stability_factor = 0.15
-				political_power_factor = 0.25
-			}
 			# equipment_bonus = {
 			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
+			# 		build_cost_ic = -0.15
 			# 		instant = yes
 			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		YSK_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_YSK#manufacturer_TEG(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				research_speed_factor = 0.15
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		TEG_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_TEG#manufacturer_TEG(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				army_leader_start_level = 2
-				army_speed_factor = 0.15
-				operative_slot = 2
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-
-		OTG_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_OTG#manufacturer_OTG(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			# modifier = {
-			# stability_factor = 0.05
-			# }
-			equipment_bonus = {
-				new_buqiang_a = {
-					soft_attack = 0.1
-					breakthrough = 0.05
-					instant = yes
-				}
-			}
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-
-		KAS_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_KAS#manufacturer_KAS(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				consumer_goods_factor = -0.05
-				LAND_NIGHT_ATTACK = 0.15
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-
-		SAK_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_SAK#manufacturer_SAK(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				production_speed_bunker_factor = 0.25
-				army_core_defence_factor = 0.6
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-
-		SPG_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_SPG#manufacturer_SPG(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				supply_consumption_factor = -0.5
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-
-		MEL_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_MEL#manufacturer_MEL(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			# modifier = {
-			# stability_factor = 0.05
-			# }
-			equipment_bonus = {
-				buqiang_a = {
-					build_cost_ic = -0.13
-					instant = yes
-				}
-			}
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-
-		OKI_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_OKI#manufacturer_OKI(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			# modifier = {
-			# stability_factor = 0.05
-			equipment_bonus = {
-				ma_rocket_artillery_a = {
-					soft_attack = 0.22
-					instant = yes
-				}
-			}
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-
-		YUK_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_YUK#manufacturer_YUK(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			# modifier = {
-			# stability_factor = 0.05
-			# }
-			equipment_bonus = {
-				ma_rocket_artillery_a = {
-					build_cost_ic = -0.2
-					instant = yes
-				}
-			}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-
-		SGS_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_SGS#manufacturer_SGS(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				experience_gain_army_factor = 1
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-
-		SHO_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_SHO#manufacturer_SHO(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				conscription = 0.01
-				mobilization_speed = 0.35
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		WAK_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_WAK#manufacturer_WAK(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				production_factory_max_efficiency_factor = 0.2
-				production_factory_efficiency_gain_factor = 0.2
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		MAM_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_MAM#manufacturer_MAM(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				max_dig_in = 16
-				encryption = 5
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		NMS_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_NMS#manufacturer_NMS(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				army_org_factor = 0.2
-				compliance_growth = 0.1
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		KOG_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_KOG#manufacturer_KOG(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				line_change_production_efficiency_factor = 0.3
-			}
-			equipment_bonus = {
-				sc_artillery_a = {
-					soft_attack = 0.05
-					hard_attack = 0.05
-					instant = yes
-				}
-			}
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		SRB_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_SRB#manufacturer_SRB(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				army_morale_factor = 0.35
-				army_defence_factor = 0.1
-
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		HUM_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_HUM#manufacturer_HUM(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			# modifier = {
-			# stability_factor = 0.05
-			# }
-			equipment_bonus = {
-				buqiang_a = {
-					soft_attack = 0.15
-					instant = yes
-				}
-			}
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		KAG_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_KAG#manufacturer_KAG(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				LAND_NIGHT_ATTACK = 0.45
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		INB_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_INB#manufacturer_INB(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				consumer_goods_factor = -0.09
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		UDO_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_UDO#manufacturer_UDO(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				army_attack_factor = 0.13
-				army_defence_factor = 0.13
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		EET_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_EET#manufacturer_EET(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			# modifier = {
-			# stability_factor = 0.05
-			# }
-			equipment_bonus = {
-				sc_artillery_a = {
-					build_cost_ic = -0.15
-					instant = yes
-				}
-			}
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		MRS_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_MRS#manufacturer_MRS(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			# modifier = {
-			# stability_factor = 0.05
-			# }
-
-			research_bonus = {
-			    magic = 0.2
-			}
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		HKR_manu2 = {#名字 建议用拼音#############
-
-		    picture = manufacturer_HKR#manufacturer_HKR(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				political_power_gain = 0.35
-				resistance_growth = -0.4
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		MSD_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_MSD#manufacturer_MRS(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				production_speed_industrial_complex_factor = 0.2
-			}
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		CHE_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_CHE#manufacturer_CHE(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				conscription_factor = 0.14
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		YKR_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_YKR#manufacturer_YKR(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			# modifier = {
-			# stability_factor = 0.05
-			# }
-			equipment_bonus = {
-				spell_card_a = {
-					breakthrough = 0.35
-					defense = 0.15
-					instant = yes
-				}
-			}
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		RMI_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_RMI#manufacturer_RMI(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				training_time_factor = -0.2
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		SEI_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_SEI#manufacturer_SEI(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				army_core_attack_factor = 0.2
-				army_core_defence_factor = 0.2
-				resistance_growth_on_our_occupied_states = 1
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		NIB_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_NIB#manufacturer_NIB(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				planning_speed = 0.3
-				army_morale_factor = 0.2
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		CIR_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_CIR#manufacturer_CIR(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				global_building_slots_factor = 0.25
-				local_resources_factor = 0.15
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		###其他大陆
-		MHP_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_MHP#manufacturer_MHP(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				army_attack_factor = 0.05
-				army_defence_factor = 0.05
-				army_org_factor = 0.1
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		KUT_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_KUT#manufacturer_KUT(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				army_infantry_attack_factor = 0.15
-				army_infantry_defence_factor = 0.15
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		SAT_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_SAT#manufacturer_SAT(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				encryption_factor = 0.3
-				decryption_factor = 0.3
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		UUG_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_UUG#manufacturer_UUG(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				training_time_factor = -0.05
-				conscription = 0.01
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		RUH_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_RUH#manufacturer_RUH(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				local_resources_factor = 0.3
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		YYK_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_YYK#manufacturer_YYK(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				experience_loss_factor = -0.75
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		TEN_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_TEN#manufacturer_TEN(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
+			# 	ma_fighter_equipment = {
 			# 		build_cost_ic = -0.1
 			# 		instant = yes
 			# 	}
@@ -1786,599 +39,1994 @@ ideas = {
 			research_bonus = {
 			    military = 0.2
 			}
-
-			
-
 			ai_will_do = {
 				factor = 5
 			}
 		}
-
-		CFA_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_CFA#manufacturer_CFA(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
+		IKU_manu2 = {
+		    picture = manufacturer_IKU
+		    available = {   
+		    	IKU = {
+		    		# manufacture_conditions = yes
+		    	}           	    
 		    }
-
 		    allowed = {
 		    	always = no
-		    }
-									
+		    }					
 			on_add = {
-			#暂时不需要
 			}
-			
 			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
+			removal_cost = -1
 			modifier = {
 				offensive_war_stability_factor = 0.5
 				defensive_war_stability_factor = 0.5
 			}
 			# equipment_bonus = {
 			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
+			# 		build_cost_ic = -0.15
 			# 		instant = yes
 			# 	}
-			# 	fighter_pure_equipment = {
+			# 	ma_fighter_equipment = {
 			# 		build_cost_ic = -0.1
 			# 		instant = yes
 			# 	}
 			# }
 			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
+			#     military = 0.15
 			# }
-
-			
-
 			ai_will_do = {
 				factor = 5
 			}
 		}
-
-		SKI_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_SKI#manufacturer_SKI(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
+		YMM_manu2 = {
+		    picture = manufacturer_YMM
+		    available = {   
+		    	YMM = {
+		    		# manufacture_conditions = yes
+		    	}           	    
 		    }
-
 		    allowed = {
 		    	always = no
-		    }
-									
+		    }					
 			on_add = {
-			#暂时不需要
 			}
-			
 			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
+			removal_cost = -1
 			modifier = {
-				dig_in_speed_factor = 0.25
-				max_planning = 0.35
+				production_speed_buildings_factor = 0.2
 			}
 			# equipment_bonus = {
 			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
+			# 		build_cost_ic = -0.15
 			# 		instant = yes
 			# 	}
-			# 	fighter_pure_equipment = {
+			# 	ma_fighter_equipment = {
 			# 		build_cost_ic = -0.1
 			# 		instant = yes
 			# 	}
 			# }
 			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
+			#     military = 0.15
 			# }
-
-			
-
 			ai_will_do = {
 				factor = 5
 			}
 		}
-
-		FUJ_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_FUJ#manufacturer_FUJ(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
+		PRS_manu2 = {
+		    picture = manufacturer_PRS
+		    available = {   
+		    	PRS = {
+		    		# manufacture_conditions = yes
+		    	}           	    
 		    }
-
 		    allowed = {
 		    	always = no
-		    }
-									
+		    }					
 			on_add = {
-			#暂时不需要
 			}
-			
 			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
+			removal_cost = -1
 			modifier = {
-				army_morale_factor = 0.15
-				army_infantry_attack_factor = 0.05
-				army_infantry_defence_factor = 0.05
-				experience_loss_factor = -0.25
+				experience_gain_army = 0.02
 			}
 			# equipment_bonus = {
 			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
+			# 		build_cost_ic = -0.15
 			# 		instant = yes
 			# 	}
-			# 	fighter_pure_equipment = {
+			# 	ma_fighter_equipment = {
 			# 		build_cost_ic = -0.1
 			# 		instant = yes
 			# 	}
 			# }
 			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
+			#     military = 0.15
 			# }
-
-			
-
 			ai_will_do = {
 				factor = 5
 			}
 		}
-
-		RGO_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_RGO#manufacturer_RGO(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
+		YUG_manu2 = {
+		    picture = manufacturer_YUG
+		    available = {   
+		    	YUG = {
+		    		# manufacture_conditions = yes
+		    	}           	    
 		    }
-
 		    allowed = {
 		    	always = no
-		    }
-									
+		    }					
 			on_add = {
-			#暂时不需要
 			}
-			
 			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
+			removal_cost = -1
 			modifier = {
-				land_reinforce_rate = 0.15
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
 			}
 			# equipment_bonus = {
 			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
+			# 		build_cost_ic = -0.15
 			# 		instant = yes
 			# 	}
-			# 	fighter_pure_equipment = {
+			# 	ma_fighter_equipment = {
 			# 		build_cost_ic = -0.1
 			# 		instant = yes
 			# 	}
 			# }
 			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
+			#     military = 0.15
 			# }
-
-			
-
 			ai_will_do = {
 				factor = 5
 			}
 		}
-
-		ALI_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_ALI#manufacturer_ALI(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
+		UTH_manu2 = {
+		    picture = manufacturer_UTH
+		    available = {   
+		    	UTH = {
+		    		# manufacture_conditions = yes
+		    	}           	    
 		    }
-
 		    allowed = {
 		    	always = no
-		    }
-									
+		    }					
 			on_add = {
-			#暂时不需要
 			}
-			
 			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
+			removal_cost = -1
 			modifier = {
-				special_forces_cap = 0.5
-				special_forces_min = 20 
+				local_resources_factor = 0.2
 			}
 			# equipment_bonus = {
 			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
+			# 		build_cost_ic = -0.15
 			# 		instant = yes
 			# 	}
-			# 	fighter_pure_equipment = {
+			# 	ma_fighter_equipment = {
 			# 		build_cost_ic = -0.1
 			# 		instant = yes
 			# 	}
 			# }
 			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
+			#     military = 0.15
 			# }
-
-			
-
 			ai_will_do = {
 				factor = 5
 			}
 		}
-
-		USZ_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_USZ#manufacturer_USZ(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
+		SAT_manu2 = {
+		    picture = manufacturer_SAT
+		    available = {   
+		    	SAT = {
+		    		# manufacture_conditions = yes
+		    	}           	    
 		    }
-
 		    allowed = {
 		    	always = no
-		    }
-									
+		    }					
 			on_add = {
-			#暂时不需要
 			}
-			
 			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
+			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.05
-				research_speed_factor = 0.05
+				decryption_factor = 0.3
 			}
 			# equipment_bonus = {
 			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
+			# 		build_cost_ic = -0.15
 			# 		instant = yes
 			# 	}
-			# 	fighter_pure_equipment = {
+			# 	ma_fighter_equipment = {
 			# 		build_cost_ic = -0.1
 			# 		instant = yes
 			# 	}
 			# }
 			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
+			#     military = 0.15
 			# }
-
-			
-
 			ai_will_do = {
 				factor = 5
 			}
 		}
-
-		WAI_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_WAI #manufacturer_WAI(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
+		YYK_manu2 = {
+		    picture = manufacturer_YYK
+		    available = {   
+		    	YYK = {
+		    		# manufacture_conditions = yes
+		    	}           	    
 		    }
-
 		    allowed = {
 		    	always = no
-		    }
-									
+		    }					
 			on_add = {
-			#暂时不需要
 			}
-			
 			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
+			removal_cost = -1
 			modifier = {
-				army_speed_factor = 0.1
-				land_reinforce_rate = 0.05
-
+				experience_loss_factor = -0.5
 			}
 			# equipment_bonus = {
 			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
+			# 		build_cost_ic = -0.15
 			# 		instant = yes
 			# 	}
-			# 	fighter_pure_equipment = {
+			# 	ma_fighter_equipment = {
 			# 		build_cost_ic = -0.1
 			# 		instant = yes
 			# 	}
 			# }
 			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
+			#     military = 0.15
 			# }
-
-			
-
 			ai_will_do = {
 				factor = 5
 			}
 		}
-
-		HCT_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_HCT #manufacturer_HCT(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
+		URM_manu2 = {
+		    picture = manufacturer_URM
+		    available = {   
+		    	URM = {
+		    		# manufacture_conditions = yes
+		    	}           	    
 		    }
-
 		    allowed = {
 		    	always = no
-		    }
-									
+		    }					
 			on_add = {
-			#暂时不需要
 			}
-			
 			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				army_leader_start_level = 1
-				army_leader_start_defense_level = 1
-				army_leader_start_planning_level = 1
-			}
+			removal_cost = -1
+			# modifier = {
+			# 	decryption_factor = 0.3
+			# }
 			# equipment_bonus = {
 			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
+			# 		build_cost_ic = -0.15
 			# 		instant = yes
 			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		CLO_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_CLO #manufacturer_CLO(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				justify_war_goal_time = -0.3
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		KCC_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_KCC #manufacturer_KCC(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				compliance_gain = 0.06
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		KRK_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_KRK #manufacturer_KRK(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				modifier_army_sub_unit_category_light_inf_attack_factor = 0.25
-				modifier_army_sub_unit_category_light_inf_defence_factor = 0.25
-			}
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
-			# 		build_cost_ic = -0.1
-			# 		instant = yes
-			# 	}
-			# }
-			# research_bonus = {
-			#     artillery_tech = 0.03
-			#     military = 0.01
-			# }
-
-			
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-
-		HNY_manu2 = {#名字 建议用拼音
-
-		    picture = manufacturer_HNY #manufacturer_HNY(国家Tag的形式，到时候方便统一加图)
-
-		    available = {
-                             	    
-		    }
-
-		    allowed = {
-		    	always = no
-		    }
-									
-			on_add = {
-			#暂时不需要
-			}
-			
-			cancel_if_invalid = no
-			removal_cost = -1#可以手动下（没人会手动下把）
-
-			modifier = {
-				research_speed_factor = 0.02
-			}
-
-			# equipment_bonus = {
-			# 	spell_card_a = {
-			# 		build_cost_ic = -0.33
-			# 		instant = yes
-			# 	}
-			# 	fighter_pure_equipment = {
+			# 	ma_fighter_equipment = {
 			# 		build_cost_ic = -0.1
 			# 		instant = yes
 			# 	}
 			# }
 			research_bonus = {
-			    math = 0.15
+			    civil = 0.2
 			}
-
-			
-
 			ai_will_do = {
 				factor = 5
 			}
 		}
+		KMC_manu2 = {
+		    picture = manufacturer_KMC
+		    available = {   
+		    	KMC = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.04
+				army_speed_factor = 0.08
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		SKI_manu2 = {
+		    picture = manufacturer_SKI
+		    available = {   
+		    	SKI = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				decryption_factor = 0.15
+				political_power_factor = 0.1
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		HGH_manu2 = {
+		    picture = manufacturer_HGH
+		    available = {   
+		    	SAT = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				attrition = -0.3
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		HCT_manu2 = {
+		    picture = manufacturer_HCT
+		    available = {   
+		    	HCT = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				modifier_army_sub_unit_sc_shield_infantry_attack_factor = 0.15
+				modifier_army_sub_unit_sc_shield_infantry_defence_factor = 0.15
+				modifier_army_sub_unit_ma_shield_infantry_attack_factor = 0.15
+				modifier_army_sub_unit_ma_shield_infantry_defence_factor = 0.15
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		CLO_manu2 = {
+		    picture = manufacturer_CLO
+		    available = {   
+		    	CLO = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				modifier_army_sub_unit_sc_infantry_attack_factor = 0.15
+				modifier_army_sub_unit_sc_infantry_defence_factor = 0.15
+				modifier_army_sub_unit_ma_infantry_attack_factor = 0.15
+				modifier_army_sub_unit_ma_infantry_defence_factor = 0.15
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		KEK_manu2 = {
+		    picture = manufacturer_KEK
+		    available = {   
+		    	KEK = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.15
+				research_speed_factor = 0.08
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		YCE_manu2 = {
+		    picture = manufacturer_YCE
+		    available = {   
+		    	YCE = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				compliance_gain = 0.1
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		SAK_manu2 = {
+		    picture = manufacturer_SAK
+		    available = {   
+		    	SAK = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				modifier_army_sub_unit_melee_cavalry_attack_factor = 0.3
+				modifier_army_sub_unit_melee_cavalry_defence_factor = 0.3
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		TEG_manu2 = {
+		    picture = manufacturer_TEG
+		    available = {   
+		    	TEG = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				army_speed_factor = 0.1
+				operative_slot = 2
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		MRY_manu2 = {
+		    picture = manufacturer_MRY
+		    available = {   
+		    	MRY = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.15
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     military = 0.15
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		NTR_manu2 = {
+		    picture = manufacturer_NTR
+		    available = {   
+		    	NTR = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			# modifier = {
+			# 	research_speed_factor = 0.15
+			# }
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			research_bonus = {
+			    heavy = 0.2
+			}
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		KAS_manu2 = {
+		    picture = manufacturer_KAS
+		    available = {   
+		    	KAS = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				compliance_gain = 0.05
+				training_time_factor = -0.15
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     heavy = 0.2
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		NMN_manu2 = {
+		    picture = manufacturer_NMN
+		    available = {   
+		    	NMN = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				production_speed_bunker_factor = 0.25
+				army_core_defence_factor = 0.4
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     heavy = 0.2
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		AKI_manu2 = {
+		    picture = manufacturer_AKI
+		    available = {   
+		    	AKI = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.2
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     heavy = 0.2
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		LIL_manu2 = {
+		    picture = manufacturer_LIL
+		    available = {   
+		    	LIL = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				supply_consumption_factor = -0.25
+				resistance_growth_on_our_occupied_states = 0.5
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     heavy = 0.2
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		SCA_manu2 = {
+		    picture = manufacturer_SCA
+		    available = {   
+		    	SCA = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			# modifier = {
+			# 	supply_consumption_factor = -0.25
+			# 	resistance_growth_on_our_occupied_states = 0.5
+			# }
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			research_bonus = {
+			    air_equipment = 0.25
+			}
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		NIB_manu2 = {
+		    picture = manufacturer_NIB
+		    available = {   
+		    	NIB = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				land_night_attack = 0.2
+				planning_speed = 0.2
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     air_equipment = 0.2
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		CIR_manu2 = {
+		    picture = manufacturer_CIR
+		    available = {   
+		    	CIR = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				global_building_slots_factor = 0.2
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     air_equipment = 0.2
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		SEJ_manu2 = {
+		    picture = manufacturer_SEJ
+		    available = {   
+		    	SEJ = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.2
+				resistance_growth_on_our_occupied_states = 0.5
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     air_equipment = 0.2
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		RMI_manu2 = {
+		    picture = manufacturer_RMI
+		    available = {   
+		    	RMI = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				land_night_attack = 0.2
+				modifier_army_sub_unit_ma_infantry_speed_factor = 0.14
+				modifier_army_sub_unit_sc_infantry_speed_factor = 0.14
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     air_equipment = 0.2
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		CHE_manu2 = {
+		    picture = manufacturer_CHE
+		    available = {   
+		    	CHE = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.1
+				modifier_army_sub_unit_ma_infantry_speed_factor = 0.14
+				modifier_army_sub_unit_sc_infantry_speed_factor = 0.14
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     air_equipment = 0.2
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		HKR_manu2 = {
+		    picture = manufacturer_HKR
+		    available = {   
+		    	HKR = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.4
+				resistance_growth = -0.3
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     air_equipment = 0.2
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		MSD_manu2 = {
+		    picture = manufacturer_MSD
+		    available = {   
+		    	MSD = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				production_speed_industrial_complex_factor = 0.3
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     air_equipment = 0.2
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		ALI_manu2 = {
+		    picture = manufacturer_ALI
+		    available = {   
+		    	ALI = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				modifier_army_sub_unit_sc_shield_tank_speed_factor = 0.1
+				modifier_army_sub_unit_ma_shield_tank_speed_factor = 0.1
+			}
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			research_bonus = {
+			    heavy = 0.1
+			}
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		MRS_manu2 = {
+		    picture = manufacturer_MRS
+		    available = {   
+		    	MRS = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			# modifier = {
+			# 	modifier_army_sub_unit_sc_shield_tank_speed_factor = 0.1
+			# 	modifier_army_sub_unit_ma_shield_tank_speed_factor = 0.1
+			# }
+			# equipment_bonus = {
+			# 	spell_card_a = {
+			# 		build_cost_ic = -0.15
+			# 		instant = yes
+			# 	}
+			# 	ma_fighter_equipment = {
+			# 		build_cost_ic = -0.1
+			# 		instant = yes
+			# 	}
+			# }
+			research_bonus = {
+			    magic = 0.2
+			}
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		YKR_manu2 = {
+		    picture = manufacturer_YKR
+		    available = {   
+		    	YKR = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			# modifier = {
+			# 	modifier_army_sub_unit_sc_shield_tank_speed_factor = 0.1
+			# 	modifier_army_sub_unit_ma_shield_tank_speed_factor = 0.1
+			# }
+			equipment_bonus = {
+				gun_a = {
+					breakthrough = 0.2
+					defense = 0.2
+					instant = yes
+				}
+				magic_core_a = {
+					breakthrough = 0.2
+					defense = 0.2
+					instant = yes
+				}
+			}
+			# research_bonus = {
+			#     magic = 0.2
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		HUM_manu2 = {
+		    picture = manufacturer_HUM
+		    available = {   
+		    	HUM = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			# modifier = {
+			# 	modifier_army_sub_unit_sc_shield_tank_speed_factor = 0.1
+			# 	modifier_army_sub_unit_ma_shield_tank_speed_factor = 0.1
+			# }
+			equipment_bonus = {
+				mortar_a = {
+					soft_attack = 0.2
+					hard_attack = 0.2
+					instant = yes
+				}
+				magic_energy_a = {
+					soft_attack = 0.2
+					hard_attack = 0.2
+					instant = yes
+				}
+			}
+			# research_bonus = {
+			#     magic = 0.2
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		TKM_manu2 = {
+		    picture = manufacturer_TKM
+		    available = {   
+		    	TKM = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			# modifier = {
+			# 	modifier_army_sub_unit_sc_shield_tank_speed_factor = 0.1
+			# 	modifier_army_sub_unit_ma_shield_tank_speed_factor = 0.1
+			# }
+			equipment_bonus = {
+				gun_a = {
+					soft_attack = 0.1
+					hard_attack = 0.1
+					instant = yes
+				}
+				magic_core_a = {
+					soft_attack = 0.1
+					hard_attack = 0.1
+					instant = yes
+				}
+			}
+			# research_bonus = {
+			#     magic = 0.2
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		SBK_manu2 = {
+		    picture = manufacturer_SBK
+		    available = {   
+		    	SBK = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				production_speed_industrial_complex_factor = 0.3
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     magic = 0.2
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		RNS_manu2 = {
+		    picture = manufacturer_RNS
+		    available = {   
+		    	RNS = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.08
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			research_bonus = {
+			    combined = 0.1
+			}
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		KAG_manu2 = {
+		    picture = manufacturer_KAG
+		    available = {   
+		    	KAG = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				land_night_attack = 0.5
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			research_bonus = {
+			    combined = 0.1
+			}
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		INB_manu2 = {
+		    picture = manufacturer_INB
+		    available = {   
+		    	INB = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		MOK_manu2 = {
+		    picture = manufacturer_MOK
+		    available = {   
+		    	MOK = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_morale_factor = 0.1
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		UDO_manu2 = {
+		    picture = manufacturer_UDO
+		    available = {   
+		    	UDO = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			# modifier = {
+			# 	army_attack_factor = 0.05
+			# 	army_defence_factor = 0.05
+			# 	army_morale_factor = 0.1
+			# }
+			research_bonus = {
+				primary_weapons = 0.25
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		EET_manu2 = {
+		    picture = manufacturer_EET
+		    available = {   
+		    	EET = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			# modifier = {
+			# 	consumer_goods_factor = -0.1
+			# }
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			research_bonus = {
+			    combined = 0.2
+			}
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		RGO_manu2 = {
+		    picture = manufacturer_RGO
+		    available = {   
+		    	RGO = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				modifier_army_sub_unit_sc_sf_infantry_speed_factor = 0.2
+				modifier_army_sub_unit_ma_sf_infantry_speed_factor = 0.2
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		SRB_manu2 = {
+		    picture = manufacturer_SRB
+		    available = {   
+		    	SRB = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			# modifier = {
+			# 	modifier_army_sub_unit_sc_sf_infantry_speed_factor = 0.2
+			# 	modifier_army_sub_unit_ma_sf_infantry_speed_factor = 0.2
+			# }
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			research_bonus = {
+			    science = 0.2
+			}
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		NMS_manu2 = {
+		    picture = manufacturer_NMS
+		    available = {   
+		    	NMS = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.15
+				compliance_gain = 0.06
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     science = 0.2
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		KYK_manu2 = {
+		    picture = manufacturer_KYK
+		    available = {   
+		    	KYK = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = 0.2
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     science = 0.2
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		ICR_manu2 = {
+		    picture = manufacturer_ICR
+		    available = {   
+		    	ICR = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				modifier_army_sub_unit_melee_infantry_attack_factor = 0.2 
+				modifier_army_sub_unit_melee_infantry_defence_factor = 0.2 
+				modifier_army_sub_unit_melee_cavalry_attack_factor = 0.2
+				modifier_army_sub_unit_melee_cavalry_defence_factor = 0.2 
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     science = 0.2
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		MNM_manu2 = {
+		    picture = manufacturer_MNM
+		    available = {   
+		    	MNM = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.2
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     science = 0.2
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		MAM_manu2 = {
+		    picture = manufacturer_MAM
+		    available = {   
+		    	MAM = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				encryption_factor = 0.3
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     science = 0.2
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		YUK_manu2 = {
+		    picture = manufacturer_YUK
+		    available = {   
+		    	YUK = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.4
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     science = 0.2
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		SGS_manu2 = {
+		    picture = manufacturer_SGS
+		    available = {   
+		    	SGS = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				modifier_army_sub_unit_ma_light_infantry_speed_factor = 0.2
+				modifier_army_sub_unit_sc_light_infantry_speed_factor = 0.2
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     science = 0.2
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		MEL_manu2 = {
+		    picture = manufacturer_MEL
+		    available = {   
+		    	MEL = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				modifier_army_sub_unit_ma_light_infantry_attack_factor = 0.15
+				modifier_army_sub_unit_ma_light_infantry_defence_factor = 0.15
+				modifier_army_sub_unit_sc_light_infantry_attack_factor = 0.15
+				modifier_army_sub_unit_sc_light_infantry_defence_factor = 0.15
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     science = 0.2
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		OKI_manu2 = {
+		    picture = manufacturer_OKI
+		    available = {   
+		    	OKI = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			# modifier = {
 
-		# WAI_manu2 = {#名字 建议用拼音
-
-		#     picture = manufacturer_WAI#manufacturer_WAI(国家Tag的形式，到时候方便统一加图)
-
-		#     available = {
-                             	    
-		#     }
-
-		#     allowed = {
-		#     	always = no
-		#     }
-									
-		# 	on_add = {
-		# 	#暂时不需要
-		# 	}
-			
-		# 	cancel_if_invalid = no
-		# 	removal_cost = -1#可以手动下（没人会手动下把）
-
-		# 	modifier = {
-		# 		defensive_war_stability_factor = 1
-		# 	}
-		# 	# equipment_bonus = {
-		# 	# 	spell_card_a = {
-		# 	# 		build_cost_ic = -0.33
-		# 	# 		instant = yes
-		# 	# 	}
-		# 	# 	fighter_pure_equipment = {
-		# 	# 		build_cost_ic = -0.1
-		# 	# 		instant = yes
-		# 	# 	}
-		# 	# }
-		# 	# research_bonus = {
-		# 	#     artillery_tech = 0.03
-		# 	#     military = 0.01
-		# 	# }
-
-			
-
-		# 	ai_will_do = {
-		# 		factor = 5
-		# 	}
-		# }
-
-
-
-
+			# }
+			equipment_bonus = {
+				mortar_a = {
+					breakthrough = 0.5
+					defense = 0.5
+					instant = yes
+				}
+				magic_energy_a = {
+					breakthrough = 0.5
+					defense = 0.5
+					instant = yes
+				}
+			}
+			# research_bonus = {
+			#     science = 0.2
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		PRI_manu2 = {
+		    picture = manufacturer_PRI
+		    available = {   
+		    	PRI = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.3
+			}
+			# equipment_bonus = {
+			# 	gun_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# 	magic_core_a = {
+			# 		soft_attack = 0.1
+			# 		hard_attack = 0.1
+			# 		instant = yes
+			# 	}
+			# }
+			# research_bonus = {
+			#     science = 0.2
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		WAK_manu2 = {
+		    picture = manufacturer_WAK
+		    available = {   
+		    	WAK = {
+		    		# manufacture_conditions = yes
+		    	}           	    
+		    }
+		    allowed = {
+		    	always = no
+		    }					
+			on_add = {
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			# modifier = {
+			# 	army_org_factor = 0.3
+			# }
+			equipment_bonus = {
+				smg_a = {
+					soft_attack = 0.2
+					hard_attack = 0.2
+					instant = yes
+				}
+				special_core_a = {
+					soft_attack = 0.2
+					hard_attack = 0.2
+					instant = yes
+				}
+			}
+			# research_bonus = {
+			#     science = 0.2
+			# }
+			ai_will_do = {
+				factor = 5
+			}
+		}
 }

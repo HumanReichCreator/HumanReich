@@ -46,15 +46,15 @@ SS_situation = {
   			set_country_flag = {
   				flag = SSI_ziji_xiangyaoduli
   				value = 1
-  				days = 365
+  				days = 730
   			}
   		}
 
-  		days_remove = 365
-      days_re_enable = 182
+  		days_remove = 730
+      days_re_enable = 91
 
   		modifier = {
-  			political_power_gain = -0.25
+  			political_power_gain = -0.05
   		}
 
   		remove_effect = {
@@ -66,6 +66,8 @@ SS_situation = {
           factor = 1.25
           or = {
             has_autonomy_state = autonomy_puppet
+            has_autonomy_state = autonomy_puppet_qinwai
+            has_autonomy_state = autonomy_puppet_neworder_fandong
             has_autonomy_state = autonomy_colony
           }
         }
@@ -77,7 +79,7 @@ SS_situation = {
           factor = 0
           tag = KAP
           OVERLORD = {
-            tag = YSK
+            tag = MRY
           }
         }
   		}
@@ -91,7 +93,7 @@ SS_situation = {
            has_country_flag = SSI_xiangyaoduli                   
       }
       is_good = yes                          
-      days_mission_timeout = 365           
+      days_mission_timeout = 1  
       timeout_effect = {                      
         set_country_flag = {
        		value = 1

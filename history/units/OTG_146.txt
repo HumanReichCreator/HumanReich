@@ -1,9 +1,21 @@
 ﻿division_template = {
+	name = "扫荡编制"
+	regiments = {
+		sc_light_infantry = { x = 0 y = 0 }
+		sc_light_infantry = { x = 0 y = 1 }
+		sc_light_infantry = { x = 0 y = 2 }
+		sc_light_infantry = { x = 0 y = 3 }
+	}
+	support = {
+	}
+}
+division_template = {
 	name = "大天狗直属编制"
 	regiments = {
 		sc_infantry = { x = 0 y = 0 }
 		sc_infantry = { x = 0 y = 1 }
-		sc_artillery_brigade = { x = 0 y = 2 }
+		sc_infantry = { x = 0 y = 2 }
+		sc_mortar_brigade = { x = 0 y = 3 }
 	}
 	support = {
 	}
@@ -11,12 +23,10 @@
 division_template = {
 	name = "天魔禁卫编制"
 	regiments = {
-		sc_artillery_brigade = { x = 0 y = 0 }
-		ma_infantry = { x = 0 y = 1 }
-		ma_infantry = { x = 0 y = 2 }
-		sc_artillery_brigade = { x = 1 y = 0 }
-		sc_infantry = { x = 1 y = 1 }
-		sc_infantry = { x = 1 y = 2 }
+		sc_mortar_brigade = { x = 0 y = 0 }
+		sc_sf_infantry = { x = 0 y = 1 }
+		sc_mortar_brigade = { x = 1 y = 0 }
+		sc_sf_infantry = { x = 1 y = 1 }
 	}
 	support = {
 	}
@@ -26,201 +36,201 @@ units = {
 		name = "大天狗直属编制"
 		location = 1387
 		division_template = "大天狗直属编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "大天狗直属编制"
 		location = 1387
 		division_template = "大天狗直属编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "天魔禁卫编制"
 		location = 1387
 		division_template = "天魔禁卫编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "天魔禁卫编制"
 		location = 1387
 		division_template = "天魔禁卫编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "天魔禁卫编制"
 		location = 1387
 		division_template = "天魔禁卫编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "天魔禁卫编制"
 		location = 1387
 		division_template = "天魔禁卫编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 
 	division = {
 		name = "大天狗直属编制"
 		location = 5374
 		division_template = "大天狗直属编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "大天狗直属编制"
 		location = 5374
 		division_template = "大天狗直属编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "大天狗直属编制"
 		location = 5374
 		division_template = "大天狗直属编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "天魔禁卫编制"
 		location = 5374
 		division_template = "天魔禁卫编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 
 	division = {
 		name = "大天狗直属编制"
 		location = 3415
 		division_template = "大天狗直属编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "大天狗直属编制"
 		location = 3415
 		division_template = "大天狗直属编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "大天狗直属编制"
 		location = 3415
 		division_template = "大天狗直属编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "天魔禁卫编制"
 		location = 3415
 		division_template = "天魔禁卫编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 
 	division = {
 		name = "大天狗直属编制"
 		location = 1387
 		division_template = "大天狗直属编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "大天狗直属编制"
 		location = 1387
 		division_template = "大天狗直属编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "天魔禁卫编制"
 		location = 1387
 		division_template = "天魔禁卫编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "天魔禁卫编制"
 		location = 1387
 		division_template = "天魔禁卫编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "天魔禁卫编制"
 		location = 1387
 		division_template = "天魔禁卫编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "天魔禁卫编制"
 		location = 1387
 		division_template = "天魔禁卫编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 
 	division = {
 		name = "大天狗直属编制"
 		location = 5374
 		division_template = "大天狗直属编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "大天狗直属编制"
 		location = 5374
 		division_template = "大天狗直属编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "大天狗直属编制"
 		location = 5374
 		division_template = "大天狗直属编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "天魔禁卫编制"
 		location = 5374
 		division_template = "天魔禁卫编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 
 	division = {
 		name = "大天狗直属编制"
 		location = 3415
 		division_template = "大天狗直属编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "大天狗直属编制"
 		location = 3415
 		division_template = "大天狗直属编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "大天狗直属编制"
 		location = 3415
 		division_template = "大天狗直属编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 	division = {
 		name = "天魔禁卫编制"
 		location = 3415
 		division_template = "天魔禁卫编制"
-		start_experience_factor = 0.95
-		start_equipment_factor = 1
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.75
 	}
 }

@@ -8,6 +8,7 @@ country_event = { #UUG ACE VS UNL
 		date > 151.1.30
 		has_global_flag = main_scenario
 		country_exists = UNL
+		is_subject = no
 		not = {
 			UNL = {
 				is_subject_of = UUG
@@ -130,7 +131,7 @@ country_event = { #地底 VS UUG
 				}
 			}
 			and = {
-				tag = KUT
+				tag = YUG
 				not = { has_war_with = UNL}
 				UNL = { 
 					surrender_progress > 0.65
@@ -138,7 +139,7 @@ country_event = { #地底 VS UUG
 				}
 			}
 			and = {
-				tag = MHP
+				tag = PRS
 				not = { has_war_with = UNL}
 				UNL = { 
 					surrender_progress > 0.35
@@ -161,7 +162,7 @@ country_event = { #地底 VS UUG
 		ai_chance = {
 			base = 70
 			modifier = {
-				MHP = {
+				PRS = {
 					has_war_with = UUG
 				}
 				add = -10
@@ -173,7 +174,7 @@ country_event = { #地底 VS UUG
 				add = -25
 			}
 			modifier = {
-				KUT = {
+				YUG = {
 					has_war_with = UUG
 				}
 				add = -25
@@ -220,7 +221,7 @@ country_event = { ####地底自卫同盟成立
 		date > 151.1.1
 		or = {
 			threat > 0.5
-			MHP = {
+			PRS = {
 				any_country = {
 					not = {
 						capital_scope ={
@@ -231,18 +232,19 @@ country_event = { ####地底自卫同盟成立
 			}
 		}
 		not = {
-			SAT = { has_war_with = KUT }
-			SAT = { has_war_with = MHP }
+			SAT = { has_war_with = YUG }
+			SAT = { has_war_with = PRS }
 		}
 		tag = SAT
+		is_subject = no
 	}
 
 	option = {
 		name = und.4.1
-		MHP = {
+		PRS = {
 			country_event = und.5
 		}
-		KUT = {
+		YUG = {
 			country_event = und.5
 		}
 		YMM = {
@@ -251,6 +253,7 @@ country_event = { ####地底自卫同盟成立
 		ai_chance = {
 			base = 95
 		}
+		add_ideas = can_create_faction_idea
 		create_faction = didiziwei
 
 		hidden_effect = {
@@ -302,6 +305,7 @@ country_event = { ####加入？
 			}
 		}
 		SAT = {
+			qiangjiemeng = yes
 			add_to_faction = ROOT
 		}
 

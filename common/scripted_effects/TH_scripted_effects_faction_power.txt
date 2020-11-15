@@ -1,0 +1,74 @@
+FT_defines = {
+	set_variable = { global.FT_research_speed = 0.005}
+	set_variable = { global.FT_war_support = 0.015}
+	set_variable = { global.FT_army_morale = 0.01}
+	set_variable = { global.FT_political_power_gain = 0.05 }
+	set_variable = { global.FT_max = 20 }
+}
+
+FT_daily = {
+	set_variable = { FT_power = 0}
+	set_variable = { FT_power = num_faction_members}
+	add_to_variable = { FT_power = -1} #不算自己
+	every_country = {
+		limit = {
+			is_in_faction_with = PREV
+			is_subject = yes
+		}
+		add_to_variable = { PREV.FT_power = -1}
+	}
+	clamp_variable = {
+		var = FT_power
+		min = 0
+		max = global.FT_max
+	}
+	set_temp_variable = { FT_power_factor = 1 }
+	add_to_temp_variable = { FT_power_factor = FT_power_factor_add}
+	multiply_variable = { FT_power = FT_power_factor }
+	if = {
+		limit = {
+			has_government = qinwai
+		}
+		multiply_variable = { FT_power = 1.5}
+	}
+	if = {
+		limit = {
+			is_faction_leader = yes
+		}
+		add_to_variable = { FT_power = 5}
+		if = {
+			limit = {
+				has_government = qinwai
+			}
+			add_to_variable = { FT_power = 5}
+		}
+	}
+	set_variable = { FT_research_speed = FT_power }
+	set_variable = { FT_war_support = FT_power }
+	set_variable = { FT_army_morale = FT_power }
+	set_variable = { FT_political_power_gain = FT_power }
+	multiply_variable = { FT_research_speed = global.FT_research_speed }
+	multiply_variable = { FT_war_support = global.FT_war_support }
+	multiply_variable = { FT_army_morale = global.FT_army_morale }
+	multiply_variable = { FT_political_power_gain = global.FT_political_power_gain }
+}
+FT_power_factor_add0.1 = {
+	add_to_variable = { FT_power_factor_add = 0.1}
+	custom_effect_tooltip = FT_power_factor_add0.1_tt
+}
+FT_power_factor_add0.2 = {
+	add_to_variable = { FT_power_factor_add = 0.2}
+	custom_effect_tooltip = FT_power_factor_add0.2_tt
+}
+FT_power_factor_add0.3 = {
+	add_to_variable = { FT_power_factor_add = 0.3}
+	custom_effect_tooltip = FT_power_factor_add0.3_tt
+}
+FT_power_factor_add0.4 = {
+	add_to_variable = { FT_power_factor_add = 0.4}
+	custom_effect_tooltip = FT_power_factor_add0.4_tt
+}
+FT_power_factor_add0.5 = {
+	add_to_variable = { FT_power_factor_add = 0.5}
+	custom_effect_tooltip = FT_power_factor_add0.5_tt
+}

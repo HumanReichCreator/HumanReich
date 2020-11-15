@@ -9,7 +9,7 @@ bianshen_category = {
                 and = {
                     is_ai = no
                     or = {
-                        SEI = {
+                        SEJ = {
                             is_subject_of = ROOT
                         }
                         owns_state = 119
@@ -37,13 +37,13 @@ bianshen_category = {
             hidden_effect = {
                 if = {
                     limit = {
-                        not = { country_exists = SEI }
+                        not = { country_exists = SEJ }
                     }
-                    SEI = {
+                    SEJ = {
                         transfer_state = 119
                     }
                 }
-                SEI = { 
+                SEJ = { 
                     remove_state_core = 119
                     remove_state_core = 101
                     remove_state_core = 130
@@ -51,20 +51,20 @@ bianshen_category = {
                         limit = {
                             is_core_of = ROOT
                         }
-                        add_core_of = SEI
+                        add_core_of = SEJ
                         remove_core_of = ROOT
                     }
                     every_state = {
                         limit = {
-                            is_claimed_by = SEI
+                            is_claimed_by = SEJ
                         }
-                        add_claim_by = SEI
+                        add_claim_by = SEJ
                         remove_claim_by = ROOT
                     }
                 }
                 ROOT = {
-                    SEI = {
-                        load_focus_tree = SEI_focus
+                    SEJ = {
+                        load_focus_tree = SEJ_focus
                         army_leader_inherit_146 = yes
                         set_popularities = {
                             qinwai = 3
@@ -86,20 +86,20 @@ bianshen_category = {
                             create_country_leader = {
                                 # name = "Kirisame Marisa"
                                 name = "露米娅"
-                                picture = "gfx/leaders/SEI/SEI_rmi.dds"
+                                picture = "gfx/leaders/SEJ/SEJ_rmi.dds"
                                 # picture = "MRS_mrs.dds"
                                 ideology = neworder_type
                                 traits = {  }
                             }
-                            SEI = {
+                            SEJ = {
                                 RMI = {
                                   can_use = yes
                                 }
                                 add_ideas = RMI_manu
                             }
-                            set_cosmetic_tag = SEI_RMI
+                            set_cosmetic_tag = SEJ_RMI
                             NIB = {
-                                set_country_flag = SEI_not_zhuren
+                                set_country_flag = SEJ_not_zhuren
                             }
                         }
                         if = {
@@ -111,21 +111,21 @@ bianshen_category = {
                             create_country_leader = {
                                 # name = "Kirisame Marisa"
                                 name = "莉格露·奈特巴格"
-                                picture = "gfx/leaders/SEI/NIB_nib.dds"
+                                picture = "gfx/leaders/SEJ/NIB_nib.dds"
                                 # picture = "MRS_mrs.dds"
                                 ideology = neworder_type
                                 traits = {  }
                             }
                             
-                            SEI = {
+                            SEJ = {
                                 NIB = {
                                   can_use = yes
                                 }
                                 add_ideas = NIB_manu
                             }
-                            set_cosmetic_tag = SEI_NIB
+                            set_cosmetic_tag = SEJ_NIB
                             RMI = {
-                                set_country_flag = SEI_not_zhuren
+                                set_country_flag = SEJ_not_zhuren
                             }
                             
                         }
@@ -135,12 +135,12 @@ bianshen_category = {
                         }
 
                         
-                        set_country_flag = SEI_fankangchenggong
+                        set_country_flag = SEJ_fankangchenggong
                         change_tag_from = ROOT
                     }
                 }
             }
-            custom_effect_tooltip = SEI_jicheng_tt
+            custom_effect_tooltip = SEJ_jicheng_tt
             
             
 

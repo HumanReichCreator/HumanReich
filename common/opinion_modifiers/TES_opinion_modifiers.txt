@@ -1,0 +1,25 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+	TES_dajiejiekeji_op = {
+		value = -100
+	}
+	TES_yumingjieyouhao_op = {
+		value = 45
+	}
+	TES_yushenpansuoyouhao_op = {
+		value = 45
+	}
+	TES_yujiudiyuyouhao_op = {
+		value = 45
+	}
+}	
+

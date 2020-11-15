@@ -26,7 +26,7 @@ sub_units = {
 		max_strength = 2
 		max_organisation = 180
 		default_morale = 0.05
-		manpower = 2
+		manpower = 3
 		training_time = 230
 
 		#Misc Abilities
@@ -46,8 +46,8 @@ sub_units = {
 		initiative = 0.15
 
 		need = {
-			spell_card_a = 10
-			buqiang_a = 10
+			magic_core_a = 10
+			gun_a = 10
 			support_equipment = 30
 		}
 
@@ -82,7 +82,7 @@ sub_units = {
 		max_strength = 2
 		max_organisation = 5
 		default_morale = 0.7
-		manpower = 2
+		manpower = 3
 		training_time = 230
 
 		#Misc Abilities
@@ -100,8 +100,8 @@ sub_units = {
 		}
 
 		need = {
-			spell_card_a = 10
-			buqiang_a = 10
+			magic_core_a = 10
+			gun_a = 10
 			support_equipment = 30
 		}
 
@@ -136,7 +136,7 @@ sub_units = {
 		max_strength = 2
 		max_organisation = 5
 		default_morale = 0.05
-		manpower = 2
+		manpower = 3
 		training_time = 230
 
 		#Misc Abilities
@@ -160,8 +160,8 @@ sub_units = {
 		}
 
 		need = {
-			spell_card_a = 10
-			buqiang_a = 10
+			magic_core_a = 10
+			gun_a = 10
 			support_equipment = 30
 		}
 
@@ -226,7 +226,7 @@ sub_units = {
 		max_strength = 2
 		max_organisation = 5
 		default_morale = 0.05
-		manpower = 2
+		manpower = 3
 		training_time = 230
 
 		#Misc Abilities
@@ -251,8 +251,8 @@ sub_units = {
 		
 		need = {
 			support_equipment = 30
-			spell_card_a = 10
-			buqiang_a = 10
+			magic_core_a = 10
+			gun_a = 10
 			# motorized_equipment = 20
 		}
 	}
@@ -284,7 +284,7 @@ sub_units = {
 		max_strength = 45
 		max_organisation = 80
 		default_morale = 0.1
-		manpower = 2
+		manpower = 3
 		training_time = 250
 
 		#Misc Abilities
@@ -304,14 +304,14 @@ sub_units = {
 
 		essential = {
 			support_equipment
-			spell_card_a
+			magic_core_a
 			# motorized_equipment
 		}
 		
 		need = {
 			support_equipment = 50
-			spell_card_a = 20
-			buqiang_a = 10
+			magic_core_a = 20
+			gun_a = 10
 			# motorized_equipment = 20
 		}
 	}
@@ -343,7 +343,7 @@ sub_units = {
 		max_strength = 0.5
 		max_organisation = -40
 		default_morale = 0.05
-		manpower = 2
+		manpower = 3
 		maximum_speed = -0.1
 		training_time = 250
 
@@ -370,19 +370,19 @@ sub_units = {
 			attack = 0.4
 		}
 
-		###
+	###
 		hard_attack = 0.05
 		soft_attack = 0.05
 
 		essential = {
 			support_equipment
-			sc_artillery_a
+			mortar_a
 			# motorized_equipment
 		}
 		
 		need = {
 			support_equipment = 50
-			sc_artillery_a = 5
+			mortar_a = 5
 			# motorized_equipment = 20
 		}
 	}
@@ -414,7 +414,7 @@ sub_units = {
 		max_strength = -40
 		max_organisation = -25
 		default_morale = -0.15
-		manpower = 2
+		manpower = 3
 		training_time = 250
 
 		#Misc Abilities
@@ -428,13 +428,12 @@ sub_units = {
 
 		essential = {
 			support_equipment
-			sc_artillery_a
 			# motorized_equipment
 		}
 		
 		need = {
 			support_equipment = 50
-			spell_card_a = 20
+			magic_core_a = 20
 			# motorized_equipment = 20
 		}
 	}
@@ -466,7 +465,7 @@ sub_units = {
 		max_strength = 60
 		max_organisation = 30
 		default_morale = 0.1
-		manpower = 2
+		manpower = 3
 		training_time = 250
 
 		#Misc Abilities
@@ -482,13 +481,13 @@ sub_units = {
 		air_attack = -0.25
 		
 		essential = {
-			spell_card_a
+			magic_core_a
 			# infantry_equipment
 			support_equipment
 		}
 
 		need = {
-			spell_card_a = 20
+			magic_core_a = 20
 			support_equipment = 50
 		}
 

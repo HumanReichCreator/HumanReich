@@ -1,0 +1,12 @@
+﻿l_english:
+ FT_buff:0 "阵营加成"
+  ############阵营加成
+ FT_power_factor_add0.1_tt:0 "§G获得的阵营成员加成10%§!\n"
+ FT_power_factor_add0.2_tt:0 "§G获得的阵营成员加成20%§!\n"
+ FT_power_factor_add0.3_tt:0 "§G获得的阵营成员加成30%§!\n"
+ FT_power_factor_add0.4_tt:0 "§G获得的阵营成员加成40%§!\n"
+ FT_power_factor_add0.5_tt:0 "§G获得的阵营成员加成50%§!\n"
+
+ FT_situation:0 "阵营加成"
+ FT_situation_desc:0 "成员加成：\n当非附庸的势力加入阵营时，可以提供加成，上限为最高[?global.FT_max]个势力，所有处于该阵营的势力都享受这一加成（不论附庸）。\n领袖加成：\n阵营领袖可以额外获得5个成员加入时的加成。\n\n§G改良§!§R意识形态获得的领袖加成为其他的200%（即相当于为10个成员），获得的成员加成为其他的150%。§!\n\n当前加成情况：\n[political_power_gain][?FT_political_power_gain|+=2]\n[war_support_factor][?FT_war_support|+=2%]\n[research_speed_factor][?FT_research_speed|+=2%]\n[army_morale_factor][?FT_army_morale|+=2%]"
+ FT_situation_dummy:0 "不可用决议"

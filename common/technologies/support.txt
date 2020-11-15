@@ -4,24 +4,27 @@ technologies = {
 		enable_equipments = {
 			support_equipment_1
 		}
+		enable_equipments = {
+			support_equipment_2
+		}
 		
 		
 		path = {
-			leads_to_tech = zhihuixiaodui147
+			leads_to_tech = zhihuixiaodui146
 			research_cost_coeff = 1
 		}	
 		
 		path = {
-			leads_to_tech = duzhanxiaodui147
+			leads_to_tech = duzhanxiaodui146
 			research_cost_coeff = 1
 		}	
 		path = {
-			leads_to_tech = zhanchanggongbing147
+			leads_to_tech = zhanchanggongbing146
 			research_cost_coeff = 1
 		}					
 
 		path = {
-			leads_to_tech = houfangyiliao147
+			leads_to_tech = houfangyiliao146
 			research_cost_coeff = 1
 		}
 
@@ -42,7 +45,7 @@ technologies = {
 		}
 	}
 
-	zhihuixiaodui147 = {
+	zhihuixiaodui146 = {
 
 		enable_subunits = {
 			sp_zhihuidui
@@ -50,13 +53,13 @@ technologies = {
 		
 		
 		path = {
-			leads_to_tech = zhihuixiaodui152
+			leads_to_tech = zhihuixiaodui151
 			research_cost_coeff = 1
 		}	
 
 
 		research_cost = 2
-		start_year = 147
+		start_year = 146
 		folder = {
 			name = support_folder
 			position = { x = 0 y = 2 }
@@ -72,10 +75,10 @@ technologies = {
 		}
 	}
 
-	zhihuixiaodui152 = {
+	zhihuixiaodui151 = {
 		
 		path = {
-			leads_to_tech = zhihuixiaodui157
+			leads_to_tech = zhihuixiaodui156
 			research_cost_coeff = 1
 		}	
 
@@ -86,7 +89,7 @@ technologies = {
 
 
 		research_cost = 2
-		start_year = 152
+		start_year = 151
 		folder = {
 			name = support_folder
 			position = { x = 0 y = 4 }
@@ -102,10 +105,10 @@ technologies = {
 		}
 	}
 
-	zhihuixiaodui157 = {
+	zhihuixiaodui156 = {
 		
 		path = {
-			leads_to_tech = zhihuixiaodui162
+			leads_to_tech = zhihuixiaodui161
 			research_cost_coeff = 1
 		}	
 
@@ -115,8 +118,8 @@ technologies = {
 		}
 
 
-		research_cost = 2
-		start_year = 157
+		research_cost = 2.3
+		start_year = 156
 		folder = {
 			name = support_folder
 			position = { x = 0 y = 6 }
@@ -132,12 +135,12 @@ technologies = {
 		}
 	}
 
-	zhihuixiaodui162 = {
+	zhihuixiaodui161 = {
 		
-		# path = {
-		# 	leads_to_tech = zhihuixiaodui157
-		# 	research_cost_coeff = 1
-		# }	
+		path = {
+			leads_to_tech = zhihuixiaodui166
+			research_cost_coeff = 1
+		}	
 
 		sp_zhihuidui = {
 			initiative = 0.1
@@ -146,8 +149,8 @@ technologies = {
 		
 
 
-		research_cost = 2
-		start_year = 162
+		research_cost = 2.3
+		start_year = 161
 		folder = {
 			name = support_folder
 			position = { x = 0 y = 8 }
@@ -163,21 +166,49 @@ technologies = {
 		}
 	}
 
-	duzhanxiaodui147 = {
+	zhihuixiaodui166 = {
+		
+		# path = {
+		# 	leads_to_tech = zhihuixiaodui156
+		# 	research_cost_coeff = 1
+		# }	
+
+		sp_zhihuidui = {
+			initiative = 0.1
+			max_organisation = 50
+		}
+
+		research_cost = 2.3
+		start_year = 166
+		folder = {
+			name = support_folder
+			position = { x = 0 y = 10 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	duzhanxiaodui146 = {
 
 		enable_subunits = {
 			sp_duzhanxiaodui
 		}
 		
-		
 		path = {
-			leads_to_tech = duzhanxiaodui152
+			leads_to_tech = duzhanxiaodui151
 			research_cost_coeff = 1
 		}	
 
 
 		research_cost = 2
-		start_year = 147
+		start_year = 146
 		folder = {
 			name = support_folder
 			position = { x = 4 y = 2 }
@@ -193,10 +224,10 @@ technologies = {
 		}
 	}
 
-	duzhanxiaodui152 = {
+	duzhanxiaodui151 = {
 		
 		path = {
-			leads_to_tech = duzhanxiaodui157
+			leads_to_tech = duzhanxiaodui156
 			research_cost_coeff = 1
 		}	
 
@@ -208,7 +239,7 @@ technologies = {
 
 
 		research_cost = 2
-		start_year = 152
+		start_year = 151
 		folder = {
 			name = support_folder
 			position = { x = 4 y = 4 }
@@ -224,10 +255,10 @@ technologies = {
 		}
 	}
 
-	duzhanxiaodui157 = {
+	duzhanxiaodui156 = {
 		
 		path = {
-			leads_to_tech = duzhanxiaodui162
+			leads_to_tech = duzhanxiaodui161
 			research_cost_coeff = 1
 		}	
 
@@ -236,8 +267,8 @@ technologies = {
 		}
 
 
-		research_cost = 2
-		start_year = 157
+		research_cost = 2.3
+		start_year = 156
 		folder = {
 			name = support_folder
 			position = { x = 4 y = 6 }
@@ -253,20 +284,20 @@ technologies = {
 		}
 	}
 
-	duzhanxiaodui162 = {
+	duzhanxiaodui161 = {
 		
-		# path = {
-		# 	leads_to_tech = duzhanxiaodui157
-		# 	research_cost_coeff = 1
-		# }	
+		path = {
+			leads_to_tech = duzhanxiaodui166
+			research_cost_coeff = 1
+		}	
 
 		sp_duzhanxiaodui = {
 			default_morale = 0.6
 		}
 
 
-		research_cost = 2
-		start_year = 162
+		research_cost = 2.3
+		start_year = 161
 		folder = {
 			name = support_folder
 			position = { x = 4 y = 8 }
@@ -282,7 +313,31 @@ technologies = {
 		}
 	}
 
-	zhanchanggongbing147 = {
+	duzhanxiaodui166 = {
+
+		sp_duzhanxiaodui = {
+			default_morale = 0.6
+		}
+
+
+		research_cost = 2.3
+		start_year = 166
+		folder = {
+			name = support_folder
+			position = { x = 4 y = 10 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	zhanchanggongbing146 = {
 
 		enable_subunits = {
 			sp_zhanchanggongbing
@@ -290,13 +345,13 @@ technologies = {
 		
 		
 		path = {
-			leads_to_tech = zhanchanggongbing152
+			leads_to_tech = zhanchanggongbing151
 			research_cost_coeff = 1
 		}	
 
 
 		research_cost = 2
-		start_year = 147
+		start_year = 146
 		folder = {
 			name = support_folder
 			position = { x = 8 y = 2 }
@@ -312,10 +367,10 @@ technologies = {
 		}
 	}
 
-	zhanchanggongbing152 = {
+	zhanchanggongbing151 = {
 		
 		path = {
-			leads_to_tech = zhanchanggongbing157
+			leads_to_tech = zhanchanggongbing156
 			research_cost_coeff = 1
 		}	
 
@@ -349,7 +404,7 @@ technologies = {
 
 
 		research_cost = 2
-		start_year = 152
+		start_year = 151
 		folder = {
 			name = support_folder
 			position = { x = 8 y = 4 }
@@ -365,10 +420,10 @@ technologies = {
 		}
 	}
 
-	zhanchanggongbing157 = {
+	zhanchanggongbing156 = {
 		
 		path = {
-			leads_to_tech = zhanchanggongbing162
+			leads_to_tech = zhanchanggongbing161
 			research_cost_coeff = 1
 		}	
 
@@ -385,8 +440,8 @@ technologies = {
 		}
 
 
-		research_cost = 2
-		start_year = 157
+		research_cost = 2.3
+		start_year = 156
 		folder = {
 			name = support_folder
 			position = { x = 8 y = 6 }
@@ -402,12 +457,13 @@ technologies = {
 		}
 	}
 
-	zhanchanggongbing162 = {
+	zhanchanggongbing161 = {
 		
-		# path = {
-		# 	leads_to_tech = zhanchanggongbing157
-		# 	research_cost_coeff = 1
-		# }	
+		path = {
+			leads_to_tech = zhanchanggongbing166
+			research_cost_coeff = 1
+		}	
+
 		sp_zhanchanggongbing = {
 			entrenchment = 2
 			forest = {
@@ -423,8 +479,8 @@ technologies = {
 			}
 		}
 
-		research_cost = 2
-		start_year = 162
+		research_cost = 2.3
+		start_year = 161
 		folder = {
 			name = support_folder
 			position = { x = 8 y = 8 }
@@ -440,7 +496,41 @@ technologies = {
 		}
 	}
 
-	houfangyiliao147 = {
+	zhanchanggongbing166 = {
+
+		sp_zhanchanggongbing = {
+			entrenchment = 2
+			forest = {
+				movement = 0.1
+			}
+
+			marsh = {
+				movement = 0.1
+			}
+
+			river = {
+				movement = 0.1
+			}
+		}
+
+		research_cost = 2.3
+		start_year = 166
+		folder = {
+			name = support_folder
+			position = { x = 8 y = 10 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	houfangyiliao146 = {
 
 		enable_subunits = {
 			sp_houfangyiliao
@@ -448,13 +538,13 @@ technologies = {
 		
 		
 		path = {
-			leads_to_tech = houfangyiliao152
+			leads_to_tech = houfangyiliao151
 			research_cost_coeff = 1
 		}	
 
 
 		research_cost = 2
-		start_year = 147
+		start_year = 146
 		folder = {
 			name = support_folder
 			position = { x = 12 y = 2 }
@@ -470,10 +560,10 @@ technologies = {
 		}
 	}
 
-	houfangyiliao152 = {
+	houfangyiliao151 = {
 		
 		path = {
-			leads_to_tech = houfangyiliao157
+			leads_to_tech = houfangyiliao156
 			research_cost_coeff = 1
 		}	
 
@@ -484,7 +574,7 @@ technologies = {
 
 
 		research_cost = 2
-		start_year = 152
+		start_year = 151
 		folder = {
 			name = support_folder
 			position = { x = 12 y = 4 }
@@ -500,10 +590,10 @@ technologies = {
 		}
 	}
 
-	houfangyiliao157 = {
+	houfangyiliao156 = {
 		
 		path = {
-			leads_to_tech = houfangyiliao162
+			leads_to_tech = houfangyiliao161
 			research_cost_coeff = 1
 		}	
 
@@ -513,8 +603,8 @@ technologies = {
 		}
 
 
-		research_cost = 2
-		start_year = 157
+		research_cost = 2.3
+		start_year = 156
 		folder = {
 			name = support_folder
 			position = { x = 12 y = 6 }
@@ -530,12 +620,12 @@ technologies = {
 		}
 	}
 
-	houfangyiliao162 = {
+	houfangyiliao161 = {
 		
-		# path = {
-		# 	leads_to_tech = houfangyiliao157
-		# 	research_cost_coeff = 1
-		# }	
+		path = {
+			leads_to_tech = houfangyiliao166
+			research_cost_coeff = 1
+		}	
 
 		sp_houfangyiliao = {
 			casualty_trickleback = 0.10
@@ -543,11 +633,36 @@ technologies = {
 		}
 
 
-		research_cost = 2
-		start_year = 162
+		research_cost = 2.3
+		start_year = 161
 		folder = {
 			name = support_folder
 			position = { x = 12 y = 8 }
+		}
+		
+		categories = {
+			support_tech
+			military
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	houfangyiliao166 = {
+		
+		sp_houfangyiliao = {
+			casualty_trickleback = 0.10
+			experience_loss_factor = -0.10
+		}
+
+
+		research_cost = 2.3
+		start_year = 166
+		folder = {
+			name = support_folder
+			position = { x = 12 y = 10 }
 		}
 		
 		categories = {

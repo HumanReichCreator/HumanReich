@@ -1,0 +1,80 @@
+﻿capital = 45
+138.8.13 = {
+    set_technology = {
+    spell_card1 = 1
+    spear1 = 1
+
+    jichushuxue = 1
+    shuxuegongju = 1
+
+    production_theory = 1
+
+    }
+}
+141.6.2 = {
+    
+}
+142.3.8 = {
+    
+}
+144.2.5 = {
+    
+}
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+            
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+            
+        #工程学 
+
+        #专用工程学
+
+        #工业
+            
+        #专用工业
+
+        #种族
+            
+    }
+    
+}
+138.8.13 = {
+    oob = "TEST"
+	# # set_research_slots = 1
+	set_politics = {
+        ruling_party = fandong
+        election_frequency = 48
+        elections_allowed = no
+    } 
+    set_popularities = {
+        qinwai = 5
+        guli = 0
+        neworder = 0
+        oldorder = 0
+        fandong = 95
+    }
+    
+    add_ideas={
+    Tribal
+	Fairy
+    open1
+    hawk3
+    normal_border
+    sc_rule
+     
+    }	
+
+
+}
+

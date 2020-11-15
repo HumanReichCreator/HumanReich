@@ -1688,7 +1688,7 @@ focus_tree = {
 					}
 				}
 				and = {
-					SHO = {
+					PRI = {
 						is_subject_of = ROOT
 						has_capitulated = yes
 					}
@@ -1993,7 +1993,7 @@ focus_tree = {
 	            name = SCA_jingtiyaoguaishan
 	        }
 		  	reverse_add_opinion_modifier = {
-				target = YSK
+				target = MRY
 			    modifier = SCA_jingtiyaoguaishan_op
 			}
 			reverse_add_opinion_modifier = {
@@ -2340,7 +2340,7 @@ focus_tree = {
 		y = 2
 
 		will_lead_to_war_with = KAP
-		will_lead_to_war_with = NIT
+		will_lead_to_war_with = NTR
 
 		relative_position_id = SCA_jianshexuanwuchuan
 
@@ -2359,7 +2359,7 @@ focus_tree = {
 					has_government = guli
 					or = {
 						threat > 0.40
-						NIT = {
+						NTR = {
 							has_war = yes
 						}
 						KAP = {
@@ -2384,17 +2384,19 @@ focus_tree = {
 				KAP = {
 					bypass_declare_war = yes
 				}
-				NIT = {
+				NTR = {
 					bypass_declare_war = yes
 				}
 			}
 		}
+
+		continue_if_invalid = yes
 		
 		completion_reward = {
 			custom_effect_tooltip = SCA_tongyihetong_1
 			custom_effect_tooltip = focus_warning3
 			add_named_threat = { 
-	            threat = 8.5
+	            threat = 4
 	            name = SCA_tongyihetong
 	        }
 			add_ideas = SCA_hetongyanjiu_idea
@@ -2403,7 +2405,7 @@ focus_tree = {
 				limit = {
 					or = {
 						is_core_of = KAP
-						is_core_of = NIT
+						is_core_of = NTR
 						is_core_of = SAP
 					}
 				}
@@ -2422,11 +2424,11 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					YSK = { owns_state = 40 }
+					MRY = { owns_state = 40 }
 				}
 				declare_war_on = {
 			  		type = liberate_wargoal
-			  		target = YSK
+			  		target = MRY
 			  	}
 			  	else = {
 			  		declare_war_on = {
@@ -2438,7 +2440,7 @@ focus_tree = {
 		  	
 		  	declare_war_on = {
 		  		type = puppet_wargoal_focus
-		  		target = NIT
+		  		target = NTR
 		  	}
 	    }
 
@@ -2516,7 +2518,7 @@ focus_tree = {
 
 		available ={
 			is_subject = no
-			YSK = {
+			MRY = {
 				faqiqingqiu = yes
 			}
 			not = {
@@ -2526,12 +2528,12 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = -60
 			custom_effect_tooltip = SCA_shoushigongtongfangyu_1
-			YSK = {
+			MRY = {
 				country_event = { id = sca.37 days = 2 }
 			}
 			custom_effect_tooltip = event_accept
 			effect_tooltip = {
-				YSK = {
+				MRY = {
 					huxiangbaodu = yes
 					jiemeng = yes
 				}
@@ -2562,13 +2564,13 @@ focus_tree = {
 				has_country_flag = SCA_shoushixianghubaodutongguo
 			}
 			is_subject = no
-			YSK = {
+			MRY = {
 				faqiqingqiu = yes
 			}
 		}
 		completion_reward = {
 			add_ideas = SCA_shoushikejibangzhu_idea
-			YSK = {
+			MRY = {
 				add_ideas = SCA_shoushikejibangzhu_idea
 				can_use = yes
 				SCA = {
@@ -2638,7 +2640,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_named_threat = {
-				threat = 1.5
+				threat = 1
 				name = SCA_renliqiyue
 			}
 			HUM = { country_event = { id = sca.23 hours = 11 }}
@@ -2745,10 +2747,17 @@ focus_tree = {
 						type = annex_everything
 					}
 				}
-				
-				SCA = {
-					add_to_faction = HUM
+				if = {
+					limit = {
+						HUM = {
+							is_in_faction_with = no
+						}
+					}
+					SCA = {
+						add_to_faction = HUM
+					}
 				}
+				
 			}
 			
 	    }
@@ -2777,6 +2786,10 @@ focus_tree = {
 			is_subject = no
 			HUM = {
 				faqiqingqiu = yes
+				or = {
+					is_subject_of = ROOT
+					is_subject = no
+				}
 			}
 		}
 		completion_reward = {
@@ -2869,7 +2882,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_named_threat = {
-				threat = 11.5
+				threat = 8
 				name = SCA_pohuaitiaoyue
 			}
 			every_country = {
@@ -3167,14 +3180,14 @@ focus_tree = {
 				WAK = {
 					is_subject_of = ROOT
 				}
-				SHO = {
+				PRI = {
 					is_subject_of = ROOT
 				}
 			}	
 		}
 		completion_reward = {
 			add_named_threat = { 
-	            threat = 1
+	            threat = 0.5
 	            name = SCA_wuzhihushili
 	        }
 		  	# add_to_tech_sharing_group = wuzhihuyanjiu
@@ -3215,7 +3228,7 @@ focus_tree = {
 				WAK = {
 					is_subject_of = ROOT
 				}
-				SHO = {
+				PRI = {
 					is_subject_of = ROOT
 				}
 			}
@@ -3251,7 +3264,7 @@ focus_tree = {
 				} 
 			}
 
-			SHO = {
+			PRI = {
 				if = {
 					limit = {
 						is_subject_of = ROOT
@@ -3299,7 +3312,7 @@ focus_tree = {
 				WAK = {
 				is_subject_of = ROOT
 				}
-				SHO = {
+				PRI = {
 					is_subject_of = ROOT
 				}
 			}
@@ -3316,9 +3329,9 @@ focus_tree = {
 		  	}
 		  	if = {
 		  		limit = {
-		  			SHO = { is_subject_of = ROOT }
+		  			PRI = { is_subject_of = ROOT }
 		  		}
-		  		SHO = { add_ideas = SCA_qianghuajunshishili_idea }
+		  		PRI = { add_ideas = SCA_qianghuajunshishili_idea }
 		  	}
 	    }
 	}
@@ -3355,9 +3368,9 @@ focus_tree = {
 		completion_reward = {
 				if = {
 					limit = {
-						SHO = { is_subject_of = ROOT }
+						PRI = { is_subject_of = ROOT }
 					}
-					SHO = { add_ideas = SCA_yishijiagu_idea }
+					PRI = { add_ideas = SCA_yishijiagu_idea }
 				} 
 				if = {
 					limit = {
@@ -3370,11 +3383,11 @@ focus_tree = {
 					modifier = SCA_tichumingliansi_op
 				}
 				reverse_add_opinion_modifier = {
-					target = KOG
+					target = TKM
 					modifier = SCA_tichumingliansi_op
 				}
 				NMS = { add_timed_idea = { idea = SCA_tichumingliansi_idea days = 547 } }
-				KOG = { add_timed_idea = { idea = SCA_tichumingliansi_idea days = 547 } }
+				TKM = { add_timed_idea = { idea = SCA_tichumingliansi_idea days = 547 } }
 				hidden_effect = {
 					news_event = { id = sca.2 days = 2}
 				}
@@ -3405,7 +3418,7 @@ focus_tree = {
 				WAK = {
 				is_subject_of = ROOT
 				}
-				SHO = {
+				PRI = {
 					is_subject_of = ROOT
 				}
 			}
@@ -3520,24 +3533,24 @@ focus_tree = {
 			focus = SCA_eshazongjiaozhashili
 		}
 
-		will_lead_to_war_with = KOG
+		will_lead_to_war_with = TKM
 
 		available = {
 			is_subject = no
 			or = {
-				is_neighbor_of = KOG
+				is_neighbor_of = TKM
 
 				any_neighbor_country = {
-					is_subject_of = KOG
+					is_subject_of = TKM
 				}
 
 				any_allied_country = {
-					is_neighbor_of = KOG
+					is_neighbor_of = TKM
 				}
 
 				any_allied_country = {
 					any_neighbor_country = {
-						is_subject_of = KOG
+						is_subject_of = TKM
 					}
 				}
 			}
@@ -3549,19 +3562,19 @@ focus_tree = {
 					has_government = guli
 					or = {
 						threat > 0.40
-						KOG = {
+						TKM = {
 							has_war = yes
 						}
 					}
 				}
 			}
 			not = {
-				has_non_aggression_pact_with = KOG
+				has_non_aggression_pact_with = TKM
 			}
 		}
 
 		bypass = {
-			KOG = {
+			TKM = {
 				bypass_declare_war = yes
 			}
 		}
@@ -3569,7 +3582,7 @@ focus_tree = {
 			add_ideas = SCA_yazhinananfusangshen_idea
 			declare_war_on = {
 		  		type = puppet_wargoal_focus
-		  		target = KOG
+		  		target = TKM
 		  	}
 	    }
 
@@ -3845,30 +3858,69 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			MRS = {
-				faqiqingqiu = yes
+			if = {
+				limit = {
+					MRS = { is_subject = no }
+				}
+				MRS = {
+					faqiqingqiu = yes
+				}
 			}
+			if = {
+				limit = {
+					ALI = { is_subject = no }
+				}
+				ALI = {
+					faqiqingqiu = yes
+				}
+			}
+			
 		}
 
 		bypass = {
 
 		}
 		completion_reward = {
-			MRS = {
-				country_event = { id = sca.40 days = 2}
-			}
-			custom_effect_tooltip = event_accept
-			effect_tooltip = {
-				every_country = {
-					limit = {
-						or = {
-							tag = MRS
-							is_subject_of = MRS
+			if = {
+				limit = {
+					MRS = {
+						is_subject = no
+					}
+				}
+				MRS = {
+					country_event = { id = sca.40 days = 2}
+				}
+				custom_effect_tooltip = event_accept
+				effect_tooltip = {
+					every_country = {
+						limit = {
+							or = {
+								tag = MRS
+								is_subject_of = MRS
+							}
+						}
+						subject_level4 = YES
+					}
+				}
+				else = {
+					ALI = {
+						country_event = { id = sca.40 days = 2}
+					}
+					custom_effect_tooltip = event_accept
+					effect_tooltip = {
+						every_country = {
+							limit = {
+								or = {
+									tag = ALI
+									is_subject_of = ALI
+								}
+							}
+							subject_level4 = YES
 						}
 					}
-					subject_level4 = YES
 				}
 			}
+			
 
 	    }
 
@@ -3892,7 +3944,7 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			KOG = {
+			TKM = {
 				faqiqingqiu = yes
 			}
 		}
@@ -3901,14 +3953,14 @@ focus_tree = {
 
 		}
 		completion_reward = {
-			KOG = {
+			TKM = {
 				country_event = {
 					id = sca.42 days = 2
 				}
 			}
 			custom_effect_tooltip = event_accept
 			effect_tooltip = {
-				KOG = {
+				TKM = {
 					huxiangbaodu = yes
 				}
 			}
@@ -3943,7 +3995,7 @@ focus_tree = {
 				WAK = {
 				is_subject_of = ROOT
 				}
-				SHO = {
+				PRI = {
 					is_subject_of = ROOT
 				}
 			}
@@ -4064,7 +4116,7 @@ focus_tree = {
 		completion_reward = {
 			add_named_threat = {
 				name = SCA_gongjizhunbei
-				threat = 5
+				threat = 3
 			}
 		  	every_owned_state = {
 		  		limit = {
@@ -4455,7 +4507,7 @@ focus_tree = {
 		}
 		completion_reward = {
 		  	add_tech_bonus = {
-		  		category = magic_weapons
+		  		category = primary_weapons
 		  		uses = 1
 		  		bonus = 1
 		  	}
@@ -4533,7 +4585,7 @@ focus_tree = {
 		}
 		completion_reward = {
 		  	add_tech_bonus = {
-		  		category = magic_weapons_improve
+		  		category = primary_weapons
 		  		uses = 1
 		  		bonus = 1
 		  	}
@@ -4571,7 +4623,7 @@ focus_tree = {
 		}
 		completion_reward = {
 		  	add_tech_bonus = {
-		  		category = vehicle
+		  		category = sf_force
 		  		uses = 1
 		  		bonus = 1
 		  	}
@@ -4608,7 +4660,7 @@ focus_tree = {
 		}
 		completion_reward = {
 		  	add_tech_bonus = {
-		  		category = magic_artillery_improve
+		  		category = mortar
 		  		uses = 1
 		  		bonus = 1
 		  	}
@@ -4776,7 +4828,7 @@ focus_tree = {
 
 		  	add_tech_bonus = {
 		  		category = artillery_tech
-		  		category = magic_weapons
+		  		category = primary_weapons
 		  		uses = 3
 		  		bonus = 2
 		  		ahead_reduction = 2.5

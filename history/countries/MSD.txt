@@ -1,61 +1,12 @@
 ﻿capital = 259
-138.8.13 = {
-
-}
-141.6.2 = {
-    
-}
-142.3.8 = {
-    set_technology = {
-        #通用武器线
-        spell_card = 1
-        buqiang117 = 1
-            
-        #辅助
-
-        #专用辅助
-
-        #专用基础
-
-        #专用进阶
-
-        #混合系
-
-        #陆军学说
-        zhanchangzhihui140 = 1
-            
-        #工程学 
-        jichushuxue = 1
-        tongxunlilun = 1
-
-        #专用工程学
-
-        #工业
-        production_theory = 1
-        org_production = 1
-        jianzaojishu130 = 1
-            
-        #专用工业
-
-        #种族
-            
-    }
-}
-144.2.5 = {
-    set_technology = {
-        zhanchangzhihui140 = 1
-        zuzhihuazhanzheng142 = 1
-        zhanchangzhihui145 = 1
-    }
-}
 146.1.1 = {
     set_technology = {
         #通用武器线
-        spell_card = 1
-        linglijiejing139 = 1
-        buqiang117 = 1
-        buqiang140 = 1
-            
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglidanyao = 1
+        gun2 = 1
         #辅助
 
         #专用辅助
@@ -65,6 +16,7 @@
         #专用进阶
 
         #混合系
+        sc_shield1 = 1
 
         #陆军学说
         zhanchangzhihui140 = 1
@@ -90,6 +42,7 @@
         yaohuakecheng1 = 1
             
     }
+    
 }
 142.3.8.7 = {
     oob = "MSD_142"
@@ -124,9 +77,6 @@
 144.1.1 = {
     oob = "MSD_144"
 
-    set_technology = {
-    linglijiejing139 = 1
-    }
 
     set_politics = {
         ruling_party = neworder

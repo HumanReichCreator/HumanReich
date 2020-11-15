@@ -790,14 +790,14 @@ custom_leader_cate = {
                         create_country_leader = {
                             name = "Okunoda Miyoi"
                             # name = "奥野田美宵"
-                            picture = "HUM_myoi.dds"
+                            picture = "HUM_may.dds"
                             ideology = [IDO]
                         }
                         else = {
                             create_country_leader = {
                                 #name = "Okunoda Miyoi"
                                 name = "奥野田美宵"
-                                picture = "HUM_myoi.dds"
+                                picture = "HUM_may.dds"
                                 ideology = [IDO]
                             }
                         }
@@ -816,9 +816,9 @@ custom_leader_cate = {
         }
     }
 
-    KOG_kog = {
+    TKM_kog = {
         visible = {
-            tag = KOG
+            tag = TKM
             custom_leader_on = yes
         }
 
@@ -834,14 +834,14 @@ custom_leader_cate = {
                         create_country_leader = {
                             name = "Tatara Kogasa"
                             # name = "多多良小伞"
-                            picture = "KOG_kog.dds"
+                            picture = "TKM_kog.dds"
                             ideology = [IDO]
                         }
                         else = {
                             create_country_leader = {
                                 # name = "Tatara Kogasa"
                                 name = "多多良小伞"
-                                picture = "KOG_kog.dds"
+                                picture = "TKM_kog.dds"
                                 ideology = [IDO]
                             }
                         }
@@ -859,9 +859,9 @@ custom_leader_cate = {
             }
         }
     }
-    KOG_raiko = {
+    TKM_raiko = {
         visible = {
-            tag = KOG
+            tag = TKM
             custom_leader_on = yes
         }
 
@@ -877,14 +877,14 @@ custom_leader_cate = {
                         create_country_leader = {
                             name = "Horikawa Raiko"
                             # name = "堀川雷鼓"
-                            picture = "KOG_raiko.dds"
+                            picture = "TKM_raiko.dds"
                             ideology = [IDO]
                         }
                         else = {
                             create_country_leader = {
                                 # name = "Horikawa Raiko"
                                 name = "堀川雷鼓"
-                                picture = "KOG_raiko.dds"
+                                picture = "TKM_raiko.dds"
                                 ideology = [IDO]
                             }
                         }
@@ -902,9 +902,9 @@ custom_leader_cate = {
             }
         }
     }
-    KOG_yatsuhashi = {
+    TKM_yatsuhashi = {
         visible = {
-            tag = KOG
+            tag = TKM
             custom_leader_on = yes
         }
 
@@ -920,14 +920,14 @@ custom_leader_cate = {
                         create_country_leader = {
                             name = "Tsukumo Yatsuhashi"
                             # name = "九十九八桥"
-                            picture = "KOG_yatsuhashi.dds"
+                            picture = "TKM_yatsuhashi.dds"
                             ideology = [IDO]
                         }
                         else = {
                             create_country_leader = {
                                 # name = "Tsukumo Yatsuhashi"
                                 name = "九十九八桥"
-                                picture = "KOG_yatsuhashi.dds"
+                                picture = "TKM_yatsuhashi.dds"
                                 ideology = [IDO]
                             }
                         }
@@ -945,9 +945,9 @@ custom_leader_cate = {
             }
         }
     }
-    KOG_benben = {
+    TKM_benben = {
         visible = {
-            tag = KOG
+            tag = TKM
             custom_leader_on = yes
         }
 
@@ -963,14 +963,14 @@ custom_leader_cate = {
                         create_country_leader = {
                             name = "Tsukumo Benben"
                             # name = "九十九弁弁"
-                            picture = "KOG_benben.dds"
+                            picture = "TKM_benben.dds"
                             ideology = [IDO]
                         }
                         else = {
                             create_country_leader = {
                                 # name = "Tsukumo Benben"
                                 name = "九十九弁弁"
-                                picture = "KOG_benben.dds"
+                                picture = "TKM_benben.dds"
                                 ideology = [IDO]
                             }
                         }
@@ -988,9 +988,9 @@ custom_leader_cate = {
             }
         }
     }
-    KOG_kokoro = {
+    TKM_kokoro = {
         visible = {
-            tag = KOG
+            tag = TKM
             custom_leader_on = yes
         }
 
@@ -1006,14 +1006,14 @@ custom_leader_cate = {
                         create_country_leader = {
                             name = "Hata no Kokoro"
                             # name = "秦心"
-                            picture = "KOG_kokoro.dds"
+                            picture = "TKM_kokoro.dds"
                             ideology = [IDO]
                         }
                         else = {
                             create_country_leader = {
                                 # name = "Hata no Kokoro"
                                 name = "秦心"
-                                picture = "KOG_kokoro.dds"
+                                picture = "TKM_kokoro.dds"
                                 ideology = [IDO]
                             }
                         }
@@ -1120,135 +1120,6 @@ custom_leader_cate = {
             }
         }
     }
-    # MHP_mhp = {
-    #     visible = {
-    #         tag = MHP
-    #         custom_leader_on = yes
-    #     }
-
-    #     fire_only_once = no
-    #     complete_effect = {
-    #         current_government = yes
-    #         meta_effect = {
-    #             text = {
-    #                 if = {
-    #                     limit = {
-    #                         english_leaders = yes
-    #                     }
-    #                     create_country_leader = {
-    #                         name = "Mizuhashi Parsee"
-    #                         #name = "水桥帕露西"
-    #                         picture = "MHP_mhp.dds"
-    #                         ideology = [IDO]
-    #                     }
-    #                     else = {
-    #                         create_country_leader = {
-    #                             # name = "Mizuhashi Parsee"
-    #                             name = "水桥帕露西"
-    #                             picture = "MHP_mhp.dds"
-    #                             ideology = [IDO]
-    #                         }
-    #                     }
-    #                 }
-    #             }
-    #             IDO = "[THIS.government_type]"
-    #         }
-    #     }
-
-    #     ai_will_do = {
-    #         factor = 0
-    #         modifier = {
-    #             add = 1
-    #             caidankaiqi = yes
-    #         }
-    #     }
-    # }
-    # MHP_yamame = {
-    #     visible = {
-    #         tag = MHP
-    #         custom_leader_on = yes
-    #     }
-
-    #     fire_only_once = no
-    #     complete_effect = {
-    #         current_government = yes
-    #         meta_effect = {
-    #             text = {
-    #                 if = {
-    #                     limit = {
-    #                         english_leaders = yes
-    #                     }
-    #                     create_country_leader = {
-    #                         name = "Kurodani Yamame"
-    #                         #name = "黑谷山女"
-    #                         picture = "MHP_yamame.dds"
-    #                         ideology = [IDO]
-    #                     }
-    #                     else = {
-    #                         create_country_leader = {
-    #                             # name = "Kurodani Yamame"
-    #                             name = "黑谷山女"
-    #                             picture = "MHP_yamame.dds"
-    #                             ideology = [IDO]
-    #                         }
-    #                     }
-    #                 }
-    #             }
-    #             IDO = "[THIS.government_type]"
-    #         }
-    #     }
-
-    #     ai_will_do = {
-    #         factor = 0
-    #         modifier = {
-    #             add = 1
-    #             caidankaiqi = yes
-    #         }
-    #     }
-    # }
-    # MHP_kisume = {
-    #     visible = {
-    #         tag = MHP
-    #         custom_leader_on = yes
-    #     }
-
-    #     fire_only_once = no
-    #     complete_effect = {
-    #         current_government = yes
-    #         meta_effect = {
-    #             text = {
-    #                 if = {
-    #                     limit = {
-    #                         english_leaders = yes
-    #                     }
-    #                     create_country_leader = {
-    #                         name = "Kisume"
-    #                         #name = "琪斯美"
-    #                         picture = "MHP_kisume.dds"
-    #                         ideology = [IDO]
-    #                     }
-    #                     else = {
-    #                         create_country_leader = {
-    #                             # name = "Kisume"
-    #                             name = "琪斯美"
-    #                             picture = "MHP_kisume.dds"
-    #                             ideology = [IDO]
-    #                         }
-    #                     }
-    #                 }
-    #             }
-    #             IDO = "[THIS.government_type]"
-    #         }
-    #     }
-
-    #     ai_will_do = {
-    #         factor = 0
-    #         modifier = {
-    #             add = 1
-    #             caidankaiqi = yes
-    #         }
-    #     }
-    # }
     MRS_mrs = {
         visible = {
             tag = MRS
@@ -1940,9 +1811,9 @@ custom_leader_cate = {
             }
         }
     }
-    RUH_ruh = {
+    UTH_uth = {
         visible = {
-            tag = RUH
+            tag = UTH
             custom_leader_on = yes
         }
 
@@ -1958,14 +1829,14 @@ custom_leader_cate = {
                         create_country_leader = {
                             name = "Reiuji Utsuho"
                             # name = "灵乌路空"
-                            picture = "RUH_ruh.dds"
+                            picture = "UTH_uth.dds"
                             ideology = [IDO]
                         }
                         else = {
                             create_country_leader = {
                                 # name = "Reiuji Utsuho"
                                 name = "灵乌路空"
-                                picture = "RUH_ruh.dds"
+                                picture = "UTH_uth.dds"
                                 ideology = [IDO]
                             }
                         }
@@ -1983,9 +1854,9 @@ custom_leader_cate = {
             }
         }
     }
-    RUH_rin = {
+    UTH_rin = {
         visible = {
-            tag = RUH
+            tag = UTH
             custom_leader_on = yes
         }
 
@@ -2001,14 +1872,14 @@ custom_leader_cate = {
                         create_country_leader = {
                             name = "Kaenbyou Rin"
                             #name = "火焰猫燐"
-                            picture = "RUH_rin.dds"
+                            picture = "UTH_rin.dds"
                             ideology = [IDO]
                         }
                         else = {
                             create_country_leader = {
                                 name = "Kaenbyou Rin"
                                 #name = "火焰猫燐"
-                                picture = "RUH_rin.dds"
+                                picture = "UTH_rin.dds"
                                 ideology = [IDO]
                             }
                         }
@@ -2129,14 +2000,14 @@ custom_leader_cate = {
                         }
                         create_country_leader = {
                             name = "Patchouli Knowledge"
-                            # name = "帕秋莉 诺蕾姬"
+                            # name = "帕秋莉·诺蕾姬"
                             picture = "SCA_pachy.dds"
                             ideology = [IDO]
                         }
                         else = {
                             create_country_leader = {
                                 # name = "Patchouli Knowledge"
-                                name = "帕秋莉 诺蕾姬"
+                                name = "帕秋莉·诺蕾姬"
                                 picture = "SCA_pachy.dds"
                                 ideology = [IDO]
                             }
@@ -2370,9 +2241,9 @@ custom_leader_cate = {
             }
         }
     }
-    SEI_sei = {
+    SEJ_sei = {
         visible = {
-            tag = SEI
+            tag = SEJ
             custom_leader_on = yes
         }
 
@@ -2388,14 +2259,14 @@ custom_leader_cate = {
                         create_country_leader = {
                             name = "Kijin Seija"
                             # name = "鬼人正邪"
-                            picture = "SEI_sei.dds"
+                            picture = "SEJ_sej.dds"
                             ideology = [IDO]
                         }
                         else = {
                             create_country_leader = {
                                 # name = "Kijin Seija"
                                 name = "鬼人正邪"
-                                picture = "SEI_sei.dds"
+                                picture = "SEJ_sej.dds"
                                 ideology = [IDO]
                             }
                         }
@@ -2413,9 +2284,9 @@ custom_leader_cate = {
             }
         }
     }
-    SEI_smm = {
+    SEJ_smm = {
         visible = {
-            tag = SEI
+            tag = SEJ
             custom_leader_on = yes
         }
 
@@ -2431,14 +2302,14 @@ custom_leader_cate = {
                         create_country_leader = {
                             name = "Sukuna Shinmyoumaru"
                             # name = "少名针妙丸"
-                            picture = "SEI_smm.dds"
+                            picture = "SEJ_smm.dds"
                             ideology = [IDO]
                         }
                         else = {
                             create_country_leader = {
                                 # name = "Sukuna Shinmyoumaru"
                                 name = "少名针妙丸"
-                                picture = "SEI_smm.dds"
+                                picture = "SEJ_smm.dds"
                                 ideology = [IDO]
                             }
                         }
@@ -2585,9 +2456,9 @@ custom_leader_cate = {
             }
         }
     }
-    SHO_lyrica = {
+    PRI_lyrica = {
         visible = {
-            tag = SHO
+            tag = PRI
             custom_leader_on = yes
         }
 
@@ -2603,14 +2474,14 @@ custom_leader_cate = {
                         create_country_leader = {
                             name = "Lyrica Prismriver"
                             # name = "莉莉卡·普莉兹姆利巴"
-                            picture = "SHO_lyrica.dds"
+                            picture = "PRI_lyrica.dds"
                             ideology = [IDO]
                         }
                         else = {
                             create_country_leader = {
                                 # name = "Lyrica Prismriver"
                                 name = "莉莉卡·普莉兹姆利巴"
-                                picture = "SHO_lyrica.dds"
+                                picture = "PRI_lyrica.dds"
                                 ideology = [IDO]
                             }
                         }
@@ -2628,9 +2499,9 @@ custom_leader_cate = {
             }
         }
     }
-    SHO_luna = {
+    PRI_luna = {
         visible = {
-            tag = SHO
+            tag = PRI
             custom_leader_on = yes
         }
 
@@ -2646,14 +2517,14 @@ custom_leader_cate = {
                         create_country_leader = {
                             name = "Lunasa Prismriver"
                             # name = "露娜萨·普莉兹姆利巴"
-                            picture = "SHO_luna.dds"
+                            picture = "PRI_luna.dds"
                             ideology = [IDO]
                         }
                         else = {
                             create_country_leader = {
                                 # name = "Lunasa Prismriver"
                                 name = "露娜萨·普莉兹姆利巴"
-                                picture = "SHO_luna.dds"
+                                picture = "PRI_luna.dds"
                                 ideology = [IDO]
                             }
                         }
@@ -2671,9 +2542,9 @@ custom_leader_cate = {
             }
         }
     }
-    SHO_merlin = {
+    PRI_merlin = {
         visible = {
-            tag = SHO
+            tag = PRI
             custom_leader_on = yes
         }
 
@@ -2689,14 +2560,14 @@ custom_leader_cate = {
                         create_country_leader = {
                             name = "Merlin Prismriver"
                             # name = "梅露兰·普莉兹姆利巴"
-                            picture = "SHO_merlin.dds"
+                            picture = "PRI_merlin.dds"
                             ideology = [IDO]
                         }
                         else = {
                             create_country_leader = {
                                 # name = "Merlin Prismriver"
                                 name = "梅露兰·普莉兹姆利巴"
-                                picture = "SHO_merlin.dds"
+                                picture = "PRI_merlin.dds"
                                 ideology = [IDO]
                             }
                         }
@@ -2757,7 +2628,7 @@ custom_leader_cate = {
             }
         }
     }
-    WAI_kom = {
+    SKI_kmc = {
         visible = {
             tag = SKI
             custom_leader_on = yes
@@ -2775,14 +2646,14 @@ custom_leader_cate = {
                         create_country_leader = {
                             name = "Onozuka Komachi"
                             # name = "小野塚小町"
-                            picture = "gfx/leaders/WAI/WAI_kom.dds"
+                            picture = "gfx/leaders/KMC/KMC_kmc.dds"
                             ideology = [IDO]
                         }
                         else = {
                             create_country_leader = {
                                 # name = "Onozuka Komachi"
                             name = "小野塚小町"
-                            picture = "gfx/leaders/WAI/WAI_kom.dds"
+                            picture = "gfx/leaders/KMC/KMC_kmc.dds"
                                 ideology = [IDO]
                             }
                         }
@@ -2800,6 +2671,50 @@ custom_leader_cate = {
             }
         }
     }
+    SKI_nwt = {
+        visible = {
+            tag = SKI
+            custom_leader_on = yes
+        }
+
+        fire_only_once = no
+        complete_effect = {
+            current_government = yes
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            english_leaders = yes
+                        }
+                        create_country_leader = {
+                            name = "Kutaka Niwatari"
+                            # name = "庭渡久侘歌"
+                            picture = "SKI_nwt.dds"
+                            ideology = [IDO]
+                        }
+                        else = {
+                            create_country_leader = {
+                                # name = "Niwatari Kutaka"
+                                name = "庭渡久侘歌"
+                                picture = "SKI_nwt.dds"
+                                ideology = [IDO]
+                            }
+                        }
+                    }
+                }
+                IDO = "[THIS.government_type]"
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                caidankaiqi = yes
+            }
+        }
+    }
+
     SRB_mik = {
         visible = {
             tag = SRB
@@ -3146,9 +3061,9 @@ custom_leader_cate = {
             }
         }
     }
-    TEN_ten = {
+    TES_ten = {
         visible = {
-            tag = TEN
+            tag = TES
             custom_leader_on = yes
         }
 
@@ -3164,14 +3079,14 @@ custom_leader_cate = {
                         create_country_leader = {
                             name = "Hinanawi Tenshi"
                             # name = "比那名居天子"
-                            picture = "TEN_ten.dds"
+                            picture = "TES_tes.dds"
                             ideology = [IDO]
                         }
                         else = {
                             create_country_leader = {
                                 # name = "Hinanawi Tenshi"
                                 name = "比那名居天子"
-                                picture = "TEN_ten.dds"
+                                picture = "TES_tes.dds"
                                 ideology = [IDO]
                             }
                         }
@@ -3189,9 +3104,9 @@ custom_leader_cate = {
             }
         }
     }
-    TEN_iku = {
+    TES_iku = {
         visible = {
-            tag = TEN
+            tag = TES
             custom_leader_on = yes
         }
 
@@ -3207,14 +3122,14 @@ custom_leader_cate = {
                         create_country_leader = {
                             name = "Nagae Iku"
                             # name = "永江衣玖"
-                            picture = "TEN_iku.dds"
+                            picture = "TES_iku.dds"
                             ideology = [IDO]
                         }
                         else = {
                             create_country_leader = {
                                 # name = "Nagae Iku"
                                 name = "永江衣玖"
-                                picture = "TEN_iku.dds"
+                                picture = "TES_iku.dds"
                                 ideology = [IDO]
                             }
                         }
@@ -3447,9 +3362,9 @@ custom_leader_cate = {
             }
         }
     }
-    YSK_ysk = {
+    MRY_ysk = {
         visible = {
-            tag = YSK
+            tag = MRY
             custom_leader_on = yes
         }
 
@@ -3465,14 +3380,14 @@ custom_leader_cate = {
                         create_country_leader = {
                             name = "Yasaka Kanako"  
                             # name = "八坂神奈子"
-                            picture = "YSK_ysk.dds"
+                            picture = "MRY_ysk.dds"
                             ideology = [IDO]
                         }
                         else = {
                             create_country_leader = {
                                 # name = "Yasaka Kanako"  
                                 name = "八坂神奈子"
-                                picture = "YSK_ysk.dds"
+                                picture = "MRY_ysk.dds"
                                 ideology = [IDO]
                             }
                         }
@@ -3490,9 +3405,9 @@ custom_leader_cate = {
             }
         }
     }
-    YSK_mry = {
+    MRY_mry = {
         visible = {
-            tag = YSK
+            tag = MRY
             custom_leader_on = yes
         }
 
@@ -3508,14 +3423,14 @@ custom_leader_cate = {
                         create_country_leader = {
                             name = "Moriya Suwako" 
                             # name = "泄矢诹访子"
-                            picture = "YSK_mry.dds"
+                            picture = "MRY_mry.dds"
                             ideology = [IDO]
                         }
                         else = {
                             create_country_leader = {
                                 # name = "Moriya Suwako" 
                                 name = "泄矢诹访子"
-                                picture = "YSK_mry.dds"
+                                picture = "MRY_mry.dds"
                                 ideology = [IDO]
                             }
                         }
@@ -3533,9 +3448,9 @@ custom_leader_cate = {
             }
         }
     }
-    YSK_sanae = {
+    MRY_sanae = {
         visible = {
-            tag = YSK
+            tag = MRY
             custom_leader_on = yes
         }
 
@@ -3551,14 +3466,14 @@ custom_leader_cate = {
                         create_country_leader = {
                             name = "Kochiya Sanae"
                             # name = "东风谷早苗"  
-                            picture = "YSK_sanae.dds"
+                            picture = "MRY_sanae.dds"
                             ideology = [IDO]
                         }
                         else = {
                             create_country_leader = {
                                 # name = "Kochiya Sanae"
                                 name = "东风谷早苗"  
-                                picture = "YSK_sanae.dds"
+                                picture = "MRY_sanae.dds"
                                 ideology = [IDO]
                             }
                         }
@@ -3752,9 +3667,9 @@ custom_leader_cate = {
 
 
     ###
-    USZ_usz = {
+    URM_urm = {
         visible = {
-            tag = USZ
+            tag = URM
             custom_leader_on = yes
         }
 
@@ -3770,14 +3685,14 @@ custom_leader_cate = {
                         create_country_leader = {
                             name = "Urumi Ushizaki"
                             # name = "牛崎润美"
-                            picture = "USZ_usz.dds"
+                            picture = "URM_urm.dds"
                             ideology = [IDO]
                         }
                         else = {
                             create_country_leader = {
                                 #name = "Ushizaki Urumi"
                                 name = "牛崎润美"
-                                picture = "USZ_usz.dds"
+                                picture = "URM_urm.dds"
                                 ideology = [IDO]
                             }
                         }
@@ -3795,9 +3710,9 @@ custom_leader_cate = {
             }
         }
     }
-    USZ_ebs = {
+    URM_ebs = {
         visible = {
-            tag = USZ
+            tag = URM
             custom_leader_on = yes
         }
 
@@ -3813,57 +3728,14 @@ custom_leader_cate = {
                         create_country_leader = {
                             name = "Eika Ebisu"
                             # name = "戎璎花"
-                            picture = "USZ_ebs.dds"
+                            picture = "URM_ebs.dds"
                             ideology = [IDO]
                         }
                         else = {
                             create_country_leader = {
                                 #name = "Ebisu Eika"
                                 name = "戎璎花"
-                                picture = "USZ_ebs.dds"
-                                ideology = [IDO]
-                            }
-                        }
-                    }
-                }
-                IDO = "[THIS.government_type]"
-            }
-        }
-
-        ai_will_do = {
-            factor = 0
-            modifier = {
-                add = 1
-                caidankaiqi = yes
-            }
-        }
-    }
-    USZ_nwt = {
-        visible = {
-            tag = USZ
-            custom_leader_on = yes
-        }
-
-        fire_only_once = no
-        complete_effect = {
-            current_government = yes
-            meta_effect = {
-                text = {
-                    if = {
-                        limit = {
-                            english_leaders = yes
-                        }
-                        create_country_leader = {
-                            name = "Kutaka Niwatari"
-                            # name = "庭渡久侘歌"
-                            picture = "USZ_nwt.dds"
-                            ideology = [IDO]
-                        }
-                        else = {
-                            create_country_leader = {
-                                # name = "Niwatari Kutaka"
-                                name = "庭渡久侘歌"
-                                picture = "USZ_nwt.dds"
+                                picture = "URM_ebs.dds"
                                 ideology = [IDO]
                             }
                         }
@@ -3882,9 +3754,9 @@ custom_leader_cate = {
         }
     }
 
-    HNY_hny = {
+    KEK_kek = {
         visible = {
-            tag = HNY
+            tag = KEK
             custom_leader_on = yes
         }
 
@@ -3900,14 +3772,14 @@ custom_leader_cate = {
                         create_country_leader = {
                             name = "Keiki Haniyasushin"
                             # name = "埴安神袿姬"
-                            picture = "HNY_hny.dds"
+                            picture = "KEK_kek.dds"
                             ideology = [IDO]
                         }
                         else = {
                             create_country_leader = {
                                 # name = "Haniyasushin Keiki"
                                 name = "埴安神袿姬"
-                                picture = "HNY_hny.dds"
+                                picture = "KEK_kek.dds"
                                 ideology = [IDO]
                             }
                         }
@@ -3925,9 +3797,9 @@ custom_leader_cate = {
             }
         }
     }
-    HNY_jtg = {
+    KEK_jtg = {
         visible = {
-            tag = HNY
+            tag = KEK
             custom_leader_on = yes
         }
 
@@ -3943,14 +3815,14 @@ custom_leader_cate = {
                         create_country_leader = {
                             name = "Mayumi Joutougu"
                             # name = "杖刀偶磨弓"
-                            picture = "HNY_jtg.dds"
+                            picture = "KEK_jtg.dds"
                             ideology = [IDO]
                         }
                         else = {
                             create_country_leader = {
                                 # name = "Joutougu Mayumi"
                                 name = "杖刀偶磨弓"
-                                picture = "HNY_jtg.dds"
+                                picture = "KEK_jtg.dds"
                                 ideology = [IDO]
                             }
                         }

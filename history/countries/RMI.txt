@@ -1,101 +1,15 @@
 ﻿capital = 135
-138.8.13 = {
-
-}
-141.6.2 = {
-    
-}
-142.3.8 = {
-    set_technology = {
-        #通用武器线
-        spell_card = 1
-        danmujingque139 = 1
-        gaosudanmu139 = 1
-        buqiang117 = 1
-            
-        #辅助
-
-        #专用辅助
-
-        #专用基础
-
-        #专用进阶
-
-        #混合系
-
-        #陆军学说
-        zhanchangzhihui140 = 1
-        zuzhihuazhanzheng142 = 1
-            
-        #工程学 
-        jichushuxue = 1
-        shuxuegongju = 1
-        tongxunlilun = 1
-
-        #专用工程学
-
-        #工业
-        production_theory = 1
-        org_production = 1
-            
-        #专用工业
-        linglishengchan130 = 1
-
-        #种族
-            
-    }
-}
-144.2.5 = {
-    set_technology = {
-        #通用武器线
-        spell_card = 1
-        linglijiejing139 = 1
-        danmujingque139 = 1
-        gaosudanmu139 = 1
-        buqiang117 = 1
-            
-        #辅助
-
-        #专用辅助
-
-        #专用基础
-
-        #专用进阶
-
-        #混合系
-
-        #陆军学说
-        zhanchangzhihui140 = 1
-        zuzhihuazhanzheng142 = 1
-        zhanchangzhihui145 = 1
-            
-        #工程学 
-        jichushuxue = 1
-        shuxuegongju = 1
-        lingben = 1
-
-        #专用工程学
-        production_theory = 1
-        org_production = 1
-
-        #工业
-            
-        #专用工业
-        linglishengchan130 = 1
-
-        #种族
-        qinlvetianxing1 = 1
-            
-    }
-}
 146.1.1 = {
     set_technology = {
         #通用武器线
-        spell_card = 1
-        linglijiejing139 = 1
-        danmujingque139 = 1
-        gaosudanmu139 = 1
-        buqiang117 = 1
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        spell_card2 = 1
+        spear2 = 1
+        
         #辅助
 
         #专用辅助
@@ -130,6 +44,7 @@
         qinlvetianxing1 = 1
             
     }
+    
 }
 142.3.8.7 = {
 
@@ -208,7 +123,7 @@
 create_country_leader = {
 	# name = "Rumia"  
     name = "露米娅"
-	picture = "gfx/leaders/SEI/SEI_rmi.dds"
+	picture = "gfx/leaders/SEJ/SEJ_rmi.dds"
 	ideology = fandong_type
 	traits = {  }
 }
@@ -216,7 +131,7 @@ create_country_leader = {
 create_country_leader = {
     # name = "Rumia"  
     name = "露米娅"
-    picture = "gfx/leaders/SEI/SEI_rmi.dds"
+    picture = "gfx/leaders/SEJ/SEJ_rmi.dds"
     ideology = neworder_type
     traits = {  }
 }
@@ -224,7 +139,7 @@ create_country_leader = {
 create_country_leader = {
     # name = "Rumia"  
     name = "露米娅"
-    picture = "gfx/leaders/SEI/SEI_rmi.dds"
+    picture = "gfx/leaders/SEJ/SEJ_rmi.dds"
     ideology = qinwai_type
     traits = {  }
 }
@@ -232,7 +147,7 @@ create_country_leader = {
 create_country_leader = {
     # name = "Rumia"  
     name = "露米娅"
-    picture = "gfx/leaders/SEI/SEI_rmi.dds"
+    picture = "gfx/leaders/SEJ/SEJ_rmi.dds"
     ideology = guli_type
     traits = {  }
 }
@@ -240,7 +155,7 @@ create_country_leader = {
 create_country_leader = {
     # name = "Rumia"  
     name = "露米娅"
-    picture = "gfx/leaders/SEI/SEI_rmi.dds"
+    picture = "gfx/leaders/SEJ/SEJ_rmi.dds"
     ideology = oldorder_type
     traits = {  }
 }

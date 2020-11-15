@@ -43,7 +43,7 @@ technologies = {
 		}
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
 		conscription_factor = 0.02
 
@@ -71,7 +71,7 @@ technologies = {
 		conscription_factor = 0.02
 		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
 		folder = {
 			name = Beast_race_tech_folder
@@ -97,7 +97,7 @@ technologies = {
 		conscription_factor = 0.02
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = Beast_race_tech_folder
@@ -123,7 +123,7 @@ technologies = {
 		conscription_factor = 0.02
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
 		folder = {
 			name = Beast_race_tech_folder
@@ -144,7 +144,7 @@ technologies = {
 		conscription_factor = 0.02
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
 		folder = {
 			name = Beast_race_tech_folder
@@ -168,9 +168,9 @@ technologies = {
 		}
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
-		LAND_NIGHT_ATTACK = 0.06
+		LAND_NIGHT_ATTACK = 0.08
 
 		folder = {
 			name = Beast_race_tech_folder
@@ -193,10 +193,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		LAND_NIGHT_ATTACK = 0.06
+		LAND_NIGHT_ATTACK = 0.08
 		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
 		folder = {
 			name = Beast_race_tech_folder
@@ -219,10 +219,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		LAND_NIGHT_ATTACK = 0.06
+		LAND_NIGHT_ATTACK = 0.08
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = Beast_race_tech_folder
@@ -245,10 +245,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		LAND_NIGHT_ATTACK = 0.06
+		LAND_NIGHT_ATTACK = 0.08
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
 		folder = {
 			name = Beast_race_tech_folder
@@ -266,10 +266,10 @@ technologies = {
 
 	yeguangzhili5 = {
 
-		LAND_NIGHT_ATTACK = 0.06
+		LAND_NIGHT_ATTACK = 0.08
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
 		folder = {
 			name = Beast_race_tech_folder
@@ -292,16 +292,15 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Beast_special_1
+		melee_infantry = {
+			combat_width = -5
 		}
-
-		enable_subunits = {
-			Beast_special
+		melee_cavalry = {
+			combat_width = -5
 		}
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
 		folder = {
 			name = Beast_race_tech_folder
@@ -324,16 +323,17 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Beast_special_2
+		melee_infantry = {
+			breakthrough = 0.15
+			defense = 0.15
 		}
-
-		Beast_special = {
-			combat_width = -5
+		melee_cavalry = {
+			breakthrough = 0.15
+			defense = 0.15
 		}
 		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
 		folder = {
 			name = Beast_race_tech_folder
@@ -356,18 +356,19 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Beast_special_3
+		melee_infantry = {
+			max_organisation = 15
+			default_morale = 0.02
 		}
-
-		Beast_special = {
-			combat_width = -5
+		melee_cavalry = {
+			max_organisation = 15
+			default_morale = 0.02
 		}
 
 
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = Beast_race_tech_folder
@@ -390,16 +391,19 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Beast_special_4
+		melee_infantry = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+			ap_attack = 0.5
 		}
-
-		Beast_special = {
-			combat_width = -5
+		melee_cavalry = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+			ap_attack = 0.5
 		}
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
 		folder = {
 			name = Beast_race_tech_folder
@@ -418,14 +422,13 @@ technologies = {
 	qianxingtujidui5 = {
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
-		enable_equipments = {
-			Beast_special_5
+		melee_infantry = {
+			maximum_speed = 0.3
 		}
-
-		Beast_special = {
-			combat_width = -5
+		melee_cavalry = {
+			maximum_speed = 0.3
 		}
 
 		folder = {

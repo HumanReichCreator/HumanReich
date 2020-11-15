@@ -7,6 +7,9 @@ subject_level4 = {
 	custom_effect_tooltip = subject_level4_tt
 	puppet_party_save = yes
 	hidden_effect = {
+		PREV = {
+			save_event_target_as = newoverlord
+		}
 		every_country = {
 			limit = {
 				has_war_with = PREV
@@ -14,10 +17,10 @@ subject_level4 = {
 					tag = PREV.PREV
 				}
 			}
-			PREV.PREV = {
+			event_target:newoverlord = {
 				add_to_war = { 
 				    targeted_alliance = PREV.PREV
-				    enemy = PREV 
+				    enemy = PREV
 				}
 			}
 		}
@@ -34,6 +37,9 @@ subject_level3 = {
 	custom_effect_tooltip = subject_level3_tt
 	puppet_party_save = yes
 	hidden_effect = {
+		PREV = {
+			save_event_target_as = newoverlord
+		}
 		every_country = {
 			limit = {
 				has_war_with = PREV
@@ -41,10 +47,10 @@ subject_level3 = {
 					tag = PREV.PREV
 				}
 			}
-			PREV.PREV = {
+			event_target:newoverlord = {
 				add_to_war = { 
 				    targeted_alliance = PREV.PREV
-				    enemy = PREV 
+				    enemy = PREV
 				}
 			}
 		}
@@ -62,6 +68,9 @@ subject_level2 = {
 	custom_effect_tooltip = subject_level2_tt
 	puppet_party_save = yes
 	hidden_effect = {
+		PREV = {
+			save_event_target_as = newoverlord
+		}
 		every_country = {
 			limit = {
 				has_war_with = PREV
@@ -69,17 +78,46 @@ subject_level2 = {
 					tag = PREV.PREV
 				}
 			}
-			PREV.PREV = {
+			event_target:newoverlord = {
 				add_to_war = { 
 				    targeted_alliance = PREV.PREV
-				    enemy = PREV 
+				    enemy = PREV
 				}
 			}
 		}
 		PREV = {
-			set_autonomy = {
-				target = PREV
-				autonomous_state = autonomy_puppet
+			if = {
+				limit = {
+					has_government = qinwai
+				}
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_puppet_qinwai
+				}
+			}
+			if = {
+				limit = {
+					or = {
+						has_government = fandong
+						has_government = neworder
+					}
+				}
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_puppet_neworder_fandong
+				}
+			}
+			if = {
+				limit = {
+					or = {
+						has_government = guli
+						has_government = oldorder
+					}
+				}
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_puppet
+				}
 			}
 		}
 	}
@@ -89,6 +127,9 @@ subject_level1 = {
 	custom_effect_tooltip = subject_level1_tt
 	puppet_party_save = yes
 	hidden_effect = {
+		PREV = {
+			save_event_target_as = newoverlord
+		}
 		every_country = {
 			limit = {
 				has_war_with = PREV
@@ -96,17 +137,46 @@ subject_level1 = {
 					tag = PREV.PREV
 				}
 			}
-			PREV.PREV = {
+			event_target:newoverlord = {
 				add_to_war = { 
 				    targeted_alliance = PREV.PREV
-				    enemy = PREV 
+				    enemy = PREV
 				}
 			}
 		}
 		PREV = {
-			set_autonomy = {
-				target = PREV
-				autonomous_state = autonomy_integrated_puppet
+			if = {
+				limit = {
+					has_government = qinwai
+				}
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_integrated_puppet_qinwai
+				}
+			}
+			if = {
+				limit = {
+					or = {
+						has_government = fandong
+						has_government = neworder
+					}
+				}
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_integrated_puppet_neworder_fandong
+				}
+			}
+			if = {
+				limit = {
+					or = {
+						has_government = guli
+						has_government = oldorder
+					}
+				}
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_integrated_puppet
+				}
 			}
 		}
 	}
@@ -118,17 +188,16 @@ low_puppet_level = {
 	hidden_effect = {
 		if = {
 			limit = {
-				has_autonomy_state = autonomy_integrated_puppet
+				or = {
+					has_autonomy_state = autonomy_integrated_puppet
+					has_autonomy_state = autonomy_integrated_puppet_qinwai
+					has_autonomy_state = autonomy_integrated_puppet_neworder_fandong
+				}
 			}
 
 			OVERLORD = {
+				save_event_target_as = annexed_overlord
 				PREV = {
-					every_owned_state = {
-						limit = {
-							is_core_of = PREV
-						}
-						set_state_flag = will_be_annex
-					}
 					every_state = {
 						limit = {
 							or = {
@@ -147,9 +216,10 @@ low_puppet_level = {
 								}
 							}
 						}
-						every_state = {
+						every_owned_state = {
 							limit = {
 								is_core_of = PREV
+								has_state_flag = will_be_annexed_by_@event_target:annexed_overlord
 							}
 							add_core_of = PREV.PREV
 						}
@@ -166,24 +236,27 @@ low_puppet_level = {
 			
 			save_event_target_as = annexed_subject
 			OVERLORD = { 
-				save_event_target_as = annexed_overlord
-				add_named_threat = { threat = 0.5 name = tunbingfuyong}
+				add_named_threat = { threat = 0.3 name = tunbingfuyong}
 				annex_news_event = yes		
 				remove_ideas = annex_subject_idea
 				army_leader_inherit_146 = yes
 				annex_country = {target = PREV transfer_troops = yes} 
-				every_state = {
+				every_owned_state = {
 					limit = {
-						has_state_flag = will_be_annex
+						has_state_flag = will_be_annexed_by_@event_target:annexed_overlord
 					}
-					clr_state_flag = will_be_annex
+					clr_state_flag = will_be_annexed_by_@event_target:annexed_overlord
 					add_compliance = 35
 				}
 			}
 		}
 		if = {
 			limit = {
-				has_autonomy_state = autonomy_puppet
+				or = {
+					has_autonomy_state = autonomy_puppet
+					has_autonomy_state = autonomy_puppet_qinwai
+					has_autonomy_state = autonomy_puppet_neworder_fandong
+				}
 			}
 			OVERLORD = {
 				PREV = {
@@ -241,7 +314,11 @@ increase_puppet_level = {
 		}
 		if = {
 			limit = {
-				has_autonomy_state = autonomy_puppet
+				or = {
+					has_autonomy_state = autonomy_puppet
+					has_autonomy_state = autonomy_puppet_qinwai
+					has_autonomy_state = autonomy_puppet_neworder_fandong
+				}
 			}
 			OVERLORD = {
 				PREV = {
@@ -253,7 +330,11 @@ increase_puppet_level = {
 		
 		if = {
 			limit = {
-				has_autonomy_state = autonomy_integrated_puppet
+				or = {
+					has_autonomy_state = autonomy_integrated_puppet
+					has_autonomy_state = autonomy_integrated_puppet_qinwai
+					has_autonomy_state = autonomy_integrated_puppet_neworder_fandong
+				}
 			}
 			OVERLORD = {
 				PREV = {
@@ -519,6 +600,63 @@ jiemeng = {
 	}
 }
 
+qiangjiemeng = {
+	diplomatic_relation = {
+	    country = PREV
+	    relation = non_aggression_pact
+	    active = yes
+	}
+	add_opinion_modifier = {
+		target = PREV modifier = qiangjiemeng
+	}
+	reverse_add_opinion_modifier = {
+		target = PREV modifier = qiangjiemeng
+	}
+	add_ai_strategy = {
+		type = befriend
+		id = PREV
+		value = 100
+	}
+	add_ai_strategy = {
+		type = support 
+		id = PREV
+		value = 100
+	}
+	add_ai_strategy = {
+		type = alliance
+		id = PREV
+		value = 2000
+	}
+	add_ai_strategy = {
+		type = send_volunteers_desire
+		id = PREV
+		value = 100
+	}
+	
+	PREV = {
+		add_ai_strategy = {
+			type = befriend
+			id = PREV
+			value = 100
+		}
+		add_ai_strategy = {
+			type = support 
+			id = PREV
+			value = 100
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = PREV
+			value = 2000
+		}
+		add_ai_strategy = {
+			type = send_volunteers_desire
+			id = PREV
+			value = 100
+		}
+	}
+}
+
 didui = {
 	add_opinion_modifier = {
 		target = PREV modifier = set_enemy
@@ -604,7 +742,7 @@ background_enemy = {
 	add_ai_strategy = {
 		type = conquer 
 		id = PREV
-		value = 10
+		value = 25
 	}
 	add_ai_strategy = {
 		type = alliance
@@ -792,16 +930,16 @@ english_leader_on = {
 		limit = {
 			has_global_flag =  main_scenario
 		}
-		if = {
-			limit = {
-				english_leaders = yes
-			}
-			english_leader_set_146 = yes
+		# if = {
+		# 	limit = {
+		# 		english_leaders = yes
+		# 	}
+		# 	english_leader_set_146 = yes
 
-			else = {
+		# 	else = {
 				chinese_leader_set_146 = yes
-			}
-		}
+		# 	}
+		# }
 	}
 }
 
@@ -852,4 +990,11 @@ can_use = {
 
 claim_a_region = {
 	
+}
+
+yukari_ehua = {
+	custom_effect_tooltip = yukari_ehua_tt
+}
+okina_ehua = {
+	custom_effect_tooltip = okina_ehua_tt
 }

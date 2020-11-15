@@ -1,12 +1,12 @@
 technologies = {
-	gongjianzhiyuanpao148 = {
+	gongjianzhiyuanpao150 = {
 		
 		dependencies = {
-		   gongjianpao146 = 1
+		   gongjianpao149 = 1
 		}
 
 		path = {
-			leads_to_tech = gongjianzhiyuanpao154
+			leads_to_tech = gongjianzhiyuanpao160
 			research_cost_coeff = 1
 		}
 
@@ -20,7 +20,7 @@ technologies = {
 		}
 		
 		research_cost = 2
-		start_year = 148
+		start_year = 150
 
 		folder = {
 			name = kap_tech_folder
@@ -36,15 +36,15 @@ technologies = {
 		}
 	}
 
-	gongjianzhiyuanpao154 = {
+	gongjianzhiyuanpao160 = {
 	
 		path = {
-			leads_to_tech = gongjianzhiyuanpao160
+			leads_to_tech = gongjianzhiyuanpao170
 			research_cost_coeff = 1
 		}
 		
 		research_cost = 2
-		start_year = 154
+		start_year = 160
 
 		sp_gongjianpao = {
 			mountain = {
@@ -69,10 +69,10 @@ technologies = {
 		}
 	}
 
-	gongjianzhiyuanpao160 = {
+	gongjianzhiyuanpao170 = {
 		
 		research_cost = 2
-		start_year = 160
+		start_year = 170
 
 		folder = {
 			name = kap_tech_folder
@@ -92,25 +92,25 @@ technologies = {
 		}
 	}
 
-	linglibuqiang148 = {
+	linglibuqiang150 = {
 	
 		path = {
-			leads_to_tech = linglibuqiang154
+			leads_to_tech = linglibuqiang160
 			research_cost_coeff = 1
 		}
 
-		category_science_infantry = {
+		sc_infantry = {
+			hardness = 3
 			hard_attack = 1
-			hardness = 1.5
 		}
-
-		sc_mechanized = {
-			hardness = -1.5
+		sc_light_infantry = {
+			hardness = 3
+			hard_attack = 1
 		}
 		
 
 		research_cost = 2
-		start_year = 148
+		start_year = 150
 
 		folder = {
 			name = kap_tech_folder
@@ -126,24 +126,24 @@ technologies = {
 		}
 	}
 
-	linglibuqiang154 = {
+	linglibuqiang160 = {
 	
 		path = {
-			leads_to_tech = linglibuqiang160
+			leads_to_tech = linglibuqiang170
 			research_cost_coeff = 1
 		}
 
-		category_science_infantry = {
+		sc_infantry = {
+			hardness = 3
 			hard_attack = 1
-			hardness = 1.5
 		}
-
-		sc_mechanized = {
-			hardness = -1.5
+		sc_light_infantry = {
+			hardness = 3
+			hard_attack = 1
 		}
 		
 		research_cost = 2
-		start_year = 154
+		start_year = 160
 
 		folder = {
 			name = kap_tech_folder
@@ -159,18 +159,18 @@ technologies = {
 		}
 	}
 
-	linglibuqiang160 = {
+	linglibuqiang170 = {
 		
 		research_cost = 2
 		start_year = 160
 
-		category_science_infantry = {
+		sc_infantry = {
+			hardness = 3
 			hard_attack = 1
-			hardness = 1.5
 		}
-
-		sc_mechanized = {
-			hardness = -1.5
+		sc_light_infantry = {
+			hardness = 3
+			hard_attack = 1
 		}
 
 		folder = {

@@ -1,0 +1,1739 @@
+﻿add_namespace = sca
+##########焦点事件###########
+news_event = { #下玄武川问题
+	id = sca.1
+	title = sca.1.t
+	desc = sca.1.d
+	picture = GFX_news_event_sca.1
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = sca.1.1
+		trigger = {
+			or ={
+				tag = SCA
+				is_subject_of = SCA
+			}	
+			
+		}
+	}
+	option = {
+		name = sca.1.2
+		trigger = {
+			OR = {
+				tag = TEG
+				tag = MRY
+			}
+		}
+	}
+	option = {
+		name = sca.1.3
+		trigger = {
+			tag = KAP
+			tag = SAP
+			tag = NTR
+		}
+	}
+	option = {
+		name = sca.1.4
+		trigger = {
+			NOT = {
+				tag = TEG
+				tag = MRY
+				tag = KAP
+				tag = SCA
+				tag = SAP
+				tag = NTR
+				is_subject_of = SCA
+			}	
+		}
+	}
+}
+
+news_event = { #谴责命莲寺
+	id = sca.2
+	title = sca.2.t
+	desc = sca.2.d
+	picture = GFX_news_event_sca.2
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = sca.2.1
+		trigger = {
+			or = {
+				tag = NMS
+				tag = TKM
+			}
+		}
+	}
+	option = {
+		name = sca.2.2
+		trigger = {
+			tag = SCA
+		}
+	}
+	option = {
+		name = sca.2.3
+		trigger = {
+			NOT = {
+				tag = SCA
+				tag = NMS
+				tag = TKM
+			}
+		}
+	}
+}
+
+news_event = { #雾之湖势力范围建设（国策）
+	id = sca.17
+	title = sca.17.t
+	desc  = sca.17.d
+	picture = GFX_news_event_sca.17
+	major = yes
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = sca.17.1
+		trigger = {
+			tag = SCA
+		}
+	}
+	option = {
+		name = sca.17.2
+		trigger = {
+			NOT = { tag = SCA }
+		}
+	}	
+}
+
+news_event = { #警惕叛徒妖精（国策）
+	id = sca.18
+	title = sca.18.t
+	desc  = sca.18.d
+	picture = GFX_news_event_sca.18
+	major = yes
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = sca.18.1
+		trigger = {
+			tag = SCA
+		}
+	}
+	option = {
+		name = sca.18.2
+		trigger = {
+			NOT = { 
+				tag = SCA 
+				shiyaojingzijide = yes
+			}
+		}
+	}	
+	option = {
+		name = sca.18.3
+		trigger = {
+			shiyaojingzijide = yes
+		}
+	}	
+}
+##########焦点事件结束###########
+###########时间事件###########
+country_event = { #庆典准备
+	id = sca.4
+	title = sca.4.t
+	desc = sca.4.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	trigger = {
+		tag = SCA
+		date > 146.1.20
+		has_global_flag = main_scenario
+	}
+
+	option = {
+		name = sca.4.1
+		hidden_effect = {
+			country_event = {id = sca.5 days = 40 random = 60}
+		}
+		add_political_power = 10
+
+	}
+}
+
+country_event = { #刺杀事件
+	id = sca.5
+	title = sca.5.t
+	desc = sca.5.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			SCA = { complete_national_focus = SCA_hongmochengshijian }
+		}
+	}
+
+	option = {
+		name = sca.5.1
+
+		add_stability = -0.3
+
+		# hidden_effect = {
+		# 	retire_country_leader = yes
+		# }
+
+		create_country_leader = {
+			# name = "Council"
+		    name = "帝国临时议会"
+			picture = "gfx/leaders/OTG/OTG_council.dds"
+			ideology = guli_type
+			traits = {
+
+			}
+		}
+
+		# swap_ideas = { add fairy_unrest
+		# add_political_power = -20
+		hidden_effect = {
+			news_event = {id = sca.6 days = 2}
+			country_event = {id = sca.10 days = 40 random = 70}
+		}
+	}
+}
+
+news_event = { #刺杀新闻事件
+	id = sca.6
+	title = sca.6.t
+	desc = sca.6.d
+	picture = GFX_news_event_sca.6
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = sca.6.1
+		trigger = {
+			tag = SCA
+		}
+	}
+	option = {
+		name = sca.6.2
+		trigger = {
+			not = { 
+				tag = SCA 
+				shiyaojingzijide = yes
+			}
+		}
+	}
+	option = {
+		name = sca.6.2
+		trigger = {
+			shiyaojingzijide = yes
+		}
+	}
+}
+
+country_event = { #妖精暴动
+	id = sca.8
+	title = sca.8.t
+	desc = sca.8.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {id = sca.12 days = 300 random = 70}
+			
+			SCA = { 
+				complete_national_focus = SCA_huancaoyuan 
+				set_country_flag = SCA_panluan
+			}
+			SC2 = {
+				add_timed_idea = { idea = panluantouxiang_idea days = 20 }
+				transfer_state = 61
+				transfer_state = 70
+				transfer_state = 85
+				transfer_state = 311
+				inherit_technology = SCA
+				load_oob = SC2_rebel
+				load_oob = SC2_rebel
+			}
+			SC1 = {
+				add_timed_idea = { idea = panluantouxiang_idea days = 20 }
+				transfer_state = 77
+				transfer_state = 90
+				inherit_technology = SCA
+				load_oob = SC1_rebel
+				load_oob = SC1_rebel
+			}
+			set_global_flag = {
+				flag = SCA_panluankaishi
+				value = 1
+				days = 92
+			}
+			hidden_effect = {
+				SC1 = {
+					declare_war_on = {
+						target = SCA
+						type = duli_wargoal
+					}
+				}
+				SC2 = {
+					declare_war_on = {
+						target = SCA
+						type = duli_wargoal
+					}
+				}
+				
+			}
+			country_event = { id = sca.9 days = 2}
+		}
+
+
+	}
+
+	option = {
+		add_timed_idea = { days = 365 idea = SCA_zhongzuzhuyizhe_idea }
+		name = sca.8.1
+		add_stability = -0.2
+	}
+}
+
+news_event = { #妖精暴动
+	id = sca.9
+	title = sca.9.t
+	desc = sca.9.d
+	picture = GFX_news_event_sca.9
+	major = yes
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		
+		
+	}
+
+	option = {
+		name = sca.9.1
+		trigger = {
+			tag = SCA
+		}
+	}
+
+	option = {
+		name = sca.9.2
+		trigger = {
+			not = { tag = SCA }
+		}
+	}
+}
+
+country_event = { #选举事件
+	id = sca.10
+	title = sca.10.t
+	desc = sca.10.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {id = sca.8 days = 145 random = 70}
+		}
+	}
+
+	option = {
+		name = sca.10.1
+		add_political_power = -10
+
+		hidden_effect = {
+			news_event = { id = sca.11 days = 2}
+			SCA = { complete_national_focus = SCA_pachy }
+			set_country_flag = SCA_pachy
+		}
+
+		add_stability = -0.05
+
+
+		retire_country_leader = yes
+
+		create_country_leader = {
+		    # name = "Patchouli Knowledge"
+		    name = "帕秋莉·诺蕾姬"
+		    picture = "SCA_pachy.dds"
+		    ideology = guli_type
+		    traits = {
+
+		    }
+		}
+
+		add_ideas = SCA_pachydaili_idea
+		add_ideas = SCA_dailizhengfu_idea
+
+		add_popularity = {
+		    ideology = qinwai
+		    popularity = 0.25
+		}
+
+		conservativeincrease = yes
+
+		ai_chance = {
+			base = 33
+			modifier = {
+				factor = 0
+				not = {
+					has_game_rule = {
+						rule = SCA_paths
+						option = path_random
+					}
+					has_game_rule = {
+						rule = SCA_paths
+						option = SCA_path_qinwai
+					}
+				}
+			}
+		}
+
+	}
+	option = {
+		name = sca.10.2
+		add_political_power = 25
+
+		hidden_effect = {
+			# retire_country_leader = yes
+			news_event = { id = sca.11 days = 2}
+			SCA = { complete_national_focus = SCA_sakura }
+			set_country_flag = SCA_16
+		}
+
+		add_ideas = SCA_dailizhengfu_idea
+
+		retire_country_leader = yes
+
+		create_country_leader = {
+			# name = "Council"
+		    name = "十六夜咲夜"
+    		picture = "SCA_sky.dds"
+			ideology = guli_type
+			traits = {
+
+			}
+		}
+
+		add_popularity = {
+		    ideology = guli
+		    popularity = 0.1
+		}
+
+		ai_chance = {
+			base = 33
+			modifier = {
+				factor = 0
+				not = {
+					has_game_rule = {
+						rule = SCA_paths
+						option = path_random
+					}
+					has_game_rule = {
+						rule = SCA_paths
+						option = SCA_path_guli
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = sca.10.3
+		add_political_power = -40
+
+		add_stability = -0.15
+
+		add_ideas = SCA_dailizhengfu_idea
+
+		hidden_effect = {
+			news_event = { id = sca.11 days = 2}
+			SCA = { complete_national_focus = SCA_flandre }
+			set_country_flag = SCA_flandre
+		}	
+
+		retire_country_leader = yes
+
+		create_country_leader = {
+		    # name = "Flandre Scarlet"
+		    name = "芙兰朵露·斯卡蕾特"
+		    picture = "SCA_flan.dds"
+		    ideology = guli_type
+		    traits = {
+
+		    }
+		}
+
+		add_ideas = SCA_flandredaili_idea
+		add_ideas = SCA_dailizhengfu_idea
+
+		add_popularity = {
+		    ideology = neworder
+		    popularity = 0.25
+		}
+
+		conservativedecrease = yes
+
+		ai_chance = {
+			base = 33
+			modifier = {
+				factor = 0
+				not = {
+					has_game_rule = {
+						rule = SCA_paths
+						option = path_random
+					}
+					has_game_rule = {
+						rule = SCA_paths
+						option = SCA_path_neworder
+					}
+				}
+			}
+		}
+
+	}
+}
+news_event = { 
+	id = sca.11
+	title = sca.11.t
+	desc = {
+		text = sca.11.da
+		trigger = {
+			SCA = { has_country_flag = SCA_pachy}
+		}
+	}
+	desc = {
+		text = sca.11.db
+		trigger = {
+			SCA = { has_country_flag = SCA_16}
+		}
+	}
+	desc = {
+		text = sca.11.dc
+		trigger = {
+			SCA = { has_country_flag = SCA_flandre}
+		}
+	}
+	picture = GFX_news_event_sca.11
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = sca.11.1
+		trigger = {
+			tag = SCA
+		}
+	}
+
+	option = {
+		name = sca.11.2
+		trigger = {
+			NOT = { tag = SCA }
+		}
+	}
+}
+
+country_event = { #蕾米归位
+	id = sca.12
+	title = sca.12.t
+	desc = sca.12.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			create_country_leader = { 
+				# name = "Remilia Scarlet"
+			    name = "蕾米莉亚·斯卡蕾特"
+				picture = "SCA_rem.dds"
+				ideology = guli_type
+				traits = { 
+				}
+			}
+		}
+	}
+
+	option = {
+		name = sca.12.1
+		add_political_power = 10
+		set_country_flag = SCA_leimihuifu
+		remove_ideas = SCA_dailizhengfu_idea
+
+		trigger = {
+			has_government = guli
+		}
+
+		hidden_effect = {
+			news_event = { days = 1 id = sca.13}
+		}
+		if = {
+			limit = {
+				has_idea = SCA_pachydaili_idea
+			}
+			remove_ideas = SCA_pachydaili_idea
+		}
+		if = {
+			limit = {
+				has_idea = SCA_flandredaili_idea
+			}
+			remove_ideas = SCA_flandredaili_idea
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				not = {
+					has_game_rule = {
+						rule = SCA_paths
+						option = path_random
+					}
+					has_game_rule = {
+						rule = SCA_paths
+						option = SCA_path_guli
+					}
+				}
+			}
+		}
+
+		#retire_country_leader = yes
+		set_politics = { ruling_party = guli }
+	}
+
+	option = {
+		name = sca.12.2
+		set_country_flag = SCA_leimihuifu
+		trigger = {
+			or = {
+				and = {
+					has_country_flag = SCA_pachy
+		   			is_ai = yes
+				}
+				has_government = qinwai
+			}
+		}
+		ai_chance = {
+			base = 15
+			modifier = {
+				factor = 0
+				not = {
+					has_game_rule = {
+						rule = SCA_paths
+						option = path_random
+					}
+					has_game_rule = {
+						rule = SCA_paths
+						option = SCA_path_qinwai
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_government = guli
+			}
+			add_popularity = {
+			    ideology = qinwai
+			    popularity = 0.2
+			}
+		}
+		set_politics = {
+			ruling_party = qinwai
+		}
+		hidden_effect = {
+			news_event = { days = 1 id = sca.13}
+		}
+		remove_ideas = SCA_pachydaili_idea
+		remove_ideas = SCA_dailizhengfu_idea
+
+		add_political_power = -50
+		add_stability = -0.05
+		add_popularity = {
+		    ideology = qinwai
+		    popularity = 0.2
+		}
+
+		set_cosmetic_tag = SCA_federation
+
+		swap_ideas = { remove_idea = Empire add_idea = Country}
+		remove_ideas = SCA_xixueguitiaoyue_idea
+		GRS = { drop_cosmetic_tag = yes}
+		WAK = { drop_cosmetic_tag = yes}
+		PRI = { drop_cosmetic_tag = yes}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_subject_of = ROOT
+				}
+				set_country_flag = isSubject
+			}
+			dismantle_faction = yes
+		}
+		
+		create_faction = wuzhihulianmeng
+
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_country_flag = isSubject
+				}
+				ROOT = {add_to_faction = PREV}
+			}
+		}
+	}
+
+	option = {
+		name = sca.12.3
+		set_country_flag = SCA_leimihuifu
+		trigger = {
+			or = {
+				and = {
+					has_country_flag = SCA_flandre
+		   			is_ai = yes
+				}
+				has_government = neworder
+			}
+		}
+		ai_chance = {
+			base = 18
+			modifier = {
+				factor = 0
+				not = {
+					has_game_rule = {
+						rule = SCA_paths
+						option = path_random
+					}
+					has_game_rule = {
+						rule = SCA_paths
+						option = SCA_path_neworder
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_government = guli
+			}
+			add_popularity = {
+			    ideology = neworder
+			    popularity = 0.2
+			}
+		}
+		set_politics = {
+			ruling_party = neworder
+		}
+		hidden_effect = {
+			news_event = { days = 1 id = sca.13}
+		}
+		remove_ideas = SCA_flandredaili_idea
+		remove_ideas = SCA_dailizhengfu_idea
+
+		add_political_power = -80
+		add_stability = -0.1
+		add_popularity = {
+		    ideology = neworder
+		    popularity = 0.2
+		}
+	}
+
+	option = {
+		name = sca.12.4
+		set_country_flag = SCA_leimihuifu
+		set_country_flag = SCA_leimi_neworder
+		trigger = {
+			or = {
+				and = {
+					has_country_flag = SCA_flandre
+		   			is_ai = yes
+				}
+				has_government = neworder
+			}
+		}
+		ai_chance = {
+			base = 18
+			modifier = {
+				factor = 0
+				not = {
+					has_game_rule = {
+						rule = SCA_paths
+						option = path_random
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_government = guli
+			}
+			add_popularity = {
+			    ideology = neworder
+			    popularity = 0.2
+			}
+		}
+		create_country_leader = {
+			# name = "Remilia Scarlet"
+		    name = "蕾米莉亚·斯卡蕾特"
+			picture = "SCA_rem.dds"
+			ideology = neworder_type
+			traits = { 
+			}
+		}
+		set_politics = {
+			ruling_party = neworder
+		}
+		hidden_effect = {
+			news_event = { days = 1 id = sca.13}
+		}
+		remove_ideas = SCA_flandredaili_idea
+		remove_ideas = SCA_dailizhengfu_idea
+
+		add_political_power = -20
+		add_stability = -0.1
+		add_war_support = -0.1
+		add_popularity = {
+		    ideology = neworder
+		    popularity = 0.2
+		}
+	}
+}
+
+news_event = { #被篡位的新闻
+	id = sca.13
+	title = {
+		text = sca.13.ta
+		trigger = { 
+			SCA = { has_government = guli }
+		}
+	}
+	title = {
+		text = sca.13.tb
+		trigger = { 
+			NOT = { SCA = { has_government = guli } }
+		}
+	}
+	desc = {
+		text = sca.13.da
+		trigger = { 
+			SCA = { has_government = guli }
+		}
+	}
+	desc = {
+		text = sca.13.db
+		trigger = { 
+			SCA = { has_government = qinwai }
+		}
+	}
+	desc = {
+		text = sca.13.dc
+		trigger = { 
+			SCA = { 
+				has_government = neworder 
+				not = {
+					has_country_flag = SCA_leimi_neworder
+				}
+			}
+		}
+	}
+	desc = {
+		text = sca.13.dd
+		trigger = { 
+			SCA = { 
+				has_government = neworder 
+				has_country_flag = SCA_leimi_neworder
+			}
+		}
+	}
+
+	# picture = GFX_news_event_sca.13_4
+	picture = [SCA.sca13]
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = sca.13.11
+		trigger = {
+			tag = SCA
+			SCA = { has_government = guli }
+		}
+	}
+
+	option = {
+		name = sca.13.12
+		trigger = {
+			tag = SCA
+			NOT = { SCA = { has_government = guli } }
+		}
+	}
+
+	option = {
+		name = sca.13.21
+		trigger = {
+			NOT = { tag = SCA }
+			SCA = { has_government = guli }
+			
+		}
+	}
+	option = {
+		name = sca.13.22
+		trigger = {
+			NOT = { tag = SCA }
+			NOT = { SCA = { has_government = guli } }
+			
+		}
+	}
+}
+
+country_event = { 
+	id = sca.23
+	title = sca.23.t
+	desc = sca.23.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = sca.23.1
+		
+		add_opinion_modifier = {
+		    target = SCA
+		    modifier = SCA_renliqiyue_op
+		}
+		reverse_add_opinion_modifier = {
+		    target = SCA
+		    modifier = SCA_renliqiyue_op
+		}
+		SCA = {
+			swap_ideas = { add_idea = SCA_bufentuolitiaoyue_idea remove_idea = SCA_xixueguitiaoyue_idea}
+		}
+
+		hidden_effect = {
+			news_event = { id = sca.25 days = 2}
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	option = {
+		name = sca.23.2
+		hidden_effect = {
+			SCA = { country_event = {id = glo.2002 hours = 11}}
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0.6
+				ROOT = {
+					has_opinion = { target = FROM value > 0 } 
+				}
+			}
+			modifier = {
+				factor = 0.6
+				ROOT = {
+					has_opinion = { target = FROM value > 30 } 
+				}
+			}
+			modifier = {
+				factor = 0.6
+				ROOT = {
+					has_opinion = { target = FROM value > 50 } 
+				}
+			}
+			modifier = {
+				factor = 0.6
+				ROOT = {
+					has_opinion = { target = FROM value > 90 } 
+				}
+			}
+			modifier = {
+				factor = 1.5
+				has_cosmetic_tag = HUM_f
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = sca.24
+	title = sca.24.t
+	desc = sca.24.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = sca.24.1
+
+		effect_tooltip = {
+			ROOT = {
+				add_tech_bonus = {
+					category = combined
+					uses = 2
+					bonus = 1.5
+					ahead_reduction = 1.5
+				}
+			}
+			HUM = {
+				add_tech_bonus = {
+					category = combined
+					uses = 2
+					bonus = 1.5
+					ahead_reduction = 1.5
+				}
+			}
+		}
+	}
+}
+
+news_event = { 
+	id = sca.25
+	title = sca.25.t
+	desc = sca.25.d
+	picture = GFX_news_event_sca.25
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = sca.25.1
+
+		trigger = {
+			not = {
+				tag = SCA
+				tag = HUM
+			}
+		}
+	}
+
+	option = {
+		name = sca.25.2
+		trigger = {
+			or = {
+				tag = SCA
+				tag = HUM
+			}
+		}
+	}
+}
+
+news_event = { 
+	id = sca.26
+	title = sca.26.t
+	desc = sca.26.d
+	picture = GFX_news_event_sca.26
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = sca.26.1
+
+		trigger = {
+			tag = SCA
+		}
+	}
+
+	option = {
+		name = sca.26.2
+		trigger = {
+			not = {
+				tag = SCA
+			}
+		}
+	}
+}
+
+
+news_event = { 
+	id = sca.27
+	title = sca.27.t
+	desc = sca.27.d
+	picture = GFX_news_event_sca.27
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = sca.27.1
+
+		trigger = {
+			tag = SCA
+		}
+	}
+
+	option = {
+		name = sca.27.2
+		trigger = {
+			not = {
+				tag = SCA
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sca.32
+	title = sca.32.t
+	desc = sca.32.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		has_country_flag = SCA_panluan
+		not = {
+			country_exists = SC1
+			country_exists = SC2
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	option = {
+		name = sca.32.1
+		custom_effect_tooltip = SCA_panluan
+		set_variable = {
+			SCA_zaohePP1 = 15
+		}
+		set_variable = {
+			SCA_zaohePP2 = 40
+		}
+		set_variable = {
+			SCA_zaohePP3 = 200
+		}
+		set_variable = {
+			SCA_zaohePP4 = 100
+		}
+		set_variable = {
+			SCA_zaohePP5 = 125
+		}
+		set_variable = {
+			SCA_zaoheshijian1 = 90
+		}
+		set_variable = {
+			SCA_zaoheshijian2 = 120
+		}
+		set_variable = {
+			SCA_zaoheshijian3 = 360
+		}
+		set_variable = {
+			SCA_zaoheshijian4 = 180
+		}
+		set_variable = {
+			SCA_zaoheshijian5 = 180
+		}
+		every_state = {
+			limit = {
+				is_core_of = ROOT
+				not = { region = 31 }
+			}
+			remove_core_of = ROOT
+			add_claim_by = ROOT
+			# force_enable_resistance = SCA
+	    	start_resistance = yes
+
+	    	add_compliance = 25
+	    	
+		}
+	}
+	
+}
+
+country_event = {  #平息人类动乱（紫
+	id = sca.35
+	title = sca.35.t
+	desc = sca.35.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = sca.35.1
+		SCA = {
+			go_oldorder = yes
+	        set_politics = {
+	            ruling_party = oldorder
+	        }
+	        add_popularity = {
+	            ideology = oldorder
+	            popularity = 0.45
+	        }
+	        PO_add10 = yes
+	        PO_add10 = yes
+	        OL_add10 = yes
+	        conservativedecrease = yes
+		}
+		hidden_effect = {
+			news_event = { id = sca.36 days = 2}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = sca.35.2
+		hidden_effect = {
+			SCA = { country_event = { id = glo.2002 days = 2} }
+		}
+		ai_chance = {
+			base = 90
+			modifier = {
+				factor = 0.4
+				ROOT = {
+					has_opinion = { target = FROM value > 0 } 
+				}
+			}
+			modifier = {
+				factor = 0.4
+				ROOT = {
+					has_opinion = { target = FROM value > 30 } 
+				}
+			}
+			modifier = {
+				factor = 0.4
+				ROOT = {
+					has_opinion = { target = FROM value > 50 } 
+				}
+			}
+			modifier = {
+				factor = 0.4
+				ROOT = {
+					has_opinion = { target = FROM value > 90 } 
+				}
+			}
+			modifier = {
+				factor = 0.3
+				date > 151.1.1
+				ROOT = {
+					has_war = yes
+				}
+			}
+		}
+	}
+}
+
+news_event = {  #平息人类动乱（新闻
+	id = sca.36
+	title = sca.36.t
+	desc = sca.36.d
+	picture = GFX_news_event_sca.36
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = sca.36.1
+		trigger = {
+			or = {
+				tag = SCA
+				is_subject_of = SCA
+			}
+		}
+	}
+	option = {
+		name = sca.36.2
+		trigger = {
+			not = {
+				tag = SCA
+				is_subject_of = SCA
+			}
+		}
+	}
+}
+
+country_event = {  #守矢共同防御（守矢
+	id = sca.37
+	title = sca.37.t
+	desc = sca.37.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = sca.37.1
+		SCA = {
+			xianghubaodu = yes
+			jiemeng = yes
+			set_country_flag = SCA_shoushixianghubaodutongguo
+		}
+		ai_chance = {
+			base = 20
+		}
+		hidden_effect = {
+			news_event = { id = sca.38 days = 2}
+		}
+	}
+	option = {
+		name = sca.37.2
+		hidden_effect = {
+			SCA = { country_event = { id = glo.2002 days = 2} }
+		}
+		ai_chance = {
+			base = 80
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = { target = FROM value > 0 } 
+				}
+			}
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = { target = FROM value > 30 } 
+				}
+			}
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = { target = FROM value > 50 } 
+				}
+			}
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = { target = FROM value > 90 } 
+				}
+			}
+		}
+	}
+}
+
+news_event = {  #守矢共同防御（新闻
+	id = sca.38
+	title = sca.38.t
+	desc = sca.38.d
+	picture = GFX_news_event_sca.38
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = sca.38.1
+		trigger = {
+			or = {
+				tag = SCA
+				is_subject_of = SCA
+				tag = MRY
+			}
+		}
+	}
+	option = {
+		name = sca.38.2
+		trigger = {
+			not = {
+				tag = MRY
+				tag = TEG
+				tag = SCA
+				is_subject_of = SCA
+			}
+		}
+	}
+	option = {
+		name = sca.38.3
+		trigger = {
+			tag = TEG
+		}
+	}
+}
+
+news_event = {  #守矢科技互助（新闻
+	id = sca.39
+	title = sca.39.t
+	desc = sca.39.d
+	picture = GFX_news_event_sca.39
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = sca.39.1
+		trigger = {
+			or = {
+				tag = SCA
+				is_subject_of = SCA
+				tag = MRY
+			}
+		}
+	}
+	option = {
+		name = sca.39.2
+		trigger = {
+			not = {
+				tag = SCA
+				is_subject_of = SCA
+				tag = MRY
+			}
+		}
+	}
+}
+
+country_event = {  #邀请魔女加入（MRS
+	id = sca.40
+	title = sca.40.t
+	desc = sca.40.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = sca.40.1
+		SCA = {
+			every_country = {
+				limit = {
+					or = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+				subject_level4 = YES
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+		hidden_effect = {
+			news_event = { id = sca.41 days = 2}
+		}
+	}
+	option = {
+		name = sca.40.2
+		hidden_effect = {
+			SCA = { country_event = { id = glo.2002 days = 2} }
+		}
+		ai_chance = {
+			base = 90
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = { target = FROM value > 0 } 
+				}
+			}
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = { target = FROM value > 30 } 
+				}
+			}
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = { target = FROM value > 50 } 
+				}
+			}
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = { target = FROM value > 90 } 
+				}
+			}
+		}
+	}
+}
+
+news_event = {  #邀请魔女加入（新闻
+	id = sca.41
+	title = sca.41.t
+	desc = sca.41.d
+	picture = GFX_news_event_sca.41
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = sca.41.1
+		trigger = {
+			or = {
+				tag = SCA
+				is_subject_of = SCA
+			}
+		}
+	}
+	option = {
+		name = sca.41.2
+		trigger = {
+			not = {
+				tag = SCA
+				is_subject_of = SCA
+			}
+		}
+	}
+}
+
+country_event = {  #付丧神共同防御（TKM
+	id = sca.42
+	title = sca.42.t
+	desc = sca.42.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = sca.42.1
+		SCA = {
+			xianghubaodu = yes
+		}
+		ai_chance = {
+			base = 10
+		}
+		hidden_effect = {
+			news_event = { id = sca.43 days = 2}
+		}
+	}
+	option = {
+		name = sca.42.2
+		hidden_effect = {
+			SCA = { country_event = { id = glo.2002 days = 2} }
+		}
+		ai_chance = {
+			base = 90
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = { target = FROM value > 0 } 
+				}
+			}
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = { target = FROM value > 30 } 
+				}
+			}
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = { target = FROM value > 50 } 
+				}
+			}
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = { target = FROM value > 90 } 
+				}
+			}
+		}
+	}
+}
+
+news_event = {  #付丧神共同防御（新闻
+	id = sca.43
+	title = sca.43.t
+	desc = sca.43.d
+	picture = GFX_news_event_sca.43
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = sca.43.1
+		trigger = {
+			or = {
+				tag = SCA
+				tag = TKM
+				is_subject_of = SCA
+			}
+		}
+	}
+	option = {
+		name = sca.43.2
+		trigger = {
+			not = {
+				tag = SCA
+				tag = TKM
+				is_subject_of = SCA
+			}
+		}
+	}
+}
+
+country_event = {  #人里影子政府（HUM
+	id = sca.44
+	title = sca.44.t
+	desc = sca.44.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = sca.44.1
+		SCA = {
+			ROOT = {
+				subject_level4 = yes
+			}
+			add_ideas = SCA_renliyingzizhengfu_idea
+		}
+		ai_chance = {
+			base = 10
+		}
+		hidden_effect = {
+			news_event = { id = sca.45 days = 2}
+		}
+	}
+	option = {
+		name = sca.44.2
+		hidden_effect = {
+			SCA = { country_event = { id = glo.2002 days = 2} }
+		}
+		ai_chance = {
+			base = 90
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = { target = FROM value > 130 } 
+				}
+			}
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = { target = FROM value > 160 } 
+				}
+			}
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = { target = FROM value > 190 } 
+				}
+			}
+		}
+	}
+}
+
+news_event = {  #人里影子政府（新闻
+	id = sca.45
+	title = sca.45.t
+	desc = sca.45.d
+	picture = GFX_news_event_sca.45
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = sca.45.1
+		trigger = {
+			or = {
+				tag = SCA
+				is_subject_of = SCA
+			}
+		}
+	}
+	option = {
+		name = sca.45.2
+		trigger = {
+			not = {
+				tag = SCA
+				is_subject_of = SCA
+			}
+		}
+	}
+}
+
+country_event = {  #邀请人类参加对抗命莲寺
+	id = sca.46
+	title = sca.46.t
+	desc = sca.46.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = sca.46.1
+		declare_war_on = {
+			target = NMS
+			type = annex_everything
+		}
+		if = {
+			limit = {
+				HUM = {
+					is_in_faction_with = no
+				}
+			}
+			SCA = {
+				add_to_faction = HUM
+			}
+		}
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = sca.46.2
+		hidden_effect = {
+			SCA = { country_event = { id = glo.2002 days = 2} }
+		}
+	}
+}
+
+news_event = {  #红魔乡
+	id = sca.47
+	title = sca.47.t
+	desc = sca.47.d
+	picture = GFX_news_event_sca.47
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = sca.47.1
+		trigger = {
+			or = {
+				tag = SCA
+				is_subject_of = SCA
+			}
+		}
+	}
+	option = {
+		name = sca.47.2
+		trigger = {
+			not = {
+				tag = SCA
+				is_subject_of = SCA
+			}
+		}
+	}
+}

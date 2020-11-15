@@ -18,15 +18,36 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		category_science_infantry = {
-	    	max_strength = 15
+		melee_infantry = {
+	      max_strength = 15
 	    }
-	    category_magic_infantry = {
-	    	max_strength = 15
+	    melee_cavalry = {
+	      max_strength = 15
+	    }     
+	    sc_infantry = {
+	      max_strength = 15
 	    }
-	    category_combined_infantry = {
-	    	max_strength = 15
+	    ma_infantry = {
+	      max_strength = 15
+	    }  
+	    sc_light_infantry = {
+	      max_strength = 15
 	    }
+	    ma_light_infantry = {
+	      max_strength = 15
+	    } 
+	    sc_sf_infantry = {
+	      max_strength = 15
+	    }
+	    ma_sf_infantry = {
+	      max_strength = 15
+	    } 
+	    sc_shield_infantry = {
+	      max_strength = 15
+	    }
+	    ma_shield_infantry = {
+	      max_strength = 15
+	    } 
 
 		research_cost = 1
 	    
@@ -48,7 +69,7 @@ technologies = {
 		}
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
 		consumer_goods_factor = -0.03
 
@@ -76,7 +97,7 @@ technologies = {
 		consumer_goods_factor = -0.03
 		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
 		folder = {
 			name = God_race_tech_folder
@@ -102,7 +123,7 @@ technologies = {
 		consumer_goods_factor = -0.03
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = God_race_tech_folder
@@ -128,7 +149,7 @@ technologies = {
 		consumer_goods_factor = -0.03
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
 		folder = {
 			name = God_race_tech_folder
@@ -149,7 +170,7 @@ technologies = {
 		consumer_goods_factor = -0.03
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
 		folder = {
 			name = God_race_tech_folder
@@ -173,7 +194,7 @@ technologies = {
 		}
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
 		encryption = 2.5
 		decryption = 2.5
@@ -203,7 +224,7 @@ technologies = {
 		decryption = 2.5
 		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
 		folder = {
 			name = God_race_tech_folder
@@ -231,7 +252,7 @@ technologies = {
 
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = God_race_tech_folder
@@ -258,7 +279,7 @@ technologies = {
 		decryption = 2.5
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
 		folder = {
 			name = God_race_tech_folder
@@ -280,7 +301,7 @@ technologies = {
 		decryption = 2.5
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
 		folder = {
 			name = God_race_tech_folder
@@ -303,16 +324,17 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			God_special_1
+		ma_shield_infantry = {
+			max_organisation = 15
+			default_morale = 0.01 
 		}
-
-		enable_subunits = {
-			God_special
+		sc_shield_infantry = {
+			max_organisation = 15
+			default_morale = 0.01 
 		}
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
 		folder = {
 			name = God_race_tech_folder
@@ -335,16 +357,15 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			God_special_2
+		ma_shield_infantry = {
+			armor_value = 0.15
 		}
-
-		God_special = {
-			combat_width = -5
+		sc_shield_infantry = {
+			armor_value = 0.15
 		}
 		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
 		folder = {
 			name = God_race_tech_folder
@@ -367,17 +388,18 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			God_special_3
+		ma_shield_infantry = {
+			breakthrough = 0.25
+			defense = 0.25
 		}
-
-		God_special = {
-			combat_width = -5
+		sc_shield_infantry = {
+			breakthrough = 0.25
+			defense = 0.25
 		}
 
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = God_race_tech_folder
@@ -400,16 +422,17 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			God_special_4
+		ma_shield_infantry = {
+			soft_attack = 0.25
+			hard_attack = 0.25
 		}
-
-		God_special = {
-			combat_width = -5
+		sc_shield_infantry = {
+			soft_attack = 0.25
+			hard_attack = 0.25
 		}
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
 		folder = {
 			name = God_race_tech_folder
@@ -428,14 +451,28 @@ technologies = {
 	shenmingdaixingzhe5 = {
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
-		enable_equipments = {
-			God_special_5
+		melee_cavalry = {
+			armor_value = 0.05
 		}
-
-		God_special = {
-			combat_width = -5
+		ma_shield_infantry = {
+			armor_value = 0.05
+		}
+		sc_shield_infantry = {
+			armor_value = 0.05
+		}
+		ma_sf_infantry = {
+			armor_value = 0.05
+		}
+		sc_sf_infantry = {
+			armor_value = 0.05
+		}
+		ma_shield_tank = {
+			armor_value = 0.05
+		}
+		sc_shield_tank = {
+			armor_value = 0.05
 		}
 
 		folder = {

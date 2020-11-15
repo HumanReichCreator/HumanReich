@@ -2,9 +2,9 @@
 146.1.1 = {
     set_technology = {
         #通用武器线
-        spell_card = 1
-        danmujingque139 = 1
-        buqiang117 = 1
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
             
         #辅助
 
@@ -34,10 +34,12 @@
         #种族
             
     }
+    
 }
 138.1.1={
-    oob = "HB1_146"
+    
     add_ideas = {
+        type3_manpowerlv3
         Youkai
         Village
         dove2
@@ -45,6 +47,7 @@
         strict_border
         limit_magic
     }
+    oob = "HB1_146"
     set_politics = {
         ruling_party = guli
         election_frequency = 48

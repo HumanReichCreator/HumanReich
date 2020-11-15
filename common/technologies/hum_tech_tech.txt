@@ -1,12 +1,12 @@
-	technologies = {
-	zhiyuanwuyujiaqiang148 = {
+technologies = {
+	zhiyuanwuyujiaqiang150 = {
 		
 		dependencies = {
-		   wunvzhiyuan146 = 1
+		   wunvzhiyuan149 = 1
 		}
 
 		path = {
-			leads_to_tech = zhiyuanwuyujiaqiang154
+			leads_to_tech = zhiyuanwuyujiaqiang160
 			research_cost_coeff = 1
 		}
 
@@ -16,7 +16,7 @@
 		}
 		
 		research_cost = 2
-		start_year = 148
+		start_year = 150
 
 		folder = {
 			name = hum_tech_folder
@@ -32,15 +32,15 @@
 		}
 	}
 
-	zhiyuanwuyujiaqiang154 = {
+	zhiyuanwuyujiaqiang160 = {
 	
 		path = {
-			leads_to_tech = zhiyuanwuyujiaqiang160
+			leads_to_tech = zhiyuanwuyujiaqiang170
 			research_cost_coeff = 1
 		}
 		
 		research_cost = 2
-		start_year = 154
+		start_year = 160
 
 		sp_wunv = {
 			supply_consumption_factor = -0.05
@@ -60,10 +60,10 @@
 		}
 	}
 
-	zhiyuanwuyujiaqiang160 = {
+	zhiyuanwuyujiaqiang170 = {
 		
 		research_cost = 2
-		start_year = 160
+		start_year = 170
 
 		folder = {
 			name = hum_tech_folder
@@ -84,28 +84,27 @@
 		}
 	}
 
-	chuandunhuopao148 = {
+	chuandunhuopao150 = {
 	
 		path = {
-			leads_to_tech = chuandunhuopao154
+			leads_to_tech = chuandunhuopao160
 			research_cost_coeff = 1
 		}
 
 		# on_research_complete = {
-		# 	add_ideas = chuandunhuopao148_idea
+		# 	add_ideas = chuandunhuopao150_idea
 		# }
-		sc_mot_artillery_brigade = {
-			hard_attack = 1.5
+		sc_mortar_brigade = {
+			hard_attack = 0.75
+			ap_attack = 0.5
 		}
-		sc_artillery_brigade = {
-			hard_attack = 1.5
-		}
-		sc_artillery = {
-			hard_attack = 1.5
+		sc_anti_shield_brigade = {
+			hard_attack = 0.75
+			ap_attack = 0.5
 		}
 		
 		research_cost = 2
-		start_year = 148
+		start_year = 150
 
 		folder = {
 			name = hum_tech_folder
@@ -121,28 +120,27 @@
 		}
 	}
 
-	chuandunhuopao154 = {
+	chuandunhuopao160 = {
 	
 		path = {
-			leads_to_tech = chuandunhuopao160
+			leads_to_tech = chuandunhuopao170
 			research_cost_coeff = 1
 		}
 
 		# on_research_complete = {
 		# 	add_ideas = chuandunhuopao154_idea
 		# }
-		sc_mot_artillery_brigade = {
-			hard_attack = 1.5
+		sc_mortar_brigade = {
+			hard_attack = 0.75
+			ap_attack = 0.5
 		}
-		sc_artillery_brigade = {
-			hard_attack = 1.5
-		}
-		sc_artillery = {
-			hard_attack = 1.5
+		sc_anti_shield_brigade = {
+			hard_attack = 0.75
+			ap_attack = 0.5
 		}
 		
 		research_cost = 2
-		start_year = 154
+		start_year = 160
 
 		folder = {
 			name = hum_tech_folder
@@ -158,22 +156,21 @@
 		}
 	}
 
-	chuandunhuopao160 = {
+	chuandunhuopao170 = {
 		
 		research_cost = 2
-		start_year = 160
+		start_year = 170
 
 		# on_research_complete = {
 		# 	add_ideas = chuandunhuopao160_idea
 		# }
-		sc_mot_artillery_brigade = {
-			hard_attack = 1.5
+		sc_mortar_brigade = {
+			hard_attack = 0.75
+			ap_attack = 0.5
 		}
-		sc_artillery_brigade = {
-			hard_attack = 1.5
-		}
-		sc_artillery = {
-			hard_attack = 1.5
+		sc_anti_shield_brigade = {
+			hard_attack = 0.75
+			ap_attack = 0.5
 		}
 
 		folder = {

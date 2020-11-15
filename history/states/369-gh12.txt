@@ -6,16 +6,16 @@ state={
 	}
 	resources={
 		energy = 10
-		powder=5.000
-		metal=5.000
+		powder = 6.0
+		metal = 5.0
 		gas=5.000
 		crystal=5.000
 	}
 
 	history={
-			owner = ZYD
 		146.1.1 = {
 			owner = ZYD
+			controller = GH1
 			add_claim_by = GH1
 			add_core_of = ZYD
 			buildings = {

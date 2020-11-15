@@ -1,18 +1,22 @@
 ﻿division_template = {
+	name = "扫荡编制"
+	regiments = {
+		sc_light_infantry = { x = 0 y = 0 }
+		sc_light_infantry = { x = 0 y = 1 }
+		sc_light_infantry = { x = 0 y = 2 }
+		sc_light_infantry = { x = 0 y = 3 }
+	}
+	support = {
+	}
+}
+division_template = {
 	name = "前月兔战斗编制"
 	regiments = {
 		sc_infantry = { x = 0 y = 0 }
 		sc_infantry = { x = 0 y = 1 }
 		sc_infantry = { x = 0 y = 2 }
 		sc_infantry = { x = 0 y = 3 }
-		sc_artillery_brigade = {x = 1 y = 0 }
-	}
-}
-division_template = {
-	name = "竹林游击编制"
-	regiments = {
-		ma_militia = { x = 0 y = 0 }
-		ma_militia = { x = 0 y = 1 }
+		sc_mortar_brigade = {x = 0 y = 4 }
 	}
 }
 
@@ -53,125 +57,125 @@ units = {
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "竹林游击编制"
+		name = "扫荡编制"
 		location = 6542
-		division_template = "竹林游击编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 
 	division = {
-		name = "竹林游击编制"
+		name = "扫荡编制"
 		location = 6489
-		division_template = "竹林游击编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "竹林游击编制"
+		name = "扫荡编制"
 		location = 6489
-		division_template = "竹林游击编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "竹林游击编制"
+		name = "扫荡编制"
 		location = 6489
-		division_template = "竹林游击编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "竹林游击编制"
+		name = "扫荡编制"
 		location = 6489
-		division_template = "竹林游击编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 
 	division = {
-		name = "竹林游击编制"
+		name = "扫荡编制"
 		location = 6615
-		division_template = "竹林游击编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "竹林游击编制"
+		name = "扫荡编制"
 		location = 6615
-		division_template = "竹林游击编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "竹林游击编制"
+		name = "扫荡编制"
 		location = 6615
-		division_template = "竹林游击编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "竹林游击编制"
+		name = "扫荡编制"
 		location = 6615
-		division_template = "竹林游击编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 
 	division = {
-		name = "竹林游击编制"
+		name = "扫荡编制"
 		location = 6592
-		division_template = "竹林游击编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "竹林游击编制"
+		name = "扫荡编制"
 		location = 6592
-		division_template = "竹林游击编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "竹林游击编制"
+		name = "扫荡编制"
 		location = 6592
-		division_template = "竹林游击编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "竹林游击编制"
+		name = "扫荡编制"
 		location = 6592
-		division_template = "竹林游击编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 
 	division = {
-		name = "竹林游击编制"
+		name = "扫荡编制"
 		location = 6535
-		division_template = "竹林游击编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "竹林游击编制"
+		name = "扫荡编制"
 		location = 6535
-		division_template = "竹林游击编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "竹林游击编制"
+		name = "扫荡编制"
 		location = 6535
-		division_template = "竹林游击编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "竹林游击编制"
+		name = "扫荡编制"
 		location = 6535
-		division_template = "竹林游击编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}

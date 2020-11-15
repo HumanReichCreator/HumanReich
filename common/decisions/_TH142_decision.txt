@@ -16,7 +16,7 @@ scenario_decision = {
 		  #       is_ai = no
 		  #       has_war = yes
 	   #      }
-	   #      KOG = {has_war = no}
+	   #      TKM = {has_war = no}
     #       }
     #       available = {
     #         custom_trigger_tooltip = {
@@ -37,7 +37,7 @@ scenario_decision = {
     #       fire_only_once = no
 
 	   #    timeout_effect = {
-	   #      	KOG = {declare_war_on = {target = HUM type = annex_everything}}
+	   #      	TKM = {declare_war_on = {target = HUM type = annex_everything}}
 	   #    }
 
 	   #    complete_effect = {
@@ -167,7 +167,7 @@ scenario_decision = {
           	fire_only_once = no
 
 	     	timeout_effect = {
-	        	KOG = {
+	        	TKM = {
 	      			transfer_state = 192
 	      			transfer_state = 490
 	      		}
@@ -181,7 +181,7 @@ scenario_decision = {
 				    limit = {
 				    	OR = {
 					    	HUM = {has_country_flag = L_s }
-					        KOG = {has_country_flag = E_s }
+					        TKM = {has_country_flag = E_s }
 				    	}
 				        
 				        HUM = {has_country_flag = scn144_hum_complete }
@@ -192,7 +192,7 @@ scenario_decision = {
 				    limit = {
 				    	OR = {
 					    	HUM = {has_country_flag = L_s }
-					        KOG = {has_country_flag = E_s }
+					        TKM = {has_country_flag = E_s }
 				    	}
 				        
 				        HUM = { NOT = { has_country_flag = scn144_hum_complete } }
@@ -203,7 +203,7 @@ scenario_decision = {
 				    limit = {
 				        OR = {
 					        HUM = {has_country_flag = H_s }
-					        KOG = {has_country_flag = N_s }
+					        TKM = {has_country_flag = N_s }
 				        }
 				        HUM = {has_country_flag = scn144_hum_complete }
 				    }
@@ -213,7 +213,7 @@ scenario_decision = {
 				    limit = {
 				        OR = {
 					        HUM = {has_country_flag = H_s }
-					        KOG = {has_country_flag = N_s }
+					        TKM = {has_country_flag = N_s }
 				        }
 				        HUM = { NOT = { has_country_flag = scn144_hum_complete } }
 				    }
@@ -224,8 +224,8 @@ scenario_decision = {
 				    	OR = {
 				    		HUM = {has_country_flag = E_s }
 				    		HUM = {has_country_flag = N_s }
-				    		KOG = {has_country_flag = H_s }
-				    		KOG = {has_country_flag = L_s }
+				    		TKM = {has_country_flag = H_s }
+				    		TKM = {has_country_flag = L_s }
 				    	}				        
 				        HUM = {has_country_flag = scn144_hum_complete }
 				    }
@@ -236,8 +236,8 @@ scenario_decision = {
 				        OR = {
 				    		HUM = {has_country_flag = E_s }
 				    		HUM = {has_country_flag = N_s }
-				    		KOG = {has_country_flag = H_s }
-				    		KOG = {has_country_flag = L_s }
+				    		TKM = {has_country_flag = H_s }
+				    		TKM = {has_country_flag = L_s }
 				    	}
 				        HUM = { NOT = { has_country_flag = scn144_hum_complete } }
 				    }

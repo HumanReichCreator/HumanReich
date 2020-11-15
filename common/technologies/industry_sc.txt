@@ -172,7 +172,10 @@ technologies = {
 	}
 	fangwaijieshengchan160 = {
 	
-		
+		path = {
+			leads_to_tech = fangwaijieshengchan165
+			research_cost_coeff = 1
+		}
 		
 		research_cost = 1.8
 		folder = {
@@ -185,6 +188,61 @@ technologies = {
 		line_change_production_efficiency_factor = 0.05
 		
 		start_year = 160
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			industrys
+			main
+			science
+		}
+	}
+	fangwaijieshengchan165 = {
+	
+		path = {
+			leads_to_tech = fangwaijieshengchan170
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.8
+		folder = {
+			name = industry_sc_folder
+			position = { x = 2 y = 14 }
+		}
+
+		production_factory_max_efficiency_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.15
+		line_change_production_efficiency_factor = 0.05
+		
+		start_year = 165
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			industrys
+			main
+			science
+		}
+	}
+	fangwaijieshengchan170 = {
+		
+		research_cost = 1.8
+		folder = {
+			name = industry_sc_folder
+			position = { x = 2 y = 16 }
+		}
+
+		production_factory_max_efficiency_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.15
+		line_change_production_efficiency_factor = 0.05
+		
+		start_year = 170
 
 		ai_will_do = {
 			factor = 1
@@ -212,7 +270,7 @@ technologies = {
 		start_year = 147
 		
 		
-		research_cost = 1.8
+		research_cost = 2
 		folder = {
 			name = industry_sc_folder
 			position = { x = 5 y = 7 }
@@ -244,7 +302,7 @@ technologies = {
 		line_change_production_efficiency_factor = 0.05
 		
 		
-		research_cost = 1.8
+		research_cost = 2
 		folder = {
 			name = industry_sc_folder
 			position = { x = 5 y = 9 }
@@ -275,7 +333,7 @@ technologies = {
 		production_factory_start_efficiency_factor = 0.05
 		line_change_production_efficiency_factor = 0.05
 		
-		research_cost = 1.8
+		research_cost = 2
 		folder = {
 			name = industry_sc_folder
 			position = { x = 5 y = 11 }
@@ -294,10 +352,14 @@ technologies = {
 	}
 	linglifuzhushengchan162 = {
 			
-		research_cost = 1.8
+		research_cost = 2
 		folder = {
 			name = industry_sc_folder
 			position = { x = 5 y = 13 }
+		}
+		path = {
+			leads_to_tech = linglifuzhushengchan167
+			research_cost_coeff = 1
 		}
 
 		production_factory_max_efficiency_factor = 0.02
@@ -305,6 +367,31 @@ technologies = {
 		line_change_production_efficiency_factor = 0.05
 		
 		start_year = 162
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			civil
+			industrys
+			combined
+			fuzhu
+		}
+	}
+	linglifuzhushengchan167 = {
+			
+		research_cost = 2
+		folder = {
+			name = industry_sc_folder
+			position = { x = 5 y = 15 }
+		}
+
+		production_factory_max_efficiency_factor = 0.02
+		production_factory_start_efficiency_factor = 0.05
+		line_change_production_efficiency_factor = 0.05
+		
+		start_year = 167
 
 		ai_will_do = {
 			factor = 1

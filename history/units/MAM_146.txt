@@ -1,17 +1,32 @@
 ﻿division_template = {
+	name = "扫荡编制"
+	regiments = {
+		ma_light_infantry = { x = 0 y = 0 }
+		ma_light_infantry = { x = 0 y = 1 }
+		ma_light_infantry = { x = 0 y = 2 }
+		ma_light_infantry = { x = 0 y = 3 }
+	}
+	support = {
+	}
+}
+division_template = {
 	name = "狸猫妖力编制"
 	regiments = {
-		ma_militia = { x = 0 y = 0 }
-		ma_militia = { x = 0 y = 1 }
-		ma_militia = { x = 0 y = 2 }
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		melee_infantry = { x = 0 y = 2 }
+		melee_infantry = { x = 0 y = 3 }
+		melee_infantry = { x = 0 y = 4 }
 	}
 }
 division_template = {
 	name = "狸猫步枪编制"
 	regiments = {
-		sc_militia = { x = 0 y = 0 }
-		sc_militia = { x = 0 y = 1 }
-		sc_militia = { x = 0 y = 2 }
+		sc_infantry = { x = 0 y = 0 }
+		sc_infantry = { x = 0 y = 1 }
+		melee_infantry = { x = 0 y = 2 }
+		melee_infantry = { x = 0 y = 3 }
+		melee_infantry = { x = 0 y = 4 }
 	}
 }
 
@@ -46,13 +61,6 @@ units = {
 	}
 	division = {
 		name = "狸猫妖力编制"
-		location = 1253
-		division_template = "狸猫妖力编制"
-		start_experience_factor = 0.25
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "狸猫妖力编制"
 		location = 468
 		division_template = "狸猫妖力编制"
 		start_experience_factor = 0.25
@@ -68,13 +76,6 @@ units = {
 	division = {
 		name = "狸猫妖力编制"
 		location = 468
-		division_template = "狸猫妖力编制"
-		start_experience_factor = 0.25
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "狸猫妖力编制"
-		location = 406
 		division_template = "狸猫妖力编制"
 		start_experience_factor = 0.25
 		start_equipment_factor = 1

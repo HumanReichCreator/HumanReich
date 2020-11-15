@@ -37,8 +37,9 @@ on_actions = {
 	# triggered daily, so make sure there is a sink somewhere not firing events
 	# country, FROM = target nation
 	on_justifying_wargoal_pulse = {
-
-
+		random_events = {
+			100 = gen.15
+		}
 	}
 
 	on_wargoal_expire = {
@@ -47,11 +48,259 @@ on_actions = {
 
 	on_nuke_drop = {
 		effect = {
-			set_global_flag = first_nuke_dropped
 			if = {
-				limit = { NOT = { has_global_flag = first_nuke_dropped } }
-				country_event = { id = generic.8 }
+				limit = {
+					has_tech = jingjiesiliezhadan
+				}
+				FROM = {
+					remove_building = {
+					    type = infrastructure
+					    level = 50
+					}
+					remove_building = {
+					    type = arms_factory
+					    level = 50
+					}
+					remove_building = {
+					    type = industrial_complex
+					    level = 50
+					}
+					remove_building = {
+					    type = air_base
+					    level = 50
+					}
+					remove_building = {
+					    type = anti_air_building
+					    level = 50
+					}
+					remove_building = {
+					    type = powder_factory
+					    level = 50
+					}
+					remove_building = {
+					    type = metal_factory
+					    level = 50
+					}
+					remove_building = {
+					    type = gas_factory
+					    level = 50
+					}
+					remove_building = {
+					    type = rock_factory
+					    level = 50
+					}
+					remove_building = {
+					    type = energy_factory
+					    level = 50
+					}
+					remove_building = {
+					    type = fuel_silo
+					    level = 50
+					}
+					remove_building = {
+					    type = radar_station
+					    level = 50
+					}
+					remove_building = {
+					    type = nuclear_reactor
+					    level = 50
+					}
+					every_neighbor_state = {
+						damage_building = {
+						    type = infrastructure
+						    damage = 50
+						}
+						damage_building = {
+						    type = arms_factory
+						    damage = 50
+						}
+						damage_building = {
+						    type = industrial_complex
+						    damage = 50
+						}
+						damage_building = {
+						    type = air_base
+						    damage = 50
+						}
+						damage_building = {
+						    type = anti_air_building
+						    damage = 50
+						}
+						damage_building = {
+						    type = powder_factory
+						    damage = 50
+						}
+						damage_building = {
+						    type = metal_factory
+						    damage = 50
+						}
+						damage_building = {
+						    type = gas_factory
+						    damage = 50
+						}
+						damage_building = {
+						    type = rock_factory
+						    damage = 50
+						}
+						damage_building = {
+						    type = energy_factory
+						    damage = 50
+						}
+						damage_building = {
+						    type = fuel_silo
+						    damage = 50
+						}
+						damage_building = {
+						    type = radar_station
+						    damage = 50
+						}
+						damage_building = {
+						    type = nuclear_reactor
+						    damage = 50
+						}
+					}
+					controller = {
+						EXHC_exhaustion_add25 = yes
+						EXHC_exhaustion_add25 = yes
+					}
+				}
 			}
+			if = {
+				limit = {
+					has_tech = lingliguozaizhadan
+				}
+				FROM = {
+					controller = {
+						if = {
+							limit = {
+								has_idea = th_nuke_idea1
+							}
+							modify_timed_idea = {
+							    idea = th_nuke_idea1
+							    days = 180
+							}
+							else = {
+								add_timed_idea = {idea = th_nuke_idea1 days = 180}
+							}
+							EXHC_exhaustion_add25 = yes
+							EXHC_exhaustion_add25 = yes
+						}
+						every_country = {
+							limit = {
+								or = {
+									is_in_faction_with = PREV
+									is_subject_of = PREV
+								}
+							}
+							if = {
+								limit = {
+									has_idea = th_nuke_idea2
+								}
+								modify_timed_idea = {
+								    idea = th_nuke_idea2
+								    days = 180
+								}
+								else = {
+									add_timed_idea = {idea = th_nuke_idea2 days = 180}
+								}
+							}
+							EXHC_exhaustion_add25 = yes
+						}
+					}
+				}
+			}
+			FROM = {
+				#type 1
+				set_temp_variable = { reduce_manpower1 = -50000}
+				if = {
+					limit = {
+						check_variable = { ST_present_race = 0}
+					}
+					divide_temp_variable = { reduce_manpower1 = 14}
+				}
+				if = {
+					limit = {
+						check_variable = { ST_present_race = 1}
+					}
+					divide_temp_variable = { reduce_manpower1 = 20}
+				}
+				if = {
+					limit = {
+						check_variable = { ST_present_race = 2}
+					}
+					divide_temp_variable = { reduce_manpower1 = 25}
+				}
+				if = {
+					limit = {
+						check_variable = { ST_present_race = 3}
+					}
+					divide_temp_variable = { reduce_manpower1 = 16}
+				}
+				if = {
+					limit = {
+						check_variable = { ST_present_race = 4}
+					}
+					divide_temp_variable = { reduce_manpower1 = 4}
+				}
+				if = {
+					limit = {
+						check_variable = { ST_present_race = 5}
+					}
+					divide_temp_variable = { reduce_manpower1 = 8}
+				}
+				if = {
+					limit = {
+						check_variable = { ST_present_race = 6}
+					}
+					divide_temp_variable = { reduce_manpower1 = 8}
+				}
+				if = {
+					limit = {
+						check_variable = { ST_present_race = 7}
+					}
+					divide_temp_variable = { reduce_manpower1 = 0.2}
+				}
+				if = {
+					limit = {
+						check_variable = { ST_present_race = 8}
+					}
+					divide_temp_variable = { reduce_manpower1 = 12.5}
+				}
+				if = {
+					limit = {
+						check_variable = { ST_present_race = 9}
+					}
+					divide_temp_variable = { reduce_manpower1 = 25}
+				}
+				#type2
+				set_temp_variable = { reduce_manpower2 = state_population_k}
+				if = {
+					limit = {
+						check_variable = { reduce_manpower2 > 3000}
+					}
+					set_temp_variable = { reduce_manpower2 = -1500}
+					else = {
+						divide_temp_variable = { reduce_manpower2 = -3 }
+					}
+				}
+				multiply_temp_variable = { reduce_manpower2 = 1000 }
+				#final
+				if = {
+					limit = {
+						check_variable = { reduce_manpower2 < reduce_manpower1}
+					}
+					add_manpower = reduce_manpower2
+					else = {
+						add_manpower = reduce_manpower1
+					}
+				}
+			}
+			
+			# set_global_flag = first_nuke_dropped
+			# if = {
+			# 	limit = { NOT = { has_global_flag = first_nuke_dropped } }
+			# 	country_event = { id = generic.8 }
+			# }
 		}
 	}
 
@@ -101,6 +350,12 @@ on_actions = {
 	on_declare_war = {
 		effect = {
 			EXHC_exhaustion_add10 = yes
+			if = {
+				limit = {
+					has_completed_focus = TKM_shulishenmingweiyan
+				}
+				add_to_variable = { EXHC_current_exhaustion = 2}
+			}
 			
 			hidden_effect = {
 				delcare_war_events = yes
@@ -108,10 +363,23 @@ on_actions = {
 
 			###与附庸叛乱的机制一样
 			SS_subject_independence_war = yes
+
+			threat_generator = yes
 			
 			every_country = {
 				limit = {
-					has_guaranteed = FROM
+					or = {
+						has_guaranteed = FROM
+						and = {
+							any_country = {
+								FROM = {
+									is_subject_of = PREV
+								}
+								PREV = { has_guaranteed = PREV }
+							}
+						}
+					}
+					
 					not = { tag = ROOT }
 				}
 				country_event = { id = gen.14 days = 1 }
@@ -133,8 +401,14 @@ on_actions = {
 			if = {
 				limit = {
 					FROM = {
-						tag = HUM
+						or = {
+							tag = HUM
+							is_subject_of = HUM
+						}
 						has_idea = HUM_youkai_influence 
+					}
+					HUM = {
+						is_in_faction = no
 					}
 				}
 				random_country = {
@@ -214,6 +488,7 @@ on_startup = {
 	        CO_defines = yes
 	        CONV_defines = yes
 	        region_defines = yes
+	        FT_defines = yes
 	        every_state = {
 	       		state_value_calculator = yes
 		    }
@@ -233,8 +508,8 @@ on_startup = {
 				limit = {
 					not = { is_core_of = PREV }
 				}
-				add_compliance = -100
-	       		add_resistance = 10
+				add_compliance = -40
+	       		# add_resistance = 10
 			}
 		}
 
@@ -270,33 +545,28 @@ on_startup = {
 		    	}	
 		    	set_global_flag = main_scenario
 
-		    	HUM = {	set_variable = { EXHC_current_exhaustion = 100}	}
-		    	HKR = {	set_variable = { EXHC_current_exhaustion = 20}	}
+		    	HUM = {	set_variable = { EXHC_current_exhaustion = 50}	}
 
-		    	SEI = {	set_variable = { EXHC_current_exhaustion = 90}	}
-		    	RMI = {	set_variable = { EXHC_current_exhaustion = 30}	}
-		    	NIB = {	set_variable = { EXHC_current_exhaustion = 30}	}
+		    	SEJ = {	set_variable = { EXHC_current_exhaustion = 30}	}
+		    	RMI = {	set_variable = { EXHC_current_exhaustion = 10}	}
+		    	NIB = {	set_variable = { EXHC_current_exhaustion = 10}	}
 
-		    	NMS = {	set_variable = { EXHC_current_exhaustion = 90}	}
-		    	ICR = {	set_variable = { EXHC_current_exhaustion = 70}	}
-		    	MNM = {	set_variable = { EXHC_current_exhaustion = 70}	}
-		    	AVE = {	set_variable = { EXHC_current_exhaustion = 50}	}
-		    	MAM = {	set_variable = { EXHC_current_exhaustion = 50}	}
+		    	NMS = {	set_variable = { EXHC_current_exhaustion = 30}	}
+		    	ICR = {	set_variable = { EXHC_current_exhaustion = 10}	}
+		    	MNM = {	set_variable = { EXHC_current_exhaustion = 10}	}
+		    	KYK = {	set_variable = { EXHC_current_exhaustion = 5}	}
+		    	MAM = {	set_variable = { EXHC_current_exhaustion = 5}	}
 		    	
-		    	KAG = {	set_variable = { EXHC_current_exhaustion = 60}	}
-		    	MSD = {	set_variable = { EXHC_current_exhaustion = 60}	}
-		    	KOG = {	set_variable = { EXHC_current_exhaustion = 30}	}
+		    	KAG = {	set_variable = { EXHC_current_exhaustion = 5}	}
+		    	MSD = {	set_variable = { EXHC_current_exhaustion = 5}	}
+		    	TKM = {	set_variable = { EXHC_current_exhaustion = 10}	}
 
-		    	SCA = {	set_variable = { EXHC_current_exhaustion = 50}	}
-		    	WAK = {	set_variable = { EXHC_current_exhaustion = 15}	}
-		    	SHO = {	set_variable = { EXHC_current_exhaustion = 15}	}
+		    	SCA = {	set_variable = { EXHC_current_exhaustion = 25}	}
+		    	WAK = {	set_variable = { EXHC_current_exhaustion = 5}	}
+		    	PRI = {	set_variable = { EXHC_current_exhaustion = 5}	}
 
-		    	CHE = {	set_variable = { EXHC_current_exhaustion = 10}	}
-		    	
-		    	SBK = {	set_variable = { EXHC_current_exhaustion = 5}	}
-
-		    	ZYD = {	set_variable = { EXHC_current_exhaustion = 75}	}
-		    	GH1 = {	set_variable = { EXHC_current_exhaustion = 60}	}
+		    	ZYD = {	set_variable = { EXHC_current_exhaustion = 70}	}
+		    	GH1 = {	set_variable = { EXHC_current_exhaustion = 50}	}
 
 		    	333 = {
 		    		add_building_construction = {
@@ -408,8 +678,6 @@ on_startup = {
 		    add_ideas = allsmallscenario
 		    set_research_slots = 1
 		}
-
-		
 		
 		#scenario choose
 
@@ -424,7 +692,7 @@ on_startup = {
 	        EET = {
 	          set_major = yes
 	        }
-	        KOG = {
+	        TKM = {
 	          set_major = yes
 	        }
 	        SRB = {
@@ -442,25 +710,6 @@ on_startup = {
 	    	english_leader_on = yes #
 	    	scenario_setting = yes
 	    }
-	    #########
-	    # every_country = {
-	    # 	limit = {
-	    # 		is_subject = yes
-	    # 		is_ai = yes
-	    # 	}
-	    # 	random_list = {
-	    # 		25 = {
-	    # 			set_country_flag = {
-	    # 				flag = SSI_sujiduli
-	    # 				days = 1000
-	    # 				value = 1
-	    # 			}
-	    # 		}
-	    # 		75 = {
-
-	    # 		}
-	    # 	}
-	    # }
 	}
 }
 
@@ -481,6 +730,9 @@ on_startup = {
 					add_compliance = 70
 				}
 			}
+			ROOT = {
+				country_value_calculator_and_manpower_gainer = yes
+			}
 		}
 	}
 
@@ -495,6 +747,11 @@ on_startup = {
 	#ROOT = nation being puppeted, FROM = overlord
 	on_puppet = {
 		effect = {
+			FROM = {
+				ROOT = {
+					subject_level2 = yes
+				}
+			}
 			clr_country_flag = LS_start_lowing
 			clr_country_flag = LS_is_cooling_down
 			clr_country_flag = LS_cooldown_completed

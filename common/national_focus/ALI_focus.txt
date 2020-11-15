@@ -265,13 +265,13 @@ focus_tree = {
     y = 0
 
     # prerequisite = {
-    #   focus = SEI_burugongyehua
+    #   focus = SEJ_burugongyehua
     # }
     # mutually_exclusive = {
     #   focus = ty_tourububing
     # }
 
-    # relative_position_id = SEI_kaifawenquan
+    # relative_position_id = SEJ_kaifawenquan
 
     available ={
       custom_trigger_tooltip = {
@@ -314,21 +314,22 @@ focus_tree = {
 
     available ={
       MRS = {
-        is_subject_of = ROOT
+        or = {
+          is_subject_of = ROOT
+          exists = no
+        }
       }
     }
     bypass = {
-      MRS = {
-        bypass_declare_war = YES
-      }
+
     }
 
     completion_reward = {
       MRS = {
         low_puppet_level = yes
       }
-      add_political_power = -100
-      add_stability = -0.05
+      add_political_power = -150
+      add_stability = -0.3
       LS_low_per_PP_cost_minus0.4 = yes
       hidden_effect = {
         news_event = { id = ali.40 days = 2}
@@ -362,6 +363,7 @@ focus_tree = {
     }
 
     completion_reward = {
+      add_political_power = 100
       add_timed_idea = { idea = ALI_moheiquchumolisha_idea days = 365}
       set_country_flag = ALI_moheiquchumolisha
       remove_unit_leader = 19
@@ -372,7 +374,7 @@ focus_tree = {
       }
     }
     ai_will_do = {
-      factor = 1
+      factor = 10
     }
     # cancel_if_invalid = no
     # continue_if_invalid = yes
@@ -673,7 +675,7 @@ focus_tree = {
 
     completion_reward = {
       add_tech_bonus = {
-        category = magic_weapons
+        category = primary_weapons
         uses = 2
         bonus = 0.5
       }
@@ -714,7 +716,7 @@ focus_tree = {
 
     completion_reward = {
       add_tech_bonus = {
-        category = magic_weapons_improve
+        category = primary_weapons
         uses = 2
         bonus = 0.5
       }
@@ -900,7 +902,7 @@ focus_tree = {
 
     completion_reward = {
       add_tech_bonus = {
-        category = magic_rocket_artillery
+        category = bomber
         uses = 2
         bonus = 0.5
         ahead_reduction = 1
@@ -1018,11 +1020,11 @@ focus_tree = {
     }
 
     completion_reward = {
-      custom_effect_tooltip = ALI_tezhonggeliyarenou_tt
       add_ideas = ALI_tezhonggeliyarenou_idea
       set_technology = {
         ALI_tezhonggeliyarenou_tech = 1
       }
+      custom_effect_tooltip = ALI_tezhonggeliyarenou_tt
     }
     ai_will_do = {
       factor = 1
@@ -1058,10 +1060,10 @@ focus_tree = {
     }
 
     completion_reward = {
-      custom_effect_tooltip = ALI_jingjianrenoushengchanxian_tt
       set_technology = {
         ALI_jingjianrenoushengchanxian_tech = 1
       }
+      custom_effect_tooltip = ALI_jingjianrenoushengchanxian_tt
     }
     ai_will_do = {
       factor = 1
@@ -1097,10 +1099,10 @@ focus_tree = {
     }
 
     completion_reward = {
-      custom_effect_tooltip = ALI_gaoxiaorenouzhanshu_tt
       set_technology = {
         ALI_gaoxiaorenouzhanshu_tech = 1
       }
+      custom_effect_tooltip = ALI_gaoxiaorenouzhanshu_tt
     }
     ai_will_do = {
       factor = 1
@@ -1137,7 +1139,7 @@ focus_tree = {
 
     completion_reward = {
       add_tech_bonus = {
-        category = magic_artillery_weapons
+        category = mortar
         uses = 2
         ahead_reduction = 1
         bonus = 0.5
@@ -1449,13 +1451,13 @@ focus_tree = {
 #     y = 10
 
 #     # prerequisite = {
-#     #   focus = SEI_burugongyehua
+#     #   focus = SEJ_burugongyehua
 #     # }
 #     # mutually_exclusive = {
 #     #   focus = ty_tourububing
 #     # }
 
-#     # relative_position_id = SEI_kaifawenquan
+#     # relative_position_id = SEJ_kaifawenquan
 
 #     available ={
 #       is_subject = no
@@ -1771,7 +1773,7 @@ focus_tree = {
 #     # mutually_exclusive = {
 #     #   focus = ty_tourububing
 #     # }
-#     will_lead_to_war_with = KOG
+#     will_lead_to_war_with = TKM
 
 #     relative_position_id = ALI_weidadezuguoweidademolisha
     
@@ -1779,7 +1781,7 @@ focus_tree = {
 #       is_subject = no
 #     }
 #     bypass = {
-#       KOG = {
+#       TKM = {
 #         bypass_declare_war = yes
 #       }
 #     }
@@ -1787,7 +1789,7 @@ focus_tree = {
 #     completion_reward = {
 #       add_ideas = ALI_fusangshenshiyongfangan_idea
 #       declare_war_on = {
-#         target = KOG
+#         target = TKM
 #         type = puppet_wargoal_focus
 #       }
 #     }
@@ -1855,7 +1857,7 @@ focus_tree = {
 #       is_subject = no
 #     }
 
-#     will_lead_to_war_with = SEI
+#     will_lead_to_war_with = SEJ
 #     will_lead_to_war_with = RMI
 
 #     completion_reward = {
@@ -1989,6 +1991,7 @@ focus = {
     }
 
     completion_reward = {
+      go_qinwai = yes
       set_politics = {
         ruling_party = qinwai
       }
@@ -2351,7 +2354,7 @@ focus = {
     x = -4
     y = 1
 
-    will_lead_to_war_with = KOG
+    will_lead_to_war_with = TKM
 
     prerequisite = {
       focus = ALI_yirenouweishouduandewaijiaocelve
@@ -2365,10 +2368,15 @@ focus = {
     available ={
       is_subject = no
     }
+    bypass = {
+      TKM = {
+        bypass_declare_war = yes
+      }
+    }
 
     completion_reward = {
       declare_war_on = {
-        target = KOG
+        target = TKM
         type = puppet_wargoal_focus
       }
     }
@@ -2401,11 +2409,11 @@ focus = {
     
     available ={
       is_subject = no
-      KOG = { has_government = qinwai}
+      TKM = { has_government = qinwai}
     }
 
     completion_reward = {
-      KOG = {
+      TKM = {
         jiemeng = yes
       }
       hidden_effect = {
@@ -2434,11 +2442,11 @@ focus = {
     
     available ={
       is_subject = no
-      SEI = { has_government = qinwai}
+      SEJ = { has_government = qinwai}
     }
 
     completion_reward = {
-      SEI = {
+      SEJ = {
         jiemeng = yes
       }
       hidden_effect = {
@@ -2502,6 +2510,11 @@ focus = {
     
     available ={
       is_subject = no
+    }
+    bypass = {
+      SCA = {
+        bypass_declare_war = yes
+      }
     }
 
     completion_reward = {
@@ -2587,7 +2600,7 @@ focus = {
               value > 60
             }
           }
-          KOG = {
+          TKM = {
             has_opinion = {
               target = ROOT
               value > 60
@@ -2601,6 +2614,7 @@ focus = {
       set_politics = {
         ruling_party = fandong
       }
+      go_fandong = yes
       add_popularity = {
         ideology = fandong
         popularity = 0.1
@@ -2931,12 +2945,12 @@ focus = {
     y = 2
 
     prerequisite = {
-      
+      focus = ALI_bazhongyaodemofashizuochengrenou
     }
     prerequisite = {
       focus = ALI_renouzidongxiufuxitong
       focus = ALI_gengduorenoudeziwoyishi
-      focus = ALI_bazhongyaodemofashizuochengrenou
+      
     }
 
     relative_position_id = ALI_bazhongyaodemofashizuochengrenou
@@ -2976,11 +2990,11 @@ focus = {
     }
 
     completion_reward = {
-      KOG = {
-        add_to_faction = ROOT
+      TKM = { 
+        qiangjiemeng = yes
+        add_to_faction = ALI
       }
-      KOG = { jiemeng = yes}
-      KOG = {
+      TKM = {
         can_use = yes
         ROOT = {
           can_use = yes
@@ -3192,14 +3206,14 @@ focus = {
     }
     relative_position_id = ALI_xunzhaogengduorenousucai
     
-    will_lead_to_war_with = SEI
+    will_lead_to_war_with = SEJ
     will_lead_to_war_with = RMI
     
     available ={
       is_subject = no
     }
     bypass = {
-      SEI = {
+      SEJ = {
         bypass_declare_war = yes
       }
       RMI = {
@@ -3213,7 +3227,7 @@ focus = {
         type = puppet_wargoal_focus
       }
       declare_war_on = {
-        target = SEI
+        target = SEJ
         type = puppet_wargoal_focus
       }
     }
@@ -3456,7 +3470,7 @@ focus = {
 
     completion_reward = {
       add_tech_bonus = {
-        category = magic_weapons
+        category = primary_weapons
         uses = 2
         bonus = 0.5
       }
@@ -3486,7 +3500,7 @@ focus = {
 
     completion_reward = {
       add_tech_bonus = {
-        category = magic_weapons_improve
+        category = primary_weapons
         uses = 2
         bonus = 0.5
       }
@@ -3530,8 +3544,7 @@ focus = {
       add_tech_bonus = {
         uses = 3
         bonus = 0.5
-        category = magic_support
-        category = science_support
+        category = support_tech
       }
       
     }
@@ -3832,11 +3845,17 @@ focus = {
        # has_global_flag = main_scenario
     }
 
-    will_lead_to_war_with = KOG
+    bypass = {
+      TKM = {
+        bypass_declare_war = yes
+      }
+    }
+
+    will_lead_to_war_with = TKM
 
     completion_reward = {
       declare_war_on = {
-        target = KOG
+        target = TKM
         type = puppet_wargoal_focus
       }
     } 
@@ -3873,7 +3892,7 @@ focus = {
     completion_reward = {
       add_tech_bonus = {
         bonus = 1.25
-        category = magic_weapons
+        category = primary_weapons
         uses = 2
         ahead_reduction = 2.5
       }
@@ -3897,7 +3916,7 @@ focus = {
       focus = ALI_xianzheyuanzhu
     }
 
-    will_lead_to_war_with = SEI
+    will_lead_to_war_with = SEJ
 
     relative_position_id = ALI_xianzheyuanzhu
 
@@ -3905,7 +3924,7 @@ focus = {
       is_subject = no
     }
     bypass = {
-      SEI = {
+      SEJ = {
         bypass_declare_war = yes
       }
     }
@@ -3913,7 +3932,7 @@ focus = {
     completion_reward = {
       declare_war_on = {
         type = puppet_wargoal_focus
-        target = SEI
+        target = SEJ
       }
     }
 
@@ -3982,6 +4001,7 @@ focus = {
     completion_reward = {
       SCA = {
         add_to_faction = MRS
+        qiangjiemeng = yes
       }
       hidden_effect = {
         news_event = { id = ali.8 days = 2 }
@@ -4210,7 +4230,7 @@ focus = {
       add_tech_bonus = {
         uses = 2
         bonus = 0.65
-        category = magic_weapons
+        category = primary_weapons
       }
       add_ideas = ALI_shipeimojiewuqi_idea
     }
@@ -4505,7 +4525,7 @@ focus = {
         threat = 3
         name = ALI_mojiezhimindi
       }
-      add_ideas = Country
+      add_ideas = World
       set_cosmetic_tag = ALI_xinmojie
       every_country = {
         add_opinion_modifier = { target = ROOT modifier = set_enemy}

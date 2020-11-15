@@ -8,7 +8,7 @@
   th_power.b:0 "§Y[?PO_average_mp|1]%§!"
   th_power.c:0 "§R[?PO_average_mp|1]%§!"
   th_power_tt:0 "§Y平均[th_power_word_type]值§!\n当前平均[th_power_word_type]值为§Y[th_power]§!\n每日变化[?PO_power_daily_change|4+]\n\n§Y当前[th_power_word_type]的影响：§!\n[th_power_influ_type]\n\n§Y灵力影响因素：§!\n基础灵力来源类型:[continent_type] [?PO_conti_p|1Y]\n种族:§Y[race_get]§! [?PO_race_cons|0Y]\n世界观:[view_type] [?PO_view_cons|0Y]\n其他来源总加成:§Y[?PO_mp_add|1]§!"
-  th_power_influ_type0:0 "单位攻击：[?PO_attack_defence|+%]\n单位防御：[?PO_attack_defence|+%]\n陆军组织度恢复：[?PO_org_recover|+%]\n\n适宜人口修正：[?PO_conscription|+%]\n科研速度：[?PO_research|+%]"
+  th_power_influ_type0:0 "[army_attack_factor]:[?PO_attack_defence|+=%]\n[army_defence_factor]:[?PO_attack_defence|+=%]\n[army_morale_factor]:[?PO_org_recover|+=%]\n\n[conscription_factor]:[?PO_conscription|+=%]\n[research_speed_factor]:[?PO_research|+=%]"
   th_power_delayed_tt:0 "平均[th_power_word_type]值代表你的人民的天赋与潜能，会间接影响战斗力或其他数值。"
   th_power_range.red:0 "§R([?global.PO_change_range_low|3=]%,[?global.PO_change_range_high|3=]%)§!"
   th_power_range.yellow:0 "§Y([?global.PO_change_range_low|3=]%,[?global.PO_change_range_high|3=]%)§!"

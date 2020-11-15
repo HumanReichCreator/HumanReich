@@ -1555,8 +1555,7 @@ shared_focus = {
 		add_tech_bonus = {
 			bonus = 0.6
 			uses = 1
-			category = science_weapons
-			category = magic_weapons
+			category = primary_weapons
 		}
 	}
 }
@@ -2118,7 +2117,7 @@ shared_focus = {
 	completion_reward = {
 		OL_minus5 = yes
 		PO_add2.5 = yes
-		custom_effect_tooltip = KOG_kaifabendiwuqi_tt
+		custom_effect_tooltip = TKM_kaifabendiwuqi_tt
         add_to_variable = { OL_to_weiwu_base_add = 0.1 }
 
 		#weixindu -5
@@ -2226,7 +2225,7 @@ shared_focus = {
 	completion_reward = {
 		OL_minus10 = yes
 		add_political_power = 50
-		custom_effect_tooltip = KOG_kaifabendiwuqi_tt
+		custom_effect_tooltip = TKM_kaifabendiwuqi_tt
         add_to_variable = { OL_to_weiwu_base_add = 0.1 }
        
         if = {
@@ -2474,10 +2473,6 @@ shared_focus = {
 			tag = HUM
 			factor = 2.5
 		}
-		modifier = {
-			has_government = oldorder
-			factor = 1.5
-		}
 	}
 
 	available = {
@@ -2572,8 +2567,7 @@ shared_focus = {
 	}
 
 	available = {
-	     
-		 
+
 	}
 
 	bypass = {
@@ -2968,6 +2962,7 @@ shared_focus = {
 		focus = ty_baochiguli
 		focus = ty_quanlidouzheng
 		focus = ty_zhengduobaquan
+		focus = ty_wuzhihudehunluan
 	}
 
 	x = 0
@@ -2996,7 +2991,10 @@ shared_focus = {
 				has_completed_focus = ty_zhengduobaquan
 				has_government = neworder
 			}
-			has_government = oldorder
+			and = {
+				has_government = oldorder
+				has_completed_focus = ty_wuzhihudehunluan
+			}
 		}
 	}
 
@@ -3138,16 +3136,16 @@ shared_focus = {
 }
 
 shared_focus = {
-		id = ty_wuzhihudehunluan
-		icon = GFX_goal_generic_propaganda
-		cost = 8
-		prerequisite = {
-			focus = ty_zhengjubianhua
-		}
+	id = ty_wuzhihudehunluan
+	icon = GFX_goal_generic_propaganda
+	cost = 8
+	prerequisite = {
+		focus = ty_zhengjubianhua
+	}
 
-		x = 7
-		y = 1
-		relative_position_id = ty_zhengjubianhua
+	x = 7
+	y = 1
+	relative_position_id = ty_zhengjubianhua
 
     ai_will_do = {
 		factor = 1
@@ -3156,7 +3154,7 @@ shared_focus = {
 	available = {
 	    SCA = {
 	    	has_war = yes
-	    	date > 148.1.1
+	    	date > 149.1.1
 	    }
 	}
 
@@ -3288,6 +3286,22 @@ shared_focus = {
 			is_major = no
 			factor = 1.5
 		}
+		modifier = {
+			or = {
+				tag = RNS
+				tag = MSD
+				tag = SBK
+				tag = KAG
+			}
+			TKM = {
+				has_government = qinwai
+			}
+			factor = 0
+		}
+		modifier = {
+			has_opinion_modifier = jiemeng
+			factor = 0
+		}
 	}
 
 	available = {
@@ -3340,6 +3354,10 @@ shared_focus = {
 				target = SCA
 				value > 49
 			}
+		}
+		modifier = {
+			factor = 0.05
+			is_in_faction_with = TEG
 		}
 		modifier = {
 			factor = 0

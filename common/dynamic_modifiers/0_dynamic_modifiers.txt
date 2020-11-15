@@ -80,13 +80,13 @@ Monthly_manpower = {
 }
 
 
-# KOG_xinshengdeshili = {
+# TKM_xinshengdeshili = {
 # 	icon = "GFX_idea_generic_disjointed_gov" # optional, will show up in guis if icon is specified
 # 		# enable = { always = yes } #optional, the modifier won't apply if not enabled
 # 		# remove_trigger = { always = no } #optional, will remove the modifier if true
 # #
-# 	political_power_gain = KOG_xinsheng_pp
-# 	drift_defence_factor = KOG_xinsheng_den
+# 	political_power_gain = TKM_xinsheng_pp
+# 	drift_defence_factor = TKM_xinsheng_den
 # }
 
 SS_subject_influence = {
@@ -106,6 +106,14 @@ SS_subject_influence = {
 	land_night_attack = SS_Beast_power
 }
 
+FT_buff = {
+	# icon = "GFX_idea_unknown"
+	research_speed_factor = FT_research_speed
+	war_support_factor = FT_war_support
+	army_morale_factor = FT_army_morale
+	political_power_gain = FT_political_power_gain
+}
+
 HUM_influenced = {
 	# icon = "GFX_idea_unknown"
 
@@ -115,9 +123,9 @@ HUM_influenced = {
 	industrial_capacity_factory = global.HMIF_influenced_factory
 }
 
-KOG_manpower = {
+TKM_manpower = {
 	# icon = "GFX_generic_production_bonus"
-	weekly_manpower = KOG_weekly
+	weekly_manpower = TKM_weekly
 	# conscription_factor = -0.5
 }
 ALI_manpower = {

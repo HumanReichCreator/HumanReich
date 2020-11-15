@@ -28,17 +28,17 @@ NMS_HUm_start = {
 	}
 	ai_strategy = {
 		type = befriend
-		id = "AVE"			
+		id = "KYK"			
 		value = -100
 	}	
 	ai_strategy = {
 		type = alliance
-		id = "AVE"			
+		id = "KYK"			
 		value = -100
 	}	
 	ai_strategy = {
 		type = antagonize
-		id = "AVE"			
+		id = "KYK"			
 		value = 15
 	}
 }
@@ -527,7 +527,7 @@ NMS_muhouyouhao2 = {
 # 	}	
 # 	ai_strategy = {
 # 		type = befriend
-# 		id = "SEI"			
+# 		id = "SEJ"			
 # 		value = -50
 # 	}	
 
@@ -543,7 +543,7 @@ NMS_muhouyouhao2 = {
 # 	}	
 # 	ai_strategy = {
 # 		type = protect
-# 		id = "SEI"			
+# 		id = "SEJ"			
 # 		value = -50
 # 	}
 
@@ -559,7 +559,7 @@ NMS_muhouyouhao2 = {
 # 	}	
 # 	ai_strategy = {
 # 		type = alliance
-# 		id = "SEI"			
+# 		id = "SEJ"			
 # 		value = -50
 # 	}
 
@@ -575,7 +575,7 @@ NMS_muhouyouhao2 = {
 # 	}	
 # 	ai_strategy = {
 # 		type = send_volunteers_desire 
-# 		id = "SEI"			
+# 		id = "SEJ"			
 # 		value = -50
 # 	}
 
@@ -591,7 +591,78 @@ NMS_muhouyouhao2 = {
 # 	}	
 # 	ai_strategy = {
 # 		type = ignore 
-# 		id = "SEI"			
+# 		id = "SEJ"			
 # 		value = 20
 # 	}
 # }
+
+Her_dispute_has_nothing_to_do_with_me_for_the_time_being = {
+	enable = {
+		tag = NMS
+	}
+	abort = {
+		date > 153.1.1
+	}
+
+	ai_strategy = {
+		type = ignore_claim
+		id = "AKI"			
+		value = 1
+	}		
+	ai_strategy = {
+		type = ignore_claim
+		id = "MEL"			
+		value = 1
+	}			
+	ai_strategy = {
+		type = ignore_claim
+		id = "SGS"			
+		value = 1
+	}		
+	ai_strategy = {
+		type = ignore_claim
+		id = "YUK"			
+		value = 1
+	}		
+}
+
+NMS_We_just_need_a_little_bit_of_foundation = {
+	enable = {
+		tag = NMS
+		has_war = no
+	}
+	abort = { 
+		OR = {
+			date > 147.1.1
+			has_war = yes
+		}
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 60
+	}
+}
+
+NMS_wants_arms_to_fight_the_vampire = {
+	enable = {
+		tag = NMS
+		date < 148.4.1
+		date > 147.1.1
+		has_war = no
+	}
+
+	abort = { 
+		OR = {
+			date > 148.4.1
+			has_war = yes
+		}
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 75
+	}
+}

@@ -37,14 +37,14 @@ human_influ = { #人里影响系统
 scenario_decision = { #小剧本决议
 	priority = 19
 }
-debuff_category = {
-	priority = 19
+SS_situation = {
+	priority = 11
+}
+FT_situation = {
+	priority = 12
 }
 #20以上为国家特有
 SW_battle = { #
-	priority = 20
-}
-Spoil_battle = { #
 	priority = 20
 }
 CLO_battle = { #
@@ -56,22 +56,19 @@ TH_bamboo = { #
 SCA_jiechusaodong = { 
 	priority = 20
 }
-YSK_kejigexin = {
+MRY_kejigexin = {
 	priority = 20
 }
 TEG_category = {
 	priority = 20
 }
-SGS_category = {
-	priority = 20
-}
 HKR_category = { #灵梦二手工业
 	priority = 20
 }
-SEI_category = { #灵梦二手工业
+SEJ_category = { #灵梦二手工业
 	priority = 20
 }
-KOG_category = { 
+TKM_category = { 
 	priority = 20
 }
 SRB_category = {
@@ -100,9 +97,6 @@ bianshen_category = { ###变身国家决议
 }
 HUM_qianzhai = {
 	priority = 30
-}
-SS_situation = {
-	priority = 50
 }
 
 

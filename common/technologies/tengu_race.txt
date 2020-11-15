@@ -21,18 +21,36 @@ technologies = {
 	      position = { x = 10 y = 0 }
 	    }
 
-	    category_science_infantry = {
-	    	max_strength = 5
-	    	breakthrough = 0.25
+	    melee_infantry = {
+	      max_strength = 10
 	    }
-	    category_magic_infantry = {
-	    	max_strength = 5
-	    	breakthrough = 0.25
+	    melee_infantry = {
+	      max_strength = 10
+	    }     
+	    sc_infantry = {
+	      max_strength = 10
 	    }
-	    category_combined_infantry = {
-	    	max_strength = 5
-	    	breakthrough = 0.25
+	    ma_infantry = {
+	      max_strength = 10
+	    }  
+	    sc_light_infantry = {
+	      max_strength = 10
 	    }
+	    ma_light_infantry = {
+	      max_strength = 10
+	    } 
+	    sc_sf_infantry = {
+	      max_strength = 10
+	    }
+	    ma_sf_infantry = {
+	      max_strength = 10
+	    } 
+	    sc_shield_infantry = {
+	      max_strength = 10
+	    }
+	    ma_shield_infantry = {
+	      max_strength = 10
+	    } 
 	    
 	    categories = {
 	      secret
@@ -53,12 +71,6 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		sc_militia = {
-			maximum_speed = 0.05
-		}
-		ma_militia = {
-			maximum_speed = 0.05
-		}
 		sc_infantry = {
 			maximum_speed = 0.05
 		}
@@ -67,7 +79,7 @@ technologies = {
 		}
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
 		folder = {
 			name = Tenggu_race_tech_folder
@@ -91,7 +103,7 @@ technologies = {
 		}
 
 		sc_light_infantry = {
-			breakthrough = 0.1
+			maximum_speed = 0.1
 			forest = {
 				attack = 0.05
 				defence = 0.05
@@ -118,7 +130,7 @@ technologies = {
 			}
 		}
 		ma_light_infantry = {
-			breakthrough = 0.1
+			maximum_speed = 0.1
 			forest = {
 				attack = 0.05
 				defence = 0.05
@@ -147,7 +159,7 @@ technologies = {
 
 		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
 		folder = {
 			name = Tenggu_race_tech_folder
@@ -172,29 +184,17 @@ technologies = {
 
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = Tenggu_race_tech_folder
 			position = { x = 4 y = 6 }
 		}
 
-		sc_militia = {
-			breakthrough = 0.1
-		}
-		ma_militia = {
-			breakthrough = 0.1
-		}
 		sc_infantry = {
 			breakthrough = 0.1
 		}
 		ma_infantry = {
-			breakthrough = 0.1
-		}
-		sc_light_infantry = {
-			breakthrough = 0.1
-		}
-		ma_light_infantry = {
 			breakthrough = 0.1
 		}
 		
@@ -214,12 +214,6 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		sc_militia = {
-			maximum_speed = 0.05
-		}
-		ma_militia = {
-			maximum_speed = 0.05
-		}
 		sc_infantry = {
 			maximum_speed = 0.05
 		}
@@ -229,7 +223,7 @@ technologies = {
 
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
 		folder = {
 			name = Tenggu_race_tech_folder
@@ -250,10 +244,10 @@ technologies = {
 		research_speed_factor = 0.03
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
 		sc_light_infantry = {
-			breakthrough = 0.1
+			maximum_speed = 0.1
 			forest = {
 				attack = 0.05
 				defence = 0.05
@@ -280,7 +274,7 @@ technologies = {
 			}
 		}
 		ma_light_infantry = {
-			breakthrough = 0.1
+			maximum_speed = 0.1
 			forest = {
 				attack = 0.05
 				defence = 0.05
@@ -329,7 +323,7 @@ technologies = {
 		}
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
 		army_leader_start_logistics_level = 1
 		army_leader_start_planning_level = 1
@@ -362,7 +356,7 @@ technologies = {
 
 		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
 		folder = {
 			name = Tenggu_race_tech_folder
@@ -389,7 +383,7 @@ technologies = {
 
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = Tenggu_race_tech_folder
@@ -417,7 +411,7 @@ technologies = {
 
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
 		folder = {
 			name = Tenggu_race_tech_folder
@@ -437,7 +431,7 @@ technologies = {
 
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
 		army_leader_start_attack_level = 1
 		army_leader_start_defense_level = 1
@@ -463,16 +457,21 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Tengu_special_1
+		ma_light_infantry = {
+			maximum_speed = 0.2
 		}
-
-		enable_subunits = {
-			Tengu_special
+		ma_sf_infantry = {
+			maximum_speed = 0.2
+		}
+		sc_light_infantry = {
+			maximum_speed = 0.2
+		}
+		sc_sf_infantry = {
+			maximum_speed = 0.2
 		}
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
 		folder = {
 			name = Tenggu_race_tech_folder
@@ -495,16 +494,25 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Tengu_special_2
+		ma_light_infantry = {
+			breakthrough = 0.2
+			defense = 0.2
 		}
-
-		Tengu_special = {
-			combat_width = -5
+		ma_sf_infantry = {
+			breakthrough = 0.2
+			defense = 0.2
+		}
+		sc_light_infantry = {
+			breakthrough = 0.2
+			defense = 0.2
+		}
+		sc_sf_infantry = {
+			breakthrough = 0.2
+			defense = 0.2
 		}
 		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
 		folder = {
 			name = Tenggu_race_tech_folder
@@ -527,17 +535,16 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Tengu_special_3
+		ma_shield_infantry = {
+			maximum_speed = 0.2
 		}
-
-		Tengu_special = {
-			combat_width = -5
+		sc_shield_infantry = {
+			maximum_speed = 0.2
 		}
 
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = Tenggu_race_tech_folder
@@ -560,16 +567,17 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Tengu_special_4
+		ma_shield_infantry = {
+			breakthrough = 0.2
+			defense = 0.2
 		}
-
-		Tengu_special = {
-			combat_width = -5
+		sc_shield_infantry = {
+			breakthrough = 0.2
+			defense = 0.2
 		}
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
 		folder = {
 			name = Tenggu_race_tech_folder
@@ -588,13 +596,24 @@ technologies = {
 	tiangouqingbaoban5 = {
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
-		enable_equipments = {
-			Tengu_special_5
+		ma_light_infantry = {
+			combat_width = -5
 		}
-
-		Tengu_special = {
+		ma_sf_infantry = {
+			combat_width = -5
+		}
+		sc_light_infantry = {
+			combat_width = -5
+		}
+		sc_sf_infantry = {
+			combat_width = -5
+		}
+		ma_shield_infantry = {
+			combat_width = -5
+		}
+		sc_shield_infantry = {
 			combat_width = -5
 		}
 

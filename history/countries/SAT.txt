@@ -1,24 +1,11 @@
 ﻿capital = 298
-138.8.13 = {
-
-}
-141.6.2 = {
-    
-}
-142.3.8 = {
-    
-}
-144.2.5 = {
-    
-}
 146.1.1 = {
     set_technology = {
         #通用武器线
-        spell_card = 1
-        linglijiejing139 = 1
-        danmujingque139 = 1
-        gaosudanmu139 = 1
-        buqiang117 = 1
+        spell_card1 = 1
+        spear1 = 1
+        linglicunchu = 1
+        spell_card2 = 1
             
         #辅助
 
@@ -38,7 +25,7 @@
         jichushuxue = 1
         tongxunlilun = 1
         jiemi137 = 1
-        jiemi142 = 1
+        
 
         #专用工程学
 
@@ -52,6 +39,7 @@
         #种族
             
     }
+    
 }
 146.1.1={
     oob = "SAT_146"
@@ -68,36 +56,21 @@
         free_magic
     }
     
-    RUH = {
+    UTH = {
         subject_level2 = yes
-        set_cosmetic_tag = RUH_SAT
-    }
-    
-    RUH = {
-      set_politics = {
-        ruling_party = guli
-        election_frequency = 48
-        elections_allowed = no
-     }
-     set_popularities = {
-        qinwai = 0
-        guli = 80
-        neworder = 0
-        oldorder = 0
-        fandong = 20
-     }
+        set_cosmetic_tag = UTH_SAT
     }
     set_politics = {
-    	ruling_party = oldorder
+    	ruling_party = guli
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 0
-        guli = 0
-        neworder = 6
-        oldorder = 92
-        fandong = 2
+        qinwai = 20
+        guli = 65
+        neworder = 10
+        oldorder = 5
+        fandong = 0
     }
     
     

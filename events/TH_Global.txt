@@ -294,6 +294,7 @@ country_event = {
 		add_dynamic_modifier = { modifier = LS_pp }
 		add_dynamic_modifier = { modifier = Monthly_manpower }
 		add_dynamic_modifier = { modifier = SS_subject_influence }
+		add_dynamic_modifier = { modifier = FT_buff }
 		if = {
 			limit = {
 				tag = HUM
@@ -390,44 +391,9 @@ country_event = {
 			}
 			add_to_variable = { global.HMIF_influenced = -1}
 		}
-
-		
-		
 	}
 
 	option = {
 
 	}
 }
-
-# country_event = { #吞掉看海国
-# 	id = glo.3001
-
-# 	fire_only_once = yes
-# 	is_triggered_only = no
-
-# 	trigger = {
-# 		XXX = { is_ai = yes }
-# 		date > 148.1.1
-# 		tag = XXX
-# 	}
-
-# 	mean_time_to_happen = {
-# 		days = 2
-# 	}
-
-# 	immediate = {
-# 		random_country = {
-# 			limit = {
-# 				is_ai = no
-# 			}
-# 			transfer_state = 304
-# 		}
-# 	}
-
-# 	option = {
-
-# 	}
-
-# 	hidden = yes
-# }

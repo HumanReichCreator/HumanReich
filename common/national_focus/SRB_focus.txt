@@ -464,6 +464,19 @@ focus_tree = {
 
       ai_will_do = {
         factor = 1
+        modifier = {
+          factor = 0
+          not = {
+            has_game_rule = {
+              rule = SRB_paths
+              option = path_random
+            }
+            has_game_rule = {
+              rule = SRB_paths
+              option = SRB_path_guli
+            }
+          }
+        }
       }
 
       cancel_if_invalid = no
@@ -520,13 +533,30 @@ focus_tree = {
           }
         }
         add_named_threat = {
-          threat = 0.05
+          threat = 0.5
           name = SRB_zhunbeikuodajunshililiang
         }
       }
 
       ai_will_do = {
         factor = 1
+        modifier = {
+          factor = 0
+          not = {
+            has_game_rule = {
+              rule = SRB_paths
+              option = path_random
+            }
+            has_game_rule = {
+              rule = SRB_paths
+              option = SRB_path_fandong
+            }
+            has_game_rule = {
+              rule = SRB_paths
+              option = SRB_path_neworder
+            }
+          }
+        }
       }
 
       cancel_if_invalid = no
@@ -933,9 +963,9 @@ focus_tree = {
 
       completion_reward = {
         army_experience = 1
-        custom_effect_tooltip = KOG_1_tt
+        custom_effect_tooltip = TKM_1_tt
         hidden_effect = {
-          load_oob = KOG_1
+          load_oob = TKM_1
         }
       }
 
@@ -1183,7 +1213,7 @@ focus_tree = {
       completion_reward = {
         add_ideas = SRB_shiyongrenleikeji_idea
         add_tech_bonus = {
-          category = science_weapons_improve
+          category = primary_weapons
           uses = 1
           bonus = 1
         }
@@ -1298,7 +1328,12 @@ focus_tree = {
 
       completion_reward = {
         add_research_slot = 2
-        add_ideas = SRB_daojiaotansuojingshen_idea
+        if = {
+          limit = {
+            has_idea = srb_daojiaotansuojingshen_o_idea
+          }
+          swap_ideas = { add_idea = SRB_daojiaotansuojingshen_idea remove_idea = srb_daojiaotansuojingshen_o_idea}
+        }
       }
 
       ai_will_do = {
@@ -1342,7 +1377,7 @@ focus_tree = {
       }
 
       cancel_if_invalid = no
-      continue_if_invalid = no
+      continue_if_invalid = yes
       available_if_capitulated = yes
   }
 
@@ -1386,6 +1421,23 @@ focus_tree = {
 
       ai_will_do = {
         factor = 1
+        modifier = {
+          factor = 0
+          not = {
+            has_game_rule = {
+              rule = SRB_paths
+              option = path_random
+            }
+            has_game_rule = {
+              rule = SRB_paths
+              option = SRB_path_neworder
+            }
+            has_game_rule = {
+              rule = SRB_paths
+              option = SRB_path_fandong
+            }
+          }
+        }
       }
 
       cancel_if_invalid = yes
@@ -1521,7 +1573,7 @@ focus_tree = {
           uses = 2
           bonus = 1
           ahead_reduction = 2
-          category = science_artillery_weapons
+          category = mortar
         }
       }
 
@@ -1637,6 +1689,20 @@ focus_tree = {
         factor = 1
         modifier = {
           has_completed_focus = SRB_zhunbeikuodajunshililiang
+          factor = 0.5
+        }
+        modifier = {
+          factor = 0
+          not = {
+            has_game_rule = {
+              rule = SRB_paths
+              option = path_random
+            }
+            has_game_rule = {
+              rule = SRB_paths
+              option = SRB_path_guli
+            }
+          }
         }
       }
 
@@ -1863,6 +1929,19 @@ focus_tree = {
 
       ai_will_do = {
         factor = 1
+        modifier = {
+          factor = 0
+          not = {
+            has_game_rule = {
+              rule = SRB_paths
+              option = path_random
+            }
+            has_game_rule = {
+              rule = SRB_paths
+              option = SRB_path_fandong
+            }
+          }
+        }
       }
 
       cancel_if_invalid = no
@@ -2030,6 +2109,19 @@ focus_tree = {
 
       ai_will_do = {
         factor = 1
+        modifier = {
+          factor = 0
+          not = {
+            has_game_rule = {
+              rule = SRB_paths
+              option = path_random
+            }
+            has_game_rule = {
+              rule = SRB_paths
+              option = SRB_path_neworder
+            }
+          }
+        }
       }
 
       cancel_if_invalid = no
@@ -2185,13 +2277,7 @@ focus_tree = {
           name = SRB_huanxiangxiangjiangshihua
         }
         add_ideas = Human
-        hidden_effect = {
-          set_technology = {
-            god_tech = 0
-          }
-          tech_initialize = yes
-          country_event = glo.3000
-        }
+        race_tech_clear = yes
         set_country_flag = SRB_huanxiangxiangjiangshihua
         hidden_effect = {
           news_event = { id = srb.16 days = 2}
@@ -2328,10 +2414,14 @@ focus_tree = {
       }
 
       bypass = {
-      
+        not = {
+          has_idea = srb_daojiaotansuojingshen_o_idea
+          has_idea = SRB_daojiaotansuojingshen_idea
+        }
       }
 
       completion_reward = {
+        remove_ideas = srb_daojiaotansuojingshen_o_idea
         remove_ideas = SRB_daojiaotansuojingshen_idea
       }
 
@@ -2385,7 +2475,7 @@ focus_tree = {
       }
 
       cancel_if_invalid = no
-      continue_if_invalid = no
+      continue_if_invalid = yes
       available_if_capitulated = yes
   }
 
@@ -2500,7 +2590,7 @@ focus_tree = {
         focus = SRB_xiangxiqinshi
       }
 
-      will_lead_to_war_with = AVE
+      will_lead_to_war_with = KYK
 
       available ={
         is_subject = no
@@ -2511,14 +2601,14 @@ focus_tree = {
       }
 
       bypass = {
-        AVE = {
+        KYK = {
           bypass_declare_war = yes
         }
       }
 
       completion_reward = {
         declare_war_on = {
-          target = AVE
+          target = KYK
           type = puppet_wargoal_focus
         }
       }
@@ -2976,6 +3066,9 @@ focus_tree = {
           level = 3
         }
         HMIF_daily_add0.04 = yes
+        ZBT = {
+          can_core = yes
+        }
 
         hidden_effect = {
           news_event = { id = srb.27 days = 2}
@@ -3023,6 +3116,9 @@ focus_tree = {
       completion_reward = {
         custom_effect_tooltip = focus_warning3 
         HUM = {
+          low_puppet_level = yes
+        }
+        ZBT = {
           low_puppet_level = yes
         }
         add_ideas = Empire

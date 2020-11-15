@@ -1,0 +1,117 @@
+﻿capital = 29
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
+            
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        waike = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+            
+        #专用工业
+
+        #种族
+            
+    }
+    
+}
+
+146.1.1={
+    oob = "LIL_146"
+    add_ideas = {
+    Tribal
+    Fairy
+    open0
+    dove2
+    loose_border
+    sc_rule
+    type1_manpowerlv3
+    }
+    set_politics = {
+    	ruling_party = qinwai
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 80
+        guli = 5
+        neworder = 0
+        oldorder = 0
+        fandong = 15
+    }
+
+    set_truce = {target = SCA days = 730}
+    set_truce = {target = WAK days = 730}
+    set_truce = {target = GRS days = 730}
+    set_truce = {target = PRI days = 730}
+}
+create_country_leader = {
+	# name = "Lily White"
+    name = "莉莉·霍瓦特" 
+	#desc = ""
+	picture = "LIL_lil.dds"
+	ideology = qinwai_type
+	traits = {
+	}
+}
+create_country_leader = {
+    # name = "Lily White"
+    name = "莉莉·霍瓦特"
+    #desc = ""
+    picture = "LIL_lil.dds"
+    ideology = guli_type
+    traits = {
+    }
+}
+create_country_leader = {
+    # name = "Lily White"
+    name = "莉莉·霍瓦特"
+    #desc = ""
+    picture = "LIL_lil.dds"
+    ideology = fandong_type
+    traits = {
+    }
+}
+create_country_leader = {
+    # name = "Lily White"
+    name = "莉莉·霍瓦特"
+    #desc = ""
+    picture = "LIL_lil.dds"
+    ideology = neworder_type
+    traits = {
+    }
+}
+create_country_leader = {
+    # name = "Lily White"
+    name = "莉莉·霍瓦特"
+    #desc = ""
+    picture = "LIL_lil.dds"
+    ideology = oldorder_type
+    traits = {
+    }
+}

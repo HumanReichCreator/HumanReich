@@ -69,6 +69,15 @@ scale_change = {
 
         ai_will_do = {
             factor = 50
+            modifier = {
+                factor = 100
+                tag = MRS
+                has_completed_focus = MRS_jingguanqibian
+            }
+            modifier = {
+                date > 149.6.1
+                factor = 10
+            }
         }
     }
 
@@ -103,6 +112,10 @@ scale_change = {
 
         ai_will_do = {
             factor = 50
+            modifier = {
+                date > 149.6.1
+                factor = 10
+            }
         }
     }
     to_country = {
@@ -138,6 +151,10 @@ scale_change = {
 
         ai_will_do = {
             factor = 50
+            modifier = {
+                date > 149.6.1
+                factor = 10
+            }
         }
     }
 }

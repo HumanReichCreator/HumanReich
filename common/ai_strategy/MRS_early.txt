@@ -102,7 +102,7 @@ MRS_jiarufeihong1 = {
 		tag = MRS
 		is_subject = no
 		or = {
-			has_completed_focus = MRS_jiarufeihongtixi
+			# has_completed_focus = MRS_jiarufeihongtixi
 			has_completed_focus = MRS_feihongtiaoyue
 		}
 	}
@@ -129,7 +129,7 @@ MRS_jiarufeihong2 = {
 		tag = MRS
 		is_subject = no
 		or = {
-			has_completed_focus = MRS_jiarufeihongtixi
+			# has_completed_focus = MRS_jiarufeihongtixi
 			has_completed_focus = MRS_feihongtiaoyue
 		}
 	}
@@ -168,17 +168,17 @@ MRS_huizhencheng1 = {
 
 	ai_strategy = {
 		type = befriend
-		id = "SEI"			
+		id = "SEJ"			
 		value = 25
 	}
 	ai_strategy = {
 		type = alliance
-		id = "SEI"			
+		id = "SEJ"			
 		value = 10
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
-		id = "SEI"			
+		id = "SEJ"			
 		value = 10
 	}
 }
@@ -199,17 +199,17 @@ MRS_huizhencheng2 = {
 
 	ai_strategy = {
 		type = befriend
-		id = "SEI"			
+		id = "SEJ"			
 		value = 25
 	}
 	ai_strategy = {
 		type = alliance
-		id = "SEI"			
+		id = "SEJ"			
 		value = 10
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
-		id = "SEI"			
+		id = "SEJ"			
 		value = 10
 	}
 }
@@ -231,17 +231,17 @@ MRS_fusangshen1 = {
 
 	ai_strategy = {
 		type = befriend
-		id = "KOG"			
+		id = "TKM"			
 		value = 25
 	}
 	ai_strategy = {
 		type = alliance
-		id = "KOG"			
+		id = "TKM"			
 		value = 10
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
-		id = "KOG"			
+		id = "TKM"			
 		value = 10
 	}
 }
@@ -262,17 +262,17 @@ MRS_fusangshen2 = {
 
 	ai_strategy = {
 		type = befriend
-		id = "KOG"			
+		id = "TKM"			
 		value = 25
 	}
 	ai_strategy = {
 		type = alliance
-		id = "KOG"			
+		id = "TKM"			
 		value = 10
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
-		id = "KOG"			
+		id = "TKM"			
 		value = 10
 	}
 }
@@ -340,47 +340,6 @@ MRS_yaojing2 = {
 	}
 }
 
-MRS_fuchou1 = { 
-	# reversed = yes
-	enable = {
-		tag = MRS
-		is_subject = no
-		MRS = {
-			has_completed_focus = MRS_yaoguaifuchou
-		}
-	}
-	abort = {
-		has_global_flag = xinshidai
-	}
-
-
-	ai_strategy = {
-		type = antagonize
-		id = "SEI"			
-		value = 100
-	}
-}
-MRS_fuchou2 = { 
-	reversed = yes
-	enable = {
-		tag = MRS
-		is_subject = no
-		MRS = {
-			has_completed_focus = MRS_yaoguaifuchou
-		}
-	}
-	abort = {
-		has_global_flag = xinshidai
-	}
-
-
-	ai_strategy = {
-		type = antagonize
-		id = "SEI"			
-		value = 100
-	}
-}
-
 MRS_wuzhihu1 = { 
 	# reversed = yes
 	enable = {
@@ -460,50 +419,5 @@ MRS_wuzhihu2 = {
 		type = antagonize
 		id = "CIR"			
 		value = 100
-	}
-}
-
-MRS_zhunbeikuozhang1 = { 
-	reversed = yes
-	enable = {
-		all_country = {
-
-		}
-		MRS = {
-			has_completed_focus = MRS_zhunbeikuozhang
-			is_subject = no
-		}
-	}
-	abort = {
-		has_global_flag = xinshidai
-	}
-
-
-	ai_strategy = {
-		type = antagonize
-		id = "MRS"			
-		value = 250
-	}
-}
-MRS_zhunbeikuozhang2 = { 
-	# reversed = yes
-	enable = {
-		all_country = {
-		
-		}
-		MRS = {
-			has_completed_focus = MRS_zhunbeikuozhang
-			is_subject = no
-		}
-	}
-	abort = {
-		has_global_flag = xinshidai
-	}
-
-
-	ai_strategy = {
-		type = antagonize
-		id = "MRS"			
-		value = 250
 	}
 }

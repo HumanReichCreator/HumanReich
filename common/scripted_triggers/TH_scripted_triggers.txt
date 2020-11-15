@@ -222,30 +222,6 @@ is_same_government = {
 				has_government = oldorder
 			}
 		}
-		and = {
-			has_government = lienin
-			PREV = {
-				has_government = lienin
-			}
-		}
-		and = {
-			has_government = authordemo
-			PREV = {
-				has_government = authordemo
-			}
-		}
-		and = {
-			has_government = humanfirst
-			PREV = {
-				has_government = humanfirst
-			}
-		}
-		and = {
-			has_government = destroyid
-			PREV = {
-				has_government = destroyid
-			}
-		}
 	}
 }
 
@@ -268,19 +244,19 @@ youkai_mountain_country = {
 		tag = TEG
 		tag = OTG
 
-		tag = YSK
+		tag = MRY
 
 		tag = UNA
-		tag = SPG
+		tag = LIL
 
 		tag = KAP
 		tag = SAP
 		tag = GRS
-		tag = NIT
+		tag = NTR
 
 		tag = KAS
 
-		tag = SAK
+		tag = NMN
 		tag = ZYD
 
 		tag = AKI
@@ -300,15 +276,15 @@ Ghost_country = {
 		tag = NG2
 		tag = NG3
 		tag = NG4
-		tag = SHO
+		tag = PRI
 		tag = UUG
 		tag = ACE
 		tag = GH1
 		tag = GH2
 		tag = GH3
 
-		tag = KCC
-		tag = KRK
+		tag = YCE
+		tag = SAK
 		tag = GYK
 		tag = HGH
 	}
@@ -321,9 +297,10 @@ Fairy_country = {
 		tag = CIR
 		tag = HKM
 		tag = SC2
+		tag = SC3
 		tag = SCA
 		tag = SGS
-		tag = SPG
+		tag = LIL
 		tag = YUK
 		tag = MFA
 
@@ -348,6 +325,7 @@ Human_country = {
 		tag = HU7
 		tag = HU8
 		tag = MHV
+		tag = ZBT
 	}
 }
 
@@ -360,7 +338,7 @@ Magician_country = {
 		tag = ALI
 		tag = HU5
 
-		tag = FUJ
+		tag = MOK
 	}
 }
 
@@ -369,7 +347,7 @@ Kappa_country = {
 		#4
 		tag = GRS
 		tag = KAP
-		tag = NIT
+		tag = NTR
 		tag = SAP
 	}
 }
@@ -381,25 +359,25 @@ God_country = {
 		tag = OKI
 		tag = SKI
 		tag = SRB
-		tag = TEN
+		tag = TES
 		tag = CCA
 		tag = KTK
 		# tag = IKU
-		tag = WAI
+		tag = KMC
 		tag = HCT
-		tag = HNY
+		tag = KEK
 	}
 }
 
 Pri_youkai_country = {
 	or = {
 		#9
-		# tag = AVE
+		# tag = KYK
 		# tag = CHE
 		# tag = EET
 		# tag = INB
 		# tag = KAG
-		tag = KOG
+		tag = TKM
 		tag = MEL
 		# tag = MSD
 		# tag = NIB
@@ -408,9 +386,9 @@ Pri_youkai_country = {
 		tag = ONS
 		tag = RMI
 		# tag = RNS
-		# tag = RUH
+		# tag = UTH
 		tag = SC1
-		tag = SEI
+		tag = SEJ
 		# tag = UDO
 		# tag = WAK
 		tag = SBK
@@ -425,12 +403,12 @@ Pri_youkai_country = {
 Beast_country = {
 	or = {
 		#12
-		tag = AVE
+		tag = KYK
 		tag = CHE
 		tag = EET
 		tag = INB
 		tag = KAG
-		# tag = KOG
+		# tag = TKM
 		# tag = MEL
 		tag = MSD
 		tag = NIB
@@ -439,9 +417,9 @@ Beast_country = {
 		# tag = ONS
 		# tag = RMI
 		tag = RNS
-		tag = RUH
+		tag = UTH
 		# tag = SC1
-		# tag = SEI
+		# tag = SEJ
 		tag = UDO
 		tag = WAK
 		# tag = SBK
@@ -458,21 +436,21 @@ Youkai_country = {
 		#14
 		tag = IKU
 		
-		tag = KUT
+		tag = YUG
 		tag = MAM
-		tag = MHP
+		tag = PRS
 		# tag = ONI
-		tag = SAK
+		tag = NMN
 		tag = SAT
 		tag = UNA
 		tag = UNL
 		tag = YKR
-		tag = YSK
+		tag = MRY
 
 		tag = GOL
 		tag = HUB
 		tag = HB1
-		tag = USZ
+		tag = URM
 		tag = YMM
 
 		tag = AKO
@@ -552,6 +530,9 @@ random_leader = {
 		# tag = ONI
 		tag = UFA
 		tag = GYK
+		tag = SC1
+		tag = SC2
+		tag = SC3
 		# tag = UUG
 		# tag = ACE
 		# tag = NG1
@@ -775,13 +756,13 @@ dont_annex = {
 	or = {
 		and = {
 			ROOT = { 
-				tag = SEI
+				tag = SEJ
 
-				not = { has_country_flag = SEI_fankangchenggong }
+				not = { has_country_flag = SEJ_fankangchenggong }
 
 				not = {
-					has_completed_focus = SEI_sixianggonggu
-					has_completed_focus = SEI_shuliweiyan
+					has_completed_focus = SEJ_sixianggonggu
+					has_completed_focus = SEJ_shuliweiyan
 				}
 			}
 		}
@@ -831,14 +812,14 @@ dont_annex = {
 
 		and = {
 			ROOT = { 
-				tag = YSK
+				tag = MRY
 
 				PREV = {
 					tag = KAP
 				}
 
 				not = {
-					has_completed_focus = YSK_ronghehetong
+					has_completed_focus = MRY_ronghehetong
 				}
 			}
 		}
@@ -849,7 +830,7 @@ dont_annex = {
 
 				PREV = {
 					or = {
-						tag = AVE
+						tag = KYK
 						tag = MAM
 					}
 				}

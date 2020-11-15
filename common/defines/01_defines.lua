@@ -2,9 +2,7 @@ NDefines.NGame.START_DATE = "138.1.1.7"
 NDefines.NGame.END_DATE = "165.1.1.1"
 NDefines.NGame.MAP_SCALE_PIXEL_TO_KM = 200
 NDefines.NGame.FUEL_RESOURCE = "energy"
-NDefines.NGame.HANDS_OFF_START_TAG = "SAK"
-NDefines.NGame.EVENT_TIMEOUT_DEFAULT = 2						-- Default days before an event times out if not scripted
-NDefines.NGame.MISSION_REMOVE_FROM_INTERFACE_DEFAULT = 2
+NDefines.NGame.HANDS_OFF_START_TAG = "NMN"
 
 NDefines.NDiplomacy.MAX_OPINION_VALUE = 200--changed-- Max opinion value cap.
 NDefines.NDiplomacy.MIN_OPINION_VALUE = -200--changed-- Min opinion value cap.
@@ -24,10 +22,10 @@ NDefines.NDiplomacy.TENSION_TIME_SCALE_START_DATE = "147.1.1.12"--changed-- Star
 NDefines.NDiplomacy.FRONT_IS_DANGEROUS = 0 --changed-- AI should be unwilling to enter accept a call to war if front is too dangerous.
 NDefines.NDiplomacy.IDEOLOGY_JOIN_FACTION_MIN_LEVEL = -1--changed-- ideology limit required to join faction
 NDefines.NDiplomacy.WARGOAL_VERSUS_MAJOR_AT_WAR_REDUCTION = 0 	-- reduction of pp cost for wargoal vs major at war.
-NDefines.NDiplomacy.BASE_IMPROVE_RELATION_SAME_IDEOLOGY_GROUP_MAINTAIN_COST = 0.25 -- Political power cost each update when boosting relations with nation of same ideology
-NDefines.NDiplomacy.BASE_IMPROVE_RELATION_DIFFERENT_IDEOLOGY_GROUP_MAINTAIN_COST = 0.5    -- Political power cost each update when boosting relations with nation of different ideology
-
--- NDefines.NDiplomacy.WARGOAL_WORLD_TENSION_REDUCTION = -0.25			-- Reduction of pp cost for wargoal at 100% world tension, scales linearly
+NDefines.NDiplomacy.BASE_IMPROVE_RELATION_SAME_IDEOLOGY_GROUP_MAINTAIN_COST = 0.35 -- Political power cost each update when boosting relations with nation of same ideology
+NDefines.NDiplomacy.BASE_IMPROVE_RELATION_DIFFERENT_IDEOLOGY_GROUP_MAINTAIN_COST = 0.7    -- Political power cost each update when boosting relations with nation of different ideology
+NDefines.NDiplomacy.BASE_GENERATE_WARGOAL_DAILY_PP = 0.75	-- Daily pp cost for generation of wargoals
+NDefines.NDiplomacy.WARGOAL_WORLD_TENSION_REDUCTION = -0.4			-- Reduction of pp cost for wargoal at 100% world tension, scales linearly
 NDefines.NCountry.POPULATION_YEARLY_GROWTH_BASE = 0.03			-- basic population growth per year, used for monthly manpower gain
 NDefines.NCountry.EVENT_PROCESS_OFFSET = 5--changed-- Events are checked every X day per country or state (1 is ideal but CPU heavy)
 NDefines.NCountry.BASE_RESEARCH_SLOTS = 2--changed-- Base number of research slots per country.
@@ -59,9 +57,9 @@ NDefines.NPolitics.ARMY_LEADER_COST = 10--changed-- cost for recruiting new lead
 NDefines.NPolitics.BASE_POLITICAL_POWER_INCREASE = 1.5
 
 NDefines.NBuildings.MAX_BUILDING_LEVELS = 25--changed-- Max levels a building can have.
-NDefines.NBuildings.RADAR_RANGE_BASE = 90--changed-- Radar range base first level radar will be this + min best radar will be this + max
-NDefines.NBuildings.RADAR_RANGE_MIN = 90--changed-- Radar range (from state center to province center) in measure of map pixels. Exluding techs.
-NDefines.NBuildings.RADAR_RANGE_MAX = 290--changed-- Range is interpolated between building levels 1-15.
+NDefines.NBuildings.RADAR_RANGE_BASE = 60--changed-- Radar range base first level radar will be this + min best radar will be this + max
+NDefines.NBuildings.RADAR_RANGE_MIN = 60--changed-- Radar range (from state center to province center) in measure of map pixels. Exluding techs.
+NDefines.NBuildings.RADAR_RANGE_MAX = 180--changed-- Range is interpolated between building levels 1-15.
 NDefines.NBuildings.MAX_SHARED_SLOTS = 45--changed-- Max slots shared by factories
 NDefines.NBuildings.INFRASTRUCTURE_RESOURCE_BONUS = 0.25--changed -- multiplactive resource bonus for each level of (non damaged) infrastructure
 
@@ -78,7 +76,7 @@ NDefines.NMilitary.COMBAT_STACKING_PENALTY = -0.05                -- how much st
 NDefines.NMilitary.COMBAT_OVER_WIDTH_PENALTY = -3					-- over combat width penalty per %.
 NDefines.NMilitary.COMBAT_OVER_WIDTH_PENALTY_MAX = -0.5			-- over combat width max (when you cant join no more).
 NDefines.NMilitary.INFRASTRUCTURE_MOVEMENT_SPEED_IMPACT = -0.02
-NDefines.NMilitary.FIELD_EXPERIENCE_SCALE = 0.4
+NDefines.NMilitary.FIELD_EXPERIENCE_SCALE = 0.12
 NDefines.NMilitary.UNIT_EXPERIENCE_PER_TRAINING_DAY = 0.0024
 NDefines.NMilitary.WAR_SCORE_LOSSES_RATIO = 30					
 
@@ -91,7 +89,7 @@ NDefines.NAI.DIPLOMACY_FACTION_WRONG_IDEOLOGY_PENALTY = 50--changed -- AI penalt
 NDefines.NAI.DIPLOMACY_FACTION_SAME_IDEOLOGY_MAJOR = 5--changed -- AI bonus acceptance when being asked about faction is a major of the same ideology
 NDefines.NAI.DIPLOMACY_FACTION_WAR_RELUCTANCE = -25--changed-- Penalty to desire to enter a faction with a country that we are not fighting wars together with.
 NDefines.NAI.DIPLOMACY_FACTION_PLAYER_JOIN = 0--changed-- Bonus for human players asking to join a faction.
-NDefines.NAI.DIPLOMACY_FACTION_NEUTRALITY_PENALTY = 150
+NDefines.NAI.DIPLOMACY_FACTION_NEUTRALITY_PENALTY = 30
 
 NDefines.NAI.FASCISTS_BEFRIEND_FASCISTS = 0
 NDefines.NAI.FASCISTS_BEFRIEND_DEMOCRACIES = 0--changed
@@ -122,7 +120,7 @@ NDefines.NAI.COMMUNISTS_ANTAGONIZE_DEMOCRACIES = 0--changed
 NDefines.NAI.COMMUNISTS_ANTAGONIZE_COMMUNISTS = 0
 
 NDefines.NAI.FACTION_UNSTABLE_ACCEPTANCE = -25	--changed
-NDefines.NAI.DIPLOMACY_COMMUNIST_NOT_NEIGHBOUR = -100
+NDefines.NAI.DIPLOMACY_COMMUNIST_NOT_NEIGHBOUR = -250 --changed
 NDefines.NAI.MANPOWER_FREE_USAGE_THRESHOLD = 5000--changed			-- If AI has this much manpower he doesn't care about the percentage
 
 NDefines.NFocus.FOCUS_POINT_DAYS = 5--changed						-- Each point takes a week
@@ -141,6 +139,10 @@ NDefines.NIntel.ENCRYPTION_DECRYPTION_INTEL_FACTORS = {
 
 NDefines.NResistance.RESISTANCE_POP_LOW_CUTOFF = 0
 NDefines.NResistance.RESISTANCE_POP_VERY_LOW_CUTOFF = 0
+-- NDefines.NResistance.RESISTANCE_TARGET_BASE = 30
+-- NDefines.NResistance.RESISTANCE_TARGET_MODIFIER_HAS_CLAIM = -20
+-- NDefines.NResistance.COMPLIANCE_GROWTH_BASE = 0.1
+-- NDefines.NResistance.COMPLIANCE_GROWTH_HAS_CLAIM = 10
 
 
 

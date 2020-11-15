@@ -10,7 +10,7 @@ ideas = {
 			cost = 0
 			cancel_if_invalid = no
 			modifier = {
-				conscription_factor = 0.3
+				conscription_factor = 0.2
 				mobilization_speed = 0.1
 				army_org_factor = -0.3
 				PRODUCTION_SPEED_BUILDINGS_FACTOR = -0.25
@@ -18,44 +18,16 @@ ideas = {
 				research_speed_factor = -0.4
 				army_attack_factor = 0.25
 				army_defence_factor = 0.25
-				stability_weekly = -0.002
+				stability_weekly = -0.001
+				stability_factor = -0.25
 
-				justify_war_goal_time = -0.5
-				enemy_justify_war_goal_time = -0.25
+				justify_war_goal_time = -0.4
+				enemy_justify_war_goal_time = -0.2
 				generate_wargoal_tension = -1
 			}
 			default = yes
 		}
-
-		Town = {
-									
-			allowed_to_remove = {
-				always = no
-			}
-			
-			modifier = {
-				MONTHLY_POPULATION = 0.25
-				stability_factor = 0.1
-				conscription_factor = 0.05
-				operative_slot = 1
-			}
-			cost = 0
-			cancel_if_invalid = no
-		}
-		
-		Village = {
-									
-			allowed_to_remove = {
-				always = no
-			}
-			
-			modifier = {
-				MONTHLY_POPULATION = 0.1
-				stability_factor = 0.05
-			}
-			cost = 0
-			cancel_if_invalid = no
-		}
+				
 		Shrine = {
 									
 			allowed_to_remove = {
@@ -78,6 +50,37 @@ ideas = {
 			cost = 0
 			cancel_if_invalid = no
 		}
+
+		Village = {
+									
+			allowed_to_remove = {
+				always = no
+			}
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.1
+				stability_factor = 0.05
+			}
+			cost = 0
+			cancel_if_invalid = no
+		}
+
+		Town = {
+									
+			allowed_to_remove = {
+				always = no
+			}
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.25
+				stability_factor = 0.1
+				conscription_factor = 0.05
+				operative_slot = 1
+			}
+			cost = 0
+			cancel_if_invalid = no
+		}
+
 		
 		# Organization = {
 									
@@ -121,6 +124,7 @@ ideas = {
 			cost = 0
 			cancel_if_invalid = no
 		}
+		
 		Empire = {
 									
 			allowed_to_remove = {
@@ -137,6 +141,27 @@ ideas = {
 				army_org_factor = 0.1
 				conscription_factor = 0.15
 				operative_slot = 2
+			}
+			cost = 0
+			cancel_if_invalid = no
+		}
+		World = {
+									
+			allowed_to_remove = {
+				always = no
+			}
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.3
+				# CONSUMER_GOODS_FACTOR = 0.01
+				POLITICAL_POWER_GAIN = 0.5
+				TRAINING_TIME_FACTOR = -0.1
+				stability_factor = 0.3
+				# UNITY_FACTOR = 0.1
+				army_org_factor = 0.15
+				conscription_factor = 0.15
+				operative_slot = 3
+				compliance_growth = 0.01
 			}
 			cost = 0
 			cancel_if_invalid = no

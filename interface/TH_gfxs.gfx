@@ -1,4 +1,222 @@
  spriteTypes = {
+ 
+  spriteType = {
+	name = "GFX_focus_Convallaria_construction"
+	texturefile = "gfx/interface/goals/focus_Convallaria_construction.dds"
+  }
+  spriteType = {
+    name = "GFX_focus_generic_chemical_weapons"
+    texturefile = "gfx/interface/goals/focus_generic_chemical_weapons.dds"
+  }
+  spriteType = {
+    name = "GFX_focus_generic_japanese_farm_subsidies"
+    texturefile = "gfx/interface/goals/focus_generic_japanese_farm_subsidies.dds"
+  }
+  spriteType = {
+    name = "GFX_focus_generic_war_with_NMS"
+    texturefile = "gfx/interface/goals/focus_generic_war_with_NMS.dds"
+  }
+  spriteType = {
+    name = "GFX_focus_Lycoris_construction"
+    texturefile = "gfx/interface/goals/focus_Lycoris_construction.dds"
+  }
+  spriteType = {
+    name = "GFX_focus_Medicine_militia"
+    texturefile = "gfx/interface/goals/focus_Medicine_militia.dds"
+  }
+  
+  spriteType = {
+    name = "GFX_focus_Convallaria_construction_shine"
+    texturefile = "gfx/interface/goals/focus_Convallaria_construction.dds"
+    effectFile = "gfx/FX/buttonstate.lua"
+    animation = {
+      animationmaskfile = "gfx/interface/goals/focus_Convallaria_construction.dds"
+      animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+      animationrotation = -90.0
+      animationlooping = no
+      animationtime = 0.75
+      animationdelay = 0
+      animationblendmode = "add"
+      animationtype = "scrolling"
+      animationrotationoffset = { x = 0.0 y = 0.0 }
+      animationtexturescale = { x = 1.0 y = 1.0 }
+    }
+
+    animation = {
+      animationmaskfile = "gfx/interface/goals/focus_Convallaria_construction.dds"
+      animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+      animationrotation = 90.0
+      animationlooping = no
+      animationtime = 0.75
+      animationdelay = 0
+      animationblendmode = "add"
+      animationtype = "scrolling"
+      animationrotationoffset = { x = 0.0 y = 0.0 }
+      animationtexturescale = { x = 1.0 y = 1.0 }
+    }
+    legacy_lazy_load = no
+  }
+
+  spriteType = {
+    name = "GFX_focus_generic_chemical_weapons_shine"
+    texturefile = "gfx/interface/goals/focus_generic_chemical_weapons.dds"
+    effectFile = "gfx/FX/buttonstate.lua"
+    animation = {
+      animationmaskfile = "gfx/interface/goals/focus_generic_chemical_weapons.dds"
+      animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+      animationrotation = -90.0
+      animationlooping = no
+      animationtime = 0.75
+      animationdelay = 0
+      animationblendmode = "add"
+      animationtype = "scrolling"
+      animationrotationoffset = { x = 0.0 y = 0.0 }
+      animationtexturescale = { x = 1.0 y = 1.0 }
+    }
+
+    animation = {
+      animationmaskfile = "gfx/interface/goals/focus_generic_chemical_weapons.dds"
+      animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+      animationrotation = 90.0
+      animationlooping = no
+      animationtime = 0.75
+      animationdelay = 0
+      animationblendmode = "add"
+      animationtype = "scrolling"
+      animationrotationoffset = { x = 0.0 y = 0.0 }
+      animationtexturescale = { x = 1.0 y = 1.0 }
+    }
+    legacy_lazy_load = no
+  }
+
+  spriteType = {
+    name = "GFX_focus_generic_japanese_farm_subsidies_shine"
+    texturefile = "gfx/interface/goals/focus_generic_japanese_farm_subsidies.dds"
+    effectFile = "gfx/FX/buttonstate.lua"
+    animation = {
+      animationmaskfile = "gfx/interface/goals/focus_generic_japanese_farm_subsidies.dds"
+      animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+      animationrotation = -90.0
+      animationlooping = no
+      animationtime = 0.75
+      animationdelay = 0
+      animationblendmode = "add"
+      animationtype = "scrolling"
+      animationrotationoffset = { x = 0.0 y = 0.0 }
+      animationtexturescale = { x = 1.0 y = 1.0 }
+    }
+
+    animation = {
+      animationmaskfile = "gfx/interface/goals/focus_generic_japanese_farm_subsidies.dds"
+      animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+      animationrotation = 90.0
+      animationlooping = no
+      animationtime = 0.75
+      animationdelay = 0
+      animationblendmode = "add"
+      animationtype = "scrolling"
+      animationrotationoffset = { x = 0.0 y = 0.0 }
+      animationtexturescale = { x = 1.0 y = 1.0 }
+    }
+    legacy_lazy_load = no
+  }
+
+  spriteType = {
+    name = "GFX_focus_generic_war_with_NMS_shine"
+    texturefile = "gfx/interface/goals/focus_generic_war_with_NMS.dds"
+    effectFile = "gfx/FX/buttonstate.lua"
+    animation = {
+      animationmaskfile = "gfx/interface/goals/focus_generic_war_with_NMS.dds"
+      animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+      animationrotation = -90.0
+      animationlooping = no
+      animationtime = 0.75
+      animationdelay = 0
+      animationblendmode = "add"
+      animationtype = "scrolling"
+      animationrotationoffset = { x = 0.0 y = 0.0 }
+      animationtexturescale = { x = 1.0 y = 1.0 }
+    }
+
+    animation = {
+      animationmaskfile = "gfx/interface/goals/focus_generic_war_with_NMS.dds"
+      animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+      animationrotation = 90.0
+      animationlooping = no
+      animationtime = 0.75
+      animationdelay = 0
+      animationblendmode = "add"
+      animationtype = "scrolling"
+      animationrotationoffset = { x = 0.0 y = 0.0 }
+      animationtexturescale = { x = 1.0 y = 1.0 }
+    }
+    legacy_lazy_load = no
+  }
+
+  spriteType = {
+    name = "GFX_focus_Lycoris_construction_shine"
+    texturefile = "gfx/interface/goals/focus_Lycoris_construction.dds"
+    effectFile = "gfx/FX/buttonstate.lua"
+    animation = {
+      animationmaskfile = "gfx/interface/goals/focus_Lycoris_construction.dds"
+      animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+      animationrotation = -90.0
+      animationlooping = no
+      animationtime = 0.75
+      animationdelay = 0
+      animationblendmode = "add"
+      animationtype = "scrolling"
+      animationrotationoffset = { x = 0.0 y = 0.0 }
+      animationtexturescale = { x = 1.0 y = 1.0 }
+    }
+
+    animation = {
+      animationmaskfile = "gfx/interface/goals/focus_Lycoris_construction.dds"
+      animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+      animationrotation = 90.0
+      animationlooping = no
+      animationtime = 0.75
+      animationdelay = 0
+      animationblendmode = "add"
+      animationtype = "scrolling"
+      animationrotationoffset = { x = 0.0 y = 0.0 }
+      animationtexturescale = { x = 1.0 y = 1.0 }
+    }
+    legacy_lazy_load = no
+  }
+
+  spriteType = {
+    name = "GFX_focus_Medicine_militia_shine"
+    texturefile = "gfx/interface/goals/focus_Medicine_militia.dds"
+    effectFile = "gfx/FX/buttonstate.lua"
+    animation = {
+      animationmaskfile = "gfx/interface/goals/focus_Medicine_militia.dds"
+      animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+      animationrotation = -90.0
+      animationlooping = no
+      animationtime = 0.75
+      animationdelay = 0
+      animationblendmode = "add"
+      animationtype = "scrolling"
+      animationrotationoffset = { x = 0.0 y = 0.0 }
+      animationtexturescale = { x = 1.0 y = 1.0 }
+    }
+
+    animation = {
+      animationmaskfile = "gfx/interface/goals/focus_Medicine_militia.dds"
+      animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+      animationrotation = 90.0
+      animationlooping = no
+      animationtime = 0.75
+      animationdelay = 0
+      animationblendmode = "add"
+      animationtype = "scrolling"
+      animationrotationoffset = { x = 0.0 y = 0.0 }
+      animationtexturescale = { x = 1.0 y = 1.0 }
+    }
+    legacy_lazy_load = no
+  }
+ 
 	#focus
 	SpriteType = {
 		name = "GFX_goal_Marisa"
@@ -253,16 +471,16 @@
 		legacy_lazy_load = no
 	}
 	SpriteType = {
-		name = "GFX_goal_SEI_kick_seija"
-		texturefile = "gfx/interface/goals/SEI_kick_seija.dds"
+		name = "GFX_goal_SEJ_kick_seija"
+		texturefile = "gfx/interface/goals/SEJ_kick_seija.dds"
 				
 	}
 	SpriteType = {
-		name = "GFX_goal_SEI_kick_seija_shine"
-		texturefile = "gfx/interface/goals/SEI_kick_seija.dds"			
+		name = "GFX_goal_SEJ_kick_seija_shine"
+		texturefile = "gfx/interface/goals/SEJ_kick_seija.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/SEI_kick_seija.dds"			
+			animationmaskfile = "gfx/interface/goals/SEJ_kick_seija.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -275,7 +493,7 @@
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/SEI_kick_seija.dds"			
+			animationmaskfile = "gfx/interface/goals/SEJ_kick_seija.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -289,16 +507,16 @@
 		legacy_lazy_load = no
 	}
 	SpriteType = {
-		name = "GFX_goal_SEI_vassalize_shinmyoumaru"
-		texturefile = "gfx/interface/goals/SEI_vassalize_shinmyoumaru.dds"
+		name = "GFX_goal_SEJ_vassalize_shinmyoumaru"
+		texturefile = "gfx/interface/goals/SEJ_vassalize_shinmyoumaru.dds"
 				
 	}
 	SpriteType = {
-		name = "GFX_goal_SEI_vassalize_shinmyoumaru_shine"
-		texturefile = "gfx/interface/goals/SEI_vassalize_shinmyoumaru.dds"			
+		name = "GFX_goal_SEJ_vassalize_shinmyoumaru_shine"
+		texturefile = "gfx/interface/goals/SEJ_vassalize_shinmyoumaru.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/SEI_vassalize_shinmyoumaru.dds"			
+			animationmaskfile = "gfx/interface/goals/SEJ_vassalize_shinmyoumaru.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -311,7 +529,7 @@
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/SEI_vassalize_shinmyoumaru.dds"			
+			animationmaskfile = "gfx/interface/goals/SEJ_vassalize_shinmyoumaru.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -433,16 +651,16 @@
 		legacy_lazy_load = no
 	}
 	SpriteType = {
-		name = "GFX_goal_YSK_moriya_sanae"
-		texturefile = "gfx/interface/goals/YSK_moriya_sanae.dds"
+		name = "GFX_goal_MRY_moriya_sanae"
+		texturefile = "gfx/interface/goals/MRY_moriya_sanae.dds"
 				
 	}
 	SpriteType = {
-		name = "GFX_goal_YSK_moriya_sanae_shine"
-		texturefile = "gfx/interface/goals/YSK_moriya_sanae.dds"			
+		name = "GFX_goal_MRY_moriya_sanae_shine"
+		texturefile = "gfx/interface/goals/MRY_moriya_sanae.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/YSK_moriya_sanae.dds"			
+			animationmaskfile = "gfx/interface/goals/MRY_moriya_sanae.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -455,7 +673,7 @@
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/YSK_moriya_sanae.dds"			
+			animationmaskfile = "gfx/interface/goals/MRY_moriya_sanae.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -469,16 +687,16 @@
 		legacy_lazy_load = no
 	}
 	SpriteType = {
-		name = "GFX_goal_YSK_moriya_suwako"
-		texturefile = "gfx/interface/goals/YSK_moriya_suwako.dds"
+		name = "GFX_goal_MRY_moriya_suwako"
+		texturefile = "gfx/interface/goals/MRY_moriya_suwako.dds"
 				
 	}
 	SpriteType = {
-		name = "GFX_goal_YSK_moriya_suwako_shine"
-		texturefile = "gfx/interface/goals/YSK_moriya_suwako.dds"			
+		name = "GFX_goal_MRY_moriya_suwako_shine"
+		texturefile = "gfx/interface/goals/MRY_moriya_suwako.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/YSK_moriya_suwako.dds"			
+			animationmaskfile = "gfx/interface/goals/MRY_moriya_suwako.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -491,7 +709,7 @@
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/YSK_moriya_suwako.dds"			
+			animationmaskfile = "gfx/interface/goals/MRY_moriya_suwako.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -505,16 +723,16 @@
 		legacy_lazy_load = no
 	}
 	SpriteType = {
-		name = "GFX_goal_YSK_moriya_yasaka"
-		texturefile = "gfx/interface/goals/YSK_moriya_yasaka.dds"
+		name = "GFX_goal_MRY_moriya_yasaka"
+		texturefile = "gfx/interface/goals/MRY_moriya_yasaka.dds"
 				
 	}
 	SpriteType = {
-		name = "GFX_goal_YSK_moriya_yasaka_shine"
-		texturefile = "gfx/interface/goals/YSK_moriya_yasaka.dds"			
+		name = "GFX_goal_MRY_moriya_yasaka_shine"
+		texturefile = "gfx/interface/goals/MRY_moriya_yasaka.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/YSK_moriya_yasaka.dds"			
+			animationmaskfile = "gfx/interface/goals/MRY_moriya_yasaka.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -527,7 +745,7 @@
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/YSK_moriya_yasaka.dds"			
+			animationmaskfile = "gfx/interface/goals/MRY_moriya_yasaka.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -1007,6 +1225,10 @@
 		texturefile = "gfx/interface/laws/shrine.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_World"
+		texturefile = "gfx/interface/laws/world.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_Organization"
 		texturefile = "gfx/interface/laws/org.dds"
 	}
@@ -1198,8 +1420,8 @@
 		texturefile = "gfx/interface/manufacturers/manufacture_KAG.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_manufacturer_KOG"
-		texturefile = "gfx/interface/manufacturers/manufacture_KOG.dds"
+		name = "GFX_idea_manufacturer_TKM"
+		texturefile = "gfx/interface/manufacturers/manufacture_TKM.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_manufacturer_KAP"
@@ -1210,8 +1432,8 @@
 		texturefile = "gfx/interface/manufacturers/manufacture_KAS.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_manufacturer_KUT"
-		texturefile = "gfx/interface/manufacturers/manufacture_KUT.dds"
+		name = "GFX_idea_manufacturer_YUG"
+		texturefile = "gfx/interface/manufacturers/manufacture_YUG.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_manufacturer_LAC"
@@ -1226,8 +1448,8 @@
 		texturefile = "gfx/interface/manufacturers/manufacture_MEL.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_manufacturer_MHP"
-		texturefile = "gfx/interface/manufacturers/manufacture_MHP.dds"
+		name = "GFX_idea_manufacturer_PRS"
+		texturefile = "gfx/interface/manufacturers/manufacture_PRS.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_manufacturer_MRS"
@@ -1282,12 +1504,12 @@
 		texturefile = "gfx/interface/manufacturers/manufacture_RNS.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_manufacturer_RUH"
-		texturefile = "gfx/interface/manufacturers/manufacture_RUH.dds"	
+		name = "GFX_idea_manufacturer_UTH"
+		texturefile = "gfx/interface/manufacturers/manufacture_UTH.dds"	
 	}
 	spriteType = {
-		name = "GFX_idea_manufacturer_SAK"
-		texturefile = "gfx/interface/manufacturers/manufacture_SAK.dds"
+		name = "GFX_idea_manufacturer_NMN"
+		texturefile = "gfx/interface/manufacturers/manufacture_NMN.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_manufacturer_SAT"
@@ -1298,20 +1520,20 @@
 		texturefile = "gfx/interface/manufacturers/manufacture_SCA.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_manufacturer_SEI"
-		texturefile = "gfx/interface/manufacturers/manufacture_SEI.dds"
+		name = "GFX_idea_manufacturer_SEJ"
+		texturefile = "gfx/interface/manufacturers/manufacture_SEJ.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_manufacturer_SHO"
-		texturefile = "gfx/interface/manufacturers/manufacture_SHO.dds"
+		name = "GFX_idea_manufacturer_PRI"
+		texturefile = "gfx/interface/manufacturers/manufacture_PRI.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_manufacturer_SKI"
 		texturefile = "gfx/interface/manufacturers/manufacture_SKI.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_manufacturer_SPG"
-		texturefile = "gfx/interface/manufacturers/manufacture_SPG.dds"
+		name = "GFX_idea_manufacturer_LIL"
+		texturefile = "gfx/interface/manufacturers/manufacture_LIL.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_manufacturer_SRB"
@@ -1322,8 +1544,8 @@
 		texturefile = "gfx/interface/manufacturers/manufacture_TEG.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_manufacturer_TEN"
-		texturefile = "gfx/interface/manufacturers/manufacture_TEN.dds"
+		name = "GFX_idea_manufacturer_TES"
+		texturefile = "gfx/interface/manufacturers/manufacture_TES.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_manufacturer_UNA"
@@ -1338,8 +1560,8 @@
 		texturefile = "gfx/interface/manufacturers/manufacture_UUG.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_manufacturer_WAI"
-		texturefile = "gfx/interface/manufacturers/manufacture_WAI.dds"
+		name = "GFX_idea_manufacturer_KMC"
+		texturefile = "gfx/interface/manufacturers/manufacture_KMC.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_manufacturer_WAK"
@@ -1354,8 +1576,8 @@
 		texturefile = "gfx/interface/manufacturers/manufacture_YKR.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_manufacturer_YSK"
-		texturefile = "gfx/interface/manufacturers/manufacture_YSK.dds"
+		name = "GFX_idea_manufacturer_MRY"
+		texturefile = "gfx/interface/manufacturers/manufacture_MRY.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_manufacturer_YUK"
@@ -1371,8 +1593,8 @@
 	}
 
 	spriteType = {
-		name = "GFX_idea_manufacturer_NIT"
-		texturefile = "gfx/interface/manufacturers/manufacture_NIT.dds"
+		name = "GFX_idea_manufacturer_NTR"
+		texturefile = "gfx/interface/manufacturers/manufacture_NTR.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_manufacturer_UDO"
@@ -1384,16 +1606,16 @@
 		texturefile = "gfx/interface/manufacturers/manufacture_YYK.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_manufacturer_TEN"
-		texturefile = "gfx/interface/manufacturers/manufacture_TEN.dds"
+		name = "GFX_idea_manufacturer_TES"
+		texturefile = "gfx/interface/manufacturers/manufacture_TES.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_manufacturer_CFA"
 		texturefile = "gfx/interface/manufacturers/manufacture_CFA.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_manufacturer_WAI"
-		texturefile = "gfx/interface/manufacturers/manufacture_WAI.dds"
+		name = "GFX_idea_manufacturer_KMC"
+		texturefile = "gfx/interface/manufacturers/manufacture_KMC.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_manufacturer_SKI"
@@ -1404,20 +1626,20 @@
 		texturefile = "gfx/interface/manufacturers/manufacture_SAT.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_manufacturer_RUH"
-		texturefile = "gfx/interface/manufacturers/manufacture_RUH.dds"
+		name = "GFX_idea_manufacturer_UTH"
+		texturefile = "gfx/interface/manufacturers/manufacture_UTH.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_manufacturer_KUT"
-		texturefile = "gfx/interface/manufacturers/manufacture_KUT.dds"
+		name = "GFX_idea_manufacturer_YUG"
+		texturefile = "gfx/interface/manufacturers/manufacture_YUG.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_manufacturer_UUG"
 		texturefile = "gfx/interface/manufacturers/manufacture_UUG.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_manufacturer_MHP"
-		texturefile = "gfx/interface/manufacturers/manufacture_MHP.dds"
+		name = "GFX_idea_manufacturer_PRS"
+		texturefile = "gfx/interface/manufacturers/manufacture_PRS.dds"
 	}
 
 	spriteType = {
@@ -1429,8 +1651,8 @@
 		texturefile = "gfx/interface/manufacturers/manufacture_ALI.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_manufacturer_FUJ"
-		texturefile = "gfx/interface/manufacturers/manufacture_FUJ.dds"
+		name = "GFX_idea_manufacturer_MOK"
+		texturefile = "gfx/interface/manufacturers/manufacture_MOK.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_manufacturer_CLO"
@@ -1441,24 +1663,48 @@
 		texturefile = "gfx/interface/manufacturers/manufacture_GYK.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_manufacturer_HNY"
-		texturefile = "gfx/interface/manufacturers/manufacture_HNY.dds"
+		name = "GFX_idea_manufacturer_KEK"
+		texturefile = "gfx/interface/manufacturers/manufacture_KEK.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_manufacturer_HCT"
 		texturefile = "gfx/interface/manufacturers/manufacture_HCT.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_manufacturer_USZ"
-		texturefile = "gfx/interface/manufacturers/manufacture_USZ.dds"
+		name = "GFX_idea_manufacturer_URM"
+		texturefile = "gfx/interface/manufacturers/manufacture_URM.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_manufacturer_KCC"
-		texturefile = "gfx/interface/manufacturers/manufacture_KCC.dds"
+		name = "GFX_idea_manufacturer_YCE"
+		texturefile = "gfx/interface/manufacturers/manufacture_YCE.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_manufacturer_KRK"
-		texturefile = "gfx/interface/manufacturers/manufacture_KRK.dds"
+		name = "GFX_idea_manufacturer_SAK"
+		texturefile = "gfx/interface/manufacturers/manufacture_SAK.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_KYK"
+		texturefile = "gfx/interface/manufacturers/manufacture_KYK.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_HGH"
+		texturefile = "gfx/interface/manufacturers/manufacture_HGH.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_IKU"
+		texturefile = "gfx/interface/manufacturers/manufacture_IKU.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_YMM"
+		texturefile = "gfx/interface/manufacturers/manufacture_YMM.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_ICR"
+		texturefile = "gfx/interface/manufacturers/manufacture_ICR.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_manufacturer_MNM"
+		texturefile = "gfx/interface/manufacturers/manufacture_MNM.dds"
 	}
 
 	#############New Ideo
@@ -1628,6 +1874,25 @@
 	spriteType = {
 		name = "GFX_achievement_entry_bg_cant"
 		textureFile = "gfx/interface/achievement_entry_bg_cant.dds"
+	}
+
+	###subject
+	spriteType = {
+		name = "GFX_autonomy_puppet_qinwai_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_collaboration_government.dds"
+	}
+	spriteType = {
+		name = "GFX_autonomy_integrated_puppet_qinwai_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_supervised_state.dds"
+	}
+
+	spriteType = {
+		name = "GFX_autonomy_integrated_puppet_neworder_fandong_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_reichskommissariat_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_autonomy_puppet_neworder_fandong_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_reichsprotectorate_icon.dds"
 	}
 
 	

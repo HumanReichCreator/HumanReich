@@ -1,39 +1,32 @@
 ﻿capital = 258
-138.8.13 = {
-
-}
-141.6.2 = {
-    
-}
-142.3.8 = {
-    
-}
-144.2.5 = {
-    
-}
 146.1.1 = {
     set_technology = {
         #通用武器线
-        spell_card = 1
-        buqiang117 = 1
-        buqiang140 = 1
-        buqiang145 = 1
-        tangxiangailiang140 = 1
-        jiandanmiaozhunjing140 = 1
-        tangxiangailiang145 = 1
-        qijumiaozhunjing145 = 1
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
+        spell_card2 = 1
+        spear2 = 1
+        gun2 = 1
+        lingliliushuixian = 1
+        spear3 = 1
+        gun3 = 1
             
         #辅助
 
         #专用辅助
-        fangzhihuopao143 = 1
+        mortar1 = 1
+        
 
         #专用基础
 
         #专用进阶
-        qiyouche146 = 1
 
         #混合系
+        sc_shield1 = 1
 
         #陆军学说
         zhanchangzhihui140 = 1
@@ -63,6 +56,7 @@
         kongjuyizhiji1 = 1
             
     }
+    
 }
 146.1.1={
     oob = "EMB_146"
@@ -92,10 +86,10 @@
     YKR = {
         give_guarantee = EMB
     }
-    SEI = {
+    SEJ = {
         give_guarantee = EMB
     }
-    KOG = {
+    TKM = {
         give_guarantee = EMB
     }
     NMS = {
@@ -129,52 +123,47 @@
 
 
 create_country_leader = {
-    # name = "Council"
-    name = "联合使馆"
-    desc = ""
-    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    # name = "Okunoda Miyoi"
+    name = "奥野田美宵"
+    picture = "gfx/leaders/HUM/HUM_may.dds"
     ideology = guli_type
     traits = {
-        #warrior_code
+
     }
 }
 create_country_leader = {
-    # name = "Council"
-    name = "联合使馆"
-    desc = ""
-    picture = "gfx/leaders/ZYD/ZYD_council.dds"
-    ideology = fandong_type
-    traits = {
-        #warrior_code
-    }
-}
-create_country_leader = {
-    # name = "Council"
-    name = "联合使馆"
-    desc = ""
-    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    # name = "Okunoda Miyoi"
+    name = "奥野田美宵"
+    picture = "gfx/leaders/HUM/HUM_may.dds"
     ideology = neworder_type
     traits = {
-        #warrior_code
+
     }
 }
 create_country_leader = {
-    # name = "Council"
-    name = "联合使馆"
-    desc = ""
-    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    # name = "Okunoda Miyoi"
+    name = "奥野田美宵"
+    picture = "gfx/leaders/HUM/HUM_may.dds"
+    ideology = fandong_type
+    traits = {
+
+    }
+}
+create_country_leader = {
+    # name = "Okunoda Miyoi"
+    name = "奥野田美宵"
+    picture = "gfx/leaders/HUM/HUM_may.dds"
     ideology = qinwai_type
     traits = {
-        #warrior_code
+
     }
 }
 create_country_leader = {
-    # name = "Council"
-    name = "联合使馆"
-    desc = ""
-    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    # name = "Okunoda Miyoi"
+    name = "奥野田美宵"
+    picture = "gfx/leaders/HUM/HUM_may.dds"
     ideology = oldorder_type
     traits = {
-        #warrior_code
+
     }
 }

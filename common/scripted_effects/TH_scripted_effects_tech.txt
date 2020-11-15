@@ -29,6 +29,22 @@
 # 		infantry_sc_support_inherit = yes
 # 	}
 # }
+race_tech_clear = {
+	hidden_effect = {
+		beast_race_clear = yes
+		fairy_race_clear = yes
+		ghost_race_clear = yes
+		god_race_clear = yes
+		human_race_clear = yes
+		kappa_race_clear = yes
+		magician_race_clear = yes
+		pri_youkai_race_clear = yes
+		tengu_race_clear = yes
+		youkai_race_clear = yes
+		tech_initialize = yes
+	    country_event = glo.3000
+	}
+}
 
 clear_waike_tech = {
 	electronic_sc_clear = yes
@@ -36,8 +52,9 @@ clear_waike_tech = {
 	infantry_sc_advanced_clear = yes
 	infantry_sc_primary_clear = yes
 	infantry_sc_support_clear = yes
-	kap_tech_clear = yes
-	hum_tech_clear = yes
+	infantry_sc_combined_clear = yes
+	kap_tech_tech_clear = yes
+	hum_tech_tech_clear = yes
 	
 }
 
@@ -47,8 +64,9 @@ clear_lingben_tech = {
 	infantry_ma_advanced_clear = yes
 	infantry_ma_primary_clear = yes
 	infantry_ma_support_clear = yes
-	youkai_tech_clear = yes
-	p_youkai_tech_clear = yes
+	infantry_ma_combined_clear = yes
+	youkai_tech_tech_clear = yes
+	p_youkai_tech_tech_clear = yes
 
 }
 
@@ -141,108 +159,138 @@ tech_initialize = {
    }
 }
 #抽卡
-YSK_research1_tech = {
+MRY_research1_tech = {
 	random_list = {
 		10 = {
 			effect_tooltip = {
 				add_tech_bonus = { bonus = 0.1 uses = 1 category = jiegou }
 			}
-			set_variable = { YSK_research_bonus = 1 }
+			set_variable = { MRY_research_bonus = 1 }
 		}
 		10 = {
 			effect_tooltip = {
 				add_tech_bonus = { bonus = 0.1 uses = 1 category = main }
 			}
-			set_variable = { YSK_research_bonus = 2 }
+			set_variable = { MRY_research_bonus = 2 }
 		}
 		10 = {
 			effect_tooltip = {
 				add_tech_bonus = { bonus = 0.1 uses = 1 category = fuzhu }
 			}
-			set_variable = { YSK_research_bonus = 3 }
+			set_variable = { MRY_research_bonus = 3 }
 		}
 		10 = {
 			effect_tooltip = {
 				add_tech_bonus = { bonus = 0.1 uses = 1 category = build }
 			}
-			set_variable = { YSK_research_bonus = 4 }
+			set_variable = { MRY_research_bonus = 4 }
 		}
 		10 = {
 			effect_tooltip = {
 				add_tech_bonus = { bonus = 0.1 uses = 1 category = resource }
 			}	
-			set_variable = { YSK_research_bonus = 5 }
+			set_variable = { MRY_research_bonus = 5 }
 		}
 		10 = {
 			effect_tooltip = {
 				add_tech_bonus = { bonus = 0.1 uses = 1 category = jiemi }
 			}
-			set_variable = { YSK_research_bonus = 6 }
+			set_variable = { MRY_research_bonus = 6 }
 		}
 		10 = {
 			effect_tooltip = {
 				add_tech_bonus = { bonus = 0.1 uses = 1 category = jiami }
 			}
-			set_variable = { YSK_research_bonus = 7 }
+			set_variable = { MRY_research_bonus = 7 }
 		}
 		10 = {
 			effect_tooltip = {
 				add_tech_bonus = { bonus = 0.1 uses = 1 category = radio }
 			}
-			set_variable = { YSK_research_bonus = 8 }
+			set_variable = { MRY_research_bonus = 8 }
+		}
+		5 = {
+			effect_tooltip = {
+				add_tech_bonus = { bonus = 0.1 uses = 1 category = race }
+			}
+			set_variable = { MRY_research_bonus = 9 }
+		}
+		5 = {
+			effect_tooltip = {
+				add_tech_bonus = { bonus = 0.1 uses = 1 category = techtree_tech }
+			}
+			set_variable = { MRY_research_bonus = 10 }
+		}
+		1 = {
+			effect_tooltip = {
+				add_tech_bonus = { bonus = 0.1 uses = 1 category = secret }
+			}
+			set_variable = { MRY_research_bonus = 11 }
 		}
 	}
 }
 
-YSK_research2_tech = {
+MRY_research2_tech = {
 	random_list = {
 		10 = {
 			effect_tooltip = {
-				add_tech_bonus = { bonus = 0.1 uses = 1 category = science_weapons }
+				add_tech_bonus = { bonus = 0.1 uses = 1 category = primary_weapons }
 			}
-			set_variable = { YSK_research_bonus = 9 }
+			set_variable = { MRY_research_bonus = 12 }
 		}
 		10 = {
 			effect_tooltip = {
-				add_tech_bonus = { bonus = 0.1 uses = 1 category = science_weapons_improve }
+				add_tech_bonus = { bonus = 0.1 uses = 1 category = mortar }
 			}
-			set_variable = { YSK_research_bonus = 10 }
+			set_variable = { MRY_research_bonus = 13 }
 		}
 		10 = {
 			effect_tooltip = {
-				add_tech_bonus = { bonus = 0.1 uses = 1 category = science_vehicle_weapons }
+				add_tech_bonus = { bonus = 0.1 uses = 1 category = anti_shield }
 			}
-			set_variable = { YSK_research_bonus = 11 }
-		}
-		10 = {
-			effect_tooltip = {
-				add_tech_bonus = { bonus = 0.1 uses = 1 category = science_artillery_weapons }
-			}
-			set_variable = { YSK_research_bonus = 12 }
-		}
-		10 = {
-			effect_tooltip = {
-				add_tech_bonus = { bonus = 0.1 uses = 1 category = science_artillery_improve }
-			}
-			set_variable = { YSK_research_bonus = 13 }
+			set_variable = { MRY_research_bonus = 14 }
 		}
 		10 = {
 			effect_tooltip = {
 				add_tech_bonus = { bonus = 0.1 uses = 1 category = support_tech }
 			}
-			set_variable = { YSK_research_bonus = 14 }
+			set_variable = { MRY_research_bonus = 15 }
 		}
 		10 = {
 			effect_tooltip = {
 				add_tech_bonus = { bonus = 0.1 uses = 1 category = basic_doctrine }
 			}
-			set_variable = { YSK_research_bonus = 15 }
+			set_variable = { MRY_research_bonus = 16 }
 		}
-		10 = {
+		5 = {
 			effect_tooltip = {
 				add_tech_bonus = { bonus = 0.1 uses = 1 category = land_doctrine }
 			}
-			set_variable = { YSK_research_bonus = 16 }
+			set_variable = { MRY_research_bonus = 17 }
+		}
+		5 = {
+			effect_tooltip = {
+				add_tech_bonus = { bonus = 0.1 uses = 1 category = shield }
+			}
+			set_variable = { MRY_research_bonus = 18 }
+		}
+		5 = {
+			effect_tooltip = {
+				add_tech_bonus = { bonus = 0.1 uses = 1 category = sf_force }
+			}
+			set_variable = { MRY_research_bonus = 19 }
+		}
+		1 = {
+			effect_tooltip = {
+				add_tech_bonus = { bonus = 0.1 uses = 1 category = heavy }
+			}
+			set_variable = { MRY_research_bonus = 20 }
+		}
+		1 = {
+			effect_tooltip = {
+				add_tech_bonus = { bonus = 0.1 uses = 1 category = shield_weapons }
+			}
+			set_variable = { MRY_research_bonus = 21 }
 		}
 	}
 }

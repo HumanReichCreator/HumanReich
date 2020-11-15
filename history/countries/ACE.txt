@@ -1,20 +1,9 @@
-﻿capital = 72
-138.8.13 = {
-
-}
-141.6.2 = {
-    
-}
-142.3.8 = {
-    
-}
-144.2.5 = {
-    
-}
+﻿capital = 89
 146.1.1 = {
     set_technology = {
         #通用武器线
-        spell_card = 1
+        spell_card1 = 1
+        spear1 = 1
             
         #辅助
 
@@ -33,12 +22,13 @@
         #专用工程学
 
         #工业
-            
+        production_theory = 1
         #专用工业
 
         #种族
             
     }
+    
 }
 set_technology = {
     ghost_tech = 1

@@ -272,6 +272,10 @@ focus_tree = {
       }
       ai_will_do = {
         factor = 1
+        modifier = {
+          date > 148.6.1
+          factor = 4
+        }
       }
   }
 
@@ -323,6 +327,10 @@ focus_tree = {
             }
           }
         }
+        modifier = {
+          date > 148.6.1
+          factor = 4
+        }
       }
   }
 
@@ -369,6 +377,10 @@ focus_tree = {
       
       ai_will_do = {
         factor = 1
+        modifier = {
+          date > 148.6.1
+          factor = 4
+        }
       }
   }
 
@@ -431,6 +443,10 @@ focus_tree = {
       }
       ai_will_do = {
         factor = 1
+        modifier = {
+          date > 148.6.1
+          factor = 4
+        }
       }
   }
 
@@ -641,6 +657,10 @@ focus_tree = {
       }
       ai_will_do = {
         factor = 1
+        modifier = {
+          date > 148.6.1
+          factor = 4
+        }
       }
   }
 
@@ -659,14 +679,14 @@ focus_tree = {
 
       available ={
         or = {
-          neworder > 0.5
+          neworder > 0.45
           has_government = neworder
         } 
       }
 
       completion_reward = {
         add_named_threat = {
-          threat = 3
+          threat = 2
           name =  CIR_yaojingzhongzuzhuyi
         }
         add_war_support = 0.05
@@ -689,6 +709,10 @@ focus_tree = {
       
       ai_will_do = {
         factor = 1
+        modifier = {
+          date > 148.6.1
+          factor = 4
+        }
       }
   }
 
@@ -718,6 +742,10 @@ focus_tree = {
       }
       ai_will_do = {
         factor = 1
+        modifier = {
+          date > 148.6.1
+          factor = 4
+        }
       }
   }
 
@@ -762,7 +790,7 @@ focus_tree = {
 
       prerequisite = {
         focus = CIR_mofazhisendeziyuan
-        focus = CIR_yaojingdeshentou
+        # focus = CIR_yaojingdeshentou
       }
       # mutually_exclusive = {
       #   focus = ty_tourububing
@@ -774,7 +802,7 @@ focus_tree = {
       relative_position_id = CIR_mofazhisendeziyuan
 
       available ={
-        threat > 0.25
+        threat > 0.4
         is_subject = no
         or = {
           has_government = neworder
@@ -849,6 +877,9 @@ focus_tree = {
         # }
         
       }
+
+      continue_if_invalid = yes
+
       ai_will_do = {
         factor = 1
         modifier = {
@@ -883,6 +914,10 @@ focus_tree = {
       }
       ai_will_do = {
         factor = 1
+        modifier = {
+          date > 148.6.1
+          factor = 4
+        }
       }
   }
 
@@ -901,11 +936,11 @@ focus_tree = {
       relative_position_id = CIR_yaojingzuzhihua
 
       will_lead_to_war_with = NIB
-      will_lead_to_war_with = SEI
+      will_lead_to_war_with = SEJ
 
       available ={
         is_subject = no
-        threat > 0.5
+        threat > 0.6
         or = {
           has_government = neworder
           123 = {
@@ -926,7 +961,7 @@ focus_tree = {
         123 = {
           is_owned_by = ROOT
         }
-        # SEI = {
+        # SEJ = {
         #   bypass_declare_war = yes
         # }
       }
@@ -968,6 +1003,7 @@ focus_tree = {
           }
         }
       }
+      continue_if_invalid = yes
       ai_will_do = {
         factor = 1
         modifier = {
@@ -1010,7 +1046,11 @@ focus_tree = {
         
       }
       ai_will_do = {
-        factor = 1
+        factor = 4
+        modifier = {
+          date > 148.6.1
+          factor = 4
+        }
       }
   }  
   
@@ -1068,6 +1108,10 @@ focus_tree = {
             }
           }
         }
+        modifier = {
+          date > 148.6.1
+          factor = 4
+        }
       }
   }
   focus = {
@@ -1103,6 +1147,10 @@ focus_tree = {
       }
       ai_will_do = {
         factor = 1
+        modifier = {
+          date > 148.6.1
+          factor = 4
+        }
       }
   }
   focus = {
@@ -1139,6 +1187,10 @@ focus_tree = {
       }
       ai_will_do = {
         factor = 1
+        modifier = {
+          date > 148.6.1
+          factor = 4
+        }
       }
   }
   focus = {
@@ -1164,6 +1216,10 @@ focus_tree = {
       }
       ai_will_do = {
         factor = 1
+        modifier = {
+          date > 148.6.1
+          factor = 4
+        }
       }
   }
 
@@ -1186,19 +1242,20 @@ focus_tree = {
       relative_position_id = CIR_zhenduiemo
 
       available ={
-        SEI = { is_faction_leader = yes}
-        SEI = { has_government = ROOT }
+        SEJ = { is_faction_leader = yes}
+        SEJ = { has_government = ROOT }
         has_war = no
       }
 
       completion_reward = {
         add_named_threat = {
-          threat = 2
+          threat = 1
           name =  CIR_chongxinxiakeshang
         }
         add_political_power = 50
-        SEI = { 
+        SEJ = { 
           add_to_faction = ROOT 
+          qiangjiemeng = yes
         }
         hidden_effect = {
           news_event = { id = cir.10 days = 2}
@@ -1230,17 +1287,18 @@ focus_tree = {
       available ={
         has_war = no
         or  ={
-          SEI = { is_faction_leader = no}
-          not = { SEI = { has_government = fandong} }
+          SEJ = { is_faction_leader = no}
+          not = { SEJ = { has_government = fandong} }
         }
       }
 
       completion_reward = {
         add_named_threat = {
-          threat = 3.5
+          threat = 3
           name =  CIR_jieqiqizhi
         }
         add_political_power = 200
+        add_ideas = can_create_faction_idea
         create_faction = CIR_faction2
 
         hidden_effect = {
@@ -1277,6 +1335,10 @@ focus_tree = {
       }
       ai_will_do = {
         factor = 1
+        modifier = {
+          date > 148.6.1
+          factor = 4
+        }
       }
   }
 
@@ -1306,6 +1368,10 @@ focus_tree = {
       }
       ai_will_do = {
         factor = 1
+        modifier = {
+          date > 148.6.1
+          factor = 4
+        }
       }
   }
 
@@ -1326,7 +1392,10 @@ focus_tree = {
       relative_position_id = CIR_yaojingdeshentou
 
       available ={
-        threat > 0.7
+        or = {
+          date > 149.6.1
+          threat > 0.7
+        }
         is_subject = no
         or = {
           has_government = neworder
@@ -1401,6 +1470,8 @@ focus_tree = {
         }
       }
 
+      continue_if_invalid = yes
+      
       ai_will_do = {
         factor = 1
         modifier = {
@@ -1411,6 +1482,10 @@ focus_tree = {
             }
           }
           factor = 0
+        }
+        modifier = {
+          date > 148.6.1
+          factor = 4
         }
       }
 
@@ -1565,13 +1640,13 @@ focus_tree = {
           if = {
             limit = {
               has_government = qinwai
-              country_existS = SPG
-              SPG = {
+              country_existS = LIL
+              LIL = {
                 is_subject = no
                 is_ai = yes
               }
             }
-            SPG = {
+            LIL = {
               save_global_event_target_as = CIR_target
             }
             country_event = { id = cir.25 days = 10 }
@@ -1613,7 +1688,7 @@ focus_tree = {
       completion_reward = {
         set_cosmetic_tag = CIR_muguo
         add_named_threat = {
-          threat = 1.5
+          threat = 5
           name =  CIR_yaojingmuguo
         }
         swap_ideas = { add_idea = Country remove_idea = Town}
@@ -1877,6 +1952,10 @@ focus_tree = {
             }
           }
         }
+        modifier = {
+          date > 148.6.1
+          factor = 4
+        }
       }
   }
 
@@ -1923,6 +2002,10 @@ focus_tree = {
 
       ai_will_do = {
         factor = 1
+        modifier = {
+          date > 148.6.1
+          factor = 4
+        }
       }
   }
 
@@ -1967,6 +2050,10 @@ focus_tree = {
 
       ai_will_do = {
         factor = 1
+        modifier = {
+          date > 148.6.1
+          factor = 4
+        }
       }
   }
 
@@ -1995,17 +2082,17 @@ focus_tree = {
         custom_effect_tooltip = CIR_same
         if = {
           limit = {
-            SEI = {
+            SEJ = {
               has_government = ROOT
             }
           }
-          add_opinion_modifier = { target = SEI modifier = CIR_panluanjiaoliu_op }
-          reverse_add_opinion_modifier = { target = SEI modifier = CIR_panluanjiaoliu_op }
+          add_opinion_modifier = { target = SEJ modifier = CIR_panluanjiaoliu_op }
+          reverse_add_opinion_modifier = { target = SEJ modifier = CIR_panluanjiaoliu_op }
           
           else = {
             effect_tooltip = {
-              add_opinion_modifier = { target = SEI modifier = CIR_panluanjiaoliu_op }
-              reverse_add_opinion_modifier = { target = SEI modifier = CIR_panluanjiaoliu_op }
+              add_opinion_modifier = { target = SEJ modifier = CIR_panluanjiaoliu_op }
+              reverse_add_opinion_modifier = { target = SEJ modifier = CIR_panluanjiaoliu_op }
             }
           }
         }
@@ -2013,6 +2100,10 @@ focus_tree = {
 
       ai_will_do = {
         factor = 1
+        modifier = {
+          date > 148.6.1
+          factor = 4
+        }
       }
   }
 
@@ -2051,6 +2142,10 @@ focus_tree = {
 
       ai_will_do = {
         factor = 1
+        modifier = {
+          date > 148.6.1
+          factor = 4
+        }
       }
   }
 
@@ -2085,6 +2180,10 @@ focus_tree = {
 
       ai_will_do = {
         factor = 1
+        modifier = {
+          date > 148.6.1
+          factor = 4
+        }
       }
   }
   
@@ -2105,12 +2204,8 @@ focus_tree = {
       relative_position_id = CIR_duifazhandegaibian
 
       available ={
-        
-      }
-
-      available ={
         or = {
-          qinwai > 0.5
+          qinwai > 0.45
           has_government = qinwai
         } 
       }
@@ -2143,6 +2238,10 @@ focus_tree = {
 
       ai_will_do = {
         factor = 1
+        modifier = {
+          date > 148.6.1
+          factor = 4
+        }
       }
   }
 
@@ -2188,21 +2287,33 @@ focus_tree = {
       relative_position_id = CIR_yumofashihejie
 
       available ={
-        not = { has_war_with = MRS }
-        country_existS = MRS
-        MRS = { is_subject = no}
+        is_subject = no
+        or = {
+          MRS = { is_subject = no}
+          ALI = { is_subject = no}
+        }
         custom_trigger_tooltip = {
           tooltip = CIR_hejiechenggong
           has_country_flag = CIR_hejiechenggong
         }
       }
 
-
+      bypass = {
+        and = {
+          ALI = {
+            bypass_declare_war = yes
+          }
+          MRS = {
+            bypass_declare_war = yes
+          }
+        }
+      }
       completion_reward = {
-        MRS = { country_event = { id = cir.17 hours = 11 }}
+        188 = { state_owner_get = yes }
+        event_target:trigger_target = {country_event = { id = cir.17 hours = 11 }}
         custom_effect_tooltip = TEG_accept
         effect_tooltip = {
-          MRS = {
+          event_target:trigger_target = {
             subject_level4 = yes
           }
         }
@@ -2233,11 +2344,12 @@ focus_tree = {
 
       completion_reward = {
         add_named_threat = {
-          threat = 2
+          threat = 1
           name =  CIR_yaojinglianbang
         }
+        add_ideas = can_create_faction_idea
         create_faction = CIR_faction1
-        SPG = {
+        LIL = {
           can_use = yes
           xianghubaodu = yes
           jiemeng = yes
@@ -2249,6 +2361,10 @@ focus_tree = {
 
       ai_will_do = {
         factor = 1
+        modifier = {
+          date > 148.6.1
+          factor = 4
+        }
       }
   }
 
@@ -2272,14 +2388,14 @@ focus_tree = {
         is_subject = no
         or = {
           CIR = { has_war_with = SCA }
-          SPG = { has_war_with = SCA }
+          LIL = { has_war_with = SCA }
         }
       }
 
 
       completion_reward = {
         add_ideas = CIR_qianhoujiaji_idea
-        SPG = { add_ideas = CIR_qianhoujiaji_idea }
+        LIL = { add_ideas = CIR_qianhoujiaji_idea }
       }
 
       ai_will_do = {
@@ -2341,7 +2457,7 @@ focus_tree = {
       completion_reward = {
         add_tech_bonus = {
           bonus = 0.8
-          category = magic_weapons
+          category = primary_weapons
           uses = 1
         }
       }
@@ -2376,7 +2492,7 @@ focus_tree = {
       completion_reward = {
         add_tech_bonus = {
           bonus = 0.9
-          category = magic_weapons_improve
+          category = primary_weapons
           uses = 1
         }
       }
@@ -2410,12 +2526,12 @@ focus_tree = {
 
       completion_reward = {
         add_tech_bonus = {
-          category = magic_weapons
+          category = primary_weapons
           bonus = 0.6
           uses = 1
         }
         add_tech_bonus = {
-          category = magic_weapons
+          category = primary_weapons
           ahead_reduction = 1.2
           uses = 1
         }
@@ -2516,7 +2632,7 @@ focus_tree = {
         }
         add_tech_bonus = {
           bonus = 0.8
-          category = magic_artillery_improve
+          category = mortar
           uses = 1
         }
       }

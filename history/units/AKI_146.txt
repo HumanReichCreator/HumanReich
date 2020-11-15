@@ -1,8 +1,20 @@
 ﻿division_template = {
+	name = "扫荡编制"
+	regiments = {
+		ma_light_infantry = { x = 0 y = 0 }
+		ma_light_infantry = { x = 0 y = 1 }
+		ma_light_infantry = { x = 0 y = 2 }
+		ma_light_infantry = { x = 0 y = 3 }
+	}
+	support = {
+	}
+}
+division_template = {
 	name = "神明支援编制"
 	regiments = {
-		sc_militia = { x = 0 y = 0 }
-		sc_militia = { x = 0 y = 1 }
+		melee_infantry = { x = 0 y = 0 }
+		melee_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 2 }
 	}
 	support = {
 	}
@@ -10,10 +22,11 @@
 division_template = {
 	name = "神明主力编制"
 	regiments = {
-		sc_militia = { x = 0 y = 0 }
-		sc_militia = { x = 0 y = 1 }
-		sc_militia = { x = 0 y = 2 }
-		sc_militia = { x = 0 y = 3 }
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 2 }
+		ma_infantry = { x = 0 y = 3 }
+		ma_infantry = { x = 0 y = 4 }
 	}
 	support = {
 	}
@@ -76,27 +89,6 @@ units = {
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
-	division = {
-		name = "神明主力编制"
-		location = 1075
-		division_template = "神明主力编制"
-		start_experience_factor = 0.4
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "神明主力编制"
-		location = 1075
-		division_template = "神明主力编制"
-		start_experience_factor = 0.4
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "神明主力编制"
-		location = 1075
-		division_template = "神明主力编制"
-		start_experience_factor = 0.4
-		start_equipment_factor = 1
-	}
 
 	division = {
 		name = "神明主力编制"
@@ -141,42 +133,7 @@ units = {
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
-	division = {
-		name = "神明主力编制"
-		location = 5054
-		division_template = "神明主力编制"
-		start_experience_factor = 0.4
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "神明主力编制"
-		location = 5054
-		division_template = "神明主力编制"
-		start_experience_factor = 0.4
-		start_equipment_factor = 1
-	}
 
-	division = {
-		name = "神明主力编制"
-		location = 4974
-		division_template = "神明主力编制"
-		start_experience_factor = 0.4
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "神明主力编制"
-		location = 4974
-		division_template = "神明主力编制"
-		start_experience_factor = 0.4
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "神明主力编制"
-		location = 4974
-		division_template = "神明主力编制"
-		start_experience_factor = 0.4
-		start_equipment_factor = 1
-	}
 	division = {
 		name = "神明主力编制"
 		location = 4974
@@ -214,28 +171,7 @@ units = {
 		start_experience_factor = 0.4
 		start_equipment_factor = 1
 	}
-	division = {
-		name = "神明支援编制"
-		location = 2771
-		division_template = "神明支援编制"
-		start_experience_factor = 0.4
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "神明支援编制"
-		location = 2771
-		division_template = "神明支援编制"
-		start_experience_factor = 0.4
-		start_equipment_factor = 1
-	}
 
-	division = {
-		name = "神明支援编制"
-		location = 5032
-		division_template = "神明支援编制"
-		start_experience_factor = 0.4
-		start_equipment_factor = 1
-	}
 	division = {
 		name = "神明支援编制"
 		location = 5032

@@ -62,10 +62,18 @@ scripted_gui = {
 				}
 			}
 			th_subject_level1_visible = {
-				has_autonomy_state = autonomy_integrated_puppet
+				or = {
+					has_autonomy_state = autonomy_integrated_puppet
+					has_autonomy_state = autonomy_integrated_puppet_qinwai
+					has_autonomy_state = autonomy_integrated_puppet_neworder_fandong
+				}
 			}
 			th_subject_level2_visible = {
-				has_autonomy_state = autonomy_puppet
+				or = {
+					has_autonomy_state = autonomy_puppet
+					has_autonomy_state = autonomy_puppet_qinwai
+					has_autonomy_state = autonomy_puppet_neworder_fandong
+				}
 			}
 			th_subject_level3_visible = {
 				has_autonomy_state = autonomy_colony

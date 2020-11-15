@@ -55,15 +55,15 @@ custom_leader_on = {
 }
 
 DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = {
-	# if = {
-	# 	limit = {
-	# 		has_game_rule = {
-	# 			rule = allow_guarantees
-	# 			option = ALWAYS_FREE
-	# 		}
-	# 	}
-	# 	always = yes
-	# }
+	if = {
+		limit = {
+			has_game_rule = {
+				rule = allow_guarantees
+				option = ALWAYS_FREE
+			}
+		}
+		always = yes
+	}
 	if = {
 		limit = {
 			has_game_rule = {
@@ -73,18 +73,18 @@ DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = {
 		}
 		always = yes # Handled by game logic.
 	}
-	# if = {
-	# 	limit = {
-	# 		has_game_rule = {
-	# 			rule = allow_guarantees
-	# 			option = SAME_IDEOLOGY
-	# 		}
-	# 	}
-	# 	custom_trigger_tooltip = {
-	# 		tooltip = RULE_ALLOW_GUARANTEES_SAME_IDEOLOGY_TOOLTIP
-	# 		has_government = FROM
-	# 	}
-	# }
+	if = {
+		limit = {
+			has_game_rule = {
+				rule = allow_guarantees
+				option = SAME_IDEOLOGY
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = RULE_ALLOW_GUARANTEES_SAME_IDEOLOGY_TOOLTIP
+			has_government = FROM
+		}
+	}
 	if = {
 		limit = {
 			has_game_rule = {
@@ -115,19 +115,15 @@ DIPLOMACY_REVOKE_GUARANTEE_ENABLE_TRIGGER = {
 }
 
 DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
-	# if = {
-	# 	limit = {
-	# 		has_game_rule = {
-	# 			rule = allow_release_nations
-	# 			option = FREE
-	# 		}
-	# 		OR = {
-	# 			NOT = { has_dlc = "Man the Guns" }
-	# 			NOT = { original_tag = ENG }
-	# 		}
-	# 	}
-	# 	always = yes
-	# }
+	if = {
+		limit = {
+			has_game_rule = {
+				rule = allow_release_nations
+				option = FREE
+			}
+		}
+		always = yes
+	}
 	# if = {
 	# 	limit = {
 	# 		has_game_rule = {
@@ -173,18 +169,18 @@ DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
 	# 		NOT = { FROM = { tag = GAM } }
 	# 	}
 	# }
-	# if = {
-	# 	limit = {
-	# 		has_game_rule = {
-	# 			rule = allow_release_nations
-	# 			option = PEACE_ONLY
-	# 		}
-	# 	}
-	# 	custom_trigger_tooltip = {
-	# 		tooltip = RULE_ALLOW_RELEASE_NATIONS_PEACE_ONLY_TOOLTIP
-	# 		has_war = no
-	# 	}
-	# }
+	if = {
+		limit = {
+			has_game_rule = {
+				rule = allow_release_nations
+				option = PEACE_ONLY
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = RULE_ALLOW_RELEASE_NATIONS_PEACE_ONLY_TOOLTIP
+			has_war = no
+		}
+	}
 
 	if = {
 		limit = {

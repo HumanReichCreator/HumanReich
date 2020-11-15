@@ -182,18 +182,19 @@ ideas = {
 			}
 			
 			modifier = {
-			conscription = 0.01
-			mobilization_laws_cost_factor = 0.75
-			ARMY_ORG_FACTOR = -0.1
-			CONSUMER_GOODS_FACTOR = -0.03
-			EXPERIENCE_LOSS_FACTOR = 0.3
-			SUPPLY_CONSUMPTION_FACTOR = -0.12
-			attrition = -0.1
-			ARMY_infantry_ATTACK_FACTOR = -0.25
-			ARMY_infantry_defence_FACTOR = -0.25
-			# conscription_factor = -0.6
-			ORG_LOSS_WHEN_MOVING = 0.2
-			# land_night_attack = -0.75
+				conscription = 0.01
+				mobilization_laws_cost_factor = 0.75
+				training_time_factor = -0.25
+				ARMY_ORG_FACTOR = -0.1
+				CONSUMER_GOODS_FACTOR = -0.03
+				EXPERIENCE_LOSS_FACTOR = 0.3
+				SUPPLY_CONSUMPTION_FACTOR = -0.12
+				attrition = -0.1
+				ARMY_infantry_ATTACK_FACTOR = -0.15
+				ARMY_infantry_defence_FACTOR = -0.15
+				# conscription_factor = -0.6
+				ORG_LOSS_WHEN_MOVING = 0.2
+				# land_night_attack = -0.75
 			}
 			
 			
@@ -212,17 +213,15 @@ ideas = {
 			modifier = {
 			conscription = 0.002
 			mobilization_laws_cost_factor = 0.5
-			training_time_factor = 0.75
+			training_time_factor = -0.4
 			ARMY_ORG_FACTOR = -0.05
 			ORG_LOSS_WHEN_MOVING = 0.05
 			ARMY_MORALE_FACTOR = 0.1
 			LOCAL_RESOURCES_FACTOR = 0.1
 			SUPPLY_CONSUMPTION_FACTOR = -0.15
 			attrition = -0.2
-			# conscription_factor = -0.9
-			ARMY_infantry_ATTACK_FACTOR = -0.4
-			ARMY_infantry_defence_FACTOR = -0.4
-			# land_night_attack = -0.25
+			ARMY_infantry_ATTACK_FACTOR = -0.3
+			ARMY_infantry_defence_FACTOR = -0.3
 
 			}
 			cost = 0

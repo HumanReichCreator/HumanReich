@@ -1,11 +1,13 @@
 ﻿division_template = {
-	name = "视察编制"
+	name = "扫荡编制"
 	regiments = {
-		ma_militia = { x = 0 y = 0 }
-		ma_militia = { x = 0 y = 1 }
-		ma_artillery_brigade = { x = 1 y = 0 }
+		ma_light_infantry = { x = 0 y = 0 }
+		ma_light_infantry = { x = 0 y = 1 }
+		ma_light_infantry = { x = 0 y = 2 }
+		ma_light_infantry = { x = 0 y = 3 }
 	}
 	support = {
+		sp_jiaqiangban = { x = 0 y = 0 }
 	}
 }
 division_template = {
@@ -14,9 +16,11 @@ division_template = {
 		ma_infantry = { x = 0 y = 0 }
 		ma_infantry = { x = 0 y = 1 }
 		ma_infantry = { x = 0 y = 2 }
-		ma_artillery_brigade = { x = 0 y = 3 }
+		ma_infantry = { x = 0 y = 3 }
+		ma_infantry = { x = 0 y = 4 }
 	}
 	support = {
+		sp_jiaqiangban = { x = 0 y = 0 }
 	}
 }
 division_template = {
@@ -28,9 +32,10 @@ division_template = {
 		ma_infantry = { x = 1 y = 0 }
 		ma_infantry = { x = 1 y = 1 }
 		ma_infantry = { x = 1 y = 2 }
-		ma_artillery_brigade = { x = 1 y = 3 }
+		ma_magic_energy_brigade = { x = 1 y = 3 }
 	}
 	support = {
+		sp_jiaqiangban = { x = 0 y = 0 }
 	}
 }
 division_template = {
@@ -40,78 +45,37 @@ division_template = {
 		ma_sf_infantry = { x = 0 y = 1 }
 		ma_light_infantry = { x = 0 y = 2 }
 		ma_light_infantry = { x = 0 y = 3 }
+		ma_light_infantry = { x = 0 y = 4 }
 	}
 	support = {
 	}
 }
 units = {
 	division = {
-		name = "特种编制"
+		name = "扫荡编制"
 		location = 2425
-		division_template = "特种编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "特种编制"
+		name = "扫荡编制"
 		location = 2425
-		division_template = "特种编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "特种编制"
+		name = "扫荡编制"
 		location = 2425
-		division_template = "特种编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "视察编制"
+		name = "扫荡编制"
 		location = 2425
-		division_template = "视察编制"
-		start_experience_factor = 1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "视察编制"
-		location = 2425
-		division_template = "视察编制"
-		start_experience_factor = 1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "视察编制"
-		location = 2425
-		division_template = "视察编制"
-		start_experience_factor = 1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "视察编制"
-		location = 2425
-		division_template = "视察编制"
-		start_experience_factor = 1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "视察编制"
-		location = 2425
-		division_template = "视察编制"
-		start_experience_factor = 1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "视察编制"
-		location = 2425
-		division_template = "视察编制"
-		start_experience_factor = 1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "视察编制"
-		location = 2425
-		division_template = "视察编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
@@ -151,135 +115,51 @@ units = {
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "视察编制"
+		name = "扫荡编制"
 		location = 2425
-		division_template = "视察编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "视察编制"
+		name = "扫荡编制"
 		location = 2425
-		division_template = "视察编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "视察编制"
+		name = "扫荡编制"
 		location = 2425
-		division_template = "视察编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "视察编制"
+		name = "扫荡编制"
 		location = 2425
-		division_template = "视察编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "视察编制"
+		name = "扫荡编制"
 		location = 2425
-		division_template = "视察编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "视察编制"
+		name = "扫荡编制"
 		location = 2425
-		division_template = "视察编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "视察编制"
+		name = "扫荡编制"
 		location = 2425
-		division_template = "视察编制"
-		start_experience_factor = 1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "警护编制"
-		location = 2425
-		division_template = "警护编制"
-		start_experience_factor = 1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "警护编制"
-		location = 2425
-		division_template = "警护编制"
-		start_experience_factor = 1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "警护编制"
-		location = 2425
-		division_template = "警护编制"
-		start_experience_factor = 1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "警护编制"
-		location = 2425
-		division_template = "警护编制"
-		start_experience_factor = 1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "入侵防御编制"
-		location = 2425
-		division_template = "入侵防御编制"
-		start_experience_factor = 1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "视察编制"
-		location = 2425
-		division_template = "视察编制"
-		start_experience_factor = 1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "视察编制"
-		location = 2425
-		division_template = "视察编制"
-		start_experience_factor = 1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "视察编制"
-		location = 2425
-		division_template = "视察编制"
-		start_experience_factor = 1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "视察编制"
-		location = 2425
-		division_template = "视察编制"
-		start_experience_factor = 1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "视察编制"
-		location = 2425
-		division_template = "视察编制"
-		start_experience_factor = 1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "视察编制"
-		location = 2425
-		division_template = "视察编制"
-		start_experience_factor = 1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "视察编制"
-		location = 2425
-		division_template = "视察编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
@@ -319,51 +199,135 @@ units = {
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "视察编制"
+		name = "扫荡编制"
 		location = 2425
-		division_template = "视察编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "视察编制"
+		name = "扫荡编制"
 		location = 2425
-		division_template = "视察编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "视察编制"
+		name = "扫荡编制"
 		location = 2425
-		division_template = "视察编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "视察编制"
+		name = "扫荡编制"
 		location = 2425
-		division_template = "视察编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "视察编制"
+		name = "扫荡编制"
 		location = 2425
-		division_template = "视察编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "视察编制"
+		name = "扫荡编制"
 		location = 2425
-		division_template = "视察编制"
+		division_template = "扫荡编制"
 		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "视察编制"
+		name = "扫荡编制"
 		location = 2425
-		division_template = "视察编制"
+		division_template = "扫荡编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "警护编制"
+		location = 2425
+		division_template = "警护编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "警护编制"
+		location = 2425
+		division_template = "警护编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "警护编制"
+		location = 2425
+		division_template = "警护编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "警护编制"
+		location = 2425
+		division_template = "警护编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "入侵防御编制"
+		location = 2425
+		division_template = "入侵防御编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 2425
+		division_template = "扫荡编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 2425
+		division_template = "扫荡编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 2425
+		division_template = "扫荡编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 2425
+		division_template = "扫荡编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 2425
+		division_template = "扫荡编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 2425
+		division_template = "扫荡编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 2425
+		division_template = "扫荡编制"
 		start_experience_factor = 1
 		start_equipment_factor = 1
 	}

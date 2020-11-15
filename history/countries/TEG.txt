@@ -1,40 +1,32 @@
-﻿138.8.13 = {
-
-}
-141.6.2 = {
-
-}
-142.3.8 = {
-    
-}
-144.2.5 = {
-    
-}
-146.1.1 = {
+﻿146.1.1 = {
     set_technology = {
         #通用武器线
-
-        spell_card = 1
-        linglijiejing139 = 1
-        danmujingque139 = 1
-        gaosudanmu139 = 1
-        buqiang117 = 1
-        buqiang140 = 1
-        tangxiangailiang140 = 1
-        tangxiangailiang145 = 1
-        tezhong149 = 1
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
+        spell_card2 = 1
+        spear2 = 1
+        gun2 = 1
+        lingliliushuixian = 1
+        spear3 = 1
+        gun3 = 1
             
         #辅助
         zhiyuanzhuangbei = 1
 
         #专用辅助
-        fangzhihuopao143 = 1
+        mortar1 = 1
 
         #专用基础
 
         #专用进阶
 
         #混合系
+        sc_shield1 = 1
+        smg1 = 1
 
         #陆军学说
         zhanchangzhihui140 = 1
@@ -58,6 +50,7 @@
         #种族
             
     }
+    
 }
 141.6.2.7 = {
     capital = 84
@@ -98,17 +91,18 @@
 
 146.1.1={
     drop_cosmetic_tag = yes
-    capital = 407
+    capital = 399
     oob = "TEG_146"
     # set_research_slots = 7
     set_country_flag = bunengqie_neworder
     set_major = yes
 
-    create_faction = TEG_faction_HR
-    add_to_faction = NIT
-    add_to_faction = KAP
+    create_faction = TEG_faction1
+    add_to_faction = NTR
+    add_to_faction = SAP
         
     add_ideas = {
+    can_create_faction_idea
     Tenggu
     Country
     isolation
@@ -129,17 +123,16 @@
     # set_war_support = 0.5
 
     set_politics = {
-    	ruling_party = fandong
+    	ruling_party = qinwai
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 25
-        guli = 5
+        qinwai = 40
+        guli = 25
         neworder = 0
         oldorder = 0
-        fandong = 55
-        lienin = 15
+        fandong = 35
     }
     
     
@@ -153,15 +146,6 @@ create_country_leader = {
 	ideology = qinwai_type
 	traits = {  }
 }
-
-create_country_leader = {
-	name = "射命丸文"
-    # name = "Shameimaru Aya"
-	
-	picture = "TEG_aya.dds"
-	ideology = humanfirst_type
-	traits = {  }
-}
 create_country_leader = {
 	# name = "Inubashiri Momiji"
     name = "犬走椛"
@@ -172,18 +156,10 @@ create_country_leader = {
 }
 create_country_leader = {
     # name = "Inubashiri Momiji"
-    name = "射命丸文"
-    
-    picture = "TEG_aya.dds"
-    ideology = fandong_type
-    traits = {  }
-}
-create_country_leader = {
-    # name = "Inubashiri Momiji"
     name = "犬走椛"
     
     picture = "TEG_mom.dds"
-    ideology = lienin_type
+    ideology = fandong_type
     traits = {  }
 }
 create_country_leader = {
@@ -192,15 +168,6 @@ create_country_leader = {
 	
 	picture = "TEG_hatate.dds"
 	ideology = guli_type
-	traits = {  }
-}
-
-create_country_leader = {
-	# name = "Himekaidou Hatate"
-    name = "姬海棠果"
-	
-	picture = "TEG_hatate.dds"
-	ideology = authordemo_type
 	traits = {  }
 }
 create_country_leader = {

@@ -1,86 +1,920 @@
 spriteTypes = {
 #techweapons
-#in
+	###melee
 	spriteType = {
-		name = "GFX_spell_card_medium"
-		texturefile = "gfx/interface/technologies/magic117.dds"
+		name = "GFX_melee117_medium"
+		texturefile = "gfx/equipments/melee/melee1.dds"
 	}
 	spriteType = {
-		name = "GFX_linglijiejing139_medium"
-		texturefile = "gfx/interface/technologies/magic139.dds"
+		name = "GFX_melee141_medium"
+		texturefile = "gfx/equipments/melee/melee2.dds"
 	}
 	spriteType = {
-		name = "GFX_linglijiejing144_medium"
-		texturefile = "gfx/interface/technologies/magic144.dds"
+		name = "GFX_melee147_medium"
+		texturefile = "gfx/equipments/melee/melee3.dds"
 	}
 	spriteType = {
-		name = "GFX_linglijiejing147_medium"
-		texturefile = "gfx/interface/technologies/magic147.dds"
+		name = "GFX_melee149_medium"
+		texturefile = "gfx/equipments/melee/melee4.dds"
 	}
 	spriteType = {
-		name = "GFX_linglijiejing151_medium"
-		texturefile = "gfx/interface/technologies/magic151.dds"
+		name = "GFX_melee157_medium"
+		texturefile = "gfx/equipments/melee/melee5.dds"
 	}
 	spriteType = {
-		name = "GFX_linglijiejing154_medium"
-		texturefile = "gfx/interface/technologies/magic154.dds"
+		name = "GFX_melee165_medium"
+		texturefile = "gfx/equipments/melee/melee6.dds"
+	}
+
+	spriteType = {
+		name = "GFX_spear1_medium"
+		texturefile = "gfx/equipments/melee/melee1.dds"
 	}
 	spriteType = {
-		name = "GFX_linglijiejing157_medium"
-		texturefile = "gfx/interface/technologies/magic157.dds"
-	}
-	#waijie
-	spriteType = {
-		name = "GFX_buqiang117_medium"
-		texturefile = "gfx/interface/technologies/gun117.dds"
+		name = "GFX_spear2_medium"
+		texturefile = "gfx/equipments/melee/melee2.dds"
 	}
 	spriteType = {
-		name = "GFX_buqiang140_medium"
-		texturefile = "gfx/interface/technologies/gun140.dds"
+		name = "GFX_spear3_medium"
+		texturefile = "gfx/equipments/melee/melee3.dds"
 	}
 	spriteType = {
-		name = "GFX_buqiang145_medium"
-		texturefile = "gfx/interface/technologies/gun145.dds"
+		name = "GFX_ma_spear4_medium"
+		texturefile = "gfx/equipments/melee/melee4.dds"
 	}
 	spriteType = {
-		name = "GFX_buqiang148_medium"
-		texturefile = "gfx/interface/technologies/gun148.dds"
+		name = "GFX_ma_spear5_medium"
+		texturefile = "gfx/equipments/melee/melee5.dds"
 	}
 	spriteType = {
-		name = "GFX_buqiang152_medium"
-		texturefile = "gfx/interface/technologies/gun152.dds"
+		name = "GFX_ma_spear6_medium"
+		texturefile = "gfx/equipments/melee/melee6.dds"
 	}
 	spriteType = {
-		name = "GFX_buqiang155_medium"
-		texturefile = "gfx/interface/technologies/gun155.dds"
+		name = "GFX_sc_spear4_medium"
+		texturefile = "gfx/equipments/melee/melee4.dds"
 	}
 	spriteType = {
-		name = "GFX_buqiang158_medium"
-		texturefile = "gfx/interface/technologies/gun158.dds"
-	}
-	#jiehe
-	spriteType = {
-		name = "GFX_lingliqiangxie140_medium"
-		texturefile = "gfx/interface/technologies/lgun140.dds"
+		name = "GFX_sc_spear5_medium"
+		texturefile = "gfx/equipments/melee/melee5.dds"
 	}
 	spriteType = {
-		name = "GFX_lingliqiangxie145_medium"
-		texturefile = "gfx/interface/technologies/lgun145.dds"
+		name = "GFX_sc_spear6_medium"
+		texturefile = "gfx/equipments/melee/melee6.dds"
+	}
+	###support
+	SpriteType = {
+		name = "GFX_zhiyuanzhuangbei_medium"
+		texturefile = "gfx/interface/technologies/support_equipment_1.dds"
+	}		
+	SpriteType = {
+		name = "GFX_support_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/support_equipment_1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_support_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/support_equipment_1.dds"
+	}	
+	###primary
+	#ma
+	spriteType = {
+		name = "GFX_magic_core117_medium"
+		texturefile = "gfx/equipments/primary/magic_core1.dds"
 	}
 	spriteType = {
-		name = "GFX_lingliqiangxie148_medium"
-		texturefile = "gfx/interface/technologies/lgun148.dds"
+		name = "GFX_magic_core141_medium"
+		texturefile = "gfx/equipments/primary/magic_core2.dds"
 	}
 	spriteType = {
-		name = "GFX_lingliqiangxie152_medium"
-		texturefile = "gfx/interface/technologies/lgun152.dds"
+		name = "GFX_magic_core147_medium"
+		texturefile = "gfx/equipments/primary/magic_core3.dds"
 	}
 	spriteType = {
-		name = "GFX_lingliqiangxie155_medium"
-		texturefile = "gfx/interface/technologies/lgun155.dds"
+		name = "GFX_magic_core153_medium"
+		texturefile = "gfx/equipments/primary/magic_core4.dds"
 	}
 	spriteType = {
-		name = "GFX_lingliqiangxie158_medium"
-		texturefile = "gfx/interface/technologies/lgun158.dds"
+		name = "GFX_magic_core159_medium"
+		texturefile = "gfx/equipments/primary/magic_core5.dds"
+	}
+	spriteType = {
+		name = "GFX_magic_core165_medium"
+		texturefile = "gfx/equipments/primary/magic_core6.dds"
+	}
+	spriteType = {
+		name = "GFX_spell_card1_medium"
+		texturefile = "gfx/equipments/primary/magic_core1.dds"
+	}
+	spriteType = {
+		name = "GFX_spell_card2_medium"
+		texturefile = "gfx/equipments/primary/magic_core2.dds"
+	}
+	spriteType = {
+		name = "GFX_spell_card3_medium"
+		texturefile = "gfx/equipments/primary/magic_core3.dds"
+	}
+	spriteType = {
+		name = "GFX_spell_card4_medium"
+		texturefile = "gfx/equipments/primary/magic_core4.dds"
+	}
+	spriteType = {
+		name = "GFX_spell_card5_medium"
+		texturefile = "gfx/equipments/primary/magic_core5.dds"
+	}
+	spriteType = {
+		name = "GFX_spell_card6_medium"
+		texturefile = "gfx/equipments/primary/magic_core6.dds"
+	}
+	#sc
+	spriteType = {
+		name = "GFX_gun117_medium"
+		texturefile = "gfx/equipments/primary/gun1.dds"
+	}
+	spriteType = {
+		name = "GFX_gun141_medium"
+		texturefile = "gfx/equipments/primary/gun2.dds"
+	}
+	spriteType = {
+		name = "GFX_gun147_medium"
+		texturefile = "gfx/equipments/primary/gun3.dds"
+	}
+	spriteType = {
+		name = "GFX_gun153_medium"
+		texturefile = "gfx/equipments/primary/gun4.dds"
+	}
+	spriteType = {
+		name = "GFX_gun159_medium"
+		texturefile = "gfx/equipments/primary/gun5.dds"
+	}
+	spriteType = {
+		name = "GFX_gun165_medium"
+		texturefile = "gfx/equipments/primary/gun6.dds"
+	}
+	spriteType = {
+		name = "GFX_gun1_medium"
+		texturefile = "gfx/equipments/primary/gun1.dds"
+	}
+	spriteType = {
+		name = "GFX_gun2_medium"
+		texturefile = "gfx/equipments/primary/gun2.dds"
+	}
+	spriteType = {
+		name = "GFX_gun3_medium"
+		texturefile = "gfx/equipments/primary/gun3.dds"
+	}
+	spriteType = {
+		name = "GFX_gun4_medium"
+		texturefile = "gfx/equipments/primary/gun4.dds"
+	}
+	spriteType = {
+		name = "GFX_gun5_medium"
+		texturefile = "gfx/equipments/primary/gun5.dds"
+	}
+	spriteType = {
+		name = "GFX_gun6_medium"
+		texturefile = "gfx/equipments/primary/gun6.dds"
+	}
+	#melee
+	#xxxx
+	###art
+	#sc
+	spriteType = {
+		name = "GFX_mortar143_medium"
+		texturefile = "gfx/equipments/art/rocket1.dds"
+	}
+	spriteType = {
+		name = "GFX_mortar149_medium"
+		texturefile = "gfx/equipments/art/rocket2.dds"
+	}
+	spriteType = {
+		name = "GFX_mortar155_medium"
+		texturefile = "gfx/equipments/art/rocket3.dds"
+	}
+	spriteType = {
+		name = "GFX_mortar161_medium"
+		texturefile = "gfx/equipments/art/rocket4.dds"
+	}
+	spriteType = {
+		name = "GFX_mortar167_medium"
+		texturefile = "gfx/equipments/art/rocket5.dds"
+	}
+	spriteType = {
+		name = "GFX_mortar1_medium"
+		texturefile = "gfx/equipments/art/rocket1.dds"
+	}
+	spriteType = {
+		name = "GFX_mortar2_medium"
+		texturefile = "gfx/equipments/art/rocket2.dds"
+	}
+	spriteType = {
+		name = "GFX_mortar3_medium"
+		texturefile = "gfx/equipments/art/rocket3.dds"
+	}
+	spriteType = {
+		name = "GFX_mortar4_medium"
+		texturefile = "gfx/equipments/art/rocket4.dds"
+	}
+	spriteType = {
+		name = "GFX_mortar5_medium"
+		texturefile = "gfx/equipments/art/rocket5.dds"
+	}
+	#ma
+	spriteType = {
+		name = "GFX_magic_energy143_medium"
+		texturefile = "gfx/equipments/art/magic_energy1.dds"
+	}
+	spriteType = {
+		name = "GFX_magic_energy149_medium"
+		texturefile = "gfx/equipments/art/magic_energy2.dds"
+	}
+	spriteType = {
+		name = "GFX_magic_energy155_medium"
+		texturefile = "gfx/equipments/art/magic_energy3.dds"
+	}
+	spriteType = {
+		name = "GFX_magic_energy161_medium"
+		texturefile = "gfx/equipments/art/magic_energy4.dds"
+	}
+	spriteType = {
+		name = "GFX_magic_energy167_medium"
+		texturefile = "gfx/equipments/art/magic_energy5.dds"
+	}
+	spriteType = {
+		name = "GFX_magic_energy1_medium"
+		texturefile = "gfx/equipments/art/magic_energy1.dds"
+	}
+	spriteType = {
+		name = "GFX_magic_energy2_medium"
+		texturefile = "gfx/equipments/art/magic_energy2.dds"
+	}
+	spriteType = {
+		name = "GFX_magic_energy3_medium"
+		texturefile = "gfx/equipments/art/magic_energy3.dds"
+	}
+	spriteType = {
+		name = "GFX_magic_energy4_medium"
+		texturefile = "gfx/equipments/art/magic_energy4.dds"
+	}
+	spriteType = {
+		name = "GFX_magic_energy5_medium"
+		texturefile = "gfx/equipments/art/magic_energy5.dds"
+	}
+
+	###anti_shield
+	#sc
+	spriteType = {
+		name = "GFX_anti_shield1_medium"
+		texturefile = "gfx/equipments/antishield/art1.dds"
+	}
+	spriteType = {
+		name = "GFX_anti_shield2_medium"
+		texturefile = "gfx/equipments/antishield/art2.dds"
+	}
+	spriteType = {
+		name = "GFX_anti_shield3_medium"
+		texturefile = "gfx/equipments/antishield/art3.dds"
+	}
+	spriteType = {
+		name = "GFX_anti_shield4_medium"
+		texturefile = "gfx/equipments/antishield/art4.dds"
+	}
+	spriteType = {
+		name = "GFX_anti_shield152_medium"
+		texturefile = "gfx/equipments/antishield/art1.dds"
+	}
+	spriteType = {
+		name = "GFX_anti_shield158_medium"
+		texturefile = "gfx/equipments/antishield/art2.dds"
+	}
+	spriteType = {
+		name = "GFX_anti_shield164_medium"
+		texturefile = "gfx/equipments/antishield/art3.dds"
+	}
+	spriteType = {
+		name = "GFX_anti_shield170_medium"
+		texturefile = "gfx/equipments/antishield/art4.dds"
+	}
+	#ma
+	spriteType = {
+		name = "GFX_magic_focus1_medium"
+		texturefile = "gfx/equipments/antishield/magic_focus1.dds"
+	}
+	spriteType = {
+		name = "GFX_magic_focus2_medium"
+		texturefile = "gfx/equipments/antishield/magic_focus2.dds"
+	}
+	spriteType = {
+		name = "GFX_magic_focus3_medium"
+		texturefile = "gfx/equipments/antishield/magic_focus3.dds"
+	}
+	spriteType = {
+		name = "GFX_magic_focus4_medium"
+		texturefile = "gfx/equipments/antishield/magic_focus4.dds"
+	}
+	spriteType = {
+		name = "GFX_magic_focus152_medium"
+		texturefile = "gfx/equipments/antishield/magic_focus1.dds"
+	}
+	spriteType = {
+		name = "GFX_magic_focus158_medium"
+		texturefile = "gfx/equipments/antishield/magic_focus2.dds"
+	}
+	spriteType = {
+		name = "GFX_magic_focus164_medium"
+		texturefile = "gfx/equipments/antishield/magic_focus3.dds"
+	}
+	spriteType = {
+		name = "GFX_magic_focus170_medium"
+		texturefile = "gfx/equipments/antishield/magic_focus4.dds"
+	}
+	###sf
+	#sc
+	spriteType = {
+		name = "GFX_smg146_medium"
+		texturefile = "gfx/equipments/sf/smg1.dds"
+	}
+	spriteType = {
+		name = "GFX_smg153_medium"
+		texturefile = "gfx/equipments/sf/smg2.dds"
+	}
+	spriteType = {
+		name = "GFX_smg161_medium"
+		texturefile = "gfx/equipments/sf/smg3.dds"
+	}
+	spriteType = {
+		name = "GFX_smg169_medium"
+		texturefile = "gfx/equipments/sf/smg4.dds"
+	}
+	spriteType = {
+		name = "GFX_smg1_medium"
+		texturefile = "gfx/equipments/sf/smg1.dds"
+	}
+	spriteType = {
+		name = "GFX_smg2_medium"
+		texturefile = "gfx/equipments/sf/smg2.dds"
+	}
+	spriteType = {
+		name = "GFX_smg3_medium"
+		texturefile = "gfx/equipments/sf/smg3.dds"
+	}
+	spriteType = {
+		name = "GFX_smg4_medium"
+		texturefile = "gfx/equipments/sf/smg4.dds"
+	}
+	#ma
+	spriteType = {
+		name = "GFX_tezhonglinglidanyuan1_medium"
+		texturefile = "gfx/equipments/sf/special_core1.dds"
+	}
+	spriteType = {
+		name = "GFX_tezhonglinglidanyuan2_medium"
+		texturefile = "gfx/equipments/sf/special_core2.dds"
+	}
+	spriteType = {
+		name = "GFX_tezhonglinglidanyuan3_medium"
+		texturefile = "gfx/equipments/sf/special_core3.dds"
+	}
+	spriteType = {
+		name = "GFX_tezhonglinglidanyuan4_medium"
+		texturefile = "gfx/equipments/sf/special_core4.dds"
+	}
+	spriteType = {
+		name = "GFX_special_core1_medium"
+		texturefile = "gfx/equipments/sf/special_core1.dds"
+	}
+	spriteType = {
+		name = "GFX_special_core2_medium"
+		texturefile = "gfx/equipments/sf/special_core2.dds"
+	}
+	spriteType = {
+		name = "GFX_special_core3_medium"
+		texturefile = "gfx/equipments/sf/special_core3.dds"
+	}
+	spriteType = {
+		name = "GFX_special_core4_medium"
+		texturefile = "gfx/equipments/sf/special_core4.dds"
+	}
+
+	###shield_army
+	#ma
+	spriteType = {
+		name = "GFX_core_shield153_medium"
+		texturefile = "gfx/equipments/shield_army/sc1.dds"
+	}
+	spriteType = {
+		name = "GFX_core_shield157_medium"
+		texturefile = "gfx/equipments/shield_army/sc2.dds"
+	}
+	spriteType = {
+		name = "GFX_core_shield161_medium"
+		texturefile = "gfx/equipments/shield_army/sc3.dds"
+	}
+	spriteType = {
+		name = "GFX_core_shield1_medium"
+		texturefile = "gfx/equipments/shield_army/sc1.dds"
+	}
+	spriteType = {
+		name = "GFX_core_shield2_medium"
+		texturefile = "gfx/equipments/shield_army/sc2.dds"
+	}
+	spriteType = {
+		name = "GFX_core_shield3_medium"
+		texturefile = "gfx/equipments/shield_army/sc3.dds"
+	}
+	#sc
+	spriteType = {
+		name = "GFX_special_shield153_medium"
+		texturefile = "gfx/equipments/shield_army/gohei1.dds"
+	}
+	spriteType = {
+		name = "GFX_special_shield157_medium"
+		texturefile = "gfx/equipments/shield_army/gohei2.dds"
+	}
+	spriteType = {
+		name = "GFX_special_shield161_medium"
+		texturefile = "gfx/equipments/shield_army/gohei3.dds"
+	}
+	spriteType = {
+		name = "GFX_special_shield1_medium"
+		texturefile = "gfx/equipments/shield_army/gohei1.dds"
+	}
+	spriteType = {
+		name = "GFX_special_shield2_medium"
+		texturefile = "gfx/equipments/shield_army/gohei2.dds"
+	}
+	spriteType = {
+		name = "GFX_special_shield3_medium"
+		texturefile = "gfx/equipments/shield_army/gohei3.dds"
+	}
+	#shield
+	spriteType = {
+		name = "GFX_ma_shield1_medium"
+		texturefile = "gfx/equipments/shield/shield1.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_shield2_medium"
+		texturefile = "gfx/equipments/shield/shield2.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_shield3_medium"
+		texturefile = "gfx/equipments/shield/shield3.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_shield4_medium"
+		texturefile = "gfx/equipments/shield/shield4.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_shield5_medium"
+		texturefile = "gfx/equipments/shield/shield5.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_shield6_medium"
+		texturefile = "gfx/equipments/shield/shield6.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_shield7_medium"
+		texturefile = "gfx/equipments/shield/shield7.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_shield1_medium"
+		texturefile = "gfx/equipments/shield/shield1.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_shield2_medium"
+		texturefile = "gfx/equipments/shield/shield2.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_shield3_medium"
+		texturefile = "gfx/equipments/shield/shield3.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_shield4_medium"
+		texturefile = "gfx/equipments/shield/shield4.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_shield5_medium"
+		texturefile = "gfx/equipments/shield/shield5.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_shield6_medium"
+		texturefile = "gfx/equipments/shield/shield6.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_shield7_medium"
+		texturefile = "gfx/equipments/shield/shield7.dds"
+	}
+	spriteType = {
+		name = "GFX_shield146_medium"
+		texturefile = "gfx/equipments/shield/shield1.dds"
+	}
+	spriteType = {
+		name = "GFX_shield149_medium"
+		texturefile = "gfx/equipments/shield/shield2.dds"
+	}
+	spriteType = {
+		name = "GFX_shield153_medium"
+		texturefile = "gfx/equipments/shield/shield3.dds"
+	}
+	spriteType = {
+		name = "GFX_shield157_medium"
+		texturefile = "gfx/equipments/shield/shield4.dds"
+	}
+	spriteType = {
+		name = "GFX_shield161_medium"
+		texturefile = "gfx/equipments/shield/shield5.dds"
+	}
+	spriteType = {
+		name = "GFX_shield165_medium"
+		texturefile = "gfx/equipments/shield/shield6.dds"
+	}
+	spriteType = {
+		name = "GFX_shield169_medium"
+		texturefile = "gfx/equipments/shield/shield7.dds"
+	}
+	###tank
+	#sc mecha
+	spriteType = {
+		name = "GFX_mecha153_medium"
+		texturefile = "gfx/equipments/tank/mecha1.dds"
+	}
+	spriteType = {
+		name = "GFX_mecha157_medium"
+		texturefile = "gfx/equipments/tank/mecha2.dds"
+	}
+	spriteType = {
+		name = "GFX_mecha161_medium"
+		texturefile = "gfx/equipments/tank/mecha3.dds"
+	}
+	spriteType = {
+		name = "GFX_mecha165_medium"
+		texturefile = "gfx/equipments/tank/mecha4.dds"
+	}
+	spriteType = {
+		name = "GFX_mecha169_medium"
+		texturefile = "gfx/equipments/tank/mecha5.dds"
+	}
+	spriteType = {
+		name = "GFX_jijia1_medium"
+		texturefile = "gfx/equipments/tank/mecha1.dds"
+	}
+	spriteType = {
+		name = "GFX_jijia2_medium"
+		texturefile = "gfx/equipments/tank/mecha2.dds"
+	}
+	spriteType = {
+		name = "GFX_jijia3_medium"
+		texturefile = "gfx/equipments/tank/mecha3.dds"
+	}
+	spriteType = {
+		name = "GFX_jijia4_medium"
+		texturefile = "gfx/equipments/tank/mecha4.dds"
+	}
+	spriteType = {
+		name = "GFX_jijia5_medium"
+		texturefile = "gfx/equipments/tank/mecha5.dds"
+	}
+	#ma youkai
+	spriteType = {
+		name = "GFX_tactical_core153_medium"
+		texturefile = "gfx/equipments/tank/tactical_shield1.dds"
+	}
+	spriteType = {
+		name = "GFX_tactical_core157_medium"
+		texturefile = "gfx/equipments/tank/tactical_shield2.dds"
+	}
+	spriteType = {
+		name = "GFX_tactical_core161_medium"
+		texturefile = "gfx/equipments/tank/tactical_shield3.dds"
+	}
+	spriteType = {
+		name = "GFX_tactical_core165_medium"
+		texturefile = "gfx/equipments/tank/tactical_shield4.dds"
+	}
+	spriteType = {
+		name = "GFX_tactical_core169_medium"
+		texturefile = "gfx/equipments/tank/tactical_shield5.dds"
+	}
+	spriteType = {
+		name = "GFX_zhanshujiejiehexin1_medium"
+		texturefile = "gfx/equipments/tank/tactical_shield1.dds"
+	}
+	spriteType = {
+		name = "GFX_zhanshujiejiehexin2_medium"
+		texturefile = "gfx/equipments/tank/tactical_shield2.dds"
+	}
+	spriteType = {
+		name = "GFX_zhanshujiejiehexin3_medium"
+		texturefile = "gfx/equipments/tank/tactical_shield3.dds"
+	}
+	spriteType = {
+		name = "GFX_zhanshujiejiehexin4_medium"
+		texturefile = "gfx/equipments/tank/tactical_shield4.dds"
+	}
+	spriteType = {
+		name = "GFX_zhanshujiejiehexin5_medium"
+		texturefile = "gfx/equipments/tank/tactical_shield5.dds"
+	}
+	###scout
+	#ma
+	spriteType = {
+		name = "GFX_ma_scout146_medium"
+		texturefile = "gfx/equipments/air/magic_scout1.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_scout155_medium"
+		texturefile = "gfx/equipments/air/magic_scout2.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_scout164_medium"
+		texturefile = "gfx/equipments/air/magic_scout3.dds"
+	}
+	spriteType = {
+		name = "GFX_magic_scout1_medium"
+		texturefile = "gfx/equipments/air/magic_scout1.dds"
+	}
+	spriteType = {
+		name = "GFX_magic_scout2_medium"
+		texturefile = "gfx/equipments/air/magic_scout2.dds"
+	}
+	spriteType = {
+		name = "GFX_magic_scout3_medium"
+		texturefile = "gfx/equipments/air/magic_scout3.dds"
+	}
+	#sc
+	spriteType = {
+		name = "GFX_sc_scout146_medium"
+		texturefile = "gfx/equipments/air/sc_scout1.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_scout155_medium"
+		texturefile = "gfx/equipments/air/sc_scout2.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_scout164_medium"
+		texturefile = "gfx/equipments/air/sc_scout3.dds"
+	}
+	spriteType = {
+		name = "GFX_science_scout1_medium"
+		texturefile = "gfx/equipments/air/sc_scout1.dds"
+	}
+	spriteType = {
+		name = "GFX_science_scout2_medium"
+		texturefile = "gfx/equipments/air/sc_scout2.dds"
+	}
+	spriteType = {
+		name = "GFX_science_scout3_medium"
+		texturefile = "gfx/equipments/air/sc_scout3.dds"
+	}
+
+	###fighter
+	#ma
+	spriteType = {
+		name = "GFX_ma_fighter148_medium"
+		texturefile = "gfx/equipments/air/magic_fighter1.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_fighter153_medium"
+		texturefile = "gfx/equipments/air/magic_fighter2.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_fighter158_medium"
+		texturefile = "gfx/equipments/air/magic_fighter3.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_fighter163_medium"
+		texturefile = "gfx/equipments/air/magic_fighter4.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_fighter168_medium"
+		texturefile = "gfx/equipments/air/magic_fighter5.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_fighter1_medium"
+		texturefile = "gfx/equipments/air/magic_fighter1.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_fighter2_medium"
+		texturefile = "gfx/equipments/air/magic_fighter2.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_fighter3_medium"
+		texturefile = "gfx/equipments/air/magic_fighter3.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_fighter4_medium"
+		texturefile = "gfx/equipments/air/magic_fighter4.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_fighter5_medium"
+		texturefile = "gfx/equipments/air/magic_fighter5.dds"
+	}
+	#sc
+	spriteType = {
+		name = "GFX_sc_fighter148_medium"
+		texturefile = "gfx/equipments/air/sc_fighter1.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_fighter153_medium"
+		texturefile = "gfx/equipments/air/sc_fighter2.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_fighter158_medium"
+		texturefile = "gfx/equipments/air/sc_fighter3.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_fighter163_medium"
+		texturefile = "gfx/equipments/air/sc_fighter4.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_fighter168_medium"
+		texturefile = "gfx/equipments/air/sc_fighter5.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_fighter1_medium"
+		texturefile = "gfx/equipments/air/sc_fighter1.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_fighter2_medium"
+		texturefile = "gfx/equipments/air/sc_fighter2.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_fighter3_medium"
+		texturefile = "gfx/equipments/air/sc_fighter3.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_fighter4_medium"
+		texturefile = "gfx/equipments/air/sc_fighter4.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_fighter5_medium"
+		texturefile = "gfx/equipments/air/sc_fighter5.dds"
+	}
+
+	###bomber
+	#ma
+	spriteType = {
+		name = "GFX_ma_bomber148_medium"
+		texturefile = "gfx/equipments/air/ma_bomber1.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_bomber153_medium"
+		texturefile = "gfx/equipments/air/ma_bomber2.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_bomber158_medium"
+		texturefile = "gfx/equipments/air/ma_bomber3.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_bomber163_medium"
+		texturefile = "gfx/equipments/air/ma_bomber4.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_bomber168_medium"
+		texturefile = "gfx/equipments/air/ma_bomber5.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_bomber1_medium"
+		texturefile = "gfx/equipments/air/ma_bomber1.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_bomber2_medium"
+		texturefile = "gfx/equipments/air/ma_bomber2.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_bomber3_medium"
+		texturefile = "gfx/equipments/air/ma_bomber3.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_bomber4_medium"
+		texturefile = "gfx/equipments/air/ma_bomber4.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_bomber5_medium"
+		texturefile = "gfx/equipments/air/ma_bomber5.dds"
+	}
+	#sc
+	spriteType = {
+		name = "GFX_sc_bomber148_medium"
+		texturefile = "gfx/equipments/air/sc_bomber1.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_bomber153_medium"
+		texturefile = "gfx/equipments/air/sc_bomber2.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_bomber158_medium"
+		texturefile = "gfx/equipments/air/sc_bomber3.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_bomber163_medium"
+		texturefile = "gfx/equipments/air/sc_bomber4.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_bomber168_medium"
+		texturefile = "gfx/equipments/air/sc_bomber5.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_bomber1_medium"
+		texturefile = "gfx/equipments/air/sc_bomber1.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_bomber2_medium"
+		texturefile = "gfx/equipments/air/sc_bomber2.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_bomber3_medium"
+		texturefile = "gfx/equipments/air/sc_bomber3.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_bomber4_medium"
+		texturefile = "gfx/equipments/air/sc_bomber4.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_bomber5_medium"
+		texturefile = "gfx/equipments/air/sc_bomber5.dds"
+	}
+
+	###st_bomber
+	#ma
+	spriteType = {
+		name = "GFX_ma_st_bomber148_medium"
+		texturefile = "gfx/equipments/air/ma_st_bomber1.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_st_bomber153_medium"
+		texturefile = "gfx/equipments/air/ma_st_bomber2.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_st_bomber158_medium"
+		texturefile = "gfx/equipments/air/ma_st_bomber3.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_st_bomber163_medium"
+		texturefile = "gfx/equipments/air/ma_st_bomber4.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_st_bomber168_medium"
+		texturefile = "gfx/equipments/air/ma_st_bomber5.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_st_bomber1_medium"
+		texturefile = "gfx/equipments/air/ma_st_bomber1.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_st_bomber2_medium"
+		texturefile = "gfx/equipments/air/ma_st_bomber2.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_st_bomber3_medium"
+		texturefile = "gfx/equipments/air/ma_st_bomber3.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_st_bomber4_medium"
+		texturefile = "gfx/equipments/air/ma_st_bomber4.dds"
+	}
+	spriteType = {
+		name = "GFX_ma_st_bomber5_medium"
+		texturefile = "gfx/equipments/air/ma_st_bomber5.dds"
+	}
+	#sc
+	spriteType = {
+		name = "GFX_sc_st_bomber148_medium"
+		texturefile = "gfx/equipments/air/sc_st_bomber1.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_st_bomber153_medium"
+		texturefile = "gfx/equipments/air/sc_st_bomber2.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_st_bomber158_medium"
+		texturefile = "gfx/equipments/air/sc_st_bomber3.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_st_bomber163_medium"
+		texturefile = "gfx/equipments/air/sc_st_bomber4.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_st_bomber168_medium"
+		texturefile = "gfx/equipments/air/sc_st_bomber5.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_st_bomber1_medium"
+		texturefile = "gfx/equipments/air/sc_st_bomber1.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_st_bomber2_medium"
+		texturefile = "gfx/equipments/air/sc_st_bomber2.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_st_bomber3_medium"
+		texturefile = "gfx/equipments/air/sc_st_bomber3.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_st_bomber4_medium"
+		texturefile = "gfx/equipments/air/sc_st_bomber4.dds"
+	}
+	spriteType = {
+		name = "GFX_sc_st_bomber5_medium"
+		texturefile = "gfx/equipments/air/sc_st_bomber5.dds"
 	}
 }

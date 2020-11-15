@@ -50,13 +50,21 @@ LS_time_caculator = {
 	#等级
 	if = {
 		limit = {
-			has_autonomy_state = autonomy_integrated_puppet
+			or = {
+				has_autonomy_state = autonomy_integrated_puppet
+				has_autonomy_state = autonomy_integrated_puppet_qinwai
+				has_autonomy_state = autonomy_integrated_puppet_neworder_fandong
+			}
 		}
 		multiply_variable = { LS_base_time = global.LS_low_time_factor_level1}
 	}
 	if = {
 		limit = {
-			has_autonomy_state = autonomy_puppet
+			or = {
+				has_autonomy_state = autonomy_puppet
+				has_autonomy_state = autonomy_puppet_qinwai
+				has_autonomy_state = autonomy_puppet_neworder_fandong
+			}
 		}
 		multiply_variable = { LS_base_time = global.LS_low_time_factor_level2}
 	}
@@ -94,6 +102,12 @@ LS_time_caculator = {
 			set_variable = { LS_base_time_factor = 1}
 			add_to_variable = { LS_base_time_factor = PREV.LS_base_time_add }
 			multiply_variable = { LS_base_time = LS_base_time_factor}
+			######上下限
+			clamp_variable = {
+				var = LS_base_time
+				min = 50
+				max = 800
+			}
 			if = {
 				limit = {
 					has_country_flag = SS_dikangduli
@@ -109,7 +123,6 @@ LS_start_lowing = {
 	set_country_flag = LS_start_lowing
 	set_variable = { LS_current_time = LS_base_time }
 	set_variable = { LS_lowing_progress = 0 }
-
 	country_event = gen.13
 }
 
@@ -192,13 +205,21 @@ LS_daily = {
 		set_country_flag = LS_is_cooling_down
 		if = {
 			limit = {
-				has_autonomy_state = autonomy_integrated_puppet
+				or = {
+					has_autonomy_state = autonomy_integrated_puppet
+					has_autonomy_state = autonomy_integrated_puppet_qinwai
+					has_autonomy_state = autonomy_integrated_puppet_neworder_fandong
+				}
 			}
 			set_variable = { LS_cooldown_time = global.LS_cooldown_level1}
 		}
 		if = {
 			limit = {
-				has_autonomy_state = autonomy_puppet
+				or = {
+					has_autonomy_state = autonomy_puppet
+					has_autonomy_state = autonomy_puppet_qinwai
+					has_autonomy_state = autonomy_puppet_neworder_fandong
+				}
 			}
 			set_variable = { LS_cooldown_time = global.LS_cooldown_level2}
 		}

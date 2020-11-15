@@ -16,6 +16,37 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
+		melee_infantry = {
+	      max_strength = 5
+	    }
+	    melee_cavalry = {
+	      max_strength = 5
+	    }     
+	    sc_infantry = {
+	      max_strength = 5
+	    }
+	    ma_infantry = {
+	      max_strength = 5
+	    }  
+	    sc_light_infantry = {
+	      max_strength = 5
+	    }
+	    ma_light_infantry = {
+	      max_strength = 5
+	    } 
+	    sc_sf_infantry = {
+	      max_strength = 5
+	    }
+	    ma_sf_infantry = {
+	      max_strength = 5
+	    } 
+	    sc_shield_infantry = {
+	      max_strength = 5
+	    }
+	    ma_shield_infantry = {
+	      max_strength = 5
+	    }
+	    
 	   folder = {
 	      name = Pri_youkai_race_tech_folder
 	      position = { x = 10 y = 0 }
@@ -44,7 +75,7 @@ technologies = {
 		resistance_growth = -0.05
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
 		folder = {
 			name = Pri_youkai_race_tech_folder
@@ -72,7 +103,7 @@ technologies = {
 
 		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
 		folder = {
 			name = Pri_youkai_race_tech_folder
@@ -100,7 +131,7 @@ technologies = {
 
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = Pri_youkai_race_tech_folder
@@ -128,7 +159,7 @@ technologies = {
 
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
 		folder = {
 			name = Pri_youkai_race_tech_folder
@@ -150,7 +181,7 @@ technologies = {
 		resistance_growth = -0.05
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
 		folder = {
 			name = Pri_youkai_race_tech_folder
@@ -174,10 +205,10 @@ technologies = {
 		}
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
-		justify_war_goal_time = -0.1
-		generate_wargoal_tension = -0.1
+		justify_war_goal_time = -0.05
+		generate_wargoal_tension = -0.05
 
 		
 
@@ -207,7 +238,7 @@ technologies = {
 
 		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
 		folder = {
 			name = Pri_youkai_race_tech_folder
@@ -235,7 +266,7 @@ technologies = {
 
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = Pri_youkai_race_tech_folder
@@ -263,7 +294,7 @@ technologies = {
 
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
 		folder = {
 			name = Pri_youkai_race_tech_folder
@@ -283,7 +314,7 @@ technologies = {
 
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
 		folder = {
 			name = Pri_youkai_race_tech_folder
@@ -309,16 +340,21 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Pri_youkai_special_1
+		ma_infantry = {
+			hardness = 0.4
 		}
-
-		enable_subunits = {
-			Pri_youkai_special
+		ma_light_infantry = {
+			hardness = 0.4
+		}
+		sc_infantry = {
+			hardness = 4
+		}
+		sc_light_infantry = {
+			hardness = 4
 		}
 		
 		research_cost = 2.2
-		start_year = 144
+		start_year = 147
 
 		folder = {
 			name = Pri_youkai_race_tech_folder
@@ -341,16 +377,21 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Pri_youkai_special_2
+		ma_infantry = {
+			hardness = 0.4
 		}
-
-		Pri_youkai_special = {
-			combat_width = -5
+		ma_light_infantry = {
+			hardness = 0.4
+		}
+		sc_infantry = {
+			hardness = 4
+		}
+		sc_light_infantry = {
+			hardness = 4
 		}
 		
 		research_cost = 2.2
-		start_year = 148
+		start_year = 152
 
 		folder = {
 			name = Pri_youkai_race_tech_folder
@@ -373,17 +414,22 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Pri_youkai_special_3
+		ma_infantry = {
+			hardness = 0.4
 		}
-
-		Pri_youkai_special = {
-			combat_width = -5
+		ma_light_infantry = {
+			hardness = 0.4
+		}
+		sc_infantry = {
+			hardness = 4
+		}
+		sc_light_infantry = {
+			hardness = 4
 		}
 
 		
 		research_cost = 2.2
-		start_year = 152
+		start_year = 157
 
 		folder = {
 			name = Pri_youkai_race_tech_folder
@@ -406,16 +452,21 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		enable_equipments = {
-			Pri_youkai_special_4
+		ma_infantry = {
+			hardness = 0.4
 		}
-
-		Pri_youkai_special = {
-			combat_width = -5
+		ma_light_infantry = {
+			hardness = 0.4
+		}
+		sc_infantry = {
+			hardness = 4
+		}
+		sc_light_infantry = {
+			hardness = 4
 		}
 		
 		research_cost = 2.2
-		start_year = 156
+		start_year = 162
 
 		folder = {
 			name = Pri_youkai_race_tech_folder
@@ -434,16 +485,21 @@ technologies = {
 	yexingxiaodui5 = {
 		
 		research_cost = 2.2
-		start_year = 160
+		start_year = 167
 
 
 
-		enable_equipments = {
-			Pri_youkai_special_5
+		ma_infantry = {
+			hardness = 0.4
 		}
-
-		Pri_youkai_special = {
-			combat_width = -5
+		ma_light_infantry = {
+			hardness = 0.4
+		}
+		sc_infantry = {
+			hardness = 4
+		}
+		sc_light_infantry = {
+			hardness = 4
 		}
 
 		folder = {

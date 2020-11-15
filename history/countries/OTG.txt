@@ -1,40 +1,33 @@
 ﻿capital = 41
-138.8.13 = {  
-
-}
-141.6.2 = {
-
-    
-}
-142.3.8 = {
-    
-}
-144.2.5 = {
-    
-}
 146.1.1 = {
     set_technology = {
         #通用武器线
-        spell_card = 1
-        linglijiejing139 = 1
-        danmujingque139 = 1
-        gaosudanmu139 = 1
-        buqiang117 = 1
-        buqiang140 = 1
-        tangxiangailiang140 = 1
-        tangxiangailiang145 = 1
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
+        spell_card2 = 1
+        spear2 = 1
+        gun2 = 1
+        lingliliushuixian = 1
+        spear3 = 1
+        gun3 = 1
             
         #辅助
         zhiyuanzhuangbei = 1
 
         #专用辅助
-        fangzhihuopao143 = 1
+        mortar1 = 1
 
         #专用基础
 
         #专用进阶
 
         #混合系
+        sc_shield1 = 1
+        smg1 = 1
 
         #陆军学说
         zhanchangzhihui140 = 1
@@ -58,6 +51,7 @@
         #种族
             
     }
+    
 }
 138.8.13 = {
     oob = "OTG_138"
@@ -89,30 +83,6 @@
     strict_border
     OTG_otg_problem_idea
     }
-    create_corps_commander = {
-    name = "Shameimaru Aya"
-    portrait_path = "gfx/leaders/TEG/TEG_aya.dds"
-    id = 1001
-    skill = 5
-    }
-    create_corps_commander = {
-    name = "Himekaidou Hatate"
-    portrait_path = "gfx/leaders/TEG/TEG_hatate.dds"
-    id = 1002
-    skill = 5
-    }
-    create_corps_commander = {
-    name = "Inubashiri Momiji"
-    portrait_path = "gfx/leaders/TEG/TEG_mom.dds"
-    id = 1003
-    skill = 4
-    }
-    create_corps_commander = {
-    name = "Kawashiro Nitori"
-    portrait_path = "gfx/leaders/NIT/NIT_nit.dds"
-    id = 1004
-    skill = 4
-    }	
 }
 141.6.2 = {
     add_ideas = {
@@ -120,10 +90,6 @@
        close2
        strict_border
     }  
-    remove_unit_leader = 1001
-    remove_unit_leader = 1002
-    remove_unit_leader = 1003
-    remove_unit_leader = 1004
 
     oob = "OTG_141"
 	# set_research_slots = 0
@@ -162,11 +128,10 @@
     }
     set_popularities = {
         qinwai = 0
-        guli = 5
+        guli = 3
         neworder = 0
-        oldorder = 30
+        oldorder = 97
         fandong = 0
-        authordemo = 65
     }
     
 }
@@ -191,14 +156,6 @@ create_country_leader = {
     name = "大天狗议会"
     picture = "OTG_council.dds"
     ideology = oldorder_type
-    traits = {
-    }
-}
-create_country_leader = {
-    # name = "Council"
-    name = "大天狗议会"
-    picture = "OTG_council.dds"
-    ideology = authordemo_type
     traits = {
     }
 }

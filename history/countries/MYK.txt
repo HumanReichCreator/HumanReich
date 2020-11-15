@@ -2,11 +2,13 @@
 146.1.1 = {
     set_technology = {
         #通用武器线
-        spell_card = 1
-        linglijiejing139 = 1
-        danmujingque139 = 1
-        gaosudanmu139 = 1
-        buqiang117 = 1
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        spell_card2 = 1
+        gun2 = 1
             
         #辅助
 
@@ -43,6 +45,7 @@
         # yanjiujingshen1 = 1
             
     }
+    
 }
 146.1.1={
     oob = "MYK_146"
@@ -73,7 +76,7 @@
 
     set_truce = {target = RMI days = 365}
     set_truce = {target = NIB days = 365}
-    set_truce = {target = SEI days = 365}
+    set_truce = {target = SEJ days = 365}
 }
 
 create_country_leader = {

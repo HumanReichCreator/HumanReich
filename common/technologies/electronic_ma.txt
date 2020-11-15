@@ -56,7 +56,7 @@ technologies = {
 
 	}
 	lingliganying157 = {
-	    research_cost = 1.8
+	    research_cost = 2.1
 
 	    path = {
 			leads_to_tech = lingliganying162
@@ -84,10 +84,14 @@ technologies = {
 	}
 
 	lingliganying162 = {
-	    research_cost = 1.8
+	    research_cost = 2.1
 	    folder = {
 			name = electronics_ma_folder
 			position = { x = 1 y = 14 }
+		}
+		path = {
+			leads_to_tech = lingliganying167
+			research_cost_coeff = 1
 		}
 
 		land_reinforce_rate = 0.02
@@ -103,7 +107,27 @@ technologies = {
 			magic
 			civil
 		}
+	}
+	lingliganying167 = {
+	    research_cost = 2.1
+	    folder = {
+			name = electronics_ma_folder
+			position = { x = 1 y = 18 }
+		}
 
+		land_reinforce_rate = 0.02
+		
+		start_year = 167
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			radio
+			magic
+			civil
+		}
 	}
 
 	jiemigai149 = {
@@ -118,7 +142,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		decryption_factor = 0.1
+		decryption_factor = 0.05
 		
 		start_year = 149
 		
@@ -146,7 +170,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		decryption_factor = 0.1
+		decryption_factor = 0.05
 		
 		start_year = 154
 		
@@ -159,18 +183,22 @@ technologies = {
 			magic
 			civil
 		}
-
 	}
 
 	jiemigai159 = {
-	    research_cost = 2.5
+	    research_cost = 2.8
 	    folder = {
 			name = electronics_ma_folder
 			position = { x = 4 y = 12 }
 		}
 
+		path = {
+			leads_to_tech = jiemigai164
+			research_cost_coeff = 1
+		}
 
-		decryption_factor = 0.1
+
+		decryption_factor = 0.05
 		
 		start_year = 159
 		
@@ -183,6 +211,54 @@ technologies = {
 			magic
 			civil
 		}
+	}
 
+	jiemigai164= {
+	    research_cost = 2.8
+	    folder = {
+			name = electronics_ma_folder
+			position = { x = 4 y = 16 }
+		}
+
+		path = {
+			leads_to_tech = jiemigai169
+			research_cost_coeff = 1
+		}
+
+		decryption_factor = 0.05
+		
+		start_year = 164
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			jiemi
+			magic
+			civil
+		}
+	}
+
+	jiemigai169= {
+	    research_cost = 2.8
+	    folder = {
+			name = electronics_ma_folder
+			position = { x = 4 y = 20 }
+		}
+
+		decryption_factor = 0.05
+		
+		start_year = 169
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			jiemi
+			magic
+			civil
+		}
 	}
 }

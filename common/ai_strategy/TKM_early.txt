@@ -1,0 +1,595 @@
+# 	# unit_base is the base value used for evaluating how important it is to deploy the various categories
+# # Written by Henrik "Groogy" Hansson
+# #AI 倾向
+# TKM_MRS_1 = {
+# 	enable = {
+# 		tag = TKM
+# 		has_opinion_modifier = TKM_yumofashiyouhao_op
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "MRS"			
+# 		value = 15
+# 	}	
+# 	ai_strategy = {
+# 		type = protect
+# 		id = "MRS"			
+# 		value = 15
+# 	}
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "MRS"			
+# 		value = 15
+# 	}
+# }
+
+# TKM_MRS_1r = {
+# 	enable = {
+# 		tag = MRS
+# 		has_opinion_modifier = TKM_yumofashiyouhao_op
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "TKM"			
+# 		value = 15
+# 	}	
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "TKM"			
+# 		value = 15
+# 	}
+# 	# ai_strategy = {
+# 	# 	type = protect
+# 	# 	id = "MRS"			
+# 	# 	value = 20
+# 	# }
+# }
+
+# TKM_MRS_2 = {
+# 	enable = {
+# 		tag = TKM
+# 		has_completed_focus = TKM_jiefangmofadaoju
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+# 	ai_strategy = {
+# 		type = antagonize
+# 		id = "MRS"			
+# 		value = 50
+# 	}	
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = "MRS"			
+# 		value = 50
+# 	}
+# }
+
+# TKM_NMS_muhou_friend= {
+# 	enable = {
+# 		has_opinion_modifier = NMS_muhouyouhao_op
+# 		not = {
+# 			tag = OKI
+# 			tag = YKR
+# 			tag = KAS
+# 		}
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "OKI"			
+# 		value = 35
+# 	}	
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "YKR"			
+# 		value = 35
+# 	}	
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "KAS"			
+# 		value = 35
+# 	}	
+# }
+
+# TKM_NMS_muhou_friendR = {
+# 	enable = {
+# 		has_opinion_modifier = NMS_muhouyouhao_op
+# 		not = {
+# 			tag = OKI
+# 			tag = YKR
+# 			tag = KAS
+# 		}
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+# 	reversed = yes
+
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "OKI"			
+# 		value = 35
+# 	}	
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "YKR"			
+# 		value = 35
+# 	}	
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "KAS"			
+# 		value = 35
+# 	}	
+# }
+
+# TKM_NMS_1 = {
+# 	enable = {
+# 		tag = TKM
+# 		has_opinion_modifier = TKM_zantonglinian_op
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "MRS"			
+# 		value = 25
+# 	}	
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "MRS"			
+# 		value = 25
+# 	}
+# }
+
+# TKM_NMS_1r = {
+# 	enable = {
+# 		tag = NMS
+# 		has_opinion_modifier = TKM_zantonglinian_op
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "TKM"			
+# 		value = 25
+# 	}	
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "TKM"			
+# 		value = 25
+# 	}
+# 	# ai_strategy = {
+# 	# 	type = protect
+# 	# 	id = "MRS"			
+# 	# 	value = 20
+# 	# }
+# }
+
+# TKM_HUM_1 = {
+# 	enable = {
+# 		tag = TKM
+# 		has_opinion_modifier = TKM_xuanchengshouhushen_op
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "HUM"			
+# 		value = 50
+# 	}	
+# 	ai_strategy = {
+# 		type = protect
+# 		id = "HUM"			
+# 		value = 50
+# 	}
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "HUM"			
+# 		value = 50
+# 	}
+# }
+
+# TKM_HUM_1r = {
+# 	enable = {
+# 		tag = HUM
+# 		has_opinion_modifier = TKM_xuanchengshouhushen_op
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "TKM"			
+# 		value = 50
+# 	}	
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "TKM"			
+# 		value = 50
+# 	}
+# }
+
+# TKM_SCA_1 = {
+# 	enable = {
+# 		tag = TKM
+# 		has_opinion_modifier = TKM_dishihongmoguan_op
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+# 	ai_strategy = {
+# 		type = antagonize
+# 		id = "SCA"			
+# 		value = 15
+# 	}	
+# }
+
+# TKM_SCA_1R = {
+# 	enable = {
+# 		tag = SCA
+# 		has_opinion_modifier = TKM_dishihongmoguan_op
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+# 	ai_strategy = {
+# 		type = antagonize
+# 		id = "TKM"			
+# 		value = 15
+# 	}	
+# }
+
+# TKM_RNS_1 = {
+# 	enable = {
+# 		tag = TKM
+# 		has_opinion_modifier = TKM_xianglintangdedaoju_op
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "RNS"			
+# 		value = 15
+# 	}	
+# 	ai_strategy = {
+# 		type = protect
+# 		id = "RNS"			
+# 		value = 15
+# 	}
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "RNS"			
+# 		value = 15
+# 	}
+# }
+
+# TKM_RNS_1r = {
+# 	enable = {
+# 		tag = RNS
+# 		has_opinion_modifier = TKM_xianglintangdedaoju_op
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "TKM"			
+# 		value = 15
+# 	}	
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "TKM"			
+# 		value = 15
+# 	}
+# 	# ai_strategy = {
+# 	# 	type = protect
+# 	# 	id = "MRS"			
+# 	# 	value = 20
+# 	# }
+# }
+
+# TKM_SBK_1 = {
+# 	enable = {
+# 		tag = TKM
+# 		has_opinion_modifier = TKM_yaoguaicunluo_op
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "SBK"			
+# 		value = 15
+# 	}	
+# 	ai_strategy = {
+# 		type = protect
+# 		id = "SBK"			
+# 		value = 15
+# 	}
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "SBK"			
+# 		value = 15
+# 	}
+# }
+
+# TKM_SBK_1r = {
+# 	enable = {
+# 		tag = SBK
+# 		has_opinion_modifier = TKM_yaoguaicunluo_op
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "TKM"			
+# 		value = 15
+# 	}	
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "TKM"			
+# 		value = 15
+# 	}
+# 	# ai_strategy = {
+# 	# 	type = protect
+# 	# 	id = "MRS"			
+# 	# 	value = 20
+# 	# }
+# }
+
+# TKM_MSD_KAG_1 = {
+# 	enable = {
+# 		tag = TKM
+# 		has_opinion_modifier = TKM_dongmiandebuluo_op
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "MSD"			
+# 		value = 15
+# 	}	
+# 	ai_strategy = {
+# 		type = protect
+# 		id = "MSD"			
+# 		value = 15
+# 	}
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "MSD"			
+# 		value = 15
+# 	}
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "KAG"			
+# 		value = 15
+# 	}	
+# 	ai_strategy = {
+# 		type = protect
+# 		id = "KAG"			
+# 		value = 15
+# 	}
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "KAG"			
+# 		value = 15
+# 	}
+# }
+
+# TKM_MSD_KAG_1r = {
+# 	enable = {
+# 		or = {
+# 			tag = MSD
+# 			tag = KAG
+# 		}
+# 		has_opinion_modifier = TKM_dongmiandebuluo_op
+# 	}
+# 	abort = {
+# 		has_global_flag = xinshidai
+# 	}
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = "TKM"			
+# 		value = 15
+# 	}	
+# 	ai_strategy = {
+# 		type = alliance
+# 		id = "TKM"			
+# 		value = 15
+# 	}
+# 	# ai_strategy = {
+# 	# 	type = protect
+# 	# 	id = "MRS"			
+# 	# 	value = 20
+# 	# }
+# }
+
+TKM_North_has_nothing_to_do_with_us = {
+	enable = {
+		tag = TKM
+    	has_war_with = WAK
+		OR = {
+			OR = {
+			 	is_in_faction_with = CIR
+	     		CIR = { is_subject_of = TKM }
+			}
+			OR = {
+			 	is_in_faction_with = SEJ
+	     		SEJ = { is_subject_of = TKM }
+			}
+			OR = {
+			 	is_in_faction_with = NIB
+	     		NIB = { is_subject_of = TKM }
+			}
+			OR = {
+			 	is_in_faction_with = RMI
+	     		RMI = { is_subject_of = TKM }
+			}
+			OR = {
+			 	is_in_faction_with = MSD
+	     		MSD = { is_subject_of = TKM }
+			 }
+		}
+
+	}
+	abort = {
+		OR = {
+		    WAK = { has_capitulated = yes }
+			NOT = { country_exists = WAK }
+		    not = { WAK = { is_subject_of = SCA } }
+		}
+	}
+	
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "CIR"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "SEJ"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "NIB"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "RMI"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "MSD"
+		value = 100
+	}
+
+}
+
+TKM_North_has_nothing_to_do_with_us_2 = {
+	enable = {
+		tag = TKM
+    	has_war_with = KYK
+		OR = {
+		 	OR = {
+			 	is_in_faction_with = CIR
+	     		CIR = { is_subject_of = TKM }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = SEJ
+     			SEJ = { is_subject_of = TKM }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = NIB
+     			NIB = { is_subject_of = TKM }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = RMI
+     			RMI = { is_subject_of = TKM }
+		 	}
+		 	OR = {
+			 	is_in_faction_with = MSD
+	     		MSD = { is_subject_of = TKM }
+		 	}
+		}
+
+	}
+	abort = {
+		OR = {
+    		KYK = { has_capitulated = yes }
+			NOT = { country_exists = KYK }
+    		not = { KYK = { is_subject_of = NMS } }
+		}
+	}
+	
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "CIR"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "SEJ"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "NIB"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "RMI"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "MSD"
+		value = 100
+	}
+
+}
+
+TKM_Tonight_is_an_elegant_militarist = {
+	enable = {
+		tag = TKM
+	  	or = {
+			has_idea = kog_jixingdegongye_idea
+			has_idea = TKM_suoyoudaojujiewuqi_idea
+	 		has_idea = TKM_yanxujunshigongyequ_idea
+	  	}
+	}
+
+	abort = { 
+		or = {
+		  has_idea = TKM_zhongshiminyongyanjiu_idea
+			has_war = yes
+			date > 148.4.1
+		}
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 75
+	}
+}
+
+TKM_Tonight_is_not_an_elegant_militarist = {
+	enable = {
+		tag = TKM
+	  	has_idea = TKM_zhongshiminyongyanjiu_idea
+	}
+
+	abort = { 
+		or = {
+			has_war = yes
+			date > 148.4.1
+		}
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 60
+	}
+}

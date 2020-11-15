@@ -399,39 +399,39 @@ tactic_ambush = { #counters shock
 	attacker = -0.25
 }
 
-# tactic_blitz = {
-# 	is_attacker = yes
-# 	trigger = {
-# 		is_attacker = yes
-# 		hardness > 0.5
-# 		phase = no
-# 		OR = {
-# 			skill > 2
-# 			has_trait = panzer_leader
-# 			skill_advantage > 1
-# 		}
-# 	}
+tactic_blitz = {
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		hardness > 0.5
+		phase = no
+		OR = {
+			skill > 2
+			has_trait = panzer_leader
+			skill_advantage > 1
+		}
+	}
 	
-# 	active = no
+	active = no
 	
-# 	base =  { 
-# 		factor = 4
-# 		modifier = {
-# 			add = 4
-# 			OR = {
-# 				has_trait = panzer_expert
-# 				has_trait = combined_arms_expert
-# 			}
-# 		}
-# 	}
+	base =  { 
+		factor = 4
+		modifier = {
+			add = 4
+			OR = {
+				has_trait = panzer_expert
+				has_trait = combined_arms_expert
+			}
+		}
+	}
 	
-# 	picture = blitz
-# 	countered_by = tactic_elastic_defense
+	picture = blitz
+	countered_by = tactic_elastic_defense
 	
-# 	attacker_movement_speed = 0.5
-# 	attacker = 0.15
-# 	defender = -0.15
-# }
+	attacker_movement_speed = 0.5
+	attacker = 0.15
+	defender = -0.15
+}
 
 
 tactic_elastic_defense = { #counters blitz
@@ -733,24 +733,28 @@ tactic_human_wave_tactics = { #People's army attacker tactic
 	defender = 0.1
 }
 
-# tactic_banzai_charge = { #Special Japan attacker tactic
-# 	is_attacker = yes
-# 	trigger = {
-# 		is_attacker = yes
-# 		phase = no
-# 	}
+tactic_banzai_charge = { #Special Japan attacker tactic
+	is_attacker = yes
+	trigger = {
+		or = {
+			Ghost_country = yes
+			Fairy_country = yes
+		}
+		is_attacker = yes
+		phase = no
+	}
 	
-# 	active = yes
+	active = yes
 	
-# 	countered_by = tactic_overwhelming_fire
+	countered_by = tactic_overwhelming_fire
 	
-# 	base =  { factor = 4 }
-# 	picture = tactic_banzai_charge
+	base =  { factor = 4 }
+	picture = tactic_banzai_charge
 	
-# 	attacker_movement_speed = 0.1
-# 	attacker = 0.25 
-# 	defender = 0.1
-# }
+	attacker_movement_speed = 0.1
+	attacker = 0.25 
+	defender = 0.1
+}
 
 tactic_infantry_charge = { #GBP -> Infantry attacker tactic
 	is_attacker = yes

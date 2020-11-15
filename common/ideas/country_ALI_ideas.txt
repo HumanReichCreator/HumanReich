@@ -19,7 +19,7 @@ ideas = {
 	    	picture = generic_acquire_tanks
 
 			targeted_modifier = {
-	    		tag = KOG
+	    		tag = TKM
 	    		attack_bonus_against = 0.3
 	    		defense_bonus_against = 0.3
 	    	}
@@ -70,7 +70,7 @@ ideas = {
 	  #   }
 	  #   ALI_fusangshenshiyongfangan_idea = {
 	  #   	targeted_modifier = {
-	  #   		tag = KOG
+	  #   		tag = TKM
 	  #   		attack_bonus_against = 0.1
 	  #   		defense_bonus_against = 0.1
 	  #   	}
@@ -98,7 +98,7 @@ ideas = {
 	    	picture = strategic_bombing_focus
 
 	    	equipment_bonus = {
-				ma_rocket_artillery_a = {
+				ma_magic_energy_a = {
 					breakthrough = 0.2
 					defense = 0.2
 					instant = yes
@@ -127,7 +127,7 @@ ideas = {
 	    	picture = generic_artillery_regiments
 
 	    	equipment_bonus = {
-				ma_artillery_a = {
+				ma_magic_energy_a = {
 					soft_attack = 0.1
 					hard_attack = 0.1
 					instant = yes
@@ -274,7 +274,7 @@ ideas = {
 
 	    	}
 	    	equipment_bonus = {
-	    		spell_card_a = {
+	    		magic_core_a = {
 	    			soft_attack = 0.075
 	    			hard_attack = 0.075
 	    		}
@@ -285,7 +285,7 @@ ideas = {
 			picture = generic_research_bonus
 
 	    	research_bonus = {
-	    		magic_weapons = 0.125
+	    		primary_weapons = 0.125
 	    	}
 	    }
 	    ALI_duimojiedeqianglierentonggan_idea = {
@@ -445,8 +445,8 @@ ideas = {
 	    		has_war_with = ALI
 	    	}
 	    	modifier = {
-				army_attack_factor = -0.08
-				army_defence_factor = -0.08
+				army_attack_factor = -0.06
+				army_defence_factor = -0.06
 			}
 	    }
 

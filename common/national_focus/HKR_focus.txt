@@ -437,7 +437,7 @@ focus_tree = {
             has_country_flag = hkr_help_renli
           }
           add_tech_bonus = {
-            category = science_weapons 
+            category = primary_weapons 
             uses = 2
             bonus = 0.9
           }
@@ -447,12 +447,12 @@ focus_tree = {
             has_country_flag = hkr_help_hongmoguan
           }
           add_tech_bonus = {
-            category = magic_weapons 
+            category = primary_weapons 
             uses = 1
             bonus = 0.5
           }
           add_tech_bonus = {
-            category = magic_weapons_improve
+            category = primary_weapons
             uses = 1
             bonus = 1
           }
@@ -462,7 +462,7 @@ focus_tree = {
             has_country_flag = hkr_help_zi
           }
           add_tech_bonus = {
-            category = magic_weapons 
+            category = primary_weapons 
             uses = 2
             bonus = 0.6
           }
@@ -494,8 +494,7 @@ focus_tree = {
 
       completion_reward = {
         add_tech_bonus = {
-          category = science_artillery_weapons
-          category = magic_artillery_weapons
+          category = mortar
           uses = 1
           bonus = 0.3
         }
@@ -782,6 +781,12 @@ focus_tree = {
         modifier = {
           factor = 0
           has_war = yes
+        }
+        modifier = {
+          factor = 3
+          MSD = {
+            has_war = yes
+          }
         }
       }
   }
@@ -1614,7 +1619,7 @@ focus_tree = {
           tooltip = HKR_rangrenleizaiciweida_tt
           has_country_flag = {
             flag = hkr_renyaoqingxiang 
-            value > 3
+            value > 2
           }
         }
         has_country_flag = {
@@ -1630,6 +1635,11 @@ focus_tree = {
       }
 
       completion_reward = {
+        YKR = {
+          diplomatic_relation = { 
+            country = HKR relation = guarantee active = no
+          }
+        }
         go_fandong = yes
         add_popularity = {
           ideology = fandong
@@ -1696,6 +1706,11 @@ focus_tree = {
       }
 
       completion_reward = {
+        YKR = {
+          diplomatic_relation = { 
+            country = HKR relation = guarantee active = no
+          }
+        }
         go_neworder = yes
         add_popularity = {
           ideology = neworder
@@ -1763,15 +1778,20 @@ focus_tree = {
         
         custom_trigger_tooltip = {
           tooltip = HKR_huanxiangxiangdezhize2_tt
-          has_country_flag = {
-            flag = hkr_oldorder
-            value > 4
+          or = {
+            is_ai = yes
+            has_country_flag = {
+              flag = hkr_oldorder
+              value > 4
+            }
           }
         }
       }
 
       completion_reward = {
         go_oldorder = yes
+        PO_add10 = yes
+        PO_add10 = yes
         remove_ideas = hkr_bayunzi
         remove_ideas = hkr_bayunzi2
         remove_ideas = hkr_bayunzi3
@@ -1817,7 +1837,7 @@ focus_tree = {
           tooltip = HKR_yaoguaiwunv_tt
           has_country_flag = {
             flag = hkr_renyaoqingxiang 
-            value < -2
+            value < -1
           }
         }
       }
@@ -2175,15 +2195,34 @@ focus_tree = {
             HUM = {
               subject_level4 = yes
             }
+            if = {
+              limit = {
+                ZBT = {
+                  is_subject_of = HUM
+                }
+              }
+              subject_level4 = yes
+            }
             add_named_threat = {
               name = HKR_zheshiyichangguangronggeming
-              threat = 5
+              threat = 4
             }
             remove_ideas = {
               hkr_treaty
               hkr_treaty2
             }
             HUM = {
+              remove_ideas = {
+                HUM_youkai_influence
+                HUM_war_fear
+              }
+            }
+            if = {
+              limit = {
+                ZBT = {
+                  is_subject_of = HUM
+                }
+              }
               remove_ideas = {
                 HUM_youkai_influence
                 HUM_war_fear
@@ -2218,11 +2257,11 @@ focus_tree = {
                 }
             }
             modifier = {
-                factor = 1.5
+                factor = 2
                 has_completed_focus = HKR_tichuqitashili
             }
             modifier = {
-                factor = 1.5
+                factor = 2
                 is_neighbor_of = HUM
             }
           }
@@ -2454,38 +2493,57 @@ focus_tree = {
       }
 
       completion_reward = {
+        custom_effect_tooltip = focus_warning3
         white_peace = HUM
         set_cosmetic_tag = HKR_HUM
 
-        annex_country = {
-          target = HUM
-          transfer_troops = yes
-        }
-        every_state = {
+        if = {
           limit = {
-            is_core_of = HUM
+            HUM = {
+              not = { is_subject_of = ROOT }
+            }
           }
-          add_core_of = HKR
+          HUM = {
+            can_core = yes
+            subject_level1 = yes
+          }
+          else = {
+            HUM = {
+              can_core = yes
+              low_puppet_level = yes
+              low_puppet_level = yes
+              low_puppet_level = yes
+              low_puppet_level = yes
+            }
+          }
         }
-        every_state = {
+        if = {
           limit = {
-            is_claimed_by = HUM
+            ZBT = {
+              not = { is_subject_of = ROOT }
+            }
           }
-          add_claim_by = HKR
-        }
-        HUM = {
-          HKR = {
-            army_leader_inherit_146 = yes
+          ZBT = {
+            can_core = yes
+            subject_level1 = yes
+          }
+          else = {
+            ZBT = {
+              can_core = yes
+              low_puppet_level = yes
+              low_puppet_level = yes
+              low_puppet_level = yes
+            }
+            
           }
         }
+        add_ideas = Human
+        race_tech_clear = yes
         add_named_threat = {
           name = HKR_jianlibolirenleidiguo
-          threat = 8
+          threat = 6
         }
-        swap_ideas = {
-          remove_idea = Shrine
-          add_idea = Empire
-        }
+        add_ideas = Empire
         hidden_effect = {
           news_event = { id = hkr.32 days = 2}
         }
@@ -2512,7 +2570,7 @@ focus_tree = {
       relative_position_id = HKR_jianlibolirenleidiguo
 
       will_lead_to_war_with = SRB
-      will_lead_to_war_with = KOG
+      will_lead_to_war_with = TKM
       will_lead_to_war_with = NMS
 
       available ={
@@ -2614,9 +2672,7 @@ focus_tree = {
 
       available ={
         threat > 0.15
-        has_army_size = {
-          size > 30
-        }
+        num_divisions > 30
       }
 
       completion_reward = {
@@ -2626,6 +2682,8 @@ focus_tree = {
           name = HKR_chongsurenleiyingxiong
         }
       }
+
+      continue_if_invalid = yes
 
     ai_will_do = {
         factor = 1
@@ -2647,19 +2705,44 @@ focus_tree = {
 
       available ={
         is_subject = no
-        MRS = {
-          faqiqingqiu = yes
+        or = {
+          ALI = {
+            is_subject = no
+          }
+          MRS = {
+            is_subject = no
+          }
         }
         not = {
           has_completed_focus = HKR_ziligengsheng
+        }
+      }
+      bypass = {
+        and = {
+          MRS = {
+            bypass_declare_war = yes
+          }
+          ALI = {
+            bypass_declare_war = yes
+          }
         }
       }
 
       completion_reward = {
         custom_effect_tooltip = HKR_yumofashilianhedekeneng_1
         add_political_power = -60
-        MRS = {
-          country_event = { id = hkr.13 days = 2 } 
+        if = {
+          limit = {
+            MRS = { is_subject_of = ALI}
+          }
+          ALI = {
+            country_event = { id = hkr.13 days = 2 } 
+          }
+          else = {
+            MRS = {
+              country_event = { id = hkr.13 days = 2 } 
+            }
+          }
         }
       }
 
@@ -2686,10 +2769,10 @@ focus_tree = {
 
       relative_position_id = HKR_yumofashilianhedekeneng
 
-      will_lead_to_war_with = SEI
+      will_lead_to_war_with = SEJ
 
       bypass = {
-        SEI = { 
+        SEJ = { 
           bypass_declare_war = yes 
         }
 
@@ -2716,7 +2799,7 @@ focus_tree = {
       completion_reward = {
         declare_war_on = {
           type = annex_everything
-          target = SEI
+          target = SEJ
         }
       }
 
@@ -2760,7 +2843,16 @@ focus_tree = {
               }
             }
           }
-          set_cosmetic_tag = HKR_MRS
+          if = {
+            limit = {
+              has_country_flag = HKR_ALI_fuyong
+            }
+            set_cosmetic_tag = HKR_ALI
+            else = {
+              set_cosmetic_tag = HKR_MRS
+            }
+          }
+          
           swap_ideas = { remove_idea = Shrine add_idea = Country}
           HMIF_daily_add0.01 = yes
           else = {
@@ -2900,7 +2992,7 @@ focus_tree = {
       }
 
       completion_reward = {
-
+        PO_add5 = yes
         add_ideas = HKR_shuliweiwang_idea
         
       }
@@ -2964,7 +3056,7 @@ focus_tree = {
       relative_position_id = HKR_huanxiangxiangdezhize
 
       available ={
-
+        is_subject = no
       }
       bypass = {
         MRS = {
@@ -2991,6 +3083,14 @@ focus_tree = {
         declare_war_on = {
           type = puppet_wargoal_focus
           target = ALI
+        }
+        random_army_leader = {
+          limit = {
+            has_id = 1
+          }
+          add_skill_level = 2
+          add_logistics = 2
+          add_planning = 2
         }
         hidden_effect = {
           news_event = { id = hkr.38 days = 2}
@@ -3025,6 +3125,8 @@ focus_tree = {
       }
 
       completion_reward = {
+        PO_influence_factor0.05 = yes
+        PO_add5 = yes
         add_ideas = HKR_laizidajiejiedeliliang_idea
       }
 
@@ -3070,6 +3172,7 @@ focus_tree = {
         hidden_effect = {
           news_event = { id = hkr.39 days = 2}
         }
+        PO_influence_factor0.25 = yes
       }
 
       ai_will_do = {
@@ -3094,11 +3197,12 @@ focus_tree = {
       will_lead_to_war_with = KAG
       will_lead_to_war_with = SBK
 
-      available ={
-
+      available ={  
+        is_subject = no
       }
 
       completion_reward = {
+        HMIF_daily_add0.01 = yes
         country_event = hkr.15
       }
 
@@ -3151,6 +3255,16 @@ focus_tree = {
             has_government = oldorder 
           }
           add_ideas = oldorderjiaqiang
+          random_army_leader = {
+            limit = {
+              has_id = 1
+            }
+            add_skill_level = 1
+            add_logistics = 2
+            add_planning = 2
+          }
+          PO_add10 = yes
+          PO_influence_factor0.25 = yes
           else = {
             add_ideas = neworderjiaqiang
           }
@@ -3158,6 +3272,8 @@ focus_tree = {
         add_political_power = 200
         add_stability = 0.15
         add_ideas = HKR_ziligengsheng_idea
+        set_country_flag = ALI_dilinglizuozhan
+        custom_effect_tooltip = ALI_dilinglizuozhan_tt
       }
 
       ai_will_do = {
@@ -3195,6 +3311,7 @@ focus_tree = {
       completion_reward = {
         add_political_power = -50
         YKR = {
+          add_ideas = can_create_faction_idea
           create_faction = HKR_zhizechongshen_faction
           add_to_faction = HKR
         }
@@ -3203,6 +3320,8 @@ focus_tree = {
           name = HKR_zhizechongshen
         }
         add_ideas = HKR_zhizechongshen_idea
+        set_country_flag = ALI_dilinglizuozhan
+        custom_effect_tooltip = ALI_dilinglizuozhan_tt
         hidden_effect = {
           news_event = { id = hkr.41 days = 2}
         }
@@ -3506,13 +3625,7 @@ focus_tree = {
 
       completion_reward = {
         add_ideas = Youkai
-        hidden_effect = {
-          set_technology = {
-            magician_tech = 0
-          }
-          tech_initialize = yes
-          country_event = glo.3000
-        }
+        race_tech_clear = yes
       }
 
       ai_will_do = {
@@ -3548,8 +3661,8 @@ focus_tree = {
             add_planning = 3
         }
 
-        #suika and anuu
-        if = { #suika
+        #suika
+        if = {
           limit = {
             has_government = neworder
             has_country_flag = {
@@ -3558,17 +3671,6 @@ focus_tree = {
             }
           }
           country_event = hkr.20
-        }
-        if = { #annu
-          limit = {
-            has_government = qinwai
-            has_country_flag = hkr_okina
-            has_country_flag = {
-              flag = lobbyvalue
-              value < 0
-            }
-          }
-          country_event = hkr.57
         }
       }
 
@@ -3595,13 +3697,25 @@ focus_tree = {
       }
 
       completion_reward = {
+        add_ideas = Pri_youkai
+        race_tech_clear = yes
         OL_minus10 = yes
-        OL_minus5 = yes
-        add_stability = -0.05
-        OL_xiajiangsudu0.2 = yes
+        add_stability = -0.1
         EXHC_exhaustion_factor_add10 = yes
         set_country_flag = OL_to_pingheng
-        
+        CO_core_Pri_youkai = yes
+        CO_core_Beast = yes
+        if = { #annu
+          limit = {
+            has_government = qinwai
+            has_country_flag = hkr_okina
+            has_country_flag = {
+              flag = lobbyvalue
+              value < 0
+            }
+          }
+          country_event = hkr.57
+        }
       }
 
 
@@ -3654,14 +3768,14 @@ focus_tree = {
 
       relative_position_id = HKR_mingquedangxiaweixie
 
-      will_lead_to_war_with = SEI
+      will_lead_to_war_with = SEJ
 
       mutually_exclusive = {
         focus = HKR_yaoguaizennengweinu
       }
 
       bypass = {
-        SEI = { 
+        SEJ = { 
           bypass_declare_war = yes 
         }
       }
@@ -3673,7 +3787,7 @@ focus_tree = {
       completion_reward = {
         declare_war_on = {
           type = annex_everything
-          target = SEI
+          target = SEJ
         }
       }
 

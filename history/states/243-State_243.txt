@@ -3,18 +3,17 @@ state={
 	id=243
 	name="STATE_243"
 	resources={
-		powder=2.000
-		metal=0.000
+		powder = 2.0
+		metal = 0.0
 		gas=5.000
 		crystal=0.000
 	}
 
 	history={
-			owner = HUM
 		146.1.1 = {
-			owner = HUM
+			owner = MSD
 			add_core_of = MSD
-			add_core_of = HUM
+			add_claim_by = HUM
 			add_claim_by = HU6
 			add_claim_by = HU7
 			add_claim_by = HU8

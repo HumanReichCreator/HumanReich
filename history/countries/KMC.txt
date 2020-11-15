@@ -1,0 +1,124 @@
+﻿capital = 490
+138.8.13 = {
+
+}
+141.6.2 = {
+    
+}
+142.3.8 = {
+    
+}
+144.2.5 = {
+    
+}
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card1 = 1
+        spear1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+            
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+        zuzhihuazhanzheng142 = 1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        lingben = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+            
+        #专用工业
+
+        #种族
+            
+    }
+    
+}
+146.1.1={
+    oob = "KMC_146"
+    
+    add_ideas = {
+    God
+    Village
+    dove1
+    close1
+    strict_border
+    limit_magic
+    }
+    set_politics = {
+    	ruling_party = guli
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 9
+        guli = 88
+        neworder = 0
+        oldorder = 0
+        fandong = 3
+    }
+    
+}
+
+create_country_leader = {
+    # name = "Onozuka Komachi"
+    name = "小野塚小町"
+    picture = "KMC_kmc.dds"
+    ideology = guli_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Onozuka Komachi"
+    name = "小野塚小町"
+    picture = "KMC_kmc.dds"
+    ideology = neworder_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Onozuka Komachi"
+    name = "小野塚小町"
+    picture = "KMC_kmc.dds"
+    ideology = qinwai_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Onozuka Komachi"
+    name = "小野塚小町"
+    picture = "KMC_kmc.dds"
+    ideology = fandong_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Onozuka Komachi"
+    name = "小野塚小町"
+    picture = "KMC_kmc.dds"
+    ideology = oldorder_type
+    traits = {
+        #warrior_code
+    }
+}

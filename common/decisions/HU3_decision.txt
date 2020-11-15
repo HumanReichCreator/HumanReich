@@ -67,11 +67,11 @@ HU3_category = {
         complete_effect = {
 
 		AKI = {
-		add_ai_strategy = {
-			type = befriend
-			id = "HU3"
-			value = 200
-		}
+			add_ai_strategy = {
+				type = befriend
+				id = "HU3"
+				value = 200
+			}
 		}
 
 		add_ai_strategy = {
@@ -80,6 +80,14 @@ HU3_category = {
 			value = 200
 		}
 
+	    go_guli = yes
+	    set_politics = {
+	        ruling_party = guli
+	    }
+	    add_popularity = {
+	        ideology = guli
+	        popularity = 0.5
+	    }
 
         AKI = { 
           add_to_faction = HU3
@@ -110,10 +118,10 @@ HU3_category = {
 
 		ai_will_do = {
 			factor = 1000
-        modifier = {
-          has_war = no
-          factor = 0
-        }
+	        modifier = {
+	          has_war = no
+	          factor = 0
+	        }
 		}
 
         complete_effect = {
@@ -133,8 +141,8 @@ HU3_category = {
         available = {
 			has_war = yes
             has_idea = AKI_laiziqiushendezhichi_idea
-              NOT = { AKI = { has_idea = AKI_tudijianbing_idea } }
-              NOT = { AKI = { has_idea = AKI_jiduanzhuyiyundong_idea } }
+            NOT = { AKI = { has_idea = AKI_tudijianbing_idea } }
+            NOT = { AKI = { has_idea = AKI_jiduanzhuyiyundong_idea } }
         }
 
         days_remove = 182
@@ -144,17 +152,16 @@ HU3_category = {
 
 		ai_will_do = {
 			factor = 1000
-        modifier = {
-          has_war = no
-          factor = 0
-        }
+	        modifier = {
+	          has_war = no
+	          factor = 0
+	        }
 		}
 
         complete_effect = {
 			AKI = {
-            country_event = { id = hu3.4 hours = 1 } 
+            	country_event = { id = hu3.4 hours = 1 } 
 			}
-
         }
 
     }
@@ -178,12 +185,10 @@ HU3_category = {
 		}
 
         complete_effect = {
-            AKI = {
-        add_timed_idea = { idea = AKI_zhichibuji_idea days = 90 }
-            }
-
-        add_timed_idea = { idea = AKI_buji_idea days = 90 }
-
+	        AKI = {
+	        	add_timed_idea = { idea = AKI_zhichibuji_idea days = 90 }
+	        }
+	        add_timed_idea = { idea = AKI_buji_idea days = 90 }
         }
 
     }
@@ -208,11 +213,9 @@ HU3_category = {
 
         complete_effect = {
             AKI = {
-        add_timed_idea = { idea = AKI_zhichigongshi_idea days = 90 }
+        		add_timed_idea = { idea = AKI_zhichigongshi_idea days = 90 }
             }
-
-        add_timed_idea = { idea = AKI_gongshi_idea days = 90 }
-
+        	add_timed_idea = { idea = AKI_gongshi_idea days = 90 }
         }
 
     }
@@ -235,24 +238,19 @@ HU3_category = {
 		}
 
         complete_effect = {
+			reverse_add_opinion_modifier = { target = AKI modifier = AKI_kaoshan_op }
+        	add_opinion_modifier = { target = AKI modifier = AKI_kaoshan_op }
 
-		reverse_add_opinion_modifier = { target = AKI modifier = AKI_kaoshan_op }
-        add_opinion_modifier = { target = AKI modifier = AKI_kaoshan_op }
-
-		  	 	set_country_flag = AKI_nagong_flag
-
+		  	set_country_flag = AKI_nagong_flag
 			set_country_flag = {
 				value = 1
 				days = 90
 				flag = AKI_diycinagong_flag
 			}
-
 			AKI = {
-            country_event = { id = hu3.6 hours = 1 } 
+            	country_event = { id = hu3.6 hours = 1 } 
 			}
-
         }
-
     }
 
     HU3_shangjiaogongpin = {
@@ -278,20 +276,17 @@ HU3_category = {
 			factor = 100
 		}
 
-        complete_effect = {
-       random_list = {
-          50 = {
-			AKI = {
-            country_event = { id = hu3.6 hours = 1 } 
-			}
-          }
-
-          50 = {
-          custom_effect_tooltip = AKI_shouchengbuhao_tt
-          }
-
-        }
-
+       	complete_effect = {
+	       random_list = {
+	          50 = {
+				AKI = {
+	            	country_event = { id = hu3.6 hours = 1 } 
+				}
+	          }
+	          50 = {
+	          	custom_effect_tooltip = AKI_shouchengbuhao_tt
+	          }
+	        }
         }
 
     }

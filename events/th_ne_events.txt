@@ -1,4 +1,4 @@
-﻿add_namespace = nee
+add_namespace = nee
 country_event = { #YMM puppet UNA(YMM)
 	id = nee.1
 	title = nee.1.t
@@ -111,7 +111,7 @@ news_event = { #YMM puppet UNA(新闻)
 	}
 }
 
-country_event = { #YMM VS SPG
+country_event = { #YMM VS LIL
 	id = nee.4
 	title = nee.4.t
 	desc = nee.4.d
@@ -123,23 +123,23 @@ country_event = { #YMM VS SPG
 		has_global_flag = main_scenario
 		tag = YMM
 		is_subject = no
-		SPG = {
+		LIL = {
 			is_subject = no
 		}
-		country_exists = SPG
+		country_exists = LIL
 		or = {
 			and = {
 				owns_state = 6 
 				owns_state = 431
 			}
-			SPG = {
+			UNA = {
 				is_subject_of = ROOT
 			}
 		}
 	}
 
 	mean_time_to_happen = {
-		days = 365
+		days = 350
 	}
 
 	option = {
@@ -148,7 +148,7 @@ country_event = { #YMM VS SPG
 			base = 50
 		}
 		declare_war_on = {
-			target = SPG
+			target = LIL
 			type = puppet_wargoal_focus
 		}
 		army_experience = 15
@@ -177,7 +177,7 @@ country_event = { #YMM VS SPG
 	}
 }
 
-news_event = { #YMM VS SPG(新闻)
+news_event = { #YMM VS LIL(新闻)
 	id = nee.5
 	title = nee.5.t
 	desc = nee.5.d
@@ -209,7 +209,7 @@ news_event = { #YMM VS SPG(新闻)
 	}
 }
 
-country_event = { #SPG puppet HU7 (SPG)
+country_event = { #LIL puppet HU7 (LIL)
 	id = nee.6
 	title = nee.6.t
 	desc = nee.6.d
@@ -220,7 +220,7 @@ country_event = { #SPG puppet HU7 (SPG)
 		date > 146.10.1
 		date < 147.8.1
 		has_global_flag = main_scenario
-		tag = SPG
+		tag = LIL
 		is_subject = no
 		HU7 = {
 			is_subject = no
@@ -289,7 +289,7 @@ country_event = { #SPG puppet HU7 (SPG)
 	}
 }
 
-country_event = { #SPG puppet HU7 (SPG)
+country_event = { #LIL puppet HU7 (LIL)
 	id = nee.7
 	title = nee.7.t
 	desc = nee.7.d

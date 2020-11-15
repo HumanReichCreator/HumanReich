@@ -2,7 +2,7 @@ SS_defines = {
   set_variable = { global.SS_Ghost_influ_max = 0.3 }
   set_variable = { global.SS_Fairy_influ_max = -0.5 }
   set_variable = { global.SS_Human_influ_max = 0.5 }
-  set_variable = { global.SS_Pri_youkai_influ_max = 0.3 }
+  set_variable = { global.SS_Pri_youkai_influ_max = 0.2 }
   set_variable = { global.SS_Youkai_influ_max = 0.25 }
   set_variable = { global.SS_Tengu_influ_max = 0.15 }
   set_variable = { global.SS_Kappa_influ_max = 0.35 }
@@ -114,13 +114,21 @@ SS_power_calculator = {
       }
       if = {
         limit = {
-          has_autonomy_state = autonomy_puppet
+          or = {
+            has_autonomy_state = autonomy_puppet
+            has_autonomy_state = autonomy_puppet_qinwai
+            has_autonomy_state = autonomy_puppet_neworder_fandong
+          }
         }
         multiply_variable = { SS_subject_give_power_ratio = global.SS_subject_level2_power_factor }
       }
       if = {
         limit = {
-          has_autonomy_state = autonomy_integrated_puppet
+          or = {
+            has_autonomy_state = autonomy_integrated_puppet
+            has_autonomy_state = autonomy_integrated_puppet_qinwai
+            has_autonomy_state = autonomy_integrated_puppet_neworder_fandong
+          }
         }
         multiply_variable = { SS_subject_give_power_ratio = global.SS_subject_level1_power_factor }
       }

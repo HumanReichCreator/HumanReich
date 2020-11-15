@@ -1,5 +1,27 @@
 ideas = {
 	country = {
+		srb_daojiaotansuojingshen_o_idea = {
+
+			picture = generic_research_bonus
+
+	    	allowed = {
+				always = no
+			}
+
+
+			available = {
+				has_idea = Shrine
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				research_speed_factor = 0.1
+			}
+	    }	
 		SRB_xianjiemingongjianshe_idea = {
 			picture = man_five_year_plan_industry
 	    	allowed = {
@@ -170,7 +192,7 @@ ideas = {
 
 
 			available = {
-
+				has_idea = Shrine
 			}
 
 			allowed_civil_war = {
@@ -179,7 +201,7 @@ ideas = {
 			removal_cost = -1
 	
 			modifier = {
-				research_speed_factor = -0.3
+				research_speed_factor = -0.15
 			}
 	    }	
 	    SRB_zhunbeizhonghouqizhanzheng_idea = {
@@ -326,7 +348,7 @@ ideas = {
 				# conscription = 0.06
 			}
 			targeted_modifier = { 
-				tag = AVE
+				tag = KYK
 				attack_bonus_against = 0.05
 				defense_bonus_against = 0.05
 			}
