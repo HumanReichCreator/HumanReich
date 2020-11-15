@@ -511,7 +511,10 @@ focus_tree = {
 				min = 1
 				max = 150
 			}
-			add_timed_idea = { idea = guli_drift1 days = 60}
+			add_timed_idea = {
+				idea = guli_drift1
+				days = 60
+			}
 			#外交变化
 			every_country = {
 				limit = {
@@ -532,7 +535,6 @@ focus_tree = {
 					id = SGS
 					value = -5
 				}
-
 			}
 		}
 	}
@@ -549,13 +551,13 @@ focus_tree = {
 		relative_position_id = SGS_communicate_with_others_focus
 		#友好倾向（以后可能还要看琪露诺走没走斗争）；加好感。军事经验换人力？buff？资源？
 		select_effect = {
-			country_event={
+			country_event = {
 				id = sgs.209
 				days = 1
 			}
 		}
 		completion_reward = {
-			country_event={
+			country_event = {
 				id = sgs.222
 			}
 			add_popularity = {
@@ -683,6 +685,12 @@ focus_tree = {
 			add_stability = 0.1
 			add_to_variable = {
 				sgs_star_infl = 8
+			}
+			hidden_effect = {
+				country_event = {
+					id = sgs.223
+					days = 1
+				}
 			}
 		}
 	}
@@ -820,9 +828,9 @@ focus_tree = {
 			set_technology = {
 				buqiang117 = 1
 			}
-		add_ideas = {
-			SGS_imitate_guns_idea
-		}
+			add_ideas = {
+				SGS_imitate_guns_idea
+			}
 			add_equipment_to_stockpile = {
 				type = buqiang_a
 				amount = 400

@@ -2805,7 +2805,7 @@ country_event = {
 		trigger = {
 			num_of_civilian_factories > 1
 		}
-		activate_mission = debuff_use_one_CIC_No2_day9
+		activate_decision = debuff_use_one_CIC_No2_day9
 		add_to_variable = {
 			sgs_star_infl = 3
 		}
@@ -4122,7 +4122,7 @@ country_event = {
 	id = sgs.212
 	title = sgs.212.t
 	desc = sgs.212.d
-	fire_only_once = no
+	fire_only_once = yes
 	is_triggered_only = yes
 	timeout_days = 2
 	trigger = {
@@ -4864,11 +4864,12 @@ country_event = {
 						has_equipment = {
 							buqiang_a > 500
 						}
-						send_equipment = {
-							equipment = buqiang_a
-							amount = 250
-							target = CIR
-						}
+						
+					}
+					send_equipment = {
+						equipment = buqiang_a
+						amount = 250
+						target = CIR
 					}
 					else = {
 						send_equipment = {
@@ -5147,12 +5148,13 @@ country_event = {
 					has_equipment = {
 						buqiang_a > 250
 					}
-					effect_tooltip = {
-						send_equipment = {
-							equipment = buqiang_a
-							amount = 250
-							target = CIR
-						}
+					
+				}
+				effect_tooltip = {
+					send_equipment = {
+						equipment = buqiang_a
+						amount = 250
+						target = CIR
 					}
 				}
 				else = {
@@ -5376,11 +5378,12 @@ country_event = {
 							has_equipment = {
 								buqiang_a > 250
 							}
-							send_equipment = {
-								equipment = buqiang_a
-								amount = 250
-								target = CIR
-							}
+							
+						}
+						send_equipment = {
+							equipment = buqiang_a
+							amount = 250
+							target = CIR
 						}
 						else = {
 							send_equipment = {
@@ -5398,11 +5401,12 @@ country_event = {
 								has_equipment = {
 									buqiang_a > 500
 								}
-								send_equipment = {
-									equipment = buqiang_a
-									amount = 500
-									target = CIR
-								}
+								
+							}
+							send_equipment = {
+								equipment = buqiang_a
+								amount = 500
+								target = CIR
 							}
 							else = {
 								send_equipment = {
@@ -5493,7 +5497,7 @@ country_event = {
 		name = sgs.2181.1
 		trigger = {
 			CIR = {
-				has_country_flag = sgs_trade_cir_ok_too
+				has_country_flag = sgs_trade_cir_NG_too
 			}
 		}
 		CIR = {
@@ -5544,12 +5548,13 @@ country_event = {
 						has_equipment = {
 							buqiang_a > 250
 						}
-						effect_tooltip = {
-							send_equipment = {
-								equipment = buqiang_a
-								amount = 250
-								target = CIR
-							}
+						
+					}
+					effect_tooltip = {
+						send_equipment = {
+							equipment = buqiang_a
+							amount = 250
+							target = CIR
 						}
 					}
 					else = {
@@ -5596,12 +5601,13 @@ country_event = {
 						has_equipment = {
 							buqiang_a > 500
 						}
-						effect_tooltip = {
-							send_equipment = {
-								equipment = buqiang_a
-								amount = 500
-								target = CIR
-							}
+						
+					}
+					effect_tooltip = {
+						send_equipment = {
+							equipment = buqiang_a
+							amount = 500
+							target = CIR
 						}
 					}
 					else = {
@@ -5727,10 +5733,7 @@ country_event = {
 		add_to_variable = {
 			sgs_visited_fairy = 1
 		}
-		country_event = {
-			id = sgs.212
-			days = 5
-		}
+		
 		ai_chance = {
 			base = 10
 		}
@@ -5901,7 +5904,7 @@ country_event = {
 	fire_only_once = no
 	is_triggered_only = yes
 	trigger = {
-		tag = cir
+		tag = sgs
 	}
 	option = {
 		#
@@ -5939,7 +5942,7 @@ country_event = {
 	fire_only_once = no
 	is_triggered_only = yes
 	trigger = {
-		tag = cir
+		tag = sgs
 	}
 	option = {
 		#不扩大

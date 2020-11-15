@@ -126,8 +126,8 @@ ideas = {
 			}
 		}
 		SGS_pay_tension_in_product_idea = {
-			picture = spa_duty_to_work
-			#generic_production_bonus
+			picture = generic_production_bonus
+			#generic_production_bonus  spa_duty_to_work
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.15
 				production_speed_buildings_factor = 0.1
