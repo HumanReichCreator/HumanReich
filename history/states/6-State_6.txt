@@ -3,17 +3,18 @@ state={
 	id=6
 	name="STATE_6"
 	resources={
-		powder = 6.0
-		metal = 0.0
+		powder=5.000
+		metal=0.000
 		gas=5.000
 		crystal=0.000
 	}
 
 	history={
+			owner = UNA
 		146.1.1 = {
 			owner = UNA
 			add_core_of = UNA
-			add_claim_by = LIL
+			add_claim_by = SPG
 			buildings = {
 				infrastructure = 4
 				industrial_complex = 4

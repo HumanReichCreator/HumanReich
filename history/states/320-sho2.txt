@@ -4,16 +4,18 @@ state={
 	name="STATE_320"
 	resources={
 
-		powder = 0.0
-		metal = 0.0
+		powder=0.000
+		metal=0.000
 		gas=5.000
 		crystal=5.000
 	}
 
 	history={
+			owner = WHM
 		143.7.1 = {
-			owner = PRI
-			add_core_of = PRI
+			owner = WHM
+			add_core_of = HU4
+			add_core_of = WHM
 			buildings = {
 				infrastructure =2
 				industrial_complex = 0
@@ -23,8 +25,8 @@ state={
 
 		}
 		146.1.1 = {
-			owner = PRI
-			add_core_of = PRI
+			owner = WHM
+			add_claim_by = SHO
 			buildings = {
 				infrastructure =3
 				industrial_complex = 0
@@ -39,7 +41,7 @@ state={
 	provinces={
 		592 2387 3247 3583 3585 3587 3589 
 	}
-	manpower=46060.0
+	manpower=4606.0
 	buildings_max_level_factor=1.000
 	state_category=s2
 }

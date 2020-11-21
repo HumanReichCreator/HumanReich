@@ -4,9 +4,10 @@ state={
 	name="STATE_203"
 
 	history={
+			owner = HUM
 		143.7.1 = {
-			owner = KYK
-			add_core_of = KYK
+			owner = AVE
+			add_core_of = AVE
 			buildings = {
 				infrastructure =3
 				industrial_complex = 1
@@ -15,12 +16,9 @@ state={
 			}
 		}
 		146.1.1 = {
-			owner = KYK
-			add_core_of = KYK
-			add_claim_by = HUM
-			add_claim_by = HU6
-			add_claim_by = HU7
-			add_claim_by = HU8
+			owner = HUM
+			add_claim_by = AVE
+			add_core_of = HUM
 			buildings = {
 				infrastructure =3
 				industrial_complex = 1

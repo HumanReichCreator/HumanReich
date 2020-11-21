@@ -1,0 +1,210 @@
+﻿138.8.13 = {
+
+}
+141.6.2 = {
+    
+}
+142.3.8 = {
+    
+}
+144.2.5 = {
+    
+}
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card = 1
+        linglijiejing139 = 1
+        danmujingque139 = 1
+        gaosudanmu139 = 1
+        buqiang117 = 1
+        buqiang140 = 1
+        tangxiangailiang140 = 1
+        jiandanmiaozhunjing140 = 1
+            
+        #辅助
+        zhiyuanzhuangbei = 1
+
+        #专用辅助
+        fangzhihuopao143 = 1
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+        zuzhihuazhanzheng142 = 1
+        zhanchangzhihui145 = 1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        waike = 1
+        jisuangongju144 = 1
+
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1   
+        jianzaojishu130 = 1
+        jianzaojishu140 = 1
+            
+        #专用工业
+        fangwaijieshengchan130 = 1
+        fangwaijieshengchan140 = 1
+
+        #种族
+            
+    }
+}
+138.1.1 = {
+	oob = "TEST"
+	# set_research_slots = 0
+	set_politics = {
+        ruling_party = guli
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 7
+        guli = 92
+        neworder = 1
+        oldorder = 0
+        fandong = 0
+    }
+}
+141.1.1={
+    oob = "YSK_141"
+    if = {
+       limit = {
+         date < 142.1.1
+       }
+       add_manpower = 10000
+
+    }
+    
+    add_ideas = {
+    Shrine
+    Youkai
+    hawk1
+    open0
+    normal_border
+    sc_rule
+    }
+    
+    set_politics = {
+        ruling_party = guli
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 12
+        guli = 85
+        neworder = 3
+        oldorder = 0
+        fandong = 0
+    }
+    
+}
+capital = 28
+146.1.1={
+    oob = "YSK_146"
+    
+    set_major = yes
+    
+    diplomatic_relation = { 
+        country = NIT relation = non_aggression_pact 
+    }
+    add_ideas = {
+    Shrine
+    Youkai
+    hawk4
+    open1
+    normal_border
+    sc_rule
+    
+    YSK_shenmingdeweiji_idea
+    YSK_fugushenwei_idea
+    }
+    add_timed_idea = {
+        idea = YSK_kejizhishen_idea
+        days = 1825
+    }
+    set_politics = {
+    	ruling_party = authordemo
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 10
+        guli = 10
+        neworder = 10
+        oldorder = 0
+        fandong = 0
+        authordemo = 70
+    }
+    
+    
+    
+    
+}
+create_country_leader = {
+	# name = "Yasaka Kanako"  
+    name = "泄矢诹访子"
+	picture = "YSK_mry.dds"
+	ideology = neworder_type
+	traits = {  }
+}
+create_country_leader = {
+	# name = "Moriya Suwako" 
+    name = "东风谷早苗"
+    picture = "YSK_sanae.dds"
+	ideology = guli_type
+	traits = {  }
+}
+create_country_leader = {
+	# name = "Kochiya Sanae"
+    name = "东风谷早苗"  
+	picture = "YSK_sanae.dds"
+	ideology = qinwai_type
+	traits = {  }
+}
+create_country_leader = {
+    # name = "Kochiya Sanae"
+    name = "八坂神奈子"  
+    picture = "YSK_ysk.dds"
+    ideology = fandong_type
+    traits = {  }
+}
+create_country_leader = {
+    # name = "Yasaka Kanako"  
+    name = "泄矢诹访子"
+    picture = "YSK_mry.dds"
+    ideology = oldorder_type
+    traits = {  }
+}
+create_country_leader = {
+    # name = "Yasaka Kanako"  
+    name = "八坂神奈子"
+    picture = "YSK_ysk.dds"
+    ideology = authordemo_type
+    traits = {  }
+}
+create_country_leader = {
+    # name = "Yasaka Kanako"  
+    name = "八坂神奈子"
+    picture = "YSK_ysk.dds"
+    ideology = lienin_type
+    traits = {  }
+}
+create_country_leader = {
+    # name = "Yasaka Kanako"  
+    name = "东风谷早苗"
+    picture = "YSK_sanae.dds"
+    ideology = humanfirst_type
+    traits = {  }
+}

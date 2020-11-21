@@ -6,16 +6,18 @@ state={
 	}
 	resources={
 
-		powder = 0.0
-		metal = 0.0
+		powder=0.000
+		metal=0.000
 		gas=5.000
 		crystal=0.000
 	}
 
 	history={
+			owner = SAP
 		146.1.1 = {
-			owner = HU5
+			owner = SAP
 			add_core_of = HU5
+			add_claim_by = SAP
 			buildings = {
 				infrastructure =0
 				industrial_complex = 0

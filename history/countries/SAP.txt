@@ -14,23 +14,19 @@
 146.1.1 = {
     set_technology = {
         #通用武器线
-        spell_card1 = 1
-        spear1 = 1
-        gun1 = 1
-        linglicunchu = 1
-        linglizhufu = 1
-        linglidanyao = 1
-        spell_card2 = 1
-        spear2 = 1
-        gun2 = 1
-        lingliliushuixian = 1
-        spear3 = 1
-        gun3 = 1
+        spell_card = 1
+        linglijiejing139 = 1
+        danmujingque139 = 1
+         #外界
+        buqiang117 = 1
+        buqiang140 = 1
+        tangxiangailiang140 = 1
+        jiandanmiaozhunjing140 = 1
             
         #辅助
 
         #专用辅助
-        mortar1 = 1
+        fangzhihuopao143 = 1
 
         #专用基础
 
@@ -64,7 +60,6 @@
         yanjiujingshen1 = 1
             
     }
-    
 }
 146.1.1={
     oob = "SAP_146"
@@ -80,7 +75,14 @@
     limit_magic
      
     }
-    
+    SAP = {
+        HU5 = {
+            subject_level3 = yes
+        }
+    }
+
+    set_truce = {target = NIT days = 300}
+    set_truce = {target = KAP days = 300}
     set_politics = {
     	ruling_party = guli
     	election_frequency = 48
@@ -101,6 +103,15 @@ create_country_leader = {
     desc = ""
     picture = "gfx/leaders/ZYD/ZYD_council.dds"
     ideology = qinwai_type
+    traits = {
+
+    }
+}
+create_country_leader = {
+    name = "河童商会代表"
+    desc = ""
+    picture = "gfx/leaders/gen/kap1.dds"
+    ideology = guli_type
     traits = {
 
     }

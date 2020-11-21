@@ -5,14 +5,15 @@ state={
 	resources={
 
 		powder = 0.0
-		metal = 5.0
+		metal = 5
 		gas = 5.0
 		crystal = 0.0
 	}
 	history={
+			owner = MHP
        	146.1.1 = {
-			owner = PRS
-			add_core_of = PRS
+			owner = MHP
+			add_core_of = MHP
 			buildings = {
 				infrastructure = 3
 				industrial_complex = 1

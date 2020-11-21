@@ -3,13 +3,14 @@ state={
 	id=168
 	name="STATE_168"
 	resources={
-		powder = 0.0
-		metal = 0.0
+		powder=0.000
+		metal=0.000
 		gas=0.000
 		crystal=0.000
 	}
 
 	history={
+			owner = MNM
 		# 143.7.1 = {
 		# 	owner = NMS
 		# 	add_core_of = NMS
@@ -24,7 +25,7 @@ state={
 		146.1.1 = {
 			owner = MNM
 			add_core_of = MNM
-			add_claim_by = PRI
+			add_claim_by = SHO
 			buildings = {
 				infrastructure = 3
 				industrial_complex = 0

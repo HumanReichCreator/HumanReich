@@ -6,17 +6,18 @@ state={
 	}
 	resources={
 		energy = 0
-		powder = 0.0
-		metal = 0.0
+		powder=0.000
+		metal=0.000
 		gas=0.000
 		crystal=0.000
 	}
 
 	history={
+			owner = UNA
 		146.1.1 = {
 			owner = UNA
 			add_core_of = UNA
-			add_claim_by = LIL
+			add_claim_by = SPG
 			buildings = {
 				infrastructure =2
 				industrial_complex = 1

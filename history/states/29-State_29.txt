@@ -4,21 +4,21 @@ state={
 	name="STATE_29"
 	resources={
 		energy = 5
-		powder = 6.0
-		metal = 0.0
+		powder=5.000
+		metal=0.000
 		gas=5.000
 		crystal=0.000
 	}
 
 	history={
+			owner = SPG
 		146.1.1 = {
-			owner = LIL
-			add_core_of = LIL
+			owner = SPG
+			add_core_of = SPG
 			buildings = {
 				infrastructure = 3
 				industrial_complex = 3
 				arms_factory = 2
-				
 
 			}
 

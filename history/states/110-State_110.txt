@@ -4,13 +4,14 @@ state={
 	name="STATE_110"
 	resources={
 
-		powder = 6.0
-		metal = 0.0
+		powder=5.000
+		metal=0.000
 		gas=10.000
 		crystal=0.000
 	}
 
 	history={
+			owner = SGS
 		143.7.1 = {
 			owner = SCA
 			add_core_of = SCA
@@ -23,13 +24,17 @@ state={
 			}
 		}
 		146.1.1 = {
-			owner = SCA
-			add_core_of = SCA
-			add_core_of = SC1
+			owner = SGS
+			remove_core_of = SCA
+			add_claim_by = SCA
+			add_core_of = SGS
 			buildings = {
 				infrastructure =5
 				industrial_complex = 1
 				arms_factory = 1
+				431 = {
+					bunker = 7
+				}
 
 			}
 
@@ -40,7 +45,7 @@ state={
 	provinces={
 		431 816 892 1235 1999 2295 2464 2696 2705 3357 3364 3367 3368 3674 3676 
 	}
-	manpower=1213.0
+	manpower=12130.0
 	buildings_max_level_factor=1.000
 	state_category=s7
 }

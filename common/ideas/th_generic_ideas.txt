@@ -87,7 +87,7 @@ ideas = {
 			}
 		}
 		qinwai_drift1 = {
-			 picture = generic_democratic_drift_bonus
+			 picture = generic_communism_drift_bonus
 
 		    allowed = {
 				always = no
@@ -135,6 +135,94 @@ ideas = {
 			
 			modifier = {
 			     guli_drift = 0.05
+			}
+		}
+		
+		oldorder_drift1 = {
+			 picture = generic_fascism_drift_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			     oldorder_drift = 0.05
+			}
+		}
+		
+		authordemo_drift1 = {
+			 picture = generic_neutrality_drift_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			     authordemo_drift = 0.05
+			}
+		}
+		
+		lienin_drift1 = {
+			 picture = generic_communism_drift_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			     lienin_drift = 0.05
+			}
+		}
+		humanfirst_drift1 = {
+			 picture = generic_fascism_drift_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			     humanfirst_drift = 0.05
+			}
+		}
+		destroyid_drift1 = {
+			 picture = generic_fascism_drift_bonus
+
+		    allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			     destroyid_drift = 0.05
 			}
 		}
 
@@ -536,10 +624,13 @@ ideas = {
 			picture = ast_volunteer_defence_corps
 			
 			equipment_bonus = {
-				gun_a = {
+				buqiang_a = {
 				 	build_cost_ic = -0.1 instant = yes
 				}
-				magic_core_a = {
+				spell_card_a = {
+				 	build_cost_ic = -0.1 instant = yes
+				}
+				new_buqiang_a = {
 				 	build_cost_ic = -0.1 instant = yes
 				}
 			}
@@ -559,10 +650,13 @@ ideas = {
 			picture = generic_artillery_regiments
 			
 			equipment_bonus = {
-				sc_mortar_a = {
+				sc_artillery_a = {
 					build_cost_ic = -0.1 instant = yes
 				}
-				ma_magic_energy_a = {
+				ma_artillery_a = {
+				    build_cost_ic = -0.1 instant = yes
+				}
+				ma_rocket_artillery_a = {
 				    build_cost_ic = -0.1 instant = yes
 				}
 			}
@@ -769,10 +863,13 @@ ideas = {
 			picture = partial_economic_mobilisation
 			
 			equipment_bonus = {
-				gun_a = {
+				buqiang_a = {
 				 	soft_attack = 0.1 instant = yes
 				}
-				magic_core_a = {
+				spell_card_a = {
+				 	soft_attack = 0.1 instant = yes
+				}
+				new_buqiang_a = {
 				 	soft_attack = 0.1 instant = yes
 				}
 			}
@@ -878,26 +975,6 @@ ideas = {
 			
 			modifier = {
 			  	manufacturer_cost_factor = -0.3
-			}
-		}
-
-		####
-		zhinengjiqiren1_idea = {
-			picture = generic_research_bonus
-
-		    allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			
-			research_bonus = {
-				combined = 0.15
 			}
 		}
 }

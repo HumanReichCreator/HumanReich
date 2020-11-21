@@ -1,33 +1,65 @@
 ﻿capital = 122
+138.1.1 = {
+    set_technology = {
+
+    spell_card = 1
+    buqiang117 = 1
+
+    jichushuxue = 1
+    shuxuegongju = 1
+
+    production_theory = 1
+
+    }
+}
+141.6.2 = {
+    
+}
+143.7.1 = {
+    set_technology = {
+
+    spell_card = 1
+    linglijiejing139 = 1
+
+    buqiang117 = 1
+
+    zhanchangzhihui140 = 1
+
+    zhanchangzhihui140 = 1
+    zuzhihuazhanzheng142 = 1
+    zhanchangzhihui145 = 1
+
+    jichushuxue = 1
+    shuxuegongju = 1
+    lingben = 1
+
+    production_theory = 1
+
+
+    }
+}
 146.1.1 = {
     set_technology = {
         #通用武器线
-        spell_card1 = 1
-        spear1 = 1
-        gun1 = 1
-        linglicunchu = 1
-        linglizhufu = 1
-        linglidanyao = 1
-        spell_card2 = 1
-        spear2 = 1
-        gun2 = 1
-        lingliliushuixian = 1
-        spell_card3 = 1
-        spear3 = 1
+        spell_card = 1
+        linglijiejing139 = 1
+        linglijiejing144 = 1
+        danmujingque139 = 1
+        danmujingque144 = 1
+        gaosudanmu139 = 1
+        gaosudanmu144 = 1
+        buqiang117 = 1
             
         #辅助
-        zhiyuanzhuangbei = 1
-        zhihuixiaodui146 = 1
 
         #专用辅助
-        magic_energy1 = 1
+        fanyongmopao144 = 1
 
         #专用基础
 
         #专用进阶
 
         #混合系
-        ma_shield1 = 1
 
         #陆军学说
         zhanchangzhihui140 = 1
@@ -35,7 +67,7 @@
         zhanchangzhihui145 = 1
 
         #空军
-        ma_fighter1 = 1
+        zhiyuanxiugaixing147 = 1
             
         #工程学 
         jichushuxue = 1
@@ -44,7 +76,6 @@
         tongxunlilun = 1
         jiemi137 = 1
         jiami137 = 1
-        lingganleida142 = 1
 
         #专用工程学
 
@@ -61,7 +92,6 @@
         #种族
             
     }
-    
 }
 set_country_flag = forbidden_fairy_sys 
 
@@ -91,7 +121,6 @@ set_country_flag = forbidden_fairy_sys
     dove1
     normal_border
     sc_rule
-
     
 
     }
@@ -182,11 +211,7 @@ set_country_flag = forbidden_fairy_sys
         oldorder = 0
         fandong = 25
     }
-    SCA = {
-        PRI = {
-            subject_level4 = yes
-        }
-    }
+    
 }
 146.1.1={
     set_country_flag = bunengqie_fandong
@@ -194,24 +219,16 @@ set_country_flag = forbidden_fairy_sys
     # give_guarantee = GRS
     set_major = yes
     drop_cosmetic_tag = yes
-    create_faction = feihongtixi
-    add_to_faction = WAK
-    add_to_faction = PRI
+    
+    set_truce = {target = SPG days = 180}
+    set_truce = {target = SC2 days = 180}
+    set_truce = {target = CIR days = 180}
 
-    PRI = {
-        set_cosmetic_tag = PRI_SCA
-    }
-    WAK = {
-        set_cosmetic_tag = WAK_SCA
-    }
-    GRS = {
-        set_cosmetic_tag = GRS_SCA
-    }
+   
 
 	
     
     add_ideas={
-        can_create_faction_idea
     	Fairy
         Empire
         SCA_yaojingsaodong_idea
@@ -226,16 +243,7 @@ set_country_flag = forbidden_fairy_sys
     remove_ideas = {
        rem142
     }
-    PRI = {
-        subject_level4 = yes
-    }
-    GRS = {
-        subject_level4 = yes
-    }
-    WAK = {
-        subject_level4 = yes
-    }
-        
+
     set_politics = {
     	ruling_party = guli
     	election_frequency = 48
@@ -244,14 +252,15 @@ set_country_flag = forbidden_fairy_sys
     set_popularities = {
         qinwai = 20
         guli = 60
-        neworder = 20
+        neworder = 10
         oldorder = 0
-        fandong = 0
+        fandong = 5
+        authordemo = 5
     }
 
 
     add_equipment_to_stockpile = {
-        type = ma_fighter148
+        type = ma_CAS147
         amount = 150
         producer = SCA
     }
@@ -260,8 +269,8 @@ set_country_flag = forbidden_fairy_sys
 }
 create_country_leader = {
     # name = "Patchouli Knowledge"
-    name = "帕秋莉·诺蕾姬"
-    picture = "SCA_pachy.dds"
+    name = "红美铃"
+    picture = "SWL_mli.dds"
     ideology = qinwai_type
     traits = {
 
@@ -269,8 +278,8 @@ create_country_leader = {
 }
 create_country_leader = {
 	# name = "Remilia Scarlet"
-    name = "蕾米莉亚·斯卡蕾特"
-	picture = "SCA_rem.dds"
+    name = "十六夜咲夜"
+	picture = "SCA_sky.dds"
 	ideology = guli_type
 	traits = { 
 	}
@@ -286,8 +295,8 @@ create_country_leader = {
 }
 create_country_leader = {
     # name = "Remilia Scarlet"
-    name = "蕾米莉亚·斯卡蕾特"
-    picture = "SCA_rem.dds"
+    name = "芙兰朵露·斯卡蕾特"
+    picture = "SCA_flan.dds"
     ideology = oldorder_type
     traits = { 
     }
@@ -297,6 +306,33 @@ create_country_leader = {
     name = "小恶魔"
     picture = "SCA_kak.dds"
     ideology = fandong_type
+    traits = { 
+    }
+}
+
+create_country_leader = {
+    # name = "Koakuma"
+    name = "十六夜咲夜"
+    picture = "SCA_sky.dds"
+    ideology = authordemo_type
+    traits = { 
+    }
+}
+
+create_country_leader = {
+    # name = "Koakuma"
+    name = "小恶魔"
+    picture = "SCA_kak.dds"
+    ideology = lienin_type
+    traits = { 
+    }
+}
+
+create_country_leader = {
+    # name = "Koakuma"
+    name = "十六夜咲夜"
+    picture = "SCA_sky.dds"
+    ideology = humanfirst_type
     traits = { 
     }
 }

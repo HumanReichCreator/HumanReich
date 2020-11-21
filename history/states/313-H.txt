@@ -4,11 +4,11 @@ state={
 	name="STATE_313"
 
 	history={
+			owner = SPG
 		146.1.1 = {
-			owner = SCA
-			add_core_of = SC3
-			add_core_of = SCA
-			add_core_of = LIL
+			owner = SPG
+			add_claim_by = SCA
+			add_core_of = SPG
 			buildings = {
 				infrastructure =2
 				industrial_complex = 0

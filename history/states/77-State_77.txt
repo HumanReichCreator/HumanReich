@@ -4,17 +4,18 @@ state={
 	name="STATE_77"
 	resources={
 
-		powder = 0.0
-		metal = 0.0
+		powder=0.000
+		metal=0.000
 		gas=0.000
 		crystal=0.000
 	}
 
 	history={
+			owner = SGS
 		146.1.1 = {
-			owner = SCA
+			owner = SGS
 			add_core_of = SCA
-			add_core_of = SC1
+			add_core_of = SGS
 			buildings = {
 				infrastructure =2
 				industrial_complex = 0

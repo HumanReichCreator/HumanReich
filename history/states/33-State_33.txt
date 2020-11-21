@@ -4,14 +4,15 @@ state={
 	resources={
 
 		powder = 2.0
-		metal = 2.0
+		metal = 2
 		gas = 5.0
 		crystal = 0.0
 	}
 	history={
+			owner = KUT
        	146.1.1 = {
-			owner = YUG
-			add_core_of = YUG
+			owner = KUT
+			add_core_of = KUT
 			buildings = {
 				infrastructure =4
 				industrial_complex = 3

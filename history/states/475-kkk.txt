@@ -6,18 +6,19 @@ state={
 	}
 	resources={
 		energy = 0
-		powder = 5.0
-		metal = 4.0
+		powder=4.000
+		metal=4.000
 		gas=0.000
 		crystal=36.000
 	}
 	history={
+			owner = HNY
 		146.1.1 = {
-			owner = KEK
-			add_core_of = KEK
+			owner = HNY
+			add_core_of = HNY
 			add_claim_by = GYK
-			add_claim_by = SAK
-			add_claim_by = YCE
+			add_claim_by = KRK
+			add_claim_by = KCC
 			buildings = {
 				infrastructure = 7
 				industrial_complex = 3
@@ -27,7 +28,7 @@ state={
 
 		}
 	}
-	manpower=2627275.0
+	manpower=87275.0
 	state_category=s10
 	buildings_max_level_factor=1.000
 }

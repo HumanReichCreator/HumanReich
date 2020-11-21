@@ -1,0 +1,312 @@
+﻿capital = 165
+add_dynamic_modifier = {
+  modifier = KOG_manpower
+}
+138.8.13 = {
+
+}
+141.6.2 = {
+    
+}
+142.3.8 = {
+    set_technology = {
+        #通用武器线
+            spell_card = 1  
+            buqiang117 = 1
+            buqiang140 = 1
+            tangxiangailiang140 = 1
+        #辅助
+        
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+            zhanchangzhihui140 = 1
+            zuzhihuazhanzheng142 = 1
+            
+        #工程学 
+            jichushuxue = 1
+            shuxuegongju = 1
+            waike = 1
+
+        #专用工程学
+
+        #工业
+            production_theory = 1
+            org_production = 1
+            jianzaojishu130 = 1
+            ziyuankaifa130 = 1
+        #专用工业
+            fangwaijieshengchan130 = 1
+        #种族
+            caogenchuantong1 = 1
+            
+    }
+}
+143.7.1 = {
+    set_technology = {
+        #通用武器线
+            spell_card = 1
+            linglijiejing139 = 1
+            buqiang117 = 1
+            buqiang140 = 1
+            tangxiangailiang140 = 1
+        #辅助
+            fangzhihuopao143 = 1
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+            zhanchangzhihui140 = 1
+            zuzhihuazhanzheng142 = 1
+            
+        #工程学 
+            jichushuxue = 1
+            shuxuegongju = 1
+            waike = 1
+
+        #专用工程学
+
+        #工业
+            production_theory = 1
+            org_production = 1
+            
+            jianzaojishu130 = 1
+            ziyuankaifa130 = 1
+            
+        #专用工业
+            fangwaijieshengchan130 = 1
+        #种族
+            
+    }
+}
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+            spell_card = 1
+            linglijiejing139 = 1
+            buqiang117 = 1
+            buqiang140 = 1
+            tangxiangailiang140 = 1
+            tangxiangailiang145 = 1
+            jiandanmiaozhunjing140 = 1
+        #辅助
+            fangzhihuopao143 = 1
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+            zhanchangzhihui140 = 1
+            zuzhihuazhanzheng142 = 1
+            zhanchangzhihui145 = 1
+            
+        #工程学 
+            jichushuxue = 1
+            shuxuegongju = 1
+            waike = 1
+
+        #专用工程学
+
+        #工业
+            production_theory = 1
+            org_production = 1
+            
+            jianzaojishu130 = 1
+            jianzaojishu140 = 1
+            ziyuankaifa130 = 1
+            ziyuankaifa140 = 1
+            
+        #专用工业
+            fangwaijieshengchan130 = 1
+            fangwaijieshengchan140 = 1
+            fangwaijieshengchan145 = 1
+        #种族
+            caogenchuantong1 = 1
+            
+    }
+}
+142.1.1={
+    oob = "KOG_142"
+    add_ideas = {
+    Pri_youkai
+     
+    Village
+    open1
+    hawk1
+    strict_border
+    sc_rule
+    }
+
+    
+    #########局势修改
+    set_politics = {
+    
+        ruling_party = guli
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 24
+        guli = 70
+        neworder = 1
+        oldorder = 0
+        fandong = 5
+    }
+}
+143.7.1 = {
+    oob = "TEST"
+    
+    #########局势修改
+    add_ideas = {
+        Pri_youkai
+         
+        Village
+        open1
+        dove3
+        close_border
+        limit_magic
+    }
+    set_politics = {
+        ruling_party = guli
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 20
+        guli = 80
+        neworder = 0
+        oldorder = 0
+        fandong = 0
+    }
+}
+146.1.1={
+    oob = "KOG_146"
+
+    # set_variable = { KOG_xinsheng_pp = -0.5 }
+    # set_variable = { KOG_xinsheng_den = -0.2 }
+    # add_dynamic_modifier = { modifier = KOG_xinshengdeshili }
+
+    set_country_flag = KOG_gugelvse
+    
+    add_ideas = {
+    Pri_youkai
+     
+    Village
+    open2
+    dove1
+    # loose_border
+    limit_magic
+    kog_jixingdegongye_idea
+    kog_xinshengdeshili_idea
+    kog_manpower_puppet
+    }
+    #########局势修改
+    #set_stability = 0.7
+    set_politics = {
+    	ruling_party = humanfirst
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 10
+        guli = 15
+        neworder = 0
+        authordemo = 20
+        fandong = 0
+        humanfirst = 55
+    }
+}
+create_country_leader = {
+ 	# name = "Tatara Kogasa"
+     name = "多多良小伞"
+ 	picture = "KOG_kog.dds"
+ 	ideology = humanfirst_type
+ 	traits = {
+ 	}
+ }
+create_country_leader = {
+    # name = "Horikawa Raiko"
+    name = "堀川雷鼓"
+    picture = "KOG_raiko.dds"
+    ideology = qinwai_type
+    traits = {
+    }
+}
+create_country_leader = {
+    # name = "Tsukumo Yatsuhashi"
+    name = "九十九八桥"
+    picture = "KOG_yatsuhashi.dds"
+    ideology = fandong_type
+    traits = {
+    }
+}
+create_country_leader = {
+    # name = "Tsukumo Benben"
+    name = "九十九弁弁"
+    picture = "KOG_benben.dds"
+    ideology = lienin_type
+    traits = {
+    }
+}
+create_country_leader = {
+    # name = "Tsukumo Benben"
+    name = "九十九弁弁"
+    picture = "KOG_benben.dds"
+    ideology = neworder_type
+    traits = {
+    }
+}
+create_country_leader = {
+    # name = "Horikawa Raiko"
+    name = "秦心"
+    picture = "KOG_kokoro.dds"
+    ideology = oldorder_type
+    traits = {
+    }
+}
+create_country_leader = {
+    # name = "Hata no Kokoro"
+    name = "秦心"
+    picture = "KOG_kokoro.dds"
+    ideology = guli_type
+    traits = {
+    }
+}
+
+create_country_leader = {
+    # name = "Hata no Kokoro"
+    name = "多多良小伞"
+    picture = "KOG_kog.dds"
+    ideology = authordemo_type
+    traits = {
+    }
+}
+
+
+# create_corps_commander = {
+#     # name = "Hata no Kokoro"
+#     name = "秦心"
+#     picture = "KOG_kokoro.dds"
+#     traits = {  th_character  }
+#     attack_skill = 2
+#     defense_skill = 2
+#     planning_skill = 3
+#     logistics_skill = 2
+    
+#     skill = 3
+# }

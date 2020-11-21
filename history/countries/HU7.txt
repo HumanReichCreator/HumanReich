@@ -3,31 +3,26 @@
 146.1.1 = {
     set_technology = {
         #通用武器线
-        spell_card1 = 1
-        spear1 = 1
-        gun1 = 1
-        linglicunchu = 1
-        linglizhufu = 1
-        linglidanyao = 1
-        spell_card2 = 1
-        spear2 = 1
-        gun2 = 1
-        lingliliushuixian = 1
-        spear3 = 1
-        gun3 = 1
+        spell_card = 1
+        buqiang117 = 1
+        buqiang140 = 1
+        buqiang145 = 1
+        tangxiangailiang140 = 1
+        jiandanmiaozhunjing140 = 1
+        tangxiangailiang145 = 1
+        qijumiaozhunjing145 = 1
             
         #辅助
 
         #专用辅助
-        mortar1 = 1
-        
+        fangzhihuopao143 = 1
 
         #专用基础
 
         #专用进阶
+        qiyouche146 = 1
 
         #混合系
-        sc_shield1 = 1
 
         #陆军学说
         zhanchangzhihui140 = 1
@@ -57,15 +52,14 @@
         kongjuyizhiji1 = 1
             
     }
-    
 }
 
 146.1.1={
-    add_manpower = 150
+    add_manpower = 750
     oob = "HU7_146"
     
     add_ideas = {
-        Human
+        Pri_youkai
         Village
         type2_manpowerlv6
         hawk3
@@ -76,25 +70,41 @@
 
     set_politics = {
 
-        ruling_party = fandong
+        ruling_party = neworder
         election_frequency = 48
         elections_allowed = no
     }
     set_popularities = {
         qinwai = 0
         guli = 0
-        neworder = 0
+        neworder = 100
         oldorder = 0
-        fandong = 100
+        fandong = 0
+    }
+
+    create_equipment_variant = {
+       name = "仿制Kar98k 乙修改型"
+       type = buqiang145
+       upgrades = {
+          upgrade_reliability = 1
+          upgrade_softattack = 2
+          # upgrade_hardattack = 1
+          # upgrade_aaattack = 2
+          upgrade_defense = 1
+          # upgrade_breakthrough = 5
+          # upgrade_ic = 2
+          upgrade_ic_reverse = 2
+          # upgrade_reliability_reverse = 3
+       }
     }
 }
 
 
 create_country_leader = {
     # name = "Council"
-    name = "流亡委员会"
+    name = "鬼人正邪"
     desc = ""
-    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    picture = "gfx/leaders/SEI/SEI_sei.dds"
     ideology = guli_type
     traits = {
         #warrior_code
@@ -102,9 +112,9 @@ create_country_leader = {
 }
 create_country_leader = {
     # name = "Council"
-    name = "流亡委员会"
+    name = "鬼人正邪"
     desc = ""
-    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    picture = "gfx/leaders/SEI/SEI_sei.dds"
     ideology = fandong_type
     traits = {
         #warrior_code
@@ -112,9 +122,9 @@ create_country_leader = {
 }
 create_country_leader = {
     # name = "Council"
-    name = "流亡委员会"
+    name = "鬼人正邪"
     desc = ""
-    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    picture = "gfx/leaders/SEI/SEI_sei.dds"
     ideology = neworder_type
     traits = {
         #warrior_code
@@ -122,9 +132,9 @@ create_country_leader = {
 }
 create_country_leader = {
     # name = "Council"
-    name = "流亡委员会"
+    name = "鬼人正邪"
     desc = ""
-    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    picture = "gfx/leaders/SEI/SEI_sei.dds"
     ideology = qinwai_type
     traits = {
         #warrior_code
@@ -132,10 +142,40 @@ create_country_leader = {
 }
 create_country_leader = {
     # name = "Council"
-    name = "流亡委员会"
+    name = "鬼人正邪"
     desc = ""
-    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    picture = "gfx/leaders/SEI/SEI_sei.dds"
     ideology = oldorder_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Council"
+    name = "鬼人正邪"
+    desc = ""
+    picture = "gfx/leaders/SEI/SEI_sei.dds"
+    ideology = authordemo_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Council"
+    name = "鬼人正邪"
+    desc = ""
+    picture = "gfx/leaders/SEI/SEI_sei.dds"
+    ideology = humanfirst_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Council"
+    name = "鬼人正邪"
+    desc = ""
+    picture = "gfx/leaders/SEI/SEI_sei.dds"
+    ideology = lienin_type
     traits = {
         #warrior_code
     }

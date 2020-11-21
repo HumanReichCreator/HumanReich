@@ -6,19 +6,21 @@ state={
 	}
 	resources={
 
-		powder = 2.0
-		metal = 5.0
+		powder=2.000
+		metal=5.000
 		gas=0.000
 		crystal=0.000
 	}
 
 	history={
+			owner = WHM
 		146.1.1 = {
-			owner = HU2
+			owner = WHM
 			add_core_of = HU2
+			add_core_of = WHM
 			buildings = {
 				infrastructure = 2 
-				industrial_complex = 2
+				industrial_complex = 0
 				arms_factory = 0
 
 			}

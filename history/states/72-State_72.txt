@@ -6,17 +6,18 @@ state={
 	resources={
 		energy = 0
 		powder = 0.0
-		metal = 0.0
+		metal = 0
 		gas = 0.0
 		crystal = 15.0
 	}
 
 	history={
+			owner = ACE
 		146.1.1 = {
 			owner = ACE
 			add_core_of = ACE
 			add_claim_by = UNL
-			add_claim_by = PRS
+			add_claim_by = MHP
 			buildings = {
 				infrastructure = 1
 				industrial_complex = 1
@@ -31,7 +32,7 @@ state={
 	provinces={
 		122 133 280 351 958 1247 1449 1647 1707 2047 2651 2666 2674 
 	}
-	manpower=87504
+	manpower=57504
 	state_category=s5
 	buildings_max_level_factor=1.000
 }

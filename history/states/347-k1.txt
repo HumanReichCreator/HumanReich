@@ -4,21 +4,19 @@ state={
 	name="STATE_347"
 
 	resources={
-		powder = 6.0
-		metal = 5.0
+		powder=5.000
+		metal=5.000
 		gas=0.000
 		crystal=0.000
 	}
 
 	history={
+			owner = HUM
 		146.1.1 = {
-			owner = KAG
+			owner = HUM
 			add_core_of = KAG
 			add_claim_by = INB
-			add_claim_by = HUM
-			add_claim_by = HU6
-			add_claim_by = HU7
-			add_claim_by = HU8
+			add_core_of = HUM
 			buildings = {
 				infrastructure = 3
 				industrial_complex = 1
@@ -33,7 +31,7 @@ state={
 	provinces={
 		120 224 619 1212 2435 3156 3249 5614 5617 5631 5641 5655 5665 
 	}
-	manpower=510.0
-	state_category=s2
+	manpower=1010.0
+	state_category=s5
 	buildings_max_level_factor=1.000
 }

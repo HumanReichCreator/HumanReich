@@ -815,11 +815,11 @@ focus_tree = {
 division_template = {
 	name = "凋零者"
 	regiments = {
-		ma_infantry = { x = 0 y = 0 }
-		ma_infantry = { x = 0 y = 1 }
-		ma_infantry = { x = 0 y = 2 }
-		ma_infantry = { x = 0 y = 3 }
-		ma_infantry = { x = 0 y = 4 }
+		sc_militia = { x = 0 y = 0 }
+		sc_militia = { x = 0 y = 1 }
+		sc_militia = { x = 0 y = 2 }
+		sc_militia = { x = 0 y = 3 }
+		sc_militia = { x = 0 y = 4 }
 	}
 	support = {
 	}
@@ -914,17 +914,17 @@ division_template = {
 
       completion_reward = {
 
-    		add_tech_bonus = {
-    			bonus = 1.00
-    			uses = 1
-    			category = industrys
-    		}
+		add_tech_bonus = {
+			bonus = 1.00
+			uses = 1
+			category = industrys
+		}
 
-    		add_tech_bonus = {
-    			bonus = 1.00
-    			uses = 1
-    			category = resource
-    		}
+		add_tech_bonus = {
+			bonus = 1.00
+			uses = 1
+			category = resource
+		}
 
       }
 
@@ -1151,12 +1151,12 @@ division_template = {
 
       completion_reward = {
 
-		    conservativedecrease = yes
+		  conservativedecrease = yes
 
-    		PO_add5 = yes
-    		OL_add5 = yes
+		PO_add5 = yes
+		OL_add5 = yes
 
-        add_research_slot = 1
+          add_research_slot = 1
       }
 
       ai_will_do = {
@@ -1430,27 +1430,56 @@ division_template = {
 
       completion_reward = {
 
-    		# HU4 = {
-      # 		add_ai_strategy = {
-      # 			type = alliance
-      # 			id = "AKI"
-      # 			value = 1000
-      # 		}
-    		# }
 
-    		# add_ai_strategy = {
-    		# 	type = alliance
-    		# 	id = "HU4"
-    		# 	value = 1000
-    		# }
+		HU1 = {
+		add_ai_strategy = {
+			type = befriend
+			id = "AKI"
+			value = 200
+		}
+		}
 
-			  lobbydecrease = yes
-        add_ideas = can_create_faction_idea
+		HU2 = {
+		add_ai_strategy = {
+			type = befriend
+			id = "AKI"
+			value = 200
+		}
+		}
+
+		HU4 = {
+		add_ai_strategy = {
+			type = befriend
+			id = "AKI"
+			value = 200
+		}
+		}
+
+		add_ai_strategy = {
+			type = befriend
+			id = "HU1"
+			value = 200
+		}
+
+		add_ai_strategy = {
+			type = befriend
+			id = "HU2"
+			value = 200
+		}
+
+		add_ai_strategy = {
+			type = befriend
+			id = "HU4"
+			value = 200
+		}
+
+			lobbydecrease = yes
+
         create_faction = AKI_faction
 
-    		end_puppet = HU4
-    		end_puppet = HU2
-    		end_puppet = HU1
+		end_puppet = HU4
+		end_puppet = HU2
+		end_puppet = HU1
 
         AKI = { 
           add_to_faction = HU4
@@ -1464,17 +1493,14 @@ division_template = {
 
         HU4 = { 
           add_ideas = AKI_xinanliancun_idea
-          qiangjiemeng = yes
         }
 
         HU2 = { 
           add_ideas = AKI_xinanliancun_idea
-          qiangjiemeng = yes
         }
 
         HU1 = { 
           add_ideas = AKI_xinanliancun_idea
-          qiangjiemeng = yes
         }
 
 			hidden_effect = {
@@ -1623,15 +1649,15 @@ division_template = {
 		reverse_add_opinion_modifier = { target = TEG modifier = AKI_ganbei_op }
         add_opinion_modifier = { target = TEG modifier = AKI_ganbei_op }
 
-		NTR = {
+		NIT = {
           	can_use = yes
 	        AKI = {
 	          can_use = yes
 	        }
 		}
 
-		reverse_add_opinion_modifier = { target = NTR modifier = AKI_ganbei_op }
-        add_opinion_modifier = { target = NTR modifier = AKI_ganbei_op }
+		reverse_add_opinion_modifier = { target = NIT modifier = AKI_ganbei_op }
+        add_opinion_modifier = { target = NIT modifier = AKI_ganbei_op }
 
       }
 
@@ -1975,7 +2001,7 @@ division_template = {
 
         OL_minus7.5 = yes
 
-		custom_effect_tooltip = TKM_kaifabendiwuqi_tt
+		custom_effect_tooltip = KOG_kaifabendiwuqi_tt
         add_to_variable = { OL_to_weiwu_base_add = 0.1 }
 
         125 = {
@@ -2083,7 +2109,7 @@ division_template = {
 
 				}
 
-				NTR = {
+				NIT = {
 
 
 					add_to_tech_sharing_group = sanfangkeyanzu
@@ -2369,9 +2395,15 @@ division_template = {
 
           custom_effect_tooltip = AKI_xirenlidechengli_tt
 
-          add_ideas = Human
+      add_ideas = Human
 
-          race_tech_clear = yes
+          hidden_effect = {
+            set_technology = {
+              god_tech = 0
+            }
+            tech_initialize = yes
+            country_event = glo.3000
+          }
 
             swap_ideas = { remove_idea = AKI_renyushendemohujiexian_idea add_idea = AKI_tongyiderenleirentong_idea }
 
@@ -2586,11 +2618,11 @@ division_template = {
 division_template = {
 	name = "凋零者"
 	regiments = {
-		ma_infantry = { x = 0 y = 0 }
-		ma_infantry = { x = 0 y = 1 }
-		ma_infantry = { x = 0 y = 2 }
-		ma_infantry = { x = 0 y = 3 }
-		ma_infantry = { x = 0 y = 4 }
+		sc_militia = { x = 0 y = 0 }
+		sc_militia = { x = 0 y = 1 }
+		sc_militia = { x = 0 y = 2 }
+		sc_militia = { x = 0 y = 3 }
+		sc_militia = { x = 0 y = 4 }
 	}
 	support = {
 	}
@@ -2655,8 +2687,8 @@ division_template = {
 		reverse_add_opinion_modifier = { target = HU3 modifier = AKI_youdianguotou_op }
         add_opinion_modifier = { target = HU3 modifier = AKI_youdianguotou_op }
 
-		reverse_add_opinion_modifier = { target = NTR modifier = AKI_liyishousun_op }
-        add_opinion_modifier = { target = NTR modifier = AKI_liyishousun_op }
+		reverse_add_opinion_modifier = { target = NIT modifier = AKI_liyishousun_op }
+        add_opinion_modifier = { target = NIT modifier = AKI_liyishousun_op }
 
       }
 
@@ -2773,11 +2805,11 @@ division_template = {
 
       completion_reward = {
 
-			add_equipment_to_stockpile = {
-				type = gun_a
-				amount = 2500
-				producer = AKI
-			}
+					add_equipment_to_stockpile = {
+						type = buqiang_a
+						amount = 2500
+						producer = AKI
+					}
 
 	    random_owned_controlled_state = {
 				limit = {
@@ -3184,17 +3216,17 @@ division_template = {
 division_template = {
 	name = "寂灭者"
 	regiments = {
-		ma_infantry = { x = 0 y = 0 }
-		ma_infantry = { x = 0 y = 1 }
-		ma_infantry = { x = 0 y = 2 }
-		ma_infantry = { x = 0 y = 3 }
-		ma_infantry = { x = 0 y = 4 }
+		sc_militia = { x = 0 y = 0 }
+		sc_militia = { x = 0 y = 1 }
+		sc_militia = { x = 0 y = 2 }
+		sc_militia = { x = 0 y = 3 }
+		sc_militia = { x = 0 y = 4 }
 
-		melee_infantry = { x = 1 y = 0 }
-		melee_infantry = { x = 1 y = 1 }
-		melee_infantry = { x = 1 y = 2 }
-		melee_infantry = { x = 1 y = 3 }
-		melee_infantry = { x = 1 y = 4 }
+		sc_militia = { x = 1 y = 0 }
+		sc_militia = { x = 1 y = 1 }
+		sc_militia = { x = 1 y = 2 }
+		sc_militia = { x = 1 y = 3 }
+		sc_militia = { x = 1 y = 4 }
 	}
 	support = {
 	}
@@ -3246,8 +3278,13 @@ division_template = {
           can_core = yes
           add_ideas = God
           custom_effect_tooltip = AKI_zhongzuzhuanhua_tt
-          race_tech_clear = yes
           hidden_effect = {
+
+            set_technology = {
+              human_tech = 0
+            }
+            tech_initialize = yes
+            country_event = glo.3000
 
             every_owned_state = {
               limit = {
@@ -3265,8 +3302,13 @@ division_template = {
           can_core = yes
           add_ideas = God
           custom_effect_tooltip = AKI_zhongzuzhuanhua_tt
-          race_tech_clear = yes
           hidden_effect = {
+
+            set_technology = {
+              human_tech = 0
+            }
+            tech_initialize = yes
+            country_event = glo.3000
 
             every_owned_state = {
               limit = {
@@ -3285,8 +3327,14 @@ division_template = {
           can_core = yes
           add_ideas = God
           custom_effect_tooltip = AKI_zhongzuzhuanhua_tt
-          race_tech_clear = yes
           hidden_effect = {
+
+            set_technology = {
+              human_tech = 0
+            }
+            tech_initialize = yes
+            country_event = glo.3000
+
             every_owned_state = {
               limit = {
                 check_variable = { ST_present_race = 4}
@@ -3299,32 +3347,24 @@ division_template = {
           }
         }
 
-        HU4 = {
-          if = {
-            limit = {
-              is_subject_of = ROOT
-            }
-            low_puppet_level = yes
+			HU2 = {
+        if = {
+          limit = {
+            is_subject_of = ROOT
           }
+          low_puppet_level = yes
         }
+				
+			}
 
-  			HU2 = {
-          if = {
-            limit = {
-              is_subject_of = ROOT
-            }
-            low_puppet_level = yes
+			HU1 = {
+				if = {
+          limit = {
+            is_subject_of = ROOT
           }
-  			}
-
-  			HU1 = {
-  				if = {
-            limit = {
-              is_subject_of = ROOT
-            }
-            low_puppet_level = yes
-          }
-  			}
+          low_puppet_level = yes
+        }
+			}
 
       }
 
@@ -3442,11 +3482,12 @@ division_template = {
       }
 
       completion_reward = {
-	     add_tech_bonus = {
-    			bonus = 0.5
-    			uses = 2
-    			category = primary_weapons
-    		}
+	    add_tech_bonus = {
+			bonus = 0.5
+			uses = 2
+			category = science_weapons
+			category = magic_weapons
+		}
       }
 
       ai_will_do = {
@@ -3488,11 +3529,11 @@ division_template = {
         set_technology = { AKI_shanpao_tech = 1}
         custom_effect_tooltip = AKI_shanpao_tt
 
-    		add_tech_bonus = {
-    			bonus = 0.5
-    			uses = 2
-    			category = artillery_tech
-    		}
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 2
+			category = artillery_tech
+		}
 
       }
 
@@ -3635,29 +3676,29 @@ focus = {
 
 	completion_reward = {
 
-  		add_tech_bonus = {
-  			bonus = 0.5
-  			uses = 1
-  			category = basic_doctrine
-  		}
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 1
+			category = basic_doctrine
+		}
 
-  		add_tech_bonus = {
-  			bonus = 0.5
-  			uses = 1
-  			category = land_doctrine
-  		}
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 1
+			category = land_doctrine
+		}
 
-  		add_tech_bonus = {
-  			bonus = 0.3
-  			uses = 1
-  			category = jiami
-  		}
+		add_tech_bonus = {
+			bonus = 0.3
+			uses = 1
+			category = jiami
+		}
 
-  		add_tech_bonus = {
-  			bonus = 0.3
-  			uses = 1
-  			category = jiemi
-  		}
+		add_tech_bonus = {
+			bonus = 0.3
+			uses = 1
+			category = jiemi
+		}
 
 	}
 }
@@ -4267,8 +4308,14 @@ focus = {
 
           add_ideas = God
           custom_effect_tooltip = AKI_zhongzuzhuanhua_tt
-          race_tech_clear = yes
           hidden_effect = {
+
+            set_technology = {
+              human_tech = 0
+            }
+            tech_initialize = yes
+            country_event = glo.3000
+
             every_owned_state = {
               limit = {
                 check_variable = { ST_present_race = 4}
@@ -4632,9 +4679,14 @@ focus = {
           }
 
           add_ideas = God
-          race_tech_clear = yes
           custom_effect_tooltip = AKI_zhongzuzhuanhua_tt
           hidden_effect = {
+
+            set_technology = {
+              magician_tech = 0
+            }
+            tech_initialize = yes
+            country_event = glo.3000
 
             every_owned_state = {
               limit = {
@@ -5320,7 +5372,7 @@ focus = {
  
 			every_state = {
 				limit = { 
-					is_core_of = PRI 
+					is_core_of = SHO 
 				}
 				add_claim_by = AKI
 			}
@@ -5425,9 +5477,9 @@ focus = {
       relative_position_id = AKI_suoyaowomendehefalingdi
 
       available ={
-	       is_subject = no
+	     is_subject = no
          has_war = no
-		     has_government = qinwai
+		 has_government = qinwai
          TEG = { is_faction_leader = yes }
          NOT = { TEG = { has_war_with = AKI } }
       }
@@ -5438,27 +5490,33 @@ focus = {
 
       completion_reward = {
 
-  		TEG = {
-        qiangjiemeng = yes
-      }
-      if = {
+		TEG = {
+		add_ai_strategy = {
+			type = befriend
+			id = "AKI"
+			value = 200
+		}
+		}
+
+		add_ai_strategy = {
+			type = befriend
+			id = "TEG"
+			value = 200
+		}
+
+      every_country = {
         limit = {
-          AKI = { is_faction_leader = yes}
+          is_in_faction_with = AKI
+          AKI = { is_faction_leader = yes }
         }
-        every_country = {
-          limit = {
-            is_in_faction_with = AKI
-            AKI = { is_faction_leader = yes }
-          }
-          TEG = {
-            add_to_faction = PREV
-          }
-          TEG = { 
-            add_to_faction = ROOT 
-          }
+        TEG = {
+          add_to_faction = PREV
         }
       }
-      
+
+        TEG = { 
+          add_to_faction = ROOT 
+        }
 
       }
 
@@ -5710,4 +5768,4 @@ focus = {
       cancel_if_invalid = yes
       continue_if_invalid = no
       available_if_capitulated = no
-  }   
+  }   }
