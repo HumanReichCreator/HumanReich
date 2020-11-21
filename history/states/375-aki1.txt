@@ -6,21 +6,19 @@ state={
 	}
 	resources={
 
-		powder=0.000
-		metal=0.000
+		powder = 0.0
+		metal = 0.0
 		gas=0.000
 		crystal=0.000
 	}
 
 	history={
-			owner = WHM
 		146.1.1 = {
-			owner = WHM
+			owner = AKI
 			add_core_of = AKI
-			add_core_of = WHM
 			buildings = {
-				infrastructure =2
-				industrial_complex = 1
+				infrastructure =0
+				industrial_complex = 0
 				arms_factory = 0
 
 			}
@@ -29,6 +27,6 @@ state={
 
 	}
 	state_category=s2
-	manpower=623.0
+	manpower=271.0
 	buildings_max_level_factor=1.000
 }

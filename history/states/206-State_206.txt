@@ -4,19 +4,17 @@ state={
 	name="STATE_206"
 	resources={
 
-		powder=0.000
-		metal=0.000
+		powder = 0.0
+		metal = 0.0
 		gas=0.000
 		crystal=0.000
 	}
 
 	history={
-			owner = HKR
 		146.1.1 = {
-			owner = HKR
+			owner = ALI
 			add_core_of = ALI
-			add_core_of = HKR
-			add_claim_by = MSD
+			add_core_of = MSD
 			buildings = {
 				infrastructure =2
 				industrial_complex = 1

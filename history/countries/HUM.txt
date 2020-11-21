@@ -1,137 +1,35 @@
 ﻿capital = 246
-138.1.1 = {
-
-}
-141.6.2 = {
-    
-}
-142.3.8 = {
-    set_technology = {
-        #通用武器线
-        spell_card = 1
-        buqiang117 = 1
-        buqiang140 = 1
-        buqiang145 = 1
-        tangxiangailiang140 = 1
-        jiandanmiaozhunjing140 = 1
-            
-        #辅助
-        
-
-        #专用辅助
-        fangzhihuopao143 = 1
-
-
-        #专用基础
-
-        #专用进阶
-        qiyouche146 = 1
-
-        #混合系
-
-        #陆军学说
-        zhanchangzhihui140 = 1
-        zuzhihuazhanzheng142 = 1
-        zhanchangzhihui145=  1
-            
-        #工程学 
-        jichushuxue = 1
-        shuxuegongju = 1
-        waike = 1
-        jisuangongju144 = 1
-        tongxunlilun = 1
-
-        #专用工程学
-
-        #工业
-        production_theory = 1
-        org_production = 1
-        jianzaojishu130 = 1
-            
-        #专用工业
-        fangwaijieshengchan130 = 1
-        fangwaijieshengchan140 = 1
-
-        #种族
-        kongjuyizhiji1 = 1
-            
-    }
-}
-143.7.1 = {
-    set_technology = {
-        #通用武器线
-        spell_card = 1
-        buqiang117 = 1
-        buqiang140 = 1
-        buqiang145 = 1
-        tangxiangailiang140 = 1
-        jiandanmiaozhunjing140 = 1
-        tangxiangailiang145 = 1
-        qijumiaozhunjing145 = 1
-            
-        #辅助
-
-        #专用辅助
-        fangzhihuopao143 = 1
-
-        #专用基础
-
-        #专用进阶
-        qiyouche146 = 1
-
-        #混合系
-
-        #陆军学说
-        zhanchangzhihui140 = 1
-        zuzhihuazhanzheng142 = 1
-        zhanchangzhihui145=  1
-            
-        #工程学 
-        jichushuxue = 1
-        shuxuegongju = 1
-        waike = 1
-        jisuangongju144 = 1
-        tongxunlilun = 1
-
-        #专用工程学
-
-        #工业
-        production_theory = 1
-        org_production = 1
-        jianzaojishu130 = 1
-            
-        #专用工业
-        fangwaijieshengchan130 = 1
-        fangwaijieshengchan140 = 1
-
-        #种族
-        kongjuyizhiji1 = 1
-            
-    }
-}
 146.1.1 = {
     set_technology = {
         #通用武器线
-        spell_card = 1
-        buqiang117 = 1
-        buqiang140 = 1
-        buqiang145 = 1
-        tangxiangailiang140 = 1
-        jiandanmiaozhunjing140 = 1
-        tangxiangailiang145 = 1
-        qijumiaozhunjing145 = 1
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
+        spell_card2 = 1
+        spear2 = 1
+        gun2 = 1
+        lingliliushuixian = 1
+        spear3 = 1
+        gun3 = 1
             
         #辅助
+        zhiyuanzhuangbei = 1
+        zhihuixiaodui146 = 1
 
         #专用辅助
-        fangzhihuopao143 = 1
+        mortar1 = 1
+        
+        wunvzhiyuan149 = 1
 
         #专用基础
 
         #专用进阶
-        qiyouche146 = 1
 
         #混合系
+        sc_shield1 = 1
 
         #陆军学说
         zhanchangzhihui140 = 1
@@ -161,19 +59,20 @@
         kongjuyizhiji1 = 1
             
     }
+    
 }
 138.1.1 = {#temp
     
 	# set_research_slots = 1
 	add_ideas = {
-    Human
-	Town
-	# type1_manpowerlv3
-	partial_economic_mobilisation
-    hawk0
-    close2
-    forbidden_magic
-    strict_border
+        Human
+    	Town
+    	# type1_manpowerlv3
+    	partial_economic_mobilisation
+        hawk0
+        close2
+        forbidden_magic
+        strict_border
     }
 	
 
@@ -190,22 +89,6 @@
         fandong = 60
         oldorder = 5
         neworder = 10
-    }
-
-    create_equipment_variant = {
-       name = "仿制Kar98k 乙修改型"
-       type = buqiang145
-       upgrades = {
-          upgrade_reliability = 1
-          upgrade_softattack = 2
-          # upgrade_hardattack = 1
-          # upgrade_aaattack = 2
-          upgrade_defense = 1
-          # upgrade_breakthrough = 5
-          # upgrade_ic = 2
-          upgrade_ic_reverse = 2
-          # upgrade_reliability_reverse = 3
-       }
     }
 }
 
@@ -267,23 +150,23 @@
     remove_ideas = {
         renli144
     }
-    create_faction = human_repower
-    add_to_faction = WHM
-    add_to_faction = HKR
-    add_to_faction = SEI
-    add_to_faction = RNS
-
-    HUM = {
-        KOG = {
-            subject_level4 = yes
-        }
-    }
-    KOG = {
-        set_cosmetic_tag = KOG_HUM
-    }
-
+    set_truce = {target = EMB days = 1095}
+    set_truce = {target = WAK days = 1095}
     set_truce = {target = CHE days = 1095}
-
+    set_truce = {target = KAG days = 1095}
+    set_truce = {target = TKM days = 1095}
+    set_truce = {target = NMS days = 1095}
+    set_truce = {target = SCA days = 1095}
+    set_truce = {target = NMS days = 1095}
+    set_truce = {target = RMI days = 1095}
+    set_truce = {target = SEJ days = 1095}
+    set_truce = {target = MSD days = 1095}
+    set_truce = {target = PRI days = 1095}
+    set_truce = {target = SBK days = 1095}
+    set_truce = {target = NIB days = 1095}
+    set_truce = {target = HKM days = 1095}
+    set_truce = {target = KYK days = 1095}
+    set_truce = {target = MAM days = 1095}
 
     add_ideas = {
         Human
@@ -295,38 +178,40 @@
         HUM_youkai_influence
         HUM_war_fear
         
-        dove2
-        close4
+        dove5
+        open1
         normal_border
         forbidden_magic
     }
     #########调整
-    
+    SRB = { give_guarantee = HUM}
+    TKM = { give_guarantee = HUM}
     
     set_politics = {
 
-    	ruling_party = authordemo
+    	ruling_party = guli
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 7
-        guli = 20
+        qinwai = 8
+        guli = 89
         neworder = 2
         oldorder = 0
         fandong = 1
-        lienin = 10
-        humanfirst = 17
-        authordemo = 43
+    }
+
+    ZBT = {
+        subject_level4 = yes
     }
 
     
 }
 
 create_country_leader = {
-    # name = "Fujiwara no Mokou"
-    name = "藤原妹红"
-    picture = "HUM_mokou.dds"
+    #name = "Kamishirasawa Keine"
+    name = "上白泽慧音"
+    picture = "HUM_keine.dds"
     ideology = neworder_type
     traits = {
         
@@ -344,9 +229,9 @@ create_country_leader = {
 }
 
 create_country_leader = {
-    #name = "Kamishirasawa Keine"
-    name = "上白泽慧音"
-    picture = "HUM_keine.dds"
+    #name = "Okunoda Miyoi"
+    name = "奥野田美宵"
+    picture = "HUM_may.dds"
     ideology = oldorder_type
     traits = {
         
@@ -354,9 +239,9 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	#name = "Motoori Kosuzu"
-    name = "本居小铃"
-	picture = "HUM_kosuzu.dds"
+	#name = "Okunoda Miyoi"
+    name = "奥野田美宵"
+	picture = "HUM_may.dds"
 	ideology = qinwai_type
 	traits = {
 		
@@ -372,14 +257,3 @@ create_country_leader = {
         
     }
 }
-
-create_country_leader = {
-    #name = "Motoori Kosuzu"
-    name = "稗田阿求"
-    picture = "HUM_aky.dds"
-    ideology = authordemo_type
-    traits = {
-        
-    }
-}
-

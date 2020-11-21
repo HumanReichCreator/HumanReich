@@ -22,17 +22,17 @@ bookmarks = {
 			}
 		}
 		
-		"YSK"={
-			history = "YSK_DAWN_DESC"
+		"MRY"={
+			history = "MRY_DAWN_DESC"
 			ideas = { 
-				YSK_kejizhishen_idea
-    			YSK_shenmingdeweiji_idea
-    			YSK_fugushenwei_idea
+				MRY_kejizhishen_idea
+    			MRY_shenmingdeweiji_idea
+    			MRY_fugushenwei_idea
 			}
 			focuses = {
-				YSK_shenmingyongyuanshishen
-				YSK_xiangtiangouxuanzhan
-				YSK_chengweiyaoguaishanzhizhu
+				MRY_shenmingyongyuanshishen
+				MRY_xiangtiangouxuanzhan
+				MRY_chengweiyaoguaishanzhizhu
 			}
 		}
 		
@@ -51,16 +51,16 @@ bookmarks = {
 			}
 		}
 		
-		"SEI"={
-			history = "SEI_DAWN_DESC"
+		"SEJ"={
+			history = "SEJ_DAWN_DESC"
 			ideas = { 
-				SEI_zhengzhiweiji_idea
+				SEJ_zhengzhiweiji_idea
 				gensokyo_primary_idea
 			}
 			focuses = {
-				SEI_xinshidaixiakeshang
-				SEI_yuyaojinghezuo
-				SEI_emoyapozhe
+				SEJ_xinshidaixiakeshang
+				SEJ_yuyaojinghezuo
+				SEJ_emoyapozhe
 			}
 		}
 
@@ -92,17 +92,17 @@ bookmarks = {
 			}
 		}
 
-		"KOG"={
-			history = "KOG_DAWN_DESC"
+		"TKM"={
+			history = "TKM_DAWN_DESC"
 			ideas = { 
 				kog_jixingdegongye_idea
 				kog_xinshengdeshili_idea
 				kog_manpower_puppet
 			}
 			focuses = {
-				KOG_kejigexindeqishi
-				KOG_caogenyaoguaigongrongquan
-				KOG_quankaowomenziji
+				TKM_kejigexindeqishi
+				TKM_caogenyaoguaigongrongquan
+				TKM_quankaowomenziji
 			}
 		}
 		
@@ -143,17 +143,17 @@ bookmarks = {
             	MRS_feihongtiaoyue
 			}			
 		}
-		"TEN"={
+		"TES"={
 		    minor = yes
-			history = "TEN_DAWN_DESC"		#sca
+			history = "TES_DAWN_DESC"		#sca
 			ideas={ 
 				not_gensoukyo_idea
 				God
 			}	
             focuses = {
-            	TEN_zhuanyishoudou
-            	TEN_binamingjuducai
-            	TEN_kuodayingxianglidaodiyu
+            	TES_zhuanyishoudou
+            	TES_binamingjuducai
+            	TES_kuodayingxianglidaodiyu
 			}			
 		}
 		"SRB"={
@@ -162,6 +162,7 @@ bookmarks = {
 			ideas={ 
 				Shrine
 				God
+				srb_daojiaotansuojingshen_o_idea
 			}	
             focuses = {
             	SRB_xuanchengtianhuang
@@ -170,47 +171,52 @@ bookmarks = {
 			}			
 		}
 
-		#"ALI"={
-		#    minor = yes
-		#	history = "ALI_DAWN_DESC"		#sca
-		#	ideas={ 
-		#		ali_renoujuntuan_idea
-        #		ali_zhenduidaojudeliliang_idea
-		#	}	
-         #   focuses = {
-          #  	ALI_tonglingmofashixiehui
-           # 	ALI_jianlirenougongfang
-            #	ALI_lingrenxiaiderenouzhixiang
-			#}			
-		#}
 		"ALI"={
 		    minor = yes
 			history = "ALI_DAWN_DESC"		#sca
 			ideas={ 
-				SGS_battle_fairy_talent_idea
-				SGS_battle_fairy_restlessness_idea
-				SGS_hurry_mic_idea
+				ali_renoujuntuan_idea
+        		ali_zhenduidaojudeliliang_idea
 			}	
             focuses = {
-            	
+            	ALI_tonglingmofashixiehui
+            	ALI_jianlirenougongfang
+            	ALI_lingrenxiaiderenouzhixiang
 			}			
 		}
-		"SGS"={
+    
+
+
+		"AKI"={
 		    minor = yes
 			history = "AKI_DAWN_DESC"		#sca
 			ideas={ 
-				SGS_battle_fairy_talent_idea
-				SGS_battle_fairy_restlessness_idea
-				SGS_hurry_mic_idea
+            AKI_tudijianbing_idea
+            AKI_jiduanzhuyiyundong_idea
+            AKI_renyushendemohujiexian_idea
 			}	
             focuses = {
-            	SGS_battle_fariy_issue_focus
-            	SGS_pacify_battle_fariy_focus
-            	SGS_develop_our_country_focus
+            	AKI_cunluodalianhe
+            	AKI_xirenlidechengli
+            	AKI_tongyiwuyuanzhong
 			}			
 		}
-
-		
+    
+    "MEL"={
+		    minor = yes
+			history = "MEL_DAWN_DESC"		#sca
+			ideas={ 
+	            SGS_tuanjiexieding_idea
+	            MEL_messy_economy_idea
+	            MEL_unorganized_militia_idea
+			}	
+            focuses = {
+            	MEL_BiAnHua_Plant
+            	MEL_mustard_gas
+              	MEL_Liberation
+			}			
+		}
+    
 		
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !

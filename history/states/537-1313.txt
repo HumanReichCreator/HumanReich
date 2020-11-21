@@ -4,29 +4,34 @@ state={
 	name="STATE_537"
 	resources={
 		energy=0.000
-		powder=0.000
-		metal=0.000
+		powder = 0.0
+		metal = 0.0
 		gas=0.000
 		crystal=0.000
 	}
 
 	history={
-			owner = XXX
 		146.1.1 = {
-			owner = XXX
-			add_core_of = XXX
+			owner = HUM
+			add_core_of = HUM
+			add_core_of = HU6
+			add_core_of = HU7
+			add_core_of = HU8
 			buildings = {
-				infrastructure = 1
+				infrastructure = 4
 				industrial_complex = 0
 				arms_factory = 0
+
 			}
+
 		}
+
 	}
 
 	provinces={
-		6475 
+		194 1207 2920 5562 5587 5593 5604 5621 
 	}
-	manpower=46331
+	manpower=421
 	buildings_max_level_factor=1.000
 	state_category=s2
 }

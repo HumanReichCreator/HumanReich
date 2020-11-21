@@ -2,32 +2,36 @@
 state={
 	id=454
 	name="STATE_454"
-
 	resources={
 		energy=0.000
-		powder=0.000
-		metal=0.000
+		powder = 2.0
+		metal = 0.0
 		gas=0.000
 		crystal=0.000
 	}
 
 	history={
-			owner = XXX
 		146.1.1 = {
-			owner = XXX
-			add_core_of = XXX
+			owner = HUM
+			add_core_of = HUM
+			add_core_of = HU6
+			add_core_of = HU7
+			add_core_of = HU8
 			buildings = {
-				infrastructure = 1
-				industrial_complex = 0
+				infrastructure = 6
+				industrial_complex = 2
 				arms_factory = 0
+
 			}
+
 		}
+
 	}
 
 	provinces={
-		6476 
+		382 788 985 2436 2922 3160 3466 3468 5591 5609 5646 5662 5664 5669 
 	}
-	manpower=342
+	manpower=6842
 	buildings_max_level_factor=1.000
 	state_category=s2
 }

@@ -4,17 +4,16 @@ state={
 	name="STATE_329"
 	resources={
 
-		powder=0.000
-		metal=0.000
+		powder = 0.0
+		metal = 0.0
 		gas=5.000
 		crystal=0.000
 	}
 
 	history={
-			owner = AVE
 		143.7.1 = {
-			owner = AVE
-			add_core_of = AVE
+			owner = KYK
+			add_core_of = KYK
 			buildings = {
 				infrastructure =2
 				industrial_complex = 0
@@ -23,8 +22,8 @@ state={
 			}
 		}
 		146.1.1 = {
-			owner = AVE
-			add_core_of = AVE
+			owner = KYK
+			add_core_of = KYK
 			add_claim_by = HUM
 			add_claim_by = HU6
 			add_claim_by = HU7

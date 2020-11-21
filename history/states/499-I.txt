@@ -6,16 +6,15 @@ state={
 	}
 	resources={
 		energy = 0.000
-		powder=0.000
-		metal=0.000
+		powder = 0.0
+		metal = 0.0
 		gas=15.000
 		crystal=0.000
 	}
 	history={
-			owner = SPG
 		146.1.1 = {
-			owner = SPG
-			add_core_of = SPG
+			owner = LIL
+			add_core_of = LIL
 			buildings = {
 				infrastructure = 2
 				industrial_complex = 1

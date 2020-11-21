@@ -1,24 +1,14 @@
 ﻿capital = 282
-138.8.13 = {
-
-}
-141.6.2 = {
-    
-}
-142.3.8 = {
-    
-}
-144.2.5 = {
-    
-}
 146.1.1 = {
     set_technology = {
         #通用武器线
-            spell_card = 1
-            linglijiejing139 = 1
-            gaosudanmu139 = 1
-            buqiang117 = 1
-            buqiang140 = 1
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
+        gun2 = 1
         #辅助
 
         #专用辅助
@@ -54,9 +44,13 @@
             yeguangzhili1 = 1
             
     }
+    
 }
 146.1.1={
     oob = "MAM_146"
+    set_truce = {target = HKR days = 300}
+    set_truce = {target = HUM days = 300}
+    set_truce = {target = ZBT days = 300}
     add_ideas = {
     Youkai
     Village
@@ -71,12 +65,11 @@
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 10
-        guli = 80
-        neworder = 0
+        qinwai = 35
+        guli = 55
+        neworder = 10
         oldorder = 0
         fandong = 0
-        humanfirst = 10
     }
     
     set_convoys = 2

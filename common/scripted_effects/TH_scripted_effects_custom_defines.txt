@@ -12,8 +12,6 @@ custom_defines_initialize = {
 	set_variable = { global.DF_lobby_time_cost = 260 }
 	set_variable = { global.DF_hawk_cost = 120 }
 	set_variable = { global.DF_dove_cost = 120 }
-	set_variable = { global.DF_balance_cost = 180 }
-	
 }
 custom_defines_changer = { 
     #open close
@@ -25,15 +23,12 @@ custom_defines_changer = {
 	set_variable = { lobby_time_cost = global.DF_lobby_time_cost }
 	set_variable = { hawk_cost = global.DF_hawk_cost }
 	set_variable = { dove_cost = global.DF_dove_cost }
-	set_variable = { banlance_cost = global.DF_balance_cost }
 	
 	if = {
 		limit = {
 		  OR = {
 		    has_government = neworder
-		    has_government = oldorder
-			has_government = humanfirst
-			has_government = authordemo
+		    has_government = guli
 		  }
 		}
 		multiply_variable = { var = close_cost value = 0.5 }
@@ -43,7 +38,6 @@ custom_defines_changer = {
 		  OR = {
 		    has_government = qinwai
 		    has_government = fandong
-			has_government = lienin
 		  }
 		}
 		multiply_variable = { var = open_cost value = 0.5 }
@@ -61,23 +55,12 @@ custom_defines_changer = {
 	if = {
 		limit = {
 		    OR = {
-		        has_government = oldorder
-				has_government = humanfirst
-		        has_government = lienin
+		        has_government = guli
+		        has_government = qinwai
 		    }
 		}
 		multiply_variable = { var = dove_cost value = 0.5 }
 	}
-	if = {
-		limit = {
-		    OR = {
-		        has_government = guli
-				has_government = authordemo
-		    }
-		}
-		multiply_variable = { var = banlance_cost value = 0.5 }
-	}
-	
 
 	set_temp_variable = { lobby_time_factor = 1 }
 	set_temp_variable = { conservative_time_factor = 1}

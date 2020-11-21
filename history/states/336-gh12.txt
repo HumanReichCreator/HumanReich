@@ -4,21 +4,20 @@ state={
 	name="STATE_336"
 	resources={
 
-		powder=0.000
-		metal=0.000
+		powder = 0.0
+		metal = 0.0
 		gas=0.000
 		crystal=0.000
 	}
 
 	history={
-			owner = ZYD
 		146.1.1 = {
 			owner = ZYD
 			add_core_of = ZYD
 			buildings = {
 				infrastructure =1
 				industrial_complex = 0
-				arms_factory = 1
+				arms_factory = 2
 
 			}
 

@@ -1,76 +1,32 @@
 ﻿capital = 223
-138.8.13 = {
-
-}
-141.6.2 = {
-    
-}
-142.3.8 = {
-    
-} 
-143.7.1 = {
-    set_technology = {
-        #通用武器线
-        spell_card = 1
-        linglijiejing139 = 1
-        linglijiejing144= 1
-        gaosudanmu139 = 1
-        buqiang117 = 1
-            
-        #辅助
-
-        #专用辅助
-
-        #专用基础
-
-        #专用进阶
-
-        #混合系
-
-        #陆军学说
-        zhanchangzhihui140 = 1
-        zuzhihuazhanzheng142 = 1
-        zhanchangzhihui145 = 1
-            
-        #工程学 
-        jichushuxue = 1
-        shuxuegongju = 1
-        lingben = 1
-        tongxunlilun = 1
-        jiemi137 = 1
-
-        #专用工程学
-
-        #工业
-        production_theory = 1
-        org_production = 1
-            
-        #专用工业
-
-        #种族
-        caogenchuantong1 = 1
-            
-    }
-}
 146.1.1 = {
     set_technology = {
         #通用武器线
-        spell_card = 1
-        linglijiejing139 = 1
-        linglijiejing144= 1
-        danmujingque139 = 1
-        gaosudanmu139 = 1
-        buqiang117 = 1
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
+        spell_card2 = 1
+        spear2 = 1
+        lingliliushuixian = 1
+        spell_card3 = 1
+        spear3 = 1
             
         #辅助
+        zhiyuanzhuangbei = 1
+        zhihuixiaodui146 = 1
 
         #专用辅助
+        lingliganying147 = 1
 
         #专用基础
 
         #专用进阶
 
         #混合系
+        sc_shield1 = 1
 
         #陆军学说
         zhanchangzhihui140 = 1
@@ -92,12 +48,16 @@
             
         #专用工业
         linglishengchan130 = 1
+        linglishengchan140 = 1
 
         #种族
         caogenchuantong1 = 1
         caogenchuantong2 = 1
+        qinlvetianxing1 = 1
+        qinlvetianxing2 = 1
             
     }
+    
 }
 143.1.1 = {#temp
     set_politics = {
@@ -140,6 +100,7 @@
     }
 }
 146.1.1={
+    add_manpower = 850
     # set_cosmetic_tag = NMS_nue
     # set_cosmetic_tag = NMS_SRB
     # set_cosmetic_tag = NMS_youkai
@@ -147,15 +108,11 @@
     # set_research_slots = 5
     # Starting tech
     
-    create_faction = Buddi_Tao_ally
-    add_to_faction = SRB
-
     diplomatic_relation = { 
-        country = WHM relation = non_aggression_pact 
+        country = TKM relation = non_aggression_pact 
     }
-
-    diplomatic_relation = { 
-        country = HUM relation = non_aggression_pact 
+    KYK = {
+        subject_level3 = yes
     }
     MAM = {
         subject_level4 = yes
@@ -185,16 +142,15 @@
     }
     set_politics = {
     
-    	ruling_party = authordemo
+    	ruling_party = qinwai
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        authordemo = 65
-        qinwai = 20
+        qinwai = 65
         guli = 5
-        neworder = 0
-        oldorder = 10
+        neworder = 30
+        oldorder = 0
         fandong = 0
     }
 }
@@ -241,33 +197,6 @@ create_country_leader = {
     name = "圣白莲"
 	picture = "NMS_bkr.dds"
 	ideology = oldorder_type
-    traits = {
-        # nms_bkr
-    }
-}
-create_country_leader = {
-	# name = "Hijiri Byakuren"
-    name = "圣白莲"
-	picture = "NMS_bkr.dds"
-	ideology = authordemo_type
-    traits = {
-        # nms_bkr
-    }
-}
-create_country_leader = {
-	# name = "Hijiri Byakuren"
-    name = "圣白莲"
-	picture = "NMS_bkr.dds"
-	ideology = lienin_type
-    traits = {
-        # nms_bkr
-    }
-}
-create_country_leader = {
-	# name = "Hijiri Byakuren"
-    name = "圣白莲"
-	picture = "NMS_bkr.dds"
-	ideology = humanfirst_type
     traits = {
         # nms_bkr
     }

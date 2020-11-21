@@ -14,21 +14,26 @@
 146.1.1 = {
     set_technology = {
         #通用武器线
-        spell_card = 1
-        buqiang117 = 1
-        buqiang140 = 1
-        tangxiangailiang140 = 1
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
+        spear2 = 1
+        gun2 = 1
             
         #辅助
 
         #专用辅助
-        fangzhihuopao143 = 1
+        mortar1 = 1
 
         #专用基础
 
         #专用进阶
 
         #混合系
+        sc_shield1 = 1
 
         #陆军学说
         zhanchangzhihui140 = 1
@@ -52,38 +57,34 @@
         #种族
             
     }
+    
 }
 146.1.1 = {
-    
+    add_manpower = 400
     oob = "RNS_146"
     
     # set_research_slots = 4
     add_ideas = {
     Beast
     Village
-    hawk0
     open2
+    dove2
     limit_magic
     normal_border
     }
     
-    RNS = {
-        SBK = {
-            subject_level3 = yes
-        }
-    }
+    
     set_politics = {
-        ruling_party = destroyid
+        ruling_party = guli
         election_frequency = 48
         elections_allowed = no
     }
     set_popularities = {
         qinwai = 7
-        guli = 3
+        guli = 93
         neworder = 0
         oldorder = 0
         fandong = 0
-        destroyid = 90
     }
 }
 create_country_leader = {
@@ -91,15 +92,6 @@ create_country_leader = {
     name = "森近霖之助"
     picture = "RNS_rns.dds"
     ideology = guli_type
-    traits = {
-
-    }
-}
-create_country_leader = {
-    # name = "Morichika Rinnosuke"
-    name = "雾雨家"
-    picture = "RNS_rns.dds"
-    ideology = destroyid_type
     traits = {
 
     }
@@ -136,36 +128,6 @@ create_country_leader = {
     name = "朱鷺子"
     picture = "RNS_tokiko.dds"
     ideology = oldorder_type
-    traits = {
-
-    }
-}
-
-create_country_leader = {
-    # name = "Tokiko"
-    name = "朱鷺子"
-    picture = "RNS_tokiko.dds"
-    ideology = authordemo_type
-    traits = {
-
-    }
-}
-
-create_country_leader = {
-    # name = "Tokiko"
-    name = "朱鷺子"
-    picture = "RNS_tokiko.dds"
-    ideology = lienin_type
-    traits = {
-
-    }
-}
-
-create_country_leader = {
-    # name = "Tokiko"
-    name = "朱鷺子"
-    picture = "RNS_tokiko.dds"
-    ideology = humanfirst_type
     traits = {
 
     }

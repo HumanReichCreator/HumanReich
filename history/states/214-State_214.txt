@@ -5,17 +5,16 @@ state={
 
 	resources={
 		energy = 0
-		powder=2.000
-		metal=0.000
+		powder = 2.0
+		metal = 0.0
 		gas=5.000
 		crystal=0.000
 	}
 
 	history={
-			owner = WAI
 		146.1.1 = {
-			owner = WAI
-			add_core_of = WAI
+			owner = KMC
+			add_core_of = KMC
 			buildings = {
 				infrastructure = 3
 				industrial_complex = 1

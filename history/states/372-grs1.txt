@@ -6,18 +6,18 @@ state={
 	}
 	resources={
 
-		powder=0.000
-		metal=0.000
+		powder = 0.0
+		metal = 0.0
 		gas=0.000
 		crystal=0.000
 	}
 
 	history={
-			owner = NIT
 		146.1.1 = {
-			owner = NIT
+			owner = GRS
+			add_core_of = GRS
 			add_core_of = KAP
-			add_core_of = NIT
+			add_core_of = NTR
 			buildings = {
 				infrastructure =3
 				industrial_complex = 0

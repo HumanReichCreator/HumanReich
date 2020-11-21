@@ -4,22 +4,24 @@ state={
 	name="STATE_69"
 	resources={
 		energy = 20
-		powder=15.000
-		metal=5.000
+		powder = 20.0
+		metal = 5.0
 		gas=0.000
 		crystal=0.000
 	}
 
 	history={
-			owner = NIT
 		146.1.1 = {
-			owner = NIT
+			owner = GRS
+			add_core_of = GRS
 			add_core_of = KAP
-			add_core_of = NIT
+			add_core_of = NTR
 			buildings = {
 				infrastructure =6
 				industrial_complex = 7
 				arms_factory = 1
+				radar_station = 1
+				
 
 			}
 

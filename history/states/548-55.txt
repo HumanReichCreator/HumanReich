@@ -4,17 +4,16 @@ state={
 	name="STATE_548"
 	resources={
 		energy=0.000
-		powder=0.000
-		metal=0.000
+		powder = 0.0
+		metal = 0.0
 		gas=0.000
 		crystal=0.000
 	}
 
 	history={
-			owner = XXX
 		146.1.1 = {
-			owner = XXX
-			add_core_of = XXX
+			# owner = XXX
+			# add_core_of = XXX
 			buildings = {
 				infrastructure = 1
 				industrial_complex = 0
@@ -28,5 +27,5 @@ state={
 	}
 	manpower=6253
 	buildings_max_level_factor=1.000
-	state_category=s7
+	state_category=s0
 }

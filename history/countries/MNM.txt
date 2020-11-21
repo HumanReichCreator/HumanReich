@@ -2,12 +2,11 @@
 146.1.1 = {
     set_technology = {
         #通用武器线
-        spell_card = 1
-        linglijiejing139 = 1
-        linglijiejing144= 1
-        danmujingque139 = 1
-        gaosudanmu139 = 1
-        buqiang117 = 1
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        spell_card2 = 1
             
         #辅助
 
@@ -45,11 +44,15 @@
         caogenchuantong2 = 1
             
     }
+    
 }
 146.1.1={
     # set_cosmetic_tag = NMS_nue
     # set_cosmetic_tag = NMS_SRB
     # set_cosmetic_tag = NMS_youkai
+    set_truce = {target = HKR days = 300}
+    set_truce = {target = HUM days = 300}
+    set_truce = {target = ZBT days = 300}
     oob = "MNM_146"
     # set_research_slots = 5
     # Starting tech
@@ -65,17 +68,16 @@
     free_magic
     }
     set_politics = {
-        ruling_party = guli
+        ruling_party = neworder
         election_frequency = 48
         elections_allowed = no
     }
     set_popularities = {
         qinwai = 0
-        guli = 80
-        neworder = 0
+        guli = 0
+        neworder = 100
         oldorder = 0
-        fandong = 10
-        lienin = 10
+        fandong = 0
     }
 }
 

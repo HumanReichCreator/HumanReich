@@ -4,22 +4,22 @@ state={
 	name="STATE_399"
 	resources={
 
-		powder=4.000
-		metal=9.000
+		powder = 5.0
+		metal = 9.0
 		gas=4.000
 		crystal=0.000
 	}
 
 	history={
-			owner = OTG
 		146.1.1 = {
-			owner = OTG
+			owner = TEG
 			add_core_of = TEG
 			add_core_of = OTG
 			buildings = {
 				infrastructure =8
 				industrial_complex = 17
 				arms_factory = 2
+				
 
 			}
 
@@ -30,7 +30,7 @@ state={
 	provinces={
 		930 932 1894 2247 2683 3108 3110 3386 5250 5254 5260 5264 5268 5270 5282 5285 5286 5293 5295 5300 5302 5305 
 	}
-	manpower=6213.0
+	manpower=11213.0
 	buildings_max_level_factor=1.000
 	state_category=s20
 }
