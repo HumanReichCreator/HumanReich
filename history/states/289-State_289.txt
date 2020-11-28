@@ -6,12 +6,13 @@ state={
 	resources={
 		energy = 5
 		powder = 0.0
-		metal = 0.0
+		metal = 0
 		gas = 5.0
 		crystal = 0.0
 	}
 
 	history={
+			owner = KAG
 		146.1.1 = {
 			owner = KAG
 			add_core_of = KAG

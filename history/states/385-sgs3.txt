@@ -6,27 +6,28 @@ state={
 	}
 	resources={
 
-		powder = 0.0
-		metal = 0.0
+		powder=0.000
+		metal=0.000
 		gas=0.000
 		crystal=0.000
 	}
 
 	history={
+			owner = WHM
 		146.1.1 = {
-			owner = SGS
-			add_core_of = SGS
+			owner = WHM
+			add_core_of = WHM
 			buildings = {
-				infrastructure =0
-				industrial_complex = 0
-				arms_factory = 0
+				infrastructure =5
+				industrial_complex = 2
+				arms_factory = 3
 
 			}
 
 		}
 
 	}
-	state_category=s2
-	manpower=9057.0
+	state_category=s15
+	manpower=2057.0
 	buildings_max_level_factor=1.000
 }

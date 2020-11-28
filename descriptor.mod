@@ -1,11 +1,8 @@
-version="0.1.0"
+version="0.0.1"
 tags={
 	"Alternative History"
-	"Map"
-	"Gameplay"
 }
-name="[Touhou project mod] ROA-HumanReich"
-picture="test.png"
+name="NewHR"
 dependencies={
 	"52 Chinese Localisation"
 }
@@ -77,6 +74,4 @@ replace_path="history/states"
 replace_path="map/strategicregions"
 replace_path="map/supplyareas"
 replace_path="gfx/loadingscreens"
-supported_version="1.10.*"
-path="D:/user/HOI4/HumanReich"
-remote_file_id="1100200730"
+supported_version="1.10.2"

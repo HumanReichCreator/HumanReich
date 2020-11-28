@@ -43,8 +43,14 @@ SS_situation = {
 FT_situation = {
 	priority = 12
 }
+debuff_category = {
+	priority = 19
+}
 #20以上为国家特有
 SW_battle = { #
+	priority = 20
+}
+Spoil_battle = { #
 	priority = 20
 }
 CLO_battle = { #
@@ -60,6 +66,9 @@ MRY_kejigexin = {
 	priority = 20
 }
 TEG_category = {
+	priority = 20
+}
+SGS_category = {
 	priority = 20
 }
 HKR_category = { #灵梦二手工业
@@ -98,6 +107,7 @@ bianshen_category = { ###变身国家决议
 HUM_qianzhai = {
 	priority = 30
 }
+
 
 
 

@@ -1,13 +1,22 @@
 ﻿capital = 29
+138.8.13 = {
+
+}
+141.6.2 = {
+    
+}
+142.3.8 = {
+    
+}
+144.2.5 = {
+    
+}
 146.1.1 = {
     set_technology = {
         #通用武器线
-        spell_card1 = 1
-        spear1 = 1
-        gun1 = 1
-        linglicunchu = 1
-        linglizhufu = 1
-        linglidanyao = 1
+        spell_card = 1
+        linglijiejing139 = 1
+        buqiang117 = 1
             
         #辅助
 
@@ -38,7 +47,6 @@
         #种族
             
     }
-    
 }
 
 146.1.1={
@@ -50,25 +58,21 @@
     dove2
     loose_border
     sc_rule
-    type1_manpowerlv3
     }
     set_politics = {
-    	ruling_party = qinwai
+    	ruling_party = guli
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 80
-        guli = 5
+        qinwai = 15
+        guli = 80
         neworder = 0
         oldorder = 0
-        fandong = 15
+        fandong = 5
     }
 
-    set_truce = {target = SCA days = 730}
-    set_truce = {target = WAK days = 730}
-    set_truce = {target = GRS days = 730}
-    set_truce = {target = PRI days = 730}
+
 }
 create_country_leader = {
 	# name = "Lily White"

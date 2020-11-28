@@ -137,29 +137,6 @@ country_value_calculator_and_manpower_gainer = {
 
     if = {
         limit = {
-            is_subject = yes
-            not = {
-                has_country_flag = LS_start_lowing
-            }
-        }
-        PREV = {
-            OVERLORD = {
-                save_event_target_as = annexed_overlord
-            }
-            every_owned_state = {
-                limit = {
-                    is_core_of = PREV
-                    not = {
-                        has_state_flag = will_be_annexed_by_@event_target:annexed_overlord
-                    }
-                }
-                set_state_flag =  will_be_annexed_by_@event_target:annexed_overlord
-            }
-        }
-    }
-
-    if = {
-        limit = {
             has_war = no
             check_variable = { manpower_value < 40}
             has_army_manpower = {
@@ -195,13 +172,24 @@ go_qinwai = {
     clr_country_flag = go_fandong
     clr_country_flag = go_guli
     clr_country_flag = go_neworder
+	clr_country_flag = go_authordemo
+	clr_country_flag = go_lienin
+	clr_country_flag = go_humanfirst
+	clr_country_flag = go_destroyid
+	clr_country_flag = go_oldorder
 }
+
 
 go_guli = {
     set_country_flag = go_guli
     clr_country_flag = go_fandong
     clr_country_flag = go_qinwai
     clr_country_flag = go_neworder
+	clr_country_flag = go_authordemo
+	clr_country_flag = go_lienin
+	clr_country_flag = go_humanfirst
+	clr_country_flag = go_destroyid
+	clr_country_flag = go_oldorder
 }
 
 go_fandong = {
@@ -209,6 +197,11 @@ go_fandong = {
     clr_country_flag = go_qinwai
     clr_country_flag = go_guli
     clr_country_flag = go_neworder
+	clr_country_flag = go_authordemo
+	clr_country_flag = go_lienin
+	clr_country_flag = go_humanfirst
+	clr_country_flag = go_destroyid
+	clr_country_flag = go_oldorder
 }
 
 go_neworder = {
@@ -216,13 +209,71 @@ go_neworder = {
     clr_country_flag = go_fandong
     clr_country_flag = go_guli
     clr_country_flag = go_qinwai
+	clr_country_flag = go_authordemo
+	clr_country_flag = go_lienin
+	clr_country_flag = go_humanfirst
+	clr_country_flag = go_destroyid
+	clr_country_flag = go_oldorder
 }
 
 go_oldorder = {
+	set_country_flag = go_oldorder
     clr_country_flag = go_neworder
     clr_country_flag = go_fandong
     clr_country_flag = go_guli
     clr_country_flag = go_qinwai
+	clr_country_flag = go_authordemo
+	clr_country_flag = go_lienin
+	clr_country_flag = go_humanfirst
+	clr_country_flag = go_destroyid
+}
+
+go_authordemo = {
+	set_country_flag = go_authordemo
+    clr_country_flag = go_neworder
+    clr_country_flag = go_fandong
+    clr_country_flag = go_guli
+    clr_country_flag = go_qinwai
+	clr_country_flag = go_oldorder
+	clr_country_flag = go_lienin
+	clr_country_flag = go_humanfirst
+	clr_country_flag = go_destroyid
+}
+
+go_lienin = {
+	set_country_flag = go_lienin
+    clr_country_flag = go_neworder
+    clr_country_flag = go_fandong
+    clr_country_flag = go_guli
+    clr_country_flag = go_qinwai
+	clr_country_flag = go_authordemo
+	clr_country_flag = go_oldorder
+	clr_country_flag = go_humanfirst
+	clr_country_flag = go_destroyid
+}
+
+go_humanfirst = {
+	set_country_flag = go_humanfirst
+    clr_country_flag = go_neworder
+    clr_country_flag = go_fandong
+    clr_country_flag = go_guli
+    clr_country_flag = go_qinwai
+	clr_country_flag = go_authordemo
+	clr_country_flag = go_lienin
+	clr_country_flag = go_oldorder
+	clr_country_flag = go_destroyid
+}
+
+go_destroyid = {
+	set_country_flag = go_destroyid
+    clr_country_flag = go_neworder
+    clr_country_flag = go_fandong
+    clr_country_flag = go_guli
+    clr_country_flag = go_qinwai
+	clr_country_flag = go_authordemo
+	clr_country_flag = go_lienin
+	clr_country_flag = go_humanfirst
+	clr_country_flag = go_oldorder
 }
 
 subject_situation_change_list = {
@@ -350,39 +401,39 @@ delcare_war_events = {
             limit = {
                 FROM = {tag = MSD}
             }
-            news_event = { id = sei.18 days = 2}
+            news_event = { id = sej.18 days = 2}
         }
         if = {
             limit = {
                 FROM = {tag = MRS}
             }
-            news_event = { id = sei.23 days = 2}
+            news_event = { id = sej.23 days = 2}
         }
         if = {
             limit = {
                 FROM = {tag = CIR}
             }
-            news_event = { id = sei.26 days = 2}
+            news_event = { id = sej.26 days = 2}
         }
         if = {
             limit = {
                 not = { has_government = qinwai }
                 FROM = {tag = YKR}
             }
-            news_event = { id = sei.42 days = 2}
+            news_event = { id = sej.42 days = 2}
         }
         if = {
             limit = {
                 has_government = qinwai
                 FROM = {tag = YKR}
             }
-            news_event = { id = sei.54 days = 2}
+            news_event = { id = sej.54 days = 2}
         }
         if = {
             limit = {
                 FROM = {tag = YUG}
             }
-            news_event = { id = sei.55 days = 2}
+            news_event = { id = sej.55 days = 2}
         }
     }
     if = {
@@ -393,13 +444,13 @@ delcare_war_events = {
             limit = {
                 FROM = {tag = NTR}
             }
-            news_event = { days = 2 id = ysk.12}
+            news_event = { days = 2 id = mry.12}
         }
         if = {
             limit = {
                 FROM = {tag = TEG}
             }
-            news_event = { days = 2 id = ysk.16}
+            news_event = { days = 2 id = mry.16}
         }
         if = {
             limit = {
@@ -408,13 +459,13 @@ delcare_war_events = {
                     FROM = {tag = GRS}
                 }
             }
-            news_event = { days = 2 id = ysk.28}
+            news_event = { days = 2 id = mry.28}
         }
         if = {
             limit = {
                 FROM = {tag = HU5}
             }
-            news_event = { days = 2 id = ysk.32}
+            news_event = { days = 2 id = mry.32}
         }
     }
 
@@ -517,25 +568,25 @@ delcare_war_events = {
                     tag = WAK
                 }
             }
-            news_event = { id = kog2.39 days = 2}
+            news_event = { id = tkm2.39 days = 2}
         }
         if = {
             limit = {
                 FROM = {tag = MRS}
             }
-            news_event = { id = kog2.36 days = 2}
+            news_event = { id = tkm2.36 days = 2}
         }
         if = {
             limit = {
                 FROM = {tag = NMS}
             }
-            news_event = { id = kog2.45 days = 2}
+            news_event = { id = tkm2.45 days = 2}
         }
         if = {
             limit = {
                 FROM = {tag = HUM}
             }
-            news_event = { id = kog2.71 days = 2}
+            news_event = { id = tkm2.71 days = 2}
         }
     }
 
@@ -712,8 +763,16 @@ delcare_war_events = {
         if = {
             limit = {
                 FROM = {tag = TKM}
+                ROOT = { has_government = qinwai}
             }
             news_event = { days = 2 id = ali.43}
+        }
+        if = {
+            limit = {
+                FROM = {tag = TKM}
+                ROOT = { not = { has_government = qinwai} }
+            }
+            news_event = { days = 2 id = ali.59}
         }
         if = {
             limit = {
@@ -837,14 +896,6 @@ background_friend = {
 
 startup_opinion = {
     #FRIEND
-    TEG = {
-        NTR = {
-            background_friend = yes
-            TEG = {
-                background_friend = yes
-            }
-        }
-    }
     KAS = {
         YUG = {
             background_friend = yes
@@ -1086,8 +1137,8 @@ startup_outlook = {
         set_variable = { OL_view_value = 60}
     }
     KAP = {
-        set_variable = { OL_view_type = 1}
-        set_variable = { OL_view_value = -5}
+        set_variable = { OL_view_type = 2}
+        set_variable = { OL_view_value = -20}
     }
     GRS = {
         set_variable = { OL_view_type = 1}
@@ -1128,10 +1179,6 @@ startup_outlook = {
 
     #SE
     HUM = {
-        set_variable = { OL_view_type = 1}
-        set_variable = { OL_view_value = 25}
-    }
-    ZBT = {
         set_variable = { OL_view_type = 1}
         set_variable = { OL_view_value = 25}
     }
@@ -1209,64 +1256,165 @@ startup_outlook = {
 
 startup_manu = {
     ###manufacture
-    TES = {add_ideas = TES_manu2 }
-    IKU = {add_ideas = IKU_manu2 }
-    YMM = {add_ideas = YMM_manu2 }
-    PRS = {add_ideas = PRS_manu2 }
-    YUG = {add_ideas = YUG_manu2 }
-    UTH = {add_ideas = UTH_manu2 }
-    SAT = {add_ideas = SAT_manu2 }
-    YYK = {add_ideas = YYK_manu2 }
-    URM = {add_ideas = URM_manu2 }
-    KMC = {add_ideas = KMC_manu2 }
-    SKI = {add_ideas = SKI_manu2 }
-    HGH = {add_ideas = HGH_manu2 }
-    HCT = {add_ideas = HCT_manu2 }
-    CLO = {add_ideas = CLO_manu2 }
-    KEK = {add_ideas = KEK_manu2 }
-    YCE = {add_ideas = YCE_manu2 }
-    SAK = {add_ideas = SAK_manu2 }
-    GYK = {add_ideas = GYK_manu2 }
-    TEG = {add_ideas = TEG_manu2 }
-    MRY = {add_ideas = MRY_manu2 }
-    NTR = {add_ideas = NTR_manu2 }
-    KAS = {add_ideas = KAS_manu2 }
-    NMN = {add_ideas = NMN_manu2 }
-    AKI = {add_ideas = AKI_manu2 }
-    LIL = {add_ideas = LIL_manu2 }
-    SCA = {add_ideas = SCA_manu2 }
-    NIB = {add_ideas = NIB_manu2 }
-    CIR = {add_ideas = CIR_manu2 }
-    SEJ = {add_ideas = SEJ_manu2 }
-    RMI = {add_ideas = RMI_manu2 }
-    CHE = {add_ideas = CHE_manu2 }
-    HKR = {add_ideas = HKR_manu2 }
-    MSD = {add_ideas = MSD_manu2 }
-    ALI = {add_ideas = ALI_manu2 }
-    MRS = {add_ideas = MRS_manu2 }
-    YKR = {add_ideas = YKR_manu2 }
-    HUM = {add_ideas = HUM_manu2 }
-    TKM = {add_ideas = TKM_manu2 }
-    SBK = {add_ideas = SBK_manu2 }
-    RNS = {add_ideas = RNS_manu2 }
-    KAG = {add_ideas = KAG_manu2 }
-    INB = {add_ideas = INB_manu2 }
-    MOK = {add_ideas = MOK_manu2 }
-    UDO = {add_ideas = UDO_manu2 }
-    EET = {add_ideas = EET_manu2 }
-    RGO = {add_ideas = RGO_manu2 }
-    SRB = {add_ideas = SRB_manu2 }
-    NMS = {add_ideas = NMS_manu2 }
-    KYK = {add_ideas = KYK_manu2 }
-    ICR = {add_ideas = ICR_manu2 }
-    MNM = {add_ideas = MNM_manu2 }
-    MAM = {add_ideas = MAM_manu2 }
-    YUK = {add_ideas = YUK_manu2 }
-    SGS = {add_ideas = SGS_manu2 }
-    MEL = {add_ideas = MEL_manu2 }
-    OKI = {add_ideas = OKI_manu2 }
-    PRI = {add_ideas = PRI_manu2 }
-    WAK = {add_ideas = WAK_manu2 }
+    AKI = {
+        add_ideas = AKI_manu2
+    }
+    CFA = {
+        add_ideas = CFA_manu2
+    }
+    CHE = {
+        add_ideas = CHE_manu2
+    }
+    CIR = {
+        add_ideas = CIR_manu2
+    }
+    EET = {
+        add_ideas = EET_manu2
+    }
+    HKR = {
+        add_ideas = HKR_manu2
+    }
+    HUM = {
+        add_ideas = HUM_manu2
+    }
+    INB = {
+        add_ideas = INB_manu2
+    }
+    KAG = {
+        add_ideas = KAG_manu2
+    }
+    KAP = {
+        add_ideas = KAP_manu2
+    }
+    KAS = {
+        add_ideas = KAS_manu2
+    }
+    TKM = {
+        add_ideas = TKM_manu2
+    }
+    YUG = {
+        add_ideas = YUG_manu2
+    }
+    MAM = {
+        add_ideas = MAM_manu2
+    }
+    MEL = {
+        add_ideas = MEL_manu2
+    }
+    PRS = {
+        add_ideas = PRS_manu2
+    }
+    MRS = {
+        add_ideas = MRS_manu2
+    }
+    MSD = {
+        add_ideas = MSD_manu2
+    }
+    NIB = {
+        add_ideas = NIB_manu2
+    }
+    NTR = {
+        add_ideas = NTR_manu2
+    }
+    NMS = {
+        add_ideas = NMS_manu2
+    }
+    OKI = {
+        add_ideas = OKI_manu2
+    }
+    OTG = {
+        add_ideas = OTG_manu2
+    }
+    RMI = {
+        add_ideas = RMI_manu2
+    }
+    UTH = {
+        add_ideas = UTH_manu2
+    }
+    NMN = {
+        add_ideas = NMN_manu2
+    }
+    SAT = {
+        add_ideas = SAT_manu2
+    }
+    SCA = {
+        add_ideas = SCA_manu2
+    }
+    SEJ = {
+        add_ideas = SEJ_manu2
+    }
+    SGS = {
+        add_ideas = SGS_manu2
+    }
+    PRI = {
+        add_ideas = PRI_manu2
+    }
+    SKI = {
+        add_ideas = SKI_manu2
+    }
+    LIL = {
+        add_ideas = LIL_manu2
+    }
+    SRB = {
+        add_ideas = SRB_manu2
+    }
+    TEG = {
+        add_ideas = TEG_manu2
+    }
+    TES = {
+        add_ideas = TES_manu2
+    }
+    UDO = {
+        add_ideas = UDO_manu2
+    }
+    UUG = {
+        add_ideas = UUG_manu2
+    }
+    WAK = {
+        add_ideas = WAK_manu2
+    }
+    YKR = {
+        add_ideas = YKR_manu2
+    }
+    MRY = {
+        add_ideas = MRY_manu2
+    }
+    YUK = {
+        add_ideas = YUK_manu2
+    }
+    YYK = {
+        add_ideas = YYK_manu2
+    }
+    MOK = {
+        add_ideas = MOK_manu2
+    }
+    RGO = {
+        add_ideas = RGO_manu2
+    }
+    ALI = {
+        add_ideas = ALI_manu2
+    }
+    KMC = {
+        add_ideas = KMC_manu2
+    }
+    URM = {
+        add_ideas = URM_manu2
+    }
+    CLO = {
+        add_ideas = CLO_manu2
+    }
+    HCT = {
+        add_ideas = HCT_manu2
+    }
+    KEK = {
+        add_ideas = KEK_manu2
+    }
+    YCE = {
+        add_ideas = YCE_manu2
+    }
+    SAK = {
+        add_ideas = SAK_manu2
+    }
 }
 
 startup_weapon_pro = {
@@ -1280,6 +1428,11 @@ startup_weapon_pro = {
         set_variable = { ma_a_s = 1}
         set_variable = { ma_a_h = 1}
         set_variable = { ma_a_rr = 2}
+
+        set_variable = { ma_ra_ir = 1}
+        set_variable = { ma_ra_s = 1}
+        set_variable = { ma_ra_h = 1}
+        set_variable = { ma_ra_rr = 2}
     }
     TEG = {
         set_variable = { sc_p_ir = 2}
@@ -1289,6 +1442,9 @@ startup_weapon_pro = {
 
         set_variable = { sc_a_b = 1}
         set_variable = { sc_a_rr = 1}
+
+        # set_variable = { sc_ra_b = 1}
+        # set_variable = { sc_ra_rr = 1}
     }
     CIR = {
         set_variable = { ma_p_i = 1}
@@ -1299,6 +1455,8 @@ startup_weapon_pro = {
         set_variable = { ma_a_i = 1}
         set_variable = { ma_a_s = 1}
 
+        set_variable = { ma_ra_i = 1}
+        set_variable = { ma_ra_s = 1}
     }
     SEJ = {
         set_variable = { ma_p_rr = 1}
@@ -1309,6 +1467,10 @@ startup_weapon_pro = {
         set_variable = { ma_a_s = 1}
         set_variable = { ma_a_ir = 1}
         set_variable = { ma_a_b = 1}
+
+        set_variable = { ma_ra_s = 1}
+        set_variable = { ma_ra_ir = 1}
+        set_variable = { ma_ra_b = 1}
     }
     NMS = {
         set_variable = { ma_p_r = 2}
@@ -1316,6 +1478,9 @@ startup_weapon_pro = {
 
         set_variable = { ma_a_b = 3}
         set_variable = { ma_a_rr = 1}
+
+        set_variable = { ma_ra_b = 3}
+        set_variable = { ma_ra_rr = 1}
     }
 
     MRY = {
@@ -1392,84 +1557,6 @@ AC_daily_check = {
                     set_country_flag = AC_completed_number_[AC]
                 }
                 AC = "[?v]"
-            }
-        }
-    }
-}
-
-threat_generator = {
-    if = {
-        limit = {
-            date > 148.7.1
-            or = {
-                FROM = {
-                    is_subject = no
-                    or = {
-                        tag = TKM
-                        tag = NMS
-                        tag = SCA
-                        tag = TEG
-                        tag = MRY
-                        tag = SEJ
-                        tag = CIR
-
-                        tag = OKI
-                        tag = YKR
-                        tag = KAS
-                    }
-                }
-                FROM = {
-                    capital_scope = {
-                        is_on_continent = Gensokyo
-                    }
-                    ROOT = {
-                        not = {
-                            is_same_continent = yes
-                        }
-                    }
-                }
-                FROM = {
-                    is_major = yes
-                    is_subject = no
-                    check_variable = { all_value_plus_manpower > 1200}
-                }
-            }
-        }
-        add_named_threat = { threat = 5 name = tense_situation}
-    }
-}
-
-country_overlord_get = {
-    if = {
-        limit = {
-            is_subject = no
-        }
-        save_event_target_as = trigger_target
-    }
-    if = {
-        limit = {
-            is_subject = yes
-        }
-        OVERLORD = {
-            save_event_target_as = trigger_target
-        }
-    }
-}
-
-state_owner_get = {
-    owner = {
-        if = {
-            limit = {
-                is_subject = no
-            }
-            save_event_target_as = trigger_target
-        }
-        if = {
-            limit = {
-                is_subject = yes
-            }
-            OVERLORD = {
-                save_event_target_as = trigger_target
             }
         }
     }

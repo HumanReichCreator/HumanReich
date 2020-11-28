@@ -1,12 +1,23 @@
-﻿capital = 248
+﻿capital = 90
+138.8.13 = {
+
+}
+141.6.2 = {
+    
+}
+142.3.8 = {
+    
+}
+144.2.5 = {
+    
+}
 146.1.1 = {
     set_technology = {
     
         #通用武器线
-        spell_card1 = 1
-        spear1 = 1
-        gun1 = 1
-        linglicunchu = 1
+        spell_card = 1
+        linglijiejing139 = 1
+        buqiang117 = 1
             
         #辅助
 
@@ -34,10 +45,8 @@
         #种族
             
     }
-    
 }
 146.1.1={
-    add_manpower = 300
     oob = "SGS_146"
     # set_research_slots = 3
     #declare_war_on = { target = MAM type = annex_everything}
@@ -50,29 +59,37 @@
     #装甲
 
     }
-    give_guarantee = MEL
     add_ideas = {
     Tribal
 	Fairy
-    open1
+    close1
     hawk0
     normal_border
     free_magic
-    SGS_tuanjiexieding_idea 
-    type1_manpowerlv3
-     
+    SGS_battle_fairy_talent_idea
+    SGS_battle_fairy_restlessness_idea
+    SGS_hurry_mic_idea
+    SGS_mic_spoil0_idea
+    SGS_donot_attack_fairy_idea
     }
+    set_country_flag = neworder_Spoil
+    set_variable = {sgs_uprise= 50}
+    set_variable = {sgs_sunny_infl= 20}
+    set_variable = {sgs_star_infl= 5}
+    set_variable = {sgs_luna_infl= 5}
+    
     set_politics = {
-    	ruling_party = fandong
+    	ruling_party = neworder
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 7
-        guli = 20
-        neworder = 3
-        oldorder = 0
-        fandong = 70
+        qinwai = 5
+        guli = 15
+        neworder = 70
+        oldorder = 5
+        fandong = 0
+        authordemo = 5
     }
     
 }
@@ -88,8 +105,8 @@ create_country_leader = {
 }
 create_country_leader = {
     # name = "Sunny Milk"
-    name = "桑尼·米尔克"
-    picture = "SGS_sun.dds"
+    name = "斯塔·萨菲雅"
+    picture = "SGS_star.dds"
     ideology = guli_type
     traits = {
         #warrior_code
@@ -97,8 +114,8 @@ create_country_leader = {
 }
 create_country_leader = {
     # name = "Lunar Child"
-    name = "露娜·切露德"
-    picture = "SGS_lunar.dds"
+    name = "斯塔·萨菲雅"
+    picture = "SGS_star.dds"
     ideology = qinwai_type
     traits = {
         #warrior_code
@@ -106,8 +123,8 @@ create_country_leader = {
 }
 create_country_leader = {
     # name = "Star Sapphire"
-    name = "斯塔·萨菲雅"
-    picture = "SGS_star.dds"
+    name = "桑尼·米尔克"
+    picture = "SGS_sun.dds"
     ideology = neworder_type
     traits = {
         #warrior_code
@@ -118,6 +135,33 @@ create_country_leader = {
     name = "露娜·切露德"
     picture = "SGS_lunar.dds"
     ideology = oldorder_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Lunar Child"
+    name = "露娜·切露德"
+    picture = "SGS_lunar.dds"
+    ideology = lienin_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Lunar Child"
+    name = "斯塔·萨菲雅"
+    picture = "SGS_star.dds"
+    ideology = authordemo_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Lunar Child"
+    name = "斯塔·萨菲雅"
+    picture = "SGS_star.dds"
+    ideology = humanfirst_type
     traits = {
         #warrior_code
     }

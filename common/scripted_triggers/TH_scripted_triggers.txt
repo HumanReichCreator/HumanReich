@@ -222,6 +222,30 @@ is_same_government = {
 				has_government = oldorder
 			}
 		}
+		and = {
+			has_government = lienin
+			PREV = {
+				has_government = lienin
+			}
+		}
+		and = {
+			has_government = authordemo
+			PREV = {
+				has_government = authordemo
+			}
+		}
+		and = {
+			has_government = humanfirst
+			PREV = {
+				has_government = humanfirst
+			}
+		}
+		and = {
+			has_government = destroyid
+			PREV = {
+				has_government = destroyid
+			}
+		}
 	}
 }
 
@@ -297,7 +321,6 @@ Fairy_country = {
 		tag = CIR
 		tag = HKM
 		tag = SC2
-		tag = SC3
 		tag = SCA
 		tag = SGS
 		tag = LIL
@@ -325,7 +348,6 @@ Human_country = {
 		tag = HU7
 		tag = HU8
 		tag = MHV
-		tag = ZBT
 	}
 }
 
@@ -530,9 +552,6 @@ random_leader = {
 		# tag = ONI
 		tag = UFA
 		tag = GYK
-		tag = SC1
-		tag = SC2
-		tag = SC3
 		# tag = UUG
 		# tag = ACE
 		# tag = NG1

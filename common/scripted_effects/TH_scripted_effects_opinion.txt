@@ -4,6 +4,8 @@ opinion_change = {
 	hidden_effect = {
 		every_country = {
 			remove_opinion_modifier = {target = ROOT modifier = same_view }
+			remove_opinion_modifier = {target = ROOT modifier = same_gov }
+			remove_opinion_modifier = {target = ROOT modifier = similar_gov }
 			remove_opinion_modifier = {target = ROOT modifier = different_view }
 			remove_opinion_modifier = {target = ROOT modifier = gailiang_view }
 			remove_opinion_modifier = {target = ROOT modifier = different_world }
@@ -12,21 +14,64 @@ opinion_change = {
 				remove_opinion_modifier = {target = PREV modifier = different_view }
 				remove_opinion_modifier = {target = PREV modifier = gailiang_view }
 				remove_opinion_modifier = {target = PREV modifier = different_world }
+				remove_opinion_modifier = {target = ROOT modifier = same_gov }
+				remove_opinion_modifier = {target = ROOT modifier = similar_gov }
 			}
 		}
 		if = {
 			limit = {
-				has_government = qinwai
+				has_government = fandong
 			}
 			every_country = {
 				limit = {
-					has_government = qinwai
+					has_government = fandong
 				}
 				add_opinion_modifier = {target = ROOT modifier = gailiang_view}
 				reverse_add_opinion_modifier = {target = ROOT modifier = gailiang_view}
 			}
 		}
-
+		if = {# new 同类型意识形态加关系
+			limit = {
+				not = {	has_government = neworder }
+			}
+			every_country = {
+				limit = {
+					is_same_government = yes
+				}
+				add_opinion_modifier = {target = ROOT modifier = same_gov}
+				reverse_add_opinion_modifier = {target = ROOT modifier = same_gov}
+			}
+		}
+		if = {# new 类似意识形态加关系
+			limit = {
+				has_socialist_government = yes
+			}
+			every_country = {
+				limit = {
+					and = {
+						not = {is_same_government = yes}
+						has_socialist_government = yes
+						}
+				}
+				add_opinion_modifier = {target = ROOT modifier = similar_gov}
+				reverse_add_opinion_modifier = {target = ROOT modifier = similar_gov}
+			}
+		}
+		if = {# new 类似意识形态加关系-孤立
+			limit = {
+				has_guli_government = yes
+			}
+			every_country = {
+				limit = {
+					and = {
+						not = {is_same_government = yes}
+						has_guli_government = yes
+						}
+				}
+				add_opinion_modifier = {target = ROOT modifier = similar_gov}
+				reverse_add_opinion_modifier = {target = ROOT modifier = similar_gov}
+			}
+		}
 		if = {
 			limit = {
 				capital_scope = {

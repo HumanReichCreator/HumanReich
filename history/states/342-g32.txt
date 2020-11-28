@@ -4,16 +4,17 @@ state={
 	name="STATE_342"
 	resources={
 		energy = 15
-		powder = 0.0
-		metal = 0.0
+		powder=0.000
+		metal=0.000
 		gas=5.000
 		crystal=40.000
 	}
 
 	history={
+			owner = OKI
 		146.1.1 = {
-			owner = GH3
-			add_core_of = GH3
+			owner = OKI
+			add_claim_by = OKI
 			buildings = {
 				infrastructure =1
 				industrial_complex = 2
@@ -28,7 +29,7 @@ state={
 	provinces={
 		339 661 988 2028 3200 4653 4666 4673 4688 4691 4693 4694 4702 4706 4717 
 	}
-	manpower=273027.0
+	manpower=173027.0
 	buildings_max_level_factor=1.000
-	state_category=s2
+	state_category=s7
 }

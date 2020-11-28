@@ -1,14 +1,20 @@
 ﻿capital = 227
-146.1.1 = {
+138.8.13 = {
+
+}
+141.6.2 = {
+    
+}
+142.3.8 = {
+    
+}
+143.7.1 = {
     set_technology = {
         #通用武器线
-        spell_card1 = 1
-        spear1 = 1
-        gun1 = 1
-        linglidanyao = 1
-        linglizhufu = 1
-        linglicunchu = 1
-        gun2 = 1
+        spell_card = 1
+        linglijiejing139 = 1
+        buqiang117 = 1
+        buqiang140 = 1
             
         #辅助
 
@@ -19,7 +25,46 @@
         #专用进阶
 
         #混合系
-        sc_shield1 = 1
+
+        #陆军学说
+        zhanchangzhihui140 = 1
+            
+        #工程学 
+        jichushuxue = 1
+        shuxuegongju = 1
+        waike = 1
+        #专用工程学
+
+        #工业
+        production_theory = 1
+        org_production = 1
+            
+        #专用工业
+        # linglishengchan130 = 1
+        fangwaijieshengchan130 = 1
+
+        #种族
+            
+    }
+}
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+        spell_card = 1
+        linglijiejing139 = 1
+        buqiang117 = 1
+        buqiang140 = 1
+        tangxiangailiang140 = 1
+            
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
 
         #陆军学说
         zhanchangzhihui140 = 1
@@ -48,7 +93,6 @@
         yaohuakecheng2 = 1
             
     }
-    
 }
 143.7.1={
     oob = "TEST"
@@ -78,9 +122,7 @@
 }
 146.1.1={
     oob = "KYK_146"
-    set_truce = {target = HKR days = 300}
-    set_truce = {target = HUM days = 300}
-    set_truce = {target = ZBT days = 300}
+    
     add_ideas = {
 
     Beast
@@ -89,19 +131,23 @@
     # anti_fairy
     #new_sytle_buddism
     open1
-    dove3
+    hawk0
     normal_border
     free_magic
     }
 
+    SRB = { give_guarantee = KYK}
+    HUM = { give_guarantee = KYK}
+    NMS = { give_guarantee = KYK}
+    
     set_politics = {
-    	ruling_party = qinwai
+    	ruling_party = guli
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 100
-        guli = 0
+        qinwai = 0
+        guli = 100
         neworder = 0
         oldorder = 0
         fandong = 0

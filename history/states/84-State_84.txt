@@ -4,13 +4,14 @@ state={
 	name="STATE_84"
 	resources={
 
-		powder = 0.0
-		metal = 1.0
+		powder=0.000
+		metal=1.000
 		gas=5.000
 		crystal=0.000
 	}
 
 	history={
+			owner = TEG
 		146.1.1 = {
 			owner = TEG
 			add_core_of = TEG

@@ -2,15 +2,13 @@
 146.1.1 = {
     set_technology = {
         #通用武器线
-        spell_card1 = 1
-        spear1 = 1
-        gun1 = 1
-        linglidanyao = 1
-        linglizhufu = 1
-        linglicunchu = 1
-        spell_card2 = 1
-        spear2 = 1
-        gun2 = 1
+        spell_card = 1
+        linglijiejing139 = 1
+        danmujingque139 = 1
+        danmujingque144 = 1
+        gaosudanmu139 = 1
+        gaosudanmu144 = 1
+        buqiang117 = 1
             
         #辅助
 
@@ -46,12 +44,18 @@
         #种族
             
     }
-    
 }
 146.1.1={
     oob = "CCA_146"
     # set_research_slots = 5
-    
+    diplomatic_relation = {
+        country = OTG
+        relation = military_access
+        active = yes
+    }
+    diplomatic_relation = { 
+        country = OTG relation = non_aggression_pact 
+    }
     add_ideas = {
     God
     Town
@@ -70,9 +74,9 @@
     }
     set_popularities = {
         qinwai = 0
-        guli = 100
+        guli = 50
         neworder = 0
-        oldorder = 0
+        oldorder = 50
         fandong = 0
     }
     

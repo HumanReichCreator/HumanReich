@@ -5,31 +5,11 @@ SW_battle = {
             date < 151.1.1
             is_subject = no
             has_country_flag = SW_xinanluanzhan
-            not = {
-                tag = MEL
-            }
         }
         available = {
             threat < 0.5
             date < 150.1.1
             has_idea = Tribal
-            if = {
-	            limit = { FROM = { tag = MEL } }
-	            NOT = { has_idea = SGS_tuanjiexieding_idea }
-	        }
-	        if = {
-	            limit = { FROM = { tag = SGS } }
-	            NOT = { has_idea = SGS_tuanjiexieding_idea }
-	        }
-            if = {
-                limit = {
-                    FROM = {
-                        tag = ZYD
-                    }
-                    tag = GH1   
-                }
-                date > 147.3.1
-            }
         }
 
         target_trigger = {
@@ -58,14 +38,6 @@ SW_battle = {
             }
         }
 
-        complete_effect = {
-            set_country_flag = {
-                value = 1
-                flag = SW_luanzhan_ai_cooldown
-                days = 45
-            }
-        }
-
         ai_will_do = {
             base = 100
             modifier = {
@@ -76,15 +48,9 @@ SW_battle = {
                 factor = 0
             }
             modifier = {
-                has_country_flag = SW_luanzhan_ai_cooldown
-                factor = 0
-            }
-            modifier = {
                 FROM = {
                     or = {
                         tag = AKI
-                        tag = HU4
-                        tag = HU3
                         is_subject_of = AKI
                     }
                 }
@@ -207,5 +173,9 @@ SW_battle = {
             base = 1000
         }
     }
+
+    
+    
+    
 }
 

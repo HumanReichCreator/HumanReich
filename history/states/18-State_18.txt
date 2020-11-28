@@ -5,12 +5,13 @@ state={
 	resources={
 		energy = 0
 		powder = 0.0
-		metal = 0.0
+		metal = 0
 		gas = 3.0
 		crystal = 3.0
 	}
 
 	history={
+			owner = PRS
        	146.1.1 = {
 			owner = PRS
 			add_core_of = PRS

@@ -1,24 +1,32 @@
 ﻿capital = 88
+138.8.13 = {
+
+}
+141.6.2 = {
+    
+}
+142.3.8 = {
+    
+}
+144.2.5 = {
+    
+}
 146.1.1 = {
     set_technology = {
         #通用武器线
-        spell_card1 = 1
-        spear1 = 1
-        gun1 = 1
-        linglicunchu = 1
-        linglizhufu = 1
-        linglidanyao = 1
-        spell_card2 = 1
-        spear2 = 1
-        gun2 = 1
-        lingliliushuixian = 1
-        spear3 = 1
-        gun3 = 1
+        spell_card = 1
+        linglijiejing139 = 1
+        danmujingque139 = 1
+         #外界
+        buqiang117 = 1
+        buqiang140 = 1
+        tangxiangailiang140 = 1
+        jiandanmiaozhunjing140 = 1
             
         #辅助
 
         #专用辅助
-        mortar1 = 1
+        fangzhihuopao143 = 1
 
         #专用基础
 
@@ -54,7 +62,6 @@
         yanjiujingshen1 = 1
             
     }
-    
 }
 146.1.1={
     oob = "NTR_146"
@@ -70,21 +77,20 @@
     }
     
     set_politics = {
-    	ruling_party = qinwai
+    	ruling_party = lienin
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 65
+        qinwai = 25
         guli = 0
         neworder = 25
         oldorder = 0
-        fandong = 10
+        fandong = 0
+        lienin = 50
     }
 
-    SAP = {
-        subject_level4 = yes
-    }
+
 }
 create_country_leader = {
 	# name = "Kawasiro Nitori"
@@ -112,6 +118,13 @@ create_country_leader = {
     name = "河城荷取"
     picture = "NTR_ntr.dds"
     ideology = neworder_type
+    traits = {  }
+}
+create_country_leader = {
+    # name = "Kawasiro Nitori"
+    name = "河城荷取"
+    picture = "NTR_ntr.dds"
+    ideology = lienin_type
     traits = {  }
 }
 create_country_leader = {

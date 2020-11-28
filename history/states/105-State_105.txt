@@ -4,16 +4,19 @@ state={
 	name="STATE_105"
 	resources={
 
-		powder = 0.0
-		metal = 0.0
+		powder=0.000
+		metal=0.000
 		gas=0.000
 		crystal=0.000
 	}
 
 	history={
+			owner = WHM
+		owner = WHM
 		146.1.1 = {
-			owner = AKI
+			owner = WHM
 			add_core_of = AKI
+			add_core_of = WHM
 			buildings = {
 				infrastructure =0
 				industrial_complex = 0

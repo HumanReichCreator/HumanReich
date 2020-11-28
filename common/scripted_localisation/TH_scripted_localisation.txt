@@ -902,6 +902,21 @@ defined_text = {
 	   localization_key = exhaustion_low_or_not.b
 	}
 }
+defined_text = {
+	name = exhaustion_battle_fairy_or_not
+	text = {
+	   trigger = {
+	      has_country_flag = EXHC_lowing_battle_fairy
+	   }
+	   localization_key = exhaustion_lowing_by_battle_fairy
+	}
+	text = {
+	   trigger = {
+	      not = { has_country_flag = EXHC_lowing_battle_fairy }
+	   }
+	   localization_key = exhaustion_low_or_not.b
+	}
+}
 
 #Outlook viewtype
 defined_text = {
@@ -2466,22 +2481,5 @@ defined_text = {
 	   		}
 	   }
 	   localization_key = LS_subject_sys_cant_delayed_tt3
-	}
-}
-defined_text = {
-	name = SS_subject_name0
-	text = {
-	   trigger = {
-	   		not = {
-	   			ROOT = { has_country_flag = wusuntunbing_@PREV }
-	   		}
-	   }
-	   localization_key = SS_subject_name1
-	}
-	text = {
-	   trigger = {
-	   		ROOT = { has_country_flag = wusuntunbing_@PREV }
-	   }
-	   localization_key = SS_subject_name2
 	}
 }

@@ -171,52 +171,47 @@ bookmarks = {
 			}			
 		}
 
+		#"ALI"={
+		#    minor = yes
+		#	history = "ALI_DAWN_DESC"		#sca
+		#	ideas={ 
+		#		ali_renoujuntuan_idea
+        #		ali_zhenduidaojudeliliang_idea
+		#	}	
+         #   focuses = {
+          #  	ALI_tonglingmofashixiehui
+           # 	ALI_jianlirenougongfang
+            #	ALI_lingrenxiaiderenouzhixiang
+			#}			
+		#}
 		"ALI"={
 		    minor = yes
 			history = "ALI_DAWN_DESC"		#sca
 			ideas={ 
-				ali_renoujuntuan_idea
-        		ali_zhenduidaojudeliliang_idea
+				SGS_battle_fairy_talent_idea
+				SGS_battle_fairy_restlessness_idea
+				SGS_hurry_mic_idea
 			}	
             focuses = {
-            	ALI_tonglingmofashixiehui
-            	ALI_jianlirenougongfang
-            	ALI_lingrenxiaiderenouzhixiang
+            	
 			}			
 		}
-    
-
-
-		"AKI"={
+		"SGS"={
 		    minor = yes
 			history = "AKI_DAWN_DESC"		#sca
 			ideas={ 
-            AKI_tudijianbing_idea
-            AKI_jiduanzhuyiyundong_idea
-            AKI_renyushendemohujiexian_idea
+				SGS_battle_fairy_talent_idea
+				SGS_battle_fairy_restlessness_idea
+				SGS_hurry_mic_idea
 			}	
             focuses = {
-            	AKI_cunluodalianhe
-            	AKI_xirenlidechengli
-            	AKI_tongyiwuyuanzhong
+            	SGS_battle_fariy_issue_focus
+            	SGS_pacify_battle_fariy_focus
+            	SGS_develop_our_country_focus
 			}			
 		}
-    
-    "MEL"={
-		    minor = yes
-			history = "MEL_DAWN_DESC"		#sca
-			ideas={ 
-	            SGS_tuanjiexieding_idea
-	            MEL_messy_economy_idea
-	            MEL_unorganized_militia_idea
-			}	
-            focuses = {
-            	MEL_BiAnHua_Plant
-            	MEL_mustard_gas
-              	MEL_Liberation
-			}			
-		}
-    
+
+		
 		
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !

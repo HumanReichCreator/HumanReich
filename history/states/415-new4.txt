@@ -6,18 +6,21 @@ state={
 	}
 	resources={
 
-		powder = 0.0
-		metal = 0.0
+		powder=0.000
+		metal=0.000
 		gas=5.000
 		crystal=0.000
 	}
 
 	history={
+			# owner = KTK
+			owner = SAP
 		146.1.1 = {
 			# owner = KTK
 			# add_core_of = KTK
-			owner = HU5
+			owner = SAP
 			add_core_of = HU5
+			add_core_of = SAP
 			buildings = {
 				infrastructure =1
 				industrial_complex = 1
@@ -29,6 +32,6 @@ state={
 
 	}
 	state_category=s7
-	manpower=1663.0
+	manpower=463.0
 	buildings_max_level_factor=1.000
 }

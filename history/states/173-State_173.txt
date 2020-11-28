@@ -3,13 +3,14 @@ state={
 	id=173
 	name="STATE_173"
 	resources={
-		powder = 6.0
-		metal = 0.0
+		powder=5.000
+		metal=0.000
 		gas=0.000
 		crystal=0.000
 	}
 
 	history={
+			owner = TKM
 		143.7.1 = {
 			owner = TKM
 			add_core_of = TKM
@@ -17,15 +18,13 @@ state={
 				infrastructure = 3
 				industrial_complex = 1
 				arms_factory = 1
-				radar_station = 1
 
 			}
 
 		}
 		146.1.1 = {
-			owner = WAK
+			owner = TKM
 			add_core_of = WAK
-			remove_core_of = TKM
 			buildings = {
 				infrastructure = 5
 				industrial_complex = 3

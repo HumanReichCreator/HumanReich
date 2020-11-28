@@ -6,12 +6,13 @@ state={
 	}
 	resources={
 		energy = 0
-		powder = 0.0
-		metal = 0.0
+		powder=0.000
+		metal=0.000
 		gas=0.000
 		crystal=8.000
 	}
 	history={
+			owner = YCE
 		146.1.1 = {
 			owner = YCE
 			add_core_of = YCE
@@ -24,7 +25,7 @@ state={
 
 		}
 	}
-	manpower=46871.0
+	manpower=10871.0
 	state_category=s2
 	buildings_max_level_factor=1.000
 }

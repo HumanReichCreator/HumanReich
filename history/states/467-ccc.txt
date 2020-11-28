@@ -4,13 +4,14 @@ state={
 	name="STATE_467"
 	resources={
 		energy=0.000
-		powder = 6.0
-		metal = 5.0
+		powder=5.000
+		metal=5.000
 		gas=18.000
 		crystal=0.000
 	}
 
 	history={
+			owner = CLO
 		146.1.1 = {
 			owner = CLO
 			add_core_of = CLO
