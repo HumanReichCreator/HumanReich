@@ -1,23 +1,13 @@
 ﻿capital = 90
-138.8.13 = {
 
-}
-141.6.2 = {
-    
-}
-142.3.8 = {
-    
-}
-144.2.5 = {
-    
-}
 146.1.1 = {
     set_technology = {
     
         #通用武器线
-        spell_card = 1
-        linglijiejing139 = 1
-        buqiang117 = 1
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
             
         #辅助
 
@@ -47,6 +37,7 @@
     }
 }
 146.1.1={
+    add_manpower = 300
     oob = "SGS_146"
     # set_research_slots = 3
     #declare_war_on = { target = MAM type = annex_everything}

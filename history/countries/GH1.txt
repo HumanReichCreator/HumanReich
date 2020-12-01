@@ -17,7 +17,8 @@ set_technology = {
 146.1.1 = {
     set_technology = {
         #通用武器线
-            spell_card = 1
+            spell_card1 = 1
+            spear1 = 1
         #辅助
 
         #专用辅助
@@ -43,6 +44,7 @@ set_technology = {
     }
 }
 146.1.1={
+    add_manpower = 500
     oob = "GH1_146"
     
     add_ideas = {

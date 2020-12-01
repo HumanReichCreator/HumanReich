@@ -1,64 +1,13 @@
 ﻿capital = 192
-138.8.13 = {
 
-}
-141.6.2 = {
-    
-}
-142.3.8 = {
-    set_technology = {
-        #通用武器线
-        spell_card = 1
-        danmujingque139 = 1
-        danmujingque144 = 1
-        danmujingque147 = 1
-        gaosudanmu139 = 1
-        gaosudanmu144 = 1
-        gaosudanmu147 = 1
-        #辅助
-
-        #专用辅助
-
-        #专用基础
-
-        #专用进阶
-
-        #混合系
-
-        #陆军学说
-        zhanchangzhihui140 = 1
-        zuzhihuazhanzheng142 = 1
-        zhanchangzhihui145 = 1
-        zuzhihuazhanzheng147 = 1
-            
-        #工程学 
-        jichushuxue = 1
-        #专用工程学
-
-        #工业
-        production_theory = 1
-            
-        #专用工业
-
-
-        #种族
-            
-    }
-}
-144.2.5 = {
-    
-}
 146.1.1 = {
     set_technology = {
         #通用武器线
-        spell_card = 1
-        danmujingque139 = 1
-        danmujingque144 = 1
-        danmujingque147 = 1
-        gaosudanmu139 = 1
-        gaosudanmu144 = 1
-        gaosudanmu147 = 1
-        buqiang117 = 1
+        spell_card1 = 1
+        spear1 = 1
+        gun1 = 1
+        linglicunchu = 1
+        spell_card2 = 1
             
         #辅助
 
@@ -199,6 +148,37 @@
         oldorder = 22
         fandong = 1
     }
+    create_equipment_variant = {
+        name = "夢符「封魔陣」"
+        type = magic_core141
+        upgrades = {
+           upgrade_reliability = 3
+           upgrade_softattack = 3
+           # upgrade_hardattack = 1
+           upgrade_aaattack = 3
+           upgrade_defense = 3
+           upgrade_breakthrough = 3
+           upgrade_ic = 2
+           # upgrade_ic_reverse = 1
+           # upgrade_reliability_reverse = 1
+        }
+     }
+ 
+     create_equipment_variant = {
+        name = "夢符「封魔陣」"
+        type = magic_core141
+        upgrades = {
+           upgrade_reliability = 3
+           upgrade_softattack = 3
+           # upgrade_hardattack = 1
+           upgrade_aaattack = 3
+           upgrade_defense = 3
+           upgrade_breakthrough = 3
+           upgrade_ic = 2
+           # upgrade_ic_reverse = 1
+           # upgrade_reliability_reverse = 1
+        }
+     }
 }
 create_country_leader = {
 	# name = "Hakurei Reimu"
