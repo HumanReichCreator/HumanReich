@@ -459,7 +459,7 @@ country_event = {
 		name = sgs.103.2
 		trigger = {
 			has_equipment = {
-				spell_card_a > 59
+				magic_core_a > 59
 			}
 		}
 		custom_effect_tooltip = down_sgs_uprise_little
@@ -473,7 +473,7 @@ country_event = {
 		}
 		add_stability = 0.05
 		add_equipment_to_stockpile = {
-			type = spell_card_a
+			type = magic_core_a
 			amount = -60
 		}
 		ai_chance = {
@@ -481,7 +481,7 @@ country_event = {
 			modifier = {
 				add = 20
 				has_equipment = {
-					spell_card_a > 179
+					magic_core_a > 179
 				}
 			}
 		}
@@ -2250,11 +2250,11 @@ country_event = {
 		trigger = {
 			has_country_flag = sgs_sunny_bad
 			has_equipment = {
-				buqiang_a > 19
+				gun_a > 19
 			}
 		}
 		add_equipment_to_stockpile = {
-			type = buqiang_a
+			type = gun_a
 			amount = -20
 		}
 		country_event = {
@@ -2287,11 +2287,11 @@ country_event = {
 		trigger = {
 			has_country_flag = sgs_luna_bad
 			has_equipment = {
-				spell_card_a > 19
+				magic_core_a > 19
 			}
 		}
 		add_equipment_to_stockpile = {
-			type = spell_card_a
+			type = magic_core_a
 			amount = -20
 		}
 		country_event = {
@@ -3101,11 +3101,11 @@ country_event = {
 			max = 150
 		}
 		add_equipment_to_stockpile = {
-			type = spell_card_a
+			type = magic_core_a
 			amount = 200
 		}
 		add_equipment_to_stockpile = {
-			type = buqiang_a
+			type = gun_a
 			amount = 200
 		}
 		ai_chance = {
@@ -3141,11 +3141,11 @@ country_event = {
 			max = 150
 		}
 		add_equipment_to_stockpile = {
-			type = spell_card_a
+			type = magic_core_a
 			amount = 450
 		}
 		add_equipment_to_stockpile = {
-			type = buqiang_a
+			type = gun_a
 			amount = 450
 		}
 		add_political_power = 20
@@ -3183,11 +3183,11 @@ country_event = {
 			max = 150
 		}
 		add_equipment_to_stockpile = {
-			type = spell_card_a
+			type = magic_core_a
 			amount = 750
 		}
 		add_equipment_to_stockpile = {
-			type = buqiang_a
+			type = gun_a
 			amount = 750
 		}
 		add_timed_idea = {
@@ -4862,18 +4862,18 @@ country_event = {
 				if = {
 					limit = {
 						has_equipment = {
-							buqiang_a > 500
+							gun_a > 500
 						}
 						
 					}
 					send_equipment = {
-						equipment = buqiang_a
+						equipment = gun_a
 						amount = 250
 						target = CIR
 					}
 					else = {
 						send_equipment = {
-							equipment = spell_card_a
+							equipment = magic_core_a
 							amount = 250
 							target = CIR
 						}
@@ -4993,10 +4993,10 @@ country_event = {
 					}
 					or = {
 						has_equipment = {
-							buqiang_a > 500
+							gun_a > 500
 						}
 						has_equipment = {
-							spell_card_a > 500
+							magic_core_a > 500
 						}
 					}
 				}
@@ -5045,12 +5045,12 @@ country_event = {
 			if = {
 				limit = {
 					has_equipment = {
-						buqiang_a > 500
+						gun_a > 500
 					}
 				}
 				effect_tooltip = {
 					send_equipment = {
-						equipment = buqiang_a
+						equipment = gun_a
 						amount = 500
 						target = CIR
 					}
@@ -5058,7 +5058,7 @@ country_event = {
 				else = {
 					effect_tooltip = {
 						send_equipment = {
-							equipment = spell_card_a
+							equipment = magic_core_a
 							amount = 500
 							target = CIR
 						}
@@ -5086,10 +5086,10 @@ country_event = {
 					has_political_power < 25
 				}
 				has_equipment = {
-					buqiang_a < 750
+					gun_a < 750
 				}
 				has_equipment = {
-					spell_card_a < 750
+					magic_core_a < 750
 				}
 			}
 		}
@@ -5111,10 +5111,10 @@ country_event = {
 					}
 					or = {
 						has_equipment = {
-							buqiang_a > 250
+							gun_a > 250
 						}
 						has_equipment = {
-							spell_card_a > 250
+							magic_core_a > 250
 						}
 					}
 				}
@@ -5146,13 +5146,13 @@ country_event = {
 			if = {
 				limit = {
 					has_equipment = {
-						buqiang_a > 250
+						gun_a > 250
 					}
 					
 				}
 				effect_tooltip = {
 					send_equipment = {
-						equipment = buqiang_a
+						equipment = gun_a
 						amount = 250
 						target = CIR
 					}
@@ -5160,7 +5160,7 @@ country_event = {
 				else = {
 					effect_tooltip = {
 						send_equipment = {
-							equipment = spell_card_a
+							equipment = magic_core_a
 							amount = 250
 							target = CIR
 						}
@@ -5184,10 +5184,10 @@ country_event = {
 				}
 				or = {
 					has_equipment = {
-						buqiang_a > 1500
+						gun_a > 1500
 					}
 					has_equipment = {
-						spell_card_a > 1500
+						magic_core_a > 1500
 					}
 				}
 			}
@@ -5376,18 +5376,18 @@ country_event = {
 					if = {
 						limit = {
 							has_equipment = {
-								buqiang_a > 250
+								gun_a > 250
 							}
 							
 						}
 						send_equipment = {
-							equipment = buqiang_a
+							equipment = gun_a
 							amount = 250
 							target = CIR
 						}
 						else = {
 							send_equipment = {
-								equipment = spell_card_a
+								equipment = magic_core_a
 								amount = 250
 								target = CIR
 							}
@@ -5399,18 +5399,18 @@ country_event = {
 						if = {
 							limit = {
 								has_equipment = {
-									buqiang_a > 500
+									gun_a > 500
 								}
 								
 							}
 							send_equipment = {
-								equipment = buqiang_a
+								equipment = gun_a
 								amount = 500
 								target = CIR
 							}
 							else = {
 								send_equipment = {
-									equipment = spell_card_a
+									equipment = magic_core_a
 									amount = 500
 									target = CIR
 								}
@@ -5546,13 +5546,13 @@ country_event = {
 				if = {
 					limit = {
 						has_equipment = {
-							buqiang_a > 250
+							gun_a > 250
 						}
 						
 					}
 					effect_tooltip = {
 						send_equipment = {
-							equipment = buqiang_a
+							equipment = gun_a
 							amount = 250
 							target = CIR
 						}
@@ -5560,7 +5560,7 @@ country_event = {
 					else = {
 						effect_tooltip = {
 							send_equipment = {
-								equipment = spell_card_a
+								equipment = magic_core_a
 								amount = 250
 								target = CIR
 							}
@@ -5599,13 +5599,13 @@ country_event = {
 				if = {
 					limit = {
 						has_equipment = {
-							buqiang_a > 500
+							gun_a > 500
 						}
 						
 					}
 					effect_tooltip = {
 						send_equipment = {
-							equipment = buqiang_a
+							equipment = gun_a
 							amount = 500
 							target = CIR
 						}
@@ -5613,7 +5613,7 @@ country_event = {
 					else = {
 						effect_tooltip = {
 							send_equipment = {
-								equipment = spell_card_a
+								equipment = magic_core_a
 								amount = 500
 								target = CIR
 							}

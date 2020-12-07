@@ -95,12 +95,12 @@ country_event = {
 		var:ROOT.spoil_xiaxuanwucheng_target = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
-					type = buqiang_a
+					type = gun_a
 					amount = 500
 				}
 			}
 			send_equipment = {
-				equipment = buqiang_a
+				equipment = gun_a
 				amount = 1000
 				target = ROOT
 			}
@@ -464,21 +464,21 @@ country_event = {
 		var:ROOT.spoil_nanxuanwucheng_target = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
-					type = buqiang_a
+					type = gun_a
 					amount = 500
 				}
 				add_equipment_to_stockpile = {
-					type = spell_card_a
+					type = magic_core_a
 					amount = 250
 				}
 			}
 			send_equipment = {
-				equipment = buqiang_a
+				equipment = gun_a
 				amount = 1000
 				target = ROOT
 			}
 			send_equipment = {
-				equipment = spell_card_a
+				equipment = magic_core_a
 				amount = 500
 				target = ROOT
 			}
@@ -825,12 +825,12 @@ country_event = {
 		var:ROOT.spoil_xihongmoguan_target = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
-					type = spell_card_a
+					type = magic_core_a
 					amount = 500
 				}
 			}
 			send_equipment = {
-				equipment = spell_card_a
+				equipment = magic_core_a
 				amount = 1000
 				target = ROOT
 			}
@@ -1176,21 +1176,21 @@ country_event = {
 		var:ROOT.spoil_hongmoguan_target = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
-					type = buqiang_a
+					type = gun_a
 					amount = 250
 				}
 				add_equipment_to_stockpile = {
-					type = spell_card_a
+					type = magic_core_a
 					amount = 500
 				}
 			}
 			send_equipment = {
-				equipment = buqiang_a
+				equipment = gun_a
 				amount = 500
 				target = ROOT
 			}
 			send_equipment = {
-				equipment = spell_card_a
+				equipment = magic_core_a
 				amount = 1000
 				target = ROOT
 			}
@@ -1536,12 +1536,12 @@ country_event = {
 		var:ROOT.spoil_scagang_target = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
-					type = spell_card_a
+					type = magic_core_a
 					amount = 250
 				}
 			}
 			send_equipment = {
-				equipment = spell_card_a
+				equipment = magic_core_a
 				amount = 500
 				target = ROOT
 			}
@@ -1887,21 +1887,21 @@ country_event = {
 		var:ROOT.spoil_fengshoucun_target = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
-					type = buqiang_a
+					type = gun_a
 					amount = 200
 				}
 				add_equipment_to_stockpile = {
-					type = spell_card_a
+					type = magic_core_a
 					amount = 50
 				}
 			}
 			send_equipment = {
-				equipment = buqiang_a
+				equipment = gun_a
 				amount = 400
 				target = ROOT
 			}
 			send_equipment = {
-				equipment = spell_card_a
+				equipment = magic_core_a
 				amount = 100
 				target = ROOT
 			}
@@ -2247,12 +2247,12 @@ country_event = {
 		var:ROOT.spoil_datiecun_target = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
-					type = buqiang_a
+					type = gun_a
 					amount = 250
 				}
 			}
 			send_equipment = {
-				equipment = buqiang_a
+				equipment = gun_a
 				amount = 500
 				target = ROOT
 			}
@@ -2598,12 +2598,12 @@ country_event = {
 		var:ROOT.spoil_kantanqu_target = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
-					type = buqiang_a
+					type = gun_a
 					amount = 500
 				}
 			}
 			send_equipment = {
-				equipment = buqiang_a
+				equipment = gun_a
 				amount = 1000
 				target = ROOT
 			}
@@ -2949,12 +2949,12 @@ country_event = {
 		var:ROOT.spoil_xibuzhongxin_target = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
-					type = buqiang_a
+					type = gun_a
 					amount = 750
 				}
 			}
 			send_equipment = {
-				equipment = buqiang_a
+				equipment = gun_a
 				amount = 1500
 				target = ROOT
 			}
@@ -3300,21 +3300,21 @@ country_event = {
 		var:ROOT.spoil_wumingcun_target = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
-					type = buqiang_a
+					type = gun_a
 					amount = 400
 				}
 				add_equipment_to_stockpile = {
-					type = spell_card_a
+					type = magic_core_a
 					amount = 100
 				}
 			}
 			send_equipment = {
-				equipment = buqiang_a
+				equipment = gun_a
 				amount = 800
 				target = ROOT
 			}
 			send_equipment = {
-				equipment = spell_card_a
+				equipment = magic_core_a
 				amount = 200
 				target = ROOT
 			}
@@ -3660,12 +3660,12 @@ country_event = {
 		var:ROOT.spoil_yanzouwutai_target = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
-					type = spell_card_a
+					type = magic_core_a
 					amount = 250
 				}
 			}
 			send_equipment = {
-				equipment = spell_card_a
+				equipment = magic_core_a
 				amount = 500
 				target = ROOT
 			}
@@ -4011,12 +4011,12 @@ country_event = {
 		var:ROOT.spoil_fengjiandi_target = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
-					type = spell_card_a
+					type = magic_core_a
 					amount = 750
 				}
 			}
 			send_equipment = {
-				equipment = spell_card_a
+				equipment = magic_core_a
 				amount = 1500
 				target = ROOT
 			}
@@ -4362,12 +4362,12 @@ country_event = {
 		var:ROOT.spoil_yaojingbuji_target = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
-					type = spell_card_a
+					type = magic_core_a
 					amount = 250
 				}
 			}
 			send_equipment = {
-				equipment = spell_card_a
+				equipment = magic_core_a
 				amount = 500
 				target = ROOT
 			}
@@ -4713,21 +4713,21 @@ country_event = {
 		var:ROOT.spoil_chongcun_target = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
-					type = buqiang_a
+					type = gun_a
 					amount = 125
 				}
 				add_equipment_to_stockpile = {
-					type = spell_card_a
+					type = magic_core_a
 					amount = 125
 				}
 			}
 			send_equipment = {
-				equipment = buqiang_a
+				equipment = gun_a
 				amount = 250
 				target = ROOT
 			}
 			send_equipment = {
-				equipment = spell_card_a
+				equipment = magic_core_a
 				amount = 250
 				target = ROOT
 			}
@@ -5073,21 +5073,21 @@ country_event = {
 		var:ROOT.spoil_xinhuizhencheng_target = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
-					type = buqiang_a
+					type = gun_a
 					amount = 375
 				}
 				add_equipment_to_stockpile = {
-					type = spell_card_a
+					type = magic_core_a
 					amount = 375
 				}
 			}
 			send_equipment = {
-				equipment = buqiang_a
+				equipment = gun_a
 				amount = 750
 				target = ROOT
 			}
 			send_equipment = {
-				equipment = spell_card_a
+				equipment = magic_core_a
 				amount = 750
 				target = ROOT
 			}

@@ -36,7 +36,7 @@ SGS_category = {
 		available = {
 			has_war = no
 			has_equipment = {
-				spell_card_a > 119
+				magic_core_a > 119
 			}
 			not = {
 				has_country_flag = sgs_selected_battle_fairy_deci
@@ -59,7 +59,7 @@ SGS_category = {
 				sgs_uprise = 0.75
 			}
 			add_equipment_to_stockpile = {
-				type = spell_card_a
+				type = magic_core_a
 				amount = -120
 			}
 			country_event = {
@@ -77,13 +77,13 @@ SGS_category = {
 			factor = 75
 			modifier = {
 				has_equipment = {
-					spell_card_a < 250
+					magic_core_a < 250
 				}
 				factor = 0.6
 			}
 			modifier = {
 				has_equipment = {
-					spell_card_a > 1000
+					magic_core_a > 1000
 				}
 				factor = 1.5
 			}
@@ -349,13 +349,13 @@ SGS_category = {
 			factor = 65
 			modifier = {
 				has_equipment = {
-					spell_card_a < 100
+					magic_core_a < 100
 				}
 				factor = 1.3
 			}
 			modifier = {
 				has_equipment = {
-					buqiang_a < 100
+					gun_a < 100
 				}
 				factor = 1.3
 			}
@@ -402,13 +402,13 @@ SGS_category = {
 			factor = 70
 			modifier = {
 				has_equipment = {
-					spell_card_a < 0
+					magic_core_a < 0
 				}
 				factor = 2
 			}
 			modifier = {
 				has_equipment = {
-					buqiang_a < 0
+					gun_a < 0
 				}
 				factor = 2
 			}
