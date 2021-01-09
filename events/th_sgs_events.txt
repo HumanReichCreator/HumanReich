@@ -123,7 +123,7 @@ country_event = {
 	id = sgs.4
 	title = sgs.4.t
 	desc = sgs.4.d
-	fire_only_once = no
+	fire_only_once = yes
 	is_triggered_only = no
 	immediate = {
 		add_to_variable = {
@@ -360,7 +360,7 @@ country_event = {
 	#}
 	#trigger = {
 	#	tag = SGS
-	#	has_decision = SGS_dannmakugokko_deci 
+	#	has_decision = SGS_dannmakugokko_deci
 	#}
 	trigger = {
 		not = {
@@ -603,7 +603,7 @@ news_event = {
 	id = sgs.106
 	title = sgs.106.t
 	desc = sgs.106.d
-	#picture = GFX_news_event_nuke 
+	#picture = GFX_news_event_nuke
 	major = yes
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -2738,7 +2738,9 @@ country_event = {
 			has_country_flag = sgs_events_interrupted
 		}
 		has_decision = SGS_picking_up_deci
-		check_variable = {sgs_num_picking < 4}
+		check_variable = {
+			sgs_num_picking < 4
+		}
 	}
 	mean_time_to_happen = {
 		days = 17
@@ -2792,7 +2794,9 @@ country_event = {
 			has_country_flag = sgs_events_interrupted
 		}
 		has_decision = SGS_picking_up_deci
-		check_variable = {sgs_num_picking < 4}
+		check_variable = {
+			sgs_num_picking < 4
+		}
 	}
 	mean_time_to_happen = {
 		days = 17
@@ -2846,7 +2850,9 @@ country_event = {
 			has_country_flag = sgs_events_interrupted
 		}
 		has_decision = SGS_picking_up_deci
-		check_variable = {sgs_num_picking < 4}
+		check_variable = {
+			sgs_num_picking < 4
+		}
 	}
 	mean_time_to_happen = {
 		days = 17
@@ -3554,8 +3560,6 @@ country_event = {
 			min = 1
 			max = 150
 		}
-		
-		
 		if = {
 			limit = {
 				has_country_flag = sgs_shrine_90
@@ -3982,7 +3986,9 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.1
-				has_country_flag = sgs_trade_with_SCA_ind
+				check_variable = {
+					SGS.sgs_industry_negotiation_target = SCA.id
+				}
 			}
 		}
 	}
@@ -4864,7 +4870,6 @@ country_event = {
 						has_equipment = {
 							gun_a > 500
 						}
-						
 					}
 					send_equipment = {
 						equipment = gun_a
@@ -5148,7 +5153,6 @@ country_event = {
 					has_equipment = {
 						gun_a > 250
 					}
-					
 				}
 				effect_tooltip = {
 					send_equipment = {
@@ -5378,7 +5382,6 @@ country_event = {
 							has_equipment = {
 								gun_a > 250
 							}
-							
 						}
 						send_equipment = {
 							equipment = gun_a
@@ -5401,7 +5404,6 @@ country_event = {
 								has_equipment = {
 									gun_a > 500
 								}
-								
 							}
 							send_equipment = {
 								equipment = gun_a
@@ -5548,7 +5550,6 @@ country_event = {
 						has_equipment = {
 							gun_a > 250
 						}
-						
 					}
 					effect_tooltip = {
 						send_equipment = {
@@ -5601,7 +5602,6 @@ country_event = {
 						has_equipment = {
 							gun_a > 500
 						}
-						
 					}
 					effect_tooltip = {
 						send_equipment = {
@@ -5682,7 +5682,9 @@ country_event = {
 			base = 35
 			modifier = {
 				factor = 1.5
-				has_country_flag = sgs_trade_with_SCA_ind
+				check_variable = {
+					SGS.sgs_industry_negotiation_target = SCA.id
+				}
 			}
 		}
 	}
@@ -5733,7 +5735,6 @@ country_event = {
 		add_to_variable = {
 			sgs_visited_fairy = 1
 		}
-		
 		ai_chance = {
 			base = 10
 		}
@@ -5981,13 +5982,2734 @@ country_event = {
 			ideology = neworder
 			popularity = -0.15
 		}
-		add_to_variable = { sgs_star_infl = 20 }
+		add_to_variable = {
+			sgs_star_infl = 20
+		}
 		ai_chance = {
 			base = 10
 			modifier = {
 				factor = 5
-				check_variable = {sgs_star_infl > 20}
+				check_variable = {
+					sgs_star_infl > 20
+				}
 			}
+		}
+	}
+}
+
+country_event = {
+	#选择谈判国
+	id = sgs.224
+	title = sgs.224.t
+	desc = sgs.224.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#河童
+		name = sgs.224.1
+		trigger = {
+			or = {
+				country_exists = NTR
+				country_exists = KAP
+			}
+		}
+		if = {
+			limit = {
+				country_exists = NTR
+			}
+			set_variable = {
+				SGS.sgs_industry_negotiation_target = NTR.id
+			}
+			else_if = {
+				limit = {
+					country_exists = KAP
+				}
+				set_variable = {
+					SGS.sgs_industry_negotiation_target = KAP.id
+				}
+			}
+		}
+		set_variable = {
+			SGS.sgs_industry_negotiation_attitude = 4
+		}
+		country_event = {
+			id = sgs.225
+			days = 5
+		}
+		var:SGS.sgs_industry_negotiation_target = {
+			id = sgs.2241
+			days = 5
+		}
+		ai_chance = {
+			base = 20
+			has_completed_focus = SGS_trade_with_other_fairy_focus
+		}
+	}
+	option = {
+		#人类
+		name = sgs.224.2
+		trigger = {
+			country_exists = WHM
+		}
+		set_variable = {
+			SGS.sgs_industry_negotiation_target = WHM.id
+		}
+		set_variable = {
+			SGS.sgs_industry_negotiation_attitude = 5
+		}
+		country_event = {
+			id = sgs.225
+			days = 5
+		}
+		var:SGS.sgs_industry_negotiation_target = {
+			id = sgs.2241
+			days = 5
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+	option = {
+		#红魔馆
+		name = sgs.224.3
+		trigger = {
+			country_exists = SCA
+		}
+		set_variable = {
+			SGS.sgs_industry_negotiation_target = SCA.id
+		}
+		set_variable = {
+			SGS.sgs_industry_negotiation_attitude = 6
+		}
+		country_event = {
+			id = sgs.225
+			days = 5
+		}
+		var:SGS.sgs_industry_negotiation_target = {
+			id = sgs.2241
+			days = 5
+		}
+		ai_chance = {
+			base = 35
+			modifier = {
+				add = 25
+			}
+		}
+	}
+}
+
+country_event = {
+	#战场妖精来谈判
+	id = sgs.2241
+	title = sgs.2241.t
+	desc = sgs.2241.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		#
+		name = sgs.2241.2
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#关于承诺和平
+	id = sgs.225
+	title = sgs.225.t
+	desc = sgs.225.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#不承诺
+		name = sgs.225.1
+		subtract_from_variable = {
+			SGS.sgs_industry_negotiation_attitude = 2
+		}
+		if = {
+			limit = {
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = WHM
+				}
+			}
+			subtract_from_variable = {
+				SGS.sgs_industry_negotiation_attitude = 1
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					SGS.sgs_industry_negotiation_attitude < 0
+				}
+			}
+			country_event = {
+				id = sgs.2250
+			}
+			else = {
+				country_event = {
+					id = sgs.226
+					days = 3
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 3
+				neworder > 0.8
+			}
+		}
+	}
+	option = {
+		#合约
+		name = sgs.225.2
+		if = {
+			limit = {
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = WHM
+				}
+			}
+			add_to_variable = {
+				SGS.sgs_industry_negotiation_attitude = 1
+			}
+		}
+		custom_effect_tooltip = SGS_if_trade_ok
+		effect_tooltip = {
+			diplomatic_relation = {
+				country = var:SGS.sgs_industry_negotiation_target
+				relation = non_aggression_pact
+			}
+		}
+		set_country_flag = SGS_IN_promise_to_peace
+		country_event = {
+			id = sgs.226
+			days = 3
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+	option = {
+		#合约+镇压
+		name = sgs.225.3
+		add_to_variable = {
+			SGS.sgs_industry_negotiation_attitude = 2
+		}
+		if = {
+			limit = {
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = WHM
+				}
+			}
+			add_to_variable = {
+				SGS.sgs_industry_negotiation_attitude = 1
+			}
+		}
+		custom_effect_tooltip = SGS_if_trade_ok
+		effect_tooltip = {
+			diplomatic_relation = {
+				country = var:SGS.sgs_industry_negotiation_target
+				relation = non_aggression_pact
+			}
+		}
+		custom_effect_tooltip = SGS_IN_promise_to_suppress_tooltip
+		set_country_flag = SGS_IN_promise_to_suppress
+		country_event = {
+			id = sgs.226
+			days = 3
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 3
+				guli > 0.45
+			}
+		}
+	}
+}
+
+country_event = {
+	#谈判破裂
+	id = sgs.2250
+	title = sgs.2250.t
+	desc = sgs.2250.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		#
+		name = sgs.2250.1
+		var:SGS.sgs_industry_negotiation_target = {
+			add_opinion_modifier = {
+				target = SGS
+				modifier = SGS_bad_trade_op
+			}
+			add_opinion_modifier = {
+				target = SGS
+				modifier = SGS_bad_trade_trade_op
+			}
+			country_event = {
+				id = sgs.2251
+				days = 5
+			}
+		}
+		add_popularity = {
+			ideology = neworder
+			popularity = 0.15
+		}
+		add_stability = -0.1
+		set_country_flag = SGS_IN_failed
+
+		subtract_from_variable = {
+			sgs_star_infl = 10
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#战场妖精毫无诚意
+	id = sgs.2251
+	title = sgs.2251.t
+	desc = sgs.2251.d
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		#
+		name = sgs.2251.2
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#关于投资民工
+	id = sgs.226
+	title = sgs.226.t
+	desc = sgs.226.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#啥都不要
+		name = sgs.226.1
+		add_to_variable = {
+			SGS.sgs_industry_negotiation_attitude = 1
+		}
+		country_event = {
+			id = sgs.227
+			days = 3
+		}
+		ai_chance = {
+			base = 15
+			modifier = {
+				factor = 1.5
+				num_of_civilian_factories > 20
+			}
+		}
+	}
+	option = {
+		#少量投资
+		name = sgs.226.2
+		subtract_from_variable = {
+			SGS.sgs_industry_negotiation_attitude = 1
+		}
+		if = {
+			limit = {
+				or = {
+					var:SGS.sgs_industry_negotiation_target = {
+						tag = NTR
+					}
+					var:SGS.sgs_industry_negotiation_target = {
+						tag = KAP
+					}
+				}
+			}
+			add_to_variable = {
+				SGS.sgs_industry_negotiation_attitude = 1
+			}
+		}
+		custom_effect_tooltip = SGS_if_trade_ok
+		effect_tooltip = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+		set_country_flag = SGS_IN_small_investment
+		if = {
+			limit = {
+				check_variable = {
+					SGS.sgs_industry_negotiation_attitude < 0
+				}
+			}
+			country_event = {
+				id = sgs.2250
+			}
+			else = {
+				country_event = {
+					id = sgs.227
+					days = 3
+				}
+			}
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+	option = {
+		#大量投资
+		name = sgs.226.3
+		subtract_from_variable = {
+			SGS.sgs_industry_negotiation_attitude = 2
+		}
+		if = {
+			limit = {
+				or = {
+					var:SGS.sgs_industry_negotiation_target = {
+						tag = NTR
+					}
+					var:SGS.sgs_industry_negotiation_target = {
+						tag = KAP
+					}
+				}
+			}
+			add_to_variable = {
+				SGS.sgs_industry_negotiation_attitude = 1
+			}
+		}
+		custom_effect_tooltip = SGS_if_trade_ok
+		effect_tooltip = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 3
+			}
+		}
+		set_country_flag = SGS_IN_big_investment
+		if = {
+			limit = {
+				check_variable = {
+					SGS.sgs_industry_negotiation_attitude < 0
+				}
+			}
+			country_event = {
+				id = sgs.2250
+			}
+			else = {
+				country_event = {
+					id = sgs.227
+					days = 3
+				}
+			}
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 1.2
+				num_of_civilian_factories < 10
+			}
+		}
+	}
+}
+
+country_event = {
+	#关于提供资源
+	id = sgs.227
+	title = sgs.227.t
+	desc = sgs.227.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#啥都不给
+		name = sgs.227.1
+		subtract_from_variable = {
+			SGS.sgs_industry_negotiation_attitude = 1
+		}
+		if = {
+			limit = {
+				or = {
+					var:SGS.sgs_industry_negotiation_target = {
+						tag = NTR
+					}
+					var:SGS.sgs_industry_negotiation_target = {
+						tag = KAP
+					}
+				}
+			}
+			subtract_from_variable = {
+				SGS.sgs_industry_negotiation_attitude = 1
+			}
+		}
+		if = {
+			limit = {
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = SCA
+				}
+			}
+			add_to_variable = {
+				SGS.sgs_industry_negotiation_attitude = 1
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					SGS.sgs_industry_negotiation_attitude < 0
+				}
+			}
+			country_event = {
+				id = sgs.2250
+			}
+			else = {
+				country_event = {
+					id = sgs.226
+					days = 3
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 3
+				neworder > 0.8
+			}
+		}
+	}
+	option = {
+		#提供少量
+		name = sgs.227.2
+		if = {
+			limit = {
+				or = {
+					var:SGS.sgs_industry_negotiation_target = {
+						tag = NTR
+					}
+					var:SGS.sgs_industry_negotiation_target = {
+						tag = KAP
+					}
+				}
+			}
+			add_to_variable = {
+				SGS.sgs_industry_negotiation_attitude = 1
+			}
+		}
+		custom_effect_tooltip = SGS_if_trade_ok
+		effect_tooltip = {
+			var:SGS.sgs_industry_negotiation_target = {
+				create_import = {
+					resource = gas
+					amount = 8
+					exporter = SGS
+				}
+			}
+		}
+		set_country_flag = SGS_IN_give_some_resource
+		country_event = {
+			id = sgs.228
+			days = 3
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+	option = {
+		#提供大量
+		name = sgs.227.3
+		add_to_variable = {
+			SGS.sgs_industry_negotiation_attitude = 2
+		}
+		if = {
+			limit = {
+				or = {
+					var:SGS.sgs_industry_negotiation_target = {
+						tag = NTR
+					}
+					var:SGS.sgs_industry_negotiation_target = {
+						tag = KAP
+					}
+				}
+			}
+			add_to_variable = {
+				SGS.sgs_industry_negotiation_attitude = 1
+			}
+		}
+		if = {
+			limit = {
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = SCA
+				}
+			}
+			subtract_from_variable = {
+				SGS.sgs_industry_negotiation_attitude = 1
+			}
+		}
+		custom_effect_tooltip = SGS_if_trade_ok
+		effect_tooltip = {
+			var:SGS.sgs_industry_negotiation_target = {
+				create_import = {
+					resource = gas
+					amount = 20
+					exporter = SGS
+				}
+			}
+		}
+		set_country_flag = SGS_IN_give_many_resource
+		country_event = {
+			id = sgs.228
+			days = 3
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+country_event = {
+	#关于给予蓝图
+	id = sgs.228
+	title = sgs.228.t
+	desc = sgs.228.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#啥都不要
+		name = sgs.228.1
+		add_to_variable = {
+			SGS.sgs_industry_negotiation_attitude = 1
+		}
+		country_event = {
+			id = sgs.229
+			days = 3
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		#少量蓝图
+		name = sgs.228.2
+		custom_effect_tooltip = SGS_if_trade_ok
+		effect_tooltip = {
+			add_tech_bonus = {
+				bonus = 0.2
+				uses = 1
+				category = industrys
+			}
+		}
+		set_country_flag = SGS_IN_small_blueprint
+		country_event = {
+			id = sgs.229
+			days = 3
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+	option = {
+		#大量投资
+		name = sgs.228.3
+		subtract_from_variable = {
+			SGS.sgs_industry_negotiation_attitude = 1
+		}
+		custom_effect_tooltip = SGS_if_trade_ok
+		effect_tooltip = {
+			add_tech_bonus = {
+				bonus = 0.15
+				uses = 2
+				category = industrys
+			}
+			add_tech_bonus = {
+				bonus = 0.15
+				uses = 1
+				category = civil
+			}
+		}
+		set_country_flag = SGS_IN_big_blueprint
+		if = {
+			limit = {
+				check_variable = {
+					SGS.sgs_industry_negotiation_attitude < 0
+				}
+			}
+			country_event = {
+				id = sgs.2250
+			}
+			else = {
+				country_event = {
+					id = sgs.229
+					days = 3
+				}
+			}
+		}
+		ai_chance = {
+			base = 25
+		}
+	}
+}
+
+country_event = {
+	#关于妖精战术
+	id = sgs.229
+	title = sgs.229.t
+	desc = sgs.229.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#不提供
+		name = sgs.229.1
+		subtract_from_variable = {
+			SGS.sgs_industry_negotiation_attitude = 1
+		}
+		if = {
+			limit = {
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = SCA
+				}
+			}
+			subtract_from_variable = {
+				SGS.sgs_industry_negotiation_attitude = 1
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					SGS.sgs_industry_negotiation_attitude < 0
+				}
+			}
+			country_event = {
+				id = sgs.2250
+			}
+			else = {
+				country_event = {
+					id = sgs.230
+					days = 3
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 3
+				neworder > 0.5
+			}
+		}
+	}
+	option = {
+		#提供学说
+		name = sgs.229.2
+		if = {
+			limit = {
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = SCA
+				}
+			}
+			add_to_variable = {
+				SGS.sgs_industry_negotiation_attitude = 1
+			}
+		}
+		custom_effect_tooltip = SGS_if_trade_ok
+		custom_effect_tooltip = up_sgs_uprise
+		effect_tooltip = {
+			var:SGS.sgs_industry_negotiation_target = {
+				add_tech_bonus = {
+					bonus = 0.3
+					uses = 2
+					category = land_doctrine
+				}
+			}
+		}
+		set_country_flag = SGS_IN_doctrine_only
+		country_event = {
+			id = sgs.230
+			days = 3
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+	option = {
+		#学说+buff
+		name = sgs.229.3
+		add_to_variable = {
+			SGS.sgs_industry_negotiation_attitude = 1
+		}
+		if = {
+			limit = {
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = SCA
+				}
+			}
+			add_to_variable = {
+				SGS.sgs_industry_negotiation_attitude = 1
+			}
+		}
+		custom_effect_tooltip = SGS_if_trade_ok
+		custom_effect_tooltip = up_sgs_uprise
+		effect_tooltip = {
+			var:SGS.sgs_industry_negotiation_target = {
+				add_tech_bonus = {
+					bonus = 0.3
+					uses = 2
+					category = land_doctrine
+				}
+				add_timed_idea = {
+					idea = SGS_battle_fairy_training_pattern_idea
+					days = 1095
+				}
+			}
+		}
+		set_country_flag = SGS_IN_doctrine_and_training
+		country_event = {
+			id = sgs.230
+			days = 3
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 2
+				guli > 0.45
+			}
+		}
+	}
+}
+
+country_event = {
+	#关于技术援助
+	id = sgs.230
+	title = sgs.230.t
+	desc = sgs.230.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#啥都不要
+		name = sgs.230.1
+		add_to_variable = {
+			SGS.sgs_industry_negotiation_attitude = 1
+		}
+		country_event = {
+			id = sgs.231
+			days = 3
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		#少量援助
+		name = sgs.230.2
+		custom_effect_tooltip = SGS_if_trade_ok
+		effect_tooltip = {
+			add_timed_idea = {
+				idea = SGS_industry_support_idea
+				days = 1095
+			}
+		}
+		set_country_flag = SGS_IN_small_ins_support
+		country_event = {
+			id = sgs.231
+			days = 3
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+	option = {
+		#大量援助
+		name = sgs.230.3
+		subtract_from_variable = {
+			SGS.sgs_industry_negotiation_attitude = 2
+		}
+		custom_effect_tooltip = SGS_if_trade_ok
+		effect_tooltip = {
+			add_timed_idea = {
+				idea = SGS_industry_big_support_idea
+				days = 1095
+			}
+		}
+		set_country_flag = SGS_IN_big_ins_support
+		if = {
+			limit = {
+				check_variable = {
+					SGS.sgs_industry_negotiation_attitude < 0
+				}
+			}
+			country_event = {
+				id = sgs.2250
+			}
+			else = {
+				country_event = {
+					id = sgs.231
+					days = 3
+				}
+			}
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+country_event = {
+	#特殊提供
+	id = sgs.231
+	title = sgs.231.t
+	desc = {
+		text = sgs.231.d_kappa
+		trigger = {
+			or = {
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = NTR
+				}
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = KAP
+				}
+			}
+		}
+	}
+	desc = {
+		text = sgs.231.d_WHM
+		trigger = {
+			var:SGS.sgs_industry_negotiation_target = {
+				tag = WHM
+			}
+		}
+	}
+	desc = {
+		text = sgs.231.d_SCA
+		trigger = {
+			var:SGS.sgs_industry_negotiation_target = {
+				tag = SCA
+			}
+		}
+	}
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#不提供
+		name = sgs.231.1
+		subtract_from_variable = {
+			SGS.sgs_industry_negotiation_attitude = 1
+		}
+		if = {
+			limit = {
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = SCA
+				}
+			}
+			subtract_from_variable = {
+				SGS.sgs_industry_negotiation_attitude = 1
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					SGS.sgs_industry_negotiation_attitude < 0
+				}
+			}
+			country_event = {
+				id = sgs.2250
+			}
+			else = {
+				country_event = {
+					id = sgs.230
+					days = 3
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 3
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = SCA
+				}
+				has_manpower<1000
+			}
+			modifier = {
+				factor = 5
+				or = {
+					var:SGS.sgs_industry_negotiation_target = {
+						tag = NTR
+					}
+					var:SGS.sgs_industry_negotiation_target = {
+						tag = KAP
+					}
+				}
+				neworder>0.7
+			}
+		}
+	}
+	option = {
+		#提供少量
+		name = sgs.231.2
+		if = {
+			limit = {
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = SCA
+				}
+			}
+			add_to_variable = {
+				SGS.sgs_industry_negotiation_attitude = 1
+			}
+		}
+		custom_effect_tooltip = SGS_if_trade_ok
+		if = {
+			#给红魔馆提供人力
+			limit = {
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = SCA
+				}
+			}
+			set_country_flag = SGS_IN_give_manpower_small
+			effect_tooltip = {
+				add_manpower = -800
+				var:SGS.sgs_industry_negotiation_target = {
+					add_manpower = 800
+				}
+			}
+		}
+		if = {
+			#给河童提供
+			limit = {
+				or = {
+					var:SGS.sgs_industry_negotiation_target = {
+						tag = NTR
+					}
+					var:SGS.sgs_industry_negotiation_target = {
+						tag = KAP
+					}
+				}
+			}
+			set_country_flag = SGS_IN_give_amry_org_obver
+			effect_tooltip = {
+				country_event = {
+					id = sgs.2311
+				}
+				add_stability = -0.03
+			}
+			custom_effect_tooltip = up_sgs_uprise
+		}
+		if = {
+			limit = {
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = WHM
+				}
+			}
+			set_country_flag = SGS_IN_give_old_machine_small
+			effect_tooltip = {
+				country_event = {
+					id = sgs.2312
+				}
+			}
+		}
+		country_event = {
+			id = sgs.232
+			days = 3
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+	option = {
+		#提供更多
+		name = sgs.231.3
+		add_to_variable = {
+			SGS.sgs_industry_negotiation_attitude = 1
+		}
+		if = {
+			limit = {
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = SCA
+				}
+			}
+			add_to_variable = {
+				SGS.sgs_industry_negotiation_attitude = 1
+			}
+		}
+		custom_effect_tooltip = SGS_if_trade_ok
+		if = {
+			#给红魔馆提供人力
+			limit = {
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = SCA
+				}
+			}
+			set_country_flag = SGS_IN_give_manpower_big
+			effect_tooltip = {
+				add_manpower = -1800
+				var:SGS.sgs_industry_negotiation_target = {
+					add_manpower = 1800
+				}
+			}
+		}
+		if = {
+			#给河童提供军事观察和知识
+			limit = {
+				or = {
+					var:SGS.sgs_industry_negotiation_target = {
+						tag = NTR
+					}
+					var:SGS.sgs_industry_negotiation_target = {
+						tag = KAP
+					}
+				}
+			}
+			set_country_flag = SGS_IN_give_amry_org_obver_and_knowledge
+			effect_tooltip = {
+				country_event = {
+					id = sgs.2311
+				}
+			}
+
+			custom_effect_tooltip = up_sgs_uprise
+		}
+		if = {
+			#给慧音提供旧机床-多
+			limit = {
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = WHM
+				}
+			}
+			set_country_flag = SGS_IN_give_old_machine_big
+			effect_tooltip = {
+				country_event = {
+					id = sgs.2312
+				}
+			}
+		}
+		country_event = {
+			id = sgs.232
+			days = 3
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = SCA
+				}
+				has_manpower<1800
+			}
+			modifier = {
+				factor = 2
+				or = {
+					var:SGS.sgs_industry_negotiation_target = {
+						tag = NTR
+					}
+					var:SGS.sgs_industry_negotiation_target = {
+						tag = KAP
+					}
+				}
+				guli>0.5
+			}
+		}
+	}
+}
+
+country_event = {
+	#特殊援助
+	id = sgs.232
+	title = sgs.232.t
+	desc = {
+		text = sgs.232.d_kappa
+		trigger = {
+			or = {
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = NTR
+				}
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = KAP
+				}
+			}
+		}
+	}
+	desc = {
+		text = sgs.232.d_WHM
+		trigger = {
+			var:SGS.sgs_industry_negotiation_target = {
+				tag = WHM
+			}
+		}
+	}
+	desc = {
+		text = sgs.232.d_SCA
+		trigger = {
+			var:SGS.sgs_industry_negotiation_target = {
+				tag = SCA
+			}
+		}
+	}
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#啥都不要
+		name = sgs.232.1
+		add_to_variable = {
+			SGS.sgs_industry_negotiation_attitude = 1
+		}
+		if = {
+			limit = {
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = WHM
+				}
+			}
+			subtract_from_variable = {
+				SGS.sgs_industry_negotiation_attitude = 1
+			}
+		}
+		country_event = {
+			id = sgs.233
+			days = 2
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0.5
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = WHM
+				}
+			}
+		}
+	}
+	option = {
+		#少量援助
+		name = sgs.232.2
+		custom_effect_tooltip = SGS_if_trade_ok
+		if = {
+			#红魔馆少量放松贸易禁运
+			limit = {
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = SCA
+				}
+			}
+			set_country_flag = SGS_IN_reduce_trade_limit_small
+			effect_tooltip = {
+				var:SGS.sgs_industry_negotiation_target = {
+					add_opinion_modifier = {
+						target = SGS
+						modifier = SGS_reduce_trade_limit_small_op
+					}
+				}
+			}
+		}
+		if = {
+			#河童提供武器
+			limit = {
+				or = {
+					var:SGS.sgs_industry_negotiation_target = {
+						tag = NTR
+					}
+					var:SGS.sgs_industry_negotiation_target = {
+						tag = KAP
+					}
+				}
+			}
+			set_country_flag = SGS_IN_give_nitori_guns
+			effect_tooltip = {
+				sgs_industry_negotiation_target = {
+					hidden_effect = {
+						add_equipment_to_stockpile = {
+							type = gun_a
+							amount = 500
+						}
+					}
+					send_equipment = {
+						equipment = gun_a
+						amount = 1000
+						target = SGS
+					}
+				}
+			}
+		}
+		if = {
+			#去慧音寺子屋
+			limit = {
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = WHM
+				}
+			}
+			add_to_variable = {
+				SGS.sgs_industry_negotiation_attitude = 1
+			}
+			set_country_flag = SGS_IN_leader_go_to_terakoya
+			effect_tooltip = {
+				country_event = {
+					id = sgs.2315
+				}
+			}
+		}
+		country_event = {
+			id = sgs.233
+			days = 2
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+	option = {
+		#大量援助
+		name = sgs.232.3
+		subtract_from_variable = {
+			SGS.sgs_industry_negotiation_attitude = 1
+		}
+		custom_effect_tooltip = SGS_if_trade_ok
+		if = {
+			#红魔馆放开贸易禁运
+			limit = {
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = SCA
+				}
+			}
+			set_country_flag = SGS_IN_reduce_trade_limit_big
+			effect_tooltip = {
+				var:SGS.sgs_industry_negotiation_target = {
+					add_opinion_modifier = {
+						target = SGS
+						modifier = SGS_reduce_trade_limit_big_op
+					}
+				}
+			}
+		}
+		if = {
+			#河童提供武器和知识
+			limit = {
+				or = {
+					var:SGS.sgs_industry_negotiation_target = {
+						tag = NTR
+					}
+					var:SGS.sgs_industry_negotiation_target = {
+						tag = KAP
+					}
+				}
+			}
+			set_country_flag = SGS_IN_give_nitori_guns_and_tech
+			effect_tooltip = {
+				sgs_industry_negotiation_target = {
+					hidden_effect = {
+						add_equipment_to_stockpile = {
+							type = gun_a
+							amount = 500
+						}
+					}
+					send_equipment = {
+						equipment = gun_a
+						amount = 1000
+						target = SGS
+					}
+				}
+				add_tech_bonus = {
+					bonus = 0.3
+					uses = 1
+					category = artillery_tech
+				}
+				add_tech_bonus = {
+					bonus = 0.2
+					uses = 1
+					category = support_tech
+				}
+			}
+		}
+		if = {
+			#去慧音寺子屋
+			limit = {
+				var:SGS.sgs_industry_negotiation_target = {
+					tag = WHM
+				}
+			}
+			add_to_variable = {
+				SGS.sgs_industry_negotiation_attitude = 2
+			}
+			set_country_flag = SGS_IN_all_go_to_terakoya
+			effect_tooltip = {
+				country_event = {
+					id = sgs.2316
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					SGS.sgs_industry_negotiation_attitude < 0
+				}
+			}
+			country_event = {
+				id = sgs.2250
+			}
+			else = {
+				country_event = {
+					id = sgs.233
+					days = 2
+				}
+			}
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+country_event = {
+	#交易成功
+	id = sgs.233
+	title = sgs.233.t
+	desc = sgs.233.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.233.1
+		if = {
+			limit = {
+				or = {
+					var:SGS.sgs_industry_negotiation_target = {
+						has_government = qinwai
+					}
+					var:SGS.sgs_industry_negotiation_target = {
+						has_government = lienin
+					}
+					var:SGS.sgs_industry_negotiation_target = {
+						has_government = fandong
+					}
+				}
+			}
+			set_country_flag = SGS_IN_with_red_country
+		}
+		hidden_effect = {
+			if = {#关于履行不侵略
+				limit = {
+					or = {
+						has_country_flag = SGS_IN_promise_to_peace
+						has_country_flag = SGS_IN_promise_to_suppress
+					}
+				}
+				country_event = {
+					id = sgs.2331
+				}
+				var:SGS.sgs_industry_negotiation_target = {
+					country_event = {
+						id = sgs.2341
+					}
+				}
+			}
+			if = {#履行投资民工
+				limit = {
+					or = {
+						has_country_flag = SGS_IN_small_investment
+						has_country_flag = SGS_IN_big_investment
+					}
+				}
+				country_event = {
+					id = sgs.2332
+				}
+				var:SGS.sgs_industry_negotiation_target = {
+					country_event = {
+						id = sgs.2342
+					}
+				}
+			}
+			if = {#履行提供资源
+				limit = {
+					or = {
+						has_country_flag = SGS_IN_give_some_resource
+						has_country_flag = SGS_IN_give_many_resource
+					}
+				}
+				country_event = {
+					id = sgs.2333
+				}
+				var:SGS.sgs_industry_negotiation_target = {
+					country_event = {
+						id = sgs.2343
+					}
+				}
+			}
+
+			if = {#履行给予蓝图
+				limit = {
+					or = {
+						has_country_flag = SGS_IN_small_blueprint
+						has_country_flag = SGS_IN_big_blueprint
+					}
+				}
+				country_event = {
+					id = sgs.2334
+				}
+				var:SGS.sgs_industry_negotiation_target = {
+					country_event = {
+						id = sgs.2344
+					}
+				}
+			}
+			if = {#履行传授战术
+				limit = {
+					or = {
+						has_country_flag = SGS_IN_doctrine_only
+						has_country_flag = SGS_IN_doctrine_and_training
+					}
+				}
+				country_event = {
+					id = sgs.2335
+				}
+				var:SGS.sgs_industry_negotiation_target = {
+					country_event = {
+						id = sgs.2345
+					}
+				}
+			}
+			if = {#履行技术援助
+				limit = {
+					or = {
+						has_country_flag = SGS_IN_small_ins_support
+						has_country_flag = SGS_IN_big_ins_support
+					}
+				}
+				country_event = {
+					id = sgs.2336
+				}
+				var:SGS.sgs_industry_negotiation_target = {
+					country_event = {
+						id = sgs.2346
+					}
+				}
+			}
+			if = {#履行人力援助
+				limit = {
+					or = {
+						has_country_flag = SGS_IN_give_manpower_small
+						has_country_flag = SGS_IN_give_manpower_big
+					}
+				}
+				country_event = {
+					id = sgs.2337
+				}
+				var:SGS.sgs_industry_negotiation_target = {
+					country_event = {
+						id = sgs.2347
+					}
+				}
+			}
+			if = {#履行组织观察
+				limit = {
+					or = {
+						has_country_flag = SGS_IN_give_amry_org_obver
+						has_country_flag = SGS_IN_give_amry_org_obver_and_knowledge
+					}
+				}
+				country_event = {
+					id = sgs.2311
+				}
+				var:SGS.sgs_industry_negotiation_target = {
+					country_event = {
+						id = sgs.2313
+					}
+				}
+			}
+			if = {#履行旧机床提供
+				limit = {
+					or = {
+						has_country_flag = SGS_IN_give_old_machine_small
+						has_country_flag = SGS_IN_give_old_machine_big
+					}
+				}
+				country_event = {
+					id = sgs.2312
+				}
+				var:SGS.sgs_industry_negotiation_target = {
+					country_event = {
+						id = sgs.2314
+					}
+				}
+			}
+			if = {#履行开放贸易
+				limit = {
+					or = {
+						has_country_flag = SGS_IN_reduce_trade_limit_small
+						has_country_flag = SGS_IN_reduce_trade_limit_big
+					}
+				}
+				country_event = {
+					id = sgs.2338
+				}
+				var:SGS.sgs_industry_negotiation_target = {
+					country_event = {
+						id = sgs.2348
+					}
+				}
+			}
+			if = {#履行武器援助
+				limit = {
+					or = {
+						has_country_flag = SGS_IN_give_nitori_guns
+						has_country_flag = SGS_IN_give_nitori_guns_and_tech
+					}
+				}
+				country_event = {
+					id = sgs.2339
+				}
+				var:SGS.sgs_industry_negotiation_target = {
+					country_event = {
+						id = sgs.2349
+					}
+				}
+			}
+			if = {#履行教育援助
+				limit = {
+					or = {
+						has_country_flag = SGS_IN_leader_go_to_terakoya
+						has_country_flag = SGS_IN_all_go_to_terakoya
+					}
+				}
+				country_event = {
+					id = sgs.2315
+				}
+				var:SGS.sgs_industry_negotiation_target = {
+					country_event = {
+						id = sgs.2316
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#履行不侵略
+	id = sgs.2331
+	title = sgs.2331.t
+	desc = {
+		text = sgs.2331.d_peace
+		trigger = {
+			has_country_flag = SGS_IN_promise_to_peace
+		}
+	}
+	desc = {
+		text = sgs.2331.d_surp
+		trigger = {
+			has_country_flag = SGS_IN_promise_to_suppress
+			not = { has_completed_focus = SGS_surpress_bad_BaF_focus }
+		}
+	}
+	desc = {
+		text = sgs.2331.d_surp_OK
+		trigger = {
+			has_country_flag = SGS_IN_promise_to_suppress
+			has_completed_focus = SGS_surpress_bad_BaF_focus
+		}
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	option = {
+		#互不侵略
+		name = sgs.2331.1
+		trigger = {
+			has_country_flag = SGS_IN_promise_to_peace
+		}
+		diplomatic_relation = {
+			country = var:SGS.sgs_industry_negotiation_target
+			relation = non_aggression_pact
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#承诺镇压
+		name = sgs.2331.2
+		trigger = {
+			has_country_flag = SGS_IN_promise_to_suppress
+			not = { has_completed_focus = SGS_surpress_bad_BaF_focus }
+		}
+		diplomatic_relation = {
+			country = var:SGS.sgs_industry_negotiation_target
+			relation = non_aggression_pact
+		}
+		activate_mission = SGS_surpress_mission
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#镇压过了
+		name = sgs.2331.3
+		trigger = {
+			has_country_flag = SGS_IN_promise_to_suppress
+			has_completed_focus = SGS_surpress_bad_BaF_focus
+		}
+		diplomatic_relation = {
+			country = var:SGS.sgs_industry_negotiation_target
+			relation = non_aggression_pact
+		}
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#履行和平-对象国
+	id = sgs.2341
+	title = sgs.2341.t
+	desc = {
+		text = sgs.2341.d_peace
+		trigger = {
+			has_country_flag = SGS_IN_promise_to_peace
+		}
+	}
+	desc = {
+		text = sgs.2341.d_surp
+		trigger = {
+			has_country_flag = SGS_IN_promise_to_suppress
+		}
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	option = {
+		#
+		name = sgs.2341.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#履行投资
+	id = sgs.2332
+	title = sgs.2332.t
+	desc = {
+		text = sgs.2332.d_small
+		trigger = {
+			has_country_flag = SGS_IN_small_investment
+		}
+	}
+	desc = {
+		text = sgs.2332.d_big
+		trigger = {
+			has_country_flag = SGS_IN_big_investment
+
+		}
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	option = {
+		#小
+		name = sgs.2332.1
+		trigger = {
+			has_country_flag = SGS_IN_small_investment
+		}
+		add_offsite_building = {
+			type = industrial_complex
+			level = 1
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#大
+		name = sgs.2332.2
+		trigger = {
+			has_country_flag = SGS_IN_big_investment
+		}
+		add_offsite_building = {
+			type = industrial_complex
+			level = 3
+		}
+
+		ai_chance = {
+			base = 35
+		}
+	}
+
+}
+country_event = {
+	#履行投资-对象国
+	id = sgs.2342
+	title = sgs.2342.t
+	desc = {
+		text = sgs.2342.d_small
+		trigger = {
+			has_country_flag = SGS_IN_small_investment
+		}
+	}
+	desc = {
+		text = sgs.2342.d_big
+		trigger = {
+			has_country_flag = SGS_IN_big_investment
+		}
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	option = {
+		#
+		name = sgs.2342.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#履行提供资源
+	id = sgs.2333
+	title = sgs.2333.t
+	desc = {
+		text = sgs.2333.d_small
+		trigger = {
+			has_country_flag = SGS_IN_give_some_resource
+		}
+	}
+	desc = {
+		text = sgs.2333.d_big
+		trigger = {
+			has_country_flag = SGS_IN_give_many_resource
+		}
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	option = {
+		#小
+		name = sgs.2333.1
+		trigger = {
+			has_country_flag = SGS_IN_give_some_resource
+		}
+		var:SGS.sgs_industry_negotiation_target = {
+			create_import = {
+				resource = gas
+				amount = 8
+				exporter = SGS
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#大
+		name = sgs.2333.2
+		trigger = {
+			has_country_flag = SGS_IN_give_many_resource
+		}
+		var:SGS.sgs_industry_negotiation_target = {
+			create_import = {
+				resource = gas
+				amount = 20
+				exporter = SGS
+			}
+		}
+
+		ai_chance = {
+			base = 35
+		}
+	}
+
+}
+country_event = {
+	#履行递交资源-对象国
+	id = sgs.2343
+	title = sgs.2343.t
+	desc = {
+		text = sgs.2343.d_small
+		trigger = {
+			has_country_flag = SGS_IN_give_some_resource
+		}
+	}
+	desc = {
+		text = sgs.2343.d_big
+		trigger = {
+			has_country_flag = SGS_IN_give_many_resource
+		}
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	option = {
+		#
+		name = sgs.2343.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#履行提供蓝图
+	id = sgs.2334
+	title = sgs.2334.t
+	desc = {
+		text = sgs.2334.d_small
+		trigger = {
+			has_country_flag = SGS_IN_small_blueprint
+		}
+	}
+	desc = {
+		text = sgs.2334.d_big
+		trigger = {
+			has_country_flag = SGS_IN_big_blueprint
+
+		}
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	option = {
+		#小
+		name = sgs.2334.1
+		trigger = {
+			has_country_flag = SGS_IN_small_blueprint
+		}
+		add_tech_bonus = {
+			bonus = 0.2
+			uses = 1
+			category = industrys
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#大
+		name = sgs.2334.2
+		trigger = {
+			has_country_flag = SGS_IN_big_blueprint
+		}
+		add_tech_bonus = {
+			bonus = 0.15
+			uses = 2
+			category = industrys
+		}
+		add_tech_bonus = {
+			bonus = 0.15
+			uses = 1
+			category = civil
+		}
+
+		ai_chance = {
+			base = 35
+		}
+	}
+
+}
+country_event = {
+	#履行蓝图-对象国
+	id = sgs.2344
+	title = sgs.2344.t
+	desc = {
+		text = sgs.2344.d_small
+		trigger = {
+			has_country_flag = SGS_IN_small_blueprint
+		}
+	}
+	desc = {
+		text = sgs.2344.d_big
+		trigger = {
+			has_country_flag = SGS_IN_big_blueprint
+		}
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	option = {
+		#
+		name = sgs.2344.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#履行分享战术
+	id = sgs.2335
+	title = sgs.2335.t
+	desc = {
+		text = sgs.2335.d_small
+		trigger = {
+			has_country_flag = SGS_IN_doctrine_only
+		}
+	}
+	desc = {
+		text = sgs.2335.d_big
+		trigger = {
+			has_country_flag = SGS_IN_doctrine_and_training
+
+		}
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	option = {
+		#小
+		name = sgs.2335.1
+		trigger = {
+			has_country_flag = SGS_IN_doctrine_only
+		}
+		var:SGS.sgs_industry_negotiation_target = {
+			add_tech_bonus = {
+				bonus = 0.3
+				uses = 2
+				category = land_doctrine
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#大
+		name = sgs.2335.2
+		trigger = {
+			has_country_flag = SGS_IN_doctrine_and_training
+		}
+		var:SGS.sgs_industry_negotiation_target = {
+			add_tech_bonus = {
+				bonus = 0.3
+				uses = 2
+				category = land_doctrine
+			}
+			add_timed_idea = {
+				idea = SGS_battle_fairy_training_pattern_idea
+				days = 1095
+			}
+		}
+
+		ai_chance = {
+			base = 35
+		}
+	}
+
+}
+country_event = {
+	#履行战术对象国
+	id = sgs.2345
+	title = sgs.2345.t
+	desc = {
+		text = sgs.2345.d_small
+		trigger = {
+			has_country_flag = SGS_IN_doctrine_only
+		}
+	}
+	desc = {
+		text = sgs.2345.d_big
+		trigger = {
+			has_country_flag = SGS_IN_doctrine_and_training
+		}
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	option = {
+		#
+		name = sgs.2345.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#履行技术援助
+	id = sgs.2336
+	title = sgs.2336.t
+	desc = {
+		text = sgs.2336.d_small
+		trigger = {
+			has_country_flag = SGS_IN_small_ins_support
+		}
+	}
+	desc = {
+		text = sgs.2336.d_big
+		trigger = {
+			has_country_flag = SGS_IN_big_ins_support
+
+		}
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	option = {
+		#小
+		name = sgs.2336.1
+		trigger = {
+			has_country_flag = SGS_IN_small_ins_support
+		}
+		add_timed_idea = {
+			idea = SGS_industry_support_idea
+			days = 1095
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#大
+		name = sgs.2336.2
+		trigger = {
+			has_country_flag = SGS_IN_big_ins_support
+		}
+		add_timed_idea = {
+			idea = SGS_industry_big_support_idea
+			days = 1095
+		}
+
+		ai_chance = {
+			base = 35
+		}
+	}
+
+}
+country_event = {
+	#履行技术-对象国
+	id = sgs.2346
+	title = sgs.2346.t
+	desc = {
+		text = sgs.2346.d_small
+		trigger = {
+			has_country_flag = SGS_IN_small_ins_support
+		}
+	}
+	desc = {
+		text = sgs.2346.d_big
+		trigger = {
+			has_country_flag = SGS_IN_big_ins_support
+		}
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	option = {
+		#
+		name = sgs.2346.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#履行人力
+	id = sgs.2337
+	title = sgs.2337.t
+	desc = {
+		text = sgs.2337.d_small
+		trigger = {
+			has_country_flag = SGS_IN_give_manpower_small
+		}
+	}
+	desc = {
+		text = sgs.2337.d_big
+		trigger = {
+			has_country_flag = SGS_IN_give_manpower_big
+
+		}
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	option = {
+		#小
+		name = sgs.2337.1
+		trigger = {
+			has_country_flag = SGS_IN_give_manpower_small
+		}
+		add_manpower = -800
+		var:SGS.sgs_industry_negotiation_target = {
+			add_manpower = 800
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#大
+		name = sgs.2337.2
+		trigger = {
+			has_country_flag = SGS_IN_give_manpower_big
+		}
+		add_manpower = -1800
+		var:SGS.sgs_industry_negotiation_target = {
+			add_manpower = 1800
+		}
+
+		ai_chance = {
+			base = 35
+		}
+	}
+
+}
+country_event = {
+	#履行人力-对象国
+	id = sgs.2347
+	title = sgs.2347.t
+	desc = {
+		text = sgs.2347.d_small
+		trigger = {
+			has_country_flag = SGS_IN_give_manpower_small
+		}
+	}
+	desc = {
+		text = sgs.2347.d_big
+		trigger = {
+			has_country_flag = SGS_IN_give_manpower_big
+		}
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	option = {
+		#
+		name = sgs.2347.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#履行观察
+	id = sgs.2311
+	title = sgs.2311.t
+	desc = {
+		text = sgs.2311.d_small
+		trigger = {
+			has_country_flag = SGS_IN_give_amry_org_obver
+		}
+	}
+	desc = {
+		text = sgs.2311.d_big
+		trigger = {
+			has_country_flag = SGS_IN_give_amry_org_obver_and_knowledge
+
+		}
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	option = {
+		#小
+		name = sgs.2311.1
+		trigger = {
+			has_country_flag = SGS_IN_give_amry_org_obver
+		}
+		custom_effect_tooltip = up_sgs_uprise
+		add_to_variable = {
+			sgs_uprise = 4
+		}
+		add_stability = -0.03
+		var:SGS.sgs_industry_negotiation_target = {
+			activate_decision = SGS_NIT_observe_amry
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#大
+		name = sgs.2311.2
+		trigger = {
+			has_country_flag = SGS_IN_give_amry_org_obver_and_knowledge
+		}
+		custom_effect_tooltip = up_sgs_uprise
+		add_to_variable = {
+			sgs_uprise = 7
+		}
+		add_stability = -0.05
+		var:SGS.sgs_industry_negotiation_target = {
+			army_experience = 30
+			activate_decision = SGS_NIT_observe_amry
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+
+}
+country_event = {
+	#履行观察-对象国
+	id = sgs.2313
+	title = sgs.2313.t
+	desc = {
+		text = sgs.2313.d_small
+		trigger = {
+			has_country_flag = SGS_IN_give_amry_org_obver
+		}
+	}
+	desc = {
+		text = sgs.2313.d_big
+		trigger = {
+			has_country_flag = SGS_IN_give_amry_org_obver_and_knowledge
+		}
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	option = {
+		#
+		name = sgs.2313.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#履行送机床
+	id = sgs.2312
+	title = sgs.2312.t
+	desc = {
+		text = sgs.2312.d_small
+		trigger = {
+			has_country_flag = SGS_IN_give_old_machine_small
+		}
+	}
+	desc = {
+		text = sgs.2312.d_big
+		trigger = {
+			has_country_flag = SGS_IN_give_old_machine_big
+
+		}
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	option = {
+		#小
+		name = sgs.2312.1
+		trigger = {
+			has_country_flag = SGS_IN_give_old_machine_small
+		}
+		custom_effect_tooltip = up_sgs_uprise
+		activate_decision = SGS_WHM_send_machine_small
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#大
+		name = sgs.2312.2
+		trigger = {
+			has_country_flag = SGS_IN_give_old_machine_big
+		}
+		activate_decision = SGS_WHM_send_machine_big
+		var:SGS.sgs_industry_negotiation_target = {
+			add_tech_bonus = {
+				bonus = 0.2
+				uses = 1
+				category = industrys
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+
+}
+country_event = {
+	#履行送机床-对象国
+	id = sgs.2314
+	title = sgs.2314.t
+	desc = {
+		text = sgs.2314.d_small
+		trigger = {
+			has_country_flag = SGS_IN_give_old_machine_small
+		}
+	}
+	desc = {
+		text = sgs.2314.d_big
+		trigger = {
+			has_country_flag = SGS_IN_give_old_machine_big
+		}
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	option = {
+		#
+		name = sgs.2314.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#履行开放贸易
+	id = sgs.2338
+	title = sgs.2338.t
+	desc = {
+		text = sgs.2338.d_small
+		trigger = {
+			has_country_flag = SGS_IN_reduce_trade_limit_small
+		}
+	}
+	desc = {
+		text = sgs.2338.d_big
+		trigger = {
+			has_country_flag = SGS_IN_reduce_trade_limit_big
+		}
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	option = {
+		#小
+		name = sgs.2338.1
+		trigger = {
+			has_country_flag = SGS_IN_reduce_trade_limit_small
+		}
+		var:SGS.sgs_industry_negotiation_target = {
+			add_opinion_modifier = {
+				target = SGS
+				modifier = SGS_reduce_trade_limit_small_op
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#大
+		name = sgs.2338.2
+		trigger = {
+			has_country_flag = SGS_IN_reduce_trade_limit_big
+		}
+		var:SGS.sgs_industry_negotiation_target = {
+			add_opinion_modifier = {
+				target = SGS
+				modifier = SGS_reduce_trade_limit_big_op
+			}
+		}
+
+		ai_chance = {
+			base = 35
+		}
+	}
+
+}
+country_event = {
+	#履行开放贸易-对象国
+	id = sgs.2348
+	title = sgs.2348.t
+	desc = {
+		text = sgs.2348.d_small
+		trigger = {
+			has_country_flag = SGS_IN_reduce_trade_limit_small
+		}
+	}
+	desc = {
+		text = sgs.2348.d_big
+		trigger = {
+			has_country_flag = SGS_IN_reduce_trade_limit_big
+		}
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	option = {
+		#
+		name = sgs.2348.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#履行提供武器
+	id = sgs.2339
+	title = sgs.2339.t
+	desc = {
+		text = sgs.2339.d_small
+		trigger = {
+			has_country_flag = SGS_IN_give_nitori_guns
+		}
+	}
+	desc = {
+		text = sgs.2339.d_big
+		trigger = {
+			has_country_flag = SGS_IN_give_nitori_guns_and_tech
+		}
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	option = {
+		#小
+		name = sgs.2339.1
+		trigger = {
+			has_country_flag = SGS_IN_give_nitori_guns
+		}
+		sgs_industry_negotiation_target = {
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = gun_a
+					amount = 500
+				}
+			}
+			send_equipment = {
+				equipment = gun_a
+				amount = 1000
+				target = SGS
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#大
+		name = sgs.2339.2
+		trigger = {
+			has_country_flag = SGS_IN_give_nitori_guns_and_tech
+		}
+		sgs_industry_negotiation_target = {
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = gun_a
+					amount = 500
+				}
+			}
+			send_equipment = {
+				equipment = gun_a
+				amount = 1000
+				target = SGS
+			}
+		}
+		add_tech_bonus = {
+			bonus = 0.3
+			uses = 1
+			category = artillery_tech
+		}
+		add_tech_bonus = {
+			bonus = 0.2
+			uses = 1
+			category = support_tech
+		}
+
+		ai_chance = {
+			base = 35
+		}
+	}
+
+}
+country_event = {
+	#履行提供武器-对象国
+	id = sgs.2349
+	title = sgs.2349.t
+	desc = {
+		text = sgs.2348.d_small
+		trigger = {
+			has_country_flag = SGS_IN_give_nitori_guns
+		}
+	}
+	desc = {
+		text = sgs.2349.d_big
+		trigger = {
+			has_country_flag = SGS_IN_give_nitori_guns_and_tech
+		}
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	option = {
+		#
+		name = sgs.2349.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#履行去学习
+	id = sgs.2315
+	title = sgs.2315.t
+	desc = {
+		text = sgs.2315.d_small
+		trigger = {
+			has_country_flag = SGS_IN_leader_go_to_terakoya
+		}
+	}
+	desc = {
+		text = sgs.2315.d_big
+		trigger = {
+			has_country_flag = SGS_IN_all_go_to_terakoya
+
+		}
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	option = {
+		#小
+		name = sgs.2315.1
+		trigger = {
+			has_country_flag = SGS_IN_leader_go_to_terakoya
+		}
+		
+		activate_decision = SGS_WHM_goto_terakoya_small
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#大
+		name = sgs.2315.2
+		trigger = {
+			has_country_flag = SGS_IN_all_go_to_terakoya
+		}
+		activate_decision = SGS_WHM_goto_terakoya_big
+		
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#履行送机床-对象国
+	id = sgs.2316
+	title = sgs.2316.t
+	desc = {
+		text = sgs.2316.d_small
+		trigger = {
+			has_country_flag = SGS_IN_leader_go_to_terakoya
+		}
+	}
+	desc = {
+		text = sgs.2316.d_big
+		trigger = {
+			has_country_flag = SGS_IN_all_go_to_terakoya
+		}
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	option = {
+		#
+		name = sgs.2316.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#交易成功-对象国
+	id = sgs.234
+	title = sgs.234.t
+	desc = sgs.234.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	option = {
+		#
+		name = sgs.234.1
+
+		ai_chance = {
+			base = 35
 		}
 	}
 }

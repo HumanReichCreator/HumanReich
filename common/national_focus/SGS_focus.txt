@@ -624,15 +624,33 @@ focus_tree = {
 	focus = {
 		id = SGS_trade_about_industry_focus
 		icon = GFX_goal_generic_intelligence_exchange
-		cost = 5
+		cost = 8
+		available = {
+			not = {
+				has_country_flag = SGS_IN_failed
+			}
+		}
 		prerequisite = {
 			focus = SGS_communicate_with_others_focus
 		}
 		x = -1
 		y = 1
+		cancelable = no
+		cancel = {
+			has_country_flag = SGS_IN_failed
+		}
 		relative_position_id = SGS_communicate_with_others_focus
 		#资源换工业援助，也是分对象，可以试试做个讨价还价的机制
+		select_effect = {
+			country_event = {
+				id = sgs.224
+				days = 1
+			}
+		}
 		completion_reward = {
+			country_event = {
+				id = sgs.233
+			}
 			add_to_variable = {
 				sgs_star_infl = 3
 			}

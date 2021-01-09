@@ -25,8 +25,7 @@ SGS_category = {
 				max = 150
 			}
 		}
-		remove_effect = {
-		}
+		remove_effect = {}
 	}
 	SGS_dannmakugokko_deci = {
 		visible = {
@@ -107,8 +106,7 @@ SGS_category = {
 			}
 			# has_idea = TEG_jianshaozhengbing_idea
 		}
-		modifier = {
-		}
+		modifier = {}
 		cost = 75
 		days_remove = 23
 		days_re_enable = 40
@@ -278,8 +276,7 @@ SGS_category = {
 			}
 			# has_idea = TEG_jianshaozhengbing_idea
 		}
-		modifier = {
-		}
+		modifier = {}
 		cost = 45
 		days_re_enable = 40
 		fire_only_once = no
@@ -373,8 +370,7 @@ SGS_category = {
 			}
 			# has_idea = TEG_jianshaozhengbing_idea
 		}
-		modifier = {
-		}
+		modifier = {}
 		cost = 60
 		days_remove = 30
 		days_re_enable = 30
@@ -478,7 +474,6 @@ SGS_category = {
 		}
 		timeout_effect = {
 			clr_country_flag = sgs_deci_doing
-			
 		}
 		fire_only_once = no
 		days_mission_timeout = var:ROOT.sgs_doing_days
@@ -517,4 +512,161 @@ SGS_category = {
 			add_stability = 0.1
 		}
 	}
+}
+
+SGS_IN_category = {
+
+	SGS_surpress_mission = {
+		allowed = { tag = SGS
+		}                 # This mission is only allowed for Poland. Other countries will not be able to see it or activate it.
+		available = {                           # Available here means as much as goal because:
+			has_completed_focus = SGS_surpress_bad_BaF_focus                    # we can only finish this mission if we control state 64 (Berlin)
+		}
+		activation = {                          # The mission appears and starts counting down under these circumstances:
+			# War with Germany
+		}
+		is_good = yes                           # This mission is color coded to be a positive thing (not a crisis)
+		selectable_mission = no                # This mission will complete when the player selects the mission rather than completing automatically
+		days_mission_timeout = 100              # How many days before the mission fails?
+		timeout_effect = {                      # What happens when we fail the mission?
+			add_political_power = -50
+			complete_national_focus  = SGS_surpress_bad_BaF_focus               # Lose 50 PP
+		}
+
+		complete_effect = {                    # What happens when we activate the mission i.e. mission success?
+			add_political_power = 10               # Gain 50 PP
+		}
+	}
+	SGS_NIT_observe_amry = {
+		visible = {
+
+		}
+		available = {
+
+			# has_idea = TEG_jianshaozhengbing_idea
+		}
+		modifier = {
+			political_power_gain = -0.15
+		}
+		cost = 0
+		days_remove = 35
+		# days_re_enable = 365
+		fire_only_once = no
+		complete_effect = {
+
+		}
+		remove_effect = {
+			add_timed_idea = {
+				idea = SGS_NIT_learnt_org
+				days = 1095
+			}
+		}
+	}
+	SGS_WHM_send_machine_small = {
+		visible = {
+
+		}
+		available = {
+
+			# has_idea = TEG_jianshaozhengbing_idea
+		}
+		modifier = {
+			civilian_factory_use = 2
+		}
+		cost = 0
+		days_remove = 25
+		# days_re_enable = 365
+		fire_only_once = no
+		complete_effect = {
+
+		}
+		remove_effect = {
+			var:SGS.sgs_industry_negotiation_target = {
+				add_ideas = {SGS_mic_spoil2_idea}
+			}
+
+		}
+	}
+
+	SGS_WHM_send_machine_big = {
+		visible = {
+
+		}
+		available = {
+
+			# has_idea = TEG_jianshaozhengbing_idea
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		cost = 0
+		days_remove = 35
+		# days_re_enable = 365
+		fire_only_once = no
+		complete_effect = {
+
+		}
+		remove_effect = {
+			var:SGS.sgs_industry_negotiation_target = {
+				add_ideas = {SGS_mic_spoil5_idea}
+			}
+
+		}
+	}
+
+	SGS_WHM_goto_terakoya_small = {
+		visible = {
+
+		}
+		available = {
+
+			# has_idea = TEG_jianshaozhengbing_idea
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		cost = 0
+		days_remove = 30
+		# days_re_enable = 365
+		fire_only_once = no
+		complete_effect = {
+
+		}
+		remove_effect = {
+			add_political_power = 150
+			add_popularity = {
+				ideology = qinwai
+				popularity = 0.03
+			}
+			add_ideas = { WHM_learn_history_in_terakoya}
+		}
+	}
+	SGS_WHM_goto_terakoya_big = {
+		visible = {
+
+		}
+		available = {
+
+			# has_idea = TEG_jianshaozhengbing_idea
+		}
+		modifier = {
+			political_power_gain = -0.15
+		}
+		cost = 0
+		days_remove = 40
+		# days_re_enable = 365
+		fire_only_once = no
+		complete_effect = {
+
+		}
+		remove_effect = {
+			add_political_power = 175
+			add_popularity = {
+				ideology = qinwai
+				popularity = 0.03
+			}
+			add_ideas = { WHM_learn_history_in_terakoya WHM_learn_math_in_terakoya}
+		}
+	}
+
 }

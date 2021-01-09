@@ -216,5 +216,40 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.1
 			}
 		}
+		SGS_battle_fairy_training_pattern_idea = {
+			picture = can_send_in_the_zombies
+			modifier = {
+				training_time_army_factor = -0.15 
+				minimum_training_level = 0.05
+				targeted_modifier = {
+					tag = SGS
+					attack_bonus_against = 0.2
+					defense_bonus_against = 0.2
+				}
+			}
+		}
+		SGS_industry_support_idea = {
+			picture = man_five_year_plan_industry
+			modifier = {
+				production_speed_buildings_factor = 0.1 
+				production_speed_infrastructure_factor = 0.15
+			}
+		}
+		SGS_industry_big_support_idea = {
+			picture = man_five_year_plan_industry
+			modifier = {
+				production_speed_buildings_factor = 0.1 
+				production_speed_infrastructure_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		SGS_NIT_learnt_org_idea = {
+			picture = can_send_in_the_zombies
+			modifier = {
+				army_org_factor = 0.1
+				army_org_regain = 0.15
+			}
+		}
 	}
 }

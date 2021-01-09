@@ -18,13 +18,29 @@ opinion_modifiers = {
 	SGS_fariy_friendship_op = {
 		value = 30
 	}
+	
 	SGS_show_peace_trade_op = {
 		trade = yes
 		value = 30
 	}
+	SGS_reduce_trade_limit_small_op = {
+		trade = yes
+		value = 50
+	}
+	SGS_reduce_trade_limit_big_op = {
+		trade = yes
+		value = 100
+	}
 	SGS_dislike_BaF_trade_op = {
 		trade = yes
 		value = -60
+	}
+	SGS_bad_trade_op = {
+		value = -10
+	}
+	SGS_bad_trade_trade_op = {
+		trade = yes
+		value = -10
 	}
 }	
 

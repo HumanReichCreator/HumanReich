@@ -1,0 +1,19 @@
+ideas = {
+	country = {
+		WHM_learn_history_in_terakoya = {
+			picture = jap_supremacy_of_will
+			modifier = {
+				political_power_gain = 0.05
+			}
+		}
+		WHM_learn_math_in_terakoya = {
+			picture = jap_supremacy_of_will
+			modifier = {
+				research_speed_factor = 0.05
+			}
+			research_bonus = {
+				math = 0.05
+			}
+		}
+	}
+}

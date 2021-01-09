@@ -51,3 +51,57 @@ defined_text = {
 		localization_key = sgs_uprise_None
 	}
 }
+
+defined_text = {
+	name = GetNegoAtti
+	text = {
+		trigger = {
+			check_variable = {
+				var = SGS.sgs_industry_negotiation_attitude
+				value = 9
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = sgs_industry_negotiation_happy
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				var = SGS.sgs_industry_negotiation_attitude
+				value = 7
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = sgs_industry_negotiation_light_happy
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				var = SGS.sgs_industry_negotiation_attitude
+				value = 4
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = sgs_industry_negotiation_normal
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				var = SGS.sgs_industry_negotiation_attitude
+				value = 2
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = sgs_industry_negotiation_light_angry
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				var = SGS.sgs_industry_negotiation_attitude
+				value = 2
+				compare = less_than
+			}
+		}
+		localization_key = sgs_industry_negotiation_angry
+	}
+}

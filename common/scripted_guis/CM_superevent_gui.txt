@@ -1,0 +1,30 @@
+
+scripted_gui = {
+    
+	CM_SE_main_container = {
+        window_name = CM_SE_main_container
+        context_type = player_context
+		
+		visible = {
+			has_global_flag = CM_SE_opened
+			#triggered by any effect entries u prefer
+		}
+		effects = {
+			CM_SE_exit_btn_click = { 
+				clr_global_flag = CM_SE_opened  
+				clear_array = CM_SE_event_id_array
+				#clean up everything
+			}
+		}
+		properties = {
+			CM_SE_picture_positioning_entry = {
+				image = "[CM_SE_getpicture]"
+				#defined in scripted locs
+			} 
+		}
+		
+	}
+	
+	
+	
+}
