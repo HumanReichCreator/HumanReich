@@ -3430,12 +3430,12 @@ country_event = {
 		add_tech_bonus = {
 			bonus = 0.4
 			uses = 2
-			category = science_weapons
+			category = infantry
 		}
 		add_tech_bonus = {
 			bonus = 0.2
 			uses = 1
-			category = science_weapons_improve
+			category = support_tech
 		}
 		ai_chance = {
 			base = 35
@@ -6040,12 +6040,15 @@ country_event = {
 			days = 5
 		}
 		var:SGS.sgs_industry_negotiation_target = {
-			id = sgs.2241
-			days = 5
+			country_event = {
+				id = sgs.2241
+				days = 5
+			}
+			
 		}
 		ai_chance = {
 			base = 20
-			has_completed_focus = SGS_trade_with_other_fairy_focus
+			
 		}
 	}
 	option = {
@@ -6065,8 +6068,10 @@ country_event = {
 			days = 5
 		}
 		var:SGS.sgs_industry_negotiation_target = {
-			id = sgs.2241
-			days = 5
+			country_event = {
+				id = sgs.2241
+				days = 5
+			}
 		}
 		ai_chance = {
 			base = 30
@@ -6089,13 +6094,16 @@ country_event = {
 			days = 5
 		}
 		var:SGS.sgs_industry_negotiation_target = {
-			id = sgs.2241
-			days = 5
+			country_event = {
+				id = sgs.2241
+				days = 5
+			}
 		}
 		ai_chance = {
 			base = 35
 			modifier = {
 				add = 25
+				has_completed_focus = SGS_trade_with_other_fairy_focus
 			}
 		}
 	}
@@ -6182,9 +6190,11 @@ country_event = {
 		}
 		custom_effect_tooltip = SGS_if_trade_ok
 		effect_tooltip = {
-			diplomatic_relation = {
-				country = var:SGS.sgs_industry_negotiation_target
-				relation = non_aggression_pact
+			var:SGS.sgs_industry_negotiation_target = {
+				diplomatic_relation = {
+					country = SGS
+					relation = non_aggression_pact
+				}
 			}
 		}
 		set_country_flag = SGS_IN_promise_to_peace
@@ -6214,9 +6224,11 @@ country_event = {
 		}
 		custom_effect_tooltip = SGS_if_trade_ok
 		effect_tooltip = {
-			diplomatic_relation = {
-				country = var:SGS.sgs_industry_negotiation_target
-				relation = non_aggression_pact
+			var:SGS.sgs_industry_negotiation_target = {
+				diplomatic_relation = {
+					country = SGS
+					relation = non_aggression_pact
+				}
 			}
 		}
 		custom_effect_tooltip = SGS_IN_promise_to_suppress_tooltip
@@ -7234,7 +7246,7 @@ country_event = {
 			}
 			set_country_flag = SGS_IN_give_nitori_guns
 			effect_tooltip = {
-				sgs_industry_negotiation_target = {
+				var:sgs_industry_negotiation_target = {
 					hidden_effect = {
 						add_equipment_to_stockpile = {
 							type = gun_a
@@ -7312,7 +7324,7 @@ country_event = {
 			}
 			set_country_flag = SGS_IN_give_nitori_guns_and_tech
 			effect_tooltip = {
-				sgs_industry_negotiation_target = {
+				var:sgs_industry_negotiation_target = {
 					hidden_effect = {
 						add_equipment_to_stockpile = {
 							type = gun_a
@@ -7641,9 +7653,11 @@ country_event = {
 		trigger = {
 			has_country_flag = SGS_IN_promise_to_peace
 		}
-		diplomatic_relation = {
-			country = var:SGS.sgs_industry_negotiation_target
-			relation = non_aggression_pact
+		var:SGS.sgs_industry_negotiation_target = {
+			diplomatic_relation = {
+				country = SGS
+				relation = non_aggression_pact
+			}
 		}
 		ai_chance = {
 			base = 35
@@ -7656,9 +7670,11 @@ country_event = {
 			has_country_flag = SGS_IN_promise_to_suppress
 			not = { has_completed_focus = SGS_surpress_bad_BaF_focus }
 		}
-		diplomatic_relation = {
-			country = var:SGS.sgs_industry_negotiation_target
-			relation = non_aggression_pact
+		var:SGS.sgs_industry_negotiation_target = {
+			diplomatic_relation = {
+				country = SGS
+				relation = non_aggression_pact
+			}
 		}
 		activate_mission = SGS_surpress_mission
 		ai_chance = {
@@ -7672,9 +7688,11 @@ country_event = {
 			has_country_flag = SGS_IN_promise_to_suppress
 			has_completed_focus = SGS_surpress_bad_BaF_focus
 		}
-		diplomatic_relation = {
-			country = var:SGS.sgs_industry_negotiation_target
-			relation = non_aggression_pact
+		var:SGS.sgs_industry_negotiation_target = {
+			diplomatic_relation = {
+				country = SGS
+				relation = non_aggression_pact
+			}
 		}
 
 		ai_chance = {
@@ -8532,7 +8550,7 @@ country_event = {
 		trigger = {
 			has_country_flag = SGS_IN_give_nitori_guns
 		}
-		sgs_industry_negotiation_target = {
+		var:sgs_industry_negotiation_target = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = gun_a
@@ -8555,7 +8573,7 @@ country_event = {
 		trigger = {
 			has_country_flag = SGS_IN_give_nitori_guns_and_tech
 		}
-		sgs_industry_negotiation_target = {
+		var:sgs_industry_negotiation_target = {
 			hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = gun_a

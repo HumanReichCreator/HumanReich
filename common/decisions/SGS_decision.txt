@@ -524,6 +524,7 @@ SGS_IN_category = {
 		}
 		activation = {                          # The mission appears and starts counting down under these circumstances:
 			# War with Germany
+			always = no
 		}
 		is_good = yes                           # This mission is color coded to be a positive thing (not a crisis)
 		selectable_mission = no                # This mission will complete when the player selects the mission rather than completing automatically
@@ -539,7 +540,7 @@ SGS_IN_category = {
 	}
 	SGS_NIT_observe_amry = {
 		visible = {
-
+			always = no
 		}
 		available = {
 
@@ -557,14 +558,14 @@ SGS_IN_category = {
 		}
 		remove_effect = {
 			add_timed_idea = {
-				idea = SGS_NIT_learnt_org
+				idea = SGS_NIT_learnt_org_idea
 				days = 1095
 			}
 		}
 	}
 	SGS_WHM_send_machine_small = {
 		visible = {
-
+			always = no
 		}
 		available = {
 
@@ -590,7 +591,7 @@ SGS_IN_category = {
 
 	SGS_WHM_send_machine_big = {
 		visible = {
-
+			always = no
 		}
 		available = {
 
@@ -616,7 +617,7 @@ SGS_IN_category = {
 
 	SGS_WHM_goto_terakoya_small = {
 		visible = {
-
+			always = no
 		}
 		available = {
 
@@ -643,7 +644,7 @@ SGS_IN_category = {
 	}
 	SGS_WHM_goto_terakoya_big = {
 		visible = {
-
+			always = no
 		}
 		available = {
 
