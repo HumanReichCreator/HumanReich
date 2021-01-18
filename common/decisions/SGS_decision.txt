@@ -107,11 +107,13 @@ SGS_category = {
 			# has_idea = TEG_jianshaozhengbing_idea
 		}
 		modifier = {}
-		cost = 75
+		cost = 750
 		days_remove = 23
 		days_re_enable = 40
 		fire_only_once = no
 		complete_effect = {
+			set_country_flag = SGS_civil_war_start
+			mark_focus_tree_layout_dirty = yes
 			clr_country_flag = sgs_events_interrupted
 			set_country_flag = sgs_selected_battle_fairy_deci
 			custom_effect_tooltip = down_sgs_uprise_middle

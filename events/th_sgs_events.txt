@@ -6487,7 +6487,7 @@ country_event = {
 			}
 			else = {
 				country_event = {
-					id = sgs.226
+					id = sgs.228
 					days = 3
 				}
 			}
@@ -6948,7 +6948,7 @@ country_event = {
 			}
 			else = {
 				country_event = {
-					id = sgs.230
+					id = sgs.232
 					days = 3
 				}
 			}
@@ -7417,7 +7417,9 @@ country_event = {
 			}
 			set_country_flag = SGS_IN_with_red_country
 		}
+
 		hidden_effect = {
+			complete_national_focus = SGS_trade_about_industry_focus
 			if = {#关于履行不侵略
 				limit = {
 					or = {

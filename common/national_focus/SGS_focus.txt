@@ -8,6 +8,8 @@ focus_tree = {
 		}
 	}
 	default = no
+	shared_focus = SGS_civil_war_breakup_focus
+	
 	focus = {
 		id = SGS_battle_fariy_issue_focus
 		icon = GFX_focus_CZE_german_puppet
@@ -557,6 +559,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			custom_effect_tooltip = SGS_nego_tooltip  
 			country_event = {
 				id = sgs.222
 			}
@@ -648,9 +651,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			country_event = {
-				id = sgs.233
-			}
+			custom_effect_tooltip = SGS_nego_tooltip
+			add_political_power = 30
 			add_to_variable = {
 				sgs_star_infl = 3
 			}

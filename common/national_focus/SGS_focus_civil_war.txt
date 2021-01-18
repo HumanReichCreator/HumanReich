@@ -1,0 +1,107 @@
+shared_focus = {
+	id = SGS_civil_war_breakup_focus
+	icon = GFX_focus_BUL_supremacy_on_the_bosporus
+	cost = 0.00
+	allow_branch = { has_country_flag = SGS_civil_war_start }
+	#allow_branch = { has_political_power = 1000 }
+	x = 27
+	y = 0
+
+}
+
+shared_focus = {
+	id = SGS_fix_bunker_focus
+	icon = GFX_goal_generic_fortify_city
+	cost = 3.00
+
+	prerequisite = {
+		focus = SGS_civil_war_breakup_focus
+	}
+	x = 25
+	y = 1
+
+}
+shared_focus = {
+	id = SGS_mobilize_civilian_focus
+	icon = GFX_focus_generic_little_entente
+	cost = 3.00
+	prerequisite = {
+		focus = SGS_civil_war_breakup_focus
+	}
+	x = 27
+	y = 1
+
+}
+shared_focus = {
+	id = SGS_contol_supply_focus
+	icon = GFX_goal_generic_construct_infrastructure
+	cost = 3.00
+	prerequisite = {
+		focus = SGS_civil_war_breakup_focus
+	}
+	x = 29
+	y = 1
+
+}
+shared_focus = {
+	id = SGS_win_BaF_over_focus
+	icon = GFX_goal_generic_propaganda
+	cost = 3.00
+	prerequisite = {
+		focus = SGS_fix_bunker_focus
+	}
+	prerequisite = {
+		focus = SGS_mobilize_civilian_focus
+	}
+	prerequisite = {
+		focus = SGS_contol_supply_focus
+	}
+	mutually_exclusive = {
+		focus = SGS_arrest_BaF_focus
+	}
+	x = 26
+	y = 2
+
+}
+shared_focus = {
+	id = SGS_infiltrate_enemy_focus
+	icon = GFX_focus_prc_infiltration
+	cost = 3.00
+	prerequisite = {
+		focus = SGS_win_BaF_over_focus
+	}
+	x = 26
+	y = 3
+
+}
+shared_focus = {
+	id = SGS_arrest_BaF_focus
+	icon = GFX_focus_mex_arrest_general_cedillo
+	cost = 3.00
+	prerequisite = {
+		focus = SGS_fix_bunker_focus
+	}
+	prerequisite = {
+		focus = SGS_mobilize_civilian_focus
+	}
+	prerequisite = {
+		focus = SGS_contol_supply_focus
+	}
+	mutually_exclusive = {
+		focus = SGS_win_BaF_over_focus
+	}
+	x = 28
+	y = 2
+
+}
+shared_focus = {
+	id = SGS_build_militia_focus
+	icon = GFX_focus_yug_pan_slavic_congress
+	cost = 3.00
+	prerequisite = {
+		focus = SGS_arrest_BaF_focus
+	}
+	x = 28
+	y = 3
+
+}
