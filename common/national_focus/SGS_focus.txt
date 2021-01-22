@@ -19,6 +19,9 @@ focus_tree = {
 		y = 0
 		available = {
 			has_global_flag = main_scenario
+			not = {
+				has_country_flag = SGS_civil_war_start
+			}
 		}
 		bypass = {
 		}
@@ -50,6 +53,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = SGS_battle_fariy_issue_focus
 		available = {
+			not = {
+				has_country_flag = SGS_civil_war_start
+			}
 		}
 		bypass = {
 		}
@@ -96,6 +102,11 @@ focus_tree = {
 		id = SGS_develop_cic_focus
 		icon = GFX_goal_generic_construct_civ_factory
 		cost = 5
+		available = {
+			not = {
+				has_country_flag = SGS_civil_war_start
+			}
+		}
 		prerequisite = {
 			focus = SGS_develop_our_country_focus
 		}
@@ -152,6 +163,11 @@ focus_tree = {
 		id = SGS_develop_infra_focus
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 5
+		available = {
+			not = {
+				has_country_flag = SGS_civil_war_start
+			}
+		}
 		prerequisite = {
 			focus = SGS_develop_cic_focus
 		}
@@ -188,6 +204,11 @@ focus_tree = {
 		id = SGS_develop_building_focus
 		icon = GFX_goal_generic_construction
 		cost = 5
+		available = {
+			not = {
+				has_country_flag = SGS_civil_war_start
+			}
+		}
 		prerequisite = {
 			focus = SGS_develop_infra_focus
 		}
@@ -222,6 +243,11 @@ focus_tree = {
 		id = SGS_develop_resources_focus
 		icon = GFX_goal_generic_construct_civilian
 		cost = 5
+		available = {
+			not = {
+				has_country_flag = SGS_civil_war_start
+			}
+		}
 		prerequisite = {
 			focus = SGS_develop_infra_focus
 		}
@@ -268,6 +294,11 @@ focus_tree = {
 		id = SGS_pacify_battle_fariy_focus
 		icon = GFX_focus_generic_self_management
 		cost = 12
+		available = {
+			not = {
+				has_country_flag = SGS_civil_war_start
+			}
+		}
 		prerequisite = {
 			focus = SGS_battle_fariy_issue_focus
 		}
@@ -278,6 +309,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = SGS_battle_fariy_issue_focus
 		available = {
+			not = {
+				has_country_flag = SGS_civil_war_start
+			}
 		}
 		bypass = {
 		}
@@ -314,6 +348,11 @@ focus_tree = {
 		id = SGS_try_new_ways_focus
 		icon = GFX_goal_unknown
 		cost = 5
+		available = {
+			not = {
+				has_country_flag = SGS_civil_war_start
+			}
+		}
 		prerequisite = {
 			focus = SGS_battle_fariy_issue_focus
 		}
@@ -342,6 +381,11 @@ focus_tree = {
 		id = SGS_fairy_withou_battle_focus
 		icon = GFX_goal_generic_alliance
 		cost = 5
+		available = {
+			not = {
+				has_country_flag = SGS_civil_war_start
+			}
+		}
 		prerequisite = {
 			focus = SGS_try_new_ways_focus
 		}
@@ -377,6 +421,11 @@ focus_tree = {
 		id = SGS_strong_fariy_be_youkai_focus
 		icon = GFX_goal_generic_secret_weapon
 		cost = 5
+		available = {
+			not = {
+				has_country_flag = SGS_civil_war_start
+			}
+		}
 		prerequisite = {
 			focus = SGS_try_new_ways_focus
 		}
@@ -413,6 +462,11 @@ focus_tree = {
 		id = SGS_develop_mic_focus
 		icon = GFX_goal_generic_construct_mil_factory
 		cost = 5
+		available = {
+			not = {
+				has_country_flag = SGS_civil_war_start
+			}
+		}
 		prerequisite = {
 			focus = SGS_develop_our_country_focus
 			focus = SGS_pacify_battle_fariy_focus
@@ -467,6 +521,11 @@ focus_tree = {
 		id = SGS_develop_tech_focus
 		icon = GFX_focus_research
 		cost = 5
+		available = {
+			not = {
+				has_country_flag = SGS_civil_war_start
+			}
+		}
 		prerequisite = {
 			focus = SGS_knowlege_from_BaF_focus
 		}
@@ -495,6 +554,11 @@ focus_tree = {
 		id = SGS_communicate_with_others_focus
 		icon = GFX_goal_generic_improve_relations
 		cost = 5
+		available = {
+			not = {
+				has_country_flag = SGS_civil_war_start
+			}
+		}
 		prerequisite = {
 			focus = SGS_fairy_withou_battle_focus
 		}
@@ -544,6 +608,11 @@ focus_tree = {
 		id = SGS_trade_with_other_fairy_focus
 		icon = GFX_goal_generic_positive_trade_relations
 		cost = 5
+		available = {
+			not = {
+				has_country_flag = SGS_civil_war_start
+			}
+		}
 		prerequisite = {
 			focus = SGS_communicate_with_others_focus
 		}
@@ -574,6 +643,11 @@ focus_tree = {
 		id = SGS_fairy_shrine_focus
 		icon = GFX_focus_jap_spiritual_mobilization
 		cost = 5
+		available = {
+			not = {
+				has_country_flag = SGS_civil_war_start
+			}
+		}
 		cancelable = no
 		prerequisite = {
 			focus = SGS_pacify_battle_fariy_focus
@@ -600,6 +674,11 @@ focus_tree = {
 		id = SGS_knowlege_from_BaF_focus
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		cost = 5
+		available = {
+			not = {
+				has_country_flag = SGS_civil_war_start
+			}
+		}
 		prerequisite = {
 			focus = SGS_develop_cic_focus
 			focus = SGS_develop_mic_focus
@@ -631,8 +710,10 @@ focus_tree = {
 		available = {
 			not = {
 				has_country_flag = SGS_IN_failed
+				has_country_flag = SGS_civil_war_start
 			}
 		}
+		
 		prerequisite = {
 			focus = SGS_communicate_with_others_focus
 		}
@@ -666,6 +747,11 @@ focus_tree = {
 		id = SGS_raise_potential_focus
 		icon = GFX_goal_generic_wolf_pack
 		cost = 5
+		available = {
+			not = {
+				has_country_flag = SGS_civil_war_start
+			}
+		}
 		prerequisite = {
 			focus = SGS_strong_fariy_be_youkai_focus
 		}
@@ -690,6 +776,11 @@ focus_tree = {
 		id = SGS_surpress_bad_BaF_focus
 		icon = GFX_focus_spr_crush_the_revolution
 		cost = 5
+		available = {
+			not = {
+				has_country_flag = SGS_civil_war_start
+			}
+		}
 		prerequisite = {
 			focus = SGS_fairy_withou_battle_focus
 		}
@@ -718,6 +809,11 @@ focus_tree = {
 		id = SGS_analysis_spirit_focus
 		icon = GFX_focus_generic_steel
 		cost = 5
+		available = {
+			not = {
+				has_country_flag = SGS_civil_war_start
+			}
+		}
 		prerequisite = {
 			focus = SGS_raise_potential_focus
 		}
@@ -753,6 +849,11 @@ focus_tree = {
 		id = SGS_war_school_focus
 		icon = GFX_focus_usa_guarantee_the_american_dream
 		cost = 5
+		available = {
+			not = {
+				has_country_flag = SGS_civil_war_start
+			}
+		}
 		prerequisite = {
 			focus = SGS_pacify_battle_fariy_focus
 		}
@@ -783,6 +884,11 @@ focus_tree = {
 		id = SGS_drill_in_the_mountain_focus
 		icon = GFX_focus_chi_army_reform
 		cost = 5
+		available = {
+			not = {
+				has_country_flag = SGS_civil_war_start
+			}
+		}
 		prerequisite = {
 			focus = SGS_learning_weapon_blueprint_focus
 		}
@@ -813,6 +919,11 @@ focus_tree = {
 		id = SGS_be_stronger_focus
 		icon = GFX_focus_hol_united_netherlands
 		cost = 5
+		available = {
+			not = {
+				has_country_flag = SGS_civil_war_start
+			}
+		}
 		prerequisite = {
 			focus = SGS_strong_fariy_be_youkai_focus
 		}
@@ -835,6 +946,11 @@ focus_tree = {
 		id = SGS_learning_weapon_blueprint_focus
 		icon = GFX_goal_generic_small_arms
 		cost = 5
+		available = {
+			not = {
+				has_country_flag = SGS_civil_war_start
+			}
+		}
 		prerequisite = {
 			focus = SGS_war_school_focus
 		}
@@ -862,6 +978,11 @@ focus_tree = {
 		id = SGS_BaF_play_with_fairy_focus
 		icon = GFX_focus_AST_squander_bug
 		cost = 5
+		available = {
+			not = {
+				has_country_flag = SGS_civil_war_start
+			}
+		}
 		prerequisite = {
 			focus = SGS_fairy_shrine_focus
 		}

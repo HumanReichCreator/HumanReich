@@ -12,22 +12,11 @@ defined_text = {
 		
 	text = {
 		trigger = {
-			is_in_array = {
-    			array = CM_SE_event_id_array
-   				value = 1
-			}
+			check_variable = { global.CM_SE_event_id = 1}
 		}
 		localization_key = CM_SE_desc_1
 	}
-	text = {
-		trigger = {
-			is_in_array = {
-    			array = CM_SE_event_id_array
-   				value = 2
-			}
-		}
-		localization_key = CM_SE_desc_2
-	}
+	
 	
 	text = {
 		trigger = { 

@@ -251,5 +251,21 @@ ideas = {
 				army_org_regain = 0.15
 			}
 		}
+		BAF_ingore_product_idea = {
+			picture = can_send_in_the_zombies
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.7
+				industrial_capacity_factory = -0.7
+
+			}
+		}
+		BAF_strong_army_idea = {
+			picture = can_send_in_the_zombies
+			modifier = {
+				army_attack_factor = 0.5
+				army_speed_factor = 0.2 
+				army_org_factor = 0.06
+			}
+		}
 	}
 }

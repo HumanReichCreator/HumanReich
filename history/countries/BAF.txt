@@ -1,0 +1,70 @@
+﻿capital = 117
+138.8.13 = {
+    set_technology = {
+    spell_card1 = 1
+    spear1 = 1
+
+    jichushuxue = 1
+    shuxuegongju = 1
+
+    production_theory = 1
+
+    }
+}
+146.1.1 = {
+    set_technology = {
+        #通用武器线
+            
+        #辅助
+
+        #专用辅助
+
+        #专用基础
+
+        #专用进阶
+
+        #混合系
+
+        #陆军学说
+            
+        #工程学 
+
+        #专用工程学
+
+        #工业
+            
+        #专用工业
+
+        #种族
+            
+    }
+    
+}
+138.8.13 = {
+    oob = "SC1_138"
+	# # set_research_slots = 1
+	set_politics = {
+    	ruling_party = neworder
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 0
+        guli = 0
+        neworder = 100
+        oldorder = 0
+        fandong = 0
+    }
+    
+    add_ideas={
+    Tribal
+	Pri_youkai
+    open5
+    hawk5
+    normal_border
+    sc_rule
+     
+    }	
+
+
+}

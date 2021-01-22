@@ -12,8 +12,8 @@ country_event = { #debuging,remove this later
 	option = { #test1
 		name = DBG.1.a
 		set_global_flag = CM_SE_opened
-		clear_array = CM_SE_event_id_array
-		add_to_array = { CM_SE_event_id_array = 1 }
+		clear_array = global.CM_SE_event_id_array
+		add_to_array = { global.CM_SE_event_id_array = 1 }
 		play_song = showa_restoration
 		set_politics = {
 			ruling_party = neutrality
@@ -23,19 +23,19 @@ country_event = { #debuging,remove this later
 	option = { #test2
 		name = DBG.1.b
 		set_global_flag = CM_SE_opened
-		clear_array = CM_SE_event_id_array
-		add_to_array = { CM_SE_event_id_array = 2 }
+		clear_array = global.CM_SE_event_id_array
+		add_to_array = { global.CM_SE_event_id_array = 2 }
 	}
 	
 	option = { #clear everything
 		name = DBG.1.c
 		clr_global_flag = CM_SE_opened
-		clear_array = CM_SE_event_id_array
+		clear_array = global.CM_SE_event_id_array
 	}
 	option = { #test missing entry
 		name = DBG.1.d
 		set_global_flag = CM_SE_opened
-		clear_array = CM_SE_event_id_array
+		clear_array = global.CM_SE_event_id_array
 		
 	}
 	
