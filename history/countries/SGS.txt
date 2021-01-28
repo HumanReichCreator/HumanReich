@@ -37,7 +37,7 @@
     }
 }
 146.1.1={
-    add_manpower = 300
+    add_manpower = 3000
     oob = "SGS_146"
     # set_research_slots = 3
     #declare_war_on = { target = MAM type = annex_everything}
@@ -68,7 +68,8 @@
     set_variable = {sgs_sunny_infl= 20}
     set_variable = {sgs_star_infl= 5}
     set_variable = {sgs_luna_infl= 5}
-    
+    set_stability = 0.3
+
     set_politics = {
     	ruling_party = neworder
     	election_frequency = 48

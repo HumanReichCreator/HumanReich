@@ -2,6 +2,62 @@
 SGS_effect_civil_war_begin = {
     custom_effect_tooltip = SGS_civil_war_begin_ins
     hidden_effect = {
-        
+
     }
+}
+SGS_hawk_reduce5 = {
+    custom_effect_tooltip = SGS_hawk_reduce5_tooltip
+    add_to_variable = { sgs_hawk_infl = -5}
+    set_temp_variable = { temp1 = 100 }
+    subtract_from_temp_variable = { temp1 = sgs_hawk_infl }
+    set_variable = { sgs_dove_infl = temp1 }
+}
+SGS_hawk_rise5 = {
+    custom_effect_tooltip = SGS_hawk_rise5_tooltip
+    add_to_variable = { sgs_hawk_infl = 5}
+    set_temp_variable = { temp1 = 100 }
+    subtract_from_temp_variable = { temp1 = sgs_hawk_infl }
+    set_variable = { sgs_dove_infl = temp1 }
+}
+SGS_hawk_rise10 = {
+    custom_effect_tooltip = SGS_hawk_rise10_tooltip
+    add_to_variable = { sgs_hawk_infl = 10}
+    set_temp_variable = { temp1 = 100 }
+    subtract_from_temp_variable = { temp1 = sgs_hawk_infl }
+    set_variable = { sgs_dove_infl = temp1 }
+}
+SGS_hawk_rise20 = {
+    custom_effect_tooltip = SGS_hawk_rise20_tooltip
+    add_to_variable = { sgs_hawk_infl = 20}
+    set_temp_variable = { temp1 = 100 }
+    subtract_from_temp_variable = { temp1 = sgs_hawk_infl }
+    set_variable = { sgs_dove_infl = temp1 }
+}
+SGS_dove_reduce5 = {
+    custom_effect_tooltip = SGS_dove_reduce5_tooltip
+    add_to_variable = { sgs_dove_infl = -5}
+    set_temp_variable = { temp1 = 100 }
+    subtract_from_temp_variable = { temp1 = sgs_dove_infl }
+    set_variable = { sgs_hawk_infl = temp1 }
+}
+SGS_dove_rise5 = {
+    custom_effect_tooltip = SGS_dove_rise5_tooltip
+    add_to_variable = { sgs_dove_infl = 5}
+    set_temp_variable = { temp1 = 100 }
+    subtract_from_temp_variable = { temp1 = sgs_dove_infl }
+    set_variable = { sgs_hawk_infl = temp1 }
+}
+SGS_dove_rise10 = {
+    custom_effect_tooltip = SGS_dove_rise10_tooltip
+    add_to_variable = { sgs_dove_infl = 10}
+    set_temp_variable = { temp1 = 100 }
+    subtract_from_temp_variable = { temp1 = sgs_dove_infl }
+    set_variable = { sgs_hawk_infl = temp1 }
+}
+SGS_dove_rise20 = {
+    custom_effect_tooltip = SGS_dove_rise20_tooltip
+    add_to_variable = { sgs_dove_infl = 20}
+    set_temp_variable = { temp1 = 100 }
+    subtract_from_temp_variable = { temp1 = sgs_dove_infl }
+    set_variable = { sgs_hawk_infl = temp1 }
 }

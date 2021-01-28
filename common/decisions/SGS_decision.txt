@@ -27,6 +27,34 @@ SGS_category = {
 		}
 		remove_effect = {}
 	}
+	SGS_test_deci = {
+		visible = {
+			tag = sgs
+		}
+		available = {
+			has_completed_focus = SGS_fix_bunker_focus
+			has_completed_focus = SGS_battle_fariy_issue_focus
+		}
+		modifier = {
+			industrial_capacity_factory = -0.3
+			weekly_manpower = 10
+		}
+		cost = 100
+		days_remove = 182
+		# days_re_enable = 365
+		fire_only_once = no
+		complete_effect = {
+			multiply_variable = {
+				sgs_uprise = 10
+			}
+			clamp_variable = {
+				var = sgs_uprise
+				min = 1
+				max = 150
+			}
+		}
+		remove_effect = {}
+	}
 	SGS_dannmakugokko_deci = {
 		visible = {
 			tag = sgs
@@ -520,6 +548,7 @@ SGS_category = {
 			
 		}
 		activation = {
+			tag = sgs
 			not = {
 				has_country_flag = SGS_civil_war_start
 			}
@@ -528,11 +557,11 @@ SGS_category = {
 		selectable_mission = no
 		days_mission_timeout = 300
 		timeout_effect = {
-			#country_event = {
-			#	id = sgs.xxx #顺利过渡
-			#	days = 1
-			#	random = 1
-			#}
+			country_event = {
+				id = sgs.9 #顺利过渡
+				days = 1
+				random = 1
+			}
 		}
 		complete_effect = {
 			

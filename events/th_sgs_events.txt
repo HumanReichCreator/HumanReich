@@ -1,37 +1,74 @@
 add_namespace = sgs
 country_event = {
-	#骚乱
+	#军营冲突
 	id = sgs.1
 	title = sgs.1.t
 	desc = sgs.1.d
 	fire_only_once = no
 	is_triggered_only = no
 	immediate = {
+		
+	}
+	mean_time_to_happen = {
+		days = 60
+		modifier = {
+			add = -30
+			date < 146.6.1
+		}
+		modifier = {
+			factor = 0.4
+			check_variable = {
+				sgs_uprise < 40
+			}
+		}
+		modifier = {
+			factor = 0.8
+			has_stability > -0.2
+		}
+	}
+	trigger = {
+		#date > 146.6.1
+		tag = SGS
+		#has_stability < 0.2
+		#has_war_support > 0.5
+		not = { 
+			has_country_flag = SGS_civil_war_start 
+			has_war = yes
+		}
+	}
+	option = {
+		#不管
+		name = sgs.1.1
+		custom_effect_tooltip = up_sgs_uprise
 		add_to_variable = {
-			sgs_uprise = 10
+			sgs_uprise = 5
 		}
 		clamp_variable = {
 			var = sgs_uprise
 			min = 1
 			max = 150
 		}
-	}
-	mean_time_to_happen = {
-		days = 30
-	}
-	trigger = {
-		date > 146.6.1
-		tag = SGS
-		has_stability < 0.2
-		has_war_support > 0.5
-	}
-	option = {
-		#革命
-		name = sgs.1.1
-		add_stability = 0.02
-		add_political_power = -20
+		add_political_power = 30
 		ai_chance = {
 			base = 35
+		}
+	}
+	option = {
+		#发点武器
+		name = sgs.1.2
+		add_equipment_to_stockpile = {
+			type = magic_core_a
+			amount = -60
+		}
+		
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				has_equipment = {
+					magic_core_a < 59
+				}
+			}
 		}
 	}
 }
@@ -77,6 +114,9 @@ country_event = {
 		tag = SGS
 		has_idea = SGS_battle_fairy_restlessness_idea
 		has_war = yes
+		not = { 
+			has_country_flag = SGS_civil_war_start 
+		}
 	}
 	option = {
 		#革命
@@ -107,6 +147,9 @@ country_event = {
 		tag = SGS
 		has_idea = SGS_battle_fairy_restlessness_at_war_idea
 		has_war = no
+		not = { 
+			has_country_flag = SGS_civil_war_start 
+		}
 	}
 	option = {
 		#革命
@@ -314,10 +357,12 @@ country_event = {
 			clr_country_flag = sgs_selected_battle_fairy_deci
 			clr_country_flag = sgs_dannmakugokko_unhappy
 			set_country_flag = sgs_events_interrupted
+			set_variable = {sgs_hawk_infl = 50}
+			set_variable = {sgs_dove_infl = 50}
 			BAF = {
 				add_timed_idea = { idea = panluantouxiang_idea days = 360 }
-				add_ideas = {BAF_strong_army  BAF_ingore_product_idea}
-				set_technology = { BAF_bunker_attck_tech = 1}
+				add_ideas = {BAF_strong_army_idea  BAF_ingore_product_idea}
+				set_technology = { BAF_bunker_attck_tech = 1 }
 				transfer_state = 116
 				transfer_state = 117
 				transfer_state = 131
@@ -445,6 +490,762 @@ country_event = {
 		}
 		ai_chance = {
 			base = 35
+		}
+	}
+}
+
+country_event = {
+	#平定叛乱
+	id = sgs.8
+	title = sgs.8.t
+	desc = sgs.8.d
+	fire_only_once = yes
+	is_triggered_only = no
+	immediate = {
+
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	trigger = {
+		has_country_flag = SGS_civil_war_start
+		tag = SGS
+		BAF = {
+			exists = no
+		}
+	}
+	option = {
+		#革命
+		name = sgs.8.1
+		load_focus_tree = { tree = SGS_focus_post_cw keep_completed = yes }
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#和平过渡
+	id = sgs.9
+	title = sgs.9.t
+	desc = sgs.9.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+
+	}
+	
+	option = {
+		#革命
+		name = sgs.9.1
+		load_focus_tree = { tree = SGS_focus_post_cw keep_completed = yes }
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+
+country_event = {
+	#军情误报
+	id = sgs.10
+	title = sgs.10.t
+	desc = sgs.10.d
+	fire_only_once = yes
+	is_triggered_only = no
+	immediate = {
+
+	}
+	mean_time_to_happen = {
+		days = 45
+		modifier = {
+			add = -25
+			has_stability > 0.05
+		}
+	}
+	trigger = {
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_war = yes
+		}
+		tag = SGS
+		
+	}
+	option = {
+		#不管
+		name = sgs.10.1
+		add_stability = -0.15
+		add_political_power = 50
+		ai_chance = {
+			base = 30
+		}
+	}
+	option = {
+		#演练
+		name = sgs.10.2
+		add_war_support = 0.2
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#军工冲突
+	id = sgs.11
+	title = sgs.11.t
+	desc = sgs.11.d
+	fire_only_once = yes
+	is_triggered_only = no
+	immediate = {
+		set_country_flag = sgs_fairy_dont_like_BaF
+	}
+	mean_time_to_happen = {
+		days = 75
+		modifier = {
+			add = -25
+			neworder > 0.75
+		}
+	}
+	trigger = {
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_war = yes
+		}
+		tag = SGS
+		
+	}
+	option = {
+		#不管
+		name = sgs.11.1
+		add_political_power = 75
+		random_owned_state = {
+			damage_building = {
+				type = arms_factory
+				damage = 1
+			}
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+	option = {
+		#调解
+		name = sgs.11.2
+		custom_effect_tooltip = up_sgs_uprise
+		add_to_variable = {
+			sgs_uprise = 7
+		}
+		clamp_variable = {
+			var = sgs_uprise
+			min = 1
+			max = 150
+		}
+		add_popularity = {
+			ideology = neworder
+			popularity = -0.05
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+
+country_event = {
+	#开战派煽动
+	id = sgs.12
+	title = sgs.12.t
+	desc = sgs.12.d
+	fire_only_once = yes
+	is_triggered_only = no
+	immediate = {
+
+	}
+	mean_time_to_happen = {
+		days = 50
+		modifier = {
+			add = -10
+			check_variable = {
+				sgs_uprise < 20
+			}
+		}
+		modifier = {
+			factor = 0.6
+			has_war_support > 0.7
+		}
+	}
+	trigger = {
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_country_flag = SGS_war_won
+			has_war = yes
+		}
+		tag = SGS
+		has_war_support > 0.5
+		check_variable = {
+			sgs_uprise < 35
+		}
+	}
+	option = {
+		#不管
+		name = sgs.12.1
+		custom_effect_tooltip = up_sgs_uprise
+		add_to_variable = {
+			sgs_uprise = 10
+		}
+		multiply_variable = {
+			sgs_uprise = 2
+		}
+		clamp_variable = {
+			var = sgs_uprise
+			min = 1
+			max = 150
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+	
+}
+
+country_event = {
+	#城市集会
+	id = sgs.13
+	title = sgs.13.t
+	desc = sgs.13.d
+	fire_only_once = yes
+	is_triggered_only = no
+	immediate = {
+		add_to_variable = {
+			sgs_uprise = 5
+		}
+		clamp_variable = {
+			var = sgs_uprise
+			min = 1
+			max = 150
+		}
+	}
+	mean_time_to_happen = {
+		days = 45
+		modifier = {
+			add = -15
+			check_variable = { sgs_uprise < 100 }
+		}
+		modifier = {
+			factor = 0.8
+			has_stability > -0.2
+		}
+	}
+	trigger = {
+		date > 146.6.1
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_war = yes
+			has_country_flag = SGS_war_won
+		}
+		tag = SGS
+		
+	}
+	option = {
+		#不管
+		name = sgs.13.1
+		custom_effect_tooltip = up_sgs_uprise
+		add_stability = 0.15
+		add_to_variable = {
+			sgs_uprise = 5
+		}
+		clamp_variable = {
+			var = sgs_uprise
+			min = 1
+			max = 150
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+	option = {
+		#维持秩序
+		name = sgs.13.2
+		add_political_power = -30
+		custom_effect_tooltip = down_sgs_uprise_little
+		subtract_from_variable = {
+			sgs_uprise = 5
+		}
+		clamp_variable = {
+			var = sgs_uprise
+			min = 1
+			max = 150
+		}
+		ai_chance = {
+			base = 35
+			modifier = {
+				factor = 0
+				has_political_power < 30
+			}
+		}
+	}
+}
+
+
+country_event = {
+	#骚乱破坏
+	id = sgs.14
+	title = sgs.14.t
+	desc = sgs.14.d
+	fire_only_once = yes
+	is_triggered_only = no
+	immediate = {
+		add_to_variable = {
+			sgs_uprise = 5
+		}
+		clamp_variable = {
+			var = sgs_uprise
+			min = 1
+			max = 150
+		}
+	}
+	mean_time_to_happen = {
+		days = 50
+		modifier = {
+			add = -25
+			has_stability < -0.2
+		}
+		modifier = {
+			add = 25
+			has_country_flag = SGS_war_won
+		}
+		
+	}
+	trigger = {
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_war = yes
+		}
+		tag = SGS
+		
+	}
+	option = {
+		#不管
+		name = sgs.14.1
+		add_political_power = 50
+		random_owned_state = {
+			damage_building = {
+				type = infrastructure
+				damage = 1
+			}
+		}
+		random_list = {
+			20 = {
+				random_owned_state = {
+					damage_building = {
+						type = arms_factory
+						damage = 2
+					}
+				}
+			}
+			20 = {
+				random_owned_state = {
+					damage_building = {
+						type = industrial_complex
+						damage = 2
+					}
+				}
+			}
+			40 = {
+				random_owned_state = {
+					damage_building = {
+						type = arms_factory
+						damage = 1
+					}
+					damage_building = {
+						type = industrial_complex
+						damage = 1
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+	option = {
+		#维稳
+		name = sgs.14.2
+		add_political_power = -30
+		random_owned_state = {
+			damage_building = {
+				type = infrastructure
+				damage = 1
+			}
+		}
+
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#出重拳
+		name = sgs.14.3
+		trigger = {
+			has_political_power > 60
+		}
+		add_political_power = -55
+		add_manpower = -50
+		custom_effect_tooltip = down_sgs_uprise_middle
+		subtract_from_variable = {
+			sgs_uprise = 8
+		}
+		clamp_variable = {
+			var = sgs_uprise
+			min = 1
+			max = 150
+		}
+		add_popularity = {
+			ideology = neworder
+			popularity = -0.03
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+country_event = {
+	#BAF赢了
+	id = sgs.15
+	title = sgs.15.t
+	desc = sgs.15.d
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		tag = BAF
+		SGS = {
+			exists = no
+		}
+	}
+	immediate = {
+
+	}
+	
+	option = {
+		#
+		name = sgs.15.1
+		remove_ideas = BAF_ingore_product_idea
+		declare_war_on = {
+			target = WHM
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = NTR
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = KAP
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = SCA
+			type = annex_everything
+		}
+		news_event = {id = sgs.16}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#BAF赢了-新闻
+	id = sgs.16
+	title = sgs.16.t
+	desc = sgs.16.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+
+	}
+	
+	option = {
+		#
+		name = sgs.16.1
+		
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#TNO故事-战场妖精老兵
+	id = sgs.20
+	title = sgs.20.t
+	desc = sgs.20.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+	mean_time_to_happen = {
+		days = 30	
+
+	}
+	trigger = {
+		not = {
+			has_country_flag = SGS_civil_war_start
+		}
+		tag = SGS	
+	}
+	option = {
+		#
+		name = sgs.20.1
+		hidden_effect = {
+			add_stability = -0.03
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+country_event = {
+	#TNO故事-战场妖精温和派
+	id = sgs.21
+	title = sgs.21.t
+	desc = sgs.21.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+	mean_time_to_happen = {
+		days = 75
+		modifier = {
+			add = -50
+			date > 146.6.1
+		}
+	}
+	trigger = {
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_war = yes
+		}
+		tag = SGS	
+	}
+	option = {
+		#
+		name = sgs.21.1
+		hidden_effect = {
+			add_popularity = {
+				ideology = neworder
+				popularity = -0.03
+			}
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+country_event = {
+	#TNO故事-战场妖精激进派
+	id = sgs.22
+	title = sgs.22.t
+	desc = sgs.22.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+	mean_time_to_happen = {
+		days = 30
+		modifier = {
+			add = 30
+			date < 146.6.1
+		}
+	}
+	trigger = {
+		not = {
+			has_country_flag = SGS_civil_war_start
+		}
+		tag = SGS	
+	}
+	option = {
+		#
+		name = sgs.22.1
+		hidden_effect = {
+			add_popularity = {
+				ideology = neworder
+				popularity = 0.05
+			}
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+country_event = {
+	#TNO故事-桑尼的故事
+	id = sgs.23
+	title = sgs.23.t
+	desc = sgs.23.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+	mean_time_to_happen = {
+		days = 40
+
+	}
+	trigger = {
+
+		not = {
+			has_country_flag = SGS_civil_war_start
+		}
+		tag = SGS	
+	}
+	option = {
+		#
+		name = sgs.23.1
+		hidden_effect = {
+			add_to_variable = {
+				sgs_sunny_infl = 3
+			}
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+country_event = {
+	#TNO故事-斯塔的故事
+	id = sgs.24
+	title = sgs.24.t
+	desc = sgs.24.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+	mean_time_to_happen = {
+		days = 40
+
+	}
+	trigger = {
+		date > 146.3.1
+		not = {
+			has_country_flag = SGS_civil_war_start
+		}
+		tag = SGS	
+	}
+	option = {
+		#
+		name = sgs.24.1
+		hidden_effect = {
+			add_to_variable = {
+				sgs_star_infl = 3
+			}
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+country_event = {
+	#TNO故事-露娜的故事
+	id = sgs.25
+	title = sgs.25.t
+	desc = sgs.25.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+	mean_time_to_happen = {
+		days = 40
+
+	}
+	trigger = {
+		date > 146.6.1
+		not = {
+			has_country_flag = SGS_civil_war_start
+		}
+		tag = SGS	
+	}
+	option = {
+		#
+		name = sgs.25.1
+		hidden_effect = {
+			add_to_variable = {
+				sgs_luna_infl = 3
+			}
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+country_event = {
+	#TNO故事-工人的故事
+	id = sgs.26
+	title = sgs.26.t
+	desc = sgs.26.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+	mean_time_to_happen = {
+		days = 80
+
+	}
+	trigger = {
+		date > 146.3.1
+		not = {
+			has_country_flag = SGS_civil_war_start
+		}
+		tag = SGS	
+	}
+	option = {
+		#
+		name = sgs.26.1
+		hidden_effect = {
+			add_popularity = {
+				ideology = guli
+				popularity = 0.03
+			}
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+country_event = {
+	#TNO故事-市民的故事
+	id = sgs.27
+	title = sgs.27.t
+	desc = sgs.27.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+	mean_time_to_happen = {
+		days = 40
+
+	}
+	trigger = {
+		date > 146.6.1
+		not = {
+			has_country_flag = SGS_civil_war_start
+		}
+		tag = SGS	
+	}
+	option = {
+		#
+		name = sgs.27.1
+		hidden_effect = {
+			add_popularity = {
+				ideology = guli
+				popularity = 0.03
+			}
+		}
+		ai_chance = {
+			base = 30
 		}
 	}
 }
@@ -2931,6 +3732,12 @@ country_event = {
 	}
 	mean_time_to_happen = {
 		days = 17
+		modifier = {
+			add = -10
+			check_variable = {
+				sgs_num_picking < 2
+			}
+		}
 	}
 	immediate = {
 	}
@@ -2987,6 +3794,12 @@ country_event = {
 	}
 	mean_time_to_happen = {
 		days = 17
+		modifier = {
+			add = -9
+			check_variable = {
+				sgs_num_picking < 2
+			}
+		}
 	}
 	immediate = {
 	}
@@ -3035,6 +3848,7 @@ country_event = {
 	trigger = {
 		not = {
 			has_country_flag = sgs_events_interrupted
+			has_country_flag = sgs_lend_manpower
 		}
 		has_decision = SGS_picking_up_deci
 		check_variable = {
@@ -3043,6 +3857,12 @@ country_event = {
 	}
 	mean_time_to_happen = {
 		days = 17
+		modifier = {
+			add = -11
+			check_variable = {
+				sgs_num_picking < 2
+			}
+		}
 	}
 	immediate = {
 	}

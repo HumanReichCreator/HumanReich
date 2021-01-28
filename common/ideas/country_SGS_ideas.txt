@@ -245,14 +245,14 @@ ideas = {
 			}
 		}
 		SGS_NIT_learnt_org_idea = {
-			picture = can_send_in_the_zombies
+			picture = usa_desegregation_1
 			modifier = {
 				army_org_factor = 0.1
 				army_org_regain = 0.15
 			}
 		}
 		BAF_ingore_product_idea = {
-			picture = can_send_in_the_zombies
+			picture = tur_etatism
 			modifier = {
 				production_factory_efficiency_gain_factor = -0.7
 				industrial_capacity_factory = -0.7
@@ -265,6 +265,19 @@ ideas = {
 				army_attack_factor = 0.5
 				army_speed_factor = 0.2 
 				army_org_factor = 0.06
+			}
+		}
+		BAF_supply_cut_idea = {
+			picture = generic_army_problems
+			modifier = {
+				supply_consumption_factor = 2.0
+			}
+		}
+		SGS_for_unite_idea = {
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.2
 			}
 		}
 	}

@@ -3,9 +3,17 @@ shared_focus = {
 	icon = GFX_focus_BUL_supremacy_on_the_bosporus
 	cost = 0.00
 	allow_branch = { has_country_flag = SGS_civil_war_start }
+	bypass = {
+		has_country_flag = SGS_civil_war_start
+	}
 	#allow_branch = { has_political_power = 1000 }
 	x = 27
 	y = 0
+	completion_reward = {
+		add_political_power = 30
+		#出个事件介绍一下情况
+		
+	}
 
 }
 
@@ -19,6 +27,10 @@ shared_focus = {
 	}
 	x = 25
 	y = 1
+	completion_reward = {
+		set_technology = { SGS_bunker_defence_tech = 1}
+		add_political_power = 10
+	}
 
 }
 shared_focus = {
@@ -30,8 +42,17 @@ shared_focus = {
 	}
 	x = 27
 	y = 1
-
+	completion_reward = {
+		add_manpower = 1500
+		#到时看看切法案怎么搞
+		#swap_ideas = {
+		#	remove_idea = my_idea_1
+		#	add_idea = type1_manpowerlv4
+		#}
+		add_ideas = { type1_manpowerlv4 }	
+	}
 }
+
 shared_focus = {
 	id = SGS_contol_supply_focus
 	icon = GFX_goal_generic_construct_infrastructure
@@ -41,8 +62,27 @@ shared_focus = {
 	}
 	x = 29
 	y = 1
+	completion_reward = {
+		BAF = {
+			add_ideas = { BAF_supply_cut_idea }
+			random_owned_state = {
+				damage_building = {
+					type = infrastructure
+					damage = 2
+				}
+			}
+			random_owned_state = {
+				damage_building = {
+					type = infrastructure
+					damage = 3
+				}
+			}
+		}
+		add_command_power = 20
 
+	}
 }
+
 shared_focus = {
 	id = SGS_win_BaF_over_focus
 	icon = GFX_goal_generic_propaganda
@@ -59,6 +99,17 @@ shared_focus = {
 	mutually_exclusive = {
 		focus = SGS_arrest_BaF_focus
 	}
+	completion_reward = {
+		SGS_hawk_rise10 = yes
+		add_war_support = 0.1
+		army_experience = 30
+		add_popularity = {
+			ideology = neworder
+			popularity = 0.05
+		}
+		add_to_variable = { sgs_sunny_infl = 5 }
+	}
+	
 	x = 26
 	y = 2
 
@@ -72,7 +123,9 @@ shared_focus = {
 	}
 	x = 26
 	y = 3
-
+	completion_reward = {
+		load_oob = SGS_infiltrate
+	}
 }
 shared_focus = {
 	id = SGS_arrest_BaF_focus
@@ -92,6 +145,16 @@ shared_focus = {
 	}
 	x = 28
 	y = 2
+	completion_reward = {
+		SGS_dove_rise10 = yes
+		add_stability = 0.1
+		add_political_power = 30
+		add_popularity = {
+			ideology = guli
+			popularity = 0.05
+		}
+		add_to_variable = { sgs_star_infl = 5 }
+	}
 
 }
 shared_focus = {
@@ -103,5 +166,24 @@ shared_focus = {
 	}
 	x = 28
 	y = 3
-
+	completion_reward = {
+		load_oob = SGS_militia
+	}
+}
+shared_focus = {
+	id = SGS_for_the_unity_focus
+	icon = GFX_focus_generic_support_the_left_right
+	cost = 3.00
+	prerequisite = {
+		focus = SGS_infiltrate_enemy_focus
+		focus = SGS_build_militia_focus
+	}
+	x = 27
+	y = 4
+	completion_reward = {
+		add_timed_idea = {
+			idea = SGS_for_unite_idea
+			days = 100
+		}
+	}
 }

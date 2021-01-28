@@ -1,0 +1,723 @@
+focus_tree = {
+	id = SGS_focus_post_cw
+	country = {
+		factor = 0
+		modifier = {
+			add = 15
+			tag = SGS
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 200 y = 0 }
+	shared_focus = SGS_civil_war_breakup_focus
+	focus = {
+		id = SGS_peaceful_transit_focus
+		icon = GFX_focus_generic_self_management
+		cost = 0.00
+		mutually_exclusive = {
+			focus = SGS_civil_war_end_focus
+		}
+		x = 3
+		y = 6
+
+	}
+	focus = {
+		id = SGS_civil_war_end_focus
+		icon = GFX_focus_rom_preserve_romania
+		cost = 0.00
+		mutually_exclusive = {
+			focus = SGS_peaceful_transit_focus
+		}
+		x = 13
+		y = 6
+
+	}
+	
+	
+	focus = {
+		id = SGS_solidify_army_first_focus
+		icon = GFX_focus_generic_military_mission
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_peaceful_transit_focus
+		}
+		x = 4
+		y = 7
+
+	}
+	focus = {
+		id = SGS_postwar_confer_focus
+		icon = GFX_focus_BUL_form_a_regency_council
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_civil_war_end_focus
+		}
+		x = 13
+		y = 7
+
+	}
+	focus = {
+		id = SGS_sunny_win_focus
+		icon = GFX_goal_support_fascism
+		cost = 0.00
+		prerequisite = {
+			focus = SGS_postwar_confer_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_luna_win_focus
+			focus = SGS_star_win_focus
+		}
+		x = 6
+		y = 8
+
+	}
+	focus = {
+		id = SGS_equip_issue_focus
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_solidify_army_first_focus
+			focus = SGS_sunny_win_focus
+		}
+		x = 4
+		y = 9
+
+	}
+	focus = {
+		id = SGS_find_suuport_equip_focus
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_equip_issue_focus
+		}
+		x = 3
+		y = 10
+
+	}
+	focus = {
+		id = SGS_focus_artillery_focus
+		icon = GFX_goal_generic_army_artillery2
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_equip_issue_focus
+		}
+		x = 5
+		y = 10
+
+	}
+	focus = {
+		id = SGS_stonger_brains_focus
+		icon = GFX_focus_generic_socialist_science
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_sunny_win_focus
+		}
+		x = 8
+		y = 9
+
+	}
+	focus = {
+		id = SGS_expand_military_school_focus
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_stonger_brains_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_organzie_civilian_focus
+		}
+		x = 7
+		y = 10
+
+	}
+	focus = {
+		id = SGS_organzie_civilian_focus
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_stonger_brains_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_expand_military_school_focus
+		}
+		x = 9
+		y = 10
+
+	}
+	focus = {
+		id = SGS_mili_admin_focus
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_expand_military_school_focus
+			focus = SGS_organzie_civilian_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_Baf_worker
+		}
+		x = 7
+		y = 11
+
+	}
+	focus = {
+		id = SGS_Baf_worker
+		icon = GFX_focus_generic_industry_3
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_organzie_civilian_focus
+			focus = SGS_expand_military_school_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_mili_admin_focus
+		}
+		x = 9
+		y = 11
+
+	}
+	focus = {
+		id = SGS_easy_product_focus
+		icon = GFX_focus_focus_fra_maquis
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_focus_artillery_focus
+		}
+		prerequisite = {
+			focus = SGS_find_suuport_equip_focus
+		}
+		x = 4
+		y = 11
+
+	}
+	focus = {
+		id = SGS_build_Baf_civlian_mix_army_focus
+		icon = GFX_focus_generic_little_entente
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_Baf_worker
+			focus = SGS_mili_admin_focus
+		}
+		prerequisite = {
+			focus = SGS_easy_product_focus
+		}
+		x = 8
+		y = 12
+
+	}
+	focus = {
+		id = SGS_body_stronger_focus
+		icon = GFX_goal_demand_sudetenland
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_sunny_win_focus
+		}
+		x = 10
+		y = 9
+
+	}
+	
+	focus = {
+		id = SGS_luna_win_focus
+		icon = GFX_focus_yug_zmaj
+		cost = 0.00
+		prerequisite = {
+			focus = SGS_postwar_confer_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_sunny_win_focus
+			focus = SGS_star_win_focus
+		}
+		x = 13
+		y = 8
+
+	}
+	focus = {
+		id = SGS_feel_sprit_and_body_focus
+		icon = GFX_goal_generic_wolf_pack
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_luna_win_focus
+		}
+		x = 13
+		y = 9
+
+	}
+	focus = {
+		id = SGS_all_people_training_focus
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_body_stronger_focus
+			focus = SGS_feel_sprit_and_body_focus
+		}
+		x = 11
+		y = 10
+
+	}
+	focus = {
+		id = SGS_absorb_energy_from_gas_focus
+		icon = GFX_focus_generic_steel
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_feel_sprit_and_body_focus
+		}
+		x = 13
+		y = 10
+
+	}
+	focus = {
+		id = SGS_facing_mountain_focus
+		icon = GFX_focus_GRE_a_land_of_mountains
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_all_people_training_focus
+		}
+		x = 11
+		y = 11
+
+	}
+	focus = {
+		id = SGS_catch_youkai_focus
+		icon = GFX_focus_BUL_the_fate_of_the_balkans
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_absorb_energy_from_gas_focus
+		}
+		prerequisite = {
+			focus = SGS_facing_mountain_focus
+		}
+		x = 13
+		y = 12
+
+	}
+	focus = {
+		id = SGS_the_best_fairy_army_focus
+		icon = GFX_goal_tfv_can_forced_quebec_conscription
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_build_Baf_civlian_mix_army_focus
+		}
+		prerequisite = {
+			focus = SGS_facing_mountain_focus
+		}
+		x = 9
+		y = 13
+
+	}
+	focus = {
+		id = SGS_find_youkai_friend_focus
+		icon = GFX_focus_eng_imperial_federation
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_luna_win_focus
+		}
+		x = 16
+		y = 9
+
+	}
+	focus = {
+		id = SGS_contact_to_OTG_focus
+		icon = GFX_goal_generic_major_alliance
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_find_youkai_friend_focus
+		}
+		x = 15
+		y = 10
+
+	}
+	focus = {
+		id = SGS_research_result_in_SCA_focus
+		icon = GFX_focus_generic_socialist_science
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_find_youkai_friend_focus
+		}
+		x = 17
+		y = 10
+
+	}
+	focus = {
+		id = SGS_attack_human_to_fear_focus
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_contact_to_OTG_focus
+			focus = SGS_research_result_in_SCA_focus
+		}
+		x = 16
+		y = 11
+
+	}
+	focus = {
+		id = SGS_star_win_focus
+		icon = GFX_goal_generic_improve_relations
+		cost = 0.00
+		prerequisite = {
+			focus = SGS_postwar_confer_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_luna_win_focus
+			focus = SGS_sunny_win_focus
+		}
+		x = 21
+		y = 8
+
+	}
+	focus = {
+		id = SGS_final_solution_focus
+		icon = GFX_focus_spr_crush_the_revolution
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_luna_win_focus
+			focus = SGS_star_win_focus
+		}
+		x = 19
+		y = 9
+
+	}
+	focus = {
+		id = SGS_blame_neworder_focus
+		icon = GFX_focus_mex_triumph_over_the_cristeros
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_final_solution_focus
+		}
+		x = 19
+		y = 10
+
+	}
+	focus = {
+		id = SGS_save_BaF_heritage_focus
+		icon = GFX_focus_renounce_the_treaty_of_triannon
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_blame_neworder_focus
+		}
+		x = 19
+		y = 11
+
+	}
+	focus = {
+		id = SGS_find_strength_of_BaF_focus
+		icon = GFX_focus_generic_manpower
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_save_BaF_heritage_focus
+		}
+		x = 17
+		y = 12
+
+	}
+	focus = {
+		id = SGS_become_youkai_hypo_focus
+		icon = GFX_focus_generic_japanese_imperial_glory
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_catch_youkai_focus
+		}
+		prerequisite = {
+			focus = SGS_attack_human_to_fear_focus
+		}
+		prerequisite = {
+			focus = SGS_find_strength_of_BaF_focus
+		}
+		x = 15
+		y = 13
+
+	}
+	focus = {
+		id = SGS_destroy_the_bunker_focus
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_save_BaF_heritage_focus
+		}
+		x = 19
+		y = 12
+
+	}
+	focus = {
+		id = SGS_clean_BaF_focus
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_destroy_the_bunker_focus
+		}
+		x = 19
+		y = 13
+
+	}
+	focus = {
+		id = SGS_fairy_solidarity_focus
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_star_win_focus
+		}
+		x = 22
+		y = 9
+
+	}
+	focus = {
+		id = SGS_do_independ_focus
+		icon = GFX_focus_spr_war_of_independence
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_fairy_solidarity_focus
+		}
+		x = 22
+		y = 11
+
+	}
+	focus = {
+		id = SGS_build_people_army_focus
+		icon = GFX_focus_spr_no_pasaran
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_do_independ_focus
+		}
+		prerequisite = {
+			focus = SGS_save_BaF_heritage_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_build_strong_modern_army_focus
+		}
+		x = 21
+		y = 12
+
+	}
+	focus = {
+		id = SGS_build_strong_modern_army_focus
+		icon = GFX_focus_chi_army_reform
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_do_independ_focus
+		}
+		prerequisite = {
+			focus = SGS_save_BaF_heritage_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_build_people_army_focus
+		}
+		x = 23
+		y = 12
+
+	}
+	focus = {
+		id = SGS_industry_society_focus
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_build_strong_modern_army_focus
+		}
+		x = 23
+		y = 13
+
+	}
+	
+	focus = {
+		id = SGS_show_peace_again_focus
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_star_win_focus
+		}
+		x = 27
+		y = 9
+
+	}
+	focus = {
+		id = SGS_trade_fairy_again_focus
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_show_peace_again_focus
+		}
+		x = 26
+		y = 10
+
+	}
+	
+	focus = {
+		id = SGS_trade_industry_again_focus
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_show_peace_again_focus
+		}
+		x = 28
+		y = 10
+
+	}
+	focus = {
+		id = SGS_tech_modern_help_focus
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_trade_fairy_again_focus
+		}
+		prerequisite = {
+			focus = SGS_trade_industry_again_focus
+		}
+		x = 27
+		y = 11
+
+	}
+	focus = {
+		id = SGS_education_mordern_help_focus
+		icon = GFX_focus_generic_military_academy
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_tech_modern_help_focus
+		}
+		x = 28
+		y = 12
+
+	}
+	focus = {
+		id = SGS_politic_modern_help_focus
+		icon = GFX_focus_usa_recruit_the_free_corps
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_tech_modern_help_focus
+		}
+		x = 26
+		y = 12
+
+	}
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	focus = {
+		id = SGS_Baf_economy_focus
+		icon = GFX_focus_hol_abandon_the_gold_standard
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_solidify_army_first_focus
+		}
+		x = 2
+		y = 8
+
+	}
+	focus = {
+		id = SGS_control_supply_focus
+		icon = GFX_goal_generic_consumer_goods
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_Baf_economy_focus
+		}
+		x = 2
+		y = 9
+
+	}
+	focus = {
+		id = SGS_culture_reform_focus
+		icon = GFX_focus_generic_military_academy
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_peaceful_transit_focus
+		}
+		x = 0
+		y = 7
+
+	}
+	focus = {
+		id = SGS_itazura_ban_focus
+		icon = GFX_goal_continuous_restrict_freedom
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_culture_reform_focus
+		}
+		x = 0
+		y = 9
+
+	}
+	focus = {
+		id = SGS_elite_army_focus
+		icon = GFX_focus_generic_manpower
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_control_supply_focus
+		}
+		prerequisite = {
+			focus = SGS_itazura_ban_focus
+		}
+		x = 1
+		y = 11
+
+	}
+	focus = {
+		id = SGS_spoil_system_focus
+		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_easy_product_focus
+		}
+		prerequisite = {
+			focus = SGS_elite_army_focus
+		}
+		x = 2
+		y = 12
+
+	}
+	focus = {
+		id = SGS_show_power_to_world_focus
+		icon = GFX_focus_spa_strengthen_the_supreme_reality_of_spain
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_spoil_system_focus
+		}
+		x = 2
+		y = 13
+
+	}
+	focus = {
+		id = SGS_ecnomy_modern_help_focus
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 5.00
+		prerequisite = {
+			focus = SGS_politic_modern_help_focus
+		}
+		prerequisite = {
+			focus = SGS_education_mordern_help_focus
+		}
+		x = 27
+		y = 13
+
+	}
+	focus = {
+		id = SGS_socialism_society_focus
+		icon = GFX_focus_focus_fra_revolution_upmost
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_build_people_army_focus
+		}
+		x = 21
+		y = 13
+
+	}
+	focus = {
+		id = SGS_modern_fairy_focus
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_ecnomy_modern_help_focus
+			focus = SGS_industry_society_focus
+			focus = SGS_socialism_society_focus
+		}
+		x = 25
+		y = 14
+
+	}
+}
