@@ -2,14 +2,14 @@ focus_tree = {
 	id = SGS_focus_post_cw
 	country = {
 		factor = 0
-		modifier = {
-			add = 15
-			tag = SGS
-		}
+		#modifier = {
+		#	add = 15
+		#	tag = SGS
+		#}
 	}
 	default = no
-	continuous_focus_position = { x = 200 y = 0 }
-	shared_focus = SGS_civil_war_breakup_focus
+	continuous_focus_position = { x = 200 y = 1200 }
+	#shared_focus = SGS_civil_war_breakup_focus
 	focus = {
 		id = SGS_peaceful_transit_focus
 		icon = GFX_focus_generic_self_management
@@ -18,18 +18,21 @@ focus_tree = {
 			focus = SGS_civil_war_end_focus
 		}
 		x = 3
-		y = 6
+		y = 0
 
 	}
 	focus = {
 		id = SGS_civil_war_end_focus
 		icon = GFX_focus_rom_preserve_romania
 		cost = 0.00
+		bypass = {
+			has_country_flag = SGS_civil_war_finish
+		}
 		mutually_exclusive = {
 			focus = SGS_peaceful_transit_focus
 		}
 		x = 13
-		y = 6
+		y = 0
 
 	}
 	
@@ -41,8 +44,9 @@ focus_tree = {
 		prerequisite = {
 			focus = SGS_peaceful_transit_focus
 		}
+		
 		x = 4
-		y = 7
+		y = 1
 
 	}
 	focus = {
@@ -52,14 +56,31 @@ focus_tree = {
 		prerequisite = {
 			focus = SGS_civil_war_end_focus
 		}
+		cancelable = no
+		select_effect = {
+			country_event = {
+				id = sgs.300
+				days = 1
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SGS_confer_determine_way  
+			country_event = {
+				id = sgs.301
+			}
+			
+		}
 		x = 13
-		y = 7
+		y = 1
 
 	}
 	focus = {
 		id = SGS_sunny_win_focus
 		icon = GFX_goal_support_fascism
 		cost = 0.00
+		bypass = {
+			has_country_flag = SGS_postwar_confer_sunny_win
+		}
 		prerequisite = {
 			focus = SGS_postwar_confer_focus
 		}
@@ -68,7 +89,7 @@ focus_tree = {
 			focus = SGS_star_win_focus
 		}
 		x = 6
-		y = 8
+		y = 2
 
 	}
 	focus = {
@@ -80,7 +101,7 @@ focus_tree = {
 			focus = SGS_sunny_win_focus
 		}
 		x = 4
-		y = 9
+		y = 3
 
 	}
 	focus = {
@@ -91,7 +112,7 @@ focus_tree = {
 			focus = SGS_equip_issue_focus
 		}
 		x = 3
-		y = 10
+		y = 4
 
 	}
 	focus = {
@@ -102,7 +123,7 @@ focus_tree = {
 			focus = SGS_equip_issue_focus
 		}
 		x = 5
-		y = 10
+		y = 4
 
 	}
 	focus = {
@@ -113,7 +134,7 @@ focus_tree = {
 			focus = SGS_sunny_win_focus
 		}
 		x = 8
-		y = 9
+		y = 3
 
 	}
 	focus = {
@@ -127,7 +148,7 @@ focus_tree = {
 			focus = SGS_organzie_civilian_focus
 		}
 		x = 7
-		y = 10
+		y = 4
 
 	}
 	focus = {
@@ -141,7 +162,7 @@ focus_tree = {
 			focus = SGS_expand_military_school_focus
 		}
 		x = 9
-		y = 10
+		y = 4
 
 	}
 	focus = {
@@ -156,7 +177,7 @@ focus_tree = {
 			focus = SGS_Baf_worker
 		}
 		x = 7
-		y = 11
+		y = 5
 
 	}
 	focus = {
@@ -171,7 +192,7 @@ focus_tree = {
 			focus = SGS_mili_admin_focus
 		}
 		x = 9
-		y = 11
+		y = 5
 
 	}
 	focus = {
@@ -185,7 +206,7 @@ focus_tree = {
 			focus = SGS_find_suuport_equip_focus
 		}
 		x = 4
-		y = 11
+		y = 5
 
 	}
 	focus = {
@@ -200,7 +221,7 @@ focus_tree = {
 			focus = SGS_easy_product_focus
 		}
 		x = 8
-		y = 12
+		y = 6
 
 	}
 	focus = {
@@ -211,7 +232,7 @@ focus_tree = {
 			focus = SGS_sunny_win_focus
 		}
 		x = 10
-		y = 9
+		y = 3
 
 	}
 	
@@ -219,6 +240,9 @@ focus_tree = {
 		id = SGS_luna_win_focus
 		icon = GFX_focus_yug_zmaj
 		cost = 0.00
+		bypass = {
+			has_country_flag = SGS_postwar_confer_luna_win
+		}
 		prerequisite = {
 			focus = SGS_postwar_confer_focus
 		}
@@ -227,7 +251,7 @@ focus_tree = {
 			focus = SGS_star_win_focus
 		}
 		x = 13
-		y = 8
+		y = 2
 
 	}
 	focus = {
@@ -238,7 +262,7 @@ focus_tree = {
 			focus = SGS_luna_win_focus
 		}
 		x = 13
-		y = 9
+		y = 3
 
 	}
 	focus = {
@@ -250,7 +274,7 @@ focus_tree = {
 			focus = SGS_feel_sprit_and_body_focus
 		}
 		x = 11
-		y = 10
+		y = 4
 
 	}
 	focus = {
@@ -261,7 +285,7 @@ focus_tree = {
 			focus = SGS_feel_sprit_and_body_focus
 		}
 		x = 13
-		y = 10
+		y = 4
 
 	}
 	focus = {
@@ -272,7 +296,7 @@ focus_tree = {
 			focus = SGS_all_people_training_focus
 		}
 		x = 11
-		y = 11
+		y = 5
 
 	}
 	focus = {
@@ -286,7 +310,7 @@ focus_tree = {
 			focus = SGS_facing_mountain_focus
 		}
 		x = 13
-		y = 12
+		y = 6
 
 	}
 	focus = {
@@ -300,7 +324,7 @@ focus_tree = {
 			focus = SGS_facing_mountain_focus
 		}
 		x = 9
-		y = 13
+		y = 7
 
 	}
 	focus = {
@@ -311,7 +335,7 @@ focus_tree = {
 			focus = SGS_luna_win_focus
 		}
 		x = 16
-		y = 9
+		y = 3
 
 	}
 	focus = {
@@ -322,7 +346,7 @@ focus_tree = {
 			focus = SGS_find_youkai_friend_focus
 		}
 		x = 15
-		y = 10
+		y = 4
 
 	}
 	focus = {
@@ -333,7 +357,7 @@ focus_tree = {
 			focus = SGS_find_youkai_friend_focus
 		}
 		x = 17
-		y = 10
+		y = 4
 
 	}
 	focus = {
@@ -345,13 +369,16 @@ focus_tree = {
 			focus = SGS_research_result_in_SCA_focus
 		}
 		x = 16
-		y = 11
+		y = 5
 
 	}
 	focus = {
 		id = SGS_star_win_focus
 		icon = GFX_goal_generic_improve_relations
 		cost = 0.00
+		bypass = {
+			has_country_flag = SGS_postwar_confer_star_win
+		}
 		prerequisite = {
 			focus = SGS_postwar_confer_focus
 		}
@@ -360,7 +387,7 @@ focus_tree = {
 			focus = SGS_sunny_win_focus
 		}
 		x = 21
-		y = 8
+		y = 2
 
 	}
 	focus = {
@@ -372,7 +399,7 @@ focus_tree = {
 			focus = SGS_star_win_focus
 		}
 		x = 19
-		y = 9
+		y = 3
 
 	}
 	focus = {
@@ -383,7 +410,7 @@ focus_tree = {
 			focus = SGS_final_solution_focus
 		}
 		x = 19
-		y = 10
+		y = 4
 
 	}
 	focus = {
@@ -394,7 +421,7 @@ focus_tree = {
 			focus = SGS_blame_neworder_focus
 		}
 		x = 19
-		y = 11
+		y = 5
 
 	}
 	focus = {
@@ -405,7 +432,7 @@ focus_tree = {
 			focus = SGS_save_BaF_heritage_focus
 		}
 		x = 17
-		y = 12
+		y = 6
 
 	}
 	focus = {
@@ -422,7 +449,7 @@ focus_tree = {
 			focus = SGS_find_strength_of_BaF_focus
 		}
 		x = 15
-		y = 13
+		y = 7
 
 	}
 	focus = {
@@ -433,7 +460,7 @@ focus_tree = {
 			focus = SGS_save_BaF_heritage_focus
 		}
 		x = 19
-		y = 12
+		y = 6
 
 	}
 	focus = {
@@ -444,7 +471,7 @@ focus_tree = {
 			focus = SGS_destroy_the_bunker_focus
 		}
 		x = 19
-		y = 13
+		y = 7
 
 	}
 	focus = {
@@ -455,7 +482,7 @@ focus_tree = {
 			focus = SGS_star_win_focus
 		}
 		x = 22
-		y = 9
+		y = 3
 
 	}
 	focus = {
@@ -466,7 +493,7 @@ focus_tree = {
 			focus = SGS_fairy_solidarity_focus
 		}
 		x = 22
-		y = 11
+		y = 5
 
 	}
 	focus = {
@@ -483,7 +510,7 @@ focus_tree = {
 			focus = SGS_build_strong_modern_army_focus
 		}
 		x = 21
-		y = 12
+		y = 6
 
 	}
 	focus = {
@@ -500,7 +527,7 @@ focus_tree = {
 			focus = SGS_build_people_army_focus
 		}
 		x = 23
-		y = 12
+		y = 6
 
 	}
 	focus = {
@@ -511,7 +538,7 @@ focus_tree = {
 			focus = SGS_build_strong_modern_army_focus
 		}
 		x = 23
-		y = 13
+		y = 7
 
 	}
 	
@@ -523,7 +550,7 @@ focus_tree = {
 			focus = SGS_star_win_focus
 		}
 		x = 27
-		y = 9
+		y = 3
 
 	}
 	focus = {
@@ -534,7 +561,7 @@ focus_tree = {
 			focus = SGS_show_peace_again_focus
 		}
 		x = 26
-		y = 10
+		y = 4
 
 	}
 	
@@ -546,7 +573,7 @@ focus_tree = {
 			focus = SGS_show_peace_again_focus
 		}
 		x = 28
-		y = 10
+		y = 4
 
 	}
 	focus = {
@@ -560,7 +587,7 @@ focus_tree = {
 			focus = SGS_trade_industry_again_focus
 		}
 		x = 27
-		y = 11
+		y = 5
 
 	}
 	focus = {
@@ -571,7 +598,7 @@ focus_tree = {
 			focus = SGS_tech_modern_help_focus
 		}
 		x = 28
-		y = 12
+		y = 6
 
 	}
 	focus = {
@@ -582,7 +609,7 @@ focus_tree = {
 			focus = SGS_tech_modern_help_focus
 		}
 		x = 26
-		y = 12
+		y = 6
 
 	}
 	
@@ -607,18 +634,18 @@ focus_tree = {
 			focus = SGS_solidify_army_first_focus
 		}
 		x = 2
-		y = 8
+		y = 2
 
 	}
 	focus = {
-		id = SGS_control_supply_focus
+		id = SGS_control_civil_supply_focus
 		icon = GFX_goal_generic_consumer_goods
 		cost = 5.00
 		prerequisite = {
 			focus = SGS_Baf_economy_focus
 		}
 		x = 2
-		y = 9
+		y = 3
 
 	}
 	focus = {
@@ -629,7 +656,7 @@ focus_tree = {
 			focus = SGS_peaceful_transit_focus
 		}
 		x = 0
-		y = 7
+		y = 1
 
 	}
 	focus = {
@@ -640,7 +667,7 @@ focus_tree = {
 			focus = SGS_culture_reform_focus
 		}
 		x = 0
-		y = 9
+		y = 3
 
 	}
 	focus = {
@@ -648,13 +675,13 @@ focus_tree = {
 		icon = GFX_focus_generic_manpower
 		cost = 5.00
 		prerequisite = {
-			focus = SGS_control_supply_focus
+			focus = SGS_control_civil_supply_focus
 		}
 		prerequisite = {
 			focus = SGS_itazura_ban_focus
 		}
 		x = 1
-		y = 11
+		y = 5
 
 	}
 	focus = {
@@ -668,7 +695,7 @@ focus_tree = {
 			focus = SGS_elite_army_focus
 		}
 		x = 2
-		y = 12
+		y = 6
 
 	}
 	focus = {
@@ -679,7 +706,7 @@ focus_tree = {
 			focus = SGS_spoil_system_focus
 		}
 		x = 2
-		y = 13
+		y = 7
 
 	}
 	focus = {
@@ -693,7 +720,7 @@ focus_tree = {
 			focus = SGS_education_mordern_help_focus
 		}
 		x = 27
-		y = 13
+		y = 7
 
 	}
 	focus = {
@@ -704,7 +731,7 @@ focus_tree = {
 			focus = SGS_build_people_army_focus
 		}
 		x = 21
-		y = 13
+		y = 7
 
 	}
 	focus = {
@@ -712,12 +739,14 @@ focus_tree = {
 		icon = GFX_goal_support_democracy
 		cost = 10.00
 		prerequisite = {
-			focus = SGS_ecnomy_modern_help_focus
 			focus = SGS_industry_society_focus
 			focus = SGS_socialism_society_focus
 		}
+		prerequisite = {
+			focus = SGS_ecnomy_modern_help_focus
+		}
 		x = 25
-		y = 14
+		y = 8
 
 	}
 }

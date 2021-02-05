@@ -625,6 +625,7 @@ focus_tree = {
 		relative_position_id = SGS_communicate_with_others_focus
 		#友好倾向（以后可能还要看琪露诺走没走斗争）；加好感。军事经验换人力？buff？资源？
 		select_effect = {
+			set_country_flag = SGS_select_fairy_diplo
 			country_event = {
 				id = sgs.209
 				days = 1
@@ -659,6 +660,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SGS_pacify_battle_fariy_focus
 		select_effect = {
+			set_country_flag = SGS_select_fairy_shrine
 			country_event = {
 				id = sgs.202
 				days = 1
@@ -729,6 +731,7 @@ focus_tree = {
 		relative_position_id = SGS_communicate_with_others_focus
 		#资源换工业援助，也是分对象，可以试试做个讨价还价的机制
 		select_effect = {
+			set_country_flag = SGS_select_IN
 			country_event = {
 				id = sgs.224
 				days = 1
@@ -965,7 +968,7 @@ focus_tree = {
 		relative_position_id = SGS_pacify_battle_fariy_focus
 		completion_reward = {
 			set_technology = {
-				buqiang117 = 1
+				gun2 = 1
 			}
 			add_ideas = {
 				SGS_imitate_guns_idea

@@ -7,12 +7,12 @@ country_event = {
 	fire_only_once = no
 	is_triggered_only = no
 	immediate = {
-		
+
 	}
 	mean_time_to_happen = {
-		days = 60
+		days = 75
 		modifier = {
-			add = -30
+			add = -45
 			date < 146.6.1
 		}
 		modifier = {
@@ -31,8 +31,8 @@ country_event = {
 		tag = SGS
 		#has_stability < 0.2
 		#has_war_support > 0.5
-		not = { 
-			has_country_flag = SGS_civil_war_start 
+		not = {
+			has_country_flag = SGS_civil_war_start
 			has_war = yes
 		}
 	}
@@ -60,7 +60,7 @@ country_event = {
 			type = magic_core_a
 			amount = -60
 		}
-		
+
 		ai_chance = {
 			base = 20
 			modifier = {
@@ -114,8 +114,8 @@ country_event = {
 		tag = SGS
 		has_idea = SGS_battle_fairy_restlessness_idea
 		has_war = yes
-		not = { 
-			has_country_flag = SGS_civil_war_start 
+		not = {
+			has_country_flag = SGS_civil_war_start
 		}
 	}
 	option = {
@@ -147,8 +147,8 @@ country_event = {
 		tag = SGS
 		has_idea = SGS_battle_fairy_restlessness_at_war_idea
 		has_war = no
-		not = { 
-			has_country_flag = SGS_civil_war_start 
+		not = {
+			has_country_flag = SGS_civil_war_start
 		}
 	}
 	option = {
@@ -313,6 +313,11 @@ country_event = {
 	}
 	option = {
 		name = sgs.5.2 #直接内战
+		trigger = {
+			check_variable = {
+				sgs_uprise > 99
+			}
+		}
 		set_country_flag = SGS_civil_war_from_war_promise
 		country_event = {
 			id = sgs.6
@@ -326,7 +331,7 @@ country_event = {
 	id = sgs.6
 	title = sgs.6.t
 	desc = sgs.6.d
-	fire_only_once = no
+	fire_only_once = yes
 	is_triggered_only = yes
 	immediate = {
 	}
@@ -353,10 +358,13 @@ country_event = {
 			remove_decision = SGS_producing_war_deci
 			remove_decision = SGS_picking_up_deci
 			remove_decision = SGS_accept_now_deci
+			remove_decision = SGS_producing_war_deci
+			clear_variable = sgs_uprise
 			clr_country_flag = sgs_deci_doing
 			clr_country_flag = sgs_selected_battle_fairy_deci
 			clr_country_flag = sgs_dannmakugokko_unhappy
 			set_country_flag = sgs_events_interrupted
+
 			set_variable = {sgs_hawk_infl = 50}
 			set_variable = {sgs_dove_infl = 50}
 			BAF = {
@@ -384,8 +392,33 @@ country_event = {
 				add_core_of = BAF
 			}
 			set_country_flag = SGS_civil_war_start
-			clear_variable = sgs_uprise
 			mark_focus_tree_layout_dirty = yes
+			if = {
+				limit = {
+					or = {
+						and = {
+							has_country_flag = SGS_select_fairy_shrine
+							has_completed_focus = SGS_fairy_shrine_focus
+						}
+						and = {
+							has_country_flag = SGS_select_fairy_diplo
+							has_completed_focus = SGS_trade_with_other_fairy_focus
+						}
+						and = {
+							has_country_flag = SGS_select_IN
+							or = {
+								has_country_flag = SGS_IN_failed
+								has_completed_focus = SGS_trade_about_industry_focus
+							}
+						}
+						
+					}
+					
+				}
+				country_event = {
+					id = sgs.1051
+				}
+			}
 			news_event = {
 				id = sgs.106
 			}
@@ -395,8 +428,84 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	#中断国策
+	id = sgs.1051
+	title = sgs.1051.t
+	
+	desc = {
+		text = sgs.1051.d_fairy_shrine
+		trigger = {
+			has_country_flag = SGS_civil_war_from_danmakugokko
+		}
+	}
+	desc = {
+		text = sgs.1051.d_fairy_diplo
+		trigger = {
+			has_country_flag = SGS_civil_war_from_war_promise
+		}
+	}
+	desc = {
+		text = sgs.1051.d_IN
+		trigger = {
+			has_country_flag = SGS_civil_war_from_dispute
+		}
+	}
+	#picture = GFX_news_event_nuke
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+	}
+	option = {
+		name = sgs.1051.1.a
+		hidden_effect = {
+			remove_decision = debuff_use_one_CIC_No3
+			remove_decision = debuff_use_three_CIC_No1
+		}
 
+	}
 
+}
+country_event = {
+	#中断国策-和平
+	id = sgs.1052
+	title = sgs.1052.t
+	
+	desc = {
+		text = sgs.1052.d_fairy_shrine
+		trigger = {
+			has_country_flag = SGS_civil_war_from_danmakugokko
+		}
+	}
+	desc = {
+		text = sgs.1052.d_fairy_diplo
+		trigger = {
+			has_country_flag = SGS_civil_war_from_war_promise
+		}
+	}
+	desc = {
+		text = sgs.1052.d_IN
+		trigger = {
+			has_country_flag = SGS_civil_war_from_dispute
+		}
+	}
+	#picture = GFX_news_event_nuke
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+	}
+	option = {
+		name = sgs.1052.1.a
+		hidden_effect = {
+			remove_decision = debuff_use_one_CIC_No3
+			remove_decision = debuff_use_three_CIC_No1
+		}
+
+	}
+
+}
 
 news_event = {
 	#内战新闻
@@ -479,7 +588,7 @@ country_event = {
 			has_country_flag = SGS_civil_war_from_war_promise
 			has_country_flag = SGS_civil_war_from_dispute
 			has_country_flag = SGS_civil_war_start
-			
+
 		}
 	}
 	option = {
@@ -518,6 +627,8 @@ country_event = {
 		#革命
 		name = sgs.8.1
 		load_focus_tree = { tree = SGS_focus_post_cw keep_completed = yes }
+		add_ideas = { type1_manpowerlv2 }
+		set_country_flag = SGS_civil_war_finish
 		ai_chance = {
 			base = 35
 		}
@@ -531,12 +642,58 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 	immediate = {
+		hidden_effect = {
 
+			remove_ideas = SGS_battle_fairy_restlessness_idea
+			remove_decision = SGS_dannmakugokko_deci
+			remove_decision = SGS_itazura_deci
+			remove_decision = SGS_bettle_arena_deci
+			remove_decision = SGS_training_deci
+			remove_decision = SGS_show_power_deci
+			remove_decision = SGS_producing_war_deci
+			remove_decision = SGS_picking_up_deci
+			remove_decision = SGS_accept_now_deci
+			remove_mission = SGS_war_promise_deci
+			clr_country_flag = sgs_deci_doing
+			clr_country_flag = sgs_selected_battle_fairy_deci
+			clr_country_flag = sgs_dannmakugokko_unhappy
+			set_country_flag = sgs_events_interrupted
+
+			set_country_flag = sgs_peaceful_transit_flag
+			clear_variable = sgs_uprise
+
+		}
 	}
-	
+
 	option = {
 		#革命
 		name = sgs.9.1
+		if = {
+			limit = {
+				or = {
+					and = {
+						has_country_flag = SGS_select_fairy_shrine
+						has_completed_focus = SGS_fairy_shrine_focus
+					}
+					and = {
+						has_country_flag = SGS_select_fairy_diplo
+						has_completed_focus = SGS_trade_with_other_fairy_focus
+					}
+					and = {
+						has_country_flag = SGS_select_IN
+						or = {
+							has_country_flag = SGS_IN_failed
+							has_completed_focus = SGS_trade_about_industry_focus
+						}
+					}
+					
+				}
+				
+			}
+			country_event = {
+				id = sgs.1052
+			}
+		}
 		load_focus_tree = { tree = SGS_focus_post_cw keep_completed = yes }
 		ai_chance = {
 			base = 35
@@ -550,7 +707,7 @@ country_event = {
 	id = sgs.10
 	title = sgs.10.t
 	desc = sgs.10.d
-	fire_only_once = yes
+	fire_only_once = no
 	is_triggered_only = no
 	immediate = {
 
@@ -568,7 +725,7 @@ country_event = {
 			has_war = yes
 		}
 		tag = SGS
-		
+
 	}
 	option = {
 		#不管
@@ -594,7 +751,7 @@ country_event = {
 	id = sgs.11
 	title = sgs.11.t
 	desc = sgs.11.d
-	fire_only_once = yes
+	fire_only_once = no
 	is_triggered_only = no
 	immediate = {
 		set_country_flag = sgs_fairy_dont_like_BaF
@@ -612,7 +769,7 @@ country_event = {
 			has_war = yes
 		}
 		tag = SGS
-		
+
 	}
 	option = {
 		#不管
@@ -656,7 +813,7 @@ country_event = {
 	id = sgs.12
 	title = sgs.12.t
 	desc = sgs.12.d
-	fire_only_once = yes
+	fire_only_once = no
 	is_triggered_only = no
 	immediate = {
 
@@ -705,7 +862,7 @@ country_event = {
 			base = 30
 		}
 	}
-	
+
 }
 
 country_event = {
@@ -713,7 +870,7 @@ country_event = {
 	id = sgs.13
 	title = sgs.13.t
 	desc = sgs.13.d
-	fire_only_once = yes
+	fire_only_once = no
 	is_triggered_only = no
 	immediate = {
 		add_to_variable = {
@@ -744,7 +901,7 @@ country_event = {
 			has_country_flag = SGS_war_won
 		}
 		tag = SGS
-		
+
 	}
 	option = {
 		#不管
@@ -792,7 +949,7 @@ country_event = {
 	id = sgs.14
 	title = sgs.14.t
 	desc = sgs.14.d
-	fire_only_once = yes
+	fire_only_once = no
 	is_triggered_only = no
 	immediate = {
 		add_to_variable = {
@@ -814,7 +971,7 @@ country_event = {
 			add = 25
 			has_country_flag = SGS_war_won
 		}
-		
+
 	}
 	trigger = {
 		not = {
@@ -822,7 +979,7 @@ country_event = {
 			has_war = yes
 		}
 		tag = SGS
-		
+
 	}
 	option = {
 		#不管
@@ -924,9 +1081,9 @@ country_event = {
 		}
 	}
 	immediate = {
-
+		set_global_flag = Baf_win
 	}
-	
+
 	option = {
 		#
 		name = sgs.15.1
@@ -953,22 +1110,24 @@ country_event = {
 		}
 	}
 }
-country_event = {
+
+
+news_event = {
 	#BAF赢了-新闻
 	id = sgs.16
 	title = sgs.16.t
 	desc = sgs.16.d
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	immediate = {
 
 	}
-	
+
 	option = {
 		#
 		name = sgs.16.1
-		
+
 		ai_chance = {
 			base = 35
 		}
@@ -976,23 +1135,101 @@ country_event = {
 }
 
 country_event = {
+	#释放SGS
+	id = sgs.17
+	title = sgs.17.t
+	desc = sgs.17.d
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		or = {
+			BAF = {
+				exists = no
+			}
+			BAF = {
+				is_subject = yes
+			}
+		}
+		has_global_flag =  Baf_win
+		tag = xxx
+	}
+	immediate = {
+
+	}
+
+	option = {
+		#
+		name = sgs.17.1
+		every_state = {
+			limit = {
+				is_core_of = SGS
+			not = {
+				is_core_of = WHM
+				is_core_of = NTR
+				is_core_of = SCA
+				is_core_of = PRI
+			}
+			}
+			SGS = {
+				transfer_state = PREV
+			}
+		}
+		SGS = {
+			set_popularities = {
+				guli = 100
+			}
+			set_politics = {
+				ruling_party = guli
+			}
+			load_focus_tree = { tree = SGS_focus_post_cw keep_completed = yes }
+		}
+
+		news_event = {id = sgs.18}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+news_event = {
+	#释放SGS
+	id = sgs.18
+	title = sgs.18.t
+	desc = sgs.18.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		#
+		name = sgs.18.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
 	#TNO故事-战场妖精老兵
 	id = sgs.20
 	title = sgs.20.t
 	desc = sgs.20.d
 	fire_only_once = yes
-	is_triggered_only = yes
+	is_triggered_only = no
 	immediate = {
 	}
 	mean_time_to_happen = {
-		days = 30	
+		days = 30
 
 	}
 	trigger = {
 		not = {
 			has_country_flag = SGS_civil_war_start
 		}
-		tag = SGS	
+		tag = SGS
 	}
 	option = {
 		#
@@ -1012,7 +1249,7 @@ country_event = {
 	title = sgs.21.t
 	desc = sgs.21.d
 	fire_only_once = yes
-	is_triggered_only = yes
+	is_triggered_only = no
 	immediate = {
 	}
 	mean_time_to_happen = {
@@ -1027,7 +1264,7 @@ country_event = {
 			has_country_flag = SGS_civil_war_start
 			has_war = yes
 		}
-		tag = SGS	
+		tag = SGS
 	}
 	option = {
 		#
@@ -1050,7 +1287,7 @@ country_event = {
 	title = sgs.22.t
 	desc = sgs.22.d
 	fire_only_once = yes
-	is_triggered_only = yes
+	is_triggered_only = no
 	immediate = {
 	}
 	mean_time_to_happen = {
@@ -1064,7 +1301,7 @@ country_event = {
 		not = {
 			has_country_flag = SGS_civil_war_start
 		}
-		tag = SGS	
+		tag = SGS
 	}
 	option = {
 		#
@@ -1087,7 +1324,7 @@ country_event = {
 	title = sgs.23.t
 	desc = sgs.23.d
 	fire_only_once = yes
-	is_triggered_only = yes
+	is_triggered_only = no
 	immediate = {
 	}
 	mean_time_to_happen = {
@@ -1099,7 +1336,7 @@ country_event = {
 		not = {
 			has_country_flag = SGS_civil_war_start
 		}
-		tag = SGS	
+		tag = SGS
 	}
 	option = {
 		#
@@ -1120,7 +1357,7 @@ country_event = {
 	title = sgs.24.t
 	desc = sgs.24.d
 	fire_only_once = yes
-	is_triggered_only = yes
+	is_triggered_only = no
 	immediate = {
 	}
 	mean_time_to_happen = {
@@ -1132,7 +1369,7 @@ country_event = {
 		not = {
 			has_country_flag = SGS_civil_war_start
 		}
-		tag = SGS	
+		tag = SGS
 	}
 	option = {
 		#
@@ -1153,7 +1390,7 @@ country_event = {
 	title = sgs.25.t
 	desc = sgs.25.d
 	fire_only_once = yes
-	is_triggered_only = yes
+	is_triggered_only = no
 	immediate = {
 	}
 	mean_time_to_happen = {
@@ -1165,7 +1402,7 @@ country_event = {
 		not = {
 			has_country_flag = SGS_civil_war_start
 		}
-		tag = SGS	
+		tag = SGS
 	}
 	option = {
 		#
@@ -1186,7 +1423,7 @@ country_event = {
 	title = sgs.26.t
 	desc = sgs.26.d
 	fire_only_once = yes
-	is_triggered_only = yes
+	is_triggered_only = no
 	immediate = {
 	}
 	mean_time_to_happen = {
@@ -1198,7 +1435,7 @@ country_event = {
 		not = {
 			has_country_flag = SGS_civil_war_start
 		}
-		tag = SGS	
+		tag = SGS
 	}
 	option = {
 		#
@@ -1221,7 +1458,7 @@ country_event = {
 	title = sgs.27.t
 	desc = sgs.27.d
 	fire_only_once = yes
-	is_triggered_only = yes
+	is_triggered_only = no
 	immediate = {
 	}
 	mean_time_to_happen = {
@@ -1233,7 +1470,7 @@ country_event = {
 		not = {
 			has_country_flag = SGS_civil_war_start
 		}
-		tag = SGS	
+		tag = SGS
 	}
 	option = {
 		#
@@ -2674,7 +2911,7 @@ country_event = {
 				}
 				random_list = {
 					20 = {
-		
+
 					}
 					30 = {
 						country_event = {
@@ -2700,7 +2937,7 @@ country_event = {
 	fire_only_once = no
 	is_triggered_only = yes
 	trigger = {
-		
+
 	}
 	immediate = {
 	}
@@ -4493,6 +4730,11 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		tag = sgs
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_focus_tree = SGS_focus_post_cw
+		}
+
 	}
 	option = {
 		#首都
@@ -4666,6 +4908,10 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		tag = sgs
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_focus_tree = SGS_focus_post_cw
+		}
 	}
 	option = {
 		#改造碉堡
@@ -4945,6 +5191,10 @@ country_event = {
 	timeout_days = 2
 	trigger = {
 		tag = sgs
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_focus_tree = SGS_focus_post_cw
+		}
 	}
 	option = {
 		#祝你们好运
@@ -4975,6 +5225,10 @@ country_event = {
 	timeout_days = 2
 	trigger = {
 		tag = sgs
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_focus_tree = SGS_focus_post_cw
+		}
 	}
 	option = {
 		#去
@@ -5022,6 +5276,10 @@ country_event = {
 	timeout_days = 2
 	trigger = {
 		tag = sgs
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_focus_tree = SGS_focus_post_cw
+		}
 	}
 	option = {
 		#简单交流
@@ -5140,6 +5398,10 @@ country_event = {
 	timeout_days = 2
 	trigger = {
 		tag = sgs
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_focus_tree = SGS_focus_post_cw
+		}
 	}
 	option = {
 		#不想要啥
@@ -5470,6 +5732,10 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		tag = sgs
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_focus_tree = SGS_focus_post_cw
+		}
 	}
 	option = {
 		#啥都不要，相安无事
@@ -5747,6 +6013,10 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		tag = sgs
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_focus_tree = SGS_focus_post_cw
+		}
 	}
 	option = {
 		#
@@ -5943,6 +6213,10 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		tag = sgs
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_focus_tree = SGS_focus_post_cw
+		}
 	}
 	option = {
 		#同意啥也不要
@@ -6500,6 +6774,10 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		tag = sgs
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_focus_tree = SGS_focus_post_cw
+		}
 	}
 	option = {
 		#被拒绝
@@ -6660,6 +6938,10 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		tag = sgs
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_focus_tree = SGS_focus_post_cw
+		}
 	}
 	option = {
 		#去不了了
@@ -6727,6 +7009,10 @@ country_event = {
 	timeout_days = 2
 	trigger = {
 		tag = sgs
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_focus_tree = SGS_focus_post_cw
+		}
 	}
 	option = {
 		#简单交流
@@ -6819,6 +7105,10 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		tag = sgs
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_focus_tree = SGS_focus_post_cw
+		}
 	}
 	option = {
 		#
@@ -6913,6 +7203,10 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		tag = sgs
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_focus_tree = SGS_focus_post_cw
+		}
 	}
 	option = {
 		#
@@ -7013,6 +7307,10 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		tag = sgs
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_focus_tree = SGS_focus_post_cw
+		}
 	}
 	option = {
 		#河童
@@ -7141,6 +7439,10 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		tag = sgs
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_focus_tree = SGS_focus_post_cw
+		}
 	}
 	option = {
 		#不承诺
@@ -7319,6 +7621,10 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		tag = sgs
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_focus_tree = SGS_focus_post_cw
+		}
 	}
 	option = {
 		#啥都不要
@@ -7451,6 +7757,10 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		tag = sgs
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_focus_tree = SGS_focus_post_cw
+		}
 	}
 	option = {
 		#啥都不给
@@ -7605,6 +7915,10 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		tag = sgs
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_focus_tree = SGS_focus_post_cw
+		}
 	}
 	option = {
 		#啥都不要
@@ -7691,6 +8005,10 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		tag = sgs
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_focus_tree = SGS_focus_post_cw
+		}
 	}
 	option = {
 		#不提供
@@ -7820,6 +8138,10 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		tag = sgs
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_focus_tree = SGS_focus_post_cw
+		}
 	}
 	option = {
 		#啥都不要
@@ -7927,6 +8249,10 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		tag = sgs
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_focus_tree = SGS_focus_post_cw
+		}
 	}
 	option = {
 		#不提供
@@ -8187,6 +8513,10 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		tag = sgs
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_focus_tree = SGS_focus_post_cw
+		}
 	}
 	option = {
 		#啥都不要
@@ -8404,6 +8734,10 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		tag = sgs
+		not = {
+			has_country_flag = SGS_civil_war_start
+			has_focus_tree = SGS_focus_post_cw
+		}
 	}
 	option = {
 		#
@@ -9734,6 +10068,120 @@ country_event = {
 	option = {
 		#
 		name = sgs.234.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+#----内战后国策事件
+country_event = {
+	#战后会议
+	id = sgs.300
+	title = sgs.300.t
+	desc = sgs.300.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.300.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#会议结果
+	id = sgs.301
+	title = sgs.301.t
+	desc = sgs.301.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#桑尼
+		name = sgs.301.1
+		set_country_flag = SGS_postwar_confer_sunny_win
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = {
+		#露娜
+		name = sgs.301.2
+		set_country_flag = SGS_postwar_confer_luna_win
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = {
+		#斯塔
+		name = sgs.301.3
+		set_country_flag = SGS_postwar_confer_star_win
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = {
+		#你来选
+		name = sgs.301.4
+		random_list = {
+			var:sgs_sunny_infl = {
+				set_country_flag = SGS_postwar_confer_sunny_win
+			}
+			var:sgs_luna_infl = {
+				set_country_flag = SGS_postwar_confer_luna_win
+			}
+			var:sgs_star_infl = {
+				set_country_flag = SGS_postwar_confer_star_win
+			}
+			
+		}
+		news_event = {
+			id = sgs.302
+			days = 1
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+news_event = {
+	#战后会议
+	id = sgs.302
+	title = sgs.302.t
+	desc = {
+		text = sgs.302.d_sunny
+		trigger = {
+			has_country_flag = SGS_postwar_confer_sunny_win
+		}
+	}
+	desc = {
+		text = sgs.302.d_luna
+		trigger = {
+			has_country_flag = SGS_postwar_confer_luna_win
+		}
+	}
+	desc = {
+		text = sgs.302.d_star
+		trigger = {
+			has_country_flag = SGS_postwar_confer_star_win
+		}
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	
+	}
+	option = {
+		#
+		name = sgs.302.1
 
 		ai_chance = {
 			base = 35

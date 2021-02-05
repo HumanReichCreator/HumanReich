@@ -4,7 +4,7 @@
 
 		sc_infantry = { x = 0 y = 0 }
 		sc_infantry = { x = 0 y = 1 }
-		sc_infantry = { x = 0 y = 2 }
+		ma_infantry = { x = 0 y = 2 }
 	}
 	
 	support = {
@@ -13,33 +13,46 @@
 units = {
 	division = {
 		name = "渗透配置"
-		location = 1523
+		location = 629
 		division_template = "渗透配置"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "渗透配置"
-		location = 1523
+		location = 629
 		division_template = "渗透配置"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "渗透配置"
-		location = 1523
+		location = 5103
 		division_template = "渗透配置"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
 	division = {
 		name = "渗透配置"
-		location = 1523
+		location = 5103
 		division_template = "渗透配置"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-
+	division = {
+		name = "渗透配置"
+		location = 1043
+		division_template = "渗透配置"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "渗透配置"
+		location = 1043
+		division_template = "渗透配置"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
 
 
 	

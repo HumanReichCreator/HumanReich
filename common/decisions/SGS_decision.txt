@@ -520,7 +520,7 @@ SGS_category = {
 		}
 		is_good = no
 		selectable_mission = no
-		days_mission_timeout = 120
+		days_mission_timeout = 90
 		timeout_effect = {
 			country_event = {
 				id = sgs.5
@@ -550,7 +550,11 @@ SGS_category = {
 		activation = {
 			tag = sgs
 			not = {
-				has_country_flag = SGS_civil_war_start
+				or = {
+					has_country_flag = SGS_civil_war_start
+					has_country_flag = sgs_peaceful_transit_flag
+				}
+				
 			}
 		}
 		is_good = yes
