@@ -903,6 +903,7 @@ focus_tree = {
 		relative_position_id = SGS_pacify_battle_fariy_focus
 		completion_reward = {
 			custom_effect_tooltip = down_sgs_uprise_much
+			add_to_variable = { sgs_sunny_infl = 8 }
 			multiply_variable = {
 				sgs_uprise = 0.3
 			}
