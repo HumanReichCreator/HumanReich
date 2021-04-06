@@ -670,6 +670,9 @@ focus_tree = {
 		prerequisite = {
 			focus = SGS_solidify_army_first_focus
 		}
+		completion_reward = {
+			#给一个buff，加军转民速度，
+		}
 		x = 2
 		y = 2
 
@@ -680,6 +683,9 @@ focus_tree = {
 		cost = 5.00
 		prerequisite = {
 			focus = SGS_Baf_economy_focus
+		}
+		completion_reward = {
+			#给之前那个buff增加一个减稳定，建筑建造和大幅消费品的修正
 		}
 		x = 2
 		y = 3
