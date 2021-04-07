@@ -738,14 +738,247 @@ focus_tree = {
 		y = 8
 	}
 	focus = {
-		id = SGS_indutry_plan
-		icon = GFX_goal_support_democracy
-		cost = 10
-		prerequisite = {
-		}
-		prerequisite = {
-		}
+		id = SGS_ind_plan
+		icon = GFX_focus_generic_industry_3
+		cost = 10.00
 		x = 35
 		y = 0
+
+	}
+	focus = {
+		id = SGS_ind_plan_hawk
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_ind_plan
+		}
+		mutually_exclusive = {
+			focus = SGS_ind_plan_dove
+		}
+		x = 33
+		y = 1
+
+	}
+	focus = {
+		id = SGS_newfocus_3
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_ind_plan_hawk
+		}
+		x = 32
+		y = 2
+
+	}
+	focus = {
+		id = SGS_newfocus_4
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_ind_plan_hawk
+		}
+		x = 34
+		y = 2
+
+	}
+	focus = {
+		id = SGS_newfocus_7
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_newfocus_3
+		}
+		prerequisite = {
+			focus = SGS_newfocus_4
+		}
+		x = 33
+		y = 3
+
+	}
+	focus = {
+		id = SGS_newfocus_9
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_newfocus_7
+		}
+		mutually_exclusive = {
+			focus = SGS_newfocus_10
+		}
+		x = 32
+		y = 4
+
+	}
+	focus = {
+		id = SGS_ind_plan_dove
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_ind_plan
+		}
+		mutually_exclusive = {
+			focus = SGS_ind_plan_hawk
+		}
+		x = 37
+		y = 1
+
+	}
+	focus = {
+		id = SGS_newfocus_5
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_ind_plan_dove
+		}
+		x = 36
+		y = 2
+
+	}
+	focus = {
+		id = SGS_newfocus_6
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_ind_plan_dove
+		}
+		x = 38
+		y = 2
+
+	}
+	focus = {
+		id = SGS_newfocus_8
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_newfocus_5
+		}
+		prerequisite = {
+			focus = SGS_newfocus_6
+		}
+		x = 37
+		y = 3
+
+	}
+	focus = {
+		id = SGS_newfocus_10
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_newfocus_8
+			focus = SGS_newfocus_7
+		}
+		mutually_exclusive = {
+			focus = SGS_newfocus_9
+			focus = SGS_newfocus_11
+		}
+		x = 35
+		y = 4
+
+	}
+	focus = {
+		id = SGS_newfocus_13
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_newfocus_10
+		}
+		mutually_exclusive = {
+			focus = SGS_newfocus_14
+		}
+		x = 34
+		y = 5
+
+	}
+	focus = {
+		id = SGS_newfocus_14
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_newfocus_10
+		}
+		mutually_exclusive = {
+			focus = SGS_newfocus_13
+		}
+		x = 36
+		y = 5
+
+	}
+	focus = {
+		id = SGS_newfocus_11
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_newfocus_8
+		}
+		mutually_exclusive = {
+			focus = SGS_newfocus_10
+		}
+		x = 38
+		y = 4
+
+	}
+	focus = {
+		id = SGS_newfocus_12
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_newfocus_9
+		}
+		x = 32
+		y = 5
+
+	}
+	focus = {
+		id = SGS_newfocus_15
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_newfocus_11
+		}
+		x = 38
+		y = 5
+
+	}
+	focus = {
+		id = SGS_newfocus_16
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_newfocus_12
+			focus = SGS_newfocus_13
+			focus = SGS_newfocus_14
+			focus = SGS_newfocus_15
+		}
+		x = 35
+		y = 6
+
+	}
+	focus = {
+		id = SGS_newfocus_17
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_newfocus_16
+		}
+		mutually_exclusive = {
+			focus = SGS_newfocus_18
+		}
+		x = 34
+		y = 7
+
+	}
+	focus = {
+		id = SGS_newfocus_18
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_newfocus_16
+		}
+		mutually_exclusive = {
+			focus = SGS_newfocus_17
+		}
+		x = 36
+		y = 7
+
 	}
 }
