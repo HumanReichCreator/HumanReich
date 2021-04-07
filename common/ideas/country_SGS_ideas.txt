@@ -282,5 +282,17 @@ ideas = {
 				army_core_defence_factor = 0.2
 			}
 		}
+		SGS_BaF_economy_system_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				industrial_capacity_factory = 0.1
+				political_power_gain = -0.1
+				research_bonus = {
+					military = 0.1
+				}
+				conversion_cost_civ_to_mil_factor = -0.2
+				# fandong_drift = 0.01
+			}
+		}
 	}
 }
