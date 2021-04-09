@@ -58,7 +58,7 @@ focus_tree = {
 				popularity = 0.2
 			}
 			conservativedecrease = yes
-			#country_event = { id = SGS.xxx }
+			#country_event = { id = SGS.xxx } 选择方向的事件
 		}
 		x = 4
 		y = 1
@@ -634,6 +634,21 @@ focus_tree = {
 		}
 		completion_reward = {
 			#给之前那个buff增加一个建筑建造和大幅消费品的修正，概率性会有事件表示平民会逃跑，损失人力，减稳定
+			swap_ideas
+			{
+				remove_idea = SGS_BaF_economy_system_idea
+				add_idea = SGS_BaF_economy_system_control_civ_idea
+			}
+			hidden_effect = {
+				random_list = {
+					20 = {
+
+					}
+					80 = {
+						#country_event = { id = SGS.xxx }逃跑事件
+					}
+				}
+			}
 		}
 		x = 2
 		y = 3
