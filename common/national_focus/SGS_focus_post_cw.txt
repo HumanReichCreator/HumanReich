@@ -639,6 +639,10 @@ focus_tree = {
 				remove_idea = SGS_BaF_economy_system_idea
 				add_idea = SGS_BaF_economy_system_control_civ_idea
 			}
+			
+		}
+
+		select_effect = {
 			hidden_effect = {
 				random_list = {
 					20 = {
@@ -662,6 +666,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			#事件选稳定+集体主义or战争支持+个人主义 会根据派系情况给出结果，如果强行干涉则会大幅影响派系力量
+			#country_event = {id = SGS.xxx}
 		}
 		x = 0
 		y = 1
@@ -675,6 +680,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			#加稳定buff，事件选进一步提升工厂还是训练质量。后续会概率性出现逃跑事件
+			
 		}
 		x = 0
 		y = 3

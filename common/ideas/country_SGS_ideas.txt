@@ -308,5 +308,33 @@ ideas = {
 				# fandong_drift = 0.01
 			}
 		}
+		SGS_itazura_ban_worker_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				industrial_capacity_factory = 0.1
+				political_power_gain = -0.1
+				research_bonus = {
+					military = 0.1
+				}
+				conversion_cost_civ_to_mil_factor = -0.2
+				consumer_goods_factor = -0.1
+				production_speed_arms_factory_factor = 0.05
+				# fandong_drift = 0.01
+			}
+		}
+		SGS_itazura_ban_mil_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				industrial_capacity_factory = 0.1
+				political_power_gain = -0.1
+				research_bonus = {
+					military = 0.1
+				}
+				conversion_cost_civ_to_mil_factor = -0.2
+				consumer_goods_factor = -0.1
+				production_speed_arms_factory_factor = 0.05
+				# fandong_drift = 0.01
+			}
+		}
 	}
 }
