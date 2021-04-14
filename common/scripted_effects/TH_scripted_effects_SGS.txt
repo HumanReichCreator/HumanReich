@@ -2,9 +2,15 @@
 SGS_effect_civil_war_begin = {
     custom_effect_tooltip = SGS_civil_war_begin_ins
     hidden_effect = {
-
     }
 }
+
+#鹰鸽派机制
+SGS_init_hawk_dove_value = {
+    set_variable = {sgs_hawk_infl = 50}
+    set_variable = {sgs_dove_infl = 50}
+}
+
 SGS_hawk_reduce5 = {
     custom_effect_tooltip = SGS_hawk_reduce5_tooltip
     add_to_variable = { sgs_hawk_infl = -5}

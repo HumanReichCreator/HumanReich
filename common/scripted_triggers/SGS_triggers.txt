@@ -1,0 +1,22 @@
+SGS_peaceful_transit_gov = {
+	AND = {
+		has_government = neworder
+		has_country_flag = sgs_peaceful_transit_flag
+	}
+}
+
+SGS_sunnystar_post_cw_gov = {
+	AND = {
+		has_country_flag = SGS_civil_war_start
+		not = {
+			has_country_flag = SGS_BaF_destroyed
+		}
+	}
+}
+
+SGS_post_Baf_star_gov = {
+	AND = {
+		has_government = guli
+		has_country_flag = SGS_BaF_destroyed
+	}
+}

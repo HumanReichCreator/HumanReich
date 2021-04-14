@@ -105,3 +105,46 @@ defined_text = {
 		localization_key = sgs_industry_negotiation_angry
 	}
 }
+
+defined_text = {
+	name = hawk_faction
+	text = {
+		trigger = {
+			SGS_peaceful_transit_gov = yes
+		}
+		localization_key = sgs_HD_radical_BaF
+	}
+	text = {
+		trigger = {
+			SGS_sunnystar_post_cw_gov = yes
+		}
+		localization_key = sgs_HD_BaF
+	}
+	text = {
+		trigger = {
+			SGS_post_Baf_star_gov = yes
+		}
+		localization_key = sgs_HD_indusry_faction
+	}
+}
+defined_text = {
+	name = dove_faction
+	text = {
+		trigger = {
+			SGS_peaceful_transit_gov = yes
+		}
+		localization_key = sgs_HD_gentle_BaF
+	}
+	text = {
+		trigger = {
+			SGS_sunnystar_post_cw_gov = yes
+		}
+		localization_key = sgs_HD_civilian
+	}
+	text = {
+		trigger = {
+			SGS_post_Baf_star_gov = yes
+		}
+		localization_key = sgs_HD_socialist_faction
+	}
+}

@@ -365,8 +365,7 @@ country_event = {
 			clr_country_flag = sgs_dannmakugokko_unhappy
 			set_country_flag = sgs_events_interrupted
 
-			set_variable = {sgs_hawk_infl = 50}
-			set_variable = {sgs_dove_infl = 50}
+			SGS_init_hawk_dove_value = yes
 			BAF = {
 				add_timed_idea = { idea = panluantouxiang_idea days = 360 }
 				add_ideas = {BAF_strong_army_idea  BAF_ingore_product_idea}
@@ -391,7 +390,7 @@ country_event = {
 				}
 				add_core_of = BAF
 			}
-			set_country_flag = SGS_civil_war_start
+			set_country_flag = SGS_civil_war_start #标记内战开始
 			mark_focus_tree_layout_dirty = yes
 			if = {
 				limit = {
@@ -683,6 +682,7 @@ country_event = {
 
 			set_country_flag = sgs_peaceful_transit_flag
 			clear_variable = sgs_uprise
+			SGS_init_hawk_dove_value = yes
 
 		}
 	}
