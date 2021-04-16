@@ -58,7 +58,7 @@ focus_tree = {
 				popularity = 0.2
 			}
 			conservativedecrease = yes
-			#country_event = { id = SGS.xxx } 选择方向的事件
+			country_event = { id = SGS.3030} 
 		}
 		x = 4
 		y = 1
@@ -112,7 +112,7 @@ focus_tree = {
 			focus = SGS_sunny_win_focus
 		}
 		completion_reward = {
-			#
+			#+pp，选解决方案：黑市购买，威胁他国还是琢磨科技，选项将影响后续国策内容 
 		}
 		x = 4
 		y = 3
@@ -723,6 +723,9 @@ focus_tree = {
 		cost = 5
 		prerequisite = {
 			focus = SGS_spoil_system_focus
+		}
+		completion_reward = {
+			#加紧张度、新规 3年buff 减厌战和侵略相关 威胁和草原屈服概率提升 和所有国家减关系
 		}
 		x = 2
 		y = 7

@@ -369,6 +369,16 @@ country_event = {
 			BAF = {
 				add_timed_idea = { idea = panluantouxiang_idea days = 360 }
 				add_ideas = {BAF_strong_army_idea  BAF_ingore_product_idea}
+				create_field_marshal = {
+					name = "贝特尔"
+					picture = "gfx/leaders/gen/fai1.dds"
+					traits = { trait_reckless }
+					skill = 2
+					attack_skill = 3
+					defense_skill = 1
+					planning_skill = 2
+					logistics_skill = 1
+				}
 				set_technology = { BAF_bunker_attck_tech = 1 }
 				transfer_state = 116
 				transfer_state = 117
@@ -10407,6 +10417,84 @@ news_event = {
 
 		ai_chance = {
 			base = 35
+		}
+	}
+}
+#-------sgs.3030开始是和平过渡路线的事件
+country_event = {
+	#先军体制的方向
+	id = sgs.3030
+	title = sgs.3030.t
+	desc = sgs.3030.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.3030.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#先军体制的方向
+	id = sgs.3030
+	title = sgs.3030.t
+	desc = sgs.3030.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#建军为主
+		name = sgs.3030.1
+		custom_effect_tooltip = SGS_toolip_Baf_two_leaders 
+		create_field_marshal = {
+			name = "贝特尔"
+			picture = "gfx/leaders/gen/fai1.dds"
+			traits = { trait_reckless }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		create_field_marshal = {
+			name = "阿尔特·坎普法"
+			picture = "gfx/leaders/gen/fai2.dds"
+			traits = { war_hero }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 2
+		}
+		#派系变化
+		SGS_hawk_rise10 = yes
+		ai_chance = {
+			base = 30
+		}
+	}
+	option = {
+		#军工为主
+		name = sgs.3030.1
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				level = 2
+				instant_build = yes
+				type = arms_factory
+			}
+		}
+		#派系变化
+		SGS_dove_rise10 = yes
+		ai_chance = {
+			base = 40
 		}
 	}
 }

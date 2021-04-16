@@ -100,7 +100,9 @@ shared_focus = {
 		focus = SGS_arrest_BaF_focus
 	}
 	completion_reward = {
-		SGS_hawk_rise10 = yes
+		hidden_effect = {
+			SGS_hawk_rise10 = yes
+		}
 		add_war_support = 0.1
 		army_experience = 30
 		add_popularity = {
@@ -146,7 +148,9 @@ shared_focus = {
 	x = 28
 	y = 2
 	completion_reward = {
-		SGS_dove_rise10 = yes
+		hidden_effect = {
+			SGS_dove_rise10 = yes
+		}
 		add_stability = 0.1
 		add_political_power = 30
 		add_popularity = {
