@@ -632,6 +632,9 @@ focus_tree = {
 		prerequisite = {
 			focus = SGS_Baf_economy_focus
 		}
+		available = {
+			SGS_hawk_get_more = yes
+		}
 		completion_reward = {
 			#给之前那个buff增加一个建筑建造和大幅消费品的修正，概率性会有事件表示平民会逃跑，损失人力，减稳定
 			swap_ideas
@@ -675,6 +678,9 @@ focus_tree = {
 		id = SGS_itazura_ban_focus
 		icon = GFX_goal_continuous_restrict_freedom
 		cost = 5
+		available = {
+			SGS_hawk_have_supporter = yes
+		}
 		prerequisite = {
 			focus = SGS_culture_reform_focus
 		}

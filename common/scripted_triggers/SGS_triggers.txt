@@ -20,3 +20,34 @@ SGS_post_Baf_star_gov = {
 		has_country_flag = SGS_BaF_destroyed
 	}
 }
+
+SGS_hawk_have_supporter = {
+	check_variable = {
+		sgs_hawk_infl > 40
+	}
+}
+SGS_hawk_get_more = {
+	check_variable = {
+		sgs_hawk_infl > 60
+	}
+}
+SGS_hawk_hold_meeting = {
+	check_variable = {
+		sgs_hawk_infl > 80
+	}
+}
+SGS_dove_have_supporter = {
+	check_variable = {
+		sgs_dove_infl > 40
+	}
+}
+SGS_dove_get_more = {
+	check_variable = {
+		sgs_dove_infl > 60
+	}
+}
+SGS_dove_hold_meeting = {
+	check_variable = {
+		sgs_dove_infl > 80
+	}
+}
