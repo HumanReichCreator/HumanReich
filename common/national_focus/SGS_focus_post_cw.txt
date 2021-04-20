@@ -652,7 +652,10 @@ focus_tree = {
 
 					}
 					80 = {
-						#country_event = { id = SGS.xxx }逃跑事件
+						country_event = { 
+							days = 20
+							id = SGS.3031 
+						} #逃跑事件
 					}
 				}
 			}
@@ -670,6 +673,14 @@ focus_tree = {
 		completion_reward = {
 			#事件选稳定+集体主义or战争支持+个人主义 会根据派系情况给出结果，如果强行干涉则会大幅影响派系力量
 			#country_event = {id = SGS.xxx}
+			random_list{
+				sgs_dove_infl = {
+					country_event = { id = SGS.3032} 
+				}
+				sgs_hawk_infl = {
+					country_event = { id = SGS.3033} 
+				}
+			}
 		}
 		x = 0
 		y = 1
@@ -718,6 +729,7 @@ focus_tree = {
 			focus = SGS_elite_army_focus
 		}
 		completion_reward = {
+			#关闭国境，居民无法外逃
 			#解锁新玩法，掠夺开始之前可以选择目的，抢劳力（免费造建筑）、抢技术or抢钱（生产/建造加速），输了给的少赢了给的多。
 		}
 		x = 2
