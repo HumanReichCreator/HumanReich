@@ -12,7 +12,7 @@ ideas = {
 				army_attack_factor = 0.06
 				army_speed_factor = 0.1
 				army_org_factor = 0.1
-				fandong_drift = 0.01
+				#fandong_drift = 0.01
 			}
 		}
 		SGS_battle_fairy_talent_pacified_idea = {
@@ -26,6 +26,19 @@ ideas = {
 				neworder_drift = 0.01
 			}
 		}
+		SGS_battle_fairy_elite_army = {
+			picture = can_send_in_the_zombies
+			modifier = {
+				war_support_weekly = 0.01
+				army_attack_factor = 0.15
+				army_speed_factor = 0.2
+				army_org_factor = 0.15
+				conscription_factor = -0.2
+				monthly_population = 0.2
+				neworder_drift = 0.01
+			}
+		}
+
 		SGS_battle_fairy_restlessness_idea = {
 			picture = chi_war_of_resistance3
 			modifier = {

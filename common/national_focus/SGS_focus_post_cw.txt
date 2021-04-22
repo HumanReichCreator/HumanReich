@@ -615,8 +615,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			#急功近利的工业换名字，去掉debuff，加军转民速度，军事科技加速
-			swap_ideas
-			{
+			swap_ideas = {
 				remove_idea = SGS_hurry_mic_idea
 				add_idea = SGS_BaF_economy_system_idea
 			}
@@ -637,8 +636,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			#给之前那个buff增加一个建筑建造和大幅消费品的修正，概率性会有事件表示平民会逃跑，损失人力，减稳定
-			swap_ideas
-			{
+			swap_ideas = {
 				remove_idea = SGS_BaF_economy_system_idea
 				add_idea = SGS_BaF_economy_system_control_civ_idea
 			}
@@ -674,10 +672,10 @@ focus_tree = {
 			#事件选稳定+集体主义or战争支持+个人主义 会根据派系情况给出结果，如果强行干涉则会大幅影响派系力量
 			#country_event = {id = SGS.xxx}
 			random_list{
-				sgs_dove_infl = {
+				var:sgs_dove_infl = {
 					country_event = { id = SGS.3032} 
 				}
-				sgs_hawk_infl = {
+				var:sgs_hawk_infl = {
 					country_event = { id = SGS.3033} 
 				}
 			}
@@ -697,7 +695,23 @@ focus_tree = {
 		}
 		completion_reward = {
 			#加稳定buff，事件选进一步提升工厂还是训练时间。后续会概率性出现逃跑事件
-			#country_event = {id = SGS.xxx}
+			add_ideas = SGS_itazura_ban_idea
+			country_event = {id = SGS.3034 days = 10}
+		}
+		select_effect = {
+			hidden_effect = {
+				random_list = {
+					40 = {
+
+					}
+					60 = {
+						country_event = { 
+							days = 20
+							id = SGS.3031 
+						} #逃跑事件
+					}
+				}
+			}
 		}
 		x = 0
 		y = 3
@@ -714,6 +728,21 @@ focus_tree = {
 		}
 		completion_reward = {
 			#给BaF天赋加buff，战斗力、速度、训练质量，减少适役，增加动员
+			if = {
+				limit = {
+					has_idea = my_idea
+				}
+				swap_ideas = {
+					remove_idea = SGS_battle_fairy_talent_pacified_idea
+					add_idea = SGS_battle_fairy_elite_army
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = SGS_battle_fairy_talent_idea
+						add_idea = SGS_battle_fairy_elite_army
+					}
+				}
+			}
 		}
 		x = 1
 		y = 5
