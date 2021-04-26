@@ -79,9 +79,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = SGS_confer_determine_way
-			country_event = {
-				id = sgs.301
-			}
 		}
 		x = 13
 		y = 1
@@ -112,7 +109,9 @@ focus_tree = {
 			focus = SGS_sunny_win_focus
 		}
 		completion_reward = {
-			#+pp，选解决方案：黑市购买，威胁他国还是琢磨科技，选项将影响后续国策内容 
+			#+pp，选解决方案：黑市购买，威胁他国还是琢磨科技，选项将影响后续国策内容
+			add_political_power = 50
+			country_event = {id = SGS.3035} 
 		}
 		x = 4
 		y = 3
@@ -125,7 +124,19 @@ focus_tree = {
 			focus = SGS_equip_issue_focus
 		}
 		completion_reward = {
-			#
+			if = {
+				limit = {
+					has_country_flag = SGS_on_own_way_equip
+				}
+				add_tech_bonus = {
+					category = support_tech
+					uses = 3
+					bonus = 0.15
+				}
+				else = {
+					custom_effect_tooltip = SGS_open_more_equipment_deci_tool
+				}
+			}
 		}
 		x = 3
 		y = 4
@@ -138,7 +149,19 @@ focus_tree = {
 			focus = SGS_equip_issue_focus
 		}
 		completion_reward = {
-			#
+			if = {
+				limit = {
+					has_country_flag = SGS_on_own_way_equip
+				}
+				add_tech_bonus = {
+					category = artillery_tech
+					uses = 2
+					bonus = 0.25
+				}
+				else = {
+					custom_effect_tooltip = SGS_open_more_equipment_deci_tool
+				}
+			}
 		}
 		x = 5
 		y = 4
@@ -233,7 +256,18 @@ focus_tree = {
 			focus = SGS_find_suuport_equip_focus
 		}
 		completion_reward = {
-			#
+			if = {
+				limit = {
+					has_country_flag = SGS_on_own_way_equip
+				}
+				swap_ideas = {
+					remove_idea = SGS_imitate_guns_idea
+					add_idea = SGS_easy_product_all_idea
+				}
+				else = {
+					country_event = {id = sgs.3036}
+				}
+			}
 		}
 		x = 4
 		y = 5

@@ -10674,3 +10674,107 @@ country_event = {
 	}
 }
  
+country_event = {
+	#选择装备问题解决方案
+	id = sgs.3035
+	title = sgs.3035.t
+	desc = sgs.3035.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#强要
+		name = sgs.3035.1
+		custom_effect_tooltip = SGS_open_force_demand_deci_tool
+		set_country_flag = SGS_force_demand_equip
+		SGS_hawk_rise5 = yes
+		ai_chance = {
+			base = 35
+			modifier = {
+				add = 20
+				SGS_hawk_get_more = yes
+			}
+			modifier = {
+				factor = 1.5
+				SGS_peaceful_transit_gov = yes
+			}
+		}
+	}
+	option = {
+		#黑市
+		name = sgs.3035.2
+		custom_effect_tooltip = SGS_open_black_market_deci_tool
+		set_country_flag = SGS_black_market_equip
+		SGS_dove_rise5 = yes
+		ai_chance = {
+			base = 35
+			modifier = {
+				factor = 1.5
+				SGS_sunnystar_post_cw_gov = yes
+			}
+		}
+	}
+	option = {
+		#自己琢磨
+		name = sgs.3035.3
+		add_tech_bonus = {
+			category = primary_weapons
+			uses = 2
+			bonus = 0.1
+		}
+		add_tech_bonus = {
+			category = shield_weapons
+			uses = 1
+			bonus = 0.2
+		}
+		SGS_dove_rise10 = yes
+		set_country_flag = SGS_on_own_way_equip
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 30
+				SGS_dove_get_more = yes
+			}
+			modifier = {
+				factor = 0.2
+				SGS_peaceful_transit_gov = yes
+			}
+			
+		}
+	}
+}
+country_event = {
+	#廉价武器方案
+	id = sgs.3036
+	title = sgs.3036.t
+	desc = sgs.3036.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#近战武器和支援装备
+		name = sgs.3036.1
+		swap_ideas = {
+			remove_idea = SGS_imitate_guns_idea
+			add_idea = SGS_easy_product_support_idea
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+	option = {
+		#护盾和火炮
+		name = sgs.3036.2
+		swap_ideas = {
+			remove_idea = SGS_imitate_guns_idea
+			add_idea = SGS_easy_product_artillery_idea
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+}

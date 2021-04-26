@@ -210,6 +210,71 @@ ideas = {
 				}
 			}
 		}
+		SGS_easy_product_support_idea = {
+			picture = generic_war_preparation
+			equipment_bonus = {
+				gun_a = {
+					build_cost_ic = -0.25
+					reliability = -0.05
+					instant = yes
+				}
+				melee_a = {
+					build_cost_ic = -0.2
+					reliability = -0.05
+					instant = yes
+				}
+				support_equipment = {
+					build_cost_ic = -0.2
+					reliability = -0.05
+					instant = yes
+				}
+			}
+		}
+		SGS_easy_product_artillery_idea = {
+			picture = generic_war_preparation
+			equipment_bonus = {
+				gun_a = {
+					build_cost_ic = -0.25
+					reliability = -0.05
+					instant = yes
+				}
+				core_shield_a = {
+					build_cost_ic = -0.2
+					reliability = -0.05
+					instant = yes
+				}
+				mortar_a = {
+					build_cost_ic = -0.2
+					reliability = -0.08
+					instant = yes
+				}
+			}
+		}
+		SGS_easy_product_all_idea = {
+			picture = generic_war_preparation
+			equipment_bonus = {
+				gun_a = {
+					build_cost_ic = -0.25
+					instant = yes
+				}
+				melee_a = {
+					build_cost_ic = -0.2
+					instant = yes
+				}
+				core_shield_a = {
+					build_cost_ic = -0.2
+					instant = yes
+				}
+				support_equipment = {
+					build_cost_ic = -0.2
+					instant = yes
+				}
+				mortar_a = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+		}
 		SGS_buy_comsume_idea = {
 			picture = generic_war_preparation
 			modifier = {
