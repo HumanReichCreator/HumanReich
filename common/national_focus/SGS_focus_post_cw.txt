@@ -764,7 +764,7 @@ focus_tree = {
 			#给BaF天赋加buff，战斗力、速度、训练质量，减少适役，增加动员
 			if = {
 				limit = {
-					has_idea = my_idea
+					has_idea = SGS_battle_fairy_talent_pacified_idea
 				}
 				swap_ideas = {
 					remove_idea = SGS_battle_fairy_talent_pacified_idea
