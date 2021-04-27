@@ -807,6 +807,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			#加紧张度、新规 3年buff 减厌战和侵略相关 威胁和草原屈服概率提升 和所有国家减关系
+			add_threat = 3
+			add_popularity = {
+				ideology = neworder
+				popularity = 0.5
+			}
+			#news_event = { days = 2 id = sgs.xxx}
 		}
 		x = 2
 		y = 7
