@@ -25,7 +25,8 @@ SGS_category = {
 				max = 150
 			}
 		}
-		remove_effect = {}
+		remove_effect = {
+		}
 	}
 	SGS_test_deci = {
 		visible = {
@@ -53,7 +54,8 @@ SGS_category = {
 				max = 150
 			}
 		}
-		remove_effect = {}
+		remove_effect = {
+		}
 	}
 	SGS_dannmakugokko_deci = {
 		visible = {
@@ -134,13 +136,13 @@ SGS_category = {
 			}
 			# has_idea = TEG_jianshaozhengbing_idea
 		}
-		modifier = {}
+		modifier = {
+		}
 		cost = 75
 		days_remove = 23
 		days_re_enable = 40
 		fire_only_once = no
 		complete_effect = {
-			
 			clr_country_flag = sgs_events_interrupted
 			set_country_flag = sgs_selected_battle_fairy_deci
 			custom_effect_tooltip = down_sgs_uprise_middle
@@ -305,7 +307,8 @@ SGS_category = {
 			}
 			# has_idea = TEG_jianshaozhengbing_idea
 		}
-		modifier = {}
+		modifier = {
+		}
 		cost = 45
 		days_re_enable = 40
 		fire_only_once = no
@@ -399,7 +402,8 @@ SGS_category = {
 			}
 			# has_idea = TEG_jianshaozhengbing_idea
 		}
-		modifier = {}
+		modifier = {
+		}
 		cost = 60
 		days_remove = 30
 		days_re_enable = 30
@@ -508,7 +512,6 @@ SGS_category = {
 		days_mission_timeout = var:ROOT.sgs_doing_days
 		is_good = no
 	}
-
 	SGS_war_promise_deci = {
 		# This is our mission id
 		available = {
@@ -544,8 +547,7 @@ SGS_category = {
 	SGS_face_BaF_restless_issue_deci = {
 		# This is our mission id
 		available = {
-			has_country_flag = SGS_civil_war_start # 任务目标
-			
+			has_country_flag = SGS_civil_war_start			# 任务目标
 		}
 		activation = {
 			tag = sgs
@@ -554,7 +556,6 @@ SGS_category = {
 					has_country_flag = SGS_civil_war_start
 					has_country_flag = sgs_peaceful_transit_flag
 				}
-				
 			}
 		}
 		is_good = yes
@@ -562,39 +563,42 @@ SGS_category = {
 		days_mission_timeout = 300
 		timeout_effect = {
 			country_event = {
-				id = sgs.9 #顺利过渡
+				id = sgs.9				#顺利过渡
 				days = 1
 				random = 1
 			}
 		}
 		complete_effect = {
-			
 		}
 	}
 }
 
 SGS_IN_category = {
-
 	SGS_surpress_mission = {
-		allowed = { tag = SGS
-		}                 # This mission is only allowed for Poland. Other countries will not be able to see it or activate it.
-		available = {                           # Available here means as much as goal because:
-			has_completed_focus = SGS_surpress_bad_BaF_focus                    # we can only finish this mission if we control state 64 (Berlin)
+		allowed = {
+			tag = SGS
 		}
-		activation = {                          # The mission appears and starts counting down under these circumstances:
+		# This mission is only allowed for Poland. Other countries will not be able to see it or activate it.
+		available = {
+			# Available here means as much as goal because:
+			has_completed_focus = SGS_surpress_bad_BaF_focus			# we can only finish this mission if we control state 64 (Berlin)
+		}
+		activation = {
+			# The mission appears and starts counting down under these circumstances:
 			# War with Germany
 			always = no
 		}
-		is_good = yes                           # This mission is color coded to be a positive thing (not a crisis)
-		selectable_mission = no                # This mission will complete when the player selects the mission rather than completing automatically
-		days_mission_timeout = 100              # How many days before the mission fails?
-		timeout_effect = {                      # What happens when we fail the mission?
+		is_good = yes		# This mission is color coded to be a positive thing (not a crisis)
+		selectable_mission = no		# This mission will complete when the player selects the mission rather than completing automatically
+		days_mission_timeout = 100		# How many days before the mission fails?
+		timeout_effect = {
+			# What happens when we fail the mission?
 			add_political_power = -50
-			complete_national_focus  = SGS_surpress_bad_BaF_focus               # Lose 50 PP
+			complete_national_focus = SGS_surpress_bad_BaF_focus			# Lose 50 PP
 		}
-
-		complete_effect = {                    # What happens when we activate the mission i.e. mission success?
-			add_political_power = 10               # Gain 50 PP
+		complete_effect = {
+			# What happens when we activate the mission i.e. mission success?
+			add_political_power = 10			# Gain 50 PP
 		}
 	}
 	SGS_NIT_observe_amry = {
@@ -602,7 +606,6 @@ SGS_IN_category = {
 			always = no
 		}
 		available = {
-
 			# has_idea = TEG_jianshaozhengbing_idea
 		}
 		modifier = {
@@ -613,7 +616,6 @@ SGS_IN_category = {
 		# days_re_enable = 365
 		fire_only_once = no
 		complete_effect = {
-
 		}
 		remove_effect = {
 			add_timed_idea = {
@@ -627,7 +629,6 @@ SGS_IN_category = {
 			always = no
 		}
 		available = {
-
 			# has_idea = TEG_jianshaozhengbing_idea
 		}
 		modifier = {
@@ -638,22 +639,20 @@ SGS_IN_category = {
 		# days_re_enable = 365
 		fire_only_once = no
 		complete_effect = {
-
 		}
 		remove_effect = {
 			var:SGS.sgs_industry_negotiation_target = {
-				add_ideas = {SGS_mic_spoil2_idea}
+				add_ideas = {
+					SGS_mic_spoil2_idea
+				}
 			}
-
 		}
 	}
-
 	SGS_WHM_send_machine_big = {
 		visible = {
 			always = no
 		}
 		available = {
-
 			# has_idea = TEG_jianshaozhengbing_idea
 		}
 		modifier = {
@@ -664,22 +663,20 @@ SGS_IN_category = {
 		# days_re_enable = 365
 		fire_only_once = no
 		complete_effect = {
-
 		}
 		remove_effect = {
 			var:SGS.sgs_industry_negotiation_target = {
-				add_ideas = {SGS_mic_spoil5_idea}
+				add_ideas = {
+					SGS_mic_spoil5_idea
+				}
 			}
-
 		}
 	}
-
 	SGS_WHM_goto_terakoya_small = {
 		visible = {
 			always = no
 		}
 		available = {
-
 			# has_idea = TEG_jianshaozhengbing_idea
 		}
 		modifier = {
@@ -690,7 +687,6 @@ SGS_IN_category = {
 		# days_re_enable = 365
 		fire_only_once = no
 		complete_effect = {
-
 		}
 		remove_effect = {
 			add_political_power = 150
@@ -698,7 +694,9 @@ SGS_IN_category = {
 				ideology = qinwai
 				popularity = 0.03
 			}
-			add_ideas = { WHM_learn_history_in_terakoya}
+			add_ideas = {
+				WHM_learn_history_in_terakoya
+			}
 		}
 	}
 	SGS_WHM_goto_terakoya_big = {
@@ -706,7 +704,6 @@ SGS_IN_category = {
 			always = no
 		}
 		available = {
-
 			# has_idea = TEG_jianshaozhengbing_idea
 		}
 		modifier = {
@@ -717,7 +714,6 @@ SGS_IN_category = {
 		# days_re_enable = 365
 		fire_only_once = no
 		complete_effect = {
-
 		}
 		remove_effect = {
 			add_political_power = 175
@@ -725,8 +721,68 @@ SGS_IN_category = {
 				ideology = qinwai
 				popularity = 0.03
 			}
-			add_ideas = { WHM_learn_history_in_terakoya WHM_learn_math_in_terakoya}
+			add_ideas = {
+				WHM_learn_history_in_terakoya
+				WHM_learn_math_in_terakoya
+			}
 		}
 	}
+}
 
+SGS_equipment_issue_category = {
+	SGS_find_black_marketer_deci = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			check_variable = {
+				ROOT.sgs_current_black_marketer = 0
+			}
+		}
+		available = {
+		}
+		modifier = {
+			political_power_gain = -0.01
+		}
+		cost = 20
+		days_remove = 30
+		days_re_enable = 15
+		fire_only_once = no
+		complete_effect = {
+		}
+		remove_effect = {
+			
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}
+
+SGS_hawk_dove_category = {
+	SGS_supprot_hawk_deci = {
+		visible = {
+			or = {
+				SGS_peaceful_transit_gov = yes 
+				SGS_sunnystar_post_cw_gov = yes 
+				SGS_post_Baf_star_gov = yes 
+			}
+		}
+		available = {
+		}
+		modifier = {
+			political_power_gain = -0.01
+		}
+		cost = 30
+		#days_remove = 30
+		days_re_enable = 30
+		fire_only_once = no
+		complete_effect = {
+			SGS_hawk_rise5 = yes
+		}
+		remove_effect = {
+			
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
 }

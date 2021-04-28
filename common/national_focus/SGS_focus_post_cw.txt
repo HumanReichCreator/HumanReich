@@ -812,6 +812,20 @@ focus_tree = {
 				ideology = neworder
 				popularity = 0.5
 			}
+			every_country = {
+				limit = {
+					not = {	tag = sgs}
+				}
+				add_opinion_modifier = {
+					target = SGS
+					modifier = SGS_show_power_to_world_op
+				}
+				add_ai_strategy = {
+					type = antagonize
+					id = SGS
+					value = 10
+				}
+			}
 			#news_event = { days = 2 id = sgs.xxx}
 		}
 		x = 2

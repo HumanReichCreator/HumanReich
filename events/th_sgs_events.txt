@@ -10708,6 +10708,9 @@ country_event = {
 		custom_effect_tooltip = SGS_open_black_market_deci_tool
 		set_country_flag = SGS_black_market_equip
 		SGS_dove_rise5 = yes
+		set_variable = {
+			ROOT.sgs_current_black_marketer = 0
+		}
 		ai_chance = {
 			base = 35
 			modifier = {

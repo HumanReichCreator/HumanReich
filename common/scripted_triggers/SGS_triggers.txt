@@ -51,3 +51,8 @@ SGS_dove_hold_meeting = {
 		sgs_dove_infl > 80
 	}
 }
+
+SGS_find_black_marketer_deci_base_trigger = {
+	tag = sgs
+	has_country_flag = SGS_black_market_equip
+}
