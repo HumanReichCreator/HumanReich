@@ -56,3 +56,10 @@ SGS_find_black_marketer_deci_base_trigger = {
 	tag = sgs
 	has_country_flag = SGS_black_market_equip
 }
+
+SGS_restless_stage_is_over = {
+	or = {
+		has_country_flag = SGS_civil_war_start
+		has_country_flag = sgs_peaceful_transit_flag
+	}
+}

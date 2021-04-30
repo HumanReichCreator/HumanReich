@@ -10,7 +10,7 @@ country_event = {
 
 	}
 	mean_time_to_happen = {
-		days = 75
+		days = 150
 		modifier = {
 			add = -45
 			date < 146.6.1
@@ -32,7 +32,7 @@ country_event = {
 		#has_stability < 0.2
 		#has_war_support > 0.5
 		not = {
-			has_country_flag = SGS_civil_war_start
+			SGS_restless_stage_is_over = yes
 			has_war = yes
 		}
 	}
@@ -226,8 +226,8 @@ country_event = {
 		#不承诺
 		name = sgs.4.2
 		custom_effect_tooltip = up_sgs_uprise
-		subtract_from_variable = {
-			sgs_uprise = 3
+		add_to_variable = {
+			sgs_uprise = 15
 		}
 		clamp_variable = {
 			var = sgs_uprise
@@ -401,7 +401,7 @@ country_event = {
 				add_core_of = BAF
 			}
 			set_country_flag = SGS_civil_war_start #标记内战开始
-			mark_focus_tree_layout_dirty = yes
+
 			if = {
 				limit = {
 					or = {
@@ -431,6 +431,7 @@ country_event = {
 					id = sgs.1051
 				}
 			}
+			mark_focus_tree_layout_dirty = yes
 			news_event = {
 				id = sgs.106
 			}
@@ -752,7 +753,7 @@ country_event = {
 
 	}
 	mean_time_to_happen = {
-		days = 45
+		days = 75
 		modifier = {
 			add = -25
 			has_stability > 0.05
@@ -760,7 +761,7 @@ country_event = {
 	}
 	trigger = {
 		not = {
-			has_country_flag = SGS_civil_war_start
+			SGS_restless_stage_is_over = yes
 			has_war = yes
 		}
 		tag = SGS
@@ -796,7 +797,7 @@ country_event = {
 		set_country_flag = sgs_fairy_dont_like_BaF
 	}
 	mean_time_to_happen = {
-		days = 75
+		days = 100
 		modifier = {
 			add = -25
 			neworder > 0.75
@@ -804,7 +805,7 @@ country_event = {
 	}
 	trigger = {
 		not = {
-			has_country_flag = SGS_civil_war_start
+			SGS_restless_stage_is_over = yes
 			has_war = yes
 		}
 		tag = SGS
@@ -875,7 +876,7 @@ country_event = {
 	}
 	trigger = {
 		not = {
-			has_country_flag = SGS_civil_war_start
+			SGS_restless_stage_is_over = yes
 			has_country_flag = SGS_war_won
 			has_war = yes
 		}
@@ -925,7 +926,7 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 45
+		days = 75
 		modifier = {
 			add = -15
 			check_variable = { sgs_uprise < 100 }
@@ -938,7 +939,7 @@ country_event = {
 	trigger = {
 		date > 146.6.1
 		not = {
-			has_country_flag = SGS_civil_war_start
+			SGS_restless_stage_is_over = yes
 			has_war = yes
 			has_country_flag = SGS_war_won
 		}
@@ -1004,7 +1005,7 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 75
+		days = 120
 		modifier = {
 			add = -25
 			has_stability < -0.2
@@ -1018,7 +1019,7 @@ country_event = {
 	trigger = {
 		date > 146.4.1
 		not = {
-			has_country_flag = SGS_civil_war_start
+			SGS_restless_stage_is_over = yes
 			has_war = yes
 		}
 		tag = SGS
@@ -1290,8 +1291,9 @@ country_event = {
 
 	}
 	trigger = {
+		date > 146.2.1
 		not = {
-			has_country_flag = SGS_civil_war_start
+			SGS_restless_stage_is_over = yes
 		}
 		tag = SGS
 	}
@@ -1325,7 +1327,7 @@ country_event = {
 	}
 	trigger = {
 		not = {
-			has_country_flag = SGS_civil_war_start
+			SGS_restless_stage_is_over = yes
 			has_war = yes
 		}
 		tag = SGS
@@ -1357,13 +1359,14 @@ country_event = {
 	mean_time_to_happen = {
 		days = 30
 		modifier = {
-			add = 30
+			add = 60
 			date < 146.6.1
 		}
 	}
 	trigger = {
+		date > 146.3.1
 		not = {
-			has_country_flag = SGS_civil_war_start
+			SGS_restless_stage_is_over = yes
 		}
 		tag = SGS
 	}
@@ -1396,9 +1399,9 @@ country_event = {
 
 	}
 	trigger = {
-
+		date > 146.1.3
 		not = {
-			has_country_flag = SGS_civil_war_start
+			SGS_restless_stage_is_over = yes
 		}
 		tag = SGS
 	}
@@ -1431,7 +1434,7 @@ country_event = {
 	trigger = {
 		date > 146.3.1
 		not = {
-			has_country_flag = SGS_civil_war_start
+			SGS_restless_stage_is_over = yes
 		}
 		tag = SGS
 	}
@@ -1464,7 +1467,7 @@ country_event = {
 	trigger = {
 		date > 146.6.1
 		not = {
-			has_country_flag = SGS_civil_war_start
+			SGS_restless_stage_is_over = yes
 		}
 		tag = SGS
 	}
@@ -1495,9 +1498,9 @@ country_event = {
 
 	}
 	trigger = {
-		date > 146.3.1
+		date > 146.4.1
 		not = {
-			has_country_flag = SGS_civil_war_start
+			SGS_restless_stage_is_over = yes
 		}
 		tag = SGS
 	}
@@ -1532,7 +1535,7 @@ country_event = {
 	trigger = {
 		date > 146.6.1
 		not = {
-			has_country_flag = SGS_civil_war_start
+			SGS_restless_stage_is_over = yes
 		}
 		tag = SGS
 	}
@@ -10437,7 +10440,7 @@ country_event = {
 		#建军为主
 		name = sgs.3030.1
 		custom_effect_tooltip = SGS_toolip_Baf_two_leaders 
-		create_field_marshal = {
+		create_corps_commander  = {
 			name = "贝特尔"
 			picture = "gfx/leaders/gen/fai1.dds"
 			traits = { trait_reckless }
@@ -10447,7 +10450,7 @@ country_event = {
 			planning_skill = 2
 			logistics_skill = 1
 		}
-		create_field_marshal = {
+		create_corps_commander = {
 			name = "阿尔特·坎普法"
 			picture = "gfx/leaders/gen/fai2.dds"
 			traits = { war_hero }
@@ -10503,6 +10506,7 @@ country_event = {
 			min = 0
 			max = 1000
 		}
+		add_to_temp_variable = {num_dogs = 400}
 		add_to_variable = { global.manpower_escape_from_SGS = num_dogs } 
 		set_temp_variable = { tempv = num_dogs }
 		multiply_temp_variable = { tempv = -1 }
@@ -10515,20 +10519,22 @@ country_event = {
 
 
 		randomize_variable = {
-			var = num_dogss
+			var = num_dogs
 			distribution = binomial
 			min = 0
 			max = 1000
 		}
-		add_to_variable = { global.manpower_escape_from_SGS = num_dogss } 
-		set_temp_variable = { tempvv = num_dogss }
-		multiply_temp_variable = { tempvv = -1 }
+		add_to_temp_variable = {num_dogs = 400}
+		add_to_variable = { global.manpower_escape_from_SGS = num_dogs } 
+		set_temp_variable = { tempv = num_dogs }
+		multiply_temp_variable = { tempv = -1 }
 		random_owned_state = {
 			limit = {
 				state_population > 400
 			}
-			add_manpower = tempvv
+			add_manpower = tempv
 		}
+
 		add_stability = -0.08
 		#人跑完之后给其他国家加人力，触发事件
 		ai_chance = {
@@ -10579,7 +10585,7 @@ country_event = {
 	}
 	option = {
 		#还是要激进派方案
-		name = sgs.3032.1
+		name = sgs.3032.2
 		add_war_support = 0.3
 		lobbyincrease = yes
 		SGS_dove_reduce5 = yes
@@ -10611,7 +10617,7 @@ country_event = {
 	}
 	option = {
 		#还是要激进派方案
-		name = sgs.3033.1
+		name = sgs.3033.2
 		add_stability = 0.25
 		lobbydecrease = yes
 		SGS_hawk_reduce5 = yes
