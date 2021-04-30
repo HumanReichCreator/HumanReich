@@ -10422,25 +10422,7 @@ news_event = {
 	}
 }
 #-------sgs.3030开始是和平过渡路线的事件
-country_event = {
-	#先军体制的方向
-	id = sgs.3030
-	title = sgs.3030.t
-	desc = sgs.3030.d
-	fire_only_once = yes
-	is_triggered_only = yes
-	trigger = {
-		tag = sgs
-	}
-	option = {
-		#
-		name = sgs.3030.1
 
-		ai_chance = {
-			base = 35
-		}
-	}
-}
 country_event = {
 	#先军体制的方向
 	id = sgs.3030
@@ -10515,37 +10497,37 @@ country_event = {
 		name = sgs.3031.1
 		set_variable = { global.manpower_escape_from_SGS = 0 }
 		
-		randomize_temp_variable = {
+		randomize_variable = {
 			var = num_dogs
-			distribution = poisson
-			lambda = 500  # required
-			min = 400     # optional
+			distribution = binomial
+			min = 0
+			max = 1000
 		}
 		add_to_variable = { global.manpower_escape_from_SGS = num_dogs } 
-		set_temp_variable = { temp = num_dogs }
-		multiply_temp_variable = { temp = -1 }
+		set_temp_variable = { tempv = num_dogs }
+		multiply_temp_variable = { tempv = -1 }
 		random_owned_state = {
 			limit = {
 				state_population > 400
 			}
-			add_manpower = temp
+			add_manpower = tempv
 		}
 
 
-		randomize_temp_variable = {
-			var = num_dogs
-			distribution = poisson
-			lambda = 500  # required
-			min = 400     # optional
+		randomize_variable = {
+			var = num_dogss
+			distribution = binomial
+			min = 0
+			max = 1000
 		}
-		add_to_variable = { global.manpower_escape_from_SGS = num_dogs } 
-		set_temp_variable = { temp = num_dogs }
-		multiply_temp_variable = { temp = -1 }
+		add_to_variable = { global.manpower_escape_from_SGS = num_dogss } 
+		set_temp_variable = { tempvv = num_dogss }
+		multiply_temp_variable = { tempvv = -1 }
 		random_owned_state = {
 			limit = {
 				state_population > 400
 			}
-			add_manpower = temp
+			add_manpower = tempvv
 		}
 		add_stability = -0.08
 		#人跑完之后给其他国家加人力，触发事件
