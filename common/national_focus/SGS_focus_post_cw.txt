@@ -666,7 +666,11 @@ focus_tree = {
 			focus = SGS_Baf_economy_focus
 		}
 		available = {
-			SGS_hawk_get_more = yes
+			custom_trigger_tooltip = {
+                SGS_hawk_get_more = yes
+                SGS_hawk_have_supporter = yes
+            }
+			
 		}
 		completion_reward = {
 			#给之前那个buff增加一个建筑建造和大幅消费品的修正，概率性会有事件表示平民会逃跑，损失人力，减稳定
@@ -722,7 +726,11 @@ focus_tree = {
 		icon = GFX_goal_continuous_restrict_freedom
 		cost = 5
 		available = {
-			SGS_hawk_have_supporter = yes
+			custom_trigger_tooltip = {
+                tooltip = SGS_hawk_have_supporter
+                SGS_hawk_have_supporter = yes
+            }
+			
 		}
 		prerequisite = {
 			focus = SGS_culture_reform_focus
@@ -776,6 +784,10 @@ focus_tree = {
 						add_idea = SGS_battle_fairy_elite_army
 					}
 				}
+			}
+			delete_unit_template_and_units = {
+				division_template = "妖精民兵武装"
+				disband = yes
 			}
 		}
 		x = 1

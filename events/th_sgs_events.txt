@@ -10468,7 +10468,7 @@ country_event = {
 	}
 	option = {
 		#军工为主
-		name = sgs.3030.1
+		name = sgs.3030.2
 		random_owned_controlled_state = {
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
@@ -10651,7 +10651,7 @@ country_event = {
 	}
 	option = {
 		#送到训练场
-		name = sgs.3034.1
+		name = sgs.3034.2
 		swap_ideas = {
 			remove_idea = SGS_itazura_ban_idea
 			add_idea = SGS_itazura_ban_mil_idea
