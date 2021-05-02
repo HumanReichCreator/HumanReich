@@ -10741,7 +10741,7 @@ country_event = {
 	id = sgs.3036
 	title = sgs.3036.t
 	desc = sgs.3036.d
-	fire_only_once = yes
+	fire_only_once = no
 	is_triggered_only = yes
 	trigger = {
 		tag = sgs
@@ -10766,6 +10766,133 @@ country_event = {
 		}
 		ai_chance = {
 			base = 40
+		}
+	}
+}
+
+country_event = {
+	#寻找黑市商人
+	id = sgs.3037
+	title = sgs.3037.t
+	desc = sgs.3037.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#河童
+		name = sgs.3037.1
+		set_variable = { ROOT.sgs_find_black_marketer = 1}
+		hidden_effect = {
+			random_list = {
+				40 = {
+					set_country_flag = SGS_find_marketer_successfully
+				}
+				40 = {
+					set_country_flag = SGS_find_marketer_failed_but_fariy
+				}
+			    20 = { }
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#妖精
+		name = sgs.3037.2
+		set_variable = { ROOT.sgs_find_black_marketer = 2}
+		hidden_effect = {
+			random_list = {
+				85 = {
+					set_country_flag = SGS_find_marketer_successfully
+				}
+			    15 = { }
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#人类
+		name = sgs.3037.3
+		set_variable = { ROOT.sgs_find_black_marketer = 3}
+		hidden_effect = {
+			random_list = {
+				65 = {
+					set_country_flag = SGS_find_marketer_successfully
+				}
+				25 = {
+					set_country_flag = SGS_find_marketer_failed_but_fariy
+				}
+			    10 = { }
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#寻找成功
+	id = sgs.3038
+	title = sgs.3038.t
+	desc = sgs.3038.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.3038.1
+		set_variable = {ROOT.sgs_current_black_marketer = ROOT.sgs_find_black_marketer}
+		add_political_power = 30
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#寻找失败
+	id = sgs.3039
+	title = sgs.3039.t
+	desc = {
+		text = sgs.3039.d
+		trigger = {
+			not=  { has_country_flag = SGS_find_marketer_failed_but_fariy }
+		}
+	}
+	desc = {
+		text = sgs.3039.d_fairy
+		trigger = {
+			has_country_flag = SGS_find_marketer_failed_but_fariy
+		}
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#接受失败
+		name = sgs.3039.1
+		add_political_power = -5
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#试试妖精
+		trigger = {
+			has_country_flag = SGS_find_marketer_failed_but_fariy
+		}
+		name = sgs.3039.2
+		set_variable = {ROOT.sgs_current_black_marketer = 2}
+		ai_chance = {
+			base = 35
 		}
 	}
 }
