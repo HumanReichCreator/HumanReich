@@ -279,7 +279,7 @@ on_actions = {
 			if = {
 				limit = {
 					SGS_find_black_marketer_deci_base_trigger = yes
-					not = {check_variable = {sgs_current_black_marketer>0} }
+					not = {check_variable = {sgs_current_black_marketer = 0} }
 				}
 				SGS_calculate_black_market_repo = yes
 			}
