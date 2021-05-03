@@ -1,8 +1,8 @@
 country_event = {
 	#
-	id = sgs.3036
-	title = sgs.3036.t
-	desc = sgs.3036.d
+	id = sgs.3038
+	title = sgs.3038.t
+	desc = sgs.3038.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	trigger = {
@@ -10,7 +10,7 @@ country_event = {
 	}
 	option = {
 		#
-		name = sgs.3036.1
+		name = sgs.3038.1
 
 		ai_chance = {
 			base = 35
@@ -22,8 +22,12 @@ SGS_force_demand_equip
 SGS_black_market_equip
 SGS_on_own_way_equip
 
+sgs_find_black_marketer
+SGS_find_marketer_failed_but_fariy
 SGS_restless_stage_is_over = yes
 country_event = {
 	id = sgs.1052
 }
 why?
+
+|G0

@@ -21,6 +21,14 @@ SGS_post_Baf_star_gov = {
 	}
 }
 
+SGS_has_hawk_dove_mechanism = {
+	or = {
+		SGS_peaceful_transit_gov = yes 
+		SGS_sunnystar_post_cw_gov = yes 
+		SGS_post_Baf_star_gov = yes 
+	}
+}
+
 SGS_hawk_have_supporter = {
 	check_variable = {
 		sgs_hawk_infl > 40

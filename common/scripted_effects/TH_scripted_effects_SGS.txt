@@ -71,3 +71,28 @@ SGS_dove_rise20 = {
     SGS_deal_after_dove_cal = yes
 }
 
+SGS_calculate_black_market_repo = {
+    if = {
+        limit = {
+            check_variable = {sgs_current_black_marketer = 1} #河童
+        }
+        set_temp_variable = {sgs_equip_num = 2500}
+        every_country = {
+            limit = {
+                has_idea = Kappa
+            }
+            add_to_temp_variable = {sgs_equip_num = num_equipment@gun_a }
+        }
+        multiply_temp_variable = {sgs_equip_num = 0.2}
+        set_variable = {sgs_black_market_repo_gun = sgs_equip_num}
+        else_if = {
+            limit = {
+                check_variable = {sgs_current_black_marketer = 2} #妖精
+            }
+
+        }
+        else = { #人类
+            
+        }
+    }
+}

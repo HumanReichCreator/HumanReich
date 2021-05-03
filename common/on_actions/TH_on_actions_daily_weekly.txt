@@ -274,7 +274,17 @@ on_actions = {
 		    
 		}
 	}
-
+	on_daily_SGS = {
+		effect = {
+			if = {
+				limit = {
+					SGS_find_black_marketer_deci_base_trigger = yes
+					not = {check_variable = {sgs_current_black_marketer>0} }
+				}
+				SGS_calculate_black_market_repo = yes
+			}
+		}
+	}
 	on_weekly = {
 		effect = {
 			if = {

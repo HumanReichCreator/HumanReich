@@ -761,9 +761,8 @@ SGS_equipment_issue_category = {
 					else = {
 						country_event = { id = sgs.3039}
 					}
-				}
+				}  
 			}
-			
 		}
 		ai_will_do = {
 			factor = 100
@@ -795,11 +794,7 @@ SGS_equipment_issue_category = {
 SGS_hawk_dove_category = {
 	SGS_supprot_hawk_deci = {
 		visible = {
-			or = {
-				SGS_peaceful_transit_gov = yes 
-				SGS_sunnystar_post_cw_gov = yes 
-				SGS_post_Baf_star_gov = yes 
-			}
+			SGS_has_hawk_dove_mechanism = yes
 		}
 		available = {
 		}

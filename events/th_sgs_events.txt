@@ -10442,7 +10442,7 @@ country_event = {
 		custom_effect_tooltip = SGS_toolip_Baf_two_leaders 
 		create_corps_commander  = {
 			name = "贝特尔"
-			picture = "gfx/leaders/gen/fai1.dds"
+			portrait_path = "gfx/leaders/gen/fai1.dds"
 			traits = { trait_reckless }
 			skill = 2
 			attack_skill = 3
@@ -10452,7 +10452,7 @@ country_event = {
 		}
 		create_corps_commander = {
 			name = "阿尔特·坎普法"
-			picture = "gfx/leaders/gen/fai2.dds"
+			portrait_path = "gfx/leaders/gen/fai2.dds"
 			traits = { war_hero }
 			skill = 4
 			attack_skill = 2
@@ -10850,6 +10850,7 @@ country_event = {
 		name = sgs.3038.1
 		set_variable = {ROOT.sgs_current_black_marketer = ROOT.sgs_find_black_marketer}
 		add_political_power = 30
+		SGS_calculate_black_market_repo = yes
 		ai_chance = {
 			base = 35
 		}
@@ -10891,6 +10892,7 @@ country_event = {
 		}
 		name = sgs.3039.2
 		set_variable = {ROOT.sgs_current_black_marketer = 2}
+		SGS_calculate_black_market_repo = yes
 		ai_chance = {
 			base = 35
 		}

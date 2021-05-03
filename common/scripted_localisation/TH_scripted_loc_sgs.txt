@@ -184,3 +184,60 @@ defined_text = {
 		localization_key = sgs_black_marketer_human
 	}
 }
+defined_text = {
+	name = SGSBlackMarketRepoInfo
+	text = {
+		trigger = {
+			check_variable = {
+				ROOT.sgs_current_black_marketer = 0
+			}
+		}
+		localization_key = sgs_black_market_repo_none
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				not = {ROOT.sgs_current_black_marketer = 0}
+			}
+		}
+		localization_key = sgs_black_market_repo_have
+	}
+}
+defined_text = {
+	name = SGSBlackMarketRepoInfoSupport
+	text = {
+		trigger = {
+			check_variable = {
+				not= { has_completed_focus = SGS_find_suuport_equip_focus }
+			}
+		}
+		localization_key = SGS_text_none
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				has_completed_focus = SGS_find_suuport_equip_focus
+			}
+		}
+		localization_key = sgs_black_market_repo_support
+	}
+}
+defined_text = {
+	name = SGSBlackMarketRepoInfoArtillery
+	text = {
+		trigger = {
+			check_variable = {
+				not= { has_completed_focus = SGS_focus_artillery_focus }
+			}
+		}
+		localization_key = SGS_text_none
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				has_completed_focus = SGS_focus_artillery_focus
+			}
+		}
+		localization_key = sgs_black_market_repo_artillery
+	}
+}
