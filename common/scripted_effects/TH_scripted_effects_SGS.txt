@@ -71,28 +71,137 @@ SGS_dove_rise20 = {
     SGS_deal_after_dove_cal = yes
 }
 
+SGS_calculate_black_market_repo_kappa = {
+    every_country = {
+        limit = {
+            has_idea = Kappa
+        }
+        
+        add_to_variable = {global.sgs_equip_num = num_equipment@var:global.sgs_equip_type }
+    }
+    multiply_variable = {global.sgs_equip_num = 0.2}
+}
+SGS_calculate_black_market_repo_fairy = {
+    every_neighbor_country = {
+               
+        add_to_variable = {global.sgs_equip_num = num_equipment@var:global.sgs_equip_type }
+    }
+    multiply_variable = {global.sgs_equip_num = 0.1}
+}
+
+SGS_calculate_black_market_repo_human = {
+    every_neighbor_country = {
+        limit = {
+            has_idea = Human
+        }    
+        add_to_variable = {global.sgs_equip_num = num_equipment@var:global.sgs_equip_type }
+    }
+    multiply_variable = {global.sgs_equip_num = 0.5}
+}
+
 SGS_calculate_black_market_repo = {
     if = {
         limit = {
             check_variable = {sgs_current_black_marketer = 1} #河童
         }
-        set_temp_variable = {sgs_equip_num = 2500}
-        every_country = {
-            limit = {
-                has_idea = Kappa
-            }
-            add_to_temp_variable = {sgs_equip_num = num_equipment@gun_a }
-        }
-        multiply_temp_variable = {sgs_equip_num = 0.2}
-        set_variable = {sgs_black_market_repo_gun = sgs_equip_num}
+        #gun
+        set_variable = {global.sgs_equip_num = 1575} #315*5
+        set_variable = { global.sgs_equip_type = token:gun_a }
+        SGS_calculate_black_market_repo_kappa = yes
+        set_variable = {sgs_black_market_repo_gun = global.sgs_equip_num}
+        #sc 
+        set_variable = {global.sgs_equip_num = 1800} #360*5
+        set_variable = { global.sgs_equip_type = token:magic_core_a }
+        SGS_calculate_black_market_repo_kappa = yes
+        set_variable = {sgs_black_market_repo_SC = global.sgs_equip_num}
+        #melee
+        set_variable = {global.sgs_equip_num = 3600} #720*5
+        set_variable = { global.sgs_equip_type = token:melee_a }
+        SGS_calculate_black_market_repo_kappa = yes
+        set_variable = {sgs_black_market_repo_knife = global.sgs_equip_num}
+        #support
+        set_variable = {global.sgs_equip_num = 180} #36*5
+        set_variable = { global.sgs_equip_type = token:support_equipment }
+        SGS_calculate_black_market_repo_kappa = yes
+        set_variable = {sgs_black_market_repo_support = global.sgs_equip_num}
+        #shield
+        set_variable = {global.sgs_equip_num = 1125} #225*5
+        set_variable = { global.sgs_equip_type = token:shield_a }
+        SGS_calculate_black_market_repo_kappa = yes
+        set_variable = {sgs_black_market_repo_shield = global.sgs_equip_num}
+        #motar
+        set_variable = {global.sgs_equip_num = 180} #36*5
+        set_variable = { global.sgs_equip_type = token:mortar_a }
+        SGS_calculate_black_market_repo_kappa = yes
+        set_variable = {sgs_black_market_repo_motar = global.sgs_equip_num}
+        
         else_if = {
             limit = {
                 check_variable = {sgs_current_black_marketer = 2} #妖精
             }
-
+            #gun
+            set_variable = {global.sgs_equip_num = 0} #
+            set_variable = { global.sgs_equip_type = token:gun_a }
+            SGS_calculate_black_market_repo_fairy = yes
+            set_variable = {sgs_black_market_repo_gun = global.sgs_equip_num}
+            #sc 
+            set_variable = {global.sgs_equip_num = 0} #
+            set_variable = { global.sgs_equip_type = token:magic_core_a }
+            SGS_calculate_black_market_repo_fairy = yes
+            set_variable = {sgs_black_market_repo_SC = global.sgs_equip_num}
+            #melee
+            set_variable = {global.sgs_equip_num = 0} #
+            set_variable = { global.sgs_equip_type = token:melee_a }
+            SGS_calculate_black_market_repo_fairy = yes
+            set_variable = {sgs_black_market_repo_knife = global.sgs_equip_num}
+            #support
+            set_variable = {global.sgs_equip_num = 0} #
+            set_variable = { global.sgs_equip_type = token:support_equipment }
+            SGS_calculate_black_market_repo_fairy = yes
+            set_variable = {sgs_black_market_repo_support = global.sgs_equip_num}
+            #shield
+            set_variable = {global.sgs_equip_num = 0} #
+            set_variable = { global.sgs_equip_type = token:shield_a }
+            SGS_calculate_black_market_repo_fairy = yes
+            set_variable = {sgs_black_market_repo_shield = global.sgs_equip_num}
+            #motar
+            set_variable = {global.sgs_equip_num = 0} #
+            set_variable = { global.sgs_equip_type = token:mortar_a }
+            SGS_calculate_black_market_repo_fairy = yes
+            set_variable = {sgs_black_market_repo_motar = global.sgs_equip_num}
         }
         else = { #人类
             
+            #gun
+            set_variable = {global.sgs_equip_num = 350} #
+            set_variable = { global.sgs_equip_type = token:gun_a }
+            SGS_calculate_black_market_repo_human = yes
+            set_variable = {sgs_black_market_repo_gun = global.sgs_equip_num}
+            #sc 
+            set_variable = {global.sgs_equip_num = 400} #
+            set_variable = { global.sgs_equip_type = token:magic_core_a }
+            SGS_calculate_black_market_repo_human = yes
+            set_variable = {sgs_black_market_repo_SC = global.sgs_equip_num}
+            #melee
+            set_variable = {global.sgs_equip_num = 800} #
+            set_variable = { global.sgs_equip_type = token:melee_a }
+            SGS_calculate_black_market_repo_human = yes
+            set_variable = {sgs_black_market_repo_knife = global.sgs_equip_num}
+            #support
+            set_variable = {global.sgs_equip_num = 40} #
+            set_variable = { global.sgs_equip_type = token:support_equipment }
+            SGS_calculate_black_market_repo_human = yes
+            set_variable = {sgs_black_market_repo_support = global.sgs_equip_num}
+            #shield
+            set_variable = {global.sgs_equip_num = 250} #
+            set_variable = { global.sgs_equip_type = token:shield_a }
+            SGS_calculate_black_market_repo_human = yes
+            set_variable = {sgs_black_market_repo_shield = global.sgs_equip_num}
+            #motar
+            set_variable = {global.sgs_equip_num = 40} #
+            set_variable = { global.sgs_equip_type = token:mortar_a }
+            SGS_calculate_black_market_repo_human = yes
+            set_variable = {sgs_black_market_repo_motar = global.sgs_equip_num}
         }
     }
 }
