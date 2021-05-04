@@ -198,6 +198,14 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			or = {
+				has_country_flag = sgs_black_market_repo_preparing_flag
+			}
+		}
+		localization_key = sgs_black_market_repo_preparing
+	}
+	text = {
+		trigger = {
 			not = {
 				check_variable = {
 					ROOT.sgs_current_black_marketer = 0

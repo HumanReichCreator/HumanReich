@@ -205,3 +205,135 @@ SGS_calculate_black_market_repo = {
         }
     }
 }
+SGS_buying_behaviour_BLM = {
+    round_variable = global.sgs_equip_num_temp
+    send_equipment = {
+        equipment = var:global.sgs_black_market_buying_type
+        amount = var:global.sgs_equip_num_temp
+        target = SGS
+    }
+    add_to_variable = {global.sgs_equip_total_temp = global.sgs_equip_num_temp }
+}
+SGS_buying_from_black_market_repo_kappa = {
+    every_country = {
+        limit = {
+            has_idea = Kappa
+            check_variable = { global.sgs_equip_total_temp < global.sgs_black_market_buying_num }
+            has_equipment = {
+                var:global.sgs_black_market_buying_type > global.sgs_equip_num_temp
+            }
+        }
+        SGS_buying_behaviour_BLM = yes
+    }
+    SGS_BLM_cal_remain = yes
+}
+SGS_buying_from_black_market_repo_fairy = {
+    every_neighbor_country = {
+        limit = {
+            check_variable = {global.sgs_equip_total_temp < global.sgs_black_market_buying_num}
+            has_equipment = {
+                var:global.sgs_black_market_buying_type > global.sgs_equip_num_temp
+            }
+           # check_variable = { num_equipment@ > global.sgs_equip_num_temp}
+        }
+        SGS_buying_behaviour_BLM = yes
+    }
+    SGS_BLM_cal_remain = yes
+}
+
+SGS_buying_from_black_market_repo_human = {
+    every_neighbor_country = {
+        limit = {
+            has_idea = Human
+            check_variable = {global.sgs_equip_total_temp < global.sgs_black_market_buying_num }
+            has_equipment = {
+                var:global.sgs_black_market_buying_type > global.sgs_equip_num_temp
+            }
+        }
+        SGS_buying_behaviour_BLM = yes
+    }
+    SGS_BLM_cal_remain = yes
+}
+
+SGS_BLM_cal_remain = {
+    set_variable = {global.sgs_remain = global.sgs_black_market_buying_num }
+    subtract_from_variable = {global.sgs_remain = global.sgs_equip_total_temp }
+    if = {
+        limit = {
+            check_variable = {global.sgs_remain > 0}
+        }
+        add_equipment_to_stockpile = {
+            type = var:global.sgs_black_market_buying_type
+            amount = var:global.sgs_remain
+        }
+    }
+}
+
+SGS_BLM_cal_remain_for_fake = {
+    if = {
+        limit = {
+            check_variable = {sgs_current_black_marketer = 1} #河童	
+        }
+        every_country = {
+            limit = {
+                has_idea = Kappa
+                check_variable = { global.sgs_equip_total_temp < global.sgs_black_market_buying_num }
+                has_equipment = {
+                    var:global.sgs_black_market_buying_type > global.sgs_equip_num_temp
+                }  
+            }
+            add_to_variable = {global.sgs_equip_total_temp = global.sgs_equip_num_temp }
+        }
+
+
+        else_if = {
+            limit = {
+                check_variable = {sgs_current_black_marketer = 2}
+            }
+            every_neighbor_country = {
+                limit = {
+                    check_variable = {global.sgs_equip_total_temp < global.sgs_black_market_buying_num}
+                    has_equipment = {
+                        var:global.sgs_black_market_buying_type > global.sgs_equip_num_temp
+                    }
+                   # check_variable = { num_equipment@ > global.sgs_equip_num_temp}
+                }
+                add_to_variable = {global.sgs_equip_total_temp = global.sgs_equip_num_temp }
+            }
+        }
+
+
+        else = {# 人类
+            every_neighbor_country = {
+                limit = {
+                    has_idea = Human
+                    check_variable = {global.sgs_equip_total_temp < global.sgs_black_market_buying_num }
+                    has_equipment = {
+                        var:global.sgs_black_market_buying_type > global.sgs_equip_num_temp
+                    }
+                }
+                add_to_variable = {global.sgs_equip_total_temp = global.sgs_equip_num_temp }
+            }
+        }
+    }
+
+    set_variable = {global.sgs_remain = global.sgs_black_market_buying_num }
+    subtract_from_variable = {global.sgs_remain = global.sgs_equip_total_temp }
+}
+
+SGS_init_BML_deci = {
+    set_country_flag = sgs_black_market_repo_preparing_flag
+    activate_decision = SGS_fire_black_market_doing_deci 
+	set_variable = { global.sgs_equip_num_temp = global.sgs_black_market_buying_num }
+	if = {
+		limit = {
+			check_variable = { sgs_current_black_marketer = 3 }
+		}
+		multiply_variable = {global.sgs_equip_num_temp = 0.3}
+		else = {
+			multiply_variable = {global.sgs_equip_num_temp = 0.1}
+		}
+	}
+	round_variable = global.sgs_equip_num_temp
+	set_variable = {global.sgs_equip_total_temp = 0}
+}

@@ -10850,7 +10850,10 @@ country_event = {
 		name = sgs.3038.1
 		set_variable = {ROOT.sgs_current_black_marketer = ROOT.sgs_find_black_marketer}
 		add_political_power = 30
-		SGS_calculate_black_market_repo = yes
+		hidden_effect = {
+			SGS_calculate_black_market_repo = yes
+		}
+		
 		ai_chance = {
 			base = 35
 		}
@@ -10892,7 +10895,51 @@ country_event = {
 		}
 		name = sgs.3039.2
 		set_variable = {ROOT.sgs_current_black_marketer = 2}
-		SGS_calculate_black_market_repo = yes
+		hidden_effect = {
+			SGS_calculate_black_market_repo = yes
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#货物送达-小
+	id = sgs.3040
+	title = sgs.3040.t
+	desc = sgs.3040.d
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	immediate = {
+		hidden_effect = {
+			SGS_BLM_cal_remain_for_fake = yes
+		}
+		
+	}
+	option = {
+		#
+		name = sgs.3040.1
+		set_variable = {global.sgs_equip_total_temp = 0 }
+		if = {
+			limit = {
+				check_variable = {sgs_current_black_marketer = 1} #河童	
+			}
+			SGS_buying_from_black_market_repo_kappa = yes
+			else_if = {
+				limit = {
+					check_variable = {sgs_current_black_marketer = 2}
+				}
+				SGS_buying_from_black_market_repo_fairy = yes
+			}
+			else = {# 人类
+				SGS_buying_from_black_market_repo_human = yes
+			}
+		}
+		clr_country_flag = sgs_black_market_repo_preparing_flag
+
 		ai_chance = {
 			base = 35
 		}

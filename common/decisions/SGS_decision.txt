@@ -772,12 +772,14 @@ SGS_equipment_issue_category = {
 		visible = {
 			SGS_find_black_marketer_deci_base_trigger = yes
 			not = {
+				
 				check_variable = {
 					ROOT.sgs_current_black_marketer = 0
 				}
 			}
 		}
 		available = {
+			not = { has_decision = SGS_fire_black_market_doing_deci }
 		}
 		cost = 10
 		days_re_enable = 15
@@ -786,9 +788,94 @@ SGS_equipment_issue_category = {
 			set_variable = {ROOT.sgs_current_black_marketer = 0}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 	}
+
+	SGS_fire_black_marketer_buy_gun_small = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 0
+				}
+			}
+		}
+		available = {
+			not = {
+				has_decision = SGS_fire_black_market_doing_deci
+			}
+			check_variable = {sgs_black_market_repo_gun > 149}
+		}
+		cost = 30
+		days_re_enable = 2
+		days_remove = 30
+		fire_only_once = no
+		modifier = {
+			civilian_factory_use = 1
+		}
+		complete_effect = {
+			set_variable = {global.sgs_black_market_buying_type = token:gun_a}
+			set_variable = {global.sgs_black_market_buying_num = 150}
+			SGS_init_BML_deci = yes
+		}
+		remove_effect = {
+			country_event = {id = sgs.3040} #交货
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	SGS_fire_black_marketer_buy_magic_core_small = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 0
+				}
+			}
+		}
+		available = {
+			not = {
+				has_decision = SGS_fire_black_market_doing_deci
+			}
+			check_variable = {sgs_black_market_repo_SC > 180}
+		}
+		cost = 30
+		days_re_enable = 2
+		days_remove = 30
+		fire_only_once = no
+		modifier = {
+			civilian_factory_use = 1
+		}
+		complete_effect = {
+			set_variable = { global.sgs_black_market_buying_type = token:magic_core_a }
+			set_variable = { global.sgs_black_market_buying_num = 180 }
+			SGS_init_BML_deci = yes
+		}
+		remove_effect = {
+			country_event = {id = sgs.3040 } #交货
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	SGS_fire_black_market_doing_deci = {
+		
+		#available = {
+		#	always = no
+		#}
+		# visible = {
+	    	# SGS_find_black_marketer_deci_base_trigger = yes
+		# }
+		days_remove = 60
+		timeout_effect = {
+			
+		}
+		fire_only_once = no
+		
+	}
+
 }
 
 SGS_hawk_dove_category = {
