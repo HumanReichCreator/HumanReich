@@ -120,7 +120,7 @@ SGS_category = {
 				check_variable = {
 					sgs_uprise > 100
 				}
-				factor = 2
+				factor = 1
 			}
 		}
 	}
@@ -280,7 +280,7 @@ SGS_category = {
 			}
 		}
 		ai_will_do = {
-			factor = 25
+			factor = 15
 			modifier = {
 				has_stability < 0.1
 				factor = 1.2
@@ -433,13 +433,13 @@ SGS_category = {
 				has_equipment = {
 					magic_core_a < 0
 				}
-				factor = 2
+				factor = 1
 			}
 			modifier = {
 				has_equipment = {
 					gun_a < 0
 				}
-				factor = 2
+				factor = 1
 			}
 		}
 	}
@@ -494,7 +494,7 @@ SGS_category = {
 				check_variable = {
 					sgs_uprise > 75
 				}
-				factor = 2
+				factor = 1
 			}
 		}
 	}
@@ -800,12 +800,21 @@ SGS_equipment_issue_category = {
 					ROOT.sgs_current_black_marketer = 0
 				}
 			}
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 3
+				}
+			}
 		}
 		available = {
 			not = {
 				has_decision = SGS_fire_black_market_doing_deci
 			}
-			check_variable = {sgs_black_market_repo_gun > 149}
+			custom_trigger_tooltip = {
+                tooltip = sgs_black_market_repo_gun_small_tt
+                check_variable = {sgs_black_market_repo_gun > 149}
+            }
+			
 		}
 		cost = 30
 		days_re_enable = 2
@@ -814,16 +823,18 @@ SGS_equipment_issue_category = {
 		modifier = {
 			civilian_factory_use = 1
 		}
+		
 		complete_effect = {
 			set_variable = {global.sgs_black_market_buying_type = token:gun_a}
 			set_variable = {global.sgs_black_market_buying_num = 150}
 			SGS_init_BML_deci = yes
+			
 		}
 		remove_effect = {
 			country_event = {id = sgs.3040} #交货
 		}
 		ai_will_do = {
-			factor = 0
+			factor = 1
 		}
 	}
 	SGS_fire_black_marketer_buy_magic_core_small = {
@@ -834,12 +845,21 @@ SGS_equipment_issue_category = {
 					ROOT.sgs_current_black_marketer = 0
 				}
 			}
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 3
+				}
+			}
 		}
 		available = {
 			not = {
 				has_decision = SGS_fire_black_market_doing_deci
 			}
-			check_variable = {sgs_black_market_repo_SC > 180}
+			custom_trigger_tooltip = {
+                tooltip = sgs_black_market_repo_magic_core_small_tt
+                check_variable = {sgs_black_market_repo_SC > 179}
+            }
+			
 		}
 		cost = 30
 		days_re_enable = 2
@@ -848,29 +868,1016 @@ SGS_equipment_issue_category = {
 		modifier = {
 			civilian_factory_use = 1
 		}
+		
 		complete_effect = {
 			set_variable = { global.sgs_black_market_buying_type = token:magic_core_a }
 			set_variable = { global.sgs_black_market_buying_num = 180 }
 			SGS_init_BML_deci = yes
+			
+
 		}
 		remove_effect = {
 			country_event = {id = sgs.3040 } #交货
 		}
 		ai_will_do = {
-			factor = 0
+			factor = 1
 		}
 	}
+	SGS_fire_black_marketer_buy_melee_small = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 0
+				}
+			}
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 3
+				}
+			}
+			has_completed_focus = SGS_find_suuport_equip_focus
+		}
+		available = {
+			not = {
+				has_decision = SGS_fire_black_market_doing_deci
+			}
+			custom_trigger_tooltip = {
+				tooltip = sgs_black_market_repo_melee_small_tt
+				check_variable = {sgs_black_market_repo_knife > 349}
+			}
+			
+		}
+		cost = 30
+		days_re_enable = 2
+		days_remove = 30
+		fire_only_once = no
+		modifier = {
+			civilian_factory_use = 1
+		}
+		
+		complete_effect = {
+			set_variable = {global.sgs_black_market_buying_type = token:melee_a}
+			set_variable = {global.sgs_black_market_buying_num = 350}
+			SGS_init_BML_deci = yes
+			
+		}
+		remove_effect = {
+			country_event = {id = sgs.3040} #交货
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SGS_fire_black_marketer_buy_support_small = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 0
+				}
+			}
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 3
+				}
+			}
+			has_completed_focus = SGS_find_suuport_equip_focus
+		}
+		available = {
+			not = {
+				has_decision = SGS_fire_black_market_doing_deci
+			}
+			custom_trigger_tooltip = {
+				tooltip = sgs_black_market_repo_support_small_tt
+				check_variable = {sgs_black_market_repo_support > 19}
+			}
+			
+		}
+		cost = 30
+		days_re_enable = 2
+		days_remove = 30
+		fire_only_once = no
+		modifier = {
+			civilian_factory_use = 1
+		}
+		
+		complete_effect = {
+			set_variable = {global.sgs_black_market_buying_type = token:support_equipment}
+			set_variable = {global.sgs_black_market_buying_num = 20}
+			SGS_init_BML_deci = yes
+			
+		}
+		remove_effect = {
+			country_event = {id = sgs.3040} #交货
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SGS_fire_black_marketer_buy_shield_small = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 0
+				}
+			}
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 3
+				}
+			}
+			has_completed_focus = SGS_focus_artillery_focus
+		}
+		available = {
+			not = {
+				has_decision = SGS_fire_black_market_doing_deci
+			}
+			custom_trigger_tooltip = {
+				tooltip = sgs_black_market_repo_shield_small_tt
+				check_variable = {sgs_black_market_repo_shield > 109}
+			}
+			
+		}
+		cost = 30
+		days_re_enable = 2
+		days_remove = 30
+		fire_only_once = no
+		modifier = {
+			civilian_factory_use = 1
+		}
+		
+		complete_effect = {
+			set_variable = {global.sgs_black_market_buying_type = token:shield_a}
+			set_variable = {global.sgs_black_market_buying_num = 110}
+			SGS_init_BML_deci = yes
+			
+		}
+		remove_effect = {
+			country_event = {id = sgs.3040} #交货
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SGS_fire_black_marketer_buy_artillery_small = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 0
+				}
+			}
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 3
+				}
+			}
+			has_completed_focus = SGS_focus_artillery_focus
+		}
+		available = {
+			not = {
+				has_decision = SGS_fire_black_market_doing_deci
+			}
+			custom_trigger_tooltip = {
+				tooltip = sgs_black_market_repo_artillery_small_tt
+				check_variable = {sgs_black_market_repo_motar > 19}
+			}
+			
+		}
+		cost = 30
+		days_re_enable = 2
+		days_remove = 30
+		fire_only_once = no
+		modifier = {
+			civilian_factory_use = 1
+		}
+		
+		complete_effect = {
+			set_variable = {global.sgs_black_market_buying_type = token:mortar_a}
+			set_variable = {global.sgs_black_market_buying_num = 20}
+			SGS_init_BML_deci = yes
+			
+		}
+		remove_effect = {
+			country_event = {id = sgs.3040} #交货
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	SGS_fire_black_marketer_buy_gun = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 0
+				}
+			}
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 3
+				}
+			}
+		}
+		available = {
+			not = {
+				has_decision = SGS_fire_black_market_doing_deci
+			}
+			custom_trigger_tooltip = {
+                tooltip = sgs_black_market_repo_gun_tt
+                check_variable = {sgs_black_market_repo_gun > 349}
+            }
+			
+		}
+		cost = 50
+		days_re_enable = 2
+		days_remove = 30
+		fire_only_once = no
+		modifier = {
+			civilian_factory_use = 2
+		}
+		
+		complete_effect = {
+			set_variable = {global.sgs_black_market_buying_type = token:gun_a}
+			set_variable = {global.sgs_black_market_buying_num = 350}
+			SGS_init_BML_deci = yes
+			
+		}
+		remove_effect = {
+			country_event = {id = sgs.3041} #交货
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SGS_fire_black_marketer_buy_magic_core = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 0
+				}
+			}
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 3
+				}
+			}
+		}
+		available = {
+			not = {
+				has_decision = SGS_fire_black_market_doing_deci
+			}
+			custom_trigger_tooltip = {
+                tooltip = sgs_black_market_repo_magic_core_tt
+                check_variable = {sgs_black_market_repo_SC > 399}
+            }
+			
+		}
+		cost = 50
+		days_re_enable = 2
+		days_remove = 30
+		fire_only_once = no
+		modifier = {
+			civilian_factory_use = 2
+		}
+		
+		complete_effect = {
+			set_variable = { global.sgs_black_market_buying_type = token:magic_core_a }
+			set_variable = { global.sgs_black_market_buying_num = 400 }
+			SGS_init_BML_deci = yes
+			
+
+		}
+		remove_effect = {
+			country_event = {id = sgs.3041 } #交货
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SGS_fire_black_marketer_buy_melee = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 0
+				}
+			}
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 3
+				}
+			}
+			has_completed_focus = SGS_find_suuport_equip_focus
+		}
+		available = {
+			not = {
+				has_decision = SGS_fire_black_market_doing_deci
+			}
+			custom_trigger_tooltip = {
+				tooltip = sgs_black_market_repo_melee_tt
+				check_variable = {sgs_black_market_repo_knife > 799}
+			}
+			
+		}
+		cost = 50
+		days_re_enable = 2
+		days_remove = 30
+		fire_only_once = no
+		modifier = {
+			civilian_factory_use = 2
+		}
+		
+		complete_effect = {
+			set_variable = {global.sgs_black_market_buying_type = token:melee_a}
+			set_variable = {global.sgs_black_market_buying_num = 800}
+			SGS_init_BML_deci = yes
+			
+		}
+		remove_effect = {
+			country_event = {id = sgs.3041} #交货
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SGS_fire_black_marketer_buy_support = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 0
+				}
+			}
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 3
+				}
+			}
+			has_completed_focus = SGS_find_suuport_equip_focus
+		}
+		available = {
+			not = {
+				has_decision = SGS_fire_black_market_doing_deci
+			}
+			custom_trigger_tooltip = {
+				tooltip = sgs_black_market_repo_support_tt
+				check_variable = {sgs_black_market_repo_support > 39}
+			}
+			
+		}
+		cost = 50
+		days_re_enable = 2
+		days_remove = 30
+		fire_only_once = no
+		modifier = {
+			civilian_factory_use = 2
+		}
+		
+		complete_effect = {
+			set_variable = {global.sgs_black_market_buying_type = token:support_equipment}
+			set_variable = {global.sgs_black_market_buying_num = 40}
+			SGS_init_BML_deci = yes
+			
+		}
+		remove_effect = {
+			country_event = {id = sgs.3041} #交货
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SGS_fire_black_marketer_buy_shield = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 0
+				}
+			}
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 3
+				}
+			}
+			has_completed_focus = SGS_focus_artillery_focus
+		}
+		available = {
+			not = {
+				has_decision = SGS_fire_black_market_doing_deci
+			}
+			custom_trigger_tooltip = {
+				tooltip = sgs_black_market_repo_shield_tt
+				check_variable = {sgs_black_market_repo_shield > 249}
+			}
+			
+		}
+		cost = 50
+		days_re_enable = 2
+		days_remove = 30
+		fire_only_once = no
+		modifier = {
+			civilian_factory_use = 2
+		}
+		
+		complete_effect = {
+			set_variable = {global.sgs_black_market_buying_type = token:shield_a}
+			set_variable = {global.sgs_black_market_buying_num = 250}
+			SGS_init_BML_deci = yes
+			
+		}
+		remove_effect = {
+			country_event = {id = sgs.3041} #交货
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SGS_fire_black_marketer_buy_artillery = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 0
+				}
+			}
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 3
+				}
+			}
+			has_completed_focus = SGS_focus_artillery_focus
+		}
+		available = {
+			not = {
+				has_decision = SGS_fire_black_market_doing_deci
+			}
+			custom_trigger_tooltip = {
+				tooltip = sgs_black_market_repo_artillery_tt
+				check_variable = {sgs_black_market_repo_motar > 39}
+			}
+			
+		}
+		cost = 50
+		days_re_enable = 2
+		days_remove = 30
+		fire_only_once = no
+		modifier = {
+			civilian_factory_use = 2
+		}
+		
+		complete_effect = {
+			set_variable = {global.sgs_black_market_buying_type = token:mortar_a}
+			set_variable = {global.sgs_black_market_buying_num = 40}
+			SGS_init_BML_deci = yes
+			
+		}
+		remove_effect = {
+			country_event = {id = sgs.3041} #交货
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	SGS_fire_black_marketer_buy_gun_small_human = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 0
+				}
+			}
+			check_variable = {
+					ROOT.sgs_current_black_marketer = 3
+				}
+		}
+		available = {
+			not = {
+				has_decision = SGS_fire_black_market_doing_deci
+			}
+			custom_trigger_tooltip = {
+                tooltip = sgs_black_market_repo_gun_small_tt
+                check_variable = {sgs_black_market_repo_gun > 149}
+            }
+			
+		}
+		cost = 30
+		days_re_enable = 2
+		days_remove = 30
+		fire_only_once = no
+		
+		complete_effect = {
+			set_variable = {global.sgs_black_market_buying_type = token:gun_a}
+			set_variable = {global.sgs_black_market_buying_num = 150}
+			SGS_init_BML_deci = yes
+			
+		}
+		remove_effect = {
+			country_event = {id = sgs.3040} #交货
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SGS_fire_black_marketer_buy_magic_core_small_human = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 0
+				}
+			}
+			check_variable = {
+					ROOT.sgs_current_black_marketer = 3
+				}
+		}
+		available = {
+			not = {
+				has_decision = SGS_fire_black_market_doing_deci
+			}
+			custom_trigger_tooltip = {
+                tooltip = sgs_black_market_repo_magic_core_small_tt
+                check_variable = {sgs_black_market_repo_SC > 179}
+            }
+			
+		}
+		cost = 30
+		days_re_enable = 2
+		days_remove = 30
+		fire_only_once = no
+
+		
+		complete_effect = {
+			set_variable = { global.sgs_black_market_buying_type = token:magic_core_a }
+			set_variable = { global.sgs_black_market_buying_num = 180 }
+			SGS_init_BML_deci = yes
+			
+
+		}
+		remove_effect = {
+			country_event = {id = sgs.3040 } #交货
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SGS_fire_black_marketer_buy_melee_small_human = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 0
+				}
+			}
+			check_variable = {
+					ROOT.sgs_current_black_marketer = 3
+			}
+			has_completed_focus = SGS_find_suuport_equip_focus
+		}
+		available = {
+			not = {
+				has_decision = SGS_fire_black_market_doing_deci
+			}
+			custom_trigger_tooltip = {
+				tooltip = sgs_black_market_repo_melee_small_tt
+				check_variable = {sgs_black_market_repo_knife > 349}
+			}
+		}
+		cost = 30
+		days_re_enable = 2
+		days_remove = 30
+		fire_only_once = no
+		modifier = {
+			
+		}
+		
+		complete_effect = {
+			set_variable = {global.sgs_black_market_buying_type = token:melee_a}
+			set_variable = {global.sgs_black_market_buying_num = 350}
+			SGS_init_BML_deci = yes
+			
+		}
+		remove_effect = {
+			country_event = {id = sgs.3040} #交货
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SGS_fire_black_marketer_buy_support_small_human = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 0
+				}
+			}
+			check_variable = {
+					ROOT.sgs_current_black_marketer = 3
+			}
+			has_completed_focus = SGS_find_suuport_equip_focus
+		}
+		available = {
+			not = {
+				has_decision = SGS_fire_black_market_doing_deci
+			}
+			custom_trigger_tooltip = {
+				tooltip = sgs_black_market_repo_support_small_tt
+				check_variable = {sgs_black_market_repo_support > 19}
+			}
+			
+		}
+		cost = 30
+		days_re_enable = 2
+		days_remove = 30
+		fire_only_once = no
+		modifier = {
+			
+		}
+		
+		complete_effect = {
+			set_variable = {global.sgs_black_market_buying_type = token:support_equipment}
+			set_variable = {global.sgs_black_market_buying_num = 20}
+			SGS_init_BML_deci = yes
+			
+		}
+		remove_effect = {
+			country_event = {id = sgs.3040} #交货
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SGS_fire_black_marketer_buy_shield_small_human = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 0
+				}
+			}
+			check_variable = {
+					ROOT.sgs_current_black_marketer = 3
+			}
+			has_completed_focus = SGS_focus_artillery_focus
+		}
+		available = {
+			not = {
+				has_decision = SGS_fire_black_market_doing_deci
+			}
+			custom_trigger_tooltip = {
+				tooltip = sgs_black_market_repo_shield_small_tt
+				check_variable = {sgs_black_market_repo_shield > 109}
+			}
+			
+		}
+		cost = 30
+		days_re_enable = 2
+		days_remove = 30
+		fire_only_once = no
+		modifier = {
+			
+		}
+		
+		complete_effect = {
+			set_variable = {global.sgs_black_market_buying_type = token:shield_a}
+			set_variable = {global.sgs_black_market_buying_num = 110}
+			SGS_init_BML_deci = yes
+			
+		}
+		remove_effect = {
+			country_event = {id = sgs.3040} #交货
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SGS_fire_black_marketer_buy_artillery_small_human = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 0
+				}
+			}
+			check_variable = {
+					ROOT.sgs_current_black_marketer = 3
+			}
+			has_completed_focus = SGS_focus_artillery_focus
+		}
+		available = {
+			not = {
+				has_decision = SGS_fire_black_market_doing_deci
+			}
+			custom_trigger_tooltip = {
+				tooltip = sgs_black_market_repo_artillery_small_tt
+				check_variable = {sgs_black_market_repo_motar > 19}
+			}
+			
+		}
+		cost = 30
+		days_re_enable = 2
+		days_remove = 30
+		fire_only_once = no
+		modifier = {
+			
+		}
+		
+		complete_effect = {
+			set_variable = {global.sgs_black_market_buying_type = token:mortar_a}
+			set_variable = {global.sgs_black_market_buying_num = 20}
+			SGS_init_BML_deci = yes
+			
+		}
+		remove_effect = {
+			country_event = {id = sgs.3040} #交货
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	SGS_fire_black_marketer_buy_gun_human = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 0
+				}
+			}
+			check_variable = {
+					ROOT.sgs_current_black_marketer = 3
+				}
+		}
+		available = {
+			not = {
+				has_decision = SGS_fire_black_market_doing_deci
+			}
+			custom_trigger_tooltip = {
+                tooltip = sgs_black_market_repo_gun_tt
+                check_variable = {sgs_black_market_repo_gun > 349}
+            }
+			
+		}
+		cost = 30
+		days_re_enable = 2
+		days_remove = 50
+		fire_only_once = no
+		modifier = {
+			civilian_factory_use = 1
+		}
+		
+		complete_effect = {
+			set_variable = {global.sgs_black_market_buying_type = token:gun_a}
+			set_variable = {global.sgs_black_market_buying_num = 350}
+			SGS_init_BML_deci = yes
+			
+		}
+		remove_effect = {
+			country_event = {id = sgs.3041} #交货
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SGS_fire_black_marketer_buy_magic_core_human = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 0
+				}
+			}
+			check_variable = {
+					ROOT.sgs_current_black_marketer = 3
+				}
+		}
+		available = {
+			not = {
+				has_decision = SGS_fire_black_market_doing_deci
+			}
+			custom_trigger_tooltip = {
+                tooltip = sgs_black_market_repo_magic_core_tt
+                check_variable = {sgs_black_market_repo_SC > 399}
+            }
+			
+		}
+		cost = 30
+		days_re_enable = 1
+		days_remove = 50
+		fire_only_once = no
+		modifier = {
+			civilian_factory_use = 1
+		}
+		
+		complete_effect = {
+			set_variable = { global.sgs_black_market_buying_type = token:magic_core_a }
+			set_variable = { global.sgs_black_market_buying_num = 400 }
+			SGS_init_BML_deci = yes
+			
+
+		}
+		remove_effect = {
+			country_event = {id = sgs.3041 } #交货
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SGS_fire_black_marketer_buy_melee_human = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 0
+				}
+			}
+			check_variable = {
+					ROOT.sgs_current_black_marketer = 3
+			}
+			has_completed_focus = SGS_find_suuport_equip_focus
+		}
+		available = {
+			not = {
+				has_decision = SGS_fire_black_market_doing_deci
+			}
+			custom_trigger_tooltip = {
+				tooltip = sgs_black_market_repo_melee_tt
+				check_variable = {sgs_black_market_repo_knife > 799}
+			}
+			
+		}
+		cost = 50
+		days_re_enable = 2
+		days_remove = 30
+		fire_only_once = no
+		modifier = {
+			civilian_factory_use = 1
+		}
+		
+		complete_effect = {
+			set_variable = {global.sgs_black_market_buying_type = token:melee_a}
+			set_variable = {global.sgs_black_market_buying_num = 800}
+			SGS_init_BML_deci = yes
+			
+		}
+		remove_effect = {
+			country_event = {id = sgs.3041} #交货
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SGS_fire_black_marketer_buy_support_human = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 0
+				}
+			}
+			check_variable = {
+					ROOT.sgs_current_black_marketer = 3
+			}
+			has_completed_focus = SGS_find_suuport_equip_focus
+		}
+		available = {
+			not = {
+				has_decision = SGS_fire_black_market_doing_deci
+			}
+			custom_trigger_tooltip = {
+				tooltip = sgs_black_market_repo_support_tt
+				check_variable = {sgs_black_market_repo_support > 39}
+			}
+			
+		}
+		cost = 50
+		days_re_enable = 2
+		days_remove = 30
+		fire_only_once = no
+		modifier = {
+			civilian_factory_use = 1
+		}
+		
+		complete_effect = {
+			set_variable = {global.sgs_black_market_buying_type = token:support_equipment}
+			set_variable = {global.sgs_black_market_buying_num = 40}
+			SGS_init_BML_deci = yes
+			
+		}
+		remove_effect = {
+			country_event = {id = sgs.3041} #交货
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SGS_fire_black_marketer_buy_shield_human = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 0
+				}
+			}
+			check_variable = {
+					ROOT.sgs_current_black_marketer = 3
+			}
+			has_completed_focus = SGS_focus_artillery_focus
+		}
+		available = {
+			not = {
+				has_decision = SGS_fire_black_market_doing_deci
+			}
+			custom_trigger_tooltip = {
+				tooltip = sgs_black_market_repo_shield_tt
+				check_variable = {sgs_black_market_repo_shield > 249}
+			}
+			
+		}
+		cost = 50
+		days_re_enable = 2
+		days_remove = 30
+		fire_only_once = no
+		modifier = {
+			civilian_factory_use = 1
+		}
+		
+		complete_effect = {
+			set_variable = {global.sgs_black_market_buying_type = token:shield_a}
+			set_variable = {global.sgs_black_market_buying_num = 250}
+			SGS_init_BML_deci = yes
+			
+		}
+		remove_effect = {
+			country_event = {id = sgs.3041} #交货
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SGS_fire_black_marketer_buy_artillery_human = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 0
+				}
+			}
+			check_variable = {
+					ROOT.sgs_current_black_marketer = 3
+			}
+			has_completed_focus = SGS_focus_artillery_focus
+		}
+		available = {
+			not = {
+				has_decision = SGS_fire_black_market_doing_deci
+			}
+			custom_trigger_tooltip = {
+				tooltip = sgs_black_market_repo_artillery_tt
+				check_variable = {sgs_black_market_repo_motar > 39}
+			}
+			
+		}
+		cost = 50
+		days_re_enable = 2
+		days_remove = 30
+		fire_only_once = no
+		modifier = {
+			civilian_factory_use = 1
+		}
+		
+		complete_effect = {
+			set_variable = {global.sgs_black_market_buying_type = token:mortar_a}
+			set_variable = {global.sgs_black_market_buying_num = 40}
+			SGS_init_BML_deci = yes
+			
+		}
+		remove_effect = {
+			country_event = {id = sgs.3041} #交货
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	SGS_fire_black_market_doing_deci = {
 		
-		#available = {
-		#	always = no
-		#}
-		# visible = {
+		available = {
+			always = no
+		}
+		 visible = {
+			always = no
 	    	# SGS_find_black_marketer_deci_base_trigger = yes
-		# }
-		days_remove = 60
+		 }
+		days_remove = 45
 		timeout_effect = {
-			
+			clr_country_flag = sgs_black_market_repo_preparing_flag
 		}
 		fire_only_once = no
 		

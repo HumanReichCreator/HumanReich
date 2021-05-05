@@ -323,6 +323,7 @@ SGS_BLM_cal_remain_for_fake = {
 
 SGS_init_BML_deci = {
     set_country_flag = sgs_black_market_repo_preparing_flag
+    clr_country_flag =  sgs_BLM_failed
     activate_decision = SGS_fire_black_market_doing_deci 
 	set_variable = { global.sgs_equip_num_temp = global.sgs_black_market_buying_num }
 	if = {
@@ -336,4 +337,32 @@ SGS_init_BML_deci = {
 	}
 	round_variable = global.sgs_equip_num_temp
 	set_variable = {global.sgs_equip_total_temp = 0}
+    
+}
+SGS_clear_all_BLM_decis = {
+    remove_decision = SGS_fire_black_marketer_buy_gun_small
+    remove_decision = SGS_fire_black_marketer_buy_magic_core_small
+    remove_decision = SGS_fire_black_marketer_buy_melee_small
+    remove_decision = SGS_fire_black_marketer_buy_support_small
+    remove_decision = SGS_fire_black_marketer_buy_shield_small
+    remove_decision = SGS_fire_black_marketer_buy_artillery_small
+    remove_decision = SGS_fire_black_marketer_buy_gun
+    remove_decision = SGS_fire_black_marketer_buy_magic_core
+    remove_decision = SGS_fire_black_marketer_buy_melee
+    remove_decision = SGS_fire_black_marketer_buy_support
+    remove_decision = SGS_fire_black_marketer_buy_shield
+    remove_decision = SGS_fire_black_marketer_buy_artillery
+    remove_decision = SGS_fire_black_marketer_buy_gun_small_human
+    remove_decision = SGS_fire_black_marketer_buy_magic_core_small_human
+    remove_decision = SGS_fire_black_marketer_buy_melee_small_human
+    remove_decision = SGS_fire_black_marketer_buy_support_small_human
+    remove_decision = SGS_fire_black_marketer_buy_shield_small_human
+    remove_decision = SGS_fire_black_marketer_buy_artillery_small_human
+    remove_decision = SGS_fire_black_marketer_buy_gun_human
+    remove_decision = SGS_fire_black_marketer_buy_magic_core_human
+    remove_decision = SGS_fire_black_marketer_buy_melee_human
+    remove_decision = SGS_fire_black_marketer_buy_support_human
+    remove_decision = SGS_fire_black_marketer_buy_shield_human
+    remove_decision = SGS_fire_black_marketer_buy_artillery_human
+    # remove_decision = SGS_fire_black_market_doing_deci
 }

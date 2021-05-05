@@ -10716,7 +10716,7 @@ country_event = {
 			bonus = 0.1
 		}
 		add_tech_bonus = {
-			category = shield_weapons
+			category = shield
 			uses = 1
 			bonus = 0.2
 		}
@@ -10912,6 +10912,9 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		tag = sgs
+		not = {
+			has_country_flag = sgs_BLM_failed
+		}
 	}
 	immediate = {
 		hidden_effect = {
@@ -10939,7 +10942,114 @@ country_event = {
 			}
 		}
 		clr_country_flag = sgs_black_market_repo_preparing_flag
+		if = {
+			limit = {
+				check_variable = {sgs_current_black_marketer = 2}
+			}
+			add_timed_idea = {
+				idea = SGS_BLM_paying_done_fairy_idea
+				days = 30
+			}
+			else = {
+				add_timed_idea = {
+					idea = SGS_BLM_paying_done_idea
+					days = 30
+				}
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
 
+country_event = {
+	#货物送达-中
+	id = sgs.3041
+	title = sgs.3041.t
+	desc = sgs.3041.d
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+		not = {
+			has_country_flag = sgs_BLM_failed
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			SGS_BLM_cal_remain_for_fake = yes
+		}
+		
+	}
+	option = {
+		#
+		name = sgs.3041.1
+		set_variable = {global.sgs_equip_total_temp = 0 }
+		if = {
+			limit = {
+				check_variable = {sgs_current_black_marketer = 1} #河童	
+			}
+			SGS_buying_from_black_market_repo_kappa = yes
+			else_if = {
+				limit = {
+					check_variable = {sgs_current_black_marketer = 2}
+				}
+				SGS_buying_from_black_market_repo_fairy = yes
+			}
+			else = {# 人类
+				SGS_buying_from_black_market_repo_human = yes
+			}
+		}
+		clr_country_flag = sgs_black_market_repo_preparing_flag
+		if = {
+			limit = {
+				check_variable = {sgs_current_black_marketer = 2}
+			}
+			add_timed_idea = {
+				idea = SGS_BLM_paying_done_idea_fairy_double
+				days = 30
+			}
+			else = {
+				add_timed_idea = {
+					idea = SGS_BLM_paying_done_idea_double
+					days = 30
+				}
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#失败
+	id = sgs.3042
+	title = sgs.3042.t
+	desc = sgs.3042.d
+	mean_time_to_happen = {
+		days = 20
+		modifier = {
+			add = 999
+			check_variable = {sgs_current_black_marketer = 3}
+		}
+		modifier = {
+			add = 6
+			check_variable = {sgs_current_black_marketer = 2}
+		}
+	}
+	trigger = {
+		tag = sgs
+		has_country_flag = sgs_black_market_repo_preparing_flag
+	}
+	option = {
+		#
+		name = sgs.3042.1
+		hidden_effect = {
+			SGS_clear_all_BLM_decis = yes
+		}
+		clr_country_flag = sgs_black_market_repo_preparing_flag
+		set_country_flag = sgs_BLM_failed
 		ai_chance = {
 			base = 35
 		}

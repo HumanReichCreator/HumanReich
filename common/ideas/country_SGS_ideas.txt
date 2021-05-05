@@ -408,5 +408,33 @@ ideas = {
 				training_time_factor = -0.2
 			}
 		}
+		SGS_BLM_paying_done_idea = {
+			picture = man_five_year_plan_industry
+			modifier = {
+				civilian_factory_use = 1
+				consumer_goods_factor = 0.05
+			}
+		}
+		SGS_BLM_paying_done_idea_double = {
+			picture = man_five_year_plan_industry
+			modifier = {
+				civilian_factory_use = 2
+				consumer_goods_factor = 0.08
+			}
+		}
+		SGS_BLM_paying_done_fairy_idea = {
+			picture = man_five_year_plan_industry
+			modifier = {
+				civilian_factory_use = 1
+				consumer_goods_factor = 0.03
+			}
+		}
+		SGS_BLM_paying_done_idea_fairy_double = {
+			picture = man_five_year_plan_industry
+			modifier = {
+				civilian_factory_use = 2
+				consumer_goods_factor = 0.05
+			}
+		}
 	}
 }
