@@ -11034,8 +11034,16 @@ country_event = {
 			check_variable = {sgs_current_black_marketer = 3}
 		}
 		modifier = {
-			add = 6
+			add = 10
 			check_variable = {sgs_current_black_marketer = 2}
+		}
+		modifier = {
+			factor = 1.2
+			has_country_flag = SGS_BLM_deli_safe_1
+		}
+		modifier = {
+			factor = 1.3
+			has_country_flag = SGS_BLM_deli_safe_2
 		}
 	}
 	trigger = {

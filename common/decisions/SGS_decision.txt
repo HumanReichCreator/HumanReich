@@ -786,12 +786,74 @@ SGS_equipment_issue_category = {
 		fire_only_once = no
 		complete_effect = {
 			set_variable = {ROOT.sgs_current_black_marketer = 0}
+			clr_country_flag = SGS_BLM_deli_safe_1
+			clr_country_flag = SGS_BLM_deli_safe_2
 		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
-
+	SGS_black_marketer_pay_for_deli_safe_1_deci = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 0
+				}
+				has_country_flag = SGS_BLM_deli_safe_1
+			}
+		}
+		available = {
+		}
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+		cost = 25
+		days_remove = 30
+		days_re_enable = 15
+		fire_only_once = no
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			custom_effect_tooltip = SGS_BLM_deli_safe_tt
+			set_country_flag = SGS_BLM_deli_safe_1
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	SGS_black_marketer_pay_for_deli_safe_2_deci = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+			has_country_flag = SGS_BLM_deli_safe_1
+			not = {
+				check_variable = {
+					ROOT.sgs_current_black_marketer = 0
+				}
+				has_country_flag = SGS_BLM_deli_safe_2
+			}
+		}
+		available = {
+		}
+		modifier = {
+			consumer_goods_factor = 0.08
+		}
+		cost = 40
+		days_remove = 30
+		days_re_enable = 15
+		fire_only_once = no
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			custom_effect_tooltip = SGS_BLM_deli_safe_tt
+			set_country_flag = SGS_BLM_deli_safe_2
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
 	SGS_fire_black_marketer_buy_gun_small = {
 		visible = {
 			SGS_find_black_marketer_deci_base_trigger = yes
