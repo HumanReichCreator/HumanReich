@@ -70,6 +70,21 @@ SGS_dove_rise20 = {
     add_to_variable = { sgs_dove_infl = 20}
     SGS_deal_after_dove_cal = yes
 }
+SGS_BLM_cal_prompt_repo = {
+    if = {
+        limit = {
+            has_country_flag = SGS_BLM_pay_prompt_repo_2_flag
+        }
+        multiply_variable = {global.sgs_equip_num = 1.1}
+        else_if = {
+            limit = {
+                has_country_flag = SGS_BLM_pay_prompt_repo_1_flag
+            }
+            multiply_variable = {global.sgs_equip_num = 1.05}
+        }
+    }
+    round_variable = global.sgs_equip_num
+}
 
 SGS_calculate_black_market_repo_kappa = {
     every_country = {
@@ -80,6 +95,7 @@ SGS_calculate_black_market_repo_kappa = {
         add_to_variable = {global.sgs_equip_num = num_equipment@var:global.sgs_equip_type }
     }
     multiply_variable = {global.sgs_equip_num = 0.2}
+    SGS_BLM_cal_prompt_repo = yes
 }
 SGS_calculate_black_market_repo_fairy = {
     every_neighbor_country = {
@@ -87,6 +103,7 @@ SGS_calculate_black_market_repo_fairy = {
         add_to_variable = {global.sgs_equip_num = num_equipment@var:global.sgs_equip_type }
     }
     multiply_variable = {global.sgs_equip_num = 0.1}
+    SGS_BLM_cal_prompt_repo = yes
 }
 
 SGS_calculate_black_market_repo_human = {
@@ -97,6 +114,7 @@ SGS_calculate_black_market_repo_human = {
         add_to_variable = {global.sgs_equip_num = num_equipment@var:global.sgs_equip_type }
     }
     multiply_variable = {global.sgs_equip_num = 0.5}
+    SGS_BLM_cal_prompt_repo = yes
 }
 
 SGS_calculate_black_market_repo = {
