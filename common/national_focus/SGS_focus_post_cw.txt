@@ -136,7 +136,9 @@ focus_tree = {
 				else = {
 					custom_effect_tooltip = SGS_open_more_equipment_deci_tool
 				}
+				
 			}
+			add_to_variable = { SGS_BLM_garbage = 50 }
 		}
 		x = 3
 		y = 4

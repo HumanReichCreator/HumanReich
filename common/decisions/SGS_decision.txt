@@ -788,9 +788,71 @@ SGS_equipment_issue_category = {
 			set_variable = {ROOT.sgs_current_black_marketer = 0}
 			clr_country_flag = SGS_BLM_deli_safe_1
 			clr_country_flag = SGS_BLM_deli_safe_2
+			clr_country_flag = SGS_BLM_pay_prompt_repo_1_flag
+			clr_country_flag = SGS_BLM_pay_prompt_repo_2_flag
 		}
 		ai_will_do = {
 			factor = 0
+		}
+	}
+	SGS_black_marketer_find_garbage = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+
+		}
+		available = {
+			not = {
+				has_decision = SGS_black_marketer_find_garbage_by_leader
+			}
+		}
+		modifier = {
+			political_power_gain = 0.05
+		}
+		cost = 30
+		days_remove = 20
+		days_re_enable = 15
+		fire_only_once = no
+		complete_effect = {
+			set_variable = {sgs_get_garbage_this_time = 0}
+			SGS_BLM_get_random_garbages = yes
+			
+		}
+		remove_effect = {
+			country_event = {id = sgs.3043}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	SGS_black_marketer_find_garbage_by_leader = {
+		visible = {
+			SGS_find_black_marketer_deci_base_trigger = yes
+
+		}
+		available = {
+			not = {
+				has_decision = SGS_black_marketer_find_garbage
+			}
+		}
+		modifier = {
+			political_power_gain = 0.1
+			stability_weekly = 0.05
+		}
+		cost = 50
+		days_remove = 30
+		days_re_enable = 15
+		fire_only_once = no
+		complete_effect = {
+			set_variable = {sgs_get_garbage_this_time = 0}
+			SGS_BLM_get_random_garbages = yes
+			SGS_BLM_get_random_garbages = yes
+			
+		}
+		remove_effect = {
+			country_event = {id = sgs.3043}
+		}
+		ai_will_do = {
+			factor = 5
 		}
 	}
 	SGS_black_marketer_pay_for_deli_safe_1_deci = {
@@ -985,7 +1047,7 @@ SGS_equipment_issue_category = {
 			
 		}
 		cost = 30
-		days_re_enable = 2
+		days_re_enable = 2  
 		days_remove = 30
 		fire_only_once = no
 		modifier = {

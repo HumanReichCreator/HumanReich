@@ -10699,6 +10699,9 @@ country_event = {
 		set_variable = {
 			ROOT.sgs_current_black_marketer = 0
 		}
+		set_variable = {
+			SGS_BLM_garbage = 0
+		}
 		ai_chance = {
 			base = 35
 			modifier = {
@@ -10961,6 +10964,20 @@ country_event = {
 			base = 35
 		}
 	}
+	option = {
+		#零件支付全款
+		name = sgs.3040.2
+		trigger = {
+			check_variable = {sgs_current_black_marketer = 3}
+			check_variable = {SGS_BLM_garbage > 59}
+		}
+		SGS_BLM_event_304x = yes
+		subtract_from_variable = {SGS_BLM_garbage = 60}
+		
+		ai_chance = {
+			base = 35
+		}
+	}
 }
 
 country_event = {
@@ -10982,25 +10999,9 @@ country_event = {
 		
 	}
 	option = {
-		#
+		#普通支付
 		name = sgs.3041.1
-		set_variable = {global.sgs_equip_total_temp = 0 }
-		if = {
-			limit = {
-				check_variable = {sgs_current_black_marketer = 1} #河童	
-			}
-			SGS_buying_from_black_market_repo_kappa = yes
-			else_if = {
-				limit = {
-					check_variable = {sgs_current_black_marketer = 2}
-				}
-				SGS_buying_from_black_market_repo_fairy = yes
-			}
-			else = {# 人类
-				SGS_buying_from_black_market_repo_human = yes
-			}
-		}
-		clr_country_flag = sgs_black_market_repo_preparing_flag
+		SGS_BLM_event_304x = yes
 		if = {
 			limit = {
 				check_variable = {sgs_current_black_marketer = 2}
@@ -11020,6 +11021,41 @@ country_event = {
 			base = 35
 		}
 	}
+	option = {
+		#零件支付半款
+		name = sgs.3041.2
+		trigger = {
+			not = {
+				check_variable = {sgs_current_black_marketer = 2}
+			}
+			check_variable = {SGS_BLM_garbage > 59}
+		}
+		SGS_BLM_event_304x = yes
+		subtract_from_variable = {SGS_BLM_garbage = 60}
+		add_timed_idea = {
+			idea = SGS_BLM_paying_done_idea
+			days = 30
+		}
+		
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#零件支付全款
+		name = sgs.3041.3
+		trigger = {
+			check_variable = {sgs_current_black_marketer = 3}
+			check_variable = {SGS_BLM_garbage > 104}
+		}
+		SGS_BLM_event_304x = yes
+		subtract_from_variable = {SGS_BLM_garbage = 105}
+		
+		ai_chance = {
+			base = 50
+		}
+	}
+
 }
 
 country_event = {
@@ -11058,6 +11094,25 @@ country_event = {
 		}
 		clr_country_flag = sgs_black_market_repo_preparing_flag
 		set_country_flag = sgs_BLM_failed
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#得到拾荒装备
+	id = sgs.3043
+	title = sgs.3043.t
+	desc = sgs.3043.d
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.3043.1
+		add_to_variable = { SGS_BLM_garbage = sgs_get_garbage_this_time } 
+		custom_effect_tooltip = sgs_get_garbage_tt
 		ai_chance = {
 			base = 35
 		}
