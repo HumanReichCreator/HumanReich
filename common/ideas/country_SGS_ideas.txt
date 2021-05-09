@@ -389,20 +389,20 @@ ideas = {
 			}
 		}
 		SGS_itazura_ban_idea = {
-			picture = generic_local_self_management
+			picture = FRA_matignon_agreements
 			modifier = {
 				stability_weekly = 0.01
 			}
 		}
 		SGS_itazura_ban_worker_idea = {
-			picture = generic_local_self_management
+			picture = generic_production_bonus
 			modifier = {
 				stability_weekly = 0.015
 				production_factory_efficiency_gain_factor = 0.1
 			}
 		}
 		SGS_itazura_ban_mil_idea = {
-			picture = generic_local_self_management
+			picture = generic_manpower_bonus
 			modifier = {
 				stability_weekly = 0.01
 				training_time_factor = -0.2

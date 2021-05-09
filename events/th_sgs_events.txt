@@ -10787,6 +10787,7 @@ country_event = {
 		#河童
 		name = sgs.3037.1
 		set_variable = { ROOT.sgs_find_black_marketer = 1}
+		set_variable = { sgs_black_marketer_tag = NTR.id}
 		hidden_effect = {
 			random_list = {
 				40 = {
@@ -10806,6 +10807,7 @@ country_event = {
 		#妖精
 		name = sgs.3037.2
 		set_variable = { ROOT.sgs_find_black_marketer = 2}
+		set_variable = { sgs_black_marketer_tag = SCA.id}
 		hidden_effect = {
 			random_list = {
 				85 = {
@@ -10822,6 +10824,7 @@ country_event = {
 		#人类
 		name = sgs.3037.3
 		set_variable = { ROOT.sgs_find_black_marketer = 3}
+		set_variable = { sgs_black_marketer_tag = WHM.id}
 		hidden_effect = {
 			random_list = {
 				65 = {

@@ -283,6 +283,7 @@ SGS_BLM_cal_remain = {
         add_equipment_to_stockpile = {
             type = var:global.sgs_black_market_buying_type
             amount = var:global.sgs_remain
+            producer = var:sgs_black_marketer_tag
         }
     }
 }
