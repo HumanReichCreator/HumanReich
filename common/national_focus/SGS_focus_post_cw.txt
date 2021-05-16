@@ -176,7 +176,43 @@ focus_tree = {
 			focus = SGS_sunny_win_focus
 		}
 		completion_reward = {
+			custom_effect_tooltip = SGS_dove_rise5_tooltip
+			set_country_flag = SGS_research_team
 			#在两派相争中解锁一系列直接获得科技的决议，并且选项会由后续国策继续变多
+			#解锁数学决议，平民派++
+			if = {
+				limit = {
+					has_country_flag = SGS_select_develop_tech_over
+				}
+				SGS_dove_rise5 = yes
+				if = {
+					limit = {
+						has_idea = SGS_organize_smart_fairy_idea
+					}
+					swap_ideas = {
+						remove_idea = SGS_organize_smart_fairy_idea
+						add_idea = SGS_science_bureau_idea
+					}
+					modify_timed_idea = {
+						idea = SGS_science_bureau_idea
+						days = 270
+					}
+					else = {
+						add_timed_idea = {
+							idea = SGS_science_bureau_idea
+							days = 180
+						}
+					}
+				}
+				#科学局
+				else = {
+					#科研攻坚小组
+					add_timed_idea = {
+						idea = SGS_science_battle_team
+						days = 180
+					}
+				}
+			}
 		}
 		x = 8
 		y = 3
@@ -192,12 +228,13 @@ focus_tree = {
 			focus = SGS_organzie_civilian_focus
 		}
 		completion_reward = {
-			#
+			#加陆军经验，激进派++，解锁军事理论
 		}
 		x = 7
 		y = 4
 	}
 	focus = {
+
 		id = SGS_organzie_civilian_focus
 		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
 		cost = 5
@@ -208,7 +245,7 @@ focus_tree = {
 			focus = SGS_expand_military_school_focus
 		}
 		completion_reward = {
-			#
+			#获得独特科技，获得新编制，获得一个军事理论
 		}
 		x = 9
 		y = 4
@@ -225,7 +262,10 @@ focus_tree = {
 			focus = SGS_Baf_worker
 		}
 		completion_reward = {
-			#
+			#基础加一点战场妖精派的影响力，加pp和新规
+			#随机事件，战场妖精学会了妥协or战场妖精努力实现自己的主张，会涨or降战场妖精的影响力
+			#解锁妖精种族科技，以后会变成社会科学
+			
 		}
 		x = 7
 		y = 5
@@ -242,7 +282,7 @@ focus_tree = {
 			focus = SGS_mili_admin_focus
 		}
 		completion_reward = {
-			#
+			#平民派++，获得一个工业科技，和平++，替换经济buff
 		}
 		x = 9
 		y = 5
@@ -285,6 +325,10 @@ focus_tree = {
 		prerequisite = {
 			focus = SGS_easy_product_focus
 		}
+		completion_reward = {
+			#需要影响力比较均衡，获得新编制，改善种族buff
+			
+		}
 		x = 8
 		y = 6
 	}
@@ -297,6 +341,10 @@ focus_tree = {
 		}
 		x = 10
 		y = 3
+		completion_reward = {
+			#一个训练上的临时buff+稳定or战争支持二选一（影响影响力
+			
+		}
 	}
 	focus = {
 		id = SGS_luna_win_focus

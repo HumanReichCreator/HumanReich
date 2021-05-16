@@ -533,6 +533,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = SGS_develop_our_country_focus
 		completion_reward = {
+			set_country_flag = SGS_select_develop_tech_over
 			custom_effect_tooltip = up_sgs_uprise
 			add_to_variable = {
 				sgs_luna_infl = 5

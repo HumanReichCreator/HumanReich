@@ -407,7 +407,7 @@ country_event = {
 					or = {
 						and = {
 							has_country_flag = SGS_select_fairy_shrine
-							not = {has_completed_focus = SGS_fairy_shrine_focus}
+							not = {has_country_flag = SGS_select_fairy_shrine_over}
 						}
 						and = {
 							has_country_flag = SGS_select_fairy_diplo
@@ -707,7 +707,7 @@ country_event = {
 				or = {
 					and = {
 						has_country_flag = SGS_select_fairy_shrine
-						not= {has_completed_focus = SGS_fairy_shrine_focus}
+						not= {has_country_flag = SGS_select_fairy_shrine_over}
 					}
 					and = {
 						has_country_flag = SGS_select_fairy_diplo
