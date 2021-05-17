@@ -644,9 +644,9 @@ country_event = {
 	immediate = {
 
 	}
-	mean_time_to_happen = {
-		days = 2
-	}
+	#mean_time_to_happen = {
+	#	days = 2
+	#}
 	trigger = {
 		has_country_flag = SGS_civil_war_start
 		tag = SGS
@@ -11116,6 +11116,35 @@ country_event = {
 		name = sgs.3043.1
 		add_to_variable = { SGS_BLM_garbage = sgs_get_garbage_this_time } 
 		custom_effect_tooltip = sgs_get_garbage_tt
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#得到科技-team-one
+	id = sgs.3044
+	title = sgs.3044.t
+	desc = sgs.3044.d
+	fire_only_once = no
+	is_triggered_only = yes
+	immediate = {
+
+	}
+	#mean_time_to_happen = {
+	#	days = 2
+	#}
+	
+	option = {
+		#
+		name = sgs.3044.1
+		set_technology = {
+			var:SGS_research_team_one = 1
+		}
+		set_variable = {SGS_research_team_one = 0}
+		set_variable = {sgs_RT_tech_current_value_one = 0}
+		clear_variable = sgs_RT_tech_days_one
 		ai_chance = {
 			base = 35
 		}

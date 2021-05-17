@@ -305,3 +305,25 @@ defined_text = {
 		localization_key = SGS_RT_one_teach_info_detail
 	}
 }
+
+defined_text = {
+	name = SGS_RT_one_tech_name
+	text = {
+		trigger = {
+			check_variable = {SGS_research_team_one = token:jichushuxue}
+		}
+		localization_key = jichushuxue
+	}
+	text = {
+		trigger = {
+			check_variable = {SGS_research_team_one = token:shuxuegongju}
+		}
+		localization_key = shuxuegongju
+	}
+	text = {
+		trigger = {
+			check_variable = {SGS_research_team_one = token:jisuangongju144}
+		}
+		localization_key = jisuangongju144
+	}
+}

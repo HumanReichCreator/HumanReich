@@ -185,6 +185,7 @@ focus_tree = {
 			custom_effect_tooltip = SGS_dove_rise5_tooltip
 			set_country_flag = SGS_research_team
 			set_variable = {SGS_research_team_one = 0}
+			set_variable = {SGS.SGS_research_team_speed = 5}
 			#在两派相争中解锁一系列直接获得科技的决议，并且选项会由后续国策继续变多
 			#解锁数学决议，平民派++
 			if = {

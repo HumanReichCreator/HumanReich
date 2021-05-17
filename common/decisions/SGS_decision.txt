@@ -2143,14 +2143,7 @@ SGS_research_team_category = {
 		# days_re_enable = 365
 		fire_only_once = no
 		complete_effect = {
-			multiply_variable = {
-				sgs_uprise = 10
-			}
-			clamp_variable = {
-				var = sgs_uprise
-				min = 1
-				max = 150
-			}
+			set_variable = {SGS.SGS_research_team_speed = 20}
 		}
 		remove_effect = {
 		}

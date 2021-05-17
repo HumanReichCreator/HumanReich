@@ -436,10 +436,25 @@ SGS_RT_assign = {
     }
 }
 
+SGS_RT_one_days_cal = {
+    set_variable = {sgs_RT_tech_days_one = sgs_RT_tech_total_value_one}
+    subtract_from_variable  = {sgs_RT_tech_days_one = sgs_RT_tech_current_value_one}
+    divide_variable = { sgs_RT_tech_days_one = SGS.SGS_research_team_speed }
+    round_variable = sgs_RT_tech_days_one
+    if = {
+        limit = {
+            check_variable = {sgs_RT_tech_days_one < 1}
+        }
+        country_event = {id = sgs.3044}
+    }
+}
+
 SGS_RT_one_assign = {
     set_variable = {SGS_research_team_one = global.sgs_RT_tech_token }
     set_variable = {sgs_RT_tech_current_value_one = 0}
 	set_variable = {sgs_RT_tech_total_value_one = global.sgs_RT_tech_total_value}
+    SGS_RT_one_days_cal = yes
+    
 }
 SGS_RT_two_assign = {
     set_variable = {SGS_research_team_two = sgs_RT_tech_token}
@@ -450,4 +465,15 @@ SGS_RT_three_assign = {
     set_variable = {SGS_research_team_three = sgs_RT_tech_token}
     set_variable = {sgs_RT_tech_current_value_three = 0}
 	set_variable = {sgs_RT_tech_total_value_three = sgs_RT_tech_total_value}
+}
+
+SGS_RT_daily_cal = {
+    if = {
+        limit = {
+            has_variable = SGS_research_team_one
+            not = {check_variable = {SGS_research_team_one = 0}}
+        }
+        add_to_variable = {sgs_RT_tech_current_value_one = SGS.SGS_research_team_speed}
+        SGS_RT_one_days_cal = yes
+    }
 }

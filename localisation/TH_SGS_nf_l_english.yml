@@ -251,9 +251,9 @@ sgs_black_market_repo_shield_tt:0 "供应商拥有超过250单位护盾"
 sgs_black_market_repo_artillery_tt:0 "供应商拥有超过40单位火炮"
 
 SGS_research_team_category:0 "特别科研团队相关决议"
-SGS_RT_jichushuxue_deci:0 "安排研究[?token:jichushuxue]"
-SGS_research_team_category_desc:0 "目前有[SGS_RT_num]只科研团队\n1号科研队，正在研究：[SGS_RT_one_teach_info][SGS_RT_two_info]"
-SGS_RT_one_teach_info_detail:0 "基础数学,进度：[?vsgs_RT_tech_current_value_one]/[?sgs_RT_tech_total_value_one]"
+SGS_RT_jichushuxue_deci:0 "安排研究数学基础"
+SGS_research_team_category_desc:0 "目前有[SGS_RT_num]只科研团队,科研速度为：[?SGS.SGS_research_team_speed|G2]/天\n1号科研队，正在研究：[SGS_RT_one_teach_info][SGS_RT_two_info]"
+SGS_RT_one_teach_info_detail:0 "[SGS_RT_one_tech_name],进度：[?sgs_RT_tech_current_value_one]/[?sgs_RT_tech_total_value_one]。距离完成研究还有[?sgs_RT_tech_days_one|Y0]天"
 SGS_RT_two_info:0 "\n2号科研队，正在研究：,进度：00/00"
 
 SGS_battle_fariy_issue_focus:0 "战场妖精的问题"
