@@ -79,6 +79,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = SGS_confer_determine_way
+			country_event = {
+				id = sgs.301
+			}
 		}
 		x = 13
 		y = 1
@@ -92,6 +95,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = SGS_postwar_confer_focus
+		}
+		available  = {
+			always = no
 		}
 		mutually_exclusive = {
 			focus = SGS_luna_win_focus
@@ -178,6 +184,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = SGS_dove_rise5_tooltip
 			set_country_flag = SGS_research_team
+			set_variable = {SGS_research_team_one = 0}
 			#在两派相争中解锁一系列直接获得科技的决议，并且选项会由后续国策继续变多
 			#解锁数学决议，平民派++
 			if = {
@@ -356,6 +363,9 @@ focus_tree = {
 		prerequisite = {
 			focus = SGS_postwar_confer_focus
 		}
+		available  = {
+			always = no
+		}
 		mutually_exclusive = {
 			focus = SGS_sunny_win_focus
 			focus = SGS_star_win_focus
@@ -480,6 +490,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = SGS_postwar_confer_focus
+		}
+		available  = {
+			always = no
 		}
 		mutually_exclusive = {
 			focus = SGS_luna_win_focus

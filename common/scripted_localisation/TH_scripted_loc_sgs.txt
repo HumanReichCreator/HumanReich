@@ -251,3 +251,57 @@ defined_text = {
 		localization_key = sgs_black_market_repo_artillery
 	}
 }
+
+defined_text = {
+	name = SGS_RT_num
+	text = {
+		trigger = {
+			has_variable = SGS_research_team_three
+		}
+		localization_key = "3"
+	}
+	text = {
+		trigger = {
+			has_variable = SGS_research_team_two
+		}
+		localization_key = "2"
+	}
+	text = {
+		trigger = {
+			has_variable = SGS_research_team_one
+		}
+		localization_key = "1"
+	}
+}
+
+defined_text = {
+	name = SGS_RT_two_info
+	text = {
+		trigger = {
+			not = {has_variable = SGS_research_team_two}
+		}
+		localization_key = SGS_text_none
+	}
+	text = {
+		trigger = {
+			has_variable = SGS_research_team_two
+		}
+		localization_key = SGS_RT_two_info
+	}
+}
+
+defined_text = {
+	name = SGS_RT_one_teach_info
+	text = {
+		trigger = {
+			check_variable = {SGS_research_team_one = 0}
+		}
+		localization_key = sgs_black_market_repo_none
+	}
+	text = {
+		trigger = {
+			not = {check_variable = {SGS_research_team_one = 0}}
+		}
+		localization_key = SGS_RT_one_teach_info_detail
+	}
+}
