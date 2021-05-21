@@ -72,7 +72,7 @@ SGS_restless_stage_is_over = {
 	}
 }
 
-
+# 科研团队系列
 SGS_has_research_team_mechanism = {
 	has_completed_focus = SGS_stonger_brains_focus
 	has_country_flag = SGS_research_team
@@ -89,6 +89,18 @@ SGS_reseach_team_two_idle = {
 SGS_reseach_team_three_idle = {
 	has_variable = SGS_research_team_three
 	check_variable = {SGS_research_team_three = 0}
+}
+SGS_reseach_team_one_ongoing = {
+	has_variable = SGS_research_team_one
+	not = {check_variable = {SGS_research_team_one = 0}}
+}
+SGS_reseach_team_two_ongoing = {
+	has_variable = SGS_research_team_two
+	not = {check_variable = {SGS_research_team_two = 0}}
+}
+SGS_reseach_team_three_ongoing = {
+	has_variable = SGS_research_team_three
+	not = {check_variable = {SGS_research_team_three = 0}}
 }
 SGS_has_idle_reseach_team = {
 	or = {

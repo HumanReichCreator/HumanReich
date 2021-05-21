@@ -182,7 +182,7 @@ focus_tree = {
 			focus = SGS_sunny_win_focus
 		}
 		completion_reward = {
-			custom_effect_tooltip = SGS_dove_rise5_tooltip
+			
 			set_country_flag = SGS_research_team
 			set_variable = {SGS_research_team_one = 0}
 			set_variable = {SGS.SGS_research_team_speed = 5}
@@ -191,25 +191,27 @@ focus_tree = {
 			if = {
 				limit = {
 					has_country_flag = SGS_select_develop_tech_over
+					has_idea = SGS_organize_smart_fairy_idea
 				}
+				
 				SGS_dove_rise5 = yes
-				if = {
+				swap_ideas = {
+					remove_idea = SGS_organize_smart_fairy_idea
+					add_idea = SGS_science_bureau_idea
+				}
+				modify_timed_idea = {
+					idea = SGS_science_bureau_idea
+					days = 270
+				}
+				else_if = {
 					limit = {
 						has_idea = SGS_organize_smart_fairy_idea
 					}
-					swap_ideas = {
-						remove_idea = SGS_organize_smart_fairy_idea
-						add_idea = SGS_science_bureau_idea
-					}
-					modify_timed_idea = {
+					
+					SGS_dove_rise5 = yes
+					add_timed_idea = {
 						idea = SGS_science_bureau_idea
-						days = 270
-					}
-					else = {
-						add_timed_idea = {
-							idea = SGS_science_bureau_idea
-							days = 180
-						}
+						days = 180
 					}
 				}
 				#科学局

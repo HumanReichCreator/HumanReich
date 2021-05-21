@@ -2097,9 +2097,69 @@ SGS_hawk_dove_category = {
 }
 
 SGS_research_team_category = {
+	SGS_see_deci_2 = {
+		visible = {
+			tag = sgs
+		}
+		available = {
+			has_war = no
+			# has_idea = TEG_jianshaozhengbing_idea
+		}
+		modifier = {
+			industrial_capacity_factory = -0.3
+			weekly_manpower = 10
+		}
+		cost = 100
+		days_remove = 182
+		# days_re_enable = 365
+		fire_only_once = no
+		complete_effect = {
+			set_variable = {SGS.SGS_research_team_speed = 20}
+		}
+		remove_effect = {
+		}
+	}
+	SGS_RT_improve_basic_edu_1 = {
+		visible = {
+			SGS_has_research_team_mechanism = yes
+			has_tech = jichushuxue
+			tag = sgs
+		}
+		available = {
+			
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		cost = 20
+		days_remove = 30
+		fire_only_once = yes
+		remove_effect = {
+			add_ideas = {SGS_basic_edu_idea}
+			set_country_flag = SGS_RT_improve_basic_edu_1_over
+		}
+	}
+	SGS_RT_expan_research_team_two = {
+		visible = {
+			SGS_has_research_team_mechanism = yes
+			tag = sgs
+			has_country_flag = SGS_RT_improve_basic_edu_1_over
+		}
+		available = {
+			
+		}
+		modifier = {
+		}
+		cost = 30
+		days_remove = 15
+		fire_only_once = yes
+		remove_effect = {
+			set_variable = {SGS_research_team_two = 0}
+		}
+	}
 	SGS_RT_jichushuxue_deci = {
 		visible = {
-			# SGS_has_research_team_mechanism = yes
+			SGS_has_research_team_mechanism = yes
 			not = {
 				has_tech = jichushuxue
 			}
@@ -2126,26 +2186,123 @@ SGS_research_team_category = {
 			factor = 30
 		}
 	}
-	SGS_see_deci_2 = {
+	SGS_RT_shuxuegongju_deci = {
 		visible = {
-			tag = sgs
+			SGS_has_research_team_mechanism = yes
+			not = {
+				has_tech = shuxuegongju
+			}
 		}
 		available = {
-			has_war = no
-			# has_idea = TEG_jianshaozhengbing_idea
+			SGS_has_idle_reseach_team = yes
+			can_research = shuxuegongju
+			not = { is_researching_technology =  shuxuegongju}
 		}
 		modifier = {
-			industrial_capacity_factory = -0.3
-			weekly_manpower = 10
 		}
-		cost = 100
-		days_remove = 182
-		# days_re_enable = 365
-		fire_only_once = no
+		cost = 50
+		#days_remove = 30
+		#days_re_enable = 30
+		fire_only_once = yes
 		complete_effect = {
-			set_variable = {SGS.SGS_research_team_speed = 20}
+			set_variable = {global.sgs_RT_tech_token = token:shuxuegongju}
+			set_variable = {global.sgs_RT_tech_total_value = 1000}
+			SGS_RT_assign = yes
+			
 		}
-		remove_effect = {
+		
+		ai_will_do = {
+			factor = 30
 		}
 	}
-}
+	SGS_RT_zuzhihuazhanzheng142_deci = {
+		visible = {
+			SGS_has_research_team_mechanism = yes
+			has_completed_focus = SGS_expand_military_school_focus
+			not = {
+				has_tech = zuzhihuazhanzheng142
+			}
+		}
+		available = {
+			SGS_has_idle_reseach_team = yes
+			can_research = zuzhihuazhanzheng142
+			not = { is_researching_technology =  zuzhihuazhanzheng142}
+		}
+		modifier = {
+		}
+		cost = 50
+		#days_remove = 30
+		#days_re_enable = 30
+		fire_only_once = yes
+		complete_effect = {
+			set_variable = {global.sgs_RT_tech_token = token:zuzhihuazhanzheng142}
+			set_variable = {global.sgs_RT_tech_total_value = 2500}
+			SGS_RT_assign = yes
+			
+		}
+		
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	SGS_RT_zhanchangzhihui145_deci = {
+		visible = {
+			SGS_has_research_team_mechanism = yes
+			has_completed_focus = SGS_expand_military_school_focus
+			not = {
+				has_tech = zhanchangzhihui145
+			}
+		}
+		available = {
+			SGS_has_idle_reseach_team = yes
+			can_research = zhanchangzhihui145
+			not = { is_researching_technology =  zhanchangzhihui145}
+		}
+		modifier = {
+		}
+		cost = 50
+		#days_remove = 30
+		#days_re_enable = 30
+		fire_only_once = yes
+		complete_effect = {
+			set_variable = {global.sgs_RT_tech_token = token:zhanchangzhihui145}
+			set_variable = {global.sgs_RT_tech_total_value = 2500}
+			SGS_RT_assign = yes
+			
+		}
+		
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	SGS_RT_zuzhihuazhanzheng147_deci = {
+		visible = {
+			SGS_has_research_team_mechanism = yes
+			has_completed_focus = SGS_expand_military_school_focus
+			not = {
+				has_tech = zuzhihuazhanzheng147
+			}
+		}
+		available = {
+			SGS_has_idle_reseach_team = yes
+			can_research = zuzhihuazhanzheng147
+			not = { is_researching_technology =  zuzhihuazhanzheng147}
+		}
+		modifier = {
+		}
+		cost = 50
+		#days_remove = 30
+		#days_re_enable = 30
+		fire_only_once = yes
+		complete_effect = {
+			set_variable = {global.sgs_RT_tech_token = token:zuzhihuazhanzheng147}
+			set_variable = {global.sgs_RT_tech_total_value = 2500}
+			SGS_RT_assign = yes
+			
+		}
+		
+		ai_will_do = {
+			factor = 30
+		}
+	}
+} 

@@ -11122,11 +11122,63 @@ country_event = {
 	}
 }
 
+#以下为科研系列事件
+
 country_event = {
 	#得到科技-team-one
 	id = sgs.3044
 	title = sgs.3044.t
 	desc = sgs.3044.d
+	fire_only_once = no
+	is_triggered_only = yes
+	immediate = {
+
+	}
+	
+	option = {
+		#
+		name = sgs.3044.1
+		set_technology = {
+			var:SGS_research_team_one = 1
+		}
+		set_variable = {SGS_research_team_one = 0}
+		set_variable = {sgs_RT_tech_current_value_one = 0}
+		clear_variable = sgs_RT_tech_days_one
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#得到科技-team-two
+	id = sgs.30440
+	title = sgs.30440.t
+	desc = sgs.30440.d
+	fire_only_once = no
+	is_triggered_only = yes
+	immediate = {
+
+	}
+	
+	option = {
+		#
+		name = sgs.3044.1
+		set_technology = {
+			var:SGS_research_team_two = 1
+		}
+		set_variable = {SGS_research_team_two = 0}
+		set_variable = {sgs_RT_tech_current_value_two = 0}
+		clear_variable = sgs_RT_tech_days_two
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#得到科技-team-three
+	id = sgs.30441
+	title = sgs.30441.t
+	desc = sgs.30441.d
 	fire_only_once = no
 	is_triggered_only = yes
 	immediate = {
@@ -11140,11 +11192,81 @@ country_event = {
 		#
 		name = sgs.3044.1
 		set_technology = {
-			var:SGS_research_team_one = 1
+			var:SGS_research_team_three = 1
+		}
+		set_variable = {SGS_research_team_three = 0}
+		set_variable = {sgs_RT_tech_current_value_three = 0}
+		clear_variable = sgs_RT_tech_days_three
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#由于玩家的研究，科研中断
+	id = sgs.3045
+	title = sgs.3045.t
+	desc = sgs.3045.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		or = {
+			and = {
+				SGS_reseach_team_one_ongoing = yes
+				has_tech = var:SGS_research_team_one
+			}
+			and = {
+				SGS_reseach_team_two_ongoing = yes
+				has_tech = var:SGS_research_team_two
+			}
+			and = {
+				SGS_reseach_team_three_ongoing = yes
+				has_tech = var:SGS_research_team_three
+			}
+		}
+		 
+	}
+
+	
+	option = {
+		#1
+		name = sgs.3045.1
+		trigger = {
+			SGS_reseach_team_one_ongoing = yes
+			has_tech = var:SGS_research_team_one
 		}
 		set_variable = {SGS_research_team_one = 0}
 		set_variable = {sgs_RT_tech_current_value_one = 0}
 		clear_variable = sgs_RT_tech_days_one
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#2
+		name = sgs.3045.1
+		trigger = {
+			SGS_reseach_team_two_ongoing = yes
+			has_tech = var:SGS_research_team_two
+		}
+		set_variable = {SGS_research_team_two = 0}
+		set_variable = {sgs_RT_tech_current_value_two = 0}
+		clear_variable = sgs_RT_tech_days_two
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#3
+		name = sgs.3045.1
+		trigger = {
+			SGS_reseach_team_three_ongoing = yes
+			has_tech = var:SGS_research_team_three
+		}
+		set_variable = {SGS_research_team_three = 0}
+		set_variable = {sgs_RT_tech_current_value_three = 0}
+		clear_variable = sgs_RT_tech_days_three
 		ai_chance = {
 			base = 35
 		}

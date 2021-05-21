@@ -286,7 +286,22 @@ defined_text = {
 		trigger = {
 			has_variable = SGS_research_team_two
 		}
-		localization_key = SGS_RT_two_info
+		localization_key = SGS_RT_two_info_text
+	}
+}
+defined_text = {
+	name = SGS_RT_three_info
+	text = {
+		trigger = {
+			not = {has_variable = SGS_research_team_three}
+		}
+		localization_key = SGS_text_none
+	}
+	text = {
+		trigger = {
+			has_variable = SGS_research_team_three
+		}
+		localization_key = SGS_RT_three_info_text
 	}
 }
 
@@ -305,6 +320,38 @@ defined_text = {
 		localization_key = SGS_RT_one_teach_info_detail
 	}
 }
+defined_text = {
+	name = SGS_RT_two_teach_info
+	text = {
+		trigger = {
+			check_variable = {SGS_research_team_two = 0}
+		}
+		localization_key = sgs_black_market_repo_none
+	}
+	text = {
+		trigger = {
+			not = {check_variable = {SGS_research_team_two = 0}}
+		}
+		localization_key = SGS_RT_two_teach_info_detail
+	}
+}
+defined_text = {
+	name = SGS_RT_three_teach_info
+	text = {
+		trigger = {
+			check_variable = {SGS_research_team_three = 0}
+		}
+		localization_key = sgs_black_market_repo_none
+	}
+	text = {
+		trigger = {
+			not = {check_variable = {SGS_research_team_three = 0}}
+		}
+		localization_key = SGS_RT_three_teach_info_detail
+	}
+}
+
+
 
 defined_text = {
 	name = SGS_RT_one_tech_name
@@ -323,6 +370,28 @@ defined_text = {
 	text = {
 		trigger = {
 			check_variable = {SGS_research_team_one = token:jisuangongju144}
+		}
+		localization_key = jisuangongju144
+	}
+}
+
+defined_text = {
+	name = SGS_RT_two_tech_name
+	text = {
+		trigger = {
+			check_variable = {SGS_research_team_two = token:jichushuxue}
+		}
+		localization_key = jichushuxue
+	}
+	text = {
+		trigger = {
+			check_variable = {SGS_research_team_two = token:shuxuegongju}
+		}
+		localization_key = shuxuegongju
+	}
+	text = {
+		trigger = {
+			check_variable = {SGS_research_team_two = token:jisuangongju144}
 		}
 		localization_key = jisuangongju144
 	}
