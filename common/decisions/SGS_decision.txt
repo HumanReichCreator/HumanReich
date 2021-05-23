@@ -2094,6 +2094,28 @@ SGS_hawk_dove_category = {
 			factor = 30
 		}
 	}
+	SGS_supprot_dove_deci = {
+		visible = {
+			SGS_has_hawk_dove_mechanism = yes
+		}
+		available = {
+		}
+		modifier = {
+		}
+		cost = 30
+		#days_remove = 30
+		days_re_enable = 30
+		fire_only_once = no
+		complete_effect = {
+			SGS_dove_rise5 = yes
+		}
+		remove_effect = {
+			
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
 }
 
 SGS_research_team_category = {
@@ -2379,7 +2401,7 @@ SGS_research_team_category = {
 	SGS_RT_org_production_deci = {
 		visible = {
 			SGS_has_research_team_mechanism = yes
-			has_completed_focus = SGS_organzie_civilian_focus
+			has_completed_focus = SGS_Baf_worker
 			not = {
 				has_tech = org_production
 			}
@@ -2409,11 +2431,13 @@ SGS_research_team_category = {
 	SGS_RT_jizhongshenchan145_deci = {
 		visible = {
 			SGS_has_research_team_mechanism = yes
-			has_completed_focus = SGS_organzie_civilian_focus
+			has_completed_focus = SGS_Baf_worker
 			not = {
 				has_tech = jizhongshenchan145
 				has_tech = fensanshenchan145
+				has_country_flag = RT_fensanshenchan145_triggered
 			}
+			
 		}
 		available = {
 			SGS_has_idle_reseach_team = yes
@@ -2430,7 +2454,7 @@ SGS_research_team_category = {
 			set_variable = {global.sgs_RT_tech_token = token:jizhongshenchan145}
 			set_variable = {global.sgs_RT_tech_total_value = 2000}
 			SGS_RT_assign = yes
-			
+			set_country_flag = RT_jizhongshenchan145_triggered
 		}
 		
 		ai_will_do = {
@@ -2440,10 +2464,11 @@ SGS_research_team_category = {
 	SGS_RT_fensanshenchan145_deci = {
 		visible = {
 			SGS_has_research_team_mechanism = yes
-			has_completed_focus = SGS_organzie_civilian_focus
+			has_completed_focus = SGS_Baf_worker
 			not = {
 				has_tech = jizhongshenchan145
 				has_tech = fensanshenchan145
+				has_country_flag = RT_jizhongshenchan145_triggered
 			}
 		}
 		available = {
@@ -2461,7 +2486,7 @@ SGS_research_team_category = {
 			set_variable = {global.sgs_RT_tech_token = token:fensanshenchan145}
 			set_variable = {global.sgs_RT_tech_total_value = 2000}
 			SGS_RT_assign = yes
-			
+			set_country_flag = RT_fensanshenchan145_triggered
 		}
 		
 		ai_will_do = {
