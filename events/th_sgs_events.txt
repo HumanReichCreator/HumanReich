@@ -347,6 +347,7 @@ country_event = {
 		trigger = {
 
 		}
+		add_research_slot = -1
 		hidden_effect = {
 
 			remove_ideas = SGS_battle_fairy_restlessness_idea
@@ -364,14 +365,14 @@ country_event = {
 			clr_country_flag = sgs_selected_battle_fairy_deci
 			clr_country_flag = sgs_dannmakugokko_unhappy
 			set_country_flag = sgs_events_interrupted
-
+			
 			SGS_init_hawk_dove_value = yes
 			BAF = {
 				add_timed_idea = { idea = panluantouxiang_idea days = 360 }
 				add_ideas = {BAF_strong_army_idea  BAF_ingore_product_idea}
 				create_field_marshal = {
 					name = "贝特尔"
-					picture = "gfx/leaders/gen/fai1.dds"
+					portrait_path = "gfx/leaders/gen/fai1.dds"
 					traits = { trait_reckless }
 					skill = 2
 					attack_skill = 3

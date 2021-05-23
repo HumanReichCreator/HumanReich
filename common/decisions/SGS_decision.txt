@@ -2157,6 +2157,47 @@ SGS_research_team_category = {
 			set_variable = {SGS_research_team_two = 0}
 		}
 	}
+	SGS_RT_improve_basic_edu_2 = {
+		visible = {
+			SGS_has_research_team_mechanism = yes
+			has_tech = shuxuegongju
+			tag = sgs
+		}
+		available = {
+			
+		}
+		modifier = {
+			political_power_gain = -0.15
+		}
+		cost = 25
+		days_remove = 30
+		fire_only_once = yes
+		remove_effect = {
+			swap_ideas = {
+				remove_idea = SGS_basic_edu_idea
+				add_idea = SGS_basic_edu_2_idea
+			}
+			set_country_flag = SGS_RT_improve_basic_edu_2_over
+		}
+	}
+	SGS_RT_expan_research_team_three = {
+		visible = {
+			SGS_has_research_team_mechanism = yes
+			tag = sgs
+			has_country_flag = SGS_RT_improve_basic_edu_2_over
+		}
+		available = {
+			
+		}
+		modifier = {
+		}
+		cost = 40
+		days_remove = 15
+		fire_only_once = yes
+		remove_effect = {
+			set_variable = {SGS_research_team_three = 0}
+		}
+	}
 	SGS_RT_jichushuxue_deci = {
 		visible = {
 			SGS_has_research_team_mechanism = yes
@@ -2207,36 +2248,6 @@ SGS_research_team_category = {
 		complete_effect = {
 			set_variable = {global.sgs_RT_tech_token = token:shuxuegongju}
 			set_variable = {global.sgs_RT_tech_total_value = 1000}
-			SGS_RT_assign = yes
-			
-		}
-		
-		ai_will_do = {
-			factor = 30
-		}
-	}
-	SGS_RT_zuzhihuazhanzheng142_deci = {
-		visible = {
-			SGS_has_research_team_mechanism = yes
-			has_completed_focus = SGS_expand_military_school_focus
-			not = {
-				has_tech = zuzhihuazhanzheng142
-			}
-		}
-		available = {
-			SGS_has_idle_reseach_team = yes
-			can_research = zuzhihuazhanzheng142
-			not = { is_researching_technology =  zuzhihuazhanzheng142}
-		}
-		modifier = {
-		}
-		cost = 50
-		#days_remove = 30
-		#days_re_enable = 30
-		fire_only_once = yes
-		complete_effect = {
-			set_variable = {global.sgs_RT_tech_token = token:zuzhihuazhanzheng142}
-			set_variable = {global.sgs_RT_tech_total_value = 2500}
 			SGS_RT_assign = yes
 			
 		}
@@ -2305,4 +2316,278 @@ SGS_research_team_category = {
 			factor = 30
 		}
 	}
+	SGS_RT_yaojinggansiban1_deci = {
+		visible = {
+			SGS_has_research_team_mechanism = yes
+			has_completed_focus = SGS_organzie_civilian_focus
+			not = {
+				has_tech = yaojinggansiban1
+			}
+		}
+		available = {
+			SGS_has_idle_reseach_team = yes
+			can_research = yaojinggansiban1
+			not = { is_researching_technology =  yaojinggansiban1}
+		}
+		modifier = {
+		}
+		cost = 50
+		#days_remove = 30
+		#days_re_enable = 30
+		fire_only_once = yes
+		complete_effect = {
+			set_variable = {global.sgs_RT_tech_token = token:yaojinggansiban1}
+			set_variable = {global.sgs_RT_tech_total_value = 2200}
+			SGS_RT_assign = yes
+			
+		}
+		
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	SGS_RT_yaojinggansiban2_deci = {
+		visible = {
+			SGS_has_research_team_mechanism = yes
+			has_completed_focus = SGS_organzie_civilian_focus
+			not = {
+				has_tech = yaojinggansiban2
+			}
+		}
+		available = {
+			SGS_has_idle_reseach_team = yes
+			can_research = yaojinggansiban2
+			not = { is_researching_technology =  yaojinggansiban2}
+		}
+		modifier = {
+		}
+		cost = 50
+		#days_remove = 30
+		#days_re_enable = 30
+		fire_only_once = yes
+		complete_effect = {
+			set_variable = {global.sgs_RT_tech_token = token:yaojinggansiban2}
+			set_variable = {global.sgs_RT_tech_total_value = 3500}
+			SGS_RT_assign = yes
+			
+		}
+		
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	SGS_RT_org_production_deci = {
+		visible = {
+			SGS_has_research_team_mechanism = yes
+			has_completed_focus = SGS_organzie_civilian_focus
+			not = {
+				has_tech = org_production
+			}
+		}
+		available = {
+			SGS_has_idle_reseach_team = yes
+			can_research = org_production
+			not = { is_researching_technology =  org_production}
+		}
+		modifier = {
+		}
+		cost = 50
+		#days_remove = 30
+		#days_re_enable = 30
+		fire_only_once = yes
+		complete_effect = {
+			set_variable = {global.sgs_RT_tech_token = token:org_production}
+			set_variable = {global.sgs_RT_tech_total_value = 800}
+			SGS_RT_assign = yes
+			
+		}
+		
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	SGS_RT_jizhongshenchan145_deci = {
+		visible = {
+			SGS_has_research_team_mechanism = yes
+			has_completed_focus = SGS_organzie_civilian_focus
+			not = {
+				has_tech = jizhongshenchan145
+				has_tech = fensanshenchan145
+			}
+		}
+		available = {
+			SGS_has_idle_reseach_team = yes
+			can_research = jizhongshenchan145
+			not = { is_researching_technology =  jizhongshenchan145}
+		}
+		modifier = {
+		}
+		cost = 50
+		#days_remove = 30
+		#days_re_enable = 30
+		fire_only_once = yes
+		complete_effect = {
+			set_variable = {global.sgs_RT_tech_token = token:jizhongshenchan145}
+			set_variable = {global.sgs_RT_tech_total_value = 2000}
+			SGS_RT_assign = yes
+			
+		}
+		
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	SGS_RT_fensanshenchan145_deci = {
+		visible = {
+			SGS_has_research_team_mechanism = yes
+			has_completed_focus = SGS_organzie_civilian_focus
+			not = {
+				has_tech = jizhongshenchan145
+				has_tech = fensanshenchan145
+			}
+		}
+		available = {
+			SGS_has_idle_reseach_team = yes
+			can_research = fensanshenchan145
+			not = { is_researching_technology =  fensanshenchan145}
+		}
+		modifier = {
+		}
+		cost = 50
+		#days_remove = 30
+		#days_re_enable = 30
+		fire_only_once = yes
+		complete_effect = {
+			set_variable = {global.sgs_RT_tech_token = token:fensanshenchan145}
+			set_variable = {global.sgs_RT_tech_total_value = 2000}
+			SGS_RT_assign = yes
+			
+		}
+		
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	SGS_RT_fangwaijieshengchan130_deci = {
+		visible = {
+			SGS_has_research_team_mechanism = yes
+			has_completed_focus = SGS_mili_admin_focus
+			not = {
+				has_tech = fangwaijieshengchan130
+			}
+		}
+		available = {
+			SGS_has_idle_reseach_team = yes
+			can_research = fangwaijieshengchan130
+			not = { is_researching_technology =  fangwaijieshengchan130}
+		}
+		modifier = {
+		}
+		cost = 50
+		#days_remove = 30
+		#days_re_enable = 30
+		fire_only_once = yes
+		complete_effect = {
+			set_variable = {global.sgs_RT_tech_token = token:fangwaijieshengchan130}
+			set_variable = {global.sgs_RT_tech_total_value = 1500}
+			SGS_RT_assign = yes
+			
+		}
+		
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	SGS_RT_fangwaijieshengchan140_deci = {
+		visible = {
+			SGS_has_research_team_mechanism = yes
+			has_completed_focus = SGS_mili_admin_focus
+			not = {
+				has_tech = fangwaijieshengchan140
+			}
+		}
+		available = {
+			SGS_has_idle_reseach_team = yes
+			can_research = fangwaijieshengchan140
+			not = { is_researching_technology =  fangwaijieshengchan140}
+		}
+		modifier = {
+		}
+		cost = 50
+		#days_remove = 30
+		#days_re_enable = 30
+		fire_only_once = yes
+		complete_effect = {
+			set_variable = {global.sgs_RT_tech_token = token:fangwaijieshengchan140}
+			set_variable = {global.sgs_RT_tech_total_value = 1500}
+			SGS_RT_assign = yes
+			
+		}
+		
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	SGS_RT_linglishengchan130_deci = {
+		visible = {
+			SGS_has_research_team_mechanism = yes
+			has_completed_focus = SGS_mili_admin_focus
+			not = {
+				has_tech = linglishengchan130
+			}
+		}
+		available = {
+			SGS_has_idle_reseach_team = yes
+			can_research = linglishengchan130
+			not = { is_researching_technology =  linglishengchan130}
+		}
+		modifier = {
+		}
+		cost = 50
+		#days_remove = 30
+		#days_re_enable = 30
+		fire_only_once = yes
+		complete_effect = {
+			set_variable = {global.sgs_RT_tech_token = token:linglishengchan130}
+			set_variable = {global.sgs_RT_tech_total_value = 1500}
+			SGS_RT_assign = yes
+			
+		}
+		
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	SGS_RT_linglishengchan140_deci = {
+		visible = {
+			SGS_has_research_team_mechanism = yes
+			has_completed_focus = SGS_mili_admin_focus
+			not = {
+				has_tech = linglishengchan140
+			}
+		}
+		available = {
+			SGS_has_idle_reseach_team = yes
+			can_research = linglishengchan140
+			not = { is_researching_technology =  linglishengchan140}
+		}
+		modifier = {
+		}
+		cost = 50
+		#days_remove = 30
+		#days_re_enable = 30
+		fire_only_once = yes
+		complete_effect = {
+			set_variable = {global.sgs_RT_tech_token = token:linglishengchan140}
+			set_variable = {global.sgs_RT_tech_total_value = 1500}
+			SGS_RT_assign = yes
+			
+		}
+		
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
+
 } 

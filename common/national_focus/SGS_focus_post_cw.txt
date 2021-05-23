@@ -239,6 +239,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			#加陆军经验，激进派++，解锁军事理论
+			army_experience = 25
+			SGS_hawk_rise10 = yes
+			custom_effect_tooltip = SGS_RT_unlcok_more_tt
 		}
 		x = 7
 		y = 4
@@ -255,7 +258,31 @@ focus_tree = {
 			focus = SGS_expand_military_school_focus
 		}
 		completion_reward = {
-			#获得独特科技，获得新编制，获得一个军事理论
+			#获得新编制，获得一个军事理论
+			SGS_dove_rise5 = yes
+			add_tech_bonus = {
+				bonus = 0.8
+				uses = 1
+				category = jitizhuyi
+			}
+			division_template = {
+				name = SGS_template_civilian
+				regiments = {
+					ma_light_infantry = { x = 0 y = 0 }
+					ma_light_infantry = { x = 0 y = 1 }
+					ma_light_infantry = { x = 0 y = 2 }
+					melee_infantry = { x = 0 y = 4 }
+					melee_infantry = { x = 0 y = 5 }
+					sc_light_infantry = { x = 1 y = 0 }
+					sc_light_infantry = { x = 1 y = 1 }
+					sc_light_infantry = { x = 1 y = 2 }
+					melee_infantry = { x = 1 y = 4 }
+					melee_infantry = { x = 1 y = 5 }
+				}
+				support = { 
+				} 
+			}
+			custom_effect_tooltip = SGS_RT_unlcok_more_tt
 		}
 		x = 9
 		y = 4
@@ -268,14 +295,28 @@ focus_tree = {
 			focus = SGS_expand_military_school_focus
 			focus = SGS_organzie_civilian_focus
 		}
+		available = {
+			custom_trigger_tooltip = {
+                tooltip = SGS_hawk_get_more
+                SGS_hawk_get_more = yes
+            }
+			
+		}
 		mutually_exclusive = {
 			focus = SGS_Baf_worker
 		}
 		completion_reward = {
 			#基础加一点战场妖精派的影响力，加pp和新规
 			#随机事件，战场妖精学会了妥协or战场妖精努力实现自己的主张，会涨or降战场妖精的影响力
-			#解锁妖精种族科技，以后会变成社会科学
-			
+			#解锁工业科技，以后会变成社会科学
+			add_political_power = 50
+			add_popularity = {
+				ideology = neworder
+				popularity = 0.05
+			}
+			#事件
+			custom_effect_tooltip = SGS_RT_unlcok_more_tt
+
 		}
 		x = 7
 		y = 5
@@ -288,11 +329,23 @@ focus_tree = {
 			focus = SGS_organzie_civilian_focus
 			focus = SGS_expand_military_school_focus
 		}
+		available = {
+			custom_trigger_tooltip = {
+                tooltip = SGS_dove_get_more
+                SGS_dove_get_more = yes
+            }
+			
+		}
 		mutually_exclusive = {
 			focus = SGS_mili_admin_focus
 		}
 		completion_reward = {
 			#平民派++，获得一个工业科技，和平++，替换经济buff
+			add_popularity = {
+				ideology = guli
+				popularity = 0.05
+			}
+			custom_effect_tooltip = SGS_RT_unlcok_more_tt
 		}
 		x = 9
 		y = 5
@@ -336,7 +389,7 @@ focus_tree = {
 			focus = SGS_easy_product_focus
 		}
 		completion_reward = {
-			#需要影响力比较均衡，获得新编制，改善种族buff
+			#需要影响力比较均衡，获得新编制，改善BaF种族buff
 			
 		}
 		x = 8
@@ -645,7 +698,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SGS_show_peace_again_focus
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_improve_relations
 		cost = 10
 		prerequisite = {
 			focus = SGS_star_win_focus
@@ -655,7 +708,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SGS_trade_fairy_again_focus
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_positive_trade_relations
 		cost = 5
 		prerequisite = {
 			focus = SGS_show_peace_again_focus
@@ -665,7 +718,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SGS_trade_industry_again_focus
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_intelligence_exchange
 		cost = 5
 		prerequisite = {
 			focus = SGS_show_peace_again_focus
@@ -850,6 +903,9 @@ focus_tree = {
 						add_idea = SGS_battle_fairy_elite_army
 					}
 				}
+			}
+			set_technology = {
+				jingyingxunlian = 1
 			}
 			delete_unit_template_and_units = {
 				division_template = "妖精民兵武装"

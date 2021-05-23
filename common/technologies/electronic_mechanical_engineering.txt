@@ -104,6 +104,10 @@ technologies = {
 				has_tech = waike
 				factor = -1
 			}
+			modifier = {
+				tech_ai_factor_must_lingben = yes
+				factor = 1000
+			}
 		}
 		
 		categories = {
@@ -149,6 +153,11 @@ technologies = {
 				has_tech = lingben
 				factor = -1
 			}
+			modifier = {
+				tech_ai_factor_must_waike = yes
+				factor = 1000
+			}
+			 
 		}
 		
 		categories = {

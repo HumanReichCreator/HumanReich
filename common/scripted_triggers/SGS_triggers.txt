@@ -2,6 +2,7 @@ SGS_peaceful_transit_gov = {
 	AND = {
 		has_government = neworder
 		has_country_flag = sgs_peaceful_transit_flag
+		tag = sgs
 	}
 }
 
@@ -11,6 +12,7 @@ SGS_sunnystar_post_cw_gov = {
 		not = {
 			has_country_flag = SGS_BaF_destroyed
 		}
+		tag = sgs
 	}
 }
 
@@ -18,6 +20,7 @@ SGS_post_Baf_star_gov = {
 	AND = {
 		has_government = guli
 		has_country_flag = SGS_BaF_destroyed
+		tag = sgs
 	}
 }
 
