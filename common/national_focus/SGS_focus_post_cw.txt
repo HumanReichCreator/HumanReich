@@ -1002,8 +1002,8 @@ focus_tree = {
 		x = 25
 		y = 8
 	}
-	focus = {
-		id = SGS_ind_plan
+focus = {
+		id = SGS_ind_plan_focus
 		icon = GFX_focus_generic_industry_3
 		cost = 10.00
 		x = 35
@@ -1015,7 +1015,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		cost = 10.00
 		prerequisite = {
-			focus = SGS_ind_plan
+			focus = SGS_ind_plan_focus
 		}
 		mutually_exclusive = {
 			focus = SGS_ind_plan_dove
@@ -1025,8 +1025,8 @@ focus_tree = {
 
 	}
 	focus = {
-		id = SGS_newfocus_3
-		icon = GFX_goal_unknown
+		id = SGS_enforce_picking_up #开发资源
+		icon = GFX_goal_generic_production
 		cost = 10.00
 		prerequisite = {
 			focus = SGS_ind_plan_hawk
@@ -1036,8 +1036,8 @@ focus_tree = {
 
 	}
 	focus = {
-		id = SGS_newfocus_4
-		icon = GFX_goal_unknown
+		id = SGS_mic_expand_focus
+		icon = GFX_focus_generic_tank_production #加军工厂，减消费品
 		cost = 10.00
 		prerequisite = {
 			focus = SGS_ind_plan_hawk
@@ -1047,28 +1047,28 @@ focus_tree = {
 
 	}
 	focus = {
-		id = SGS_newfocus_7
-		icon = GFX_goal_unknown
+		id = SGS_national_roadway_focus
+		icon = GFX_goal_generic_construct_infrastructure
 		cost = 10.00
 		prerequisite = {
-			focus = SGS_newfocus_3
+			focus = SGS_enforce_picking_up
 		}
 		prerequisite = {
-			focus = SGS_newfocus_4
+			focus = SGS_mic_expand_focus
 		}
 		x = 33
 		y = 3
 
 	}
 	focus = {
-		id = SGS_newfocus_9
-		icon = GFX_goal_unknown
+		id = SGS_planning_product_focus #像筹划恶作剧一样计划性展开生产
+		icon = GFX_goal_generic_position_armies
 		cost = 10.00
 		prerequisite = {
-			focus = SGS_newfocus_7
+			focus = SGS_national_roadway_focus
 		}
 		mutually_exclusive = {
-			focus = SGS_newfocus_10
+			focus = SGS_factory_flexible_trans_focus
 		}
 		x = 32
 		y = 4
@@ -1079,7 +1079,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		cost = 10.00
 		prerequisite = {
-			focus = SGS_ind_plan
+			focus = SGS_ind_plan_focus
 		}
 		mutually_exclusive = {
 			focus = SGS_ind_plan_hawk
@@ -1089,8 +1089,8 @@ focus_tree = {
 
 	}
 	focus = {
-		id = SGS_newfocus_5
-		icon = GFX_goal_unknown
+		id = SGS_transform_picking_up
+		icon = GFX_goal_generic_air_production
 		cost = 10.00
 		prerequisite = {
 			focus = SGS_ind_plan_dove
@@ -1100,8 +1100,8 @@ focus_tree = {
 
 	}
 	focus = {
-		id = SGS_newfocus_6
-		icon = GFX_goal_unknown
+		id = SGS_cic_invest_focus
+		icon = GFX_focus_generic_industry_3
 		cost = 10.00
 		prerequisite = {
 			focus = SGS_ind_plan_dove
@@ -1111,136 +1111,136 @@ focus_tree = {
 
 	}
 	focus = {
-		id = SGS_newfocus_8
-		icon = GFX_goal_unknown
+		id = SGS_city_infra_focus
+		icon = GFX_focus_generic_the_giant_wakes
 		cost = 10.00
 		prerequisite = {
-			focus = SGS_newfocus_5
+			focus = SGS_transform_picking_up
 		}
 		prerequisite = {
-			focus = SGS_newfocus_6
+			focus = SGS_cic_invest_focus
 		}
 		x = 37
 		y = 3
 
 	}
 	focus = {
-		id = SGS_newfocus_10
-		icon = GFX_goal_unknown
+		id = SGS_factory_flexible_trans_focus
+		icon = GFX_goal_continuous_non_factory_construct
 		cost = 10.00
 		prerequisite = {
-			focus = SGS_newfocus_8
-			focus = SGS_newfocus_7
+			focus = SGS_city_infra_focus
+			focus = SGS_national_roadway_focus
 		}
 		mutually_exclusive = {
-			focus = SGS_newfocus_9
-			focus = SGS_newfocus_11
+			focus = SGS_exploring_product_focus
+			focus = SGS_planning_product_focus
 		}
 		x = 35
 		y = 4
 
 	}
 	focus = {
-		id = SGS_newfocus_13
-		icon = GFX_goal_unknown
+		id = SGS_mili_build_focus
+		icon = GFX_goal_generic_fortify_city
 		cost = 10.00
 		prerequisite = {
-			focus = SGS_newfocus_10
+			focus = SGS_factory_flexible_trans_focus
 		}
 		mutually_exclusive = {
-			focus = SGS_newfocus_14
+			focus = SGS_civil_build_focus
 		}
 		x = 34
 		y = 5
 
 	}
 	focus = {
-		id = SGS_newfocus_14
-		icon = GFX_goal_unknown
+		id = SGS_civil_build_focus
+		icon = GFX_goal_generic_construction
 		cost = 10.00
 		prerequisite = {
-			focus = SGS_newfocus_10
+			focus = SGS_factory_flexible_trans_focus
 		}
 		mutually_exclusive = {
-			focus = SGS_newfocus_13
+			focus = SGS_mili_build_focus
 		}
 		x = 36
 		y = 5
 
 	}
 	focus = {
-		id = SGS_newfocus_11
-		icon = GFX_goal_unknown
+		id = SGS_exploring_product_focus
+		icon = GFX_goal_generic_build_airforce
 		cost = 10.00
 		prerequisite = {
-			focus = SGS_newfocus_8
+			focus = SGS_city_infra_focus
 		}
 		mutually_exclusive = {
-			focus = SGS_newfocus_10
+			focus = SGS_factory_flexible_trans_focus
 		}
 		x = 38
 		y = 4
 
 	}
 	focus = {
-		id = SGS_newfocus_12
-		icon = GFX_goal_unknown
+		id = SGS_planning_contruct_focus
+		icon = GFX_focus_usa_build_the_pentagon
 		cost = 10.00
 		prerequisite = {
-			focus = SGS_newfocus_9
+			focus = SGS_planning_product_focus
 		}
 		x = 32
 		y = 5
 
 	}
 	focus = {
-		id = SGS_newfocus_15
-		icon = GFX_goal_unknown
+		id = SGS_encourge_privte_invest_focus
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		cost = 10.00
 		prerequisite = {
-			focus = SGS_newfocus_11
+			focus = SGS_exploring_product_focus
 		}
 		x = 38
 		y = 5
 
 	}
 	focus = {
-		id = SGS_newfocus_16
-		icon = GFX_goal_unknown
+		id = SGS_completed_moonlight_industry_system
+		icon = GFX_focus_TUR_turanist_ambition
 		cost = 10.00
 		prerequisite = {
-			focus = SGS_newfocus_12
-			focus = SGS_newfocus_13
-			focus = SGS_newfocus_14
-			focus = SGS_newfocus_15
+			focus = SGS_planning_contruct_focus
+			focus = SGS_mili_build_focus
+			focus = SGS_civil_build_focus
+			focus = SGS_encourge_privte_invest_focus
 		}
 		x = 35
 		y = 6
 
 	}
 	focus = {
-		id = SGS_newfocus_17
-		icon = GFX_goal_unknown
+		id = SGS_sunlight_factory_solution
+		icon = GFX_focus_jap_pacific_guardian
 		cost = 10.00
 		prerequisite = {
-			focus = SGS_newfocus_16
+			focus = SGS_completed_moonlight_industry_system
 		}
 		mutually_exclusive = {
-			focus = SGS_newfocus_18
+			focus = SGS_starlight_factory_solution
 		}
 		x = 34
 		y = 7
 
 	}
 	focus = {
-		id = SGS_newfocus_18
-		icon = GFX_goal_unknown
+		id = SGS_starlight_factory_solution
+		icon = GFX_focus_prc_agrarian_socialism
 		cost = 10.00
 		prerequisite = {
-			focus = SGS_newfocus_16
+			focus = SGS_completed_moonlight_industry_system
 		}
 		mutually_exclusive = {
-			focus = SGS_newfocus_17
+			focus = SGS_sunlight_factory_solution
 		}
 		x = 36
 		y = 7
