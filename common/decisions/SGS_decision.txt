@@ -2220,6 +2220,120 @@ SGS_research_team_category = {
 			set_variable = {SGS_research_team_three = 0}
 		}
 	}
+	SGS_RT_improve_teams_life = {
+		visible = {
+			SGS_has_research_team_mechanism = yes
+			tag = sgs
+			SGS_dove_have_supporter = yes
+		}
+		available = {
+			SGS_has_at_least_one_reseach_team_ongoing = yes
+		}
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+		cost = 30
+		days_remove = 45
+		days_re_enable = 30
+		fire_only_once = no
+		complete_effect = {
+			set_country_flag = SGS_RT_reseacher_better_life
+			SGS_RT_update_research_speed = yes
+		}
+		remove_effect = {
+			clr_country_flag = SGS_RT_reseacher_better_life
+			SGS_RT_update_research_speed = yes
+		}
+	}
+	SGS_RT_improve_teams_political_statue = {
+		visible = {
+			SGS_has_research_team_mechanism = yes
+			tag = sgs
+			SGS_dove_get_more = yes
+		}
+		available = {
+			SGS_has_at_least_one_reseach_team_ongoing = yes
+		}
+		modifier = {
+			political_power_gain = 0.4
+		}
+		cost = 20
+		days_remove = 45
+		days_re_enable = 15
+		fire_only_once = no
+		complete_effect = {
+			set_country_flag = SGS_RT_reseacher_better_political_statue
+			SGS_RT_update_research_speed = yes
+		}
+		remove_effect = {
+			clr_country_flag = SGS_RT_reseacher_better_political_statue
+			SGS_RT_update_research_speed = yes
+		}
+	}
+	SGS_RT_open_overtime_deci = {
+		visible = {
+			SGS_has_research_team_mechanism = yes
+			tag = sgs
+			SGS_hawk_get_more = yes
+			not = { has_country_flag = SGS_RT_reseacher_overtime }
+		}
+		available = {
+			
+		}
+		cost = 50
+		fire_only_once = no
+		complete_effect = {
+			SGS_RT_open_overtime = yes
+		}
+	}
+	SGS_RT_close_overtime_deci = {
+		visible = {
+			SGS_has_research_team_mechanism = yes
+			tag = sgs
+			has_country_flag = SGS_RT_reseacher_overtime
+		}
+		available = {
+			
+		}
+		cost = 30
+		fire_only_once = no
+		complete_effect = {
+			SGS_RT_close_overtime = yes
+		}
+	}
+	SGS_RT_open_concentrate_deci = {
+		visible = {
+			SGS_has_research_team_mechanism = yes
+			tag = sgs
+			SGS_hawk_get_more = yes
+			not = { has_country_flag = SGS_RT_reseach_concentrate }
+		}
+		available = {
+			SGS_has_at_least_one_reseach_team_ongoing = yes
+			not = {SGS_RT_has_at_least_one_stop_working = no}
+		}
+		cost = 80
+		fire_only_once = no
+		complete_effect = {
+			SGS_RT_open_concentrate = yes
+		}
+	}
+	SGS_RT_close_concentrate_deci = {
+		visible = {
+			SGS_has_research_team_mechanism = yes
+			tag = sgs
+			has_country_flag = SGS_RT_reseach_concentrate
+		}
+		available = {
+			
+		}
+		cost = 20
+		fire_only_once = no
+		complete_effect = {
+			SGS_RT_close_concentrate = yes
+		}
+	}
+
 	SGS_RT_jichushuxue_deci = {
 		visible = {
 			SGS_has_research_team_mechanism = yes
