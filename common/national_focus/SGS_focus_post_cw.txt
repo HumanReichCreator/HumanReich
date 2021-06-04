@@ -290,7 +290,7 @@ focus_tree = {
 	focus = {
 		id = SGS_mili_admin_focus
 		icon = GFX_goal_support_fascism
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SGS_expand_military_school_focus
 			focus = SGS_organzie_civilian_focus
@@ -341,9 +341,15 @@ focus_tree = {
 		}
 		completion_reward = {
 			#平民派++，获得一个工业科技，和平++，替换经济buff
+			SGS_dove_rise5 = yes
 			add_popularity = {
 				ideology = guli
 				popularity = 0.05
+			}
+			add_tech_bonus = {
+				bonus = 0.4
+				uses = 1
+				category = industrys
 			}
 			custom_effect_tooltip = SGS_RT_unlcok_more_tt
 		}
@@ -387,6 +393,18 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = SGS_easy_product_focus
+		}
+		available = {
+			not = {
+				custom_trigger_tooltip = {
+					tooltip = SGS_dove_hold_meeting
+					SGS_dove_hold_meeting = yes
+				}
+				custom_trigger_tooltip = {
+					tooltip = SGS_hawk_hold_meeting
+					SGS_hawk_hold_meeting = yes
+				}
+			}
 		}
 		completion_reward = {
 			#需要影响力比较均衡，获得新编制，改善BaF种族buff
@@ -466,6 +484,11 @@ focus_tree = {
 		cost = 5
 		prerequisite = {
 			focus = SGS_all_people_training_focus
+		}
+		completion_reward = {
+			#给一个山地作战的科技，然后加点灵力
+			PO_influence_factor0.05 = yes
+			
 		}
 		x = 11
 		y = 5

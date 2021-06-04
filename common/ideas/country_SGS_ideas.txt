@@ -38,6 +38,17 @@ ideas = {
 				neworder_drift = 0.01
 			}
 		}
+		SGS_BaF_civ_mix_troop = {
+			picture = can_send_in_the_zombies
+			modifier = {
+				army_attack_factor = 0.05
+				
+				army_speed_factor = 0.05
+				army_org_factor = 0.1
+
+
+			}
+		}
 
 		SGS_battle_fairy_restlessness_idea = {
 			picture = chi_war_of_resistance3
