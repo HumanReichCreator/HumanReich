@@ -96,14 +96,17 @@ SGS_reseach_team_three_idle = {
 SGS_reseach_team_one_ongoing = {
 	has_variable = SGS_research_team_one
 	not = {check_variable = {SGS_research_team_one = 0}}
+	not = { has_country_flag =  SGS_RT_team_one_stop}
 }
 SGS_reseach_team_two_ongoing = {
 	has_variable = SGS_research_team_two
 	not = {check_variable = {SGS_research_team_two = 0}}
+	not = { has_country_flag =  SGS_RT_team_two_stop}
 }
 SGS_reseach_team_three_ongoing = {
 	has_variable = SGS_research_team_three
 	not = {check_variable = {SGS_research_team_three = 0}}
+	not = { has_country_flag =  SGS_RT_team_two_stop}
 }
 SGS_has_idle_reseach_team = {
 	or = {
@@ -112,3 +115,19 @@ SGS_has_idle_reseach_team = {
 		SGS_reseach_team_three_idle = yes
 	}
 }
+
+SGS_has_at_least_one_reseach_team_ongoing = {
+	or = {
+		SGS_reseach_team_one_ongoing = yes
+		SGS_reseach_team_two_ongoing = yes
+		SGS_reseach_team_three_ongoing = yes
+	}
+}
+SGS_RT_has_at_least_one_stop_working = {
+	or = {
+		has_country_flag =  SGS_RT_team_one_stop
+		has_country_flag =  SGS_RT_team_two_stop
+		has_country_flag =  SGS_RT_team_three_stop
+	}
+}
+

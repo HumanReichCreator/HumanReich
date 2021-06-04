@@ -490,10 +490,93 @@ SGS_RT_three_days_cal = {
         country_event = {id = sgs.30441}
     }
 }
+
+SGS_RT_update_research_speed = {
+    set_variable = {SGS.SGS_research_team_speed = 5}
+    limit = {
+        if = {
+            has_country_flag = SGS_RT_reseacher_better_life
+        }
+        multiply_variable = {SGS_research_team_speed = 1.25}
+    }
+    limit = {
+        if = {
+            has_country_flag = SGS_RT_reseacher_better_political_statue
+        }
+        multiply_variable = {SGS_research_team_speed = 1.5}
+    }
+    limit = {
+        if = {
+            has_country_flag = SGS_RT_reseacher_overtime
+        }
+        multiply_variable = {SGS_research_team_speed = 1.8}
+    }
+    limit = {
+        if = {
+            has_country_flag = SGS_RT_reseach_concentrate
+            has_variable = SGS_research_team_two
+            not = {has_variable = SGS_research_team_three}
+        }
+        multiply_variable = {SGS_research_team_speed = 1.7}
+    }
+    limit = {
+        if = {
+            has_country_flag = SGS_RT_reseach_concentrate
+            has_variable = SGS_research_team_three
+        }
+        multiply_variable = {SGS_research_team_speed = 2.5}
+    }
+
+}
+
+SGS_RT_open_overtime = {
+    set_country_flag = SGS_RT_reseacher_overtime
+    SGS_RT_update_research_speed = yes
+}
+
+SGS_RT_close_overtime = {
+    clr_country_flag = SGS_RT_reseacher_overtime
+    SGS_RT_update_research_speed = yes
+    clr_country_flag = SGS_RT_one_resercher_down
+}
+
+SGS_RT_open_concentrate = {
+    set_country_flag = SGS_RT_reseach_concentrate
+    if = {
+        limit = {
+            SGS_reseach_team_one_ongoing = yes
+        }
+        set_country_flag = SGS_RT_team_two_stop
+        set_country_flag = SGS_RT_team_three_stop
+        else_if = {
+            limit = {
+                SGS_reseach_team_two_ongoing = yes
+            }
+            set_country_flag = SGS_RT_team_one_stop
+            set_country_flag = SGS_RT_team_three_stop
+        }
+        else = {
+            set_country_flag = SGS_RT_team_one_stop
+            set_country_flag = SGS_RT_team_two_stop
+        }
+    }
+    SGS_RT_update_research_speed = yes
+}
+
+SGS_RT_close_concentrate = {
+    clr_country_flag = SGS_RT_reseach_concentrate
+    clr_country_flag = SGS_RT_team_one_stop
+    clr_country_flag = SGS_RT_team_two_stop
+    clr_country_flag = SGS_RT_team_three_stop #集中攻坚时猝死的话得另处理
+    SGS_RT_update_research_speed = yes
+}
+
+
 SGS_RT_daily_cal = {
     if = {
         limit = {
             SGS_reseach_team_one_ongoing = yes
+            not = { has_country_flag = SGS_RT_team_one_stop }
         }
         add_to_variable = {sgs_RT_tech_current_value_one = SGS.SGS_research_team_speed}
         SGS_RT_one_days_cal = yes
@@ -501,6 +584,7 @@ SGS_RT_daily_cal = {
     if = {
         limit = {
             SGS_reseach_team_two_ongoing = yes
+            not = { has_country_flag = SGS_RT_team_two_stop }
         }
         add_to_variable = {sgs_RT_tech_current_value_two = SGS.SGS_research_team_speed}
         SGS_RT_two_days_cal = yes
@@ -508,6 +592,7 @@ SGS_RT_daily_cal = {
     if = {
         limit = {
             SGS_reseach_team_three_ongoing = yes
+            not = { has_country_flag = SGS_RT_team_three_stop }
         }
         add_to_variable = {sgs_RT_tech_current_value_three = SGS.SGS_research_team_speed}
         SGS_RT_three_days_cal = yes
