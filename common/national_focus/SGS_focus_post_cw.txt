@@ -145,6 +145,11 @@ focus_tree = {
 				
 			}
 			add_to_variable = { SGS_BLM_garbage = 50 }
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 100
+				producer = SGS
+			}
 		}
 		x = 3
 		y = 4

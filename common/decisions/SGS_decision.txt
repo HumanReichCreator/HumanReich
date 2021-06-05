@@ -2218,6 +2218,7 @@ SGS_research_team_category = {
 		fire_only_once = yes
 		remove_effect = {
 			set_variable = {SGS_research_team_three = 0}
+			SGS_RT_close_concentrate = yes
 		}
 	}
 	SGS_RT_improve_teams_life = {
@@ -2227,7 +2228,7 @@ SGS_research_team_category = {
 			SGS_dove_have_supporter = yes
 		}
 		available = {
-			SGS_has_at_least_one_reseach_team_ongoing = yes
+			#SGS_has_at_least_one_reseach_team_ongoing = yes
 		}
 		modifier = {
 			consumer_goods_factor = 0.05
@@ -2252,7 +2253,7 @@ SGS_research_team_category = {
 			SGS_dove_get_more = yes
 		}
 		available = {
-			SGS_has_at_least_one_reseach_team_ongoing = yes
+			#SGS_has_at_least_one_reseach_team_ongoing = yes
 		}
 		modifier = {
 			political_power_gain = 0.4
@@ -2278,7 +2279,7 @@ SGS_research_team_category = {
 			not = { has_country_flag = SGS_RT_reseacher_overtime }
 		}
 		available = {
-			
+			SGS_has_at_least_one_reseach_team_ongoing = yes
 		}
 		cost = 50
 		fire_only_once = no
@@ -2310,7 +2311,7 @@ SGS_research_team_category = {
 		}
 		available = {
 			SGS_has_at_least_one_reseach_team_ongoing = yes
-			not = {SGS_RT_has_at_least_one_stop_working = no}
+			not = {SGS_RT_has_at_least_one_stop_working = yes}
 		}
 		cost = 80
 		fire_only_once = no

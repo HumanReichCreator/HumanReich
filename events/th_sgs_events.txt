@@ -11078,11 +11078,11 @@ country_event = {
 			check_variable = {sgs_current_black_marketer = 2}
 		}
 		modifier = {
-			factor = 1.2
+			factor = 2
 			has_country_flag = SGS_BLM_deli_safe_1
 		}
 		modifier = {
-			factor = 1.3
+			factor = 2
 			has_country_flag = SGS_BLM_deli_safe_2
 		}
 	}
@@ -11145,6 +11145,7 @@ country_event = {
 		set_variable = {SGS_research_team_one = 0}
 		set_variable = {sgs_RT_tech_current_value_one = 0}
 		clear_variable = sgs_RT_tech_days_one
+		SGS_RT_close_concentrate = yes
 		ai_chance = {
 			base = 35
 		}
@@ -11170,6 +11171,7 @@ country_event = {
 		set_variable = {SGS_research_team_two = 0}
 		set_variable = {sgs_RT_tech_current_value_two = 0}
 		clear_variable = sgs_RT_tech_days_two
+		SGS_RT_close_concentrate = yes
 		ai_chance = {
 			base = 35
 		}
@@ -11198,6 +11200,7 @@ country_event = {
 		set_variable = {SGS_research_team_three = 0}
 		set_variable = {sgs_RT_tech_current_value_three = 0}
 		clear_variable = sgs_RT_tech_days_three
+		SGS_RT_close_concentrate = yes
 		ai_chance = {
 			base = 35
 		}
@@ -11240,6 +11243,7 @@ country_event = {
 		set_variable = {SGS_research_team_one = 0}
 		set_variable = {sgs_RT_tech_current_value_one = 0}
 		clear_variable = sgs_RT_tech_days_one
+		SGS_RT_close_concentrate = yes
 		ai_chance = {
 			base = 35
 		}
@@ -11254,6 +11258,7 @@ country_event = {
 		set_variable = {SGS_research_team_two = 0}
 		set_variable = {sgs_RT_tech_current_value_two = 0}
 		clear_variable = sgs_RT_tech_days_two
+		SGS_RT_close_concentrate = yes
 		ai_chance = {
 			base = 35
 		}
@@ -11268,6 +11273,7 @@ country_event = {
 		set_variable = {SGS_research_team_three = 0}
 		set_variable = {sgs_RT_tech_current_value_three = 0}
 		clear_variable = sgs_RT_tech_days_three
+		SGS_RT_close_concentrate = yes
 		ai_chance = {
 			base = 35
 		}

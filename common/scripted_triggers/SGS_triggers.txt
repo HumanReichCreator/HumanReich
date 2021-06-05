@@ -117,17 +117,24 @@ SGS_has_idle_reseach_team = {
 }
 
 SGS_has_at_least_one_reseach_team_ongoing = {
-	or = {
-		SGS_reseach_team_one_ongoing = yes
-		SGS_reseach_team_two_ongoing = yes
-		SGS_reseach_team_three_ongoing = yes
+	custom_trigger_tooltip = {
+		tooltip = SGS_has_at_least_one_reseach_team_ongoing_tt
+		or = {
+			SGS_reseach_team_one_ongoing = yes
+			SGS_reseach_team_two_ongoing = yes
+			SGS_reseach_team_three_ongoing = yes
+		}
 	}
 }
+
 SGS_RT_has_at_least_one_stop_working = {
-	or = {
-		has_country_flag =  SGS_RT_team_one_stop
-		has_country_flag =  SGS_RT_team_two_stop
-		has_country_flag =  SGS_RT_team_three_stop
+	custom_trigger_tooltip = {
+		tooltip = SGS_RT_has_at_least_one_stop_working_tt
+		or = {
+			has_country_flag =  SGS_RT_team_one_stop
+			has_country_flag =  SGS_RT_team_two_stop
+			has_country_flag =  SGS_RT_team_three_stop
+		}
 	}
 }
 

@@ -493,34 +493,35 @@ SGS_RT_three_days_cal = {
 
 SGS_RT_update_research_speed = {
     set_variable = {SGS.SGS_research_team_speed = 5}
-    limit = {
-        if = {
+
+    if = {
+        limit = {
             has_country_flag = SGS_RT_reseacher_better_life
         }
         multiply_variable = {SGS_research_team_speed = 1.25}
     }
-    limit = {
-        if = {
+    if = {
+        limit = {
             has_country_flag = SGS_RT_reseacher_better_political_statue
         }
         multiply_variable = {SGS_research_team_speed = 1.5}
     }
-    limit = {
-        if = {
+    if = {
+        limit = {
             has_country_flag = SGS_RT_reseacher_overtime
         }
         multiply_variable = {SGS_research_team_speed = 1.8}
     }
-    limit = {
-        if = {
+    if = {
+        limit = {
             has_country_flag = SGS_RT_reseach_concentrate
             has_variable = SGS_research_team_two
             not = {has_variable = SGS_research_team_three}
         }
         multiply_variable = {SGS_research_team_speed = 1.7}
     }
-    limit = {
-        if = {
+    if = {
+        limit = {
             has_country_flag = SGS_RT_reseach_concentrate
             has_variable = SGS_research_team_three
         }
