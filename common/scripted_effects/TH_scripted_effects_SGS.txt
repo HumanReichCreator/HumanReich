@@ -600,3 +600,21 @@ SGS_RT_daily_cal = {
     }
 
 }
+
+SGS_RT_reduce_progress = {
+    if = {
+        limit = {
+            check_variable = {sgs_rt_changing_team_num = 1}
+        }
+        subtract_from_variable = {sgs_RT_tech_current_value_one = sgs_rt_reduce_progress_var}
+        else_if = {
+            limit = {
+                check_variable = {sgs_rt_changing_team_num = 2}
+            }
+            subtract_from_variable = {sgs_RT_tech_current_value_two = sgs_rt_reduce_progress_var}
+        }
+        else = {
+            subtract_from_variable = {sgs_RT_tech_current_value_three = sgs_rt_reduce_progress_var}
+        }
+    }
+}

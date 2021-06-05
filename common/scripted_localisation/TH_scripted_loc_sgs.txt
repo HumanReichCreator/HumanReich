@@ -396,3 +396,81 @@ defined_text = {
 		localization_key = jisuangongju144
 	}
 }
+
+defined_text = {
+	name = SGS_RT_overtime_status
+	text = {
+		trigger = {
+			has_country_flag = SGS_RT_reseacher_overtime
+		}
+		localization_key = SGS_RT_overtime_status_on
+	}
+	text = {
+		trigger = {
+			not = {has_country_flag = SGS_RT_reseacher_overtime}
+		}
+		localization_key = SGS_RT_overtime_status_off
+	}
+}
+
+defined_text = {
+	name = SGS_RT_concentrate_status
+	text = {
+		trigger = {
+			has_country_flag = SGS_RT_reseacher_concentrate
+		}
+		localization_key = SGS_RT_concentrate_status_on
+	}
+	text = {
+		trigger = {
+			not = {has_country_flag = SGS_RT_reseacher_concentrate}
+		}
+		localization_key = SGS_RT_concentrate_status_off
+	}
+}
+
+defined_text = {
+	name = SGS_RT_stop_status_one
+	text = {
+		trigger = {
+			has_country_flag = SGS_RT_team_one_stop
+		}
+		localization_key = SGS_RT_team_stop
+	}
+	text = {
+		trigger = {
+			not = {has_country_flag = SGS_RT_team_one_stop}
+		}
+		localization_key = sgs_black_market_repo_none
+	}
+}
+defined_text = {
+	name = SGS_RT_stop_status_two
+	text = {
+		trigger = {
+			has_country_flag = SGS_RT_team_two_stop
+		}
+		localization_key = SGS_RT_team_stop
+	}
+	text = {
+		trigger = {
+			not = {has_country_flag = SGS_RT_team_two_stop}
+		}
+		localization_key = sgs_black_market_repo_none
+	}
+}
+defined_text = {
+	name = SGS_RT_stop_status_three
+	text = {
+		trigger = {
+			has_country_flag = SGS_RT_team_three_stop
+		}
+		localization_key = SGS_RT_team_stop
+	}
+	text = {
+		trigger = {
+			not = {has_country_flag = SGS_RT_team_three_stop}
+		}
+		localization_key = sgs_black_market_repo_none
+	}
+}

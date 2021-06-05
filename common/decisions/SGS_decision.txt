@@ -2209,6 +2209,10 @@ SGS_research_team_category = {
 			has_country_flag = SGS_RT_improve_basic_edu_2_over
 		}
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = "没有进行集中攻坚"
+				not = { has_country_flag = SGS_RT_reseach_concentrate }
+			}
 			
 		}
 		modifier = {
@@ -2311,7 +2315,15 @@ SGS_research_team_category = {
 		}
 		available = {
 			SGS_has_at_least_one_reseach_team_ongoing = yes
-			not = {SGS_RT_has_at_least_one_stop_working = yes}
+			custom_trigger_tooltip = {
+				tooltip = SGS_RT_have_more_than_one_team
+				has_variable = SGS_research_team_two
+			}
+			custom_trigger_tooltip = {
+				tooltip = SGS_RT_not_has_at_least_one_stop_working_tt
+				not = {SGS_RT_has_at_least_one_stop_working = yes}
+			}
+			
 		}
 		cost = 80
 		fire_only_once = no

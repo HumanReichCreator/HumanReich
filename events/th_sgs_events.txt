@@ -11279,3 +11279,120 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	#加班猝死
+	id = sgs.30451
+	title = sgs.30451.t
+	desc = sgs.30451.d
+	fire_only_once = no
+	is_triggered_only = no
+	mean_time_to_happen = {
+		days = 45
+		modifier = {
+			add = -20
+			has_country_flag = SGS_RT_one_resercher_down
+		}
+	}
+	trigger = {
+		tag = sgs
+		has_country_flag = SGS_RT_reseacher_overtime
+		SGS_has_at_least_one_reseach_team_ongoing = yes
+	}
+	option = {
+		#不管
+		name = sgs.30451.1
+		add_manpower = -1
+		set_variable = {sgs_rt_reduce_progress_var = 300}
+		if = {
+			limit = {
+				SGS_reseach_team_one_ongoing = yes
+			}
+			set_variable = {sgs_rt_changing_team_num = 1}
+			else_if = {
+				limit = {
+					SGS_reseach_team_two_ongoing = yes
+				}
+				set_variable = {sgs_rt_changing_team_num = 2}
+			}
+			else = {
+				set_variable = {sgs_rt_changing_team_num = 3}
+			}
+		}
+		SGS_RT_reduce_progress = yes
+		set_country_flag = SGS_RT_one_resercher_down
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#停止加班
+		name = sgs.30451.2
+		add_manpower = -1
+		set_variable = {sgs_rt_reduce_progress_var = 300}
+		if = {
+			limit = {
+				SGS_reseach_team_one_ongoing = yes
+			}
+			set_variable = {sgs_rt_changing_team_num = 1}
+			else_if = {
+				limit = {
+					SGS_reseach_team_two_ongoing = yes
+				}
+				set_variable = {sgs_rt_changing_team_num = 2}
+			}
+			else = {
+				set_variable = {sgs_rt_changing_team_num = 3}
+			}
+		}
+		SGS_RT_reduce_progress = yes
+		SGS_RT_close_overtime = yes
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 50
+				has_country_flag = SGS_RT_one_resercher_down
+			}
+		}
+	}
+}
+
+country_event = {
+	#加班导致停摆
+	id = sgs.30452
+	title = sgs.30452.t
+	desc = sgs.30452.d
+	fire_only_once = no
+	is_triggered_only = no
+	mean_time_to_happen = {
+		days = 30
+	}
+	trigger = {
+		tag = sgs
+		has_country_flag = SGS_RT_reseacher_overtime
+		has_country_flag = SGS_RT_one_resercher_down
+	}
+	option = {
+		#
+		name = sgs.30452.1
+		SGS_RT_close_overtime = yes
+		SGS_RT_close_concentrate = yes
+		set_country_flag = {
+			flag = SGS_RT_team_one_stop
+			days = 45
+		}
+		set_country_flag = {
+			flag = SGS_RT_team_two_stop
+			days = 45
+		}
+		set_country_flag = {
+			flag = SGS_RT_team_three_stop
+			days = 45
+		}
+		
+		ai_chance = {
+			base = 35
+		}
+	}
+	
+}
