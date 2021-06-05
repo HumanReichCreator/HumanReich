@@ -607,14 +607,47 @@ SGS_RT_reduce_progress = {
             check_variable = {sgs_rt_changing_team_num = 1}
         }
         subtract_from_variable = {sgs_RT_tech_current_value_one = sgs_rt_reduce_progress_var}
+        clamp_variable = {
+            var = sgs_RT_tech_current_value_one
+            min = 0
+            max = 10000
+        }
         else_if = {
             limit = {
                 check_variable = {sgs_rt_changing_team_num = 2}
             }
             subtract_from_variable = {sgs_RT_tech_current_value_two = sgs_rt_reduce_progress_var}
+            clamp_variable = {
+                var = sgs_RT_tech_current_value_two
+                min = 0
+                max = 10000
+            }
         }
         else = {
             subtract_from_variable = {sgs_RT_tech_current_value_three = sgs_rt_reduce_progress_var}
+            clamp_variable = {
+                var = sgs_RT_tech_current_value_three
+                min = 0
+                max = 10000
+            }
+        }
+    }
+}
+
+SGS_find_available_team = {
+    if = {
+        limit = {
+            SGS_reseach_team_one_ongoing = yes
+        }
+        set_variable = {sgs_rt_changing_team_num = 1}
+        else_if = {
+            limit = {
+                SGS_reseach_team_two_ongoing = yes
+            }
+            set_variable = {sgs_rt_changing_team_num = 2}
+        }
+        else = {
+            set_variable = {sgs_rt_changing_team_num = 3}
         }
     }
 }

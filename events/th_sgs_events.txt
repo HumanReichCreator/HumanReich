@@ -11396,3 +11396,165 @@ country_event = {
 	}
 	
 }
+
+country_event = {
+	#需要做实验
+	id = sgs.3046
+	title = sgs.3046.t
+	desc = sgs.3046.d
+	fire_only_once = no
+	is_triggered_only = no
+	mean_time_to_happen = {
+		days = 60
+	}
+	trigger = {
+		tag = sgs
+		SGS_has_at_least_one_reseach_team_ongoing = yes
+	}
+	option = {
+		#管
+		name = sgs.3046.1
+		SGS_find_available_team = yes
+		activate_decision = debuff_use_two_CIC_for_RT
+		random_list = {
+			50 = {#进展
+				country_event = {
+					id = sgs.30463
+					days = 2
+				}
+			}
+			30 = {#大进展
+				country_event = {
+					id = sgs.30464
+					days = 2
+				}
+			}
+			20 = {#没事
+
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#不管
+		name = sgs.3046.1
+		random_list = {
+			30 = {# 倒退
+				country_event = {
+					id = sgs.30461
+					days = 2
+				}
+			}
+			20 = {# 大倒退
+				country_event = {
+					id = sgs.30462
+					days = 2
+				}
+			}
+			50 = {
+			}
+		}
+		
+
+		ai_chance = {
+			base = 35
+			modifier = {
+				add = 100
+				SGS_dove_hold_meeting = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	#小规模退步
+	id = sgs.30461
+	title = sgs.30461.t
+	desc = sgs.30461.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+		SGS_has_at_least_one_reseach_team_ongoing = yes
+	}
+	option = {
+		#
+		name = sgs.30461.1
+		SGS_find_available_team = yes
+		set_variable = {sgs_rt_reduce_progress_var = 350}
+		SGS_RT_reduce_progress = yes
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#大规模退步
+	id = sgs.30462
+	title = sgs.30462.t
+	desc = sgs.30462.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+		SGS_has_at_least_one_reseach_team_ongoing = yes
+	}
+	option = {
+		#
+		name = sgs.30462.1
+		SGS_find_available_team = yes
+		set_variable = {sgs_rt_reduce_progress_var = 500}
+		SGS_RT_reduce_progress = yes
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#小规模进步
+	id = sgs.30463
+	title = sgs.30463.t
+	desc = sgs.30463.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+		SGS_has_at_least_one_reseach_team_ongoing = yes
+	}
+	option = {
+		#
+		name = sgs.30463.1
+		SGS_find_available_team = yes
+		set_variable = {sgs_rt_reduce_progress_var = -350}
+		SGS_RT_reduce_progress = yes
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#大规模进步
+	id = sgs.30464
+	title = sgs.30464.t
+	desc = sgs.30464.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+		SGS_has_at_least_one_reseach_team_ongoing = yes
+	}
+	option = {
+		#
+		name = sgs.30464.1
+		SGS_find_available_team = yes
+		set_variable = {sgs_rt_reduce_progress_var = -500}
+		SGS_RT_reduce_progress = yes
+		ai_chance = {
+			base = 35
+		}
+	}
+}

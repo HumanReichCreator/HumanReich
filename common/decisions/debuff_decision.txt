@@ -69,6 +69,20 @@ debuff_category = {
 			civilian_factory_use = 3
 		}
 	}
+	debuff_use_two_CIC_for_RT = {
+		# This is our mission id
+		available = {
+			# 任务目标
+			#always = no
+		}
+		visible = {
+			always = no
+		}
+		days_remove = 20
+		modifier = {
+			civilian_factory_use = 2
+		}
+	}
 	debuff_send_military_adviser = {
 		# This is our mission id
 		available = {
