@@ -38,15 +38,14 @@ ideas = {
 				neworder_drift = 0.01
 			}
 		}
-		SGS_BaF_civ_mix_troop = {
+		SGS_BaF_civ_mix_troop_idea = {
 			picture = can_send_in_the_zombies
 			modifier = {
 				army_attack_factor = 0.05
-				
+				army_defence_factor = 0.05
 				army_speed_factor = 0.05
 				army_org_factor = 0.1
-
-
+				army_org_regain = 0.05
 			}
 		}
 
@@ -70,6 +69,19 @@ ideas = {
 				production_factory_efficiency_gain_factor = -0.2
 				industrial_capacity_factory = 0.1
 				# fandong_drift = 0.01
+			}
+		}
+		SGS_post_cw_mic_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				industrial_capacity_factory = -0.05
+				production_speed_buildings_factor = -0.05
+			}
+		}
+		SGS_baf_worker_mic_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
 			}
 		}
 		SGS_mic_spoil0_idea = {

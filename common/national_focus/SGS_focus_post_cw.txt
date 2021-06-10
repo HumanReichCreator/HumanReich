@@ -320,6 +320,22 @@ focus_tree = {
 				popularity = 0.05
 			}
 			#事件
+			hidden_effect = {
+				random_list = {
+					50 = {
+						country_event = {
+							id =  sgs.3047
+							days = 5
+						}
+					}
+					50 = {
+						country_event = {
+							id =  sgs.30471
+							days = 5
+						}
+					}
+				}
+			}
 			custom_effect_tooltip = SGS_RT_unlcok_more_tt
 
 		}
@@ -355,6 +371,10 @@ focus_tree = {
 				bonus = 0.4
 				uses = 1
 				category = industrys
+			}
+			swap_ideas = {
+				remove_idea = SGS_post_cw_mic_idea
+				add_idea = SGS_baf_worker_mic_idea
 			}
 			custom_effect_tooltip = SGS_RT_unlcok_more_tt
 		}
@@ -413,7 +433,43 @@ focus_tree = {
 		}
 		completion_reward = {
 			#需要影响力比较均衡，获得新编制，改善BaF种族buff
-			
+			if = {
+				limit = {
+					has_idea = SGS_battle_fairy_talent_pacified_idea
+				}
+				swap_ideas = {
+					remove_idea = SGS_battle_fairy_talent_pacified_idea
+					add_idea = SGS_BaF_civ_mix_troop_idear_mic_idea
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = SGS_battle_fairy_talent_idea
+						add_idea = SGS_BaF_civ_mix_troop_idear_mic_idea
+					}
+				}
+			}
+			division_template = {
+				name = SGS_template_civilian
+				regiments = {
+					ma_light_infantry = { x = 0 y = 0 }
+					ma_light_infantry = { x = 0 y = 1 }
+					ma_light_infantry = { x = 0 y = 2 }
+					melee_infantry = { x = 0 y = 4 }
+					melee_infantry = { x = 0 y = 5 }
+					sc_infantry = { x = 1 y = 0 }
+					sc_infantry = { x = 1 y = 1 }
+					sc_infantry = { x = 1 y = 2 }
+					sc_infantry = { x = 1 y = 4 }
+					sc_infantry = { x = 1 y = 5 }
+					sc_mortar_brigade = { x = 2 y = 0 }
+					sc_mortar_brigade = { x = 2 y = 1 }
+					sc_mortar_brigade = { x = 2 y = 2 }
+				}
+				support = { 
+				} 
+			}
+			army_experience = 20
+
 		}
 		x = 8
 		y = 6
@@ -428,7 +484,7 @@ focus_tree = {
 		x = 10
 		y = 3
 		completion_reward = {
-			#一个训练上的临时buff+稳定or战争支持二选一（影响影响力
+			#将领等级加一，稳定or战争支持二选一（影响影响力
 			
 		}
 	}
@@ -459,6 +515,10 @@ focus_tree = {
 		prerequisite = {
 			focus = SGS_luna_win_focus
 		}
+		completion_reward = {
+			
+			
+		}
 		x = 13
 		y = 3
 	}
@@ -469,6 +529,11 @@ focus_tree = {
 		prerequisite = {
 			focus = SGS_body_stronger_focus
 			focus = SGS_feel_sprit_and_body_focus
+		}
+		completion_reward = {
+			#给训练相关buff
+			
+			
 		}
 		x = 11
 		y = 4
@@ -520,6 +585,11 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = SGS_facing_mountain_focus
+		}
+		completion_reward = {
+			#核心攻方+妖精攻防，需要解锁与妖精交战？
+			
+			
 		}
 		x = 9
 		y = 7

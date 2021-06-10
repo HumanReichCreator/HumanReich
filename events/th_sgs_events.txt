@@ -10301,7 +10301,10 @@ country_event = {
 	option = {
 		#
 		name = sgs.300.1
-
+		swap_ideas = {
+			remove_idea = SGS_hurry_mic_idea
+			add_idea = SGS_post_cw_mic_idea
+		}
 		ai_chance = {
 			base = 35
 		}
@@ -11553,6 +11556,46 @@ country_event = {
 		SGS_find_available_team = yes
 		set_variable = {sgs_rt_reduce_progress_var = -500}
 		SGS_RT_reduce_progress = yes
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#BaF从政优势
+	id = sgs.3047
+	title = sgs.3047.t
+	desc = sgs.3047.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.3047.1
+		SGS_hawk_rise5 = yes
+		add_political_power = 30
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#BaF从政劣势
+	id = sgs.30471
+	title = sgs.30471.t
+	desc = sgs.30471.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.30471.1
+		SGS_dove_rise10 = yes
+		add_political_power = 30
 		ai_chance = {
 			base = 35
 		}

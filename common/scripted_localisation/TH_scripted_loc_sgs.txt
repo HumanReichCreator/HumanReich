@@ -53,6 +53,55 @@ defined_text = {
 }
 
 defined_text = {
+	name = SGSGetMostInfl
+	text = {
+		trigger = {
+			check_variable = {
+				var = sgs_sunny_infl
+				value = sgs_star_infl
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = sgs_sunny_infl
+				value = sgs_luna_infl
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = sgs_sunny_most_infl
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				var = sgs_star_infl
+				value = sgs_sunny_infl
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = sgs_star_infl
+				value = sgs_luna_infl
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = sgs_star_most_infl
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				var = sgs_luna_infl
+				value = sgs_star_infl
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = sgs_luna_infl
+				value = sgs_sunny_infl
+				compare = greater_than_or_equals
+			}
+		}
+		localization_key = sgs_luna_most_infl
+	}
+}
+
+defined_text = {
 	name = GetNegoAtti
 	text = {
 		trigger = {
