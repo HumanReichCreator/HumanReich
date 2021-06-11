@@ -139,6 +139,39 @@ ideas = {
 				defense_bonus_against = -0.5
 			}
 		}
+		SGS_best_fairy_army_idea = {
+			picture = generic_manpower_bonus
+			modifier = {
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+			}
+			targeted_modifier = {
+				tag = SCA
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = CIR
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = SC2
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = LIL
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = SGS
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+
+		}
 		SGS_get_intel_from_NTR_idea = {
 			picture = generic_constitutional_guarantees
 			targeted_modifier = {
@@ -483,6 +516,14 @@ ideas = {
 			modifier = {
 				civilian_factory_use = 2
 				consumer_goods_factor = 0.05
+			}
+		}
+		SGS_all_people_training_idea = {
+			picture = generic_manpower_bonus
+			modifier = {
+				training_time_army_factor = -0.15 
+				minimum_training_level = 0.05
+				war_support_weekly = 0.01
 			}
 		}
 	}

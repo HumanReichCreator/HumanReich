@@ -485,7 +485,13 @@ focus_tree = {
 		y = 3
 		completion_reward = {
 			#将领等级加一，稳定or战争支持二选一（影响影响力
-			
+			every_unit_leader = {
+				add_attack = 1
+				add_defense  = 1
+			}
+			country_event = {
+				id = sgs.3048
+			}
 		}
 	}
 	focus = {
@@ -532,7 +538,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			#给训练相关buff
-			
+			add_timed_idea = {
+				idea = SGS_all_people_training_idea
+				days = 360
+			}
 			
 		}
 		x = 11
@@ -558,7 +567,7 @@ focus_tree = {
 		completion_reward = {
 			#给一个山地作战的科技，然后加点灵力
 			PO_influence_factor0.05 = yes
-			
+			set_technology = { SGS_face_mountain_tech = 1}
 		}
 		x = 11
 		y = 5
@@ -586,9 +595,19 @@ focus_tree = {
 		prerequisite = {
 			focus = SGS_facing_mountain_focus
 		}
+		available = {
+			not = {
+				has_idea = SGS_donot_attack_fairy_idea
+			}
+			
+		}
 		completion_reward = {
 			#核心攻方+妖精攻防，需要解锁与妖精交战？
-			
+			add_timed_idea = {
+				idea = SGS_best_fairy_army_idea
+				days = 1095
+			}
+			add_political_power = 100
 			
 		}
 		x = 9

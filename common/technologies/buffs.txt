@@ -318,4 +318,49 @@ technologies = {
 			}
     }
   }
+  SGS_face_mountain_tech = {
+    allow = {
+      always = no
+    }
+    ma_infantry = {
+      hills = {
+        attack = 0.08
+        defence = 0.1
+      }
+      mountain = {
+        attack = 0.08
+        defence = 0.1
+      }
+    }
+    sc_infantry = {
+      hills = {
+        attack = 0.08
+        defence = 0.1
+      }
+      mountain = {
+        attack = 0.08
+        defence = 0.1
+      }
+    }
+    ma_light_infantry = {
+      hills = {
+        attack = 0.08
+        defence = 0.1
+      }
+      mountain = {
+        attack = 0.08
+        defence = 0.1
+      }
+    }
+    sc_light_infantry = {
+      hills = {
+        attack = 0.08
+        defence = 0.1
+      }
+      mountain = {
+        attack = 0.08
+        defence = 0.1
+      }
+    }
+  }
 }
