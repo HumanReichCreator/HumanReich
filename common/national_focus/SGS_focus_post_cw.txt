@@ -439,12 +439,12 @@ focus_tree = {
 				}
 				swap_ideas = {
 					remove_idea = SGS_battle_fairy_talent_pacified_idea
-					add_idea = SGS_BaF_civ_mix_troop_idear_mic_idea
+					add_idea = SGS_BaF_civ_mix_troop_idea
 				}
 				else = {
 					swap_ideas = {
 						remove_idea = SGS_battle_fairy_talent_idea
-						add_idea = SGS_BaF_civ_mix_troop_idear_mic_idea
+						add_idea = SGS_BaF_civ_mix_troop_idea
 					}
 				}
 			}
@@ -1239,8 +1239,8 @@ focus = {
 		}
 		x = 37
 		y = 3
-
 	}
+
 	focus = {
 		id = SGS_factory_flexible_trans_focus
 		icon = GFX_goal_continuous_non_factory_construct
@@ -1255,8 +1255,8 @@ focus = {
 		}
 		x = 35
 		y = 4
-
 	}
+
 	focus = {
 		id = SGS_mili_build_focus
 		icon = GFX_goal_generic_fortify_city
@@ -1269,8 +1269,8 @@ focus = {
 		}
 		x = 34
 		y = 5
-
 	}
+
 	focus = {
 		id = SGS_civil_build_focus
 		icon = GFX_goal_generic_construction
@@ -1283,8 +1283,8 @@ focus = {
 		}
 		x = 36
 		y = 5
-
 	}
+
 	focus = {
 		id = SGS_exploring_product_focus
 		icon = GFX_goal_generic_build_airforce
@@ -1297,8 +1297,8 @@ focus = {
 		}
 		x = 38
 		y = 4
-
 	}
+
 	focus = {
 		id = SGS_planning_contruct_focus
 		icon = GFX_focus_usa_build_the_pentagon
@@ -1308,8 +1308,8 @@ focus = {
 		}
 		x = 32
 		y = 5
-
 	}
+
 	focus = {
 		id = SGS_encourge_privte_invest_focus
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
@@ -1319,8 +1319,8 @@ focus = {
 		}
 		x = 38
 		y = 5
-
 	}
+
 	focus = {
 		id = SGS_completed_moonlight_industry_system
 		icon = GFX_focus_TUR_turanist_ambition
@@ -1333,8 +1333,8 @@ focus = {
 		}
 		x = 35
 		y = 6
-
 	}
+
 	focus = {
 		id = SGS_sunlight_factory_solution
 		icon = GFX_focus_jap_pacific_guardian
@@ -1347,8 +1347,8 @@ focus = {
 		}
 		x = 34
 		y = 7
-
 	}
+
 	focus = {
 		id = SGS_starlight_factory_solution
 		icon = GFX_focus_prc_agrarian_socialism
@@ -1361,6 +1361,429 @@ focus = {
 		}
 		x = 36
 		y = 7
+	}
+
+	focus = {
+		id = SGS_no_peace_diplo_focus
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		x = 46
+		y = 0
+		completion_reward = {
+			#
+		}
+
+	}
+	focus = {
+		id = SGS_occupy_SCA_focus
+		icon = GFX_focus_chi_cooperation_with_the_communists
+		cost = 10.00
+		x = 45
+		y = 9
+
+	}
+	focus = {
+		id = SGS_occupy_CIR_focus
+		icon = GFX_focus_generic_befriend_greece
+		cost = 10.00
+		x = 50
+		y = 9
+
+	}
+	focus = {
+		id = SGS_occupy_LIL_focus
+		icon = GFX_focus_generic_befriend_cyprus
+		cost = 10.00
+		x = 55
+		y = 9
+
+	}
+	focus = {
+		id = SGS_deal_with_leaders_focus
+		icon = GFX_focus_eng_motion_of_no_confidence
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_occupy_CIR_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = SGS_occupy_CIR_focus
+
+	}
+	focus = {
+		id = SGS_take_over_dessert_focus
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_occupy_SCA_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_expand_weapon_repo_focus
+		}
+		x = 1
+		y = 1
+		relative_position_id = SGS_occupy_SCA_focus
+
+	}
+	focus = {
+		id = SGS_expand_weapon_repo_focus
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_occupy_SCA_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_take_over_dessert_focus
+		}
+		x = -1
+		y = 1
+		relative_position_id = SGS_occupy_SCA_focus
+
+	}
+	focus = {
+		id = SGS_treat_about_people_focus
+		icon = GFX_focus_eng_the_kings_party
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_take_over_dessert_focus
+			focus = SGS_expand_weapon_repo_focus
+		}
+		x = 0
+		y = 2
+		relative_position_id = SGS_occupy_SCA_focus
+
+	}
+	focus = {
+		id = SGS_integrate_SCA_focus
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_treat_about_people_focus
+		}
+		x = 0
+		y = 3
+		relative_position_id = SGS_occupy_SCA_focus
+
+	}
+	focus = {
+		id = SGS_face_CIR_army_focus
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_occupy_CIR_focus
+		}
+		x = 2
+		y = 1
+		relative_position_id = SGS_occupy_CIR_focus
+
+	}
+	focus = {
+		id = SGS_SC2_issue_focus
+		icon = GFX_focus_por_the_pink_map
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_no_peace_diplo_focus
+		}
+		x = 3
+		y = 1
+		relative_position_id = SGS_no_peace_diplo_focus
+
+	}
+
+	focus = {
+		id = SGS_prepare_to_fight_fairy_focus
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_no_peace_diplo_focus
+		}
+		x = -2
+		y = 1
+		relative_position_id = SGS_no_peace_diplo_focus
+
+	}
+	focus = {
+		id = SGS_unlcok_attack_fairy_focus
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_prepare_to_fight_fairy_focus
+		}
+		x = 43
+		y = 2
+
+	}
+	focus = {
+		id = SGS_start_recruit_focus
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_prepare_to_fight_fairy_focus
+		}
+		x = 45
+		y = 2
+
+	}
+	focus = {
+		id = SGS_aim_SCA_focus
+		icon = GFX_focus_ger_strike_at_the_source
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_unlcok_attack_fairy_focus
+		}
+		prerequisite = {
+			focus = SGS_start_recruit_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_ambitious_to_all_fairy_focus
+		}
+		x = 43
+		y = 3
+
+	}
+	focus = {
+		id = SGS_ambitious_to_all_fairy_focus
+		icon = GFX_focus_eng_global_defense
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_start_recruit_focus
+		}
+		prerequisite = {
+			focus = SGS_unlcok_attack_fairy_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_aim_SCA_focus
+		}
+		x = 45
+		y = 3
+
+	}
+	focus = {
+		id = SGS_fight_SCA_focus
+		icon = GFX_focus_attack_soviet
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_ambitious_to_all_fairy_focus
+			focus = SGS_aim_SCA_focus
+		}
+		x = 46
+		y = 4
+
+	}
+	focus = {
+		id = SGS_infl_SC2_focus
+		icon = GFX_focus_por_recover_brazil
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_SC2_issue_focus
+		}
+		x = 52
+		y = 2
+
+	}
+	focus = {
+		id = SGS_try_to_control_SC2_focus
+		icon = GFX_focus_spa_the_war_of_vengeance
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_infl_SC2_focus
+		}
+		x = 52
+		y = 3
+
+	}
+	focus = {
+		id = SGS_fight_SC2_focus
+		icon = GFX_focus_generic_attack_bulgaria
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_try_to_control_SC2_focus
+			focus = SGS_ambitious_to_all_fairy_focus
+			focus = SGS_aim_SCA_focus
+		}
+		x = 50
+		y = 4
+
+	}
+	focus = {
+		id = SGS_get_SW_focus
+		icon = GFX_focus_TUR_support_the_golden_square
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_fight_SCA_focus
+		}
+		prerequisite = {
+			focus = SGS_fight_SC2_focus
+		}
+		x = 48
+		y = 5
+
+	}
+	focus = {
+		id = SGS_fight_others_focus
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_get_SW_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_divide_them_focus
+		}
+		x = 46
+		y = 6
+
+	}
+	focus = {
+		id = SGS_prepare_final_war_focus
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_fight_others_focus
+		}
+		x = 45
+		y = 7
+
+	}
+	
+	focus = {
+		id = SGS_lake_road_focus
+		icon = GFX_focus_generic_cruiser2
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_occupy_CIR_focus
+		}
+		x = -2
+		y = 1
+		relative_position_id = SGS_occupy_CIR_focus
+
+	}
+	focus = {
+		id = SGS_integrate_CIR_focus
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_lake_road_focus
+		}
+		prerequisite = {
+			focus = SGS_deal_with_leaders_focus
+		}
+		prerequisite = {
+			focus = SGS_face_CIR_army_focus
+		}
+		x = 0
+		y = 3
+		relative_position_id = SGS_occupy_CIR_focus
+
+	}
+	focus = {
+		id = SGS_refugee_issue_focus
+		icon = GFX_focus_generic_military_academy
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_occupy_LIL_focus
+		}
+		x = 0
+		y = 2
+		relative_position_id = SGS_occupy_LIL_focus
+
+	}
+	focus = {
+		id = SGS_integrate_LIL_focus
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_refugee_issue_focus
+		}
+		x = 0
+		y = 3
+		relative_position_id = SGS_occupy_LIL_focus
+
+	}
+	focus = {
+		id = SGS_divide_them_focus
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_get_SW_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_fight_others_focus
+		}
+		x = 50
+		y = 6
+
+	}
+	focus = {
+		id = SGS_prepare_LIL_focus
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_divide_them_focus
+		}
+		x = 49
+		y = 7
+
+	}
+	focus = {
+		id = SGS_fight_LIL_focus
+		icon = GFX_focus_generic_attack_cyprus
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_prepare_LIL_focus
+		}
+		x = 49
+		y = 8
+
+	}
+	focus = {
+		id = SGS_prepare_CIR_focus
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_divide_them_focus
+		}
+		x = 51
+		y = 7
+
+	}
+	focus = {
+		id = SGS_fight_CIR_focus
+		icon = GFX_focus_generic_attack_greece
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_prepare_CIR_focus
+		}
+		x = 51
+		y = 8
+
+	}
+	focus = {
+		id = SGS_big_fair_war_focus
+		icon = GFX_focus_generic_air_defense
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_prepare_final_war_focus
+		}
+		x = 45
+		y = 8
+
+	}
+	focus = {
+		id = SGS_unite_fairy_area_focus
+		icon = GFX_focus_chi_one_china_policy
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_integrate_SCA_focus
+		}
+		prerequisite = {
+			focus = SGS_integrate_CIR_focus
+		}
+		prerequisite = {
+			focus = SGS_integrate_LIL_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = SGS_integrate_CIR_focus
 
 	}
 }
