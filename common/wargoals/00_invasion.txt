@@ -302,6 +302,32 @@ wargoal_types = {
 		annex_cost = -75
 	}
 
+	fairy_area_unite_war = {
+		# PREV = original target country
+		# ROOT = goal owner country
+
+		war_name = FAIRY_AREA_UNITE_WAR
+
+		allowed = {
+			always = no
+		}
+		
+		available = {
+		
+		}
+		
+		take_states = {
+			
+		}
+
+		expire = 365
+				
+		threat = 1
+		puppet_cost = 100000
+		annex_threat_factor = 0.5
+		annex_cost = -50
+	}
+
 	topple_government = {
 		# PREV = original target country
 		# ROOT = goal owner country

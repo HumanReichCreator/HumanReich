@@ -1371,6 +1371,8 @@ focus = {
 		y = 0
 		completion_reward = {
 			#
+			add_war_support = 0.1
+			add_command_power = 30
 		}
 
 	}
@@ -1566,6 +1568,14 @@ focus = {
 			focus = SGS_ambitious_to_all_fairy_focus
 			focus = SGS_aim_SCA_focus
 		}
+		completion_reward = {
+			#
+			declare_war_on = {
+    			target = SCA
+    			type = fairy_area_unite_war
+			}
+			add_command_power = 10
+		}
 		x = 46
 		y = 4
 
@@ -1603,7 +1613,13 @@ focus = {
 		}
 		x = 50
 		y = 4
-
+		completion_reward = {
+			#
+			declare_war_on = {
+    			target = SC2
+    			type = fairy_area_unite_war
+			}
+		}
 	}
 	focus = {
 		id = SGS_get_SW_focus
@@ -1733,7 +1749,14 @@ focus = {
 		}
 		x = 49
 		y = 8
-
+		completion_reward = {
+			#
+			declare_war_on = {
+    			target = LIL
+    			type = fairy_area_unite_war
+			}
+			add_command_power = 10
+		}
 	}
 	focus = {
 		id = SGS_prepare_CIR_focus
@@ -1755,7 +1778,14 @@ focus = {
 		}
 		x = 51
 		y = 8
-
+		completion_reward = {
+			#
+			declare_war_on = {
+    			target = CIR
+    			type = fairy_area_unite_war
+			}
+			add_command_power = 10
+		}
 	}
 	focus = {
 		id = SGS_big_fair_war_focus
