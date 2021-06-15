@@ -1132,7 +1132,7 @@ focus = {
 				uses = 1
 				category = industrys
 			}
-			
+			add_ideas = SGS_industy_focus_idea
 		}
 	}
 	focus = {
@@ -1144,6 +1144,24 @@ focus = {
 		}
 		mutually_exclusive = {
 			focus = SGS_ind_plan_dove
+		}
+		available = {
+			custom_trigger_tooltip = {
+                tooltip = SGS_hawk_have_supporter
+                SGS_hawk_have_supporter = yes
+            }	
+		}
+		completion_reward = {
+			#
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					level = 1
+					instant_build = yes
+					type = arms_factory
+				}
+			}
+			#还有一个新buff
 		}
 		x = 33
 		y = 1
@@ -1169,7 +1187,17 @@ focus = {
 		}
 		x = 34
 		y = 2
-
+		completion_reward = {
+			#
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					level = 2
+					instant_build = yes
+					type = arms_factory
+				}
+			}
+		}
 	}
 	focus = {
 		id = SGS_national_roadway_focus
@@ -1209,9 +1237,26 @@ focus = {
 		mutually_exclusive = {
 			focus = SGS_ind_plan_hawk
 		}
+		available = {
+			custom_trigger_tooltip = {
+                tooltip = SGS_dove_have_supporter
+                SGS_dove_have_supporter = yes
+            }	
+		}
 		x = 37
 		y = 1
-
+		completion_reward = {
+			#
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					level = 1
+					instant_build = yes
+					type = industrial_complex
+				}
+			}
+			#还有一个新buff
+		}
 	}
 	focus = {
 		id = SGS_transform_picking_up
@@ -1233,7 +1278,17 @@ focus = {
 		}
 		x = 38
 		y = 2
-
+		completion_reward = {
+			#
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					level = 2
+					instant_build = yes
+					type = industrial_complex
+				}
+			}
+		}
 	}
 	focus = {
 		id = SGS_city_infra_focus

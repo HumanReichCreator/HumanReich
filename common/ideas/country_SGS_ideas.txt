@@ -526,5 +526,12 @@ ideas = {
 				war_support_weekly = 0.01
 			}
 		}
+		SGS_industy_focus_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				industrial_capacity_factory = 0.03
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
 	}
 }
