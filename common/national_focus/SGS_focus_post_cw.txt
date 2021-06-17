@@ -1176,7 +1176,25 @@ focus = {
 		}
 		x = 32
 		y = 2
-
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.3
+				uses = 2
+				category = resource_mining
+			}
+			random_owned_controlled_state = {
+				add_resource = {
+					type = metal
+					amount = 8
+				}
+			}
+			random_owned_controlled_state = {
+				add_resource = {
+					type = powder
+					amount = 5
+				}
+			}
+		}
 	}
 	focus = {
 		id = SGS_mic_expand_focus
@@ -1197,6 +1215,7 @@ focus = {
 					type = arms_factory
 				}
 			}
+			#再来个二选一事件
 		}
 	}
 	focus = {
@@ -1211,7 +1230,15 @@ focus = {
 		}
 		x = 33
 		y = 3
-
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+					level = 2
+					instant_build = yes
+					type = infrastructure
+				}
+			}	
+		}
 	}
 	focus = {
 		id = SGS_planning_product_focus #像筹划恶作剧一样计划性展开生产
@@ -1271,7 +1298,28 @@ focus = {
 		y = 2
 		completion_reward = {
 			#
-			
+			add_tech_bonus = {
+				bonus = 0.3
+				uses = 2
+				category = resource_building
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					level = 1
+					instant_build = yes
+					type = gas_factory
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					level = 1
+					instant_build = yes
+					type = energy_factory
+				}
+			}
+
 		}
 	}
 	focus = {
@@ -1293,6 +1341,7 @@ focus = {
 					type = industrial_complex
 				}
 			}
+			#再来个二选一事件
 		}
 	}
 	focus = {
@@ -1307,6 +1356,25 @@ focus = {
 		}
 		x = 37
 		y = 3
+		completion_reward = {
+			every_owned_state = {
+				trigger = {
+					or = {
+						has_state_category = s12
+						has_state_category = s10
+						has_state_category = s15
+						has_state_category = s17
+						is_capital = yes
+					}
+				}
+				add_building_construction = {
+					level = 5
+					instant_build = yes
+					type = infrastructure
+				}
+			}
+
+		}
 	}
 
 	focus = {
@@ -1376,6 +1444,16 @@ focus = {
 		}
 		x = 32
 		y = 5
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					level = 1
+					instant_build = yes
+					type = arms_factory
+				}
+			}
+		}
 	}
 
 	focus = {
@@ -1387,6 +1465,9 @@ focus = {
 		}
 		x = 38
 		y = 5
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
 	}
 
 	focus = {

@@ -533,5 +533,114 @@ ideas = {
 				production_factory_start_efficiency_factor = 0.05
 			}
 		}
+		SGS_industy_hawk_plan_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				industrial_capacity_factory = 0.08
+				production_factory_start_efficiency_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		SGS_industy_dove_plan_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				industrial_capacity_factory = 0.03
+				production_factory_start_efficiency_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		SGS_flexible_factory_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				conversion_cost_civ_to_mil_factor = 0.5
+				conversion_cost_mil_to_civ_factor = 0.5	
+				industry_repair_factor = 0.3
+			}
+		}
+		SGS_flexible_factory_mil_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				conversion_cost_civ_to_mil_factor = 0.7
+				conversion_cost_mil_to_civ_factor = 0.5
+				industry_repair_factor = 0.3
+				production_speed_arms_factory_factor = 0.1
+				production_speed_air_base_factor = 0.1
+				production_speed_bunker_factor = 0.1
+				production_speed_anti_air_building_factor = 0.1
+			}
+		}
+		SGS_flexible_factory_civ_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				conversion_cost_civ_to_mil_factor = 0.5
+				conversion_cost_mil_to_civ_factor = 0.7
+				industry_repair_factor = 0.3
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				production_speed_radar_station_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+		SGS_planning_product_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				industrial_capacity_factory = 0.05
+				line_change_production_efficiency_factor = 0.1
+			}
+		}
+		SGS_exploring_product_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+			}
+		}
+		SGS_planning_product_moonlight_idea = {
+			picture = generic_local_self_management 
+			modifier = {
+				local_resources_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				industrial_capacity_factory = 0.05
+				line_change_production_efficiency_factor = 0.1
+			}
+		}
+		SGS_exploring_product_moonlight_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				local_resources_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+			}
+		}
+		SGS_flexible_factory_mil_moonlight_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				local_resources_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				conversion_cost_civ_to_mil_factor = 0.7
+				conversion_cost_mil_to_civ_factor = 0.5
+				industry_repair_factor = 0.3
+				production_speed_arms_factory_factor = 0.1
+				production_speed_air_base_factor = 0.1
+				production_speed_bunker_factor = 0.1
+				production_speed_anti_air_building_factor = 0.1
+			}
+		}
+		SGS_flexible_factory_civ_moonlight_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				local_resources_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				conversion_cost_civ_to_mil_factor = 0.5
+				conversion_cost_mil_to_civ_factor = 0.7
+				industry_repair_factor = 0.3
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				production_speed_radar_station_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+		}
 	}
 }
