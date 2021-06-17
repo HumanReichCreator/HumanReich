@@ -1248,7 +1248,9 @@ focus = {
 		completion_reward = {
 			#
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
+				limit = {
+					industrial_complex > 0
+				}
 				add_building_construction = {
 					level = 1
 					instant_build = yes
@@ -1267,7 +1269,10 @@ focus = {
 		}
 		x = 36
 		y = 2
-
+		completion_reward = {
+			#
+			
+		}
 	}
 	focus = {
 		id = SGS_cic_invest_focus
