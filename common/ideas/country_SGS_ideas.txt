@@ -642,5 +642,22 @@ ideas = {
 				consumer_goods_factor = -0.05
 			}
 		}
+		SGS_starlight_factory_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				global_building_slots_factor = 0.2
+				global_building_slots = 2
+				production_speed_infrastructure_factor = 0.05
+			}
+		}
+		SGS_sunlightlight_factory_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				global_building_slots_factor = -0.1
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		
 	}
 }
