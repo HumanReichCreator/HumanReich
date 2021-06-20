@@ -33,33 +33,51 @@ SGS_has_hawk_dove_mechanism = {
 }
 
 SGS_hawk_have_supporter = {
-	check_variable = {
-		sgs_hawk_infl > 39
+	custom_trigger_tooltip = {
+		tooltip = SGS_hawk_have_supporter
+		check_variable = {
+			sgs_hawk_infl > 39
+		}
 	}
 }
 SGS_hawk_get_more = {
-	check_variable = {
-		sgs_hawk_infl > 59
+	custom_trigger_tooltip = {
+		tooltip = SGS_hawk_get_more
+		check_variable = {
+			sgs_hawk_infl > 59
+		}
 	}
 }
 SGS_hawk_hold_meeting = {
-	check_variable = {
-		sgs_hawk_infl > 79
+	custom_trigger_tooltip = {
+		tooltip = SGS_hawk_hold_meeting
+		check_variable = {
+			sgs_hawk_infl > 79
+		}
 	}
 }
 SGS_dove_have_supporter = {
-	check_variable = {
-		sgs_dove_infl > 39
+	custom_trigger_tooltip = {
+		tooltip = SGS_dove_have_supporter
+		check_variable = {
+			sgs_dove_infl > 39
+		}
 	}
 }
 SGS_dove_get_more = {
-	check_variable = {
-		sgs_dove_infl > 59
+	custom_trigger_tooltip = {
+		tooltip = SGS_dove_get_more
+		check_variable = {
+			sgs_dove_infl > 59
+		}
 	}
 }
 SGS_dove_hold_meeting = {
-	check_variable = {
-		sgs_dove_infl > 79
+	custom_trigger_tooltip = {
+		tooltip = SGS_dove_hold_meeting
+		check_variable = {
+			sgs_dove_infl > 79
+		}
 	}
 }
 

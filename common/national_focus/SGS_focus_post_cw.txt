@@ -301,10 +301,7 @@ focus_tree = {
 			focus = SGS_organzie_civilian_focus
 		}
 		available = {
-			custom_trigger_tooltip = {
-                tooltip = SGS_hawk_get_more
-                SGS_hawk_get_more = yes
-            }
+			SGS_hawk_get_more = yes
 			
 		}
 		mutually_exclusive = {
@@ -351,10 +348,7 @@ focus_tree = {
 			focus = SGS_expand_military_school_focus
 		}
 		available = {
-			custom_trigger_tooltip = {
-                tooltip = SGS_dove_get_more
-                SGS_dove_get_more = yes
-            }
+			SGS_dove_get_more = yes
 			
 		}
 		mutually_exclusive = {
@@ -420,15 +414,10 @@ focus_tree = {
 			focus = SGS_easy_product_focus
 		}
 		available = {
-			not = {
-				custom_trigger_tooltip = {
-					tooltip = SGS_dove_hold_meeting
-					SGS_dove_hold_meeting = yes
-				}
-				custom_trigger_tooltip = {
-					tooltip = SGS_hawk_hold_meeting
-					SGS_hawk_hold_meeting = yes
-				}
+			custom_trigger_tooltip = {
+				tooltip = SGS_hawk_dove_not_imbalance
+				SGS_hawk_hold_meeting = no
+				SGS_dove_hold_meeting = no
 			}
 		}
 		completion_reward = {
@@ -902,10 +891,7 @@ focus_tree = {
 			focus = SGS_Baf_economy_focus
 		}
 		available = {
-			custom_trigger_tooltip = {
-                tooltip = SGS_hawk_get_more
-                SGS_hawk_get_more = yes
-            }
+			SGS_hawk_get_more = yes
 			
 		}
 		completion_reward = {
@@ -962,10 +948,7 @@ focus_tree = {
 		icon = GFX_goal_continuous_restrict_freedom
 		cost = 5
 		available = {
-			custom_trigger_tooltip = {
-                tooltip = SGS_hawk_have_supporter
-                SGS_hawk_have_supporter = yes
-            }
+			tooltip = SGS_hawk_have_supporter
 			
 		}
 		prerequisite = {
@@ -1146,10 +1129,7 @@ focus = {
 			focus = SGS_ind_plan_dove
 		}
 		available = {
-			custom_trigger_tooltip = {
-                tooltip = SGS_hawk_have_supporter
-                SGS_hawk_have_supporter = yes
-            }	
+			SGS_hawk_have_supporter = yes	
 		}
 		completion_reward = {
 			#
@@ -1248,6 +1228,9 @@ focus = {
 		id = SGS_planning_product_focus #像筹划恶作剧一样计划性展开生产
 		icon = GFX_goal_generic_position_armies
 		cost = 10.00
+		available = {
+			SGS_hawk_get_more = yes	
+		}
 		prerequisite = {
 			focus = SGS_national_roadway_focus
 		}
@@ -1272,10 +1255,7 @@ focus = {
 			focus = SGS_ind_plan_hawk
 		}
 		available = {
-			custom_trigger_tooltip = {
-                tooltip = SGS_dove_have_supporter
-                SGS_dove_have_supporter = yes
-            }	
+			SGS_dove_have_supporter = yes	
 		}
 		x = 37
 		y = 1
@@ -1367,7 +1347,7 @@ focus = {
 		y = 3
 		completion_reward = {
 			every_owned_state = {
-				trigger = {
+				limit = {
 					or = {
 						has_state_category = s12
 						has_state_category = s10
@@ -1421,6 +1401,7 @@ focus = {
 		completion_reward = {
 			add_ideas = SGS_flexible_factory_mil_idea
 			add_war_support = 0.05
+			SGS_hawk_rise5 = yes
 		}
 	}
 
@@ -1439,6 +1420,7 @@ focus = {
 		completion_reward = {
 			add_ideas = SGS_flexible_factory_civ_idea
 			add_stability = 0.05
+			SGS_dove_rise5 = yes
 		}
 	}
 
@@ -1446,6 +1428,9 @@ focus = {
 		id = SGS_exploring_product_focus
 		icon = GFX_goal_generic_build_airforce
 		cost = 10.00
+		available = {
+			SGS_dove_get_more = yes	
+		}
 		prerequisite = {
 			focus = SGS_city_infra_focus
 		}
@@ -1464,12 +1449,16 @@ focus = {
 		id = SGS_planning_contruct_focus
 		icon = GFX_focus_usa_build_the_pentagon
 		cost = 10.00
+		available = {
+			SGS_hawk_get_more = yes	
+		}
 		prerequisite = {
 			focus = SGS_planning_product_focus
 		}
 		x = 32
 		y = 5
 		completion_reward = {
+			custom_effect_tooltip = SGS_planning_contruct_mechanism 
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1485,13 +1474,18 @@ focus = {
 		id = SGS_encourge_privte_invest_focus
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		cost = 10.00
+		available = {
+			SGS_dove_get_more = yes	
+		}
 		prerequisite = {
 			focus = SGS_exploring_product_focus
 		}
 		x = 38
 		y = 5
 		completion_reward = {
+			custom_effect_tooltip = SGS_privte_invest_mechanism 
 			add_offsite_building = { type = industrial_complex level = 1 }
+			set_variable = {sgs_private_factory = 0}
 		}
 	}
 
@@ -1562,7 +1556,7 @@ focus = {
 		y = 7
 		completion_reward = {
 			every_owned_state = {
-				trigger = {
+				limit = {
 					or = {
 						has_state_category = s12
 						has_state_category = s10

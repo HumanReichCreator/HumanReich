@@ -600,7 +600,7 @@ ideas = {
 			picture = generic_local_self_management 
 			modifier = {
 				local_resources_factor = 0.1
-				production_factory_efficiency_gain_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.1
 				industrial_capacity_factory = 0.05
 				line_change_production_efficiency_factor = 0.1
 			}
@@ -609,7 +609,7 @@ ideas = {
 			picture = generic_local_self_management
 			modifier = {
 				local_resources_factor = 0.1
-				production_factory_efficiency_gain_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.1
 				production_factory_max_efficiency_factor = 0.1
 				production_factory_start_efficiency_factor = 0.1
 			}
@@ -618,7 +618,7 @@ ideas = {
 			picture = generic_local_self_management
 			modifier = {
 				local_resources_factor = 0.1
-				production_factory_efficiency_gain_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.1
 				conversion_cost_civ_to_mil_factor = 0.7
 				conversion_cost_mil_to_civ_factor = 0.5
 				industry_repair_factor = 0.3
@@ -632,7 +632,7 @@ ideas = {
 			picture = generic_local_self_management
 			modifier = {
 				local_resources_factor = 0.1
-				production_factory_efficiency_gain_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.1
 				conversion_cost_civ_to_mil_factor = 0.5
 				conversion_cost_mil_to_civ_factor = 0.7
 				industry_repair_factor = 0.3
@@ -645,8 +645,7 @@ ideas = {
 		SGS_starlight_factory_idea = {
 			picture = generic_local_self_management
 			modifier = {
-				global_building_slots_factor = 0.2
-				global_building_slots = 2
+				global_building_slots_factor = 0.5
 				production_speed_infrastructure_factor = 0.05
 			}
 		}
