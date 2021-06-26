@@ -1200,6 +1200,7 @@ focus = {
 				}
 			}
 			#再来个二选一事件
+			country_event = { id = sgs.3049 }
 		}
 	}
 	focus = {
@@ -1331,6 +1332,7 @@ focus = {
 				}
 			}
 			#再来个二选一事件
+			country_event = { id = sgs.30491 }
 		}
 	}
 	focus = {
@@ -1458,6 +1460,7 @@ focus = {
 		x = 32
 		y = 5
 		completion_reward = {
+			set_country_flag = sgs_planning_construct_flg
 			custom_effect_tooltip = SGS_planning_contruct_mechanism 
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
@@ -1483,9 +1486,12 @@ focus = {
 		x = 38
 		y = 5
 		completion_reward = {
+			set_country_flag = sgs_privte_invest_flg
+			set_variable = {sgs_private_factory_mic = 0}
+			set_variable = {sgs_private_factory_cic = 0}
 			custom_effect_tooltip = SGS_privte_invest_mechanism 
 			add_offsite_building = { type = industrial_complex level = 1 }
-			set_variable = {sgs_private_factory = 0}
+			
 		}
 	}
 
@@ -1609,6 +1615,10 @@ focus = {
 		cost = 10.00
 		x = 45
 		y = 9
+		completion_reward = {
+			#条件：控制并拥有红魔馆，SCA不存在，效果：加政治点，解锁SCA地区的造核
+			
+		}
 
 	}
 	focus = {
@@ -1617,7 +1627,10 @@ focus = {
 		cost = 10.00
 		x = 50
 		y = 9
-
+		completion_reward = {
+			#条件：控制并拥有琪露诺领土，CIR不存在，效果：加政治点 ？
+			
+		}
 	}
 	focus = {
 		id = SGS_occupy_LIL_focus
@@ -1625,6 +1638,10 @@ focus = {
 		cost = 10.00
 		x = 55
 		y = 9
+		completion_reward = {
+			#条件：控制并拥有莉莉白领土，LIL不存在，效果：加政治点 ？
+			
+		}
 
 	}
 	focus = {
@@ -1669,6 +1686,9 @@ focus = {
 		x = -1
 		y = 1
 		relative_position_id = SGS_occupy_SCA_focus
+		completion_reward = {
+			#军械库加俩军工，然后再加一批先进武器
+		}
 
 	}
 	focus = {
@@ -1890,7 +1910,7 @@ focus = {
 		x = 48
 		y = 5
 		completion_reward = {
-			#加紧张度
+			#加紧张度，解锁草原妖精地区的造核，出个新闻，讨论要不要改名
 			add_political_power = 80
 		}
 	}
@@ -1907,8 +1927,9 @@ focus = {
 		x = 46
 		y = 6
 		completion_reward = {
-			#红魔馆++，免费修理
-			
+			#
+			add_political_power = -30
+			add_war_support = 0.2
 		}
 	}
 	focus = {
@@ -1992,6 +2013,11 @@ focus = {
 		}
 		x = 50
 		y = 6
+		completion_reward = {
+			#出事件，CIR和LIL会不会分家。如果已经分家的话则可直接跳过，分家失败的话自动点亮左边
+			add_political_power = -50
+			
+		}
 
 	}
 	focus = {
@@ -2004,7 +2030,7 @@ focus = {
 		x = 49
 		y = 7
 		completion_reward = {
-			#莉莉++，加速和移动士气损失，特别是骑兵
+			#莉莉++，加速和移动士气损失，特别是骑兵,分家失败则锁死
 		}
 
 	}
@@ -2035,7 +2061,9 @@ focus = {
 		}
 		x = 51
 		y = 7
-
+		completion_reward = {
+			#琪露诺++，,分家失败则锁死
+		}
 	}
 	focus = {
 		id = SGS_fight_CIR_focus
@@ -2064,7 +2092,18 @@ focus = {
 		}
 		x = 45
 		y = 8
-
+		completion_reward = {
+			#
+			declare_war_on = {
+    			target = LIL
+    			type = fairy_area_unite_war
+			}
+			declare_war_on = {
+    			target = CIR
+    			type = fairy_area_unite_war
+			}
+			add_command_power = 30
+		}
 	}
 	focus = {
 		id = SGS_unite_fairy_area_focus

@@ -300,6 +300,28 @@ on_actions = {
 	on_monthly = {
 		effect = {
 			# region_daily_check = yes
+			add_to_variable = { global.season_month = 1}
+			if = {
+				limit = {
+					check_variable = {global.season_month = 4}
+				}
+				set_variable = { global.season_month = 1 }
+			}
+
+			if = {
+				limit = {
+					check_variable = {global.season_month = 1}
+					tag = sgs
+					has_country_flag = sgs_planning_construct_flg
+				}
+				country_event = {id = sgs.30492 }
+			}
 		}
 	}
+
+	on_monthly_SGS = {
+		effect = {
+
+		}
+	} 
 }

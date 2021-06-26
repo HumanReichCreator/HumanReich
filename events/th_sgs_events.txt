@@ -11714,3 +11714,301 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	#行政指令建设
+	id = sgs.30492
+	title = sgs.30492.t
+	desc = sgs.30492.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = sgs_planning_construct_flg
+		tag = sgs
+	}
+	option = {
+		#军工
+		name = sgs.30492.1
+		trigger = {
+			has_political_power > 99
+		}
+		add_political_power = -80
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				level = 1
+				instant_build = yes
+				type = industrial_complex
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#民工
+		name = sgs.30492.2
+		trigger = {
+			has_political_power > 99
+		}
+		add_political_power = -80
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				level = 1
+				instant_build = yes
+				type = industrial_complex
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#不行
+		name = sgs.30492.3
+		add_political_power = 20
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#
+	id = sgs.30493
+	title = sgs.30493.t
+	desc = sgs.30493.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+		has_country_flag = sgs_privte_invest_flg 
+		check_variable = { sgs_private_factory_cic < 3 }
+	}
+	mean_time_to_happen = {
+		days = 70
+		modifier = {
+			factor = 0.8
+			or = {
+				guli > 0.5
+				SGS_dove_get_more = yes
+			}
+		}
+		modifier = {
+			factor = 1.5
+			or = {
+				neworder > 0.5
+				SGS_hawk_get_more = yes
+			}
+		}
+		modifier = {
+			factor = 1.2
+			has_war_support > 0.5
+		}
+
+		modifier = {
+			factor = 0.6
+			has_stability > 0.5
+		}
+		modifier = {
+			factor = 0.6
+			has_stability > 0.8
+		}
+		modifier = {
+			factor = 1.2
+			has_stability < 0.3
+		}
+		modifier = {
+			factor = 3
+			has_stability < 0.1
+		}
+		
+	}
+	option = {
+		#
+		name = sgs.30493.1
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_to_variable = { sgs_private_factory_cic = 1}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#
+	id = sgs.30494
+	title = sgs.30494.t
+	desc = sgs.30494.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+		has_country_flag = sgs_privte_invest_flg 
+		check_variable = { sgs_private_factory_mic < 3 }
+	}
+	mean_time_to_happen = {
+		days = 100
+		modifier = {
+			factor = 1.5
+			or = {
+				guli > 0.5
+				SGS_dove_get_more = yes
+			}
+		}
+		modifier = {
+			factor = 0.75
+			or = {
+				neworder > 0.5
+				SGS_hawk_get_more = yes
+			}
+		}
+		modifier = {
+			factor = 0.6
+			has_war_support > 0.8
+		}
+
+		modifier = {
+			factor = 0.75
+			has_stability > 0.5
+		}
+		modifier = {
+			factor = 0.75
+			has_stability > 0.8
+		}
+		modifier = {
+			factor = 2
+			has_stability < 0.1
+		}
+		modifier = {
+			factor = 1.5
+			has_war_support < 0.5
+		}
+		modifier = {
+			factor = 0.5
+			has_war = yes
+		}
+		
+	}
+	option = {
+		#
+		name = sgs.30494.1
+		add_offsite_building = { type = arms_factory level = 1 }
+		add_to_variable = { sgs_private_factory_mic = 1}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#
+	id = sgs.30495
+	title = sgs.30495.t
+	desc = sgs.30495.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+		has_country_flag = sgs_privte_invest_flg 
+		check_variable = { sgs_private_factory_cic > 0 }
+	}
+	mean_time_to_happen = {
+		days = 150
+		modifier = {
+			factor = 1.2
+			or = {
+				guli > 0.5
+				SGS_dove_get_more = yes
+			}
+		}
+		
+		modifier = {
+			factor = 1.2
+			has_stability > 0.5
+		}
+		modifier = {
+			factor = 1.2
+			has_stability > 0.8
+		}
+		modifier = {
+			factor = 0.5
+			has_stability < 0.1
+		}
+		modifier = {
+			factor = 0.5
+			has_stability < -0.1
+		}
+	}
+	option = {
+		#
+		name = sgs.30495.1
+		add_offsite_building = { type = industrial_complex level = -1 }
+		subtract_from_variable = { sgs_private_factory_cic = 1}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#
+	id = sgs.30496
+	title = sgs.30496.t
+	desc = sgs.30496.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+		has_country_flag = sgs_privte_invest_flg 
+		check_variable = { sgs_private_factory_mic > 0 }
+	}
+	mean_time_to_happen = {
+		days = 120
+		modifier = {
+			factor = 1.2
+			or = {
+				neworder > 0.5
+				SGS_hawk_get_more = yes
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_war_support > 0.7
+		}
+		modifier = {
+			factor = 2
+			has_war = yes
+		}
+		modifier = {
+			factor = 0.6
+			has_war_support < 0.3
+		}
+		modifier = {
+			factor = 1.2
+			has_stability > 0.5
+		}
+		modifier = {
+			factor = 1.2
+			has_stability > 0.8
+		}
+		modifier = {
+			factor = 0.7
+			has_stability < 0.1
+		}
+		modifier = {
+			factor = 0.7
+			has_stability < -0.1
+		}
+
+	}
+	option = {
+		#
+		name = sgs.30496.1
+		add_offsite_building = { type = arms_factory level = -1 }
+		add_to_variable = { sgs_private_factory_mic = -1}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
