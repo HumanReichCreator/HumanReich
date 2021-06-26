@@ -1599,8 +1599,7 @@ focus = {
 		y = 0
 		completion_reward = {
 			#
-			add_war_support = 0.1
-			add_command_power = 30
+			
 		}
 
 	}
@@ -1653,7 +1652,9 @@ focus = {
 		x = 1
 		y = 1
 		relative_position_id = SGS_occupy_SCA_focus
-
+		completion_reward = {
+			#红魔馆加俩民工，加buff，会出事件影响内销还是外销，如果有过走私buff则会有特殊好buff
+		}
 	}
 	focus = {
 		id = SGS_expand_weapon_repo_focus
@@ -1693,7 +1694,9 @@ focus = {
 		x = 0
 		y = 3
 		relative_position_id = SGS_occupy_SCA_focus
-
+		completion_reward = {
+			#移除走私buff
+		}
 	}
 	focus = {
 		id = SGS_face_CIR_army_focus
@@ -1730,7 +1733,11 @@ focus = {
 		x = -2
 		y = 1
 		relative_position_id = SGS_no_peace_diplo_focus
-
+		completion_reward = {
+			#
+			add_war_support = 0.1
+			add_command_power = 30
+		}
 	}
 	focus = {
 		id = SGS_unlcok_attack_fairy_focus
@@ -1741,7 +1748,9 @@ focus = {
 		}
 		x = 43
 		y = 2
-
+		completion_reward = {
+			#把之前的buff改了
+		}
 	}
 	focus = {
 		id = SGS_start_recruit_focus
@@ -1752,7 +1761,19 @@ focus = {
 		}
 		x = 45
 		y = 2
-
+		completion_reward = {
+			add_ideas = { type1_manpowerlv4 }
+			if = {
+				limit = {
+					has_completed_focus = SGS_elite_army_focus
+				}
+				add_manpower = 1000
+				else = {
+					add_manpower = 5000
+				}
+			}	
+			
+		}
 	}
 	focus = {
 		id = SGS_aim_SCA_focus
@@ -1769,7 +1790,10 @@ focus = {
 		}
 		x = 43
 		y = 3
-
+		completion_reward = {
+			#红魔馆++，免费修理
+			
+		}
 	}
 	focus = {
 		id = SGS_ambitious_to_all_fairy_focus
@@ -1786,6 +1810,10 @@ focus = {
 		}
 		x = 45
 		y = 3
+		completion_reward = {
+			#全体妖精++，加计划加成和速度
+			
+		}
 
 	}
 	focus = {
@@ -1861,7 +1889,10 @@ focus = {
 		}
 		x = 48
 		y = 5
-
+		completion_reward = {
+			#加紧张度
+			add_political_power = 80
+		}
 	}
 	focus = {
 		id = SGS_fight_others_focus
@@ -1875,7 +1906,10 @@ focus = {
 		}
 		x = 46
 		y = 6
-
+		completion_reward = {
+			#红魔馆++，免费修理
+			
+		}
 	}
 	focus = {
 		id = SGS_prepare_final_war_focus
@@ -1886,7 +1920,10 @@ focus = {
 		}
 		x = 45
 		y = 7
-
+		completion_reward = {
+			#针对妖精++，减少补给消耗
+			
+		}
 	}
 	
 	focus = {
@@ -1966,6 +2003,9 @@ focus = {
 		}
 		x = 49
 		y = 7
+		completion_reward = {
+			#莉莉++，加速和移动士气损失，特别是骑兵
+		}
 
 	}
 	focus = {
