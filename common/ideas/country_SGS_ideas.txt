@@ -657,6 +657,96 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.05
 			}
 		}
-		
+
+		SGS_dove_60_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+		SGS_dove_70_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				stability_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+		SGS_dove_80_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				stability_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				consumer_goods_factor = 0.05
+
+			}
+		}
+		SGS_dove_90_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				stability_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				consumer_goods_factor = 0.05
+				political_power_factor = 0.15
+			}
+		}
+		SGS_dove_100_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				stability_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				consumer_goods_factor = 0.05
+				political_power_factor = 0.15
+				research_speed_factor = 0.1
+				war_support_factor = -0.2
+			}
+		}
+
+		SGS_hawk_60_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+		SGS_hawk_70_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+		SGS_hawk_80_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = -0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = -0.1
+			}
+		}
+		SGS_hawk_90_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = -0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = -0.1
+				conscription_factor = 0.05
+			}
+		}
+		SGS_hawk_100_idea = {
+			picture = generic_local_self_management
+			modifier = {
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = -0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = -0.1
+				conscription_factor = 0.05
+				army_attack_factor = 0.1
+				stability_factor = -0.2
+			}
+		}
 	}
 }
