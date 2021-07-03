@@ -1160,6 +1160,9 @@ focus = {
 		}
 		x = 32
 		y = 2
+		available = {
+			SGS_hawk_have_supporter = yes	
+		}
 		completion_reward = {
 			add_tech_bonus = {
 				bonus = 0.3
@@ -1189,10 +1192,13 @@ focus = {
 		}
 		x = 34
 		y = 2
+		available = {
+			SGS_hawk_have_supporter = yes	
+		}
 		completion_reward = {
 			#
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					level = 2
 					instant_build = yes
@@ -1212,6 +1218,9 @@ focus = {
 		}
 		prerequisite = {
 			focus = SGS_mic_expand_focus
+		}
+		available = {
+			SGS_hawk_have_supporter = yes	
 		}
 		x = 33
 		y = 3
@@ -1284,6 +1293,9 @@ focus = {
 		prerequisite = {
 			focus = SGS_ind_plan_dove
 		}
+		available = {
+			SGS_dove_have_supporter = yes	
+		}
 		x = 36
 		y = 2
 		completion_reward = {
@@ -1319,12 +1331,15 @@ focus = {
 		prerequisite = {
 			focus = SGS_ind_plan_dove
 		}
+		available = {
+			SGS_dove_have_supporter = yes	
+		}
 		x = 38
 		y = 2
 		completion_reward = {
 			#
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					level = 2
 					instant_build = yes
@@ -1344,6 +1359,9 @@ focus = {
 		}
 		prerequisite = {
 			focus = SGS_cic_invest_focus
+		}
+		available = {
+			SGS_dove_have_supporter = yes	
 		}
 		x = 37
 		y = 3
@@ -1436,6 +1454,7 @@ focus = {
 		prerequisite = {
 			focus = SGS_city_infra_focus
 		}
+		
 		mutually_exclusive = {
 			focus = SGS_factory_flexible_trans_focus
 		}
@@ -1662,21 +1681,40 @@ focus = {
 		cost = 10.00
 		prerequisite = {
 			focus = SGS_occupy_SCA_focus
+			controls_state = 122
+			owns_state = 122
 		}
 		mutually_exclusive = {
 			focus = SGS_expand_weapon_repo_focus
+		}
+		available = {
+			SGS_dove_get_more = yes	
 		}
 		x = 1
 		y = 1
 		relative_position_id = SGS_occupy_SCA_focus
 		completion_reward = {
 			#红魔馆加俩民工，加buff，会出事件影响内销还是外销，如果有过走私buff则会有特殊好buff
+			122 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					level = 2
+					instant_build = yes
+					type = industrial_complex
+				}
+			}
+			#还缺个buff
 		}
 	}
 	focus = {
 		id = SGS_expand_weapon_repo_focus
 		icon = GFX_goal_generic_army_artillery
 		cost = 10.00
+		available = {
+			SGS_hawk_get_more = yes	
+			controls_state = 104
+			owns_state = 104
+		}
 		prerequisite = {
 			focus = SGS_occupy_SCA_focus
 		}
@@ -1688,6 +1726,29 @@ focus = {
 		relative_position_id = SGS_occupy_SCA_focus
 		completion_reward = {
 			#军械库加俩军工，然后再加一批先进武器
+			104 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					level = 2
+					instant_build = yes
+					type = arms_factory
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = gun147
+				amount = 3000
+				producer = SCA
+			}
+			add_equipment_to_stockpile = {
+				type = magic_core147
+				amount = 3000
+				producer = SCA
+			}
+			add_equipment_to_stockpile = {
+				type = magic_energy_a
+				amount = 250
+				producer = SCA
+			}
 		}
 
 	}
@@ -1715,7 +1776,7 @@ focus = {
 		y = 3
 		relative_position_id = SGS_occupy_SCA_focus
 		completion_reward = {
-			#移除走私buff
+			#移除走私buff.走向会受之前分支国策的影响，先进科技，代工技术，经营/投资能力（民间？红魔馆人物？）？，大量废弃厂房？
 		}
 	}
 	focus = {
@@ -1728,6 +1789,9 @@ focus = {
 		x = 2
 		y = 1
 		relative_position_id = SGS_occupy_CIR_focus
+		completion_reward = {
+			#移除走私buff
+		}
 
 	}
 	focus = {
@@ -1957,6 +2021,10 @@ focus = {
 		x = -2
 		y = 1
 		relative_position_id = SGS_occupy_CIR_focus
+		completion_reward = {
+			#两个港口加基建，提升顺从减少抵抗，加个buff，经济相关以及政治点数增长。如果可以的话，可以搞个地块传送
+			
+		}
 
 	}
 	focus = {
@@ -1975,6 +2043,9 @@ focus = {
 		x = 0
 		y = 3
 		relative_position_id = SGS_occupy_CIR_focus
+		completion_reward = {
+			#从这才能开始整合地块
+		}
 
 	}
 	focus = {
@@ -1999,7 +2070,9 @@ focus = {
 		x = 0
 		y = 3
 		relative_position_id = SGS_occupy_LIL_focus
-
+		completion_reward = {
+			#从这才能开始整合地块
+		}
 	}
 	focus = {
 		id = SGS_divide_them_focus
