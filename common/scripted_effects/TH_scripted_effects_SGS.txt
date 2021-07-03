@@ -10,6 +10,89 @@ SGS_init_hawk_dove_value = {
     set_variable = {sgs_hawk_infl = 50}
     set_variable = {sgs_dove_infl = 50}
 }
+SGS_hawk_dove_buff_add = {
+    remove_ideas = SGS_dove_60_idea
+    remove_ideas = SGS_dove_70_idea
+    remove_ideas = SGS_dove_80_idea
+    remove_ideas = SGS_dove_90_idea
+    remove_ideas = SGS_dove_100_idea
+    remove_ideas = SGS_hawk_60_idea
+    remove_ideas = SGS_hawk_70_idea
+    remove_ideas = SGS_hawk_80_idea
+    remove_ideas = SGS_hawk_90_idea
+    remove_ideas = SGS_hawk_100_idea
+    if = {
+        limit = {
+            check_variable = {sgs_dove_infl > 59}
+            check_variable = {sgs_dove_infl < 70}
+        }
+        add_ideas =  SGS_dove_60_idea
+    }
+    if = {
+        limit = {
+            check_variable = {sgs_dove_infl > 69}
+            check_variable = {sgs_dove_infl < 80}
+        }
+        add_ideas =  SGS_dove_70_idea
+    }
+    if = {
+        limit = {
+            check_variable = {sgs_dove_infl > 79}
+            check_variable = {sgs_dove_infl < 90}
+        }
+        add_ideas =  SGS_dove_80_idea
+    }
+    if = {
+        limit = {
+            check_variable = {sgs_dove_infl > 89}
+            check_variable = {sgs_dove_infl < 100}
+        }
+        add_ideas =  SGS_dove_90_idea
+    }
+    if = {
+        limit = {
+            check_variable = {sgs_dove_infl > 99}
+        }
+        add_ideas =  SGS_dove_100_idea
+    }
+    if = {
+        limit = {
+            check_variable = {sgs_hawk_infl > 59}
+            check_variable = {sgs_hawk_infl < 70}
+        }
+        add_ideas =  SGS_hawk_60_idea
+    }
+    if = {
+        limit = {
+            check_variable = {sgs_hawk_infl > 69}
+            check_variable = {sgs_hawk_infl < 80}
+        }
+        add_ideas =  SGS_hawk_70_idea
+    }
+    if = {
+        limit = {
+            check_variable = {sgs_hawk_infl > 79}
+            check_variable = {sgs_hawk_infl < 90}
+        }
+        add_ideas =  SGS_hawk_80_idea
+    }
+    if = {
+        limit = {
+            check_variable = {sgs_hawk_infl > 89}
+            check_variable = {sgs_hawk_infl < 100}
+        }
+        add_ideas =  SGS_hawk_90_idea
+    }
+    if = {
+        limit = {
+            check_variable = {sgs_hawk_infl > 99}
+        }
+        add_ideas =  SGS_hawk_100_idea
+    }
+
+}
+
+
 SGS_deal_after_hawk_cal = {
     clamp_variable = {
         var = sgs_hawk_infl
@@ -19,6 +102,9 @@ SGS_deal_after_hawk_cal = {
     set_temp_variable = { temp1 = 100 }
     subtract_from_temp_variable = { temp1 = sgs_hawk_infl }
     set_variable = { sgs_dove_infl = temp1 }
+    hidden_effect = {
+        SGS_hawk_dove_buff_add = yes
+    }
 }
 SGS_deal_after_dove_cal = {
     clamp_variable = {
@@ -29,6 +115,9 @@ SGS_deal_after_dove_cal = {
     set_temp_variable = { temp1 = 100 }
     subtract_from_temp_variable = { temp1 = sgs_dove_infl }
     set_variable = { sgs_hawk_infl = temp1 }
+    hidden_effect = {
+        SGS_hawk_dove_buff_add = yes
+    }
 }
 SGS_hawk_reduce5 = {
     custom_effect_tooltip = SGS_hawk_reduce5_tooltip
