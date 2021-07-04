@@ -900,6 +900,13 @@ focus_tree = {
 				remove_idea = SGS_BaF_economy_system_idea
 				add_idea = SGS_BaF_economy_system_control_civ_idea
 			}
+
+			hidden_effect = {
+				country_event = { 
+					days = 2
+					id = SGS.7120001 
+				}#TNO小故事
+			}
 			
 		}
 
@@ -1673,6 +1680,11 @@ focus = {
 		x = 0
 		y = 1
 		relative_position_id = SGS_occupy_CIR_focus
+		completion_reward = {
+			#条件：湖主发布任务，CIR的不同线路任务不同，任务达成则会加入你们政府，减少造核花费时间，否则搞事情加叛乱度减稳定并且核心全部造好之后会离开
+			#可以不接受赌注，和任务失败一样并且会再给一个debuff如果激进派战场妖精支持率特别高，只能选择不接受赌注
+			
+		}
 
 	}
 	focus = {
@@ -1790,7 +1802,9 @@ focus = {
 		y = 1
 		relative_position_id = SGS_occupy_CIR_focus
 		completion_reward = {
-			#移除走私buff
+			#一系列事件，既包括军队们的反应，也包括内部的一个鹰鸽派讨论。最后的结果就是需要靠提升平民派的席位来保持稳定和快速造核
+			#要么也是提升反抗和造核时间，如果琪露诺也跑了的话会有更严重的buff
+			#（露娜线或许是另一个套事件链？ 
 		}
 
 	}
@@ -1814,11 +1828,20 @@ focus = {
 		prerequisite = {
 			focus = SGS_no_peace_diplo_focus
 		}
+		available = {
+			or = {
+				has_government = oldorder
+				SGS_peaceful_transit_gov = yes
+				date > 148.1.1
+			}
+			
+
+		}
 		x = -2
 		y = 1
 		relative_position_id = SGS_no_peace_diplo_focus
 		completion_reward = {
-			#
+			#可能得等一阵，要么就是激进妖精或露娜线
 			add_war_support = 0.1
 			add_command_power = 30
 		}
@@ -1834,6 +1857,10 @@ focus = {
 		y = 2
 		completion_reward = {
 			#把之前的buff改了
+			swap_ideas = {
+				remove_idea = SGS_donot_attack_fairy_idea
+				add_idea = SGS_admit_attack_fairy_idea
+			}
 		}
 	}
 	focus = {
@@ -1876,7 +1903,10 @@ focus = {
 		y = 3
 		completion_reward = {
 			#红魔馆++，免费修理
-			
+			add_timed_idea = {
+				idea = SGS_aim_SCA_idea
+				days = 360
+			}
 		}
 	}
 	focus = {
@@ -1896,7 +1926,10 @@ focus = {
 		y = 3
 		completion_reward = {
 			#全体妖精++，加计划加成和速度
-			
+			add_timed_idea = {
+				idea = SGS_aim_all_fairy_idea
+				days = 360
+			}
 		}
 
 	}
@@ -2044,7 +2077,7 @@ focus = {
 		y = 3
 		relative_position_id = SGS_occupy_CIR_focus
 		completion_reward = {
-			#从这才能开始整合地块
+			#从这才能开始整合地块，主要讨论妖精族群意识，结果影响造核速度。
 		}
 
 	}
@@ -2058,6 +2091,10 @@ focus = {
 		x = 0
 		y = 2
 		relative_position_id = SGS_occupy_LIL_focus
+		completion_reward = {
+			# 花政治点数大力传教或者走和平路线增加消费品（增加少许鸽派和和平）来获取人力，花民工强制迁移
+			# 或者不管，然后增加抵抗和造核时间
+		}
 
 	}
 	focus = {
@@ -2071,7 +2108,7 @@ focus = {
 		y = 3
 		relative_position_id = SGS_occupy_LIL_focus
 		completion_reward = {
-			#从这才能开始整合地块
+			#从这才能开始整合地块。一样，需要靠平民席位换取稳定，然后可以花钱支援建设换取一些buff
 		}
 	}
 	focus = {
@@ -2197,3 +2234,4 @@ focus = {
 
 	}
 }
+

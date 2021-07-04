@@ -11720,8 +11720,8 @@ country_event = {
 	id = sgs.30492
 	title = sgs.30492.t
 	desc = sgs.30492.d
-	fire_only_once = yes
-	is_triggered_only = yes
+	fire_only_once = no
+	is_triggered_only = no
 	trigger = {
 		has_country_flag = sgs_planning_construct_flg
 		tag = sgs
@@ -11779,8 +11779,8 @@ country_event = {
 	id = sgs.30493
 	title = sgs.30493.t
 	desc = sgs.30493.d
-	fire_only_once = yes
-	is_triggered_only = yes
+	fire_only_once = no
+	is_triggered_only = no
 	trigger = {
 		tag = sgs
 		has_country_flag = sgs_privte_invest_flg 
@@ -11841,8 +11841,8 @@ country_event = {
 	id = sgs.30494
 	title = sgs.30494.t
 	desc = sgs.30494.d
-	fire_only_once = yes
-	is_triggered_only = yes
+	fire_only_once = no
+	is_triggered_only = no
 	trigger = {
 		tag = sgs
 		has_country_flag = sgs_privte_invest_flg 
@@ -11907,8 +11907,8 @@ country_event = {
 	id = sgs.30495
 	title = sgs.30495.t
 	desc = sgs.30495.d
-	fire_only_once = yes
-	is_triggered_only = yes
+	fire_only_once = no
+	is_triggered_only = no
 	trigger = {
 		tag = sgs
 		has_country_flag = sgs_privte_invest_flg 
@@ -11956,8 +11956,8 @@ country_event = {
 	id = sgs.30496
 	title = sgs.30496.t
 	desc = sgs.30496.d
-	fire_only_once = yes
-	is_triggered_only = yes
+	fire_only_once = no
+	is_triggered_only = no
 	trigger = {
 		tag = sgs
 		has_country_flag = sgs_privte_invest_flg 
@@ -12009,6 +12009,66 @@ country_event = {
 		add_to_variable = { sgs_private_factory_mic = -1}
 		ai_chance = {
 			base = 35
+		}
+	}
+}
+
+
+
+#tno小故事专场
+country_event = {
+	#小市民故事- 物资限制
+	id = sgs.7120001
+	title = sgs.7120001.t
+	desc = sgs.7120001.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+	
+	trigger = {
+		tag = SGS
+	}
+	option = {
+		#
+		name = sgs.7120001.1
+		hidden_effect = {
+			#add_stability = -0.03
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+country_event = {
+	#小市民故事- 跑路
+	id = sgs.7120002
+	title = sgs.7120002.t
+	desc = sgs.7120002.d
+	fire_only_once = yes
+	is_triggered_only = no
+	mean_time_to_happen = {
+		days = 2
+	}
+	trigger = {
+		has_completed_focus = SGS_elite_army_focus
+	}
+	immediate = {
+	}
+	
+	trigger = {
+		tag = SGS
+	}
+	option = {
+		#
+		name = sgs.7120001.1
+		add_manpower = -3
+		hidden_effect = {
+			#add_stability = -0.03
+		}
+		ai_chance = {
+			base = 30
 		}
 	}
 }
