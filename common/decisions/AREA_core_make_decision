@@ -1,0 +1,237 @@
+FAIRY_AREA_CORE_MAKE = {
+    SC2_core_make = {
+
+		icon = onmap_recruit_operative
+
+		available = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+                not = {is_core_of = ROOT}
+				is_core_of = SC2
+			}
+		}
+		visible = {
+			is_fairy_area = yes ##要写一下
+			has_country_flag = keyizhenghe #要写一下
+            not = {
+                tag = SC2
+            }
+			
+		}
+
+		fire_only_once = yes
+		cost = var:ROOT.dammy_SC2_cost #要写一下
+
+		days_re_enable = 0
+		days_remove = var:ROOT.dammy_SC2_days #要写一下
+
+		on_map_mode = map_only
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			add_core_of = ROOT
+		}
+		modifier = {
+			
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+    SCA_core_make = {
+
+		icon = onmap_recruit_operative
+
+		available = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+                not = {is_core_of = ROOT}
+				is_core_of = SCA
+			}
+		}
+		visible = {
+			is_fairy_area = yes ##要写一下
+			has_country_flag = keyizhenghe #要写一下
+            not = {
+                tag = SCA
+            }
+			
+		}
+
+		fire_only_once = yes
+		cost = var:ROOT.dammy_SCA_cost #要写一下
+
+		days_re_enable = 0
+		days_remove = var:ROOT.dammy_SCA_days #要写一下
+
+		on_map_mode = map_only
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			add_core_of = ROOT
+		}
+		modifier = {
+			
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+    CIR_core_make = {
+
+		icon = onmap_recruit_operative
+
+		available = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+                not = {is_core_of = ROOT}
+				is_core_of = CIR
+			}
+		}
+		visible = {
+			is_fairy_area = yes ##要写一下
+			has_country_flag = keyizhenghe #要写一下
+            not = {
+                tag = CIR
+            }
+			
+		}
+
+		fire_only_once = yes
+		cost = var:ROOT.dammy_CIR_cost #要写一下
+
+		days_re_enable = 0
+		days_remove = var:ROOT.dammy_CIR_days #要写一下
+
+		on_map_mode = map_only
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			add_core_of = ROOT
+		}
+		modifier = {
+			
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+    LIL_core_make = {
+
+		icon = onmap_recruit_operative
+
+		available = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+                not = {is_core_of = ROOT}
+				is_core_of = LIL
+			}
+		}
+		visible = {
+			is_fairy_area = yes ##要写一下
+			has_country_flag = keyizhenghe #要写一下
+            not = {
+                tag = LIL
+            }
+			
+		}
+
+		fire_only_once = yes
+		cost = var:ROOT.dammy_LIL_cost #要写一下
+
+		days_re_enable = 0
+		days_remove = var:ROOT.dammy_LIL_days #要写一下
+
+		on_map_mode = map_only
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			add_core_of = ROOT
+		}
+		modifier = {
+			
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+    LIL_core_make = {
+
+		icon = onmap_recruit_operative
+
+		available = {
+			
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+                not = {is_core_of = ROOT}
+				is_core_of = LIL
+			}
+		}
+		visible = {
+			is_fairy_area = yes ##要写一下
+			has_country_flag = keyizhenghe #要写一下
+            not = {
+                tag = LIL
+            }
+			
+		}
+
+		fire_only_once = yes
+		cost = var:ROOT.dammy_LIL_cost #要写一下
+
+		days_re_enable = 0
+		days_remove = var:ROOT.dammy_LIL_days #要写一下
+
+		on_map_mode = map_only
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			add_core_of = ROOT
+		}
+		modifier = {
+			
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+}
