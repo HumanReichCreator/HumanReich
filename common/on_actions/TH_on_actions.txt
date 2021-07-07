@@ -489,6 +489,7 @@ on_startup = {
 	        CONV_defines = yes
 	        region_defines = yes
 	        FT_defines = yes
+			SC2_infl_defines = yes
 	        every_state = {
 	       		state_value_calculator = yes
 		    }

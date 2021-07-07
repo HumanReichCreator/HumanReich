@@ -1,0 +1,21 @@
+defined_text = { 
+	name = FPA_infl	
+	text = {
+		trigger = {
+			
+			SC2 = {
+				is_in_faction_with = LIL #莉莉白永远在FPA
+			}
+		}
+		localization_key = FPA_inl_text
+	}
+	text = {
+		trigger = { 
+		#generic
+		}
+		localization_key = SGS_text_none
+	}	
+}
+
+
+

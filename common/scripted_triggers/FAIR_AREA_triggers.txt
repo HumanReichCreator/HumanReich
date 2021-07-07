@@ -1,0 +1,13 @@
+
+SC2_can_infl = {
+  SC2 = {
+    exists = yes
+    is_puppet = no
+  }
+  PREV = {
+    or = {
+      has_country_flag = FA_can_infl_SC2
+      is_in_faction_with = SC2
+    }
+  }
+}

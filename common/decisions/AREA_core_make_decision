@@ -187,7 +187,7 @@ FAIRY_AREA_CORE_MAKE = {
 			base = 1000
 		}
 	}
-    LIL_core_make = {
+    SGS_core_make = {
 
 		icon = onmap_recruit_operative
 
@@ -201,23 +201,23 @@ FAIRY_AREA_CORE_MAKE = {
 				is_owned_by = ROOT
 				is_fully_controlled_by = ROOT
                 not = {is_core_of = ROOT}
-				is_core_of = LIL
+				is_core_of = SGS
 			}
 		}
 		visible = {
 			is_fairy_area = yes ##要写一下
 			has_country_flag = keyizhenghe #要写一下
             not = {
-                tag = LIL
+                tag = SGS
             }
 			
 		}
 
 		fire_only_once = yes
-		cost = var:ROOT.dammy_LIL_cost #要写一下
+		cost = var:ROOT.dammy_SGS_cost #要写一下
 
 		days_re_enable = 0
-		days_remove = var:ROOT.dammy_LIL_days #要写一下
+		days_remove = var:ROOT.dammy_SGS_days #要写一下
 
 		on_map_mode = map_only
 		complete_effect = {
@@ -234,4 +234,8 @@ FAIRY_AREA_CORE_MAKE = {
 			base = 1000
 		}
 	}
+}
+
+SC2_infl_category = {
+	
 }
