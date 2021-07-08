@@ -65,7 +65,7 @@ FAIRY_AREA_CORE_MAKE = {
 		}
 		visible = {
 			is_fairy_area = yes ##要写一下
-			has_country_flag = keyizhenghe #要写一下
+			has_country_flag = FIR_AREA_SCA_MAKE_CORE 
             not = {
                 tag = SCA
             }
@@ -73,10 +73,10 @@ FAIRY_AREA_CORE_MAKE = {
 		}
 
 		fire_only_once = yes
-		cost = var:ROOT.dammy_SCA_cost #要写一下
+		cost = var:ROOT.FIR_AREA_SCA_MC_cose 
 
 		days_re_enable = 0
-		days_remove = var:ROOT.dammy_SCA_days #要写一下
+		days_remove = var:ROOT.FIR_AREA_SCA_MC_time 
 
 		on_map_mode = map_only
 		complete_effect = {

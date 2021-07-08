@@ -11,3 +11,13 @@ SC2_can_infl = {
     }
   }
 }
+
+is_fairy_area = {
+  or = {
+    tag = SGS
+    tag = SCA
+    tag = SC2
+    tag = LIL
+    tag = CIR
+  }
+}

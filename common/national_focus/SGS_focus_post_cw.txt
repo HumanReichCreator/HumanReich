@@ -1645,7 +1645,7 @@ focus = {
 			#条件：控制并拥有红魔馆，SCA不存在，效果：加政治点，解锁SCA地区的造核
 			add_political_power = 50
 			set_country_flag =  FIR_AREA_SCA_MAKE_CORE 
-			set_variable = {sgs.FIR_AREA_SCA_MC_time = 30 }
+			custom_effect_tooltip = SCA_core_make_tooltup
 		}
 
 	}
@@ -2083,6 +2083,8 @@ focus = {
 		relative_position_id = SGS_occupy_CIR_focus
 		completion_reward = {
 			#从这才能开始整合地块，主要讨论妖精族群意识，结果影响造核速度。
+			set_country_flag =  FIR_AREA_CIR_MAKE_CORE 
+			custom_effect_tooltip = CIR_core_make_tooltup
 		}
 
 	}
@@ -2114,6 +2116,8 @@ focus = {
 		relative_position_id = SGS_occupy_LIL_focus
 		completion_reward = {
 			#从这才能开始整合地块。一样，需要靠平民席位换取稳定，然后可以花钱支援建设换取一些buff
+			set_country_flag =  FIR_AREA_LIL_MAKE_CORE 
+			custom_effect_tooltip = LIL_core_make_tooltup
 		}
 	}
 	focus = {

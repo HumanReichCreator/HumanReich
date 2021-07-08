@@ -4,7 +4,45 @@ SC2_infl_defines = {
 	set_variable = { LIL.SC2_infl_value = 0}
 	set_variable = { CIR.SC2_infl_value = 0}
 	set_variable = { SC2.SC2_FPA_infl_value = 50}
-	
+	#整合核心的相关变量也先写这好了
+	#妖精草原
+	set_variable = { SGS.FIR_AREA_SC2_MC_time = 0}
+	set_variable = { SGS.FIR_AREA_SC2_MC_cost = 0}
+	set_variable = { SCA.FIR_AREA_SC2_MC_time = 0}
+	set_variable = { SCA.FIR_AREA_SC2_MC_cost = 0}
+	set_variable = { CIR.FIR_AREA_SC2_MC_time = 0}
+	set_variable = { CIR.FIR_AREA_SC2_MC_cost = 0}
+	set_variable = { LIL.FIR_AREA_SC2_MC_time = 0}
+	set_variable = { LIL.FIR_AREA_SC2_MC_cost = 0}
+	#红魔馆
+	set_variable = { SGS.FIR_AREA_SCA_MC_time = 0}
+	set_variable = { SGS.FIR_AREA_SCA_MC_cost = 0}
+	set_variable = { SCA.FIR_AREA_SCA_MC_time = 0}
+	set_variable = { SCA.FIR_AREA_SCA_MC_cost = 0}
+	set_variable = { CIR.FIR_AREA_SCA_MC_time = 0}
+	set_variable = { CIR.FIR_AREA_SCA_MC_cost = 0}
+	set_variable = { LIL.FIR_AREA_SCA_MC_time = 0}
+	set_variable = { LIL.FIR_AREA_SCA_MC_cost = 0}
+	#莉莉白
+	set_variable = { SGS.FIR_AREA_SCA_MC_time = 0}
+	set_variable = { SGS.FIR_AREA_SCA_MC_cost = 0}
+	set_variable = { SCA.FIR_AREA_SCA_MC_time = 0}
+	set_variable = { SCA.FIR_AREA_SCA_MC_cost = 0}
+	set_variable = { CIR.FIR_AREA_SCA_MC_time = 0}
+	set_variable = { CIR.FIR_AREA_SCA_MC_cost = 0}
+	set_variable = { LIL.FIR_AREA_SCA_MC_time = 0}
+	set_variable = { LIL.FIR_AREA_SCA_MC_cost = 0}
+	#琪露诺
+	set_variable = { SGS.FIR_AREA_SCA_MC_time = 0}
+	set_variable = { SGS.FIR_AREA_SCA_MC_cost = 0}
+	set_variable = { SCA.FIR_AREA_SCA_MC_time = 0}
+	set_variable = { SCA.FIR_AREA_SCA_MC_cost = 0}
+	set_variable = { CIR.FIR_AREA_SCA_MC_time = 0}
+	set_variable = { CIR.FIR_AREA_SCA_MC_cost = 0}
+	set_variable = { LIL.FIR_AREA_SCA_MC_time = 0}
+	set_variable = { LIL.FIR_AREA_SCA_MC_cost = 0}
+	#
+
 }
 
 
