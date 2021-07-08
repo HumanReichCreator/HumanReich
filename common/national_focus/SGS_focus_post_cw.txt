@@ -1643,7 +1643,9 @@ focus = {
 		y = 9
 		completion_reward = {
 			#条件：控制并拥有红魔馆，SCA不存在，效果：加政治点，解锁SCA地区的造核
-			
+			add_political_power = 50
+			set_country_flag =  FIR_AREA_SCA_MAKE_CORE 
+			set_variable = {sgs.FIR_AREA_SCA_MC_time = 30 }
 		}
 
 	}
@@ -1655,7 +1657,7 @@ focus = {
 		y = 9
 		completion_reward = {
 			#条件：控制并拥有琪露诺领土，CIR不存在，效果：加政治点 ？
-			
+			add_political_power = 60
 		}
 	}
 	focus = {
@@ -1666,7 +1668,7 @@ focus = {
 		y = 9
 		completion_reward = {
 			#条件：控制并拥有莉莉白领土，LIL不存在，效果：加政治点 ？
-			
+			add_political_power = 30
 		}
 
 	}
@@ -1803,8 +1805,9 @@ focus = {
 		relative_position_id = SGS_occupy_CIR_focus
 		completion_reward = {
 			#一系列事件，既包括军队们的反应，也包括内部的一个鹰鸽派讨论。最后的结果就是需要靠提升平民派的席位来保持稳定和快速造核
-			#要么也是提升反抗和造核时间，如果琪露诺也跑了的话会有更严重的buff
+			#要么也是提升反抗和造核时间，如果琪露诺也跑了的话会有更严重的buff,大概就是全区域造核时间加长
 			#（露娜线或许是另一个套事件链？ 
+			#造核花费也是一个变量，不知道能不能用
 		}
 
 	}
@@ -2009,6 +2012,8 @@ focus = {
 		completion_reward = {
 			#加紧张度，解锁草原妖精地区的造核，出个新闻，讨论要不要改名
 			add_political_power = 80
+			set_country_flag =  FIR_AREA_SC2_MAKE_CORE 
+			set_variable = {sgs.FIR_AREA_SC2_MC_time = 50 }
 		}
 	}
 	focus = {
