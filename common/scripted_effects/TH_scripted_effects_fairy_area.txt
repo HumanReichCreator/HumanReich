@@ -4,45 +4,44 @@ SC2_infl_defines = {
 	set_variable = { LIL.SC2_infl_value = 0}
 	set_variable = { CIR.SC2_infl_value = 0}
 	set_variable = { SC2.SC2_FPA_infl_value = 50}
-	#整合核心的相关变量也先写这好了
+	#整合核心的相关变量也先写这好了,时间大概会往下调
 	#妖精草原
-	set_variable = { SGS.FIR_AREA_SC2_MC_time = 0}
-	set_variable = { SGS.FIR_AREA_SC2_MC_cost = 0}
-	set_variable = { SCA.FIR_AREA_SC2_MC_time = 0}
-	set_variable = { SCA.FIR_AREA_SC2_MC_cost = 0}
-	set_variable = { CIR.FIR_AREA_SC2_MC_time = 0}
-	set_variable = { CIR.FIR_AREA_SC2_MC_cost = 0}
-	set_variable = { LIL.FIR_AREA_SC2_MC_time = 0}
-	set_variable = { LIL.FIR_AREA_SC2_MC_cost = 0}
+	set_variable = { SGS.FIR_AREA_SC2_MC_time = 50}
+	set_variable = { SGS.FIR_AREA_SC2_MC_cost = 50}
+	set_variable = { SCA.FIR_AREA_SC2_MC_time = 70}
+	set_variable = { SCA.FIR_AREA_SC2_MC_cost = 70}
+	set_variable = { CIR.FIR_AREA_SC2_MC_time = 40}
+	set_variable = { CIR.FIR_AREA_SC2_MC_cost = 40}
+	set_variable = { LIL.FIR_AREA_SC2_MC_time = 30}
+	set_variable = { LIL.FIR_AREA_SC2_MC_cost = 30}
 	#红魔馆
-	set_variable = { SGS.FIR_AREA_SCA_MC_time = 0}
-	set_variable = { SGS.FIR_AREA_SCA_MC_cost = 0}
-	set_variable = { SCA.FIR_AREA_SCA_MC_time = 0}
-	set_variable = { SCA.FIR_AREA_SCA_MC_cost = 0}
-	set_variable = { CIR.FIR_AREA_SCA_MC_time = 0}
-	set_variable = { CIR.FIR_AREA_SCA_MC_cost = 0}
-	set_variable = { LIL.FIR_AREA_SCA_MC_time = 0}
-	set_variable = { LIL.FIR_AREA_SCA_MC_cost = 0}
+	set_variable = { SGS.FIR_AREA_SCA_MC_time = 50}
+	set_variable = { SGS.FIR_AREA_SCA_MC_cost = 50}
+	set_variable = { CIR.FIR_AREA_SCA_MC_time = 30}
+	set_variable = { CIR.FIR_AREA_SCA_MC_cost = 30}
+	set_variable = { LIL.FIR_AREA_SCA_MC_time = 35}
+	set_variable = { LIL.FIR_AREA_SCA_MC_cost = 35}
 	#莉莉白
-	set_variable = { SGS.FIR_AREA_SCA_MC_time = 0}
-	set_variable = { SGS.FIR_AREA_SCA_MC_cost = 0}
-	set_variable = { SCA.FIR_AREA_SCA_MC_time = 0}
-	set_variable = { SCA.FIR_AREA_SCA_MC_cost = 0}
-	set_variable = { CIR.FIR_AREA_SCA_MC_time = 0}
-	set_variable = { CIR.FIR_AREA_SCA_MC_cost = 0}
-	set_variable = { LIL.FIR_AREA_SCA_MC_time = 0}
-	set_variable = { LIL.FIR_AREA_SCA_MC_cost = 0}
+	set_variable = { SGS.FIR_AREA_LIL_MC_time = 50}
+	set_variable = { SGS.FIR_AREA_LIL_MC_cost = 50}
+	set_variable = { SCA.FIR_AREA_LIL_MC_time = 60}
+	set_variable = { SCA.FIR_AREA_LIL_MC_cost = 60}
+	set_variable = { CIR.FIR_AREA_LIL_MC_time = 40}
+	set_variable = { CIR.FIR_AREA_LIL_MC_cost = 40}
 	#琪露诺
-	set_variable = { SGS.FIR_AREA_SCA_MC_time = 0}
-	set_variable = { SGS.FIR_AREA_SCA_MC_cost = 0}
-	set_variable = { SCA.FIR_AREA_SCA_MC_time = 0}
-	set_variable = { SCA.FIR_AREA_SCA_MC_cost = 0}
-	set_variable = { CIR.FIR_AREA_SCA_MC_time = 0}
-	set_variable = { CIR.FIR_AREA_SCA_MC_cost = 0}
-	set_variable = { LIL.FIR_AREA_SCA_MC_time = 0}
-	set_variable = { LIL.FIR_AREA_SCA_MC_cost = 0}
-	#
-
+	set_variable = { SGS.FIR_AREA_CIR_MC_time = 50}
+	set_variable = { SGS.FIR_AREA_CIR_MC_cost = 50}
+	set_variable = { SCA.FIR_AREA_CIR_MC_time = 80}
+	set_variable = { SCA.FIR_AREA_CIR_MC_cost = 80}
+	set_variable = { LIL.FIR_AREA_CIR_MC_time = 40}
+	set_variable = { LIL.FIR_AREA_CIR_MC_cost = 40}
+	#三月精
+	set_variable = { SCA.FIR_AREA_SGS_MC_time = 50}
+	set_variable = { SCA.FIR_AREA_SGS_MC_cost = 50}
+	set_variable = { CIR.FIR_AREA_SGS_MC_time = 55}
+	set_variable = { CIR.FIR_AREA_SGS_MC_cost = 55}
+	set_variable = { LIL.FIR_AREA_SGS_MC_time = 45}
+	set_variable = { LIL.FIR_AREA_SGS_MC_cost = 45}
 }
 
 
