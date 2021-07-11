@@ -955,7 +955,7 @@ focus_tree = {
 		icon = GFX_goal_continuous_restrict_freedom
 		cost = 5
 		available = {
-			tooltip = SGS_hawk_have_supporter
+			SGS_hawk_have_supporter = yes
 			
 		}
 		prerequisite = {
@@ -1695,14 +1695,15 @@ focus = {
 		cost = 10.00
 		prerequisite = {
 			focus = SGS_occupy_SCA_focus
-			controls_state = 122
-			owns_state = 122
+			
 		}
 		mutually_exclusive = {
 			focus = SGS_expand_weapon_repo_focus
 		}
 		available = {
 			SGS_dove_get_more = yes	
+			controls_state = 122
+			owns_state = 122
 		}
 		x = 1
 		y = 1
@@ -1821,7 +1822,10 @@ focus = {
 		x = 3
 		y = 1
 		relative_position_id = SGS_no_peace_diplo_focus
+		completion_reward = {
+			#弄个新闻
 
+		}
 	}
 
 	focus = {
@@ -1992,7 +1996,7 @@ focus = {
 		x = 50
 		y = 4
 		completion_reward = {
-			#
+			#弄成事件，前提就是决议解锁或者值够了
 			declare_war_on = {
     			target = SC2
     			type = fairy_area_unite_war

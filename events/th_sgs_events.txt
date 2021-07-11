@@ -10,7 +10,7 @@ country_event = {
 
 	}
 	mean_time_to_happen = {
-		days = 150
+		days = 120
 		modifier = {
 			add = -45
 			date < 146.6.1
@@ -733,6 +733,7 @@ country_event = {
 		}
 		load_focus_tree = { tree = SGS_focus_post_cw keep_completed = yes }
 		complete_national_focus = SGS_peaceful_transit_focus
+		complete_national_focus = SGS_no_peace_diplo_focus
 		news_event = {
 			id = sgs.1061
 		}
@@ -4036,7 +4037,7 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 17
+		days = 30
 		modifier = {
 			add = -10
 			check_variable = {
@@ -4099,7 +4100,7 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 17
+		days = 30
 		modifier = {
 			add = -9
 			check_variable = {
@@ -4162,7 +4163,7 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		days = 17
+		days = 30
 		modifier = {
 			add = -11
 			check_variable = {
@@ -10328,6 +10329,7 @@ country_event = {
 			ruling_party = neworder
 		}
 		complete_national_focus = SGS_sunny_win_focus
+		complete_national_focus = SGS_no_peace_diplo_focus
 		ai_chance = {
 			base = 0
 		}
@@ -10340,6 +10342,7 @@ country_event = {
 			ruling_party = oldorder
 		}
 		complete_national_focus = SGS_luna_win_focus
+		complete_national_focus = SGS_no_peace_diplo_focus
 		ai_chance = {
 			base = 0
 		}
@@ -10366,6 +10369,7 @@ country_event = {
 					ruling_party = neworder
 				}
 				complete_national_focus = SGS_sunny_win_focus
+				complete_national_focus = SGS_no_peace_diplo_focus
 			}
 			var:sgs_luna_infl = {
 				set_country_flag = SGS_postwar_confer_luna_win
@@ -10373,6 +10377,7 @@ country_event = {
 					ruling_party = oldorder
 				}
 				complete_national_focus = SGS_luna_win_focus
+				complete_national_focus = SGS_no_peace_diplo_focus
 			}
 			var:sgs_star_infl = {
 				set_country_flag = SGS_postwar_confer_star_win
@@ -12013,6 +12018,81 @@ country_event = {
 	}
 }
 
+#外交事件
+country_event = {
+	#攻占红魔馆
+	id = sgs.4010
+	title = sgs.4010.t
+	desc = sgs.4010.d
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		tag = sgs
+		controls_state = 122
+		owns_state = 122
+		SCA = {
+			exists = no
+		}
+	}
+	option = {
+		#
+		name = sgs.4010.1
+		complete_national_focus = SGS_occupy_SCA_focus
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#攻占琪露诺
+	id = sgs.4011
+	title = sgs.4011.t
+	desc = sgs.4011.d
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		tag = sgs
+		controls_state = 118
+		owns_state = 118
+		CIR = {
+			exists = no
+		}
+	}
+	option = {
+		#
+		name = sgs.4011.1
+		complete_national_focus = SGS_occupy_CIR_focus
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#攻占莉莉白
+	id = sgs.4012
+	title = sgs.4012.t
+	desc = sgs.4012.d
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		tag = sgs
+		controls_state = 29
+		owns_state = 29
+		LIL = {
+			exists = no
+		}
+	}
+	option = {
+		#
+		name = sgs.4012.1
+		complete_national_focus = SGS_occupy_LIL_focus
+		ai_chance = {
+			base = 35
+		}
+	}
+}
 
 
 #tno小故事专场
@@ -12072,3 +12152,4 @@ country_event = {
 		}
 	}
 }
+
