@@ -1,13 +1,19 @@
 
 SC2_can_infl = {
-  SC2 = {
-    exists = yes
-    is_puppet = no
-  }
-  or = {
-    has_country_flag = FA_can_infl_SC2_flg
-    is_in_faction_with = SC2
-  }
+  custom_trigger_tooltip = {
+    tooltip = SC2_can_infl_tt
+    SC2 = {
+      exists = yes
+      is_puppet = no
+    }
+    or = {
+      has_country_flag = FA_can_infl_SC2_flg
+      is_in_faction_with = SC2
+    }
+    not = {
+      tag = SC2
+    }
+  } 
 }
 
 is_fairy_area = {
@@ -17,6 +23,13 @@ is_fairy_area = {
     tag = SC2
     tag = LIL
     tag = CIR
+  }
+}
+
+SC2_need_pay_attention = {
+  any_country = {
+    SC2_can_infl = yes
+    not = { has_country_flag = FA_in_FPA_flg }
   }
 }
 

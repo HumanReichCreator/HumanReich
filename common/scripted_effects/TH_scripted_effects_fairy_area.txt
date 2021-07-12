@@ -1,8 +1,8 @@
 SC2_infl_defines = {
 	set_variable = { SGS.SC2_infl_value = 0}
 	set_variable = { SCA.SC2_infl_value = 0}
-	set_variable = { LIL.SC2_infl_value = 0}
-	set_variable = { CIR.SC2_infl_value = 0}
+	set_variable = { LIL.SC2_infl_value = 25}
+	set_variable = { CIR.SC2_infl_value = 25}
 	set_variable = { SC2.SC2_FPA_infl_value = 50}
 	#整合核心的相关变量也先写这好了,时间大概会往下调
 	#妖精草原
@@ -42,6 +42,17 @@ SC2_infl_defines = {
 	set_variable = { CIR.FIR_AREA_SGS_MC_cost = 55}
 	set_variable = { LIL.FIR_AREA_SGS_MC_time = 45}
 	set_variable = { LIL.FIR_AREA_SGS_MC_cost = 45}
+}
+
+cal_FPA_infl = {
+	set_temp_variable = { FPA_infl_total = 0}
+	every_country = {
+		limit = {
+			has_country_flag = FA_in_FPA_flg
+		}
+		add_to_temp_variable = { FPA_infl_total = THIS.SC2_infl_value }
+	}
+	set_variable = {SC2.SC2_FPA_infl_value = FPA_infl_total}
 }
 
 

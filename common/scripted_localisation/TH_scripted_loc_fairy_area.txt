@@ -2,8 +2,9 @@ defined_text = {
 	name = FPA_infl	
 	text = {
 		trigger = {
-			
-			always = no
+			any_country = {
+				has_country_flag = FA_in_FPA_flg
+			}
 		}
 		localization_key = FPA_infl_text
 	}
@@ -21,6 +22,7 @@ defined_text = {
 		trigger = {
 			CIR = {
 				SC2_can_infl = yes
+				not = { has_country_flag = FA_in_FPA_flg }
 			}
 		}
 		localization_key = CIR_infl_text
@@ -38,6 +40,7 @@ defined_text = {
 		trigger = {
 			LIL = {
 				SC2_can_infl = yes
+				not = { has_country_flag = FA_in_FPA_flg }
 			}
 		}
 		localization_key = LIL_infl_text
@@ -55,6 +58,7 @@ defined_text = {
 		trigger = {
 			SCA = {
 				SC2_can_infl = yes
+				not = { has_country_flag = FA_in_FPA_flg }
 			}
 		}
 		localization_key = SCA_infl_text
@@ -72,6 +76,7 @@ defined_text = {
 		trigger = {
 			SGS = {
 				SC2_can_infl = yes
+				not = { has_country_flag = FA_in_FPA_flg }
 			}
 		}
 		localization_key = SGS_infl_text
@@ -84,4 +89,18 @@ defined_text = {
 	}	
 }
 
-
+defined_text = { 
+	name = SC2_need_attention	
+	text = {
+		trigger = {
+			SC2_need_pay_attention = no
+		}
+		localization_key = SC2_need_attention_no
+	}
+	text = {
+		trigger = { 
+		#generic
+		}
+		localization_key = SC2_need_attention_yes
+	}	
+}

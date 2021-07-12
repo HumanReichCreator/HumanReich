@@ -1,22 +1,27 @@
 country_event = {
-	#
-	id = sgs.30493
-	title = sgs.30493.t
-	desc = sgs.30493.d
+	#攻占红魔馆
+	id = sgs.4010
+	title = sgs.4010.t
+	desc = sgs.4010.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	trigger = {
 		tag = sgs
+
 	}
 	option = {
 		#
-		name = sgs.30493.1
+		name = sgs.4010.1
 
 		ai_chance = {
 			base = 35
 		}
 	}
 }
+
+set_country_flag = FA_in_FPA_flg
+
+
 
 completion_reward = {
 			#
