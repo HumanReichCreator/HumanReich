@@ -1980,14 +1980,42 @@ focus = {
 		prerequisite = {
 			focus = SGS_infl_SC2_focus
 		}
+		available = {
+			or = {
+				custom_trigger_tooltip = {
+					tooltip = SGS_hawk_enough_infl_to_SC2
+					check_variable = {
+						SGS.SC2_infl_value > SC2.SC2_FPA_infl_value
+					}
+					any_country = {
+						has_country_flag = FA_in_FPA_flg
+					}
+				}
+				SC2 = {
+					is_in_faction = no
+				}
+			}
+		}
 		x = 52
 		y = 3
+		completion_reward = {
+			set_temp_variable = { two_times_FPA = SC2_FPA_infl_value }
+			multiply_temp_variable = {two_times_FPA = 1.5}
+			if = {
+				limit = { #影响力极高，高过FPA的1.5倍
+					check_variable = {
+						SGS.SC2_infl_value > two_times_FPA 
+					}
+				}
+				country_event = { id = sgs.4000 } #直接投降
+			}
+		}
 
 	}
 	focus = {
 		id = SGS_fight_SC2_focus
 		icon = GFX_focus_generic_attack_bulgaria
-		cost = 10.00
+		cost = 2
 		prerequisite = {
 			focus = SGS_try_to_control_SC2_focus
 			focus = SGS_ambitious_to_all_fairy_focus
