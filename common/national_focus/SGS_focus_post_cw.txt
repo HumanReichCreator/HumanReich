@@ -1819,6 +1819,9 @@ focus = {
 		prerequisite = {
 			focus = SGS_no_peace_diplo_focus
 		}
+		bypass = {
+			SC2_can_be_infled = yes
+		}
 		x = 3
 		y = 1
 		relative_position_id = SGS_no_peace_diplo_focus
@@ -1967,6 +1970,9 @@ focus = {
 		prerequisite = {
 			focus = SGS_SC2_issue_focus
 		}
+		bypass = {
+			SC2_can_be_infled = yes
+		}
 		x = 52
 		y = 2
 		completion_reward = {
@@ -1980,6 +1986,13 @@ focus = {
 		prerequisite = {
 			focus = SGS_infl_SC2_focus
 		}
+		bypass = {
+			or = {
+				SC2_can_be_infled = no
+				has_country_flag = FA_SC2_skip_infl_to_war
+			}
+
+		}
 		available = {
 			or = {
 				custom_trigger_tooltip = {
@@ -1991,23 +2004,37 @@ focus = {
 						has_country_flag = FA_in_FPA_flg
 					}
 				}
-				SC2 = {
-					is_in_faction = no
+				not = {
+					SC2 = {
+						has_country_flag = FA_in_FPA_flg
+					}
 				}
+
 			}
 		}
 		x = 52
 		y = 3
 		completion_reward = {
-			set_temp_variable = { two_times_FPA = SC2_FPA_infl_value }
-			multiply_temp_variable = {two_times_FPA = 1.5}
-			if = {
-				limit = { #影响力极高，高过FPA的1.5倍
-					check_variable = {
-						SGS.SC2_infl_value > two_times_FPA 
+			custom_effect_tooltip = SGS_try_to_control_SC2_tt
+			hidden_effect = {
+				set_temp_variable = { two_times_FPA = SC2_FPA_infl_value }
+				multiply_temp_variable = {two_times_FPA = 1.5}
+				if = {
+					limit = { #影响力极高，高过FPA的1.5倍
+						or = {
+							check_variable = { SGS.SC2_infl_value > two_times_FPA  }
+							SC2 = { is_in_faction = no }
+						}
+					}
+					country_event = { id = sgs.4000 } #直接投降
+					else = {
+						SC2 = {
+							faction_leader = {
+								country_event = { id = sgs.4001 }
+							}
+						}
 					}
 				}
-				country_event = { id = sgs.4000 } #直接投降
 			}
 		}
 
@@ -2023,8 +2050,10 @@ focus = {
 		}
 		x = 50
 		y = 4
+		
 		completion_reward = {
 			#弄成事件，前提就是决议解锁或者值够了
+			#SC2的事件，根据SGS的行为还会有更多buff
 			declare_war_on = {
     			target = SC2
     			type = fairy_area_unite_war

@@ -1,11 +1,14 @@
+SC2_can_be_infled = {
+  SC2 = {
+    exists = yes
+    is_puppet = no
+  }
+}
 
 SC2_can_infl = {
   custom_trigger_tooltip = {
     tooltip = SC2_can_infl_tt
-    SC2 = {
-      exists = yes
-      is_puppet = no
-    }
+    SC2_can_be_infled = yes
     or = {
       has_country_flag = FA_can_infl_SC2_flg
       is_in_faction_with = SC2

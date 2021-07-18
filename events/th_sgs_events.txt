@@ -12019,7 +12019,158 @@ country_event = {
 }
 
 #外交事件
+country_event = {
+	#草原妖精直接投降，毫无办法
+	id = sgs.4000
+	title = sgs.4000.t
+	desc = sgs.4000.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.4000.1
+		every_country = {
+			limit = {
+				has_country_flag = FA_in_FPA_flg
+			}
+			country_event = {id = sgs.40000}
+			set_variable = { THIS.SC2_infl_value = 0}
+			
+		}
+		SC2 = {
+			leave_faction = yes
+			subject_level1 = yes
+			clr_country_flag = FA_in_FPA_flg
+		}
+		
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#投降通知
+	id = sgs.40000
+	title = sgs.40000.t
+	desc ={
+		text =  sgs.40000.d
+		trigger = {
+			not = {tag = SC2}
+		}
+	}
+	desc ={
+		text =  sgs.40000.d_sc2
+		trigger = {
+			tag = SC2
+		}
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
 
+	}
+	option = {
+		#
+		name = sgs.40000.1
+		trigger = {
+			not = {tag = SC2}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#
+		name = sgs.40000.2
+		trigger = {
+			tag = SC2
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#要抢人
+	id = sgs.4001
+	title = sgs.4001.t
+	desc = sgs.4001.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+		controls_state = 122
+		owns_state = 122
+		SCA = {
+			exists = no
+		}
+	}
+	option = {
+		#
+		name = sgs.4001.1
+		complete_national_focus = SGS_occupy_SCA_focus
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#SC2后方起义
+	id = sgs.4002
+	title = sgs.4002.t
+	desc = sgs.4002.d
+	fire_only_once = yes
+	is_triggered_only = no
+	mean_time_to_happen = {
+		days = 2
+	}
+	trigger = {
+		tag = SC2
+		has_war_with = SGS
+		surrender_progress > 0.5
+		SGS = { has_country_flag = FA_SC2_skip_infl_to_war }
+		
+	}
+	option = {
+		#
+		name = sgs.4002.1
+		set_state_controller = 64
+		set_state_controller = 85
+		set_state_controller = 61
+		set_state_controller = 311
+		set_state_controller = 310
+		load_oob = SC2_rebel
+		SGS = { country_event = { id = sgs.40020 } }
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#SC2后方起义-SGS通知
+	id = sgs.40020
+	title = sgs.40020.t
+	desc = sgs.40020.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = SGS	
+	}
+	option = {
+		#
+		name = sgs.40020.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
 
 country_event = {
 	#攻占红魔馆

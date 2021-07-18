@@ -270,18 +270,49 @@ SC2_infl_category = {
 		days_re_enable = 3
 		fire_only_once = no
 		complete_effect = {
+			SC2 = { set_country_flag = FA_in_FPA_flg }
+			CIR = { set_country_flag = FA_in_FPA_flg }
+			LIL = { set_country_flag = FA_in_FPA_flg }
 			add_to_variable = { ROOT.SC2_infl_value = 50 }
 			cal_FPA_infl = yes
+
 		}
 		remove_effect = {
 			
 		}
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				add = 30
-				SC2_need_pay_attention = yes
+			factor = 0
+			
+		}
+	}
+	SC2_skip_infl = {
+		visible = {
+			ROOT = {
+				SC2_can_infl = yes
 			}
+			
+		}
+		available = {
+			or = {
+				has_government = oldorder
+				SGS_hawk_hold_meeting = yes
+			}
+		}
+		modifier = {
+		}
+		cost = 30
+		days_remove = 3
+		days_re_enable = 3
+		fire_only_once = no
+		complete_effect = {
+			set_country_flag = FA_SC2_skip_infl_to_war
+		}
+		remove_effect = {
+			
+		}
+		ai_will_do = {
+			factor = 0
+			
 		}
 	}
 }
