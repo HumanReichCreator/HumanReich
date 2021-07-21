@@ -114,6 +114,13 @@ LS_time_caculator = {
 				}
 				multiply_variable = { LS_base_time = 2}
 			}
+			#三月精吞并妖精草原
+			if = {
+				limit = {
+					tag = SC2
+				}
+				multiply_variable = { LS_base_time = 0.2}
+			}
 		}
 
 	}

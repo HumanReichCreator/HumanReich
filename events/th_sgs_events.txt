@@ -12102,22 +12102,174 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 	trigger = {
-		tag = sgs
-		controls_state = 122
-		owns_state = 122
-		SCA = {
-			exists = no
-		}
+		not = { tag = SGS }
 	}
 	option = {
-		#
+		#让了
 		name = sgs.4001.1
-		complete_national_focus = SGS_occupy_SCA_focus
+		set_variable = { ROOT.SC2_infl_value = 0 }
+		SC2 = {
+			leave_faction = yes
+			clr_country_flag = FA_in_FPA_flg
+			set_country_flag = FA_FPA_betray_SC2
+			country_event = { id = sgs.40010 }
+		}
+		every_country = {
+			limit = {
+				has_country_flag = FA_in_FPA_flg
+				not = { tag = ROOT }
+			}
+			country_event = { id = sgs.40011 }
+		}
+		SGS = {
+			country_event = { id = sgs.40012 }
+		}
+
 		ai_chance = {
 			base = 35
 		}
 	}
 }
+
+country_event = {
+	#FPA领袖卖了SC2-SC2通知
+	id = sgs.40010
+	title = sgs.40010.t
+	desc = sgs.40010.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = SC2	
+	}
+	option = {
+		#
+		name = sgs.40010.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#FPA领袖卖了SC2-FPA其他成员通知
+	id = sgs.40011
+	title = sgs.40011.t
+	desc = sgs.40011.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		not = {
+			tag = SGS
+			tag = SC2
+			is_faction_leader = yes
+		}
+	}
+	option = {
+		#
+		name = sgs.40011.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#FPA领袖卖了SC2-SGS通知
+	id = sgs.40012
+	title = sgs.40012.t
+	desc = sgs.40012.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = SGS	
+	}
+	option = {
+		#
+		name = sgs.40012.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#SC2被FPA卖了但是打了一半之后LIL介入
+	id = sgs.40013
+	title = sgs.40013.t
+	desc = sgs.40013.d
+	fire_only_once = yes
+	is_triggered_only = no
+	mean_time_to_happen = {
+		days = 2
+	}
+	trigger = {
+		tag = SC2
+		has_war_with = SGS
+		surrender_progress > 0.6
+		has_country_flag = FA_FPA_betray_SC2 
+		country_exists = LIL
+	}
+	option = {
+		#
+		name = sgs.40013.1
+		LIL = {
+			transfer_state = 70
+			transfer_state = 61
+			transfer_state = 91
+			country_event = { id = sgs.40014}
+		}
+		SGS = {
+			annex_country = {
+				target = SC2
+				transfer_troops = no
+				country_event = { id = sgs.40015}
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#SC2被FPA卖了但是打了一半之后LIL介入-LIL通知
+	id = sgs.40014
+	title = sgs.40014.t
+	desc = sgs.40014.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = SGS	
+	}
+	option = {
+		#
+		name = sgs.40014.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#SC2被FPA卖了但是打了一半之后LIL介入-SGS通知
+	id = sgs.40015
+	title = sgs.40015.t
+	desc = sgs.40015.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = SGS	
+	}
+	option = {
+		#
+		name = sgs.40015.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
 
 country_event = {
 	#SC2后方起义
@@ -12139,13 +12291,11 @@ country_event = {
 	option = {
 		#
 		name = sgs.4002.1
-		set_state_controller = 64
-		set_state_controller = 85
 		set_state_controller = 61
 		set_state_controller = 311
-		set_state_controller = 310
 		load_oob = SC2_rebel
 		SGS = { country_event = { id = sgs.40020 } }
+		set_country_flag = FA_SC2_has_rebelled
 		ai_chance = {
 			base = 35
 		}
@@ -12171,6 +12321,124 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	#SC2再次投降
+	id = sgs.40021
+	title = sgs.40021.t
+	desc = sgs.40021.d
+	fire_only_once = yes
+	is_triggered_only = no
+	mean_time_to_happen = {
+		days = 2
+	}
+	trigger = {
+		tag = SC2
+		has_war_with = SGS
+		surrender_progress > 0.5
+		has_country_flag = FA_SC2_has_rebelled
+		SGS = { has_country_flag = FA_SC2_skip_infl_to_war }
+	}
+	option = {
+		#
+		name = sgs.40021.1
+		SGS = { country_event = { id = sgs.40022 } }
+		hidden_effect = {
+			if = {
+				limit = {
+					country_exists = LIL
+				}
+				LIL = {country_event = { id = sgs.40023 } }
+			}
+		}
+		
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#SC2再次投降-分一半地-SGS
+	id = sgs.40022
+	title = sgs.40022.t
+	desc = {
+		text = sgs.40022.d
+		trigger = {
+			country_exists = LIL
+		}
+	}
+	desc = {
+		text = sgs.40022.d_nolil
+		trigger = {
+			not = { country_exists = LIL }
+		}
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = SGS	
+	}
+	option = {
+		#LIL存在
+		name = sgs.40022.1
+		trigger = {
+			country_exists = LIL
+		}
+		LIL = {
+			transfer_state = 70
+			transfer_state = 61
+			transfer_state = 91
+			transfer_state = 311
+		}
+		annex_country = {
+			target = SC2
+			transfer_troops = no
+		}
+		every_country = {
+			limit = {
+				is_in_faction_with = LIL
+			}
+			white_peace = SGS	
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#LIL不存在
+		name = sgs.40022.2
+		trigger = {
+			not = { country_exists = LIL }
+		}
+		annex_country = {
+			target = SC2
+			transfer_troops = yes
+		}
+		ai_chance = {
+			base = 35
+		}
+		
+	}
+}
+country_event = {
+	#SC2再次投降-LIL通知
+	id = sgs.40023
+	title = sgs.40023.t
+	desc = sgs.40023.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = SGS	
+	}
+	option = {
+		#
+		name = sgs.40023.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
 
 country_event = {
 	#攻占红魔馆
