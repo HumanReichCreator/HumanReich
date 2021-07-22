@@ -19,6 +19,18 @@ country_event = {
 	}
 }
 
+SC2 = {
+	leave_faction = yes
+	subject_level1 = yes
+	clr_country_flag = FA_in_FPA_flg
+}
+every_country = {
+	limit = {
+		has_country_flag = FA_in_FPA_flg
+	}
+	white_peace = SGS	
+}
+
 desc ={
 	text =  sgs.4000.d
 	trigger = {

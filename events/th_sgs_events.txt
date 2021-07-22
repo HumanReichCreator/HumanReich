@@ -12500,9 +12500,23 @@ country_event = {
 		}
 	}
 	option = {
-		#
+		#SC2投降
 		name = sgs.40031.1
-
+		trigger = {
+			tag = SC2
+		}
+		SGS = { country_event = { id = sgs.40032 } }
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = {
+		#其他人卖了SC2
+		name = sgs.40031.2
+		trigger = {
+			not = {tag = SC2}
+		}
+		SGS = { country_event = { id = sgs.40032 } }
 		ai_chance = {
 			base = 35
 		}
