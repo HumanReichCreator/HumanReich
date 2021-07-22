@@ -12129,6 +12129,21 @@ country_event = {
 			base = 35
 		}
 	}
+	option = {
+		#不让
+		name = sgs.4001.2
+		set_variable = { ROOT.SC2_infl_value = 0 }
+		SC2 = {
+			set_country_flag = FA_FPA_protect_SC2
+		}
+		SGS = {
+			country_event = { id = sgs.4003 }
+		}
+
+		ai_chance = {
+			base = 35
+		}
+	}
 }
 
 country_event = {
@@ -12217,13 +12232,13 @@ country_event = {
 			transfer_state = 70
 			transfer_state = 61
 			transfer_state = 91
-			country_event = { id = sgs.40014}
+			country_event = { id = sgs.40014 }
 		}
 		SGS = {
 			annex_country = {
 				target = SC2
 				transfer_troops = no
-				country_event = { id = sgs.40015}
+				country_event = { id = sgs.40015 }
 			}
 		}
 		ai_chance = {
@@ -12438,6 +12453,62 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	#FPA不让-SGS通知
+	id = sgs.4003
+	title = sgs.4003.t
+	desc = sgs.4003.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = SGS
+	}
+	option = {
+		#
+		name = sgs.4003.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+country_event = {
+	#FPA不让-有人撑不住了
+	id = sgs.40031
+	title = sgs.40031.t
+	desc = { 
+		text = sgs.40031.d
+		trigger = {
+			tag = SC2
+		}
+	}
+	desc = { 
+		text = sgs.40031.d_other
+		trigger = {
+			not = { tag = SC2 }
+		}
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = FA_in_FPA_flg
+		has_war_with = SGS
+		surrender_progress > 0.5
+		SC2 = {has_country_flag = FA_FPA_protect_SC2	
+		}
+	}
+	option = {
+		#
+		name = sgs.40031.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
 
 
 country_event = {
