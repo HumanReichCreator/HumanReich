@@ -12126,7 +12126,7 @@ country_event = {
 		}
 
 		ai_chance = {
-			base = 35
+			base = var:SGS.SC2_infl_value
 		}
 	}
 	option = {
@@ -12141,7 +12141,7 @@ country_event = {
 		}
 
 		ai_chance = {
-			base = 35
+			base = var:SC2.SC2_FPA_infl_value
 		}
 	}
 }
@@ -12235,11 +12235,12 @@ country_event = {
 			country_event = { id = sgs.40014 }
 		}
 		SGS = {
+			white_peace = SC2
 			annex_country = {
 				target = SC2
 				transfer_troops = no
-				country_event = { id = sgs.40015 }
 			}
+			country_event = { id = sgs.40015 }
 		}
 		ai_chance = {
 			base = 35
@@ -12306,8 +12307,8 @@ country_event = {
 	option = {
 		#
 		name = sgs.4002.1
-		set_state_controller = 61
-		set_state_controller = 311
+		set_state_controller = 64
+		set_state_controller = 85
 		load_oob = SC2_rebel
 		SGS = { country_event = { id = sgs.40020 } }
 		set_country_flag = FA_SC2_has_rebelled
@@ -12349,7 +12350,7 @@ country_event = {
 	trigger = {
 		tag = SC2
 		has_war_with = SGS
-		surrender_progress > 0.5
+		surrender_progress > 0.8
 		has_country_flag = FA_SC2_has_rebelled
 		SGS = { has_country_flag = FA_SC2_skip_infl_to_war }
 	}
@@ -12403,6 +12404,10 @@ country_event = {
 			transfer_state = 61
 			transfer_state = 91
 			transfer_state = 311
+			add_state_core = 70
+			add_state_core = 61
+			add_state_core = 91
+			add_state_core = 311
 		}
 		annex_country = {
 			target = SC2
@@ -12491,7 +12496,7 @@ country_event = {
 		}
 	}
 	fire_only_once = yes
-	is_triggered_only = yes
+	is_triggered_only = no
 	trigger = {
 		has_country_flag = FA_in_FPA_flg
 		has_war_with = SGS
@@ -12506,6 +12511,13 @@ country_event = {
 			tag = SC2
 		}
 		SGS = { country_event = { id = sgs.40032 } }
+		every_country = {
+			limit = {
+				has_country_flag = FA_in_FPA_flg
+				not = { tag = SC2 }
+			}
+			country_event = { id = sgs.40034 days = 2 } 
+		}
 		ai_chance = {
 			base = 35
 		}
@@ -12517,13 +12529,95 @@ country_event = {
 			not = {tag = SC2}
 		}
 		SGS = { country_event = { id = sgs.40032 } }
+		SC2 = { country_event = { id = sgs.40033 days = 2 } }
 		ai_chance = {
 			base = 35
 		}
 	}
 }
 
+country_event = {
+	#SC2/FPA其他人投降-SGS通知
+	id = sgs.40032
+	title = sgs.40032.t
+	desc = { 
+		text = sgs.40032.d
+		trigger = {
+			SC2 = { surrender_progress > 0.5 }
+		}
+	}
+	desc = { 
+		text = sgs.40032.d_other
+		trigger = {
+			not = { SC2 = { surrender_progress > 0.5 } }
+		}
+	}
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = SGS
+	}
+	option = {
+		#
+		name = sgs.40032.1
+		every_country = {
+			limit = {
+				has_country_flag = FA_in_FPA_flg
+			}
+			white_peace = SGS	
+		}
+		SC2 = {
+			leave_faction = yes
+			subject_level1 = yes
+			clr_country_flag = FA_in_FPA_flg
+		}
+		
+		ai_chance = {
+			base = 35
+		}
+	}
+}
 
+country_event = {
+	#FPA其他人投降-SC2通知
+	id = sgs.40033
+	title = sgs.40033.t
+	desc = sgs.40033.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = SC2
+	}
+	option = {
+		#
+		name = sgs.40033.1
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#SC2擅自投降-FPA通知
+	id = sgs.40034
+	title = sgs.40034.t
+	desc = sgs.40034.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		not = {
+			tag = SC2
+			tag = SGS
+		}
+		
+	}
+	option = {
+		#
+		name = sgs.40034.1
+		ai_chance = {
+			base = 35
+		}
+	}
+}
 
 country_event = {
 	#攻占红魔馆

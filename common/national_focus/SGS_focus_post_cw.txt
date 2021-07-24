@@ -1982,7 +1982,7 @@ focus = {
 	focus = {
 		id = SGS_try_to_control_SC2_focus
 		icon = GFX_focus_spa_the_war_of_vengeance
-		cost = 10.00
+		cost = 4
 		prerequisite = {
 			focus = SGS_infl_SC2_focus
 		}
@@ -2017,7 +2017,7 @@ focus = {
 		completion_reward = {
 			custom_effect_tooltip = SGS_try_to_control_SC2_tt
 			hidden_effect = {
-				set_temp_variable = { two_times_FPA = SC2_FPA_infl_value }
+				set_temp_variable = { two_times_FPA = SC2.SC2_FPA_infl_value }
 				multiply_temp_variable = {two_times_FPA = 1.5}
 				if = {
 					limit = { #影响力极高，高过FPA的1.5倍
@@ -2042,7 +2042,7 @@ focus = {
 	focus = {
 		id = SGS_fight_SC2_focus
 		icon = GFX_focus_generic_attack_bulgaria
-		cost = 2
+		cost = 3
 		prerequisite = {
 			focus = SGS_try_to_control_SC2_focus
 			focus = SGS_ambitious_to_all_fairy_focus
@@ -2050,7 +2050,14 @@ focus = {
 		}
 		x = 50
 		y = 4
-		
+		bypass = {
+			SC2 = {
+				or ={
+					exists = no
+					is_puppet = yes
+				}
+			}
+		}
 		completion_reward = {
 			#弄成事件，前提就是决议解锁或者值够了
 			#SC2的事件，根据SGS的行为还会有更多buff
@@ -2069,6 +2076,9 @@ focus = {
 		}
 		prerequisite = {
 			focus = SGS_fight_SC2_focus
+		}
+		available = {
+			has_war = no
 		}
 		x = 48
 		y = 5

@@ -273,7 +273,7 @@ SC2_infl_category = {
 			SC2 = { set_country_flag = FA_in_FPA_flg }
 			CIR = { set_country_flag = FA_in_FPA_flg }
 			LIL = { set_country_flag = FA_in_FPA_flg }
-			add_to_variable = { ROOT.SC2_infl_value = 5 }
+			add_to_variable = { ROOT.SC2_infl_value = 50 }
 			set_variable = { CIR.SC2_infl_value = 25 }
 			set_variable = { LIL.SC2_infl_value = 25 }
 			cal_FPA_infl = yes
