@@ -797,5 +797,28 @@ ideas = {
 				stability_factor = -0.2
 			}
 		}
+		SGS_lake_road_political_idea = {
+			picture = jap_interservice_rivalry_army_dominant
+			modifier = {
+				political_power_factor = 0.1
+				resistance_growth_on_our_occupied_states = -0.05
+				compliance_growth_on_our_occupied_states = -0.05
+			}
+		}
+		SGS_lake_road_economy_idea = {
+			picture = jap_interservice_rivalry_army_dominant
+			modifier = {
+				consumer_goods_factor = -0.03
+				production_speed_industrial_complex_factor = -0.1
+			}
+		}
+		SC2_defence_SGS_idea = {
+			picture = generic_constitutional_guarantees
+			targeted_modifier = {
+				tag = SGS
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.25
+			}
+		}
 	}
 }

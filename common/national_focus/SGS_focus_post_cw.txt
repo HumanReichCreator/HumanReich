@@ -1644,7 +1644,8 @@ focus = {
 		completion_reward = {
 			#条件：控制并拥有红魔馆，SCA不存在，效果：加政治点，解锁SCA地区的造核
 			add_political_power = 50
-			set_country_flag =  FIR_AREA_SCA_MAKE_CORE 
+			set_country_flag =  FIR_AREA_SCA_MAKE_CORE
+			set_country_flag = wusuntunbing_SC2
 			custom_effect_tooltip = SCA_core_make_tooltup
 		}
 
@@ -2065,6 +2066,14 @@ focus = {
     			target = SC2
     			type = fairy_area_unite_war
 			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = FA_SC2_skip_infl_to_war
+					}
+					SC2 = { add_ideas = SC2_defence_SGS_idea }
+				}
+			}
 		}
 	}
 	focus = {
@@ -2129,12 +2138,41 @@ focus = {
 		prerequisite = {
 			focus = SGS_occupy_CIR_focus
 		}
+		available = {
+			controls_state = 116
+			owns_state = 116
+			controls_state = 115
+			owns_state = 115
+			controls_state = 128
+			owns_state = 128
+		}
 		x = -2
 		y = 1
 		relative_position_id = SGS_occupy_CIR_focus
 		completion_reward = {
 			#两个港口加基建，提升顺从减少抵抗，加个buff，经济相关以及政治点数增长。如果可以的话，可以搞个地块传送
-			
+			116 = {
+				add_building_construction = {
+					level = 3
+					instant_build = yes
+					type = infrastructure
+				}
+			}
+			115 = {
+				add_building_construction = {
+					level = 3
+					instant_build = yes
+					type = infrastructure
+				}
+			}
+			128 = {
+				add_building_construction = {
+					level = 3
+					instant_build = yes
+					type = infrastructure
+				}
+			}
+			add_ideas = { SGS_lake_road_political_idea SGS_lake_road_economy_idea }
 		}
 
 	}
