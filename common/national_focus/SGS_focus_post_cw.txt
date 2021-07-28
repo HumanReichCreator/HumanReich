@@ -1686,7 +1686,15 @@ focus = {
 		completion_reward = {
 			#条件：湖主发布任务，CIR的不同线路任务不同，任务达成则会加入你们政府，减少造核花费时间，否则搞事情加叛乱度减稳定并且核心全部造好之后会离开
 			#可以不接受赌注，和任务失败一样并且会再给一个debuff如果激进派战场妖精支持率特别高，只能选择不接受赌注
+			# 和平主义大酱希望尽快让妖精区域恢复和平，需要在限定时间内把其他国家干掉（你不是和平的话）
+			# 社民琪露诺重视民生，需要限定时间内稳定达到XX？/累积多少pp？
+			# 斗争琪露诺需要你限定时间搞出一只大军（非激进BaF）或者赢得3次掠夺战争（激进BaF）
+			# 威民琪露诺需要你限定时间内有多少装备
 			
+			set_country_flag = CIR_guli_task_one_flg
+
+
+
 		}
 
 	}
@@ -2173,6 +2181,7 @@ focus = {
 				}
 			}
 			add_ideas = { SGS_lake_road_political_idea SGS_lake_road_economy_idea }
+			set_country_flag = FA_build_lake_road
 		}
 
 	}

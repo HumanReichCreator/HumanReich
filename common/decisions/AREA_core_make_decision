@@ -318,3 +318,62 @@ SC2_infl_category = {
 		}
 	}
 }
+
+lake_deci_category = {
+	lake_releport_116_to_115 = {
+		visible = {
+			has_country_flag = FA_build_lake_road
+			controls_state = 116
+			owns_state = 116
+			controls_state = 115
+			owns_state = 115
+		}
+		available = {
+		}
+		modifier = {
+		}
+		cost = 30
+		days_remove = 30
+		days_re_enable = 3
+		fire_only_once = no
+		complete_effect = {
+			116 = {
+				teleport_armies = {
+					limit = {
+						tag = ROOT
+					}
+					to_state = 115
+				}
+			}
+		}
+		remove_effect = {
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CIR_guli_task_one_misson = {
+		allowed = { has_country_flag =  CIR_guli_task_one_flg  }
+		available = {
+			has_completed_focus = SGS_unite_fairy_area_focus			# 任务目标
+		}
+		activation = {
+			tag = sgs
+			not = {
+				or = {
+					has_country_flag = SGS_civil_war_start
+					has_country_flag = sgs_peaceful_transit_flag
+				}
+			}
+		}
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = 360
+		timeout_effect = {
+			#不服
+		}
+		complete_effect = {
+			#服你
+		}
+	}
+}
