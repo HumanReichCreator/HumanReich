@@ -19,17 +19,19 @@ country_event = {
 	}
 }
 
-SC2 = {
-	leave_faction = yes
-	subject_level1 = yes
-	clr_country_flag = FA_in_FPA_flg
-}
-every_country = {
+FIR_AREA_SCA_MAKE_CORE
+
+if = {
 	limit = {
-		has_country_flag = FA_in_FPA_flg
+		ROOT = { has_country_flag = FIR_AREA_SCA_MAKE_CORE }
+		is_owned_by = ROOT
+		is_core_of = SC2
+		not = { is_core_of = ROOT}
 	}
-	white_peace = SGS	
+	add_core_of = ROOT
 }
+
+
 
 desc ={
 	text =  sgs.4000.d

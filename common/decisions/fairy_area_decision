@@ -33,7 +33,7 @@ FAIRY_AREA_CORE_MAKE = {
 			
 		}
 		remove_effect = {
-			add_core_of = ROOT
+			FROM = {add_core_of = ROOT}
 		}
 		modifier = {
 			
@@ -77,7 +77,7 @@ FAIRY_AREA_CORE_MAKE = {
 			
 		}
 		remove_effect = {
-			add_core_of = ROOT
+			FROM = {add_core_of = ROOT}
 		}
 		modifier = {
 			
@@ -121,7 +121,7 @@ FAIRY_AREA_CORE_MAKE = {
 			
 		}
 		remove_effect = {
-			add_core_of = ROOT
+			FROM = {add_core_of = ROOT}
 		}
 		modifier = {
 			
@@ -165,7 +165,7 @@ FAIRY_AREA_CORE_MAKE = {
 			
 		}
 		remove_effect = {
-			add_core_of = ROOT
+			FROM = {add_core_of = ROOT}
 		}
 		modifier = {
 			
@@ -209,7 +209,7 @@ FAIRY_AREA_CORE_MAKE = {
 			
 		}
 		remove_effect = {
-			add_core_of = ROOT
+			FROM = {add_core_of = ROOT}
 		}
 		modifier = {
 			
@@ -337,16 +337,48 @@ lake_deci_category = {
 		days_re_enable = 3
 		fire_only_once = no
 		complete_effect = {
+			
+		}
+		remove_effect = {
 			116 = {
 				teleport_armies = {
-					limit = {
-						tag = ROOT
-					}
+					
 					to_state = 115
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	lake_releport_115_to_116 = {
+		visible = {
+			has_country_flag = FA_build_lake_road
+			controls_state = 116
+			owns_state = 116
+			controls_state = 115
+			owns_state = 115
+		}
+		available = {
+		}
+		modifier = {
+		}
+		cost = 30
+		days_remove = 30
+		days_re_enable = 3
+		fire_only_once = no
+		complete_effect = {
+			
+		}
 		remove_effect = {
+			115 = {
+				teleport_armies = {
+					limit = {
+						tag = ROOT
+					}
+					to_state = 116
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
