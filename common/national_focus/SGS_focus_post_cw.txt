@@ -1645,7 +1645,6 @@ focus = {
 			#条件：控制并拥有红魔馆，SCA不存在，效果：加政治点，解锁SCA地区的造核
 			add_political_power = 50
 			set_country_flag =  FIR_AREA_SCA_MAKE_CORE
-			set_country_flag = wusuntunbing_SC2
 			custom_effect_tooltip = SCA_core_make_tooltup
 		}
 
@@ -1691,8 +1690,8 @@ focus = {
 			# 斗争琪露诺需要你限定时间搞出一只大军（非激进BaF）或者赢得3次掠夺战争（激进BaF）
 			# 威民琪露诺需要你限定时间内有多少装备
 			
-			set_country_flag = CIR_guli_task_one_flg
-
+			#set_country_flag = CIR_guli_task_one_flg
+			country_event = { id = fairy_area.101 }
 
 
 		}
@@ -1955,10 +1954,19 @@ focus = {
 	focus = {
 		id = SGS_fight_SCA_focus
 		icon = GFX_focus_attack_soviet
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = SGS_ambitious_to_all_fairy_focus
 			focus = SGS_aim_SCA_focus
+		}
+		bypass = {
+			SCA = {
+				or ={
+					exists = no
+					is_puppet_of  = ROOT
+					has_war_with = ROOT
+				}
+			}
 		}
 		completion_reward = {
 			#
@@ -2063,7 +2071,8 @@ focus = {
 			SC2 = {
 				or ={
 					exists = no
-					is_puppet = yes
+					is_puppet_of  = ROOT
+					has_war_with = ROOT
 				}
 			}
 		}
@@ -2104,6 +2113,8 @@ focus = {
 			add_political_power = 80
 			set_country_flag =  FIR_AREA_SC2_MAKE_CORE 
 			set_variable = {sgs.FIR_AREA_SC2_MC_time = 50 }
+			custom_effect_tooltip = SC2_core_make_tooltup
+			set_country_flag = wusuntunbing_SC2
 		}
 	}
 	focus = {
@@ -2282,6 +2293,15 @@ focus = {
 		}
 		x = 49
 		y = 8
+		bypass = {
+			LIL = {
+				or ={
+					exists = no
+					is_puppet_of  = ROOT
+					has_war_with = ROOT
+				}
+			}
+		}
 		completion_reward = {
 			#
 			declare_war_on = {
@@ -2313,6 +2333,15 @@ focus = {
 		}
 		x = 51
 		y = 8
+		bypass = {
+			CIR = {
+				or ={
+					exists = no
+					is_puppet_of  = ROOT
+					has_war_with = ROOT
+				}
+			}
+		}
 		completion_reward = {
 			#
 			declare_war_on = {
