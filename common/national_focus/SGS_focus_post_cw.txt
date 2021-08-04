@@ -1645,7 +1645,6 @@ focus = {
 			#条件：控制并拥有红魔馆，SCA不存在，效果：加政治点，解锁SCA地区的造核
 			add_political_power = 50
 			set_country_flag =  FIR_AREA_SCA_MAKE_CORE
-			set_country_flag = wusuntunbing_SC2
 			custom_effect_tooltip = SCA_core_make_tooltup
 		}
 
@@ -1691,8 +1690,8 @@ focus = {
 			# 斗争琪露诺需要你限定时间搞出一只大军（非激进BaF）或者赢得3次掠夺战争（激进BaF）
 			# 威民琪露诺需要你限定时间内有多少装备
 			
-			set_country_flag = CIR_guli_task_one_flg
-
+			#set_country_flag = CIR_guli_task_one_flg
+			country_event = { id = fairy_area.101 }
 
 
 		}
@@ -1814,10 +1813,23 @@ focus = {
 		y = 1
 		relative_position_id = SGS_occupy_CIR_focus
 		completion_reward = {
-			#一系列事件，既包括军队们的反应，也包括内部的一个鹰鸽派讨论。最后的结果就是需要靠提升平民派的席位来保持稳定和快速造核
+			#一系列事件，既包括军队们的反应，也包括内部的一个鹰鸽派讨论。
+			#过程是取决于琪露诺的意识形态，但总体是三种结局： 谈判失败人家继续去捣乱or招安加入军队or招安变成平民
+			#大概玩法就是先两拨讨论有个观点，你可以干预并影响两方影响力。然后拿着你们讨论出的方案找人家，人家会不会直接同意取决于他们的意识形态和一些选项。然后不行之后有一次机会再讨论新方案，再失败就gg。但gg比直接把人撵走强
+			#最后的结果就是保持稳定和快速造核or吃军队加成or吃减成
 			#要么也是提升反抗和造核时间，如果琪露诺也跑了的话会有更严重的buff,大概就是全区域造核时间加长
-			#（露娜线或许是另一个套事件链？ 
-			#造核花费也是一个变量，不知道能不能用
+			#（露娜线不用另一个套事件链，只是不需要内部讨论了
+			#造核花费也是一个变量，能用
+			if = {
+				limit = {
+					has_government = oldorder
+				}
+				country_event = { id = sgs.4021 }
+				else = {
+					country_event = { id = sgs.402 }
+				}
+			}
+			
 		}
 
 	}
@@ -1955,10 +1967,19 @@ focus = {
 	focus = {
 		id = SGS_fight_SCA_focus
 		icon = GFX_focus_attack_soviet
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = SGS_ambitious_to_all_fairy_focus
 			focus = SGS_aim_SCA_focus
+		}
+		bypass = {
+			SCA = {
+				or ={
+					exists = no
+					is_puppet_of  = ROOT
+					has_war_with = ROOT
+				}
+			}
 		}
 		completion_reward = {
 			#
@@ -2063,7 +2084,8 @@ focus = {
 			SC2 = {
 				or ={
 					exists = no
-					is_puppet = yes
+					is_puppet_of  = ROOT
+					has_war_with = ROOT
 				}
 			}
 		}
@@ -2104,6 +2126,8 @@ focus = {
 			add_political_power = 80
 			set_country_flag =  FIR_AREA_SC2_MAKE_CORE 
 			set_variable = {sgs.FIR_AREA_SC2_MC_time = 50 }
+			custom_effect_tooltip = SC2_core_make_tooltup
+			set_country_flag = wusuntunbing_SC2
 		}
 	}
 	focus = {
@@ -2282,6 +2306,15 @@ focus = {
 		}
 		x = 49
 		y = 8
+		bypass = {
+			LIL = {
+				or ={
+					exists = no
+					is_puppet_of  = ROOT
+					has_war_with = ROOT
+				}
+			}
+		}
 		completion_reward = {
 			#
 			declare_war_on = {
@@ -2313,6 +2346,15 @@ focus = {
 		}
 		x = 51
 		y = 8
+		bypass = {
+			CIR = {
+				or ={
+					exists = no
+					is_puppet_of  = ROOT
+					has_war_with = ROOT
+				}
+			}
+		}
 		completion_reward = {
 			#
 			declare_war_on = {

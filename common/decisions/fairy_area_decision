@@ -329,6 +329,7 @@ lake_deci_category = {
 			owns_state = 115
 		}
 		available = {
+			not = { has_country_flag = clr_country_flag }
 		}
 		modifier = {
 		}
@@ -337,15 +338,49 @@ lake_deci_category = {
 		days_re_enable = 3
 		fire_only_once = no
 		complete_effect = {
-			
-		}
-		remove_effect = {
 			116 = {
 				teleport_armies = {
 					
 					to_state = 115
 				}
 			}
+			set_country_flag = lake_releport_CD
+		}
+		remove_effect = {
+			clr_country_flag = lake_releport_CD
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	lake_releport_116_to_128 = {
+		visible = {
+			has_country_flag = FA_build_lake_road
+			controls_state = 116
+			owns_state = 116
+			controls_state = 128
+			owns_state = 128
+		}
+		available = {
+			not = { has_country_flag = clr_country_flag }
+		}
+		modifier = {
+		}
+		cost = 30
+		days_remove = 30
+		days_re_enable = 3
+		fire_only_once = no
+		complete_effect = {
+			116 = {
+				teleport_armies = {
+					
+					to_state = 128
+				}
+			}
+			set_country_flag = lake_releport_CD
+		}
+		remove_effect = {
+			clr_country_flag = lake_releport_CD
 		}
 		ai_will_do = {
 			factor = 1
@@ -354,12 +389,13 @@ lake_deci_category = {
 	lake_releport_115_to_116 = {
 		visible = {
 			has_country_flag = FA_build_lake_road
-			controls_state = 116
-			owns_state = 116
 			controls_state = 115
 			owns_state = 115
+			controls_state = 116
+			owns_state = 116
 		}
 		available = {
+			not = { has_country_flag = clr_country_flag }
 		}
 		modifier = {
 		}
@@ -368,44 +404,235 @@ lake_deci_category = {
 		days_re_enable = 3
 		fire_only_once = no
 		complete_effect = {
-			
-		}
-		remove_effect = {
 			115 = {
 				teleport_armies = {
-					limit = {
-						tag = ROOT
-					}
+					
 					to_state = 116
 				}
 			}
+			set_country_flag = lake_releport_CD
+		}
+		remove_effect = {
+			clr_country_flag = lake_releport_CD
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
+	lake_releport_115_to_128 = {
+		visible = {
+			has_country_flag = FA_build_lake_road
+			controls_state = 115
+			owns_state = 115
+			controls_state = 128
+			owns_state = 128
+		}
+		available = {
+			not = { has_country_flag = clr_country_flag }
+		}
+		modifier = {
+		}
+		cost = 30
+		days_remove = 30
+		days_re_enable = 3
+		fire_only_once = no
+		complete_effect = {
+			115 = {
+				teleport_armies = {
+					
+					to_state = 128
+				}
+			}
+			set_country_flag = lake_releport_CD
+		}
+		remove_effect = {
+			clr_country_flag = lake_releport_CD
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	lake_releport_128_to_116 = {
+		visible = {
+			has_country_flag = FA_build_lake_road
+			controls_state = 128
+			owns_state = 128
+			controls_state = 116
+			owns_state = 116
+		}
+		available = {
+			not = { has_country_flag = clr_country_flag }
+		}
+		modifier = {
+		}
+		cost = 30
+		days_remove = 30
+		days_re_enable = 3
+		fire_only_once = no
+		complete_effect = {
+			128 = {
+				teleport_armies = {
+					
+					to_state = 116
+				}
+			}
+			set_country_flag = lake_releport_CD
+		}
+		remove_effect = {
+			clr_country_flag = lake_releport_CD
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	lake_releport_128_to_115 = {
+		visible = {
+			has_country_flag = FA_build_lake_road
+			controls_state = 128
+			owns_state = 128
+			controls_state = 115
+			owns_state = 115
+		}
+		available = {
+			not = { has_country_flag = clr_country_flag }
+		}
+		modifier = {
+		}
+		cost = 30
+		days_remove = 30
+		days_re_enable = 3
+		fire_only_once = no
+		complete_effect = {
+			128 = {
+				teleport_armies = {
+					
+					to_state = 115
+				}
+			}
+			set_country_flag = lake_releport_CD
+		}
+		remove_effect = {
+			clr_country_flag = lake_releport_CD
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	
+	
 	CIR_guli_task_one_misson = {
 		allowed = { has_country_flag =  CIR_guli_task_one_flg  }
 		available = {
-			has_completed_focus = SGS_unite_fairy_area_focus			# 任务目标
+			has_completed_focus = SGS_integrate_SCA_focus	
+			has_completed_focus = SGS_integrate_CIR_focus
+			has_completed_focus = SGS_integrate_LIL_focus		# 任务目标
+			SGS_dove_have_supporter = yes
 		}
 		activation = {
-			tag = sgs
-			not = {
-				or = {
-					has_country_flag = SGS_civil_war_start
-					has_country_flag = sgs_peaceful_transit_flag
-				}
-			}
+			
 		}
 		is_good = yes
 		selectable_mission = yes
-		days_mission_timeout = 360
+		days_mission_timeout = var:CIR.CIR_TASK_time
 		timeout_effect = {
+			country_event = { id = fairy_area.102 }
 			#不服
 		}
 		complete_effect = {
 			#服你
+			country_event = { id = fairy_area.101 }
+		}
+	}
+	CIR_authordemo_task_one_misson = {
+		allowed = { has_country_flag =  CIR_guli_task_one_flg  }
+		available = {
+			has_equipment = {
+				or = {
+					support_equipment_1 > 1000
+					support_equipment_2 > 1000
+				}
+				
+			}	# 任务目标
+			
+		}
+		activation = {
+			
+		}
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = var:CIR.CIR_TASK_time
+		timeout_effect = {
+			country_event = { id = fairy_area.102 }
+			#不服
+		}
+		complete_effect = {
+			#服你
+			country_event = { id = fairy_area.101 }
+		}
+	}
+	CIR_qinwai_task_one_misson = {
+		allowed = { has_country_flag =  CIR_guli_task_one_flg  }
+		available = {
+			has_stability > 0.65	# 任务目标
+			has_political_power > 1000
+			SGS_dove_get_more = yes
+		}
+		activation = {
+			
+		}
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = var:CIR.CIR_TASK_time
+		timeout_effect = {
+			country_event = { id = fairy_area.102 }
+			#不服
+		}
+		complete_effect = {
+			#服你
+			country_event = { id = fairy_area.101 }
+		}
+	}
+	CIR_neworder_task_one_misson = {
+		allowed = { has_country_flag =  CIR_guli_task_one_flg  }
+		available = {
+			num_divisions > 150
+			SGS_hawk_have_supporter = yes
+		}
+		activation = {
+			
+		}
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = var:CIR.CIR_TASK_time
+		timeout_effect = {
+			country_event = { id = fairy_area.102 }
+			#不服
+		}
+		complete_effect = {
+			#服你
+			country_event = { id = fairy_area.101 }
+		}
+	}
+	CIR_neworder_elite_task_one_misson = {
+		allowed = { has_country_flag =  CIR_guli_task_one_flg  }
+		available = {
+			has_army_experience = 300
+			SGS_hawk_get_more = yes
+		}
+		activation = {
+			
+		}
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = var:CIR.CIR_TASK_time
+		timeout_effect = {
+			country_event = { id = fairy_area.102 }
+			#不服
+		}
+		complete_effect = {
+			#服你
+			country_event = { id = fairy_area.101 }
 		}
 	}
 }
