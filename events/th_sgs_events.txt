@@ -12693,7 +12693,43 @@ country_event = {
 		}
 	}
 }
-
+#琪露诺军队问题
+country_event = {
+	#内部讨论
+	id = sgs.402
+	title = sgs.402.t
+	desc = sgs.402.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	option = {
+		name = sgs.402.1
+		if = {
+			limit = {
+				SGS_peaceful_transit_gov = yes
+			}
+			random_list = {
+				var:sgs_hawk_infl = {
+					country_event = { id = sgs.4022 } #直接不谈
+				}
+				var:sgs_dove_infl = {
+					country_event = { id = sgs.4023 } #劝人参军
+				}
+			}
+			else = {#默认和平线不会走这边
+				var:sgs_hawk_infl = {
+					country_event = { id = sgs.4023 } #劝人参军
+				}
+				var:sgs_dove_infl = {
+					country_event = { id = sgs.4024 } #劝人复员
+				}
+			}
+		}
+	}
+	
+}
 
 #tno小故事专场
 country_event = {
