@@ -1,0 +1,53 @@
+{
+    "MetaCodeSnippet ": {
+        "scope": "json,jsonc",
+		"prefix": "new_snippet",
+		"body": [
+			"\"${Names}\": {",
+            "    \"scope\": \"hoi4,paradox,plaintext,lua\",",
+            "    \"prefix\": \"${prefix}\",",
+            "    \"body\": [",
+            "        \"\",",
+            "        \"\",",
+            "        \"\",",
+            "        \"\",",
+            "    ]",
+            "}"
+		]
+	},
+    "TriggeredCountryEvent ": {
+        "scope": "hoi4,paradox,plaintext,lua",
+		"prefix": "_triggered_country_event",
+		"body": [
+			"country_event = {",
+			"    id = ${Namespace}.${Id}",
+            "    # description",
+			"    title = ${Namespace}.${Id}.t",
+			"    desc = ${Namespace}.${Id}.d",
+            "    fire_only_once = yes",
+			"    is_triggered_only = yes",
+            "    trigger = {",
+            "        tag = ${Namespace}",
+            "    }",
+            "    option = {",
+            "        #",
+            "        name = ${Namespace}.${Id}.1",
+            "        ai_chance = { base = 1 }",
+            "    }",
+			"}"
+		]
+	},
+    "EventOption": {
+        "scope": "hoi4,paradox,plaintext,lua",
+        "prefix": "_option_of_event",
+        "body": [
+            "option = {",
+            "    #",
+            "    name = ${Namespace}.${Id}.${num:2}",
+            "    ai_chance = { base = 1 }",
+            "}"
+        ]
+    }
+    
+}
+

@@ -12730,6 +12730,34 @@ country_event = {
 	}
 	
 }
+country_event = {
+	id = sgs.4021
+	# 桑尼线跳过讨论
+	title = sgs.4021.t
+	desc = sgs.4021.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#直接不要
+		name = sgs.4021.1
+		country_event = { id = sgs.40210 }
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#收他们入伍
+		name = sgs.4021.2
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#让他们复员
+		name = sgs.4021.3
+		ai_chance = { base = 1 }
+	}
+}
+
 
 #tno小故事专场
 country_event = {
