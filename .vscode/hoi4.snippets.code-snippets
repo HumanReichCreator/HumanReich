@@ -12,7 +12,7 @@
             "        \"\",",
             "        \"\",",
             "    ]",
-            "}"
+            "},"
 		]
 	},
     "TriggeredCountryEvent ": {
@@ -20,8 +20,8 @@
 		"prefix": "_triggered_country_event",
 		"body": [
 			"country_event = {",
-			"    id = ${Namespace}.${Id}",
             "    # description",
+			"    id = ${Namespace}.${Id}",
 			"    title = ${Namespace}.${Id}.t",
 			"    desc = ${Namespace}.${Id}.d",
             "    fire_only_once = yes",
@@ -47,7 +47,31 @@
             "    ai_chance = { base = 1 }",
             "}"
         ]
-    }
+    },
+    "SimpleLoc": {
+        "scope": "yaml,hoi4,paradox,plaintext,lua",
+        "prefix": "_loc_simple",
+        "body": [
+            "${tag}:0 \"content\"",
+        ]
+    },
+    "DescLoc": {
+        "scope": "yaml,hoi4,paradox,plaintext,lua",
+        "prefix": "_loc_with_desc",
+        "body": [
+            "${tag}:0 \"content\"",
+            "${tag}_desc:0 \"desc content\"",
+        ]
+    },
+    "EventLoc": {
+        "scope": "yaml,hoi4,paradox,plaintext,lua",
+        "prefix": "_loc_of_event",
+        "body": [
+            "${Namespace}.${Id}.t:0 \"title\"",
+            "${Namespace}.${Id}.d:0 \"desc\"",
+            "${Namespace}.${Id}.1:0 \"option1\"",
+        ]
+    },
     
 }
 

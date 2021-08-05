@@ -12732,7 +12732,7 @@ country_event = {
 }
 country_event = {
 	id = sgs.4021
-	# 桑尼线跳过讨论
+	#　露娜线跳过讨论
 	title = sgs.4021.t
 	desc = sgs.4021.d
 	fire_only_once = yes
@@ -12741,7 +12741,7 @@ country_event = {
 		tag = sgs
 	}
 	option = {
-		#直接不要
+		#直接不要（关起来）
 		name = sgs.4021.1
 		country_event = { id = sgs.40210 }
 		ai_chance = { base = 1 }
@@ -12758,6 +12758,46 @@ country_event = {
 	}
 }
 
+
+#琪露诺赌约
+country_event = {
+	id = sgs.403
+	# 开始谈判
+	title = sgs.403.t
+	desc = sgs.403.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#直接撵走
+		name = sgs.403.1
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#来谈判
+		name = sgs.403.2
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	id = sgs.4031
+	# 琪露诺run了
+	title = sgs.4031.t
+	desc = sgs.4031.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.4031.1
+		#反抗界限减少，加长造核时间
+		ai_chance = { base = 1 }
+	}
+}
 
 #tno小故事专场
 country_event = {
