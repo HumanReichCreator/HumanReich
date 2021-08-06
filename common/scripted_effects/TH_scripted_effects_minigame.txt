@@ -13,14 +13,15 @@ minigame_21p_player_draw = {
         min = 1
         max = 10
     }
+    round_variable = num_dogs
     add_to_variable = { minigame_21p_player_point = num_dogs }
     if = {
         limit = {
-            check_variable = { minigame_21p_player_point <=  minigame_21p_player_limit }
+            check_variable = { minigame_21p_player_point >  minigame_21p_player_limit }
         }
-        country_event = {id = minigame_21p.3 } #对方回合
+        country_event = {id = minigame_21p.4 } #你死了
         else = {
-            country_event = {id = minigame_21p.4 } #你死了
+            country_event = {id = minigame_21p.3 } #对方回合
         }
     }
 }
@@ -34,7 +35,7 @@ minigame_21p_player_stop_draw = {
         }
         country_event = { id = minigame_21p.6 }
         else = {
-            
+            set_variable = {num_dogs = 0}
             country_event = {id = minigame_21p.3 }
         }
     }
@@ -47,14 +48,15 @@ minigame_21p_AI_draw = {
         min = 1
         max = 10
     }
+    round_variable = num_dogs
     add_to_variable = { minigame_21p_AI_point = num_dogs }
     if = {
         limit = {
-            check_variable = { minigame_21p_AI_point <=  minigame_21p_AI_limit }
+            check_variable = { minigame_21p_AI_point >  minigame_21p_AI_limit }
         }
-        country_event = {id = minigame_21p.2 } #玩家回合
+        country_event = {id = minigame_21p.5 } #对方死了
         else = {
-            country_event = {id = minigame_21p.5 } #对方死了
+            country_event = {id = minigame_21p.2 } #玩家回合
         }
     }
 }
@@ -67,6 +69,7 @@ minigame_21p_AI_stop_draw = {
         }
         country_event = { id = minigame_21p.6 }
         else = {
+            set_variable = {num_dogs = 0}
             country_event = {id = minigame_21p.2 }
         }
     }

@@ -80,7 +80,9 @@ country_event = {
 		if = {
 			limit = {
 				check_variable = {
-					minigame_21p_AI_point <= AI_safe_line
+					var = minigame_21p_AI_point
+					value = AI_safe_line
+					compare = less_than_or_equals
 				}
 			}
 			minigame_21p_AI_draw = yes #如果稳不输的话电脑必抓
@@ -104,7 +106,7 @@ country_event = {
 		trigger = {
 			has_country_flag = minigame_21p_AI_stop 
 		}
-		minigame_21p_player_stop_draw = yes
+		minigame_21p_AI_stop_draw = yes
 		ai_chance = { base = 1 }
 	}
 }
@@ -174,7 +176,7 @@ country_event = {
 	}
 	option = {
 		#对方赢
-		name = minigame_21p.6.2
+		name = minigame_21p.6.3
 		trigger = {
 			check_variable = { minigame_21p_player_point < minigame_21p_AI_point }
 		}

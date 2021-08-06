@@ -7,7 +7,7 @@
  minigame_21p.2.t:0 "我方回合"
  minigame_21p.2.d:0 "上一回对面抽了[?num_dogs|0]\n你的点数是：[?minigame_21p_player_point|0]/[?minigame_21p_player_limit|0]\n对面的点数是：[?minigame_21p_AI_point|0]/[?minigame_21p_AI_limit|0]\n[Player21pStatus]\n[AI21pStatus]"
  minigame_21p.2.1:0 "加！"
- minigame_21p.2.1:0 "不加！"
+ minigame_21p.2.2:0 "不加！"
  minigame_21p.3.t:0 "对方回合"
  minigame_21p.3.d:0 "上一回你抽了[?num_dogs|0]\n你的点数是：[?minigame_21p_player_point|0]/[?minigame_21p_player_limit|0]\n对面的点数是：[?minigame_21p_AI_point|0]/[?minigame_21p_AI_limit|0]\n[Player21pStatus]\n[AI21pStatus]"
  minigame_21p.3.1:0 "对面行动"
@@ -16,12 +16,13 @@
  minigame_21p.4.d:0 "上一回你抽了[?num_dogs|0]\n你的点数是：[?minigame_21p_player_point|0]/[?minigame_21p_player_limit|0]\n对面的点数是：[?minigame_21p_AI_point|0]/[?minigame_21p_AI_limit|0]\n[Player21pStatus]\n[AI21pStatus]"
  minigame_21p.4.1:0 "决斗结束"
  minigame_21p.5.t:0 "对面爆了"
- minigame_21p.5.d:0 "上一回你抽了[?num_dogs|0]\n你的点数是：[?minigame_21p_player_point|0]/[?minigame_21p_player_limit|0]\n对面的点数是：[?minigame_21p_AI_point|0]/[?minigame_21p_AI_limit|0]\n[Player21pStatus]\n[AI21pStatus]"
+ minigame_21p.5.d:0 "上一回对面抽了[?num_dogs|0]\n你的点数是：[?minigame_21p_player_point|0]/[?minigame_21p_player_limit|0]\n对面的点数是：[?minigame_21p_AI_point|0]/[?minigame_21p_AI_limit|0]\n[Player21pStatus]\n[AI21pStatus]"
  minigame_21p.5.1:0 "决斗结束"
  minigame_21p.6.t:0 "都停了"
  minigame_21p.6.d:0 "上一回的人抽了[?num_dogs|0]\n你的点数是：[?minigame_21p_player_point|0]/[?minigame_21p_player_limit|0]\n对面的点数是：[?minigame_21p_AI_point|0]/[?minigame_21p_AI_limit|0]\n[Player21pStatus]\n[AI21pStatus]"
- minigame_21p.6.1:0 "决斗结束"
-
+ minigame_21p.6.1:0 "平局，再来一局"
+ minigame_21p.6.2:0 "你赢了"
+ minigame_21p.6.3:0 "你输了"
 
 
  Player21pStatusStop:0 "你停了"
