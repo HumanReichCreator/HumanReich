@@ -72,6 +72,17 @@
             "${Namespace}.${Id}.1:0 \"option1\"",
         ]
     },
-    
+    "NormalIdea": {
+        "scope": "hoi4,paradox,plaintext,lua",
+        "prefix": "_idea_normal",
+        "body": [
+            "${Name}_idea = {",
+            "    picture = ${pic}",
+            "    modifier = {",
+            "        $0",
+            "    }",
+            "}",
+        ]
+    },
 }
 

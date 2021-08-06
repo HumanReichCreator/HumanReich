@@ -820,5 +820,30 @@ ideas = {
 				defense_bonus_against = 0.25
 			}
 		}
+		SGS_CIR_uprise_idea = {
+			picture = cir9
+			modifier = {
+				resistance_target_on_our_occupied_states = -0.2
+				occupation_cost = 0.1
+				stability_factor = -0.05
+			}
+		}
+		SGS_CIR_army_uprise_idea = {
+			picture = generic_constitutional_guarantees
+			modifier = {
+				occupation_cost = 0.1
+				resistance_growth_on_our_occupied_states = 0.3
+			}
+		}
+		SGS_CIR_and_army_uprise_idea = {
+			picture = generic_constitutional_guarantees
+			modifier = {
+				occupation_cost = 0.3
+				resistance_growth_on_our_occupied_states = 0.5
+				resistance_target_on_our_occupied_states = -0.3
+				stability_factor = -0.08
+			}
+		}
+
 	}
 }

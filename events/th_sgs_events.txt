@@ -12773,11 +12773,22 @@ country_event = {
 	option = {
 		#直接撵走
 		name = sgs.403.1
+		hidden_effect = {
+			country_event = { id = sgs.4031 }
+		}
+		custom_effect_tooltip = SGS_will_arrest_CIR_tt
 		ai_chance = { base = 1 }
 	}
 	option = {
 		#来谈判
 		name = sgs.403.2
+		if = {
+			limit = {
+				has_government = neworder
+				CIR_neworder_way = yes
+			}
+			country_event = { id = sgs.4032 } #如果桑尼上台而且琪露诺走了斗争线，那么会要求决斗
+		}
 		ai_chance = { base = 1 }
 	}
 }
@@ -12785,7 +12796,18 @@ country_event = {
 	id = sgs.4031
 	# 琪露诺run了
 	title = sgs.4031.t
-	desc = sgs.4031.d
+	desc = {#任务失败
+		text = sgs.4031.d
+		trigger = {
+			has_country_flag = SGS_CIR_pulich_task
+		}
+	}
+	desc = {#羁押的时候被琪露诺逃了
+		text = sgs.4031.d_voi
+		trigger = {
+			not = {has_country_flag = SGS_CIR_pulich_task}
+		}
+	}
 	fire_only_once = yes
 	is_triggered_only = yes
 	trigger = {
@@ -12795,6 +12817,41 @@ country_event = {
 		#
 		name = sgs.4031.1
 		#反抗界限减少，加长造核时间
+		set_variable = { SGS.FIR_AREA_CIR_MC_time = 50}
+		custom_effect_tooltip = FA_make_core_time_up
+		add_ideas = SGS_CIR_uprise_idea
+		#如果不是任务失败的话还会扣pp
+		if = {
+			limit = {
+				not = {has_country_flag = SGS_CIR_pulich_task}
+			}
+			add_political_power = -30
+		}
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	# 琪露诺提出决斗
+	id = sgs.4032
+	title = sgs.4032.t
+	desc = sgs.4032.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#同意
+		name = sgs.4032.1
+		country_event = {id = sgs.40320}
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#问问还有没有别的选择
+		name = sgs.4032.2
+		set_country_flag = sgs_fear_to_duel_cir_flag
+		country_event = { id = sgs.4033 }
 		ai_chance = { base = 1 }
 	}
 }
