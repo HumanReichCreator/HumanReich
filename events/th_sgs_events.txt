@@ -12844,14 +12844,46 @@ country_event = {
 	option = {
 		#同意
 		name = sgs.4032.1
-		country_event = {id = sgs.40320}
+		set_variable = { minigame_21p_player_limit = 21 }
+		set_variable = { minigame_21p_AI_limit = 24 }
+		set_country_flag = sgs_deal_with_CIR
+		minigame_21p_init = yes
+		country_event = { id = minigame_21p.1 }
 		ai_chance = { base = 1 }
 	}
 	option = {
 		#问问还有没有别的选择
 		name = sgs.4032.2
 		set_country_flag = sgs_fear_to_duel_cir_flag
+		custom_effect_tooltip = sgs_fear_to_duel_cir_tt
 		country_event = { id = sgs.4033 }
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 决斗结束
+	id = sgs.40320
+	title = sgs.40320.t
+	desc = sgs.40320.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#玩家胜出
+		name = sgs.40320.1
+		trigger = {
+			check_variable = { minigame_21p_winner = 1 }
+		}
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#对方胜出
+		name = sgs.40320.2
+		trigger = {
+			check_variable = { minigame_21p_winner = 2 }
+		}
 		ai_chance = { base = 1 }
 	}
 }

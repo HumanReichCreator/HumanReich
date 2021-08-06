@@ -1,0 +1,82 @@
+minigame_21p_init = {
+    set_variable = { minigame_21p_player_point = 0	}
+	set_variable = { minigame_21p_AI_point = 0	}
+    set_variable = { minigame_21p_winner = 0 }
+    clr_country_flag = minigame_21p_player_stop
+    clr_country_flag = minigame_21p_AI_stop
+}
+
+minigame_21p_player_draw = {
+    randomize_variable = {
+        var = num_dogs
+        distribution = binomial
+        min = 1
+        max = 10
+    }
+    add_to_variable = { minigame_21p_player_point = num_dogs }
+    if = {
+        limit = {
+            check_variable = { minigame_21p_player_point <=  minigame_21p_player_limit }
+        }
+        country_event = {id = minigame_21p.3 } #对方回合
+        else = {
+            country_event = {id = minigame_21p.4 } #你死了
+        }
+    }
+}
+
+minigame_21p_player_stop_draw = {
+    set_country_flag = minigame_21p_player_stop
+    if = {
+        limit = {
+            has_country_flag = minigame_21p_player_stop
+            has_country_flag = minigame_21p_AI_stop
+        }
+        country_event = { id = minigame_21p.6 }
+        else = {
+            
+            country_event = {id = minigame_21p.3 }
+        }
+    }
+}
+
+minigame_21p_AI_draw = {
+    randomize_variable = {
+        var = num_dogs
+        distribution = binomial
+        min = 1
+        max = 10
+    }
+    add_to_variable = { minigame_21p_AI_point = num_dogs }
+    if = {
+        limit = {
+            check_variable = { minigame_21p_AI_point <=  minigame_21p_AI_limit }
+        }
+        country_event = {id = minigame_21p.2 } #玩家回合
+        else = {
+            country_event = {id = minigame_21p.5 } #对方死了
+        }
+    }
+}
+minigame_21p_AI_stop_draw = {
+    set_country_flag = minigame_21p_AI_stop
+    if = {
+        limit = {
+            has_country_flag = minigame_21p_player_stop
+            has_country_flag = minigame_21p_AI_stop
+        }
+        country_event = { id = minigame_21p.6 }
+        else = {
+            country_event = {id = minigame_21p.2 }
+        }
+    }
+    
+}
+minigame_21p_callback = {
+    if = {
+        limit = { has_country_flag = sgs_deal_with_CIR }
+        country_event = { id = sgs.40320 }
+        clr_country_flag = sgs_deal_with_CIR
+    }
+
+}
