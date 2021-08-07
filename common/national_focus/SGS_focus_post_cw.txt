@@ -1674,7 +1674,7 @@ focus = {
 	}
 	focus = {
 		id = SGS_deal_with_leaders_focus
-		icon = GFX_focus_eng_motion_of_no_confidence
+		icon = GFX_focus_focus_CIR_head
 		cost = 10.00
 		prerequisite = {
 			focus = SGS_occupy_CIR_focus
@@ -1841,7 +1841,7 @@ focus = {
 			focus = SGS_no_peace_diplo_focus
 		}
 		bypass = {
-			SC2_can_be_infled = yes
+			SC2_can_be_infled = no
 		}
 		x = 3
 		y = 1
@@ -1966,7 +1966,7 @@ focus = {
 	}
 	focus = {
 		id = SGS_fight_SCA_focus
-		icon = GFX_focus_attack_soviet
+		icon = GFX_focus_focus_war_SCA
 		cost = 5
 		prerequisite = {
 			focus = SGS_ambitious_to_all_fairy_focus
@@ -2001,7 +2001,7 @@ focus = {
 			focus = SGS_SC2_issue_focus
 		}
 		bypass = {
-			SC2_can_be_infled = yes
+			SC2_can_be_infled = no
 		}
 		x = 52
 		y = 2
@@ -2071,7 +2071,7 @@ focus = {
 	}
 	focus = {
 		id = SGS_fight_SC2_focus
-		icon = GFX_focus_generic_attack_bulgaria
+		icon = GFX_focus_focus_war_SC2
 		cost = 3
 		prerequisite = {
 			focus = SGS_try_to_control_SC2_focus
@@ -2299,7 +2299,7 @@ focus = {
 	}
 	focus = {
 		id = SGS_fight_LIL_focus
-		icon = GFX_focus_generic_attack_cyprus
+		icon = GFX_focus_focus_war_LIL
 		cost = 10.00
 		prerequisite = {
 			focus = SGS_prepare_LIL_focus
@@ -2339,7 +2339,7 @@ focus = {
 	}
 	focus = {
 		id = SGS_fight_CIR_focus
-		icon = GFX_focus_generic_attack_greece
+		icon = GFX_focus_focus_war_CIR
 		cost = 10.00
 		prerequisite = {
 			focus = SGS_prepare_CIR_focus

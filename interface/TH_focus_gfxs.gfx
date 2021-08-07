@@ -1,5 +1,189 @@
 spriteTypes = {
 
+
+	spriteType = {
+		name = "GFX_focus_focus_war_SC2"
+		texturefile = "gfx/interface/goals/focus_war_SC2.png"
+	}
+	
+	  spriteType = {
+		name = "GFX_focus_focus_war_SC2_shine"
+		texturefile = "gfx/interface/goals/focus_war_SC2.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+		  animationmaskfile = "gfx/interface/goals/focus_war_SC2.png"
+		  animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		  animationrotation = -90.0
+		  animationlooping = no
+		  animationtime = 0.75
+		  animationdelay = 0
+		  animationblendmode = "add"
+		  animationtype = "scrolling"
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	
+		animation = {
+		  animationmaskfile = "gfx/interface/goals/focus_war_SC2.png"
+		  animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		  animationrotation = 90.0
+		  animationlooping = no
+		  animationtime = 0.75
+		  animationdelay = 0
+		  animationblendmode = "add"
+		  animationtype = "scrolling"
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	  }
+	spriteType = {
+		name = "GFX_focus_focus_war_SCA"
+		texturefile = "gfx/interface/goals/focus_war_SCA.png"
+	}
+	
+	  spriteType = {
+		name = "GFX_focus_focus_war_SCA_shine"
+		texturefile = "gfx/interface/goals/focus_war_SCA.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+		  animationmaskfile = "gfx/interface/goals/focus_war_SCA.png"
+		  animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		  animationrotation = -90.0
+		  animationlooping = no
+		  animationtime = 0.75
+		  animationdelay = 0
+		  animationblendmode = "add"
+		  animationtype = "scrolling"
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	
+		animation = {
+		  animationmaskfile = "gfx/interface/goals/focus_war_SCA.png"
+		  animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		  animationrotation = 90.0
+		  animationlooping = no
+		  animationtime = 0.75
+		  animationdelay = 0
+		  animationblendmode = "add"
+		  animationtype = "scrolling"
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	  }
+	
+	spriteType = {
+		name = "GFX_focus_focus_war_LIL"
+		texturefile = "gfx/interface/goals/focus_war_LIL.png"
+	}
+	
+	  spriteType = {
+		name = "GFX_focus_focus_war_LIL_shine"
+		texturefile = "gfx/interface/goals/focus_war_LIL.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+		  animationmaskfile = "gfx/interface/goals/focus_war_LIL.png"
+		  animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		  animationrotation = -90.0
+		  animationlooping = no
+		  animationtime = 0.75
+		  animationdelay = 0
+		  animationblendmode = "add"
+		  animationtype = "scrolling"
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	
+		animation = {
+		  animationmaskfile = "gfx/interface/goals/focus_war_LIL.png"
+		  animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		  animationrotation = 90.0
+		  animationlooping = no
+		  animationtime = 0.75
+		  animationdelay = 0
+		  animationblendmode = "add"
+		  animationtype = "scrolling"
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	  }
+
+	spriteType = {
+		name = "GFX_focus_focus_war_CIR"
+		texturefile = "gfx/interface/goals/focus_war_CIR.png"
+	}
+	
+	  spriteType = {
+		name = "GFX_focus_focus_war_CIR_shine"
+		texturefile = "gfx/interface/goals/focus_war_CIR.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+		  animationmaskfile = "gfx/interface/goals/focus_war_CIR.png"
+		  animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		  animationrotation = -90.0
+		  animationlooping = no
+		  animationtime = 0.75
+		  animationdelay = 0
+		  animationblendmode = "add"
+		  animationtype = "scrolling"
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	
+		animation = {
+		  animationmaskfile = "gfx/interface/goals/focus_war_CIR.png"
+		  animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		  animationrotation = 90.0
+		  animationlooping = no
+		  animationtime = 0.75
+		  animationdelay = 0
+		  animationblendmode = "add"
+		  animationtype = "scrolling"
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	  }
+
+	spriteType = {
+		name = "GFX_focus_focus_CIR_head"
+		texturefile = "gfx/interface/goals/focus_CIR_head.png"
+	}
+	
+	  spriteType = {
+		name = "GFX_focus_focus_CIR_head_shine"
+		texturefile = "gfx/interface/goals/focus_CIR_head.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+		  animationmaskfile = "gfx/interface/goals/focus_CIR_head.png"
+		  animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		  animationrotation = -90.0
+		  animationlooping = no
+		  animationtime = 0.75
+		  animationdelay = 0
+		  animationblendmode = "add"
+		  animationtype = "scrolling"
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	
+		animation = {
+		  animationmaskfile = "gfx/interface/goals/focus_CIR_head.png"
+		  animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		  animationrotation = 90.0
+		  animationlooping = no
+		  animationtime = 0.75
+		  animationdelay = 0
+		  animationblendmode = "add"
+		  animationtype = "scrolling"
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	  }
 spriteType = {
 	name = "GFX_focus_three_fairies_confer"
 	texturefile = "gfx/interface/goals/focus_three_fairies.png"
