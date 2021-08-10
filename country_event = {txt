@@ -86,3 +86,98 @@ SGS_RT_reduce_progress = yes
  	
 
 set_state_controller = 345
+
+
+
+
+CIR_authordemo_task_one_misson = {
+		allowed = { has_country_flag =  CIR_guli_task_one_flg  }
+		available = {
+			has_equipment = {
+				or = {
+					support_equipment_1 > 1000
+					support_equipment_2 > 1000
+				}
+				
+			}	# 任务目标
+			
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = var:CIR.CIR_TASK_time
+		timeout_effect = {
+			country_event = { id = fairy_area.102 }
+			#不服
+		}
+		complete_effect = {
+			#服你
+			country_event = { id = fairy_area.101 }
+		}
+	}
+	CIR_qinwai_task_one_misson = {
+		allowed = { has_country_flag =  CIR_guli_task_one_flg  }
+		available = {
+			has_stability > 0.65	# 任务目标
+			has_political_power > 1000
+			SGS_dove_get_more = yes
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = var:CIR.CIR_TASK_time
+		timeout_effect = {
+			country_event = { id = fairy_area.102 }
+			#不服
+		}
+		complete_effect = {
+			#服你
+			country_event = { id = fairy_area.101 }
+		}
+	}
+	CIR_neworder_task_one_misson = {
+		allowed = { has_country_flag =  CIR_guli_task_one_flg  }
+		available = {
+			num_divisions > 150
+			SGS_hawk_have_supporter = yes
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = var:CIR.CIR_TASK_time
+		timeout_effect = {
+			country_event = { id = fairy_area.102 }
+			#不服
+		}
+		complete_effect = {
+			#服你
+			country_event = { id = fairy_area.101 }
+		}
+	}
+	CIR_neworder_elite_task_one_misson = {
+		allowed = { has_country_flag =  CIR_guli_task_one_flg  }
+		available = {
+			has_army_experience = 300
+			SGS_hawk_get_more = yes
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = var:CIR.CIR_TASK_time
+		timeout_effect = {
+			country_event = { id = fairy_area.102 }
+			#不服
+		}
+		complete_effect = {
+			#服你
+			country_event = { id = fairy_area.101 }
+		}
+	}

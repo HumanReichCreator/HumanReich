@@ -1691,7 +1691,7 @@ focus = {
 			# 威民琪露诺需要你限定时间内有多少装备
 			
 			#set_country_flag = CIR_guli_task_one_flg
-			country_event = { id = fairy_area.101 }
+			country_event = { id = sgs.403 }
 
 
 		}
@@ -2127,7 +2127,7 @@ focus = {
 			set_country_flag =  FIR_AREA_SC2_MAKE_CORE 
 			set_variable = {sgs.FIR_AREA_SC2_MC_time = 50 }
 			custom_effect_tooltip = SC2_core_make_tooltup
-			set_country_flag = wusuntunbing_SC2
+			SC2 = {can_core = yes}
 		}
 	}
 	focus = {
