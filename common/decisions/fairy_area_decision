@@ -522,12 +522,102 @@ lake_deci_category = {
 	
 	
 	CIR_guli_task_one_misson = {
-		allowed = { has_country_flag =  CIR_guli_task_one_flg  }
+		allowed = { always = no  }
 		available = {
 			has_completed_focus = SGS_integrate_SCA_focus	
 			has_completed_focus = SGS_integrate_CIR_focus
 			has_completed_focus = SGS_integrate_LIL_focus		# 任务目标
 			has_country_flag = sgs_all_integrated_peacelly
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = var:CIR.CIR_TASK_time
+		timeout_effect = {
+			country_event = { id = sgs.4031 }
+			#不服
+		}
+		complete_effect = {
+			#服你
+			country_event = { id = sgs.4034 }
+		}
+	}
+
+	CIR_authordemo_task_one_misson = {
+		allowed = { always = no  }
+		available = {
+			has_equipment = {
+				or = {
+					support_equipment_1 > 1000
+					support_equipment_2 > 1000
+				}	
+			}	# 任务目标
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = var:CIR.CIR_TASK_time
+		timeout_effect = {
+			country_event = { id = sgs.4031 }
+			#不服
+		}
+		complete_effect = {
+			#服你
+			country_event = { id = sgs.4034 }
+		}
+	}
+	CIR_qinwai_task_one_misson = {
+		allowed = { always = no  }
+		available = {
+			has_stability > 0.65	# 任务目标
+			has_political_power > 1000
+			SGS_dove_get_more = yes
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = var:CIR.CIR_TASK_time
+		timeout_effect = {
+			country_event = { id = sgs.4031 }
+			#不服
+		}
+		complete_effect = {
+			#服你
+			country_event = { id = sgs.4034 }
+		}
+	}
+	CIR_neworder_task_one_misson = {
+		allowed = { always = no  }
+		available = {
+			num_divisions > 150
+			SGS_hawk_have_supporter = yes
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = var:CIR.CIR_TASK_time
+		timeout_effect = {
+			country_event = { id = sgs.4031 }
+			#不服
+		}
+		complete_effect = {
+			#服你
+			country_event = { id = sgs.4034 }
+		}
+	}
+	CIR_neworder_elite_task_one_misson = {
+		allowed = { always = no  }
+		available = {
+			has_army_experience = 300
+			SGS_hawk_get_more = yes
 		}
 		activation = {
 			always = no

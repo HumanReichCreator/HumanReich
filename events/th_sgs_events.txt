@@ -12717,6 +12717,9 @@ country_event = {
 				var:sgs_dove_infl = {
 					country_event = { id = sgs.4023 } #劝人参军
 				}
+				10 = {
+					country_event = { id = sgs.4024 } #劝人复员
+				}
 			}
 			else = {#默认和平线不会走这边
 				var:sgs_hawk_infl = {
@@ -12724,6 +12727,9 @@ country_event = {
 				}
 				var:sgs_dove_infl = {
 					country_event = { id = sgs.4024 } #劝人复员
+				}
+				10 = {
+					country_event = { id = sgs.4022 } #直接不谈
 				}
 			}
 		}
@@ -12743,21 +12749,154 @@ country_event = {
 	option = {
 		#直接不要（关起来）
 		name = sgs.4021.1
-		country_event = { id = sgs.40210 }
+		country_event = { id = sgs.40220 }
 		ai_chance = { base = 1 }
 	}
 	option = {
 		#收他们入伍
 		name = sgs.4021.2
+		country_event = { id = sgs.40230 }
 		ai_chance = { base = 1 }
 	}
 	option = {
 		#让他们复员
 		name = sgs.4021.3
+		country_event = { id = sgs.40240 }
 		ai_chance = { base = 1 }
 	}
 }
 
+country_event = {
+	# 讨论结果：关起来
+	id = sgs.4022
+	title = sgs.4022.t
+	desc = sgs.4022.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#同意
+		name = sgs.4022.1
+		if = {
+			limit = {
+				SGS_peaceful_transit_gov = yes
+			}
+			SGS_hawk_rise5 = yes
+			else = {
+				SGS_hawk_rise10 = yes
+			}
+		}
+		country_event = { id = sgs.40220 }
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#还是温和一点，让他们当兵吧
+		name = sgs.4022.2
+		if = {
+			limit = {
+				SGS_peaceful_transit_gov = yes
+			}
+			SGS_hawk_reduce5 = yes
+			SGS_dove_rise10 = yes
+			else = {
+				SGS_hawk_rise5 = yes
+			}
+			country_event = { id = sgs.40230 }
+		}
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 讨论结果：当他们当兵
+	id = sgs.4023
+	title = sgs.4023.t
+	desc = sgs.4023.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#同意
+		name = sgs.4023.1
+		if = {
+			limit = {
+				SGS_peaceful_transit_gov = yes
+			}
+			SGS_dove_rise5 = yes
+			else = {
+				SGS_hawk_rise5 = yes
+			}
+		}
+		country_event = { id = sgs.40230 }
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#还是激进一点，把它们关起来吧
+		name = sgs.4023.2
+		trigger = {
+			SGS_peaceful_transit_gov = yes
+		}
+		SGS_hawk_rise10 = yes
+		country_event = { id = sgs.40220 }
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#还是温和一点，让他们复原
+		name = sgs.4023.3
+		trigger = {
+			SGS_peaceful_transit_gov = no
+		}
+		SGS_dove_rise10 = yes
+		country_event = { id = sgs.40240 }
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	# 讨论结果：让他们复员
+	id = sgs.4024
+	title = sgs.4024.t
+	desc = sgs.4024.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#同意
+		name = sgs.4024.1
+		if = {
+			limit = {
+				SGS_peaceful_transit_gov = yes
+			}
+			SGS_dove_rise10 = yes
+			else = {
+				SGS_dove_rise5 = yes
+			}
+		}
+		country_event = { id = sgs.40240 }
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#还是激进一点，让他们当兵吧
+		name = sgs.4024.2
+		if = {
+			limit = {
+				SGS_peaceful_transit_gov = no
+			}
+			SGS_dove_reduce5 = yes
+			SGS_hawk_rise10 = yes
+			else = {
+				SGS_dove_rise5 = yes
+			}
+			country_event = { id = sgs.40230 }
+		}
+		ai_chance = { base = 1 }
+	}
+}
 
 #琪露诺赌约
 country_event = {
@@ -12928,11 +13067,29 @@ country_event = {
 	id = sgs.4033
 	title = {
 		text = sgs.4033.t
-		trigger = { not = {has_country_flag = sgs_fear_to_duel_cir_flag } }
+		trigger = { CIR_guli_way = yes }
 	}
 	title = {
-		text = sgs.4033.t_no_duel
-		trigger = { has_country_flag = sgs_fear_to_duel_cir_flag }
+		text = sgs.4033.t_qinwai
+		trigger = { CIR_qinwai_way  = yes }
+	}
+	title = {
+		text = sgs.4033.t_authordemo
+		trigger = { CIR_authordemo_way  = yes }
+	}
+	title = {
+		text = sgs.4033.t_neworder
+		trigger = { 
+			CIR_neworder_way = yes
+			not = { has_idea = SGS_battle_fairy_elite_army }
+		}
+	}
+	title = {
+		text = sgs.4033.t_neworder_elite
+		trigger = { 
+			CIR_neworder_way = yes
+			has_idea = SGS_battle_fairy_elite_army
+		}
 	}
 	desc = sgs.4033.d
 	fire_only_once = yes
@@ -12943,12 +13100,39 @@ country_event = {
 	option = {
 		#
 		name = sgs.4033.1
+		set_variable = { CIR.CIR_TASK_time  = 600 }
 		if = {
 			limit = {
 				CIR_guli_way = yes
 			}
-			set_variable = { CIR.CIR_TASK_time  = 600 }
+			
 			activate_mission = CIR_guli_task_one_misson
+		}
+		if = {
+			limit = {
+				CIR_authordemo_way  = yes
+			}
+			activate_mission = CIR_authordemo_task_one_misson
+		}
+		if = {
+			limit = {
+				CIR_qinwai_way = yes
+			}
+			activate_mission = CIR_qinwai_task_one_misson
+		}
+		if = {
+			limit = {
+				CIR_neworder_way = yes
+				not = { has_idea = SGS_battle_fairy_elite_army }
+			}
+			activate_mission = CIR_neworder_task_one_misson
+		}
+		if = {
+			limit = {
+				CIR_neworder_way = yes
+				has_idea = SGS_battle_fairy_elite_army
+			}
+			activate_mission = CIR_neworder_elite_task_one_misson
 		}
 		ai_chance = { base = 1 }
 	}
