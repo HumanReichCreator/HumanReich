@@ -1,5 +1,115 @@
 spriteTypes = {
 
+	spriteType = {
+		name = "GFX_focus_focus_plan_of_sunny"
+		texturefile = "gfx/interface/goals/focus_plan_of_sunny.png"
+	}
+	
+	spriteType = {
+		name = "GFX_focus_focus_plan_of_sunny_shine"
+		texturefile = "gfx/interface/goals/focus_plan_of_sunny.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+		  animationmaskfile = "gfx/interface/goals/focus_plan_of_sunny.png"
+		  animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		  animationrotation = -90.0
+		  animationlooping = no
+		  animationtime = 0.75
+		  animationdelay = 0
+		  animationblendmode = "add"
+		  animationtype = "scrolling"
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	
+		animation = {
+		  animationmaskfile = "gfx/interface/goals/focus_plan_of_sunny.png"
+		  animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		  animationrotation = 90.0
+		  animationlooping = no
+		  animationtime = 0.75
+		  animationdelay = 0
+		  animationblendmode = "add"
+		  animationtype = "scrolling"
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	  }
+	
+	spriteType = {
+		name = "GFX_focus_focus_plan_of_star"
+		texturefile = "gfx/interface/goals/focus_plan_of_star.png"
+	}
+	
+	spriteType = {
+		name = "GFX_focus_focus_plan_of_star_shine"
+		texturefile = "gfx/interface/goals/focus_plan_of_star.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+		  animationmaskfile = "gfx/interface/goals/focus_plan_of_star.png"
+		  animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		  animationrotation = -90.0
+		  animationlooping = no
+		  animationtime = 0.75
+		  animationdelay = 0
+		  animationblendmode = "add"
+		  animationtype = "scrolling"
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	
+		animation = {
+		  animationmaskfile = "gfx/interface/goals/focus_plan_of_star.png"
+		  animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		  animationrotation = 90.0
+		  animationlooping = no
+		  animationtime = 0.75
+		  animationdelay = 0
+		  animationblendmode = "add"
+		  animationtype = "scrolling"
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	  }
+
+	spriteType = {
+		name = "GFX_focus_focus_plan_of_luna_final"
+		texturefile = "gfx/interface/goals/focus_plan_of_luna_final.png"
+	}
+	
+	spriteType = {
+		name = "GFX_focus_focus_plan_of_luna_final_shine"
+		texturefile = "gfx/interface/goals/focus_plan_of_luna_final.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+		  animationmaskfile = "gfx/interface/goals/focus_plan_of_luna_final.png"
+		  animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		  animationrotation = -90.0
+		  animationlooping = no
+		  animationtime = 0.75
+		  animationdelay = 0
+		  animationblendmode = "add"
+		  animationtype = "scrolling"
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	
+		animation = {
+		  animationmaskfile = "gfx/interface/goals/focus_plan_of_luna_final.png"
+		  animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		  animationrotation = 90.0
+		  animationlooping = no
+		  animationtime = 0.75
+		  animationdelay = 0
+		  animationblendmode = "add"
+		  animationtype = "scrolling"
+		  animationrotationoffset = { x = 0.0 y = 0.0 }
+		  animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	  }
 
 	spriteType = {
 		name = "GFX_focus_focus_war_SC2"

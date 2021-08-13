@@ -12980,6 +12980,16 @@ country_event = {
 		set_variable = { SGS.FIR_AREA_CIR_MC_time = 50}
 		custom_effect_tooltip = FA_make_core_time_up
 		add_ideas = SGS_CIR_uprise_idea
+		every_state = {
+			limit = {
+				is_core_of = CIR
+			}
+			add_state_modifier = {
+				modifier = {
+					resistance_growth = 0.2
+				}
+			}
+		}
 		#如果不是任务失败的话还会扣pp
 		if = {
 			limit = {

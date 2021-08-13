@@ -18,6 +18,21 @@ country_event = {
 		}
 	}
 }
+
+every_state = {
+	limit = {
+		is_core_of = CIR
+	}
+	add_state_modifier = {
+		modifier = {
+			resistance_target = 0.3
+			resistance_garrison_penetration_chance = 0.3
+		}
+	}
+}
+
+
+
 sgs_fear_to_duel_cir_flag
 FIR_AREA_SCA_MAKE_CORE
 
