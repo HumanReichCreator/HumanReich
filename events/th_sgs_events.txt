@@ -12749,7 +12749,10 @@ country_event = {
 	option = {
 		#直接不要（关起来）
 		name = sgs.4021.1
-		country_event = { id = sgs.40220 }
+		random_list = {
+			50 = {country_event = { id = sgs.40220 }}
+			50 = {country_event = { id = sgs.40221 }}
+		}
 		ai_chance = { base = 1 }
 	}
 	option = {
@@ -12788,7 +12791,11 @@ country_event = {
 				SGS_hawk_rise10 = yes
 			}
 		}
-		country_event = { id = sgs.40220 }
+		random_list = {
+			50 = {country_event = { id = sgs.40220 }}
+			50 = {country_event = { id = sgs.40221 }}
+		}
+		
 		ai_chance = { base = 1 }
 	}
 	option = {
@@ -12807,7 +12814,100 @@ country_event = {
 		}
 		ai_chance = { base = 1 }
 	}
+
 }
+country_event = {
+	# 抓捕成功
+	id = sgs.40220
+	title = sgs.40220.t
+	desc = sgs.40220.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40220.1
+		add_ideas = SGS_CIR_army_catched_idea
+		clr_country_flag = sgs_all_integrated_peacelly
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 抓捕失败
+	id = sgs.40221
+	title = sgs.40221.t
+	desc = sgs.40221.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40221.1
+		clr_country_flag = sgs_all_integrated_peacelly
+		add_ideas = SGS_CIR_army_uprise_idea
+		CIR_army_uprise_debuff = yes
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 被关押的卫队自行出逃
+	id = sgs.40222
+	title = sgs.40222.t
+	desc = sgs.40222.d
+	fire_only_once = yes
+	is_triggered_only = no
+	mean_time_to_happen = {
+		days = 2
+	}
+	trigger = {
+		tag = sgs
+		has_idea = SGS_CIR_army_catched_idea
+		or = {
+			not = { has_political_power = 0 }
+			not = { has_stability > 0 }
+			not = { has_manpower = 1 }
+		}
+	}
+	option = {
+		#
+		name = sgs.40222.1
+		swap_ideas = {
+			remove_idea = SGS_CIR_army_catched_idea
+			add_idea = SGS_CIR_army_uprise_idea
+		}
+		CIR_army_uprise_debuff = yes
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	# 琪露诺和卫队合流
+	id = sgs.40223
+	title = sgs.40223.t
+	desc = sgs.40223.d
+	fire_only_once = yes
+	is_triggered_only = no
+	mean_time_to_happen = {
+		days = 5
+	}
+	trigger = {
+		tag = sgs
+		has_idea = SGS_CIR_army_uprise_idea
+		has_idea = SGS_CIR_uprise_idea
+	}
+	option = {
+		#
+		name = sgs.40223.1
+		remove_ideas = { SGS_CIR_army_uprise_idea  SGS_CIR_uprise_idea }
+		add_ideas = SGS_CIR_and_army_uprise_idea
+		ai_chance = { base = 1 }
+	}
+}
+
 country_event = {
 	# 讨论结果：当他们当兵
 	id = sgs.4023
@@ -12854,6 +12954,89 @@ country_event = {
 		ai_chance = { base = 1 }
 	}
 }
+country_event = {
+	# 向他们谈判，让他们当兵
+	id = sgs.40230
+	title = sgs.40230.t
+	desc = sgs.40230.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#琪露诺新规线表示必须跟随领袖
+		name = sgs.40230.1
+		limit = {
+			CIR_army_wait_their_leader = yes
+		}
+		set_country_flag = CIR_wait_for_leader
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#直接同意
+		name = sgs.40230.2
+		limit = {
+			CIR_army_wait_their_leader = no
+			CIR_agree_to_join_as_army = yes
+		}
+		country_event = {id = sgs.40231 }
+		ai_chance = { base = 1 }
+	}
+	
+	option = {
+		#犹豫一下
+		name = sgs.40230.3
+		limit = {
+			CIR_army_wait_their_leader = no
+			CIR_agree_to_join_as_army = no
+		}
+		country_event = {id = sgs.40232 }
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 同意当兵
+	id = sgs.40231
+	title = sgs.40231.t
+	desc = sgs.40231.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40231.1
+		add_manpower = 2000
+		army_experience = 50
+		add_political_power = 50
+		if = {
+			limit = { CIR_qinwai_way = yes }
+			add_ideas = SGS_CIR_group_tactics_idea
+		}
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 犹豫一下
+	id = sgs.40232
+	title = sgs.40232.t
+	desc = sgs.40232.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40232.1
+		ai_chance = { base = 1 }
+	}
+}
+
+
+
 
 country_event = {
 	# 讨论结果：让他们复员
@@ -12903,7 +13086,14 @@ country_event = {
 	id = sgs.403
 	# 开始谈判
 	title = sgs.403.t
-	desc = sgs.403.d
+	desc = {
+		text = sgs.403.d
+		trigger = { CIR_peace_task_already_failed = no }
+	}
+	desc = {
+		text = sgs.403.d_failed
+		trigger = { CIR_peace_task_already_failed = yes }
+	}
 	fire_only_once = yes
 	is_triggered_only = yes
 	trigger = {
@@ -12918,9 +13108,11 @@ country_event = {
 		custom_effect_tooltip = SGS_will_arrest_CIR_tt
 		ai_chance = { base = 1 }
 	}
+
 	option = {
 		#来谈判
 		name = sgs.403.2
+		limit = { CIR_peace_task_already_failed = no }
 		if = {
 			limit = {
 				#has_government = neworder
@@ -13000,6 +13192,98 @@ country_event = {
 			}
 			add_political_power = -30
 		}
+
+		if = {
+			limit = {
+				or = {
+					has_country_flag =  CIR_wait_for_leader
+					not = { has_completed_focus = SGS_face_CIR_army_focus }
+				}
+				CIR_neworder_way = yes
+			}
+			country_event = { id = sgs.40311 }
+		}
+		if = {
+			limit = {
+				has_idea = SGS_CIR_army_catched_idea
+			}
+			hidden_effect = {
+				country_event = { 
+					id = sgs.40312
+					days = 5
+				}
+			}
+		}
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 和平线琪露诺任务失败
+	id = sgs.40310
+	title = sgs.40310.t
+	desc = sgs.40310.d
+	fire_only_once = yes
+	is_triggered_only = no
+	mean_time_to_happen = {
+		days = 2
+	}
+	trigger = {
+		tag = sgs
+		has_active_mission = CIR_guli_task_one_misson
+		not = { has_country_flag = sgs_all_integrated_peacelly }
+	}
+	option = {
+		#
+		name = sgs.40310.1
+		remove_mission = CIR_guli_task_one_misson
+		country_event = { id = sgs.4031 }
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 琪露诺run了之后卫队也跟着走了
+	id = sgs.40311
+	title = sgs.40311.t
+	desc = sgs.40311.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40311.1
+		set_country_flag = skip_face_CIR_army_flag
+		add_ideas = SGS_CIR_and_army_uprise_idea
+		if  = { 
+			limit = { has_idea = SGS_CIR_uprise_idea }
+			remove_ideas = SGS_CIR_uprise_idea
+		}
+		CIR_army_uprise_debuff = yes
+		ai_chance = { base = 1 }
+	}
+}country_event = {
+	# 琪露诺把被关的卫队救出来了
+	id = sgs.40312
+	title = sgs.40312.t
+	desc = sgs.40312.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40312.1
+		if  = { 
+			limit = { has_idea = SGS_CIR_uprise_idea }
+			remove_ideas = SGS_CIR_uprise_idea
+		}
+		swap_ideas = {
+			remove_idea = SGS_CIR_army_catched_idea
+			add_idea = SGS_CIR_and_army_uprise_idea
+		}
+		CIR_army_uprise_debuff = yes
 		ai_chance = { base = 1 }
 	}
 }
@@ -13166,6 +13450,7 @@ country_event = {
 				set_nationality = ROOT
 			}
 		}
+		set_country_flag =  CIR_join_root
 		news_event = {id = sgs.40440}
 		ai_chance = { base = 1 }
 	}
@@ -13222,7 +13507,7 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = no
 	mean_time_to_happen = {
-		days = 2
+		days = 20
 	}
 	trigger = {
 		has_completed_focus = SGS_elite_army_focus

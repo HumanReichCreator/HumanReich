@@ -1641,6 +1641,9 @@ focus = {
 		cost = 10.00
 		x = 45
 		y = 9
+		available = {
+			always = no	
+		}
 		completion_reward = {
 			#条件：控制并拥有红魔馆，SCA不存在，效果：加政治点，解锁SCA地区的造核
 			add_political_power = 50
@@ -1655,6 +1658,9 @@ focus = {
 		cost = 10.00
 		x = 50
 		y = 9
+		available = {
+			always = no	
+		}
 		completion_reward = {
 			#条件：控制并拥有琪露诺领土，CIR不存在，效果：加政治点 ？
 			add_political_power = 60
@@ -1664,6 +1670,9 @@ focus = {
 		id = SGS_occupy_LIL_focus
 		icon = GFX_focus_generic_befriend_cyprus
 		cost = 10.00
+		available = {
+			always = no	
+		}
 		x = 55
 		y = 9
 		completion_reward = {
@@ -1808,6 +1817,9 @@ focus = {
 		cost = 10.00
 		prerequisite = {
 			focus = SGS_occupy_CIR_focus
+		}
+		bypass = {
+			has_country_flag = skip_face_CIR_army_flag
 		}
 		x = 2
 		y = 1

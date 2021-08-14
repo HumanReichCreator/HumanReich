@@ -842,6 +842,20 @@ ideas = {
 				stability_factor = -0.08
 			}
 		}
+		SGS_CIR_group_tactics_idea = {
+			picture = generic_constitutional_guarantees
+			modifier = {
+				supply_consumption_factor = -0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		SGS_CIR_army_catched_idea = {
+			picture = generic_constitutional_guarantees
+			modifier = {
+				political_power_gain = -0.05
+				stability_factor = 0.1
+			}
+		}
 
 	}
 }

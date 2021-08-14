@@ -37,6 +37,31 @@
 			"}"
 		]
 	},
+    "UntriggeredCountryEvent ": {
+        "scope": "hoi4,paradox,plaintext,lua",
+		"prefix": "_untriggered_country_event",
+		"body": [
+			"country_event = {",
+            "    # description",
+			"    id = ${Namespace}.${Id}",
+			"    title = ${Namespace}.${Id}.t",
+			"    desc = ${Namespace}.${Id}.d",
+            "    fire_only_once = ${yes_or_no}",
+			"    is_triggered_only = no",
+            "    mean_time_to_happen = {",
+            "        days = ${days:2}",
+            "    }",
+            "    trigger = {",
+            "        tag = ${Namespace}",
+            "    }",
+            "    option = {",
+            "        #",
+            "        name = ${Namespace}.${Id}.1",
+            "        ai_chance = { base = 1 }",
+            "    }",
+			"}"
+		]
+	},
     "EventOption": {
         "scope": "hoi4,paradox,plaintext,lua",
         "prefix": "_option_of_event",

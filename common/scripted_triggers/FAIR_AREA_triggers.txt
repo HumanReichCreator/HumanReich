@@ -36,3 +36,37 @@ SC2_need_pay_attention = {
   }
 }
 
+CIR_army_wait_their_leader = {
+    CIR_neworder_way = yes
+    not = { has_completed_focus = SGS_deal_with_leaders_focus }
+}
+
+CIR_army_join_with_their_leader = {
+    CIR_neworder_way = yes
+    has_country_flag = CIR_join_root
+}
+
+CIR_agree_to_join_as_army = {
+    or = {
+        CIR_army_join_with_their_leader = yes
+        and = {
+            CIR_authordemo_way = yes
+            SGS_dove_have_supporter = yes
+        }
+        and = {
+            CIR_qinwai_way = yes
+            SGS_dove_get_more = yes
+        }
+        and = {
+            CIR_guli_way = yes
+            SGS_dove_hold_meeting = yes
+        }
+    }
+    not = { has_idea = SGS_battle_fairy_elite_army }
+}
+CIR_peace_task_already_failed = {
+  CIR_guli_way = yes
+  not = { has_country_flag = sgs_all_integrated_peacelly }
+}
+
+
