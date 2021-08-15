@@ -12970,7 +12970,7 @@ country_event = {
 		limit = {
 			CIR_army_wait_their_leader = yes
 		}
-		set_country_flag = CIR_wait_for_leader
+		set_country_flag = CIR_wait_for_leader_solder
 		ai_chance = { base = 1 }
 	}
 	option = {
@@ -13080,6 +13080,82 @@ country_event = {
 		ai_chance = { base = 1 }
 	}
 }
+country_event = {
+	# 向他们谈判，让他们复员
+	id = sgs.40240
+	title = sgs.40240.t
+	desc = sgs.40240.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#琪露诺新规线表示必须跟随领袖
+		name = sgs.40240.1
+		limit = {
+			CIR_army_wait_their_leader = yes
+		}
+		set_country_flag = CIR_wait_for_leader_worker
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#直接同意
+		name = sgs.40240.2
+		limit = {
+			CIR_army_wait_their_leader = no
+			CIR_agree_to_join_as_worker = yes
+		}
+		country_event = {id = sgs.40241 }
+		ai_chance = { base = 1 }
+	}
+	
+	option = {
+		#犹豫一下
+		name = sgs.40240.3
+		limit = {
+			CIR_army_wait_their_leader = no
+			CIR_agree_to_join_as_army = no
+		}
+		country_event = {id = sgs.40242 }
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 同意复员
+	id = sgs.40241
+	title = sgs.40241.t
+	desc = sgs.40241.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40241.1
+		add_stability = 0.15
+		add_timed_idea = {
+			idea = SGS_CIR_army_worker  #还没写内容
+			days = 360
+		}  
+		add_political_power = 50
+		
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#
+		name = sgs.40241.2
+		limit = {
+			CIR_neworder_way = yes
+		}
+		add_stability = 0.15
+		add_political_power = 80
+		add_ideas = SGS_CIR_army_police
+		ai_chance = { base = 1 }
+	}
+}
+
 
 #琪露诺赌约
 country_event = {
@@ -13193,10 +13269,11 @@ country_event = {
 			add_political_power = -30
 		}
 
-		if = {
+		if = { #如果琪露诺新规，士兵会跟着一起走
 			limit = {
 				or = {
-					has_country_flag =  CIR_wait_for_leader
+					has_country_flag =  CIR_wait_for_leader_worker
+					has_country_flag =  CIR_wait_for_leader_solder
 					not = { has_completed_focus = SGS_face_CIR_army_focus }
 				}
 				CIR_neworder_way = yes
@@ -13451,6 +13528,15 @@ country_event = {
 			}
 		}
 		set_country_flag =  CIR_join_root
+		if = {
+			limit = {  has_country_flag = CIR_wait_for_leader_worker }
+			country_event = { id = sgs.40241 }
+		}
+		if = {
+			limit = {  has_country_flag = CIR_wait_for_leader_solder }
+			country_event = { id = sgs.40231 }
+		}
+
 		news_event = {id = sgs.40440}
 		ai_chance = { base = 1 }
 	}
