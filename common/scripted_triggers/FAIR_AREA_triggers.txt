@@ -47,6 +47,7 @@ CIR_army_join_with_their_leader = {
 }
 
 CIR_agree_to_join_as_army = {
+    not = { has_government = oldorder  }
     or = {
         CIR_army_join_with_their_leader = yes
         and = {
@@ -66,6 +67,7 @@ CIR_agree_to_join_as_army = {
 }
 
 CIR_agree_to_join_as_worker = {
+  not = { has_government = oldorder  }
   or = {
       CIR_army_join_with_their_leader = yes
       and = {

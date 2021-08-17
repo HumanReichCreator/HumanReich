@@ -12991,7 +12991,67 @@ country_event = {
 			CIR_army_wait_their_leader = no
 			CIR_agree_to_join_as_army = no
 		}
-		country_event = {id = sgs.40232 }
+		set_variable = { SGS_nego_failed_poss =  10 }
+		set_variable = { SGS_addition_cond =  40 }
+		set_variable = { SGS_change_another =  50 }
+
+		if = {
+			limit = {
+				or = {
+					has_government = oldorder
+					SGS_hawk_get_more = yes
+				}
+			}
+			add_to_variable = { SGS_addition_cond =  20  }
+		}
+
+		if = {
+			limit = {
+				has_idea = SGS_battle_fairy_elite_army
+			}
+			add_to_variable = { SGS_nego_failed_poss =  100  }
+		}
+
+		random_list = {
+			var:SGS_nego_failed_poss = {# 抓起来
+				custom_effect_tooltip = SGS_CIR_nego_failed
+				hidden_effect = {
+					random_list = {
+						50 = {country_event = { id = sgs.40220 }}
+						50 = {country_event = { id = sgs.40221 }}
+					}
+				}
+			}
+			var:SGS_addition_cond = {#追加条件后同意
+				custom_effect_tooltip = SGS_CIR_addition_cond_solder
+				hidden_effect = {
+					if = {
+						limit = {  not = { has_government = oldorder } }
+						SGS_dove_rise5 = yes
+						else = { 
+							add_popularity = {
+								ideology = oldorder
+								popularity = -0.2
+							} 
+						}
+					}
+					if = {
+						limit = { has_idea = SGS_battle_fairy_elite_army }
+						swap_ideas = {
+							remove_idea = SGS_battle_fairy_elite_army
+							add_idea = SGS_battle_fairy_elite_army_loose
+						}
+					}
+					country_event = {id = sgs.40231 }
+				}
+			}
+			var:SGS_change_another = {  #换了去向之后同意
+				custom_effect_tooltip = SGS_CIR_change_to_worker
+				hidden_effect = {
+					country_event = {id = sgs.40241 }
+				}
+			}
+		}
 		ai_chance = { base = 1 }
 	}
 }
@@ -13019,7 +13079,7 @@ country_event = {
 	}
 }
 country_event = {
-	# 犹豫一下
+	# 
 	id = sgs.40232
 	title = sgs.40232.t
 	desc = sgs.40232.d
@@ -13031,6 +13091,7 @@ country_event = {
 	option = {
 		#
 		name = sgs.40232.1
+		
 		ai_chance = { base = 1 }
 	}
 }
@@ -13117,7 +13178,67 @@ country_event = {
 			CIR_army_wait_their_leader = no
 			CIR_agree_to_join_as_army = no
 		}
-		country_event = {id = sgs.40242 }
+		set_variable = { SGS_nego_failed_poss =  10 }
+		set_variable = { SGS_addition_cond =  40 }
+		set_variable = { SGS_change_another =  50 }
+
+		if = {
+			limit = {
+				or = {
+					has_government = oldorder
+					SGS_hawk_get_more = yes
+				}
+			}
+			add_to_variable = { SGS_addition_cond =  20  }
+		}
+
+		if = {
+			limit = {
+				has_idea = SGS_battle_fairy_elite_army
+			}
+			add_to_variable = { SGS_nego_failed_poss =  100  }
+		}
+
+		random_list = {
+			var:SGS_nego_failed_poss = {# 抓起来
+				custom_effect_tooltip = SGS_CIR_nego_failed
+				hidden_effect = {
+					random_list = {
+						50 = {country_event = { id = sgs.40220 }}
+						50 = {country_event = { id = sgs.40221 }}
+					}
+				}
+			}
+			var:SGS_addition_cond = {#追加条件后同意
+				custom_effect_tooltip = SGS_CIR_addition_cond_worker
+				hidden_effect = {
+					if = {
+						limit = {  not = { has_government = oldorder } }
+						SGS_dove_rise5 = yes
+						else = { 
+							add_popularity = {
+								ideology = oldorder
+								popularity = -0.2
+							} 
+						}
+					}
+					if = {
+						limit = { has_idea = SGS_battle_fairy_elite_army }
+						swap_ideas = {
+							remove_idea = SGS_battle_fairy_elite_army
+							add_idea = SGS_battle_fairy_elite_army_loose
+						}
+					}
+					country_event = {id = sgs.40241 }
+				}
+			}
+			var:SGS_change_another = {  #换了去向之后同意
+				custom_effect_tooltip = SGS_CIR_change_to_solder
+				hidden_effect = {
+					country_event = {id = sgs.40231 }
+				}
+			}
+		}
 		ai_chance = { base = 1 }
 	}
 }
