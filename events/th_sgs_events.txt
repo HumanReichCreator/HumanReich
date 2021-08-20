@@ -12987,6 +12987,7 @@ country_event = {
 	option = {
 		#犹豫一下
 		name = sgs.40230.3
+		custom_effect_tooltip = SGS_CIR_will_nego
 		limit = {
 			CIR_army_wait_their_leader = no
 			CIR_agree_to_join_as_army = no
@@ -13078,24 +13079,6 @@ country_event = {
 		ai_chance = { base = 1 }
 	}
 }
-country_event = {
-	# 
-	id = sgs.40232
-	title = sgs.40232.t
-	desc = sgs.40232.d
-	fire_only_once = yes
-	is_triggered_only = yes
-	trigger = {
-		tag = sgs
-	}
-	option = {
-		#
-		name = sgs.40232.1
-		
-		ai_chance = { base = 1 }
-	}
-}
-
 
 
 
@@ -13246,7 +13229,14 @@ country_event = {
 	# 同意复员
 	id = sgs.40241
 	title = sgs.40241.t
-	desc = sgs.40241.d
+	desc = {
+		text = sgs.40241.d
+		trigger = { CIR_neworder_way = no }
+	}
+	desc = {
+		text = sgs.40241.d_police
+		trigger = { CIR_neworder_way = yes }
+	}
 	fire_only_once = yes
 	is_triggered_only = yes
 	trigger = {
@@ -13255,9 +13245,12 @@ country_event = {
 	option = {
 		#
 		name = sgs.40241.1
+		limit = {
+			CIR_neworder_way = no
+		}
 		add_stability = 0.15
 		add_timed_idea = {
-			idea = SGS_CIR_army_worker  #还没写内容
+			idea = SGS_CIR_army_worker_idea  
 			days = 360
 		}  
 		add_political_power = 50
@@ -13272,7 +13265,7 @@ country_event = {
 		}
 		add_stability = 0.15
 		add_political_power = 80
-		add_ideas = SGS_CIR_army_police
+		add_ideas = SGS_CIR_army_police_idea 
 		ai_chance = { base = 1 }
 	}
 }
@@ -13557,33 +13550,41 @@ country_event = {
 country_event = {
 	# 发布任务
 	id = sgs.4033
-	title = {
-		text = sgs.4033.t
+	desc = {
+		text = sgs.4033.d
 		trigger = { CIR_guli_way = yes }
 	}
-	title = {
-		text = sgs.4033.t_qinwai
+	desc = {
+		text = sgs.4033.d_qinwai
 		trigger = { CIR_qinwai_way  = yes }
 	}
-	title = {
-		text = sgs.4033.t_authordemo
+	desc = {
+		text = sgs.4033.d_authordemo
 		trigger = { CIR_authordemo_way  = yes }
 	}
-	title = {
-		text = sgs.4033.t_neworder
+	desc = {
+		text = sgs.4033.d_neworder
 		trigger = { 
 			CIR_neworder_way = yes
 			not = { has_idea = SGS_battle_fairy_elite_army }
 		}
 	}
-	title = {
-		text = sgs.4033.t_neworder_elite
+	desc = {
+		text = sgs.4033.d_neworder_elite
 		trigger = { 
 			CIR_neworder_way = yes
 			has_idea = SGS_battle_fairy_elite_army
 		}
 	}
-	desc = sgs.4033.d
+	title = {
+		text = sgs.4033.t_no_duel
+		trigger = { has_country_flag = sgs_fear_to_duel_cir_flag }
+	}
+	title = {
+		text = sgs.4033.t
+		trigger = { not = {has_country_flag = sgs_fear_to_duel_cir_flag} }
+	}
+	
 	fire_only_once = yes
 	is_triggered_only = yes
 	trigger = {

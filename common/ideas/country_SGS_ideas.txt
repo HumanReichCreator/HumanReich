@@ -801,8 +801,8 @@ ideas = {
 			picture = jap_interservice_rivalry_army_dominant
 			modifier = {
 				political_power_factor = 0.1
-				resistance_growth_on_our_occupied_states = -0.05
-				compliance_growth_on_our_occupied_states = -0.05
+				occupation_cost = -0.05
+				stability_factor = 0.03
 			}
 		}
 		SGS_lake_road_economy_idea = {
@@ -854,6 +854,22 @@ ideas = {
 			modifier = {
 				political_power_gain = -0.05
 				stability_factor = 0.1
+			}
+		}
+
+		SGS_CIR_army_worker_idea = {
+			picture = generic_constitutional_guarantees
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.03
+			}
+		}
+
+		SGS_CIR_army_police_idea = {
+			picture = generic_constitutional_guarantees
+			modifier = {
+				political_power_gain = 0.1
+				stability_weekly = 0.05
 			}
 		}
 
