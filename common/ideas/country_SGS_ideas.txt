@@ -38,6 +38,16 @@ ideas = {
 				neworder_drift = 0.01
 			}
 		}
+		SGS_battle_fairy_elite_army_loose = {
+			picture = can_send_in_the_zombies
+			modifier = {
+				army_attack_factor = 0.1
+				army_speed_factor = 0.07
+				army_org_factor = 0.1
+				conscription_factor = -0.1
+				monthly_population = 0.1
+			}
+		}
 		SGS_BaF_civ_mix_troop_idea = {
 			picture = can_send_in_the_zombies
 			modifier = {

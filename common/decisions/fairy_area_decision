@@ -544,16 +544,13 @@ lake_deci_category = {
 			country_event = { id = sgs.4034 }
 		}
 	}
-
 	CIR_authordemo_task_one_misson = {
 		allowed = { always = no  }
 		available = {
-			has_equipment = {
-				or = {
-					support_equipment_1 > 1000
-					support_equipment_2 > 1000
-				}	
-			}	# 任务目标
+			or = {
+				has_equipment = { support_equipment_1 > 1000 }
+				has_equipment = { support_equipment_2 > 1000 }
+			}# 任务目标
 		}
 		activation = {
 			always = no

@@ -12722,14 +12722,16 @@ country_event = {
 				}
 			}
 			else = {#默认和平线不会走这边
-				var:sgs_hawk_infl = {
-					country_event = { id = sgs.4023 } #劝人参军
-				}
-				var:sgs_dove_infl = {
-					country_event = { id = sgs.4024 } #劝人复员
-				}
-				10 = {
-					country_event = { id = sgs.4022 } #直接不谈
+				random_list = {
+					var:sgs_hawk_infl = {
+						country_event = { id = sgs.4023 } #劝人参军
+					}
+					var:sgs_dove_infl = {
+						country_event = { id = sgs.4024 } #劝人复员
+					}
+					10 = {
+						country_event = { id = sgs.4022 } #直接不谈
+					}
 				}
 			}
 		}
@@ -12867,9 +12869,9 @@ country_event = {
 		tag = sgs
 		has_idea = SGS_CIR_army_catched_idea
 		or = {
-			not = { has_political_power = 0 }
+			not = { has_political_power > 0 }
 			not = { has_stability > 0 }
-			not = { has_manpower = 1 }
+			not = { has_manpower > 1 }
 		}
 	}
 	option = {
@@ -12964,34 +12966,7 @@ country_event = {
 	trigger = {
 		tag = sgs
 	}
-	option = {
-		#琪露诺新规线表示必须跟随领袖
-		name = sgs.40230.1
-		limit = {
-			CIR_army_wait_their_leader = yes
-		}
-		set_country_flag = CIR_wait_for_leader_solder
-		ai_chance = { base = 1 }
-	}
-	option = {
-		#直接同意
-		name = sgs.40230.2
-		limit = {
-			CIR_army_wait_their_leader = no
-			CIR_agree_to_join_as_army = yes
-		}
-		country_event = {id = sgs.40231 }
-		ai_chance = { base = 1 }
-	}
-	
-	option = {
-		#犹豫一下
-		name = sgs.40230.3
-		custom_effect_tooltip = SGS_CIR_will_nego
-		limit = {
-			CIR_army_wait_their_leader = no
-			CIR_agree_to_join_as_army = no
-		}
+	immediate = {
 		set_variable = { SGS_nego_failed_poss =  10 }
 		set_variable = { SGS_addition_cond =  40 }
 		set_variable = { SGS_change_another =  50 }
@@ -13012,6 +12987,36 @@ country_event = {
 			}
 			add_to_variable = { SGS_nego_failed_poss =  100  }
 		}
+	}
+	option = {
+		#琪露诺新规线表示必须跟随领袖
+		name = sgs.40230.1
+		trigger = {
+			CIR_army_wait_their_leader = yes
+		}
+		set_country_flag = CIR_wait_for_leader_solder
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#直接同意
+		name = sgs.40230.2
+		trigger = {
+			CIR_army_wait_their_leader = no
+			CIR_agree_to_join_as_army = yes
+		}
+		country_event = {id = sgs.40231 }
+		ai_chance = { base = 1 }
+	}
+	
+	option = {
+		#犹豫一下
+		name = sgs.40230.3
+		trigger = {
+			CIR_army_wait_their_leader = no
+			CIR_agree_to_join_as_army = no
+		}
+		custom_effect_tooltip = SGS_CIR_will_nego
+		
 
 		random_list = {
 			var:SGS_nego_failed_poss = {# 抓起来
@@ -13134,33 +13139,7 @@ country_event = {
 	trigger = {
 		tag = sgs
 	}
-	option = {
-		#琪露诺新规线表示必须跟随领袖
-		name = sgs.40240.1
-		limit = {
-			CIR_army_wait_their_leader = yes
-		}
-		set_country_flag = CIR_wait_for_leader_worker
-		ai_chance = { base = 1 }
-	}
-	option = {
-		#直接同意
-		name = sgs.40240.2
-		limit = {
-			CIR_army_wait_their_leader = no
-			CIR_agree_to_join_as_worker = yes
-		}
-		country_event = {id = sgs.40241 }
-		ai_chance = { base = 1 }
-	}
-	
-	option = {
-		#犹豫一下
-		name = sgs.40240.3
-		limit = {
-			CIR_army_wait_their_leader = no
-			CIR_agree_to_join_as_army = no
-		}
+	immediate = {
 		set_variable = { SGS_nego_failed_poss =  10 }
 		set_variable = { SGS_addition_cond =  40 }
 		set_variable = { SGS_change_another =  50 }
@@ -13181,6 +13160,36 @@ country_event = {
 			}
 			add_to_variable = { SGS_nego_failed_poss =  100  }
 		}
+	}
+	option = {
+		#琪露诺新规线表示必须跟随领袖
+		name = sgs.40240.1
+		trigger = {
+			CIR_army_wait_their_leader = yes
+		}
+		set_country_flag = CIR_wait_for_leader_worker
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#直接同意
+		name = sgs.40240.2
+		trigger = {
+			CIR_army_wait_their_leader = no
+			CIR_agree_to_join_as_worker = yes
+		}
+		country_event = {id = sgs.40241 }
+		ai_chance = { base = 1 }
+	}
+	
+	option = {
+		#犹豫一下
+		name = sgs.40240.3
+		trigger = {
+			CIR_army_wait_their_leader = no
+			CIR_agree_to_join_as_army = no
+		}
+		custom_effect_tooltip = SGS_CIR_will_nego
+		
 
 		random_list = {
 			var:SGS_nego_failed_poss = {# 抓起来
@@ -13245,7 +13254,7 @@ country_event = {
 	option = {
 		#
 		name = sgs.40241.1
-		limit = {
+		trigger = {
 			CIR_neworder_way = no
 		}
 		add_stability = 0.15
@@ -13260,7 +13269,7 @@ country_event = {
 	option = {
 		#
 		name = sgs.40241.2
-		limit = {
+		trigger = {
 			CIR_neworder_way = yes
 		}
 		add_stability = 0.15
@@ -13302,7 +13311,7 @@ country_event = {
 	option = {
 		#来谈判
 		name = sgs.403.2
-		limit = { CIR_peace_task_already_failed = no }
+		trigger = { CIR_peace_task_already_failed = no }
 		if = {
 			limit = {
 				#has_government = neworder

@@ -1875,7 +1875,7 @@ focus = {
 			or = {
 				has_government = oldorder
 				SGS_peaceful_transit_gov = yes
-				date > 148.1.1
+				date > 146.1.1  #debug结束后改成148
 			}
 			
 
@@ -2087,6 +2087,8 @@ focus = {
 		cost = 3
 		prerequisite = {
 			focus = SGS_try_to_control_SC2_focus
+		}
+		prerequisite = {
 			focus = SGS_ambitious_to_all_fairy_focus
 			focus = SGS_aim_SCA_focus
 		}
