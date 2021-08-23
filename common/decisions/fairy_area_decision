@@ -287,6 +287,107 @@ SC2_infl_category = {
 			
 		}
 	}
+	CIR_debug_guli = {
+		visible = {
+			tag = sgs
+			is_debug = yes
+		}
+		available = {
+			
+		}
+		modifier = {
+		}
+		cost = 3
+		days_remove = 3
+		days_re_enable = 3
+		fire_only_once = no
+		complete_effect = {
+			CIR = { set_politics = { ruling_party = guli } }
+		}
+		remove_effect = {
+			
+		}
+		ai_will_do = {
+			factor = 0
+			
+		}
+	}
+	CIR_debug_authordemo = {
+		visible = {
+			tag = sgs
+			is_debug = yes
+		}
+		available = {
+			
+		}
+		modifier = {
+		}
+		cost = 3
+		days_remove = 3
+		days_re_enable = 3
+		fire_only_once = no
+		complete_effect = {
+			CIR = { set_politics = { ruling_party = authordemo } }
+		}
+		remove_effect = {
+			
+		}
+		ai_will_do = {
+			factor = 0
+			
+		}
+	}
+	CIR_debug_qinwai = {
+		visible = {
+			tag = sgs
+			is_debug = yes
+		}
+		available = {
+			
+		}
+		modifier = {
+		}
+		cost = 3
+		days_remove = 3
+		days_re_enable = 3
+		fire_only_once = no
+		complete_effect = {
+			CIR = { set_politics = { ruling_party = qinwai } }
+		}
+		remove_effect = {
+			
+		}
+		ai_will_do = {
+			factor = 0
+			
+		}
+	}
+	CIR_debug_neworder = {
+		visible = {
+			tag = sgs
+			is_debug = yes
+		}
+		available = {
+			
+		}
+		modifier = {
+		}
+		cost = 3
+		days_remove = 3
+		days_re_enable = 3
+		fire_only_once = no
+		complete_effect = {
+			CIR = { set_politics = { ruling_party = neworder } }
+		}
+		remove_effect = {
+			
+		}
+		ai_will_do = {
+			factor = 0
+			
+		}
+	}
+	
 	SC2_skip_infl = {
 		visible = {
 			ROOT = {

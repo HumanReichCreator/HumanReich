@@ -12994,7 +12994,23 @@ country_event = {
 		trigger = {
 			CIR_army_wait_their_leader = yes
 		}
-		set_country_flag = CIR_wait_for_leader_solder
+
+		if  = {
+			limit = {
+				has_idea = SGS_CIR_uprise_idea
+			}
+			custom_effect_tooltip = SGS_CIR_nego_failed
+			hidden_effect = {
+				random_list = {
+					50 = {country_event = { id = sgs.40220 }}
+					50 = {country_event = { id = sgs.40221 }}
+				}
+			}
+			else = {
+				custom_effect_tooltip = CIR_wait_for_leader_tt
+				set_country_flag = CIR_wait_for_leader_solder
+			}
+		}
 		ai_chance = { base = 1 }
 	}
 	option = {
@@ -13167,7 +13183,22 @@ country_event = {
 		trigger = {
 			CIR_army_wait_their_leader = yes
 		}
-		set_country_flag = CIR_wait_for_leader_worker
+		if  = {
+			limit = {
+				has_idea = SGS_CIR_uprise_idea
+			}
+			custom_effect_tooltip = SGS_CIR_nego_failed
+			hidden_effect = {
+				random_list = {
+					50 = {country_event = { id = sgs.40220 }}
+					50 = {country_event = { id = sgs.40221 }}
+				}
+			}
+			else = {
+				custom_effect_tooltip = CIR_wait_for_leader_tt
+				set_country_flag = CIR_wait_for_leader_worker
+			}
+		}
 		ai_chance = { base = 1 }
 	}
 	option = {

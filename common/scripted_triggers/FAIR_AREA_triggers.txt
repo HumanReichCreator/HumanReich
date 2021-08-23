@@ -38,7 +38,7 @@ SC2_need_pay_attention = {
 
 CIR_army_wait_their_leader = {
     CIR_neworder_way = yes
-    not = { has_completed_focus = SGS_deal_with_leaders_focus }
+    not = { CIR_army_join_with_their_leader = yes }
 }
 
 CIR_army_join_with_their_leader = {
