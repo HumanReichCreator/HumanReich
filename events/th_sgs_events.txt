@@ -12849,6 +12849,9 @@ country_event = {
 	option = {
 		#
 		name = sgs.40221.1
+		custom_effect_tooltip = FA_make_core_cost_up
+		multiply_variable = { SGS.FIR_AREA_CIR_MC_cost = 1.25 }
+		round_variable = SGS.FIR_AREA_CIR_MC_cost
 		clr_country_flag = sgs_all_integrated_peacelly
 		add_ideas = SGS_CIR_army_uprise_idea
 		CIR_army_uprise_debuff = yes
@@ -12877,6 +12880,9 @@ country_event = {
 	option = {
 		#
 		name = sgs.40222.1
+		custom_effect_tooltip = FA_make_core_cost_up
+		multiply_variable = { SGS.FIR_AREA_CIR_MC_cost = 1.25 }
+		round_variable = SGS.FIR_AREA_CIR_MC_cost
 		swap_ideas = {
 			remove_idea = SGS_CIR_army_catched_idea
 			add_idea = SGS_CIR_army_uprise_idea
@@ -13241,7 +13247,7 @@ country_event = {
 						else = { 
 							add_popularity = {
 								ideology = oldorder
-								popularity = -0.2
+								popularity = -0.1
 							} 
 						}
 					}
@@ -13399,7 +13405,9 @@ country_event = {
 		#
 		name = sgs.4031.1
 		#反抗界限减少，加长造核时间
-		set_variable = { SGS.FIR_AREA_CIR_MC_time = 50}
+		#set_variable = { SGS.FIR_AREA_CIR_MC_time = 50}
+		multiply_variable = { SGS.FIR_AREA_CIR_MC_time = 1.25 }
+		round_variable = SGS.FIR_AREA_CIR_MC_time
 		custom_effect_tooltip = FA_make_core_time_up
 		add_ideas = SGS_CIR_uprise_idea
 		every_state = {
@@ -13491,6 +13499,9 @@ country_event = {
 			remove_ideas = SGS_CIR_uprise_idea
 		}
 		CIR_army_uprise_debuff = yes
+		custom_effect_tooltip = FA_make_core_cost_up
+		multiply_variable = { SGS.FIR_AREA_CIR_MC_cost = 1.25 }
+		round_variable = SGS.FIR_AREA_CIR_MC_cost
 		ai_chance = { base = 1 }
 	}
 }country_event = {
@@ -13515,6 +13526,9 @@ country_event = {
 			add_idea = SGS_CIR_and_army_uprise_idea
 		}
 		CIR_army_uprise_debuff = yes
+		custom_effect_tooltip = FA_make_core_cost_up
+		multiply_variable = { SGS.FIR_AREA_CIR_MC_cost = 1.25 }
+		round_variable = SGS.FIR_AREA_CIR_MC_cost
 		ai_chance = { base = 1 }
 	}
 }
@@ -13719,6 +13733,139 @@ news_event = {
 		ai_chance = { base = 1 }
 	}
 }
+
+country_event = {
+	# 展开怀柔还是严厉
+	id = sgs.404
+	title = sgs.404.t
+	desc = sgs.404.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#怀柔
+		name = sgs.404.1
+		add_ideas = SGS_CIR_new_leader_soft_idea
+		set_country_flag = SGS_CIR_soft_NL_flag
+		country_event = {
+			id = sgs.4040
+			days = 30
+		}
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#严厉
+		name = sgs.404.1
+		add_ideas = SGS_CIR_new_leader_strict_idea
+		set_country_flag = SGS_CIR_strict_NL_flag
+		country_event = {
+			id = sgs.4040
+			days = 30
+		}
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	# 安抚结果
+	id = sgs.4040
+	title = sgs.4040.t
+	desc = sgs.4040.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.4040.1
+		set_variable = { var_ok = 50 }
+		set_variable = { var_ng = 50 }
+		random_list = {
+			var:var_ok = {   country_event = { id = sgs.4041 }  } #安抚成功
+			var:var_ng = {   country_event = { id = sgs.4042 }  } #安抚失败
+		}
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	# 安抚成功
+	id = sgs.4041
+	title = sgs.4041.t
+	desc = sgs.4041.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.4041.1
+		multiply_variable = { SGS.FIR_AREA_CIR_MC_time = 0.8 }
+		multiply_variable = { SGS.FIR_AREA_CIR_MC_cost = 0.8 }
+		custom_effect_tooltip = FA_make_core_time_down
+		custom_effect_tooltip = FA_make_core_cost_down
+		add_political_power = 80
+		add_stability = 0.2
+		remove_ideas = {   SGS_CIR_new_leader_soft_idea  SGS_CIR_new_leader_strict_idea }
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	# 安抚不成功
+	id = sgs.4042
+	title = sgs.4042.t
+	desc = sgs.4042.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	option = {
+		#接受条件
+		name = sgs.4042.1
+
+		if = {
+			limit = {  SGS_peaceful_transit_gov = yes  }
+			SGS_dove_rise10 = yes
+		}
+		if = {
+			limit = {  SGS_sunnystar_post_cw_gov = yes  }
+			SGS_dove_rise5 = yes
+		}
+		if = {
+			limit = { has_government = oldorder }
+			add_popularity = {
+				ideology = oldorder
+				popularity = -0.15
+			} 
+		}
+		country_event = { id = sgs.4041 } 
+
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#残酷镇压
+		name = sgs.4042.2
+		trigger = {
+			or = {
+				and = {
+					has_country_flag = SGS_CIR_strict_NL_flag
+					has_idea = SGS_CIR_and_army_uprise_idea
+				}
+				and = {
+					SGS_peaceful_transit_gov = yes
+					SGS_hawk_get_more = yes
+				}
+			}
+		}
+		ai_chance = { base = 1 }
+	}
+}
+
 
 
 #tno小故事专场
