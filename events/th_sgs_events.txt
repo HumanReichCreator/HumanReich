@@ -13824,6 +13824,7 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		tag = sgs
+	}
 	option = {
 		#接受条件
 		name = sgs.4042.1
@@ -13862,6 +13863,23 @@ country_event = {
 				}
 			}
 		}
+
+		if = {
+			limit = {  has_idea = SGS_CIR_new_leader_strict_idea  }
+			swap_ideas = {
+				remove_idea = SGS_CIR_new_leader_strict_idea
+				add_idea = SGS_CIR_new_leader_forcely_surpress_idea
+			}
+		}
+
+		if = {
+			limit = {  has_idea = SGS_CIR_new_leader_soft_idea  }
+			swap_ideas = {
+				remove_idea = SGS_CIR_new_leader_soft_idea
+				add_idea = SGS_CIR_new_leader_forcely_surpress_idea
+			}
+		}
+
 		ai_chance = { base = 1 }
 	}
 }

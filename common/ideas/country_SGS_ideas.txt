@@ -882,6 +882,32 @@ ideas = {
 				stability_weekly = 0.05
 			}
 		}
+		SGS_CIR_new_leader_soft_idea = {
+			picture = generic_constitutional_guarantees
+			modifier = {
+				political_power_gain = -0.1
+				guli_drift = 0.01
+
+			}
+		}
+		SGS_CIR_new_leader_soft_idea = {
+			picture = generic_constitutional_guarantees
+			modifier = {
+				political_power_gain = -0.05
+				neworder_drift = 0.01
+				
+			}
+		}
+
+		SGS_CIR_new_leader_forcely_surpress_idea = {
+			picture = generic_constitutional_guarantees
+			modifier = {
+				political_power_gain = -0.2
+				stability_weekly = -0.01
+				required_garrison_factor = 0.5
+				weekly_manpower = -20
+			}
+		}
 
 	}
 }
