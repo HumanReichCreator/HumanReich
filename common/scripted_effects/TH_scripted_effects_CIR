@@ -1,0 +1,35 @@
+CIR_run = {
+    if = {
+		limit = {
+			has_idea = SGS_CIR_uprise_idea
+		}
+		remove_ideas = SGS_CIR_uprise_idea
+	}
+	if = {
+		limit = {
+			has_idea = SGS_CIR_army_uprise_idea
+		}
+		remove_ideas = SGS_CIR_army_uprise_idea
+	}
+	if = {
+		limit = {
+			has_idea = SGS_CIR_and_army_uprise_idea
+		}
+		remove_ideas = SGS_CIR_and_army_uprise_idea
+	}
+}
+
+CIR_run_to_other_country = {
+	CIR = {
+		random_country = {
+			limit = {
+				capital_scope = {
+					is_on_continent = Gensokyo
+				}
+				exists = yes
+				has_same_government_as_ROOT = yes
+			}
+			country_event = { id = sgs.4050 }
+		}
+	}
+}

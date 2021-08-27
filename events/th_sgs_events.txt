@@ -13103,6 +13103,7 @@ country_event = {
 			limit = { CIR_qinwai_way = yes }
 			add_ideas = SGS_CIR_group_tactics_idea
 		}
+		set_country_flag = CIR_army_join
 		ai_chance = { base = 1 }
 	}
 }
@@ -13300,7 +13301,8 @@ country_event = {
 			days = 360
 		}  
 		add_political_power = 50
-		
+		set_country_flag = CIR_army_join
+
 		ai_chance = { base = 1 }
 	}
 	option = {
@@ -13312,6 +13314,7 @@ country_event = {
 		add_stability = 0.15
 		add_political_power = 80
 		add_ideas = SGS_CIR_army_police_idea 
+		set_country_flag = CIR_army_join
 		ai_chance = { base = 1 }
 	}
 }
@@ -13757,7 +13760,7 @@ country_event = {
 	}
 	option = {
 		#严厉
-		name = sgs.404.1
+		name = sgs.404.2
 		add_ideas = SGS_CIR_new_leader_strict_idea
 		set_country_flag = SGS_CIR_strict_NL_flag
 		country_event = {
@@ -13781,8 +13784,79 @@ country_event = {
 	option = {
 		#
 		name = sgs.4040.1
-		set_variable = { var_ok = 50 }
-		set_variable = { var_ng = 50 }
+		set_variable = { var_ok = 70 }
+		set_variable = { var_ng = 30 }
+		#如果同时妥善解决琪露诺和湖主卫队，则百分之百成功
+		if = {
+			limit = {
+				has_country_flag = CIR_join_root
+				has_country_flag = CIR_army_join
+			}
+			add_to_variable = { var_ok = 9999  }
+		}
+		#琪露诺招安失败增加失败概率
+		if = {
+			limit = {
+				has_idea = SGS_CIR_uprise_idea
+			}
+			add_to_variable = { var_ng = 30  }
+		}
+		#湖主卫队招安失败增加失败概率
+		if = {
+			limit = {
+				has_idea = SGS_CIR_army_uprise_idea
+			}
+			add_to_variable = { var_ng = 15  }
+		}
+		#琪露诺和湖主卫队同时招安失败大大增加失败概率
+		if = {
+			limit = {
+				has_idea = SGS_CIR_army_uprise_idea
+			}
+			add_to_variable = { var_ng = 70  }
+		}
+		#激进战场妖精增加失败概率
+		if = {
+			limit = {
+				SGS_peaceful_transit_gov = yes
+			}
+			add_to_variable = { var_ng = 100  }
+		}
+		#如果琪露诺走了和平/社民，你还严厉，增加失败概率
+		if = {
+			limit = {
+				or = {
+					CIR_guli_way = yes
+					CIR_qinwai_way = yes
+				}
+				has_country_flag = SGS_CIR_strict_NL_flag
+			}
+			add_to_variable = { var_ng = 20  }
+		}
+		#如果琪露诺走了和平/社民，你是怀柔，增加成功概率
+		if = {
+			limit = {
+				or = {
+					CIR_guli_way = yes
+					CIR_qinwai_way = yes
+				}
+				has_country_flag = SGS_CIR_soft_NL_flag
+			}
+			add_to_variable = { var_ok = 30  }
+		}
+		#如果琪露诺走了斗争/威民，你还怀柔，增加失败概率
+		if = {
+			limit = {
+				or = {
+					CIR_neworder_way = yes
+					CIR_authordemo_way = yes
+				}
+				has_country_flag = SGS_CIR_soft_NL_flag
+			}
+			add_to_variable = { var_ng = 25  }
+		}
+
+
 		random_list = {
 			var:var_ok = {   country_event = { id = sgs.4041 }  } #安抚成功
 			var:var_ng = {   country_event = { id = sgs.4042 }  } #安抚失败
@@ -13880,6 +13954,81 @@ country_event = {
 			}
 		}
 
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	# 全部核心转化完毕，琪露诺跑路
+	id = sgs.405
+	title = sgs.405.t
+	desc = sgs.405.d
+	fire_only_once = yes
+	is_triggered_only = no
+	mean_time_to_happen = {
+		days = 2
+	}
+	trigger = {
+		tag = sgs
+		or = {
+			has_idea = SGS_CIR_uprise_idea
+			has_idea = SGS_CIR_army_uprise_idea
+			has_idea = SGS_CIR_and_army_uprise_idea
+		}
+		all_state = {
+			or = {
+				not = { is_core_of = CIR }
+				and = {
+					is_core_of = CIR
+					is_core_of = ROOT
+				}
+			}
+		}
+	}
+	option = {
+		#琪露诺跑路
+		name = sgs.405.1
+		CIR_run = yes
+		CIR = {
+			CIR_run_to_other_country = yes
+		}
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 触发的琪露诺跑路
+	id = sgs.4050
+	title = sgs.4050.t
+	desc = sgs.4050.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.4050.1
+		CIR_run = yes
+		CIR = {
+			CIR_run_to_other_country = yes
+		}
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	# 接收国发生琪露诺来了的事件
+	id = sgs.4051
+	title = sgs.4051.t
+	desc = sgs.4051.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.4051.1
 		ai_chance = { base = 1 }
 	}
 }

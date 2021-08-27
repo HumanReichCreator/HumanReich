@@ -268,3 +268,10 @@ CIR_authordemo_task_one_misson = {
 			country_event = { id = sgs.4034 }
 		}
 	}
+
+	CIR_army_join
+	CIR_join_root
+
+	capital_scope = {
+				is_on_continent = Gensokyo
+			}

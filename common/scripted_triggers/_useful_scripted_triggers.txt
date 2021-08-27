@@ -35,6 +35,44 @@ has_same_government_as_ROOT = {
 	}
 }
 
+
+has_same_government_as_PREV = {
+	OR = {
+		AND = {
+			has_government = qinwai
+			PREV = { has_government = qinwai }
+		}
+		AND = {
+			has_government = fandong
+			PREV = { has_government = fandong }
+		}
+		AND = {
+			has_government = lienin
+			PREV = { has_government = lienin }
+		}
+		AND = {
+			has_government = guli
+			PREV = { has_government = guli }
+		}
+		AND = {
+			has_government = authordemo
+			PREV = { has_government = authordemo }
+		}
+		AND = {
+			has_government = oldorder
+			PREV = { has_government = oldorder }
+		}
+		AND = {
+			has_government = humanfirst
+			PREV = { has_government = humanfirst }
+		}
+		AND = {
+			has_government = destroyid
+			PREV = { has_government = destroyid }
+		}
+	}
+}
+
 # checks for these three government types for the country in scope
 has_socialist_government = {
 	custom_trigger_tooltip = {
