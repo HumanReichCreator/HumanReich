@@ -31,7 +31,7 @@ CIR_run_to_other_country = {
 				not = { tag = SC2 }
 				not = { tag = LIL }
 				exists = yes
-				has_same_government_as_ROOT = yes
+				has_same_government_as_PREV = yes
 			}
 			CIR = {
 				every_unit_leader = {

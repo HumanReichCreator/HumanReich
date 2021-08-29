@@ -63,6 +63,10 @@ has_same_government_as_PREV = {
 			PREV = { has_government = authordemo }
 		}
 		AND = {
+			has_government = neworder
+			PREV = { has_government = neworder }
+		}
+		AND = {
 			has_government = oldorder
 			PREV = { has_government = oldorder }
 		}
