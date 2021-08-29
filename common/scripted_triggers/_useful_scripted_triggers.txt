@@ -21,6 +21,10 @@ has_same_government_as_ROOT = {
 			ROOT = { has_government = authordemo }
 		}
 		AND = {
+			has_government = neworder
+			ROOT = { has_government = neworder }
+		}
+		AND = {
 			has_government = oldorder
 			ROOT = { has_government = oldorder }
 		}

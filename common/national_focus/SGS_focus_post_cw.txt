@@ -2242,6 +2242,7 @@ focus = {
 		completion_reward = {
 			#从这才能开始整合地块，主要讨论妖精族群意识，结果影响造核速度。
 			set_country_flag =  FIR_AREA_CIR_MAKE_CORE 
+			country_event = { id = sgs.404  }
 			custom_effect_tooltip = CIR_core_make_tooltup
 		}
 
