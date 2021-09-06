@@ -151,6 +151,13 @@
             "  }",
         ]
     },
+    "fast_country_event": {
+        "scope": "hoi4,paradox,plaintext,lua",
+        "prefix": "*country_event",
+        "body": [
+            "country_event = { id = ${Namespace}.${Id} }",
+        ]
+    },
     
 }
 

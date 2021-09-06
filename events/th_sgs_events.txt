@@ -14068,6 +14068,109 @@ news_event = {
 	}
 }
 
+#有时间构思一下残酷镇压时候的事件以及琪露诺提前跑路
+
+
+country_event = {
+	# 红魔馆带审判
+	id = sgs.406
+	title = sgs.406.t
+	desc = sgs.406.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#开始
+		name = sgs.406.1
+		country_event = { id = sgs.4060 }
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	# 雷米的命运
+	id = sgs.4060
+	title = sgs.4060.t
+	desc = sgs.4060.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#继续关着
+		name = sgs.4060.1
+		country_event = { id = sgs.4061 }
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#辕门射戟
+		name = sgs.4060.2
+		country_event = { id = sgs.4063 }
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#游街后驱逐
+		name = sgs.4060.3
+		country_event = { id = sgs.4062 }
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 继续关着
+	id = sgs.4061
+	title = sgs.4061.t
+	desc = sgs.4061.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.4061.1
+		set_country_flag = SGS_keep_remi_flg
+		country_event = { id = sgs.4064 }
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 游街驱逐
+	id = sgs.4062
+	title = sgs.4062.t
+	desc = sgs.4062.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.4062.1
+		set_country_flag = SGS_expel_remi_flg
+		country_event = { id = sgs.4064 }
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 辕门射戟
+	id = sgs.4063
+	title = sgs.4063.t
+	desc = sgs.4063.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.4063.1
+		ai_chance = { base = 1 }
+	}
+}
+
 
 
 #tno小故事专场
