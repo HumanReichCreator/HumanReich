@@ -14103,19 +14103,25 @@ country_event = {
 		#继续关着
 		name = sgs.4060.1
 		country_event = { id = sgs.4061 }
-		ai_chance = { base = 1 }
+		ai_chance = { base = 30 }
 	}
 	option = {
 		#辕门射戟
 		name = sgs.4060.2
 		country_event = { id = sgs.4063 }
-		ai_chance = { base = 1 }
+		ai_chance = { base = 40 }
+	}
+	option = {
+		#软驱逐
+		name = sgs.4060.3
+		country_event = { id = sgs.40620 }
+		ai_chance = { base = 20 }
 	}
 	option = {
 		#游街后驱逐
-		name = sgs.4060.3
-		country_event = { id = sgs.4062 }
-		ai_chance = { base = 1 }
+		name = sgs.4060.4
+		country_event = { id = sgs.40621 }
+		ai_chance = { base = 10 }
 	}
 }
 country_event = {
@@ -14132,12 +14138,13 @@ country_event = {
 		#
 		name = sgs.4061.1
 		set_country_flag = SGS_keep_remi_flg
+		add_political_power = -50
 		country_event = { id = sgs.4064 }
 		ai_chance = { base = 1 }
 	}
 }
 country_event = {
-	# 游街驱逐
+	# 软性or硬驱逐
 	id = sgs.4062
 	title = sgs.4062.t
 	desc = sgs.4062.d
@@ -14147,10 +14154,49 @@ country_event = {
 		tag = sgs
 	}
 	option = {
-		#
+		#软驱逐
 		name = sgs.4062.1
-		set_country_flag = SGS_expel_remi_flg
-		country_event = { id = sgs.4064 }
+		country_event = { id = sgs.40620 }
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#硬驱逐
+		name = sgs.4062.2
+		country_event = { id = sgs.40621 }
+		ai_chance = { base = 1 }
+	}
+
+}
+country_event = {
+	# 软驱逐
+	id = sgs.40620
+	title = sgs.40620.t
+	desc = sgs.40620.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40620.1
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 硬驱逐
+	id = sgs.40621
+	title = sgs.40621.t
+	desc = sgs.40621.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40621.1
+		set_country_flag = SGS_expel_remi_violently_flg
 		ai_chance = { base = 1 }
 	}
 }
@@ -14165,8 +14211,41 @@ country_event = {
 		tag = sgs
 	}
 	option = {
-		#
-		name = sgs.4063.1
+		#自己射
+		name = sgs.40630.1
+		ai_chance = { base = 30 }
+	}
+	option = {
+		#随便找个妖精射
+		name = sgs.40631.2
+		ai_chance = { base = 30 }
+	}
+	option = {
+		#蕾咪射
+		name = sgs.40632.3
+		ai_chance = { 
+			base = 10 
+			modifier = {
+				add = 20
+				has_government = neworder
+			}
+		}
+	}
+}
+country_event = {
+	# 自己射
+	id = sgs.40630
+	title = sgs.40630.t
+	desc = sgs.40630.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#射中
+		name = sgs.40630.1
+		country_event = { id = sgs.403600 }
 		ai_chance = { base = 1 }
 	}
 }
