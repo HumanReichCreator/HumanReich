@@ -62,6 +62,14 @@ set_country_flag = FA_in_FPA_flg
 SC2.SC2_FPA_infl_value
 SGS.SC2_infl_value
 
+
+custom_effect_tooltip = SGS_shoot_by_myself_tt
+		random_list = {
+			20 = {country_event = { id = sgs.4062}}
+			80 = {country_event = { id = sgs.4061}}
+		 }
+
+
 completion_reward = {
 			#
 			

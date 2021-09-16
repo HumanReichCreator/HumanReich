@@ -14178,9 +14178,29 @@ country_event = {
 		tag = sgs
 	}
 	option = {
-		#
+		#扔给八云紫
 		name = sgs.40620.1
-		ai_chance = { base = 1 }
+		trigger = {
+			has_government = oldorder
+			YKR ={ exists = yes  }
+		}
+		country_event = { id = sgs.4064 }
+		ai_chance = { base = 30 }
+	}
+	option = {
+		#送到妖怪山自生自灭
+		name = sgs.40620.1
+		trigger = {
+			has_government = neworder
+		}
+		country_event = { id = sgs.4064 }
+		ai_chance = { base = 20 }
+	}
+	option = {
+		#随便仍哪
+		name = sgs.40620.1
+		country_event = { id = sgs.4064 }
+		ai_chance = { base = 10 }
 	}
 }
 country_event = {
@@ -14197,6 +14217,7 @@ country_event = {
 		#
 		name = sgs.40621.1
 		set_country_flag = SGS_expel_remi_violently_flg
+		#弄个决议准备几天，然后出个事件和新闻，然后是红魔一家出逃
 		ai_chance = { base = 1 }
 	}
 }
@@ -14210,19 +14231,28 @@ country_event = {
 	trigger = {
 		tag = sgs
 	}
-	option = {
-		#自己射
-		name = sgs.40630.1
-		ai_chance = { base = 30 }
-	}
+
 	option = {
 		#随便找个妖精射
-		name = sgs.40631.2
+		name = sgs.4063.1
+		custom_effect_tooltip = SGS_shoot_by_fairy_tt
+		hidden_effect = {
+			random_list = {
+				50 = { country_event = { id = sgs.40630 } } #不会射
+				50 = {
+					random_list = {
+						20 = {country_event = { id = sgs.40631 }} #会射也没中
+						80 = {country_event = { id = sgs.40632 }} #中了
+					}
+				}
+			}
+		}
+
 		ai_chance = { base = 30 }
 	}
 	option = {
 		#蕾咪射
-		name = sgs.40632.3
+		name = sgs.4063.2
 		ai_chance = { 
 			base = 10 
 			modifier = {
@@ -14233,7 +14263,7 @@ country_event = {
 	}
 }
 country_event = {
-	# 自己射
+	# 妖精不会射
 	id = sgs.40630
 	title = sgs.40630.t
 	desc = sgs.40630.d
@@ -14243,12 +14273,52 @@ country_event = {
 		tag = sgs
 	}
 	option = {
-		#射中
+		#
 		name = sgs.40630.1
-		country_event = { id = sgs.403600 }
+		country_event = { id = sgs.4062 }
 		ai_chance = { base = 1 }
 	}
 }
+
+country_event = {
+	# 妖精会射没射中
+	id = sgs.40631
+	title = sgs.40631.t
+	desc = sgs.40631.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40631.1
+		country_event = { id = sgs.4062 }
+		army_experience = 5
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	# 会射而且射中了
+	id = sgs.40632
+	title = sgs.40632.t
+	desc = sgs.40632.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40632.1
+		country_event = { id = sgs.4061 }
+		add_war_support = 0.05
+		# create_corps_commander = {} 得一员猛将，回去再写
+		ai_chance = { base = 1 }
+	}
+}
+
 
 
 
