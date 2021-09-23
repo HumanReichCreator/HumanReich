@@ -1809,6 +1809,31 @@ focus = {
 		relative_position_id = SGS_occupy_SCA_focus
 		completion_reward = {
 			#移除走私buff.走向会受之前分支国策的影响，先进科技，代工技术，经营/投资能力（民间？红魔馆人物？）？，大量废弃厂房？
+			
+			#甜品产业为核心的公私合营
+			if = {
+				limit = {
+					has_completed_focus = SGS_take_over_dessert_focus
+				}
+				country_event = { id = sgs.4071 }
+			}
+			#保持自由市场
+			if = {
+				limit = {
+					not = { has_completed_focus = SGS_take_over_dessert_focus }
+					has_completed_focus = SGS_encourge_privte_invest_focus
+				}
+				country_event = { id = sgs.4070 }
+			}
+			#收归国有
+			if = {
+				limit = {
+					not = { has_completed_focus = SGS_take_over_dessert_focus }
+					not = { has_completed_focus = SGS_encourge_privte_invest_focus }
+				}
+				country_event = { id = sgs.407 }
+			}
+
 		}
 	}
 	focus = {

@@ -14192,6 +14192,7 @@ country_event = {
 		name = sgs.40620.1
 		trigger = {
 			has_government = neworder
+			OTG = { exists = yes  }
 		}
 		country_event = { id = sgs.4064 }
 		ai_chance = { base = 20 }
@@ -14253,6 +14254,7 @@ country_event = {
 	option = {
 		#蕾咪射
 		name = sgs.4063.2
+		country_event = { id = sgs.40633 }
 		ai_chance = { 
 			base = 10 
 			modifier = {
@@ -14315,6 +14317,309 @@ country_event = {
 		country_event = { id = sgs.4061 }
 		add_war_support = 0.05
 		# create_corps_commander = {} 得一员猛将，回去再写
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	# 雷米射，要不要整她
+	id = sgs.40633
+	title = sgs.40633.t
+	desc = sgs.40633.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	immediate = {
+		set_variable = { var_ok = 70 }
+		set_variable = { var_ng = 30 }
+		if = {
+			limit = {
+				SCA = { has_government = authordemo  }
+			}
+			add_to_variable = {var_ok = 10}
+		}
+		if = {
+			limit = {
+				SCA = { has_government = neworder  }
+			}
+			add_to_variable = {var_ok = 20}
+		}
+	}
+	option = {
+		#搞她
+		name = sgs.40633.1
+		add_to_variable = {var_ng = 100}
+		random_list = {
+			var:var_ng = { country_event = { id = sgs.40634 }  }
+			var:var_ok = { country_event = { id = sgs.40635 }  }
+		}
+		ai_chance = { 
+			base = 10 
+			modifier = {
+				add = 30
+				has_government = neworder
+				SGS_sunnystar_post_cw_gov = yes
+			}
+		}
+	}
+	option = {
+		#不搞她
+		name = sgs.40633.2
+		random_list = {
+			var:var_ng = { country_event = { id = sgs.40634 }  }
+			var:var_ok = { country_event = { id = sgs.40635 }  }
+		}
+		ai_chance = { base = 20 }
+	}
+}
+
+country_event = {
+	# 雷米没射中
+	id = sgs.40634
+	title = sgs.40634.t
+	desc = sgs.40634.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40634.1
+		country_event = { id = sgs.4062 }
+		add_political_power = 25
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	# 雷米射中了
+	id = sgs.40635
+	title = sgs.40635.t
+	desc = sgs.40635.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40635.1
+		country_event = { id = sgs.4061 }
+		add_popularity = {
+			ideology = neworder
+			popularity = -0.1
+		} 
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	# 审判其他人
+	id = sgs.4064
+	title = sgs.4064.t
+	desc = sgs.4064.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#邀请加入
+		name = sgs.4064.1
+		#咲夜
+		set_variable = { var_ok = 50 }
+		set_variable = { var_ng = 50 }
+		random_list = {
+			var:var_ng = { country_event = { id = sgs.40640 }  }
+			var:var_ok = { country_event = { id = sgs.40641 }  }
+		}
+		#红美铃
+		set_variable = { var_ok = 50 }
+		set_variable = { var_ng = 50 }
+		random_list = {
+			var:var_ng = { country_event = { id = sgs.40642 }  }
+			var:var_ok = { country_event = { id = sgs.40643 }  }
+		}
+		#芙兰
+		set_variable = { var_ok = 50 }
+		set_variable = { var_ng = 50 }
+		random_list = {
+			var:var_ng = { country_event = { id = sgs.40644 }  }
+			var:var_ok = { country_event = { id = sgs.40645 }  }
+		}
+		#小恶魔
+		set_variable = { var_ok = 50 }
+		set_variable = { var_ng = 50 }
+		random_list = {
+			var:var_ng = { country_event = { id = sgs.40646 }  }
+			var:var_ok = { country_event = { id = sgs.40647 }  }
+		}
+
+		#帕秋莉
+		if = {
+			limit = {
+				SCA = { has_country_flag = SCA_Pache_come_back }
+			}
+			set_variable = { var_ok = 50 }
+			set_variable = { var_ng = 50 }
+			random_list = {
+				var:var_ng = { country_event = { id = sgs.40648 }  }
+				var:var_ok = { country_event = { id = sgs.40649 }  }
+			}
+		}
+
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#撵走
+		name = sgs.4064.2
+		country_event = { id = sgs.4065 }
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	# 咲夜同意加入
+	id = sgs.40640
+	title = sgs.40640.t
+	desc = sgs.40640.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40640.1
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 咲夜不同意，走了
+	id = sgs.40641
+	title = sgs.40641.t
+	desc = sgs.40641.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40641.1
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	# 集体驱逐，各奔东西
+	id = sgs.4065
+	title = sgs.4065.t
+	desc = sgs.4065.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.4065.1
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	# 出售股权
+	id = sgs.407
+	title = sgs.407.t
+	desc = sgs.407.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#同意，花pp得几个民工。得一次工业科技加速
+		name = sgs.407.1
+		add_political_power = -50
+		122 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				level = 2
+				instant_build = yes
+				type = industrial_complex
+			}
+		}
+		add_tech_bonus = {
+			category = industry
+			uses = 1
+			bonus = 0.25
+		}
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#自负盈亏 得一个减消费的buff，一次性得一些pp
+		name = sgs.407.2
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 规范市场，自由经营，后续触发产业升级
+	id = sgs.4070
+	title = sgs.4070.t
+	desc = sgs.4070.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#同意 加一个比走私甜品更吊的buff但是要持续花政治点数，然后过一阵会有产业升级的事件进一步提升buff并让民间投资活得更好
+		name = sgs.4070.1
+		add_stability = 0.05
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#直接收归国有，少花点pp，得几个民工
+		name = sgs.4070.2
+		add_political_power = -30
+		122 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				level = 2
+				instant_build = yes
+				type = industrial_complex
+			}
+		}
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	# 公私合营整合并升级产业链
+	id = sgs.4071
+	title = sgs.4071.t
+	desc = sgs.4071.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#同意 投入大量pp，获得整合版（内+外）甜品工业buff+工业基础能力buff
+		name = sgs.4071.1
+		add_political_power = -80
+		add_stability = 0.1
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#产业转移 投入少量pp，直接得军工or军工加速
+		name = sgs.4071.2
+		add_political_power = -40
+		add_war_support = 0.05
 		ai_chance = { base = 1 }
 	}
 }
