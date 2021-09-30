@@ -14580,6 +14580,11 @@ country_event = {
 		#同意 加一个比走私甜品更吊的buff但是要持续花政治点数，然后过一阵会有产业升级的事件进一步提升buff并让民间投资活得更好
 		name = sgs.4070.1
 		add_stability = 0.05
+		add_ideas = { SGS_free_market_to_SCA_idea }
+		country_event = { 
+			id = sgs.40700
+			days = 100 
+		}
 		ai_chance = { base = 1 }
 	}
 	option = {
@@ -14594,6 +14599,23 @@ country_event = {
 				type = industrial_complex
 			}
 		}
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 自由市场迸发活力
+	id = sgs.40700
+	title = sgs.40700.t
+	desc = sgs.40700.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40700.1
+		
 		ai_chance = { base = 1 }
 	}
 }
