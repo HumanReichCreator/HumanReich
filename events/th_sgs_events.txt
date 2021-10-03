@@ -14181,15 +14181,16 @@ country_event = {
 		#扔给八云紫
 		name = sgs.40620.1
 		trigger = {
-			has_government = oldorder
+			#has_government = oldorder
 			YKR ={ exists = yes  }
 		}
+		event_target:SCA_Remilia_Scarlet = { set_nationality = YKR }
 		country_event = { id = sgs.4064 }
 		ai_chance = { base = 30 }
 	}
 	option = {
 		#送到妖怪山自生自灭
-		name = sgs.40620.1
+		name = sgs.40620.2
 		trigger = {
 			has_government = neworder
 			OTG = { exists = yes  }
@@ -14199,7 +14200,7 @@ country_event = {
 	}
 	option = {
 		#随便仍哪
-		name = sgs.40620.1
+		name = sgs.40620.3
 		country_event = { id = sgs.4064 }
 		ai_chance = { base = 10 }
 	}

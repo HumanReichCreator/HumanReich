@@ -1206,6 +1206,7 @@ army_chinese_leader_inherit_146 = {
             # name = "Remilia Scarlet"
             name = "蕾米莉亚·斯卡蕾特"
             portrait_path = "gfx/leaders/SCA/SCA_rem.dds"
+            id = 2000
             traits = {  th_character  }
             attack_skill = 6
             defense_skill = 3
@@ -1213,6 +1214,10 @@ army_chinese_leader_inherit_146 = {
             logistics_skill = 5
             
             skill = 6
+        }
+        random_unit_leader = {
+            limit = { has_id = 2000 }
+            save_global_event_target_as = SCA_Remilia_Scarlet
         }
         create_field_marshal = {
             # name = "Patchouli Knowledge"
