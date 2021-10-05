@@ -1202,23 +1202,7 @@ army_chinese_leader_inherit_146 = {
             not = { has_country_flag = has_inherit_@PREV }
         }
         set_country_flag = has_inherit_@PREV
-        create_field_marshal = {
-            # name = "Remilia Scarlet"
-            name = "蕾米莉亚·斯卡蕾特"
-            portrait_path = "gfx/leaders/SCA/SCA_rem.dds"
-            id = 2000
-            traits = {  th_character  }
-            attack_skill = 6
-            defense_skill = 3
-            planning_skill = 3
-            logistics_skill = 5
-            
-            skill = 6
-        }
-        random_unit_leader = {
-            limit = { has_id = 2000 }
-            save_global_event_target_as = SCA_Remilia_Scarlet
-        }
+        
         create_field_marshal = {
             # name = "Patchouli Knowledge"
             name = "帕秋莉·诺雷姬"
@@ -1252,9 +1236,13 @@ army_chinese_leader_inherit_146 = {
             defense_skill = 5
             planning_skill = 4
             logistics_skill = 2
-            
+            id = 2001
             skill = 4
         }
+        random_unit_leader = {
+			limit = { has_id = 2001 }
+			save_global_event_target_as = SCA_Sakuya
+		}
         create_corps_commander = {
             # name = "Hong Meirin"
             name = "红美铃"

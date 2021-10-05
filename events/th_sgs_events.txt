@@ -14181,10 +14181,11 @@ country_event = {
 		#扔给八云紫
 		name = sgs.40620.1
 		trigger = {
-			#has_government = oldorder
+			has_government = oldorder
 			YKR ={ exists = yes  }
 		}
-		event_target:SCA_Remilia_Scarlet = { set_nationality = YKR }
+		#event_target:SCA_Remilia_Scarlet = { set_nationality = YKR }
+		YKR = {create_remilia = yes }
 		country_event = { id = sgs.4064 }
 		ai_chance = { base = 30 }
 	}
@@ -14195,12 +14196,15 @@ country_event = {
 			has_government = neworder
 			OTG = { exists = yes  }
 		}
+		OTG = { country_event = { id = sgs.40622 } }
 		country_event = { id = sgs.4064 }
 		ai_chance = { base = 20 }
 	}
 	option = {
 		#随便仍哪
 		name = sgs.40620.3
+		SCA = {SCA_Remi_exile = yes}
+		
 		country_event = { id = sgs.4064 }
 		ai_chance = { base = 10 }
 	}
@@ -14220,6 +14224,32 @@ country_event = {
 		name = sgs.40621.1
 		set_country_flag = SGS_expel_remi_violently_flg
 		#弄个决议准备几天，然后出个事件和新闻，然后是红魔一家出逃
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	# 大天狗事件：雷米来了
+	id = sgs.40622
+	title = sgs.40622.t
+	desc = sgs.40622.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#收留
+		name = sgs.40622.1
+		create_remilia = yes
+		add_political_power = -30
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#不收
+		name = sgs.40622.2
+		add_political_power = 10
+		SCA_Remi_exile = yes
 		ai_chance = { base = 1 }
 	}
 }
@@ -14477,6 +14507,7 @@ country_event = {
 	option = {
 		#撵走
 		name = sgs.4064.2
+		
 		country_event = { id = sgs.4065 }
 		ai_chance = { base = 1 }
 	}
@@ -14495,6 +14526,9 @@ country_event = {
 	option = {
 		#
 		name = sgs.40640.1
+		event_target:SCA_Sakuya = {
+			set_nationality = ROOT
+		}
 		ai_chance = { base = 1 }
 	}
 }
@@ -14511,6 +14545,11 @@ country_event = {
 	option = {
 		#
 		name = sgs.40641.1
+
+		event_target:SCA_Sakuya = {
+			save_global_event_target_as = SCA_exile_member
+		}
+		SCA = { SCA_mumber_exile = yes }
 		ai_chance = { base = 1 }
 	}
 }
