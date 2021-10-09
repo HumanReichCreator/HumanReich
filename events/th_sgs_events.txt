@@ -14069,6 +14069,7 @@ news_event = {
 }
 
 #有时间构思一下残酷镇压时候的事件以及琪露诺提前跑路
+#偶尔会建筑损坏或反抗暴增+减人力
 
 
 country_event = {
@@ -14224,6 +14225,7 @@ country_event = {
 		name = sgs.40621.1
 		set_country_flag = SGS_expel_remi_violently_flg
 		#弄个决议准备几天，然后出个事件和新闻，然后是红魔一家出逃
+		activate_decision = debuff_use_one_CIC_No2_day9
 		ai_chance = { base = 1 }
 	}
 }
@@ -14236,7 +14238,7 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 	trigger = {
-		tag = sgs
+		tag = otg
 	}
 	option = {
 		#收留
@@ -14251,6 +14253,51 @@ country_event = {
 		add_political_power = 10
 		SCA_Remi_exile = yes
 		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 葬礼
+	id = sgs.40623
+	title = sgs.40623.t
+	desc = sgs.40623.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40623.1
+		add_political_power = 80
+		SCA_mumber_all_exile = yes
+		news_event = { id = sgs.40624 }
+		ai_chance = { base = 1 }
+	}
+}
+
+news_event = {
+	#葬礼新闻
+	id = sgs.40624
+	title = sgs.40624.t
+	desc =  sgs.40624.d
+
+	#picture = GFX_news_event_nuke
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+	}
+	option = {
+		trigger = {
+			has_idea = fairy
+		}
+		name = sgs.40624.1	
+	}
+	option = {
+		trigger = {
+			not = {has_idea = fairy}
+		}
+		name = sgs.40624.2
 	}
 }
 country_event = {
@@ -14347,7 +14394,16 @@ country_event = {
 		name = sgs.40632.1
 		country_event = { id = sgs.4061 }
 		add_war_support = 0.05
-		# create_corps_commander = {} 得一员猛将，回去再写
+		create_corps_commander = {
+			name = "柳福·“冈格尼尔”·杰夫林"
+			portrait_path = "gfx/leaders/gen/fai3.dds"
+			traits = { fortress_buster }
+			skill = 4
+			attack_skill = 5
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
 		ai_chance = { base = 1 }
 	}
 }

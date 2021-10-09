@@ -1,6 +1,6 @@
 FAIRY_AREA_CORE_MAKE = {
     SCA_core_make = {
-		icon = onmap_recruit_operative
+		icon = generic_decision
 		available = {
 			
 		}
@@ -44,7 +44,7 @@ FAIRY_AREA_CORE_MAKE = {
 		}
 	}
 	SC2_core_make = {
-		icon = onmap_recruit_operative
+		icon = generic_decision
 		available = {
 			
 		}
@@ -88,7 +88,7 @@ FAIRY_AREA_CORE_MAKE = {
 		}
 	}
 	CIR_core_make = {
-		icon = onmap_recruit_operative
+		icon = generic_decision
 		available = {
 			
 		}
@@ -132,7 +132,7 @@ FAIRY_AREA_CORE_MAKE = {
 		}
 	}
 	LIL_core_make = {
-		icon = onmap_recruit_operative
+		icon = generic_decision
 		available = {
 			
 		}
@@ -176,7 +176,7 @@ FAIRY_AREA_CORE_MAKE = {
 		}
 	}
 	SGS_core_make = {
-		icon = onmap_recruit_operative
+		icon = generic_decision
 		available = {
 			
 		}
@@ -730,6 +730,25 @@ lake_deci_category = {
 		complete_effect = {
 			#服你
 			country_event = { id = sgs.4034 }
+		}
+	}
+
+	debuff_prepare_fairy_funeral = {
+		# This is our mission id
+		available = {
+			# 任务目标
+			#always = no
+		}
+		visible = {
+			always = no
+		}
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 3
+			political_power_gain = -0.5
+		}
+		remove_effect = {
+			country_event = { id = sgs.40623 }
 		}
 	}
 }
