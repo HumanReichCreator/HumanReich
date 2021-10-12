@@ -13967,6 +13967,7 @@ country_event = {
 			}
 		}
 		set_country_flag = SGS_CIR_forcely_surpress
+		country_event = { id = sgs.405  days = 240}
 		ai_chance = { base = 1 }
 	}
 }
@@ -13983,6 +13984,10 @@ country_event = {
 	trigger = {
 		tag = sgs
 		has_country_flag = SGS_CIR_forcely_surpress
+		any_owned_state = {
+			is_core_of = CIR
+			not = {is_core_of = ROOT}
+		}
 	}
 	option = {
 		#
@@ -13992,7 +13997,7 @@ country_event = {
 				is_core_of = CIR
 			}
 			add_manpower = -1000
-			add_compliance = 30
+			add_resistance = 30
 		}
 		ai_chance = { base = 1 }
 	}
@@ -14011,6 +14016,10 @@ country_event = {
 	trigger = {
 		tag = sgs
 		has_country_flag = SGS_CIR_forcely_surpress
+		any_owned_state = {
+			is_core_of = CIR
+			not = {is_core_of = ROOT}
+		}
 	}
 	option = {
 		#
@@ -14063,6 +14072,7 @@ country_event = {
 	option = {
 		#琪露诺跑路
 		name = sgs.405.1
+		clr_country_flag = SGS_CIR_forcely_surpress
 		CIR_run = yes
 		CIR = {
 			CIR_run_to_other_country = yes
