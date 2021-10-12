@@ -13966,7 +13966,70 @@ country_event = {
 				add_idea = SGS_CIR_new_leader_forcely_surpress_idea
 			}
 		}
+		set_country_flag = SGS_CIR_forcely_surpress
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 严酷镇压下的造反
+	id = sgs.4043
+	title = sgs.4043.t
+	desc = sgs.4043.d
+	fire_only_once = yes_or_no
+	is_triggered_only = no
+	mean_time_to_happen = {
+		days = 50
+	}
+	trigger = {
+		tag = sgs
+		has_country_flag = SGS_CIR_forcely_surpress
+	}
+	option = {
+		#
+		name = sgs.4043.1
+		random_owned_state = {
+			limit = {
+				is_core_of = CIR
+			}
+			add_manpower = -1000
+			add_compliance = 30
+		}
+		ai_chance = { base = 1 }
+	}
+}
 
+country_event = {
+	# 严酷镇压下的破坏
+	id = sgs.4044
+	title = sgs.4044.t
+	desc = sgs.4044.d
+	fire_only_once = yes_or_no
+	is_triggered_only = no
+	mean_time_to_happen = {
+		days = 60
+	}
+	trigger = {
+		tag = sgs
+		has_country_flag = SGS_CIR_forcely_surpress
+	}
+	option = {
+		#
+		name = sgs.4044.1
+		add_political_power = -50
+		random_owned_state = {
+			limit = {
+				industrial_complex > 0
+				is_core_of = CIR
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 4
+			}
+			damage_building = {
+				type = infrastructure
+				damage = 3
+			}
+		}
 		ai_chance = { base = 1 }
 	}
 }
