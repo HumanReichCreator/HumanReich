@@ -13995,6 +13995,7 @@ country_event = {
 		random_owned_state = {
 			limit = {
 				is_core_of = CIR
+				not = {is_core_of = ROOT}
 			}
 			add_manpower = -1000
 			add_resistance = 30
@@ -14621,7 +14622,8 @@ country_event = {
 		#帕秋莉
 		if = {
 			limit = {
-				SCA = { has_country_flag = SCA_Pache_come_back }
+				SCA = {any_unit_leader = { has_id = 2005 } }
+				#SCA = { has_country_flag = SCA_Pache_come_back }
 			}
 			set_variable = { var_ok = 50 }
 			set_variable = { var_ng = 50 }
@@ -14676,6 +14678,168 @@ country_event = {
 		name = sgs.40641.1
 
 		event_target:SCA_Sakuya = {
+			save_global_event_target_as = SCA_exile_member
+		}
+		SCA = { SCA_mumber_exile = yes }
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	# 红美铃同意加入
+	id = sgs.40642
+	title = sgs.40642.t
+	desc = sgs.40642.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40642.1
+		event_target:SCA_Meiling = {
+			set_nationality = ROOT
+		}
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 红美铃不同意，走了
+	id = sgs.40643
+	title = sgs.40643.t
+	desc = sgs.40643.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40643.1
+
+		event_target:SCA_Meiling = {
+			save_global_event_target_as = SCA_exile_member
+		}
+		SCA = { SCA_mumber_exile = yes }
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	# 芙兰同意加入
+	id = sgs.40644
+	title = sgs.40644.t
+	desc = sgs.40644.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40644.1
+		event_target:SCA_Frandre = {
+			set_nationality = ROOT
+		}
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 芙兰不同意，走了
+	id = sgs.40645
+	title = sgs.40645.t
+	desc = sgs.40645.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40645.1
+
+		event_target:SCA_Frandre = {
+			save_global_event_target_as = SCA_exile_member
+		}
+		SCA = { SCA_mumber_exile = yes }
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 小恶魔同意加入
+	id = sgs.40646
+	title = sgs.40646.t
+	desc = sgs.40646.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40646.1
+		event_target:SCA_Koakuma = {
+			set_nationality = ROOT
+		}
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 小恶魔不同意，走了
+	id = sgs.40647
+	title = sgs.40647.t
+	desc = sgs.40647.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40647.1
+
+		event_target:SCA_Koakuma = {
+			save_global_event_target_as = SCA_exile_member
+		}
+		SCA = { SCA_mumber_exile = yes }
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 帕秋莉同意加入
+	id = sgs.40648
+	title = sgs.40648.t
+	desc = sgs.40648.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40648.1
+		event_target:SCA_Pachu = {
+			set_nationality = ROOT
+		}
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 帕秋莉不同意，走了
+	id = sgs.40649
+	title = sgs.40649.t
+	desc = sgs.40649.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40649.1
+
+		event_target:SCA_Pachu = {
 			save_global_event_target_as = SCA_exile_member
 		}
 		SCA = { SCA_mumber_exile = yes }
