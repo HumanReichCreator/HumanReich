@@ -15040,6 +15040,137 @@ country_event = {
 }
 
 
+country_event = {
+	# 流民处理
+	id = sgs.408
+	title = sgs.408.t
+	desc = sgs.408.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#安置
+		name = sgs.408.1
+		add_political_power = -50
+		add_stability = 0.2
+		set_variable = { SGS_LIL_good_ending = 50 }
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#不管
+		name = sgs.408.2
+		add_political_power = 20
+		set_variable = { SGS_LIL_good_ending = 20 }
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#征兵
+		trigger = {
+			has_government = neworder
+		}
+		name = sgs.408.3
+		add_political_power = -35
+		add_manpower = 2500
+		set_variable = { SGS_LIL_good_ending = 35 }
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#撵走
+		name = sgs.408.3
+		add_political_power = 50
+		every_owned_state = {
+			limit = {is_core_of = LIL}
+			add_manpower = -1000
+		}
+		set_variable = { SGS_LIL_good_ending = 0 }
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	# 乐园子民的结果
+	id = sgs.4080
+	title = sgs.4080.t
+	desc = sgs.4080.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.4080.1
+		random_list = {
+			30 = { country_event = { id = sgs.4081 } }
+			var:SGS_LIL_good_ending = { country_event = { id = sgs.4082 } }
+		}
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	# 坏结果
+	id = sgs.4081
+	title = sgs.4081.t
+	desc = sgs.4081.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.4081.1
+		LIL_run_to_other_country = yes
+		random_list = {
+			50 = {
+				custom_effect_tooltip = FA_make_core_cost_up
+				multiply_variable = { SGS.FIR_AREA_LIL_MC_cost = 1.25 }
+			}
+			50 = {
+				custom_effect_tooltip = FA_make_core_time_up
+				multiply_variable = { SGS.FIR_AREA_LIL_MC_time = 1.25 }
+			}
+		}
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 好结果
+	id = sgs.4082
+	title = sgs.4082.t
+	desc = sgs.4082.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.4082.1
+		LIL = {
+			every_unit_leader = {
+				limit = {  has_trait = th_character  }
+				set_nationality = ROOT
+			}
+		}
+		random_list = {
+			50 = {
+				custom_effect_tooltip = FA_make_core_cost_down
+				multiply_variable = { SGS.FIR_AREA_LIL_MC_cost = 0.8 }
+			}
+			50 = {
+				custom_effect_tooltip = FA_make_core_time_down
+				multiply_variable = { SGS.FIR_AREA_LIL_MC_time = 0.8 }
+			}
+		}
+		ai_chance = { base = 1 }
+	}
+}
+
+
 
 
 #tno小故事专场
