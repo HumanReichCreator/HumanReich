@@ -49,7 +49,9 @@ SCA_mumber_exile = {
 			not = { tag = LIL }
 			exists = yes
 			has_same_government_as_PREV = yes
+			not = { tag = event_target:SCA_mumber_exile_last_country }
 		}
+		save_global_event_target_as = SCA_mumber_exile_last_country
 		event_target:SCA_exile_member = {
 			set_nationality = PREV
 		}

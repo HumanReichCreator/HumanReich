@@ -11828,6 +11828,14 @@ country_event = {
 			factor = 3
 			has_stability < 0.1
 		}
+		modifier = {
+			factor = 0.8
+			has_idea = SGS_free_market_to_SCA_idea
+		}
+		modifier = {
+			factor = 0.5
+			has_idea = SGS_good_free_market_to_SCA_idea
+		}
 		
 	}
 	option = {
@@ -11944,6 +11952,14 @@ country_event = {
 		modifier = {
 			factor = 0.5
 			has_stability < -0.1
+		}
+		modifier = {
+			factor = 1.2
+			has_idea = SGS_free_market_to_SCA_idea
+		}
+		modifier = {
+			factor = 1.5
+			has_idea = SGS_good_free_market_to_SCA_idea
 		}
 	}
 	option = {
@@ -14860,6 +14876,36 @@ country_event = {
 	option = {
 		#
 		name = sgs.4065.1
+		event_target:SCA_Sakuya = {
+			save_global_event_target_as = SCA_exile_member
+		}
+		SCA = { SCA_mumber_exile = yes }
+
+		event_target:SCA_Meiling = {
+			save_global_event_target_as = SCA_exile_member
+		}
+		SCA = { SCA_mumber_exile = yes }
+
+		event_target:SCA_Frandre = {
+			save_global_event_target_as = SCA_exile_member
+		}
+
+		SCA = { SCA_mumber_exile = yes }
+		event_target:SCA_Koakuma = {
+			save_global_event_target_as = SCA_exile_member
+		}
+		
+		SCA = { SCA_mumber_exile = yes }
+
+		if  = {
+			limit = {
+				SCA = {any_unit_leader = { has_id = 2005 } }
+			}
+			event_target:SCA_Pachu = {
+				save_global_event_target_as = SCA_exile_member
+			}
+			SCA = { SCA_mumber_exile = yes }
+		}
 		ai_chance = { base = 1 }
 	}
 }
@@ -14896,6 +14942,8 @@ country_event = {
 	option = {
 		#自负盈亏 得一个减消费的buff，一次性得一些pp
 		name = sgs.407.2
+		add_political_power = 25
+		add_ideas = SGS_SCA_company_play_yourselves_idea
 		ai_chance = { base = 1 }
 	}
 }
@@ -14932,6 +14980,14 @@ country_event = {
 				type = industrial_complex
 			}
 		}
+		308 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				level = 1
+				instant_build = yes
+				type = industrial_complex
+			}
+		}
 		ai_chance = { base = 1 }
 	}
 }
@@ -14948,7 +15004,11 @@ country_event = {
 	option = {
 		#
 		name = sgs.40700.1
-		
+		add_political_power = 30
+		swap_ideas = {
+			remove_idea = SGS_free_market_to_SCA_idea
+			add_idea = SGS_good_free_market_to_SCA_idea
+		}
 		ai_chance = { base = 1 }
 	}
 }

@@ -926,12 +926,14 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.05
 			}
 		}
-		SGS_smuggle_comsume_from_SCA_idea = {
+		SGS_SCA_company_play_yourselves_idea = {
 			picture = generic_war_preparation
 			modifier = {
-				consumer_goods_factor = -0.04
+				consumer_goods_factor = -0.08
+				political_power_gain = 0.02
 			}
 		}
+		
 
 	}
 }

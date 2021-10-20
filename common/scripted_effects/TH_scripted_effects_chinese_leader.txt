@@ -1203,22 +1203,22 @@ army_chinese_leader_inherit_146 = {
         }
         set_country_flag = has_inherit_@PREV
         
-        create_field_marshal = {
-            # name = "Patchouli Knowledge"
-            name = "帕秋莉·诺雷姬"
-            portrait_path = "gfx/leaders/SCA/SCA_pachy.dds"
-            traits = {  th_character  }
-            attack_skill = 4
-            defense_skill = 5
-            planning_skill = 6
-            logistics_skill = 4
-            id = 2005
-            skill = 6
-         }
-         random_unit_leader = {
-			limit = { has_id = 2005 }
-			save_global_event_target_as = SCA_Pachu
-		}
+        #create_field_marshal = {
+        #    # name = "Patchouli Knowledge"
+        #    name = "帕秋莉·诺雷姬"
+        #    portrait_path = "gfx/leaders/SCA/SCA_pachy.dds"
+        #    traits = {  th_character  }
+        #    attack_skill = 4
+        #    defense_skill = 5
+        #    planning_skill = 6
+        #    logistics_skill = 4
+        #    id = 2005
+        #    skill = 6
+        # }
+        # random_unit_leader = {
+		#	limit = { has_id = 2005 }
+		#	save_global_event_target_as = SCA_Pachu
+		#}
         create_corps_commander = {
             # name = "Flandre Scarlet"
             name = "芙兰朵露·斯卡蕾特"
