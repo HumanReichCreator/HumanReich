@@ -933,6 +933,15 @@ ideas = {
 				political_power_gain = 0.02
 			}
 		}
+		SGS_SCA_mix_dessert_idea = {
+			picture = generic_war_preparation
+			modifier = {
+				trade_opinion_factor = 0.15
+				industrial_capacity_factory = 0.1
+				consumer_goods_factor = -0.15
+				political_power_gain = 0.01
+			}
+		}
 		
 
 	}

@@ -15028,6 +15028,7 @@ country_event = {
 		name = sgs.4071.1
 		add_political_power = -80
 		add_stability = 0.1
+		add_ideas = SGS_SCA_mix_dessert_idea
 		ai_chance = { base = 1 }
 	}
 	option = {
@@ -15035,6 +15036,22 @@ country_event = {
 		name = sgs.4071.2
 		add_political_power = -40
 		add_war_support = 0.05
+		122 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				level = 2
+				instant_build = yes
+				type = arms_factory
+			}
+		}
+		308 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				level = 1
+				instant_build = yes
+				type = arms_factory
+			}
+		}
 		ai_chance = { base = 1 }
 	}
 }
