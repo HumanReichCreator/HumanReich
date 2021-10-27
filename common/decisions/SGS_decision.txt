@@ -1,6 +1,7 @@
 SGS_category = {
 	SGS_see_deci = {
 		visible = {
+			is_debug = yes
 			tag = sgs
 		}
 		available = {
@@ -31,6 +32,7 @@ SGS_category = {
 	SGS_test_deci = {
 		visible = {
 			tag = sgs
+			is_debug = yes
 		}
 		available = {
 			has_completed_focus = SGS_fix_bunker_focus
@@ -542,33 +544,33 @@ SGS_category = {
 			add_stability = 0.1
 		}
 	}
-	SGS_face_BaF_restless_issue_deci = {
-		# This is our mission id
-		available = {
-			has_country_flag = SGS_civil_war_start			# 任务目标
-		}
-		activation = {
-			tag = sgs
-			not = {
-				or = {
-					has_country_flag = SGS_civil_war_start
-					has_country_flag = sgs_peaceful_transit_flag
-				}
-			}
-		}
-		is_good = yes
-		selectable_mission = no
-		days_mission_timeout = 300
-		timeout_effect = {
-			country_event = {
-				id = sgs.9				#顺利过渡
-				days = 1
-				random = 1
-			}
-		}
-		complete_effect = {
-		}
-	}
+	#SGS_face_BaF_restless_issue_deci = {
+	#	# This is our mission id
+	#	available = {
+	#		has_country_flag = SGS_civil_war_start			# 任务目标
+	#	}
+	#	activation = {
+	#		tag = sgs
+	#		not = {
+	#			or = {
+	#				has_country_flag = SGS_civil_war_start
+	#				has_country_flag = sgs_peaceful_transit_flag
+	#			}
+	#		}
+	#	}
+	#	is_good = yes
+	#	selectable_mission = no
+	#	days_mission_timeout = 300
+	#	timeout_effect = {
+	#		country_event = {
+	#			id = sgs.9				#顺利过渡
+	#			days = 1
+	#			random = 1
+	#		}
+	#	}
+	#	complete_effect = {
+	#	}
+	#}
 }
 
 SGS_IN_category = {

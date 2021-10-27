@@ -609,10 +609,13 @@ country_event = {
 		days = 10
 	}
 	trigger = {
-		date > 146.8.1
 		tag = SGS
-		check_variable = {
-			sgs_uprise > 99
+		or = {
+			and = {
+				date > 146.8.1
+				check_variable = { sgs_uprise > 99 }
+			}
+			date > 146.11.1
 		}
 
 		not = {
@@ -620,7 +623,7 @@ country_event = {
 			has_country_flag = SGS_civil_war_from_war_promise
 			has_country_flag = SGS_civil_war_from_dispute
 			has_country_flag = SGS_civil_war_start
-
+			has_country_flag = sgs_peaceful_transit_flag
 		}
 	}
 	option = {
@@ -673,7 +676,18 @@ country_event = {
 	title = sgs.9.t
 	desc = sgs.9.d
 	fire_only_once = yes
-	is_triggered_only = yes
+	is_triggered_only = no 
+	mean_time_to_happen = {
+		days = 5
+	}
+	trigger = {
+		not = {has_country_flag = SGS_civil_war_start}
+		has_country_flag = SGS_won_before_civil_war
+		tag = SGS
+		date >  146.10.1
+	}
+
+
 	immediate = {
 		hidden_effect = {
 
