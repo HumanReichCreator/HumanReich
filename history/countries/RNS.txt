@@ -70,17 +70,17 @@
         add_to_faction = RNS
     }
     set_politics = {
-        ruling_party = destroyid
+        ruling_party = guli
         election_frequency = 48
         elections_allowed = no
     }
     set_popularities = {
-        qinwai = 7
-        guli = 3
+        qinwai = 10
+        guli = 80
         neworder = 0
-        oldorder = 0
+        oldorder = 5
         fandong = 0
-        destroyid = 90
+        destroyid = 5
     }
 }
 create_country_leader = {

@@ -712,6 +712,12 @@ on_startup = {
 	    	english_leader_on = yes #
 	    	scenario_setting = yes
 	    }
+
+		#外交调整
+		HUM = {
+			add_to_faction = WHM
+			add_to_faction = RNS
+		}
 	}
 }
 

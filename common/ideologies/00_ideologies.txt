@@ -17,6 +17,7 @@ ideologies = {
 			can_puppet = no
 			can_join_factions = no
 			can_send_volunteers = no
+
 		}
 		modifiers = {
 			join_faction_tension = 0.25
@@ -48,7 +49,7 @@ ideologies = {
 		color = { 205 205 25 }
 		rules = {
 			can_force_government = no
-			can_puppet = yes
+			can_puppet = no
 			can_join_factions = no
 			can_send_volunteers = yes
 		}
@@ -83,7 +84,7 @@ ideologies = {
 		color = { 205 80 15 }
 		rules = {
 			can_force_government = no
-			can_puppet = yes
+			can_puppet = no
 			can_join_factions = no
 			can_send_volunteers = yes
 		}
@@ -126,7 +127,7 @@ ideologies = {
 		color = { 255 0 0 }
 		rules = {
 			can_force_government = no
-			can_puppet = yes
+			can_puppet = no
 			can_join_factions = no
 			can_send_volunteers = yes
 		}
@@ -161,7 +162,7 @@ ideologies = {
 		color = { 125 0 0 }
 		rules = {
 			can_force_government = yes
-			can_puppet = yes
+			can_puppet = no
 			can_join_factions = no
 			can_send_volunteers = yes
 		}
@@ -199,7 +200,7 @@ ideologies = {
 		color = { 200 200 150 }
 		rules = {
 			can_force_government = no
-			can_puppet = yes
+			can_puppet = no
 			can_join_factions = no
 			can_send_volunteers = yes
 		}
@@ -240,7 +241,7 @@ ideologies = {
 		color = { 15 15 205 }
 		rules = {
 			can_force_government = no
-			can_puppet = yes
+			can_puppet = no
 			can_join_factions = no
 			can_send_volunteers = yes
 		}
@@ -284,7 +285,7 @@ ideologies = {
 		color = { 175 200 150 }
 		rules = {
 			can_force_government = no
-			can_puppet = yes
+			can_puppet = no
 			can_join_factions = no
 			can_send_volunteers = yes
 		}
