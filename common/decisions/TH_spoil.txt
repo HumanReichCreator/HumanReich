@@ -2886,6 +2886,14 @@ Spoil_battle = {
 		}
 		complete_effect = {
 			custom_effect_tooltip = spoilCD_if_vic
+			if = {
+				limit = {
+					tag = sgs
+					not = { has_country_flag = SGS_won_before_civil_war }
+				}
+				set_country_flag = SGS_won_before_civil_war
+			}
+			
 			add_political_power = 50
 			add_stability = 0.1
 			effect_tooltip = {
@@ -2931,6 +2939,13 @@ Spoil_battle = {
 		}
 		complete_effect = {
 			custom_effect_tooltip = spoilCD_if_vic
+			if = {
+				limit = {
+					tag = sgs
+					not = { has_country_flag = SGS_won_before_civil_war }
+				}
+				set_country_flag = SGS_won_before_civil_war
+			}
 			add_political_power = 100
 			add_war_support = 0.1
 			add_stability = 0.2
@@ -2977,6 +2992,13 @@ Spoil_battle = {
 		}
 		complete_effect = {
 			custom_effect_tooltip = spoilCD_if_vic
+			if = {
+				limit = {
+					tag = sgs
+					not = { has_country_flag = SGS_won_before_civil_war }
+				}
+				set_country_flag = SGS_won_before_civil_war
+			}
 			add_political_power = 50
 			add_stability = 0.1
 			effect_tooltip = {
@@ -3022,6 +3044,13 @@ Spoil_battle = {
 		}
 		complete_effect = {
 			custom_effect_tooltip = spoilCD_if_vic
+			if = {
+				limit = {
+					tag = sgs
+					not = { has_country_flag = SGS_won_before_civil_war }
+				}
+				set_country_flag = SGS_won_before_civil_war
+			}
 			add_political_power = 100
 			add_stability = 0.2
 			add_war_support = 0.1
@@ -3068,6 +3097,13 @@ Spoil_battle = {
 		}
 		complete_effect = {
 			custom_effect_tooltip = spoilCD_if_vic
+			if = {
+				limit = {
+					tag = sgs
+					not = { has_country_flag = SGS_won_before_civil_war }
+				}
+				set_country_flag = SGS_won_before_civil_war
+			}
 			add_political_power = 25
 			add_stability = 0.05
 			effect_tooltip = {
@@ -3113,6 +3149,13 @@ Spoil_battle = {
 		}
 		complete_effect = {
 			custom_effect_tooltip = spoilCD_if_vic
+			if = {
+				limit = {
+					tag = sgs
+					not = { has_country_flag = SGS_won_before_civil_war }
+				}
+				set_country_flag = SGS_won_before_civil_war
+			}
 			add_political_power = 25
 			add_stability = 0.1
 			effect_tooltip = {
@@ -3158,6 +3201,13 @@ Spoil_battle = {
 		}
 		complete_effect = {
 			custom_effect_tooltip = spoilCD_if_vic
+			if = {
+				limit = {
+					tag = sgs
+					not = { has_country_flag = SGS_won_before_civil_war }
+				}
+				set_country_flag = SGS_won_before_civil_war
+			}
 			add_political_power = 25
 			add_stability = 0.1
 			effect_tooltip = {
@@ -3203,6 +3253,13 @@ Spoil_battle = {
 		}
 		complete_effect = {
 			custom_effect_tooltip = spoilCD_if_vic
+			if = {
+				limit = {
+					tag = sgs
+					not = { has_country_flag = SGS_won_before_civil_war }
+				}
+				set_country_flag = SGS_won_before_civil_war
+			}
 			add_political_power = 50
 			add_stability = 0.1
 			effect_tooltip = {
@@ -3248,6 +3305,13 @@ Spoil_battle = {
 		}
 		complete_effect = {
 			custom_effect_tooltip = spoilCD_if_vic
+			if = {
+				limit = {
+					tag = sgs
+					not = { has_country_flag = SGS_won_before_civil_war }
+				}
+				set_country_flag = SGS_won_before_civil_war
+			}
 			add_political_power = 100
 			add_stability = 0.2
 			add_war_support = 0.1
