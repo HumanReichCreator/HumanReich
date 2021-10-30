@@ -41,30 +41,28 @@
     every_country = {
         custom_situation_initialize = yes
     }
-    #techtree only can be changed for one time 以及ai无科技国家
+    #techtree only can be changed for one time
     every_country = {
         set_technology = {
-            tech_changed = 1 #0在onaction里
+            tech_changed = 1
         }
     }
-    
 
     #focus
     every_country = {
         limit = {
-            date > 145.12.31
-            not = { tag = XXX }
+            date > 145.1.1
+            not = { tag = XXX}
         }
         complete_national_focus = ty_early_main 
     }
 
     ST_race_setting = yes
 
-    # english_leader_set_146 = yes
+
     #idea
     every_country = {
         limit = {
-            has_start_date > 145.12.31
             capital_scope = {
                 is_on_continent = Gensokyo
             }
@@ -147,6 +145,9 @@
     MOK = {
         add_ideas = great_presige_idea
     }
+    YYK = {
+        add_ideas = great_presige_idea
+    }
     SAT = {
         add_ideas = great_presige_idea
     }
@@ -163,278 +164,43 @@
         add_ideas = great_presige_idea
     }
 
-    if = {
-        limit = {
-            has_start_date < 143.7.2
-            has_start_date > 143.6.30
-        }
-        set_variable = { global.sce143_zhuzha = 39}
-        set_variable = { global.sce143_fusangshenzhongcheng = 100}
-        set_global_flag = scenario143
-        HUM = {
-            EXHC_exhaustion_add25 = yes
-            set_cosmetic_tag = HUM_143
-        }
-        PRI = {
-            set_cosmetic_tag = PRI_SCA
-            add_ideas = juexin_idea
-        }
-        GRS = {
-            set_cosmetic_tag = GRS_SCA
-            add_ideas = juexin_idea
-        }
+}
+
+if = {
+    limit = {
+        has_start_date < 143.7.2
+        has_start_date > 143.6.30
+    }
+    PRI = {
+        set_cosmetic_tag = PRI_SCA
+    }
+    KYK = {
+        set_cosmetic_tag = KYK_HUM
+        retire_country_leader = yes
+    }
+    TKM = {
+        set_cosmetic_tag = TKM_HUM
+        retire_country_leader = yes
+    }
+    HUM = {
         TKM = {
-            set_cosmetic_tag = TKM2
-            TKM_143_leader = yes
-            add_ideas = shuxirenli_idea
-            set_capital = 165
+            subject_level4 = yes
         }
-        HUM = {
-            TKM = {
-                subject_level4 = yes
-            }
-            add_ideas = shuxirenli_idea
-            create_faction = HUM_scenario_faction
-            add_to_faction = HKR
-            add_to_faction = MRS
-        }
-        SCA = {
-            add_ideas = juexin_idea
-            create_faction = feihongtixi
-            add_to_faction = PRI
-            add_to_faction = GRS
-            PRI = {
-                subject_level4 = yes
-            }
-            GRS = {
-                subject_level4 = yes
-            }
-        }
-        NMS = {
-            add_ideas = juexin_idea
-            create_faction = NMS_scenario_faction
-            MAM = {
-                subject_level3 = yes
-            }
-            add_to_faction = KAG
-            add_to_faction = MSD
-            add_to_faction = MAM
-            add_to_faction = SEJ
-            add_to_faction = NIB
-            add_to_faction = RMI
-            # add_to_faction = CHE
-            SEJ = {
-                RMI = {
-                    subject_level1 = yes
-                }
-                NIB = {
-                    subject_level1 = yes
-                }
-            }
-            every_country = {
-                limit = {
-                    or = {
-                        is_in_faction_with = NMS
-                        tag = NMS
-                    }
-                }
-                add_ideas = juexin_idea
-                declare_war_on = {
-                    target = HUM
-                    type = scenario143
-                }
-                declare_war_on = {
-                    target = HKR
-                    type = scenario143
-                }
-                declare_war_on = {
-                    target = MRS
-                    type = scenario143
-                }
-                declare_war_on = {
-                    target = TKM
-                    type = scenario143
-                }
-            }
-        }
-        NMS = {
-            NMS = {
-                army_chinese_leader_inherit_146 = yes
-            }
-            KYK = {
-                NMS = {
-                    army_chinese_leader_inherit_146 = yes
-                }
-            }
-            MNM = {
-                NMS = {
-                    army_chinese_leader_inherit_146 = yes
-                }
-            }
-            ICR = {
-                NMS = {
-                    army_chinese_leader_inherit_146 = yes
-                }
-            }
-        }
-        SCA = {
-            SCA = {
-                army_chinese_leader_inherit_146 = yes
-            }
-        }
-        PRI = {
-            PRI = {
-                army_chinese_leader_inherit_146 = yes
-            }
-        }
-        MAM = {
-            MAM = {
-                army_chinese_leader_inherit_146 = yes
-            }
-        }
-        CHE = {
-            add_ideas = juexin_idea
-            CHE = {
-                army_chinese_leader_inherit_146 = yes
-            }
-        }
-        KAG = {
-            KAG = {
-                army_chinese_leader_inherit_146 = yes
-            }
-        }
-        MSD = {
-            MSD = {
-                army_chinese_leader_inherit_146 = yes
-            }
-        }
-        SEJ = {
-            SEJ = {
-                army_chinese_leader_inherit_146 = yes
-            }
-        }
-        RMI = {
-            RMI = {
-                army_chinese_leader_inherit_146 = yes
-            }
-        }
-        NIB = {
-            NIB = {
-                army_chinese_leader_inherit_146 = yes
-            }
-        }
-        TKM = {
-            add_ideas = qingbaoxielu143_idea
-            TKM = {
-                army_chinese_leader_inherit_146 = yes
-            }
-        }
-        HKR = {
-            add_ideas = qingbaoxielu143_idea
-            HKR = {
-                army_chinese_leader_inherit_146 = yes
-            }
-        }
-        HUM = {
-            add_ideas = qingbaoxielu143_idea
-            HUM = {
-                army_chinese_leader_inherit_146 = yes
-            }
-            MOK = {
-                HUM = {
-                    army_chinese_leader_inherit_146 = yes
-                }
-            }
-            ZBT = {
-                HUM = {
-                    army_chinese_leader_inherit_146 = yes
-                }
-            }
-            EMB = {
-                HUM = {
-                    army_chinese_leader_inherit_146 = yes
-                }
-            }
-        }
-        MRS = {
-            set_cosmetic_tag = MRS_MF
-            add_stability = -0.5
-            add_war_support = -0.5
-            add_ideas = qingbaoxielu143_idea 
-            MRS = {
-                army_chinese_leader_inherit_146 = yes
-            }
-            ALI = {
-                MRS = {
-                    army_chinese_leader_inherit_146 = yes
-                }
-            }
-            RNS = {
-                MRS = {
-                    army_chinese_leader_inherit_146 = yes
-                }
-            }
-        }
-        every_country = {
-            limit = {
-                not = {
-                    tag = HUM
-                    tag = HKR
-                    tag = MRS
-                    tag = CHE
-                }
-            }
-            add_equipment_to_stockpile = {
-                type = magic_core_a
-                amount = 50000
-                # producer = SCA
-            }
-            add_equipment_to_stockpile = {
-                type = shield_a
-                amount = 50000
-                # producer = SCA
-            }
-            add_equipment_to_stockpile = {
-                type = melee_a
-                amount = 50000
-                # producer = SCA
-            }
-            add_equipment_to_stockpile = {
-                type = gun_a
-                amount = 50000
-                # producer = SCA
-            }
-        }
-        SCA = {
-            add_equipment_to_stockpile = {
-                type = ma_fighter148
-                amount = 100
-                producer = SCA
-            }
+        KYK = {
+            subject_level1 = yes
         }
     }
-    ###YYK
-    every_country = {
-        limit = {
-            capital_scope = {
-                is_on_continent = Hell
-            }
-            not = {
-                tag = SKI
-            }
-        }
-        add_opinion_modifier = {
-            target = YYK
-            modifier = YYK_sijidezhicai_op
-        }
+
+    SCA = {
+        add_ideas = qingbaoxielu143_idea 
     }
-    
-    SKI = {
-        add_opinion_modifier = {
-            target = YYK
-            modifier = YYK_sijidezhicai_op2
-        }
+    NMS = {
+        add_ideas = qingbaoxielu143_idea 
     }
+    PRI = {
+        add_ideas = qingbaoxielu143_idea 
+    }
+
 }
 
 create_country_leader = {

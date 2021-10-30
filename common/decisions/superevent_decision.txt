@@ -1,0 +1,33 @@
+CIR_category = {
+    SGS_superevent_star = {
+        visible = {
+            tag = SGS
+        }
+        available = {
+            always = no
+        }
+
+        cost = 0
+
+        fire_only_once = no
+
+        complete_effect = {
+
+            clear_variable = global.CM_SE_event_id
+            set_variable = { global.CM_SE_event_id = 1 }
+            
+            
+            set_global_flag = CM_SE_opened
+            play_song = superevent_sgs_star
+        }
+
+        remove_effect = {
+
+        }
+
+        ai_will_do = {
+            base = 100
+        }
+    }
+}
+

@@ -1,0 +1,208 @@
+﻿add_namespace = minigame_21p
+country_event = {
+	# 21点开始-单人模式-介绍规则
+	id = minigame_21p.1
+	title = minigame_21p.1.t
+	desc = minigame_21p.1.d #介绍规则
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	
+	option = {
+		#先手
+		name = minigame_21p.1.1
+		hidden_effect = {
+			minigame_21p_player_draw = yes
+		}
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#后手
+		name = minigame_21p.1.2
+		hidden_effect = {
+			minigame_21p_AI_draw = yes
+		}
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#随机先后手
+		name = minigame_21p.1.3
+		hidden_effect = {
+			random_list = {
+				50 = { minigame_21p_player_draw = yes }
+				50 = { minigame_21p_AI_draw = yes }
+			}
+		}
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = {
+	# 我方回合
+	id = minigame_21p.2
+	title = minigame_21p.2.t
+	desc = minigame_21p.2.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	option = {
+		#加
+		name = minigame_21p.2.1
+		trigger = {
+			not = { has_country_flag = minigame_21p_player_stop }
+		}
+		hidden_effect = {
+			minigame_21p_player_draw = yes
+		}
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#不加
+		name = minigame_21p.2.2
+		hidden_effect = {
+			minigame_21p_player_stop_draw = yes
+		}
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	# 对方回合
+	id = minigame_21p.3
+	title = minigame_21p.3.t
+	desc = minigame_21p.3.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		#对方行动
+		name = minigame_21p.3.1
+		trigger = {
+			not = { has_country_flag = minigame_21p_AI_stop }
+		}
+		hidden_effect = {
+			set_temp_variable = { AI_safe_line  = minigame_21p_AI_limit}
+			subtract_from_temp_variable = {	AI_safe_line = 10 }
+			if = {
+				limit = {
+					check_variable = {
+						var = minigame_21p_AI_point
+						value = AI_safe_line
+						compare = less_than_or_equals
+					}
+				}
+				minigame_21p_AI_draw = yes #如果稳不输的话电脑必抓
+				else = {
+					set_temp_variable = { lose_poss  = minigame_21p_AI_point }
+					subtract_from_temp_variable = {	lose_poss = AI_safe_line }
+					set_temp_variable = { win_poss  = minigame_21p_AI_limit }
+					subtract_from_temp_variable = {	win_poss = minigame_21p_AI_point }
+					random_list = {
+						win_poss = {  minigame_21p_AI_draw = yes }
+						lose_poss = { minigame_21p_AI_stop_draw = yes  }
+					}
+
+				}
+			}
+		}
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#对方已经停了
+		name = minigame_21p.3.2
+		trigger = {
+			has_country_flag = minigame_21p_AI_stop 
+		}
+		hidden_effect = {
+			minigame_21p_AI_stop_draw = yes
+		}
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	# 玩家爆了
+	id = minigame_21p.4
+	title = minigame_21p.4.t
+	desc = minigame_21p.4.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		#
+		name = minigame_21p.4.1
+		hidden_effect = {
+			set_variable = { minigame_21p_winner = 2 }#电脑赢了
+			minigame_21p_callback = yes
+		}
+		ai_chance = { base = 1 }
+	}
+}
+
+
+
+country_event = {
+	# 电脑爆了
+	id = minigame_21p.5
+	title = minigame_21p.5.t
+	desc = minigame_21p.5.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		#
+		name = minigame_21p.5.1
+		hidden_effect = {
+			set_variable = { minigame_21p_winner = 1 }#玩家赢了
+			minigame_21p_callback = yes
+		}
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 都停了
+	id = minigame_21p.6
+	title = minigame_21p.6.t
+	desc = minigame_21p.6.d
+	fire_only_once = no
+	is_triggered_only = yes
+	trigger = {
+	}
+	option = {
+		#pingju
+		name = minigame_21p.6.1
+		trigger = {
+			check_variable = { minigame_21p_player_point = minigame_21p_AI_point }
+		}
+		country_event = { id = minigame_21p.1 }
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#玩家赢
+		name = minigame_21p.6.2
+		trigger = {
+			check_variable = { minigame_21p_player_point > minigame_21p_AI_point }
+		}
+		set_variable = { minigame_21p_winner = 1 }
+		minigame_21p_callback = yes
+		ai_chance = { base = 1 }
+	}
+	option = {
+		#对方赢
+		name = minigame_21p.6.3
+		trigger = {
+			check_variable = { minigame_21p_player_point < minigame_21p_AI_point }
+		}
+		set_variable = { minigame_21p_winner = 2 }
+		minigame_21p_callback = yes
+		ai_chance = { base = 1 }
+	}
+}

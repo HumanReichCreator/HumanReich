@@ -12,7 +12,7 @@
         modifier = {
         	war_support_weekly = -0.003
             stability_weekly = 0.001
-        	political_power_gain = 0.15
+        	political_power_gain = 0.2
         }
 
         days_remove = 182
@@ -36,7 +36,7 @@
         }
 
         modifier = {
-            stability_weekly = 0.001
+            stability_weekly = 0.003
             # political_power_gain = -0.4
         }
 
@@ -44,7 +44,7 @@
         days_re_enable = 365
 
         complete_effect = {
-            add_stability = 0.04
+            add_stability = 0.08
         }
 
         cost = 90
@@ -71,7 +71,7 @@
         }
 
         modifier = {
-            stability_weekly = 0.005
+            stability_weekly = 0.01
             political_power_gain = -0.2
         }
 
@@ -111,11 +111,11 @@
         }
 
         modifier = {
-            war_support_weekly = 0.001
+            war_support_weekly = 0.003
         }
 
         complete_effect = {
-            add_war_support = 0.04
+            add_war_support = 0.08
         }
 
         cost = 125
@@ -152,7 +152,7 @@
         }
 
         modifier = {
-            war_support_weekly = 0.005
+            war_support_weekly = 0.01
             political_power_gain = -0.25
         }
 
@@ -258,16 +258,17 @@
     }
 
     fadongxiaoguimozhanzheng = {
-        target_root_trigger = {
+        visible = {
             or = {
                 has_country_flag = ty_gonggusixiang_fandong
                 has_country_flag = ty_gonggusixiang_neworder
             }
+            
         }
         available = {
-            has_country_flag = ty_yixuanzexuanzhanduixiang
             is_subject = no
         }
+
         target_trigger = {
             FROM = {
                 is_neighbor_of = ROOT
@@ -293,12 +294,6 @@
                         not = { is_same_race = yes }
                     }
                 }
-            }
-        }
-        target_array = neighbors
-        visible = {
-            FROM = {
-                exists = yes
             }
         }
 
@@ -389,83 +384,15 @@
         }
 
         complete_effect = {
-            set_country_flag = ty_yixuanzexuanzhanduixiang
+            clr_country_flag = ty_gonggusixiang_fandong
+            clr_country_flag = ty_gonggusixiang_neworder
         }
 
         remove_effect = {
-            clr_country_flag = ty_gonggusixiang_fandong
-            clr_country_flag = ty_gonggusixiang_neworder
             create_wargoal = {
                 target = FROM
                 type = take_state
             }
-        }
-    }
-}
-fuyongguanxichuli = {
-    chuliguanxi = {
-        visible = {
-            check_variable = {
-                ty_fuyongguanxichuli > 0
-            }
-        }
-        target_trigger = {
-            FROM = {
-                is_subject_of = ROOT
-            }
-        }
-        target_array = subjects
-        available = {
-            custom_trigger_tooltip = {
-                tooltip = chuliguanxi_tt
-                not = {
-                    ROOT = { has_country_flag = wusuntunbing_@FROM }
-                }
-            }
-        }
-        complete_effect = {
-            add_to_variable = {
-                ty_fuyongguanxichuli = -1
-            }
-            FROM = {
-                can_core = yes
-            }
-        }
-        ai_will_do = {
-            base = 1000
-            modifier = {
-               FROM = {
-                    check_variable = {
-                        all_power_plus_manpower > 200
-                    }
-                } 
-                factor = 2
-            }
-            modifier = {
-               FROM = {
-                    check_variable = {
-                        all_power_plus_manpower > 500
-                    }
-                } 
-                factor = 2
-            }
-            modifier = {
-               FROM = {
-                    check_variable = {
-                        all_power_plus_manpower > 1000
-                    }
-                } 
-                factor = 2
-            }
-            modifier = {
-               FROM = {
-                    check_variable = {
-                        all_power_plus_manpower > 2000
-                    }
-                } 
-                factor = 2
-            }
-            
         }
     }
 }

@@ -1,0 +1,88 @@
+create_remilia = {
+	create_field_marshal = {
+		# name = "Remilia Scarlet"
+		name = "蕾米莉亚·斯卡蕾特"
+		portrait_path = "gfx/leaders/SCA/SCA_rem.dds"
+		id = 2000
+		traits = {  th_character  }
+		attack_skill = 6
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 5
+		
+		skill = 6
+	}
+	random_unit_leader = {
+		limit = { has_id = 2000 }
+		save_global_event_target_as = SCA_Remilia_Scarlet
+	}
+}
+SCA_Remi_exile = {
+	random_country = {
+		limit = {
+			capital_scope = {
+				is_on_continent = Gensokyo
+			}
+			not = { tag = SCA }
+			not = { tag = CIR }
+			not = { tag = SGS }
+			not = { tag = SC2 }
+			not = { tag = LIL }
+			exists = yes
+			has_same_government_as_PREV = yes
+		}
+		create_remilia = yes
+	}
+}
+
+
+SCA_mumber_exile = {
+	random_country = {
+		limit = {
+			capital_scope = {
+				is_on_continent = Gensokyo
+			}
+			not = { tag = SCA }
+			not = { tag = CIR }
+			not = { tag = SGS }
+			not = { tag = SC2 }
+			not = { tag = LIL }
+			exists = yes
+			has_same_government_as_PREV = yes
+			not = { tag = event_target:SCA_mumber_exile_last_country }
+		}
+		save_global_event_target_as = SCA_mumber_exile_last_country
+		event_target:SCA_exile_member = {
+			set_nationality = PREV
+		}
+	}
+}
+
+SCA_mumber_all_exile = {
+	SCA = {
+		random_country = {
+			limit = {
+				capital_scope = {
+					is_on_continent = Gensokyo
+				}
+				not = { tag = SCA }
+				not = { tag = CIR }
+				not = { tag = SGS }
+				not = { tag = SC2 }
+				not = { tag = LIL }
+				exists = yes
+				has_same_government_as_PREV = yes
+			}
+			SCA = {
+				every_unit_leader = {
+					limit = {  has_trait = th_character  }
+					set_nationality = PREV.PREV
+				}
+				PREV.PREV = {
+					create_remilia = yes
+				}
+			}
+			country_event = { id = sgs.4051 }
+		}
+	}
+}

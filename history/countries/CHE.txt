@@ -1,106 +1,4 @@
 ﻿capital = 164
-143.7.1 = {
-    set_technology = {
-        #通用武器线
-            spell_card1 = 1
-            spear1 = 1
-            linglicunchu = 1
-            linglizhufu = 1
-            spell_card2 = 1
-        #辅助
-            
-        #专用辅助
-
-        #专用基础
-
-        #专用进阶
-
-        #混合系
-
-        #陆军学说
-            zhanchangzhihui140 = 1
-            zuzhihuazhanzheng142 = 1
-        #工程学 
-            jichushuxue = 1
-            shuxuegongju = 1
-            lingben = 1
-        #专用工程学
-
-        #工业
-            production_theory = 1
-            org_production = 1
-        #专用工业
-            linglishengchan130 = 1
-        #种族
-    }
-    if = {
-        limit = {
-            has_start_date < 143.7.2
-        }
-        set_technology = {
-            #通用武器线
-            spell_card1 = 1
-            spear1 = 1
-            gun1 = 1
-            linglicunchu = 1
-            linglizhufu = 1
-            linglidanyao = 1
-            spell_card2 = 1
-            spear2 = 1
-            gun2 = 1
-            lingliliushuixian = 1
-            spell_card3 = 1
-            spear3 = 1
-                
-            #辅助
-            zhiyuanzhuangbei = 1
-
-            #专用辅助
-            linglijiejie149 = 1
-            magic_energy1 = 1
-
-            #专用基础
-            core_shield1 = 1
-
-            #专用进阶
-
-            #混合系
-
-            #陆军学说
-            zhanchangzhihui140 = 1
-            zuzhihuazhanzheng142 = 1
-            zhanchangzhihui145 = 1
-                
-            #工程学 
-            jichushuxue = 1
-            shuxuegongju = 1
-            lingben = 1
-            tongxunlilun = 1
-            jiemi137 = 1
-
-            jiami137 = 1
-            jiami147 = 1
-
-            #专用工程学
-
-            #工业
-            production_theory = 1
-            org_production = 1
-            jianzaojishu130 = 1
-            jianzaojishu140 = 1
-                
-            #专用工业
-            linglishengchan130 = 1
-
-            #种族
-            yaoguaitezhongbudui1 = 1
-
-            #秘密
-            kongjianxue = 1
-            jingjiexue = 1
-        }
-    }
-}
 146.1.1 = {
     set_technology = {
         #通用武器线
@@ -138,8 +36,8 @@
     }
     
 }
-143.7.1 = {
-    oob = "CHE_143"
+144.1.1 = {
+    oob = "CHE_144"
     set_politics = {
         ruling_party = qinwai
         election_frequency = 48
@@ -159,7 +57,6 @@
         dove2
         loose_border
         free_magic
-        type4_manpowerlv4
     }
 }
 146.1.1={
@@ -172,20 +69,19 @@
         dove2
         loose_border
         free_magic
-        type4_manpowerlv2
     }
     set_cosmetic_tag = YKR_CHE
     set_politics = {
-    	ruling_party = qinwai
+    	ruling_party = guli
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 72
-        guli = 8
+        qinwai = 0
+        guli = 100
         neworder = 0
         oldorder = 0
-        fandong = 20
+        fandong = 0
     }
 }
 create_country_leader = {

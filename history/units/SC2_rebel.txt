@@ -1,11 +1,10 @@
 ﻿division_template = {
-	name = "叛军配置"
+	name = "起义军配置"
 	regiments = {
-		ma_infantry = { x = 0 y = 0 }
-		ma_infantry = { x = 0 y = 1 }
+		ma_light_infantry = { x = 0 y = 0 }
+		ma_light_infantry = { x = 0 y = 1 }
 		melee_infantry = { x = 0 y = 2 }
 		melee_infantry = { x = 0 y = 3 }
-		melee_infantry = { x = 0 y = 4 }
 	}
 	
 	support = {
@@ -13,222 +12,137 @@
 }
 units = {
 	division = {
-		name = "叛军配置"
-		location = 48
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "叛军配置"
-		location = 48
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "叛军配置"
-		location = 48
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "叛军配置"
-		location = 48
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "叛军配置"
-		location = 48
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "叛军配置"
-		location = 48
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "叛军配置"
-		location = 48
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "叛军配置"
-		location = 48
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-
-	division = {
-		name = "叛军配置"
-		location = 1455
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "叛军配置"
-		location = 1455
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "叛军配置"
-		location = 1455
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "叛军配置"
-		location = 1455
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "叛军配置"
-		location = 1455
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-
-	division = {
-		name = "叛军配置"
-		location = 3370
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "叛军配置"
-		location = 3370
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-
-	division = {
-		name = "叛军配置"
-		location = 2007
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "叛军配置"
-		location = 1563
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "叛军配置"
-		location = 48
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "叛军配置"
-		location = 3073
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "叛军配置"
-		location = 842
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "叛军配置"
-		location = 2681
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "叛军配置"
-		location = 1694
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "叛军配置"
-		location = 724
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "叛军配置"
-		location = 3282
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "叛军配置"
-		location = 2332
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "叛军配置"
-		location = 332
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "叛军配置"
-		location = 1340
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "叛军配置"
-		location = 1358
-		division_template = "叛军配置"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}
-	division = {
-		name = "叛军配置"
+		name = "起义军配置"
 		location = 2467
-		division_template = "叛军配置"
+		division_template = "起义军配置"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+
+	division = {
+		name = "起义军配置"
+		location = 3370
+		division_template = "起义军配置"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
 	}
 	division = {
-		name = "叛军配置"
-		location = 1305
-		division_template = "叛军配置"
+		name = "起义军配置"
+		location = 3370
+		division_template = "起义军配置"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+
+	division = {
+		name = "起义军配置"
+		location = 3068
+		division_template = "起义军配置"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
 	}
 	division = {
-		name = "叛军配置"
-		location = 1415
-		division_template = "叛军配置"
+		name = "起义军配置"
+		location = 996
+		division_template = "起义军配置"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "起义军配置"
+		location = 4072
+		division_template = "起义军配置"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "起义军配置"
+		location = 2669
+		division_template = "起义军配置"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "起义军配置"
+		location = 4100
+		division_template = "起义军配置"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "起义军配置"
+		location = 227
+		division_template = "起义军配置"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "起义军配置"
+		location = 4094
+		division_template = "起义军配置"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "起义军配置"
+		location = 5870
+		division_template = "起义军配置"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "起义军配置"
+		location = 332
+		division_template = "起义军配置"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "起义军配置"
+		location = 875
+		division_template = "起义军配置"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "起义军配置"
+		location = 621
+		division_template = "起义军配置"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "起义军配置"
+		location = 4141
+		division_template = "起义军配置"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "起义军配置"
+		location = 290
+		division_template = "起义军配置"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "起义军配置"
+		location = 1775
+		division_template = "起义军配置"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "起义军配置"
+		location = 4083
+		division_template = "起义军配置"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "起义军配置"
+		location = 3074
+		division_template = "起义军配置"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
 	}

@@ -4,13 +4,14 @@ state={
 	name="STATE_223"
 	resources={
 
-		powder = 0.0
-		metal = 0.0
+		powder=0.000
+		metal=0.000
 		gas=15.000
 		crystal=1.000
 	}
 
 	history={
+			owner = NMS
 		143.7.1 = {
 			owner = NMS
 			add_core_of = NMS
@@ -26,7 +27,7 @@ state={
 			add_core_of = NMS
 			buildings = {
 				infrastructure = 6
-				industrial_complex = 7
+				industrial_complex = 8
 				arms_factory = 2
 
 			}
@@ -38,7 +39,7 @@ state={
 	provinces={
 		232 656 1048 1307 2088 2844 3612 3618 3623 5452 
 	}
-	manpower=3369.0
+	manpower=3169.0
 	buildings_max_level_factor=1.000
-	state_category=s10
+	state_category=s12
 }

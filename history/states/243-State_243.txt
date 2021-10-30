@@ -3,27 +3,21 @@ state={
 	id=243
 	name="STATE_243"
 	resources={
-		powder = 2.0
-		metal = 0.0
+		powder=2.000
+		metal=0.000
 		gas=5.000
 		crystal=0.000
 	}
 
 	history={
-		143.7.1 = {
-			owner = MSD
-			add_core_of = MSD
-			controller = HUM
-			buildings = {
-				infrastructure = 1
-				industrial_complex = 0
-				arms_factory = 0
-
-			}
-		}
+			owner = HUM
 		146.1.1 = {
-			owner = MSD
+			owner = HUM
 			add_core_of = MSD
+			add_core_of = HUM
+			add_claim_by = HU6
+			add_claim_by = HU7
+			add_claim_by = HU8
 			buildings = {
 				infrastructure =1
 				industrial_complex = 0

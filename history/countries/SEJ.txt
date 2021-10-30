@@ -1,49 +1,5 @@
 ﻿capital = 119
-143.7.1 = {
-    set_technology = {
-        #通用武器线
-        spell_card1 = 1
-        spear1 = 1
-        gun1 = 1
-        linglicunchu = 1
-        spell_card2 = 1
-        lingliliushuixian = 1
-            
-        #辅助
 
-        #专用辅助
-
-        #专用基础
-
-        #专用进阶
-
-        #混合系
-        sc_shield1 = 1
-
-        #陆军学说
-        zhanchangzhihui140 = 1
-        zuzhihuazhanzheng142 = 1
-        xianlieduixing = 1
-            
-        #工程学 
-        jichushuxue = 1
-        shuxuegongju = 1
-        lingben = 1
-
-        #专用工程学
-
-        #工业
-        production_theory = 1
-        org_production = 1
-            
-        #专用工业
-        linglishengchan130 = 1
-        linglishengchan140 = 1
-
-        #种族
-            
-    } 
-}
 146.1.1 = {
     set_technology = {
         #通用武器线
@@ -88,20 +44,10 @@
 
         #种族
             
-    } 
-}
-143.7.1 = {
-    oob = "SEJ_143"
-    add_ideas = {
-    Pri_youkai
-    low_economic_mobilisation
-    type3_manpowerlv7
-    Tribal
-    hawk3
-    close2
-    free_magic
-     
     }
+}
+140.1.1 = {
+    #temp
     set_politics = {
         ruling_party = fandong
         election_frequency = 48
@@ -115,8 +61,68 @@
         fandong = 100
     }
 }
+142.3.8.7 = {
+    oob = "SEJ_142"
+    add_ideas = type3_manpowerlv3
+	add_ideas = {
+    Pri_youkai
+	partial_economic_mobilisation
+    hawk2
+    close1
+    strict_border
+    free_magic
+     
+    Tribal
+    }
+    
+	set_politics = {
+    	ruling_party = qinwai
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 90
+        guli = 0
+        neworder = 0
+        oldorder = 0
+        fandong = 10
+
+    }
+    # create_equipment_variant = {
+    #    name = "SCAR Mammon Mark II F-mode"
+    #    type = spell_card139
+    #    upgrades = {
+    #       # upgrade_reliability = 4
+    #       # upgrade_softattack = 4
+    #       # upgrade_hardattack = 1
+    #       # upgrade_aaattack = 2
+    #       # upgrade_defense = 1
+    #       # upgrade_breakthrough = 5
+    #       upgrade_ic = 2
+    #       # upgrade_ic_reverse = 5
+    #       upgrade_reliability_reverse = 3
+    #    }
+    # }
+    
+}
+
+144.1.1 = {
+    oob = "SEJ_144"
+    set_politics = {
+        ruling_party = fandong
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 0
+        guli = 1
+        neworder = 4
+        oldorder = 0
+        fandong = 95
+    }
+}
+
 146.1.1={
-    add_manpower = 100
     set_country_flag = bunengqie_guli
     oob = "SEJ_146"
 
@@ -128,7 +134,7 @@
     add_ideas = {
     Pri_youkai
     low_economic_mobilisation
-    type3_manpowerlv4
+    type3_manpowerlv2
     Tribal
     hawk2
     close2
@@ -138,33 +144,21 @@
     }
 
     add_ideas = SEJ_zhengzhiweiji_idea
-    # declare_war_on = {
-    #   target = ONS
-    #   type = take_state_focus
-    #   generator = { 121 }
-    # }
     
-	NIB = {
-        subject_level3 = yes
-    }
-    RMI = {
-        subject_level3 = yes
-    }
 
-    # NIB = { add_to_war = { targeted_alliance = SEJ enemy = ONS }}
-    # RMI = { add_to_war = { targeted_alliance = SEJ enemy = ONS }}
-    # CIR = { add_to_war = { targeted_alliance = SEJ enemy = ONS }}
+
     set_politics = {
-    	ruling_party = fandong
+    	ruling_party = qinwai
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 15
+        qinwai = 50
         guli = 0
-        neworder = 50
+        neworder = 15
         oldorder = 0
-        fandong = 35
+        fandong = 15
+        lienin = 20
     }
     set_major = no
     
@@ -172,23 +166,30 @@
 
 create_country_leader = {
 	# name = "Kijin Seija"
-    name = "鬼人正邪"
-	picture = "SEJ_sej.dds"
+    name = "莉格露·奈特巴格"
+	picture = "gfx/leaders/SEJ/NIB_nib.dds"
 	ideology = fandong_type
 	traits = {  }
 }
 create_country_leader = {
     # name = "Kijin Seija"
-    name = "鬼人正邪"
-    picture = "SEJ_sej.dds"
+    name = "莉格露·奈特巴格"
+    picture = "gfx/leaders/SEJ/NIB_nib.dds"
     ideology = neworder_type
     traits = {  }
 }
 create_country_leader = {
     # name = "Kijin Seija"
-    name = "鬼人正邪"
-    picture = "SEJ_sej.dds"
+    name = "露米娅"
+    picture = "gfx/leaders/SEJ/SEJ_rmi.dds"
     ideology = oldorder_type
+    traits = {  }
+}
+create_country_leader = {
+    # name = "Kijin Seija"
+    name = "露米娅"
+    picture = "gfx/leaders/SEJ/SEJ_rmi.dds"
+    ideology = lienin_type
     traits = {  }
 }
 create_country_leader = {
@@ -203,5 +204,19 @@ create_country_leader = {
     name = "少名针妙丸"
     picture = "SEJ_smm.dds"
     ideology = guli_type
+    traits = {  }
+}
+create_country_leader = {
+    # name = "Sukuna Shinmyoumaru"
+    name = "少名针妙丸"
+    picture = "SEJ_smm.dds"
+    ideology = humanfirst_type
+    traits = {  }
+}
+create_country_leader = {
+    # name = "Sukuna Shinmyoumaru"
+    name = "少名针妙丸"
+    picture = "SEJ_smm.dds"
+    ideology = authordemo_type
     traits = {  }
 }

@@ -1,4 +1,5 @@
 ﻿capital = 88
+
 146.1.1 = {
     set_technology = {
         #通用武器线
@@ -70,21 +71,20 @@
     }
     
     set_politics = {
-    	ruling_party = qinwai
+    	ruling_party = lienin
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 65
+        qinwai = 25
         guli = 0
         neworder = 25
         oldorder = 0
-        fandong = 10
+        fandong = 0
+        lienin = 50
     }
 
-    SAP = {
-        subject_level4 = yes
-    }
+
 }
 create_country_leader = {
 	# name = "Kawasiro Nitori"
@@ -112,6 +112,13 @@ create_country_leader = {
     name = "河城荷取"
     picture = "NTR_ntr.dds"
     ideology = neworder_type
+    traits = {  }
+}
+create_country_leader = {
+    # name = "Kawasiro Nitori"
+    name = "河城荷取"
+    picture = "NTR_ntr.dds"
+    ideology = lienin_type
     traits = {  }
 }
 create_country_leader = {

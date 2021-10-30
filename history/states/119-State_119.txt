@@ -3,22 +3,14 @@ state={
 	id=119
 	name="STATE_119"
 	resources={
-		powder = 0.0
-		metal = 0.0
+		powder=0.000
+		metal=0.000
 		gas=15.000
 		crystal=0.000
 	}
 
 	history={
-		143.7.1 = {
 			owner = SEJ
-			add_core_of = SEJ
-			buildings = {
-				infrastructure = 5
-				industrial_complex = 4
-				arms_factory = 4
-			}
-		}
 		146.1.1 = {
 			owner = SEJ
 			add_core_of = SEJ
@@ -37,7 +29,7 @@ state={
 	provinces={
 		7 228 736 758 1354 1591 2737 3277 3278 3279 3881 3887 3890 5778 5787 5949 
 	}
-	manpower=2995
+	manpower=1995
 	buildings_max_level_factor=1.000
 	state_category=s12
 }

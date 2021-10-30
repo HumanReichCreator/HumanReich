@@ -1,4 +1,5 @@
 ﻿capital = 227
+
 146.1.1 = {
     set_technology = {
         #通用武器线
@@ -48,7 +49,6 @@
         yaohuakecheng2 = 1
             
     }
-    
 }
 143.7.1={
     oob = "TEST"
@@ -77,33 +77,36 @@
     }
 }
 146.1.1={
-    set_country_flag = bunengsuiyiqiehuanzhengti
-    oob = "TEST"
+    oob = "KYK_146"
+    
     add_ideas = {
-        KYK_hepingzhuyi_idea
-        KYK_zhengzhibuwending1_idea
-        Beast
-        type4_manpowerlv2
-        Village
-        # anti_fairy
-        #new_sytle_buddism
-        open2
-        dove3
-        normal_border
-        free_magic
+
+    Beast
+    type4_manpowerlv2
+    Village
+    # anti_fairy
+    #new_sytle_buddism
+    open1
+    dove3
+    normal_border
+    free_magic
     }
 
+    SRB = { give_guarantee = KYK}
+    HUM = { give_guarantee = KYK}
+    NMS = { give_guarantee = KYK}
+    
     set_politics = {
-    	ruling_party = qinwai
+    	ruling_party = guli
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 70
-        guli = 0
+        qinwai = 0
+        guli = 100
         neworder = 0
         oldorder = 0
-        fandong = 30
+        fandong = 0
     }
 }
 create_country_leader = {

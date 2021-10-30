@@ -1,64 +1,6 @@
 ﻿capital = 223
-143.7.1 = {
-    set_technology = {
-        #通用武器线
-        spell_card1 = 1
-        spear1 = 1
-        gun1 = 1
-        linglicunchu = 1
-        linglizhufu = 1
-        linglidanyao = 1
-        spell_card2 = 1
-        spear2 = 1
-        lingliliushuixian = 1
-        spell_card3 = 1
-        spear3 = 1
-            
-        #辅助
-        zhiyuanzhuangbei = 1
-        zhihuixiaodui146 = 1
 
-        #专用辅助
-        lingliganying147 = 1
-
-        #专用基础
-
-        #专用进阶
-
-        #混合系
-        ma_shield1 = 1
-
-        #陆军学说
-        zhanchangzhihui140 = 1
-        zuzhihuazhanzheng142 = 1
-        zhanchangzhihui145 = 1
-            
-        #工程学 
-        jichushuxue = 1
-        shuxuegongju = 1
-        lingben = 1
-        tongxunlilun = 1
-        jiemi137 = 1
-
-        #专用工程学
-
-        #工业
-        production_theory = 1
-        org_production = 1
-            
-        #专用工业
-        linglishengchan130 = 1
-        linglishengchan140 = 1
-
-        #种族
-        caogenchuantong1 = 1
-        qinlvetianxing1 = 1
-            
-    }
-    
-}
 146.1.1 = {
-    set_country_flag = bunengsuiyiqiehuanzhengti
     set_technology = {
         #通用武器线
         spell_card1 = 1
@@ -85,13 +27,12 @@
         #专用进阶
 
         #混合系
-        ma_shield1 = 1
+        sc_shield1 = 1
 
         #陆军学说
         zhanchangzhihui140 = 1
         zuzhihuazhanzheng142 = 1
         zhanchangzhihui145 = 1
-        jingyingxunlian = 1
             
         #工程学 
         jichushuxue = 1
@@ -117,10 +58,23 @@
         qinlvetianxing2 = 1
             
     }
-    
+}
+143.1.1 = {#temp
+    set_politics = {
+        ruling_party = qinwai
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 100
+        guli = 0
+        neworder = 0
+        oldorder = 0
+        fandong = 0
+    }
 }
 143.7.1 = {
-    oob = "NMS_143"
+    oob = "TEST"
     set_politics = {
         ruling_party = qinwai
         election_frequency = 48
@@ -137,7 +91,7 @@
     
     add_ideas = {
         Pri_youkai
-        type3_manpowerlv5
+        type3_manpowerlv3
         Shrine
         open2
         hawk0
@@ -146,119 +100,62 @@
     }
 }
 146.1.1={
-    add_manpower = 850
+    # set_cosmetic_tag = NMS_nue
+    # set_cosmetic_tag = NMS_SRB
+    # set_cosmetic_tag = NMS_youkai
     oob = "NMS_146"
+    # set_research_slots = 5
+    # Starting tech
     
+    create_faction = Buddi_Tao_ally
+    add_to_faction = SRB
+
     diplomatic_relation = { 
-        country = TKM relation = non_aggression_pact 
+        country = WHM relation = non_aggression_pact 
     }
-    ########地块情况#########
-    add_dynamic_modifier = {
-        modifier = NMS_zongse_stability
+
+    diplomatic_relation = { 
+        country = HUM relation = non_aggression_pact 
     }
-    add_dynamic_modifier = {
-        modifier = NMS_lvse_stability
+    MAM = {
+        subject_level4 = yes
     }
-    add_dynamic_modifier = {
-        modifier = NMS_zise_stability
+    ICR = {
+        subject_level3 = yes
     }
-    set_variable = { NMS_lvse_r = -0.02 }
-    set_variable = { NMS_zongse_r = -0.1 }
-    set_variable = { NMS_zise_r = -0.06 }
-    set_variable = {
-        NMS_lvse_x = -0.14
+    MNM = {
+        subject_level3 = yes
     }
-    set_variable = {
-        NMS_zongse_x = -0.5
-    }
-    set_variable = {
-        NMS_zise_x = -0.24
-    }
-    set_variable = {
-        NMS_pingxi_cost = 30
-    } 
-    set_variable = {
-        NMS_pingxi_day = 60
-    } 
-    every_owned_state = {
-        limit = {
-            region = 47
-        }
-        add_dynamic_modifier = {
-            modifier = NMS_lvse_state
-        }
-    }
-    433 = {
-        add_dynamic_modifier = {
-            modifier = NMS_zongse_state
-        }
-    }
-    328 = {
-        add_dynamic_modifier = {
-            modifier = NMS_zongse_state
-        }
-    }
-    168 = {
-        add_dynamic_modifier = {
-            modifier = NMS_zongse_state
-        }
-    }
-    321 = {
-        add_dynamic_modifier = {
-            modifier = NMS_zongse_state
-        }
-    }
-    163 = {
-        add_dynamic_modifier = {
-            modifier = NMS_zongse_state
-        }
-    }
-    195 = {
-        add_dynamic_modifier = {
-            modifier = NMS_zise_state
-        }
-    }
-    327 = {
-        add_dynamic_modifier = {
-            modifier = NMS_zise_state
-        }
-    }
-    245 = {
-        add_dynamic_modifier = {
-            modifier = NMS_zise_state
-        }
-    }
-    238 = {
-        add_dynamic_modifier = {
-            modifier = NMS_zise_state
-        }
-    }
-    #####################
+    
     add_ideas = {
-        nms_hepingdefojiao_idea
-        nms_shangcengzhongzuzhuyizhe_idea
-        
-        Pri_youkai
-        type3_manpowerlv4
-        Shrine
-        # anti_fairy
-        #new_sytle_buddism
-        open1
-        hawk1
-        normal_border
-        free_magic
+    nms_shenglizhezhongdeshibaizhe_idea
+    nms_yaoguaifojiaokuangrezhe_idea
+    nms_yaoguaifojiaokuangrezhedebaodong_idea
+    
+    Pri_youkai
+    type3_manpowerlv2
+    low_economic_mobilisation
+    Shrine
+    # anti_fairy
+    #new_sytle_buddism
+    open1
+    hawk1
+    normal_border
+    free_magic
     }
     set_politics = {
-    	ruling_party = qinwai
+    
+    	ruling_party = authordemo
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 30 
-        guli = 8
-        neworder = 35
-        oldorder = 25
-        fandong = 2
+        authordemo = 65
+        qinwai = 20
+        guli = 5
+        neworder = 0
+        oldorder = 10
+        fandong = 0
     }
 }
 
@@ -273,12 +170,12 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	# name = "Toramaru Syou"
-    name = "寅丸星"
-	picture = "NMS_syou.dds"
+	# name = "Hijiri Byakuren"
+    name = "圣白莲"
+	picture = "NMS_bkr.dds"
 	ideology = guli_type
     traits = {
-
+        # nms_bkr
     }
 }
 create_country_leader = {
@@ -291,16 +188,46 @@ create_country_leader = {
     }
 }
 create_country_leader = {
-    # name = "Nazrin"
-    name = "娜兹玲"
-    picture = "NMS_mouse.dds"
+    # name = "Hijiri Byakuren"
+    name = "圣白莲"
+    picture = "NMS_bkr.dds"
     ideology = fandong_type
+    traits = {
+        # nms_bkr
+    }
 }
 create_country_leader = {
 	# name = "Hijiri Byakuren"
     name = "圣白莲"
 	picture = "NMS_bkr.dds"
 	ideology = oldorder_type
+    traits = {
+        # nms_bkr
+    }
+}
+create_country_leader = {
+	# name = "Hijiri Byakuren"
+    name = "圣白莲"
+	picture = "NMS_bkr.dds"
+	ideology = authordemo_type
+    traits = {
+        # nms_bkr
+    }
+}
+create_country_leader = {
+	# name = "Hijiri Byakuren"
+    name = "圣白莲"
+	picture = "NMS_bkr.dds"
+	ideology = lienin_type
+    traits = {
+        # nms_bkr
+    }
+}
+create_country_leader = {
+	# name = "Hijiri Byakuren"
+    name = "圣白莲"
+	picture = "NMS_bkr.dds"
+	ideology = humanfirst_type
     traits = {
         # nms_bkr
     }

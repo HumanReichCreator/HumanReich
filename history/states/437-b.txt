@@ -6,16 +6,16 @@ state={
 	}
 	resources={
 		energy = 0
-		powder = 0.0
-		metal = 0.0
+		powder=0.000
+		metal=0.000
 		gas=0.000
 		crystal=2.000
 	}
 	history={
+			owner = KMC
 		146.1.1 = {
 			owner = KMC
 			add_core_of = KMC
-			add_claim_by = GH1
 			add_claim_by = URM
 			buildings = {
 				infrastructure = 0

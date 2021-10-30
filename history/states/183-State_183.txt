@@ -5,27 +5,18 @@ state={
 
 	resources={
 
-		powder = 0.0
-		metal = 0.0
+		powder=0.000
+		metal=0.000
 		gas=0.000
 		crystal=0.000
 	}
 
 	history={
-		143.7.1 = {
-			owner = RMI
-			add_core_of = RMI
-			add_core_of = MYK
-			buildings = {
-				infrastructure = 1
-				industrial_complex = 0
-				arms_factory = 0
-			}
-		}
+			owner = HKR
 		146.1.1 = {
-			owner = RMI
+			owner = HKR
 			add_core_of = RMI
-			add_core_of = MYK
+			add_core_of = HKR
 			buildings = {
 				infrastructure =2
 				industrial_complex = 0

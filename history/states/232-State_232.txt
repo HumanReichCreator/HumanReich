@@ -3,44 +3,45 @@ state={
 	id=232
 	name="STATE_232"
 	resources={
-		powder = 0.0
-		metal = 0.0
+
+		powder=1.000
+		metal=1.000
 		gas=0.000
 		crystal=0.000
 	}
 
 	history={
+			owner = HUM
 		143.7.1 = {
 			owner = HUM
 			add_core_of = HUM
 			buildings = {
-				infrastructure = 6
-				industrial_complex = 4
-				arms_factory = 2
-
+				infrastructure =9
+				industrial_complex = 7
+				arms_factory = 3
 			}
 		}
 		146.1.1 = {
-			owner = ZBT
-			add_core_of = ZBT
+			owner = HUM
 			add_core_of = HUM
 			add_core_of = HU6
 			add_core_of = HU7
 			add_core_of = HU8
 			buildings = {
-				infrastructure = 7
+				infrastructure =7
 				industrial_complex = 8
 				arms_factory = 0
 
 			}
 
 		}
+
 	}
 
 	provinces={
-		3494 
+		126 182 973 1967 2049 2851 3201 3483 3487 3489 3490 3493 3494 3495 3497 3498 3499 3502 
 	}
-	manpower=656
+	manpower=7106.0
 	buildings_max_level_factor=1.000
-	state_category=s7
+	state_category=s10
 }

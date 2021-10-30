@@ -10,20 +10,21 @@ state={
 	}
 
 	history={
-		143.7.1 = {
-			owner = NMS
-			add_core_of = NMS
-			buildings = {
-				infrastructure = 4
-				industrial_complex = 1
-				arms_factory = 1
+			owner = MNM
+		# 143.7.1 = {
+		# 	owner = NMS
+		# 	add_core_of = NMS
+		# 	buildings = {
+		# 		infrastructure = 4
+		# 		industrial_complex = 1
+		# 		arms_factory = 0
 
-			}
+		# 	}
 
-		}
+		# }
 		146.1.1 = {
-			owner = NMS
-			add_core_of = NMS
+			owner = MNM
+			add_core_of = MNM
 			buildings = {
 				infrastructure = 5
 				industrial_complex = 2
@@ -36,9 +37,9 @@ state={
 	}
 
 	provinces={
-		166 945 1327 2316 2431 3641 3642 3645 3648 3649 3651 3652 3653 3654 3655 3656 3657 3658 3659 5426 5431 5432 5434 5436 
+		166 945 2431 3641 3642 3645 3648 3649 3651 3652 5426 5431 5432 5434 
 	}
-	manpower=1204
+	manpower=994
 	buildings_max_level_factor=1.000
 	state_category=s7
 }

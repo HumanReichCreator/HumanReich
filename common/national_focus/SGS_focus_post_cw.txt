@@ -1,0 +1,2454 @@
+focus_tree = {
+	id = SGS_focus_post_cw
+	country = {
+		factor = 0
+		#modifier = {
+		#	add = 15
+		#	tag = SGS
+		#}
+	}
+	default = no
+	continuous_focus_position = {
+		x = 200
+		y = 1200
+	}
+	#shared_focus = SGS_civil_war_breakup_focus
+	focus = {
+		id = SGS_peaceful_transit_focus
+		icon = GFX_focus_generic_self_management
+		cost = 0
+		mutually_exclusive = {
+			focus = SGS_civil_war_end_focus
+		}
+		completion_reward = {
+			add_political_power = 50
+			#加点pp意思一下
+		}
+		x = 3
+		y = 0
+	}
+	focus = {
+		id = SGS_civil_war_end_focus
+		icon = GFX_focus_rom_preserve_romania
+		cost = 0
+		bypass = {
+			has_country_flag = SGS_civil_war_finish
+		}
+		completion_reward = {
+			add_political_power = 30
+			#加点pp意思一下
+		}
+		mutually_exclusive = {
+			focus = SGS_peaceful_transit_focus
+		}
+		x = 13
+		y = 0
+	}
+	focus = {
+		id = SGS_solidify_army_first_focus
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+		prerequisite = {
+			focus = SGS_peaceful_transit_focus
+		}
+		completion_reward = {
+			#加斗争，拉强权，弄个事件看是加强军事为主还是加强军工为主，影响两派数值
+			add_popularity = {
+				ideology = neworder
+				popularity = 0.2
+			}
+			conservativedecrease = yes
+			country_event = { id = SGS.3030} 
+		}
+		x = 4
+		y = 1
+	}
+	focus = {
+		id = SGS_postwar_confer_focus
+		icon = GFX_focus_three_fairies_confer
+		cost = 5
+		prerequisite = {
+			focus = SGS_civil_war_end_focus
+		}
+		cancelable = no
+		select_effect = {
+			country_event = {
+				id = sgs.300
+				days = 1
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SGS_confer_determine_way
+			country_event = {
+				id = sgs.301
+			}
+		}
+		x = 13
+		y = 1
+	}
+	focus = {
+		id = SGS_sunny_win_focus
+		icon = GFX_goal_support_fascism
+		cost = 0
+		bypass = {
+			has_country_flag = SGS_postwar_confer_sunny_win
+		}
+		prerequisite = {
+			focus = SGS_postwar_confer_focus
+		}
+		available  = {
+			always = no
+		}
+		mutually_exclusive = {
+			focus = SGS_luna_win_focus
+			focus = SGS_star_win_focus
+		}
+		x = 6
+		y = 2
+	}
+	focus = {
+		id = SGS_equip_issue_focus
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 5
+		prerequisite = {
+			focus = SGS_solidify_army_first_focus
+			focus = SGS_sunny_win_focus
+		}
+		completion_reward = {
+			#+pp，选解决方案：黑市购买，威胁他国还是琢磨科技，选项将影响后续国策内容
+			add_political_power = 50
+			country_event = {id = SGS.3035} 
+		}
+		x = 4
+		y = 3
+	}
+	focus = {
+		id = SGS_find_suuport_equip_focus
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 5
+		prerequisite = {
+			focus = SGS_equip_issue_focus
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_country_flag = SGS_on_own_way_equip
+				}
+				add_tech_bonus = {
+					category = support_tech
+					uses = 3
+					bonus = 0.15
+				}
+				else = {
+					custom_effect_tooltip = SGS_open_more_equipment_deci_tool
+				}
+				
+			}
+			add_to_variable = { SGS_BLM_garbage = 50 }
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 100
+				producer = SGS
+			}
+		}
+		x = 3
+		y = 4
+	}
+	focus = {
+		id = SGS_focus_artillery_focus
+		icon = GFX_goal_generic_army_artillery2
+		cost = 5
+		prerequisite = {
+			focus = SGS_equip_issue_focus
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_country_flag = SGS_on_own_way_equip
+				}
+				add_tech_bonus = {
+					category = artillery_tech
+					uses = 2
+					bonus = 0.25
+				}
+				else = {
+					custom_effect_tooltip = SGS_open_more_equipment_deci_tool
+				}
+			}
+		}
+		x = 5
+		y = 4
+	}
+	focus = {
+		id = SGS_stonger_brains_focus
+		icon = GFX_focus_generic_socialist_science
+		cost = 5
+		prerequisite = {
+			focus = SGS_sunny_win_focus
+		}
+		completion_reward = {
+			
+			set_country_flag = SGS_research_team
+			set_variable = {SGS_research_team_one = 0}
+			set_variable = {SGS.SGS_research_team_speed = 5}
+			#在两派相争中解锁一系列直接获得科技的决议，并且选项会由后续国策继续变多
+			#解锁数学决议，平民派++
+			if = {
+				limit = {
+					has_country_flag = SGS_select_develop_tech_over
+					has_idea = SGS_organize_smart_fairy_idea
+				}
+				
+				SGS_dove_rise5 = yes
+				swap_ideas = {
+					remove_idea = SGS_organize_smart_fairy_idea
+					add_idea = SGS_science_bureau_idea
+				}
+				modify_timed_idea = {
+					idea = SGS_science_bureau_idea
+					days = 270
+				}
+				else_if = {
+					limit = {
+						has_idea = SGS_organize_smart_fairy_idea
+					}
+					
+					SGS_dove_rise5 = yes
+					add_timed_idea = {
+						idea = SGS_science_bureau_idea
+						days = 180
+					}
+				}
+				#科学局
+				else = {
+					#科研攻坚小组
+					add_timed_idea = {
+						idea = SGS_science_battle_team
+						days = 180
+					}
+				}
+			}
+		}
+		x = 8
+		y = 3
+	}
+	focus = {
+		id = SGS_expand_military_school_focus
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		cost = 5
+		prerequisite = {
+			focus = SGS_stonger_brains_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_organzie_civilian_focus
+		}
+		completion_reward = {
+			#加陆军经验，激进派++，解锁军事理论
+			army_experience = 25
+			SGS_hawk_rise10 = yes
+			custom_effect_tooltip = SGS_RT_unlcok_more_tt
+		}
+		x = 7
+		y = 4
+	}
+	focus = {
+
+		id = SGS_organzie_civilian_focus
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		cost = 5
+		prerequisite = {
+			focus = SGS_stonger_brains_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_expand_military_school_focus
+		}
+		completion_reward = {
+			#获得新编制，获得一个军事理论
+			SGS_dove_rise5 = yes
+			add_tech_bonus = {
+				bonus = 0.8
+				uses = 1
+				category = jitizhuyi
+			}
+			division_template = {
+				name = SGS_template_civilian
+				regiments = {
+					ma_light_infantry = { x = 0 y = 0 }
+					ma_light_infantry = { x = 0 y = 1 }
+					ma_light_infantry = { x = 0 y = 2 }
+					melee_infantry = { x = 0 y = 4 }
+					melee_infantry = { x = 0 y = 5 }
+					sc_light_infantry = { x = 1 y = 0 }
+					sc_light_infantry = { x = 1 y = 1 }
+					sc_light_infantry = { x = 1 y = 2 }
+					melee_infantry = { x = 1 y = 4 }
+					melee_infantry = { x = 1 y = 5 }
+				}
+				support = { 
+				} 
+			}
+			custom_effect_tooltip = SGS_RT_unlcok_more_tt
+		}
+		x = 9
+		y = 4
+	}
+	focus = {
+		id = SGS_mili_admin_focus
+		icon = GFX_goal_support_fascism
+		cost = 5
+		prerequisite = {
+			focus = SGS_expand_military_school_focus
+			focus = SGS_organzie_civilian_focus
+		}
+		available = {
+			SGS_hawk_get_more = yes
+			
+		}
+		mutually_exclusive = {
+			focus = SGS_Baf_worker
+		}
+		completion_reward = {
+			#基础加一点战场妖精派的影响力，加pp和新规
+			#随机事件，战场妖精学会了妥协or战场妖精努力实现自己的主张，会涨or降战场妖精的影响力
+			#解锁工业科技，以后会变成社会科学
+			add_political_power = 50
+			add_popularity = {
+				ideology = neworder
+				popularity = 0.05
+			}
+			#事件
+			hidden_effect = {
+				random_list = {
+					50 = {
+						country_event = {
+							id =  sgs.3047
+							days = 5
+						}
+					}
+					50 = {
+						country_event = {
+							id =  sgs.30471
+							days = 5
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = SGS_RT_unlcok_more_tt
+
+		}
+		x = 7
+		y = 5
+	}
+	focus = {
+		id = SGS_Baf_worker
+		icon = GFX_focus_generic_industry_3
+		cost = 5
+		prerequisite = {
+			focus = SGS_organzie_civilian_focus
+			focus = SGS_expand_military_school_focus
+		}
+		available = {
+			SGS_dove_get_more = yes
+			
+		}
+		mutually_exclusive = {
+			focus = SGS_mili_admin_focus
+		}
+		completion_reward = {
+			#平民派++，获得一个工业科技，和平++，替换经济buff
+			SGS_dove_rise5 = yes
+			add_popularity = {
+				ideology = guli
+				popularity = 0.05
+			}
+			add_tech_bonus = {
+				bonus = 0.4
+				uses = 1
+				category = industrys
+			}
+			swap_ideas = {
+				remove_idea = SGS_post_cw_mic_idea
+				add_idea = SGS_baf_worker_mic_idea
+			}
+			custom_effect_tooltip = SGS_RT_unlcok_more_tt
+		}
+		x = 9
+		y = 5
+	}
+	focus = {
+		id = SGS_easy_product_focus
+		icon = GFX_focus_focus_fra_maquis
+		cost = 5
+		prerequisite = {
+			focus = SGS_focus_artillery_focus
+		}
+		prerequisite = {
+			focus = SGS_find_suuport_equip_focus
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_country_flag = SGS_on_own_way_equip
+				}
+				swap_ideas = {
+					remove_idea = SGS_imitate_guns_idea
+					add_idea = SGS_easy_product_all_idea
+				}
+				else = {
+					country_event = {id = sgs.3036}
+				}
+			}
+		}
+		x = 4
+		y = 5
+	}
+	focus = {
+		id = SGS_build_Baf_civlian_mix_army_focus
+		icon = GFX_focus_generic_little_entente
+		cost = 5
+		prerequisite = {
+			focus = SGS_Baf_worker
+			focus = SGS_mili_admin_focus
+		}
+		prerequisite = {
+			focus = SGS_easy_product_focus
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SGS_hawk_dove_not_imbalance
+				SGS_hawk_hold_meeting = no
+				SGS_dove_hold_meeting = no
+			}
+		}
+		completion_reward = {
+			#需要影响力比较均衡，获得新编制，改善BaF种族buff
+			if = {
+				limit = {
+					has_idea = SGS_battle_fairy_talent_pacified_idea
+				}
+				swap_ideas = {
+					remove_idea = SGS_battle_fairy_talent_pacified_idea
+					add_idea = SGS_BaF_civ_mix_troop_idea
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = SGS_battle_fairy_talent_idea
+						add_idea = SGS_BaF_civ_mix_troop_idea
+					}
+				}
+			}
+			division_template = {
+				name = SGS_template_civilian
+				regiments = {
+					ma_light_infantry = { x = 0 y = 0 }
+					ma_light_infantry = { x = 0 y = 1 }
+					ma_light_infantry = { x = 0 y = 2 }
+					melee_infantry = { x = 0 y = 4 }
+					melee_infantry = { x = 0 y = 5 }
+					sc_infantry = { x = 1 y = 0 }
+					sc_infantry = { x = 1 y = 1 }
+					sc_infantry = { x = 1 y = 2 }
+					sc_infantry = { x = 1 y = 4 }
+					sc_infantry = { x = 1 y = 5 }
+					sc_mortar_brigade = { x = 2 y = 0 }
+					sc_mortar_brigade = { x = 2 y = 1 }
+					sc_mortar_brigade = { x = 2 y = 2 }
+				}
+				support = { 
+				} 
+			}
+			army_experience = 20
+
+		}
+		x = 8
+		y = 6
+	}
+	focus = {
+		id = SGS_body_stronger_focus
+		icon = GFX_goal_demand_sudetenland
+		cost = 5
+		prerequisite = {
+			focus = SGS_sunny_win_focus
+		}
+		x = 10
+		y = 3
+		completion_reward = {
+			#将领等级加一，稳定or战争支持二选一（影响影响力
+			every_unit_leader = {
+				add_attack = 1
+				add_defense  = 1
+			}
+			country_event = {
+				id = sgs.3048
+			}
+		}
+	}
+	focus = {
+		id = SGS_luna_win_focus
+		icon = GFX_focus_yug_zmaj
+		cost = 0
+		bypass = {
+			has_country_flag = SGS_postwar_confer_luna_win
+		}
+		prerequisite = {
+			focus = SGS_postwar_confer_focus
+		}
+		available  = {
+			always = no
+		}
+		mutually_exclusive = {
+			focus = SGS_sunny_win_focus
+			focus = SGS_star_win_focus
+		}
+		x = 13
+		y = 2
+	}
+	focus = {
+		id = SGS_feel_sprit_and_body_focus
+		icon = GFX_goal_generic_wolf_pack
+		cost = 5
+		prerequisite = {
+			focus = SGS_luna_win_focus
+		}
+		completion_reward = {
+			
+			
+		}
+		x = 13
+		y = 3
+	}
+	focus = {
+		id = SGS_all_people_training_focus
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 5
+		prerequisite = {
+			focus = SGS_body_stronger_focus
+			focus = SGS_feel_sprit_and_body_focus
+		}
+		completion_reward = {
+			#给训练相关buff
+			add_timed_idea = {
+				idea = SGS_all_people_training_idea
+				days = 360
+			}
+			
+		}
+		x = 11
+		y = 4
+	}
+	focus = {
+		id = SGS_absorb_energy_from_gas_focus
+		icon = GFX_focus_generic_steel
+		cost = 5
+		prerequisite = {
+			focus = SGS_feel_sprit_and_body_focus
+		}
+		x = 13
+		y = 4
+	}
+	focus = {
+		id = SGS_facing_mountain_focus
+		icon = GFX_focus_GRE_a_land_of_mountains
+		cost = 5
+		prerequisite = {
+			focus = SGS_all_people_training_focus
+		}
+		completion_reward = {
+			#给一个山地作战的科技，然后加点灵力
+			PO_influence_factor0.05 = yes
+			set_technology = { SGS_face_mountain_tech = 1}
+		}
+		x = 11
+		y = 5
+	}
+	focus = {
+		id = SGS_catch_youkai_focus
+		icon = GFX_focus_BUL_the_fate_of_the_balkans
+		cost = 10
+		prerequisite = {
+			focus = SGS_absorb_energy_from_gas_focus
+		}
+		prerequisite = {
+			focus = SGS_facing_mountain_focus
+		}
+		x = 13
+		y = 6
+	}
+	focus = {
+		id = SGS_the_best_fairy_army_focus
+		icon = GFX_goal_tfv_can_forced_quebec_conscription
+		cost = 5
+		prerequisite = {
+			focus = SGS_build_Baf_civlian_mix_army_focus
+		}
+		prerequisite = {
+			focus = SGS_facing_mountain_focus
+		}
+		available = {
+			not = {
+				has_idea = SGS_donot_attack_fairy_idea
+			}
+			
+		}
+		completion_reward = {
+			#核心攻方+妖精攻防，需要解锁与妖精交战？
+			add_timed_idea = {
+				idea = SGS_best_fairy_army_idea
+				days = 1095
+			}
+			add_political_power = 100
+			
+		}
+		x = 9
+		y = 7
+	}
+	focus = {
+		id = SGS_find_youkai_friend_focus
+		icon = GFX_focus_eng_imperial_federation
+		cost = 10
+		prerequisite = {
+			focus = SGS_luna_win_focus
+		}
+		x = 16
+		y = 3
+	}
+	focus = {
+		id = SGS_contact_to_OTG_focus
+		icon = GFX_goal_generic_major_alliance
+		cost = 5
+		prerequisite = {
+			focus = SGS_find_youkai_friend_focus
+		}
+		x = 15
+		y = 4
+	}
+	focus = {
+		id = SGS_research_result_in_SCA_focus
+		icon = GFX_focus_generic_socialist_science
+		cost = 5
+		prerequisite = {
+			focus = SGS_find_youkai_friend_focus
+		}
+		x = 17
+		y = 4
+	}
+	focus = {
+		id = SGS_attack_human_to_fear_focus
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 5
+		prerequisite = {
+			focus = SGS_contact_to_OTG_focus
+			focus = SGS_research_result_in_SCA_focus
+		}
+		x = 16
+		y = 5
+	}
+	focus = {
+		id = SGS_star_win_focus
+		icon = GFX_goal_generic_improve_relations
+		cost = 0
+		bypass = {
+			has_country_flag = SGS_postwar_confer_star_win
+		}
+		prerequisite = {
+			focus = SGS_postwar_confer_focus
+		}
+		available  = {
+			always = no
+		}
+		mutually_exclusive = {
+			focus = SGS_luna_win_focus
+			focus = SGS_sunny_win_focus
+		}
+		x = 21
+		y = 2
+	}
+	focus = {
+		id = SGS_final_solution_focus
+		icon = GFX_focus_spr_crush_the_revolution
+		cost = 5
+		prerequisite = {
+			focus = SGS_luna_win_focus
+			focus = SGS_star_win_focus
+		}
+		x = 19
+		y = 3
+	}
+	focus = {
+		id = SGS_blame_neworder_focus
+		icon = GFX_focus_mex_triumph_over_the_cristeros
+		cost = 10
+		prerequisite = {
+			focus = SGS_final_solution_focus
+		}
+		x = 19
+		y = 4
+	}
+	focus = {
+		id = SGS_save_BaF_heritage_focus
+		icon = GFX_focus_renounce_the_treaty_of_triannon
+		cost = 5
+		prerequisite = {
+			focus = SGS_blame_neworder_focus
+		}
+		x = 19
+		y = 5
+	}
+	focus = {
+		id = SGS_find_strength_of_BaF_focus
+		icon = GFX_focus_generic_manpower
+		cost = 10
+		prerequisite = {
+			focus = SGS_save_BaF_heritage_focus
+		}
+		x = 17
+		y = 6
+	}
+	focus = {
+		id = SGS_become_youkai_hypo_focus
+		icon = GFX_focus_generic_japanese_imperial_glory
+		cost = 10
+		prerequisite = {
+			focus = SGS_catch_youkai_focus
+		}
+		prerequisite = {
+			focus = SGS_attack_human_to_fear_focus
+		}
+		prerequisite = {
+			focus = SGS_find_strength_of_BaF_focus
+		}
+		x = 15
+		y = 7
+	}
+	focus = {
+		id = SGS_destroy_the_bunker_focus
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		cost = 5
+		prerequisite = {
+			focus = SGS_save_BaF_heritage_focus
+		}
+		x = 19
+		y = 6
+	}
+	focus = {
+		id = SGS_clean_BaF_focus
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 5
+		prerequisite = {
+			focus = SGS_destroy_the_bunker_focus
+		}
+		x = 19
+		y = 7
+	}
+	focus = {
+		id = SGS_fairy_solidarity_focus
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		prerequisite = {
+			focus = SGS_star_win_focus
+		}
+		x = 22
+		y = 3
+	}
+	focus = {
+		id = SGS_do_independ_focus
+		icon = GFX_focus_spr_war_of_independence
+		cost = 5
+		prerequisite = {
+			focus = SGS_fairy_solidarity_focus
+		}
+		x = 22
+		y = 5
+	}
+	focus = {
+		id = SGS_build_people_army_focus
+		icon = GFX_focus_spr_no_pasaran
+		cost = 5
+		prerequisite = {
+			focus = SGS_do_independ_focus
+		}
+		prerequisite = {
+			focus = SGS_save_BaF_heritage_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_build_strong_modern_army_focus
+		}
+		x = 21
+		y = 6
+	}
+	focus = {
+		id = SGS_build_strong_modern_army_focus
+		icon = GFX_focus_chi_army_reform
+		cost = 5
+		prerequisite = {
+			focus = SGS_do_independ_focus
+		}
+		prerequisite = {
+			focus = SGS_save_BaF_heritage_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_build_people_army_focus
+		}
+		x = 23
+		y = 6
+	}
+	focus = {
+		id = SGS_industry_society_focus
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = SGS_build_strong_modern_army_focus
+		}
+		x = 23
+		y = 7
+	}
+	focus = {
+		id = SGS_show_peace_again_focus
+		icon = GFX_goal_generic_improve_relations
+		cost = 10
+		prerequisite = {
+			focus = SGS_star_win_focus
+		}
+		x = 27
+		y = 3
+	}
+	focus = {
+		id = SGS_trade_fairy_again_focus
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 5
+		prerequisite = {
+			focus = SGS_show_peace_again_focus
+		}
+		x = 26
+		y = 4
+	}
+	focus = {
+		id = SGS_trade_industry_again_focus
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 5
+		prerequisite = {
+			focus = SGS_show_peace_again_focus
+		}
+		x = 28
+		y = 4
+	}
+	focus = {
+		id = SGS_tech_modern_help_focus
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10
+		prerequisite = {
+			focus = SGS_trade_fairy_again_focus
+		}
+		prerequisite = {
+			focus = SGS_trade_industry_again_focus
+		}
+		x = 27
+		y = 5
+	}
+	focus = {
+		id = SGS_education_mordern_help_focus
+		icon = GFX_focus_generic_military_academy
+		cost = 10
+		prerequisite = {
+			focus = SGS_tech_modern_help_focus
+		}
+		x = 28
+		y = 6
+	}
+	focus = {
+		id = SGS_politic_modern_help_focus
+		icon = GFX_focus_usa_recruit_the_free_corps
+		cost = 5
+		prerequisite = {
+			focus = SGS_tech_modern_help_focus
+		}
+		x = 26
+		y = 6
+	}
+	focus = {
+		id = SGS_Baf_economy_focus
+		icon = GFX_focus_hol_abandon_the_gold_standard
+		cost = 5
+		prerequisite = {
+			focus = SGS_solidify_army_first_focus
+		}
+		completion_reward = {
+			#急功近利的工业换名字，去掉debuff，加军转民速度，军事科技加速
+			swap_ideas = {
+				remove_idea = SGS_hurry_mic_idea
+				add_idea = SGS_BaF_economy_system_idea
+			}
+
+		}
+		x = 2
+		y = 2
+	}
+	focus = {
+		id = SGS_control_civil_supply_focus
+		icon = GFX_goal_generic_consumer_goods
+		cost = 5
+		prerequisite = {
+			focus = SGS_Baf_economy_focus
+		}
+		available = {
+			SGS_hawk_get_more = yes
+			
+		}
+		completion_reward = {
+			#给之前那个buff增加一个建筑建造和大幅消费品的修正，概率性会有事件表示平民会逃跑，损失人力，减稳定
+			swap_ideas = {
+				remove_idea = SGS_BaF_economy_system_idea
+				add_idea = SGS_BaF_economy_system_control_civ_idea
+			}
+
+			hidden_effect = {
+				country_event = { 
+					days = 2
+					id = SGS.7120001 
+				}#TNO小故事
+			}
+			
+		}
+
+		select_effect = {
+			hidden_effect = {
+				random_list = {
+					20 = {
+
+					}
+					80 = {
+						country_event = { 
+							days = 20
+							id = SGS.3031 
+						} #逃跑事件
+					}
+				}
+			}
+		}
+		x = 2
+		y = 3
+	}
+	focus = {
+		id = SGS_culture_reform_focus
+		icon = GFX_focus_generic_military_academy
+		cost = 5
+		prerequisite = {
+			focus = SGS_peaceful_transit_focus
+		}
+		completion_reward = {
+			#事件选稳定+集体主义or战争支持+个人主义 会根据派系情况给出结果，如果强行干涉则会大幅影响派系力量
+			#country_event = {id = SGS.xxx}
+			random_list{
+				var:sgs_dove_infl = {
+					country_event = { id = SGS.3032} 
+				}
+				var:sgs_hawk_infl = {
+					country_event = { id = SGS.3033} 
+				}
+			}
+		}
+		x = 0
+		y = 1
+	}
+	focus = {
+		id = SGS_itazura_ban_focus
+		icon = GFX_goal_continuous_restrict_freedom
+		cost = 5
+		available = {
+			SGS_hawk_have_supporter = yes
+			
+		}
+		prerequisite = {
+			focus = SGS_culture_reform_focus
+		}
+		completion_reward = {
+			#加稳定buff，事件选进一步提升工厂还是训练时间。后续会概率性出现逃跑事件
+			add_ideas = SGS_itazura_ban_idea
+			country_event = {id = SGS.3034 days = 10}
+		}
+		select_effect = {
+			hidden_effect = {
+				random_list = {
+					40 = {
+
+					}
+					60 = {
+						country_event = { 
+							days = 20
+							id = SGS.3031 
+						} #逃跑事件
+					}
+				}
+			}
+		}
+		x = 0
+		y = 3
+	}
+	focus = {
+		id = SGS_elite_army_focus
+		icon = GFX_focus_generic_manpower
+		cost = 5
+		prerequisite = {
+			focus = SGS_control_civil_supply_focus
+		}
+		prerequisite = {
+			focus = SGS_itazura_ban_focus
+		}
+		completion_reward = {
+			#给BaF天赋加buff，战斗力、速度、训练质量，减少适役，增加动员
+			if = {
+				limit = {
+					has_idea = SGS_battle_fairy_talent_pacified_idea
+				}
+				swap_ideas = {
+					remove_idea = SGS_battle_fairy_talent_pacified_idea
+					add_idea = SGS_battle_fairy_elite_army
+				}
+				else = {
+					swap_ideas = {
+						remove_idea = SGS_battle_fairy_talent_idea
+						add_idea = SGS_battle_fairy_elite_army
+					}
+				}
+			}
+			set_technology = {
+				jingyingxunlian = 1
+			}
+			delete_unit_template_and_units = {
+				division_template = "妖精民兵武装"
+				disband = yes
+			}
+		}
+		x = 1
+		y = 5
+	}
+	focus = {
+		id = SGS_spoil_system_focus
+		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		cost = 10
+		prerequisite = {
+			focus = SGS_easy_product_focus
+		}
+		prerequisite = {
+			focus = SGS_elite_army_focus
+		}
+		completion_reward = {
+			#关闭国境，居民无法外逃
+			#解锁新玩法，掠夺开始之前可以选择目的，抢劳力（免费造建筑）、抢技术or抢钱（生产/建造加速），输了给的少赢了给的多。
+		}
+		x = 2
+		y = 6
+	}
+	focus = {
+		id = SGS_show_power_to_world_focus
+		icon = GFX_focus_spa_strengthen_the_supreme_reality_of_spain
+		cost = 5
+		prerequisite = {
+			focus = SGS_spoil_system_focus
+		}
+		completion_reward = {
+			#加紧张度、新规 3年buff 减厌战和侵略相关 威胁和草原屈服概率提升 和所有国家减关系
+			add_threat = 3
+			add_popularity = {
+				ideology = neworder
+				popularity = 0.5
+			}
+			every_country = {
+				limit = {
+					not = {	tag = sgs}
+				}
+				add_opinion_modifier = {
+					target = SGS
+					modifier = SGS_show_power_to_world_op
+				}
+				add_ai_strategy = {
+					type = antagonize
+					id = SGS
+					value = 10
+				}
+			}
+			#news_event = { days = 2 id = sgs.xxx}
+		}
+		x = 2
+		y = 7
+	}
+	focus = {
+		id = SGS_ecnomy_modern_help_focus
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 5
+		prerequisite = {
+			focus = SGS_politic_modern_help_focus
+		}
+		prerequisite = {
+			focus = SGS_education_mordern_help_focus
+		}
+		x = 27
+		y = 7
+	}
+	focus = {
+		id = SGS_socialism_society_focus
+		icon = GFX_focus_focus_fra_revolution_upmost
+		cost = 10
+		prerequisite = {
+			focus = SGS_build_people_army_focus
+		}
+		x = 21
+		y = 7
+	}
+	focus = {
+		id = SGS_modern_fairy_focus
+		icon = GFX_goal_support_democracy
+		cost = 10
+		prerequisite = {
+			focus = SGS_industry_society_focus
+			focus = SGS_socialism_society_focus
+		}
+		prerequisite = {
+			focus = SGS_ecnomy_modern_help_focus
+		}
+		x = 25
+		y = 8
+	}
+focus = {
+		id = SGS_ind_plan_focus
+		icon = GFX_focus_generic_industry_3
+		cost = 10.00
+		x = 35
+		y = 0
+		completion_reward = {
+			#
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = industrys
+			}
+			add_ideas = SGS_industy_focus_idea
+		}
+	}
+	focus = {
+		id = SGS_ind_plan_hawk
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_ind_plan_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_ind_plan_dove
+		}
+		available = {
+			SGS_hawk_have_supporter = yes	
+		}
+		completion_reward = {
+			#
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					level = 1
+					instant_build = yes
+					type = arms_factory
+				}
+			}
+			#还有一个新buff
+			swap_ideas = {
+				remove_idea = SGS_industy_focus_idea
+				add_idea = SGS_industy_hawk_plan_idea
+			}
+		}
+		x = 33
+		y = 1
+
+	}
+	focus = {
+		id = SGS_enforce_picking_up #开发资源
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_ind_plan_hawk
+		}
+		x = 32
+		y = 2
+		available = {
+			SGS_hawk_have_supporter = yes	
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.3
+				uses = 2
+				category = resource_mining
+			}
+			random_owned_controlled_state = {
+				add_resource = {
+					type = metal
+					amount = 8
+				}
+			}
+			random_owned_controlled_state = {
+				add_resource = {
+					type = powder
+					amount = 5
+				}
+			}
+		}
+	}
+	focus = {
+		id = SGS_mic_expand_focus
+		icon = GFX_focus_generic_tank_production #加军工厂，减消费品
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_ind_plan_hawk
+		}
+		x = 34
+		y = 2
+		available = {
+			SGS_hawk_have_supporter = yes	
+		}
+		completion_reward = {
+			#
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					level = 2
+					instant_build = yes
+					type = arms_factory
+				}
+			}
+			#再来个二选一事件
+			country_event = { id = sgs.3049 }
+		}
+	}
+	focus = {
+		id = SGS_national_roadway_focus
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_enforce_picking_up
+		}
+		prerequisite = {
+			focus = SGS_mic_expand_focus
+		}
+		available = {
+			SGS_hawk_have_supporter = yes	
+		}
+		x = 33
+		y = 3
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+					level = 2
+					instant_build = yes
+					type = infrastructure
+				}
+			}	
+		}
+	}
+	focus = {
+		id = SGS_planning_product_focus #像筹划恶作剧一样计划性展开生产
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		available = {
+			SGS_hawk_get_more = yes	
+		}
+		prerequisite = {
+			focus = SGS_national_roadway_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_factory_flexible_trans_focus
+		}
+		x = 32
+		y = 4
+		completion_reward = {
+			add_ideas = SGS_planning_product_idea
+			add_political_power = 30
+		}
+	}
+	focus = {
+		id = SGS_ind_plan_dove
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_ind_plan_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_ind_plan_hawk
+		}
+		available = {
+			SGS_dove_have_supporter = yes	
+		}
+		x = 37
+		y = 1
+		completion_reward = {
+			#
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					level = 1
+					instant_build = yes
+					type = industrial_complex
+				}
+			}
+			#还有一个新buff
+			swap_ideas = {
+				remove_idea = SGS_industy_focus_idea
+				add_idea = SGS_industy_dove_plan_idea
+			}
+		}
+	}
+	focus = {
+		id = SGS_transform_picking_up
+		icon = GFX_goal_generic_air_production
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_ind_plan_dove
+		}
+		available = {
+			SGS_dove_have_supporter = yes	
+		}
+		x = 36
+		y = 2
+		completion_reward = {
+			#
+			add_tech_bonus = {
+				bonus = 0.3
+				uses = 2
+				category = resource_building
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					level = 1
+					instant_build = yes
+					type = gas_factory
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					level = 1
+					instant_build = yes
+					type = energy_factory
+				}
+			}
+
+		}
+	}
+	focus = {
+		id = SGS_cic_invest_focus
+		icon = GFX_focus_generic_industry_3
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_ind_plan_dove
+		}
+		available = {
+			SGS_dove_have_supporter = yes	
+		}
+		x = 38
+		y = 2
+		completion_reward = {
+			#
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					level = 2
+					instant_build = yes
+					type = industrial_complex
+				}
+			}
+			#再来个二选一事件
+			country_event = { id = sgs.30491 }
+		}
+	}
+	focus = {
+		id = SGS_city_infra_focus
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_transform_picking_up
+		}
+		prerequisite = {
+			focus = SGS_cic_invest_focus
+		}
+		available = {
+			SGS_dove_have_supporter = yes	
+		}
+		x = 37
+		y = 3
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					or = {
+						has_state_category = s12
+						has_state_category = s10
+						has_state_category = s15
+						has_state_category = s17
+						is_capital = yes
+					}
+				}
+				add_building_construction = {
+					level = 5
+					instant_build = yes
+					type = infrastructure
+				}
+			}
+
+		}
+	}
+
+	focus = {
+		id = SGS_factory_flexible_trans_focus
+		icon = GFX_goal_continuous_non_factory_construct
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_city_infra_focus
+			focus = SGS_national_roadway_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_exploring_product_focus
+			focus = SGS_planning_product_focus
+		}
+		x = 35
+		y = 4
+		completion_reward = {
+			add_ideas = SGS_flexible_factory_idea
+			
+		}
+	}
+
+	focus = {
+		id = SGS_mili_build_focus
+		icon = GFX_goal_generic_fortify_city
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_factory_flexible_trans_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_civil_build_focus
+		}
+		x = 34
+		y = 5
+		completion_reward = {
+			add_ideas = SGS_flexible_factory_mil_idea
+			add_war_support = 0.05
+			SGS_hawk_rise5 = yes
+		}
+	}
+
+	focus = {
+		id = SGS_civil_build_focus
+		icon = GFX_goal_generic_construction
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_factory_flexible_trans_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_mili_build_focus
+		}
+		x = 36
+		y = 5
+		completion_reward = {
+			add_ideas = SGS_flexible_factory_civ_idea
+			add_stability = 0.05
+			SGS_dove_rise5 = yes
+		}
+	}
+
+	focus = {
+		id = SGS_exploring_product_focus
+		icon = GFX_goal_generic_build_airforce
+		cost = 10.00
+		available = {
+			SGS_dove_get_more = yes	
+		}
+		prerequisite = {
+			focus = SGS_city_infra_focus
+		}
+		
+		mutually_exclusive = {
+			focus = SGS_factory_flexible_trans_focus
+		}
+		x = 38
+		y = 4
+		completion_reward = {
+			add_ideas = SGS_exploring_product_idea
+			add_political_power = 15
+		}
+	}
+
+	focus = {
+		id = SGS_planning_contruct_focus
+		icon = GFX_focus_usa_build_the_pentagon
+		cost = 10.00
+		available = {
+			SGS_hawk_get_more = yes	
+		}
+		prerequisite = {
+			focus = SGS_planning_product_focus
+		}
+		x = 32
+		y = 5
+		completion_reward = {
+			set_country_flag = sgs_planning_construct_flg
+			custom_effect_tooltip = SGS_planning_contruct_mechanism 
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					level = 1
+					instant_build = yes
+					type = arms_factory
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SGS_encourge_privte_invest_focus
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 10.00
+		available = {
+			SGS_dove_get_more = yes	
+		}
+		prerequisite = {
+			focus = SGS_exploring_product_focus
+		}
+		x = 38
+		y = 5
+		completion_reward = {
+			set_country_flag = sgs_privte_invest_flg
+			set_variable = {sgs_private_factory_mic = 0}
+			set_variable = {sgs_private_factory_cic = 0}
+			custom_effect_tooltip = SGS_privte_invest_mechanism 
+			add_offsite_building = { type = industrial_complex level = 1 }
+			
+		}
+	}
+
+	focus = {
+		id = SGS_completed_moonlight_industry_system
+		icon = GFX_focus_focus_plan_of_luna_final
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_planning_contruct_focus
+			focus = SGS_mili_build_focus
+			focus = SGS_civil_build_focus
+			focus = SGS_encourge_privte_invest_focus
+		}
+		x = 35
+		y = 6
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = SGS_planning_product_idea
+				}
+				swap_ideas = {
+					remove_idea = SGS_planning_product_idea
+					add_idea = SGS_planning_product_moonlight_idea
+				}
+			}
+			if = {
+				limit = {
+					has_idea = SGS_exploring_product_idea
+				}
+				swap_ideas = {
+					remove_idea = SGS_exploring_product_idea
+					add_idea = SGS_exploring_product_moonlight_idea
+				}
+			}
+			if = {
+				limit = {
+					has_idea = SGS_flexible_factory_mil_idea
+				}
+				swap_ideas = {
+					remove_idea = SGS_flexible_factory_mil_idea
+					add_idea = SGS_flexible_factory_mil_moonlight_idea
+				}
+			}
+			if = {
+				limit = {
+					has_idea = SGS_flexible_factory_civ_idea
+				}
+				swap_ideas = {
+					remove_idea = SGS_flexible_factory_civ_idea
+					add_idea = SGS_flexible_factory_civ_moonlight_idea
+				}
+			}
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = SGS_sunlight_factory_solution
+		icon = GFX_focus_focus_plan_of_sunny
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_completed_moonlight_industry_system
+		}
+		mutually_exclusive = {
+			focus = SGS_starlight_factory_solution
+		}
+		x = 34
+		y = 7
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					or = {
+						has_state_category = s12
+						has_state_category = s10
+						has_state_category = s15
+						has_state_category = s17
+						is_capital = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+			}
+			add_ideas = SGS_sunlightlight_factory_idea
+			SGS_hawk_rise5 = yes
+		}
+	}
+
+	focus = {
+		id = SGS_starlight_factory_solution
+		icon = GFX_focus_focus_plan_of_star
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_completed_moonlight_industry_system
+		}
+		mutually_exclusive = {
+			focus = SGS_sunlight_factory_solution
+		}
+		x = 36
+		y = 7
+		completion_reward = {
+			
+			add_ideas = SGS_starlight_factory_idea
+			SGS_dove_rise5 = yes
+		}
+	}
+
+	focus = {
+		id = SGS_no_peace_diplo_focus
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		x = 46
+		y = 0
+		completion_reward = {
+			#
+			
+		}
+
+	}
+	focus = {
+		id = SGS_occupy_SCA_focus
+		icon = GFX_focus_chi_cooperation_with_the_communists
+		cost = 10.00
+		x = 45
+		y = 9
+		available = {
+			always = no	
+		}
+		completion_reward = {
+			#条件：控制并拥有红魔馆，SCA不存在，效果：加政治点，解锁SCA地区的造核
+			add_political_power = 50
+			set_country_flag =  FIR_AREA_SCA_MAKE_CORE
+			custom_effect_tooltip = SCA_core_make_tooltup
+		}
+
+	}
+	focus = {
+		id = SGS_occupy_CIR_focus
+		icon = GFX_focus_generic_befriend_greece
+		cost = 10.00
+		x = 50
+		y = 9
+		available = {
+			always = no	
+		}
+		completion_reward = {
+			#条件：控制并拥有琪露诺领土，CIR不存在，效果：加政治点 ？
+			add_political_power = 60
+		}
+	}
+	focus = {
+		id = SGS_occupy_LIL_focus
+		icon = GFX_focus_generic_befriend_cyprus
+		cost = 10.00
+		available = {
+			always = no	
+		}
+		x = 55
+		y = 9
+		completion_reward = {
+			#条件：控制并拥有莉莉白领土，LIL不存在，效果：加政治点 ？
+			add_political_power = 30
+		}
+
+	}
+	focus = {
+		id = SGS_deal_with_leaders_focus
+		icon = GFX_focus_focus_CIR_head
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_occupy_CIR_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = SGS_occupy_CIR_focus
+		completion_reward = {
+			#条件：湖主发布任务，CIR的不同线路任务不同，任务达成则会加入你们政府，减少造核花费时间，否则搞事情加叛乱度减稳定并且核心全部造好之后会离开
+			#可以不接受赌注，和任务失败一样并且会再给一个debuff如果激进派战场妖精支持率特别高，只能选择不接受赌注
+			# 和平主义大酱希望尽快让妖精区域恢复和平，需要在限定时间内把其他国家干掉（你不是和平的话）
+			# 社民琪露诺重视民生，需要限定时间内稳定达到XX？/累积多少pp？
+			# 斗争琪露诺需要你限定时间搞出一只大军（非激进BaF）或者赢得3次掠夺战争（激进BaF）
+			# 威民琪露诺需要你限定时间内有多少装备
+			
+			#set_country_flag = CIR_guli_task_one_flg
+			country_event = { id = sgs.403 }
+
+
+		}
+
+	}
+	focus = {
+		id = SGS_take_over_dessert_focus
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_occupy_SCA_focus
+			
+		}
+		mutually_exclusive = {
+			focus = SGS_expand_weapon_repo_focus
+		}
+		available = {
+			SGS_dove_get_more = yes	
+			controls_state = 122
+			owns_state = 122
+		}
+		x = 1
+		y = 1
+		relative_position_id = SGS_occupy_SCA_focus
+		completion_reward = {
+			#红魔馆加俩民工，加buff，会出事件影响内销还是外销，如果有过走私buff则会有特殊好buff
+			122 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					level = 2
+					instant_build = yes
+					type = industrial_complex
+				}
+			}
+			#还缺个buff
+		}
+	}
+	focus = {
+		id = SGS_expand_weapon_repo_focus
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		available = {
+			SGS_hawk_get_more = yes	
+			controls_state = 104
+			owns_state = 104
+		}
+		prerequisite = {
+			focus = SGS_occupy_SCA_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_take_over_dessert_focus
+		}
+		x = -1
+		y = 1
+		relative_position_id = SGS_occupy_SCA_focus
+		completion_reward = {
+			#军械库加俩军工，然后再加一批先进武器
+			104 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					level = 2
+					instant_build = yes
+					type = arms_factory
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = gun147
+				amount = 3000
+				producer = SCA
+			}
+			add_equipment_to_stockpile = {
+				type = magic_core147
+				amount = 3000
+				producer = SCA
+			}
+			add_equipment_to_stockpile = {
+				type = magic_energy_a
+				amount = 250
+				producer = SCA
+			}
+		}
+
+	}
+	focus = {
+		id = SGS_treat_about_people_focus
+		icon = GFX_focus_eng_the_kings_party
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_take_over_dessert_focus
+			focus = SGS_expand_weapon_repo_focus
+		}
+		x = 0
+		y = 2
+		relative_position_id = SGS_occupy_SCA_focus
+		completion_reward = {
+			country_event = { id = sgs.406 }
+		}
+
+	}
+	focus = {
+		id = SGS_integrate_SCA_focus
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_treat_about_people_focus
+		}
+		x = 0
+		y = 3
+		relative_position_id = SGS_occupy_SCA_focus
+		completion_reward = {
+			#移除走私buff.走向会受之前分支国策的影响，先进科技，代工技术，经营/投资能力（民间？红魔馆人物？）？，大量废弃厂房？
+			
+			#甜品产业为核心的公私合营
+			if = {
+				limit = {
+					has_completed_focus = SGS_take_over_dessert_focus
+				}
+				country_event = { id = sgs.4071 }
+			}
+			#保持自由市场
+			if = {
+				limit = {
+					not = { has_completed_focus = SGS_take_over_dessert_focus }
+					has_completed_focus = SGS_encourge_privte_invest_focus
+				}
+				country_event = { id = sgs.4070 }
+			}
+			#收归国有
+			if = {
+				limit = {
+					not = { has_completed_focus = SGS_take_over_dessert_focus }
+					not = { has_completed_focus = SGS_encourge_privte_invest_focus }
+				}
+				country_event = { id = sgs.407 }
+			}
+
+		}
+	}
+	focus = {
+		id = SGS_face_CIR_army_focus
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_occupy_CIR_focus
+		}
+		bypass = {
+			has_country_flag = skip_face_CIR_army_flag
+		}
+		x = 2
+		y = 1
+		relative_position_id = SGS_occupy_CIR_focus
+		completion_reward = {
+			#一系列事件，既包括军队们的反应，也包括内部的一个鹰鸽派讨论。
+			#过程是取决于琪露诺的意识形态，但总体是三种结局： 谈判失败人家继续去捣乱or招安加入军队or招安变成平民
+			#大概玩法就是先两拨讨论有个观点，你可以干预并影响两方影响力。然后拿着你们讨论出的方案找人家，人家会不会直接同意取决于他们的意识形态和一些选项。然后不行之后有一次机会再讨论新方案，再失败就gg。但gg比直接把人撵走强
+			#最后的结果就是保持稳定和快速造核or吃军队加成or吃减成
+			#要么也是提升反抗和造核时间，如果琪露诺也跑了的话会有更严重的buff,大概就是全区域造核时间加长
+			#（露娜线不用另一个套事件链，只是不需要内部讨论了
+			#造核花费也是一个变量，能用
+			if = {
+				limit = {
+					has_government = oldorder
+				}
+				country_event = { id = sgs.4021 }
+				else = {
+					country_event = { id = sgs.402 }
+				}
+			}
+			
+		}
+
+	}
+	focus = {
+		id = SGS_SC2_issue_focus
+		icon = GFX_focus_por_the_pink_map
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_no_peace_diplo_focus
+		}
+		bypass = {
+			SC2_can_be_infled = no
+		}
+		x = 3
+		y = 1
+		relative_position_id = SGS_no_peace_diplo_focus
+		completion_reward = {
+			#弄个新闻
+
+		}
+	}
+
+	focus = {
+		id = SGS_prepare_to_fight_fairy_focus
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_no_peace_diplo_focus
+		}
+		available = {
+			or = {
+				has_government = oldorder
+				SGS_peaceful_transit_gov = yes
+				date > 146.1.1  #debug结束后改成148
+			}
+			
+
+		}
+		x = -2
+		y = 1
+		relative_position_id = SGS_no_peace_diplo_focus
+		completion_reward = {
+			#可能得等一阵，要么就是激进妖精或露娜线
+			add_war_support = 0.1
+			add_command_power = 30
+		}
+	}
+	focus = {
+		id = SGS_unlcok_attack_fairy_focus
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_prepare_to_fight_fairy_focus
+		}
+		x = 43
+		y = 2
+		completion_reward = {
+			#把之前的buff改了
+			swap_ideas = {
+				remove_idea = SGS_donot_attack_fairy_idea
+				add_idea = SGS_admit_attack_fairy_idea
+			}
+		}
+	}
+	focus = {
+		id = SGS_start_recruit_focus
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_prepare_to_fight_fairy_focus
+		}
+		x = 45
+		y = 2
+		completion_reward = {
+			add_ideas = { type1_manpowerlv4 }
+			if = {
+				limit = {
+					has_completed_focus = SGS_elite_army_focus
+				}
+				add_manpower = 1000
+				else = {
+					add_manpower = 5000
+				}
+			}	
+			
+		}
+	}
+	focus = {
+		id = SGS_aim_SCA_focus
+		icon = GFX_focus_ger_strike_at_the_source
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_unlcok_attack_fairy_focus
+		}
+		prerequisite = {
+			focus = SGS_start_recruit_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_ambitious_to_all_fairy_focus
+		}
+		x = 43
+		y = 3
+		completion_reward = {
+			#红魔馆++，免费修理
+			add_timed_idea = {
+				idea = SGS_aim_SCA_idea
+				days = 360
+			}
+		}
+	}
+	focus = {
+		id = SGS_ambitious_to_all_fairy_focus
+		icon = GFX_focus_eng_global_defense
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_start_recruit_focus
+		}
+		prerequisite = {
+			focus = SGS_unlcok_attack_fairy_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_aim_SCA_focus
+		}
+		x = 45
+		y = 3
+		completion_reward = {
+			#全体妖精++，加计划加成和速度
+			add_timed_idea = {
+				idea = SGS_aim_all_fairy_idea
+				days = 360
+			}
+		}
+
+	}
+	focus = {
+		id = SGS_fight_SCA_focus
+		icon = GFX_focus_focus_war_SCA
+		cost = 5
+		prerequisite = {
+			focus = SGS_ambitious_to_all_fairy_focus
+			focus = SGS_aim_SCA_focus
+		}
+		bypass = {
+			SCA = {
+				or ={
+					exists = no
+					is_puppet_of  = ROOT
+					has_war_with = ROOT
+				}
+			}
+		}
+		completion_reward = {
+			#
+			declare_war_on = {
+    			target = SCA
+    			type = fairy_area_unite_war
+			}
+			add_command_power = 10
+		}
+		x = 46
+		y = 4
+
+	}
+	focus = {
+		id = SGS_infl_SC2_focus
+		icon = GFX_focus_por_recover_brazil
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_SC2_issue_focus
+		}
+		bypass = {
+			SC2_can_be_infled = no
+		}
+		x = 52
+		y = 2
+		completion_reward = {
+			set_country_flag = FA_can_infl_SC2_flg
+		}
+	}
+	focus = {
+		id = SGS_try_to_control_SC2_focus
+		icon = GFX_focus_spa_the_war_of_vengeance
+		cost = 4
+		prerequisite = {
+			focus = SGS_infl_SC2_focus
+		}
+		bypass = {
+			or = {
+				SC2_can_be_infled = no
+				has_country_flag = FA_SC2_skip_infl_to_war
+			}
+
+		}
+		available = {
+			or = {
+				custom_trigger_tooltip = {
+					tooltip = SGS_hawk_enough_infl_to_SC2
+					check_variable = {
+						SGS.SC2_infl_value > SC2.SC2_FPA_infl_value
+					}
+					any_country = {
+						has_country_flag = FA_in_FPA_flg
+					}
+				}
+				not = {
+					SC2 = {
+						has_country_flag = FA_in_FPA_flg
+					}
+				}
+
+			}
+		}
+		x = 52
+		y = 3
+		completion_reward = {
+			custom_effect_tooltip = SGS_try_to_control_SC2_tt
+			hidden_effect = {
+				set_temp_variable = { two_times_FPA = SC2.SC2_FPA_infl_value }
+				multiply_temp_variable = {two_times_FPA = 1.5}
+				if = {
+					limit = { #影响力极高，高过FPA的1.5倍
+						or = {
+							check_variable = { SGS.SC2_infl_value > two_times_FPA  }
+							SC2 = { is_in_faction = no }
+						}
+					}
+					country_event = { id = sgs.4000 } #直接投降
+					else = {
+						SC2 = {
+							faction_leader = {
+								country_event = { id = sgs.4001 }
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = SGS_fight_SC2_focus
+		icon = GFX_focus_focus_war_SC2
+		cost = 3
+		prerequisite = {
+			focus = SGS_try_to_control_SC2_focus
+		}
+		prerequisite = {
+			focus = SGS_ambitious_to_all_fairy_focus
+			focus = SGS_aim_SCA_focus
+		}
+		x = 50
+		y = 4
+		bypass = {
+			SC2 = {
+				or ={
+					exists = no
+					is_puppet_of  = ROOT
+					has_war_with = ROOT
+				}
+			}
+		}
+		completion_reward = {
+			#弄成事件，前提就是决议解锁或者值够了
+			#SC2的事件，根据SGS的行为还会有更多buff
+			declare_war_on = {
+    			target = SC2
+    			type = fairy_area_unite_war
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = FA_SC2_skip_infl_to_war
+					}
+					SC2 = { add_ideas = SC2_defence_SGS_idea }
+				}
+			}
+		}
+	}
+	focus = {
+		id = SGS_get_SW_focus
+		icon = GFX_focus_TUR_support_the_golden_square
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_fight_SCA_focus
+		}
+		prerequisite = {
+			focus = SGS_fight_SC2_focus
+		}
+		available = {
+			has_war = no
+		}
+		x = 48
+		y = 5
+		completion_reward = {
+			#加紧张度，解锁草原妖精地区的造核，出个新闻，讨论要不要改名
+			add_political_power = 80
+			set_country_flag =  FIR_AREA_SC2_MAKE_CORE 
+			set_variable = {sgs.FIR_AREA_SC2_MC_time = 50 }
+			custom_effect_tooltip = SC2_core_make_tooltup
+			SC2 = {can_core = yes}
+		}
+	}
+	focus = {
+		id = SGS_fight_others_focus
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_get_SW_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_divide_them_focus
+		}
+		x = 46
+		y = 6
+		completion_reward = {
+			#
+			add_political_power = -30
+			add_war_support = 0.2
+		}
+	}
+	focus = {
+		id = SGS_prepare_final_war_focus
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_fight_others_focus
+		}
+		x = 45
+		y = 7
+		completion_reward = {
+			#针对妖精++，减少补给消耗
+			
+		}
+	}
+	
+	focus = {
+		id = SGS_lake_road_focus
+		icon = GFX_focus_generic_cruiser2
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_occupy_CIR_focus
+		}
+		available = {
+			controls_state = 116
+			owns_state = 116
+			controls_state = 115
+			owns_state = 115
+			controls_state = 128
+			owns_state = 128
+		}
+		x = -2
+		y = 1
+		relative_position_id = SGS_occupy_CIR_focus
+		completion_reward = {
+			#两个港口加基建，提升顺从减少抵抗，加个buff，经济相关以及政治点数增长。如果可以的话，可以搞个地块传送
+			116 = {
+				add_building_construction = {
+					level = 3
+					instant_build = yes
+					type = infrastructure
+				}
+			}
+			115 = {
+				add_building_construction = {
+					level = 3
+					instant_build = yes
+					type = infrastructure
+				}
+			}
+			128 = {
+				add_building_construction = {
+					level = 3
+					instant_build = yes
+					type = infrastructure
+				}
+			}
+			add_ideas = { SGS_lake_road_political_idea SGS_lake_road_economy_idea }
+			set_country_flag = FA_build_lake_road
+		}
+
+	}
+	focus = {
+		id = SGS_integrate_CIR_focus
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_lake_road_focus
+		}
+		prerequisite = {
+			focus = SGS_deal_with_leaders_focus
+		}
+		prerequisite = {
+			focus = SGS_face_CIR_army_focus
+		}
+		x = 0
+		y = 3
+		relative_position_id = SGS_occupy_CIR_focus
+		completion_reward = {
+			#从这才能开始整合地块，主要讨论妖精族群意识，结果影响造核速度。
+			set_country_flag =  FIR_AREA_CIR_MAKE_CORE 
+			country_event = { id = sgs.404  }
+			custom_effect_tooltip = CIR_core_make_tooltup
+		}
+
+	}
+	focus = {
+		id = SGS_refugee_issue_focus
+		icon = GFX_focus_generic_military_academy
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_occupy_LIL_focus
+		}
+		x = 0
+		y = 2
+		relative_position_id = SGS_occupy_LIL_focus
+		completion_reward = {
+			# 花政治点数大力传教或者走和平路线增加消费品（增加少许鸽派和和平）来获取人力，花民工强制迁移
+			# 或者不管，然后增加抵抗和造核时间
+			#懒得搞了，随便写写
+			country_event = { id = sgs.408 }
+		}
+
+	}
+	focus = {
+		id = SGS_integrate_LIL_focus
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_refugee_issue_focus
+		}
+		x = 0
+		y = 3
+		relative_position_id = SGS_occupy_LIL_focus
+		completion_reward = {
+			#从这才能开始整合地块。一样，需要靠平民席位换取稳定，然后可以花钱支援建设换取一些buff
+			set_country_flag =  FIR_AREA_LIL_MAKE_CORE 
+			custom_effect_tooltip = LIL_core_make_tooltup
+			country_event = { id = sgs.4080 }
+		}
+	}
+	focus = {
+		id = SGS_divide_them_focus
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_get_SW_focus
+		}
+		mutually_exclusive = {
+			focus = SGS_fight_others_focus
+		}
+		x = 50
+		y = 6
+		completion_reward = {
+			#出事件，CIR和LIL会不会分家。如果已经分家的话则可直接跳过，分家失败的话自动点亮左边
+			add_political_power = -50
+			
+		}
+
+	}
+	focus = {
+		id = SGS_prepare_LIL_focus
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_divide_them_focus
+		}
+		x = 49
+		y = 7
+		completion_reward = {
+			#莉莉++，加速和移动士气损失，特别是骑兵,分家失败则锁死
+		}
+
+	}
+	focus = {
+		id = SGS_fight_LIL_focus
+		icon = GFX_focus_focus_war_LIL
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_prepare_LIL_focus
+		}
+		x = 49
+		y = 8
+		bypass = {
+			LIL = {
+				or ={
+					exists = no
+					is_puppet_of  = ROOT
+					has_war_with = ROOT
+				}
+			}
+		}
+		completion_reward = {
+			#
+			declare_war_on = {
+    			target = LIL
+    			type = fairy_area_unite_war
+			}
+			add_command_power = 10
+		}
+	}
+	focus = {
+		id = SGS_prepare_CIR_focus
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_divide_them_focus
+		}
+		x = 51
+		y = 7
+		completion_reward = {
+			#琪露诺++，,分家失败则锁死
+		}
+	}
+	focus = {
+		id = SGS_fight_CIR_focus
+		icon = GFX_focus_focus_war_CIR
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_prepare_CIR_focus
+		}
+		x = 51
+		y = 8
+		bypass = {
+			CIR = {
+				or ={
+					exists = no
+					is_puppet_of  = ROOT
+					has_war_with = ROOT
+				}
+			}
+		}
+		completion_reward = {
+			#
+			declare_war_on = {
+    			target = CIR
+    			type = fairy_area_unite_war
+			}
+			add_command_power = 10
+		}
+	}
+	focus = {
+		id = SGS_big_fair_war_focus
+		icon = GFX_focus_generic_air_defense
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_prepare_final_war_focus
+		}
+		x = 45
+		y = 8
+		completion_reward = {
+			#
+			declare_war_on = {
+    			target = LIL
+    			type = fairy_area_unite_war
+			}
+			declare_war_on = {
+    			target = CIR
+    			type = fairy_area_unite_war
+			}
+			add_command_power = 30
+		}
+	}
+	focus = {
+		id = SGS_unite_fairy_area_focus
+		icon = GFX_focus_chi_one_china_policy
+		cost = 10.00
+		prerequisite = {
+			focus = SGS_integrate_SCA_focus
+		}
+		prerequisite = {
+			focus = SGS_integrate_CIR_focus
+		}
+		prerequisite = {
+			focus = SGS_integrate_LIL_focus
+		}
+		x = 0
+		y = 1
+		relative_position_id = SGS_integrate_CIR_focus
+
+	}
+}
+

@@ -12,19 +12,6 @@
 	}
 }
 division_template = {
-	name = "鬼神刺杀编制"
-	regiments = {
-		ma_sf_infantry = { x = 0 y = 0 }
-		ma_sf_infantry = { x = 0 y = 1 }
-		ma_sf_infantry = { x = 0 y = 2 }
-		ma_light_infantry = { x = 1 y = 0 }
-		ma_light_infantry = { x = 1 y = 1 }
-		ma_light_infantry = { x = 1 y = 2 }
-	}
-	support = {
-	}
-}
-division_template = {
 	name = "正规编制"
 	regiments = {
 		ma_infantry = { x = 0 y = 0 }
@@ -37,48 +24,6 @@ division_template = {
 	}
 }
 units = {
-	division = {
-		name = "鬼神刺杀编制"
-		location = 2901
-		division_template = "鬼神刺杀编制"
-		start_experience_factor = 1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "鬼神刺杀编制"
-		location = 2901
-		division_template = "鬼神刺杀编制"
-		start_experience_factor = 1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "鬼神刺杀编制"
-		location = 2901
-		division_template = "鬼神刺杀编制"
-		start_experience_factor = 1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "鬼神刺杀编制"
-		location = 2901
-		division_template = "鬼神刺杀编制"
-		start_experience_factor = 1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "鬼神刺杀编制"
-		location = 2901
-		division_template = "鬼神刺杀编制"
-		start_experience_factor = 1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "鬼神刺杀编制"
-		location = 2901
-		division_template = "鬼神刺杀编制"
-		start_experience_factor = 1
-		start_equipment_factor = 1
-	}
 	division = {
 		name = "快速编制"
 		location = 2901

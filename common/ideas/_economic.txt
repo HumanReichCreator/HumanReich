@@ -5,7 +5,7 @@ ideas = {
 		
 		isolation = {
 			
-			picture = ROA_isolation
+			
 			
 			allowed = {
 				always = no
@@ -25,9 +25,7 @@ ideas = {
 				OR = {
 					has_war_support > 0.75
 					has_war = yes		
-					threat > 0.5	
-					has_government = fandong	
-					has_government = neworder
+					threat > 0.5			
 				}
 			}
 			
@@ -36,21 +34,17 @@ ideas = {
 		
 		civilian_economy = {
 			
-			picture = ROA_civilian_economy
-
+		
 			cost = 150
 			level = 2
 			removal_cost = -1
-			available = {
-				has_stability > 0
-				has_war_support > 0
-			}
-
+			
 			modifier = {
 				consumer_goods_factor = 0.4
 				production_speed_industrial_complex_factor = 0.1
 				production_speed_arms_factory_factor = -0.1
 				industrial_capacity_factory = -0.1
+				war_support_factor = -0.1
 				conversion_cost_mil_to_civ_factor = -0.05
 			}
 			
@@ -61,12 +55,11 @@ ideas = {
 		
 		low_economic_mobilisation = {
 			
-			picture = ROA_low_economic_mobilisation
-
 			available = {
-				has_stability > 0
-				has_war_support > 0
 				OR = {
+					has_government = oldorder
+					has_government = fandong
+					has_government = neworder
 					has_war = yes
 					has_war_support > 0.6
 				}	
@@ -77,8 +70,6 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = -0.1
-				war_support_factor = -0.05
 				consumer_goods_factor = 0.35
 				# production_speed_industrial_complex_factor = 0.2
 				# production_speed_arms_factory_factor = -0.2
@@ -88,7 +79,7 @@ ideas = {
 			cancel_if_invalid = no
 
 			ai_will_do = {
-   				factor = 400
+   				factor = 40
 
    				modifier = {
 					factor = 20
@@ -100,12 +91,11 @@ ideas = {
 		
 		partial_economic_mobilisation = {
 			
-			picture = ROA_partial_economic_mobilisation
-
 			available = {
-				has_stability > 0
-				has_war_support > 0
 				OR = {
+					has_government = oldorder
+					has_government = neworder
+					has_government = fandong
 					has_war = yes
 					has_war_support > 0.75
 				}
@@ -116,8 +106,6 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = -0.2
-				war_support_factor = -0.1
 				consumer_goods_factor = 0.3
 				production_speed_industrial_complex_factor = -0.1
 				production_speed_arms_factory_factor = 0.1
@@ -128,7 +116,7 @@ ideas = {
 			cancel_if_invalid = no
 
 			ai_will_do = {
-   				factor = 400
+   				factor = 40
 
    				modifier = {
 					factor = 20
@@ -140,11 +128,9 @@ ideas = {
 		
 		war_economy = {
 			
-			picture = ROA_war_economy
-
+			
 			available = {
 			    has_war_support > 0.8
-				has_stability > 0
 				AND = {
 					has_war = yes
 					any_enemy_country = {
@@ -161,8 +147,6 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = -0.3
-				war_support_factor = -0.15
 				consumer_goods_factor = 0.25
 				production_speed_industrial_complex_factor = -0.2
 				production_speed_arms_factory_factor = 0.2
@@ -173,7 +157,7 @@ ideas = {
 			cancel_if_invalid = no
 			
 			ai_will_do = {
-   				factor = 1000
+   				factor = 100
 
 				modifier = {
 					#High prio on production
@@ -185,11 +169,9 @@ ideas = {
 		
 		tot_economic_mobilisation = {
 			
-			picture = ROA_tot_economic_mobilisation
-
+			
 			available = {
-			    has_war_support > 1
-				has_stability > 0
+			    has_war_support > 0.85
 				has_war = yes
 				any_enemy_country = {
 					ic_ratio = { 
@@ -200,7 +182,7 @@ ideas = {
 			}
 
 			ai_will_do = {
-   				factor = 200
+   				factor = 20
 
 				modifier = {
 					factor = 25
@@ -222,14 +204,11 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = -0.4
-				war_support_factor = -0.2
 				consumer_goods_factor = 0.2
 				production_speed_industrial_complex_factor = -0.25
 				production_speed_arms_factory_factor = 0.25
 				industrial_capacity_factory = 0.25
-				conversion_cost_civ_to_mil_factor = -0.15
-				conscription_factor = -0.3
+				conversion_cost_civ_to_mil_factor = -0.12
 			}
 			
 			cancel_if_invalid = no

@@ -5,15 +5,15 @@ state={
 
 	resources={
 		energy = 0
-		powder = 0.0
-		metal = 0.0
+		powder=0.000
+		metal=0.000
 		gas=0.000
 		crystal=5.000
 	}
 	history={
+			owner = URM
 		146.1.1 = {
-			owner = GH1
-			add_core_of = GH1	
+			owner = URM	
 			add_claim_by = URM
 			buildings = {
 				infrastructure = 1
@@ -27,7 +27,7 @@ state={
 	provinces={
 		766 949 1003 1304 1452 2827 2835 
 	}
-	manpower=156330.0
+	manpower=8633.0
 	state_category=s2
 	buildings_max_level_factor=1.000
 }

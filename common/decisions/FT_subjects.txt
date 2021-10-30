@@ -1,0 +1,16 @@
+FT_situation = {
+  FT_situation_dummy = {
+      visible = {
+        is_in_faction = yes
+      }
+      available = {
+        always = no
+      }
+      remove_effect = {
+
+      }
+      ai_will_do = {
+        base = 0
+      }
+  }
+}

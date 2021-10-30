@@ -1,899 +1,231 @@
 ﻿add_namespace = net
-country_event = {#内战前夕 事件
+news_event = { #NG2 or NG1 VS YYK(trigger)
 	id = net.1
-	title = net.1.t
-	desc = net.1.d
+	option = {}
+	hidden = yes
 	fire_only_once = yes
 	trigger = {
-		date > 147.3.10
-		tag = YYK
+		date > 148.1.5
+		has_global_flag = main_scenario
+		country_exists = YYK
+		is_subject = no
+		or = {
+			country_exists = NG4
+			country_exists = NG3
+			country_exists = NG2
+			country_exists = NG1
+		}
+
 	}
 	mean_time_to_happen = {
-		days = 15
+		days = 10
 	}
+
 	immediate = {
 		hidden_effect = {
-			set_country_flag = YYK_neizhanqianxi
-			if = {
-				limit = {
-					or = {
-						has_completed_focus = YYK_jiashenyubayunzidelianxi
-						not = { has_completed_focus = YYK_guliyouling }
-					}
-				}
+			YYK = {
 				end_puppet = NG1
-			}
-			if = {
-				limit = {
-					or = {
-						has_completed_focus = YYK_jiashenyubayunzidelianxi
-						not = { has_completed_focus = YYK_shangyingyouling }
-					}
-				}
-				end_puppet = NG3
-			}
-			if = {
-				limit = {
-					or = {
-						has_completed_focus = YYK_jiashenyubayunzidelianxi
-						not = { has_completed_focus = YYK_guiyiyouling }
-					}
-				}
 				end_puppet = NG2
-			}
-			if = {
-				limit = {
-					or = {
-						has_completed_focus = YYK_jiashenyubayunzidelianxi
-						not = { has_completed_focus = YYK_kaifangyouling }
-					}
-				}
+				end_puppet = NG3
 				end_puppet = NG4
 			}
-			if = {
+			every_country = {
 				limit = {
-					NG1 = { is_subject_of = ROOT }
-					NG2 = { is_subject_of = ROOT }
-					NG3 = { is_subject_of = ROOT }
-					NG4 = { is_subject_of = ROOT }
-				}
-				country_event = { id = net.3 days = 40 }
-				else = {
-					set_country_flag = {
-						flag = YYK_neizhanzhunbeibaofa
-						value = 1
-						days = 45
+					or = {
+						tag = NG1
+						tag = NG2
+						tag = NG3
+						tag = NG4
+						tag = YYK
 					}
-					country_event = { id = net.2 days = 40}
+				}
+				every_state = {
+					limit = {
+						or = {
+							is_core_of = NG1
+							is_core_of = NG2
+							is_core_of = NG3
+							is_core_of = NG4
+							is_core_of = YYK
+						}
+					}
+					add_core_of = PREV
+				}
+				every_state = {
+					limit = {
+						or = {
+							is_claimed_by = NG1
+							is_claimed_by = NG2
+							is_claimed_by = NG3
+							is_claimed_by = NG4
+							is_claimed_by = YYK
+						}
+					}
+					add_claim_by = PREV
+				}
+				every_country = {
+					limit = {
+						or = {
+							tag = NG1
+							tag = NG2
+							tag = NG3
+							tag = NG4
+							tag = YYK
+						}
+					}
+					add_ai_strategy = {
+						type = conquer 
+						id = PREV
+						value = 100
+					}
+					add_ai_strategy = {
+						type = antagonize
+						id = PREV
+						value = 100
+					}
+					add_ai_strategy = {
+						type = alliance
+						id = PREV
+						value = -1000
+					}
 				}
 			}
-			
-		}
-	}
-	option = {
-		name = net.1.1 #紫
-		set_country_flag = YYK_zoubayunzi
-		go_oldorder = yes
-		if = {
-			limit = {
-				or = {
+			NG1 = {
+				declare_war_on = {
+					type = duli_wargoal
+					target = YYK
+				}
+			}
+			NG2 = {
+				declare_war_on = {
+					type = duli_wargoal
+					target = YYK
+				}
+			}
+			NG3 = {
+				declare_war_on = {
+					type = duli_wargoal
+					target = YYK
+				}
+			}
+			NG4 = {
+				declare_war_on = {
+					type = duli_wargoal
+					target = YYK
+				}
+			}
+			random_list = {
+				40 = {#zuoyou
 					NG1 = {
-						is_subject = no
+						declare_war_on = {
+							type = annex_everything
+							target = NG3
+						}
 					}
-					NG2 = {
-						is_subject = no
+					NG1 = {
+						declare_war_on = {
+							type = annex_everything
+							target = NG2
+						}
 					}
 					NG4 = {
-						is_subject = no
-					}
-				}
-			}	
-			country_event = { id = net.6 days = 10 } #妖梦出套？
-		}
-		trigger = {
-			or = {
-				has_completed_focus = YYK_jiashenyubayunzidelianxi
-				not = {
-					has_completed_focus = YYK_guliyouling
-					has_completed_focus = YYK_kaifangyouling
-					has_completed_focus = YYK_guiyiyouling
-					has_completed_focus = YYK_shangyingyouling
-				}
-			}
-		}
-		ai_chance = {
-			base = 1
-		}
-	}
-	option = {
-		name = net.1.2 #白
-		go_guli = yes
-		NG1 = {
-			low_puppet_level = yes
-		}
-		add_popularity = {
-			ideology = guli
-			popularity = 0.25
-		}
-		set_politics = {
-			ruling_party = guli
-		}
-		trigger = {
-			has_completed_focus = YYK_guliyouling
-			not = {
-				has_completed_focus = YYK_jiashenyubayunzidelianxi
-			}
-		}
-		ai_chance = {
-			base = 1
-			modifier = {
-				factor = 0
-				or = {
-					has_game_rule = {
-						rule = YYK_paths
-						option = YYK_path_qinwai
-					}
-					has_game_rule = {
-						rule = YYK_paths
-						option = YYK_path_neworder
-					}
-					has_game_rule = {
-						rule = YYK_paths
-						option = YYK_path_fandong
-					}
-				}
-			}
-		}
-	}
-	option = {
-		name = net.1.3 #绿
-		go_qinwai = yes
-		NG4 = {
-			low_puppet_level = yes
-		}
-		add_popularity = {
-			ideology = qinwai
-			popularity = 0.25
-		}
-		set_politics = {
-			ruling_party = qinwai
-		}
-		trigger = {
-			has_completed_focus = YYK_kaifangyouling
-			not = {
-				has_completed_focus = YYK_jiashenyubayunzidelianxi
-			}
-		}
-		ai_chance = {
-			base = 1
-			modifier = {
-				factor = 0
-				or = {
-					has_game_rule = {
-						rule = YYK_paths
-						option = YYK_path_guli
-					}
-					has_game_rule = {
-						rule = YYK_paths
-						option = YYK_path_neworder
-					}
-					has_game_rule = {
-						rule = YYK_paths
-						option = YYK_path_fandong
-					}
-				}
-			}
-		}
-	}
-	option = {
-		name = net.1.4 #红
-		go_fandong = yes
-		NG2 = {
-			low_puppet_level = yes
-		}
-		add_popularity = {
-			ideology = fandong
-			popularity = 0.25
-		}
-		set_politics = {
-			ruling_party = fandong
-		}
-		trigger = {
-			has_completed_focus = YYK_guiyiyouling
-			not = {
-				has_completed_focus = YYK_jiashenyubayunzidelianxi
-			}
-		}
-		ai_chance = {
-			base = 1
-			modifier = {
-				factor = 0
-				or = {
-					has_game_rule = {
-						rule = YYK_paths
-						option = YYK_path_guli
-					}
-					has_game_rule = {
-						rule = YYK_paths
-						option = YYK_path_neworder
-					}
-					has_game_rule = {
-						rule = YYK_paths
-						option = YYK_path_qinwai
-					}
-				}
-			}
-		}
-	}
-	option = {
-		name = net.1.5 #棕
-		go_neworder = yes
-		NG3 = {
-			low_puppet_level = yes
-		}
-		add_popularity = {
-			ideology = neworder
-			popularity = 0.25
-		}
-		set_politics = {
-			ruling_party = neworder
-		}
-		if = {
-			limit = {
-				or = {
-					NG1 = {
-						is_subject = no
-					}
-					NG2 = {
-						is_subject = no
+						declare_war_on = {
+							type = annex_everything
+							target = NG3
+						}
 					}
 					NG4 = {
-						is_subject = no
+						declare_war_on = {
+							type = annex_everything
+							target = NG2
+						}
 					}
 				}
-			}	
-			country_event = { id = net.6 days = 10 } #妖梦出套？
-		}
-		trigger = {
-			has_completed_focus = YYK_shangyingyouling
-			not = {
-				has_completed_focus = YYK_jiashenyubayunzidelianxi
-			}
-		}
-		ai_chance = {
-			base = 1
-			modifier = {
-				factor = 0
-				or = {
-					has_game_rule = {
-						rule = YYK_paths
-						option = YYK_path_guli
+				40 = {#shangxia
+					NG1 = {
+						declare_war_on = {
+							type = annex_everything
+							target = NG4
+						}
 					}
-					has_game_rule = {
-						rule = YYK_paths
-						option = YYK_path_fandong
+					NG1 = {
+						declare_war_on = {
+							type = annex_everything
+							target = NG2
+						}
 					}
-					has_game_rule = {
-						rule = YYK_paths
-						option = YYK_path_qinwai
+					NG3 = {
+						declare_war_on = {
+							type = annex_everything
+							target = NG4
+						}
+					}
+					NG3 = {
+						declare_war_on = {
+							type = annex_everything
+							target = NG2
+						}
 					}
 				}
+				15 = {#quan
+					NG1 = {
+						declare_war_on = {
+							type = annex_everything
+							target = NG2
+						}
+					}
+					NG1 = {
+						declare_war_on = {
+							type = annex_everything
+							target = NG3
+						}
+					}
+					NG1 = {
+						declare_war_on = {
+							type = annex_everything
+							target = NG4
+						}
+					}
+					NG2 = {
+						declare_war_on = {
+							type = annex_everything
+							target = NG3
+						}
+						declare_war_on = {
+							type = annex_everything
+							target = NG4
+						}
+					}
+					NG3 = {
+						declare_war_on = {
+							type = annex_everything
+							target = NG4
+						}
+					}
+				}
+				5 = {#quan
+					
+				}
 			}
+			news_event = { days = 2 id = net.2}
 		}
 	}
+	
 }
 
-country_event = { #内战开始 事件
+news_event = { #NG2 or NG1 VS YYK
 	id = net.2
 	title = net.2.t
 	desc = net.2.d
 
+	major = yes
 	fire_only_once = no
 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			every_country = {
-				limit = {
-					capital_scope = {
-						is_on_continent = Netherworld
-					}
-					is_subject = no
-					not = { tag = YYK }
-				}
-				add_timed_idea = { days = 30 idea = panluantouxiang_idea }
-				declare_war_on = {
-					target = YYK
-					type = duli_wargoal
-				}
-				every_country = {
-					limit = {
-						capital_scope = {
-							is_on_continent = Netherworld
-						}
-						is_subject = no
-						not = { tag = YYK }
-					}
-					declare_war_on = {
-						target = PREV
-						type = annex_everything
-					}
-				}
-			}
-			every_country = {
-				limit = {
-					capital_scope = {
-						is_on_continent = Netherworld
-					}
-				}
-				set_variable = {
-					EXHC_current_exhaustion = -25
-				}
-			}
-		}
-	}
 	option = {
 		name = net.2.1
-		hidden_effect = {
-			news_event = { id = net.4 days = 2} #新闻
-		}
 		trigger = {
 
-		}
-	}
-}
-
-country_event = { #内战避免 事件
-	id = net.3
-	title = net.3.t
-	desc = net.3.d
-
-	fire_only_once = no
-	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			set_country_flag = YYK_mingjieweineizhan
-		}
-	}
-	option = {
-		name = net.3.1
-		NG1 = {
-			low_puppet_level = yes
-		}
-		NG2 = {
-			low_puppet_level = yes
-		}
-		NG3 = {
-			low_puppet_level = yes
-		}
-		NG4 = {
-			low_puppet_level = yes
-		}
-		hidden_effect = {
-			news_event = { id = net.5 days = 2}
-		}
-		trigger = {
-
-		}
-	}
-}
-
-news_event = { #内战开始 新闻
-	id = net.4
-	title = net.4.t
-	desc = net.4.d
-	major = yes
-	picture = GFX_news_event_net.4
-	fire_only_once = no
-	is_triggered_only = yes
-
-	option = {
-		name = net.4.1
-		trigger = {
-			tag = YYK
-		}
-	}
-	option = {
-		name = net.4.2
-		trigger = {
-			capital_scope = {
-				is_on_continent = Netherworld
-			}
-			not = {
-				tag = YYK
-			}
-		}
-	}
-	option = {
-		name = net.4.3
-		trigger = {
-			tag = YKR
-		}
-	}
-	option = {
-		name = net.4.4
-		trigger = {
-			not = {
-				tag = SKI
-				tag = YKR
-				capital_scope = {
-					is_on_continent = Netherworld
-				}
-			}
-		}
-	}
-}
-
-news_event = { #内战避免 新闻
-	id = net.5
-	title = net.5.t
-	desc = net.5.d
-	picture = GFX_news_event_net.5
-	major = yes
-	fire_only_once = no
-	is_triggered_only = yes
-
-	option = {
-		name = net.5.1
-		trigger = {
-			tag = YYK
-		}
-	}
-	option = {
-		name = net.5.2
-		trigger = {
-			capital_scope = {
-				is_on_continent = Netherworld
-			}
-			not = {
-				tag = YYK
-			}
-		}
-	}
-	option = {
-		name = net.5.3
-		trigger = {
-			tag = YKR
-		}
-	}
-	option = {
-		name = net.5.4
-		trigger = {
-			not = {
-				tag = SKI
-				tag = YKR
-				capital_scope = {
-					is_on_continent = Netherworld
-				}
-			}
-		}
-	}
-}
-
-country_event = { #妖梦出逃
-	id = net.6
-	title = net.6.t
-	desc = net.6.d
-
-	fire_only_once = no
-	is_triggered_only = yes
-
-	option = {
-		name = net.6.1
-		country_lock_all_division_template = no
-		custom_effect_tooltip = net.6_tt
-		if = {
-			limit = {
-				NG1 = {
-					is_subject = no
-				}
-				NG2 = {
-					is_subject = no
-				}
-				NG4 = {
-					is_subject = no
-				}
-			}
-			random_list = {
-				1 = {
-					random_army_leader = {
-						limit = {
-							has_id = 42
-						}
-						set_nationality = NG1
-					}
-					NG1 = {
-						set_country_flag = YOM_is_here
-					}
-				}
-				1 = {
-					random_army_leader = {
-						limit = {
-							has_id = 42
-						}
-						set_nationality = NG2
-					}
-					NG2 = {
-						set_country_flag = YOM_is_here
-					}
-				}
-				1 = {
-					random_army_leader = {
-						limit = {
-							has_id = 42
-						}
-						set_nationality = NG4
-					}
-					NG4 = {
-						set_country_flag = YOM_is_here
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NG1 = {
-					is_subject = no
-				}
-				NG2 = {
-					is_subject = no
-				}
-				NG4 = {
-					is_subject = yes
-				}
-			}
-			random_list = {
-				1 = {
-					random_army_leader = {
-						limit = {
-							has_id = 42
-						}
-						set_nationality = NG1
-					}
-					NG1 = {
-						set_country_flag = YOM_is_here
-					}
-				}
-				1 = {
-					random_army_leader = {
-						limit = {
-							has_id = 42
-						}
-						set_nationality = NG2
-					}
-					NG2 = {
-						set_country_flag = YOM_is_here
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NG1 = {
-					is_subject = yes
-				}
-				NG2 = {
-					is_subject = no
-				}
-				NG4 = {
-					is_subject = no
-				}
-			}
-			random_list = {
-				1 = {
-					random_army_leader = {
-						limit = {
-							has_id = 42
-						}
-						set_nationality = NG2
-					}
-					NG2 = {
-						set_country_flag = YOM_is_here
-					}
-				}
-				1 = {
-					random_army_leader = {
-						limit = {
-							has_id = 42
-						}
-						set_nationality = NG4
-					}
-					NG4 = {
-						set_country_flag = YOM_is_here
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NG1 = {
-					is_subject = no
-				}
-				NG2 = {
-					is_subject = yes
-				}
-				NG4 = {
-					is_subject = no
-				}
-			}
-			random_list = {
-				1 = {
-					random_army_leader = {
-						limit = {
-							has_id = 42
-						}
-						set_nationality = NG1
-					}
-					NG1 = {
-						set_country_flag = YOM_is_here
-					}
-				}
-				1 = {
-					random_army_leader = {
-						limit = {
-							has_id = 42
-						}
-						set_nationality = NG4
-					}
-					NG4 = {
-						set_country_flag = YOM_is_here
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NG1 = {
-					is_subject = no
-				}
-				NG2 = {
-					is_subject = yes
-				}
-				NG4 = {
-					is_subject = yes
-				}
-			}
-			NG1 = {
-				random_army_leader = {
-					limit = {
-						has_id = 42
-					}
-					set_nationality = NG1
-				}
-				set_country_flag = YOM_is_here
-			}
-		}
-		if = {
-			limit = {
-				NG1 = {
-					is_subject = yes
-				}
-				NG2 = {
-					is_subject = no
-				}
-				NG4 = {
-					is_subject = yes
-				}
-			}
-			NG2 = {
-				random_army_leader = {
-					limit = {
-						has_id = 42
-					}
-					set_nationality = NG2
-				}
-				set_country_flag = YOM_is_here
-			}
-		}
-		if = {
-			limit = {
-				NG1 = {
-					is_subject = yes
-				}
-				NG2 = {
-					is_subject = yes
-				}
-				NG4 = {
-					is_subject = no
-				}
-			}
-			NG4 = {
-				random_army_leader = {
-					limit = {
-						has_id = 42
-					}
-					set_nationality = NG4
-				}
-				set_country_flag = YOM_is_here
-			}
-		}
-	}
-	option = {
-		name = net.6.2
-		country_lock_all_division_template = no
-		custom_effect_tooltip = net.6_tt3
-		hidden_effect = {
-			every_country = {
-				limit = {
-					ROOT = {
-						has_military_access_to = PREV
-					}
-				}
-				ROOT = {
-					diplomatic_relation = {
-						country = PREV
-						relation = military_access
-						active = no
-					}
-				}
-			}
-		}
-		random_army_leader = {
-			limit = {
-				has_id = 42
-			}
-			set_nationality = NG1
-		}
-		NG1 = {
-			set_country_flag = YOM_is_here
-			change_tag_from = ROOT
-		}
-		trigger = {
-			NG1 = {
-				is_subject = no
-			}
-		}
-	}
-	option = {
-		name = net.6.3
-		country_lock_all_division_template = no
-		custom_effect_tooltip = net.6_tt3
-		hidden_effect = {
-			every_country = {
-				limit = {
-					ROOT = {
-						has_military_access_to = PREV
-					}
-				}
-				ROOT = {
-					diplomatic_relation = {
-						country = PREV
-						relation = military_access
-						active = no
-					}
-				}
-			}
-		}
-		random_army_leader = {
-			limit = {
-				has_id = 42
-			}
-			set_nationality = NG2
-		}
-		NG2 = {
-			set_country_flag = YOM_is_here
-			change_tag_from = ROOT
-		}
-		trigger = {
-			NG2 = {
-				is_subject = no
-			}
-		}
-	}
-	option = {
-		name = net.6.4
-		country_lock_all_division_template = no
-		custom_effect_tooltip = net.6_tt3
-		hidden_effect = {
-			every_country = {
-				limit = {
-					ROOT = {
-						has_military_access_to = PREV
-					}
-				}
-				ROOT = {
-					diplomatic_relation = {
-						country = PREV
-						relation = military_access
-						active = no
-					}
-				}
-			}
-		}
-		random_army_leader = {
-			limit = {
-				has_id = 42
-			}
-			set_nationality = NG4
-		}
-		NG4 = {
-			set_country_flag = YOM_is_here
-			change_tag_from = ROOT
-		}
-		trigger = {
-			NG4 = {
-				is_subject = no
-			}
-		}
-	}
-}
-
-country_event = { #妖梦事件
-	id = net.7
-	title = net.7.t
-	desc = net.7.d
-
-	fire_only_once = yes
-	trigger = {
-		has_country_flag = YOM_is_here
-	}	
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	option = {
-		name = net.7.1
-		custom_effect_tooltip = net.7_tt
-		NET_yaomeng_leader = yes
-		set_country_flag = bunengqie_qinwai
-		set_country_flag = bunengqie_neworder
-		load_focus_tree = ROA_YOM_focus
-		mark_focus_tree_layout_dirty = yes
-		hidden_effect = {
-			news_event = { id = net.8 days = 2}
-		}
-	}
-}
-
-news_event = { #妖梦的出逃 新闻
-	id = net.8
-	title = net.8.t
-	desc = net.8.d
-	picture = GFX_news_event_net.8
-	major = yes
-	fire_only_once = no
-	is_triggered_only = yes
-
-	option = {
-		name = net.8.1
-		trigger = {
-			tag = YYK
-		}
-	}
-	option = {
-		name = net.8.2
-		trigger = {
-			tag = YKR
-		}
-	}
-	option = {
-		name = net.8.3
-		trigger = {
-			has_country_flag = YOM_is_here
-		}
-	}
-	option = {
-		name = net.8.4
-		trigger = {
-			not = {
-				has_country_flag = YOM_is_here
-				tag = YYK
-			}
-			capital_scope = {
-				is_on_continent = Netherworld
-			}
-		}
-	}
-	option = {
-		name = net.8.5
-		trigger = {
-			not = {
-				capital_scope = {
-					is_on_continent = Netherworld
-				}
-				tag = YKR
-			}
 		}
 	}
 }

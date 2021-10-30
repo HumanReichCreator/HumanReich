@@ -4,23 +4,14 @@ state={
 	name="STATE_322"
 	resources={
 
-		powder = 6.0
-		metal = 0.0
+		powder=5.000
+		metal=0.000
 		gas=5.000
 		crystal=0.000
 	}
 
 	history={
-		143.7.1 = {
 			owner = MAM
-			add_core_of = MAM
-			buildings = {
-				infrastructure = 3
-				industrial_complex = 1
-				arms_factory = 0
-
-			}
-		}
 		146.1.1 = {
 			owner = MAM
 			add_core_of = MAM
@@ -38,7 +29,7 @@ state={
 	provinces={
 		196 1046 1567 1706 2335 2930 5557 5572 
 	}
-	manpower=884.0
+	manpower=84.0
 	buildings_max_level_factor=1.000
 	state_category=s5
 }

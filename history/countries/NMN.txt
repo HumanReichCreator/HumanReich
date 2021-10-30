@@ -1,4 +1,5 @@
 ﻿capital = 402
+
 146.1.1 = {
     set_technology = {
         #通用武器线
@@ -30,15 +31,11 @@
         #种族
             
     }
-    
 }
 146.1.1={
-    add_manpower = 100
     oob = "NMN_146"
     
-    diplomatic_relation = { 
-    country = OTG relation = non_aggression_pact 
-    }
+    
     
     add_ideas = {
     Youkai
@@ -47,8 +44,6 @@
     dove2
     close_border
     limit_magic
-    manpowerlv1
-    isolation
      
     }
     set_politics = {

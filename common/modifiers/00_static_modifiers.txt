@@ -335,10 +335,9 @@ diff_very_easy_ai = { #changed
 	resistance_damage_to_garrison = -0.25
 	justify_war_goal_time = -0.3
 	ai_join_ally_desire_factor = 100
-	improve_relations_maintain_cost_factor = -1
 
-	planning_speed = 0.1
-	max_planning = 0.1
+	planning_speed = 0.2
+	max_planning = 0.2
 }
 
 diff_easy_ai = { #changed
@@ -347,10 +346,9 @@ diff_easy_ai = { #changed
 	resistance_damage_to_garrison = -0.25
 	justify_war_goal_time = -0.3
 	ai_join_ally_desire_factor = 100
-	improve_relations_maintain_cost_factor = -1
 
-	planning_speed = 0.2
-	max_planning = 0.2
+	planning_speed = 0.4
+	max_planning = 0.4
 
 	political_power_factor = 0.1
 }
@@ -361,15 +359,13 @@ diff_normal_ai = { #changed
 	resistance_damage_to_garrison = -0.25
 	justify_war_goal_time = -0.3
 	ai_join_ally_desire_factor = 100
-	improve_relations_maintain_cost_factor = -1
 
 	experience_gain_army = 0.01
 
-	planning_speed = 0.3
-	max_planning = 0.3
+	planning_speed = 0.6
+	max_planning = 0.6
 
 	political_power_factor = 0.2
-	custom_modifier_tooltip = normal_ai_tt
 }
 
 diff_hard_ai = { #changed
@@ -378,14 +374,15 @@ diff_hard_ai = { #changed
 	resistance_damage_to_garrison = -0.4
 	justify_war_goal_time = -0.3
 	ai_join_ally_desire_factor = 100
-	improve_relations_maintain_cost_factor = -1
 
-	planning_speed = 0.4
-	max_planning = 0.4
+	planning_speed = 0.8
+	max_planning = 0.8
 
 	political_power_factor = 0.35
 
 	training_time_factor = -0.1
+	planning_speed = 0.2
+	max_planning = 0.25
 
 	army_morale_factor = 0.2
 
@@ -394,7 +391,7 @@ diff_hard_ai = { #changed
 
 	conscription_factor = 0.05
 
-	local_resources_factor = 0.5
+	local_resources_factor = 0.15
 	consumer_goods_factor = -0.05
 	production_speed_buildings_factor = 0.1
 	industrial_capacity_factory = 0.1
@@ -402,7 +399,6 @@ diff_hard_ai = { #changed
 	research_speed_factor = 0.2
 
 	ai_badass_factor = 0.25
-	custom_modifier_tooltip = hard_ai_tt
 }
 
 diff_very_hard_ai = { #changed
@@ -411,12 +407,14 @@ diff_very_hard_ai = { #changed
 	resistance_damage_to_garrison = -0.55
 	justify_war_goal_time = -0.3
 	ai_join_ally_desire_factor = 100
-	improve_relations_maintain_cost_factor = -1
+	
+	planning_speed = 1
+	max_planning = 1
 
 	political_power_factor = 0.5
 
 	training_time_factor = -0.2
-	planning_speed = 0.5
+	planning_speed = 0.4
 	max_planning = 0.5
 
 	army_morale_factor = 0.4
@@ -426,7 +424,7 @@ diff_very_hard_ai = { #changed
 
 	conscription_factor = 0.1
 
-	local_resources_factor = 1
+	local_resources_factor = 0.3
 	consumer_goods_factor = -0.1
 	production_speed_buildings_factor = 0.2
 	industrial_capacity_factory = 0.2
@@ -434,7 +432,6 @@ diff_very_hard_ai = { #changed
 	research_speed_factor = 0.4
 
 	ai_badass_factor = 0.5
-	custom_modifier_tooltip = very_hard_ai_tt
 }
 
 
@@ -640,12 +637,4 @@ FRA_carry_the_revolution_south = { #changed
 	# 	}
 	# }
 	# compliance_gain = 0.4
-}
-
-forest_foggy = { # on Province
-	army_speed_factor = -0.15
-	army_defence_factor = 0.15
-	army_core_defence_factor = 0.05
-	army_core_attack_factor = 0.05
-	local_org_regain = -0.10
 }

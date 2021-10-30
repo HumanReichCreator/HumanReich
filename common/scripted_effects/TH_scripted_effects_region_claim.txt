@@ -115,7 +115,7 @@ region_defines = {
     #     }
     #     add_to_variable = { global.RE_Gensokyo_region1_all = 1}
     # }
-    # ##Gensokyo_region2 现代人类村落地区
+    # ##Gensokyo_region2 现代人间之里地区
     # every_state = {
     #     limit = {
     #         or = {
@@ -126,7 +126,7 @@ region_defines = {
     #     }
     #     add_to_variable = { global.RE_Gensokyo_region2_all = 1}
     # }
-    # ##Gensokyo_region3 人类村落远西南地区
+    # ##Gensokyo_region3 人间之里远西南地区
     # every_state = {
     #     limit = {
     #         or = {
@@ -138,7 +138,7 @@ region_defines = {
     #     }
     #     add_to_variable = { global.RE_Gensokyo_region3_all = 1}
     # }
-    # ##Gensokyo_region4 人类村落外围妖怪区
+    # ##Gensokyo_region4 人间之里外围妖怪区
     # every_state = {
     #     limit = {
     #         or = {
@@ -307,7 +307,7 @@ region_daily_check = {
     if = {
         limit = {
             any_owned_state = {
-                is_on_continent = Underground
+                is_on_continent = Celestial
             }
         }
         set_variable = { RE_Underground_ratio = 0 }
@@ -459,7 +459,7 @@ region_daily_check = {
     # }
     # divide_variable = { RE_Gensokyo_region1_ratio = global.RE_Gensokyo_region1_all }
 
-    # ##Gensokyo_region2 现代人类村落地区
+    # ##Gensokyo_region2 现代人间之里地区
     # set_variable = { RE_Gensokyo_region2_ratio = 0 }
     # every_owned_state = {
     #     limit = {
@@ -473,7 +473,7 @@ region_daily_check = {
     # }
     # divide_variable = { RE_Gensokyo_region2_ratio = global.RE_Gensokyo_region2_all }
 
-    # ##Gensokyo_region3 人类村落远西南地区
+    # ##Gensokyo_region3 人间之里远西南地区
     # set_variable = { RE_Gensokyo_region3_ratio = 0 }
     # every_owned_state = {
     #     limit = {
@@ -488,7 +488,7 @@ region_daily_check = {
     # }
     # divide_variable = { RE_Gensokyo_region3_ratio = global.RE_Gensokyo_region3_all }
 
-    # ##Gensokyo_region4 人类村落外围妖怪区
+    # ##Gensokyo_region4 人间之里外围妖怪区
     # set_variable = { RE_Gensokyo_region4_ratio = 0 }
     # every_owned_state = {
     #     limit = {

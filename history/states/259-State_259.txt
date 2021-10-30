@@ -4,32 +4,25 @@ state={
 	name="STATE_259"
 	resources={
 
-		powder = 6.0
-		metal = 5.0
+		powder=5.000
+		metal=5.000
 		gas=5.000
 		crystal=0.000
 	}
 
 	history={
-		143.7.1 = {
-			owner = MSD
-			add_core_of = MSD
-			buildings = {
-				infrastructure = 4
-				industrial_complex = 4
-				arms_factory = 1
-
-			}
-		}
+			owner = KAG
 		146.1.1 = {
-			owner = MSD
+			owner = KAG
 			add_core_of = MSD
+			add_core_of = KAG
 			buildings = {
 				infrastructure =5
 				industrial_complex = 4
 				arms_factory = 1
 
 			}
+
 		}
 
 	}

@@ -1,35 +1,5 @@
 HU3_category = {
 
-    HU3_daxiguo = {
-        visible = {
-          tag = HU3
-          is_subject = no
-        }
-        available = {
-          NOT = { country_exists = SGS }
-          NOT = { country_exists = MEL }
-          NOT = { country_exists = GH2 }
-          NOT = { country_exists = GH3 }
-        }
-
-        fire_only_once = yes
-
-        cost = 0
-
-        ai_will_do = {
-          factor = 100
-        }
-
-        complete_effect = {
-          add_ideas = country
-
-          add_ideas = AKI_zhengfuzhe_idea
-
-          set_cosmetic_tag = HU3_Great
-        }
-
-    }
-
     HU3_womenxuyaobangzhu = {
         visible = {
             tag = HU3
@@ -39,10 +9,7 @@ HU3_category = {
         available = {
 			surrender_progress > 0.50 
             has_idea = AKI_laiziqiushendezhichi_idea
-			AKI = { 
-                has_completed_focus = AKI_waijiaofanglue 
-                faqiqingqiu = yes
-            }
+			AKI = { has_completed_focus = AKI_waijiaofanglue }
         }
 
         fire_only_once = yes
@@ -55,8 +22,9 @@ HU3_category = {
 
         complete_effect = {
 			AKI = {
-                country_event = { id = hu3.8 hours = 1 } 
+            country_event = { id = hu3.8 hours = 1 } 
 			}
+
         }
 
     }
@@ -71,23 +39,20 @@ HU3_category = {
         available = {
 			has_war = no
             has_idea = AKI_laiziqiushendezhichi_idea
-            NOT = { AKI = { has_idea = AKI_tudijianbing_idea } }
-            NOT = { AKI = { has_idea = AKI_jiduanzhuyiyundong_idea } }
-            OR = {
-                controls_state = 194
-                AKI = { controls_state = 194 }
-                any_other_country = {
-                    controls_state = 194
-                    is_subject_of = HU3
-                }
-                any_other_country = {
-                    controls_state = 194
-                    is_subject_of = AKI
-                }
-            }
-            AKI = {
-                faqiqingqiu = yes
-            }
+              NOT = { AKI = { has_idea = AKI_tudijianbing_idea } }
+              NOT = { AKI = { has_idea = AKI_jiduanzhuyiyundong_idea } }
+					OR = {
+						controls_state = 194
+						AKI = { controls_state = 194 }
+						any_other_country = {
+							controls_state = 194
+							is_subject_of = HU3
+						}
+						any_other_country = {
+							controls_state = 194
+							is_subject_of = AKI
+						}
+					}
         }
 
         fire_only_once = yes
@@ -100,12 +65,35 @@ HU3_category = {
 		}
 
         complete_effect = {
-            AKI = { 
-              qiangjiemeng = yes
-              add_to_faction = HU3
-            }
 
-            add_ideas = AKI_xinanliancun_idea
+		AKI = {
+			add_ai_strategy = {
+				type = befriend
+				id = "HU3"
+				value = 200
+			}
+		}
+
+		add_ai_strategy = {
+			type = befriend
+			id = "AKI"
+			value = 200
+		}
+
+	    go_guli = yes
+	    set_politics = {
+	        ruling_party = guli
+	    }
+	    add_popularity = {
+	        ideology = guli
+	        popularity = 0.5
+	    }
+
+        AKI = { 
+          add_to_faction = HU3
+        }
+
+          add_ideas = AKI_xinanliancun_idea
 
         }
 
@@ -119,12 +107,8 @@ HU3_category = {
         available = {
 			has_war = yes
             has_idea = AKI_laiziqiushendezhichi_idea
-            NOT = { AKI = { has_idea = AKI_tudijianbing_idea } }
-            NOT = { AKI = { has_idea = AKI_jiduanzhuyiyundong_idea } }
-            NOT = { is_in_faction_with = AKI }
-            AKI = {
-                faqiqingqiu = yes
-            }
+              NOT = { AKI = { has_idea = AKI_tudijianbing_idea } }
+              NOT = { AKI = { has_idea = AKI_jiduanzhuyiyundong_idea } }
         }
 
         days_remove = 182
@@ -159,10 +143,6 @@ HU3_category = {
             has_idea = AKI_laiziqiushendezhichi_idea
             NOT = { AKI = { has_idea = AKI_tudijianbing_idea } }
             NOT = { AKI = { has_idea = AKI_jiduanzhuyiyundong_idea } }
-            NOT = { is_in_faction_with = AKI }
-            AKI = {
-                faqiqingqiu = yes
-            }
         }
 
         days_remove = 182
@@ -193,9 +173,6 @@ HU3_category = {
         }
         available = {
             has_country_flag = AKI_yunxusangejungong_flag
-            AKI = {
-                faqiqingqiu = yes
-            }
         }
 
         days_remove = 182
@@ -223,9 +200,6 @@ HU3_category = {
         }
         available = {
             has_country_flag = AKI_yunxuliugejungong_flag
-            AKI = {
-                faqiqingqiu = yes
-            }
         }
 
         days_remove = 182
@@ -253,9 +227,6 @@ HU3_category = {
         }
         available = {
             has_idea = AKI_laiziqiushendezhichi_idea
-            AKI = {
-                faqiqingqiu = yes
-            }
         }
 
         fire_only_once = yes
@@ -294,9 +265,6 @@ HU3_category = {
             has_idea = AKI_laiziqiushendezhichi_idea
             NOT = { AKI = { has_idea = AKI_zhanlipin_touzijianshe_idea } }
             NOT = { AKI = { has_idea = AKI_zhanlipin_touzishengchan_idea } }
-            AKI = {
-                faqiqingqiu = yes
-            }
         }
 
         days_remove = 182

@@ -4,27 +4,17 @@ state={
 	name="STATE_118"
 	resources={
 
-		powder = 0.0
-		metal = 5.0
+		powder=0.000
+		metal=5.000
 		gas=20.000
 		crystal=0.000
 	}
 
 	history={
-		143.7.1 = {
-			owner = SCA
-			add_core_of = SCA
-			add_core_of = CIR
-			buildings = {
-				infrastructure = 6
-				industrial_complex = 7
-				arms_factory = 4
-			}
-		}
+			owner = CIR
 		146.1.1 = {
 			owner = CIR
 			add_core_of = CIR
-			remove_core_of = SCA
 			buildings = {
 				infrastructure = 6
 				industrial_complex = 8

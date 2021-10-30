@@ -2,6 +2,7 @@
 state={
 	id=552
 	name="STATE_552"
+
 	resources={
 		energy=0.000
 		powder=0.000
@@ -11,32 +12,22 @@ state={
 	}
 
 	history={
-		143.7.1 = {
-			owner = MRS
-			add_core_of = MFA
-			buildings = {
-				infrastructure = 1
-				industrial_complex = 0
-				arms_factory = 0
-			}
-		}
+			owner = XXX
 		146.1.1 = {
-			owner = MFA
-			add_core_of = MFA
-			add_core_of = CIR
+			owner = XXX
+			add_core_of = XXX
 			buildings = {
 				infrastructure = 1
 				industrial_complex = 0
 				arms_factory = 0
-
 			}
 		}
 	}
 
 	provinces={
-		1214 1453 2230 3335 4381 4383 4387 
+		3730 
 	}
 	manpower=1903
 	buildings_max_level_factor=1.000
-	state_category=s0
+	state_category=s2
 }

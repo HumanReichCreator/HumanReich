@@ -1,50 +1,4 @@
 ﻿capital = 146
-143.7.1 = {
-    set_technology = {
-        #通用武器线
-        spell_card1 = 1
-        spear1 = 1
-        gun1 = 1
-        linglicunchu = 1
-        spell_card2 = 1
-            
-        #辅助
-
-        #专用辅助
-
-        #专用基础
-
-        #专用进阶
-
-        #混合系
-
-        #陆军学说
-        zhanchangzhihui140 = 1
-        zuzhihuazhanzheng142 = 1
-
-            
-        #工程学 
-        jichushuxue = 1
-        shuxuegongju = 1
-        lingben = 1
-
-        #专用工程学
-
-        #工业
-        production_theory = 1
-        org_production = 1
-        jianzaojishu130 = 1
-        jianzaojishu140 = 1
-            
-        #专用工业
-        linglishengchan130 = 1
-        linglishengchan140 = 1
-
-        #种族
-            
-    }
-    
-}
 146.1.1 = {
     set_technology = {
         #通用武器线
@@ -91,13 +45,12 @@
         #种族
             
     }
-    
 }
 set_technology = {
     ghost_tech = 1
 }
 143.7.1={
-    oob = "PRI_143"
+    oob = "TEST"
     # set_research_slots = 4
     
     add_ideas = {
@@ -143,11 +96,13 @@ set_technology = {
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 25
-        guli = 70
-        neworder = 0
+        qinwai = 35
+        guli = 35
+        neworder = 5
         oldorder = 0
         fandong = 5
+        authordemo = 10
+        lienin = 10
     }
 }
 create_country_leader = {
@@ -160,8 +115,8 @@ create_country_leader = {
 }
 create_country_leader = {
     # name = "Lunasa Prismriver"
-    name = "露娜萨·普莉兹姆利巴"
-    picture = "PRI_luna.dds"
+    name = "莉莉卡·普莉兹姆利巴"
+    picture = "PRI_lyrica.dds"
     ideology = guli_type
     traits = {
     }
@@ -190,6 +145,36 @@ create_country_leader = {
     name = "露娜萨·普莉兹姆利巴"
     picture = "PRI_luna.dds"
     ideology = oldorder_type
+    traits = {
+    }
+}
+
+
+create_country_leader = {
+    # name = "Lunasa Prismriver"
+    name = "露娜萨·普莉兹姆利巴"
+    picture = "PRI_luna.dds"
+    ideology = authordemo_type
+    traits = {
+    }
+}
+
+
+create_country_leader = {
+    # name = "Lunasa Prismriver"
+    name = "梅露兰·普莉兹姆利巴"
+    picture = "PRI_merlin.dds"
+    ideology = lienin_type
+    traits = {
+    }
+}
+
+
+create_country_leader = {
+    # name = "Lunasa Prismriver"
+    name = "莉莉卡·普莉兹姆利巴"
+    picture = "PRI_lyrica.dds"
+    ideology = humanfirst_type
     traits = {
     }
 }

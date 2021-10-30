@@ -199,11 +199,8 @@ IKU_We_are_good_puppets = { #
 	enable = {
 		tag = IKU
 	    IKU = { is_subject_of = TES }
-	    or = {
-	    	TES = { has_war_with = CCA }
-	    	TES = { has_war_with = CFA }
-	    }
-	    
+	    TES = { has_war_with = CCA }
+	    TES = { has_war_with = CFA }
 	}
 	abort = {
 		has_global_flag = xinshidai
@@ -216,4 +213,22 @@ IKU_We_are_good_puppets = { #
 		value = 100
 	}
 
+}
+
+IKU_We_are_good_puppets_2 = { #
+	enable = {
+		tag = IKU
+	    IKU = { is_subject_of = TES }
+	    CCA = { is_subject_of = CFA }
+	    TES = { has_war_with = CFA }
+	}
+	abort = {
+		has_global_flag = xinshidai
+	}
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = "TES"
+		value = 100
+	}
 }

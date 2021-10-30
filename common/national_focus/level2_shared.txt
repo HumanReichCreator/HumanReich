@@ -3,19 +3,6 @@ shared_focus = {
 		icon = GFX_goal_unknown
 		x = 18
 		y = 17
-		offset = {
-			x = 0
-			y = 4
-			trigger = {
-				has_country_flag = YOM_is_here
-				or = {
-					tag = NG1
-					tag = NG2
-					tag = NG3
-					tag = NG4
-				}
-			}
-		}
 
 	cost = 0
 
@@ -42,7 +29,6 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		
 	#	add_offsite_building = { type = industrial_complex level = 2 }
 	}
 }
@@ -137,7 +123,7 @@ shared_focus = {
 }
 shared_focus = {
 		id = ty_tourububing
-		icon = GFX_focus_generic_Basic_Weapons
+		icon = GFX_goal_generic_small_arms
 		cost = 14
 		prerequisite = {
 			focus = ty_kejichuangxin
@@ -177,7 +163,7 @@ shared_focus = {
 }
 shared_focus = {
 		id = ty_touruhuopao
-		icon = GFX_focus_generic_Artillery_Weapons
+		icon = GFX_goal_generic_army_artillery2
 		cost = 14
 		prerequisite = {
 			focus = ty_kejichuangxin
@@ -1144,7 +1130,7 @@ shared_focus = {
 }
 shared_focus = {
 		id = ty_bubingwuqi2
-		icon = GFX_focus_generic_Basic_Weapons
+		icon = GFX_goal_generic_axis_build_infantry
 		cost = 14.00
 		prerequisite = {
 			focus = ty_junshigeming
@@ -1185,7 +1171,7 @@ shared_focus = {
 }
 shared_focus = {
 		id = ty_huopaowuqi
-		icon = GFX_focus_generic_Artillery_Weapons
+		icon = GFX_goal_generic_army_artillery2
 		cost = 14.00
 		prerequisite = {
 			focus = ty_junshigeming
@@ -1226,7 +1212,7 @@ shared_focus = {
 }
 shared_focus = {
 		id = ty_wuqigailiang
-		icon = GFX_focus_generic_Basic_Weapons
+		icon = GFX_goal_generic_build_tank
 		cost = 14.00
 		prerequisite = {
 			focus = ty_bubingwuqi2
@@ -1266,7 +1252,7 @@ shared_focus = {
 }
 shared_focus = {
 		id = ty_huopaogaizhuang
-		icon = GFX_focus_generic_Artillery_Weapons
+		icon = GFX_goal_generic_army_artillery2
 		cost = 14.00
 		prerequisite = {
 			focus = ty_wuqigailiang

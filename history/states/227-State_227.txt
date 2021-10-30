@@ -4,16 +4,17 @@ state={
 	name="STATE_227"
 	resources={
 
-		powder = 0.0
-		metal = 0.0
+		powder=0.000
+		metal=0.000
 		gas=10.000
 		crystal=0.000
 	}
 
 	history={
+			owner = KYK
 		143.7.1 = {
-			owner = HUM
-			add_core_of = HUM
+			owner = KYK
+			add_core_of = KYK
 			buildings = {
 				infrastructure =3
 				industrial_complex = 2
@@ -22,17 +23,16 @@ state={
 			}
 		}
 		146.1.1 = {
-			owner = NMS
-			add_core_of = NMS
-			add_core_of = HUM
-			add_core_of = HU6
-			add_core_of = HU7
-			add_core_of = HU8
+			owner = KYK
+			add_core_of = KYK
+			add_claim_by = HUM
+			add_claim_by = HU6
+			add_claim_by = HU7
+			add_claim_by = HU8
 			buildings = {
 				infrastructure =4
 				industrial_complex = 3
 				arms_factory = 3
-				radar_station = 1
 
 			}
 
@@ -43,7 +43,7 @@ state={
 	provinces={
 		589 781 811 1594 3182 3187 
 	}
-	manpower=4221.0
+	manpower=2021.0
 	buildings_max_level_factor=1.000
 	state_category=s7
 }

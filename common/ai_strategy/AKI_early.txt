@@ -397,13 +397,9 @@ AKI_volunteers_support_HU3 = {
 
 	enable = {
 
-		or = {
 			tag = AKI
-			tag = HU1
-			tag = HU2
-			tag = HU4
-		}
-        HU3 = { has_idea = AKI_laiziqiushendezhichi_idea }
+
+            HU3 = { has_idea = AKI_laiziqiushendezhichi_idea }
 	}
 	abort = {
 	or = {
@@ -422,6 +418,44 @@ AKI_volunteers_support_HU3 = {
 	ai_strategy = {
 		type = support
 		id = "HU3"			
+		value = 100
+	}
+
+}
+
+TEG_volunteers_support_AKI = {
+
+	# reversed = yes
+
+	enable = {
+
+			tag = TEG
+
+            AKI = { has_government = qinwai }
+	}
+
+	abort = {
+	or = {
+		TEG = { is_subject = yes }
+		AKI = { is_subject = yes }
+	}
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "AKI"			
+		value = 50
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "AKI"			
+		value = 100
+	}
+
+	ai_strategy = {
+		type = support
+		id = "AKI"			
 		value = 100
 	}
 
@@ -564,146 +598,3 @@ AKI_xinanliancun = { #
 
 }
 
-HU3_prepare_for_war_MEL = {
-	enable = {
-		tag = HU3
-	}
-	
-	abort = {
-		has_war = yes
-	}
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "SGS"
-		value = 100
-	}
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "MEL"
-		value = 100
-	}
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "GH1"
-		value = 100
-	}
-
-}
-
-MEL_prepare_for_war_Ghost = {
-	enable = {
-		tag = MEL
-	}
-	
-	abort = {
-		has_war = yes
-	}
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "GH1"
-		value = 100
-	}
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "GH2"
-		value = 100
-	}
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "GH3"
-		value = 100
-	}
-
-}
-
-MEL_prepare_for_war_HU3 = {
-	enable = {
-		tag = MEL
-		date > 146.9.15
-	}
-	
-	abort = {
-		has_war_with = HU3
-	}
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "HU3"
-		value = 100
-	}
-
-
-}
-
-SGS_prepare_for_war_HU3 = {
-	enable = {
-		tag = SGS
-		date > 146.9.15
-	}
-	
-	abort = {
-		has_war_with = HU3
-	}
-
-	ai_strategy = {
-		type = prepare_for_war
-		id = "HU3"
-		value = 100
-	}
-
-
-}
-
-MEL_dont_defend_ally_borders_for_SGS = {
-	enable = {
-		tag = MEL
-		NOT = { MEL = { has_war_with = SGS } }
-		MEL = { has_idea = SGS_tuanjiexieding_idea }
-	}
-	abort = {
-		NOT = { MEL = { has_idea = SGS_tuanjiexieding_idea } }
-	}
-
-	ai_strategy = {
-		type = befriend
-		id = "SGS"			
-		value = 100
-	}
-	
-	ai_strategy = {
-		type = dont_defend_ally_borders
-		id = "SGS"
-		value = 200
-	}
-
-}
-
-SGS_dont_defend_ally_borders_for_MEL = {
-	enable = {
-		tag = SGS
-		NOT = { SGS = { has_war_with = MEL } }
-		SGS = { has_idea = SGS_tuanjiexieding_idea }
-	}
-	abort = {
-		NOT = { SGS = { has_idea = SGS_tuanjiexieding_idea } }
-	}
-
-	ai_strategy = {
-		type = befriend
-		id = "MEL"			
-		value = 100
-	}
-	
-	ai_strategy = {
-		type = dont_defend_ally_borders
-		id = "MEL"
-		value = 200
-	}
-
-}

@@ -3,13 +3,14 @@ state={
 	id=247
 	name="STATE_247"
 	resources={
-		powder = 0.0
-		metal = 0.0
+		powder=0.000
+		metal=0.000
 		gas=5.000
 		crystal=20.000
 	}
 
 	history={
+			owner = YYK
 		146.1.1 = {
 			owner = YYK
 			add_core_of = YYK
@@ -27,7 +28,7 @@ state={
 	provinces={
 		127 137 289 657 1242 1250 1406 1478 2175 2216 2871 2874 
 	}
-	manpower=89377
+	manpower=109377
 	buildings_max_level_factor=1.000
 	state_category=s7
 }

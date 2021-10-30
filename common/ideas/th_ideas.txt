@@ -3,7 +3,6 @@ ideas = {
     country = {
 	#=========================
 		panluantouxiang_idea = {
-			picture = FRA_national_mobilization_focus
 			allowed = {
 				always = no
 			}
@@ -18,7 +17,6 @@ ideas = {
 			}
 		}
 		dikangyingxiang_idea = {
-			picture = FRA_national_mobilization_focus
 			allowed = {
 				always = no
 			}
@@ -109,7 +107,8 @@ ideas = {
 				war_support_factor = -0.1
 				political_power_factor = -0.1
 
-				ai_get_ally_desire_factor = -200
+				ai_get_ally_desire_factor = -100
+				# AI_JOIN_ALLY_DESIRE_FACTOR = -250
 			}
 			research_bonus = {
 				combined = -0.2
@@ -278,7 +277,6 @@ ideas = {
 				stability_factor = 0.1
 				operative_slot = 2
 				generate_wargoal_tension = 0.15
-				consumer_goods_factor = -0.1
 			}
 			research_bonus = {
 				magic = 0.25
@@ -322,27 +320,7 @@ ideas = {
 	    ############SCENARIO 143############
 	    qingbaoxielu143_idea = {
 			modifier = {
-				encryption = -100
-				resistance_target = 1
-			}
-		}
-		juexin_idea = {
-			modifier = {
-				decryption = 40
-				stability_factor = 0.5
-				war_support_factor = 0.5
-			}
-			targeted_modifier = { 
-				tag = HUM
-				attack_bonus_against = 0.2
-				defense_bonus_against = 0.2
-			}
-		}
-		shuxirenli_idea = {
-			targeted_modifier = { 
-				tag = HUM
-				attack_bonus_against = 0.5
-				defense_bonus_against = 0.5
+				decryption = 25
 			}
 		}
 		#########WEI WANG
@@ -416,30 +394,6 @@ ideas = {
 				army_defence_factor = -0.15
 				army_speed_factor = -0.1
 				army_morale_factor = -0.125
-			}
-		}
-		#######ghost
-		GO_nerf_puppet = {
-			
-		}
-		####unl
-		wufadiqu_idea = {
-			picture = chi_incompetent_officers
-			allowed = {
-				always = no
-			}
-			available = {
-				not = { has_tech = zhanchangzhihui145 }
-			}
-			allowed_civil_war = {
-			}
-			
-			removal_cost = -1
-	
-			modifier = {		
-				army_org_Factor = -0.3
-				army_morale_factor = -0.1
-				recon_factor = -0.5
 			}
 		}
     }

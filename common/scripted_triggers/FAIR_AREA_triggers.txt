@@ -1,0 +1,93 @@
+SC2_can_be_infled = {
+  SC2 = {
+    exists = yes
+    is_puppet = no
+  }
+}
+
+SC2_can_infl = {
+  custom_trigger_tooltip = {
+    tooltip = SC2_can_infl_tt
+    SC2_can_be_infled = yes
+    or = {
+      has_country_flag = FA_can_infl_SC2_flg
+      is_in_faction_with = SC2
+    }
+    not = {
+      tag = SC2
+    }
+  } 
+}
+
+is_fairy_area = {
+  or = {
+    tag = SGS
+    tag = SCA
+    tag = SC2
+    tag = LIL
+    tag = CIR
+  }
+}
+
+SC2_need_pay_attention = {
+  any_country = {
+    SC2_can_infl = yes
+    not = { has_country_flag = FA_in_FPA_flg }
+  }
+}
+
+CIR_army_wait_their_leader = {
+    CIR_neworder_way = yes
+    not = { CIR_army_join_with_their_leader = yes }
+}
+
+CIR_army_join_with_their_leader = {
+    CIR_neworder_way = yes
+    has_country_flag = CIR_join_root
+}
+
+CIR_agree_to_join_as_army = {
+    not = { has_government = oldorder  }
+    or = {
+        CIR_army_join_with_their_leader = yes
+        and = {
+            CIR_authordemo_way = yes
+            SGS_dove_have_supporter = yes
+        }
+        and = {
+            CIR_qinwai_way = yes
+            SGS_dove_get_more = yes
+        }
+        and = {
+            CIR_guli_way = yes
+            SGS_dove_hold_meeting = yes
+        }
+    }
+    not = { has_idea = SGS_battle_fairy_elite_army }
+}
+
+CIR_agree_to_join_as_worker = {
+  not = { has_government = oldorder  }
+  or = {
+      CIR_army_join_with_their_leader = yes
+      and = {
+          CIR_authordemo_way = yes
+          SGS_dove_get_more = yes
+      }
+      and = {
+          CIR_qinwai_way = yes
+          SGS_dove_hold_meeting = yes
+      }
+      and = {
+          CIR_guli_way = yes
+          SGS_dove_hold_meeting = yes
+      }
+  }
+  not = { has_idea = SGS_battle_fairy_elite_army }
+}
+CIR_peace_task_already_failed = {
+  CIR_guli_way = yes
+  not = { has_country_flag = sgs_all_integrated_peacelly }
+}
+
+

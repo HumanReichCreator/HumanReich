@@ -1,60 +1,8 @@
-﻿
+﻿capital = 165
 add_dynamic_modifier = {
   modifier = TKM_manpower
 }
-143.7.1 = {
-    set_technology = {
-        #通用武器线
-        spell_card1 = 1
-        spear1 = 1
-        gun1 = 1
-        linglicunchu = 1
-        linglizhufu = 1
-        linglidanyao = 1
-        spell_card2 = 1
-        spear2 = 1
-        gun2 = 1
-        lingliliushuixian = 1
-        
-        #辅助
-        mortar1 = 1
-        #专用辅助
 
-        #专用基础
-
-        #专用进阶
-
-        #混合系
-
-        #陆军学说
-            zhanchangzhihui140 = 1
-            zuzhihuazhanzheng142 = 1
-            zhanchangzhihui145 = 1   
-            paobingzhenxian = 1
-        #工程学 
-            jichushuxue = 1
-            shuxuegongju = 1
-            waike = 1
-
-        #专用工程学
-
-        #工业
-            production_theory = 1
-            org_production = 1
-            
-            jianzaojishu130 = 1
-            jianzaojishu140 = 1
-            ziyuankaifa130 = 1
-            ziyuankaifa140 = 1
-            
-        #专用工业
-            fangwaijieshengchan130 = 1
-            fangwaijieshengchan140 = 1
-        #种族
-            
-    }
-    
-}
 146.1.1 = {
     set_technology = {
         #通用武器线
@@ -74,7 +22,7 @@ add_dynamic_modifier = {
         #辅助
         mortar1 = 1
         #专用辅助
-        zhiyuanzhuangbei = 1
+
         #专用基础
 
         #专用进阶
@@ -111,19 +59,46 @@ add_dynamic_modifier = {
             caogenchuantong1 = 1
             
     }
+}
+142.1.1={
+    oob = "TKM_142"
+    add_ideas = {
+    Pri_youkai
+     
+    Village
+    open1
+    hawk1
+    strict_border
+    sc_rule
+    }
+
     
+    #########局势修改
+    set_politics = {
+    
+        ruling_party = guli
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 24
+        guli = 70
+        neworder = 1
+        oldorder = 0
+        fandong = 5
+    }
 }
 143.7.1 = {
-    # capital = 165
-    oob = "TKM_143"
+    oob = "TEST"
     
     #########局势修改
     add_ideas = {
         Pri_youkai
-        type3_manpowerlv2
+         
         Village
         open1
         dove3
+        close_border
         limit_magic
     }
     set_politics = {
@@ -140,55 +115,50 @@ add_dynamic_modifier = {
     }
 }
 146.1.1={
-
-    HUM = { give_military_access = TKM }
-    ZBT = { give_military_access = TKM }
-    
-    set_capital = 299
-    add_manpower = 500
     oob = "TKM_146"
+
+    # set_variable = { TKM_xinsheng_pp = -0.5 }
+    # set_variable = { TKM_xinsheng_den = -0.2 }
+    # add_dynamic_modifier = { modifier = TKM_xinshengdeshili }
 
     set_country_flag = TKM_gugelvse
     
     add_ideas = {
     Pri_youkai
-    type3_manpowerlv2
+     
     Village
-    open1
+    open2
     dove1
-    normal_border
+    # loose_border
     limit_magic
-    TKM_Fear_of_destruction_idea
-    TKM_shell_shocked_spectator_5
-    tkm_Deformed_industry_idea
-    tkm_New_forces_idea_1
-    TKM_Guardian_of_mankind_idea
-    tkm_bupaoqijiudaoju_idea
-    kog_manpower_puppet
+    tkm_jixingdegongye_idea
+    tkm_xinshengdeshili_idea
+    tkm_manpower_puppet
     }
     #########局势修改
     #set_stability = 0.7
     set_politics = {
-    	ruling_party = qinwai
+    	ruling_party = humanfirst
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 44
-        guli = 0
-        neworder = 28
-        oldorder = 0
-        fandong = 28
+        qinwai = 10
+        guli = 15
+        neworder = 0
+        authordemo = 20
+        fandong = 0
+        humanfirst = 55
     }
 }
-# create_country_leader = {
-# 	# name = "Tatara Kogasa"
-#     name = "多多良小伞"
-# 	picture = "TKM_kog.dds"
-# 	ideology = qinwai_type
-# 	traits = {
-# 	}
-# }
+create_country_leader = {
+ 	# name = "Tatara Kogasa"
+     name = "多多良小伞"
+ 	picture = "TKM_kog.dds"
+ 	ideology = humanfirst_type
+ 	traits = {
+ 	}
+ }
 create_country_leader = {
     # name = "Horikawa Raiko"
     name = "堀川雷鼓"
@@ -209,14 +179,22 @@ create_country_leader = {
     # name = "Tsukumo Benben"
     name = "九十九弁弁"
     picture = "TKM_benben.dds"
+    ideology = lienin_type
+    traits = {
+    }
+}
+create_country_leader = {
+    # name = "Tsukumo Benben"
+    name = "九十九弁弁"
+    picture = "TKM_benben.dds"
     ideology = neworder_type
     traits = {
     }
 }
 create_country_leader = {
     # name = "Horikawa Raiko"
-    name = "堀川雷鼓"
-    picture = "TKM_raiko.dds"
+    name = "秦心"
+    picture = "TKM_kokoro.dds"
     ideology = oldorder_type
     traits = {
     }
@@ -229,3 +207,26 @@ create_country_leader = {
     traits = {
     }
 }
+
+create_country_leader = {
+    # name = "Hata no Kokoro"
+    name = "多多良小伞"
+    picture = "TKM_kog.dds"
+    ideology = authordemo_type
+    traits = {
+    }
+}
+
+
+# create_corps_commander = {
+#     # name = "Hata no Kokoro"
+#     name = "秦心"
+#     picture = "TKM_kokoro.dds"
+#     traits = {  th_character  }
+#     attack_skill = 2
+#     defense_skill = 2
+#     planning_skill = 3
+#     logistics_skill = 2
+    
+#     skill = 3
+# }

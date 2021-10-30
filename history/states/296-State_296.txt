@@ -4,13 +4,14 @@ state={
 	name="STATE_296"
 
 	resources={
-		powder = 1.0
-		metal = 0.0
+		powder=1.000
+		metal=0.000
 		gas=5.000
 		crystal=0.000
 	}
 
 	history={
+			owner = MOK
 		146.1.1 = {
 			owner = MOK
 			add_core_of = MOK
@@ -27,6 +28,6 @@ state={
 		8 83 644 1656 5478 5487 5488 5489 5497 
 	}
 	state_category=s5
-	manpower=620.0
+	manpower=420.0
 	buildings_max_level_factor=1.000
 }

@@ -3,29 +3,20 @@ state={
 	id=137
 	name="STATE_137"
 	resources={
-		powder=6.000
+
+		powder=5.000
 		metal=0.000
 		gas=5.000
 		crystal=0.000
 	}
 
 	history={
-		143.7.1 = {
 			owner = CHE
-			add_core_of = CHE
-			buildings = {
-				infrastructure = 3
-				industrial_complex = 1
-				arms_factory = 0
-
-			}
-
-		}
 		146.1.1 = {
 			owner = CHE
 			add_core_of = CHE
 			buildings = {
-				infrastructure = 4
+				infrastructure =4
 				industrial_complex = 2
 				arms_factory = 0
 
@@ -36,9 +27,9 @@ state={
 	}
 
 	provinces={
-		299 1163 1634 2552 2757 2765 3850 3852 3856 3859 3862 3864 3866 3870 3871 
+		299 1163 1634 2552 2757 2765 3034 3850 3852 3856 3859 3862 3864 3866 3870 3871 
 	}
-	manpower=1570
+	manpower=1570.0
 	buildings_max_level_factor=1.000
 	state_category=s7
 }

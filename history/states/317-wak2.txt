@@ -3,16 +3,16 @@ state={
 	id=317
 	name="STATE_317"
 	resources={
-		powder=6.000
+		powder=5.000
 		metal=5.000
 		gas=2.000
 		crystal=0.000
 	}
 
 	history={
+			owner = TKM
 		143.7.1 = {
 			owner = SCA
-			add_core_of = WAK
 			buildings = {
 				infrastructure = 4
 				industrial_complex = 0
@@ -22,8 +22,9 @@ state={
 
 		}
 		146.1.1 = {
-			owner = WAK
+			owner = TKM
 			add_core_of = WAK
+			add_core_of = TKM
 			buildings = {
 				infrastructure = 4
 				industrial_complex = 3
@@ -36,7 +37,7 @@ state={
 	}
 
 	provinces={
-		474 779 1381 1959 3543 3545 4340 4348 4351 4359 5951 
+		474 779 1381 1959 2390 3543 3545 4328 4340 4348 4351 4359 5950 5951 
 	}
 	manpower=721
 	buildings_max_level_factor=1.000

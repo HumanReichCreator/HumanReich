@@ -1,16 +1,5 @@
 ﻿capital = 225
-138.8.13 = {
 
-}
-141.6.2 = {
-    
-}
-142.3.8 = {
-    
-}
-144.2.5 = {
-    
-}
 146.1.1 = {
     set_technology = {
         #通用武器线
@@ -57,34 +46,41 @@
         #种族
             
     }
-    
 }
 146.1.1 = {
-    add_manpower = 400
+    
     oob = "RNS_146"
     
     # set_research_slots = 4
     add_ideas = {
     Beast
     Village
+    hawk0
     open2
-    dove2
     limit_magic
     normal_border
     }
     
-    
+    RNS = {
+        SBK = {
+            subject_level3 = yes
+        }
+    }
+    HUM = {
+        add_to_faction = RNS
+    }
     set_politics = {
         ruling_party = guli
         election_frequency = 48
         elections_allowed = no
     }
     set_popularities = {
-        qinwai = 7
-        guli = 93
+        qinwai = 10
+        guli = 80
         neworder = 0
-        oldorder = 0
+        oldorder = 5
         fandong = 0
+        destroyid = 5
     }
 }
 create_country_leader = {
@@ -92,6 +88,15 @@ create_country_leader = {
     name = "森近霖之助"
     picture = "RNS_rns.dds"
     ideology = guli_type
+    traits = {
+
+    }
+}
+create_country_leader = {
+    # name = "Morichika Rinnosuke"
+    name = "雾雨家"
+    picture = "RNS_rns.dds"
+    ideology = destroyid_type
     traits = {
 
     }
@@ -128,6 +133,36 @@ create_country_leader = {
     name = "朱鷺子"
     picture = "RNS_tokiko.dds"
     ideology = oldorder_type
+    traits = {
+
+    }
+}
+
+create_country_leader = {
+    # name = "Tokiko"
+    name = "朱鷺子"
+    picture = "RNS_tokiko.dds"
+    ideology = authordemo_type
+    traits = {
+
+    }
+}
+
+create_country_leader = {
+    # name = "Tokiko"
+    name = "朱鷺子"
+    picture = "RNS_tokiko.dds"
+    ideology = lienin_type
+    traits = {
+
+    }
+}
+
+create_country_leader = {
+    # name = "Tokiko"
+    name = "朱鷺子"
+    picture = "RNS_tokiko.dds"
+    ideology = humanfirst_type
     traits = {
 
     }

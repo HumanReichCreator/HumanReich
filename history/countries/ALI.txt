@@ -17,6 +17,7 @@
         #专用辅助
 
         #专用基础
+        core_shield1 = 1
 
         #专用进阶
 
@@ -59,7 +60,6 @@
     add_ideas = {
         ali_renoujuntuan_idea
         ali_zhenduidaojudeliliang_idea
-        mrs_ziyuanfengfu
         Magician
         Tribal
         dove3
@@ -107,7 +107,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-    # name = "Shanghai Doll"
+    # name = "Alice Margatroid"
     name = "上海人偶"
     desc = ""
     picture = "ALI_shh.dds"

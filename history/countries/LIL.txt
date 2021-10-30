@@ -1,4 +1,5 @@
 ﻿capital = 29
+
 146.1.1 = {
     set_technology = {
         #通用武器线
@@ -38,7 +39,6 @@
         #种族
             
     }
-    
 }
 
 146.1.1={
@@ -50,26 +50,23 @@
     dove2
     loose_border
     sc_rule
-    type1_manpowerlv3
     }
     set_politics = {
-    	ruling_party = qinwai
+    	ruling_party = guli
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 80
-        guli = 5
+        qinwai = 15
+        guli = 80
         neworder = 0
         oldorder = 0
-        fandong = 15
+        fandong = 5
     }
+    set_country_flag = FA_in_FPA_flg
 
-    set_truce = {target = SCA days = 730}
-    set_truce = {target = WAK days = 730}
-    set_truce = {target = GRS days = 730}
-    set_truce = {target = PRI days = 730}
 }
+
 create_country_leader = {
 	# name = "Lily White"
     name = "莉莉·霍瓦特" 

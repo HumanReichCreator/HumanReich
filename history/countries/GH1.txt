@@ -42,7 +42,6 @@ set_technology = {
         #种族
             
     }
-    
 }
 146.1.1={
     add_manpower = 500
@@ -55,8 +54,7 @@ set_technology = {
         close2
         strict_border
         sc_rule
-        type0_manpowerlv3
-        partial_economic_mobilisation
+        type0_manpowerlv6
     }
     set_politics = {
     	ruling_party = fandong
@@ -70,15 +68,10 @@ set_technology = {
         oldorder = 0
         fandong = 75
     }
-    declare_war_on = {
-      target = ZYD
-      type = take_state_focus
-      generator = { 369 335 368 150 142 370 186}
-    }
+   
 }
 create_country_leader = {
     name = "未知幽灵"
-    # name = "Unknown Ghost"
     desc = ""
     picture = "gfx/leaders/leader_unknown.dds"
     ideology = fandong_type
@@ -88,7 +81,6 @@ create_country_leader = {
 }
 create_country_leader = {
     name = "未知幽灵"
-    # name = "Unknown Ghost"
     desc = ""
     picture = "gfx/leaders/leader_unknown.dds"
     ideology = neworder_type
@@ -98,7 +90,6 @@ create_country_leader = {
 }
 create_country_leader = {
     name = "未知幽灵"
-    # name = "Unknown Ghost"
     desc = ""
     picture = "gfx/leaders/leader_unknown.dds"
     ideology = guli_type
@@ -108,7 +99,6 @@ create_country_leader = {
 }
 create_country_leader = {
     name = "未知幽灵"
-    # name = "Unknown Ghost"
     desc = ""
     picture = "gfx/leaders/leader_unknown.dds"
     ideology = qinwai_type
@@ -118,7 +108,6 @@ create_country_leader = {
 }
 create_country_leader = {
     name = "未知幽灵"
-    # name = "Unknown Ghost"
     desc = ""
     picture = "gfx/leaders/leader_unknown.dds"
     ideology = oldorder_type

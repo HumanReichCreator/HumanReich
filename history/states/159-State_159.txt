@@ -5,7 +5,7 @@ state={
 	resources={
 		energy = 10
 		powder = 0.0
-		metal = 0.0
+		metal = 0
 		gas = 5.0
 		crystal = 20.0
 	}
@@ -14,6 +14,7 @@ state={
 		81 236 428 586 807 1099 1569 1758 2132 2238 2410 2794 2797 2808 2814 
 	}
 	history={
+			owner = NG3
        	146.1.1 = {
 			owner = NG3
 			add_core_of = NG3
@@ -25,6 +26,6 @@ state={
        	}
 	}
 	state_category=s5
-	manpower=126998.0
+	manpower=296998.0
 	buildings_max_level_factor=1.000
 }

@@ -31,12 +31,6 @@ scale_change = {
             add_ideas = Tribal
         }
 
-        cancel_trigger = {
-            not = {
-                has_idea = Village
-            }
-        }
-
         ai_will_do = {
             factor = 0
         }
@@ -71,12 +65,6 @@ scale_change = {
 
         remove_effect = {
             add_ideas = Village
-        }
-
-        cancel_trigger = {
-            not = {
-                has_idea = Tribal
-            }
         }
 
         ai_will_do = {
@@ -122,12 +110,6 @@ scale_change = {
             add_ideas = Town
         }
 
-        cancel_trigger = {
-            not = {
-                has_idea = Village
-            }
-        }
-
         ai_will_do = {
             factor = 50
             modifier = {
@@ -166,12 +148,6 @@ scale_change = {
         remove_effect = {
             add_ideas = Country
         }   
-
-        cancel_trigger = {
-            not = {
-                has_idea = Town
-            }
-        }
 
         ai_will_do = {
             factor = 50

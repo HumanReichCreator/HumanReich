@@ -10,24 +10,12 @@ state={
 	}
 
 	history={
-		143.7.1 = {
-			owner = MRS
-			add_core_of = MRS
-			add_core_of = RNS
-			buildings = {
-				infrastructure = 0
-				industrial_complex = 0
-				arms_factory = 0
-
-			}
-
-		}
+			owner = RNS
 		146.1.1 = {
 			owner = RNS
 			add_core_of = RNS
-			remove_core_of = MRS
 			buildings = {
-				infrastructure = 0
+				infrastructure =0
 				industrial_complex = 0
 				arms_factory = 0
 
@@ -38,9 +26,9 @@ state={
 	}
 
 	provinces={
-		498 1977 3198 4283 4288 4293 4296 
+		498 1977 3045 3198 4283 4288 4293 4296 
 	}
-	manpower=695
+	manpower=695.0
 	buildings_max_level_factor=1.000
 	state_category=s5
 }

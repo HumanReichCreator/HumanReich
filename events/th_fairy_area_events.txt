@@ -1,0 +1,60 @@
+﻿add_namespace = fairy_area
+
+#琪露诺赌约相关
+country_event = {
+	#提出赌约
+	id = fairy_area.100
+	title = fairy_area.100.t
+	desc = fairy_area.100.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	option = {
+		#
+		name = fairy_area.100.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#赌约成功
+	id = fairy_area.101
+	title = fairy_area.101.t
+	desc = fairy_area.101.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	option = {
+		#
+		name = fairy_area.101.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+country_event = {
+	#赌约失败
+	id = fairy_area.102
+	title = fairy_area.102.t
+	desc = fairy_area.102.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	option = {
+		#
+		name = fairy_area.102.1
+
+		ai_chance = {
+			base = 35
+		}
+	}
+}

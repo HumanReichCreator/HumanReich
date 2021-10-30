@@ -4,17 +4,17 @@ state={
 	name="STATE_240"
 	resources={
 
-		powder = 0.0
-		metal = 0.0
+		powder=0.000
+		metal=0.000
 		gas=0.000
 		crystal=0.000
 	}
 
 	history={
+			owner = SBK
 		143.7.1 = {
 			owner = HUM
 			add_core_of = HUM
-			add_core_of = SBK
 			buildings = {
 				infrastructure =2
 				industrial_complex = 0
@@ -25,12 +25,9 @@ state={
 			owner = SBK
 			add_core_of = SBK
 			add_core_of = HUM
-			add_core_of = HU6
-			add_core_of = HU7
-			add_core_of = HU8
 			buildings = {
 				infrastructure =3
-				industrial_complex = 1
+				industrial_complex = 0
 				arms_factory = 0
 
 			}

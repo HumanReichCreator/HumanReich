@@ -1,49 +1,4 @@
 ﻿capital = 135
-143.7.1 = {
-    set_technology = {
-        #通用武器线
-        spell_card1 = 1
-        spear1 = 1
-        gun1 = 1
-        linglicunchu = 1
-        linglizhufu = 1
-        spell_card2 = 1
-        spear2 = 1
-        
-        #辅助
-
-        #专用辅助
-
-        #专用基础
-
-        #专用进阶
-
-        #混合系
-
-        #陆军学说
-        zhanchangzhihui140 = 1
-        zuzhihuazhanzheng142 = 1
-            
-        #工程学 
-        jichushuxue = 1
-        shuxuegongju = 1
-        lingben = 1
-
-        #专用工程学
-
-        #工业
-        production_theory = 1
-        org_production = 1
-            
-        #专用工业
-        linglishengchan130 = 1
-        linglishengchan140 = 1
-
-        #种族
-        qinlvetianxing1 = 1
-            
-    }  
-}
 146.1.1 = {
     set_technology = {
         #通用武器线
@@ -88,21 +43,23 @@
         #种族
         qinlvetianxing1 = 1
             
-    }  
-}
-143.7.1 = {
-
-    oob = "RMI_143"
-	add_ideas = {
-        Pri_youkai
-        Tribal
-    	partial_economic_mobilisation
-        hawk1
-        close1
-        strict_border
-        sc_rule
-        type3_manpowerlv6
     }
+    
+}
+142.3.8.7 = {
+
+    oob = "RMI_142"
+	add_ideas = {
+    Pri_youkai
+    Tribal
+	partial_economic_mobilisation
+    hawk1
+    close1
+    strict_border
+    sc_rule
+     
+    }
+	
 	set_politics = {
     	ruling_party = fandong
     	election_frequency = 48
@@ -116,6 +73,21 @@
         fandong = 100
     }
 }
+144.1.1 = {
+    oob = "RMI_144"
+    set_politics = {
+        ruling_party = fandong
+        election_frequency = 48
+        elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 0
+        guli = 3
+        neworder = 42
+        oldorder = 0
+        fandong = 55
+    }
+}
 146.1.1={
     oob = "RMI_146"
     
@@ -126,7 +98,6 @@
     close2
     strict_border
     sc_rule
-    type3_manpowerlv2
      
     
     }

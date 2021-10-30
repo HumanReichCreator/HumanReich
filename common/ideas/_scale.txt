@@ -21,8 +21,9 @@ ideas = {
 				stability_weekly = -0.001
 				stability_factor = -0.25
 
-				enemy_justify_war_goal_time = -0.1
-				generate_wargoal_tension = -0.15
+				justify_war_goal_time = -0.4
+				enemy_justify_war_goal_time = -0.2
+				generate_wargoal_tension = -1
 			}
 			default = yes
 		}
@@ -74,7 +75,7 @@ ideas = {
 				MONTHLY_POPULATION = 0.25
 				stability_factor = 0.1
 				conscription_factor = 0.05
-				# operative_slot = 1
+				operative_slot = 1
 			}
 			cost = 0
 			cancel_if_invalid = no
@@ -114,7 +115,7 @@ ideas = {
 			army_org_factor = 0.1
 			stability_factor = 0.15
 			conscription_factor = 0.1
-			operative_slot = 1
+			operative_slot = 2
 			
 	#	    war_impact_on_world_tension = 0.25			
 	#	    faction_impact_on_world_tension = 0.25
@@ -139,7 +140,7 @@ ideas = {
 				# UNITY_FACTOR = 0.1
 				army_org_factor = 0.1
 				conscription_factor = 0.15
-				operative_slot = 1
+				operative_slot = 2
 			}
 			cost = 0
 			cancel_if_invalid = no

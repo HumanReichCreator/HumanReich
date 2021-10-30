@@ -25,8 +25,6 @@
             
         #工程学 
             jichushuxue = 1
-            shuxuegongju = 1
-            waike = 1
 
         #专用工程学
 
@@ -48,16 +46,14 @@
     add_ideas = {
     type2_manpowerlv4
     Human
-    low_economic_mobilisation
     Village
     close2
-    hawk2
+    hawk1
     close_border
     forbidden_magic
     AKI_laiziqiushendezhichi_idea   
     AKI_gengduodetudi_idea
     }
-
     set_politics = {
     	ruling_party = neworder
     	election_frequency = 48
@@ -74,7 +70,7 @@
     
 }
 create_country_leader = {
-    # name = "Village Committee"
+    # name = "Council"
     name = "村委会"
     desc = ""
     picture = "gfx/leaders/ZYD/ZYD_council.dds"
@@ -84,8 +80,8 @@ create_country_leader = {
     }
 }
 create_country_leader = {
-    # name = "Village Committee"
-    name = "村委会"
+    # name = "Council"
+    name = "人类自治委员会"
     desc = ""
     picture = "gfx/leaders/ZYD/ZYD_council.dds"
     ideology = fandong_type
@@ -94,8 +90,8 @@ create_country_leader = {
     }
 }
 create_country_leader = {
-    # name = "Village Committee"
-    name = "村委会"
+    # name = "Council"
+    name = "人类自治委员会"
     desc = ""
     picture = "gfx/leaders/ZYD/ZYD_council.dds"
     ideology = neworder_type
@@ -104,7 +100,7 @@ create_country_leader = {
     }
 }
 create_country_leader = {
-    # name = "Village Committee"
+    # name = "Council"
     name = "村委会"
     desc = ""
     picture = "gfx/leaders/ZYD/ZYD_council.dds"
@@ -114,7 +110,7 @@ create_country_leader = {
     }
 }
 create_country_leader = {
-    # name = "Village Committee"
+    # name = "Council"
     name = "村委会"
     desc = ""
     picture = "gfx/leaders/ZYD/ZYD_council.dds"

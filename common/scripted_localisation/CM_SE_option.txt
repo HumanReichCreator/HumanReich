@@ -1,0 +1,38 @@
+#by CMCMC
+#Localisations
+#CM_SE_title  scripted loc for bigevent title
+#CM_SE_desc  scripted loc for flavor text content
+#CM_SE_btn  scripted loc for button text
+#Texture
+#CM_SE_getpicture  scripted loc for picture entry,sprites(loc_keys) need to be defined in a .gfx file
+
+
+defined_text = { 
+	name = CM_SE_btn
+		
+	text = {
+		trigger = {
+			check_variable = {global.CM_SE_event_id = 1 }
+		}
+		localization_key = CM_SE_btn_1
+	}
+	text = {
+		trigger = {
+			is_in_array = {
+    			array = global.CM_SE_event_id_array
+   				value = 2
+			}
+		}
+		localization_key = CM_SE_btn_2
+	}
+	
+	text = {
+		trigger = { 
+		#generic
+		}
+		localization_key = CM_SE_btn_missing
+	}	
+}
+
+
+

@@ -1,0 +1,754 @@
+FAIRY_AREA_CORE_MAKE = {
+    SCA_core_make = {
+		icon = generic_decision
+		available = {
+			
+		}
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+                not = {is_core_of = ROOT}
+				is_core_of = SCA
+			}
+		}
+		visible = {
+			is_fairy_area = yes 
+			has_country_flag = FIR_AREA_SCA_MAKE_CORE 
+            not = {
+                tag = SCA
+            }
+			
+		}
+
+		fire_only_once = yes
+		cost = var:ROOT.FIR_AREA_SCA_MC_cost 
+
+		days_re_enable = 0
+		days_remove = var:ROOT.FIR_AREA_SCA_MC_time 
+
+		#on_map_mode = map_only
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			FROM = {add_core_of = ROOT}
+		}
+		modifier = {
+			
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	SC2_core_make = {
+		icon = generic_decision
+		available = {
+			
+		}
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+                not = {is_core_of = ROOT}
+				is_core_of = SC2
+			}
+		}
+		visible = {
+			is_fairy_area = yes 
+			has_country_flag = FIR_AREA_SC2_MAKE_CORE 
+            not = {
+                tag = SC2
+            }
+			
+		}
+
+		fire_only_once = yes
+		cost = var:ROOT.FIR_AREA_SC2_MC_cost 
+
+		days_re_enable = 0
+		days_remove = var:ROOT.FIR_AREA_SC2_MC_time 
+
+		#on_map_mode = map_only
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			FROM = {add_core_of = ROOT}
+		}
+		modifier = {
+			
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	CIR_core_make = {
+		icon = generic_decision
+		available = {
+			
+		}
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+                not = {is_core_of = ROOT}
+				is_core_of = CIR
+			}
+		}
+		visible = {
+			is_fairy_area = yes 
+			has_country_flag = FIR_AREA_CIR_MAKE_CORE 
+            not = {
+                tag = CIR
+            }
+			
+		}
+
+		fire_only_once = yes
+		cost = var:ROOT.FIR_AREA_CIR_MC_cost 
+
+		days_re_enable = 0
+		days_remove = var:ROOT.FIR_AREA_CIR_MC_time 
+
+		#on_map_mode = map_only
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			FROM = {add_core_of = ROOT}
+		}
+		modifier = {
+			
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	LIL_core_make = {
+		icon = generic_decision
+		available = {
+			
+		}
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+                not = {is_core_of = ROOT}
+				is_core_of = LIL
+			}
+		}
+		visible = {
+			is_fairy_area = yes 
+			has_country_flag = FIR_AREA_LIL_MAKE_CORE 
+            not = {
+                tag = LIL
+            }
+			
+		}
+
+		fire_only_once = yes
+		cost = var:ROOT.FIR_AREA_LIL_MC_cost 
+
+		days_re_enable = 0
+		days_remove = var:ROOT.FIR_AREA_LIL_MC_time 
+
+		#on_map_mode = map_only
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			FROM = {add_core_of = ROOT}
+		}
+		modifier = {
+			
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	SGS_core_make = {
+		icon = generic_decision
+		available = {
+			
+		}
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				is_fully_controlled_by = ROOT
+                not = {is_core_of = ROOT}
+				is_core_of = SGS
+			}
+		}
+		visible = {
+			is_fairy_area = yes 
+			has_country_flag = FIR_AREA_SGS_MAKE_CORE 
+            not = {
+                tag = SGS
+            }
+			
+		}
+		
+		fire_only_once = yes
+		cost = var:ROOT.FIR_AREA_SGS_MC_cost 
+
+		days_re_enable = 0
+		days_remove = var:ROOT.FIR_AREA_SGS_MC_time 
+
+		#on_map_mode = map_only
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			FROM = {add_core_of = ROOT}
+		}
+		modifier = {
+			
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+}
+
+SC2_infl_category = {
+	SC2_simple_give_infl = {
+		visible = {
+			ROOT = {
+				SC2_can_infl = yes
+			}
+		}
+		available = {
+			
+		}
+		modifier = {
+		}
+		cost = 30
+		days_remove = 30
+		days_re_enable = 3
+		fire_only_once = no
+		complete_effect = {
+			add_to_variable = { ROOT.SC2_infl_value = 5 }
+			cal_FPA_infl = yes
+		}
+		remove_effect = {
+			
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				add = 30
+				SC2_need_pay_attention = yes
+			}
+		}
+	}
+	SC2_debug_give_infl = {
+		visible = {
+			ROOT = {
+				SC2_can_infl = yes
+			}
+			is_debug = yes
+		}
+		available = {
+			
+		}
+		modifier = {
+		}
+		cost = 30
+		days_remove = 3
+		days_re_enable = 3
+		fire_only_once = no
+		complete_effect = {
+			SC2 = { set_country_flag = FA_in_FPA_flg }
+			CIR = { set_country_flag = FA_in_FPA_flg }
+			LIL = { set_country_flag = FA_in_FPA_flg }
+			add_to_variable = { ROOT.SC2_infl_value = 50 }
+			set_variable = { CIR.SC2_infl_value = 25 }
+			set_variable = { LIL.SC2_infl_value = 25 }
+			cal_FPA_infl = yes
+
+		}
+		remove_effect = {
+			
+		}
+		ai_will_do = {
+			factor = 0
+			
+		}
+	}
+	CIR_debug_guli = {
+		visible = {
+			tag = sgs
+			is_debug = yes
+		}
+		available = {
+			
+		}
+		modifier = {
+		}
+		cost = 3
+		days_remove = 3
+		days_re_enable = 3
+		fire_only_once = no
+		complete_effect = {
+			CIR = { set_politics = { ruling_party = guli } }
+		}
+		remove_effect = {
+			
+		}
+		ai_will_do = {
+			factor = 0
+			
+		}
+	}
+	CIR_debug_authordemo = {
+		visible = {
+			tag = sgs
+			is_debug = yes
+		}
+		available = {
+			
+		}
+		modifier = {
+		}
+		cost = 3
+		days_remove = 3
+		days_re_enable = 3
+		fire_only_once = no
+		complete_effect = {
+			CIR = { set_politics = { ruling_party = authordemo } }
+		}
+		remove_effect = {
+			
+		}
+		ai_will_do = {
+			factor = 0
+			
+		}
+	}
+	CIR_debug_qinwai = {
+		visible = {
+			tag = sgs
+			is_debug = yes
+		}
+		available = {
+			
+		}
+		modifier = {
+		}
+		cost = 3
+		days_remove = 3
+		days_re_enable = 3
+		fire_only_once = no
+		complete_effect = {
+			CIR = { set_politics = { ruling_party = qinwai } }
+		}
+		remove_effect = {
+			
+		}
+		ai_will_do = {
+			factor = 0
+			
+		}
+	}
+	CIR_debug_neworder = {
+		visible = {
+			tag = sgs
+			is_debug = yes
+		}
+		available = {
+			
+		}
+		modifier = {
+		}
+		cost = 3
+		days_remove = 3
+		days_re_enable = 3
+		fire_only_once = no
+		complete_effect = {
+			CIR = { set_politics = { ruling_party = neworder } }
+		}
+		remove_effect = {
+			
+		}
+		ai_will_do = {
+			factor = 0
+			
+		}
+	}
+	
+	SC2_skip_infl = {
+		visible = {
+			ROOT = {
+				SC2_can_infl = yes
+			}
+			
+		}
+		available = {
+			or = {
+				has_government = oldorder
+				SGS_hawk_hold_meeting = yes
+			}
+		}
+		modifier = {
+		}
+		cost = 30
+		days_remove = 3
+		days_re_enable = 3
+		fire_only_once = no
+		complete_effect = {
+			set_country_flag = FA_SC2_skip_infl_to_war
+		}
+		remove_effect = {
+			
+		}
+		ai_will_do = {
+			factor = 0
+			
+		}
+	}
+}
+
+lake_deci_category = {
+	lake_releport_116_to_115 = {
+		visible = {
+			has_country_flag = FA_build_lake_road
+			controls_state = 116
+			owns_state = 116
+			controls_state = 115
+			owns_state = 115
+		}
+		available = {
+			not = { has_country_flag = clr_country_flag }
+		}
+		modifier = {
+		}
+		cost = 30
+		days_remove = 30
+		days_re_enable = 3
+		fire_only_once = no
+		complete_effect = {
+			116 = {
+				teleport_armies = {
+					
+					to_state = 115
+				}
+			}
+			set_country_flag = lake_releport_CD
+		}
+		remove_effect = {
+			clr_country_flag = lake_releport_CD
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	lake_releport_116_to_128 = {
+		visible = {
+			has_country_flag = FA_build_lake_road
+			controls_state = 116
+			owns_state = 116
+			controls_state = 128
+			owns_state = 128
+		}
+		available = {
+			not = { has_country_flag = clr_country_flag }
+		}
+		modifier = {
+		}
+		cost = 30
+		days_remove = 30
+		days_re_enable = 3
+		fire_only_once = no
+		complete_effect = {
+			116 = {
+				teleport_armies = {
+					
+					to_state = 128
+				}
+			}
+			set_country_flag = lake_releport_CD
+		}
+		remove_effect = {
+			clr_country_flag = lake_releport_CD
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	lake_releport_115_to_116 = {
+		visible = {
+			has_country_flag = FA_build_lake_road
+			controls_state = 115
+			owns_state = 115
+			controls_state = 116
+			owns_state = 116
+		}
+		available = {
+			not = { has_country_flag = clr_country_flag }
+		}
+		modifier = {
+		}
+		cost = 30
+		days_remove = 30
+		days_re_enable = 3
+		fire_only_once = no
+		complete_effect = {
+			115 = {
+				teleport_armies = {
+					
+					to_state = 116
+				}
+			}
+			set_country_flag = lake_releport_CD
+		}
+		remove_effect = {
+			clr_country_flag = lake_releport_CD
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	lake_releport_115_to_128 = {
+		visible = {
+			has_country_flag = FA_build_lake_road
+			controls_state = 115
+			owns_state = 115
+			controls_state = 128
+			owns_state = 128
+		}
+		available = {
+			not = { has_country_flag = clr_country_flag }
+		}
+		modifier = {
+		}
+		cost = 30
+		days_remove = 30
+		days_re_enable = 3
+		fire_only_once = no
+		complete_effect = {
+			115 = {
+				teleport_armies = {
+					
+					to_state = 128
+				}
+			}
+			set_country_flag = lake_releport_CD
+		}
+		remove_effect = {
+			clr_country_flag = lake_releport_CD
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	lake_releport_128_to_116 = {
+		visible = {
+			has_country_flag = FA_build_lake_road
+			controls_state = 128
+			owns_state = 128
+			controls_state = 116
+			owns_state = 116
+		}
+		available = {
+			not = { has_country_flag = clr_country_flag }
+		}
+		modifier = {
+		}
+		cost = 30
+		days_remove = 30
+		days_re_enable = 3
+		fire_only_once = no
+		complete_effect = {
+			128 = {
+				teleport_armies = {
+					
+					to_state = 116
+				}
+			}
+			set_country_flag = lake_releport_CD
+		}
+		remove_effect = {
+			clr_country_flag = lake_releport_CD
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	lake_releport_128_to_115 = {
+		visible = {
+			has_country_flag = FA_build_lake_road
+			controls_state = 128
+			owns_state = 128
+			controls_state = 115
+			owns_state = 115
+		}
+		available = {
+			not = { has_country_flag = clr_country_flag }
+		}
+		modifier = {
+		}
+		cost = 30
+		days_remove = 30
+		days_re_enable = 3
+		fire_only_once = no
+		complete_effect = {
+			128 = {
+				teleport_armies = {
+					
+					to_state = 115
+				}
+			}
+			set_country_flag = lake_releport_CD
+		}
+		remove_effect = {
+			clr_country_flag = lake_releport_CD
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	
+	
+	CIR_guli_task_one_misson = {
+		allowed = { always = no  }
+		available = {
+			has_completed_focus = SGS_integrate_SCA_focus	
+			has_completed_focus = SGS_integrate_CIR_focus
+			has_completed_focus = SGS_integrate_LIL_focus		# 任务目标
+			has_country_flag = sgs_all_integrated_peacelly
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = var:CIR.CIR_TASK_time
+		timeout_effect = {
+			country_event = { id = sgs.4031 }
+			#不服
+		}
+		complete_effect = {
+			#服你
+			country_event = { id = sgs.4034 }
+		}
+	}
+	CIR_authordemo_task_one_misson = {
+		allowed = { always = no  }
+		available = {
+			or = {
+				has_equipment = { support_equipment_1 > 1000 }
+				has_equipment = { support_equipment_2 > 1000 }
+			}# 任务目标
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = var:CIR.CIR_TASK_time
+		timeout_effect = {
+			country_event = { id = sgs.4031 }
+			#不服
+		}
+		complete_effect = {
+			#服你
+			country_event = { id = sgs.4034 }
+		}
+	}
+	CIR_qinwai_task_one_misson = {
+		allowed = { always = no  }
+		available = {
+			has_stability > 0.65	# 任务目标
+			has_political_power > 1000
+			SGS_dove_get_more = yes
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = var:CIR.CIR_TASK_time
+		timeout_effect = {
+			country_event = { id = sgs.4031 }
+			#不服
+		}
+		complete_effect = {
+			#服你
+			country_event = { id = sgs.4034 }
+		}
+	}
+	CIR_neworder_task_one_misson = {
+		allowed = { always = no  }
+		available = {
+			num_divisions > 150
+			SGS_hawk_have_supporter = yes
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = var:CIR.CIR_TASK_time
+		timeout_effect = {
+			country_event = { id = sgs.4031 }
+			#不服
+		}
+		complete_effect = {
+			#服你
+			country_event = { id = sgs.4034 }
+		}
+	}
+	CIR_neworder_elite_task_one_misson = {
+		allowed = { always = no  }
+		available = {
+			has_army_experience = 300
+			SGS_hawk_get_more = yes
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		selectable_mission = yes
+		days_mission_timeout = var:CIR.CIR_TASK_time
+		timeout_effect = {
+			country_event = { id = sgs.4031 }
+			#不服
+		}
+		complete_effect = {
+			#服你
+			country_event = { id = sgs.4034 }
+		}
+	}
+
+	debuff_prepare_fairy_funeral = {
+		# This is our mission id
+		available = {
+			# 任务目标
+			#always = no
+		}
+		visible = {
+			always = no
+		}
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 3
+			political_power_gain = -0.5
+		}
+		remove_effect = {
+			country_event = { id = sgs.40623 }
+		}
+	}
+}

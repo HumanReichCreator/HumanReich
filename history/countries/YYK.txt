@@ -12,15 +12,12 @@
     
 }
 146.1.1 = {
-    set_country_flag = bunengsuiyiqiehuanzhengti
     # set_cosmetic_tag = YYK_B
     set_technology = {
         #通用武器线
         spell_card1 = 1
-        linglicunchu = 1
-        spell_card2 = 1
         spear1 = 1
-        linglizhufu = 1
+        linglicunchu = 1
         #辅助
 
         #专用辅助
@@ -37,7 +34,6 @@
             
         #工程学 
         jichushuxue = 1
-        shuxuegongju = 1
 
         #专用工程学
 
@@ -48,7 +44,7 @@
         #专用工业
 
         #种族
-        shitihua1 = 1
+            
     }
     
 }
@@ -56,46 +52,25 @@ set_technology = {
     ghost_tech = 1
 }
 146.1.1={
-    country_lock_all_division_template = yes
     oob = "YYK_146"
     set_major = yes
     
-    NG1 = {
-        subject_level3 = yes
-    }
-    NG2 = {
-        subject_level3 = yes
-    }
-    NG3 = {
-        subject_level3 = yes
-    }
-    NG4 = {
-        subject_level3 = yes
-    }
+    puppet = NG1
+    puppet = NG2
+    puppet = NG3
+    puppet = NG4
     give_guarantee = HUB
-    set_country_flag = ghost_jinzhizhanju
-    set_country_flag = world_limit
-    set_variable = { YYK_sihoushijie_conscription = -0.3 }
-    add_dynamic_modifier = {
-        modifier = YYK_sihoushijie_dy
-    }
+    
     add_ideas = {
-
     Ghost
     Village
     open0
     dove2
     loose_border
     free_magic
-    type0_manpowerlv2
+    manpowerlv1
     pingmingehe_idea
-
-    YYK_sijidezhicai_idea
-    YYK_sihoushijie_idea
-    YYK_duibayunzideyuanzhu_idea
-    YYK_mingjiedongdang6_idea
     }
-    
     set_politics = {
     	ruling_party = oldorder
     	election_frequency = 48
@@ -123,7 +98,7 @@ create_country_leader = {
     # name = "Saigyouji Yuyuko"
     name = "西行寺幽幽子"
     picture = "YYK_yyk.dds"
-    ideology = qinwai_type
+    ideology = neworder_type
     traits = {
 
     }

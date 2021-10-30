@@ -4,13 +4,14 @@ state={
 	name="STATE_201"
 	resources={
 		energy = 8
-		powder = 0.0
-		metal = 0.0
+		powder=0.000
+		metal=0.000
 		gas=35.000
 		crystal=0.000
 	}
 
 	history={
+			owner = YKR
 		146.1.1 = {
 			owner = YKR
 			add_core_of = YKR

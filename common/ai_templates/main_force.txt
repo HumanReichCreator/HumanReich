@@ -13,7 +13,7 @@ ma_infantry_generic = {
 		}
 	}
 
-	match_to_count = 0.01
+	match_to_count = 0.10
 	
 	ma_infantry140before = {
 	
@@ -48,8 +48,8 @@ ma_infantry_generic = {
 			1.10 #-- defense
 			1.10 #-- breakthrough
 			0.60 #-- hardness
-			100.00 #-- soft_attack
-			50.00 #-- hard_attack
+			1.00 #-- soft_attack
+			0.00 #-- hard_attack
 			0.10 #-- recon
 			0.01 #-- entrenchment
 			0.10 #-- initiative
@@ -150,8 +150,8 @@ ma_infantry_generic = {
 			1.10 #-- defense
 			1.10 #-- breakthrough
 			0.60 #-- hardness
-			100.00 #-- soft_attack
-			50.00 #-- hard_attack
+			1.00 #-- soft_attack
+			0.00 #-- hard_attack
 			0.10 #-- recon
 			0.01 #-- entrenchment
 			0.10 #-- initiative
@@ -255,8 +255,8 @@ ma_infantry_generic = {
 			1.10 #-- defense
 			1.10 #-- breakthrough
 			0.60 #-- hardness
-			100.00 #-- soft_attack
-			50.00 #-- hard_attack
+			1.00 #-- soft_attack
+			0.00 #-- hard_attack
 			0.10 #-- recon
 			0.01 #-- entrenchment
 			0.10 #-- initiative
@@ -367,8 +367,8 @@ ma_infantry_generic = {
 			1.10 #-- defense
 			1.10 #-- breakthrough
 			0.60 #-- hardness
-			100.00 #-- soft_attack
-			50.00 #-- hard_attack
+			1.00 #-- soft_attack
+			0.00 #-- hard_attack
 			0.10 #-- recon
 			0.01 #-- entrenchment
 			0.10 #-- initiative
@@ -462,7 +462,7 @@ ma_infantry_generic = {
 
 			modifier = {
 				factor = 0
-				not = { has_tech = waike }
+				has_tech = lingben
 			}
 			modifier = {
 				factor = 0
@@ -479,8 +479,8 @@ ma_infantry_generic = {
 			1.10 #-- defense
 			1.10 #-- breakthrough
 			0.60 #-- hardness
-			100.00 #-- soft_attack
-			50.00 #-- hard_attack
+			1.00 #-- soft_attack
+			0.00 #-- hard_attack
 			0.10 #-- recon
 			0.01 #-- entrenchment
 			0.10 #-- initiative
@@ -587,8 +587,8 @@ ma_infantry_generic = {
 			1.10 #-- defense
 			1.10 #-- breakthrough
 			0.60 #-- hardness
-			100.00 #-- soft_attack
-			50.00 #-- hard_attack
+			1.00 #-- soft_attack
+			0.00 #-- hard_attack
 			0.10 #-- recon
 			0.01 #-- entrenchment
 			0.10 #-- initiative
@@ -677,11 +677,11 @@ sc_infantry_generic = {
 
 		modifier = {
 			factor = 0
-			not = { has_tech = waike }
+			has_tech = lingben
 		}
 	}
 
-	match_to_count = 0.01
+	match_to_count = 0.10
 	
 	sc_infantry140before = {
 	
@@ -699,7 +699,7 @@ sc_infantry_generic = {
 
 			modifier = {
 				factor = 0
-				not = { has_tech = waike }
+				has_tech = lingben
 			}
 			modifier = {
 				factor = 0
@@ -716,8 +716,8 @@ sc_infantry_generic = {
 			1.10 #-- defense
 			1.10 #-- breakthrough
 			0.60 #-- hardness
-			100.00 #-- soft_attack
-			50.00 #-- hard_attack
+			1.00 #-- soft_attack
+			0.00 #-- hard_attack
 			0.10 #-- recon
 			0.01 #-- entrenchment
 			0.10 #-- initiative
@@ -801,7 +801,7 @@ sc_infantry_generic = {
 
 			modifier = {
 				factor = 0
-				not = { has_tech = waike }
+				has_tech = lingben
 			}
 			modifier = {
 				factor = 0
@@ -818,8 +818,8 @@ sc_infantry_generic = {
 			1.10 #-- defense
 			1.10 #-- breakthrough
 			0.60 #-- hardness
-			100.00 #-- soft_attack
-			50.00 #-- hard_attack
+			1.00 #-- soft_attack
+			0.00 #-- hard_attack
 			0.10 #-- recon
 			0.01 #-- entrenchment
 			0.10 #-- initiative
@@ -906,7 +906,7 @@ sc_infantry_generic = {
 
 			modifier = {
 				factor = 0
-				not = { has_tech = waike }
+				has_tech = lingben
 			}
 			modifier = {
 				factor = 0
@@ -923,8 +923,8 @@ sc_infantry_generic = {
 			1.10 #-- defense
 			1.10 #-- breakthrough
 			0.60 #-- hardness
-			100.00 #-- soft_attack
-			50.00 #-- hard_attack
+			1.00 #-- soft_attack
+			0.00 #-- hard_attack
 			0.10 #-- recon
 			0.01 #-- entrenchment
 			0.10 #-- initiative
@@ -1018,7 +1018,7 @@ sc_infantry_generic = {
 
 			modifier = {
 				factor = 0
-				not = { has_tech = waike }
+				has_tech = lingben
 			}
 			modifier = {
 				factor = 0
@@ -1035,8 +1035,8 @@ sc_infantry_generic = {
 			1.10 #-- defense
 			1.10 #-- breakthrough
 			0.60 #-- hardness
-			100.00 #-- soft_attack
-			50.00 #-- hard_attack
+			1.00 #-- soft_attack
+			0.00 #-- hard_attack
 			0.10 #-- recon
 			0.01 #-- entrenchment
 			0.10 #-- initiative
@@ -1130,7 +1130,7 @@ sc_infantry_generic = {
 
 			modifier = {
 				factor = 0
-				not = { has_tech = waike }
+				has_tech = lingben
 			}
 			modifier = {
 				factor = 0
@@ -1147,8 +1147,8 @@ sc_infantry_generic = {
 			1.10 #-- defense
 			1.10 #-- breakthrough
 			0.60 #-- hardness
-			100.00 #-- soft_attack
-			50.00 #-- hard_attack
+			1.00 #-- soft_attack
+			0.00 #-- hard_attack
 			0.10 #-- recon
 			0.01 #-- entrenchment
 			0.10 #-- initiative
@@ -1242,7 +1242,7 @@ sc_infantry_generic = {
 
 			modifier = {
 				factor = 0
-				not = { has_tech = waike }
+				has_tech = lingben
 			}
 		}
 		
@@ -1255,8 +1255,8 @@ sc_infantry_generic = {
 			1.10 #-- defense
 			1.10 #-- breakthrough
 			0.60 #-- hardness
-			100.00 #-- soft_attack
-			50.00 #-- hard_attack
+			1.00 #-- soft_attack
+			0.00 #-- hard_attack
 			0.10 #-- recon
 			0.01 #-- entrenchment
 			0.10 #-- initiative

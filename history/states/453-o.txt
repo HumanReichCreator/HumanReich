@@ -3,13 +3,14 @@ state={
 	id=453
 	name="STATE_453"
 	resources={
-		powder = 6.0
-		metal = 0.0
+		powder=5.000
+		metal=0.000
 		gas=2.000
 		crystal=0.000
 	}
 
 	history={
+			owner = SAK
 		146.1.1 = {
 			owner = SAK
 			add_core_of = HB1
@@ -27,7 +28,7 @@ state={
 	provinces={
 		214 732 794 1477 1552 1906 2400 2418 6338 6341 6343 6345 6346 6347 6350 6352 6353 6357 6359 6363 6364 6369 
 	}
-	manpower=8728
+	manpower=628
 	buildings_max_level_factor=1.000
 	state_category=s2
 }

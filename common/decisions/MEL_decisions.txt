@@ -18,7 +18,7 @@ MEL_Colonization = {
 		ai_will_do = {
 			factor = 1000
 		}
-		cost = 100
+		cost = 70
 		fire_only_once = yes
 		days_remove = 105
     
@@ -69,7 +69,7 @@ MEL_Colonization = {
 		ai_will_do = {
 			factor = 1000
 		}
-		cost = 75
+		cost = 50
 		fire_only_once = yes
 		days_remove = 75
     
@@ -120,7 +120,7 @@ MEL_Colonization = {
 		ai_will_do = {
 			factor = 1000
 		}
-		cost = 75
+		cost = 50
 		fire_only_once = yes
 		days_remove = 75
     
@@ -171,7 +171,7 @@ MEL_Colonization = {
 		ai_will_do = {
 			factor = 1000
 		}
-		cost = 75
+		cost = 50
 		fire_only_once = yes
 		days_remove = 75
     
@@ -217,7 +217,7 @@ MEL_Colonization = {
 		ai_will_do = {
 			factor = 1000
 		}
-		cost = 75
+		cost = 50
 		fire_only_once = yes
 		days_remove = 75
     
@@ -263,7 +263,7 @@ MEL_Colonization = {
 		ai_will_do = {
 			factor = 1000
 		}
-		cost = 75
+		cost = 50
 		fire_only_once = yes
 		days_remove = 75
     
@@ -309,7 +309,7 @@ MEL_Colonization = {
 		ai_will_do = {
 			factor = 1000
 		}
-		cost = 75
+		cost = 50
 		fire_only_once = yes
 		days_remove = 75
     
@@ -360,7 +360,7 @@ MEL_Colonization = {
 		ai_will_do = {
 			factor = 1000
 		}
-		cost = 60
+		cost = 40
 		fire_only_once = yes
 		days_remove = 60
     
@@ -406,7 +406,7 @@ MEL_Colonization = {
 		ai_will_do = {
 			factor = 1000
 		}
-		cost = 60
+		cost = 40
 		fire_only_once = yes
 		days_remove = 60
     
@@ -451,9 +451,8 @@ MEL_Emergency = {
       NOT = { has_war_with = GH1 }
       
       # 2
-      GH1 = {
-        before_declare_war = yes
-      }
+      GH1 = { NOT = { is_subject_of = MEL is_subject_of = SGS is_in_faction_with = MEL } }
+      GH1 = { is_neighbor_of = ROOT }
 		}
 	
 		ai_will_do = {
@@ -517,9 +516,8 @@ MEL_Emergency = {
       NOT = { has_war_with = GH2 }
       
       # 2
-      GH2 = {
-        before_declare_war = yes
-      }
+      GH2 = { NOT = { is_subject_of = MEL  is_subject_of = SGS is_in_faction_with = MEL } }
+      GH2 = { is_neighbor_of = ROOT }
 		}
 	
 		ai_will_do = {
@@ -583,9 +581,8 @@ MEL_Emergency = {
       NOT = { has_war_with = GH3 }
       
       # 2
-      GH3 = {
-        before_declare_war = yes
-      }
+      GH3 = { NOT = { is_subject_of = MEL  is_subject_of = SGS is_in_faction_with = MEL } }
+      GH3 = { is_neighbor_of = ROOT }
 		}
 	
 		ai_will_do = {
@@ -650,9 +647,8 @@ MEL_Emergency = {
       NOT = { has_war_with = HU3 }
       
       # 2
-      HU3 = {
-        before_declare_war = yes
-      }
+      HU3 = { NOT = { is_subject_of = MEL  is_subject_of = SGS is_in_faction_with = MEL } }
+      HU3 = { is_neighbor_of = ROOT }
 		}
 	
 		ai_will_do = {
@@ -724,7 +720,7 @@ MEL_Scorched_Earth = {
 		ai_will_do = {
 			factor = 1000
 		}
-		cost = 150
+		cost = 30
 		fire_only_once = yes
 		days_remove = 45
     
@@ -782,7 +778,7 @@ MEL_Scorched_Earth = {
 		ai_will_do = {
 			factor = 1000
 		}
-		cost = 150
+		cost = 30
 		fire_only_once = yes
 		days_remove = 45
     
@@ -841,7 +837,7 @@ MEL_Scorched_Earth = {
 		ai_will_do = {
 			factor = 1000
 		}
-		cost = 150
+		cost = 30
 		fire_only_once = yes
 		days_remove = 45
     
@@ -888,7 +884,7 @@ MEL_Scorched_Earth = {
 		ai_will_do = {
 			factor = 1000
 		}
-		cost = 80
+		cost = 15
 		fire_only_once = yes
 		days_remove = 23
     
@@ -933,7 +929,7 @@ MEL_Scorched_Earth = {
 		ai_will_do = {
 			factor = 1000
 		}
-		cost = 80
+		cost = 15
 		fire_only_once = yes
 		days_remove = 23
     
@@ -978,7 +974,7 @@ MEL_Scorched_Earth = {
 		ai_will_do = {
 			factor = 1000
 		}
-		cost = 80
+		cost = 15
 		fire_only_once = yes
 		days_remove = 23
     
@@ -1024,7 +1020,7 @@ MEL_Scorched_Earth = {
 		ai_will_do = {
 			factor = 1000
 		}
-		cost = 150
+		cost = 30
 		fire_only_once = yes
 		days_remove = 45
     
@@ -1069,7 +1065,7 @@ MEL_Scorched_Earth = {
 		ai_will_do = {
 			factor = 1000
 		}
-		cost = 150
+		cost = 30
 		fire_only_once = yes
 		days_remove = 45
     
@@ -1128,7 +1124,7 @@ MEL_Scorched_Earth = {
 		ai_will_do = {
 			factor = 1000
 		}
-		cost = 300
+		cost = 75
 		fire_only_once = yes
 		days_remove = 113
     
@@ -1187,7 +1183,7 @@ MEL_Scorched_Earth = {
 		ai_will_do = {
 			factor = 1000
 		}
-		cost = 150
+		cost = 30
 		fire_only_once = yes
 		days_remove = 45
     
@@ -1246,7 +1242,7 @@ MEL_Scorched_Earth = {
 		ai_will_do = {
 			factor = 1000
 		}
-		cost = 150
+		cost = 30
 		fire_only_once = yes
 		days_remove = 45
     

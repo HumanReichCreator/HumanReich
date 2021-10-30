@@ -1,4 +1,5 @@
 ﻿capital = 291
+
 146.1.1 = {
     set_technology = {
         #通用武器线
@@ -50,7 +51,6 @@
         #种族
             
     }
-    
 }
 144.1.1={
     oob = "TEST"
@@ -84,14 +84,13 @@
     set_country_flag = bunengqie_qinwai
     
     add_ideas = {
-        Magician
-        Shrine
-        open1
-        dove3
-        normal_border
-        sc_rule
-        srb_daojiaotansuojingshen_o_idea
-        manpowerlv1
+    God
+    Shrine
+    open0
+    dove1
+    normal_border
+    sc_rule
+ 
     }
 
     set_politics = {
@@ -100,11 +99,12 @@
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 8
-        guli = 55
-        neworder = 37
+        qinwai = 20
+        guli = 70
+        neworder = 0
         oldorder = 0
         fandong = 0
+        authordemo = 10
     }
 }
 create_country_leader = {

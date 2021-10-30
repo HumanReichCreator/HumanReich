@@ -5,12 +5,13 @@ state={
 	resources={
 
 		powder = 0.0
-		metal = 0.0
+		metal = 0
 		gas = 0.0
 		crystal = 20.0
 	}
 
 	history={
+			owner = YYK
        	146.1.1 = {
 			owner = YYK
 			add_core_of = YYK
@@ -25,6 +26,6 @@ state={
 		413 745 764 880 1359 1604 1765 1899 2281 2843 
 	}
 	state_category=s7
-	manpower=441895.0
+	manpower=91895.0
 	buildings_max_level_factor=1.000
 }

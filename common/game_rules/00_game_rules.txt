@@ -159,6 +159,11 @@ NMS_paths = {
 		text = "NMS_path_neworder"
 		desc = " "
 	}
+	option = {
+		name = "NMS_path_neworder2"
+		text = "NMS_path_neworder2"
+		desc = " "
+	}
 	default = {
 		name = "path_random"
 		text = path_random
@@ -261,38 +266,20 @@ AKI_paths = {
 		desc = " "
 	}
 }
-YYK_paths = {
-	name = "YYK_paths"
-	group = "PATHS"
+
+leader_name = {
+	name = "ENGLISH_TRANSLATION"
+	group = "LEADERS"
 	option = {
-		name = "YYK_path_guli"
-		text = "YYK_path_guli"
-		desc = " "
-	}
-	option = {
-		name = "YYK_path_qinwai"
-		text = "YYK_path_qinwai"
-		desc = " "
-	}
-	option = {
-		name = "YYK_path_neworder"
-		text = "YYK_path_neworder"
-		desc = " "
-	}
-	option = {
-		name = "YYK_path_fandong"
-		text = "YYK_path_fandong"
-		desc = " "
-	}
-	option = {
-		name = "YYK_path_oldorder"
-		text = "YYK_path_oldorder"
-		desc = " "
+		name = "ENGLISH"
+		text = LEADER_NAME_ENGLISH
+		desc = "LEADER_NAME_ENGLISH_DESC"
+		allow_achievements = yes
 	}
 	default = {
-		name = "path_random"
-		text = path_random
-		desc = " "
+		name = "CHINESE"
+		text = "LEADER_NAME_CHINESE"
+		desc = "LEADER_NAME_CHINESE_DESC"
 	}
 }
 

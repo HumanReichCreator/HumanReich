@@ -1,9 +1,7 @@
 SEJ_category = {
     SEJ_yaoqingjiaru = {
-        allowed = {
+        visible = {
             tag = SEJ
-        }
-        target_root_trigger = {
             has_completed_focus = SEJ_xiangjiumengyouyouhao
         }
         target_trigger = {
@@ -20,14 +18,6 @@ SEJ_category = {
                 }  
             }
         }
-        targets = {
-            TKM KAG WAK SBK
-        }
-        visible = {
-            FROM = {
-                exists = yes
-            }
-        }
         available = {
             ROOT = {
                 is_faction_leader = yes
@@ -38,6 +28,7 @@ SEJ_category = {
             FROM = {
                 is_in_faction = no
             }
+              
         }
 
         cost = 100

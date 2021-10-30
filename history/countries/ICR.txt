@@ -44,15 +44,11 @@
         caogenchuantong2 = 1
             
     }
-    
 }
 146.1.1={
     # set_cosmetic_tag = NMS_nue
     # set_cosmetic_tag = NMS_SRB
     # set_cosmetic_tag = NMS_youkai
-    set_truce = {target = HKR days = 300}
-    set_truce = {target = HUM days = 300}
-    set_truce = {target = ZBT days = 300}
     oob = "ICR_146"
     # set_research_slots = 5
     # Starting tech
@@ -68,15 +64,15 @@
     free_magic
     }
     set_politics = {
-    	ruling_party = neworder
+    	ruling_party = guli
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 15
-        guli = 5
-        neworder = 80
-        oldorder = 0
+        qinwai = 0
+        guli = 80
+        neworder = 15
+        oldorder = 5
         fandong = 0
     }
 }

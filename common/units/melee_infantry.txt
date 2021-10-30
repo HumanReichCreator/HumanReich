@@ -37,6 +37,8 @@ sub_units = {
 		default_morale = 0.06
 		manpower = 10
 
+		defense = 0.2
+
 		#Misc Abilities
 		training_time = 80
 		suppression = 1
@@ -71,9 +73,6 @@ sub_units = {
 		}
 
 		combat_width = 45
-
-		defense = -0.7
-		armor_value = -0.6
 		
 		#Size Definitions
 		max_organisation = 25

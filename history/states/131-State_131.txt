@@ -4,9 +4,11 @@ state={
 	name="STATE_131"
 
 	history={
+			owner = SGS
 		143.7.1 = {
-			owner = PRI
+			owner = SGS
 			add_core_of = PRI
+			add_core_of = SGS
 			buildings = {
 				infrastructure =3
 				industrial_complex = 0
@@ -16,8 +18,9 @@ state={
 
 		}
 		146.1.1 = {
-			owner = PRI
+			owner = SGS
 			add_core_of = PRI
+			add_core_of = SGS
 			buildings = {
 				infrastructure =3
 				industrial_complex = 0
@@ -32,7 +35,7 @@ state={
 	provinces={
 		217 1043 1421 1975 2518 5449 
 	}
-	manpower=30012.0
+	manpower=1502.0
 	buildings_max_level_factor=1.000
 	state_category=s2
 }
