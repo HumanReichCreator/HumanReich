@@ -15,6 +15,9 @@
                     RE_Netherworld_ratio > 0.5
                 }
             }
+            not = {
+                has_country_flag = world_limit
+            }
         }
 
         cost = 150
@@ -63,6 +66,9 @@
                 check_variable = {
                     RE_Gensokyo_ratio > 0.5
                 }
+            }
+            not = {
+                has_country_flag = world_limit
             }
         }
 
@@ -113,6 +119,9 @@
                     RE_Underground_ratio > 0.5
                 }
             }
+            not = {
+                has_country_flag = world_limit
+            }
         }
 
         cost = 150
@@ -162,6 +171,9 @@
                     RE_Celestial_ratio > 0.5
                 }
             }
+            not = {
+                has_country_flag = world_limit
+            }
         }
 
         cost = 150
@@ -210,6 +222,9 @@
                 check_variable = {
                     RE_Hell_ratio > 0.5
                 }
+            }
+            not = {
+                has_country_flag = world_limit
             }
         }
 
@@ -636,7 +651,7 @@
 #         }
 #     }
 
-#     Gensokyo_region2_claim = { #现代人间之里地区
+#     Gensokyo_region2_claim = { #现代人类村落地区
 #         visible = {
 #             not = {
 #                 has_country_flag = formed_before
@@ -691,7 +706,7 @@
 #         }
 #     }
 
-#     Gensokyo_region3_claim = { #人间之里远西南地区
+#     Gensokyo_region3_claim = { #人类村落远西南地区
 #         visible = {
 #             not = {
 #                 has_country_flag = formed_before
@@ -748,7 +763,7 @@
 #         }
 #     }
 
-#     Gensokyo_region4_claim = { #人间之里外围妖怪区
+#     Gensokyo_region4_claim = { #人类村落外围妖怪区
 #         visible = {
 #             not = {
 #                 has_country_flag = formed_before

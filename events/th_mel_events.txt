@@ -1,0 +1,119 @@
+﻿add_namespace = mel
+##########事件###########
+country_event = {  #再考虑我们和妖精的关系
+	id = mel.1
+	title = mel.1.t
+	desc = mel.1.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+	    or = {
+        NOT = { country_exists = HU3 }
+		HU3 = { is_subject = yes }    
+        has_global_flag = HU3_white_MEL_FLAG
+	    }
+		tag = MEL
+	    is_subject = no
+        has_war = no
+        has_idea = SGS_tuanjiexieding_idea
+        country_exists = SGS 
+	    SGS = { is_subject = no }
+	    SGS = { has_war = no }
+	}
+
+	option = { 
+		name = mel.1.1
+
+		ai_chance = {
+			base = 75
+		}
+
+      add_political_power = 100
+
+	}
+
+	option = { 
+		name = mel.1.2
+
+		ai_chance = {
+			base = 75
+		}
+
+      add_political_power = -50
+
+      remove_ideas = SGS_tuanjiexieding_idea
+
+		add_ai_strategy = {
+			type = antagonize
+			id = "SGS"
+			value = 200
+		}
+
+		diplomatic_relation = {
+		    country = SGS
+		    relation = guarantee
+		    active = no
+		}
+
+			every_state = {
+				limit = { 
+					is_core_of = SGS 
+				}
+				add_claim_by = MEL
+			}
+
+		SGS = {
+			country_event = { id = mel.2 days = 1 random = 1 }
+		}
+
+	}
+
+}
+
+country_event = {  #你怎么能？！
+	id = mel.2
+	title = mel.2.t
+	desc = mel.2.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = mel.2.1
+
+      add_political_power = -50
+
+      remove_ideas = SGS_tuanjiexieding_idea
+
+		add_ai_strategy = {
+			type = antagonize
+			id = "MEL"
+			value = 200
+		}
+
+		diplomatic_relation = {
+		    country = MEL
+		    relation = guarantee
+		    active = no
+		}
+
+			every_state = {
+				limit = { 
+					is_core_of = MEL 
+				}
+				add_claim_by = SGS
+			}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+
+}
+

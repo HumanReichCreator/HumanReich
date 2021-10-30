@@ -7,12 +7,247 @@ leader_traits = {
 		}
 		
 		modifier = {
-			army_morale_factor = 0.4
+			army_morale_factor = 0.25
 		}
 		non_shared_modifier = {
-			experience_gain_factor = 0.5
-			wounded_chance_factor = -0.35
+			experience_gain_factor = 0.25
 		}
 		
+	}
+
+	th_trait_qianxianzhandou = { 
+		type = { land }
+		trait_type = personality_trait
+		allowed = {
+			always = no
+		}
+		non_shared_modifier = {
+			experience_gain_factor = 0.25
+		}
+		modifier = {
+			army_morale_factor = 0.25
+			land_reinforce_rate = 0.1
+		}
+		non_shared_modifier = {
+			wounded_chance_factor = 1
+		}
+
+		corps_commander_modifier = {
+			max_commander_army_size = -12
+		}
+		field_marshal_modifier = {
+			max_army_group_size = -3
+		}
+
+		attack_skill_factor = 1
+		defense_skill_factor = 1
+		planning_skill_factor = -1
+		# logistics_skill_factor = 1
+	}
+	th_trait_jijiacaokongzhe = { 
+		type = { land }
+		trait_type = personality_trait
+		
+		non_shared_modifier = {
+
+		}
+
+		modifier = {
+			modifier_army_sub_unit_sc_shield_tank_attack_factor = 0.10
+			modifier_army_sub_unit_sc_shield_tank_defence_factor = 0.10
+			modifier_army_sub_unit_ma_shield_tank_attack_factor = 0.10
+			modifier_army_sub_unit_ma_shield_tank_defence_factor = 0.10
+		}	
+		trait_xp_factor = {
+			panzer_leader = 1
+		}
+
+		attack_skill_factor = 1
+		# defense_skill_factor = 1
+		planning_skill_factor = 1
+		# logistics_skill_factor = 1
+	}
+	th_trait_tezhongzhuanjia = { 
+		type = { land }
+		trait_type = personality_trait
+		
+		non_shared_modifier = {
+
+		}
+
+		modifier = {
+			modifier_army_sub_unit_ma_sf_infantry_attack_factor = 0.1
+			modifier_army_sub_unit_ma_sf_infantry_defence_factor = 0.1
+			modifier_army_sub_unit_sc_sf_infantry_attack_factor = 0.1
+			modifier_army_sub_unit_sc_sf_infantry_defence_factor = 0.1
+			modifier_army_sub_unit_ma_light_infantry_defence_factor = 0.1
+			modifier_army_sub_unit_ma_light_infantry_attack_factor = 0.1
+			modifier_army_sub_unit_sc_light_infantry_defence_factor = 0.1
+			modifier_army_sub_unit_sc_light_infantry_attack_factor = 0.1
+		}	
+		trait_xp_factor = {
+			infantry_leader = 1
+		}
+
+		attack_skill_factor = 1
+		# defense_skill_factor = 1
+		planning_skill_factor = 1
+		# logistics_skill_factor = 1
+	}
+	th_trait_yinyangshi = { 
+		type = { land }
+		trait_type = personality_trait
+		
+		non_shared_modifier = {
+
+		}
+
+		modifier = {
+			modifier_army_sub_unit_ma_shield_infantry_attack_factor = 0.1
+			modifier_army_sub_unit_ma_shield_infantry_defence_factor = 0.1
+			modifier_army_sub_unit_sc_shield_infantry_attack_factor = 0.1
+			modifier_army_sub_unit_sc_shield_infantry_defence_factor = 0.1
+		}	
+		trait_xp_factor = {
+			panzer_leader = 1
+		}
+
+		# attack_skill_factor = 1
+		defense_skill_factor = 1
+		# planning_skill_factor = 1
+		logistics_skill_factor = 1
+	}
+	th_trait_chongjizhuanjia = { 
+		type = { land }
+		trait_type = personality_trait
+		
+		non_shared_modifier = {
+
+		}
+
+		modifier = {
+			modifier_army_sub_unit_melee_infantry_attack_factor = 0.1   
+			modifier_army_sub_unit_melee_infantry_defence_factor = 0.1
+			modifier_army_sub_unit_melee_cavalry_attack_factor = 0.1
+			modifier_army_sub_unit_melee_cavalry_defence_factor = 0.1
+		}	
+		trait_xp_factor = {
+			cavalry_leader = 1
+		}
+
+		attack_skill_factor = 1
+		# defense_skill_factor = 1
+		# planning_skill_factor = 1
+		logistics_skill_factor = 1
+	}
+	th_trait_huoqiangzhuanjia = { 
+		type = { land }
+		trait_type = personality_trait
+		
+		non_shared_modifier = {
+
+		}
+
+		modifier = {
+			modifier_army_sub_unit_ma_infantry_attack_factor = 0.1
+			modifier_army_sub_unit_ma_infantry_defence_factor = 0.1
+			modifier_army_sub_unit_sc_infantry_attack_factor = 0.1
+			modifier_army_sub_unit_sc_infantry_defence_factor = 0.1
+		}	
+		trait_xp_factor = {
+			infantry_leader = 1
+		}
+
+		# attack_skill_factor = 1
+		defense_skill_factor = 1
+		planning_skill_factor = 1
+		# logistics_skill_factor = 1
+	}
+	th_trait_moulvedashi = { 
+		type = { land }
+		trait_type = personality_trait
+		
+		non_shared_modifier = {
+
+		}
+
+		modifier = {
+			planning_speed = 0.5
+			max_planning = 0.1
+			experience_gain_factor = 0.2
+		}	
+
+		planning_skill = 3
+		# attack_skill_factor = 1
+		# defense_skill_factor = 1
+		planning_skill_factor = 2
+		# logistics_skill_factor = 1
+	}
+	th_trait_dayaoguai = { 
+		type = { land }
+		trait_type = personality_trait
+
+		new_commander_weight = {
+			factor = 0.5
+		}
+		
+		non_shared_modifier = {
+			experience_gain_factor = -0.35
+			wounded_chance_factor = -0.25
+		}
+
+		modifier = {
+			army_morale_factor = 0.1
+		}	
+
+		attack_skill = 6
+		defense_skill = 6
+		planning_skill = 6
+		logistics_skill = 6
+		
+		attack_skill_factor = 1
+		defense_skill_factor = 1
+		planning_skill_factor = 1
+		logistics_skill_factor = 1
+	}
+	th_trait_huolizhuanjia = { 
+		type = { land }
+		trait_type = personality_trait
+		
+		non_shared_modifier = {
+
+		}
+
+		modifier = {
+			army_artillery_attack_factor = 0.12
+			army_artillery_defence_factor = 0.12
+		}	
+
+		attack_skill_factor = 1
+		# defense_skill_factor = 1
+		# planning_skill_factor = 1
+		logistics_skill_factor = 1
+	}
+
+	####覆盖原版内容
+	desert_fox = { 
+ 		type = corps_commander
+		gain_xp = {
+			is_fighting_in_terrain = bamboo
+		}
+		cost = 700
+		modifier = {
+			bamboo = {
+				movement = 0.05
+				attack = 0.1
+				defence = 0.1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		trait_type = basic_terrain_trait
+		gui_row = 0
 	}
 }

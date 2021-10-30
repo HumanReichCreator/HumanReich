@@ -35,7 +35,8 @@
  SS_subject_name:0 "[SS_subject_name0]"
  SS_subject_name1:0 "[?this.GetName]"
  SS_subject_name2:0 "§G[?this.GetName]§!"
- SS_can_core_tt:0 "如果名字为绿色，代表这个势力被你附庸吞并后，可以直接获得她所有拥有的核心地块的核心。"
+ SS_subject_name3:0 "§Y[?this.GetName]§!"
+ SS_can_core_tt:0 "如果名字为§G绿色§!，代表这个势力被你附庸吞并后，可以直接获得她所有拥有的核心地块的核心以及她的部队。如果名字为§Y黄色§!，代表这个势力被你附庸吞并后，可以直接获得她的部队。"
  SS_subject_influence:0 "从附庸/宗主中收益"
  SS_given_power_Ghost:0 "[conscription_factor][?SS_give_power_Ghost|%]"
  SS_given_power_Fairy:0 "[supply_consumption_factor][?SS_give_power_Fairy|%]"
@@ -114,6 +115,7 @@
  SS_subject_dikangduli_desc:0 "这个附庸试图抵抗我们的下降等级行为，在此期间，需要§R两倍时间§!才能下降该附庸的等级。"
  SS_gonggushiliquan:0 "巩固势力圈"
  SS_gonggushiliquan_desc:0 "为了防止我们的附庸独立，我们得用一部分力量来防止附庸独立。"
+ SS_gonggushiliquan_tt:0 "从附庸获得的加成翻倍。"
 
  can_core_tt:0 "§G[PREV.GetFlag][PREV.GetName]附庸吞并[THIS.GetFlag][THIS.GetName]时可以直接获得她们的核心。§!\n"
 

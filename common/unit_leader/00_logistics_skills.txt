@@ -96,7 +96,7 @@ leader_logistics_skills = {
 		cost = 100
 		type = corps_commander
 		modifier = {
-			supply_consumption_factor = -0.025
+			supply_consumption_factor = -0.03
 		}
 	}
 		
@@ -104,81 +104,152 @@ leader_logistics_skills = {
 		cost = 200
 		type = corps_commander
 		modifier = {
-			supply_consumption_factor = -0.05
+			supply_consumption_factor = -0.06
 		}
 	}
 	
 	
 	3 = {
-		cost = 400
+		cost = 300
 		type = corps_commander
 		modifier = {
-			supply_consumption_factor = -0.075
+			supply_consumption_factor = -0.09
 		}
 	}
 	
 	4 = {
-		cost = 800
+		cost = 500
 		type = corps_commander
 		modifier = {
-			supply_consumption_factor = -0.1
+			supply_consumption_factor = -0.12
 		}
 	}
 	
 	5 = {
-		cost = 1600
+		cost = 700
 		type = corps_commander
 		modifier = {
-			supply_consumption_factor = -0.125
+			supply_consumption_factor = -0.15
 		}
 	}
 
 	6 = {
-		cost = 3200
+		cost = 1100
 		type = corps_commander
 		modifier = {
-			supply_consumption_factor = -0.150
+			supply_consumption_factor = -0.18
 		}
 	}
 
 	7 = {
-		cost = 6400
+		cost = 1500
 		type = corps_commander
 		modifier = {
-			supply_consumption_factor = -0.175
+			supply_consumption_factor = -0.21
 		}
 	}
 
 	8 = {
-		cost = 12800
+		cost = 2300
 		type = corps_commander
 		modifier = {
-			supply_consumption_factor = -0.2
+			supply_consumption_factor = -0.24
 		}
 	}
 
 	9 = {
-		cost = 25600
+		cost = 3100
 		type = corps_commander
 		modifier = {
-			supply_consumption_factor = -0.225
+			supply_consumption_factor = -0.27
 		}
 	}
-
+	
 	10 = {
-		cost = 51200
+		cost = 4700
 		type = corps_commander
 		modifier = {
-			supply_consumption_factor = -0.25
+			supply_consumption_factor = -0.3
 		}
 	}
+	11 = {
+		cost = 6300
+		type = corps_commander
+		modifier = {
+			supply_consumption_factor = -0.33
+		}
+	}
+	12 = {
+		cost = 9500
+		type = corps_commander
+		modifier = {
+			supply_consumption_factor = -0.36
+		}
+	}
+	13 = {
+		cost = 12700
+		type = corps_commander
+		modifier = {
+			supply_consumption_factor = -0.39
+		}
+	}
+	14 = {
+		cost = 19100
+		type = corps_commander
+		modifier = {
+			supply_consumption_factor = -0.42
+		}
+	}
+	15 = {
+		cost = 25500
+		type = corps_commander
+		modifier = {
+			supply_consumption_factor = -0.45
+		}
+	}
+	16 = {
+		cost = 38300
+		type = corps_commander
+		modifier = {
+			supply_consumption_factor = -0.48
+		}
+	}
+	17 = {
+		cost = 51100
+		type = corps_commander
+		modifier = {
+			supply_consumption_factor = -0.51
+		}
+	}
+	18 = {
+		cost = 76700
+		type = corps_commander
+		modifier = {
+			supply_consumption_factor = -0.54
+		}
+	}
+	19 = {
+		cost = 102300
+		type = corps_commander
+		modifier = {
+			supply_consumption_factor = -0.57
+		}
+	}
+	20 = {
+		cost = 153500
+		type = corps_commander
+		modifier = {
+			supply_consumption_factor = -0.6
+		}
+	}
+	
 	
 	### Field Marshal ###
 	1 = {
 		cost = 100
 		type = field_marshal
 		modifier = {
-			supply_consumption_factor = -0.025
+			supply_consumption_factor = -0.03
 		}
 	}
 		
@@ -186,72 +257,142 @@ leader_logistics_skills = {
 		cost = 200
 		type = field_marshal
 		modifier = {
-			supply_consumption_factor = -0.05
+			supply_consumption_factor = -0.06
 		}
 	}
 	
 	
 	3 = {
-		cost = 400
+		cost = 300
 		type = field_marshal
 		modifier = {
-			supply_consumption_factor = -0.075
+			supply_consumption_factor = -0.09
 		}
 	}
 	
 	4 = {
-		cost = 800
+		cost = 500
 		type = field_marshal
 		modifier = {
-			supply_consumption_factor = -0.1
+			supply_consumption_factor = -0.12
 		}
 	}
 	
 	5 = {
-		cost = 1600
+		cost = 700
 		type = field_marshal
 		modifier = {
-			supply_consumption_factor = -0.125
+			supply_consumption_factor = -0.15
 		}
 	}
 
 	6 = {
-		cost = 3200
+		cost = 1100
 		type = field_marshal
 		modifier = {
-			supply_consumption_factor = -0.150
+			supply_consumption_factor = -0.18
 		}
 	}
 
 	7 = {
-		cost = 6400
+		cost = 1500
 		type = field_marshal
 		modifier = {
-			supply_consumption_factor = -0.175
+			supply_consumption_factor = -0.21
 		}
 	}
 
 	8 = {
-		cost = 12800
+		cost = 2300
 		type = field_marshal
 		modifier = {
-			supply_consumption_factor = -0.2
+			supply_consumption_factor = -0.24
 		}
 	}
 
 	9 = {
-		cost = 25600
+		cost = 3100
 		type = field_marshal
 		modifier = {
-			supply_consumption_factor = -0.225
+			supply_consumption_factor = -0.27
 		}
 	}
-
+	
 	10 = {
-		cost = 51200
+		cost = 4700
 		type = field_marshal
 		modifier = {
-			supply_consumption_factor = -0.25
+			supply_consumption_factor = -0.3
+		}
+	}
+	11 = {
+		cost = 6300
+		type = field_marshal
+		modifier = {
+			supply_consumption_factor = -0.33
+		}
+	}
+	12 = {
+		cost = 9500
+		type = field_marshal
+		modifier = {
+			supply_consumption_factor = -0.36
+		}
+	}
+	13 = {
+		cost = 12700
+		type = field_marshal
+		modifier = {
+			supply_consumption_factor = -0.39
+		}
+	}
+	14 = {
+		cost = 19100
+		type = field_marshal
+		modifier = {
+			supply_consumption_factor = -0.42
+		}
+	}
+	15 = {
+		cost = 25500
+		type = field_marshal
+		modifier = {
+			supply_consumption_factor = -0.45
+		}
+	}
+	16 = {
+		cost = 38300
+		type = field_marshal
+		modifier = {
+			supply_consumption_factor = -0.48
+		}
+	}
+	17 = {
+		cost = 51100
+		type = field_marshal
+		modifier = {
+			supply_consumption_factor = -0.51
+		}
+	}
+	18 = {
+		cost = 76700
+		type = field_marshal
+		modifier = {
+			supply_consumption_factor = -0.54
+		}
+	}
+	19 = {
+		cost = 102300
+		type = field_marshal
+		modifier = {
+			supply_consumption_factor = -0.57
+		}
+	}
+	20 = {
+		cost = 153500
+		type = field_marshal
+		modifier = {
+			supply_consumption_factor = -0.6
 		}
 	}
 }

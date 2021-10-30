@@ -537,7 +537,8 @@ TEG_Our_industry_is_already_strong = {
 	abort = {
 		or = {
 			has_war = yes
-		  	date > 146.6.1
+		  	date > 147.10.1
+      		has_government = fandong
 		}
 	}
 
@@ -552,7 +553,29 @@ TEG_Our_industry_is_already_strong_1 = {
 	enable = {
 		tag = TEG
 		date < 148.4.1
-		date > 146.6.1
+		date > 147.10.1
+		has_war = no
+	}
+	abort = {
+		or = {
+			has_war = yes
+		  	date > 148.4.1
+      		has_government = fandong
+		}
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 75
+	}
+}
+
+TEG_Our_industry_is_already_strong_3 = {
+	enable = {
+		tag = TEG
+		date < 148.4.1
+    	has_government = fandong
 		has_war = no
 	}
 	abort = {

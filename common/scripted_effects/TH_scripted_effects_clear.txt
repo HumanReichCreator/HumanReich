@@ -1,51 +1,56 @@
 beast_race_clear = {
-	set_technology = {
-		beast_tech = 0
-	}
-	set_technology = {
-		yaohuakecheng1 = 0
-	}
-	set_technology = {
-		yaohuakecheng2 = 0
-	}
-	set_technology = {
-		yaohuakecheng3 = 0
-	}
-	set_technology = {
-		yaohuakecheng4 = 0
-	}
-	set_technology = {
-		yaohuakecheng5 = 0
-	}
-	set_technology = {
-		yeguangzhili1 = 0
-	}
-	set_technology = {
-		yeguangzhili2 = 0
-	}
-	set_technology = {
-		yeguangzhili3 = 0
-	}
-	set_technology = {
-		yeguangzhili4 = 0
-	}
-	set_technology = {
-		yeguangzhili5 = 0
-	}
-	set_technology = {
-		qianxingtujidui1 = 0
-	}
-	set_technology = {
-		qianxingtujidui2 = 0
-	}
-	set_technology = {
-		qianxingtujidui3 = 0
-	}
-	set_technology = {
-		qianxingtujidui4 = 0
-	}
-	set_technology = {
-		qianxingtujidui5 = 0
+	if = {
+		limit = {
+			has_tech = beast_tech
+		}
+		set_technology = {
+			beast_tech = 0
+		}
+		set_technology = {
+			yaohuakecheng1 = 0
+		}
+		set_technology = {
+			yaohuakecheng2 = 0
+		}
+		set_technology = {
+			yaohuakecheng3 = 0
+		}
+		set_technology = {
+			yaohuakecheng4 = 0
+		}
+		set_technology = {
+			yaohuakecheng5 = 0
+		}
+		set_technology = {
+			yeguangzhili1 = 0
+		}
+		set_technology = {
+			yeguangzhili2 = 0
+		}
+		set_technology = {
+			yeguangzhili3 = 0
+		}
+		set_technology = {
+			yeguangzhili4 = 0
+		}
+		set_technology = {
+			yeguangzhili5 = 0
+		}
+		set_technology = {
+			qianxingtujidui1 = 0
+		}
+		set_technology = {
+			qianxingtujidui2 = 0
+		}
+		set_technology = {
+			qianxingtujidui3 = 0
+		}
+		set_technology = {
+			qianxingtujidui4 = 0
+		}
+		set_technology = {
+			qianxingtujidui5 = 0
+		}
 	}
 }
 
@@ -67,9 +72,6 @@ buffs_clear = {
 	}
 	set_technology = {
 		ALI_jingjianrenoushengchanxian_tech = 0
-	}
-	set_technology = {
-		ALI_gaoxiaorenouzhanshu_tech = 0
 	}
 	set_technology = {
 		AKI_shandiliebing_tech = 0
@@ -209,206 +211,226 @@ electronic_sc_clear = {
 }
 
 fairy_race_clear = {
-	set_technology = {
-		fairy_tech = 0
-	}
-	set_technology = {
-		ziranronghe1 = 0
-	}
-	set_technology = {
-		ziranronghe2 = 0
-	}
-	set_technology = {
-		ziranronghe3 = 0
-	}
-	set_technology = {
-		ziranronghe4 = 0
-	}
-	set_technology = {
-		ziranronghe5 = 0
-	}
-	set_technology = {
-		ziranenhui1 = 0
-	}
-	set_technology = {
-		ziranenhui2 = 0
-	}
-	set_technology = {
-		ziranenhui3 = 0
-	}
-	set_technology = {
-		ziranenhui4 = 0
-	}
-	set_technology = {
-		ziranenhui5 = 0
-	}
-	set_technology = {
-		yaojinggansiban1 = 0
-	}
-	set_technology = {
-		yaojinggansiban2 = 0
-	}
-	set_technology = {
-		yaojinggansiban3 = 0
-	}
-	set_technology = {
-		yaojinggansiban4 = 0
-	}
-	set_technology = {
-		yaojinggansiban5 = 0
+	if = {
+		limit = {
+			has_tech = fairy_tech
+		}
+		set_technology = {
+			fairy_tech = 0
+		}
+		set_technology = {
+			ziranronghe1 = 0
+		}
+		set_technology = {
+			ziranronghe2 = 0
+		}
+		set_technology = {
+			ziranronghe3 = 0
+		}
+		set_technology = {
+			ziranronghe4 = 0
+		}
+		set_technology = {
+			ziranronghe5 = 0
+		}
+		set_technology = {
+			ziranenhui1 = 0
+		}
+		set_technology = {
+			ziranenhui2 = 0
+		}
+		set_technology = {
+			ziranenhui3 = 0
+		}
+		set_technology = {
+			ziranenhui4 = 0
+		}
+		set_technology = {
+			ziranenhui5 = 0
+		}
+		set_technology = {
+			yaojinggansiban1 = 0
+		}
+		set_technology = {
+			yaojinggansiban2 = 0
+		}
+		set_technology = {
+			yaojinggansiban3 = 0
+		}
+		set_technology = {
+			yaojinggansiban4 = 0
+		}
+		set_technology = {
+			yaojinggansiban5 = 0
+		}
 	}
 }
 
 ghost_race_clear = {
-	set_technology = {
-		ghost_tech = 0
-	}
-	set_technology = {
-		shitihua1 = 0
-	}
-	set_technology = {
-		shitihua2 = 0
-	}
-	set_technology = {
-		shitihua3 = 0
-	}
-	set_technology = {
-		shitihua4 = 0
-	}
-	set_technology = {
-		shitihua5 = 0
-	}
-	set_technology = {
-		ziyuanshentou1 = 0
-	}
-	set_technology = {
-		ziyuanshentou2 = 0
-	}
-	set_technology = {
-		ziyuanshentou3 = 0
-	}
-	set_technology = {
-		ziyuanshentou4 = 0
-	}
-	set_technology = {
-		ziyuanshentou5 = 0
-	}
-	set_technology = {
-		linghunqinshiban1 = 0
-	}
-	set_technology = {
-		linghunqinshiban2 = 0
-	}
-	set_technology = {
-		linghunqinshiban3 = 0
-	}
-	set_technology = {
-		linghunqinshiban4 = 0
-	}
-	set_technology = {
-		linghunqinshiban5 = 0
+	if = {
+		limit = {
+			has_tech = ghost_tech 
+		}
+		set_technology = {
+			ghost_tech = 0
+		}
+		set_technology = {
+			shitihua1 = 0
+		}
+		set_technology = {
+			shitihua2 = 0
+		}
+		set_technology = {
+			shitihua3 = 0
+		}
+		set_technology = {
+			shitihua4 = 0
+		}
+		set_technology = {
+			shitihua5 = 0
+		}
+		set_technology = {
+			ziyuanshentou1 = 0
+		}
+		set_technology = {
+			ziyuanshentou2 = 0
+		}
+		set_technology = {
+			ziyuanshentou3 = 0
+		}
+		set_technology = {
+			ziyuanshentou4 = 0
+		}
+		set_technology = {
+			ziyuanshentou5 = 0
+		}
+		set_technology = {
+			linghunqinshiban1 = 0
+		}
+		set_technology = {
+			linghunqinshiban2 = 0
+		}
+		set_technology = {
+			linghunqinshiban3 = 0
+		}
+		set_technology = {
+			linghunqinshiban4 = 0
+		}
+		set_technology = {
+			linghunqinshiban5 = 0
+		}
 	}
 }
 
 god_race_clear = {
-	set_technology = {
-		god_tech = 0
-	}
-	set_technology = {
-		shengetansuo1 = 0
-	}
-	set_technology = {
-		shengetansuo2 = 0
-	}
-	set_technology = {
-		shengetansuo3 = 0
-	}
-	set_technology = {
-		shengetansuo4 = 0
-	}
-	set_technology = {
-		shengetansuo5 = 0
-	}
-	set_technology = {
-		shengge1 = 0
-	}
-	set_technology = {
-		shengge2 = 0
-	}
-	set_technology = {
-		shengge3 = 0
-	}
-	set_technology = {
-		shengge4 = 0
-	}
-	set_technology = {
-		shengge5 = 0
-	}
-	set_technology = {
-		shenmingdaixingzhe1 = 0
-	}
-	set_technology = {
-		shenmingdaixingzhe2 = 0
-	}
-	set_technology = {
-		shenmingdaixingzhe3 = 0
-	}
-	set_technology = {
-		shenmingdaixingzhe4 = 0
-	}
-	set_technology = {
-		shenmingdaixingzhe5 = 0
+	if = {
+		limit = {
+			has_tech = god_tech
+		}
+		set_technology = {
+			god_tech = 0
+		}
+		set_technology = {
+			shengetansuo1 = 0
+		}
+		set_technology = {
+			shengetansuo2 = 0
+		}
+		set_technology = {
+			shengetansuo3 = 0
+		}
+		set_technology = {
+			shengetansuo4 = 0
+		}
+		set_technology = {
+			shengetansuo5 = 0
+		}
+		set_technology = {
+			shengge1 = 0
+		}
+		set_technology = {
+			shengge2 = 0
+		}
+		set_technology = {
+			shengge3 = 0
+		}
+		set_technology = {
+			shengge4 = 0
+		}
+		set_technology = {
+			shengge5 = 0
+		}
+		set_technology = {
+			shenmingdaixingzhe1 = 0
+		}
+		set_technology = {
+			shenmingdaixingzhe2 = 0
+		}
+		set_technology = {
+			shenmingdaixingzhe3 = 0
+		}
+		set_technology = {
+			shenmingdaixingzhe4 = 0
+		}
+		set_technology = {
+			shenmingdaixingzhe5 = 0
+		}
 	}
 }
 
 human_race_clear = {
-	set_technology = {
-		human_tech = 0
-	}
-	set_technology = {
-		kongjuyizhiji1 = 0
-	}
-	set_technology = {
-		kongjuyizhiji2 = 0
-	}
-	set_technology = {
-		kongjuyizhiji3 = 0
-	}
-	set_technology = {
-		kongjuyizhiji4 = 0
-	}
-	set_technology = {
-		kongjuyizhiji5 = 0
-	}
-	set_technology = {
-		shengchandongli1 = 0
-	}
-	set_technology = {
-		shengchandongli2 = 0
-	}
-	set_technology = {
-		shengchandongli3 = 0
-	}
-	set_technology = {
-		shengchandongli4 = 0
-	}
-	set_technology = {
-		shengchandongli5 = 0
-	}
-	set_technology = {
-		chuanchongpao1 = 0
-	}
-	set_technology = {
-		chuanchongpao2 = 0
-	}
-	set_technology = {
-		chuanchongpao3 = 0
-	}
-	set_technology = {
-		chuanchongpao4 = 0
-	}
-	set_technology = {
-		chuanchongpao5 = 0
+	if = {
+		limit = {
+			has_tech = human_tech
+		}
+		set_technology = {
+			human_tech = 0
+		}
+		set_technology = {
+			kongjuyizhiji1 = 0
+		}
+		set_technology = {
+			kongjuyizhiji2 = 0
+		}
+		set_technology = {
+			kongjuyizhiji3 = 0
+		}
+		set_technology = {
+			kongjuyizhiji4 = 0
+		}
+		set_technology = {
+			kongjuyizhiji5 = 0
+		}
+		set_technology = {
+			shengchandongli1 = 0
+		}
+		set_technology = {
+			shengchandongli2 = 0
+		}
+		set_technology = {
+			shengchandongli3 = 0
+		}
+		set_technology = {
+			shengchandongli4 = 0
+		}
+		set_technology = {
+			shengchandongli5 = 0
+		}
+		set_technology = {
+			chuanchongpao1 = 0
+		}
+		set_technology = {
+			chuanchongpao2 = 0
+		}
+		set_technology = {
+			chuanchongpao3 = 0
+		}
+		set_technology = {
+			chuanchongpao4 = 0
+		}
+		set_technology = {
+			chuanchongpao5 = 0
+		}
 	}
 }
 
@@ -1328,53 +1350,58 @@ infantry_sc_support_clear = {
 }
 
 kappa_race_clear = {
-	set_technology = {
-		kappa_tech = 0
-	}
-	set_technology = {
-		yanjiujingshen1 = 0
-	}
-	set_technology = {
-		yanjiujingshen2 = 0
-	}
-	set_technology = {
-		yanjiujingshen3 = 0
-	}
-	set_technology = {
-		yanjiujingshen4 = 0
-	}
-	set_technology = {
-		yanjiujingshen5 = 0
-	}
-	set_technology = {
-		gaonenglinglihuoyao1 = 0
-	}
-	set_technology = {
-		gaonenglinglihuoyao2 = 0
-	}
-	set_technology = {
-		gaonenglinglihuoyao3 = 0
-	}
-	set_technology = {
-		gaonenglinglihuoyao4 = 0
-	}
-	set_technology = {
-		gaonenglinglihuoyao5 = 0
-	}
-	set_technology = {
-		zhinengjiqiren1 = 0
-	}
-	set_technology = {
-		zhinengjiqiren2 = 0
-	}
-	set_technology = {
-		zhinengjiqiren3 = 0
-	}
-	set_technology = {
-		zhinengjiqiren4 = 0
-	}
-	set_technology = {
-		zhinengjiqiren5 = 0
+	if = {
+		limit = {
+			has_tech = kappa_tech
+		}
+		set_technology = {
+			kappa_tech = 0
+		}
+		set_technology = {
+			yanjiujingshen1 = 0
+		}
+		set_technology = {
+			yanjiujingshen2 = 0
+		}
+		set_technology = {
+			yanjiujingshen3 = 0
+		}
+		set_technology = {
+			yanjiujingshen4 = 0
+		}
+		set_technology = {
+			yanjiujingshen5 = 0
+		}
+		set_technology = {
+			gaonenglinglihuoyao1 = 0
+		}
+		set_technology = {
+			gaonenglinglihuoyao2 = 0
+		}
+		set_technology = {
+			gaonenglinglihuoyao3 = 0
+		}
+		set_technology = {
+			gaonenglinglihuoyao4 = 0
+		}
+		set_technology = {
+			gaonenglinglihuoyao5 = 0
+		}
+		set_technology = {
+			zhinengjiqiren1 = 0
+		}
+		set_technology = {
+			zhinengjiqiren2 = 0
+		}
+		set_technology = {
+			zhinengjiqiren3 = 0
+		}
+		set_technology = {
+			zhinengjiqiren4 = 0
+		}
+		set_technology = {
+			zhinengjiqiren5 = 0
+		}
 	}
 }
 
@@ -1400,104 +1427,114 @@ kap_tech_tech_clear = {
 }
 
 magician_race_clear = {
-	set_technology = {
-		magician_tech = 0
-	}
-	set_technology = {
-		dulichengzu1 = 0
-	}
-	set_technology = {
-		dulichengzu2 = 0
-	}
-	set_technology = {
-		dulichengzu3 = 0
-	}
-	set_technology = {
-		dulichengzu4 = 0
-	}
-	set_technology = {
-		dulichengzu5 = 0
-	}
-	set_technology = {
-		linglixiulian1 = 0
-	}
-	set_technology = {
-		linglixiulian2 = 0
-	}
-	set_technology = {
-		linglixiulian3 = 0
-	}
-	set_technology = {
-		linglixiulian4 = 0
-	}
-	set_technology = {
-		linglixiulian5 = 0
-	}
-	set_technology = {
-		xiandaiwunvban1 = 0
-	}
-	set_technology = {
-		xiandaiwunvban2 = 0
-	}
-	set_technology = {
-		xiandaiwunvban3 = 0
-	}
-	set_technology = {
-		xiandaiwunvban4 = 0
-	}
-	set_technology = {
-		xiandaiwunvban5 = 0
+	if = {
+		limit = {
+			has_tech = magician_tech
+		}
+		set_technology = {
+			magician_tech = 0
+		}
+		set_technology = {
+			dulichengzu1 = 0
+		}
+		set_technology = {
+			dulichengzu2 = 0
+		}
+		set_technology = {
+			dulichengzu3 = 0
+		}
+		set_technology = {
+			dulichengzu4 = 0
+		}
+		set_technology = {
+			dulichengzu5 = 0
+		}
+		set_technology = {
+			linglixiulian1 = 0
+		}
+		set_technology = {
+			linglixiulian2 = 0
+		}
+		set_technology = {
+			linglixiulian3 = 0
+		}
+		set_technology = {
+			linglixiulian4 = 0
+		}
+		set_technology = {
+			linglixiulian5 = 0
+		}
+		set_technology = {
+			xiandaiwunvban1 = 0
+		}
+		set_technology = {
+			xiandaiwunvban2 = 0
+		}
+		set_technology = {
+			xiandaiwunvban3 = 0
+		}
+		set_technology = {
+			xiandaiwunvban4 = 0
+		}
+		set_technology = {
+			xiandaiwunvban5 = 0
+		}
 	}
 }
 
 pri_youkai_race_clear = {
-	set_technology = {
-		pri_youkai_tech = 0
-	}
-	set_technology = {
-		caogenchuantong1 = 0
-	}
-	set_technology = {
-		caogenchuantong2 = 0
-	}
-	set_technology = {
-		caogenchuantong3 = 0
-	}
-	set_technology = {
-		caogenchuantong4 = 0
-	}
-	set_technology = {
-		caogenchuantong5 = 0
-	}
-	set_technology = {
-		qinlvetianxing1 = 0
-	}
-	set_technology = {
-		qinlvetianxing2 = 0
-	}
-	set_technology = {
-		qinlvetianxing3 = 0
-	}
-	set_technology = {
-		qinlvetianxing4 = 0
-	}
-	set_technology = {
-		qinlvetianxing5 = 0
-	}
-	set_technology = {
-		yexingxiaodui1 = 0
-	}
-	set_technology = {
-		yexingxiaodui2 = 0
-	}
-	set_technology = {
-		yexingxiaodui3 = 0
-	}
-	set_technology = {
-		yexingxiaodui4 = 0
-	}
-	set_technology = {
-		yexingxiaodui5 = 0
+	if = {
+		limit = {
+			has_tech = pri_youkai_tech
+		}
+		set_technology = {
+			pri_youkai_tech = 0
+		}
+		set_technology = {
+			caogenchuantong1 = 0
+		}
+		set_technology = {
+			caogenchuantong2 = 0
+		}
+		set_technology = {
+			caogenchuantong3 = 0
+		}
+		set_technology = {
+			caogenchuantong4 = 0
+		}
+		set_technology = {
+			caogenchuantong5 = 0
+		}
+		set_technology = {
+			qinlvetianxing1 = 0
+		}
+		set_technology = {
+			qinlvetianxing2 = 0
+		}
+		set_technology = {
+			qinlvetianxing3 = 0
+		}
+		set_technology = {
+			qinlvetianxing4 = 0
+		}
+		set_technology = {
+			qinlvetianxing5 = 0
+		}
+		set_technology = {
+			yexingxiaodui1 = 0
+		}
+		set_technology = {
+			yexingxiaodui2 = 0
+		}
+		set_technology = {
+			yexingxiaodui3 = 0
+		}
+		set_technology = {
+			yexingxiaodui4 = 0
+		}
+		set_technology = {
+			yexingxiaodui5 = 0
+		}
 	}
 }
 
@@ -1589,104 +1626,114 @@ support_clear = {
 }
 
 tengu_race_clear = {
-	set_technology = {
-		tengu_tech = 0
-	}
-	set_technology = {
-		tiangoujidong1 = 0
-	}
-	set_technology = {
-		tiangoujidong2 = 0
-	}
-	set_technology = {
-		tiangoujidong3 = 0
-	}
-	set_technology = {
-		tiangoujidong4 = 0
-	}
-	set_technology = {
-		tiangoujidong5 = 0
-	}
-	set_technology = {
-		junguankaohe1 = 0
-	}
-	set_technology = {
-		junguankaohe2 = 0
-	}
-	set_technology = {
-		junguankaohe3 = 0
-	}
-	set_technology = {
-		junguankaohe4 = 0
-	}
-	set_technology = {
-		junguankaohe5 = 0
-	}
-	set_technology = {
-		tiangouqingbaoban1 = 0
-	}
-	set_technology = {
-		tiangouqingbaoban2 = 0
-	}
-	set_technology = {
-		tiangouqingbaoban3 = 0
-	}
-	set_technology = {
-		tiangouqingbaoban4 = 0
-	}
-	set_technology = {
-		tiangouqingbaoban5 = 0
+	if = {
+		limit = {
+			has_tech = tengu_tech
+		}
+		set_technology = {
+			tengu_tech = 0
+		}
+		set_technology = {
+			tiangoujidong1 = 0
+		}
+		set_technology = {
+			tiangoujidong2 = 0
+		}
+		set_technology = {
+			tiangoujidong3 = 0
+		}
+		set_technology = {
+			tiangoujidong4 = 0
+		}
+		set_technology = {
+			tiangoujidong5 = 0
+		}
+		set_technology = {
+			junguankaohe1 = 0
+		}
+		set_technology = {
+			junguankaohe2 = 0
+		}
+		set_technology = {
+			junguankaohe3 = 0
+		}
+		set_technology = {
+			junguankaohe4 = 0
+		}
+		set_technology = {
+			junguankaohe5 = 0
+		}
+		set_technology = {
+			tiangouqingbaoban1 = 0
+		}
+		set_technology = {
+			tiangouqingbaoban2 = 0
+		}
+		set_technology = {
+			tiangouqingbaoban3 = 0
+		}
+		set_technology = {
+			tiangouqingbaoban4 = 0
+		}
+		set_technology = {
+			tiangouqingbaoban5 = 0
+		}
 	}
 }
 
 youkai_race_clear = {
-	set_technology = {
-		youkai_tech = 0
-	}
-	set_technology = {
-		bentixuhua1 = 0
-	}
-	set_technology = {
-		bentixuhua2 = 0
-	}
-	set_technology = {
-		bentixuhua3 = 0
-	}
-	set_technology = {
-		bentixuhua4 = 0
-	}
-	set_technology = {
-		bentixuhua5 = 0
-	}
-	set_technology = {
-		yaoguaitezhongbudui1 = 0
-	}
-	set_technology = {
-		yaoguaitezhongbudui2 = 0
-	}
-	set_technology = {
-		yaoguaitezhongbudui3 = 0
-	}
-	set_technology = {
-		yaoguaitezhongbudui4 = 0
-	}
-	set_technology = {
-		yaoguaitezhongbudui5 = 0
-	}
-	set_technology = {
-		waijiebushiban1 = 0
-	}
-	set_technology = {
-		waijiebushiban2 = 0
-	}
-	set_technology = {
-		waijiebushiban3 = 0
-	}
-	set_technology = {
-		waijiebushiban4 = 0
-	}
-	set_technology = {
-		waijiebushiban5 = 0
+	if = {
+		limit = {
+			has_tech = youkai_tech
+		}
+		set_technology = {
+			youkai_tech = 0
+		}
+		set_technology = {
+			bentixuhua1 = 0
+		}
+		set_technology = {
+			bentixuhua2 = 0
+		}
+		set_technology = {
+			bentixuhua3 = 0
+		}
+		set_technology = {
+			bentixuhua4 = 0
+		}
+		set_technology = {
+			bentixuhua5 = 0
+		}
+		set_technology = {
+			yaoguaitezhongbudui1 = 0
+		}
+		set_technology = {
+			yaoguaitezhongbudui2 = 0
+		}
+		set_technology = {
+			yaoguaitezhongbudui3 = 0
+		}
+		set_technology = {
+			yaoguaitezhongbudui4 = 0
+		}
+		set_technology = {
+			yaoguaitezhongbudui5 = 0
+		}
+		set_technology = {
+			waijiebushiban1 = 0
+		}
+		set_technology = {
+			waijiebushiban2 = 0
+		}
+		set_technology = {
+			waijiebushiban3 = 0
+		}
+		set_technology = {
+			waijiebushiban4 = 0
+		}
+		set_technology = {
+			waijiebushiban5 = 0
+		}
 	}
 }
 

@@ -4,10 +4,9 @@ state={
 	name="STATE_241"
 
 	history={
-			owner = KYK
 		143.7.1 = {
-			owner = KYK
-			add_core_of = KYK
+			owner = HUM
+			add_core_of = HUM
 			buildings = {
 				infrastructure =3
 				industrial_complex = 1
@@ -16,15 +15,15 @@ state={
 			}
 		}
 		146.1.1 = {
-			owner = KYK
-			add_core_of = KYK
-			add_claim_by = HUM
-			add_claim_by = HU6
-			add_claim_by = HU7
-			add_claim_by = HU8
+			owner = NMS
+			add_core_of = NMS
+			add_core_of = HUM
+			add_core_of = HU6
+			add_core_of = HU7
+			add_core_of = HU8
 			buildings = {
 				infrastructure =3
-				industrial_complex = 2
+				industrial_complex = 3
 				arms_factory = 0
 
 			}
@@ -36,7 +35,7 @@ state={
 	provinces={
 		710 993 2867 2883 3179 3180 5702 
 	}
-	manpower=853.0
+	manpower=1053.0
 	buildings_max_level_factor=1.000
 	state_category=s5
 }

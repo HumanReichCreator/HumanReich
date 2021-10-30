@@ -9,7 +9,14 @@
 # 1	草根妖怪	20
 # 9	天狗	25
 # 2	妖怪	25
-
+ST_race_defines = {
+	set_variable = { global.ST_compliance_growth = -0.2}
+	set_variable = { global.ST_recruitable_population_factor = -0.5}
+	set_variable = { global.ST_local_supplies_for_controller = -0.5}
+	set_variable = { global.ST_resistance_growth = 0.2}
+	set_variable = { global.ST_state_production_speed_buildings_factor = -0.5}
+	set_variable = { global.ST_state_resources_factor = -0.5}
+}
 ST_race_setting = {
 	Ce_race_setting = yes
 	Ne_race_setting = yes
@@ -156,15 +163,15 @@ Un_race_setting = {
 		set_variable = { ST_origin_race = 2 }
 		set_variable = { ST_present_race = 2 }
 	}
-	#YUG
+	#SAT
 	every_state = {
 		limit = {
 			or = {
 				region = 20
 			}
 		}
-		set_variable = { ST_origin_race = 2 }
-		set_variable = { ST_present_race = 2 }
+		set_variable = { ST_origin_race = 0 }
+		set_variable = { ST_present_race = 0 }
 	}
 	#PRS
 	every_state = {
@@ -305,6 +312,30 @@ He_race_setting = {
 		set_variable = { ST_origin_race = 2 }
 		set_variable = { ST_present_race = 2 }
 	}
+	448 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+	111 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+	451 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+	455 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+	453 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+	459 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
 	#CLO AOO
 	every_state = {
 		limit = {
@@ -316,16 +347,20 @@ He_race_setting = {
 		set_variable = { ST_present_race = 6 }
 	}
 	178 = {
-		set_variable = { ST_origin_race = 2 }
-		set_variable = { ST_present_race = 2 }
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
+	}
+	181 = {
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
 	}
 	466 = {
 		set_variable = { ST_origin_race = 2 }
 		set_variable = { ST_present_race = 2 }
 	}
 	461 = {
-		set_variable = { ST_origin_race = 2 }
-		set_variable = { ST_present_race = 2 }
+		set_variable = { ST_origin_race = 7 }
+		set_variable = { ST_present_race = 7 }
 	}
 	#HCT
 	every_state = {
@@ -369,14 +404,6 @@ He_race_setting = {
 		set_variable = { ST_origin_race = 2 }
 		set_variable = { ST_present_race = 2 }
 	}
-	536 = {
-		set_variable = { ST_origin_race = 2 }
-		set_variable = { ST_present_race = 2 }
-	}
-	533 = {
-		set_variable = { ST_origin_race = 2 }
-		set_variable = { ST_present_race = 2 }
-	}
 
 }
 Ge_race_setting = {
@@ -406,16 +433,12 @@ Ge_race_setting = {
 		set_variable = { ST_present_race = 1 }
 	}
 	192 = {
-		set_variable = { ST_origin_race = 2 }
-		set_variable = { ST_present_race = 2 }
+		set_variable = { ST_origin_race = 5 }
+		set_variable = { ST_present_race = 5 }
 	}
 	210 = {
 		set_variable = { ST_origin_race = 6 }
 		set_variable = { ST_present_race = 6 }
-	}
-	207 = {
-		set_variable = { ST_origin_race = 0 }
-		set_variable = { ST_present_race = 0 }
 	}
 	every_state = {
 		limit = {
@@ -423,10 +446,6 @@ Ge_race_setting = {
 				region = 61
 			}
 		}
-		set_variable = { ST_origin_race = 0 }
-		set_variable = { ST_present_race = 0 }
-	}
-	424 = {
 		set_variable = { ST_origin_race = 0 }
 		set_variable = { ST_present_race = 0 }
 	}
@@ -561,20 +580,24 @@ Ge_race_setting = {
 		set_variable = { ST_present_race = 1 }
 	}
 	427 = {
-		set_variable = { ST_origin_race = 4 }
-		set_variable = { ST_present_race = 4 }
+		set_variable = { ST_origin_race = 5 }
+		set_variable = { ST_present_race = 1 }
 	}
 	426 = {
-		set_variable = { ST_origin_race = 4 }
-		set_variable = { ST_present_race = 4 }
+		set_variable = { ST_origin_race = 5 }
+		set_variable = { ST_present_race = 1 }
 	}
-	299 = {
-		set_variable = { ST_origin_race = 1 }
-		set_variable = { ST_present_race = 4 }
-	}
-	237 = {
-		set_variable = { ST_origin_race = 1 }
-		set_variable = { ST_present_race = 4 }
+	if = {
+		limit = {
+			date < 143.7.2
+			date > 143.6.30
+		}
+		426 = {
+			set_variable = { ST_present_race = 5 }
+		}
+		427 = {
+			set_variable = { ST_present_race = 5 }
+		}
 	}
 	#SBK EMB HUM
 	every_state = {
@@ -616,8 +639,8 @@ Ge_race_setting = {
 				region = 49
 			}
 		}
-		set_variable = { ST_origin_race = 3 }
-		set_variable = { ST_present_race = 3 }
+		set_variable = { ST_origin_race = 5 }
+		set_variable = { ST_present_race = 5 }
 	}
 	every_state = {
 		limit = {
@@ -625,8 +648,8 @@ Ge_race_setting = {
 				region = 48
 			}
 		}
-		set_variable = { ST_origin_race = 3 }
-		set_variable = { ST_present_race = 3 }
+		set_variable = { ST_origin_race = 5 }
+		set_variable = { ST_present_race = 5 }
 	}
 	322 = {
 		set_variable = { ST_origin_race = 2 }
@@ -660,6 +683,18 @@ Ge_race_setting = {
 		set_variable = { ST_origin_race = 0 }
 		set_variable = { ST_present_race = 0 }
 	}
+	330 = {
+		set_variable = { ST_origin_race = 0 }
+		set_variable = { ST_present_race = 4 }
+	}
+	203 = {
+		set_variable = { ST_origin_race = 0 }
+		set_variable = { ST_present_race = 4 }
+	}
+	241 = {
+		set_variable = { ST_origin_race = 0 }
+		set_variable = { ST_present_race = 4 }
+	}
 
 	#NMS
 	every_state = {
@@ -670,6 +705,9 @@ Ge_race_setting = {
 		}
 		set_variable = { ST_origin_race = 1 }
 		set_variable = { ST_present_race = 1 }
+		238 = {
+			set_variable = { ST_present_race = 2 }
+		}
 	}
 
 	#PRI
@@ -707,7 +745,7 @@ Ge_race_setting = {
 	}
 	394 = {
 		set_variable = { ST_origin_race = 6 }
-		set_variable = { ST_present_race = 6 }
+		set_variable = { ST_present_race = 7 }
 	}
 
 	#OKI
@@ -763,15 +801,15 @@ Ge_race_setting = {
 	}
 	179 = {
 		set_variable = { ST_origin_race = 1 }
-		set_variable = { ST_present_race = 1 }
+		set_variable = { ST_present_race = 7 }
 	}
 	393 = {
 		set_variable = { ST_origin_race = 1 }
-		set_variable = { ST_present_race = 1 }
+		set_variable = { ST_present_race = 7 }
 	}
 	279 = {
 		set_variable = { ST_origin_race = 1 }
-		set_variable = { ST_present_race = 1 }
+		set_variable = { ST_present_race = 6 }
 	}
 
 
@@ -783,11 +821,11 @@ Ge_race_setting = {
 			}
 		}
 		set_variable = { ST_origin_race = 4 }
-		set_variable = { ST_present_race = 4 }
+		set_variable = { ST_present_race = 6 }
 	}
 	384 = {
 		set_variable = { ST_origin_race = 4 }
-		set_variable = { ST_present_race = 4 }
+		set_variable = { ST_present_race = 7 }
 	}
 	167 = {
 		set_variable = { ST_origin_race = 4 }
@@ -946,7 +984,7 @@ Ge_race_setting = {
 		set_variable = { ST_origin_race = 8 }
 		set_variable = { ST_present_race = 8 }
 	}
-	
+
 	#MRY
 	every_state = {
 		limit = {
@@ -1001,12 +1039,6 @@ Ge_race_setting = {
 		set_variable = { ST_origin_race = 1 }
 		set_variable = { ST_present_race = 1 }
 	}
-
-	#sgs-override
-	#90 = {
-	#	set_variable = { ST_origin_race = 8	 }
-	#	set_variable = { ST_present_race = 6 }
-	#}
 } 
 
 History_race_setting = {
@@ -1165,30 +1197,261 @@ state_race_manpower = {
 					}
 				}
 			}
-			set_variable = { ST_ongoing_race_conscription_ratio = -1 }
+			set_variable = { ST_current_race_conscription_ratio = -1 }
 			else = {
-				set_variable = { ST_ongoing_race_conscription_ratio = ST_present_race_conscription_ratio }
-				divide_variable = { ST_ongoing_race_conscription_ratio = PREV.ST_controller_race_conscription_ratio }
-				add_to_variable = { ST_ongoing_race_conscription_ratio = -1 }
+				set_variable = { ST_current_race_conscription_ratio = ST_present_race_conscription_ratio }
+				divide_variable = { ST_current_race_conscription_ratio = PREV.ST_controller_race_conscription_ratio }
+				add_to_variable = { ST_current_race_conscription_ratio = -1 }
 			}
 		}
 
 		if = {
 			limit = {
-				not = { check_variable = { ST_current_race_conscription_ratio = ST_ongoing_race_conscription_ratio} }
+				not = { ST_present_same_race = yes }
 			}
-			divide_variable = { ST_current_race_conscription_ratio = -1 }
-			meta_effect = {
-                text = {
-                	add_state_modifier = { modifier = { local_manpower = [RATIO1] } }
-                	add_state_modifier = { modifier = { local_manpower = [RATIO2] } }
-                }
-                RATIO1 = "[?THIS.ST_current_race_conscription_ratio]"
-                RATIO2 = "[?THIS.ST_ongoing_race_conscription_ratio]"
-            }
-            set_variable = { ST_current_race_conscription_ratio = ST_ongoing_race_conscription_ratio }
-
+			add_dynamic_modifier = {
+				modifier = state_different_race
+			}
+			else = {
+				if = {
+					limit = {
+						has_dynamic_modifier = { modifier = state_different_race }
+					}
+					remove_dynamic_modifier = {
+						modifier = state_different_race
+					}
+				}
+			}
 		}
 
 	}
+}
+
+ST_race_penalty_daily = {
+	every_controlled_state = {
+		limit = {
+			has_dynamic_modifier = { modifier = state_different_race }
+		}
+		set_variable = { ST_current_recruitable_population_factor = global.ST_recruitable_population_factor}
+		set_variable = { ST_current_local_supplies_for_controller = global.ST_local_supplies_for_controller}
+		set_variable = { ST_current_compliance_growth = global.ST_compliance_growth}
+		set_variable = { ST_current_resistance_growth = global.ST_resistance_growth}
+		set_variable = { ST_current_state_production_speed_buildings_factor = global.ST_state_production_speed_buildings_factor}
+		set_variable = { ST_current_state_resources_factor = global.ST_state_resources_factor}
+
+		set_temp_variable = { percentage = 1}
+		add_to_temp_variable = { percentage = PREV.ST_race_penalty }
+
+		if = {
+			limit = {
+				has_state_flag = ST_no_penalty_@PREV
+			}
+			set_temp_variable = { percentage = 0}
+		}
+		if = {
+			limit = {
+				controller = { has_country_flag = ST_hexie_Beast }
+				ST_race_is_Beast = yes
+			}
+			set_temp_variable = { percentage = 0}
+		}
+		if = {
+			limit = {
+				controller = { has_country_flag = ST_hexie_Tengu }
+				ST_race_is_Tengu = yes
+			}
+			set_temp_variable = { percentage = 0}
+		}
+		if = {
+			limit = {
+				controller = { has_country_flag = ST_hexie_Ghost }
+				ST_race_is_Ghost = yes
+			}
+			set_temp_variable = { percentage = 0}
+		}
+		if = {
+			limit = {
+				controller = { has_country_flag = ST_hexie_Fairy }
+				ST_race_is_Fairy = yes
+			}
+			set_temp_variable = { percentage = 0}
+		}
+		if = {
+			limit = {
+				controller = { has_country_flag = ST_hexie_Human }
+				ST_race_is_Human = yes
+			}
+			set_temp_variable = { percentage = 0}
+		}
+		if = {
+			limit = {
+				controller = { has_country_flag = ST_hexie_Magician }
+				ST_race_is_Magician = yes
+			}
+			set_temp_variable = { percentage = 0}
+		}
+		if = {
+			limit = {
+				controller = { has_country_flag = ST_hexie_God }
+				ST_race_is_God = yes
+			}
+			set_temp_variable = { percentage = 0}
+		}
+		if = {
+			limit = {
+				controller = { has_country_flag = ST_hexie_Youkai }
+				ST_race_is_Youkai = yes
+			}
+			set_temp_variable = { percentage = 0}
+		}
+		if = {
+			limit = {
+				controller = { has_country_flag = ST_hexie_Pri_youkai }
+				ST_race_is_Pri_youkai = yes
+			}
+			set_temp_variable = { percentage = 0}
+		}
+		if = {
+			limit = {
+				controller = { has_country_flag = ST_hexie_Kappa }
+				ST_race_is_Kappa = yes
+			}
+			set_temp_variable = { percentage = 0}
+		}
+
+		multiply_variable = { ST_current_recruitable_population_factor = percentage}
+		multiply_variable = { ST_current_local_supplies_for_controller = percentage}
+		multiply_variable = { ST_current_compliance_growth = percentage}
+		multiply_variable = { ST_current_resistance_growth = percentage}
+		multiply_variable = { ST_current_state_production_speed_buildings_factor = percentage}
+		multiply_variable = { ST_current_state_resources_factor = percentage}
+		
+	}
+}
+
+ST_race_penalty_reduce0.1 = { 
+	set_variable = { ST_race_penalty = -0.1}
+	custom_effect_tooltip = ST_race_penalty_reduce0.1_tt
+}
+ST_race_penalty_reduce0.2 = { 
+	set_variable = { ST_race_penalty = -0.2}
+	custom_effect_tooltip = ST_race_penalty_reduce0.2_tt
+}
+ST_race_penalty_reduce0.3 = { 
+	set_variable = { ST_race_penalty = -0.3}
+	custom_effect_tooltip = ST_race_penalty_reduce0.3_tt
+}
+ST_race_penalty_reduce0.4 = { 
+	set_variable = { ST_race_penalty = -0.4}
+	custom_effect_tooltip = ST_race_penalty_reduce0.4_tt
+}
+ST_race_penalty_reduce0.5 = { 
+	set_variable = { ST_race_penalty = -0.5}
+	custom_effect_tooltip = ST_race_penalty_reduce0.5_tt
+}
+ST_race_penalty_add0.1 = { 
+	set_variable = { ST_race_penalty = 0.1}
+	custom_effect_tooltip = ST_race_penalty_add0.1_tt
+}
+ST_race_penalty_add0.2 = { 
+	set_variable = { ST_race_penalty = 0.2}
+	custom_effect_tooltip = ST_race_penalty_add0.2_tt
+}
+ST_race_penalty_add0.3 = { 
+	set_variable = { ST_race_penalty = 0.3}
+	custom_effect_tooltip = ST_race_penalty_add0.3_tt
+}
+ST_race_penalty_add0.4 = { 
+	set_variable = { ST_race_penalty = 0.4}
+	custom_effect_tooltip = ST_race_penalty_add0.4_tt
+}
+ST_race_penalty_add0.5 = { 
+	set_variable = { ST_race_penalty = 0.5}
+	custom_effect_tooltip = ST_race_penalty_add0.5_tt
+}
+ST_race_penalty_remove = {
+	set_state_flag = ST_no_penalty_@ROOT
+	custom_effect_tooltip = ST_race_penalty_remove_tt
+}
+
+ST_race_to_Beast = {
+	set_variable = { ST_present_race = 0 }
+	custom_effect_tooltip = CONV_directconvert_0_tt
+}
+ST_race_to_Pri_youkai = {
+	set_variable = { ST_present_race = 1 }
+	custom_effect_tooltip = CONV_directconvert_1_tt
+}
+ST_race_to_Youkai = {
+	set_variable = { ST_present_race = 2 }
+	custom_effect_tooltip = CONV_directconvert_2_tt
+}
+ST_race_to_God = {
+	set_variable = { ST_present_race = 3 }
+	custom_effect_tooltip = CONV_directconvert_3_tt
+}
+ST_race_to_Human = {
+	set_variable = { ST_present_race = 4 }
+	custom_effect_tooltip = CONV_directconvert_4_tt
+}
+ST_race_to_Magician = {
+	set_variable = { ST_present_race = 5 }
+	custom_effect_tooltip = CONV_directconvert_5_tt
+}
+ST_race_to_Fairy = {
+	set_variable = { ST_present_race = 6 }
+	custom_effect_tooltip = CONV_directconvert_6_tt
+}
+ST_race_to_Ghost = {
+	set_variable = { ST_present_race = 7 }
+	custom_effect_tooltip = CONV_directconvert_7_tt
+}
+ST_race_to_Kappa = {
+	set_variable = { ST_present_race = 8 }
+	custom_effect_tooltip = CONV_directconvert_8_tt
+}
+ST_race_to_Tengu = {
+	set_variable = { ST_present_race = 9 }
+	custom_effect_tooltip = CONV_directconvert_9_tt
+}
+
+ST_hexie_Beast = {
+	set_country_flag = ST_hexie_Beast
+	custom_effect_tooltip = ST_hexie_Beast_tt
+}
+ST_hexie_Pri_youkai = {
+	set_country_flag = ST_hexie_Pri_youkai
+	custom_effect_tooltip = ST_hexie_Pri_youkai_tt
+}
+ST_hexie_Youkai = {
+	set_country_flag = ST_hexie_Youkai
+	custom_effect_tooltip = ST_hexie_Youkai_tt
+}
+ST_hexie_Human = {
+	set_country_flag = ST_hexie_Human
+	custom_effect_tooltip = ST_hexie_Human_tt
+}
+ST_hexie_God = {
+	set_country_flag = ST_hexie_God
+	custom_effect_tooltip = ST_hexie_God_tt
+}
+ST_hexie_Kappa = {
+	set_country_flag = ST_hexie_Kappa
+	custom_effect_tooltip = ST_hexie_Kappa_tt
+}
+ST_hexie_Fairy = {
+	set_country_flag = ST_hexie_Fairy
+	custom_effect_tooltip = ST_hexie_Fairy_tt
+}
+ST_hexie_Tengu = {
+	set_country_flag = ST_hexie_Tengu
+	custom_effect_tooltip = ST_hexie_Tengu_tt
+}
+ST_hexie_Ghost = {
+	set_country_flag = ST_hexie_Ghost
+	custom_effect_tooltip = ST_hexie_Ghost_tt
+}
+ST_hexie_Magician = {
+	set_country_flag = ST_hexie_Magician
+	custom_effect_tooltip = ST_hexie_Magician_tt
 }

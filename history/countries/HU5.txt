@@ -1,5 +1,5 @@
 ﻿# capital = 412
-capital = 414
+capital = 415
 146.1.1 = {
     set_technology = {
         #通用武器线
@@ -37,8 +37,10 @@ capital = 414
         #种族
             
     }
+    
 }
 146.1.1={
+        add_manpower = 200
     add_ideas = {
     Magician
     Village
@@ -65,7 +67,7 @@ capital = 414
 }
 
 create_country_leader = {
-    # name = "Council"
+    # name = "Village Committee"
     name = "村委会"
     desc = ""
     picture = "gfx/leaders/ZYD/ZYD_council.dds"
@@ -75,7 +77,7 @@ create_country_leader = {
     }
 }
 create_country_leader = {
-    # name = "Council"
+    # name = "Village Committee"
     name = "村委会"
     desc = ""
     picture = "gfx/leaders/ZYD/ZYD_council.dds"
@@ -85,7 +87,7 @@ create_country_leader = {
     }
 }
 create_country_leader = {
-    # name = "Council"
+    # name = "Village Committee"
     name = "村委会"
     desc = ""
     picture = "gfx/leaders/ZYD/ZYD_council.dds"
@@ -95,7 +97,7 @@ create_country_leader = {
     }
 }
 create_country_leader = {
-    # name = "Council"
+    # name = "Village Committee"
     name = "村委会"
     desc = ""
     picture = "gfx/leaders/ZYD/ZYD_council.dds"
@@ -105,7 +107,7 @@ create_country_leader = {
     }
 }
 create_country_leader = {
-    # name = "Council"
+    # name = "Village Committee"
     name = "村委会"
     desc = ""
     picture = "gfx/leaders/ZYD/ZYD_council.dds"

@@ -125,13 +125,13 @@
  ty_jiquan:0 "集权"
  ty_jiquan_desc:0 "我们该集中一下我们的权力了。"
  #tooltip
- zhengtibianhua_tt:0 "§Y会因你上面2个排斥国策的选择组合以及当前理念而变化。§!\n§R精英理念的效果固定！§!\n"
+ zhengtibianhua_tt:0 "§Y会因你上面2个排斥国策的选择组合以及当前理念而变化。§!\n§R妖怪理念的效果固定！§!\n"
  ty_chenxuerru_tt:0 "与[SCA.GetFlag][SCA.GetName]一同阵营的势力或与[SCA.GetFlag][SCA.GetName]处于战争状态的势力接壤"
  zhanzhengxuanchuan_tt:0 "厌战时间上涨周期  §G+15%§!\n"
  baoshousixiang_tt:0 "社会保守化花费  §G-20%§!\n"
  waibulianxi_o:0 "外部联系"
  ty_ewaideyanjiuli_tt:0 "至少完成两个前置国策"
- ty_fuyongguanxichuli_tt:0 "§Y当前拥有的附庸吞并时得到核心。§!"
+ ty_fuyongguanxichuli_tt:0 "§Y选择两个附庸吞并时得到核心。（在决议中）§!"
  ty_gonggusixiang_fandong:0 "开启一个一次性决议，可以宣战周边任意一个§Y非同一理念§!国家。"
  ty_gonggusixiang_neworder:0 "开启一个一次性决议，可以宣战周边任意一个§Y非同一主体种族§!国家。"
  zhichiweiquan:0 "支持红魔馆"
@@ -165,15 +165,10 @@
 
  hunshuimoyu:0 "浑水摸鱼"
 
- fandong_drift1:0 "工团主义思想"
- qinwai_drift1:0 "社会民主主义思想"
- neworder_drift1:0 "斗争主义思想"
- guli_drift1:0 "和平自由主义思想"
- authordemo_drift1:0 "威权民主主义思想"
- lienin_drift1:0 "社会集体主义思想"
- humanfirst_drift1:0 "人类同化主义思想"
- destroyid_drift1:0 "幻想乡终结论思想"
- oldorder_drift1:0 "妖怪霸权主义思想"
+ fandong_drift1:0 "激进思想"
+ qinwai_drift1:0 "改良思想"
+ neworder_drift1:0 "新规思想"
+ guli_drift1:0 "孤立思想"
  
  main_scenario:0 "剧本为劫烬变"
  event_accept:0 "§R如果她们同意，则§!\n"
@@ -181,5 +176,6 @@
  focus_warning2:0 "§R效果会随你的选择而改变，且会影响你后续国策的选择权。§!\n"
  focus_warning3:0 "§R效果会因外界因素而改变。§!\n"
  focus_warning4:0 "§R效果会因你之前的选择而改变。§!\n"
+ focus_warning5:0 "§R如果不同意将直接开战。§!"
  huxiangbaodu_tt:0 "§Y和[PREV.GetFlag][PREV.GetName]相互保障独立，并互相给予军事通行权。\n§!"
  

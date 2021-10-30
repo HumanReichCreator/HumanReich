@@ -1,0 +1,1109 @@
+### 确认现状
+shared_focus = {
+  id = MRS_determine_the_situation
+  icon = GFX_goal_generic_construction2
+  cost = 5.00
+  x = 50
+  y = 1
+  available = { 
+    is_subject = no
+    OR = {
+      has_completed_focus = MRS_pingxineiluan
+      has_completed_focus = ALI_xuanzewomendedaolu
+    }
+    
+  }
+  completion_reward = {
+      add_political_power = 100
+      add_stability = 0.10
+      add_offsite_building = {
+        type = industrial_complex
+        level = 1
+      }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+
+}
+
+### 举行经济调查会议
+shared_focus = {
+  id = MRS_Hold_Economic_Investigation_Conference
+  icon = GFX_goal_generic_propaganda
+  cost = 5.00
+  prerequisite = {
+    focus = MRS_determine_the_situation
+  }
+  available = {
+    OR = {
+      AND = {
+        original_tag = MRS
+        OR = {
+          has_completed_focus = MRS_quelimofashiyuanshoudiwei
+          has_completed_focus = MRS_duozhongzudatong
+          has_completed_focus = MRS_tongqingruozhe
+          has_completed_focus = MRS_jingguanqibian
+        }
+      }
+      AND = {
+        original_tag = ALI
+        OR = {
+          has_completed_focus = ALI_renouduodequanli
+          has_completed_focus = ALI_lingrenxiaiderenouzhixiang
+          has_completed_focus = ALI_kongbuderenouzhixiang
+          has_completed_focus = ALI_mojiehua
+        }
+      }
+    }
+    
+
+  }
+  x = 0
+  y = 1
+  relative_position_id = MRS_determine_the_situation
+  completion_reward = {
+    unlock_decision_category_tooltip = MRS_Magic_Forest_Management
+    add_stability = 0.10
+    ### Possible Events
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+
+}
+
+### 魔法使军备审查
+shared_focus = {
+  id = MRS_Mahousi_Arms_Examination
+  icon = GFX_focus_generic_combined_arms
+  cost = 6.00
+  prerequisite = {
+    focus = MRS_determine_the_situation
+  }
+  x = -7
+  y = 1
+  relative_position_id = MRS_determine_the_situation
+  completion_reward = {
+    army_experience = 25
+    add_tech_bonus = {
+      name = MRS_Mahousi_Arms_Examination
+      bonus = 1.5
+      uses = 1
+      ahead_reduction = 0.75
+      category = primary_weapons
+      category = artillery_tech
+      category = shield_weapons
+    }
+    if = {
+      limit = {
+        NOT = {
+          has_idea = partial_economic_mobilisation
+          has_idea = war_economy
+          has_idea = tot_economic_mobilisation
+        }
+      }
+      add_ideas = { partial_economic_mobilisation }
+    }
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+
+}
+
+### 魔法之森的精准地图
+shared_focus = {
+  id = MRS_an_accurate_map_of_forest
+  icon = GFX_focus_por_the_pink_map
+  cost = 6.00
+  prerequisite = {
+    focus = MRS_Mahousi_Arms_Examination
+  }
+  x = 1
+  y = 1
+  relative_position_id = MRS_Mahousi_Arms_Examination
+  completion_reward = {
+    add_ideas = { MRS_an_accurate_map_of_forest_idea }
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+
+### 建立魔法使文献馆
+shared_focus = {
+  id = MRS_Establish_Literature_Center
+  icon = GFX_focus_hol_the_foundations_of_defense
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_determine_the_situation
+  }
+  x = 8
+  y = 1
+  relative_position_id = MRS_determine_the_situation
+  completion_reward = {
+    unlock_decision_category_tooltip = MRS_Literature_Center
+    add_ideas = { MRS_Establish_Literature_Center_idea }
+    add_stability = 0.10
+  }
+
+  ai_will_do = {
+    factor = 5
+  }
+
+}
+
+### 新技术
+shared_focus = {
+  id = MRS_New_Technologies
+  icon = GFX_focus_research2
+  cost = 6.00
+  prerequisite = {
+    focus = MRS_Establish_Literature_Center
+  }
+  x = 3
+  y = 1
+  relative_position_id = MRS_Establish_Literature_Center
+  completion_reward = {
+    add_tech_bonus = {
+      bonus = 1.2
+      ahead_reduction = 0.75
+      uses = 2
+      category = math
+      category = race
+      category = build
+    } 
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+
+### 火力网
+shared_focus = {
+  id = MRS_barrage
+  icon = GFX_goal_generic_army_artillery2
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_New_Technologies
+  }
+  available = {
+    OR = {
+      has_tech = magic_energy1
+      has_tech = mortar1
+    }
+    
+  }
+  x = 2
+  y = 1
+  relative_position_id = MRS_New_Technologies
+  completion_reward = {
+    unlock_decision_tooltip = MRS_equip_barrage
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+
+### 新思维
+shared_focus = {
+  id = MRS_a_new_mind
+  icon = GFX_goal_molotov_ribbentrop_pact
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_Hold_Economic_Investigation_Conference
+  }
+  mutually_exclusive = {
+    focus = MRS_remould_the_nature
+    focus = MRS_our_tradition
+  }
+  available = {
+    has_government = qinwai
+  }
+  x = 4
+  y = 1
+  relative_position_id = MRS_Hold_Economic_Investigation_Conference
+  completion_reward = {
+    add_ideas = { MRS_magic_forest_sphere_reformist_idea }
+
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+
+### 魔理沙的传统艺能
+shared_focus = {
+  id = MRS_Technology_intelligence
+  icon = GFX_focus_BUL_the_fate_of_the_balkans
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_Establish_Literature_Center
+  }
+  x = 6
+  y = 1
+  relative_position_id = MRS_Establish_Literature_Center
+  completion_reward = {
+    if = {
+      limit = { has_intelligence_agency = no }
+      create_intelligence_agency = yes
+    }
+    add_ideas = { MRS_Technology_intelligence_idea }
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+shared_focus = {
+  id = MRS_remould_the_nature
+  icon = GFX_goal_demand_sudetenland
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_Hold_Economic_Investigation_Conference
+  }
+  mutually_exclusive = {
+    focus = MRS_our_tradition
+    focus = MRS_a_new_mind
+  }
+  available = {
+    OR = {
+      has_government = fandong
+      has_government = neworder
+    }
+  }
+  x = -4
+  y = 1
+  relative_position_id = MRS_Hold_Economic_Investigation_Conference
+  completion_reward = {
+    add_ideas = { MRS_magic_forest_sphere_neworder_idea }
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+shared_focus = {
+  id = MRS_our_tradition
+  icon = GFX_goal_generic_defence
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_Hold_Economic_Investigation_Conference
+  }
+  mutually_exclusive = {
+    focus = MRS_remould_the_nature
+    focus = MRS_a_new_mind
+  }
+  available = {
+    OR = {
+      has_government = guli
+      has_government = oldorder
+    }
+  }
+  x = 0
+  y = 1
+  relative_position_id = MRS_Hold_Economic_Investigation_Conference
+  completion_reward = {
+    add_ideas = { MRS_magic_forest_sphere_isolationist_idea }
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+shared_focus = {
+  id = MRS_Recall_Veterans
+  icon = GFX_goal_rhineland
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_Mahousi_Arms_Examination
+  }
+  x = -1
+  y = 1
+  relative_position_id = MRS_Mahousi_Arms_Examination
+  completion_reward = {
+    add_manpower = 500
+    army_experience = 30
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+shared_focus = {
+  id = MRS_defend_via_terrain
+  icon = GFX_goal_generic_construct_military
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_an_accurate_map_of_forest
+  }
+  available = {
+    has_completed_focus = MRS_Hold_Economic_Investigation_Conference
+  }
+  x = 0
+  y = 1
+  relative_position_id = MRS_an_accurate_map_of_forest
+  completion_reward = {
+    custom_effect_tooltip = MRS_defend_via_terrain_tt
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+shared_focus = {
+  id = MRS_Tactics_Discussion
+  icon = GFX_goal_generic_army_doctrines
+  cost = 6.00
+  prerequisite = {
+    focus = MRS_Recall_Veterans
+  }
+  x = 0
+  y = 1
+  relative_position_id = MRS_Recall_Veterans
+  completion_reward = {
+    add_tech_bonus = {
+      bonus = 1.0
+      uses = 2
+      ahead_reduction = 0.5
+      category = land_doctrine
+      category = basic_doctrine
+    }
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+shared_focus = {
+  id = MRS_Advanced_Production_Tools
+  icon = GFX_goal_generic_production
+  cost = 7.00
+  prerequisite = {
+    focus = MRS_remould_the_nature
+  }
+  x = 0
+  y = 1
+  relative_position_id = MRS_remould_the_nature
+  completion_reward = {
+    add_tech_bonus = {
+      name = MRS_Advanced_Production_Tools
+      bonus = 0.75
+      ahead_reduction = 0.75
+      uses = 1
+      category = jiegou
+    }
+    add_tech_bonus = {
+      name = MRS_Advanced_Production_Tools
+      bonus = 0.75
+      ahead_reduction = 0.75
+      uses = 1
+      category = main
+    }
+    add_tech_bonus = {
+      name = MRS_Advanced_Production_Tools
+      bonus = 0.75
+      ahead_reduction = 0.75
+      uses = 1
+      category = support_tech
+    }
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+shared_focus = {
+  id = MRS_New_Appearance_of_forest
+  icon = GFX_goal_generic_construct_infrastructure
+  cost = 10.00
+  available = {
+    has_idea = mrs_ziyuanfengfu
+  }
+  prerequisite = {
+    focus = MRS_Advanced_Production_Tools
+  }
+  prerequisite = {
+    focus = MRS_defend_via_terrain
+  }
+  x = -1
+  y = 1
+  relative_position_id = MRS_Advanced_Production_Tools
+  completion_reward = {
+    swap_ideas = {
+      remove_idea = mrs_ziyuanfengfu
+      add_idea = mrs_ziyuanfengfu_new_appearance
+    }
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+shared_focus = {
+  id = MRS_Magic_Forest_Arsenal
+  icon = GFX_goal_generic_construct_mil_factory
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_Mahousi_Arms_Examination
+  }
+  x = 0
+  y = 4
+  relative_position_id = MRS_Mahousi_Arms_Examination
+  completion_reward = {
+    add_offsite_building = {
+      type = arms_factory
+      level = 2
+    }
+    add_ideas = { MRS_fanyongmopaoshengchanxian_idea }
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+shared_focus = {
+  id = MRS_Open_Up_aceess_to_more_Madou_weapons
+  icon = GFX_goal_generic_military_sphere
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_Magic_Forest_Arsenal
+  }
+  x = -1
+  y = 1
+  relative_position_id = MRS_Magic_Forest_Arsenal
+  completion_reward = {
+    add_ideas = { MRS_kaifangbufenmodaowuqi_idea }
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+shared_focus = {
+  id = MRS_Magic_machine
+  icon = GFX_focus_NZL_bob_semple_tank
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_our_tradition
+    focus = MRS_remould_the_nature
+  }
+  x = -2
+  y = 1
+  relative_position_id = MRS_our_tradition
+  completion_reward = {
+    add_ideas = { MRS_Magic_machine_idea }
+    add_timed_idea = {
+      days = 300
+      idea = MRS_introduction_of_machines_cost_idea
+    }
+    add_tech_bonus = {
+      name = MRS_Magic_machine
+      bonus = 1.0
+      ahead_reduction = 0.75
+      uses = 1
+      category = main
+    }
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+shared_focus = {
+  id = MRS_High_Energy_Magical_Powder
+  icon = GFX_goal_generic_army_artillery
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_Magic_Forest_Arsenal
+  }
+  x = 1
+  y = 1
+  relative_position_id = MRS_Magic_Forest_Arsenal
+  completion_reward = {
+    add_tech_bonus = {
+      name = MRS_High_Energy_Magical_Powder
+      bonus = 1.0
+      ahead_reduction = 0.75
+      uses = 2
+      category = artillery_tech
+    }
+    
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+shared_focus = {
+  id = MRS_supportive_unit
+  icon = GFX_goal_generic_military_deal
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_Open_Up_aceess_to_more_Madou_weapons
+    focus = MRS_High_Energy_Magical_Powder
+  }
+  x = -2
+  y = 1
+  relative_position_id = MRS_High_Energy_Magical_Powder
+  completion_reward = {
+    add_tech_bonus = {
+      name = MRS_supportive_unit
+      bonus = 1.0
+      ahead_reduction = 0.75
+      uses = 2
+      category = support_tech
+    }
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+### 魔法师精英主义
+shared_focus = {
+  id = MRS_Elite_Divisions
+  icon = GFX_goal_generic_special_forces
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_High_Energy_Magical_Powder
+    focus = MRS_Open_Up_aceess_to_more_Madou_weapons
+  }
+  x = 0
+  y = 1
+  relative_position_id = MRS_High_Energy_Magical_Powder
+  completion_reward = {
+    add_tech_bonus = {
+      name = MRS_Elite_Divisions
+      bonus = 1.0
+      ahead_reduction = 0.75
+      uses = 2
+      category = sf_force
+    }
+    add_ideas = { MRS_Elite_Divisions_idea  }
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+### 四面皆敌
+shared_focus = {
+  id = MRS_enemies_in_all_direction
+  icon = GFX_focus_GRE_hellenic_armed_forces
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_Magic_Forest_Arsenal
+  }
+  x = 4
+  y = 1
+  relative_position_id = MRS_Magic_Forest_Arsenal
+  completion_reward = {
+    add_ideas = { MRS_enemies_in_all_direction_idea  }
+    unlock_decision_category_tooltip = MRS_enemies_in_all_direction
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+### 
+shared_focus = {
+  id = MRS_focus_on_guerrila
+  icon = GFX_focus_focus_fra_maquis
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_enemies_in_all_direction
+  }
+  mutually_exclusive = {
+    focus = MRS_focus_on_mobile_warfare
+  }
+  x = -1
+  y = 1
+  relative_position_id = MRS_enemies_in_all_direction
+  completion_reward = {
+    swap_ideas = {
+      remove_idea = MRS_enemies_in_all_direction_idea
+      add_idea = MRS_enemies_in_all_direction_partisan_idea
+    }
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+shared_focus = {
+  id = MRS_focus_on_mobile_warfare
+  icon = GFX_goal_generic_cavalry
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_enemies_in_all_direction
+  }
+  mutually_exclusive = {
+    focus = MRS_focus_on_guerrila
+  }
+  x = 1
+  y = 1
+  relative_position_id = MRS_enemies_in_all_direction
+  completion_reward = {
+    swap_ideas = {
+      remove_idea = MRS_enemies_in_all_direction_idea
+      add_idea = MRS_enemies_in_all_direction_mobile_idea
+    }
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+shared_focus = {
+  id = MRS_village_communities
+  icon = GFX_goal_generic_consumer_goods
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_our_tradition
+  }
+  x = 0
+  y = 1
+  relative_position_id = MRS_our_tradition
+  completion_reward = {
+    swap_ideas = {
+      remove_idea = MRS_magic_forest_sphere_isolationist_idea
+      add_idea = MRS_magic_forest_sphere_isolationist_2_idea
+    }
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+shared_focus = {
+  id = MRS_Serve_industrialization
+  icon = GFX_goal_generic_construct_civilian
+  cost = 7.00
+  prerequisite = {
+    focus = MRS_Advanced_Production_Tools
+  }
+  x = 1
+  y = 1
+  relative_position_id = MRS_Advanced_Production_Tools
+  completion_reward = {
+    add_tech_bonus = {
+      bonus = 0.75
+      uses = 3
+      technology = jizhongshenchan145
+      technology = jizhongshenchan148
+      technology = jizhongshenchan151
+      technology = jizhongshenchan156
+      technology = jizhongshenchan161
+      technology = jizhongshenchan166
+    }
+    swap_ideas = {
+      remove_idea = MRS_magic_forest_sphere_neworder_idea
+      add_idea = MRS_magic_forest_sphere_neworder_2_idea
+    }
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+shared_focus = {
+  id = MRS_recycling
+  icon = GFX_goal_generic_position_armies
+  cost = 6.00
+  prerequisite = {
+    focus = MRS_village_communities
+  }
+  x = 0
+  y = 1
+  relative_position_id = MRS_village_communities
+  completion_reward = {
+    add_offsite_building = { type = powder_factory level = 2 }
+    add_offsite_building = { type = metal_factory level = 2 }
+    add_offsite_building = { type = gas_factory level = 2 }
+  }
+
+}
+shared_focus = {
+  id = MRS_phrase_our_achievements
+  icon = GFX_focus_spa_the_spanish_miracle
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_recycling
+    focus = MRS_Serve_industrialization
+  }
+  available = {
+    num_of_factories > 80
+  }
+  x = -1
+  y = 1
+  relative_position_id = MRS_recycling
+  completion_reward = {
+    custom_effect_tooltip = MRS_phrase_our_achievements_tt
+    if = {
+      limit = { has_idea = MRS_magic_forest_sphere_isolationist_2_idea }
+      swap_ideas = {
+        remove_idea = MRS_magic_forest_sphere_isolationist_2_idea
+        add_idea = MRS_magic_forest_sphere_isolationist_3_idea
+      }
+    }
+    if = {
+      limit = { has_idea = MRS_magic_forest_sphere_neworder_2_idea }
+      swap_ideas = {
+        remove_idea = MRS_magic_forest_sphere_neworder_2_idea
+        add_idea = MRS_magic_forest_sphere_neworder_3_idea
+      }
+    }
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+
+### 回收中心
+
+
+shared_focus = {
+  id = MRS_Cautious_Approach_to_Mechanization
+  icon = GFX_focus_generic_industry_1
+  cost = 6.00
+  prerequisite = {
+    focus = MRS_a_new_mind
+  }
+  x = -1
+  y = 1
+  relative_position_id = MRS_a_new_mind
+  completion_reward = {
+    add_tech_bonus = {
+      name = MRS_Cautious_Approach_to_Mechanization
+      bonus = 0.75
+      uses = 2
+      category = main
+    }
+    add_political_power = -125
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+shared_focus = {
+  id = MRS_distribute_industry
+  icon = GFX_goal_generic_construct_civ_factory
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_Cautious_Approach_to_Mechanization
+    focus = MRS_village_communities
+  }
+  x = -1
+  y = 1
+  relative_position_id = MRS_Cautious_Approach_to_Mechanization
+  completion_reward = {
+    add_tech_bonus = {
+      bonus = 0.75
+      uses = 3
+      technology = fensanshenchan145
+      technology = fensanshenchan148
+      technology = fensanshenchan151
+      technology = fensanshenchan156
+      technology = fensanshenchan161
+      technology = fensanshenchan166
+    }
+    add_offsite_building = {
+      type = industrial_complex
+      level = 1
+    }
+    add_offsite_building = {
+      type = arms_factory
+      level = 1
+    }
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+shared_focus = {
+  id = MRS_balanced_production
+  icon = GFX_goal_generic_neutrality_focus
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_distribute_industry
+  }
+  x = 0
+  y = 1
+  relative_position_id = MRS_distribute_industry
+  completion_reward = {
+    add_tech_bonus = {
+      name = MRS_balanced_production
+      category = fuzhu
+      bonus = 1.0
+      ahead_reduction = 0.5
+      uses = 2
+    }
+    add_ideas = MRS_cujinlingkejiehe_idea
+  }
+
+}
+shared_focus = {
+  id = MRS_Multi_race_transportation
+  icon = GFX_goal_generic_army_motorized
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_a_new_mind
+  }
+  x = 1
+  y = 1
+  relative_position_id = MRS_a_new_mind
+  completion_reward = {
+    if = {
+      limit = { has_idea = MRS_tongyiyaojing_idea }
+      swap_ideas = {
+        remove_idea = MRS_tongyiyaojing_idea
+        add_idea = MRS_multirace_transportation_tongyiyaojing_idea
+      }
+    }
+    else = {
+      add_ideas = { MRS_multirace_transportation_idea }
+    }
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+shared_focus = {
+  id = MRS_unified_industrial_devices
+  icon = GFX_goal_generic_air_production
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_Multi_race_transportation
+  }
+  x = 0
+  y = 1
+  relative_position_id = MRS_Multi_race_transportation
+  completion_reward = {
+    swap_ideas = {
+      add_idea = MRS_magic_forest_sphere_reformist_2_idea
+      remove_idea = MRS_magic_forest_sphere_reformist_idea
+    }
+    add_timed_idea = {
+      idea = MRS_expenditure_increase
+      days = 120
+    }
+
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+
+### 分享我们的知识
+shared_focus = {
+  id = MRS_share_our_knowledge
+  icon = GFX_focus_generic_diplomatic_treaty
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_Establish_Literature_Center
+  }
+  x = -1
+  y = 1
+  relative_position_id = MRS_Establish_Literature_Center
+  completion_reward = {
+    custom_effect_tooltip = MRS_knowledge_sharing_tt
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+
+
+shared_focus = {
+  id = MRS_pluralist_education
+  icon = GFX_focus_generic_treaty
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_Multi_race_transportation
+  }
+  prerequisite = {
+    focus = MRS_share_our_knowledge
+  }
+  x = 0
+  y = 2
+  relative_position_id = MRS_share_our_knowledge
+  completion_reward = {
+    add_ideas = { MRS_pluralist_education_idea  }
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+shared_focus = {
+  id = MRS_Production_Enjoyment_Soul
+  icon = GFX_focus_TUR_reform_the_balkan_pact
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_unified_industrial_devices
+  }
+  prerequisite = {
+    focus = MRS_distribute_industry
+  }
+  available = {
+    num_of_factories > 80
+  }
+  x = 0
+  y = 1
+  relative_position_id = MRS_unified_industrial_devices
+  completion_reward = {
+    swap_ideas = {
+      add_idea = MRS_magic_forest_sphere_reformist_3_idea
+      remove_idea = MRS_magic_forest_sphere_reformist_2_idea
+    }
+    set_country_flag = ALI_dilinglizuozhan
+    custom_effect_tooltip = ALI_dilinglizuozhan_tt
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+shared_focus = {
+  id = MRS_reform_facilities
+  icon = GFX_goal_generic_construction2
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_pluralist_education
+  }
+  x = 0
+  y = 1
+  relative_position_id = MRS_pluralist_education
+  completion_reward = {
+    swap_ideas = {
+      remove_idea = mrs_ziyuanfengfu
+      add_idea = mrs_ziyuanfengfu_reformed
+    }
+    unlock_decision_tooltip = MRS_electric_wave_tower
+    unlock_decision_tooltip = MRS_mushroom_greenhouse
+    unlock_decision_tooltip = MRS_puppet_active_center
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+shared_focus = {
+  id = MRS_Resonace_jamming
+  icon = GFX_goal_generic_production2
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_New_Technologies
+  }
+  available = {
+    OR = {
+      has_tech = linglishengchan145
+      has_tech = fangwaijieshengchan145
+    }
+  }
+  x = -2
+  y = 1
+  relative_position_id = MRS_New_Technologies
+  completion_reward = {
+    unlock_decision_tooltip = MRS_equip_Resonace_jamming
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+shared_focus = {
+  id = MRS_flare_bomb
+  icon = GFX_focus_spr_torchbearers_of_tomorrow
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_New_Technologies
+  }
+  available = {
+    has_tech = zhanchanggongbing146
+  }
+  x = 0
+  y = 1
+  relative_position_id = MRS_New_Technologies
+  completion_reward = {
+    unlock_decision_tooltip = MRS_equip_flare_bomb
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}
+shared_focus = {
+  id = MRS_Magicians_know_it_best
+  icon = GFX_focus_research
+  cost = 10.00
+  prerequisite = {
+    focus = MRS_flare_bomb
+    focus = MRS_barrage
+    focus = MRS_Resonace_jamming
+  }
+  available = {
+    date > 149.1.1
+  }
+  x = 0
+  y = 1
+  relative_position_id = MRS_flare_bomb
+  completion_reward = {
+    add_research_slot = 1
+  }
+
+  ai_will_do = {
+    factor = 1
+  }
+
+}

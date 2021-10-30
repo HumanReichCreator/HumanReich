@@ -1,0 +1,866 @@
+﻿division_template = {
+	name = "冲击编制"
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		melee_infantry = { x = 0 y = 2 }
+		melee_infantry = { x = 0 y = 3 }
+	}
+	support = {
+	}
+}
+
+
+units = {
+	division = {
+		name = "冲击编制"
+		location = 5768
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5761
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 847
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5758
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5757
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5753
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5751
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5747
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 195
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 3846
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 3844
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 4537
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 1642
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 4528
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 4525
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5768
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5761
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 847
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5758
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5757
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5753
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5751
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5747
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 195
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 3846
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 3844
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 4537
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 1642
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 4528
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 4525
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5768
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5761
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 847
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5758
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5757
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5753
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5751
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5747
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 195
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 3846
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 3844
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 4537
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 1642
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 4528
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 4525
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5768
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5761
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 847
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5758
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5757
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5753
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5751
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5747
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 195
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 3846
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 3844
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 4537
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 1642
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 4528
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 4525
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5768
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5761
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 847
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5758
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5757
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5753
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5751
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5747
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 195
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 3846
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 3844
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 4537
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 1642
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 4528
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 4525
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	
+	division = {
+		name = "冲击编制"
+		location = 5768
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5761
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 847
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5758
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5757
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5753
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5751
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5747
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 195
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 3846
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 3844
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 4537
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 1642
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 4528
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 4525
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "冲击编制"
+		location = 2273
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 572
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 3924
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5772
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5768
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5761
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 847
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5758
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5757
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5753
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5751
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 5747
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 195
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 3846
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 3844
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 4537
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 1642
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 4528
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 4525
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "冲击编制"
+		location = 3265
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 3269
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}	
+	division = {
+		name = "冲击编制"
+		location = 3267
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}	
+	division = {
+		name = "冲击编制"
+		location = 3265
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 3269
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}	
+	division = {
+		name = "冲击编制"
+		location = 3267
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}	
+	division = {
+		name = "冲击编制"
+		location = 3265
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 3269
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}	
+	division = {
+		name = "冲击编制"
+		location = 3267
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}	
+	division = {
+		name = "冲击编制"
+		location = 3265
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "冲击编制"
+		location = 3269
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}	
+	division = {
+		name = "冲击编制"
+		location = 3267
+		division_template = "冲击编制"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}	
+}
+

@@ -1,0 +1,815 @@
+	####YYK 白绿经济线####
+	shared_focus = {
+		id = NET_shared_minjiezhengchanghua
+		icon = GFX_goal_generic_national_unity
+		cost = 12
+		offset = {
+			x = 37
+			y = 3
+			trigger = {
+				tag = YYK
+			}
+		}
+		offset = {
+			x = 22
+			y = 0
+			trigger = {
+				has_country_flag = YOM_is_here
+				not = {
+					tag = YYK
+				}
+			}
+		}
+		available = {
+			has_global_flag = main_scenario
+			or = {
+				and = {
+					tag = YYK
+					has_country_flag = NET_shared_YYK
+				}
+				not = {
+					tag = YYK
+				}
+			}
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		x = 0
+		y = 0
+		# relative_position_id = NET_shared_guliyudouzhengzhiwai
+	}
+	shared_focus = {
+		id = NET_shared_xiubujiejie
+		icon = GFX_goal_continuous_repairments
+		cost = 12
+		prerequisite = {
+			focus = NET_shared_minjiezhengchanghua
+		}
+		x = 0
+		y = 1
+		relative_position_id = NET_shared_minjiezhengchanghua
+		completion_reward = {
+			every_country = {
+				limit = {
+					capital_scope = {
+						is_on_continent = Gensokyo
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = NET_shared_xiubujiejie_op
+				}
+			}
+			every_country = {
+				limit = {
+					capital_scope = {
+						is_on_continent = Hell
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = NET_shared_xiubujiejie_op2
+				}
+			}
+			custom_effect_tooltip = NET_shared_xiubujiejie_tt
+			YYK_xiaochudongdang = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	shared_focus = {
+		id = NET_shared_kuodabaiyulou
+		icon = GFX_goal_generic_construct_civilian
+		cost = 12
+		prerequisite = {
+			focus = NET_shared_xiubujiejie
+		}
+		x = -2
+		y = 1
+		available = {
+			owns_state = 231
+		}
+		relative_position_id = NET_shared_xiubujiejie
+		completion_reward = {
+			231 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 3
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	shared_focus = {
+		id = NET_shared_xintingyuan
+		icon = GFX_focus_NET_shared_xintingyuan
+		cost = 12
+		prerequisite = {
+			focus = NET_shared_kuodabaiyulou
+		}
+		x = 0
+		y = 1
+		relative_position_id = NET_shared_kuodabaiyulou
+		available = {
+			owns_state = 231
+		}
+		allow_branch = {
+			tag = YYK
+		}
+		completion_reward = {
+			country_event = net_s.1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	shared_focus = {
+		id = NET_shared_jiaqiangminjierentong
+		icon = GFX_goal_generic_national_unity
+		cost = 12
+		prerequisite = {
+			focus = NET_shared_xiubujiejie
+		}
+		x = 0
+		y = 1
+		relative_position_id = NET_shared_xiubujiejie
+		completion_reward = {
+			add_stability = 0.05
+			add_timed_idea = {
+				idea = NET_shared_jiaqiangminjierentong_idea
+				days = 730
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	shared_focus = {
+		id = NET_shared_youlingdeshenchanliliang
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 12
+		prerequisite = {
+			focus = NET_shared_jiaqiangminjierentong
+		}
+		x = 0
+		y = 1
+		relative_position_id = NET_shared_jiaqiangminjierentong
+		completion_reward = {
+			add_tech_bonus = {
+				category = industrys
+				uses = 1
+				bonus = 1
+			}
+			add_tech_bonus = {
+				category = build
+				uses = 1
+				bonus = 1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	shared_focus = {
+		id = NET_shared_guliyoulingziyoumin
+		icon = GFX_focus_BUL_form_a_regency_council
+		cost = 12
+		prerequisite = {
+			focus = NET_shared_xiubujiejie
+		}
+		x = 2
+		y = 1
+		relative_position_id = NET_shared_xiubujiejie
+		completion_reward = {
+			conservativeincrease = yes
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			YYK_xiaochudongdang = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	shared_focus = {
+		id = NET_shared_minjieyoulingzhihui
+		icon = GFX_goal_tfv_generic_tech_sharing
+		cost = 12
+		prerequisite = {
+			focus = NET_shared_guliyoulingziyoumin
+		}
+		x = 0
+		y = 1
+		relative_position_id = NET_shared_guliyoulingziyoumin
+		completion_reward = {
+			add_ideas = NET_shared_minjieyoulingzhihui_idea
+			add_tech_bonus = {
+				category = math
+				uses = 2
+				bonus = 1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	shared_focus = {
+		id = NET_shared_liantongminjiegefang
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 12
+		prerequisite = {
+			focus = NET_shared_youlingdeshenchanliliang
+		}
+		
+		x = -1
+		y = 1
+		relative_position_id = NET_shared_youlingdeshenchanliliang
+		available = {
+			all_state = {
+				or = {
+					not = { is_on_continent = Netherworld }
+					is_owned_by = ROOT
+				}
+			}
+		}
+		completion_reward = {
+			add_ideas = NET_shared_liantongminjiegefang_idea
+			231 = {
+				every_neighbor_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_on_continent = Netherworld
+					not = {
+						any_neighbor_state = {
+							state = 231
+						}
+						state = 231
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			YYK_xukuoda = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	shared_focus = {
+		id = NET_shared_minjiechengshi
+		icon = GFX_focus_generic_industry_3
+		cost = 12
+		prerequisite = {
+			focus = NET_shared_liantongminjiegefang
+		}
+		x = 0
+		y = 1
+		relative_position_id = NET_shared_liantongminjiegefang
+		completion_reward = {
+			custom_effect_tooltip = NET_shared_minjiechengshi_tt
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			YYK_xiaochudongdang = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	shared_focus = {
+		id = NET_shared_lingshikaifa
+		icon = GFX_goal_generic_construction2
+		cost = 12
+		prerequisite = {
+			focus = NET_shared_youlingdeshenchanliliang
+		}
+		prerequisite = {
+			focus = NET_shared_minjieyoulingzhihui
+		}
+		x = 1
+		y = 1
+		relative_position_id = NET_shared_youlingdeshenchanliliang
+		completion_reward = {
+			add_tech_bonus = {
+				category = mortar
+				uses = 2
+				bonus = 1
+			}
+			add_tech_bonus = {
+				category = jiegou
+				uses = 2
+				bonus = 1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	shared_focus = {
+		id = NET_shared_lingshizhuanhuan
+		icon = GFX_goal_generic_construction2
+		cost = 12
+		prerequisite = {
+			focus = NET_shared_lingshikaifa
+		}
+		x = 0
+		y = 1
+		relative_position_id = NET_shared_lingshikaifa
+		completion_reward = {
+			custom_effect_tooltip = NET_shared_lingshizhuanhuan_tt
+			add_tech_bonus = {
+				category = gas_res
+				uses = 1
+				bonus = 1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	shared_focus = {
+		id = NET_shared_yaomengxinmingjie
+		icon = GFX_focus_research
+		cost = 12
+		prerequisite = {
+			focus = NET_shared_minjiechengshi
+			focus = NET_shared_lingshizhuanhuan
+		}
+		allow_branch = {
+			not = {
+				tag = YYK
+			}
+		}
+		x = 1
+		y = 1
+		available = {
+			owns_state = 231
+			has_idea = World
+		}
+		relative_position_id = NET_shared_minjiechengshi
+		completion_reward = {
+			set_capital = 231
+			add_research_slot = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	####YYK 白绿经济线####
+	####	军事线	####
+	shared_focus = {
+		id = NET_shared_danmuyanxizhan
+		icon = GFX_focus_generic_little_entente
+		cost = 12
+		offset = {
+			x = 3
+			y = 5
+			trigger = {
+				tag = YYK
+			}
+		}
+		offset = {
+			x = 30
+			y = 0
+			trigger = {
+				has_country_flag = YOM_is_here
+				not = {
+					tag = YYK
+				}
+			}
+		}
+		x = 0
+		y = 0
+		available = {
+			has_global_flag = main_scenario
+		}
+		completion_reward = {
+			army_experience = 20
+			add_tech_bonus = {
+				category = basic_doctrine
+				uses = 1
+				bonus = 1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	shared_focus = {
+		id = NET_shared_linghundanmuhongzha
+		icon = GFX_focus_generic_Basic_Weapons
+		cost = 12
+		prerequisite = {
+			focus = NET_shared_danmuyanxizhan
+		}
+		x = -2
+		y = 1
+		relative_position_id = NET_shared_danmuyanxizhan
+		completion_reward = {
+			PO_add1 = yes
+			add_ideas = NET_shared_linghundanmuhongzha_idea
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	shared_focus = {
+		id = NET_shared_youlingzishadanmu
+		icon = GFX_focus_generic_Artillery_Weapons
+		cost = 12
+		prerequisite = {
+			focus = NET_shared_linghundanmuhongzha
+		}
+		x = 0
+		y = 1
+		relative_position_id = NET_shared_linghundanmuhongzha
+		completion_reward = {
+			add_ideas = NET_shared_youlingzishadanmu_idea
+			add_tech_bonus = {
+				category = mortar
+				uses = 2
+				bonus = 1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	shared_focus = {
+		id = NET_shared_youlinghuayumimi
+		icon = GFX_goal_generic_defence
+		cost = 12
+		prerequisite = {
+			focus = NET_shared_youlingzishadanmu
+		}
+		mutually_exclusive = {
+			focus = NET_shared_jiemiyoulinghuayu
+		}
+		x = -1
+		y = 1
+		relative_position_id = NET_shared_youlingzishadanmu
+		completion_reward = {
+			OL_add10 = yes
+			add_tech_bonus = {
+				category = jiami
+				uses = 1
+				bonus = 1
+			}
+			add_ideas = NET_shared_youlinghuayumimi_idea
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	shared_focus = {
+		id = NET_shared_jiemiyoulinghuayu
+		icon = GFX_goal_generic_radar
+		cost = 12
+		prerequisite = {
+			focus = NET_shared_youlingzishadanmu
+		}
+		mutually_exclusive = {
+			focus = NET_shared_youlinghuayumimi
+		}
+		x = 1
+		y = 1
+		relative_position_id = NET_shared_youlingzishadanmu
+		completion_reward = {
+			OL_minus10 = yes
+			add_tech_bonus = {
+				category = jiemi
+				uses = 1
+				bonus = 1
+			}
+			YYK_xuqingzui = yes
+			add_ideas = NET_shared_jiemiyoulinghuayu_idea
+			conservativeincrease = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	shared_focus = {
+		id = NET_shared_jinshujiejin
+		icon = GFX_focus_YYK_the_tactics_of_body_possessing
+		cost = 12
+		prerequisite = {
+			focus = NET_shared_youlinghuayumimi
+			focus = NET_shared_jiemiyoulinghuayu
+		}
+		allow_branch = {
+			tag = YYK
+		}
+		x = 1
+		y = 1
+		relative_position_id = NET_shared_youlinghuayumimi
+		completion_reward = {
+			custom_effect_tooltip = NET_shared_jinshujiejin_tt
+			clr_country_flag = ghost_jinzhizhanju
+			YYK_xuqingzui = yes
+			YYK_xuqingzui = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	shared_focus = {
+		id = NET_shared_youlingdeqinzhannengli
+		icon = GFX_focus_YYK_the_tactics_of_body_possessing
+		cost = 12
+		prerequisite = {
+			focus = NET_shared_youlinghuayumimi
+			focus = NET_shared_jiemiyoulinghuayu
+		}
+		allow_branch = {
+			not = { tag = YYK }
+		}
+		x = 1
+		y = 1
+		relative_position_id = NET_shared_youlinghuayumimi
+		completion_reward = {
+			GO_time_add15 = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	shared_focus = {
+		id = NET_shared_jianshulianxi
+		icon = GFX_focus_generic_Melee_Weapons
+		cost = 12
+		prerequisite = {
+			focus = NET_shared_danmuyanxizhan
+		}
+		x = 2
+		y = 1
+		relative_position_id = NET_shared_danmuyanxizhan
+		completion_reward = {
+			if = {
+				limit = {
+					tag = YYK
+				}
+				random_unit_leader = {##YYK
+					limit = {
+						has_id = 42
+					}
+					add_attack = 1
+					add_defense = 1
+				}
+				random_unit_leader = {##YYK
+					limit = {
+						has_id = 43
+					}
+					add_attack = 1
+					add_defense = 1
+				}
+				random_unit_leader = {##YOM
+					limit = {
+						has_id = 44
+					}
+					add_attack = 1
+					add_defense = 1
+				}
+				random_unit_leader = {##YOM
+					limit = {
+						has_id = 45
+					}
+					add_attack = 1
+					add_defense = 1
+				}
+				add_tech_bonus = {
+					category = melee
+					uses = 1
+					bonus = 1
+				}
+				else = {
+					random_unit_leader = {##YYK
+						limit = {
+							has_id = 42
+						}
+						add_skill_level = 1
+						add_attack = 1
+						add_defense = 1
+						add_logistics = 1
+						add_planning = 1
+					}
+					add_tech_bonus = {
+						category = melee
+						uses = 2
+						bonus = 1
+					}
+				}
+			}
+			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	shared_focus = {
+		id = NET_shared_yaoqingyaoji
+		icon = GFX_focus_generic_military_mission
+		cost = 12
+		prerequisite = {
+			focus = NET_shared_jianshulianxi
+		}
+		mutually_exclusive = {
+			focus = NET_shared_yaojixiulian
+		}
+		x = 0
+		y = 1
+		relative_position_id = NET_shared_jianshulianxi
+		completion_reward = {
+			NET_shared_yaoji_army_leader = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	shared_focus = {
+		id = NET_shared_yaojixiulian
+		icon = GFX_focus_generic_military_academy
+		cost = 12
+		prerequisite = {
+			focus = NET_shared_jianshulianxi
+		}
+		mutually_exclusive = {
+			focus = NET_shared_yaoqingyaoji
+		}
+		x = 2
+		y = 1
+		relative_position_id = NET_shared_jianshulianxi
+		completion_reward = {
+			add_tech_bonus = {
+				category = basic_doctrine
+				uses = 1
+				bonus = 1
+			}
+			random_unit_leader = {##YYK
+				limit = {
+					has_id = 42
+				}
+				add_attack = 1
+				add_defense = 1
+				add_planning = 1
+				add_logistics = 1
+			}
+			random_unit_leader = {##YYK
+				limit = {
+					has_id = 43
+				}
+				add_attack = 1
+				add_defense = 1
+				add_planning = 1
+				add_logistics = 1
+			}
+			random_unit_leader = {##YOM
+				limit = {
+					has_id = 44
+				}
+				add_attack = 1
+				add_defense = 1
+				add_planning = 1
+				add_logistics = 1
+			}
+			random_unit_leader = {##YOM
+				limit = {
+					has_id = 45
+				}
+				add_attack = 1
+				add_defense = 1
+				add_planning = 1
+				add_logistics = 1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	shared_focus = {
+		id = NET_shared_fukajuedou
+		icon = GFX_focus_generic_japanese_imperial_glory
+		cost = 12
+		prerequisite = {
+			focus = NET_shared_yaoqingyaoji
+			focus = NET_shared_yaojixiulian
+		}
+		allow_branch = {
+			tag = YYK
+		}
+		available = {
+			YKR = {
+				is_subject = no
+				faqiqingqiu = yes
+			}
+		}
+		relative_position_id = NET_shared_yaoqingyaoji
+		x = 0
+		y = 1
+		completion_reward = { 
+			country_event = { id = net_s.2 days = 2 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	shared_focus = {
+		id = NET_shared_fukajuedou2
+		icon = GFX_focus_generic_japanese_imperial_glory
+		cost = 12
+		prerequisite = {
+			focus = NET_shared_yaoqingyaoji
+			focus = NET_shared_yaojixiulian
+		}
+		allow_branch = {
+			not = { tag = YYK }
+		}
+		available = {
+			or = {
+				YYK = {
+					is_subject_of = ROOT
+				}
+				owns_state = 231
+			}
+			
+		}
+		relative_position_id = NET_shared_yaoqingyaoji
+		x = 0
+		y = 1
+		completion_reward = { 
+			country_event = { id = net_s.6 days = 2 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	shared_focus = {
+		id = NET_shared_jiandefumo
+		icon = GFX_focus_generic_Melee_Weapons
+		cost = 12
+		prerequisite = {
+			focus = NET_shared_yaoqingyaoji
+			focus = NET_shared_yaojixiulian
+		}
+		allow_branch = {
+			not = { tag = YYK }
+		}
+		available = {
+			
+		}
+		relative_position_id = NET_shared_yaoqingyaoji
+		x = 2
+		y = 1
+		completion_reward = { 
+			random_unit_leader = {##YYK
+				limit = {
+					has_id = 42
+				}
+				add_skill_level = 2
+				add_attack = 2
+			}
+			add_tech_bonus = {
+				category = melee
+				uses = 1
+				bonus = 1
+			}	
+			add_tech_bonus = {
+				category = jiegou
+				uses = 1
+				bonus = 1
+			}	
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}

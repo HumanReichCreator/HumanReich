@@ -1,6 +1,6 @@
 ﻿l_english:
  #HUM
- HUM_qianzhai:0 "人里的债务"
+ HUM_qianzhai:0 "人类村落的债务"
  HUM_qianzhai_desc:0 "[HUM.GetFlag][HUM.GetName]自战败以后，被迫向之前的参战国支付大量赔款。而新政府对于妖怪的接受能力大大提升，因此我们或许可以提出部分要求。"
  HUM_qiuzhai:0 "要求人类尽快归还债务"
  HUM_bangzhu:0 "帮助人类归还债务"
@@ -14,12 +14,17 @@
  gaishanshiqu:0 "改善繁华地区"
  gaishanbianyuandiqu:0 "改善边缘地区"
  fadongxiaoguimozhanzheng:0 "对[FROM.GetFlag][FROM.GetName]发动小规模战争"
+ ty_yixuanzexuanzhanduixiang:0 "已选择宣战对象"
+ fuyongguanxichuli:0 "附庸关系处理"
+ fuyongguanxichuli_desc:0 "请在你的附庸里选择，选择到的势力在你附庸吞并时可以获得核心。\n当前剩余次数为§Y[?ty_fuyongguanxichuli]§!。"
+ chuliguanxi:0 "处理和§Y[FROM.GetFlag][FROM.GetName]§!的关系。"
+ chuliguanxi_tt:0 "吞并§Y[FROM.GetFlag][FROM.GetName]§!时未能获得核心。"
 
 
- lobbyincrease_tt:0 "§Y向个人主义发展一级§!\n"
- lobbydecrease_tt:0 "§Y向集体主义发展一级§!\n"
- conservativeincrease_tt:0 "§Y向平等政治发展一级§!\n"
- conservativedecrease_tt:0 "§Y向强权政治发展一级§!\n"
+ lobbyincrease_tt:0 "§Y向鹰派发展一级§!\n"
+ lobbydecrease_tt:0 "§Y向鸽派发展一级§!\n"
+ conservativeincrease_tt:0 "§Y向开放社会发展一级§!\n"
+ conservativedecrease_tt:0 "§Y向保守社会发展一级§!\n"
 
  already_full_tt:0 "§R已经不能再往这个方向改变了，改为政治点数奖赏。§!\n"
  ############介绍性决议

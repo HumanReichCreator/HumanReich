@@ -167,7 +167,7 @@ HMIF_daily_changer = {
 	# 	else = {
 			capital_scope = { 
 				ROOT = {
-					set_variable = {HMIF_distance = PREV.distance_to@246}
+					set_variable = { HMIF_distance = 246.distance_to@PREV }
 				}
 			}
 	# 	}

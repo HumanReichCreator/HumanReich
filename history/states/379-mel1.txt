@@ -6,28 +6,27 @@ state={
 	}
 	resources={
 
-		powder=0.000
-		metal=0.000
+		powder = 0.0
+		metal = 0.0
 		gas=3.000
 		crystal=3.000
 	}
 
 	history={
-			owner = MEL
 		146.1.1 = {
 			owner = MEL
 			add_core_of = MEL
 			buildings = {
 				infrastructure =3
 				industrial_complex = 0
-				arms_factory = 1
+				arms_factory = 0
 
 			}
 
 		}
 
 	}
-	state_category=s5
-	manpower=728.0
+	state_category=s0
+	manpower=628.0
 	buildings_max_level_factor=1.000
 }

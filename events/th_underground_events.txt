@@ -160,24 +160,24 @@ country_event = { #地底 VS UUG
 
 	option = {
 		ai_chance = {
-			base = 70
+			base = 65
 			modifier = {
 				PRS = {
 					has_war_with = UUG
 				}
-				add = -10
+				add = -30
 			}
 			modifier = {
 				SAT = {
 					has_war_with = UUG
 				}
-				add = -25
+				add = -30
 			}
 			modifier = {
 				YUG = {
 					has_war_with = UUG
 				}
-				add = -25
+				add = -30
 			}
 		}
 		name = und.3.1
@@ -201,7 +201,7 @@ country_event = { #地底 VS UUG
 	option = {
 		name = und.3.2
 		ai_chance = {
-			base = 30
+			base = 35
 		}
 	}
 }
@@ -241,23 +241,36 @@ country_event = { ####地底自卫同盟成立
 
 	option = {
 		name = und.4.1
-		PRS = {
+		every_country = {
+			limit = {
+				is_subject = no
+				capital_scope = {
+					is_on_continent = Underground
+				}
+				or = {
+					not = {
+						tag = UNL
+						tag = UFA
+						tag = ACE
+						tag = UUG
+
+					}
+					has_war = no
+				}
+				not = {
+					tag = SAT
+					has_war_with = SAT
+				}
+			}
 			country_event = und.5
-		}
-		YUG = {
-			country_event = und.5
-		}
-		YMM = {
-			country_event = und.5
-		}
-		ai_chance = {
-			base = 95
 		}
 		add_ideas = can_create_faction_idea
 		create_faction = didiziwei
-
 		hidden_effect = {
 			news_event = { id = und.6 days = 7}
+		}
+		ai_chance = {
+			base = 95
 		}
 	}
 
@@ -282,12 +295,20 @@ country_event = { ####加入？
 		ai_chance = {
 			base = 60
 			modifier = {
-				not = { has_government = guli }
-				factor = 0.1
+				has_government = guli
+				factor = 5
+			}
+			modifier = {
+				has_government = qinwai
+				factor = 2
 			}
 			modifier = {
 				has_war = yes
-				factor = 2
+				factor = 10
+			}
+			modifier = {
+				has_idea = ghost
+				factor = 0.1
 			}
 			modifier = {
 				or = {
@@ -357,6 +378,278 @@ news_event = { ####成立新闻
 			not = {
 				tag = SAT
 				is_in_faction_with = SAT
+			}
+		}
+	}
+}
+
+country_event = { ####空的叛乱 判定
+	id = und.7
+	title = und.7.t
+	desc = und.7.d
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		date > 146.8.1
+		date < 148.1.1
+		tag = SAT
+		has_war = no
+	}
+	mean_time_to_happen = {
+		days = 40
+	}
+	option = {
+		name = und.7.1
+		UTH = {
+			add_timed_idea = {
+				days = 135
+				idea = panluantouxiang_idea
+			}
+		}
+		random_list = {
+			75 = {
+				custom_effect_tooltip = und.7_tt
+				UTH = {
+					random_list = {
+						50 = {
+							go_fandong = yes
+						}
+						50 = {
+							go_neworder = yes
+						}
+					}
+				}
+				country_event = { days = 35 id = und.8 }
+			}
+			25 = {
+				if = {
+					limit = {
+						UTH = {
+							is_ai = no
+						}
+					}
+					custom_effect_tooltip = und.7_tt
+					country_event = { days = 35 id = und.8 }
+				}
+			}
+		}
+	}
+}
+country_event = { ####空的叛乱 触发前
+	id = und.8
+	title = und.8.t
+	desc = und.8.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		end_puppet = UTH
+		country_event = { days = 10 id = und.9 }
+	}
+	option = {
+
+	}
+}
+
+country_event = { ####空的叛乱 开始
+	id = und.9
+	title = und.9.t
+	desc = und.9.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		UTH = {
+			declare_war_on = {
+				type = duli_wargoal
+				target = SAT
+			}
+		}
+	}
+	option = {
+		name = und.9.1
+		hidden_effect = {
+			news_event = { id = und.9 days = 2	}
+		}
+	}
+}
+
+news_event = { ####空的叛乱 新闻
+	id = und.10
+	title = und.10.t
+	desc = und.10.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = und.10.1
+		trigger = {
+			tag = SAT
+		}
+	}
+
+	option = {
+		name = und.10.2
+		trigger = {
+			capital_scope = {
+				is_on_continent = Underground
+			}
+			not = {
+				tag = SAT
+				tag = UTH
+			}
+		}
+	}
+
+	option = {
+		name = und.10.3
+		trigger = {
+			tag = UTH
+		}
+	}
+
+	option = {
+		name = und.10.4
+		trigger = {
+			not = {
+				capital_scope = {
+					is_on_continent = Underground
+				}
+				tag = MRY
+			}
+		}
+	}
+
+	option = {
+		name = und.10.5
+		trigger = {
+			tag = MRY
+		}
+	}
+}
+
+country_event = { ####SAT YUG的旧地狱霸权
+	id = und.11
+	title = und.11.t
+	desc = und.11.d
+	fire_only_once = yes
+	trigger = {
+		or = {
+			tag = SAT
+			tag = YUG
+		}
+		or = {
+			has_government = neworder
+			has_government = fandong
+		}
+		or = {
+			date > 149.6.1
+			UUG = {
+				or = {
+					is_subject = yes
+					exists = no
+				}
+			}
+		}
+		date < 153.6.1
+		has_war = no
+		SAT = {
+			is_subject = no
+		}
+		YUG = {
+			is_subject = no
+		}
+	}
+	mean_time_to_happen = {
+		days = 180
+	}
+	option = {
+		name = und.11.1
+		army_experience = 10
+		if = {
+			limit = {
+				tag = SAT
+			}
+			declare_war_on = {
+				target = YUG
+				type = puppet_wargoal_focus
+			}
+		}
+		if = {
+			limit = {
+				tag = YUG
+			}
+			declare_war_on = {
+				target = SAT
+				type = puppet_wargoal_focus
+			}
+		}
+		hidden_effect = {
+			news_event = { id = und.12 days = 2	}
+		}
+		ai_chance = {
+			base = 90
+		}
+	}
+	option = {
+		name = und.11.2
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+news_event = { ####SAT YUG的旧地狱霸权 新闻
+	id = und.12
+	title = und.12.t
+	desc = und.12.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	major = yes
+
+	option = {
+		name = und.12.1
+		trigger = {
+			tag = FROM
+		}
+	}
+
+	option = {
+		name = und.12.2
+		trigger = {
+			or = {
+				tag = SAT
+				tag = YUG
+			}
+			not = {
+				tag = FROM
+			}
+		}
+	}
+
+	option = {
+		name = und.12.3
+		trigger = {
+			capital_scope = {
+				is_on_continent = Underground
+			}
+			not = {
+				tag = YUG
+				tag = SAT
+			}
+		}
+	}
+
+	option = {
+		name = und.12.4
+		trigger = {
+			not = {
+				capital_scope = {
+					is_on_continent = Underground
+				}
 			}
 		}
 	}

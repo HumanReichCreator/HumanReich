@@ -13,7 +13,7 @@ ma_tank_generic = {
 		}
 	}
 
-	match_to_count = 0.10
+	match_to_count = 0.15
 
 	ma_tank150 = {
 	
@@ -67,7 +67,7 @@ ma_tank_generic = {
 			30.00 #-- max_organisation
 			0.80 #-- max_strength
 			2.0 #-- maximum_speed
-			0.20 #-- armor_value
+			100.00 #-- armor_value
 			0.05 #-- ap_attack
 			0.10 #-- reliability
 			0.10 #-- reliability_factor
@@ -138,7 +138,7 @@ ma_tank_generic = {
 
 			modifier = {
 				factor = 0
-				has_tech = lingben
+				not = { has_tech = waike }
 			}
 			modifier = {
 				factor = 0
@@ -174,7 +174,7 @@ ma_tank_generic = {
 			30.00 #-- max_organisation
 			0.80 #-- max_strength
 			2.0 #-- maximum_speed
-			0.20 #-- armor_value
+			100.00 #-- armor_value
 			0.05 #-- ap_attack
 			0.10 #-- reliability
 			0.10 #-- reliability_factor
@@ -275,7 +275,7 @@ ma_tank_generic = {
 			30.00 #-- max_organisation
 			0.80 #-- max_strength
 			2.0 #-- maximum_speed
-			0.20 #-- armor_value
+			100.00 #-- armor_value
 			0.05 #-- ap_attack
 			0.10 #-- reliability
 			0.10 #-- reliability_factor
@@ -339,11 +339,11 @@ sc_tank_generic = {
 
 		modifier = {
 			factor = 0
-			has_tech = lingben
+			not = { has_tech = waike }
 		}
 	}
 
-	match_to_count = 0.10
+	match_to_count = 0.15
 
 	sc_tank150 = {
 	
@@ -361,7 +361,7 @@ sc_tank_generic = {
 
 			modifier = {
 				factor = 0
-				has_tech = lingben
+				not = { has_tech = waike }
 			}
 			modifier = {
 				factor = 0
@@ -397,7 +397,7 @@ sc_tank_generic = {
 			30.00 #-- max_organisation
 			0.80 #-- max_strength
 			2.0 #-- maximum_speed
-			0.20 #-- armor_value
+			100.00 #-- armor_value
 			0.05 #-- ap_attack
 			0.10 #-- reliability
 			0.10 #-- reliability_factor
@@ -466,7 +466,7 @@ sc_tank_generic = {
 
 			modifier = {
 				factor = 0
-				has_tech = lingben
+				not = { has_tech = waike }
 			}
 			modifier = {
 				factor = 0
@@ -502,7 +502,7 @@ sc_tank_generic = {
 			30.00 #-- max_organisation
 			0.80 #-- max_strength
 			2.0 #-- maximum_speed
-			0.20 #-- armor_value
+			100.00 #-- armor_value
 			0.05 #-- ap_attack
 			0.10 #-- reliability
 			0.10 #-- reliability_factor
@@ -571,7 +571,7 @@ sc_tank_generic = {
 
 			modifier = {
 				factor = 0
-				has_tech = lingben
+				not = { has_tech = waike }
 			}
 		}
 		
@@ -603,7 +603,7 @@ sc_tank_generic = {
 			30.00 #-- max_organisation
 			0.80 #-- max_strength
 			2.0 #-- maximum_speed
-			0.20 #-- armor_value
+			100.00 #-- armor_value
 			0.05 #-- ap_attack
 			0.10 #-- reliability
 			0.10 #-- reliability_factor

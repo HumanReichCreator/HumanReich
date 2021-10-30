@@ -1,0 +1,1250 @@
+zhaomu_143 = {
+  qingnianweidui_143 = {
+    allowed = {
+      tag = HUM
+    }
+    visible = {
+      has_global_flag = scenario143
+      controls_state = 246
+    }
+    available = {
+      has_manpower > 149
+      has_equipment = { gun_a > 999 }
+      has_equipment = { melee_a > 499 }
+    }
+    cost = 30
+    days_remove = 60
+    days_re_enable = 60
+    complete_effect = {
+      add_equipment_to_stockpile = { type = melee_a amount = -500 } #100x5
+      add_equipment_to_stockpile = { type = gun_a amount = -1000 } #200x5
+      add_manpower = -150
+      246 = {
+        create_unit = {
+          division = "division_template = \"青年卫队\" start_experience_factor = 0.1 start_equipment_factor = 0.9"
+          owner = HUM
+          prioritize_location = 3184
+          allow_spawning_on_enemy_provs = no 
+        }
+        create_unit = {
+          division = "division_template = \"青年卫队\" start_experience_factor = 0.1 start_equipment_factor = 0.9"
+          owner = HUM
+          prioritize_location = 3184
+          allow_spawning_on_enemy_provs = no 
+        }
+        create_unit = {
+          division = "division_template = \"青年卫队\" start_experience_factor = 0.1 start_equipment_factor = 0.9"
+          owner = HUM
+          prioritize_location = 3184
+          allow_spawning_on_enemy_provs = no 
+        }
+        create_unit = {
+          division = "division_template = \"青年卫队\" start_experience_factor = 0.1 start_equipment_factor = 0.9"
+          owner = HUM
+          prioritize_location = 3184
+          allow_spawning_on_enemy_provs = no 
+        }
+        create_unit = {
+          division = "division_template = \"青年卫队\" start_experience_factor = 0.1 start_equipment_factor = 0.9"
+          owner = HUM
+          prioritize_location = 3184
+          allow_spawning_on_enemy_provs = no 
+        }
+      }
+    }
+    fire_only_once = no
+  }
+  renlizijingjun_143 = {
+    allowed = {
+      tag = HUM
+    }
+    visible = {
+      has_global_flag = scenario143
+      controls_state = 246
+    }
+    available = {
+      has_manpower > 203
+      has_equipment = { melee_a > 599 }
+      has_equipment = { gun_a > 1229 }
+      has_equipment = { mortar_a > 107 }
+      has_equipment = { support_equipment > 89 }
+      has_equipment = { magic_core_a > 29 }
+    }
+    cost = 55
+    days_remove = 70
+    days_re_enable = 70
+    complete_effect = {
+      add_equipment_to_stockpile = { type = melee_a amount = -600 } #200x3
+      add_equipment_to_stockpile = { type = gun_a amount = -1230 } #410x3
+      add_equipment_to_stockpile = { type = mortar_a amount = -108 } #36x3
+      add_equipment_to_stockpile = { type = support_equipment amount = -90 } #30x3
+      add_equipment_to_stockpile = { type = magic_core_a amount = -30 } #10x3
+      add_manpower = -204 #68x3
+      246 = {
+        create_unit = {
+          division = "division_template = \"人类村落自警军\" start_experience_factor = 0.1 start_equipment_factor = 0.9"
+          owner = HUM
+          prioritize_location = 3184
+          allow_spawning_on_enemy_provs = no 
+        }
+        create_unit = {
+          division = "division_template = \"人类村落自警军\" start_experience_factor = 0.1 start_equipment_factor = 0.9"
+          owner = HUM
+          prioritize_location = 3184
+          allow_spawning_on_enemy_provs = no 
+        }
+        create_unit = {
+          division = "division_template = \"人类村落自警军\" start_experience_factor = 0.1 start_equipment_factor = 0.9"
+          owner = HUM
+          prioritize_location = 3184
+          allow_spawning_on_enemy_provs = no 
+        }
+      }
+    }
+    fire_only_once = no
+  }
+  wunvfuzhubianzhi_143 = {
+    allowed = {
+      tag = HUM
+    }
+    visible = {
+      has_global_flag = scenario143
+      controls_state = 246
+    }
+    available = {
+      has_manpower > 263
+      has_equipment = { melee_a > 599 }
+      has_equipment = { gun_a > 1829 }
+      has_equipment = { mortar_a > 107 }
+      has_equipment = { support_equipment > 149 }
+      has_equipment = { magic_core_a > 59 }
+    }
+    cost = 70
+    days_remove = 1
+    days_re_enable = 1
+    complete_effect = {
+      add_equipment_to_stockpile = { type = melee_a amount = -600 } #200x3
+      add_equipment_to_stockpile = { type = gun_a amount = -1830 } #610x3
+      add_equipment_to_stockpile = { type = mortar_a amount = -108 } #36x3
+      add_equipment_to_stockpile = { type = support_equipment amount = -150 } #50x3
+      add_equipment_to_stockpile = { type = magic_core_a amount = -60 } #20x3
+      add_manpower = -264 #88x3
+      246 = {
+        create_unit = {
+          division = "division_template = \"巫女辅助编制\" start_experience_factor = 0.1 start_equipment_factor = 0.9"
+          owner = HUM
+          prioritize_location = 3184
+          allow_spawning_on_enemy_provs = no 
+        }
+        create_unit = {
+          division = "division_template = \"巫女辅助编制\" start_experience_factor = 0.1 start_equipment_factor = 0.9"
+          owner = HUM
+          prioritize_location = 3184
+          allow_spawning_on_enemy_provs = no 
+        }
+        create_unit = {
+          division = "division_template = \"巫女辅助编制\" start_experience_factor = 0.1 start_equipment_factor = 0.9"
+          owner = HUM
+          prioritize_location = 3184
+          allow_spawning_on_enemy_provs = no 
+        }
+      }
+    }
+    fire_only_once = no
+  }
+
+}
+zhuzha_143 = {
+    zhujia_143_1 = {
+        allowed = {
+          tag = HUM
+        }
+      	activation = {
+          has_global_flag = scenario143
+          TKM = {
+            is_subject_of = HUM
+          }
+      		army_manpower_in_state = {
+        			state = 165
+        			amount < global.sce143_zhuzha
+        	}
+      	}
+      	available = {
+      		army_manpower_in_state = {
+      			state = 165
+      			amount > global.sce143_zhuzha
+      		}
+      	}
+        highlight_states = {
+          state = 165
+        }
+      	is_good = no
+      	days_mission_timeout = 30
+      	fire_only_once = no
+
+      	timeout_effect = {
+          custom_effect_tooltip = sce143_TKMzhujia3
+      		add_to_variable = { global.sce143_fusangshenzhongcheng = -15}
+      	}
+
+      	ai_will_do = {
+      		factor = 1
+      	}
+    }
+    zhujia_143_2 = {
+        allowed = {
+          tag = HUM
+        }
+        activation = {
+          has_global_flag = scenario143
+          TKM = {
+            is_subject_of = HUM
+          }
+          army_manpower_in_state = {
+              state = 177
+              amount < global.sce143_zhuzha
+          }
+        }
+        available = {
+          army_manpower_in_state = {
+            state = 177
+            amount > global.sce143_zhuzha
+          }
+        }
+        highlight_states = {
+          state = 177
+        }
+        is_good = no
+        days_mission_timeout = 30
+        fire_only_once = no
+
+        timeout_effect = {
+          custom_effect_tooltip = sce143_TKMzhujia1
+          add_to_variable = { global.sce143_fusangshenzhongcheng = -5}
+        }
+
+        ai_will_do = {
+          factor = 1
+        }
+    }
+    zhujia_143_3   = {
+        allowed = {
+          tag = HUM
+        }
+        activation = {
+          has_global_flag = scenario143
+          TKM = {
+            is_subject_of = HUM
+          }
+          army_manpower_in_state = {
+              state = 197
+              amount < global.sce143_zhuzha
+          }
+        }
+        available = {
+          army_manpower_in_state = {
+            state = 197
+            amount > global.sce143_zhuzha
+          }
+        }
+        highlight_states = {
+          state = 197
+        }
+        is_good = no
+        days_mission_timeout = 30
+        fire_only_once = no
+
+        timeout_effect = {
+          custom_effect_tooltip = sce143_TKMzhujia1
+          add_to_variable = { global.sce143_fusangshenzhongcheng = -5}
+        }
+
+        ai_will_do = {
+          factor = 1
+        }
+    }
+    zhujia_143_4 = {
+        allowed = {
+          tag = HUM
+        }
+        activation = {
+          has_global_flag = scenario143
+          TKM = {
+            is_subject_of = HUM
+          }
+          army_manpower_in_state = {
+              state = 196
+              amount < global.sce143_zhuzha
+          }
+        }
+        available = {
+          army_manpower_in_state = {
+            state = 196
+            amount > global.sce143_zhuzha
+          }
+        }
+        highlight_states = {
+          state = 196
+        }
+        is_good = no
+        days_mission_timeout = 30
+        fire_only_once = no
+
+        timeout_effect = {
+          custom_effect_tooltip = sce143_TKMzhujia2
+          add_to_variable = { global.sce143_fusangshenzhongcheng = -10}
+        }
+
+        ai_will_do = {
+          factor = 1
+        }
+    }
+    zhujia_143_5 = {
+        allowed = {
+          tag = HUM
+        }
+        activation = {
+          has_global_flag = scenario143
+          TKM = {
+            is_subject_of = HUM
+          }
+          army_manpower_in_state = {
+              state = 211
+              amount < global.sce143_zhuzha
+          }
+        }
+        available = {
+          army_manpower_in_state = {
+            state = 211
+            amount > global.sce143_zhuzha
+          }
+        }
+        highlight_states = {
+          state = 211
+        }
+        is_good = no
+        days_mission_timeout = 30
+        fire_only_once = no
+
+        timeout_effect = {
+          custom_effect_tooltip = sce143_TKMzhujia2
+          add_to_variable = { global.sce143_fusangshenzhongcheng = -10}
+        }
+
+        ai_will_do = {
+          factor = 1
+        }
+    }
+    zhujia_143_6 = {
+        allowed = {
+          tag = HUM
+        }
+        activation = {
+          has_global_flag = scenario143
+          TKM = {
+            is_subject_of = HUM
+          }
+          army_manpower_in_state = {
+              state = 237
+              amount < global.sce143_zhuzha
+          }
+        }
+        available = {
+          army_manpower_in_state = {
+            state = 237
+            amount > global.sce143_zhuzha
+          }
+        }
+        highlight_states = {
+          state = 237
+        }
+        is_good = no
+        days_mission_timeout = 30
+        fire_only_once = no
+
+        timeout_effect = {
+          custom_effect_tooltip = sce143_TKMzhujia1
+          add_to_variable = { global.sce143_fusangshenzhongcheng = -5}
+        }
+
+        ai_will_do = {
+          factor = 1
+        }
+    }
+    zhujia_143_7 = {
+        allowed = {
+          tag = HUM
+        }
+        activation = {
+          has_global_flag = scenario143
+          TKM = {
+            is_subject_of = HUM
+          }
+          army_manpower_in_state = {
+              state = 299
+              amount < global.sce143_zhuzha
+          }
+        }
+        available = {
+          army_manpower_in_state = {
+            state = 299
+            amount > global.sce143_zhuzha
+          }
+        }
+        highlight_states = {
+          state = 299
+        }
+        is_good = no
+        days_mission_timeout = 30
+        fire_only_once = no
+
+        timeout_effect = {
+          custom_effect_tooltip = sce143_TKMzhujia2
+          add_to_variable = { global.sce143_fusangshenzhongcheng = -10}
+        }
+
+        ai_will_do = {
+          factor = 1
+        }
+    }
+}
+yaoguai_143 = {
+    tigaoyaoguaifucongdu_143 = {
+        allowed = {
+          tag = HUM
+        }
+        visible = {
+          has_global_flag = scenario143
+          TKM = {
+            is_subject_of = HUM
+          }
+        }
+        available = {
+          custom_trigger_tooltip = {
+            tooltip = tigaoyaoguaifucongdu_143_tt1
+            or = {
+              any_allied_country = {
+                any_controlled_state = {
+                  or = {
+                    region = 63
+                    region = 56
+                    region = 47
+                    region = 55
+                  }
+                }
+              }
+              HUM = {
+                any_controlled_state = {
+                  or = {
+                    region = 63
+                    region = 56
+                    region = 47
+                    region = 55
+                  }
+                }
+              }
+            }
+          }
+        }
+        days_remove = 50
+        days_re_enable = 50
+        complete_effect = {
+          add_to_variable = { global.sce143_fusangshenzhongcheng = 10}
+          custom_effect_tooltip = sce143_TKMzengjia1
+        }
+        fire_only_once = no
+        cost = 30
+    }
+    fangqiwairenli_143 = {
+        allowed = {
+          tag = HUM
+        }
+        visible = {
+          has_global_flag = scenario143
+          TKM = {
+            is_subject_of = HUM
+          }
+        }
+        available = {
+          custom_trigger_tooltip = {
+            tooltip = fangqiwairenli_143_tt1
+            any_state = {
+              if = {
+                limit = {
+                  or = {
+                    region = 47
+                    region = 55
+                  }
+                }
+                is_controlled_by = HUM
+              }
+            }
+          }
+        }
+        days_remove = 60
+        days_re_enable = 60
+        complete_effect = {
+          custom_effect_tooltip = sce143_TKMzhujia4
+          add_to_variable = { global.sce143_fusangshenzhongcheng = -30}
+          custom_effect_tooltip = fangqiwairenli_143_tt
+          add_political_power = 200
+          EXHC_exhaustion_minus25 = yes
+          add_war_support = 0.05
+          add_stability = 0.05
+        }
+        cancel_trigger = {
+          custom_trigger_tooltip = {
+            tooltip = fangqiwairenli_143_tt2
+            all_state = {
+              if = {
+                limit = {
+                  or = {
+                    region = 47
+                    region = 55
+                  }
+                }
+                not = { is_controlled_by = HUM }
+              }
+            }
+          }
+        }
+        fire_only_once = yes
+        # cost = 30
+    }
+    yaoqiupucongjunjunchuzhan_143 = {
+        allowed = {
+          tag = HUM
+        }
+        visible = {
+          has_global_flag = scenario143
+          TKM = {
+            is_subject_of = HUM
+          }
+        }
+        available = {
+          custom_trigger_tooltip = {
+            tooltip = yaoqiupucongjun_tt
+            check_variable = { global.sce143_fusangshenzhongcheng > 59}
+          }
+        }
+        days_remove = 50
+        days_re_enable = 50
+        complete_effect = {
+          custom_effect_tooltip = sce143_TKMzhujia3
+          add_to_variable = { global.sce143_fusangshenzhongcheng = -15}
+          custom_effect_tooltip = yaoqiupucongjunjunchuzhan_143_tt
+          set_global_flag = sce143_bangzhuHUM
+        }
+        fire_only_once = yes
+        cost = 50
+    }
+    yaoqiubangzhuMRS_143 = {
+        allowed = {
+          tag = HUM
+        }
+        visible = {
+          has_global_flag = scenario143
+          TKM = {
+            is_subject_of = HUM
+          }
+          has_global_flag = sce143_bangzhuHUM
+        }
+        available = {
+          TKM = {
+            surrender_progress < 0.1
+          }
+          custom_trigger_tooltip = {
+            tooltip = yaoqiupucongjun_tt
+            check_variable = { global.sce143_fusangshenzhongcheng > 59}
+          }
+        }
+        days_remove = 30
+        days_re_enable = 30
+        complete_effect = {
+          custom_effect_tooltip = sce143_TKMzhujia1
+          add_to_variable = { global.sce143_fusangshenzhongcheng = -5}
+          custom_effect_tooltip = yaoqiubangzhuMRS_143_tt
+          set_global_flag = sce143_bangzhuMRS
+        }
+        fire_only_once = yes
+        cost = 30
+    }
+    yaoqiubangzhuHKR_143 = {
+        allowed = {
+          tag = HUM
+        }
+        visible = {
+          has_global_flag = scenario143
+          TKM = {
+            is_subject_of = HUM
+          }
+          has_global_flag = sce143_bangzhuHUM
+        }
+        available = {
+          TKM = {
+            surrender_progress < 0.1
+          }
+          custom_trigger_tooltip = {
+            tooltip = yaoqiupucongjun_tt
+            check_variable = { global.sce143_fusangshenzhongcheng > 59}
+          }
+        }
+        days_remove = 30
+        days_re_enable = 30
+        complete_effect = {
+          custom_effect_tooltip = sce143_TKMzhujia1
+          add_to_variable = { global.sce143_fusangshenzhongcheng = -5}
+          custom_effect_tooltip = yaoqiubangzhuMRS_143_tt
+          set_global_flag = sce143_bangzhuHKR
+        }
+        fire_only_once = yes
+        cost = 30
+    }
+}
+kongzhi_143 = {
+    zhuanyiboliwunv_143 = {
+        allowed = {
+          tag = HUM
+        }
+        visible = {
+          has_global_flag = scenario143
+        }
+        available = {
+          HKR = {
+            has_capitulated = no
+            is_in_faction_with = HUM
+          }
+          or = {
+            any_allied_country = {
+              controls_state = 192
+            }
+            HUM = {
+              controls_state = 192
+            }
+          }
+        }
+        cost = 30
+        modifier = {
+          political_power_cost = 0.5
+        }
+        remove_effect = {
+          HKR = {
+            every_owned_state = {
+              add_core_of = HUM
+            }
+          }
+          annex_country = {
+            target = HKR
+            transfer_troops = yes
+          }
+          state_race_manpower = yes
+          HKR = {
+              HUM = {
+                  army_chinese_leader_inherit_146 = yes
+              }
+          }
+          add_war_support = 0.25
+          add_political_power = 160
+          EXHC_exhaustion_minus10 = yes
+        }
+        days_remove = 120
+        cancel_trigger = {
+          all_allied_country = {
+            not = {
+              controls_state = 192
+            }
+          }
+          HUM = {
+            not = {
+              controls_state = 192
+            }
+          }
+        }
+        fire_only_once = yes
+    }
+    kongzhi_143_60 = { #博丽神社
+        allowed = {
+          tag = HUM
+        }
+        activation = { 
+          has_global_flag = scenario143
+          not = {
+            has_global_flag = sce143_lost60
+          }
+          all_state = {
+            if = {
+              limit = {
+                region = 60
+              }
+              not = {
+                or = {
+                  is_controlled_by = HUM
+                  any_country = {
+                    is_in_faction_with = HUM
+                    controls_state = PREV
+                  }
+                }
+              }
+            }
+          }
+        }
+        available = {
+          custom_trigger_tooltip = {
+            tooltip = kongzhi_143_[STRATEGICREGION_60]_tt
+            not = {
+              all_state = {
+                if = {
+                  limit = {
+                    region = 60
+                  }
+                  not = {
+                    or = {
+                      is_controlled_by = HUM
+                      any_country = {
+                        is_in_faction_with = HUM
+                        controls_state = PREV
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          
+        }
+        is_good = no
+        days_mission_timeout = 20
+        fire_only_once = no
+
+        timeout_effect = {
+          EXHC_exhaustion_add10 = yes
+          custom_effect_tooltip = sce143_TKMzhujia1
+          add_to_variable = { global.sce143_fusangshenzhongcheng = -5}
+          set_global_flag = sce143_lost60
+        }
+
+        ai_will_do = {
+          factor = 1
+        }
+    }
+    kongzhi_143_61 = { #兽道
+        allowed = {
+          tag = HUM
+        }
+        activation = {
+          has_global_flag = scenario143
+          not = {
+            has_global_flag = sce143_lost61
+          }
+          all_state = {
+            if = {
+              limit = {
+                region = 61
+              }
+              not = {
+                or = {
+                  is_controlled_by = HUM
+                  any_country = {
+                    is_in_faction_with = HUM
+                    controls_state = PREV
+                  }
+                }
+              }
+            }
+          }
+        }
+        available = {
+          custom_trigger_tooltip = {
+            tooltip = kongzhi_143_[STRATEGICREGION_61]_tt
+            not = {
+              all_state = {
+                if = {
+                  limit = {
+                    region = 61
+                  }
+                  not = {
+                    or = {
+                      is_controlled_by = HUM
+                      any_country = {
+                        is_in_faction_with = HUM
+                        controls_state = PREV
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          
+        }
+        is_good = no
+        days_mission_timeout = 20
+        fire_only_once = no
+
+        timeout_effect = {
+          set_global_flag = sce143_lost61
+          EXHC_exhaustion_add10 = yes
+          custom_effect_tooltip = sce143_TKMzhujia1
+          add_to_variable = { global.sce143_fusangshenzhongcheng = -5}
+        }
+
+        ai_will_do = {
+          factor = 1
+        }
+    }
+    kongzhi_143_59 = { #中魔法森林
+        allowed = {
+          tag = HUM
+        }
+        activation = {
+          has_global_flag = scenario143
+          not = {
+            has_global_flag = sce143_lost59
+          }
+          all_state = {
+            if = {
+              limit = {
+                region = 59
+              }
+              not = {
+                or = {
+                  is_controlled_by = HUM
+                  any_country = {
+                    is_in_faction_with = HUM
+                    controls_state = PREV
+                  }
+                }
+              }
+            }
+          }
+        }
+        available = {
+          custom_trigger_tooltip = {
+            tooltip = kongzhi_143_[STRATEGICREGION_59]_tt
+            not = {
+              all_state = {
+                if = {
+                  limit = {
+                    region = 59
+                  }
+                  not = {
+                    or = {
+                      is_controlled_by = HUM
+                      any_country = {
+                        is_in_faction_with = HUM
+                        controls_state = PREV
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          
+        }
+        is_good = no
+        days_mission_timeout = 20
+        fire_only_once = no
+
+        timeout_effect = {
+          set_global_flag = sce143_lost59
+          EXHC_exhaustion_add10 = yes
+          custom_effect_tooltip = sce143_TKMzhujia1
+          add_to_variable = { global.sce143_fusangshenzhongcheng = -5}
+        }
+
+        ai_will_do = {
+          factor = 1
+        }
+    }
+    kongzhi_143_58 = { #魔法使村落
+        allowed = {
+          tag = HUM
+        }
+        activation = {
+          has_global_flag = scenario143
+          not = {
+            has_global_flag = sce143_lost58
+          }
+          all_state = {
+            if = {
+              limit = {
+                region = 58
+              }
+              not = {
+                or = {
+                  is_controlled_by = HUM
+                  any_country = {
+                    is_in_faction_with = HUM
+                    controls_state = PREV
+                  }
+                }
+              }
+            }
+          }
+        }
+        available = {
+          custom_trigger_tooltip = {
+            tooltip = kongzhi_143_[STRATEGICREGION_58]_tt
+            not = {
+              all_state = {
+                if = {
+                  limit = {
+                    region = 58
+                  }
+                  not = {
+                    or = {
+                      is_controlled_by = HUM
+                      any_country = {
+                        is_in_faction_with = HUM
+                        controls_state = PREV
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          
+        }
+        is_good = no
+        days_mission_timeout = 20
+        fire_only_once = no
+
+        timeout_effect = {
+          set_global_flag = sce143_lost58
+          EXHC_exhaustion_add10 = yes
+          custom_effect_tooltip = sce143_TKMzhujia1
+          add_to_variable = { global.sce143_fusangshenzhongcheng = -5}
+        }
+
+        ai_will_do = {
+          factor = 1
+        }
+    }
+    kongzhi_143_40 = { #南岸
+        allowed = {
+          tag = HUM
+        }
+        activation = {
+          has_global_flag = scenario143
+          not = {
+            has_global_flag = sce143_lost40
+          }
+          all_state = {
+            if = {
+              limit = {
+                region = 40
+              }
+              not = {
+                or = {
+                  is_controlled_by = HUM
+                  any_country = {
+                    is_in_faction_with = HUM
+                    controls_state = PREV
+                  }
+                }
+              }
+            }
+          }
+        }
+        available = {
+          custom_trigger_tooltip = {
+            tooltip = kongzhi_143_[STRATEGICREGION_40]_tt
+            not = {
+              all_state = {
+                if = {
+                  limit = {
+                    region = 40
+                  }
+                  not = {
+                    or = {
+                      is_controlled_by = HUM
+                      any_country = {
+                        is_in_faction_with = HUM
+                        controls_state = PREV
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          
+        }
+        is_good = no
+        days_mission_timeout = 20
+        fire_only_once = no
+
+        timeout_effect = {
+          set_global_flag = sce143_lost40
+          EXHC_exhaustion_add10 = yes
+          custom_effect_tooltip = sce143_TKMzhujia1
+          add_to_variable = { global.sce143_fusangshenzhongcheng = -5}
+        }
+
+        ai_will_do = {
+          factor = 1
+        }
+    }
+    kongzhi_143_56 = { #道具加工地
+        allowed = {
+          tag = HUM
+        }
+        activation = {
+          has_global_flag = scenario143
+          not = {
+            has_global_flag = sce143_lost56
+          }
+          all_state = {
+            if = {
+              limit = {
+                region = 56
+              }
+              not = {
+                or = {
+                  is_controlled_by = HUM
+                  any_country = {
+                    is_in_faction_with = HUM
+                    controls_state = PREV
+                  }
+                }
+              }
+            }
+          }
+        }
+        available = {
+          custom_trigger_tooltip = {
+            tooltip = kongzhi_143_[STRATEGICREGION_56]_tt
+            not = {
+              all_state = {
+                if = {
+                  limit = {
+                    region = 56
+                  }
+                  not = {
+                    or = {
+                      is_controlled_by = HUM
+                      any_country = {
+                        is_in_faction_with = HUM
+                        controls_state = PREV
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          
+        }
+        is_good = no
+        days_mission_timeout = 20
+        fire_only_once = no
+
+        timeout_effect = {
+          set_global_flag = sce143_lost56
+          EXHC_exhaustion_add10 = yes
+          custom_effect_tooltip = sce143_TKMzhujia1
+          add_to_variable = { global.sce143_fusangshenzhongcheng = -5}
+        }
+
+        ai_will_do = {
+          factor = 1
+        }
+    }
+    kongzhi_143_47 = {#西人妖扩建地
+        allowed = {
+          tag = HUM
+        }
+        activation = {
+          has_global_flag = scenario143
+          not = {
+            has_global_flag = sce143_lost47
+          }
+          all_state = {
+            if = {
+              limit = {
+                region = 47
+              }
+              not = {
+                or = {
+                  is_controlled_by = HUM
+                  any_country = {
+                    is_in_faction_with = HUM
+                    controls_state = PREV
+                  }
+                }
+              }
+            }
+          }
+        }
+        available = {
+          custom_trigger_tooltip = {
+            tooltip = kongzhi_143_47_tt
+            not = {
+              all_state = {
+                if = {
+                  limit = {
+                    region = 47
+                  }
+                  not = {
+                    or = {
+                      is_controlled_by = HUM
+                      any_country = {
+                        is_in_faction_with = HUM
+                        controls_state = PREV
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          
+        }
+        is_good = no
+        days_mission_timeout = 20
+        fire_only_once = no
+
+        timeout_effect = {
+          set_global_flag = sce143_lost47
+          EXHC_exhaustion_add10 = yes
+          custom_effect_tooltip = sce143_TKMzhujia1
+          add_to_variable = { global.sce143_fusangshenzhongcheng = -5}
+        }
+
+        ai_will_do = {
+          factor = 1
+        }
+    }
+    kongzhi_143_55 = {#人类村落运河
+        allowed = {
+          tag = HUM
+        }
+        activation = {
+          has_global_flag = scenario143
+          not = {
+            has_global_flag = sce143_lost55
+          }
+          all_state = {
+            if = {
+              limit = {
+                region = 55
+              }
+              not = {
+                or = {
+                  is_controlled_by = HUM
+                  any_country = {
+                    is_in_faction_with = HUM
+                    controls_state = PREV
+                  }
+                }
+              }
+            }
+          }
+        }
+        available = {
+          custom_trigger_tooltip = {
+            tooltip = kongzhi_143_[STRATEGICREGION_55]_tt
+            not = {
+              all_state = {
+                if = {
+                  limit = {
+                    region = 55
+                  }
+                  not = {
+                    or = {
+                      is_controlled_by = HUM
+                      any_country = {
+                        is_in_faction_with = HUM
+                        controls_state = PREV
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          
+        }
+        is_good = no
+        days_mission_timeout = 20
+        fire_only_once = no
+
+        timeout_effect = {
+          set_global_flag = sce143_lost55
+          EXHC_exhaustion_add10 = yes
+          custom_effect_tooltip = sce143_TKMzhujia1
+          add_to_variable = { global.sce143_fusangshenzhongcheng = -5}
+        }
+
+        ai_will_do = {
+          factor = 1
+        }
+    }
+    kongzhi_143_51 = {#东人类扩建地
+        allowed = {
+          tag = HUM
+        }
+        activation = {
+          has_global_flag = scenario143
+          not = {
+            has_global_flag = sce143_lost51
+          }
+          all_state = {
+            if = {
+              limit = {
+                region = 51
+              }
+              not = {
+                or = {
+                  is_controlled_by = HUM
+                  any_country = {
+                    is_in_faction_with = HUM
+                    controls_state = PREV
+                  }
+                }
+              }
+            }
+          }
+        }
+        available = {
+          custom_trigger_tooltip = {
+            tooltip = kongzhi_143_[STRATEGICREGION_51]_tt
+            not = {
+              all_state = {
+                if = {
+                  limit = {
+                    region = 51
+                  }
+                  not = {
+                    or = {
+                      is_controlled_by = HUM
+                      any_country = {
+                        is_in_faction_with = HUM
+                        controls_state = PREV
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          
+        }
+        is_good = no
+        days_mission_timeout = 20
+        fire_only_once = no
+
+        timeout_effect = {
+          set_global_flag = sce143_lost51
+          EXHC_exhaustion_add10 = yes
+          custom_effect_tooltip = sce143_TKMzhujia1
+          add_to_variable = { global.sce143_fusangshenzhongcheng = -5}
+        }
+
+        ai_will_do = {
+          factor = 1
+        }
+    }
+}

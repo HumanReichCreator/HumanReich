@@ -4,11 +4,19 @@ state={
 	name="STATE_309"
 
 	history={
-			owner = CIR
-		146.1.1 = {
-			owner = CIR
+		143.7.1 = {
+			owner = SCA
 			add_core_of = SCA
-			add_core_of = CIR
+			buildings = {
+				infrastructure = 3
+				industrial_complex = 0
+				arms_factory = 0
+				radar_station = 0
+			}
+		}
+		146.1.1 = {
+			owner = SCA
+			add_core_of = SCA
 			buildings = {
 				infrastructure =3
 				industrial_complex = 0

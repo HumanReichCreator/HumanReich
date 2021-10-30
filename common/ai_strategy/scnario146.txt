@@ -47,3 +47,127 @@ helpNTR = {
 		value = 150
 	}
 }
+
+SW_countries1 = {
+	enable = {
+		not = { SW_country = yes }
+	}
+	abort = {
+		always = no
+	}
+
+	ai_strategy = {
+		type = alliance 
+		id = "GH1"			
+		value = -100
+	}
+	ai_strategy = {
+		type = alliance 
+		id = "GH2"			
+		value = -100
+	}
+	ai_strategy = {
+		type = alliance 
+		id = "GH3"			
+		value = -100
+	}
+	ai_strategy = {
+		type = alliance 
+		id = "HU3"			
+		value = -100
+	}
+	ai_strategy = {
+		type = alliance 
+		id = "HU6"			
+		value = -100
+	}
+	ai_strategy = {
+		type = alliance 
+		id = "ZYD"			
+		value = -100
+	}
+	ai_strategy = {
+		type = alliance 
+		id = "SGS"			
+		value = -100
+	}
+	ai_strategy = {
+		type = alliance 
+		id = "MEL"			
+		value = -100
+	}
+}
+
+SW_countries2 = {
+	enable = {
+		not = { SW_country = yes }
+	}
+	abort = {
+		always = no
+	}
+
+	reversed = yes
+
+	ai_strategy = {
+		type = alliance 
+		id = "GH1"			
+		value = -100
+	}
+	ai_strategy = {
+		type = alliance 
+		id = "GH2"			
+		value = -100
+	}
+	ai_strategy = {
+		type = alliance 
+		id = "GH3"			
+		value = -100
+	}
+	ai_strategy = {
+		type = alliance 
+		id = "HU3"			
+		value = -100
+	}
+	ai_strategy = {
+		type = alliance 
+		id = "HU6"			
+		value = -100
+	}
+	ai_strategy = {
+		type = alliance 
+		id = "ZYD"			
+		value = -100
+	}
+	ai_strategy = {
+		type = alliance 
+		id = "SGS"			
+		value = -100
+	}
+	ai_strategy = {
+		type = alliance 
+		id = "MEL"			
+		value = -100
+	}
+}
+
+UTH_rebel = {
+	enable = {
+		tag = UUG
+		UTH = {
+			has_war_with = SAT
+		}
+	}
+	abort = {
+		UTH = {
+			is_subject_of = SAT
+		}
+	}
+
+	reversed = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "UTH"			
+		value = 100
+	}
+}

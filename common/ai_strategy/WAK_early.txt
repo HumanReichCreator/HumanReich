@@ -1,0 +1,406 @@
+default_WAK_more = {
+	enable = {
+		has_global_flag = main_scenario
+		tag = WAK
+		OR = {
+			is_subject = no
+			compare_autonomy_state > autonomy_puppet
+		}
+	}
+	abort = {
+		always = no
+	}
+	ai_strategy = {
+		type = force_build_armies
+		value = 90
+	}
+}
+
+WAK_weibeitiaoyue = {
+
+	enable = {
+		has_opinion_modifier = WAK_weibeitiaoyue_op
+	}
+	abort = {
+		NOT = {
+			has_opinion_modifier = WAK_weibeitiaoyue_op
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "WAK"
+		value = 100
+	}
+}
+
+WAK_yapofusangshen = {
+
+	enable = {
+		has_opinion_modifier = WAK_yapofusangshen_op
+	}
+	abort = {
+		NOT = {
+			has_opinion_modifier = WAK_yapofusangshen_op
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "WAK"
+		value = 100
+	}
+}
+
+WAK_attack_TKM = {
+	enable = {
+		OR = {
+			has_completed_focus = WAK_jiejuenananweixie
+			has_completed_focus = WAK_xianfazhiren
+			has_completed_focus = WAK_chanchuxinxingshili
+		}
+		tag = WAK
+		is_subject = no
+	}
+	abort = {
+		TKM = {
+			is_subject_of = WAK
+		}
+	}
+
+	ai_strategy = {
+		type = invade
+		id = "TKM"			
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "TKM"			
+		value = 100
+	}	
+}
+
+WAK_attack_SCA = {
+	enable = {
+		OR = {
+			ROOT = {
+				has_war_with = SCA
+			}
+			has_completed_focus = WAK_diwangguilai
+			has_completed_focus = WAK_xianghongmoguanfuchou
+		}
+		tag = WAK
+		is_subject = no
+	}
+	abort = {
+		SCA = {
+			is_subject_of = WAK
+		}
+	}
+
+	ai_strategy = {
+		type = invade
+		id = "SCA"			
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "SCA"			
+		value = 100
+	}	
+}
+
+WAK_attack_PRI = {
+	enable = {
+		has_completed_focus = WAK_xiangwuzhihuxiankuozhang
+		tag = WAK
+		is_subject = no
+	}
+	abort = {
+		PRI = {
+			is_subject_of = WAK
+		}
+	}
+
+	ai_strategy = {
+		type = invade
+		id = "PRI"			
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "PRI"			
+		value = 100
+	}	
+}
+
+WAK_attack_MRS = {
+	enable = {
+		has_completed_focus = WAK_jiefangmofashikongzhixiadeyaoguai
+		tag = WAK
+		is_subject = no
+	}
+	abort = {
+		MRS = {
+			is_subject_of = WAK
+		}
+	}
+
+	ai_strategy = {
+		type = invade
+		id = "MRS"			
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "MRS"			
+		value = 100
+	}	
+}
+
+WAK_attack_CIR = {
+	enable = {
+		has_completed_focus = WAK_tongyiwuzhihu
+		tag = WAK
+		is_subject = no
+	}
+	abort = {
+		CIR = {
+			is_subject_of = WAK
+		}
+	}
+
+	ai_strategy = {
+		type = invade
+		id = "CIR"			
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "CIR"			
+		value = 100
+	}	
+}
+
+Attack_NMS = {
+	enable = {
+		has_country_flag = guafenmingliansi
+		is_subject = no
+	}
+	abort = {
+		NMS = {
+			is_subject_of = ROOT
+		}
+	}
+
+	ai_strategy = {
+		type = invade
+		id = "NMS"			
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "NMS"			
+		value = 100
+	}	
+}
+
+WAK_firend = {
+	enable = {
+		has_opinion_modifier = WAK_waijiaoyouhao_op
+	}
+	abort = {
+	
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "WAK"
+		value = 15
+	}
+}
+
+WAK_feifazhengquan = {
+	enable = {
+		has_opinion_modifier = WAK_feifazhengquan_op
+	}
+	abort = {
+		NOT = {
+			has_opinion_modifier = WAK_feifazhengquan_op
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "SCA"
+		value = 200
+	}
+}
+
+WAK_maoyizhicai = {
+	enable = {
+		has_opinion_modifier = WAK_zhicai_op
+	}
+	abort = {
+		NOT = {
+			has_opinion_modifier = WAK_zhicai_op
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "SCA"
+		value = 60
+	}
+}
+
+WAK_Refuse_to_fight_for_SCA = {
+	enable = {
+		tag = WAK
+   	has_completed_focus = WAK_anzhongtuolihongmoguan
+		is_in_faction_with = SCA
+		OR = {
+		 	OR = {
+		 		is_in_faction_with = GRS
+     		GRS = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = PRI
+     		PRI = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = SCA
+     		WAK = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = NMS
+    	 	NMS = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = TKM
+     		TKM = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = MRS
+     		MRS = { is_subject_of = SCA }
+		 	}
+		 	OR = {
+		 		is_in_faction_with = HUM
+     		HUM = { is_subject_of = SCA }
+		 	}
+		}
+	}
+	abort = {
+		OR = {
+	    SCA = { has_capitulated = yes }
+			NOT = { country_exists = SCA }
+	    SCA = { is_subject = yes }
+		  NOT = { is_in_faction_with = SCA }
+		}
+	}
+	
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "GRS"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "SCA"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "PRI"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "NMS"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "TKM"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "MRS"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "ALI"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "MTM"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "MFA"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "MYK"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "HUM"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "ZBT"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "KYK"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "MNM"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "ICR"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "YUK"
+		value = 100
+	}
+}
+
+SCA_Refuse_to_fight_for_WAK = {
+	enable = {
+		OR = {
+		  tag = SCA
+      is_in_faction_with = SCA
+		}
+   	WAK = { has_completed_focus = WAK_anzhongtuolihongmoguan }
+		WAK = { is_in_faction_with = SCA }
+	}
+	abort = {
+   	WAK = { has_completed_focus = WAK_fankangshike }
+	}
+	
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "WAK"
+		value = 100
+	}
+}

@@ -1,0 +1,2965 @@
+add_namespace = wak
+
+country_event = { #协调人力资源与工业
+    id = wak.1
+	title = wak.1.t
+	desc = wak.1.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+	    name = wak.1.1
+		158 = {
+		    add_manpower = 200
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+	            instant_build = yes
+	            type = industrial_complex
+	            level = 1
+			}
+		}
+		165 = {
+		    add_manpower = 200
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				instant_build = yes
+			    type = arms_factory
+				level = 1
+			}
+		}
+	}
+	
+	option = {
+	    name = wak.1.2
+		158 = {
+			remove_building = {
+	            type = industrial_complex
+	            level = 2
+	        }
+		}
+		165 = {
+			remove_building = {
+			    type = arms_factory
+				level = 2
+			}
+		}
+		random_owned_controlled_state = {
+		    limit = {
+			    infrastructure < 6
+			}
+		    add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				instant_build = yes
+			    type = industrial_complex
+				level = 2
+			}
+			add_building_construction = {
+				instant_build = yes
+			    type = infrastructure
+				level = 1
+			}
+			add_manpower = 300
+		}
+		random_owned_controlled_state = {
+		    limit = {
+			    infrastructure < 6
+			}
+		    add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				instant_build = yes
+			    type = arms_factory
+				level = 2
+			}
+			add_building_construction = {
+				instant_build = yes
+			    type = infrastructure
+				level = 1
+			}
+			add_manpower = 300
+		}
+	}
+		
+	option = {
+	    name = wak.1.3
+		add_manpower = -250
+		swap_ideas = {
+		    add_idea = WAK_jiurenlidewanbeigongye2_idea
+		    remove_idea = WAK_jiurenlidewanbeigongye_idea
+		}
+	}
+}
+
+country_event = { #请求帝国补助
+    id = wak.2
+	title = wak.2.t
+	desc = wak.2.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+	    name = wak.2.1
+		add_timed_idea = {
+		    idea = WAK_buzhunanwuzhihugongyequ_idea
+			days = 365
+		}
+	    FROM = {
+		    add_timed_idea = {
+			    idea = WAK_dedaobuzhu_idea
+				days = 365
+			}
+		}
+		ai_chance = {
+		    base = 33
+			modifier = {
+			    ROOT = {
+				    has_war = yes
+				}
+			    factor = 20
+			}
+		}
+		hidden_effect = {
+			WAK = {
+				country_event = { 
+				    hours = 12
+					id = glo.2001
+				}
+			}
+		}
+	}
+	
+	option = {
+	    name = wak.2.2
+	    add_timed_idea = {
+		    idea = WAK_youxianbuzhunanwuzhihugongyequ_idea
+			days = 365
+		}
+	    FROM = {
+		    add_timed_idea = {
+			    idea = WAK_dedaoyouxianbuzhu_idea
+				days = 365
+			}
+			set_country_flag = youxianbuzhu
+		}
+		ai_chance = {
+		    base = 34
+			modifier = {
+			    ROOT = {
+				    has_war = yes
+				}
+				factor = 30
+			}
+		}
+		hidden_effect = {
+		    WAK = {
+			    country_event = {
+				    hours = 12
+					id = glo.2001
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = wak.2.3
+		hidden_effect = {
+			WAK = {
+				set_country_flag = jujuebuzhu
+				country_event = {
+					id = wak.17
+					days = 2
+				}
+			}
+		}
+		ai_chance = {
+			base = 33
+			modifier = {
+				ROOT = {
+					has_war = yes
+				}
+				factor = 40
+			}
+		}
+	}
+}
+
+country_event = { #违反斯卡蕾特港条约
+	id = wak.3
+	title = wak.3.t
+	desc = wak.3.d
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SCA
+		SCA = {
+			has_idea = WAK_sikaleitegangtiaoyue_idea
+		}
+		NOT = {
+			WAK = {
+				is_in_faction_with = SCA
+			}
+		}
+	}
+	
+	option = {
+		name = wak.3.1
+		SCA = {
+			remove_ideas = WAK_sikaleitegangtiaoyue_idea
+			add_opinion_modifier = {
+                    target = WAK
+                    modifier = WAK_weibeitiaoyue_op
+            }
+		}
+		hidden_effect = {
+		    WAK = {
+			    country_event = {
+				    hours = 12
+					id = wak.4
+				}
+			}
+		}
+	}
+}
+
+country_event = { #惩罚战争预警
+	id = wak.4
+	title = wak.4.t
+	desc = wak.4.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.4.1
+		hidden_effect = {
+			set_country_flag = WAK_weibei
+		}
+	}
+}
+
+country_event = { #直接独立
+	id = wak.5
+	title = wak.5.t
+	desc = wak.5.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.5.1
+		hidden_effect = {
+			WAK = {
+				country_event = {
+					hours = 12
+					id = wak.6
+				}
+			}
+		}
+		ai_chance = {
+			base = 75
+			modifier = {
+				ic_ratio = {
+					tag = FROM
+					ratio > 1
+				}
+				factor = 50
+			}
+		}
+	}
+	
+	option = {
+		name = wak.5.2
+		SCA = {
+			end_puppet = WAK
+		}
+		hidden_effect = {
+			WAK = { drop_cosmetic_tag = yes }
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				ic_ratio = {
+					tag = FROM
+					ratio > 1
+				}
+				factor = 50
+			}
+		}
+	}
+}
+
+country_event = { #直接独立的请求遭到拒绝
+	id = wak.6
+	title = wak.6.t
+	desc = wak.6.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.6.1
+		SCA = {
+			end_puppet = WAK
+		}
+
+		leave_faction = yes
+		declare_war_on = {
+			target = SCA
+			type = duli_wargoal
+		}
+		hidden_effect = {
+			WAK = { drop_cosmetic_tag = yes }
+      news_event = {
+        id = wak.39
+        days = 2
+      }
+		}
+		ai_chance = {
+			base = 80
+			modifier = {
+				ic_ratio = {
+					tag = FROM
+					ratio > 3.5
+				}
+				factor = 10
+			}
+		}
+	}
+	
+	option = {
+		name = wak.6.2
+		add_stability = -0.2
+		add_war_support = -0.2
+		ai_chance = {
+			base = 20
+			modifier = {
+				ic_ratio = {
+					tag = FROM
+					ratio < 1
+				}
+				factor = 0
+			}
+		}
+	}
+}
+
+country_event = { #与骚灵合作
+	id = wak.7
+	title = wak.7.t
+	desc = wak.7.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.7.1
+		FROM = {
+			can_use = yes
+			add_ideas = PRI_manu
+			ROOT = {
+				can_use = yes
+				add_ideas = WAK_manu
+			}
+		}
+		hidden_effect = {
+			WAK = {
+				set_country_flag = WAK_saolinghezuo
+				country_event = {
+					id = glo.2001
+					hours = 12
+				}
+			}
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+	
+	option = {
+		name = wak.7.2
+		hidden_effect = {
+			WAK = {
+				country_event = {
+					id = glo.2002
+					hours = 12
+				}
+			}
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = { target = FROM value > 0 } 
+				}
+			}
+			modifier = {
+				is_in_faction_with = WAK
+				factor = 0
+			}
+		}
+	}
+}
+
+country_event = { #和骚灵结盟
+	id = wak.8
+	title = wak.8.t
+	desc = wak.8.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wak.8.1
+		FROM = {
+			jiemeng = yes
+		}
+		hidden_effect = {
+			WAK = {
+				country_event = {
+					days = 2
+					id = glo.2001
+				}
+			}
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	option = {
+		name = wak.8.2
+		hidden_effect = {
+			WAK = {
+				country_event = {
+					days = 2
+					id = glo.2002
+				}
+			}
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = { target = FROM value > 30 } 
+				}
+			}
+		}
+	}
+}
+
+country_event = { #邀请参拜神路加入
+	id = wak.9
+	title = wak.9.t
+	desc = wak.9.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.9.1
+		WAK = {
+			add_to_faction = ROOT
+		}
+		hidden_effect = {
+			WAK = {
+				country_event = {
+					id = glo.2001
+					days = 2
+				}
+			}
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+	
+	option = {
+		name = wak.9.2
+		hidden_effect = {
+			WAK = {
+				country_event = {
+					id = glo.2002
+					days = 2
+				}
+			}
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = { target = FROM value > 50 }
+				}
+			}
+		}
+	}
+}
+
+country_event = { #邀请妖怪小镇加入
+	id = wak.10
+	title = wak.10.t
+	desc = wak.10.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.10.1
+		WAK = {
+			add_to_faction = ROOT
+		}
+		hidden_effect = {
+			WAK = {
+				country_event = {
+					id = glo.2001
+					days = 2
+				}
+			}
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+	
+	option = {
+		name = wak.10.2
+		hidden_effect = {
+			WAK = {
+				country_event = {
+					id = glo.2002
+					days = 2
+				}
+			}
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = { target = FROM value > 30 }
+				}
+			}
+		}
+	}
+}
+
+country_event = { #邀请魔法使协会加入
+	id = wak.11
+	title = wak.11.t
+	desc = wak.11.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.11.1
+		WAK = {
+			add_to_faction = ROOT
+		}
+		hidden_effect = {
+			WAK = {
+				country_event = {
+					id = glo.2001
+					days = 2
+				}
+			}
+		}
+		ai_chance = {
+			base = 34
+		}
+	}
+	
+	option = {
+		name = wak.11.2
+		hidden_effect = {
+			WAK = {
+				country_event = {
+					id = glo.2002
+					days = 2
+				}
+			}
+		}
+		ai_chance = {
+			base = 66
+			modifier = {
+				factor = 3.3
+				ROOT = {
+					has_opinion = { target = FROM value > 50 }
+				}
+			}
+			modifier = {
+				factor = 0
+				ROOT = {
+					is_in_faction = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = { #与付丧神结盟
+	id = wak.12
+	title = wak.12.t
+	desc = wak.12.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.12.1
+
+		FROM = {
+      set_country_flag = WAK_jiemengfusangshen_flag
+
+      qiangjiemeng = yes
+			can_use = yes
+			add_ideas = TKM_manu
+			ROOT = {
+				can_use = yes
+				add_ideas = WAK_manu
+			}
+		}
+		diplomatic_relation = {
+			country = FROM
+			relation = non_aggression_pact
+			active = yes
+		}
+
+		hidden_effect = {
+			WAK = {
+				country_event = {
+					id = glo.2001
+					days = 2
+				}
+			}
+		}
+		ai_chance = {
+			base = 60
+		}
+	}
+	
+	option = {
+		name = wak.12.2
+		hidden_effect = {
+			WAK = {
+				country_event = {
+					id = glo.2002
+					days = 2
+				}
+			}
+		}
+		ai_chance = {
+			base = 40
+			modifier = {
+				TKM = {
+					has_opinion = { target = WAK value > 70 }
+				}
+				factor = 15
+			}
+			modifier = {
+				TKM = {
+					has_opinion = { target = WAK value > 100 }
+				}
+				factor = 0.5
+			}
+		}
+	}
+}
+
+country_event = { #与付丧神瓜分命莲寺
+	id = wak.13
+	title = wak.13.t
+	desc = wak.13.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.13.1
+		hidden_effect = {
+			TKM = {
+				country_event = {
+					id = wak.14
+					days = 30
+				}
+				set_country_flag = guafenmingliansi
+			}
+			WAK = {
+				country_event = {
+					id = wak.14
+					days = 30
+				}
+				set_country_flag = guafenmingliansi
+			}
+			NMS = {
+				country_event = {
+					id = wak.16
+					days = 2
+				}
+			}
+		}
+		ai_chance = {
+			base = 40
+			modifier = {
+				is_in_faction_with = NMS
+				factor = 0
+			}
+			modifier = {
+				has_war = yes
+				factor = 10
+			}
+		}
+	}
+	
+	option = {
+		name = wak.13.2
+		hidden_effect = {
+			WAK = {
+				country_event = {
+					id = wak.15
+					days = 2
+				}
+			}
+		}
+		ai_chance = {
+			base = 60
+			modifier = {
+				NOT = {
+					has_non_aggression_pact_with = NMS
+				}
+				factor = 20
+			}
+			modifier = {
+				has_government = neworder
+				factor = 10
+			}
+		}
+	}
+}
+
+country_event = { #同时进攻命莲寺
+	id = wak.14
+	title = wak.14.t
+	desc = wak.14.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.14.1
+		declare_war_on = {
+			target = NMS
+			type = puppet_wargoal_focus
+		}
+	}
+}
+
+country_event = { #单独面对命莲寺
+	id = wak.15
+	title = wak.15.t
+	desc = wak.15.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.15.1
+		declare_war_on = {
+			target = NMS
+			type = puppet_wargoal_focus
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				strength_ratio = {
+					tag = NMS
+					ratio > 1.2
+				}
+				factor = 0
+			}
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+	
+	option = {
+		name = wak.15.2
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+country_event = { #命莲寺的警戒
+	id = wak.16
+	title = wak.16.t
+	desc = wak.16.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.16.1
+	}
+}
+
+country_event = { #拒绝补助
+	id = wak.17
+	title = wak.17.t
+	desc = wak.17.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wak.17.1
+		WAK = {
+		    add_timed_idea = {
+			    idea = WAK_huifurenkouyugongye_idea
+				days = 365
+			}
+		}
+	}
+}
+
+country_event = { #右线国策独立
+	id = wak.18
+	title = wak.18.t
+	desc = wak.18.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.18.1
+		SCA = {
+			swap_ideas = {
+				add_idea = SCA_yaojingsaodong2_idea
+				remove_idea = SCA_yaojingsaodong_idea
+			}
+			declare_war_on = {
+				target = WAK
+				type = puppet_wargoal_focus
+			}
+		}
+		hidden_effect = {
+			news_event = {
+			
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+	
+	option = {
+		name = wak.18.2
+		ai_chance = {
+			base = 99
+			modifier = {
+				NOT = {
+					has_idea = SCA_yaojingsaodong_idea
+					has_idea = SCA_yaojingsaodong2_idea
+				}
+				factor = 0
+			}
+		}
+	}
+}
+
+country_event = { #暂时废弃
+	id = wak.19
+	title = wak.19.t
+	desc = wak.19.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.19.1
+	}
+}
+
+country_event = { #向背叛者进攻
+	id = wak.20
+	title = wak.20.t
+	desc = wak.20.d
+	
+	fire_only_once = yes
+	mean_time_to_happen = { days = 100 }
+	
+	trigger = {
+		tag = SCA
+		WAK = {
+			has_country_flag = WAK_weibei
+		}
+	}
+	
+	option = {
+		name = wak.20.1
+		declare_war_on = {
+            target = WAK
+            type = puppet_wargoal_focus
+        }
+		ai_chance = {
+			base = 90
+			modifier = {
+				factor = 0.5
+				strength_ratio = {
+					tag = WAK
+					ratio > 2.5
+				}
+			}
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
+	}
+	
+	option = {
+		name = wak.20.2
+		add_political_power = -150
+		add_stability = -0.1
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+country_event = { #要求幽灵区臣服
+	id = wak.21
+	title = wak.21.t
+	desc = wak.21.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.21.1
+		WAK = {
+			PRI = {
+				subject_level3 = yes
+			}
+		}
+		hidden_effect = {
+			PRI = { drop_cosmetic_tag = yes }
+			WAK = {
+				country_event = {
+					id = glo.2001
+					hours = 12
+				}
+				add_named_threat = {
+					threat = 1
+					name = WAK_yaoqiuyoulingchenfu
+				}
+			}
+			SCA = {
+				country_event = {
+					id = wak.23
+					hours = 12
+				}
+			}
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+	
+	option = {
+		name = wak.21.2
+		hidden_effect = {
+			WAK = {
+				country_event = {
+					id = wak.22
+					hours = 12
+				}
+			}
+		}
+		ai_chance = {
+			base = 65
+			modifier = {
+				WAK = {
+					has_country_flag = WAK_saolinghezuo
+				}
+				factor = 15
+			}
+			modifier = {
+				PRI = {
+					has_opinion = { target = WAK value > 50 }
+				}
+				factor = 5
+			}
+		}
+	}
+}
+
+country_event = { #要求幽灵区臣服遭到拒绝
+	id = wak.22
+	title = wak.22.t
+	desc = wak.22.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.22.1
+		declare_war_on = {
+			target = PRI
+			type = puppet_wargoal_focus
+		}
+		ai_chance = {
+			base = 85
+			modifier = {
+				has_war = yes
+				factor = 5
+			}
+		}
+	}
+	
+	option = {
+		name = wak.22.2
+		add_political_power = -50
+		add_war_support = -0.1
+		ai_chance = {
+			base = 15
+		}
+	}
+}
+
+country_event = { #SCA对WAK附庸SHO的响应
+	id = wak.23
+	title = wak.23.t
+	desc = wak.23.d
+	
+	fire_only_once =  yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.23.1
+		declare_war_on = {
+			target = WAK
+			type = puppet_wargoal_focus
+		}
+		ai_chance = {
+			base = 90
+			modifier = {
+				has_war = yes
+				factor = 10
+			}
+		}
+	}
+	
+	option = {
+		name = wak.23.2
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+country_event = { #联系外玄武川的反抗者
+	id = wak.24
+	title = wak.24.t
+	desc = wak.24.d
+	
+	fire_only_once = yes
+	mean_time_to_happen = { days = 15 }
+	
+	trigger = {
+		tag = WAK
+		has_completed_focus = WAK_lianxiwaixuanwuchuanbuluodefankangzhe
+		has_war_with = SCA
+	}
+	
+	immediate = {
+		hidden_effect = {
+			load_oob = WAK_fankangjun
+		}
+	}
+		
+	option = {
+		name = wak.24.1
+	}
+}
+
+country_event = { #与付丧神的条约
+	id = wak.25
+	title = wak.25.t
+	desc = wak.25.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.25.1
+		FROM = {
+			can_use = yes
+      if = {
+        limit = {
+          has_idea = WAK_Prop_riot_1_idea
+        }
+        remove_ideas = WAK_Prop_riot_1_idea
+      }
+
+			if = {
+				limit = {
+					has_idea = WAK_jiurenlidewanbeigongye_idea
+				}
+				swap_ideas = {
+					add_idea = WAK_jiurenlidewanbeigongye5_idea
+					remove_idea = WAK_jiurenlidewanbeigongye_idea
+				}
+				else = {
+					if = {
+						limit = {
+							has_idea = WAK_jiurenlidewanbeigongye2_idea
+						}
+						swap_ideas = {
+							add_idea = WAK_jiurenlidewanbeigongye6_idea
+							remove_idea = WAK_jiurenlidewanbeigongye2_idea
+						}
+					}
+				}
+			}
+		}
+		add_ideas = WAK_manu
+		hidden_effect = {
+			FROM = {
+				country_event = {
+					id = glo.2001
+					hours = 12
+				}
+				set_country_flag = WAK_kogdaying
+			}
+		}
+		ai_chance = {
+			base = 80
+			modifier = {
+				has_war_with = FROM
+				factor = 0
+			}
+		}
+	}
+	
+	option = {
+		name = wak.25.2
+		hidden_effect = {
+			FROM = {
+				country_event = {
+					id = glo.2002
+					hours = 12
+				}
+			}
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				ROOT = {
+					has_opinion = { target = FROM value > 60 }
+				}
+				factor = 0.5
+			}
+			modifier = {
+        is_in_faction_with = FROM
+				factor = 0.5
+			}
+		}
+	}
+}
+
+country_event = { #边境摩擦buff
+	id = wak.26
+	title = wak.26.t
+	desc = wak.26.d
+	
+	fire_only_once = yes
+	mean_time_to_happen = { days = 1 }
+	
+	trigger = {
+		tag = WAK
+		has_country_flag = WAK_bianjingmoca
+		has_war_with = PRI
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_timed_idea = {
+				idea = WAK_bianjingmoca_idea
+				days = 92
+			}
+		}
+	}
+		
+	option = {
+		name = wak.26.1
+	}
+}
+
+country_event = { #影响骚灵
+	id = wak.27
+	title = wak.27.t
+	desc = wak.27.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.27.1
+	}
+}
+
+country_event = { #颠覆骚灵
+	id = wak.28
+	title = wak.28.t
+	desc = wak.28.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.28.1
+		add_popularity = {
+			ideology = fandong
+			popularity = 0.1
+		}
+		set_politics = {
+			ruling_party = fandong
+		}
+		diplomatic_relation = {
+			country = WAK
+			relation = non_aggression_pact
+			active = yes
+		}
+		SCA = {
+			end_puppet = PRI
+		}
+		leave_faction = yes
+		custom_effect_tooltip = WAK_huiying_tt
+		hidden_effect = {
+			PRI = { drop_cosmetic_tag = yes }
+			if = {
+				limit = {
+					SCA = {
+						is_subject = no
+					}
+				}
+				SCA = {
+					country_event = {
+						id = wak.29
+						days = 2
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 80
+		}
+	}
+	
+	option = {
+		name = wak.28.2
+		add_stability = -0.2
+		add_popularity = {
+			ideology = fandong
+			popularity = -0.3
+		}
+		hidden_effect = {
+			WAK = {
+				country_event = {
+					id = wak.30
+					days = 2
+				}
+			}
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+country_event = { #wak.28.1SCA的回应
+	id = wak.29
+	title = wak.29.t
+	desc = wak.29.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.29.1
+		declare_war_on = {
+			target = PRI
+			type = puppet_wargoal_focus
+		}
+
+		end_puppet = WAK
+
+    WAK = {
+      leave_faction = yes
+    }
+
+		declare_war_on = {
+			target = WAK
+			type = puppet_wargoal_focus
+		}
+		hidden_effect = {
+			WAK = {
+				drop_cosmetic_tag = yes
+        add_timed_idea = {
+          idea = WAK_jushihunluan_idea
+          days = 90
+        }
+        every_country = {
+          limit = {
+            NOT = {
+              is_in_faction_with = SCA
+            }
+            has_war_with = WAK
+            OR = {
+              AND = {
+                is_in_faction = yes
+                is_faction_leader = yes
+              }
+              AND = {
+                is_in_faction = no
+                is_subject = no
+              }
+            }
+          }
+          country_event = {
+            id = wak.102
+            days = 2
+            random = 48
+          }
+        }
+			}
+      news_event = {
+        id = wak.39
+        days = 2
+      }
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+}
+
+country_event = { #wak.28.2WAK的回应
+	id = wak.30
+	title = wak.30.t
+	desc = wak.30.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.30.1
+	}
+}
+
+country_event = { #对WAK激进势力掌权的态度
+	id = wak.31
+	title = wak.31.t
+	desc = wak.31.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.31.1
+		end_puppet = WAK
+		WAK = {
+			leave_faction = yes
+		}
+		declare_war_on = {
+			target = WAK
+			type = puppet_wargoal_focus
+		}
+		hidden_effect = {
+			WAK = { 
+        drop_cosmetic_tag = yes 
+        add_timed_idea = {
+          idea = WAK_jushihunluan_idea
+          days = 90
+        }
+        every_country = {
+          limit = {
+            NOT = {
+              is_in_faction_with = SCA
+            }
+            has_war_with = WAK
+            OR = {
+              AND = {
+                is_in_faction = yes
+                is_faction_leader = yes
+              }
+              AND = {
+                is_in_faction = no
+                is_subject = no
+              }
+            }
+          }
+          country_event = {
+            id = wak.102
+            days = 2
+            random = 48
+          }
+        }
+      }
+      news_event = {
+        id = wak.39
+        days = 2
+      }
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				NOT = {
+					has_idea = SCA_yaojingsaodong_idea
+					has_idea = SCA_yaojingsaodong2_idea
+				}
+				factor = 100
+			}
+			modifier = {
+				has_war = yes
+				factor = 10
+			}
+		}
+	}
+	
+	option = {
+		name = wak.31.2
+		WAK = {
+			add_ideas = WAK_zhicai_idea
+			add_opinion_modifier = {
+                target = SCA
+                modifier = WAK_zhicai_op
+            }
+		}
+		hidden_effect = {
+			WAK = {
+				country_event = {
+					id = wak.32
+					days = 1
+				}
+			}
+		}
+		ai_chance = {
+			base = 60
+		}
+	}
+	
+	option = {
+		name = wak.31.3
+		ai_chance = {
+			base = 20
+			modifier = {
+				has_war = no
+				factor = 0
+			}
+		}
+	}
+}
+
+country_event = { #遭到贸易制裁的提示
+	id = wak.32
+	title = wak.32.t
+	desc = wak.32.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.32.1
+	}
+}
+
+news_event = { #加深与红魔馆的联系
+	id = wak.33
+	title = wak.33.t
+	desc = wak.33.d
+	#picture = GFX_
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.33.1
+		trigger = {
+			is_in_faction_with = SCA
+		}
+	}
+	
+	option = {
+		name = wak.33.2
+		trigger = {
+			TAG = SCA
+		}
+	}
+	
+	option = {
+		name = wak.33.3
+		trigger = {
+			NOT = {
+				TAG = SCA
+				is_in_faction_with = SCA
+			}
+		}
+	}
+}
+
+news_event = { #扩大南雾之湖工业范围
+	id = wak.34
+	title = wak.34.t
+	desc = wak.34.d
+	#picture = GFX_
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.34.1
+		trigger = {
+			TAG = WAK
+		}
+	}
+	
+	option = {
+		name = wak.34.2
+		trigger = {
+			TAG = TKM
+		}
+	}
+	
+	option = {
+		name = wak.34.3
+		trigger = {
+			NOT = {
+				TAG = WAK
+				TAG = TKM
+			}
+		}
+	}
+}
+
+news_event = { #解决南岸威胁
+	id = wak.35
+	title = wak.35.t
+	desc = wak.35.d
+	#picture = GFX_
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.35.1
+		trigger = {
+			TAG = TKM
+		}
+	}
+	
+	option = {
+		name = wak.35.2
+		trigger = {
+			OR = {
+				TAG = WAK
+				is_in_faction_with = WAK
+			}
+		}
+	}
+	
+	option = {
+		name = wak.35.3
+		trigger = {
+			NOT = {
+				TAG = TKM
+				TAG = WAK
+				is_in_faction_with = WAK
+			}
+		}
+	}
+}
+
+news_event = { #斯卡蕾特港条约
+	id = wak.36
+	title = wak.36.t
+	desc = wak.36.d
+	#picture = GFX_
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.36.1
+		trigger = {
+			TAG = WAK
+		}
+	}
+	
+	option = {
+		name = wak.36.2
+		trigger = {
+			TAG = SCA
+		}
+	}
+	
+	option = {
+		name = wak.36.3
+		trigger = {
+			NOT = {
+				TAG = WAK
+				TAG = SCA
+			}
+		}
+	}
+}
+
+news_event = { #与付丧神的条约
+	id = wak.37
+	title = wak.37.t
+	desc = wak.37.d
+	#picture = GFX_
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.37.1
+		trigger = {
+			TAG = WAK
+		}
+	}
+	
+	option = {
+		name = wak.37.2
+		trigger = {
+			TAG = TKM
+		}
+	}
+	
+	option = {
+		name = wak.37.3
+		trigger = {
+			NOT = {
+				TAG = WAK
+				TAG = TKM
+			}
+		}
+	}
+}
+
+news_event = { #在纪念碑下的演讲
+	id = wak.38
+	title = wak.38.t
+	desc = wak.38.d
+	#picture = GFX_
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.38.1
+		trigger = {
+			TAG = WAK
+		}
+	}
+	
+	option = {
+		name = wak.38.2
+		trigger = {
+			TAG = SCA
+		}
+	}
+	
+	option = {
+		name = wak.38.3
+		trigger = {
+			NOT = {
+				TAG = SCA
+				TAG = WAK
+			}
+		}
+	}
+}
+
+news_event = { #反抗时刻
+	id = wak.39
+	title = wak.39.t
+	desc = wak.39.d
+	#picture = GFX_
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.39.1
+		trigger = {
+			TAG = WAK
+		}
+	}
+	
+	option = {
+		name = wak.39.2
+		trigger = {
+			TAG = SCA
+		}
+	}
+	
+	option = {
+		name = wak.39.3
+		trigger = {
+			NOT = {
+				TAG = SCA
+				TAG = WAK
+			}
+		}
+	}
+}
+
+news_event = { #独立自主的可能？
+	id = wak.40
+	title = wak.40.t
+	desc = wak.40.d
+	#picture = GFX_
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.40.1
+		trigger = {
+			TAG = WAK
+		}
+	}
+	
+	option = {
+		name = wak.40.2
+		trigger = {
+			OR = {
+				TAG = SCA
+				is_in_faction_with = SCA
+			}
+		}
+	}
+	
+	option = {
+		name = wak.40.3
+		trigger = {
+			NOT = {
+				TAG = SCA
+				TAG = WAK
+				is_in_faction_with = SCA
+			}
+		}
+	}
+}
+
+news_event = { #南雾之湖联邦
+	id = wak.41
+	title = wak.41.t
+	desc = wak.41.d
+	#picture = GFX_
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.41.1
+		trigger = {
+			TAG = WAK
+		}
+	}
+	
+	option = {
+		name = wak.41.2
+		trigger = {
+			NOT = {
+				TAG = WAK
+			}
+		}
+	}
+}
+
+news_event = { #庇护帝国流亡者
+	id = wak.42
+	title = wak.42.t
+	desc = wak.42.d
+	#picture = GFX_
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.42.1
+		trigger = {
+			TAG = WAK
+		}
+	}
+	
+	option = {
+		name = wak.42.2
+		trigger = {
+			TAG = SCA
+		}
+	}
+	
+	option = {
+		name = wak.42.3
+		trigger = {
+			NOT = {
+				TAG = SCA
+				TAG = WAK
+			}
+		}
+	}
+}
+
+news_event = { #声索红魔城
+	id = wak.43
+	title = wak.43.t
+	desc = wak.43.d
+	#picture = GFX_
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.43.1
+		trigger = {
+			TAG = WAK
+		}
+	}
+	
+	option = {
+		name = wak.43.2
+		trigger = {
+			TAG = SCA
+		}
+	}
+	
+	option = {
+		name = wak.43.3
+		trigger = {
+			NOT = {
+				TAG = SCA
+				TAG = WAK
+			}
+		}
+	}
+}
+
+news_event = { #天命攸归
+	id = wak.44
+	title = wak.44.t
+	desc = wak.44.d
+	#picture = GFX_
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.44.1
+		trigger = {
+			TAG = WAK
+		}
+	}
+	
+	option = {
+		name = wak.44.2
+		trigger = {
+			NOT = {
+				TAG = WAK
+			}
+		}
+	}
+}
+
+news_event = { #宣称小妖怪的理想国
+	id = wak.45
+	title = wak.45.t
+	desc = wak.45.d
+	#picture = GFX_
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.45.1
+		trigger = {
+			TAG = WAK
+		}
+	}
+	
+	option = {
+		name = wak.45.2
+		trigger = {
+			NOT = {
+				TAG = WAK
+			}
+		}
+	}
+}
+
+news_event = { #雾之湖霸主
+	id = wak.46
+	title = wak.46.t
+	desc = wak.46.d
+	#picture = GFX_
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.46.1
+		trigger = {
+			TAG = WAK
+		}
+	}
+	
+	option = {
+		name = wak.46.2
+		trigger = {
+			NOT = {
+				TAG = WAK
+			}
+		}
+	}
+}
+
+country_event = { #营救事件链开启
+	id = wak.75
+	title = wak.75.t
+	desc = wak.75.d
+	
+	fire_only_once = yes
+	mean_time_to_happen = { days = 120 }
+	
+	trigger = {
+		tag = WAK
+		date > 147.7.1
+		date < 149.6.1
+		SCA = {
+			has_government = qinwai
+			NOT = {
+				has_completed_focus = SCA_hexinzhuanyi
+			}
+		}
+		WAK = {
+			is_subject = no
+			has_completed_focus = WAK_dulizizhudekeneng
+			NOT = {
+				has_war_with = SCA
+			}
+		}
+	}
+	
+	option = {
+		trigger = {
+			NOT = {
+				has_completed_focus = WAK_jingtihuanxiangxiangdedongdang
+				has_completed_focus = WAK_qiangdiaoxiaoyaoguaideziyou
+			}
+		}
+		name = wak.75.1
+		hidden_effect = {
+			set_country_flag = WAK_tanpandidian
+			SCA = {
+				country_event = {
+					id = wak.88
+					days = 2
+				}
+			}
+		}
+	}
+	
+	option = {
+		trigger = {
+			NOT = {
+				has_completed_focus = WAK_qiangdiaoxiaoyaoguaideziyou
+			}
+		}
+		name = wak.75.2
+	}
+	
+	option = {
+		trigger = {
+			has_completed_focus = WAK_qiangdiaoxiaoyaoguaideziyou
+		}
+		name = wak.75.3
+	}
+}
+
+country_event = { #选择谈判地点
+	id = wak.76
+	title = wak.76.t
+	desc = wak.76.d
+	
+	fire_only_once = yes
+	mean_time_to_happen = { days = 60 }
+	
+	trigger = {
+		tag = WAK
+		date > 148.1.1
+		WAK = {
+			has_country_flag = WAK_tanpandidian
+			is_subject = no
+			NOT = {
+				has_war_with = SCA
+			}
+		}
+	}
+	
+	option = {
+		name = wak.76.1
+		hidden_effect = {
+			clr_country_flag = WAK_tanpandidian
+			SCA = {
+				country_event = {
+					id = wak.89
+					days = 2
+				}
+			}
+			set_temp_variable = { temp1 = random }
+			if = {
+				limit = {
+					check_variable = {
+						var = temp1
+						value = 0.2
+						compare = less_than_or_equals
+					}
+				}
+				country_event = {
+					id = wak.82
+					days = 15
+				}
+				SCA = {
+					country_event = {
+						id = wak.92
+						days = 15
+					}
+				}
+				else = {
+					country_event = {
+						id = wak.80
+						days = 15
+					}
+					SCA = {
+						country_event = {
+							id = wak.93
+							days = 15
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = wak.76.2
+		hidden_effect = {
+			set_country_flag = WAK_hongmoguan
+			clr_country_flag = WAK_tanpandidian
+			SCA = {
+				country_event = {
+					id = wak.90
+					days = 2
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = wak.76.3
+		hidden_effect = {
+			clr_country_flag = WAK_tanpandidian
+			SCA = {
+				country_event = {
+					id = wak.91
+					days = 2
+				}
+			}
+			set_temp_variable = { temp2 = random }
+			if = {
+				limit = {
+					check_variable = {
+						var = temp2
+						value = 0.8
+						compare = less_than_or_equals
+					}
+				}
+				country_event = {
+					id = wak.82
+					days = 15
+				}
+				SCA = {
+					country_event = {
+						id = wak.92
+						days = 15
+					}
+				}
+				else = {
+					country_event = {
+						id = wak.81
+						days = 15
+					}
+					SCA = {
+						country_event = {
+							id = wak.94
+							days = 15
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #探索红魔馆
+	id = wak.77
+	title = wak.77.t
+	desc = wak.77.d
+	
+	fire_only_once = yes
+	mean_time_to_happen = { days = 15 }
+	
+	trigger = {
+		tag = WAK
+		date > 148.3.1
+		WAK = {
+			has_country_flag = WAK_hongmoguan
+			is_subject = no
+			NOT = {
+				has_war_with = SCA
+			}
+		}
+	}
+	
+	option = {
+		name = wak.77.1
+		hidden_effect = {
+			set_country_flag = WAK_zhonglou
+			clr_country_flag = WAK_hongmoguan
+			if = {
+				limit = {
+					WAK = {
+						has_tech = lingganleida142
+					}
+				}
+				set_country_flag = WAK_lingganleida
+				else = {
+					country_event = {
+						id = wak.82
+						days = 5
+					}
+					SCA = {
+						country_event = {
+							id = wak.92
+							days = 5
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = wak.77.2
+		hidden_effect = {
+			clr_country_flag = WAK_hongmoguan
+			country_event = {
+				id = wak.82
+				days = 5
+			}
+			SCA = {
+				country_event = {
+					id = wak.92
+					days = 5
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = wak.77.3
+		hidden_effect = {
+			set_country_flag = WAK_dixiashi
+			clr_country_flag = WAK_hongmoguan
+			if = {
+				limit = {
+					WAK = {
+						has_tech = lingganleida142
+					}
+				}
+				set_country_flag = WAK_lingganleida
+				else = {
+					country_event = {
+						id = wak.82
+						days = 5
+					}
+					SCA = {
+						country_event = {
+							id = wak.92
+							days = 5
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #寻找蕾米莉亚
+	id = wak.78
+	title = wak.78.t
+	desc = wak.78.d
+	
+	fire_only_once = yes
+	mean_time_to_happen = { days = 1 }
+	
+	trigger = {
+		tag = WAK
+		date > 148.3.2
+		WAK = {
+			has_country_flag = WAK_zhonglou
+			has_country_flag = WAK_lingganleida
+			is_subject = no
+			NOT = {
+				has_war_with = SCA
+			}
+		}
+	}
+	
+	option = {
+		name = wak.78.1
+		hidden_effect = {
+			clr_country_flag = WAK_zhonglou
+			clr_country_flag = WAK_lingganleida
+			country_event = {
+				id = wak.83
+				days = 1
+			}
+			SCA = {
+				country_event = {
+					id = wak.95
+					days = 1
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = wak.78.2
+		hidden_effect = {
+			clr_country_flag = WAK_zhonglou
+			clr_country_flag = WAK_lingganleida
+			if = {
+				limit = {
+					OR = {
+						WAK = {
+							has_tech = lingliganying147
+						}
+						WAK = {
+							has_tech = wuxiandian147
+						}
+					}
+				}
+				set_temp_variable = { temp5 = random }
+				if = {
+					limit = {
+						check_variable = {
+							var = temp5
+							value = 0.6
+							compare = less_than_or_equals
+						}
+					}
+					country_event = {
+						id = wak.86
+						days = 1
+					}
+					SCA = {
+						country_event = {
+							id = wak.97
+							days = 1
+						}
+					}
+					else = {
+						country_event = {
+							id = wak.84
+							days = 1
+						}
+						SCA = {
+							country_event = {
+								id = wak.96
+								days = 1
+							}
+						}
+					}
+				}
+				else = {
+					set_temp_variable = { temp3 = random }
+					if = {
+						limit = {
+							check_variable = {
+								var = temp3
+								value = 0.3
+								compare = less_than_or_equals
+							}
+						}
+						country_event = {
+							id = wak.86
+							days = 1
+						}
+						SCA = {
+							country_event = {
+								id = wak.97
+								days = 1
+							}
+						}
+						else = {
+							country_event = {
+								id = wak.84
+								days = 1
+							}
+							SCA = {
+								country_event = {
+									id = wak.96
+									days = 1
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = wak.78.3
+		hidden_effect = {
+			clr_country_flag = WAK_zhonglou
+			clr_country_flag = WAK_lingganleida
+			country_event = {
+				id = wak.83
+				days = 1
+			}
+			SCA = {
+				country_event = {
+					id = wak.95
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = { #寻找芙兰朵露
+	id = wak.79
+	title = wak.79.t
+	desc = wak.79.d
+	
+	fire_only_once = yes
+	mean_time_to_happen = {	days = 1 }
+	
+	trigger = {
+		tag = WAK
+		date > 148.3.2
+		WAK = {
+			has_country_flag = WAK_dixiashi
+			has_country_flag = WAK_lingganleida
+			is_subject = no
+			NOT = {
+				has_war_with = SCA
+			}
+		}
+	}
+	
+	option = {
+		name = wak.79.1
+		hidden_effect = {
+			clr_country_flag = WAK_dixiashi
+			clr_country_flag = WAK_lingganleida
+			country_event = {
+				id = wak.83
+				days = 1
+			}
+			SCA = {
+				country_event = {
+					id = wak.95
+					days = 1
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = wak.79.2
+		hidden_effect = {
+			clr_country_flag = WAK_dixiashi
+			clr_country_flag = WAK_lingganleida
+			country_event = {
+				id = wak.83
+				days = 1
+			}
+			SCA = {
+				country_event = {
+					id = wak.95
+					days = 1
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = wak.79.3
+		hidden_effect = {
+			clr_country_flag = WAK_dixiashi
+			clr_country_flag = WAK_lingganleida
+			if = {
+				limit = {
+					OR = {
+						WAK = {
+							has_tech = lingliganying147
+						}
+						WAK = {
+							has_tech = wuxiandian147
+						}
+					}
+				}
+				set_temp_variable = { temp6 = random }
+				if = {
+					limit = {
+						check_variable = {
+							var = temp6
+							value = 0.6
+							compare = less_than_or_equals
+						}
+					}
+					country_event = {
+						id = wak.87
+						days = 1
+					}
+					SCA = {
+						country_event = {
+							id = wak.98
+							days = 1
+						}
+					}
+					else = {
+						country_event = {
+							id = wak.85
+							days = 1
+						}
+						SCA = {
+							country_event = {
+								id = wak.96
+								days = 1
+							}
+						}
+					}
+				}
+				else = {
+					set_temp_variable = { temp4 = random }
+					if = {
+						limit = {
+							check_variable = {
+								var = temp4
+								value = 0.3
+								compare = less_than_or_equals
+							}
+						}
+						country_event = {
+							id = wak.87
+							days = 1
+						}
+						SCA = {
+							country_event = {
+								id = wak.98
+								days = 1
+							}
+						}
+						else = {
+							country_event = {
+								id = wak.85
+								days = 1
+							}
+							SCA = {
+								country_event = {
+									id = wak.96
+									days = 1
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #在辰野谈判遇到妖怪骚动
+	id = wak.80
+	title = wak.80.t
+	desc = wak.80.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.80.1
+	}
+}
+
+country_event = { #在湖畔谈判遇到妖精骚动
+	id = wak.81
+	title = wak.81.t
+	desc = wak.81.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.81.1
+	}
+}
+
+country_event = { #虽然没找到人但谈判却成功了
+	id = wak.82
+	title = wak.82.t
+	desc = wak.82.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.82.1
+		add_timed_idea = {
+			idea = WAK_goumaizhiyuanzhuangbei_idea
+			days = 365
+		}
+	}
+}
+
+country_event = { #救人失败
+	id = wak.83
+	title = wak.83.t
+	desc = wak.83.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.83.1
+		SCA = { didui = yes }
+	}
+}
+
+country_event = { #救蕾米失败
+	id = wak.84
+	title = wak.84.t
+	desc = wak.84.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.84.1
+		SCA = { didui = yes }
+	}
+}
+
+country_event = { #救芙兰失败
+	id = wak.85
+	title = wak.85.t
+	desc = wak.85.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.85.1
+		SCA = { didui = yes }
+	}
+}
+
+country_event = { #成功解救蕾米莉亚
+	id = wak.86
+	title = wak.86.t
+	desc = wak.86.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.86.1
+		WAK_rescure_remi_event_army_leader = yes
+		SCA = { didui = yes }
+		hidden_effect = {
+			set_country_flag = WAK_remilia_scarlet
+			add_opinion_modifier = {
+                    target = SCA
+                    modifier = WAK_feifazhengquan_op
+            }
+		}
+	}
+}
+
+country_event = { #成功解救芙兰朵露
+	id = wak.87
+	title = wak.87.t
+	desc = wak.87.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.87.1
+		WAK_rescure_flan_event_army_leader = yes
+		SCA = { didui = yes }
+		hidden_effect = {
+			set_country_flag = WAK_flandre_scarlet
+			add_opinion_modifier = {
+                    target = SCA
+                    modifier = WAK_feifazhengquan_op
+            }
+		}
+	}
+}
+
+country_event = { #SCA回应谈判
+	id = wak.88
+	title = wak.88.t
+	desc = wak.88.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.88.1
+	}
+}
+
+country_event = { #SCA回应在辰野谈判
+	id = wak.89
+	title = wak.89.t
+	desc = wak.89.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.89.1
+	}
+}
+
+country_event = { #SCA回应在红魔馆谈判
+	id = wak.90
+	title = wak.90.t
+	desc = wak.90.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.90.1
+	}
+}
+
+country_event = { #SCA回应在湖畔谈判
+	id = wak.91
+	title = wak.91.t
+	desc = wak.91.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.91.1
+	}
+}
+
+country_event = { #成功与WAK达成协议
+	id = wak.92
+	title = wak.92.t
+	desc = wak.92.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.92.1
+		add_timed_idea = {
+				idea = WAK_chushouzhiyuanzhuangbei_idea
+				days = 365
+		}
+	}
+}
+
+country_event = { #SCA回应辰野的妖怪骚动
+	id = wak.93
+	title = wak.93.t
+	desc = wak.93.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.93.1
+	}
+}
+
+country_event = { #SCA回应湖畔的妖精骚动
+	id = wak.94
+	title = wak.94.t
+	desc = wak.94.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.94.1
+	}
+}
+
+country_event = { #SCA发现WAK的计划一
+	id = wak.95
+	title = wak.95.t
+	desc = wak.95.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.95.1
+	}
+}
+
+country_event = { #SCA发现WAK的计划二
+	id = wak.96
+	title = wak.96.t
+	desc = wak.96.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.96.1
+	}
+}
+
+country_event = { #蕾米莉亚逃走了
+	id = wak.97
+	title = wak.97.t
+	desc = wak.97.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.97.1
+		remove_unit_leader = 500
+		remove_unit_leader = 34
+		WAK_remi_away_event_leader = yes
+	}
+}
+
+country_event = { #芙兰朵露逃走了
+	id = wak.98
+	title = wak.98.t
+	desc = wak.98.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.98.1
+		remove_unit_leader = 35
+		WAK_flan_away_event_leader = yes
+	}
+}
+
+country_event = { #蕾米莉亚回归
+	id = wak.99
+	title = wak.99.t
+	desc = wak.99.d
+	
+	fire_only_once = yes
+	mean_time_to_happen = { days = 1 }
+	
+	trigger = {
+		tag = SCA
+		WAK = {
+			is_subject_of = SCA
+			has_country_flag = WAK_remilia_scarlet
+		}
+	}
+	
+	option = {
+		name = wak.99.1
+		WAK_remi_return_event_army_leader = yes
+		WAK = {
+			remove_unit_leader = 501
+			remove_unit_leader = 503
+			clr_country_flag = WAK_remilia_scarlet
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = WAK_yonglisikaleite
+					}
+					WAK_remi_return_event_leader = yes
+					
+				}
+			}
+		}
+	}
+}
+
+country_event = { #芙兰朵露回归
+	id = wak.100
+	title = wak.100.t
+	desc = wak.100.d
+	
+	fire_only_once = yes
+	mean_time_to_happen = { days = 1 }
+	
+	trigger = {
+		tag = SCA
+		WAK = {
+			is_subject_of = SCA
+			has_country_flag = WAK_flandre_scarlet
+		}
+	}
+	
+	option = {
+		name = wak.100.1
+		WAK_flan_return_event_army_leader = yes
+		WAK = {
+			remove_unit_leader = 496
+			clr_country_flag = WAK_flandre_scarlet
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = WAK_yonglisikaleite
+					}
+					WAK_flan_return_event_leader = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = { #妖精种族占多数
+	id = wak.101
+	title = wak.101.t
+	desc = wak.101.d
+	
+	fire_only_once = yes
+	mean_time_to_happen = { days = 1 }
+	
+	trigger = {
+		tag = WAK
+		has_completed_focus = WAK_shengsuohongmocheng
+		any_state = {
+			is_controlled_by = WAK
+			is_core_of = WAK
+			check_variable = { ST_present_race = 6 }
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			add_ideas = WAK_diguodeyaojing_idea
+		}
+	}
+	
+	option = {
+		name = wak.101.1
+	}
+}
+
+country_event = { #反对斯卡蕾特的和谈
+	id = wak.102
+	title = wak.102.t
+	desc = wak.102.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wak.102.1
+		white_peace = FROM
+		ai_chance = {
+			base = 99
+			modifier = {
+		    tag = TKM
+        NOT = { WAK = { has_country_flag = WAK_kogdaying } }
+				factor = 0
+			}
+			modifier = {
+				ROOT = {
+				  has_completed_focus = MRS_zijiangemingqizhi
+				  has_completed_focus = MRS_jiefangwuzhihunanan
+				}
+				factor = 0
+			}
+			modifier = {
+				FROM = {
+					surrender_progress > 0.3
+				}
+				factor = 0
+			}
+		}
+	}
+	
+	option = {
+		name = wak.102.2
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+country_event = { #谈判期间开战
+	id = wak.103
+	title = wak.103.t
+	desc = wak.103.d
+	
+	fire_only_once = yes
+	mean_time_to_happen = { days = 1 }
+	
+	trigger = {
+		TAG = WAK
+		has_war_with = SCA
+		OR = {
+			has_country_flag = WAK_dixiashi
+			has_country_flag = WAK_hongmoguan
+			has_country_flag = WAK_zhonglou
+			has_country_flag = WAK_tanpandidian
+			has_country_flag = WAK_lingganleida
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = WAK_dixiashi
+			clr_country_flag = WAK_hongmoguan
+			clr_country_flag = WAK_zhonglou
+			clr_country_flag = WAK_tanpandidian
+			clr_country_flag = WAK_lingganleida
+		}
+	}
+	
+	option = {
+		name = wak.103.1
+	}
+}

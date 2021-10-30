@@ -4,20 +4,19 @@ state={
 	name="STATE_274"
 	resources={
 
-		powder=3.000
-		metal=3.000
+		powder = 4.0
+		metal = 3.0
 		gas=15.000
 		crystal=15.000
 	}
 
 	history={
-			owner = SRB
 		146.1.1 = {
 			owner = SRB
 			add_core_of = SRB
 			buildings = {
-				infrastructure =5
-				industrial_complex = 3
+				infrastructure = 5
+				industrial_complex = 4
 				arms_factory = 0
 
 			}
@@ -29,7 +28,7 @@ state={
 	provinces={
 		385 1185 1830 2340 2926 3149 5550 5574 5584 
 	}
-	manpower=1293.0
+	manpower=3293.0
 	buildings_max_level_factor=1.000
 	state_category=s7
 }

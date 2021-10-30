@@ -1,0 +1,162 @@
+﻿division_template = {
+	name = "扫荡编制"
+	regiments = {
+		ma_light_infantry = { x = 0 y = 0 }
+		ma_light_infantry = { x = 0 y = 1 }
+		ma_light_infantry = { x = 0 y = 2 }
+		ma_light_infantry = { x = 0 y = 3 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "巫女直属编制"
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		melee_infantry = { x = 0 y = 2 }
+		melee_infantry = { x = 0 y = 3 }
+		ma_infantry = { x = 1 y = 0 }
+		ma_infantry = { x = 1 y = 1 }
+		melee_infantry = { x = 1 y = 2 }
+		melee_infantry = { x = 1 y = 3 }
+	}
+}
+
+units = {
+	division = {
+		name = "巫女直属编制"
+		location = 4169
+		division_template = "巫女直属编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巫女直属编制"
+		location = 4519
+		division_template = "巫女直属编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巫女直属编制"
+		location = 4170
+		division_template = "巫女直属编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巫女直属编制"
+		location = 2024
+		division_template = "巫女直属编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巫女直属编制"
+		location = 4169
+		division_template = "巫女直属编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巫女直属编制"
+		location = 4519
+		division_template = "巫女直属编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巫女直属编制"
+		location = 4170
+		division_template = "巫女直属编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巫女直属编制"
+		location = 2024
+		division_template = "巫女直属编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "扫荡编制"
+		location = 3828
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 1355
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 4516
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 4284
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 1726
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 1917
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 4497
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 4507
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "巫女直属编制"
+		location = 2128
+		division_template = "巫女直属编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巫女直属编制"
+		location = 2128
+		division_template = "巫女直属编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巫女直属编制"
+		location = 2128
+		division_template = "巫女直属编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+}

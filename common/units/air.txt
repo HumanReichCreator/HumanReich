@@ -17,7 +17,7 @@ sub_units = {
 		categories = { category_fighter }
 	}
 
-	ma_scout_equipment = {
+	ma_scout = {
 		sprite = light_plane
 		priority = 1
 		active = yes
@@ -26,7 +26,7 @@ sub_units = {
 		categories = { category_scout_plane }
 	}
 
-	sc_scout_equipment = {
+	sc_scout = {
 		sprite = light_plane
 		priority = 1
 		active = yes

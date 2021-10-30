@@ -1,0 +1,220 @@
+ideas = {
+	country = {
+		NUE_jiadalingliwuqishengchan_idea = {
+			name = NUE_jiadalingliwuqishengchan
+			picture = generic_production_bonus
+			modifier = {
+				industrial_capacity_factory = 0.2
+				production_factory_efficiency_gain_factor = 1
+			}
+		}
+		NUE_mubiaomingliansi_idea = {
+			name = NUE_mubiaomingliansi
+			picture = generic_oppression
+			modifier = {
+				army_speed_factor = 0.05
+			}
+		}
+		NUE_pingxigebuhunluan_idea = {
+			name = NUE_pingxigebuhunluan
+			picture = SPA_duty_to_work
+			modifier = {
+				industry_free_repair_factor = 0.3
+				compliance_growth = 0.1
+				political_power_factor = 0.4
+			}
+		}
+		NUE_congzhichizhexuexi_idea = {
+			name = NUE_congzhichizhexuexi
+	    picture = general_staff
+			modifier = {
+				army_org_Factor = 0.1
+				army_morale_factor = 0.1
+			}
+		}
+		NUE_huiguiyuanshiyaoguai_idea = {
+			name = NUE_huiguiyuanshiyaoguai
+			picture = FRA_army_of_aggression_focus
+			available = {
+				has_idea = Tribal
+			}
+			modifier = {
+				offensive_war_stability_factor = 0.4
+				defensive_war_stability_factor = 0.4
+				stability_weekly = 0.001
+				political_power_factor = 0.5
+				war_support_weekly = 0.001
+			}
+		}
+		NUE_yaoguaigainiankuanhua_idea = {
+			name = NUE_yaoguaigainiankuanhua
+			picture = por_colonial_assimilation
+			modifier = {
+				compliance_growth = 0.1
+				weekly_manpower = 4
+				training_time_factor = -0.15
+			}
+		}
+		NUE_buxuyaoxiaofeipin_idea = {
+			name = NUE_buxuyaoxiaofeipin
+			picture = generic_goods_red_bonus
+			modifier = {
+				consumer_goods_factor = -0.07
+			}
+		}
+		NUE_jixianshengchan_idea = {
+			name = NUE_jixianshengchan
+			picture = generic_production_bonus
+			modifier = {
+				industrial_capacity_factory = 1.25
+				production_factory_efficiency_gain_factor = 0.5
+			}
+		}
+		NUE_jixianshengchan2_idea = {
+			name = NUE_jixianshengchan
+			picture = usa_great_depression
+			modifier = {
+				industrial_capacity_factory = -0.25
+			}
+		}
+		NUE_kaifawuqiyanjiusuo_idea = {
+			name = NUE_kaifawuqiyanjiusuo
+			picture = generic_research_bonus
+			modifier = {
+				
+			}
+			research_bonus = {
+				military = 0.05
+			}
+		}
+		NUE_SCAdeyaojingzuzhili_idea = {
+			name = NUE_SCAdeyaojingzuzhili
+			picture = generic_infantry_bonus
+			available = {
+				has_idea = Tribal
+			}
+			modifier = {
+				army_org_Factor = 0.2
+			}
+		}
+		NUE_waijiedegaojizhuangbei_idea = {
+			name = NUE_waijiedegaojizhuangbei
+			picture = generic_research_bonus
+			research_bonus = {
+				military = 0.2
+			}
+		}
+		NUE_xuexirenleishengchan_idea = {
+			name = NUE_xuexirenleishengchan
+			picture = generic_production_bonus
+			available = {
+				has_idea = Tribal
+			}
+			modifier = {
+				industrial_capacity_factory = 0.2
+				research_speed_factor = 0.3
+			}
+		}
+		NUE_xuexirenleijianzao_idea = {
+			name = NUE_xuexirenleijianzao
+			picture = man_five_year_plan_industry
+			available = {
+				has_idea = Tribal
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.2
+				research_speed_factor = 0.3
+			}
+		}
+		NUE_kaibanyaoguaijiuhui_idea = {
+			name = NUE_kaibanyaoguaijiuhui
+			picture = generic_research_bonus
+			modifier = {
+				political_power_factor = 0.15
+			}
+		}
+		NUE_kongzhirenlidefazhan_idea = {
+			name = NUE_kongzhirenlidefazhan
+			picture = generic_research_bonus
+			available = {
+				not = {
+					has_war_with = HUM
+				}
+			}
+			modifier = {
+				research_speed_factor = 0.08
+			}
+		}
+		NUE_kongzhirenlidefazhan2_idea = {
+			picture = generic_research_bonus
+			available = {
+				not = {
+					has_war_with = NUE
+				}
+			}
+			modifier = {
+				research_speed_factor = -0.08
+			}
+		}
+		NUE_kongzhirenliminsheng_idea = {
+			picture = tur_etatism
+			available = {
+				not = {
+					has_war_with = NUE
+				}
+			}
+			targeted_modifier = { 
+				tag = NUE
+				cic_to_target_factor = 0.08
+			}	
+		}
+		NUE_kongzhirenlideyiqie_idea = {
+			name = NUE_kongzhirenlideyiqie
+			picture = SPR_seize_the_gold_reserves
+			available = {
+				not = {
+					has_war_with = HUM
+				}
+			}
+			modifier = {
+				consumer_goods_factor = -0.06
+			}
+		}
+		NUE_kongzhirenlideyiqie2_idea = {
+			picture = SPR_seize_the_gold_reserves
+			available = {
+				not = {
+					has_war_with = NUE
+				}
+			}
+			modifier = {
+				consumer_goods_factor = 0.06
+				political_power_factor = -0.1
+			}
+		}
+		NUE_TKMminyongfazhan_idea = {
+			picture = generic_research_bonus
+			available = {
+				not = {
+					has_war_with = TKM
+					has_war_with = NUE
+				}
+			}
+			research_bonus = {
+				civil = 0.05
+			}
+		}
+		NUE_TKMjunshifazhan_idea = {
+			picture = generic_research_bonus
+			available = {
+				not = {
+					has_war_with = TKM
+					has_war_with = NUE
+				}
+			}
+			research_bonus = {
+				military = 0.05
+			}
+		}
+	}
+}

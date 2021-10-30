@@ -13,7 +13,7 @@ ma_light_infantry_generic = {
 		}
 	}
 
-	match_to_count = 0.10
+	match_to_count = 0.15
 	
 	ma_light_infantry140before = {
 	
@@ -27,7 +27,7 @@ ma_light_infantry_generic = {
 		}
 
 		production_prio = {
-			factor = 5
+			factor = 2
 
 			modifier = {
 				factor = 0
@@ -103,8 +103,7 @@ ma_light_infantry_generic = {
 		
 		allowed_types = {
 			melee_infantry	
-			ma_infantry
-			sc_infantry
+			
 			ma_light_infantry
 			sc_light_infantry
 
@@ -129,7 +128,7 @@ ma_light_infantry_generic = {
 		}
 
 		production_prio = {
-			factor = 5
+			factor = 2
 
 			modifier = {
 				factor = 0
@@ -205,8 +204,7 @@ ma_light_infantry_generic = {
 		
 		allowed_types = {
 			melee_infantry	
-			ma_infantry
-			sc_infantry
+			
 			ma_light_infantry
 			sc_light_infantry
 
@@ -231,7 +229,7 @@ ma_light_infantry_generic = {
 		}
 
 		production_prio = {
-			factor = 5
+			factor = 2
 
 			modifier = {
 				factor = 0
@@ -308,8 +306,7 @@ ma_light_infantry_generic = {
 		
 		allowed_types = {
 			melee_infantry	
-			ma_infantry
-			sc_infantry
+			
 			ma_light_infantry
 			sc_light_infantry
 			ma_sf_infantry
@@ -337,7 +334,7 @@ ma_light_infantry_generic = {
 		}
 
 		production_prio = {
-			factor = 5
+			factor = 2
 
 			modifier = {
 				factor = 0
@@ -414,8 +411,7 @@ ma_light_infantry_generic = {
 		
 		allowed_types = {
 			melee_infantry	
-			ma_infantry
-			sc_infantry
+			
 			ma_light_infantry
 			sc_light_infantry
 			ma_sf_infantry
@@ -443,11 +439,11 @@ ma_light_infantry_generic = {
 		}
 
 		production_prio = {
-			factor = 5
+			factor = 2
 
 			modifier = {
 				factor = 0
-				has_tech = lingben
+				not = { has_tech = waike }
 			}
 			modifier = {
 				factor = 0
@@ -520,8 +516,7 @@ ma_light_infantry_generic = {
 		
 		allowed_types = {
 			melee_infantry	
-			ma_infantry
-			sc_infantry
+			
 			ma_light_infantry
 			sc_light_infantry
 			ma_sf_infantry
@@ -549,7 +544,7 @@ ma_light_infantry_generic = {
 		}
 
 		production_prio = {
-			factor = 5
+			factor = 2
 
 			modifier = {
 				factor = 0
@@ -622,8 +617,7 @@ ma_light_infantry_generic = {
 		
 		allowed_types = {
 			melee_infantry	
-			ma_infantry
-			sc_infantry
+			
 			ma_light_infantry
 			sc_light_infantry
 			ma_sf_infantry
@@ -650,11 +644,11 @@ sc_light_infantry_generic = {
 
 		modifier = {
 			factor = 0
-			has_tech = lingben
+			not = { has_tech = waike }
 		}
 	}
 
-	match_to_count = 0.10
+	match_to_count = 0.15
 	
 	sc_light_infantry140before = {
 	
@@ -668,11 +662,11 @@ sc_light_infantry_generic = {
 		}
 
 		production_prio = {
-			factor = 5
+			factor = 2
 
 			modifier = {
 				factor = 0
-				has_tech = lingben
+				not = { has_tech = waike }
 			}
 			modifier = {
 				factor = 0
@@ -744,8 +738,7 @@ sc_light_infantry_generic = {
 		
 		allowed_types = {
 			melee_infantry	
-			ma_infantry
-			sc_infantry
+			
 			ma_light_infantry
 			sc_light_infantry
 
@@ -770,11 +763,11 @@ sc_light_infantry_generic = {
 		}
 
 		production_prio = {
-			factor = 5
+			factor = 2
 
 			modifier = {
 				factor = 0
-				has_tech = lingben
+				not = { has_tech = waike }
 			}
 			modifier = {
 				factor = 0
@@ -846,8 +839,7 @@ sc_light_infantry_generic = {
 		
 		allowed_types = {
 			melee_infantry	
-			ma_infantry
-			sc_infantry
+			
 			ma_light_infantry
 			sc_light_infantry
 
@@ -872,11 +864,11 @@ sc_light_infantry_generic = {
 		}
 
 		production_prio = {
-			factor = 5
+			factor = 2
 
 			modifier = {
 				factor = 0
-				has_tech = lingben
+				not = { has_tech = waike }
 			}
 			modifier = {
 				factor = 0
@@ -949,8 +941,7 @@ sc_light_infantry_generic = {
 		
 		allowed_types = {
 			melee_infantry	
-			ma_infantry
-			sc_infantry
+			
 			ma_light_infantry
 			sc_light_infantry
 			ma_sf_infantry
@@ -978,11 +969,11 @@ sc_light_infantry_generic = {
 		}
 
 		production_prio = {
-			factor = 5
+			factor = 2
 
 			modifier = {
 				factor = 0
-				has_tech = lingben
+				not = { has_tech = waike }
 			}
 			modifier = {
 				factor = 0
@@ -1055,8 +1046,7 @@ sc_light_infantry_generic = {
 		
 		allowed_types = {
 			melee_infantry	
-			ma_infantry
-			sc_infantry
+			
 			ma_light_infantry
 			sc_light_infantry
 			ma_sf_infantry
@@ -1084,11 +1074,11 @@ sc_light_infantry_generic = {
 		}
 
 		production_prio = {
-			factor = 5
+			factor = 2
 
 			modifier = {
 				factor = 0
-				has_tech = lingben
+				not = { has_tech = waike }
 			}
 			modifier = {
 				factor = 0
@@ -1161,8 +1151,7 @@ sc_light_infantry_generic = {
 		
 		allowed_types = {
 			melee_infantry	
-			ma_infantry
-			sc_infantry
+			
 			ma_light_infantry
 			sc_light_infantry
 			ma_sf_infantry
@@ -1190,11 +1179,11 @@ sc_light_infantry_generic = {
 		}
 
 		production_prio = {
-			factor = 5
+			factor = 2
 
 			modifier = {
 				factor = 0
-				has_tech = lingben
+				not = { has_tech = waike }
 			}
 		}
 		
@@ -1263,8 +1252,7 @@ sc_light_infantry_generic = {
 		
 		allowed_types = {
 			melee_infantry	
-			ma_infantry
-			sc_infantry
+			
 			ma_light_infantry
 			sc_light_infantry
 			ma_sf_infantry

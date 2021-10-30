@@ -1,10 +1,13 @@
 bianshen_category = {
     RMI_NIB_jicheng = {
-        visible = {
+        allowed = {
             or = {
                 tag = RMI
                 tag = NIB
             }
+        }
+        visible = {
+            
             or = {
                 and = {
                     is_ai = no
@@ -83,14 +86,7 @@ bianshen_category = {
                                     tag = RMI
                                 }
                             }
-                            create_country_leader = {
-                                # name = "Kirisame Marisa"
-                                name = "露米娅"
-                                picture = "gfx/leaders/SEJ/SEJ_rmi.dds"
-                                # picture = "MRS_mrs.dds"
-                                ideology = neworder_type
-                                traits = {  }
-                            }
+                            RMI_SEJ_decision_leader = yes
                             SEJ = {
                                 RMI = {
                                   can_use = yes
@@ -108,14 +104,7 @@ bianshen_category = {
                                     tag = NIB
                                 }
                             }
-                            create_country_leader = {
-                                # name = "Kirisame Marisa"
-                                name = "莉格露·奈特巴格"
-                                picture = "gfx/leaders/SEJ/NIB_nib.dds"
-                                # picture = "MRS_mrs.dds"
-                                ideology = neworder_type
-                                traits = {  }
-                            }
+                            NIB_SEJ_decision_leader = yes
                             
                             SEJ = {
                                 NIB = {
@@ -133,6 +122,7 @@ bianshen_category = {
                             target = ROOT
                             transfer_troops = yes
                         }
+                        state_race_manpower = yes
 
                         
                         set_country_flag = SEJ_fankangchenggong

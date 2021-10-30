@@ -1,0 +1,168 @@
+ideas = {
+	country = {
+		MNM_jixianzhuangbeishengchan_idea = {
+			name = MNM_jixianzhuangbeishengchan
+			picture = generic_production_bonus
+			modifier = {
+				production_factory_efficiency_gain_factor = 1
+				political_power_gain = -0.5
+			}
+		}
+		MNM_shuofugongyeshengchanzhe_idea = {
+			name = MNM_shuofugongyeshengchanzhe
+			picture = SPA_duty_to_work
+			modifier = {
+				industry_free_repair_factor = 1
+			}
+		}
+		MNM_mubiaomingliansi_idea = {
+			name = MNM_mubiaomingliansi
+			picture = generic_acquire_tanks
+			targeted_modifier = {
+				tag = NMS
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = NUE
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+		}
+		MNM_kongjunxietong_idea = {
+			name = MNM_kongjunxietong
+			picture = air_support_focus
+			modifier = {
+				air_close_air_support_attack_factor = 0.3
+			}
+		}
+		MNM_zhongyongxinjinyaoguai_idea = {
+			name = MNM_zhongyongxinjinyaoguai
+	    picture = generic_army_war_college
+			modifier = {
+				army_leader_cost_factor = -0.5
+			}
+		}
+		MNM_zuzhihuayaoguaijun_idea = {
+			name = MNM_zuzhihuayaoguaijun
+	    picture = general_staff
+			modifier = {
+				army_morale_factor = 0.05
+				army_org_Factor = 0.05
+				max_command_power = 10
+			}
+		}
+		MNM_jianliyaoguaiwenming_idea = {
+			name = MNM_jianliyaoguaiwenming
+			picture = HUN_treaty_of_triannon
+			modifier = {
+				political_power_factor = 0.3
+			}
+		}
+		MNM_jianshaozongjiaoxingdong1_idea = {
+			picture = SPR_appropriate_church_riches
+			modifier = {
+				consumer_goods_factor = -0.03
+			}
+		}
+		MNM_jianshaozongjiaoxingdong2_idea = {
+			picture = SPR_appropriate_church_riches
+			name = MNM_jianshaozongjiaoxingdong1_idea
+			modifier = {
+				consumer_goods_factor = -0.06
+			}
+		}
+		MNM_jianshaozongjiaoxingdong3_idea = {
+			picture = SPR_appropriate_church_riches
+			name = MNM_jianshaozongjiaoxingdong1_idea
+			modifier = {
+				consumer_goods_factor = -0.09
+			}
+		}
+		MNM_zhongjiefojiao_idea = {
+			picture = imperial_glory_idea
+			name = MNM_zhongjiefojiao
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = 0.1
+				conscription = 0.05
+			}
+		}
+		MNM_youhualiucheng_idea = {
+			name = MNM_youhualiucheng
+			picture = generic_production_bonus
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		MNM_yaoguaichengqujihua_idea = {
+			name = MNM_yaoguaichengqujihua
+			picture = man_five_year_plan_industry
+			modifier = {
+				production_speed_buildings_factor = 0.25
+			}
+		}
+		MNM_jianliyaoguaidaxue_idea = {
+			name = MNM_jianliyaoguaidaxue
+			picture = generic_research_bonus
+			research_bonus = {
+				military = 0.05
+			}
+		}
+		MNM_shengzhanhaojiao_idea = {
+			name = MNM_shengzhanhaojiao
+			available = {
+				any_country = {
+					has_idea = Human
+					has_war_with = ROOT
+				}
+			}
+			picture = SPA_crusade_against_democracy
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+		MNM_hezuoguafenHUM1_idea = {
+			name = MNM_hezuoguafenHUM
+			picture = tur_etatism
+			available = {
+				not = {
+					has_war_with = MNM
+				}
+			}
+			targeted_modifier = {
+				tag = MNM
+				cic_to_target_factor = 0.1
+			}
+		}
+		MNM_hezuoguafenHUM2_idea = {
+			name = MNM_hezuoguafenHUM
+			picture = tur_etatism
+			available = {
+				not = {
+					has_war_with = TKM
+				}
+			}
+			targeted_modifier = {
+				tag = TKM
+				cic_to_target_factor = 0.1
+			}
+		}
+		MNM_guafenSCA_idea = {
+			name = MNM_guafenSCA
+			picture = generic_acquire_tanks
+			targeted_modifier = {
+				tag = PRI
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = WAK
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+	}
+}

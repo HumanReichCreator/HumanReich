@@ -57,118 +57,86 @@
         kongjuyizhiji1 = 1
             
     }
+    
 }
 
 146.1.1={
-    add_manpower = 750
+    add_manpower = 150
     oob = "HU7_146"
     
     add_ideas = {
-        Pri_youkai
+        Human
         Village
         type2_manpowerlv6
         hawk3
         open0
         close_border
         forbidden_magic
+        partial_economic_mobilisation
     }
 
     set_politics = {
 
-        ruling_party = neworder
+        ruling_party = fandong
         election_frequency = 48
         elections_allowed = no
     }
     set_popularities = {
         qinwai = 0
         guli = 0
-        neworder = 100
+        neworder = 0
         oldorder = 0
-        fandong = 0
+        fandong = 100
     }
-
-    
 }
 
-
 create_country_leader = {
-    # name = "Council"
-    name = "鬼人正邪"
+    # name = "Exile Committee"
+    name = "流亡委员会"
     desc = ""
-    picture = "gfx/leaders/SEJ/SEJ_sej.dds"
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
     ideology = guli_type
     traits = {
         #warrior_code
     }
 }
 create_country_leader = {
-    # name = "Council"
-    name = "鬼人正邪"
+    # name = "Exile Committee"
+    name = "流亡委员会"
     desc = ""
-    picture = "gfx/leaders/SEJ/SEJ_sej.dds"
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
     ideology = fandong_type
     traits = {
         #warrior_code
     }
 }
 create_country_leader = {
-    # name = "Council"
-    name = "鬼人正邪"
+    # name = "Exile Committee"
+    name = "流亡委员会"
     desc = ""
-    picture = "gfx/leaders/SEJ/SEJ_sej.dds"
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
     ideology = neworder_type
     traits = {
         #warrior_code
     }
 }
 create_country_leader = {
-    # name = "Council"
-    name = "鬼人正邪"
+    # name = "Exile Committee"
+    name = "流亡委员会"
     desc = ""
-    picture = "gfx/leaders/SEJ/SEJ_sej.dds"
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
     ideology = qinwai_type
     traits = {
         #warrior_code
     }
 }
 create_country_leader = {
-    # name = "Council"
-    name = "鬼人正邪"
+    # name = "Exile Committee"
+    name = "流亡委员会"
     desc = ""
-    picture = "gfx/leaders/SEJ/SEJ_sej.dds"
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
     ideology = oldorder_type
     traits = {
         #warrior_code
     }
 }
-create_country_leader = {
-    # name = "Council"
-    name = "鬼人正邪"
-    desc = ""
-    picture = "gfx/leaders/SEJ/SEJ_sej.dds"
-    ideology = authordemo_type
-    traits = {
-        #warrior_code
-    }
-}
-create_country_leader = {
-    # name = "Council"
-    name = "鬼人正邪"
-    desc = ""
-    picture = "gfx/leaders/SEJ/SEJ_sej.dds"
-    ideology = humanfirst_type
-    traits = {
-        #warrior_code
-    }
-}
-create_country_leader = {
-    # name = "Council"
-    name = "鬼人正邪"
-    desc = ""
-    picture = "gfx/leaders/SEJ/SEJ_sej.dds"
-    ideology = lienin_type
-    traits = {
-        #warrior_code
-    }
-}
-

@@ -1,0 +1,24 @@
+# unit_base is the base value used for evaluating how important it is to deploy the various categories
+# Written by Henrik "Groogy" Hansson
+#AI 倾向
+
+SKI_support_YOM = {
+	 enable = {
+		YOM = {
+			has_war_with = YYK
+			has_completed_focus = ROA_YOM_2
+		}
+		tag = SKI
+		is_subject = no
+	 }
+	 abort = {
+	 	YOM = {
+			not = { has_war_with = YYK }
+		}
+	 }
+	 ai_strategy = {
+		 type = send_volunteers_desire
+		 id = YOM
+		 value = 5000
+	 }
+}

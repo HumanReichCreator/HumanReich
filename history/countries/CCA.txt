@@ -46,18 +46,12 @@
         #种族
             
     }
+    
 }
 146.1.1={
     oob = "CCA_146"
     # set_research_slots = 5
-    diplomatic_relation = {
-        country = OTG
-        relation = military_access
-        active = yes
-    }
-    diplomatic_relation = { 
-        country = OTG relation = non_aggression_pact 
-    }
+    
     add_ideas = {
     God
     Town
@@ -76,9 +70,9 @@
     }
     set_popularities = {
         qinwai = 0
-        guli = 50
+        guli = 100
         neworder = 0
-        oldorder = 50
+        oldorder = 0
         fandong = 0
     }
     
@@ -87,7 +81,7 @@
     }
 }
 create_country_leader = {
-    # name = "Council"
+    # name = "Heaven Government"
     name = "天界政府"
     desc = ""
     picture = "gfx/leaders/OTG/OTG_council.dds"
@@ -97,7 +91,7 @@ create_country_leader = {
     }
 }
 create_country_leader = {
-    # name = "Council"
+    # name = "Heaven Government"
     name = "天界政府"
     desc = ""
     picture = "gfx/leaders/OTG/OTG_council.dds"
@@ -107,7 +101,7 @@ create_country_leader = {
     }
 }
 create_country_leader = {
-    # name = "Council"
+    # name = "Heaven Government"
     name = "天界政府"
     desc = ""
     picture = "gfx/leaders/OTG/OTG_council.dds"
@@ -117,7 +111,7 @@ create_country_leader = {
     }
 }
 create_country_leader = {
-    # name = "Council"
+    # name = "Heaven Government"
     name = "天界政府"
     desc = ""
     picture = "gfx/leaders/OTG/OTG_council.dds"
@@ -127,7 +121,7 @@ create_country_leader = {
     }
 }
 create_country_leader = {
-    # name = "Council"
+    # name = "Heaven Government"
     name = "天界政府"
     desc = ""
     picture = "gfx/leaders/OTG/OTG_council.dds"

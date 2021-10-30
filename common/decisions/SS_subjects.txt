@@ -6,7 +6,7 @@ SS_situation = {
       available = {
 
       }
-      cost = 150
+      cost = 100
       complete_effect = {
           set_country_flag = {
             flag = SS_zongzhugonggu
@@ -19,7 +19,15 @@ SS_situation = {
       days_re_enable = 182
 
       modifier = {
-        stability_weekly = -0.002
+        stability_weekly = -0.001
+      }
+      complete_effect = {
+        custom_effect_tooltip = SS_gonggushiliquan_tt
+        set_country_flag = {
+          flag = SS_gonggushiliquan
+          days = 365
+          value = 1
+        }
       }
 
       remove_effect = {
@@ -34,6 +42,28 @@ SS_situation = {
         is_subject = yes
       }
   		available = {
+        or = {
+          and = {
+            threat > 0.33
+            has_government = guli
+          }
+          and = {
+            threat > 0.18
+            has_government = fandong
+          }
+          and = {
+            threat > 0.25
+            has_government = neworder
+          }
+          and = {
+            threat > 0.33
+            has_government = oldorder
+          }
+          and = {
+            threat > 0.33
+            has_government = qinwai
+          }
+        }
   			custom_trigger_tooltip = {
   				tooltip = SSI_ziji_xiangyaoduli
   				not = {
@@ -41,7 +71,7 @@ SS_situation = {
   				}
   			}
   		}
-  		cost = 100
+  		cost = 50
   		complete_effect = {
   			set_country_flag = {
   				flag = SSI_ziji_xiangyaoduli
@@ -119,15 +149,16 @@ SS_situation = {
 	}
 
 	SS_subject_duli = {
-    target_trigger = {
+      target_trigger = {
     		num_subjects > 0
         FROM = {
             is_subject_of = ROOT
             has_country_flag = SSI_xiangyaoduli
         }
       }            
+      target_array = subjects
       available = {                           
-           always = no                     
+        always = no                     
       }
       activation = {      
             
@@ -140,13 +171,14 @@ SS_situation = {
 	}
 
   SS_subject_dikangduli = {
-    target_trigger = {
+      target_trigger = {
         num_subjects > 0
         FROM = {
             is_subject_of = ROOT
             has_country_flag = SS_country_flag
         }
-      }            
+      }        
+      target_array = subjects    
       available = {                           
         always = no                     
       }

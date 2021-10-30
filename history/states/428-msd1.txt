@@ -6,18 +6,27 @@ state={
 	}
 	resources={
 		energy = 0
-		powder=0.000
-		metal=0.000
+		powder = 0.0
+		metal = 0.0
 		gas=0.000
 		crystal=0.000
 	}
 
 	history={
-			owner = KAG
-		146.1.1 = {
-			owner = KAG
+		143.7.1 = {
+			owner = MSD
 			add_core_of = MSD
-			add_core_of = KAG
+			controller =  HKR
+			buildings = {
+				infrastructure = 3
+				industrial_complex = 0
+				arms_factory = 0
+
+			}
+		}
+		146.1.1 = {
+			owner = MSD
+			add_core_of = MSD
 			buildings = {
 				infrastructure =3
 				industrial_complex = 0

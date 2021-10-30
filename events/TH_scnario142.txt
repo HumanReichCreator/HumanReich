@@ -1,0 +1,601 @@
+﻿# add_namespace = scn142
+
+# country_event = {
+# 	id = scn142.1
+# 	title = scn142.1.title
+# 	desc = scn142.1.desc
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	   hidden_effect = {
+# 	      # HUM = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 5000 producer = HUM } }
+        
+#        #    MRS = { add_equipment_to_stockpile = { type = magic_crystal1 amount = 7000 producer = MRS } }
+
+#        #    SEI = { add_equipment_to_stockpile = { type = magic_crystal2b amount = 1000 producer = SEI } }
+         
+#        #    CIR = { add_equipment_to_stockpile = { type = magic_crystal2b amount = 4000 producer = CIR } }
+        
+#        #    HKR = { add_equipment_to_stockpile = { type = magic_crystal1 amount = 10000 producer = HKR } }
+
+#        #    MSD = { add_equipment_to_stockpile = { type = magic_crystal1 amount = 20000 producer = MSD } }
+#           # if = {
+#           #   limit = {
+#           #    HKR = {is_ai = yes}
+#           #   }
+#           #   HKR= {add_manpower = 10000}
+#           #   HKR = {load_oob = "HKR_142X"}
+#           # }
+#           # if = {
+#           #   limit = {
+#           #    OR = {
+#           #     CIR = {is_ai = no}
+#           #     SEI = {is_ai = no}
+#           #     RMI = {is_ai = no}
+#           #    }
+#           #   }
+#           # HKR = { load_oob = "HKR_142X" }
+#           # }
+# 	         	NIB = {
+# 					add_ai_strategy = {
+# 						type = invade
+# 						id = "MRS"
+# 						value = 200
+# 				  	}
+# 	         	}
+# 	            HKR = {
+# 		          	add_ai_strategy = {
+# 						type = force_defend_ally_borders
+# 						id = "MRS"
+# 						value = 200
+# 				  	}
+# 	            }
+# 	            HUM = {
+# 			        add_ai_strategy = {
+# 						type = send_volunteers_desire
+# 						id = "MRS"
+# 						value = 200
+# 					}
+# 					add_ai_strategy = {
+# 						type = send_volunteers_desire
+# 						id = "HKR"
+# 						value = 200
+# 					}
+# 		      }
+	            
+          	
+# 	   }
+	   
+# 	}
+ 
+# 	option = {
+# 		name = scn142.1.a
+# 	}
+    
+# }
+# #人类村落加入战争事件
+# country_event = {
+# 	id = scn142.2
+# 	title = scn142.2.title
+# 	desc = scn142.2.desc
+# 	fire_only_once = yes
+
+# 	trigger = {
+# 	    OR = {
+# 	       #1
+#     		AND = {
+# 		       MRS = {
+# 		       surrender_progress >0.3
+# 		       }
+# 			   is_ai = no
+# 			}
+# 		  #2
+# 			OR = {
+# 			    AND = {
+# 			      tag = HUM
+# 			      has_country_flag = E_s 
+# 			    }
+# 			    AND = {
+# 			      tag = MRS
+# 			      has_country_flag = E_s
+# 			    }
+# 			    AND = {
+# 			      tag = HKR
+# 			      has_country_flag = E_s
+# 			    }
+# 			}
+# 		   #3
+# 		    AND = {
+# 		      is_ai = no
+# 		      date > 143.1.1
+# 		    }   
+# 		}
+# 		date < 144.1.1
+# 		has_global_flag = scnario142
+# 	}
+
+# 	immediate = {
+# 	   hidden_effect = { 
+# 	      HUM = {	
+# 	      	add_ideas = in142
+# 	      	set_major = yes
+
+# 	      }
+# 	      HKR = { add_to_faction = HUM }
+# 	      HUM = {
+# 		        add_ai_strategy = {
+# 					type = force_defend_ally_borders
+# 					id = "MRS"
+# 					value = 200
+# 				}
+# 	      }
+# 	      set_global_flag = HUM_join
+# 	      if = {
+# 	         limit = {
+# 	            date < 143.10.1
+# 	         }
+# 	         country_event = {id = scn142.6 days = 90}
+# 	      }
+# 	      if = {
+# 	         limit = {
+# 	            date > 143.9.30
+# 	         }
+# 	         country_event = {id = scn142.6 days = 60}
+# 	      }
+# 	   }  
+# 	}
+ 
+# 	option = {
+# 		name = scn142.2.a
+# 		# effect_tooltip = {
+# 		#    HKR = {add_to_faction = HUM}
+# 	 #       HUM = {declare_war_on = {target = SEI type = annex_everything}}
+# 		# }
+# 	}
+
+# }
+# #斯卡雷特帝国干涉事件
+# country_event = {
+#     id = scn142.3
+# 	title = scn142.3.title
+# 	desc = scn142.3.desc
+# 	fire_only_once = yes
+# 	hidden = yes
+
+# 	trigger = {
+# 	  is_ai = no
+# 	  has_global_flag = scnario142
+# 	  OR = {
+# 	    #1
+# 	        AND = {
+# 	          SCA = {
+# 	             has_opinion = { target = ROOT value > 75 }
+# 	          }
+# 	          OR = {
+# 	            tag = HUM
+# 	            tag = HKR
+# 	            tag = MRS
+# 	          }
+# 	        }
+	     
+# 	    #2
+# 	        OR = {
+# 			  HUM = { has_country_flag = E_s  }  
+# 			  HKR = { has_country_flag = E_s  }  
+# 			  MRS = { has_country_flag = E_s  }  
+# 	        }
+	     
+# 	    #3
+# 	       OR = {
+# 	         16 = { is_controlled_by = NIB }
+# 	         16 = { is_controlled_by = SEI }
+# 	         16 = { is_controlled_by = CIR }
+# 	         16 = { is_controlled_by = RMI }
+# 	       }
+# 	  }
+# 	}
+# 	option = {
+# 	  hidden_effect = {
+# 	   if = {
+# 	      limit = {
+# 	         SEI = {has_country_flag = L_s}
+# 	         RMI = {has_country_flag = L_s}
+# 	         CIR = {has_country_flag = L_s}
+# 	      }
+# 	      SCA = {declare_war_on = {target = CIR type = annex_everything}}
+# 	      CIR = {country_event = scn142.31}
+# 	      RMI = {country_event = scn142.31}
+# 	      SEI = {country_event = scn142.31}
+# 	   }
+# 	   SCA = {set_country_flag = SCA_gotowar142}  
+# 	  }
+# 	}
+# }
+# country_event = {
+# 	id = scn142.31
+# 	title = scn142.31.title
+# 	desc = scn142.31.desc
+
+# 	is_triggered_only = yes
+
+#     #只有革命方会看到
+# 	option = {
+# 	   name = scn142.31.a
+# 	}
+# }
+# #兽道联盟打劫
+# country_event = {
+# 	id = scn142.4
+# 	title = scn142.4.title
+# 	desc = scn142.4.desc
+
+# 	fire_only_once = yes
+
+# 	trigger = {
+# 	has_global_flag = scnario142
+# 	  OR = {
+# 	  #1
+# 	     AND = {
+# 	         OR = {
+# 	          # 
+# 	          SEI = { has_country_flag = E_s}
+# 	          RMI = { has_country_flag = E_s}
+# 	          CIR = { has_country_flag = E_s}
+# 	          #
+# 	         }
+# 	         MRS = {surrender_progress >0.2}
+# 	         is_ai = no
+# 	     }
+# 	  #2
+# 	     AND = {
+# 	        MSD = {
+# 	            has_opinion = { target = ROOT value > 60}
+# 	        }
+# 	        MRS = {surrender_progress >0.3}
+# 	        is_ai = no
+# 	     }
+# 	  #3
+# 	     AND = {
+# 	         OR = {
+# 	          HUM = { has_country_flag = H_s}
+# 	          HKR = { has_country_flag = H_s}
+# 	          MRS = { has_country_flag = H_s}
+# 	          HUM = { has_country_flag = L_s}
+# 	          HKR = { has_country_flag = L_s}
+# 	          MRS = { has_country_flag = L_s}
+# 	         }
+# 	         date > 143.4.1
+# 	         is_ai = no
+# 	     }
+# 	  }
+# 	}
+
+# 	immediate = {
+# 	  hidden_effect = {
+# 	   MSD = {
+# 	     declare_war_on = {target = MRS type = annex_everything}
+# 	     set_country_flag = MSD_gotowar142
+# 	   }
+# 	  }
+# 	}
+# 	option = {
+# 	   trigger = {
+# 	      OR = {
+# 	        tag = HUM
+# 	        tag = MRS
+# 	        tag = HKR
+# 	      }
+# 	   }
+# 	   name = scn142.4.a
+# 	}
+# 	option = {
+# 	   trigger = {
+# 	      OR = {
+# 	        tag = RMI
+# 	        tag = CIR
+# 	        tag = SEI
+# 	      }
+# 	   }
+# 	   name = scn142.4.b
+# 	}
+# }
+# #结分
+# country_event = {
+# 	id = scn142.5
+# 	title = scn142.5.title
+# 	desc = scn142.5.desc
+
+# 	fire_only_once = yes
+
+# 	trigger = {
+# 	 has_global_flag = scnario142
+# 	 OR = {
+# 	   date>144.1.1
+#        MRS = {has_capitulated = yes}
+#        CIR = {has_capitulated = yes}
+#        RMI = {has_capitulated = yes}
+# 	 }
+# 	 is_ai = no
+# 	}
+
+
+# 	option = {
+# 	  name = scn142.5.a
+# 	  hidden_effect = {
+# 	    SEI = {white_peace = HUM}
+# 	    SEI = {white_peace = MRS}
+# 	    SEI = {white_peace = HKR}
+# 	    SCA = {white_peace = CIR}
+# 	    MSD = {white_peace = MRS}
+# 	  }
+# 	}
+# }
+# #人类屠杀妖怪事件
+# country_event = {
+# 	id = scn142.6
+# 	title = scn142.6.title
+# 	desc = scn142.6.desc
+
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
+
+
+# 	immediate = {
+# 	   hidden_effect = {
+# 	       if = {
+# 	           limit = {
+# 	              OR = {
+# 	                  SEI = {has_country_flag = E_s}
+# 	                  RMI = {has_country_flag = E_s}
+# 	                  CIR = {has_country_flag = E_s}
+
+# 	                  HUM = {has_country_flag = L_s}
+# 	                  HKR = {has_country_flag = L_s}
+# 	                  MRS = {has_country_flag = L_s}
+# 	              }
+# 	           }
+# 	           SEI = { add_timed_idea = { idea = tushabuff1 days = 90 } }
+# 	           RMI = { add_timed_idea = { idea = tushabuff1 days = 90 } }
+# 	           CIR = { add_timed_idea = { idea = tushabuff1 days = 90 } }
+# 	           NIB = { add_timed_idea = { idea = tushabuff1 days = 90 } }
+# 	       }
+# 	       if ={
+# 	          limit = {
+# 	              OR = {
+# 	                  SEI = {has_country_flag = H_s}
+# 	                  RMI = {has_country_flag = H_s}
+# 	                  CIR = {has_country_flag = H_s}
+# 	                  SEI = {has_country_flag = N_s}
+# 	                  RMI = {has_country_flag = N_s}
+# 	                  CIR = {has_country_flag = N_s}
+
+# 	                  HUM = {has_country_flag = H_s}
+# 	                  HKR = {has_country_flag = H_s}
+# 	                  MRS = {has_country_flag = H_s}
+# 	              }
+# 	          }
+# 	          SEI = { add_timed_idea = { idea = tushabuff2 days = 90 } }
+# 	          RMI = { add_timed_idea = { idea = tushabuff2 days = 90 } }
+# 	          CIR = { add_timed_idea = { idea = tushabuff2 days = 90 } }
+# 	          NIB = { add_timed_idea = { idea = tushabuff2 days = 90 } }
+# 	       }
+# 	       if ={
+# 	          limit = {
+# 	              OR = {
+# 	                  SEI = {has_country_flag = L_s}
+# 	                  RMI = {has_country_flag = L_s}
+# 	                  CIR = {has_country_flag = L_s}
+
+# 	                  HUM = {has_country_flag = E_s}
+# 	                  HKR = {has_country_flag = E_s}
+# 	                  MRS = {has_country_flag = E_s}
+# 	              }
+# 	          }
+# 	          SEI = { add_timed_idea = { idea = tushadebuff days = 90 } }
+# 	          RMI = { add_timed_idea = { idea = tushadebuff days = 90 } }
+# 	          CIR = { add_timed_idea = { idea = tushadebuff days = 90 } }
+# 	          NIB = { add_timed_idea = { idea = tushadebuff days = 90 } }
+# 	       }
+
+# 	       ROOT = {country_event = {id = scn142.7 days = 90}}
+
+# 	   }
+# 	}
+# 	option = {
+# 	   name = scn142.6.a
+# 	   effect_tooltip = {
+# 	       if = {
+# 	           limit = {
+# 	              OR = {
+# 	                  SEI = {has_country_flag = E_s}
+# 	                  RMI = {has_country_flag = E_s}
+# 	                  CIR = {has_country_flag = E_s}
+
+# 	                  HUM = {has_country_flag = L_s}
+# 	                  HKR = {has_country_flag = L_s}
+# 	                  MRS = {has_country_flag = L_s}
+# 	              }
+# 	           }
+# 	           SEI = { add_timed_idea = { idea = tushabuff1 days = 90 } }
+# 	           RMI = { add_timed_idea = { idea = tushabuff1 days = 90 } }
+# 	           CIR = { add_timed_idea = { idea = tushabuff1 days = 90 } }
+# 	           NIB = { add_timed_idea = { idea = tushabuff1 days = 90 } }
+# 	       }
+# 	       if ={
+# 	          limit = {
+# 	              OR = {
+# 	                  SEI = {has_country_flag = H_s}
+# 	                  RMI = {has_country_flag = H_s}
+# 	                  CIR = {has_country_flag = H_s}
+# 	                  SEI = {has_country_flag = N_s}
+# 	                  RMI = {has_country_flag = N_s}
+# 	                  CIR = {has_country_flag = N_s}
+
+# 	                  HUM = {has_country_flag = H_s}
+# 	                  HKR = {has_country_flag = H_s}
+# 	                  MRS = {has_country_flag = H_s}
+# 	              }
+# 	          }
+# 	          SEI = { add_timed_idea = { idea = tushabuff2 days = 90 } }
+# 	          RMI = { add_timed_idea = { idea = tushabuff2 days = 90 } }
+# 	          CIR = { add_timed_idea = { idea = tushabuff2 days = 90 } }
+# 	          NIB = { add_timed_idea = { idea = tushabuff2 days = 90 } }
+# 	       }
+# 	       if ={
+# 	          limit = {
+# 	              OR = {
+# 	                  SEI = {has_country_flag = L_s}
+# 	                  RMI = {has_country_flag = L_s}
+# 	                  CIR = {has_country_flag = L_s}
+
+# 	                  HUM = {has_country_flag = E_s}
+# 	                  HKR = {has_country_flag = E_s}
+# 	                  MRS = {has_country_flag = E_s}
+# 	              }
+# 	          }
+# 	          SEI = { add_timed_idea = { idea = tushadebuff days = 90 } }
+# 	          RMI = { add_timed_idea = { idea = tushadebuff days = 90 } }
+# 	          CIR = { add_timed_idea = { idea = tushadebuff days = 90 } }
+# 	          NIB = { add_timed_idea = { idea = tushadebuff days = 90 } }
+# 	       }
+
+# 	   }
+# 	}
+# }
+# #人类情报事件
+# country_event = {
+# 	id = scn142.7
+# 	title = scn142.7.title
+# 	desc = scn142.7.desc
+
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 	  hidden_effect = {
+# 	      if = {
+# 	           limit = {
+# 	              OR = {
+# 	                  SEI = {has_country_flag = E_s}
+# 	                  RMI = {has_country_flag = E_s}
+# 	                  CIR = {has_country_flag = E_s}
+
+# 	                  HUM = {has_country_flag = L_s}
+# 	                  HKR = {has_country_flag = L_s}
+# 	                  MRS = {has_country_flag = L_s}
+# 	              }
+# 	           }
+# 	           SEI = { add_ideas = qingbaobuff1}
+# 	           RMI = { add_ideas = qingbaobuff1}
+# 	           CIR = { add_ideas = qingbaobuff1}
+# 	           NIB = { add_ideas = qingbaobuff1}
+# 	       }
+# 	       if ={
+# 	          limit = {
+# 	              OR = {
+# 	                  SEI = {has_country_flag = N_s}
+# 	                  RMI = {has_country_flag = N_s}
+# 	                  CIR = {has_country_flag = N_s}
+
+# 	                  HUM = {has_country_flag = H_s}
+# 	                  HKR = {has_country_flag = H_s}
+# 	                  MRS = {has_country_flag = H_s}
+# 	              }
+# 	          }
+# 	          SEI = { add_ideas = qingbaobuff2}
+# 	          RMI = { add_ideas = qingbaobuff2}
+# 	          CIR = { add_ideas = qingbaobuff2}
+# 	          NIB = { add_ideas = qingbaobuff2}
+# 	       }
+# 	       if ={
+# 	          limit = {
+# 	              OR = {
+# 	                  SEI = {has_country_flag = L_s}
+# 	                  RMI = {has_country_flag = L_s}
+# 	                  CIR = {has_country_flag = L_s}
+# 	                  SEI = {has_country_flag = H_s}
+# 	                  RMI = {has_country_flag = H_s}
+# 	                  CIR = {has_country_flag = H_s}
+
+# 	                  HUM = {has_country_flag = E_s}
+# 	                  HKR = {has_country_flag = E_s}
+# 	                  MRS = {has_country_flag = E_s}
+# 	                  HUM = {has_country_flag = N_s}
+# 	                  HKR = {has_country_flag = N_s}
+# 	                  MRS = {has_country_flag = N_s}
+# 	              }
+# 	          }
+# 	          SEI = { add_ideas = qingbaobuff3}
+# 	          RMI = { add_ideas = qingbaobuff3}
+# 	          CIR = { add_ideas = qingbaobuff3}
+# 	          NIB = { add_ideas = qingbaobuff3}
+# 	       }
+
+# 	  }
+# 	}
+# 	option = {
+# 	   name = scn142.7.a
+# 	   effect_tooltip = {
+# 	    if = {
+# 	           limit = {
+# 	              OR = {
+# 	                  SEI = {has_country_flag = E_s}
+# 	                  RMI = {has_country_flag = E_s}
+# 	                  CIR = {has_country_flag = E_s}
+
+# 	                  HUM = {has_country_flag = L_s}
+# 	                  HKR = {has_country_flag = L_s}
+# 	                  MRS = {has_country_flag = L_s}
+# 	              }
+# 	           }
+# 	           SEI = { add_ideas = qingbaobuff1}
+# 	           RMI = { add_ideas = qingbaobuff1}
+# 	           CIR = { add_ideas = qingbaobuff1}
+# 	           NIB = { add_ideas = qingbaobuff1}
+# 	       }
+# 	       if ={
+# 	          limit = {
+# 	              OR = {
+# 	                  SEI = {has_country_flag = N_s}
+# 	                  RMI = {has_country_flag = N_s}
+# 	                  CIR = {has_country_flag = N_s}
+
+# 	                  HUM = {has_country_flag = H_s}
+# 	                  HKR = {has_country_flag = H_s}
+# 	                  MRS = {has_country_flag = H_s}
+# 	              }
+# 	          }
+# 	          SEI = { add_ideas = qingbaobuff2}
+# 	          RMI = { add_ideas = qingbaobuff2}
+# 	          CIR = { add_ideas = qingbaobuff2}
+# 	          NIB = { add_ideas = qingbaobuff2}
+# 	       }
+# 	       if ={
+# 	          limit = {
+# 	              OR = {
+# 	                  SEI = {has_country_flag = L_s}
+# 	                  RMI = {has_country_flag = L_s}
+# 	                  CIR = {has_country_flag = L_s}
+# 	                  SEI = {has_country_flag = H_s}
+# 	                  RMI = {has_country_flag = H_s}
+# 	                  CIR = {has_country_flag = H_s}
+
+# 	                  HUM = {has_country_flag = E_s}
+# 	                  HKR = {has_country_flag = E_s}
+# 	                  MRS = {has_country_flag = E_s}
+# 	                  HUM = {has_country_flag = N_s}
+# 	                  HKR = {has_country_flag = N_s}
+# 	                  MRS = {has_country_flag = N_s}
+# 	              }
+# 	          }
+# 	          SEI = { add_ideas = qingbaobuff3}
+# 	          RMI = { add_ideas = qingbaobuff3}
+# 	          CIR = { add_ideas = qingbaobuff3}
+# 	          NIB = { add_ideas = qingbaobuff3}
+# 	       }
+
+# 	   }
+# 	}
+
+# }

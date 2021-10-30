@@ -1,0 +1,86 @@
+GO_defines = {
+	set_variable = { global.GO_time_base = 120 }
+	set_variable = { global.GO_attack_defence_nerf_base = -0.3 }
+}
+
+GO_set = {
+	###set time
+	set_variable = {
+		GO_time_current = global.GO_time_base	
+	}
+	add_to_variable = { 
+		GO_time_current = GO_time_add	
+	}
+	###set nerf
+	set_variable = {
+		GO_attack_defence_nerf_base_current = global.GO_attack_defence_nerf_base	
+	}
+	add_to_variable = { 
+		GO_attack_defence_nerf_base_current = GO_attack_defence_nerf_base_add
+	}
+}
+
+GO_time_add15 = {
+	custom_effect_tooltip = GO_time_add15_tt
+	add_to_variable = {
+		GO_time_add	= 15
+	}
+	GO_set = yes
+}
+GO_time_add30 = {
+	custom_effect_tooltip = GO_time_add30_tt
+	add_to_variable = {
+		GO_time_add	= 30
+	}
+	GO_set = yes
+}
+GO_time_add45 = {
+	custom_effect_tooltip = GO_time_add45_tt
+	add_to_variable = {
+		GO_time_add	= 45
+	}
+	GO_set = yes
+}
+GO_time_add60 = {
+	custom_effect_tooltip = GO_time_add60_tt
+	add_to_variable = {
+		GO_time_add	= 60
+	}
+	GO_set = yes
+}
+GO_attack_defence_nerf_add5 = {
+	custom_effect_tooltip = GO_attack_defence_nerf5_tt
+	add_to_variable = {
+		GO_attack_defence_nerf_base_add	= -0.05
+	}
+	GO_set = yes
+}
+GO_attack_defence_nerf_add10 = {
+	custom_effect_tooltip = GO_attack_defence_nerf10_tt
+	add_to_variable = {
+		GO_attack_defence_nerf_base_add	= -0.1
+	}
+	GO_set = yes
+}
+GO_attack_defence_nerf_add15 = {
+	custom_effect_tooltip = GO_attack_defence_nerf15_tt
+	add_to_variable = {
+		GO_attack_defence_nerf_base_add	= -0.15
+	}
+	GO_set = yes
+}
+GO_attack_defence_nerf_add20 = {
+	custom_effect_tooltip = GO_attack_defence_nerf20_tt
+	add_to_variable = {
+		GO_attack_defence_nerf_base_add	= -0.20
+	}
+	GO_set = yes
+}
+GO_attack_defence_nerf_add25 = {
+	custom_effect_tooltip = GO_attack_defence_nerf25_tt
+	add_to_variable = {
+		GO_attack_defence_nerf_base_add	= -0.25
+	}
+	GO_set = yes
+}
+

@@ -160,8 +160,13 @@ on_actions = {
 						}
 					}
 					controller = {
-						EXHC_exhaustion_add25 = yes
-						EXHC_exhaustion_add25 = yes
+						if = {
+							limit = {
+								not = { tag = ROOT}
+							}
+							EXHC_exhaustion_add25 = yes
+							EXHC_exhaustion_add25 = yes
+						}
 					}
 				}
 			}
@@ -170,41 +175,82 @@ on_actions = {
 					has_tech = lingliguozaizhadan
 				}
 				FROM = {
+					if = {
+						limit = {
+							not = {
+								has_dynamic_modifier = {
+									modifier = lingliguozaizhadan_bombed
+								}
+							}
+						}
+						add_dynamic_modifier = {
+							modifier = lingliguozaizhadan_bombed
+						}
+					}
+					
 					controller = {
 						if = {
 							limit = {
-								has_idea = th_nuke_idea1
+								not = { tag = ROOT}
 							}
-							modify_timed_idea = {
-							    idea = th_nuke_idea1
-							    days = 180
-							}
-							else = {
-								add_timed_idea = {idea = th_nuke_idea1 days = 180}
-							}
-							EXHC_exhaustion_add25 = yes
-							EXHC_exhaustion_add25 = yes
-						}
-						every_country = {
-							limit = {
-								or = {
-									is_in_faction_with = PREV
-									is_subject_of = PREV
-								}
-							}
+							##############强力副作用
 							if = {
 								limit = {
-									has_idea = th_nuke_idea2
+									has_idea = th_nuke_idea1
 								}
 								modify_timed_idea = {
-								    idea = th_nuke_idea2
+								    idea = th_nuke_idea1
 								    days = 180
 								}
 								else = {
-									add_timed_idea = {idea = th_nuke_idea2 days = 180}
+									add_timed_idea = {idea = th_nuke_idea1 days = 180}
+								}
+								EXHC_exhaustion_add25 = yes
+								EXHC_exhaustion_add25 = yes
+							}
+							############副作用
+							every_country = {
+								limit = {
+									or = {
+										is_in_faction_with = PREV
+										is_subject_of = PREV
+									}
+								}
+								if = {
+									limit = {
+										has_idea = th_nuke_idea2
+									}
+									modify_timed_idea = {
+									    idea = th_nuke_idea2
+									    days = 180
+									}
+									else = {
+										add_timed_idea = {idea = th_nuke_idea2 days = 180}
+									}
+								}
+								EXHC_exhaustion_add25 = yes
+							}
+							OVERLORD = {
+								if = {
+									limit = {
+										is_in_faction = no
+									}
+									if = {
+										limit = {
+											has_idea = th_nuke_idea2
+										}
+										modify_timed_idea = {
+											idea = th_nuke_idea2
+											days = 180
+										}
+										else = {
+											add_timed_idea = {idea = th_nuke_idea2 days = 180}
+										}
+									}
+									EXHC_exhaustion_add25 = yes
 								}
 							}
-							EXHC_exhaustion_add25 = yes
+							################
 						}
 					}
 				}
@@ -349,16 +395,23 @@ on_actions = {
 	#FROM is war target
 	on_declare_war = {
 		effect = {
+			subject_situation_change_list = yes
 			EXHC_exhaustion_add10 = yes
 			if = {
 				limit = {
-					has_completed_focus = TKM_shulishenmingweiyan
+					or = {
+						has_idea = TKM_shell_shocked_spectator_5
+						has_idea = TKM_shell_shocked_spectator_4
+						has_idea = TKM_shell_shocked_spectator_3
+						has_idea = TKM_shell_shocked_spectator_2
+						has_idea = TKM_shell_shocked_spectator_1
+					}
 				}
 				add_to_variable = { EXHC_current_exhaustion = 2}
 			}
 			
 			hidden_effect = {
-				delcare_war_events = yes
+				declare_war_events = yes
 			}
 
 			###与附庸叛乱的机制一样
@@ -397,6 +450,17 @@ on_actions = {
 				}
 				set_country_flag = HKR_beici
 			}
+			if = {
+				limit = {
+					or = {
+						has_idea = hkr_bayunzi
+						has_idea = hkr_bayunzi2
+						has_idea = hkr_bayunzi3
+					}
+					YKR = { has_war = no}
+				}
+				YKR = { country_event = hkr.62 }
+			}
 			#hum denfence
 			if = {
 				limit = {
@@ -411,8 +475,26 @@ on_actions = {
 						is_in_faction = no
 					}
 				}
+				TKM = {
+					if = {
+						limit = {
+							has_guaranteed = HUM
+							is_in_faction = no
+							not = {
+								has_war_with = HUM
+							}
+						}
+						country_event = { days = 2 id = hud.1 }
+					}
+					
+				}
 				random_country = {
 					limit = {
+						not = { tag = TKM }
+						or = { 
+							TKM = { has_war_with = HUM }
+							not = { TKM = { has_guaranteed = HUM } }
+						}
 						has_guaranteed = HUM
 						is_in_faction = no
 						not = {
@@ -421,6 +503,43 @@ on_actions = {
 						}
 					}
 					country_event = { days = 2 id = hud.1 }
+				}
+			}
+			##易者加入战争
+			if = {
+				limit = {
+					tag = YYK
+					has_country_flag = YYK_lianhediyulouling
+					FROM = {
+						tag = AOO
+					}
+					HGH = {
+						is_subject = no
+					}
+				}
+				HGH = {
+					declare_war_on = {
+						type = annex_everything
+						target = AOO
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = YYK
+					has_country_flag = YYK_lianhediyulouling
+					FROM = {
+						tag = AKO
+					}
+					HGH = {
+						is_subject = no
+					}
+				}
+				HGH = {
+					declare_war_on = {
+						type = annex_everything
+						target = AKO
+					}
 				}
 			}
 		}
@@ -475,11 +594,13 @@ on_startup = {
 	effect = {
 		##########defines#############
 		random_country = {
+			ST_race_defines = yes
 			SS_defines = yes
 			power_defines = yes
 			outlook_defines = yes
 			exhuastion_defines = yes
 			FAPO_defines = yes
+			GO_defines = yes
 			HMIF_defines = yes
 			set_variable = { global.PO_gensokyo_p = 25}
 			teshudibiao = yes
@@ -489,11 +610,9 @@ on_startup = {
 	        CONV_defines = yes
 	        region_defines = yes
 	        FT_defines = yes
-			SC2_infl_defines = yes
 	        every_state = {
 	       		state_value_calculator = yes
 		    }
-			set_variable = { global.season_month = 1}
 	        
 		}	
 
@@ -511,7 +630,6 @@ on_startup = {
 					not = { is_core_of = PREV }
 				}
 				add_compliance = -40
-	       		# add_resistance = 10
 			}
 		}
 
@@ -542,6 +660,11 @@ on_startup = {
 		#scenario choose
 		random_country = {
 			if = {
+
+			}
+		}
+		random_country = {
+			if = {
 		    	limit = {
 		     		has_start_date >145.12.30 
 		    	}	
@@ -552,12 +675,6 @@ on_startup = {
 		    	SEJ = {	set_variable = { EXHC_current_exhaustion = 30}	}
 		    	RMI = {	set_variable = { EXHC_current_exhaustion = 10}	}
 		    	NIB = {	set_variable = { EXHC_current_exhaustion = 10}	}
-
-		    	NMS = {	set_variable = { EXHC_current_exhaustion = 30}	}
-		    	ICR = {	set_variable = { EXHC_current_exhaustion = 10}	}
-		    	MNM = {	set_variable = { EXHC_current_exhaustion = 10}	}
-		    	KYK = {	set_variable = { EXHC_current_exhaustion = 5}	}
-		    	MAM = {	set_variable = { EXHC_current_exhaustion = 5}	}
 		    	
 		    	KAG = {	set_variable = { EXHC_current_exhaustion = 5}	}
 		    	MSD = {	set_variable = { EXHC_current_exhaustion = 5}	}
@@ -621,7 +738,10 @@ on_startup = {
 		    	}
 
 				else = {
-			
+					every_state = {
+			            add_resistance = 45
+			            add_compliance = -100
+			        }
 			    }  
 			}
 		}
@@ -669,13 +789,19 @@ on_startup = {
 
 		    CONV_daily = yes
 
-		    state_race_manpower = yes
+			state_race_manpower = yes
+			
+			ST_race_penalty_daily = yes
+
+			POPU_pp_gain = yes
 		}
 
 		#forsmallscenario
 		every_country = {
 		    limit = {
-		        date < 145.12.31
+		        not = {
+		        	has_global_flag = main_scenario
+		        }
 		    }
 		    add_ideas = allsmallscenario
 		    set_research_slots = 1
@@ -687,6 +813,7 @@ on_startup = {
 		if = {
 	        limit = {
 	            NMS = { is_ai = no}
+	            has_global_flag = main_scenario
 	        }
 	        HUM = {
 	          set_major = yes
@@ -709,14 +836,21 @@ on_startup = {
 
 	    #english leader
 	    random_country = {
-	    	english_leader_on = yes #
+	    	leader_initial = yes #
 	    	scenario_setting = yes
 	    }
 
-		#外交调整
-		HUM = {
-			add_to_faction = WHM
-			add_to_faction = RNS
+		#ai禁止切换科技树
+		every_country = {
+			limit = {
+				is_ai = yes
+				not = {
+					has_idea = none_theory
+				}
+			}
+			set_technology = {
+				tech_changed = 0 #
+			}
 		}
 	}
 }
@@ -740,6 +874,8 @@ on_startup = {
 			}
 			ROOT = {
 				country_value_calculator_and_manpower_gainer = yes
+				state_race_manpower = yes
+				ST_race_penalty_daily = yes
 			}
 		}
 	}
@@ -747,7 +883,10 @@ on_startup = {
 	#ROOT is subject FROM is previous overlord
 	on_subject_free = {
 		effect = {	
-			subject_situation_change_list = yes
+			ROOT = {
+				country_value_calculator_and_manpower_gainer = yes
+				subject_situation_change_list = yes
+			}
 		}
 	}
 
@@ -758,12 +897,19 @@ on_startup = {
 			FROM = {
 				ROOT = {
 					subject_level2 = yes
+					country_value_calculator_and_manpower_gainer = yes
+					subject_situation_change_list = yes
+					if = {
+						limit = {
+							not = { has_country_flag = initialled }
+						}
+						country_event = glo.2000
+					}
 				}
 			}
 			clr_country_flag = LS_start_lowing
 			clr_country_flag = LS_is_cooling_down
 			clr_country_flag = LS_cooldown_completed
-			subject_situation_change_list = yes
 			if = {
 				limit = {
 					ROOT = {
@@ -796,14 +942,55 @@ on_startup = {
 	#ROOT = nation being released, FROM = overlord
 	on_release_as_puppet = {
 		effect = {
-			subject_situation_change_list = yes
+			ROOT = {
+				if = {
+					limit = {
+						or = {
+							is_ai = no
+							has_idea = none_theory
+						}
+					}
+					set_technology = {
+						tech_changed = 1 #
+					}
+				}
+				country_value_calculator_and_manpower_gainer = yes
+				subject_situation_change_list = yes
+				if = {
+					limit = {
+						not = { has_country_flag = initialled }
+					}
+					country_event = glo.2000
+				}
+			}
+			
 		}
 	}
 
 	#ROOT is free nation FROM is releaser
 	on_release_as_free = {
 		effect = {
-			subject_situation_change_list = yes
+			ROOT = {
+				if = {
+					limit = {
+						or = {
+							is_ai = no
+							has_idea = none_theory
+						}
+					}
+					set_technology = {
+						tech_changed = 1 #
+					}
+				}
+				country_value_calculator_and_manpower_gainer = yes
+				subject_situation_change_list = yes
+				if = {
+					limit = {
+						not = { has_country_flag = initialled }
+					}
+					country_event = glo.2000
+				}
+			}
 		}
 	}
 
@@ -906,7 +1093,12 @@ on_startup = {
 	#ROOT is winner #FROM is loser
 	on_peaceconference_ended = {
 		effect = {
-			
+			ROOT = {
+				country_value_calculator_and_manpower_gainer = yes
+			}
+			FROM = {
+				country_value_calculator_and_manpower_gainer = yes
+			}
 		}
 	}
 

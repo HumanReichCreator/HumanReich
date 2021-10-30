@@ -1,0 +1,2539 @@
+﻿division_template = {
+	name = "东部扫荡编制"
+	regiments = {
+		sc_light_infantry = { x = 0 y = 0 }
+		sc_light_infantry = { x = 0 y = 1 }
+		sc_light_infantry = { x = 0 y = 2 }
+		sc_light_infantry = { x = 0 y = 3 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "魔法森林远征编制"
+	regiments = {
+		sc_infantry = { x = 0 y = 0 }
+		sc_infantry = { x = 0 y = 1 }
+		sc_infantry = { x = 0 y = 2 }
+		sc_infantry = { x = 0 y = 3 }
+		melee_infantry = { x = 0 y = 4 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "魔法森林炮兵编制"
+	regiments = {
+		sc_infantry = { x = 0 y = 0 }
+		sc_infantry = { x = 0 y = 1 }
+		sc_infantry = { x = 0 y = 2 }
+		sc_infantry = { x = 0 y = 3 }
+		sc_mortar_brigade = {x = 0 y = 4 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "巫女辅助编制"
+	regiments = {
+		sc_infantry = { x = 0 y = 0 }
+		sc_infantry = { x = 0 y = 1 }
+		sc_infantry = { x = 0 y = 2 }
+		melee_infantry = { x = 0 y = 3 }
+		sc_mortar_brigade = { x = 0 y = 4}
+		sc_infantry = { x = 1 y = 0 }
+		sc_infantry = { x = 1 y = 1 }
+		sc_infantry = { x = 1 y = 2 }
+		melee_infantry = { x = 1 y = 3 }
+	}
+	support = {
+		sp_wunv = { x = 0 y = 0 } 
+	}
+}
+division_template = {
+	name = "妖怪区驻扎编制"
+	regiments = {
+		sc_infantry = { x = 0 y = 0 }
+		sc_infantry = { x = 0 y = 1 }
+		melee_infantry = { x = 0 y = 2 }
+		melee_infantry = { x = 0 y = 3 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "人类村落自警军"
+	regiments = {
+		sc_infantry = { x = 0 y = 0 }
+		sc_infantry = { x = 0 y = 1 }
+		sc_infantry = { x = 0 y = 2 }
+		sc_infantry = { x = 0 y = 3 }
+		sc_mortar_brigade = {x = 0 y = 4 }
+		melee_infantry = { x = 1 y = 0 }
+		melee_infantry = { x = 1 y = 1 }
+	}
+	support = {
+		sp_zhihuidui = { x = 0 y = 0 }  
+	}
+}
+division_template = {
+	name = "稗田禁卫军"
+	regiments = {
+		sc_infantry = { x = 0 y = 0 }
+		sc_infantry = { x = 0 y = 1 }
+		sc_infantry = { x = 0 y = 2 }
+		sc_mortar_brigade = {x = 0 y = 3 }
+		melee_infantry = { x = 0 y = 4 }
+		sc_infantry = { x = 1 y = 0 }
+		sc_infantry = { x = 1 y = 1 }
+		sc_infantry = { x = 1 y = 2 }
+		sc_mortar_brigade = {x = 1 y = 3 }
+		melee_infantry = { x = 1 y = 4 }
+	}
+	support = {
+		sp_zhihuidui = { x = 0 y = 0 }  
+		sp_wunv = { x = 0 y = 1 }  
+	}
+}
+division_template = {
+	name = "西部散兵"
+	regiments = {
+		sc_light_infantry = { x = 0 y = 0 }
+		sc_light_infantry = { x = 0 y = 1 }
+		sc_light_infantry = { x = 0 y = 2 }
+		sc_light_infantry = { x = 0 y = 3 }
+		sc_light_infantry = { x = 0 y = 4 }
+	}
+	support = {
+
+	}
+}
+division_template = {
+	name = "教化妖怪军"
+	regiments = {
+		sc_infantry = { x = 0 y = 0 }
+		sc_infantry = { x = 0 y = 1 }
+		sc_infantry = { x = 0 y = 2 }
+		melee_infantry = { x = 0 y = 3 }
+		sc_infantry = { x = 1 y = 0 }
+		sc_infantry = { x = 1 y = 1 }
+		sc_infantry = { x = 1 y = 2 }
+		melee_infantry = { x = 1 y = 3 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "青年卫队"
+	regiments = {
+		sc_infantry = { x = 0 y = 0 }
+		sc_infantry = { x = 0 y = 1 }
+		melee_infantry = { x = 0 y = 2 }
+	}
+	support = {
+	}
+}
+units = {
+	division = {
+		name = "东部扫荡编制"
+		location = 224
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 3150
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 3157
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 2476
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 738
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 738
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 224
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 3150
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 3157
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 2476
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 738
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 738
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "东部扫荡编制"
+		location = 1212
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 120
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 353
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 1212
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 5636
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 5566
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 3147
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 5579
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 5541
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 5670
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 424
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 886
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 140
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 620
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 618
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 5860
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 5633
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 5599
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 3803
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 515
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "东部扫荡编制"
+		location = 4486
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 1536
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 4490
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 4488
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 4275
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "东部扫荡编制"
+		location = 4281
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 1917
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 1238
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 206
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 885
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 4502
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 4510
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 4499
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东部扫荡编制"
+		location = 4276
+		division_template = "东部扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "魔法森林远征编制"
+		location = 5775
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 2751
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 5770
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 2002
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 2763
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 5754
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 302
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 5749
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 5943
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 3330
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 2788
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 2177
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 2802
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 4529
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 4526
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 5775
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 2751
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 5770
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 2002
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 2763
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 5754
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 302
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 5749
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 5943
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 3330
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 2788
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 2177
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 2802
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 4529
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 4526
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 5775
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 2751
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 5770
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 2002
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 2763
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 5754
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 302
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 5749
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 5943
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 3330
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 2788
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 2177
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 2802
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 4529
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林远征编制"
+		location = 4526
+		division_template = "魔法森林远征编制"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "魔法森林炮兵编制"
+		location = 2751
+		division_template = "魔法森林炮兵编制"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林炮兵编制"
+		location = 302
+		division_template = "魔法森林炮兵编制"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林炮兵编制"
+		location = 5943
+		division_template = "魔法森林炮兵编制"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林炮兵编制"
+		location = 2177
+		division_template = "魔法森林炮兵编制"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "魔法森林炮兵编制"
+		location = 4529
+		division_template = "魔法森林炮兵编制"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 2532
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 2532
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 2532
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 1919
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 337
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 2362
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 2831
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 2841
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 2473
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 193
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 615
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 3207
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 2496
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "稗田禁卫军"
+		location = 3184
+		division_template = "稗田禁卫军"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "稗田禁卫军"
+		location = 230
+		division_template = "稗田禁卫军"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "稗田禁卫军"
+		location = 230
+		division_template = "稗田禁卫军"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "人类村落自警军"
+		location = 3640
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3644
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3217
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 2836
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3628
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 2848
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3615
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 589
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3187
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3182
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3640
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3644
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3217
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 2836
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3628
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 2848
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3615
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 589
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3187
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3182
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3640
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3644
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3217
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 2836
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3628
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 2848
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3615
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 589
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3187
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3182
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3640
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3644
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3217
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 2836
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3628
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 2848
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3615
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 589
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3187
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3182
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3640
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3644
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3217
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 2836
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3628
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 2848
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3615
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 589
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3187
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3182
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3640
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3644
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3217
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 2836
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3628
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 2848
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3615
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 589
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3187
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3182
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "西部散兵"
+		location = 3640
+		division_template = "西部散兵"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西部散兵"
+		location = 3644
+		division_template = "西部散兵"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西部散兵"
+		location = 3217
+		division_template = "西部散兵"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西部散兵"
+		location = 2836
+		division_template = "西部散兵"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西部散兵"
+		location = 3628
+		division_template = "西部散兵"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西部散兵"
+		location = 2848
+		division_template = "西部散兵"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西部散兵"
+		location = 3615
+		division_template = "西部散兵"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西部散兵"
+		location = 589
+		division_template = "西部散兵"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西部散兵"
+		location = 3187
+		division_template = "西部散兵"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西部散兵"
+		location = 3182
+		division_template = "西部散兵"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西部散兵"
+		location = 3640
+		division_template = "西部散兵"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西部散兵"
+		location = 3644
+		division_template = "西部散兵"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西部散兵"
+		location = 3217
+		division_template = "西部散兵"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西部散兵"
+		location = 2836
+		division_template = "西部散兵"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西部散兵"
+		location = 3628
+		division_template = "西部散兵"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西部散兵"
+		location = 2848
+		division_template = "西部散兵"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西部散兵"
+		location = 3615
+		division_template = "西部散兵"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西部散兵"
+		location = 589
+		division_template = "西部散兵"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西部散兵"
+		location = 3187
+		division_template = "西部散兵"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西部散兵"
+		location = 3182
+		division_template = "西部散兵"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "人类村落自警军"
+		location = 3193
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3193
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "人类村落自警军"
+		location = 1310
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 1310
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "人类村落自警军"
+		location = 1732
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 1732
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 811
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 1315
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 3514
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 3615
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 993
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 1905
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 1868
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 5919
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 1585
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 303
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 811
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 1315
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 3514
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 3615
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 993
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 1905
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 1868
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 5919
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 1585
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 303
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "人类村落自警军"
+		location = 3494
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3494
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "人类村落自警军"
+		location = 230
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 230
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "人类村落自警军"
+		location = 3184
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3184
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3184
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3184
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3166
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "人类村落自警军"
+		location = 3166
+		division_template = "人类村落自警军"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "青年卫队"
+		location = 3193
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 1310
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3193
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3494
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3184
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3193
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 230
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3158
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3193
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 533
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3193
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 1732
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 463
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3166
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3193
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 1310
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3193
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3494
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3184
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3193
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 230
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3158
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3193
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 533
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3193
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 1732
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 463
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3166
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "青年卫队"
+		location = 3184
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3184
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3184
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3184
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3184
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+
+	division = {
+		name = "青年卫队"
+		location = 3494
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3494
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "青年卫队"
+		location = 230
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "青年卫队"
+		location = 3166
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3166
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3166
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "青年卫队"
+		location = 1732
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 1732
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "巫女辅助编制"
+		location = 4170
+		division_template = "巫女辅助编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巫女辅助编制"
+		location = 2024
+		division_template = "巫女辅助编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巫女辅助编制"
+		location = 4169
+		division_template = "巫女辅助编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巫女辅助编制"
+		location = 4519
+		division_template = "巫女辅助编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巫女辅助编制"
+		location = 4170
+		division_template = "巫女辅助编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巫女辅助编制"
+		location = 2024
+		division_template = "巫女辅助编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巫女辅助编制"
+		location = 4169
+		division_template = "巫女辅助编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巫女辅助编制"
+		location = 4519
+		division_template = "巫女辅助编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "巫女辅助编制"
+		location = 2128
+		division_template = "巫女辅助编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巫女辅助编制"
+		location = 2128
+		division_template = "巫女辅助编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "青年卫队"
+		location = 3640
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3644
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3217
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 2836
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3628
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 2848
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3615
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 589
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3187
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3182
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3640
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3644
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3217
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 2836
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3628
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 2848
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3615
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 589
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3187
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "青年卫队"
+		location = 3182
+		division_template = "青年卫队"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 3640
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 3644
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 3217
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 2836
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 3628
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 2848
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 3615
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 589
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 3187
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 3182
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 3640
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 3644
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 3217
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 2836
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 3628
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 2848
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 3615
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 589
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 3187
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖怪区驻扎编制"
+		location = 3182
+		division_template = "妖怪区驻扎编制"
+		start_experience_factor = 0.15
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "教化妖怪军"
+		location = 3640
+		division_template = "教化妖怪军"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "教化妖怪军"
+		location = 3644
+		division_template = "教化妖怪军"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "教化妖怪军"
+		location = 3217
+		division_template = "教化妖怪军"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "教化妖怪军"
+		location = 2836
+		division_template = "教化妖怪军"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "教化妖怪军"
+		location = 3628
+		division_template = "教化妖怪军"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "教化妖怪军"
+		location = 2848
+		division_template = "教化妖怪军"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "教化妖怪军"
+		location = 3615
+		division_template = "教化妖怪军"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "教化妖怪军"
+		location = 589
+		division_template = "教化妖怪军"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "教化妖怪军"
+		location = 3187
+		division_template = "教化妖怪军"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "教化妖怪军"
+		location = 3182
+		division_template = "教化妖怪军"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "巫女辅助编制"
+		location = 3640
+		division_template = "巫女辅助编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巫女辅助编制"
+		location = 3644
+		division_template = "巫女辅助编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巫女辅助编制"
+		location = 3217
+		division_template = "巫女辅助编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巫女辅助编制"
+		location = 2836
+		division_template = "巫女辅助编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巫女辅助编制"
+		location = 3628
+		division_template = "巫女辅助编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巫女辅助编制"
+		location = 2848
+		division_template = "巫女辅助编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巫女辅助编制"
+		location = 3615
+		division_template = "巫女辅助编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巫女辅助编制"
+		location = 589
+		division_template = "巫女辅助编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巫女辅助编制"
+		location = 3187
+		division_template = "巫女辅助编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巫女辅助编制"
+		location = 3182
+		division_template = "巫女辅助编制"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1
+	}
+}

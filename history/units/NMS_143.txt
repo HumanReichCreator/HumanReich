@@ -1,0 +1,1397 @@
+﻿division_template = {
+	name = "突袭编制"
+	regiments = {
+		melee_cavalry = { x = 0 y = 0 }
+		melee_cavalry = { x = 0 y = 1 }
+		melee_cavalry = { x = 0 y = 2 }
+		melee_cavalry = { x = 0 y = 3 }
+	}
+}
+division_template = {
+	name = "扫荡编制"
+	regiments = {
+		ma_light_infantry = { x = 0 y = 0 }
+		ma_light_infantry = { x = 0 y = 1 }
+		ma_light_infantry = { x = 0 y = 2 }
+		ma_light_infantry = { x = 0 y = 3 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "命莲寺禁卫队"
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 2 }
+		ma_infantry = { x = 0 y = 3 }
+		ma_infantry = { x = 0 y = 4 }
+	}
+	support = {
+		sp_zhihuidui = { x = 0 y = 0 }  
+	}
+}
+division_template = {
+	name = "主力编制"
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 2 }
+		ma_infantry = { x = 0 y = 3 }
+		ma_infantry = { x = 0 y = 4 }
+	}
+	support = {
+	}
+}
+
+units = {
+	division = {
+		name = "命莲寺禁卫队"
+		location = 3649
+		division_template = "命莲寺禁卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺禁卫队"
+		location = 945
+		division_template = "命莲寺禁卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺禁卫队"
+		location = 3641
+		division_template = "命莲寺禁卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺禁卫队"
+		location = 3637
+		division_template = "命莲寺禁卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺禁卫队"
+		location = 218
+		division_template = "命莲寺禁卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺禁卫队"
+		location = 3620
+		division_template = "命莲寺禁卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺禁卫队"
+		location = 5461
+		division_template = "命莲寺禁卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺禁卫队"
+		location = 5459
+		division_template = "命莲寺禁卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺禁卫队"
+		location = 2319
+		division_template = "命莲寺禁卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺禁卫队"
+		location = 5458
+		division_template = "命莲寺禁卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺禁卫队"
+		location = 631
+		division_template = "命莲寺禁卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺禁卫队"
+		location = 2360
+		division_template = "命莲寺禁卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "扫荡编制"
+		location = 3649
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 945
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 3641
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 3637
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 218
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 3620
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 5461
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 5459
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 2319
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 5458
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 631
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 2360
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "突袭编制"
+		location = 3649
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 945
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 3641
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 3637
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 218
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 3620
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 5461
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 5459
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 2319
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 5458
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 631
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 2360
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 3649
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 945
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 3641
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 3637
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 218
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 3620
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 5461
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 5459
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 2319
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 5458
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 631
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 2360
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 3649
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 945
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 3641
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 3637
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 218
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 3620
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 5461
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 5459
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 2319
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 5458
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 631
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 2360
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 3649
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 945
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 3641
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 3637
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 218
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 3620
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 5461
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 5459
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 2319
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 5458
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 631
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 2360
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "命莲寺禁卫队"
+		location = 3649
+		division_template = "命莲寺禁卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺禁卫队"
+		location = 945
+		division_template = "命莲寺禁卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺禁卫队"
+		location = 3641
+		division_template = "命莲寺禁卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺禁卫队"
+		location = 3637
+		division_template = "命莲寺禁卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺禁卫队"
+		location = 218
+		division_template = "命莲寺禁卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺禁卫队"
+		location = 3620
+		division_template = "命莲寺禁卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺禁卫队"
+		location = 5461
+		division_template = "命莲寺禁卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺禁卫队"
+		location = 5459
+		division_template = "命莲寺禁卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺禁卫队"
+		location = 2319
+		division_template = "命莲寺禁卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺禁卫队"
+		location = 5458
+		division_template = "命莲寺禁卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺禁卫队"
+		location = 631
+		division_template = "命莲寺禁卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "命莲寺禁卫队"
+		location = 2360
+		division_template = "命莲寺禁卫队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "扫荡编制"
+		location = 3649
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 945
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 3641
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 3637
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 218
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 3620
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 5461
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 5459
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 2319
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 5458
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 631
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "扫荡编制"
+		location = 2360
+		division_template = "扫荡编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "突袭编制"
+		location = 3649
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 945
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 3641
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 3637
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 218
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 3620
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 5461
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 5459
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 2319
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 5458
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 631
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 2360
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 3649
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 945
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 3641
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 3637
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 218
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 3620
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 5461
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 5459
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 2319
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 5458
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 631
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 2360
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 3649
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 945
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 3641
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 3637
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 218
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 3620
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 5461
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 5459
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 2319
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 5458
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 631
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "突袭编制"
+		location = 2360
+		division_template = "突袭编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 3649
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 945
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 3641
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 3637
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 218
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 3620
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 5461
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 5459
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 2319
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 5458
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 631
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 2360
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 3649
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 945
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 3641
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 3637
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 218
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 3620
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 5461
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 5459
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 2319
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 5458
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 631
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 2360
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 3649
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 945
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 3641
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 3637
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 218
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 3620
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 5461
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 5459
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 2319
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 5458
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 631
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 2360
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 3649
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 945
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 3641
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 3637
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 218
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 3620
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 5461
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 5459
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 2319
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 5458
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 631
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 2360
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 3649
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 945
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 3641
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 3637
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 218
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 3620
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 5461
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 5459
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 2319
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 5458
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 631
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "主力编制"
+		location = 2360
+		division_template = "主力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+}

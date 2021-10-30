@@ -284,7 +284,7 @@ power_daily_changer = {
 		multiply_variable = { PO_research = global.PO_view0_low_ratio}
 		if = {
 			limit = {
-				has_completed_focus = TKM_chengweishouhushen
+				has_completed_focus = TKM_Business_as_usual
 			}
 			multiply_variable = { PO_conscription = 0}
 			multiply_variable = { PO_research = 0}
@@ -663,4 +663,29 @@ PO_influence_factor0.25 = {
 	custom_effect_tooltip = PO_influence_factor0.25_tt
 	add_to_variable = { PO_influ_ratio_add = 0.25}
     power_change_modifier = yes
+}
+PO_no_fumian = {
+	set_country_flag = ALI_dilinglizuozhan
+	custom_effect_tooltip = ALI_dilinglizuozhan_tt
+}
+
+PO_root_power_factor0.1 = {
+	custom_effect_tooltip = PO_root_power_factor0.1_tt
+	add_to_variable = { PO_root_power_factor_add = 0.1}
+}
+PO_root_power_factor0.2 = {
+	custom_effect_tooltip = PO_root_power_factor0.2_tt
+	add_to_variable = { PO_root_power_factor_add = 0.2}
+}
+PO_root_power_factor0.3 = {
+	custom_effect_tooltip = PO_root_power_factor0.3_tt
+	add_to_variable = { PO_root_power_factor_add = 0.3}
+}
+PO_root_power_factor0.4 = {
+	custom_effect_tooltip = PO_root_power_factor0.4_tt
+	add_to_variable = { PO_root_power_factor_add = 0.4}
+}
+PO_root_power_factor0.5 = {
+	custom_effect_tooltip = PO_root_power_factor0.5_tt
+	add_to_variable = { PO_root_power_factor_add = 0.5}
 }

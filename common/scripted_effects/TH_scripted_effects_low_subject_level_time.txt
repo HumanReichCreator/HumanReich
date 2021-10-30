@@ -1,11 +1,11 @@
 # 冷却时间:只和等级有关
-# 1J:50
-# 2J:100
-# 3J:200
-# 4J:300
+# 1J:25
+# 2J:50
+# 3J:100
+# 4J:200
 
 # 下降所需时间:
-# (100+对面人力总发展度/你的发展度*75)*附庸等级
+# (50+对面人力总发展度/你的发展度*75)*附庸等级
 
 # 1j 0.75
 # 2j 1
@@ -21,10 +21,10 @@
 
 
 LS_defines = {
-	set_variable = { global.LS_cooldown_level1 = 50}
-	set_variable = { global.LS_cooldown_level2 = 100}
-	set_variable = { global.LS_cooldown_level3 = 200}
-	set_variable = { global.LS_cooldown_level4 = 300}
+	set_variable = { global.LS_cooldown_level1 = 25}
+	set_variable = { global.LS_cooldown_level2 = 50}
+	set_variable = { global.LS_cooldown_level3 = 100}
+	set_variable = { global.LS_cooldown_level4 = 200}
 
 	set_variable = { global.LS_low_time_factor_level1 = 1}
 	set_variable = { global.LS_low_time_factor_level2 = 2}
@@ -45,7 +45,7 @@ LS_time_caculator = {
 		}
 	}
 	
-	add_to_variable = { LS_base_time = 100}
+	add_to_variable = { LS_base_time = 50}
 
 	#等级
 	if = {
@@ -106,20 +106,13 @@ LS_time_caculator = {
 			clamp_variable = {
 				var = LS_base_time
 				min = 50
-				max = 800
+				max = 600
 			}
 			if = {
 				limit = {
 					has_country_flag = SS_dikangduli
 				}
 				multiply_variable = { LS_base_time = 2}
-			}
-			#三月精吞并妖精草原
-			if = {
-				limit = {
-					tag = SC2
-				}
-				multiply_variable = { LS_base_time = 0.2}
 			}
 		}
 
@@ -259,6 +252,13 @@ LS_daily = {
 			set_variable = { LS_cooldown_progress = 0}
 			set_country_flag = LS_cooldown_completed
 		}
+	}
+	if = { #当PP为0时还在下降可为负数
+		limit = {
+			has_political_power < 0.1
+			political_power_daily < 0
+		}
+		add_political_power = political_power_daily
 	}
 }
 

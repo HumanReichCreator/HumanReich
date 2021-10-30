@@ -2,21 +2,31 @@ state={
 	id=430
 	name="STATE_430"
 	provinces={
-		704 896 2057 2198 2859 2869 3283 4285 4287 4290 4495 4503 4509 
+		704 896 2057 2198 2859 2869 4285 4287 4290 4495 4503 4509 
 	}
 	resources={
 		energy = 0
-		powder=0.000
-		metal=0.000
+		powder = 0.0
+		metal = 0.0
 		gas=0.000
 		crystal=0.000
 	}
 
 	history={
-			owner = RNS
+		143.7.1 = {
+			owner = MRS
+			add_core_of = MRS
+			add_core_of = RNS
+			buildings = {
+				infrastructure = 1
+				industrial_complex = 1
+				arms_factory = 0
+			}
+		}
 		146.1.1 = {
 			owner = RNS
 			add_core_of = RNS
+			remove_core_of = MRS
 			buildings = {
 				infrastructure =2
 				industrial_complex = 1

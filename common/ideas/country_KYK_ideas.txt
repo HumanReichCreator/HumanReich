@@ -1,0 +1,886 @@
+ideas = {
+	country = {
+		KYK_hepingzhuyi_idea = {
+			picture = neutrality_idea
+			modifier = {
+				defensive_war_stability_factor = 0.2
+				war_stability_factor = -0.1
+				enemy_justify_war_goal_time = 0.2
+			}
+		}
+		KYK_zhengzhibuwending1_idea = {
+			picture = generic_pp_unity_bonus
+			modifier = {
+				political_power_factor = -0.4
+			}
+		}
+		KYK_zhengzhibuwending2_idea = {
+			name = KYK_zhengzhibuwending1_idea
+			picture = generic_pp_unity_bonus
+			modifier = {
+				political_power_factor = -0.32
+			}
+		}
+		KYK_zhengzhibuwending3_idea = {
+			name = KYK_zhengzhibuwending1_idea
+			picture = generic_pp_unity_bonus
+			modifier = {
+				political_power_factor = -0.24
+			}
+		}
+		KYK_zhengzhibuwending4_idea = {
+			name = KYK_zhengzhibuwending1_idea
+			picture = generic_pp_unity_bonus
+			modifier = {
+				political_power_factor = -0.16
+			}
+		}
+		KYK_zhengzhibuwending5_idea = {
+			name = KYK_zhengzhibuwending1_idea
+			picture = generic_pp_unity_bonus 
+			modifier = {
+				political_power_factor = -0.08
+			}
+		}
+		KYK_chenglineige_idea = {
+			name = KYK_chenglineige
+			picture = generic_pp_unity_bonus
+			modifier = {
+				political_power_gain = 0.2
+			}
+		}
+		KYK_jijingeming_idea = {
+			name = KYK_jijingeming
+			picture = generic_communism_drift_bonus
+			modifier = {
+				fandong_drift = 0.05
+			}
+		}
+		KYK_yaorenbenzhitansuo_idea = {
+			name = KYK_yaorenbenzhitansuo
+			picture = generic_research_bonus
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+		KYK_yanshenwaibuguanxi_idea = {
+			name = KYK_yanshenwaibuguanxi
+			picture = wilkies_new_deal
+			modifier = {
+				manufacturer_cost_factor = -0.5
+				improve_relations_maintain_cost_factor = -0.25
+			}
+		}
+		KYK_yaorenhuzushengchan_idea = {
+			name = KYK_yaorenhuzushengchan
+			picture = generic_production_bonus
+			modifier = {
+				industrial_capacity_factory = 0.15
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		KYK_xunqiuTKMbangzhu_idea = {
+			name = KYK_xunqiuTKMbangzhu
+			picture = generic_research_bonus
+			available = {
+				not = {
+					has_war_with = TKM
+				}
+			}
+			research_bonus = {
+				mortar = 0.1
+			}
+		}
+		KYK_jianzaohuishengwuqi_idea = {
+			name = KYK_jianzaohuishengwuqi
+			picture = ast_volunteer_defence_corps
+			equipment_bonus = {
+				gun_a = {
+					instant = yes
+					soft_attack = 0.1
+				}
+				mortar_a = {
+					instant = yes
+					soft_attack = 0.1
+				}
+			}
+		}
+		KYK_xuexiTKMzhihuijiegou_idea = {
+			name = KYK_xuexiTKMzhihuijiegou
+	    picture = general_staff
+			available = {
+				not = {
+					has_war_with = TKM
+				}
+			}
+			modifier = {
+				command_power_gain_mult = 0.25
+				army_leader_start_attack_level = 1
+				army_leader_start_defense_level = 1
+				army_leader_start_logistics_level = 1
+				army_leader_start_planning_level = 1
+			}
+		}
+		KYK_xunqiuSRBbangzhu_idea = {
+			name = KYK_xunqiuSRBbangzhu
+			picture = generic_research_bonus
+			available = {
+				not = {
+					has_war_with = SRB
+				}
+			}
+			research_bonus = {
+				science = 0.05
+			}
+		}
+		KYK_daojiaosixiang_idea = {
+			name = KYK_daojiaosixiang
+			picture = generic_research_bonus
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		KYK_fududaojiaojingdian_idea = {
+			name = KYK_fududaojiaojingdian
+			picture = generic_research_bonus
+			available = {
+				not = {
+					has_war_with = SRB
+				}
+			}
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+		KYK_gujunfenzhan_idea = {
+			name = KYK_gujunfenzhan
+			picture = generic_acquire_tanks
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				war_support_factor = 0.3
+			}
+			targeted_modifier = {
+				tag = NMS
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+		KYK_NMSdiyujihua_idea = {
+			name = KYK_NMSdiyujihua
+			picture = FRA_fortification_focus
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				production_speed_bunker_factor = 0.2
+			}
+		}
+
+		KYK_TKMhezuo1_idea = {
+			picture = tur_etatism_bonus
+			available = {
+				TKM = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_TKMshencenghezuo
+			}
+			targeted_modifier = {
+				tag = TKM
+				cic_to_target_factor = 0.03
+			}
+		}
+		KYK_TKMhezuo2_idea = {
+			name = KYK_TKMhezuo1_idea
+			picture = tur_etatism_bonus
+			available = {
+				TKM = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_TKMshencenghezuo
+			}
+			targeted_modifier = {
+				tag = TKM
+				cic_to_target_factor = 0.06
+			}
+		}
+		KYK_TKMhezuo3_idea = {
+			name = KYK_TKMhezuo1_idea
+			picture = tur_etatism_bonus
+			available = {
+				TKM = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_TKMshencenghezuo
+			}
+			targeted_modifier = {
+				tag = TKM
+				cic_to_target_factor = 0.09
+			}
+		}
+		KYK_TKMhezuo4_idea = {
+			name = KYK_TKMhezuo1_idea
+			picture = tur_etatism_bonus
+			available = {
+				TKM = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_TKMshencenghezuo
+			}
+			targeted_modifier = {
+				tag = TKM
+				cic_to_target_factor = 0.12
+			}
+		}
+		KYK_TKMhezuo5_idea = {
+			name = KYK_TKMhezuo1_idea
+			picture = tur_etatism_bonus
+			available = {
+				TKM = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_TKMshencenghezuo
+			}
+			targeted_modifier = {
+				tag = TKM
+				cic_to_target_factor = 0.15
+			}
+		}
+		KYK_TKMhezuo6_idea = {
+			name = KYK_TKMhezuo1_idea
+			picture = tur_etatism
+			available = {
+				TKM = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_TKMshencenghezuo
+			}
+			targeted_modifier = {
+				tag = TKM
+				cic_to_target_factor = 0.18
+			}
+		}
+		KYK_TKMhezuo7_idea = {
+			name = KYK_TKMhezuo1_idea
+			picture = tur_etatism
+			available = {
+				TKM = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_TKMshencenghezuo
+			}
+			targeted_modifier = {
+				tag = TKM
+				cic_to_target_factor = 0.21
+			}
+		}
+		KYK_TKMhezuo8_idea = {
+			name = KYK_TKMhezuo1_idea
+			picture = tur_etatism
+			available = {
+				TKM = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_TKMshencenghezuo
+			}
+			targeted_modifier = {
+				tag = TKM
+				cic_to_target_factor = 0.24
+			}
+		}
+		KYK_TKMhezuo9_idea = {
+			name = KYK_TKMhezuo1_idea
+			picture = tur_etatism
+			available = {
+				TKM = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_TKMshencenghezuo
+			}
+			targeted_modifier = {
+				tag = TKM
+				cic_to_target_factor = 0.27
+			}
+		}
+		KYK_TKMhezuo10_idea = {
+			name = KYK_TKMhezuo1_idea
+			picture = tur_etatism
+			available = {
+				TKM = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_TKMshencenghezuo
+			}
+			targeted_modifier = {
+				tag = TKM
+				cic_to_target_factor = 0.3
+			}
+		}
+		KYK_TKMhezuo11_idea = {
+			name = KYK_TKMhezuo1_idea
+			picture = tur_etatism
+			available = {
+				TKM = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_TKMshencenghezuo
+			}
+			targeted_modifier = {
+				tag = TKM
+				cic_to_target_factor = 0.32
+			}
+			modifier = {
+				political_power_factor = -0.05
+			}
+		}
+		KYK_TKMhezuo12_idea = {
+			name = KYK_TKMhezuo1_idea
+			picture = tur_etatism
+			available = {
+				TKM = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_TKMshencenghezuo
+			}
+			targeted_modifier = {
+				tag = TKM
+				cic_to_target_factor = 0.34
+			}
+			modifier = {
+				political_power_factor = -0.1
+			}
+		}
+		KYK_TKMhezuo13_idea = {
+			name = KYK_TKMhezuo1_idea
+			picture = tur_etatism
+			available = {
+				TKM = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_TKMshencenghezuo
+			}
+			targeted_modifier = {
+				tag = TKM
+				cic_to_target_factor = 0.36
+			}
+			modifier = {
+				political_power_factor = -0.15
+			}
+		}
+		KYK_TKMhezuo14_idea = {
+			name = KYK_TKMhezuo1_idea
+			picture = tur_etatism
+			available = {
+				TKM = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_TKMshencenghezuo
+			}
+			targeted_modifier = {
+				tag = TKM
+				cic_to_target_factor = 0.38
+			}
+			modifier = {
+				political_power_factor = -0.2
+			}
+		}
+		KYK_TKMhezuo15_idea = {
+			name = KYK_TKMhezuo1_idea
+			picture = tur_etatism
+			available = {
+				TKM = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_TKMshencenghezuo
+			}
+			targeted_modifier = {
+				tag = TKM
+				cic_to_target_factor = 0.4
+			}
+			modifier = {
+				political_power_factor = -0.25
+			}
+		}
+		KYK_TKMhezuo16_idea = {
+			name = KYK_TKMhezuo1_idea
+			picture = tur_etatism
+			available = {
+				TKM = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_TKMshencenghezuo
+			}
+			targeted_modifier = {
+				tag = TKM
+				cic_to_target_factor = 0.42
+			}
+			modifier = {
+				political_power_factor = -0.3
+			}
+		}
+		KYK_TKMhezuo17_idea = {
+			name = KYK_TKMhezuo1_idea
+			picture = tur_etatism
+			available = {
+				TKM = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_TKMshencenghezuo
+			}
+			targeted_modifier = {
+				tag = TKM
+				cic_to_target_factor = 0.44
+			}
+			modifier = {
+				political_power_factor = -0.35
+			}
+		}
+		KYK_TKMhezuo18_idea = {
+			name = KYK_TKMhezuo1_idea
+			picture = tur_etatism
+			available = {
+				TKM = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_TKMshencenghezuo
+			}
+			targeted_modifier = {
+				tag = TKM
+				cic_to_target_factor = 0.46
+			}
+			modifier = {
+				political_power_factor = -0.4
+			}
+		}
+		KYK_TKMhezuo19_idea = {
+			name = KYK_TKMhezuo1_idea
+			picture = tur_etatism
+			available = {
+				TKM = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_TKMshencenghezuo
+			}
+			targeted_modifier = {
+				tag = TKM
+				cic_to_target_factor = 0.48
+			}
+			modifier = {
+				political_power_factor = -0.45
+			}
+		}
+		KYK_TKMhezuo20_idea = {
+			name = KYK_TKMhezuo1_idea
+			picture = tur_etatism
+			available = {
+				TKM = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_TKMshencenghezuo
+			}
+			targeted_modifier = {
+				tag = TKM
+				cic_to_target_factor = 0.5
+			}
+			modifier = {
+				political_power_factor = -0.5
+			}
+		}
+
+		KYK_SRBhezuo1_idea = {
+			picture = tur_etatism_bonus
+			available = {
+				SRB = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_SRBshencenghezuo
+			}
+			targeted_modifier = {
+				tag = SRB
+				cic_to_target_factor = 0.03
+			}
+		}
+		KYK_SRBhezuo2_idea = {
+			name = KYK_SRBhezuo1_idea
+			picture = tur_etatism_bonus
+			available = {
+				SRB = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_SRBshencenghezuo
+			}
+			targeted_modifier = {
+				tag = SRB
+				cic_to_target_factor = 0.06
+			}
+		}
+		KYK_SRBhezuo3_idea = {
+			name = KYK_SRBhezuo1_idea
+			picture = tur_etatism_bonus
+			available = {
+				SRB = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_SRBshencenghezuo
+			}
+			targeted_modifier = {
+				tag = SRB
+				cic_to_target_factor = 0.09
+			}
+		}
+		KYK_SRBhezuo4_idea = {
+			name = KYK_SRBhezuo1_idea
+			picture = tur_etatism_bonus
+			available = {
+				SRB = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_SRBshencenghezuo
+			}
+			targeted_modifier = {
+				tag = SRB
+				cic_to_target_factor = 0.12
+			}
+		}
+		KYK_SRBhezuo5_idea = {
+			name = KYK_SRBhezuo1_idea
+			picture = tur_etatism_bonus
+			available = {
+				SRB = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_SRBshencenghezuo
+			}
+			targeted_modifier = {
+				tag = SRB
+				cic_to_target_factor = 0.15
+			}
+		}
+		KYK_SRBhezuo6_idea = {
+			name = KYK_SRBhezuo1_idea
+			picture = tur_etatism
+			available = {
+				SRB = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_SRBshencenghezuo
+			}
+			targeted_modifier = {
+				tag = SRB
+				cic_to_target_factor = 0.18
+			}
+		}
+		KYK_SRBhezuo7_idea = {
+			name = KYK_SRBhezuo1_idea
+			picture = tur_etatism
+			available = {
+				SRB = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_SRBshencenghezuo
+			}
+			targeted_modifier = {
+				tag = SRB
+				cic_to_target_factor = 0.21
+			}
+		}
+		KYK_SRBhezuo8_idea = {
+			name = KYK_SRBhezuo1_idea
+			picture = tur_etatism
+			available = {
+				SRB = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_SRBshencenghezuo
+			}
+			targeted_modifier = {
+				tag = SRB
+				cic_to_target_factor = 0.24
+			}
+		}
+		KYK_SRBhezuo9_idea = {
+			name = KYK_SRBhezuo1_idea
+			picture = tur_etatism
+			available = {
+				SRB = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_SRBshencenghezuo
+			}
+			targeted_modifier = {
+				tag = SRB
+				cic_to_target_factor = 0.27
+			}
+		}
+		KYK_SRBhezuo10_idea = {
+			name = KYK_SRBhezuo1_idea
+			picture = tur_etatism
+			available = {
+				SRB = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_SRBshencenghezuo
+			}
+			targeted_modifier = {
+				tag = SRB
+				cic_to_target_factor = 0.3
+			}
+		}
+		KYK_SRBhezuo11_idea = {
+			name = KYK_SRBhezuo1_idea
+			picture = tur_etatism
+			available = {
+				SRB = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_SRBshencenghezuo
+			}
+			targeted_modifier = {
+				tag = SRB
+				cic_to_target_factor = 0.32
+			}
+			modifier = {
+				consumer_goods_factor = 0.03
+			}
+		}
+		KYK_SRBhezuo12_idea = {
+			name = KYK_SRBhezuo1_idea
+			picture = tur_etatism
+			available = {
+				SRB = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_SRBshencenghezuo
+			}
+			targeted_modifier = {
+				tag = SRB
+				cic_to_target_factor = 0.34
+			}
+			modifier = {
+				consumer_goods_factor = 0.06
+			}
+		}
+		KYK_SRBhezuo13_idea = {
+			name = KYK_SRBhezuo1_idea
+			picture = tur_etatism
+			available = {
+				SRB = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_SRBshencenghezuo
+			}
+			targeted_modifier = {
+				tag = SRB
+				cic_to_target_factor = 0.36
+			}
+			modifier = {
+				consumer_goods_factor = 0.09
+			}
+		}
+		KYK_SRBhezuo14_idea = {
+			name = KYK_SRBhezuo1_idea
+			picture = tur_etatism
+			available = {
+				SRB = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_SRBshencenghezuo
+			}
+			targeted_modifier = {
+				tag = SRB
+				cic_to_target_factor = 0.38
+			}
+			modifier = {
+				consumer_goods_factor = 0.12
+			}
+		}
+		KYK_SRBhezuo15_idea = {
+			name = KYK_SRBhezuo1_idea
+			picture = tur_etatism
+			available = {
+				SRB = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_SRBshencenghezuo
+			}
+			targeted_modifier = {
+				tag = SRB
+				cic_to_target_factor = 0.4
+			}
+			modifier = {
+				consumer_goods_factor = 0.15
+			}
+		}
+		KYK_SRBhezuo16_idea = {
+			name = KYK_SRBhezuo1_idea
+			picture = tur_etatism
+			available = {
+				SRB = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_SRBshencenghezuo
+			}
+			targeted_modifier = {
+				tag = SRB
+				cic_to_target_factor = 0.42
+			}
+			modifier = {
+				consumer_goods_factor = 0.18
+			}
+		}
+		KYK_SRBhezuo17_idea = {
+			name = KYK_SRBhezuo1_idea
+			picture = tur_etatism
+			available = {
+				SRB = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_SRBshencenghezuo
+			}
+			targeted_modifier = {
+				tag = SRB
+				cic_to_target_factor = 0.44
+			}
+			modifier = {
+				consumer_goods_factor = 0.21
+			}
+		}
+		KYK_SRBhezuo18_idea = {
+			name = KYK_SRBhezuo1_idea
+			picture = tur_etatism
+			available = {
+				SRB = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_SRBshencenghezuo
+			}
+			targeted_modifier = {
+				tag = SRB
+				cic_to_target_factor = 0.46
+			}
+			modifier = {
+				consumer_goods_factor = 0.24
+			}
+		}
+		KYK_SRBhezuo19_idea = {
+			name = KYK_SRBhezuo1_idea
+			picture = tur_etatism
+			available = {
+				SRB = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_SRBshencenghezuo
+			}
+			targeted_modifier = {
+				tag = SRB
+				cic_to_target_factor = 0.48
+			}
+			modifier = {
+				consumer_goods_factor = 0.27
+			}
+		}
+		KYK_SRBhezuo20_idea = {
+			name = KYK_SRBhezuo1_idea
+			picture = tur_etatism
+			available = {
+				SRB = { 
+					exists = yes 
+					is_subject = no
+				}
+				has_country_flag = KYK_SRBshencenghezuo
+			}
+			targeted_modifier = {
+				tag = SRB
+				cic_to_target_factor = 0.5
+			}
+			modifier = {
+				consumer_goods_factor = 0.3
+			}
+		}
+		KYK_tuoliyingxiang_idea = {
+	    picture = generic_disjointed_gov
+			available = {
+				or = {
+					and = {
+						has_country_flag = KYK_SRBshencenghezuo
+						SRB = { 
+							exists = yes 
+							is_subject = no
+						}
+					}
+					and = {
+						has_country_flag = KYK_TKMshencenghezuo
+						TKM = { 
+							exists = yes 
+							is_subject = no
+						}
+					}
+				}
+			}
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				political_power_factor = -0.2
+				research_speed_factor = -0.15
+			}
+		}
+
+		KYK_PRIzujian_idea = {
+			picture = chi_wargaming_division
+			modifier = {
+				consumer_goods_factor = -0.04
+			}
+		}
+		KYK_TKMzujian_idea = {
+			picture = chi_wargaming_division
+			modifier = {
+				consumer_goods_factor = -0.04
+			}
+		}
+		KYK_renyaoyouhaoxieding_idea = {
+			picture = HUN_treaty_of_triannon
+			name = KYK_renyaoyouhaoxieding
+			modifier = {
+				consumer_goods_factor = -0.04
+			}
+		}
+	}
+}

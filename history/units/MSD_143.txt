@@ -1,0 +1,228 @@
+﻿division_template = {
+	name = "游击编制"
+	regiments = {
+		sc_light_infantry = { x = 0 y = 0 }
+		melee_infantry = { x = 0 y = 1 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "火枪编制"
+	regiments = {
+		sc_infantry = { x = 0 y = 0 }
+		sc_infantry = { x = 0 y = 1 }
+		melee_infantry = { x = 0 y = 2 }
+		melee_infantry = { x = 0 y = 3 }
+	}
+	support = {
+
+	}
+}
+
+
+units = {
+	division = {
+		name = "游击编制"
+		location = 1109
+		division_template = "游击编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 4494
+		division_template = "游击编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 4485
+		division_template = "游击编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 4277
+		division_template = "游击编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 4505
+		division_template = "游击编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 3316
+		division_template = "游击编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 4511
+		division_template = "游击编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 4513
+		division_template = "游击编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 3829
+		division_template = "游击编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 78
+		division_template = "游击编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 558
+		division_template = "游击编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 3251
+		division_template = "游击编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 1204
+		division_template = "游击编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 4501
+		division_template = "游击编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 4279
+		division_template = "游击编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 4277
+		division_template = "游击编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 3812
+		division_template = "游击编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 4491
+		division_template = "游击编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 2832
+		division_template = "游击编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 862
+		division_template = "游击编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "火枪编制"
+		location = 652
+		division_template = "火枪编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "火枪编制"
+		location = 4484
+		division_template = "火枪编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "火枪编制"
+		location = 4487
+		division_template = "火枪编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "火枪编制"
+		location = 287
+		division_template = "火枪编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "火枪编制"
+		location = 4489
+		division_template = "火枪编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "火枪编制"
+		location = 627
+		division_template = "火枪编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "火枪编制"
+		location = 5688
+		division_template = "火枪编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "火枪编制"
+		location = 5684
+		division_template = "火枪编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "火枪编制"
+		location = 245
+		division_template = "火枪编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+}

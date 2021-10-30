@@ -1,1043 +1,1319 @@
-luanzhan_decision = {
-	set_checking_country = {
-		visible = {
-			is_debug = yes
-		}
+# #我自己用来debug的 直接放游戏里会卡 所以就放这里了
+# luanzhan_decision = {
+# 	tt1 = {
+# 		allowed = {
+# 			is_debug = yes
+# 		}
 
-		complete_effect = {
-			every_country = {
-				clr_country_flag = start_country
-			}
-			set_country_flag = start_country
-		}
-	}
-	check_checking_country = {
-		visible = {
-			is_debug = yes
-		}
-		complete_effect = {
-			every_country = {
-				limit = {
-					has_country_flag = start_country
-				}
-				log = "Checking country is [THIS.GetName]."
-			}
-		}
-	}
-	research_slot = {
-		fire_only_once = no
-		cost = 0
+# 		complete_effect = {
+# 			every_country = {
+# 				limit = {
+# 					capital_scope = {
+# 						is_on_continent = Gensokyo
+# 					}
+# 				}
+# 				ROOT = {
+# 					annex_country = {
+# 						target = PREV
+# 					}
+# 				}
+# 			}
+			
+# 		}
+# 	}
+# 	set_checking_country = {
+# 		allowed = {
+# 			is_debug = yes
+# 		}
 
-		visible = {
-			is_debug = yes
-		}
+# 		complete_effect = {
+# 			every_country = {
+# 				clr_country_flag = start_country
+# 			}
+# 			set_country_flag = start_country
+# 		}
+# 	}
+# 	check_checking_country = {
+# 		allowed = {
+# 			is_debug = yes
+# 		}
+# 		complete_effect = {
+# 			every_country = {
+# 				limit = {
+# 					has_country_flag = start_country
+# 				}
+# 				log = "Checking country is [THIS.GetName]."
+# 			}
+# 		}
+# 	}
+# 	focus_refresh = {
+# 		fire_only_once = no
+# 		cost = 0
 
+# 		allowed = {
+# 			is_debug = yes
+# 		}
+# 		complete_effect = {
+# 			load_focus_tree = ROA_YOM_focus
+# 			mark_focus_tree_layout_dirty = yes
+# 		}
+# 	}
+# 	weixin = {
+# 		fire_only_once = no
+# 		cost = 0
 
-		days_re_enable = 0
-		days_remove = 0
-		complete_effect = {
-			add_research_slot = 1
-		}
-	}
-	lock_down = {
-		fire_only_once = no
-		cost = 0
-
-		visible = {
-			is_debug = yes
-		}
-
-
-		days_re_enable = 0
-		days_remove = 0
-		complete_effect = {
-			country_lock_all_division_template = yes
-		}
-	}
-	unlock = {
-		fire_only_once = no
-		cost = 0
-
-		visible = {
-			is_debug = yes
-		}
-
-
-		days_re_enable = 0
-		days_remove = 0
-		complete_effect = {
-			country_lock_all_division_template = no
-		}
-	}
-	minus_slot = {
-		fire_only_once = no
-		cost = 0
-
-		visible = {
-			is_debug = yes
-		}
+# 		allowed = {
+# 			is_debug = yes
+# 		}
 
 
-		days_re_enable = 0
-		days_remove = 0
+# 		days_re_enable = 0
+# 		days_remove = 0
+# 		complete_effect = {
+# 			set_variable = { OL_view_type = 0}
+# 		}
+# 	}
+# 	pingheng = {
+# 		fire_only_once = no
+# 		cost = 0
+
+# 		allowed = {
+# 			is_debug = yes
+# 		}
+
+
+# 		days_re_enable = 0
+# 		days_remove = 0
+# 		complete_effect = {
+# 			set_variable = { OL_view_type = 1}
+# 		}
+# 	}
+# 	weiwu = {
+# 		fire_only_once = no
+# 		cost = 0
+
+# 		allowed = {
+# 			is_debug = yes
+# 		}
+
+
+# 		days_re_enable = 0
+# 		days_remove = 0
+# 		complete_effect = {
+# 			set_variable = { OL_view_type = 2}
+# 		}
+# 	}
+# 	research_slot = {
+# 		fire_only_once = no
+# 		cost = 0
+
+# 		allowed = {
+# 			is_debug = yes
+# 		}
+
+
+# 		days_re_enable = 0
+# 		days_remove = 0
+# 		complete_effect = {
+# 			add_research_slot = 1
+# 		}
+# 	}
+# 	lock_down = {
+# 		fire_only_once = no
+# 		cost = 0
+
+# 		allowed = {
+# 			is_debug = yes
+# 		}
+
+
+# 		days_re_enable = 0
+# 		days_remove = 0
+# 		complete_effect = {
+# 			country_lock_all_division_template = yes
+# 		}
+# 	}
+# 	unlock = {
+# 		fire_only_once = no
+# 		cost = 0
+
+# 		allowed = {
+# 			is_debug = yes
+# 		}
+
+
+# 		days_re_enable = 0
+# 		days_remove = 0
+# 		complete_effect = {
+# 			country_lock_all_division_template = no
+# 		}
+# 	}
+# 	minus_slot = {
+# 		fire_only_once = no
+# 		cost = 0
+
+# 		allowed = {
+# 			is_debug = yes
+# 		}
+
+
+# 		days_re_enable = 0
+# 		days_remove = 0
 		
-		state_target = yes
-		target_trigger = {
-			FROM = {
-				is_owned_by = ROOT
-			}
-		}
-		complete_effect = {
-			FROM = {
-				add_extra_state_shared_building_slots = -1
-			}
+# 		on_map_mode = map_only
+# 		state_target = yes
+# 		target_trigger = {
+# 			FROM = {
+# 				is_owned_by = ROOT
+# 			}
+# 		}
+# 		target_array = owned_states
+# 		complete_effect = {
+# 			FROM = {
+# 				add_extra_state_shared_building_slots = -1
+# 			}
 				
-		}
-	}
-	owns = {
+# 		}
+# 	}
+# 	owns = {
 
-		icon = onmap_recruit_operative
+# 		icon = onmap_recruit_operative
 
-		visible = {
-			is_debug = yes
-		}
+# 		allowed = {
+# 			is_debug = yes
+# 		}
 
-		state_target = yes
-		target_trigger = {
-			FROM = {
-				not = {
-					is_owned_by = ROOT
-				}
-			}
-		}
+# 		state_target = yes
+# 		target_trigger = {
+# 			FROM = {
+# 				not = {
+# 					is_owned_by = ROOT
+# 				}
+# 			}
+# 		}
 
-		fire_only_once = no
-		cost = 0
+# 		fire_only_once = no
+# 		cost = 0
 
-		days_re_enable = 0
-		days_remove = 0
+# 		days_re_enable = 0
+# 		days_remove = 0
 
-		on_map_mode = map_only
-		complete_effect = {
-			ROOT = {
-				transfer_state = FROM
-			}
-		}
-		remove_effect = {
+# 		on_map_mode = map_only
+# 		complete_effect = {
+# 			ROOT = {
+# 				transfer_state = FROM
+# 			}
+# 		}
+# 		remove_effect = {
 
-		}
-		modifier = {
+# 		}
+# 		modifier = {
 
-		}
+# 		}
 
-		ai_will_do = {
-			base = 0
-		}
-	}
-	core = {
+# 		ai_will_do = {
+# 			base = 0
+# 		}
+# 	}
+# 	control = {
 
-		icon = onmap_recruit_operative
+# 		icon = onmap_recruit_operative
 
-		visible = {
-			is_debug = yes
-		}
+# 		allowed = {
+# 			is_debug = yes
+# 		}
 
-		state_target = yes
-		target_trigger = {
-			FROM = {
-				not = {
-					is_core_of = ROOT
-				}
-			}
-		}
+# 		state_target = yes
+# 		target_trigger = {
+# 			FROM = {
+# 				# controller = {
+# 				# 	has_war_with = ROOT
+# 				# }
+# 				not = {
+# 					is_fully_controlled_by = ROOT
+# 				}
+# 			}
+# 		}
 
-		fire_only_once = no
-		cost = 0
+# 		fire_only_once = no
+# 		cost = 0
 
-		days_re_enable = 0
-		days_remove = 0
+# 		days_re_enable = 0
+# 		days_remove = 0
 
-		on_map_mode = map_only
-		complete_effect = {
-			FROM = {
-				add_core_of = ROOT
-			}
-		}
-		remove_effect = {
+# 		on_map_mode = map_only
+# 		complete_effect = {
+# 			ROOT = {
+# 				set_state_controller = FROM
+# 			}
+# 		}
+# 		remove_effect = {
 
-		}
-		modifier = {
+# 		}
+# 		modifier = {
 
-		}
+# 		}
 
-		ai_will_do = {
-			base = 0
-		}
-	}
-	fuyong = {
+# 		ai_will_do = {
+# 			base = 0
+# 		}
+# 	}
+# 	core = {
 
-		icon = onmap_recruit_operative
+# 		icon = onmap_recruit_operative
 
-		state_target = yes
-		target_trigger = {
-			FROM = {
-				is_capital = yes
-				owner = {
-					not = {
-						tag = ROOT
-						is_subject_of = ROOT
-					}
-				}
-			}
-		}
-		visible = {
-			is_debug = yes
-		}
+# 		allowed = {
+# 			is_debug = yes
+# 		}
 
-		fire_only_once = no
-		cost = 0
+# 		state_target = yes
+# 		target_trigger = {
+# 			FROM = {
+# 				not = {
+# 					is_core_of = ROOT
+# 				}
+# 			}
+# 		}
 
-		days_re_enable = 0
-		days_remove = 0
+# 		fire_only_once = no
+# 		cost = 0
 
-		on_map_mode = map_only
-		complete_effect = {
-			FROM = {
-				owner = {
-					ROOT = {
-						PREV = {
-							every_country = {
-								limit = {
-									is_subject_of = PREV
-								}
-								PREV = { release = PREV }
-							}
-							subject_level1 = yes
-						}
-					}
-				}
-			}
-		}
-		remove_effect = {
+# 		days_re_enable = 0
+# 		days_remove = 0
 
-		}
-		modifier = {
+# 		on_map_mode = map_only
+# 		complete_effect = {
+# 			FROM = {
+# 				add_core_of = ROOT
+# 			}
+# 		}
+# 		remove_effect = {
 
-		}
+# 		}
+# 		modifier = {
 
-		ai_will_do = {
-			base = 0
-		}
-	}
-	xiajiang = {
+# 		}
 
-		icon = onmap_recruit_operative
+# 		ai_will_do = {
+# 			base = 0
+# 		}
+# 	}
+# 	fuyong = {
 
-		state_target = yes
-		target_trigger = {
-			FROM = {
-				is_capital = yes
-				owner = {
-					is_subject_of = ROOT
-				}
-			}
-		}
-		visible = {
-			is_debug = yes
-		}
+# 		icon = onmap_recruit_operative
 
-		fire_only_once = no
-		cost = 0
+# 		state_target = yes
+# 		target_trigger = {
+# 			FROM = {
+# 				is_capital = yes
+# 				owner = {
+# 					not = {
+# 						tag = ROOT
+# 						is_subject_of = ROOT
+# 					}
+# 				}
+# 			}
+# 		}
+# 		allowed = {
+# 			is_debug = yes
+# 		}
 
-		days_re_enable = 0
-		days_remove = 0
+# 		fire_only_once = no
+# 		cost = 0
 
-		on_map_mode = map_only
-		complete_effect = {
-			FROM = {
-				owner = {
-					low_puppet_level = yes
-				}	
-			}
-		}
-		remove_effect = {
+# 		days_re_enable = 0
+# 		days_remove = 0
 
-		}
-		modifier = {
+# 		on_map_mode = map_only
+# 		complete_effect = {
+# 			FROM = {
+# 				owner = {
+# 					ROOT = {
+# 						PREV = {
+# 							every_country = {
+# 								limit = {
+# 									is_subject_of = PREV
+# 								}
+# 								PREV = { release = PREV }
+# 							}
+# 							subject_level1 = yes
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		remove_effect = {
 
-		}
+# 		}
+# 		modifier = {
 
-		ai_will_do = {
-			base = 0
-		}
-	}
-	fandong = {
+# 		}
 
-		visible = {
-			is_debug = yes
-		}
+# 		ai_will_do = {
+# 			base = 0
+# 		}
+# 	}
+# 	xiajiang = {
 
-		fire_only_once = no
-		cost = 0
+# 		icon = onmap_recruit_operative
 
-		days_re_enable = 0
-		days_remove = 0
+# 		state_target = yes
+# 		target_trigger = {
+# 			FROM = {
+# 				is_capital = yes
+# 				owner = {
+# 					is_subject_of = ROOT
+# 				}
+# 			}
+# 		}
+# 		target_array = subjects
+# 		allowed = {
+# 			is_debug = yes
+# 		}
 
-		complete_effect = {
-			set_politics = {
-				ruling_party = fandong
-			}
-		}
-		remove_effect = {
+# 		fire_only_once = no
+# 		cost = 0
 
-		}
-		modifier = {
+# 		days_re_enable = 0
+# 		days_remove = 0
 
-		}
+# 		on_map_mode = map_only
+# 		complete_effect = {
+# 			FROM = {
+# 				owner = {
+# 					low_puppet_level = yes
+# 				}	
+# 			}
+# 		}
+# 		remove_effect = {
 
-		ai_will_do = {
-			base = 0
-		}
-	}
-	qinwai = {
+# 		}
+# 		modifier = {
 
-		visible = {
-			is_debug = yes
-		}
+# 		}
 
-		fire_only_once = no
-		cost = 0
+# 		ai_will_do = {
+# 			base = 0
+# 		}
+# 	}
+# 	fandong = {
 
-		days_re_enable = 0
-		days_remove = 0
+# 		allowed = {
+# 			is_debug = yes
+# 		}
 
-		complete_effect = {
-			set_politics = {
-				ruling_party = qinwai
-			}
-		}
-		remove_effect = {
+# 		fire_only_once = no
+# 		cost = 0
 
-		}
-		modifier = {
+# 		days_re_enable = 0
+# 		days_remove = 0
 
-		}
+# 		complete_effect = {
+# 			set_politics = {
+# 				ruling_party = fandong
+# 			}
+# 		}
+# 		remove_effect = {
 
-		ai_will_do = {
-			base = 0
-		}
-	}
-	guli = {
+# 		}
+# 		modifier = {
 
-		visible = {
-			is_debug = yes
-		}
+# 		}
 
-		fire_only_once = no
-		cost = 0
+# 		ai_will_do = {
+# 			base = 0
+# 		}
+# 	}
+# 	english_check_qinwai = {
 
-		days_re_enable = 0
-		days_remove = 0
+# 		allowed = {
+# 			is_debug = yes
+# 		}
 
-		complete_effect = {
-			set_politics = {
-				ruling_party = guli
-			}
-		}
-		remove_effect = {
+# 		fire_only_once = no
+# 		cost = 0
 
-		}
-		modifier = {
+# 		days_re_enable = 0
+# 		days_remove = 0
 
-		}
+# 		complete_effect = {
+# 			every_country = {
+# 				set_politics = {
+# 					ruling_party = qinwai
+# 				}
+# 			}
+# 		}
+# 		remove_effect = {
 
-		ai_will_do = {
-			base = 0
-		}
-	}
-	neworder = {
+# 		}
+# 		modifier = {
 
-		visible = {
-			is_debug = yes
-		}
+# 		}
 
-		fire_only_once = no
-		cost = 0
+# 		ai_will_do = {
+# 			base = 0
+# 		}
+# 	}
+# 	english_check_fandong = {
 
-		days_re_enable = 0
-		days_remove = 0
+# 		allowed = {
+# 			is_debug = yes
+# 		}
 
-		complete_effect = {
-			set_politics = {
-				ruling_party = neworder
-			}
-		}
-		remove_effect = {
+# 		fire_only_once = no
+# 		cost = 0
 
-		}
-		modifier = {
+# 		days_re_enable = 0
+# 		days_remove = 0
 
-		}
+# 		complete_effect = {
+# 			every_country = {
+# 				set_politics = {
+# 					ruling_party = fandong
+# 				}
+# 			}
+# 		}
+# 		remove_effect = {
 
-		ai_will_do = {
-			base = 0
-		}
-	}
-	oldorder = {
+# 		}
+# 		modifier = {
+
+# 		}
+
+# 		ai_will_do = {
+# 			base = 0
+# 		}
+# 	}
+# 	english_check_neworder = {
+
+# 		allowed = {
+# 			is_debug = yes
+# 		}
+
+# 		fire_only_once = no
+# 		cost = 0
+
+# 		days_re_enable = 0
+# 		days_remove = 0
+
+# 		complete_effect = {
+# 			every_country = {
+# 				set_politics = {
+# 					ruling_party = neworder
+# 				}
+# 			}
+# 		}
+# 		remove_effect = {
+
+# 		}
+# 		modifier = {
+
+# 		}
+
+# 		ai_will_do = {
+# 			base = 0
+# 		}
+# 	}
+# 	english_check_guli = {
+
+# 		allowed = {
+# 			is_debug = yes
+# 		}
+
+# 		fire_only_once = no
+# 		cost = 0
+
+# 		days_re_enable = 0
+# 		days_remove = 0
+
+# 		complete_effect = {
+# 			every_country = {
+# 				set_politics = {
+# 					ruling_party = guli
+# 				}
+# 			}
+# 		}
+# 		remove_effect = {
+
+# 		}
+# 		modifier = {
+
+# 		}
+
+# 		ai_will_do = {
+# 			base = 0
+# 		}
+# 	}
+# 	english_check_oldorder = {
+
+# 		allowed = {
+# 			is_debug = yes
+# 		}
+
+# 		fire_only_once = no
+# 		cost = 0
+
+# 		days_re_enable = 0
+# 		days_remove = 0
+
+# 		complete_effect = {
+# 			every_country = {
+# 				set_politics = {
+# 					ruling_party = oldorder
+# 				}
+# 			}
+# 		}
+# 		remove_effect = {
+
+# 		}
+# 		modifier = {
+
+# 		}
+
+# 		ai_will_do = {
+# 			base = 0
+# 		}
+# 	}
 	
-		visible = {
-			is_debug = yes
-		}
+# 	qinwai = {
 
-		fire_only_once = no
-		cost = 0
+# 		allowed = {
+# 			is_debug = yes
+# 		}
 
-		days_re_enable = 0
-		days_remove = 0
+# 		fire_only_once = no
+# 		cost = 0
 
-		complete_effect = {
-			set_politics = {
-				ruling_party = oldorder
-			}
-		}
-		remove_effect = {
+# 		days_re_enable = 0
+# 		days_remove = 0
 
-		}
-		modifier = {
+# 		complete_effect = {
+# 			set_politics = {
+# 				ruling_party = qinwai
+# 			}
+# 		}
+# 		remove_effect = {
 
-		}
+# 		}
+# 		modifier = {
 
-		ai_will_do = {
-			base = 0
-		}
-	}
-	# warhint = {
- #          visible = {
- #               has_global_flag = caidan
- #               is_ai = no
- #          }
- #          available = {
- #                always = no
- #          }
- #    }
- #    ABC = {
-	#       visible = {
-	#           always = no
-	#       }
-	#       complete_effect = {
-	#       		every_country = {
-	#       			set_variable = { manpower_value1 = 0}
-	#       			set_variable = { factory_industrial = 0}
-	#       			set_variable = { factory_arms = 0}
-	#       			set_variable = { factory_sum = 0}
-	#       			every_state = {
-	#       				limit = {
-	#       					is_owned_by = PREV
-	#       				}
-	# 			        add_to_variable = { PREV.factory_industrial = industrial_complex_level }
-	# 			        add_to_variable = { PREV.factory_arms = arms_factory_level }
-	# 			    }
-	# 			    every_owned_state = {
-	# 			    	limit = {
-	# 			    		is_core_of = PREV
-	# 			    	}
-	# 			    	add_to_variable = { PREV.manpower_value1 = state_population}
-	# 			    }
-	# 			    add_to_variable = { factory_sum = factory_arms }
-	# 			    add_to_variable = { factory_sum = factory_industrial }
-	# 			    log = "[This.GetName]: 部队数量[?num_armies]"
-	#       			log = "[This.GetName]: 核心地块人力:[?manpower_value1]"
-	#       			# log = "[This.GetName]: 非核心地块人力:[?manpower_value2]"
-	#       			log = "[This.GetName]: 人力池:[?manpower_k]k"
-	#       			log = "[This.GetName]: 工厂总计:[?factory_sum]"
-	#       			log = "[This.GetName]: 民工:[?factory_industrial]"
-	#       			log = "[This.GetName]: 军工:[?factory_arms]"
-	#       			log = " "
-	#       		}
-	#       		set_variable = { factory_industrial = 0}
-	#       		set_variable = { factory_arms = 0}
-	#       		set_variable = { factory_sum = 0}
-	#       		set_variable = { manpower_value1 = 0}
- #      			every_state = {
-	# 		        add_to_variable = { PREV.factory_industrial = industrial_complex_level }
-	# 		        add_to_variable = { PREV.factory_arms = arms_factory_level }
-	# 		    }
-	# 		    add_to_variable = { factory_sum = factory_arms }
-	# 		    add_to_variable = { factory_sum = factory_industrial }
-	# 		    every_country = {
-	# 		    	add_to_variable = { PREV.manpower_value1 = num_armies}
-	# 		    }
-	# 		    log = "世界: 部队数量:[?manpower_value1]"
- #      			log = "世界: 工厂总计:[?factory_sum]"
- #      			log = "世界: 民工:[?factory_industrial]"
- #      			log = "世界: 军工:[?factory_arms]"
- #      			log = " "
-	#       }
+# 		}
 
-	#       fire_only_once = no
+# 		ai_will_do = {
+# 			base = 0
+# 		}
+# 	}
+# 	guli = {
 
-	#       ai_will_do = {
-	#          factor = 0
-	#       }
-	# }
- #    wartest = {
-	#       visible = {
-	#       	  tag = XXX
-	#           has_global_flag = main_scenario
-	#           is_ai = no
-	#           NOT = {
-	#             has_global_flag = caidan2
-	#           }
-	#       }
-	#       complete_effect = {
-	#           set_global_flag = caidan2
-	#       }
+# 		allowed = {
+# 			is_debug = yes
+# 		}
 
-	#       fire_only_once = yes
+# 		fire_only_once = no
+# 		cost = 0
 
-	#       ai_will_do = {
-	#          factor = 0
-	#       }
-	# }
-	# wartestX = {
-	#       visible = {
-	#           has_global_flag = caidan2
-	#           is_ai = no
-	#           NOT = {
-	#             has_global_flag = caidanX
-	#             has_global_flag = caidanXX
-	#             has_global_flag = caidan
-	#           }
-	#       }
-	#       complete_effect = {
-	#           set_global_flag = caidanX
-	#           hidden_effect = {
-	#               SEJ = { white_peace = ONS}
+# 		days_re_enable = 0
+# 		days_remove = 0
 
-	#               every_country = {
-	#                   limit = {
-	#                     NOT = {tag = ROOT}
-	#                     NOT = {is_in_faction_with = ROOT}
-	#                     NOT = {is_subject_of = ROOT}
-	#                     ROOT = { NOT = {is_subject_of = PREV} }
-	#                   }
-	#                   ROOT = { declare_war_on = {target = PREV type = annex_everything} }
-	#               }
+# 		complete_effect = {
+# 			set_politics = {
+# 				ruling_party = guli
+# 			}
+# 		}
+# 		remove_effect = {
+
+# 		}
+# 		modifier = {
+
+# 		}
+
+# 		ai_will_do = {
+# 			base = 0
+# 		}
+# 	}
+# 	neworder = {
+
+# 		allowed = {
+# 			is_debug = yes
+# 		}
+
+# 		fire_only_once = no
+# 		cost = 0
+
+# 		days_re_enable = 0
+# 		days_remove = 0
+
+# 		complete_effect = {
+# 			set_politics = {
+# 				ruling_party = neworder
+# 			}
+# 		}
+# 		remove_effect = {
+
+# 		}
+# 		modifier = {
+
+# 		}
+
+# 		ai_will_do = {
+# 			base = 0
+# 		}
+# 	}
+# 	oldorder = {
+	
+# 		allowed = {
+# 			is_debug = yes
+# 		}
+
+# 		fire_only_once = no
+# 		cost = 0
+
+# 		days_re_enable = 0
+# 		days_remove = 0
+
+# 		complete_effect = {
+# 			set_politics = {
+# 				ruling_party = oldorder
+# 			}
+# 		}
+# 		remove_effect = {
+
+# 		}
+# 		modifier = {
+
+# 		}
+
+# 		ai_will_do = {
+# 			base = 0
+# 		}
+# 	}
+# 	# warhint = {
+#  #          visible = {
+#  #               has_global_flag = caidan
+#  #               is_ai = no
+#  #          }
+#  #          available = {
+#  #                always = no
+#  #          }
+#  #    }
+#  #    ABC = {
+# 	#       visible = {
+# 	#           always = no
+# 	#       }
+# 	#       complete_effect = {
+# 	#       		every_country = {
+# 	#       			set_variable = { manpower_value1 = 0}
+# 	#       			set_variable = { factory_industrial = 0}
+# 	#       			set_variable = { factory_arms = 0}
+# 	#       			set_variable = { factory_sum = 0}
+# 	#       			every_state = {
+# 	#       				limit = {
+# 	#       					is_owned_by = PREV
+# 	#       				}
+# 	# 			        add_to_variable = { PREV.factory_industrial = industrial_complex_level }
+# 	# 			        add_to_variable = { PREV.factory_arms = arms_factory_level }
+# 	# 			    }
+# 	# 			    every_owned_state = {
+# 	# 			    	limit = {
+# 	# 			    		is_core_of = PREV
+# 	# 			    	}
+# 	# 			    	add_to_variable = { PREV.manpower_value1 = state_population}
+# 	# 			    }
+# 	# 			    add_to_variable = { factory_sum = factory_arms }
+# 	# 			    add_to_variable = { factory_sum = factory_industrial }
+# 	# 			    log = "[This.GetName]: 部队数量[?num_armies]"
+# 	#       			log = "[This.GetName]: 核心地块人力:[?manpower_value1]"
+# 	#       			# log = "[This.GetName]: 非核心地块人力:[?manpower_value2]"
+# 	#       			log = "[This.GetName]: 人力池:[?manpower_k]k"
+# 	#       			log = "[This.GetName]: 工厂总计:[?factory_sum]"
+# 	#       			log = "[This.GetName]: 民工:[?factory_industrial]"
+# 	#       			log = "[This.GetName]: 军工:[?factory_arms]"
+# 	#       			log = " "
+# 	#       		}
+# 	#       		set_variable = { factory_industrial = 0}
+# 	#       		set_variable = { factory_arms = 0}
+# 	#       		set_variable = { factory_sum = 0}
+# 	#       		set_variable = { manpower_value1 = 0}
+#  #      			every_state = {
+# 	# 		        add_to_variable = { PREV.factory_industrial = industrial_complex_level }
+# 	# 		        add_to_variable = { PREV.factory_arms = arms_factory_level }
+# 	# 		    }
+# 	# 		    add_to_variable = { factory_sum = factory_arms }
+# 	# 		    add_to_variable = { factory_sum = factory_industrial }
+# 	# 		    every_country = {
+# 	# 		    	add_to_variable = { PREV.manpower_value1 = num_armies}
+# 	# 		    }
+# 	# 		    log = "世界: 部队数量:[?manpower_value1]"
+#  #      			log = "世界: 工厂总计:[?factory_sum]"
+#  #      			log = "世界: 民工:[?factory_industrial]"
+#  #      			log = "世界: 军工:[?factory_arms]"
+#  #      			log = " "
+# 	#       }
+
+# 	#       fire_only_once = no
+
+# 	#       ai_will_do = {
+# 	#          factor = 0
+# 	#       }
+# 	# }
+#  #    wartest = {
+# 	#       visible = {
+# 	#       	  tag = XXX
+# 	#           has_global_flag = main_scenario
+# 	#           is_ai = no
+# 	#           NOT = {
+# 	#             has_global_flag = caidan2
+# 	#           }
+# 	#       }
+# 	#       complete_effect = {
+# 	#           set_global_flag = caidan2
+# 	#       }
+
+# 	#       fire_only_once = yes
+
+# 	#       ai_will_do = {
+# 	#          factor = 0
+# 	#       }
+# 	# }
+# 	# wartestX = {
+# 	#       visible = {
+# 	#           has_global_flag = caidan2
+# 	#           is_ai = no
+# 	#           NOT = {
+# 	#             has_global_flag = caidanX
+# 	#             has_global_flag = caidanXX
+# 	#             has_global_flag = caidan
+# 	#           }
+# 	#       }
+# 	#       complete_effect = {
+# 	#           set_global_flag = caidanX
+# 	#           hidden_effect = {
+# 	#               SEJ = { white_peace = ONS}
+
+# 	#               every_country = {
+# 	#                   limit = {
+# 	#                     NOT = {tag = ROOT}
+# 	#                     NOT = {is_in_faction_with = ROOT}
+# 	#                     NOT = {is_subject_of = ROOT}
+# 	#                     ROOT = { NOT = {is_subject_of = PREV} }
+# 	#                   }
+# 	#                   ROOT = { declare_war_on = {target = PREV type = annex_everything} }
+# 	#               }
 	              
-	#               every_country = {
-	#                   dismantle_faction = yes
-	#               }
-	#               if = {
-	#                  limit = {
-	#                     NOT = {tag = OKI}
-	#                  }
-	#                  OKI = {
-	#                     create_faction = "反玩家同盟"
-	#                     every_country = {
-	#                         OKI = { add_to_faction = PREV }
-	#                     }
-	#                  }
-	#                  else = {
-	#                      YKR = {
-	#                         create_faction = "反玩家同盟"
-	#                         every_country = {
-	#                             YKR = { add_to_faction = PREV }
-	#                         }
-	#                     }
-	#                  }
-	#               }
-	#           }
-	#       }
+# 	#               every_country = {
+# 	#                   dismantle_faction = yes
+# 	#               }
+# 	#               if = {
+# 	#                  limit = {
+# 	#                     NOT = {tag = OKI}
+# 	#                  }
+# 	#                  OKI = {
+# 	#                     create_faction = "反玩家同盟"
+# 	#                     every_country = {
+# 	#                         OKI = { add_to_faction = PREV }
+# 	#                     }
+# 	#                  }
+# 	#                  else = {
+# 	#                      YKR = {
+# 	#                         create_faction = "反玩家同盟"
+# 	#                         every_country = {
+# 	#                             YKR = { add_to_faction = PREV }
+# 	#                         }
+# 	#                     }
+# 	#                  }
+# 	#               }
+# 	#           }
+# 	#       }
 
-	#       fire_only_once = yes
+# 	#       fire_only_once = yes
 
-	#       ai_will_do = {
-	#          factor = 0
-	#       }
-	# }
-	# wartest2 = {
-	#       visible = {
-	#           has_global_flag = caidan2
-	#           is_ai = no
-	#           NOT = {
-	#             has_global_flag = caidan3
-	#             has_global_flag = caidanXX
-	#           }
-	#       }
+# 	#       ai_will_do = {
+# 	#          factor = 0
+# 	#       }
+# 	# }
+# 	# wartest2 = {
+# 	#       visible = {
+# 	#           has_global_flag = caidan2
+# 	#           is_ai = no
+# 	#           NOT = {
+# 	#             has_global_flag = caidan3
+# 	#             has_global_flag = caidanXX
+# 	#           }
+# 	#       }
 
-	#       remove_effect = {
-	#           set_global_flag = caidan3
-	#       }
+# 	#       remove_effect = {
+# 	#           set_global_flag = caidan3
+# 	#       }
 
-	#       days_remove = 10
+# 	#       days_remove = 10
 
-	#       fire_only_once = yes
+# 	#       fire_only_once = yes
 
-	#       ai_will_do = {
-	#          factor = 0
-	#       }
-	# }
-	# wartest3 = {
-	#       activation = {
- #            has_global_flag = caidan3
- #            is_ai = no
-	#           NOT = {
-	#             has_global_flag = caidan
-	#         }
- #          }
+# 	#       ai_will_do = {
+# 	#          factor = 0
+# 	#       }
+# 	# }
+# 	# wartest3 = {
+# 	#       activation = {
+#  #            has_global_flag = caidan3
+#  #            is_ai = no
+# 	#           NOT = {
+# 	#             has_global_flag = caidan
+# 	#         }
+#  #          }
 
- #          available = {
- #             custom_trigger_tooltip = {
- #             tooltip = wartest4 
- #             always = no
- #             }
- #          }
+#  #          available = {
+#  #             custom_trigger_tooltip = {
+#  #             tooltip = wartest4 
+#  #             always = no
+#  #             }
+#  #          }
 
- #          is_good = no
+#  #          is_good = no
 
-	#       timeout_effect = {
-	#         set_global_flag = caidan
-	#       }
+# 	#       timeout_effect = {
+# 	#         set_global_flag = caidan
+# 	#       }
 
-	#       days_mission_timeout = 30
+# 	#       days_mission_timeout = 30
 
-	#       fire_only_once = yes
+# 	#       fire_only_once = yes
 
-	#       ai_will_do = {
-	#          factor = 0
-	#       }
-	# }
-	# wardeclare = {
-	#       visible = {
-	#           has_global_flag = caidan
-	#           is_subject = no
-	#       }
-	#       target_trigger = {
-	#             FROM = {
-	#               OR = {
-	#                   AND = {
-	#                       is_neighbor_of = ROOT
-	#                       NOT = {is_subject_of = ROOT}
-	#                       ROOT = { NOT = {is_subject_of = PREV} }                
-	#                   }
-	#                   any_neighbor_country = {
-	#                       is_subject_of = ROOT
-	#                   }
-	#               }
-	#               NOT = {has_war_with = ROOT}  
-	#               NOT = {is_in_faction_with = ROOT}        
-	#             }
-	#       }
-	#       complete_effect = {
-	# 	       declare_war_on = {target = FROM type = annex_everything}
-	#       }
+# 	#       ai_will_do = {
+# 	#          factor = 0
+# 	#       }
+# 	# }
+# 	# wardeclare = {
+# 	#       visible = {
+# 	#           has_global_flag = caidan
+# 	#           is_subject = no
+# 	#       }
+# 	#       target_trigger = {
+# 	#             FROM = {
+# 	#               OR = {
+# 	#                   AND = {
+# 	#                       is_neighbor_of = ROOT
+# 	#                       NOT = {is_subject_of = ROOT}
+# 	#                       ROOT = { NOT = {is_subject_of = PREV} }                
+# 	#                   }
+# 	#                   any_neighbor_country = {
+# 	#                       is_subject_of = ROOT
+# 	#                   }
+# 	#               }
+# 	#               NOT = {has_war_with = ROOT}  
+# 	#               NOT = {is_in_faction_with = ROOT}        
+# 	#             }
+# 	#       }
+# 	#       complete_effect = {
+# 	# 	       declare_war_on = {target = FROM type = annex_everything}
+# 	#       }
 
-	#       fire_only_once = no
+# 	#       fire_only_once = no
 
-	#       ai_will_do = {
-	#          factor = 100
-	#          modifier = {
-	#              has_war = yes
-	#              factor = 0
-	#          }
-	#       }
-	# }
-	# warally = {
-	#       visible = {
-	#           has_global_flag = caidan
-	#           is_subject = no
-	#       }
+# 	#       ai_will_do = {
+# 	#          factor = 100
+# 	#          modifier = {
+# 	#              has_war = yes
+# 	#              factor = 0
+# 	#          }
+# 	#       }
+# 	# }
+# 	# warally = {
+# 	#       visible = {
+# 	#           has_global_flag = caidan
+# 	#           is_subject = no
+# 	#       }
 
-	#       target_trigger = {
-	#         any_country = {
-	#             has_war_with = ROOT
-	#             FROM = {
-	#                has_war_with = PREV
-	#                NOT = { is_in_faction_with = ROOT}
-	#                NOT = { has_war_with = ROOT}
-	#                OR = {
-	#                   AND = {
-	#                      is_subject = no
-	#                      is_in_faction = no
-	#                      NOT = { ROOT = { is_subject_of = PREV}}
+# 	#       target_trigger = {
+# 	#         any_country = {
+# 	#             has_war_with = ROOT
+# 	#             FROM = {
+# 	#                has_war_with = PREV
+# 	#                NOT = { is_in_faction_with = ROOT}
+# 	#                NOT = { has_war_with = ROOT}
+# 	#                OR = {
+# 	#                   AND = {
+# 	#                      is_subject = no
+# 	#                      is_in_faction = no
+# 	#                      NOT = { ROOT = { is_subject_of = PREV}}
 	                     
-	#                   }
-	#                   AND = {
-	#                      is_in_faction = yes
-	#                      is_faction_leader = yes
-	#                      ROOT = {
-	#                         all_enemy_country = {
-	#                            NOT = { is_in_faction_with = FROM }
-	#                         }
-	#                         all_allied_country = {
-	#                            NOT = { has_war_with = FROM }
-	#                         }
-	#                      }
-	#                      FROM = {
-	#                         all_enemy_country = {
-	#                            NOT = { is_in_faction_with = ROOT }
-	#                         }
-	#                         all_allied_country = {
-	#                            NOT = { has_war_with = ROOT }
-	#                         }
-	#                      }
-	#                   }
-	#                }                     
-	#             }
-	#         }
+# 	#                   }
+# 	#                   AND = {
+# 	#                      is_in_faction = yes
+# 	#                      is_faction_leader = yes
+# 	#                      ROOT = {
+# 	#                         all_enemy_country = {
+# 	#                            NOT = { is_in_faction_with = FROM }
+# 	#                         }
+# 	#                         all_allied_country = {
+# 	#                            NOT = { has_war_with = FROM }
+# 	#                         }
+# 	#                      }
+# 	#                      FROM = {
+# 	#                         all_enemy_country = {
+# 	#                            NOT = { is_in_faction_with = ROOT }
+# 	#                         }
+# 	#                         all_allied_country = {
+# 	#                            NOT = { has_war_with = ROOT }
+# 	#                         }
+# 	#                      }
+# 	#                   }
+# 	#                }                     
+# 	#             }
+# 	#         }
 	        
-	#       }
+# 	#       }
 
-	#       ai_will_do = {
-	#          factor = 100
-	#       }
+# 	#       ai_will_do = {
+# 	#          factor = 100
+# 	#       }
 
-	#       fire_only_once = no
+# 	#       fire_only_once = no
 
 
-	#       complete_effect = {
-	#            if = {
-	#               limit = {
-	#                    FROM = { is_faction_leader = yes }
-	#                    ROOT = { is_faction_leader = yes }
-	#               }
-	# 	          every_country = {
-	# 	               limit = {
-	# 	                  is_in_faction_with = FROM
-	# 	               }
-	# 	               ROOT = {add_to_faction = PREV }
-	# 	          }
-	#            }
-	#            if = {
-	#               limit = {
-	#                    FROM = { is_in_faction = no }
-	#                    ROOT = { is_faction_leader = yes }
-	#               }
-	# 	          add_to_faction = FROM
-	#            }
-	#            if = {
-	#               limit = {
-	#                    FROM = { is_faction_leader = yes }
-	#                    ROOT = { is_in_faction = no }
-	#               }
-	# 	          FROM = { add_to_faction = ROOT }
-	#            }
-	#            if = {
-	#               limit = {
-	#                    FROM = { is_in_faction = no }
-	#                    ROOT = { is_in_faction = no }
-	#               }
-	# 	          create_faction = "迷之同盟"
-	# 	          add_to_faction = FROM
-	#            }
-	#      }
-	# }
+# 	#       complete_effect = {
+# 	#            if = {
+# 	#               limit = {
+# 	#                    FROM = { is_faction_leader = yes }
+# 	#                    ROOT = { is_faction_leader = yes }
+# 	#               }
+# 	# 	          every_country = {
+# 	# 	               limit = {
+# 	# 	                  is_in_faction_with = FROM
+# 	# 	               }
+# 	# 	               ROOT = {add_to_faction = PREV }
+# 	# 	          }
+# 	#            }
+# 	#            if = {
+# 	#               limit = {
+# 	#                    FROM = { is_in_faction = no }
+# 	#                    ROOT = { is_faction_leader = yes }
+# 	#               }
+# 	# 	          add_to_faction = FROM
+# 	#            }
+# 	#            if = {
+# 	#               limit = {
+# 	#                    FROM = { is_faction_leader = yes }
+# 	#                    ROOT = { is_in_faction = no }
+# 	#               }
+# 	# 	          FROM = { add_to_faction = ROOT }
+# 	#            }
+# 	#            if = {
+# 	#               limit = {
+# 	#                    FROM = { is_in_faction = no }
+# 	#                    ROOT = { is_in_faction = no }
+# 	#               }
+# 	# 	          create_faction = "迷之同盟"
+# 	# 	          add_to_faction = FROM
+# 	#            }
+# 	#      }
+# 	# }
 
-	# wartest5 = {
- #          visible = {
- #             has_global_flag = caidan2
- #             is_ai = no
-	#          NOT = {
-	#             has_global_flag = caidanXX
-	#             has_global_flag = caidanX
-	#             has_global_flag = caidan
-	#          }
- #          }
+# 	# wartest5 = {
+#  #          visible = {
+#  #             has_global_flag = caidan2
+#  #             is_ai = no
+# 	#          NOT = {
+# 	#             has_global_flag = caidanXX
+# 	#             has_global_flag = caidanX
+# 	#             has_global_flag = caidan
+# 	#          }
+#  #          }
 
-	#       complete_effect = {
-	#         set_global_flag = caidanXX
-	#       }
+# 	#       complete_effect = {
+# 	#         set_global_flag = caidanXX
+# 	#       }
 
-	#       fire_only_once = yes
+# 	#       fire_only_once = yes
 
-	#       ai_will_do = {
-	#          factor = 0
-	#       }
-	# }
-	# wardeclare2 = {
-	#       visible = {
-	#           has_global_flag = caidanXX
-	#           is_subject = no
-	#           is_ai = no
-	#       }
-	#       target_trigger = {
-	#             FROM = {
-	#               OR = {
-	#                   AND = {
-	#                       is_neighbor_of = ROOT
-	#                       NOT = {is_subject_of = ROOT}
-	#                       ROOT = { NOT = {is_subject_of = PREV} }                
-	#                   }
-	#                   any_neighbor_country = {
-	#                       is_subject_of = ROOT
-	#                   }
-	#               }
-	#               NOT = {has_war_with = ROOT}  
-	#               NOT = {is_in_faction_with = ROOT}        
-	#             }
-	#       }
-	#       complete_effect = {
-	# 	       declare_war_on = {target = FROM type = annex_everything}
-	#       }
+# 	#       ai_will_do = {
+# 	#          factor = 0
+# 	#       }
+# 	# }
+# 	# wardeclare2 = {
+# 	#       visible = {
+# 	#           has_global_flag = caidanXX
+# 	#           is_subject = no
+# 	#           is_ai = no
+# 	#       }
+# 	#       target_trigger = {
+# 	#             FROM = {
+# 	#               OR = {
+# 	#                   AND = {
+# 	#                       is_neighbor_of = ROOT
+# 	#                       NOT = {is_subject_of = ROOT}
+# 	#                       ROOT = { NOT = {is_subject_of = PREV} }                
+# 	#                   }
+# 	#                   any_neighbor_country = {
+# 	#                       is_subject_of = ROOT
+# 	#                   }
+# 	#               }
+# 	#               NOT = {has_war_with = ROOT}  
+# 	#               NOT = {is_in_faction_with = ROOT}        
+# 	#             }
+# 	#       }
+# 	#       complete_effect = {
+# 	# 	       declare_war_on = {target = FROM type = annex_everything}
+# 	#       }
 
-	#       fire_only_once = no
+# 	#       fire_only_once = no
 
-	#       ai_will_do = {
-	#          factor = 0
-	#       }
-	# }
-	# warally2 = {
-	#       visible = {
-	#           has_global_flag = caidanXX
-	#           is_subject = no
-	#       }
+# 	#       ai_will_do = {
+# 	#          factor = 0
+# 	#       }
+# 	# }
+# 	# warally2 = {
+# 	#       visible = {
+# 	#           has_global_flag = caidanXX
+# 	#           is_subject = no
+# 	#       }
 
-	#       target_trigger = {
-	#         any_country = {
-	#             has_war_with = ROOT
-	#             FROM = {
-	#                has_war_with = PREV
-	#                NOT = { is_in_faction_with = ROOT}
-	#                NOT = { has_war_with = ROOT}
-	#                OR = {
-	#                   AND = {
-	#                      is_subject = no
-	#                      is_in_faction = no
-	#                      NOT = { ROOT = { is_subject_of = PREV}}
+# 	#       target_trigger = {
+# 	#         any_country = {
+# 	#             has_war_with = ROOT
+# 	#             FROM = {
+# 	#                has_war_with = PREV
+# 	#                NOT = { is_in_faction_with = ROOT}
+# 	#                NOT = { has_war_with = ROOT}
+# 	#                OR = {
+# 	#                   AND = {
+# 	#                      is_subject = no
+# 	#                      is_in_faction = no
+# 	#                      NOT = { ROOT = { is_subject_of = PREV}}
 	                     
-	#                   }
-	#                   AND = {
-	#                      is_in_faction = yes
-	#                      is_faction_leader = yes
-	#                      ROOT = {
-	#                         all_enemy_country = {
-	#                            NOT = { is_in_faction_with = FROM }
-	#                         }
-	#                         all_allied_country = {
-	#                            NOT = { has_war_with = FROM }
-	#                         }
-	#                      }
-	#                      FROM = {
-	#                         all_enemy_country = {
-	#                            NOT = { is_in_faction_with = ROOT }
-	#                         }
-	#                         all_allied_country = {
-	#                            NOT = { has_war_with = ROOT }
-	#                         }
-	#                      }
-	#                   }
-	#                }                     
-	#             }
-	#         }
+# 	#                   }
+# 	#                   AND = {
+# 	#                      is_in_faction = yes
+# 	#                      is_faction_leader = yes
+# 	#                      ROOT = {
+# 	#                         all_enemy_country = {
+# 	#                            NOT = { is_in_faction_with = FROM }
+# 	#                         }
+# 	#                         all_allied_country = {
+# 	#                            NOT = { has_war_with = FROM }
+# 	#                         }
+# 	#                      }
+# 	#                      FROM = {
+# 	#                         all_enemy_country = {
+# 	#                            NOT = { is_in_faction_with = ROOT }
+# 	#                         }
+# 	#                         all_allied_country = {
+# 	#                            NOT = { has_war_with = ROOT }
+# 	#                         }
+# 	#                      }
+# 	#                   }
+# 	#                }                     
+# 	#             }
+# 	#         }
 	        
-	#       }
+# 	#       }
 
-	#       ai_will_do = {
-	#          factor = 100
-	#       }
+# 	#       ai_will_do = {
+# 	#          factor = 100
+# 	#       }
 
-	#       fire_only_once = no
-
-
-	#       complete_effect = {
-	#            if = {
-	#               limit = {
-	#                    FROM = { is_faction_leader = yes }
-	#                    ROOT = { is_faction_leader = yes }
-	#               }
-	# 	          every_country = {
-	# 	               limit = {
-	# 	                  is_in_faction_with = FROM
-	# 	               }
-	# 	               ROOT = {add_to_faction = PREV }
-	# 	          }
-	#            }
-	#            if = {
-	#               limit = {
-	#                    FROM = { is_in_faction = no }
-	#                    ROOT = { is_faction_leader = yes }
-	#               }
-	# 	          add_to_faction = FROM
-	#            }
-	#            if = {
-	#               limit = {
-	#                    FROM = { is_faction_leader = yes }
-	#                    ROOT = { is_in_faction = no }
-	#               }
-	# 	          FROM = { add_to_faction = ROOT }
-	#            }
-	#            if = {
-	#               limit = {
-	#                    FROM = { is_in_faction = no }
-	#                    ROOT = { is_in_faction = no }
-	#               }
-	# 	          create_faction = "迷之同盟"
-	# 	          add_to_faction = FROM
-	#            }
-	#      }
-	# }
-}
-	#试手决议
-	#FROM TEST
-
-	# kill_fairys = {
-
-	#       target_trigger = {
-	#          FROM = {
-	#             has_idea = Fairy
-	#          }
-	#       }
-
-	#       complete_effect = {
-	#          FROM = {
-	#              add_ideas = HUM_war_fear
-	#          }
-	#       }
-
-	#       fire_only_once = no
-
-	#       cost = 5
-
-	#       days_re_enable = 5
-
-	#       ai_will_do = {
-	#          factor = 0
-	#       }
-	# }
-
-	#target decision试手
-
-	# before_kill_humans = {
-
-	#       complete_effect = {
-	#          activate_targeted_decision = { target = HUM decision = test_decision }
-	#       }
-
-	#       fire_only_once = no
-
-	#       days_re_enable = 5
-
-	#       ai_will_do = {
-	#          factor = 0
-	#       }
-	# }
-
-	# test_decision = {
-
-	#       allowed = {
-	#          always = no
-	#       }
-
-	#       fire_only_once = yes
-
-	#       complete_effect = {
-	#          FROM = { add_ideas = HUM_war_fear }
-	#       }
-	# }
-
-	#自定义消耗测试
-
-	# oppose_neighbor = {
-
-	#       target_trigger = {
-	#          FROM = {
-	#             is_neighbor_of = ROOT
-	#          }
-	#       }
-
-	#       complete_effect = {
-	#           FROM = {add_ideas = HUM_war_fear}
-	#           add_command_power = -5 
-	#       }
-
-	#       custom_cost_trigger = {
-	#           command_power > 5
-	#       }
-
-	#       custom_cost_text = "ni hao qiong a"
+# 	#       fire_only_once = no
 
 
-	#       fire_only_once = no
+# 	#       complete_effect = {
+# 	#            if = {
+# 	#               limit = {
+# 	#                    FROM = { is_faction_leader = yes }
+# 	#                    ROOT = { is_faction_leader = yes }
+# 	#               }
+# 	# 	          every_country = {
+# 	# 	               limit = {
+# 	# 	                  is_in_faction_with = FROM
+# 	# 	               }
+# 	# 	               ROOT = {add_to_faction = PREV }
+# 	# 	          }
+# 	#            }
+# 	#            if = {
+# 	#               limit = {
+# 	#                    FROM = { is_in_faction = no }
+# 	#                    ROOT = { is_faction_leader = yes }
+# 	#               }
+# 	# 	          add_to_faction = FROM
+# 	#            }
+# 	#            if = {
+# 	#               limit = {
+# 	#                    FROM = { is_faction_leader = yes }
+# 	#                    ROOT = { is_in_faction = no }
+# 	#               }
+# 	# 	          FROM = { add_to_faction = ROOT }
+# 	#            }
+# 	#            if = {
+# 	#               limit = {
+# 	#                    FROM = { is_in_faction = no }
+# 	#                    ROOT = { is_in_faction = no }
+# 	#               }
+# 	# 	          create_faction = "迷之同盟"
+# 	# 	          add_to_faction = FROM
+# 	#            }
+# 	#      }
+# 	# }
+# }
+# 	#试手决议
+# 	#FROM TEST
 
-	#       ai_will_do = {
-	#          factor = 0
-	#       }
-	# }
+# 	# kill_fairys = {
 
-	#mission 测试
-	# coring = {
-	#      available = {
-	#          any_owned_state = {
-	#             NOT = {is_core_of = ROOT}
-	#             is_controlled_by = ROOT
-	#          }
-	#      }
-	#      complete_effect = {
-	#          random_owned_state = {
-	#              limit = {
-	#                  is_controlled_by = ROOT
-	#                  NOT = {is_core_of = ROOT}
-	#              }
-	#              add_core_of = ROOT
-	#          }
-	#      }
-	# }
+# 	#       target_trigger = {
+# 	#          FROM = {
+# 	#             has_idea = Fairy
+# 	#          }
+# 	#       }
 
-	# test = {
-	#     highlight_states = { 
-	#         state = 172 
-	#     }
-	# }
+# 	#       complete_effect = {
+# 	#          FROM = {
+# 	#              add_ideas = HUM_war_fear
+# 	#          }
+# 	#       }
 
-	# rebels = {
-	#     activation = {
- #            # has_stability < 0.1 #This starts the mission
- #        }
+# 	#       fire_only_once = no
 
- #        available = {
- #            has_stability > 0.8
- #        }
+# 	#       cost = 5
 
- #        is_good = no
+# 	#       days_re_enable = 5
+
+# 	#       ai_will_do = {
+# 	#          factor = 0
+# 	#       }
+# 	# }
+
+# 	#target decision试手
+
+# 	# before_kill_humans = {
+
+# 	#       complete_effect = {
+# 	#          activate_targeted_decision = { target = HUM decision = test_decision }
+# 	#       }
+
+# 	#       fire_only_once = no
+
+# 	#       days_re_enable = 5
+
+# 	#       ai_will_do = {
+# 	#          factor = 0
+# 	#       }
+# 	# }
+
+# 	# test_decision = {
+
+# 	#       allowed = {
+# 	#          always = no
+# 	#       }
+
+# 	#       fire_only_once = yes
+
+# 	#       complete_effect = {
+# 	#          FROM = { add_ideas = HUM_war_fear }
+# 	#       }
+# 	# }
+
+# 	#自定义消耗测试
+
+# 	# oppose_neighbor = {
+
+# 	#       target_trigger = {
+# 	#          FROM = {
+# 	#             is_neighbor_of = ROOT
+# 	#          }
+# 	#       }
+
+# 	#       complete_effect = {
+# 	#           FROM = {add_ideas = HUM_war_fear}
+# 	#           add_command_power = -5 
+# 	#       }
+
+# 	#       custom_cost_trigger = {
+# 	#           command_power > 5
+# 	#       }
+
+# 	#       custom_cost_text = "ni hao qiong a"
 
 
-	#     target_trigger = {
-	#        any_owned_state = {
-	#           limit = {
-	#               any_neighbor_state = {
-	#                   is_owned_by = FROM
-	#               }
-	#           }
-	#           is_core_of = FROM
-	#         } 
-	#     }
+# 	#       fire_only_once = no
 
-	#     timeout_effect = {
- #              random_owned_state = {
-	#                limit = {
-	#                    any_neighbor_state = {
-	#                        is_owned_by = FROM
-	#                    }
-	#                    is_core_of = FROM
-	#                }
-	#                FROM = {transfer_state = PREV}
-	#            }
- #        }
+# 	#       ai_will_do = {
+# 	#          factor = 0
+# 	#       }
+# 	# }
 
- #        days_mission_timeout = 10
- #        complete_effect = {
- #        }
-	# }
-	# rebels2 = {
-	#     activation = {
- #            has_stability < 0.3 #This starts the mission
- #        }
- #        available = {
- #            always = no
- #        }
- #        is_good = yes
- #        days_mission_timeout = 1
- #        days_re_enable = 5
- #        war_with_on_timeout = CIR
- #        war_with_target_on_timeout = yes
- #    }
+# 	#mission 测试
+# 	# coring = {
+# 	#      available = {
+# 	#          any_owned_state = {
+# 	#             NOT = {is_core_of = ROOT}
+# 	#             is_controlled_by = ROOT
+# 	#          }
+# 	#      }
+# 	#      complete_effect = {
+# 	#          random_owned_state = {
+# 	#              limit = {
+# 	#                  is_controlled_by = ROOT
+# 	#                  NOT = {is_core_of = ROOT}
+# 	#              }
+# 	#              add_core_of = ROOT
+# 	#          }
+# 	#      }
+# 	# }
+
+# 	# test = {
+# 	#     highlight_states = { 
+# 	#         state = 172 
+# 	#     }
+# 	# }
+
+# 	# rebels = {
+# 	#     activation = {
+#  #            # has_stability < 0.1 #This starts the mission
+#  #        }
+
+#  #        available = {
+#  #            has_stability > 0.8
+#  #        }
+
+#  #        is_good = no
+
+
+# 	#     target_trigger = {
+# 	#        any_owned_state = {
+# 	#           limit = {
+# 	#               any_neighbor_state = {
+# 	#                   is_owned_by = FROM
+# 	#               }
+# 	#           }
+# 	#           is_core_of = FROM
+# 	#         } 
+# 	#     }
+
+# 	#     timeout_effect = {
+#  #              random_owned_state = {
+# 	#                limit = {
+# 	#                    any_neighbor_state = {
+# 	#                        is_owned_by = FROM
+# 	#                    }
+# 	#                    is_core_of = FROM
+# 	#                }
+# 	#                FROM = {transfer_state = PREV}
+# 	#            }
+#  #        }
+
+#  #        days_mission_timeout = 10
+#  #        complete_effect = {
+#  #        }
+# 	# }
+# 	# rebels2 = {
+# 	#     activation = {
+#  #            has_stability < 0.3 #This starts the mission
+#  #        }
+#  #        available = {
+#  #            always = no
+#  #        }
+#  #        is_good = yes
+#  #        days_mission_timeout = 1
+#  #        days_re_enable = 5
+#  #        war_with_on_timeout = CIR
+#  #        war_with_target_on_timeout = yes
+#  #    }

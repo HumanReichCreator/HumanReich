@@ -1,0 +1,17 @@
+
+SCA_army_reform_cate = {
+
+	icon = hol_draw_up_staff_plans
+
+	priority = 90
+  
+  	allowed = {
+    	original_tag = SCA
+	}
+
+	visible = {
+	    original_tag = SCA
+      has_country_flag = SCA_leimihuifu
+	}
+}
+

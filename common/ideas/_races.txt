@@ -9,15 +9,10 @@ ideas = {
 			}
 			modifier = {
 				land_night_attack = 0.25
+        		mobilization_speed = 0.20
 				conscription = 0.14
 				improve_relations_maintain_cost_factor = 0.25
 				mobilization_laws_cost_factor = -0.1
-			# ENCRYPTION = -2
-			# DECRYPTION = -2
-			
-			# army_org_Factor = 0.2
-			# stability_factor = 0.1
-			# land_night_attack = -0.3
 			}
 
 			research_bonus = {
@@ -35,14 +30,14 @@ ideas = {
 				always = no
 			}
 			modifier = {
-			conscription = 0.04
-			mobilization_laws_cost_factor = 0.25
-			ENCRYPTION = -2
-			DECRYPTION = -2
-			
-			army_org_Factor = 0.2
-			stability_factor = 0.1
-			land_night_attack = -0.3
+				mobilization_speed = 0.10
+				conscription = 0.04
+				mobilization_laws_cost_factor = 0.25
+				ENCRYPTION = -2
+				DECRYPTION = -2
+				army_org_Factor = 0.2
+				stability_factor = 0.1
+				land_night_attack = -0.3
 			}
 
 			research_bonus = {
@@ -60,6 +55,7 @@ ideas = {
 				always = no
 			}
 			modifier = {
+        		mobilization_speed = 0.30
 				conscription = 0.2
 				ARMY_MORALE_FACTOR = 0.25
 				training_time_factor = -0.1
@@ -77,6 +73,7 @@ ideas = {
 
 			modifier = {		
 				EXPERIENCE_LOSS_FACTOR = -0.2
+        		mobilization_speed = 0.40
 				conscription = 0.25
 				army_infantry_attack_factor = 0.1
 				army_infantry_defence_factor = 0.1
@@ -96,15 +93,14 @@ ideas = {
 				magic = 0.05
 			}
 			modifier = {
-			conscription = 0.08
-			INDUSTRIAL_CAPACITY_factory = -0.06
-			ARMY_ORG_FACTOR = -0.02
-			army_infantry_ATTACK_FACTOR = 0.1
-			army_artillery_attack_factor = 0.05
-			# LOCAL_RESOURCES_FACTOR = -0.1
-			stability_factor = -0.05
-			land_night_attack = -0.05
-			
+				mobilization_speed = 0.15
+				conscription = 0.08
+				INDUSTRIAL_CAPACITY_factory = -0.06
+				ARMY_ORG_FACTOR = -0.02
+				army_infantry_ATTACK_FACTOR = 0.1
+				army_artillery_attack_factor = 0.05
+				stability_factor = -0.05
+				land_night_attack = -0.05
 			}
 			cost = 0
 			cancel_if_invalid = no
@@ -116,14 +112,13 @@ ideas = {
 				always = no
 			}
 			modifier = {
-			conscription = 0.125
-			INDUSTRIAL_CAPACITY_factory = 0.05
-			# conscription_factor = -0.1
-			ARMY_ORG_FACTOR = 0.05
-			army_infantry_ATTACK_FACTOR = -0.02
-			army_artillery_attack_factor = 0.025
-		#	army_armor_factor = 0.05
-			research_speed_factor = 0.1
+				mobilization_speed = 0.20
+				conscription = 0.125
+				INDUSTRIAL_CAPACITY_factory = 0.05
+				ARMY_ORG_FACTOR = 0.05
+				army_infantry_ATTACK_FACTOR = -0.02
+				army_artillery_attack_factor = 0.025
+				research_speed_factor = 0.1
 
 			}
 			cost = 0
@@ -132,24 +127,23 @@ ideas = {
 
 		Tenggu = {
 									
-			available = {
-				 always = no
+			allowed_to_remove = {
+				always = no
 			}
 			
 			modifier = {
-			conscription = 0.25
-			EXPERIENCE_LOSS_FACTOR = -0.2
-			
-			ARMY_ORG_FACTOR = 0.1
-			DIG_IN_SPEED_FACTOR = -0.1
-			SUPPLY_CONSUMPTION_FACTOR = 0.05
-			army_infantry_attack_factor = 0.1
-			army_infantry_defence_factor = 0.1
-			war_support_factor = 0.1
-			manufacturer_cost_factor = 0.5
-			improve_relations_maintain_cost_factor = 1
-			trade_opinion_factor = -0.5
-
+				mobilization_speed = 0.40
+				conscription = 0.25
+				EXPERIENCE_LOSS_FACTOR = -0.2
+				ARMY_ORG_FACTOR = 0.1
+				DIG_IN_SPEED_FACTOR = -0.1
+				SUPPLY_CONSUMPTION_FACTOR = 0.05
+				army_infantry_attack_factor = 0.1
+				army_infantry_defence_factor = 0.1
+				war_support_factor = 0.1
+				manufacturer_cost_factor = 0.5
+				improve_relations_maintain_cost_factor = 1
+				trade_opinion_factor = -0.5
 			}
 			cost = 0
 			cancel_if_invalid = no
@@ -162,13 +156,12 @@ ideas = {
 			}
 			
 			modifier = {
-			conscription = 0.16
-			ENCRYPTION = 2
-			DECRYPTION = 2
-			SUPPLY_CONSUMPTION_FACTOR = -0.05
-			land_night_attack = -0.15
-
-
+				mobilization_speed = 0.20
+				conscription = 0.16
+				ENCRYPTION = 2
+				DECRYPTION = 2
+				SUPPLY_CONSUMPTION_FACTOR = -0.05
+				land_night_attack = -0.15
 			}
 			cost = 0
 			cancel_if_invalid = no
@@ -192,9 +185,7 @@ ideas = {
 				attrition = -0.1
 				ARMY_infantry_ATTACK_FACTOR = -0.15
 				ARMY_infantry_defence_FACTOR = -0.15
-				# conscription_factor = -0.6
 				ORG_LOSS_WHEN_MOVING = 0.2
-				# land_night_attack = -0.75
 			}
 			
 			
@@ -211,18 +202,17 @@ ideas = {
 			}
 			
 			modifier = {
-			conscription = 0.002
-			mobilization_laws_cost_factor = 0.5
-			training_time_factor = -0.4
-			ARMY_ORG_FACTOR = -0.05
-			ORG_LOSS_WHEN_MOVING = 0.05
-			ARMY_MORALE_FACTOR = 0.1
-			LOCAL_RESOURCES_FACTOR = 0.1
-			SUPPLY_CONSUMPTION_FACTOR = -0.15
-			attrition = -0.2
-			ARMY_infantry_ATTACK_FACTOR = -0.3
-			ARMY_infantry_defence_FACTOR = -0.3
-
+				conscription = 0.002
+				mobilization_laws_cost_factor = 0.5
+				training_time_factor = -0.4
+				ARMY_ORG_FACTOR = -0.05
+				ORG_LOSS_WHEN_MOVING = 0.05
+				ARMY_MORALE_FACTOR = 0.1
+				LOCAL_RESOURCES_FACTOR = 0.1
+				SUPPLY_CONSUMPTION_FACTOR = -0.15
+				attrition = -0.2
+				ARMY_infantry_ATTACK_FACTOR = -0.3
+				ARMY_infantry_defence_FACTOR = -0.3
 			}
 			cost = 0
 			cancel_if_invalid = no
@@ -242,8 +232,5 @@ ideas = {
 			cost = 0
 			cancel_if_invalid = no
 		}
-		
-		
-		
 	}
 }

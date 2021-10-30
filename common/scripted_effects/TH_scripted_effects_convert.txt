@@ -1,109 +1,204 @@
 CONV_convert = {
+    ####YYK####
+    ROOT = {
+        if = {
+            limit = {
+                has_completed_focus = YYK_linghunshouji
+            }
+            # set_temp_variable = { YYK_killed = PREV.ST_present_race_conscription_ratio }
+            set_temp_variable = { YYK_killed = PREV.state_population_k }
+            multiply_temp_variable = { YYK_killed = 5 }
+            if = {
+                limit = {
+                    PREV = { ST_race_is_Human = yes }
+                }
+                multiply_temp_variable = { YYK_killed = 2 }
+            }
+            if = {
+                limit = {
+                    PREV = { ST_race_is_Magician = yes }
+                }
+                multiply_temp_variable = { YYK_killed = 1.25 }
+            }
+            # X1 beast
+            if = {
+                limit = {
+                    PREV = { ST_race_is_God = yes }
+                }
+                multiply_temp_variable = { YYK_killed = 0.5 }
+            }
+            if = {
+                limit = {
+                    PREV = {
+                        or = {
+                            ST_race_is_Youkai = yes 
+                            ST_race_is_Tengu = yes 
+                            ST_race_is_Kappa = yes 
+                            ST_race_is_Pri_youkai = yes
+                        }
+                    }
+                    multiply_temp_variable = { YYK_killed = 0.4 }
+                }
+                
+            }
+            if = {
+                limit = {
+                    PREV = { ST_race_is_Fairy = yes }
+                }
+                multiply_temp_variable = { YYK_killed = 0.05 }
+            }
+            
+            add_to_variable = { YYK_kaihua = YYK_killed }
+        }
+    }
+    ###############
+
     if = {
         limit = {
-            owner = {
+            controller = {
                 has_idea = Beast
             }
         }
         set_variable = { ST_present_race = 0}
+        custom_effect_tooltip = CONV_convert_0_tt
     }
     if = {
         limit = {
-            owner = {
+            controller = {
                 has_idea = Pri_youkai
             }
         }
         set_variable = { ST_present_race = 1}
+        custom_effect_tooltip = CONV_convert_1_tt
     }
     if = {
         limit = {
-            owner = {
+            controller = {
                 has_idea = Youkai
             }
         }
         set_variable = { ST_present_race = 2}
+        custom_effect_tooltip = CONV_convert_2_tt
     }
     if = {
         limit = {
-            owner = {
+            controller = {
                 has_idea = God
             }
         }
         set_variable = { ST_present_race = 3}
+        custom_effect_tooltip = CONV_convert_3_tt
     }
     if = {
         limit = {
-            owner = {
+            controller = {
                 has_idea = Human
             }
         }
         set_variable = { ST_present_race = 4}
+        custom_effect_tooltip = CONV_convert_4_tt
     }
     if = {
         limit = {
-            owner = {
+            controller = {
                 has_idea = Magician
             }
         }
         set_variable = { ST_present_race = 5}
+        custom_effect_tooltip = CONV_convert_5_tt
     }
     if = {
         limit = {
-            owner = {
+            controller = {
                 has_idea = Fairy
             }
         }
         set_variable = { ST_present_race = 6}
+        custom_effect_tooltip = CONV_convert_6_tt
     }
     if = {
         limit = {
-            owner = {
+            controller = {
                 has_idea = Ghost
             }
         }
         set_variable = { ST_present_race = 7}
+        custom_effect_tooltip = CONV_convert_7_tt
     }
     if = {
         limit = {
-            owner = {
+            controller = {
                 has_idea = Kappa
             }
         }
         set_variable = { ST_present_race = 8}
+        custom_effect_tooltip = CONV_convert_8_tt
     }
     if = {
         limit = {
-            owner = {
+            controller = {
                 has_idea = Tenggu
             }
         }
         set_variable = { ST_present_race = 9}
+        custom_effect_tooltip = CONV_convert_9_tt
     }
 
-    set_temp_variable = { manpower_start = state_population_k }
-    set_temp_variable = { manpower_change = ST_current_race_conscription_ratio }
-    add_to_temp_variable = { manpower_change = 1 }
-    multiply_temp_variable = { manpower_change = 1000}
-    multiply_temp_variable = { manpower_change = state_population_k}
+    hidden_effect = {
+        set_temp_variable = { manpower_start = state_population_k }
+        multiply_temp_variable = { manpower_start = -250 }
 
-    multiply_temp_variable = { manpower_start = -1000 }
-    add_manpower = manpower_start
+        set_temp_variable = { manpower_change = ST_current_race_conscription_ratio }
+        add_to_temp_variable = { manpower_change = 1 }
+        multiply_temp_variable = { manpower_change = 1000}
+        multiply_temp_variable = { manpower_change = state_population_k}
+        multiply_temp_variable = { manpower_change = 0.5}
 
-    add_manpower = manpower_change
+        ###########
+        add_manpower = manpower_start
+        add_manpower = manpower_start
+        add_manpower = manpower_start
+        add_manpower = manpower_start
 
-    add_manpower = 100
+        set_temp_variable = { manpower_max = 0}
+        set_temp_variable = { manpower_current = 0}
+        ROOT = {
+            every_owned_state = {
+                limit = {
+                    is_controlled_by = ROOT
+                    is_core_of = ROOT
+                    ST_present_same_race = yes
+                }
+                clamp_temp_variable = { var = PREV.PREV.manpower_max min = state_population_k }
+                add_to_temp_variable = { var = PREV.PREV.manpower_current = state_population_k }
+            }
+        } 
+        clamp_temp_variable = { var = manpower_current max = 2500}
+        multiply_temp_variable = { manpower_current = 0.05}
+        multiply_temp_variable = { manpower_max = 0.15}
+        set_temp_variable = { manpower_move_in = manpower_current}
+        add_to_temp_variable = { manpower_move_in = manpower_max}
 
-    # add_compliance = -100
-    # add_resistance = 20
+        set_temp_variable = { manpower_ratio = infrastructure_level}
+        multiply_temp_variable = { manpower_ratio = 0.05}
+        clamp_temp_variable = { var = manpower_ratio min = 0.02 max = 0.5 }
+        multiply_temp_variable = { manpower_ratio = 1000}
+        multiply_temp_variable = { manpower_move_in = manpower_ratio }
+        add_to_temp_variable = { manpower_change = manpower_move_in }
 
-    ROOT = { add_to_variable = { PO_mp_add = PREV.CONV_current_convert_PO} }
+        add_manpower = manpower_change
+
+        add_manpower = 100
+
+        ROOT = { add_to_variable = { PO_mp_add = PREV.CONV_current_convert_PO} }
+    }
 }
 
 CONV_daily = {
     #convert value
     every_owned_state = {
         limit = {
-            not = { check_variable = { ST_current_race_conscription_ratio = 0} }
+            not = { ST_present_same_race = yes }
         }
         set_variable = { CONV_convert_cost = state_population_k}
         multiply_variable = { CONV_convert_cost = state_value}
@@ -145,8 +240,21 @@ CONV_daily = {
             multiply_variable = { CONV_convert_PO = 0.5}
         }
 
-        clamp_variable = { var = CONV_convert_cost min = 20 }
-        clamp_variable = { var = CONV_convert_time min = 60 }
+        ####YYK的特殊国策
+        if = {
+            limit = {
+                ROOT = { has_completed_focus = YYK_siwangheping }
+            }
+            multiply_variable = { CONV_convert_time = 0.1 }
+            multiply_variable = { CONV_convert_cost = 0.1 }
+            clamp_variable = { var = CONV_convert_cost max = 500 min = 10 }
+            clamp_variable = { var = CONV_convert_time max = 300 min = 30 }
+            else = {
+                clamp_variable = { var = CONV_convert_cost max = 500 min = 20 }
+                clamp_variable = { var = CONV_convert_time max = 300 min = 60 }
+            }
+        }
+        
         clamp_variable = { var = CONV_convert_PO min = 0.02 }
     }
 

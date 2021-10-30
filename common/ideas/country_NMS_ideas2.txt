@@ -1,0 +1,551 @@
+ideas = {
+	country = {
+		nms_hepingdefojiao_idea = {
+			picture = new_sytle_buddism
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = -0.15
+				training_time_factor = 0.15
+				conscription_factor = -0.18
+			}
+		}
+		nms_shangcengzhongzuzhuyizhe_idea = {
+			picture = generic_fascism_drift_2
+			modifier = {
+				stability_weekly = -0.001
+				neworder_drift = 0.01
+			}
+		}
+		NMS_zhongyongzhongzuzhuyizhe_idea = {
+			picture = generic_manpower_bonus
+			name = NMS_zhongyongzhongzuzhuyizhe
+			modifier = {
+				conscription_factor = 0.08
+			}
+		}
+		NMS_yixiangyikui_idea = {
+			picture = FRA_army_of_aggression_focus
+			name = NMS_yixiangyikui
+			modifier = {
+				army_morale_factor = 0.05
+				justify_war_goal_time = -0.1
+				generate_wargoal_tension = -0.05
+			}
+		}
+		NMS_fowubaiquan_idea = {
+			picture = generic_intel_bonus
+			name = NMS_fowubaiquan
+			modifier = {
+				modifier_army_sub_unit_melee_cavalry_attack_factor = 0.1
+				modifier_army_sub_unit_melee_cavalry_defence_factor = 0.1
+				modifier_army_sub_unit_melee_infantry_attack_factor = 0.1
+				modifier_army_sub_unit_melee_infantry_defence_factor = 0.1
+			}
+			equipment_bonus = {
+				melee_a = {
+					instant = yes 
+					soft_attack = 0.25 
+					hard_attack = 0.25
+				}
+			}
+		}
+		NMS_xiangqishengnianchuandekongbu_idea = {
+			picture = air_support_focus
+			name = NMS_xiangqishengnianchuandekongbu
+			modifier = {
+				air_close_air_support_attack_factor = 0.15
+			}
+		}
+		NMS_zhenduirenlidebaohuzhe_idea = {
+			picture = generic_army_problems
+			targeted_modifier = {
+				tag = NMS
+				attack_bonus_against = -0.06
+				defense_bonus_against = -0.06
+			}
+		}
+		NMS_niepandafozhan_idea = {
+			picture = SPR_seize_the_gold_reserves
+			name = NMS_niepandafozhan
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_gain = 0.2
+			}
+		}
+		NMS_chongxinkaiqibinzanghuodong_idea = {
+			picture = ENG_the_war_to_end_all_wars
+			name = NMS_chongxinkaiqibinzanghuodong
+			modifier = {
+				improve_relations_maintain_cost_factor = -0.2
+				political_power_gain = 0.1
+			}
+		}
+		NMS_zaiciwuruqituderenlei_idea = {
+			name = NMS_zaiciwuruqituderenlei
+			picture = generic_acquire_tanks
+			targeted_modifier = {
+				tag = HUM
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+		NMS_jianliguanglengta_idea = {
+			name = NMS_jianliguanglengta
+			picture = FRA_fortification_focus
+			modifier = {
+				army_artillery_defence_factor = 0.1
+				army_artillery_attack_factor = 0.1
+				army_core_attack_factor = 0.25
+				army_core_defence_factor = 0.25
+				production_speed_bunker_factor = 0.15
+			}
+		}
+		NMS_jianlisenglvbudui_idea = {
+			name = NMS_jianlisenglvbudui
+			picture = tur_kemalist_army_officers_minimal_power_neutral
+			modifier = {
+				special_forces_cap = 0.1
+			}
+			equipment_bonus = {
+				shield_a = {
+					armor_value = 0.1
+					instant = yes
+				}
+			}
+		}
+		NMS_zhangkonglimaomaoyi_idea = {
+			name = NMS_zhangkonglimaomaoyi
+			picture = generic_research_bonus
+			available = {
+				not = {
+					has_war_with = MAM
+				}
+			}
+			modifier = {
+				research_speed_factor = 0.03
+			}
+		}
+		NMS_zhangkonglimaomaoyi2_idea = {
+			picture = tur_etatism
+			available = {
+				not = {
+					has_war_with = NMS
+				}
+			}
+			targeted_modifier = { 
+				tag = NMS
+				cic_to_target_factor = 0.15
+			}
+		}
+		NMS_zhangkongHUMmaoyi_idea = {
+			name = NMS_zhangkongHUMmaoyi
+			picture = generic_research_bonus
+			available = {
+				not = {
+					has_war_with = HUM
+				}
+			}
+			modifier = {
+				research_speed_factor = 0.03
+			}
+		}
+		NMS_zhangkongHUMmaoyi2_idea = {
+			picture = tur_etatism
+			available = {
+				not = {
+					has_war_with = NMS
+				}
+			}
+			targeted_modifier = { 
+				tag = NMS
+				cic_to_target_factor = 0.1
+			}
+		}
+		NMS_xiuzhenghunluandiqu_idea = {
+			name = NMS_xiuzhenghunluandiqu
+			picture = SPA_duty_to_work
+			modifier = {
+				industry_free_repair_factor = 0.3
+			}
+		}
+		NMS_jiansheyiliuyaoguaicheng_idea = {
+			name = NMS_jiansheyiliuyaoguaicheng
+			picture = eng_imperial_conscription
+			modifier = {
+				monthly_population = 0.25
+			}
+		}
+		NMS_jiansheyiliuyaoguaicheng2_idea = {
+			name = NMS_jiansheyiliuyaoguaicheng
+			picture = eng_imperial_conscription
+			modifier = {
+				monthly_population = 0.1
+			}
+		}
+		NMS_changshimodaoshengchan_idea = {
+			name = NMS_changshimodaoshengchan
+			picture = generic_production_bonus
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+		}
+		NMS_jingjiandanmuwuqi_idea = {
+			name = NMS_jingjiandanmuwuqi
+			picture = ast_volunteer_defence_corps
+			equipment_bonus = {
+				magic_core_a = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		NMS_fotuoshenguangpao_idea = {
+			name = NMS_fotuoshenguangpao
+			picture = generic_artillery_regiments
+			equipment_bonus = {
+				magic_energy_a = {
+					soft_attack = 0.15
+					hard_attack = 0.15
+					instant = yes
+				}
+			}
+		}
+		NMS_daguimojunduikuochong_idea = {
+			name = NMS_daguimojunduikuochong
+			picture = generic_infantry_bonus
+			modifier = {
+				training_time_factor = -0.3
+				mobilization_laws_cost_factor = -0.25
+			}
+		}
+		NMS_qimayukansha_idea = {
+			name = NMS_qimayukansha
+			picture = warrior_traditions_idea
+			modifier = {
+				modifier_army_sub_unit_melee_infantry_attack_factor = 0.1
+				modifier_army_sub_unit_melee_infantry_defence_factor = 0.1
+				modifier_army_sub_unit_melee_cavalry_attack_factor = 0.1
+				modifier_army_sub_unit_melee_cavalry_defence_factor = 0.1
+			}
+		}
+		NMS_qianghuatizhidemofa_idea = {
+			name = NMS_qianghuatizhidemofa
+			picture = FRA_scw_intervention_nationalists_focus
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.15
+			}
+		}
+		NMS_overcome_research1_idea = {
+			name = NMS_overcome_research
+			available = {
+				has_idea = Shrine
+			}
+			picture = generic_research_bonus
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		NMS_overcome_research2_idea = {
+			name = NMS_overcome_research
+			available = {
+				has_idea = Shrine
+			}
+			picture = generic_research_bonus
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+		NMS_overcome_build1_idea = {
+			name = NMS_overcome_build
+			available = {
+				has_idea = Shrine
+			}
+			picture = man_five_year_plan_industry
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		NMS_overcome_build2_idea = {
+			name = NMS_overcome_build
+			available = {
+				has_idea = Shrine
+			}
+			picture = man_five_year_plan_industry
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		NMS_overcome_output1_idea = {
+			name = NMS_overcome_output
+			available = {
+				has_idea = Shrine
+			}
+			picture = generic_production_bonus
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+		NMS_overcome_output2_idea = {
+			name = NMS_overcome_output
+			available = {
+				has_idea = Shrine
+			}
+			picture = generic_production_bonus
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+		}
+		NMS_kaizhan_idea = {
+
+			picture = SPR_political_violence
+
+			available = {
+				has_war = no
+			}
+			modifier = {
+				stability_factor = -0.2
+				stability_weekly = -0.001
+				industrial_capacity_factory = -0.4
+				conscription_factor = -0.5
+				training_time_factor = -0.25
+			}
+		}
+		NMS_zhengshijianzaoshengnianchuan_idea = {
+
+			picture = eng_steady_as_she_goes
+
+			modifier = {
+				weekly_manpower = 1
+			}
+		}
+		NMS_huatiangulizhe_idea = {
+
+			picture = ROM_iron_guard
+
+			available = {
+				not = {
+					has_war_with = YUK
+				}
+			}
+			modifier = {
+				army_core_attack_factor = 0.08
+				army_core_defence_factor = 0.08
+			}
+		}
+		NMS_xuexidaojiaosixiang_idea = {
+
+			picture = generic_research_bonus
+
+			available = {
+				not = {
+					has_war_with = SRB
+				}
+			}
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		NMS_fodaoyitihua1_idea = {
+
+			picture = generic_research_bonus
+
+			available = {
+				not = {
+					has_war_with = SRB
+				}
+			}
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+		NMS_fodaoyitihua2_idea = {
+
+	    picture = general_staff
+
+			available = {
+				not = {
+					has_war_with = NMS
+				}
+			}
+			modifier = {
+				army_org_Factor = 0.15
+				army_morale_factor = 0.05
+			}
+		}
+		NMS_hepingdeTKM_idea = {
+			name = NMS_hepingdeTKM
+			picture = generic_manpower_bonus
+			available = {
+				not = {
+					has_war_with = TKM
+				}
+			}
+			modifier = {
+				conscription_factor = 0.05
+			}
+		}
+		NMS_fengshoudejiemei_idea = {
+			name = NMS_fengshoudejiemei
+			picture = generic_agrarian_reform
+			available = {
+				not = {
+					has_war_with = AKI
+				}
+			}
+			modifier = {
+				consumer_goods_factor = -0.04
+			}
+		}
+		NMS_huatianmaoyixieding1_idea = {
+			name = NMS_huatianmaoyixieding
+			picture = generic_research_bonus
+			available = {
+				not = {
+					has_war_with = YUK
+				}
+			}
+			modifier = {
+				research_speed_factor = 0.03
+			}
+		}
+		NMS_huatianmaoyixieding2_idea = {
+
+			picture = generic_research_bonus
+
+			available = {
+				not = {
+					has_war_with = NMS
+				}
+			}
+			modifier = {
+				research_speed_factor = 0.03
+			}
+		}
+		NMS_SRBmaoyixieding_idea = {
+			name = NMS_SRBmaoyixieding
+			picture = generic_research_bonus
+			available = {
+				not = {
+					has_war_with = SRB
+				}
+			}
+			modifier = {
+				research_speed_factor = 0.03
+			}
+		}
+		NMS_nanHXXmaoyizhongxin_idea = {
+			name = NMS_nanHXXmaoyizhongxin
+			picture = SPR_seize_the_gold_reserves
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		NMS_xiangMELchuanjiao_idea = {
+			name = NMS_xiangMELchuanjiao
+			picture = generic_research_bonus
+			available = {
+				not = {
+					has_war_with = MEL
+				}
+			}
+			modifier = {
+				research_speed_factor = 0.03
+			}
+		}
+		NMS_xiangSGSchuanjiao_idea = {
+			name = NMS_xiangSGSchuanjiao
+			picture = generic_research_bonus
+			available = {
+				not = {
+					has_war_with = SGS
+				}
+			}
+			modifier = {
+				research_speed_factor = 0.03
+			}
+		}
+		NMS_beilongduanmaoyi_idea = {
+			picture = tur_etatism
+			available = {
+				not = {
+					has_war_with = NMS
+				}
+			}
+			targeted_modifier = {
+				tag = NMS
+				cic_to_target_factor = 0.15
+			}
+		}
+		NMS_maoyichuanjiao_idea = {
+			picture = tur_etatism
+			available = {
+				not = {
+					has_war_with = NMS
+				}
+			}
+			targeted_modifier = {
+				tag = NMS
+				cic_to_target_factor = 0.05
+			}
+			modifier = {
+				research_speed_factor = 0.02
+			}
+		}
+		NMS_maoyichuanjiao2_idea = {
+			picture = generic_research_bonus
+			modifier = {
+				research_speed_factor = 0.04
+			}
+		}
+		NMS_xinyanghepingdejundui_idea = {
+			name = NMS_xinyanghepingdejundui
+			picture = kemalist_army_officers_minimal_power_loyal
+			modifier = {
+				army_org_Factor = 0.25
+				defensive_war_stability_factor = 0.1
+			}
+		}
+		NMS_xinyanghepingdejundui2_idea = {
+			name = NMS_xinyanghepingdejundui
+			picture = jap_supremacy_of_will
+			available = {
+				has_defensive_war = yes
+				has_offensive_war = no
+			}
+			modifier = {
+				army_attack_factor = 0.06
+				army_defence_factor = 0.06
+			}
+		}
+		NMS_laoshujiuchadui_idea = {
+			name = NMS_laoshujiuchadui
+			picture = generic_spy_intel
+			modifier = {
+				stability_weekly_factor = 0.002
+				operative_slot = 1
+			}
+		}
+		NMS_lingtingshengyin_idea = {
+			name = NMS_lingtingshengyin
+			picture = chi_wargaming_division
+			modifier = {
+				stability_weekly = 0.005
+			}
+		}
+		NMS_zhongzuhuyizhebaodong1_idea = {
+			name = NMS_zhongzuhuyizhebaodong
+			picture = chi_war_of_resistance2
+			modifier = {
+				stability_factor = -0.5
+			}
+		}
+		NMS_zhongzuhuyizhebaodong2_idea = {
+			name = NMS_zhongzuhuyizhebaodong
+			picture = chi_war_of_resistance2
+			modifier = {
+				stability_factor = -0.8
+			}
+		}
+	}
+}

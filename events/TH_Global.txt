@@ -287,7 +287,7 @@ country_event = {
 			}
 			custom_situation_initialize = yes
 		}
-
+		add_dynamic_modifier = { modifier = POPU_pp_gain }
 		add_dynamic_modifier = { modifier = PO_influ }
 		add_dynamic_modifier = { modifier = EXH_influ }
 		add_dynamic_modifier = { modifier = OL_influ }
@@ -295,6 +295,7 @@ country_event = {
 		add_dynamic_modifier = { modifier = Monthly_manpower }
 		add_dynamic_modifier = { modifier = SS_subject_influence }
 		add_dynamic_modifier = { modifier = FT_buff }
+		add_dynamic_modifier = { modifier = GO_nerf }
 		if = {
 			limit = {
 				tag = HUM
@@ -325,7 +326,17 @@ country_event = {
 
 		exhuastion_base_seton = yes
 
-		country_event = glo.3000 #种族关系观点修正
+		country_event = glo.3000 #种族关系观点修正	
+		if = {
+			limit = {
+				english_leaders = yes
+			}
+			army_english_leader_initial = yes
+			else = {
+				army_chinese_leader_initial = yes
+			}
+		}
+		
 	}
 
 	option = {
@@ -354,6 +365,18 @@ country_event = { #未同意
 
 	option = {
 		name = glo.2002.a
+	}
+}
+
+country_event = { #准备作战
+	id = glo.2003
+	title = glo.2003.t
+	desc = glo.2003.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = glo.2003.a
 	}
 }
 
@@ -395,5 +418,19 @@ country_event = {
 
 	option = {
 
+	}
+}
+
+country_event = {#清楚入侵倾向
+	id = glo.3001
+	fire_only_once = no
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		add_ai_strategy = {
+            type = invade
+            id = var:clear_target
+            value = -150
+        }
 	}
 }

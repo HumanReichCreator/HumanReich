@@ -41,13 +41,13 @@ on_actions = {
 			multiply_variable = { TKM_weekly = 0.2}
 			if = {
 				limit = {
-					has_completed_focus = TKM_leiguyaolizhuanyikecheng
+					has_completed_focus = TKM_Power_transfer_course
 				}
 				multiply_variable = { TKM_weekly = 1.5}
 			}
 			if = {
 				limit = {
-					has_completed_focus = TKM_chengweizhenzhengdeshenming
+					has_country_flag = TKM_Become_true_god_flag
 				}
 				multiply_variable = { TKM_weekly = 0.8}
 			}
@@ -62,13 +62,6 @@ on_actions = {
 				}
 				multiply_variable = { TKM_weekly = 0.5}
 			}
-			if = {
-				limit = {
-					has_war = yes
-					has_completed_focus = TKM_xiuzhengjiudaoju
-				}
-				set_variable = { TKM_weekly = 0}
-			}
 		}
 	}
 	on_daily_SRB = {
@@ -78,7 +71,6 @@ on_actions = {
 					has_country_flag = SRB_huanxiangxiangjiangshihua
 				}
 				every_owned_state = {
-					
 					limit = {
 						not = { check_variable = { ST_present_race = 4 } }
 					}
@@ -86,6 +78,134 @@ on_actions = {
 					add_core_of = ROOT
 					# start_resistance = yes
 				}
+			}
+		}
+	}
+	on_daily_NMS = {
+		effect = {
+			if = {
+				limit = {
+					not = { has_country_flag = NMS_wending }
+				}
+				set_variable = { NMS_zongse = 0 }
+				every_state = {
+					limit = {
+						has_dynamic_modifier = { modifier = NMS_zongse_state }
+					}
+					add_to_variable = { NMS.NMS_zongse = 1 }
+					if = {
+						limit = {
+							not = {
+								is_owned_by = ROOT
+							}
+						}
+						remove_dynamic_modifier = { modifier = NMS_zongse_state }
+					}
+				}
+				set_variable = { NMS_zongse_x = NMS_zongse }
+				multiply_variable = { NMS_zongse_x = NMS_zongse_r }
+
+				set_variable = { NMS_lvse = 0 }
+				every_state = {
+					limit = {
+						has_dynamic_modifier = { modifier = NMS_lvse_state }
+					}
+					add_to_variable = { NMS.NMS_lvse = 1 }
+					if = {
+						limit = {
+							not = {
+								is_owned_by = ROOT
+							}
+						}
+						remove_dynamic_modifier = { modifier = NMS_lvse_state }
+					}
+				}
+				set_variable = { NMS_lvse_x = NMS_lvse }
+				multiply_variable = { NMS_lvse_x = NMS_lvse_r }
+
+				set_variable = { NMS_zise = 0 }
+				every_state = {
+					limit = {
+						has_dynamic_modifier = { modifier = NMS_zise_state }
+					}
+					add_to_variable = { NMS.NMS_zise = 1 }
+					if = {
+						limit = {
+							not = {
+								is_owned_by = ROOT
+							}
+						}
+						remove_dynamic_modifier = { modifier = NMS_zise_state }
+					}
+				}
+				set_variable = { NMS_zise_x = NMS_zise }
+				multiply_variable = { NMS_zise_x = NMS_zise_r }
+
+				if = {
+					limit = {
+						check_variable = { NMS_zongse = 0 }
+						check_variable = { NMS_lvse = 0 }
+						check_variable = { NMS_zise = 0 }
+					}
+					set_country_flag = NMS_wending
+				}
+			}
+		}
+	}
+	on_daily_YYK = {
+		effect = {
+			if = {
+				limit = {
+					has_completed_focus = YYK_jiashenlianxi
+				}
+				set_variable = { YYK_jiashenlianxi = 0 }
+				every_country = {
+					limit = {
+						is_subject = no
+						has_idea = Ghost
+						capital_scope = {
+							not = {
+								is_on_continent = Netherworld
+							}
+						}
+					}
+					add_to_variable = { YYK.YYK_jiashenlianxi = 0.04 }
+				}
+			}
+			if = {
+				limit = {
+					has_idea = YYK_sihoushijie_idea
+				}
+				if = {
+					limit = {
+						country_exists = SKI
+					}
+					set_variable = { YYK_sihoushijie_conscription = SKI.opinion@ROOT }
+					# clamp_variable = { var = YYK_sihoushijie_conscription min = 0 }
+					multiply_variable = { YYK_sihoushijie_conscription = 0.001 }
+					if = {
+						limit = {
+							check_variable = { YYK_sihoushijie_conscription < 0 }
+						}
+						multiply_variable = { YYK_sihoushijie_conscription = 2 }
+						else = {
+							multiply_variable = { YYK_sihoushijie_conscription = 0.5 }
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_war_with = SKI
+					}
+					set_variable = { YYK_sihoushijie_conscription = -0.8 }
+				}
+				if = {
+					limit = {
+						not = { country_exists = SKI }
+					}
+					set_variable = { YYK_sihoushijie_conscription = 0 }
+				}
+					
 			}
 		}
 	}
@@ -227,14 +347,18 @@ on_actions = {
 
 		    CO_coring_daily = yes
 
-		    CONV_daily = yes
-
-		    state_race_manpower = yes
+			CONV_daily = yes
+			
+			state_race_manpower = yes
+			
+			ST_race_penalty_daily = yes
 
 		    region_daily_check = yes
 
 		    FT_daily = yes
 
+			POPU_pp_gain = yes
+			
 		    if = {
 		    	limit = {
 		    		tag = HUM
@@ -272,20 +396,233 @@ on_actions = {
 			# 	set_country_flag = CAS_locked
 			# }
 		    
-		}
-	}
-	on_daily_SGS = {
-		effect = {
+
+			##YOM 四季关系
 			if = {
 				limit = {
-					SGS_find_black_marketer_deci_base_trigger = yes
-					not = {check_variable = {sgs_current_black_marketer = 0} }
+					tag = YOM
+					has_idea = YYK_sihoushijie_idea
 				}
-				SGS_calculate_black_market_repo = yes
+				if = {
+					limit = {
+						country_exists = SKI
+					}
+					set_variable = { YYK_sihoushijie_conscription = SKI.opinion@ROOT }
+					# clamp_variable = { var = YYK_sihoushijie_conscription min = 0 }
+					multiply_variable = { YYK_sihoushijie_conscription = 0.001 }
+					add_to_variable = { YYK_sihoushijie_conscription = 0.05 }
+					if = {
+						limit = {
+							check_variable = { YYK_sihoushijie_conscription < 0 }
+						}
+						multiply_variable = { YYK_sihoushijie_conscription = 1 }
+						else = {
+							multiply_variable = { YYK_sihoushijie_conscription = 1 }
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_war_with = SKI
+					}
+					set_variable = { YYK_sihoushijie_conscription = -0.4 }
+				}
+				if = {
+					limit = {
+						not = { country_exists = SKI }
+					}
+					set_variable = { YYK_sihoushijie_conscription = 0.2 }
+				}	
 			}
-			SGS_RT_daily_cal = yes
+			##YOM 乱世极乐地
+			if = {
+				limit = {
+					tag = YOM
+					has_dynamic_modifier = {
+						modifier = YOM_jiledian_d_modifier
+					}
+				}
+				set_temp_variable = { v = YOM_Bliss_var }
+				if = {
+					limit = {
+						check_variable = {
+							v > 19
+						}
+					}
+					set_variable = { YOM_jiledian_3 = v }
+					add_to_variable = { YOM_jiledian_3 = -20 }
+					set_variable = { YOM_jiledian_2 = 10 }
+					set_variable = { YOM_jiledian_1 = 10 }
+					else = {
+						if = {
+							limit = {
+								check_variable = {
+									v > 9
+								}
+							}
+							set_variable = { YOM_jiledian_3 = 0 }
+							set_variable = { YOM_jiledian_2 = v }
+							add_to_variable = { YOM_jiledian_2 = -10 }
+							set_variable = { YOM_jiledian_1 = 10 }
+							else = {
+								set_variable = { YOM_jiledian_3 = 0 }
+								set_variable = { YOM_jiledian_2 = 0 }
+								set_variable = { YOM_jiledian_1 = v }
+							}
+						}
+					}
+				}
+				multiply_variable = { YOM_jiledian_3 = 0.05 }
+				multiply_variable = { YOM_jiledian_2 = -0.01 }
+				multiply_variable = { YOM_jiledian_1 = 0.04 }
+			}
+			if = {
+				limit = {
+					tag = YOM
+					has_completed_focus = ROA_YOM_87
+					not = {
+						has_country_flag = ROA_YOM_87
+					}
+				}
+				add_to_variable = { YOM_Bliss_var = 1 }
+				set_country_flag = {
+					flag = ROA_YOM_87
+					days = 365
+					value = 1
+				}
+			}
+			##YOM 吾剑之下众生平等
+			if = {
+				limit = {
+					tag = YOM
+					has_dynamic_modifier = {
+						modifier = YOM_vassal 
+					}
+				}
+				set_variable = {
+					YOM_vassal_at = 0
+				}	
+				set_variable = {
+					YOM_vassal_de = 0
+				}
+				set_variable = {
+					YOM_vassal_org = 0
+				}	
+				set_variable = {
+					YOM_vassal_mor = 0
+				}	
+				set_temp_variable = {
+					v = num_subjects  
+				}
+				#at = 0.001per
+				#de = 0.001per
+				#org = 0.01per
+				#mor = 0.005per
+				set_variable = {
+					YOM_vassal_at = v
+				}	
+				multiply_variable = {
+					YOM_vassal_at = 0.001
+				}
+				set_variable = {
+					YOM_vassal_de = v
+				}	
+				multiply_variable = {
+					YOM_vassal_de = 0.001
+				}
+				set_variable = {
+					YOM_vassal_org = v
+				}	
+				multiply_variable = {
+					YOM_vassal_org = 0.01
+				}
+				set_variable = {
+					YOM_vassal_mor = v
+				}	
+				multiply_variable = {
+					YOM_vassal_mor = 0.005
+				}
+				#at = 0.001per
+				#de = 0.001per
+				#org = 0.01per
+				#mor = 0.005per
+				if = {
+					limit = {
+						has_country_flag = YOM_sword_Enhance_2
+					}
+					set_variable = { god_subject = 0 }
+					every_country = {
+						limit = {
+							is_subject_of = ROOT
+							has_idea = God
+						}
+						add_to_variable = { ROOT.god_subject = 1 }
+					}
+					set_temp_variable = { v = god_subject }
+					multiply_temp_variable = { v = 0.001 }
+					add_to_variable = {	YOM_vassal_at = v }
+					add_to_variable = {	YOM_vassal_de = v }
+					set_temp_variable = { v = god_subject }
+					multiply_temp_variable = { v = 0.01 }
+					add_to_variable = {	YOM_vassal_org = v }
+					set_temp_variable = { v = god_subject }
+					multiply_temp_variable = { v = 0.005 }
+					add_to_variable = {	YOM_vassal_mor = v }
+				}
+				if = {
+					limit = {
+						has_country_flag = YOM_sword_Enhance_3
+					}
+					set_variable = { ghost_subject = 0 }
+					every_country = {
+						limit = {
+							is_subject_of = ROOT
+							has_idea = Ghost
+						}
+						add_to_variable = { ROOT.ghost_subject = 1 }
+					}
+					set_temp_variable = { v = ghost_subject }
+					multiply_temp_variable = { v = 0.001 }
+					add_to_variable = {	YOM_vassal_at = v }
+					add_to_variable = {	YOM_vassal_de = v }
+					set_temp_variable = { v = ghost_subject }
+					multiply_temp_variable = { v = 0.01 }
+					add_to_variable = {	YOM_vassal_org = v }
+					set_temp_variable = { v = ghost_subject }
+					multiply_temp_variable = { v = 0.005 }
+					add_to_variable = {	YOM_vassal_mor = v }
+				}
+				#at = 0.002per
+				#de = 0.002per
+				#org = 0.02per
+				#mor = 0.01per
+				if = {
+					limit = {
+						has_country_flag = YOM_sword_Enhance_4
+					}
+					set_variable = { strong_subject = 0 }
+					every_country = {
+						limit = {
+							is_subject_of = ROOT
+							check_variable = { all_value_plus_manpower > 1500 }
+						}
+						add_to_variable = { ROOT.strong_subject = 1 }
+					}
+					set_temp_variable = { v = strong_subject }
+					multiply_variable = { v = 0.002 }
+					add_to_variable = {	YOM_vassal_at = v }
+					add_to_variable = {	YOM_vassal_de = v }
+					set_temp_variable = { v = strong_subject }
+					multiply_variable = { v = 0.02 }
+					add_to_variable = {	YOM_vassal_org = v }
+					set_temp_variable = { v = strong_subject }
+					multiply_variable = { v = 0.01 }
+					add_to_variable = {	YOM_vassal_mor = v }
+				}
+			}
 		}
 	}
+
 	on_weekly = {
 		effect = {
 			if = {
@@ -300,28 +637,6 @@ on_actions = {
 	on_monthly = {
 		effect = {
 			# region_daily_check = yes
-			add_to_variable = { global.season_month = 1}
-			if = {
-				limit = {
-					check_variable = {global.season_month = 4}
-				}
-				set_variable = { global.season_month = 1 }
-			}
-
-			if = {
-				limit = {
-					check_variable = {global.season_month = 1}
-					tag = sgs
-					has_country_flag = sgs_planning_construct_flg
-				}
-				country_event = {id = sgs.30492 }
-			}
 		}
 	}
-
-	on_monthly_SGS = {
-		effect = {
-
-		}
-	} 
 }

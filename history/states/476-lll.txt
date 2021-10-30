@@ -6,13 +6,12 @@ state={
 	}
 	resources={
 		energy = 0
-		powder=4.000
-		metal=4.000
+		powder = 5.0
+		metal = 4.0
 		gas=0.000
 		crystal=15.000
 	}
 	history={
-			owner = KEK
 		146.1.1 = {
 			owner = KEK
 			add_core_of = KEK
@@ -21,14 +20,14 @@ state={
 			add_core_of = YCE
 			buildings = {
 				infrastructure = 4
-				industrial_complex = 1
-				arms_factory = 2
+				industrial_complex = 5
+				arms_factory = 3
 
 			}
 
 		}
 	}
-	manpower=13345.0
+	manpower=2254345.0
 	state_category=s12
 	buildings_max_level_factor=1.000
 }

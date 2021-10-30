@@ -10,6 +10,20 @@
 	}
 }
 division_template = {
+	name = "巨型埴轮"
+	regiments = {
+		sc_shield_infantry = { x = 0 y = 0 }
+		sc_shield_infantry = { x = 0 y = 1 }
+		sc_shield_infantry = { x = 0 y = 2 }
+		sc_shield_infantry = { x = 0 y = 3 }
+		sc_shield_infantry = { x = 0 y = 4 }
+		sc_infantry = { x = 1 y = 0 }
+		sc_infantry = { x = 1 y = 1 }
+	}
+	support = {
+	}
+}
+division_template = {
 	name = "埴轮炮兵编制"
 	regiments = {
 		sc_infantry = { x = 0 y = 0 }
@@ -33,6 +47,21 @@ division_template = {
 
 
 units = {
+	division = {
+		name = "巨型埴轮"
+		location = 6279
+		division_template = "巨型埴轮"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "巨型埴轮"
+		location = 6279
+		division_template = "巨型埴轮"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+
 	division = {
 		name = "埴轮火枪编制"
 		location = 6234

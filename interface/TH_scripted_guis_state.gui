@@ -167,11 +167,11 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name ="th_origin_race_display"
-			position = { x= -25 y = 15 }
+			position = { x= -9 y = 15 }
 			font = "hoi_18mbs"
 			text = "th_origin_race_z"
 			# text = "view_type_value"
-			format = center
+			format = left
 			maxWidth = 100
 			maxHeight = 24
 			fixedsize = yes
@@ -181,18 +181,18 @@ guiTypes = {
 		iconType ={
 		  	name ="th_origin_race"
 		  	spriteType = "GFX_state_Beast"
-		  	position = { x= 60 y = 5 } 
+		  	position = { x= 70 y = 5 } 
 		  	Orientation = "UPPER_LEFT"
 		  	pdx_tooltip = "th_origin_race_d"
 		}
 
 		instantTextBoxType = {
 			name ="th_present_race_display"
-			position = { x= -25 y = 60 }
+			position = { x= -9 y = 60 }
 			font = "hoi_18mbs"
 			text = "th_present_race_z"
 			# text = "view_type_value"
-			format = center
+			format = left
 			maxWidth = 100
 			maxHeight = 24
 			fixedsize = yes
@@ -202,7 +202,7 @@ guiTypes = {
 		iconType ={
 		  	name ="th_present_race"
 		  	spriteType = "GFX_state_Beast"
-		  	position = { x= 60 y = 50 } 
+		  	position = { x= 70 y = 50 } 
 		  	Orientation = "UPPER_LEFT"
 		  	pdx_tooltip = "th_present_race_d"
 		}

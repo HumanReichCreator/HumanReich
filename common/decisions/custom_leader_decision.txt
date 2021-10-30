@@ -170,49 +170,6 @@ custom_leader_cate = {
             }
         }
     }
-    # CIR_clown = {
-    #     visible = {
-    #         tag = CIR
-    #         custom_leader_on = yes
-    #     }
-
-    #     fire_only_once = no
-    #     complete_effect = {
-    #         current_government = yes
-    #         meta_effect = {
-    #             text = {
-    #                 if = {
-    #                     limit = {
-    #                         english_leaders = yes
-    #                     }
-    #                     create_country_leader = {
-    #                         name = "Clownpiece"
-    #                         # name = "克劳恩皮丝"
-    #                         picture ="CIR_clown.dds"
-    #                         ideology = [IDO]
-    #                     }
-    #                     else = {
-    #                         create_country_leader = {
-    #                             # name = "Clownpiece"
-    #                             name = "克劳恩皮丝"
-    #                             picture ="CIR_clown.dds"
-    #                             ideology = [IDO]
-    #                         }
-    #                     }
-    #                 }
-    #             }
-    #             IDO = "[THIS.government_type]"
-    #         }
-    #     }
-
-    #     ai_will_do = {
-    #         factor = 0
-    #         modifier = {
-    #             add = 1
-    #             caidankaiqi = yes
-    #         }
-    #     }
-    # }
     CIR_dys = {
         visible = {
             tag = CIR
@@ -643,49 +600,6 @@ custom_leader_cate = {
             }
         }
     }
-    # HUM_mokou = {
-    #     visible = {
-    #         tag = HUM
-    #         custom_leader_on = yes
-    #     }
-
-    #     fire_only_once = no
-    #     complete_effect = {
-    #         current_government = yes
-    #         meta_effect = {
-    #             text = {
-    #                 if = {
-    #                     limit = {
-    #                         english_leaders = yes
-    #                     }
-    #                     create_country_leader = {
-    #                         name = "Fujiwara no Mokou"
-    #                         # name = "藤原妹红"
-    #                         picture = "HUM_mokou.dds"
-    #                         ideology = [IDO]
-    #                     }
-    #                     else = {
-    #                         create_country_leader = {
-    #                             # name = "Fujiwara no Mokou"
-    #                             name = "藤原妹红"
-    #                             picture = "HUM_mokou.dds"
-    #                             ideology = [IDO]
-    #                         }
-    #                     }
-    #                 }
-    #             }
-    #             IDO = "[THIS.government_type]"
-    #         }
-    #     }
-
-    #     ai_will_do = {
-    #         factor = 0
-    #         modifier = {
-    #             add = 1
-    #             caidankaiqi = yes
-    #         }
-    #     }
-    # }
     HUM_keine = {
         visible = {
             tag = HUM
@@ -1074,52 +988,6 @@ custom_leader_cate = {
             }
         }
     }
-    MAM_nue = {
-        visible = {
-            or = {
-                tag = MAM
-                tag = NMS
-            }
-            custom_leader_on = yes
-        }
-
-        fire_only_once = no
-        complete_effect = {
-            current_government = yes
-            meta_effect = {
-                text = {
-                    if = {
-                        limit = {
-                            english_leaders = yes
-                        }
-                        create_country_leader = {
-                            name = "Houjuu Nue"
-                            #name = "封兽鵺"
-                            picture = "gfx/leaders/MAM/MAM_nue.dds"
-                            ideology = [IDO]
-                        }
-                        else = {
-                            create_country_leader = {
-                                # name = "Houjuu Nue"
-                                name = "封兽鵺"
-                                picture = "gfx/leaders/MAM/MAM_nue.dds"
-                                ideology = [IDO]
-                            }
-                        }
-                    }
-                }
-                IDO = "[THIS.government_type]"
-            }
-        }
-
-        ai_will_do = {
-            factor = 0
-            modifier = {
-                add = 1
-                caidankaiqi = yes
-            }
-        }
-    }
     MRS_mrs = {
         visible = {
             tag = MRS
@@ -1467,49 +1335,6 @@ custom_leader_cate = {
             }
         }
     }
-    NMS_murasa = {
-        visible = {
-            tag = NMS
-            custom_leader_on = yes
-        }
-
-        fire_only_once = no
-        complete_effect = {
-            current_government = yes
-            meta_effect = {
-                text = {
-                    if = {
-                        limit = {
-                            english_leaders = yes
-                        }
-                        create_country_leader = {
-                            name = "Murasa Minamitsu"
-                            #name = "村纱水蜜"
-                            picture = "NMS_murasa.dds"
-                            ideology = [IDO]
-                        }
-                        else = {
-                            create_country_leader = {
-                                # name = "Murasa Minamitsu"
-                                name = "村纱水蜜"
-                                picture = "NMS_murasa.dds"
-                                ideology = [IDO]
-                            }
-                        }
-                    }
-                }
-                IDO = "[THIS.government_type]"
-            }
-        }
-
-        ai_will_do = {
-            factor = 0
-            modifier = {
-                add = 1
-                caidankaiqi = yes
-            }
-        }
-    }
     NMS_syou = {
         visible = {
             tag = NMS
@@ -1536,49 +1361,6 @@ custom_leader_cate = {
                                 # name = "Toramaru Syou"
                                 name = "寅丸星"
                                 picture = "NMS_syou.dds"
-                                ideology = [IDO]
-                            }
-                        }
-                    }
-                }
-                IDO = "[THIS.government_type]"
-            }
-        }
-
-        ai_will_do = {
-            factor = 0
-            modifier = {
-                add = 1
-                caidankaiqi = yes
-            }
-        }
-    }
-    NMS_mouse = {
-        visible = {
-            tag = NMS
-            custom_leader_on = yes
-        }
-
-        fire_only_once = no
-        complete_effect = {
-            current_government = yes
-            meta_effect = {
-                text = {
-                    if = {
-                        limit = {
-                            english_leaders = yes
-                        }
-                        create_country_leader = {
-                            name = "Nazrin"
-                            #name = "娜兹玲"
-                            picture = "NMS_mouse.dds"
-                            ideology = [IDO]
-                        }
-                        else = {
-                            create_country_leader = {
-                                # name = "Nazrin"
-                                name = "娜兹玲"
-                                picture = "NMS_mouse.dds"
                                 ideology = [IDO]
                             }
                         }

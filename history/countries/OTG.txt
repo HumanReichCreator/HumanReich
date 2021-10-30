@@ -1,5 +1,4 @@
 ﻿capital = 41
-
 146.1.1 = {
     set_technology = {
         #通用武器线
@@ -52,6 +51,7 @@
         #种族
             
     }
+    
 }
 138.8.13 = {
     oob = "OTG_138"
@@ -83,30 +83,6 @@
     strict_border
     OTG_otg_problem_idea
     }
-    create_corps_commander = {
-    name = "Shameimaru Aya"
-    portrait_path = "gfx/leaders/TEG/TEG_aya.dds"
-    id = 1001
-    skill = 5
-    }
-    create_corps_commander = {
-    name = "Himekaidou Hatate"
-    portrait_path = "gfx/leaders/TEG/TEG_hatate.dds"
-    id = 1002
-    skill = 5
-    }
-    create_corps_commander = {
-    name = "Inubashiri Momiji"
-    portrait_path = "gfx/leaders/TEG/TEG_mom.dds"
-    id = 1003
-    skill = 4
-    }
-    create_corps_commander = {
-    name = "Kawashiro Nitori"
-    portrait_path = "gfx/leaders/NTR/NTR_ntr.dds"
-    id = 1004
-    skill = 4
-    }	
 }
 141.6.2 = {
     add_ideas = {
@@ -114,10 +90,6 @@
        close2
        strict_border
     }  
-    remove_unit_leader = 1001
-    remove_unit_leader = 1002
-    remove_unit_leader = 1003
-    remove_unit_leader = 1004
 
     oob = "OTG_141"
 	# set_research_slots = 0
@@ -156,16 +128,15 @@
     }
     set_popularities = {
         qinwai = 0
-        guli = 5
+        guli = 3
         neworder = 0
-        oldorder = 30
+        oldorder = 97
         fandong = 0
-        authordemo = 65
     }
     
 }
 create_country_leader = {
-	# name = "Council"
+	# name = "Great Tengu Parliament"
     name = "大天狗议会"
 	picture = "OTG_council.dds"
 	ideology = guli_type
@@ -173,7 +144,7 @@ create_country_leader = {
 	}
 }
 create_country_leader = {
-    # name = "Council"
+    # name = "Great Tengu Parliament"
     name = "大天狗议会"
     picture = "OTG_council.dds"
     ideology = neworder_type
@@ -181,18 +152,10 @@ create_country_leader = {
     }
 }
 create_country_leader = {
-    # name = "Council"
+    # name = "Great Tengu Parliament"
     name = "大天狗议会"
     picture = "OTG_council.dds"
     ideology = oldorder_type
-    traits = {
-    }
-}
-create_country_leader = {
-    # name = "Council"
-    name = "大天狗议会"
-    picture = "OTG_council.dds"
-    ideology = authordemo_type
     traits = {
     }
 }

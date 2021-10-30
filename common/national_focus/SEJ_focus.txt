@@ -1,0 +1,3727 @@
+focus_tree = {
+	id = SEJ_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SEJ
+		}
+	}
+
+  continuous_focus_position = { x = 50 y = 1600 }
+
+  shared_focus = ty_medium_main 
+  # GFX_goal_continuous_air_production
+  # GFX_goal_continuous_non_factory_construct
+  # GFX_goal_continuous_reduce_training_time
+  # GFX_goal_continuous_boost_freedom
+  # GFX_goal_continuous_suppression
+  # GFX_goal_continuous_restrict_freedom
+  # GFX_goal_continuous_def_against_influence
+  # GFX_goal_continuous_research
+  # GFX_goal_continuous_increase_nu
+  # GFX_goal_continuous_repairments
+  # GFX_goal_continuous_naval_production
+  # GFX_goal_continuous_armor_production
+  # GFX_focus_generic_steel
+  # GFX_focus_generic_aluminum
+  # GFX_focus_generic_tungsten
+  # GFX_focus_research2
+  # GFX_focus_generic_treaty
+  # GFX_focus_generic_military_academy
+  # GFX_focus_generic_military_mission
+  # GFX_focus_generic_concessions
+  # GFX_focus_generic_self_management
+  # GFX_focus_generic_license_production
+  # GFX_focus_smiling_buddha
+  # GFX_focus_generic_join_comintern
+  # GFX_focus_generic_home_defense
+  # GFX_focus_generic_the_giant_wakes
+  # GFX_focus_generic_cryptologic_bomb
+  # GFX_focus_generic_socialist_science
+  # GFX_focus_generic_italy_first
+  # GFX_focus_generic_little_entente
+  # GFX_focus_generic_soviet_politics
+  # GFX_focus_generic_strike_at_democracy3
+  # GFX_focus_generic_strike_at_democracy2
+  # GFX_focus_generic_strike_at_democracy1
+  # GFX_focus_generic_anti_fascist_diplomacy
+  # GFX_focus_generic_japanese_imperial_glory
+  # GFX_focus_generic_support_the_left_right
+  # GFX_focus_generic_polish_deal
+  # GFX_focus_generic_air_defense
+  # GFX_focus_generic_coastal_fort
+  # GFX_focus_generic_paratrooper
+  # GFX_focus_generic_diplomatic_treaty
+  # GFX_focus_NZL_bob_semple_tank
+  # GFX_goal_unknown
+  # GFX_goal_generic_production
+  # GFX_goal_shine_test
+  # GFX_goal_generic_attack_allies
+  # GFX_goal_generic_oil_refinery
+  # GFX_goal_generic_positive_trade_relations
+  # GFX_goal_generic_military_deal
+  # GFX_goal_generic_wolf_pack
+  # GFX_goal_generic_amphibious_assault
+  # GFX_goal_generic_dangerous_deal
+  # GFX_goal_generic_military_sphere
+  # GFX_goal_generic_major_alliance
+  # GFX_goal_generic_more_territorial_claims
+  # GFX_goal_generic_major_war
+  # GFX_goal_generic_soviet_construction
+  # GFX_goal_generic_fortify_city
+  # GFX_goal_generic_war_with_comintern
+  # GFX_goal_generic_territory_or_war
+  # GFX_goal_generic_forceful_treaty
+  # GFX_goal_generic_scientific_exchange
+  # GFX_goal_generic_intelligence_exchange
+  # GFX_goal_generic_small_arms
+  # GFX_goal_generic_trade
+  # GFX_goal_generic_consumer_goods
+  # GFX_goal_generic_defence
+  # GFX_goal_generic_air_production
+  # GFX_goal_generic_radar
+  # GFX_goal_generic_alliance
+  # GFX_goal_generic_construction2
+  # GFX_goal_generic_air_fighter2
+  # GFX_goal_generic_cavalry
+  # GFX_goal_generic_construction
+  # GFX_goal_generic_production2
+  # GFX_goal_generic_neutrality_focus
+  # GFX_goal_generic_secret_weapon
+  # GFX_goal_generic_navy_cruiser
+  # GFX_goal_generic_construct_naval_dockyard
+  # GFX_goal_generic_air_naval_bomber
+  # GFX_goal_generic_national_unity
+  # GFX_goal_generic_construct_infrastructure
+  # GFX_goal_generic_construct_mil_factory
+  # GFX_goal_generic_construct_civ_factory
+  # GFX_goal_generic_army_artillery2
+  # GFX_goal_generic_army_artillery
+  # GFX_goal_generic_army_doctrines
+  # GFX_goal_generic_army_tanks
+  # GFX_goal_generic_army_motorized
+  # GFX_goal_generic_navy_doctrines_tactics
+  # GFX_goal_generic_navy_anti_submarine
+  # GFX_goal_generic_navy_submarine
+  # GFX_goal_generic_navy_carrier
+  # GFX_goal_generic_navy_battleship
+  # GFX_goal_generic_air_doctrine
+  # GFX_goal_generic_CAS
+  # GFX_goal_generic_air_fighter
+  # GFX_goal_generic_air_bomber
+  # GFX_goal_generic_propaganda
+  # GFX_goal_generic_special_forces
+  # GFX_focus_wonderweapons
+  # GFX_focus_research
+  # GFX_focus_rocketry
+  # GFX_goal_support_fascism
+  # GFX_goal_support_communism
+  # GFX_goal_support_fourth_int
+  # GFX_goal_support_democracy
+  # GFX_goal_generic_allies_build_infantry
+  # GFX_goal_generic_build_tank
+  # GFX_goal_generic_build_airforce
+  # GFX_goal_generic_axis_build_infantry
+  # GFX_goal_generic_build_navy
+  # GFX_goal_generic_improve_relations
+  # GFX_goal_generic_political_pressure
+  # GFX_goal_generic_demand_territory
+  # GFX_goal_generic_occupy_start_war
+  # GFX_goal_generic_occupy_states_coastal
+  # GFX_goal_generic_occupy_states_ongoing_war
+  # GFX_goal_generic_position_armies
+  # GFX_goal_generic_construct_military
+  # GFX_goal_generic_construct_civilian
+  # GFX_focus_generic_cruiser2
+  # GFX_focus_generic_destroyer
+  # GFX_focus_generic_navy_battleship2
+  # GFX_focus_generic_industry_3
+  # GFX_focus_generic_industry_2
+  # GFX_focus_focus_generic_industry_1
+  # GFX_focus_generic_combined_arms
+  # GFX_focus_generic_tank_production
+  # GFX_focus_generic_army_tanks2
+  # GFX_goal_fortify_the_westwall
+  # GFX_goal_reichsautobahn
+  # GFX_goal_panzerwaffe
+  # GFX_goal_expand_the_luftwaffe
+  # GFX_goal_molotov_ribbentrop_pact
+  # GFX_goal_anschluss
+  # GFX_goal_rhineland
+  # GFX_goal_poland_goal
+  # GFX_goal_demand_sudetenland
+  # GFX_goal_tripartite_pact
+  # GFX_goal_anti_comintern_pact
+  # GFX_focus_ger_reichskommisariats
+  # GFX_focus_generic_rubber
+  # GFX_focus_ger_revive_kaiserreich
+  # GFX_focus_ger_return_of_the_kaiser
+  # GFX_focus_ger_assassinate_mussolini
+  # GFX_focus_ger_great_red_menace
+  # GFX_focus_ger_oppose_hitler
+  # GFX_focus_ger_bulwark_against_bolshevism
+  # GFX_focus_ger_strike_at_the_source
+  # GFX_focus_ger_accept_british_naval_dominance
+  # GFX_focus_ger_break_anglo_french_colonial_hegemony
+  # GFX_goal_tfv_sever_ties_with_uk
+  # GFX_goal_tfv_strengthen_commonwealth_ties
+  # GFX_goal_tfv_generic_tech_sharing
+  # GFX_goal_tfv_burn_the_royal_portraits
+  # GFX_goal_tfv_can_forced_quebec_conscription
+  # GFX_goal_tfv_can_compromise_with_quebec
+  # GFX_focus_AST_never_gallipoli
+  # GFX_focus_generic_provoke_border_clashes
+  # GFX_focus_AST_rats_tobruk
+  # GFX_focus_AST_squander_bug
+  # GFX_focus_AST_war_japan
+  # GFX_goal_tfv_saf_anti_colonialist_crusade
+  # GFX_goal_tfv_saf_support_german_coup
+  # GFX_goal_tfv_saf_secure_interests_in_africa
+  # GFX_goal_tfv_saf_support_ossebrandwag
+  # GFX_focus_rom_preserve_romania
+  # GFX_focus_rom_abdicate
+  # GFX_focus_rom_coup
+  # GFX_focus_rom_handle_king
+  # GFX_focus_rom_royal_dictatorship
+  # GFX_focus_rom_parties_end
+  # GFX_focus_hun_elect_a_king
+  # GFX_focus_hun_assassinate_horthy
+  # GFX_focus_secret_rearmament
+  # GFX_focus_proclaim_the_restauration_of_Austria_Hungary
+  # GFX_focus_renounce_the_treaty_of_trianon
+  # GFX_focus_attack_switzerland
+  # GFX_focus_CZE_military_aeronautical_institute
+  # GFX_focus_CZE_german_puppet
+  # GFX_focus_CZE_military_research_institute
+  # GFX_focus_YUG_zmaj
+  # GFX_focus_YUG_rogozarski
+  # GFX_focus_YUG_ikarus
+  # GFX_focus_YUG_banovina_of_croatia
+  # GFX_focus_YUG_pan_slavic_congress
+  # GFX_focus_RAJ_all_india_forward_bloc
+  # GFX_focus_RAJ_british_investors
+  # GFX_focus_RAJ_clamp_down_on_corruption
+  # GFX_focus_RAJ_indian_gentlemen_offcers
+  # GFX_focus_RAJ_indian_gurkhas
+  # GFX_focus_RAJ_indianisation_of_army
+  # GFX_focus_RAJ_lions_of_the_great_war
+  # GFX_focus_RAJ_seek_help_from_germany
+  # GFX_focus_RAJ_seek_help_from_soviet
+  # GFX_focus_RAJ_two_nation_theory
+  # GFX_focus_generic_commonwealth_build_infantry
+  # GFX_focus_chi_legislative_yuan
+  # GFX_focus_chi_examination_yuan
+  # GFX_focus_chi_united_front
+  # GFX_focus_chi_army_reform
+  # GFX_focus_chi_flying_tigers
+  # GFX_focus_chi_whampoa_military_academy
+  # GFX_focus_chi_one_china_policy
+  # GFX_focus_chi_mission_to_germany
+  # GFX_focus_chi_mission_to_the_soviet_union
+  # GFX_focus_chi_reach_out_to_france
+  # GFX_focus_chi_british_cooperation
+  # GFX_focus_chi_mission_to_the_us
+  # GFX_focus_chi_collaboration_with_the_japanese
+  # GFX_focus_chi_cooperation_with_the_nationalists
+  # GFX_focus_chi_proclaim_rival_government
+  # GFX_focus_chi_cooperation_with_the_communists
+  # GFX_focus_man_claim_the_mandate_of_heaven
+  # GFX_focus_prc_proclaim_the_peoples_republic
+  # GFX_focus_prc_infiltration
+  # GFX_focus_prc_remove_chiang_kai_shek
+  # GFX_focus_prc_social_democracy
+  # GFX_focus_prc_agrarian_socialism
+  # GFX_focus_prc_maoism
+  # GFX_focus_generic_china1
+  # GFX_focus_jap_strike_south
+  # GFX_focus_jap_cast_the_die
+  # GFX_focus_jap_zaibatsu
+  # GFX_focus_jap_showa_restoration
+  # GFX_focus_jap_pacific_guardian
+  # GFX_focus_jap_manchurian_project
+  # GFX_focus_jap_spiritual_mobilization
+  # GFX_focus_jap_zero
+  
+		# ai_will_do = {
+		# 	factor = 1
+		# }
+
+		# bypass = {
+			
+		# }
+
+		# cancel_if_invalid = no
+		# continue_if_invalid = yes
+		# available_if_capitulated = yes
+	default = no
+	#################种田线####################
+  #政治线
+  focus = {
+      id = SEJ_wendingneibu
+      icon = GFX_goal_generic_national_unity
+      cost = 12
+      x = 4
+      y = 0
+
+      # prerequisite = {
+      #   focus = SEJ_burugongyehua
+      # }
+      # mutually_exclusive = {
+      #   focus = ty_tourububing
+      # }
+
+      # relative_position_id = SEJ_kaifawenquan
+
+      available ={
+        has_global_flag = main_scenario
+      }
+
+      completion_reward = {
+        add_stability = 0.15
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+	
+  focus = {
+      id = SEJ_huizhenchenghezhoubian
+      icon = GFX_goal_generic_construct_infrastructure
+      cost = 10
+      x = -2
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_wendingneibu
+      }
+      # mutually_exclusive = {
+      #   focus = ty_tourububing
+      # }
+
+      relative_position_id = SEJ_wendingneibu
+
+      available ={
+
+      }
+
+      completion_reward = {
+        every_owned_state = {
+          limit = {
+            is_core_of = ROOT
+          }
+          add_extra_state_shared_building_slots = 1
+        }
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  } 
+  focus = {
+      id = SEJ_jianzaomingong
+      icon = GFX_goal_generic_construct_civ_factory
+      cost = 10
+      x = -1
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_huizhenchenghezhoubian
+      }
+      # mutually_exclusive = {
+      #   focus = ty_tourububing
+      # }
+
+      relative_position_id = SEJ_huizhenchenghezhoubian
+
+      available ={
+
+      }
+
+      completion_reward = {
+        random_owned_controlled_state = {
+          add_extra_state_shared_building_slots = 3
+          add_building_construction = {
+            type = industrial_complex
+            level = 3
+            instant_build = yes
+          }
+        }
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  } 
+  focus = {
+      id = SEJ_jianzaojungong
+      icon = GFX_goal_generic_construct_mil_factory
+      cost = 10
+      x = -1
+      y = 2
+
+      prerequisite = {
+        focus = SEJ_jianzaomingong
+      }
+      # mutually_exclusive = {
+      #   focus = ty_tourububing
+      # }
+
+      relative_position_id = SEJ_huizhenchenghezhoubian
+
+      available ={
+
+      }
+
+      completion_reward = {
+        random_owned_controlled_state = {
+          add_extra_state_shared_building_slots = 3
+          add_building_construction = {
+            type = arms_factory
+            level = 3
+            instant_build = yes
+          }
+        }
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  } 
+  focus = {
+      id = SEJ_xinjianshefangshi
+      icon = GFX_goal_generic_construction
+      cost = 10
+      x = 1
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_huizhenchenghezhoubian
+      }
+      # mutually_exclusive = {
+      #   focus = ty_tourububing
+      # }
+
+      relative_position_id = SEJ_huizhenchenghezhoubian
+
+      available ={
+
+      }
+
+      completion_reward = {
+        add_tech_bonus = {
+          category = build
+          uses = 1
+          bonus = 0.8
+        }
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+  focus = {
+      id = SEJ_shengchanlitisheng
+      icon = GFX_goal_generic_production
+      cost = 10
+      x = 1
+      y = 2
+
+      prerequisite = {
+        focus = SEJ_xinjianshefangshi
+      }
+      # mutually_exclusive = {
+      #   focus = ty_tourububing
+      # }
+
+      relative_position_id = SEJ_huizhenchenghezhoubian
+
+      available ={
+
+      }
+
+      completion_reward = {
+        add_tech_bonus = {
+          category = industrys
+          uses = 1
+          bonus = 0.8
+        }
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+  focus = {
+      id = SEJ_yongbufangqijinbu
+      icon = GFX_goal_generic_production2
+      cost = 10
+      x = -2
+      y = 3
+
+      prerequisite = {
+        focus = SEJ_jianzaojungong
+      }
+      # mutually_exclusive = {
+      #   focus = ty_tourububing
+      # }
+
+      relative_position_id = SEJ_huizhenchenghezhoubian
+
+      available ={
+
+      }
+
+      completion_reward = {
+        add_ideas = SEJ_yongbufangqijinbu_idea
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+  focus = {
+      id = SEJ_bangzhumengyoujianshe
+      icon = GFX_goal_generic_improve_relations
+      cost = 10
+      x = 0
+      y = 3
+
+      prerequisite = {
+        focus = SEJ_jianzaojungong
+        focus = SEJ_shengchanlitisheng
+      }
+      # mutually_exclusive = {
+      #   focus = ty_tourububing
+      # }
+
+      relative_position_id = SEJ_huizhenchenghezhoubian
+
+      available ={
+
+      }
+
+      completion_reward = {
+        every_country = {
+          limit = {
+            is_subject_of = ROOT
+          }
+          
+          random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+              type = arms_factory
+              level = 2
+              instant_build = yes
+            }
+          }
+          random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+              type = industrial_complex
+              level = 2
+              instant_build = yes
+            }
+          }
+        }
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+  focus = {
+      id = SEJ_burugongyehua
+      icon = GFX_goal_continuous_repairments
+      cost = 10
+      x = -1
+      y = 4
+
+      prerequisite = {
+        focus = SEJ_bangzhumengyoujianshe
+      }
+      prerequisite = {
+        focus = SEJ_yongbufangqijinbu
+      }
+      # mutually_exclusive = {
+      #   focus = ty_tourububing
+      # }
+
+      relative_position_id = SEJ_huizhenchenghezhoubian
+
+      available ={
+
+      }
+
+      completion_reward = {
+        add_tech_bonus = {
+          bonus = 1
+          uses = 2
+          category = build
+        }
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+  focus = {
+      id = SEJ_tichangxinyanjiu
+      icon = GFX_goal_tfv_generic_tech_sharing
+      cost = 10
+      x = 1
+      y = 4
+
+      prerequisite = {
+        focus = SEJ_bangzhumengyoujianshe
+      }
+      # mutually_exclusive = {
+      #   focus = ty_tourububing
+      # }
+
+      relative_position_id = SEJ_huizhenchenghezhoubian
+
+      available ={
+
+      }
+
+      completion_reward = {
+        add_tech_bonus = {
+          category = math
+          uses = 1
+          bonus = 0.8
+        }
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+  focus = {
+      id = SEJ_keyannenglitisheng
+      icon = GFX_focus_research
+      cost = 10
+      x = -2
+      y = 6
+
+      prerequisite = {
+        focus = SEJ_burugongyehua
+        focus = SEJ_tichangxinyanjiu
+      }
+      prerequisite = {
+        focus = SEJ_kongzhijianxiequan
+      }
+      # mutually_exclusive = {
+      #   focus = ty_tourububing
+      # }
+
+      relative_position_id = SEJ_huizhenchenghezhoubian
+
+      available ={
+
+      }
+
+      completion_reward = {
+        add_research_slot = 1
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+
+  
+  focus = {
+      id = SEJ_fansiguoqu
+      icon = GFX_goal_generic_demand_territory
+      cost = 12
+      x = 10
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_wendingneibu
+      }
+      # mutually_exclusive = {
+      #   focus = ty_tourububing
+      # }
+
+      relative_position_id = SEJ_wendingneibu
+
+      available ={
+        has_global_flag = SEJ_zhengzhiweijijieshu
+      }
+      bypass = {
+        custom_trigger_tooltip = {
+          tooltip = SEJ_fankangchenggong2
+          has_country_flag = SEJ_fankangchenggong
+        }
+      }
+
+      completion_reward = {
+        add_political_power = 50
+        add_stability = 0.05
+        remove_ideas = SEJ_zhengzhiweiji_idea
+        hidden_effect = {
+          news_event = { id = sei.8 days = 2}
+        }
+        conservativeincrease = yes
+      }
+      ai_will_do = {
+        factor = 5
+      }
+  }
+  focus = {
+      id = SEJ_xinshidaixiakeshang
+      icon = GFX_goal_support_communism
+      cost = 12
+      x = -2
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_fansiguoqu
+      }
+      mutually_exclusive = {
+        focus = SEJ_xiaorengongzhu
+        focus = SEJ_maixiangdayaoguai
+        focus = SEJ_chedizhongzhihezuo
+      }
+
+      relative_position_id = SEJ_fansiguoqu
+
+      available ={
+        custom_trigger_tooltip = {
+          tooltip = SEJ_fankangchenggong
+          not = { has_country_flag = SEJ_fankangchenggong }
+        }
+      }
+
+      completion_reward = {
+        go_fandong = yes
+        add_ideas = can_create_faction_idea
+        create_faction = SEJ_faction1
+        add_war_support = 0.05
+        add_popularity = {
+          ideology = fandong
+          popularity = 0.12
+        }
+        swap_ideas = { add_idea = Village remove_idea = Tribal}
+
+      }
+      ai_will_do = {
+        factor = 3
+        modifier = {
+          factor = 0
+          not = {
+            has_game_rule = {
+              option = path_random
+              rule = SEJ_paths
+            }
+            has_game_rule = {
+              option = SEJ_path_fandong
+              rule = SEJ_paths
+            }
+          }
+        }
+        modifier = {
+          factor = 2.5
+          date > 148.1.1
+        }
+      }
+  }
+  focus = {
+      id = SEJ_linglidezhongyaoxing
+      icon = GFX_goal_generic_army_artillery
+      cost = 12
+      x = -2
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_xinshidaixiakeshang
+        focus = SEJ_maixiangdayaoguai
+      }
+      # mutually_exclusive = {
+      #   focus = ty_tourububing
+      # }
+
+      relative_position_id = SEJ_xinshidaixiakeshang
+
+      available ={
+
+      }
+
+      completion_reward = {
+        PO_add8 = yes
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 2.5
+          date > 148.1.1
+        }
+      }
+  }
+  focus = {
+      id = SEJ_laizhibuyiduli
+      icon = GFX_goal_molotov_ribbentrop_pact
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_xinshidaixiakeshang
+      }
+      # mutually_exclusive = {
+      #   focus = ty_tourububing
+      # }
+
+      relative_position_id = SEJ_xinshidaixiakeshang
+
+      available ={
+
+      }
+
+      completion_reward = {
+        add_ideas = SEJ_laizhibuyiduli_idea
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 2.5
+          date > 148.1.1
+        }
+      }
+  }
+  focus = {
+      id = SEJ_cuihuijiushidaiyunie
+      icon = GFX_goal_generic_political_pressure
+      cost = 12
+      x = 0
+      y = 2
+
+      prerequisite = {
+        focus = SEJ_linglidezhongyaoxing
+      }
+      prerequisite = {
+        focus = SEJ_laizhibuyiduli
+      }
+      # mutually_exclusive = {
+      #   focus = ty_tourububing
+      # }
+
+      relative_position_id = SEJ_xinshidaixiakeshang
+
+      available ={
+
+      }
+
+      completion_reward = {
+        add_named_threat = {
+          threat = 3
+          name = SEJ_cuihuijiushidaiyunie
+        }
+        add_stability = 0.1
+        add_ideas = SEJ_cuihuijiushidaiyunie_idea
+        hidden_effect = {
+          news_event = { id = sei.28 days = 2}
+        }
+        lobbyincrease = yes
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 2.5
+          date > 148.1.1
+        }
+      }
+  }
+  focus = {
+      id = SEJ_xiaorengongzhu
+      icon = GFX_goal_support_democracy
+      cost = 12
+      x = 2
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_fansiguoqu
+      }
+      mutually_exclusive = {
+        focus = SEJ_xinshidaixiakeshang
+        focus = SEJ_maixiangdayaoguai
+        focus = SEJ_chedizhongzhihezuo
+      }
+
+      relative_position_id = SEJ_fansiguoqu
+
+      available ={
+        custom_trigger_tooltip = {
+          tooltip = SEJ_fankangchenggong
+          not = { has_country_flag = SEJ_fankangchenggong }
+        }
+      }
+
+      completion_reward = {
+        go_qinwai = yes
+        add_popularity = {
+          ideology = qinwai
+          popularity = 0.12
+        }
+        add_stability = 0.1
+        set_politics = {
+          ruling_party = qinwai
+        }
+        lobbydecrease = yes
+      }
+      ai_will_do = {
+        factor = 2
+        modifier = {
+          factor = 0
+          not = {
+            has_game_rule = {
+              option = path_random
+              rule = SEJ_paths
+            }
+            has_game_rule = {
+              option = SEJ_path_qinwai
+              rule = SEJ_paths
+            }
+          }
+        }
+        modifier = {
+          factor = 2.5
+          date > 148.1.1
+        }
+      }
+  }
+  focus = {
+      id = SEJ_gudinghuizhencheng
+      icon = GFX_focus_generic_industry_3
+      cost = 12
+      x = -2
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_xiaorengongzhu
+        focus = SEJ_xinshidaixiakeshang
+      }
+
+      relative_position_id = SEJ_xiaorengongzhu
+
+      available ={
+
+      }
+
+      completion_reward = {
+        add_timed_idea = { days = 365 idea = SEJ_gudinghuizhencheng_idea }
+        capital_scope = {
+          add_manpower = 4000
+          add_building_construction = {
+            type = industrial_complex
+            instant_build = yes
+            level = 2
+          }
+          add_extra_state_shared_building_slots = 5
+          add_resource = { type = energy amount = 5}
+          add_resource = { type = gas amount = 10}
+          
+        }
+        conservativeincrease = yes
+        hidden_effect = {
+          news_event = { days = 2 id = sei.29}
+        }
+
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+  focus = {
+      id = SEJ_xiaozhuiyanjiu
+      icon = GFX_goal_continuous_research
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_xiaorengongzhu
+        focus = SEJ_chedizhongzhihezuo
+      }
+
+      relative_position_id = SEJ_xiaorengongzhu
+
+      available ={
+
+      }
+
+      completion_reward = {
+        add_ideas = SEJ_xiaozhuiyanjiu_idea
+        OL_minus5 = yes
+
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 2.5
+          date > 148.1.1
+        }
+      }
+  }
+  focus = {
+      id = SEJ_xinhuizhencheng
+      icon = GFX_goal_generic_major_alliance
+      cost = 12
+      x = 1
+      y = 2
+
+      prerequisite = {
+        focus = SEJ_gudinghuizhencheng
+        focus = SEJ_xiaozhuiyanjiu
+        focus = SEJ_quganzhengxie
+      }
+
+      relative_position_id = SEJ_xiaorengongzhu
+
+      available ={
+        not = {
+          has_completed_focus = SEJ_xinshidaixiakeshang
+        }
+      }
+
+      completion_reward = {
+        add_political_power = 100
+        # add_war_support = 0.15
+        swap_ideas = { add_idea = Town remove_idea = Tribal}
+        hidden_effect = {
+          news_event = {days = 2 id = sei.30}
+        }
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 2.5
+          date > 148.1.1
+        }
+      }
+  }
+  
+  
+  focus = {
+      id = SEJ_sixianggonggu
+      icon = GFX_goal_generic_national_unity
+      cost = 12
+      x = 0
+      y = 4
+
+      prerequisite = {
+        focus = SEJ_cuihuijiushidaiyunie
+        focus = SEJ_xinhuizhencheng
+      }
+
+      relative_position_id = SEJ_fansiguoqu
+
+      available ={
+        or = {
+          has_completed_focus = SEJ_xinshidaixiakeshang
+          has_completed_focus = SEJ_xiaorengongzhu
+        }
+      }
+
+      completion_reward = {
+        LS_base_time_minus0.3 = yes
+        add_war_support = 0.05
+        add_stability = 0.1
+        add_named_threat = {
+          threat = 5.5
+          name = SEJ_sixianggonggu
+        }
+        RMI = {
+          can_core = yes
+        }
+        NIB = {
+          can_core = yes
+        }
+        ONS = {
+          can_core = yes
+        }
+
+        every_country = {
+          limit = {
+            is_subject_of = ROOT
+          }
+          low_puppet_level = yes
+        }
+        
+        
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 2.5
+          date > 148.1.1
+        }
+      }
+  }
+
+  focus = {
+      id = SEJ_maixiangdayaoguai
+      icon = GFX_goal_support_fascism
+      cost = 12
+      x = -6
+      y = 1
+
+      mutually_exclusive = {
+          focus = SEJ_xinshidaixiakeshang
+          focus = SEJ_xiaorengongzhu
+          focus = SEJ_chedizhongzhihezuo
+      }
+
+      prerequisite = {
+        focus = SEJ_fansiguoqu
+      }
+
+      relative_position_id = SEJ_fansiguoqu
+
+      available ={
+        custom_trigger_tooltip = {
+          tooltip = SEJ_fankangchenggong
+          not = { has_country_flag = SEJ_fankangchenggong }
+        }
+      }
+
+      completion_reward = {
+        go_neworder = yes
+        add_popularity = {
+          ideology = neworder
+          popularity = 0.12
+        }
+        set_politics = {
+          ruling_party = neworder
+        }
+        conservativedecrease = yes
+      }
+      ai_will_do = {
+        factor = 1.5
+        modifier = {
+          factor = 2.5
+          date > 148.1.1
+        }
+        modifier = {
+          factor = 0
+          not = {
+            has_game_rule = {
+              option = path_random
+              rule = SEJ_paths
+            }
+            has_game_rule = {
+              option = SEJ_path_neworder
+              rule = SEJ_paths
+            }
+          }
+        }
+      }
+  }
+
+  focus = {
+      id = SEJ_jiejinbayunzi
+      icon = GFX_goal_generic_improve_relations
+      cost = 12
+      x = 0
+      y = 1
+
+      mutually_exclusive = {
+      }
+
+      prerequisite = {
+        focus = SEJ_maixiangdayaoguai
+      }
+
+      relative_position_id = SEJ_maixiangdayaoguai
+
+      available ={
+
+      }
+
+      completion_reward = {
+        add_opinion_modifier = {
+          target = YKR modifier = SEJ_jiejinbayunzi_op
+        }
+        reverse_add_opinion_modifier = {
+          target = YKR modifier = SEJ_jiejinbayunzi_op
+        }
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+
+  focus = {
+      id = SEJ_xuanchengbolizhize
+      icon = GFX_goal_generic_forceful_treaty
+      cost = 12
+      x = 0
+      y = 1
+
+      mutually_exclusive = {
+      }
+
+      prerequisite = {
+        focus = SEJ_jiejinbayunzi
+      }
+
+      relative_position_id = SEJ_jiejinbayunzi
+
+      available ={
+
+      }
+
+      completion_reward = {
+        add_opinion_modifier = {
+          modifier = SEJ_xuanchengbolizhize_op
+          target = HKR
+        }
+        reverse_add_opinion_modifier = {
+          modifier = SEJ_xuanchengbolizhize_op
+          target = HKR
+        }
+        add_war_support = 0.05
+        add_named_threat = {
+          threat = 1
+          name = SEJ_xuanchengbolizhize
+        }
+        hidden_effect = {
+          news_event = { id = sei.43 days = 2}
+        }
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+  
+  focus = {
+      id = SEJ_xuanchengxinnengli
+      icon = GFX_goal_generic_political_pressure
+      cost = 12
+      x = 0
+      y = 1
+
+      mutually_exclusive = {
+      }
+
+      prerequisite = {
+        focus = SEJ_linglidezhongyaoxing
+      }
+
+      relative_position_id = SEJ_linglidezhongyaoxing
+
+      available ={
+        has_completed_focus = SEJ_maixiangdayaoguai
+      }
+
+      completion_reward = {
+        add_political_power = 100
+        PO_add5 = yes
+        hidden_effect = {
+          news_event = { id = sei.44 days = 2}
+        }
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+
+  focus = {
+      id = SEJ_shuliweiyan
+      icon = GFX_goal_generic_propaganda
+      cost = 12
+      x = 0
+      y = 3
+
+      mutually_exclusive = {
+      }
+
+      prerequisite = {
+        focus = SEJ_xuanchengbolizhize
+        focus = SEJ_xuanchengxinnengli
+      }
+
+      relative_position_id = SEJ_maixiangdayaoguai
+
+      available ={
+
+      }
+
+      completion_reward = {
+        add_named_threat = {
+          name = SEJ_shuliweiyan
+          threat = 2.5
+        }
+        RMI = {
+          can_core = yes
+        }
+        ONS = {
+          can_core = yes
+        }
+        NIB = {
+          can_core = yes
+        }
+
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+
+  focus = {
+      id = SEJ_chedizhongzhihezuo
+      icon = GFX_goal_support_fascism
+      cost = 12
+      x = 5
+      y = 1
+
+      mutually_exclusive = {
+          focus = SEJ_xinshidaixiakeshang
+          focus = SEJ_xiaorengongzhu
+          focus = SEJ_maixiangdayaoguai
+      }
+
+      prerequisite = {
+        focus = SEJ_fansiguoqu
+      }
+
+      relative_position_id = SEJ_fansiguoqu
+
+      available ={
+        custom_trigger_tooltip = {
+          tooltip = SEJ_fankangchenggong2
+          has_country_flag = SEJ_fankangchenggong
+        }
+      }
+
+      completion_reward = {
+        go_neworder = yes
+        add_political_power = 100
+        add_popularity = {
+          ideology = neworder
+          popularity = 0.12
+        }
+        set_politics = {
+          ruling_party = neworder
+        }
+        lobbyincrease = yes
+        conservativedecrease = yes
+      }
+      ai_will_do = {
+        factor = 2
+        modifier = {
+          factor = 2.5
+          date > 148.1.1
+        }
+      }
+  }
+
+
+  focus = {
+      id = SEJ_quganzhengxie
+      icon = GFX_goal_SEJ_kick_seija
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_chedizhongzhihezuo
+      }
+
+      relative_position_id = SEJ_chedizhongzhihezuo
+
+      available ={
+
+      }
+
+      completion_reward = {
+        add_stability = 0.3
+        remove_unit_leader = 999
+        hidden_effect ={
+          news_event = { id = sei.46 days = 2}
+        }
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+
+  focus = {
+      id = SEJ_kuileizhenmiaowan
+      icon = GFX_goal_SEJ_vassalize_shinmyoumaru
+      cost = 12
+      x = 2
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_chedizhongzhihezuo
+      }
+
+      relative_position_id = SEJ_chedizhongzhihezuo
+
+      available ={
+
+      }
+
+      completion_reward = {
+        101 = {
+          add_core_of = ROOT
+          add_building_construction = {
+            level = 1
+            type = infrastructure
+            instant_build = yes
+          }
+        }
+        119 = {
+          add_core_of = ROOT
+          add_building_construction = {
+            level = 1
+            type = infrastructure
+            instant_build = yes
+          }
+        }
+        130 = {
+          add_core_of = ROOT
+          add_building_construction = {
+            level = 1
+            type = infrastructure
+            instant_build = yes
+          }
+        }
+
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+
+  focus = {
+      id = SEJ_huaqinghexianzhedejiexian
+      icon = GFX_goal_generic_political_pressure
+      cost = 12
+      x = 0
+      y = 2
+
+      prerequisite = {
+        focus = SEJ_quganzhengxie
+      }
+
+      relative_position_id = SEJ_quganzhengxie
+
+      available ={
+
+      }
+
+      completion_reward = {
+        add_named_threat = {
+          threat = 3
+          name = SEJ_huaqinghexianzhedejiexian
+        }
+        add_opinion_modifier = { modifier = SEJ_huaqinghexianzhedejiexian_op target = YKR}
+        reverse_add_opinion_modifier = { modifier = SEJ_huaqinghexianzhedejiexian_op target = YKR}
+        add_war_support = 0.25
+        add_manpower = 500
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+
+
+
+  focus = {
+      id = SEJ_kongzhijianxiequan
+      icon = GFX_goal_generic_political_pressure
+      cost = 12
+      x = -10
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_sixianggonggu
+        focus = SEJ_shuliweiyan
+        focus = SEJ_huaqinghexianzhedejiexian
+      }
+
+      relative_position_id = SEJ_sixianggonggu
+
+      will_lead_to_war_with = ONS
+
+      available ={
+        ONS = {
+          before_declare_war = yes
+        }
+      }
+      bypass = {
+        ONS = {
+          bypass_declare_war = yes
+        }
+      }
+
+      completion_reward = {
+        add_state_claim = 121 
+        add_state_claim = 349
+        declare_war_on = {
+          target = ONS
+          type = take_state_focus
+          generator = { 121 349 }
+        }
+      }
+      ai_will_do = {
+        factor = 10
+        modifier = {
+          has_war = yes
+          factor = 0
+        }
+      }
+  }
+
+  focus = {
+      id = SEJ_bangzhuyuanling
+      icon = GFX_goal_generic_dangerous_deal
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_kongzhijianxiequan
+      }
+
+      relative_position_id = SEJ_kongzhijianxiequan
+
+      will_lead_to_war_with = ACE
+
+      available ={
+        is_subject = no
+        or = {
+          has_completed_focus = SEJ_xuanyangxiakeshangsixiang
+          has_completed_focus = SEJ_ruozheleyuan
+        }
+      }
+      bypass = {
+        508 = {
+          or = {
+            owner = {
+              bypass_declare_war = yes
+            }
+            is_owned_by = ROOT
+          }
+        }
+      }
+
+      completion_reward = {
+        custom_effect_tooltip = focus_warning3
+        508 = {
+          owner = {
+            if = {
+              limit = {
+                tag = ACE
+                is_ai = yes
+                is_subject = no
+              }
+              ROOT = {
+                PREV = {
+                  subject_level2 = yes
+                }
+              }
+              else = {
+                ROOT = {
+                  declare_war_on = {
+                    target = PREV
+                    type = puppet_wargoal_focus
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          has_war = yes
+          factor = 0
+        }
+        modifier = {
+          date < 151.6.1
+          factor = 0.1
+        }
+      }
+  }
+
+  focus = {
+      id = SEJ_kaitongdiditonglu
+      icon = GFX_goal_generic_major_war
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_bangzhuyuanling
+      }
+
+      relative_position_id = SEJ_bangzhuyuanling
+
+      will_lead_to_war_with = UNL
+
+      available ={
+        UNL = {
+          before_declare_war = yes
+        }
+      }
+      bypass = {
+        UNL = {
+          bypass_declare_war = yes
+        }
+      }
+
+      completion_reward = {
+        declare_war_on = {
+          target = UNL
+          type = puppet_wargoal_focus
+        }
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          has_war = yes
+          factor = 0
+        }
+        modifier = {
+          date < 151.6.1
+          factor = 0.1
+        }
+      }
+  }
+
+  focus = {
+      id = SEJ_baofuguizu
+      icon = GFX_goal_generic_major_war
+      cost = 12
+      x = 0
+      y = 2
+
+      prerequisite = {
+        focus = SEJ_kaitongdiditonglu
+      }
+
+      relative_position_id = SEJ_kaitongdiditonglu
+
+      will_lead_to_war_with = YUG
+
+      available ={
+        YUG = {
+          before_declare_war = yes
+        }
+      }
+      bypass = {
+        YUG = {
+          bypass_declare_war = yes
+        }
+      }
+
+      completion_reward = {
+        declare_war_on = {
+          target = YUG
+          type = puppet_wargoal_focus
+        }
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          has_war = yes
+          factor = 0
+        }
+      }
+  }
+
+  focus = {
+      id = SEJ_kaifawenquan
+      icon = GFX_goal_generic_construct_civilian
+      cost = 10
+      x = -2
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_burugongyehua
+      }
+      prerequisite = {
+        focus = SEJ_kongzhijianxiequan
+      }
+      # mutually_exclusive = {
+      #   focus = ty_tourububing
+      # }
+
+      relative_position_id = SEJ_kongzhijianxiequan
+
+      available ={
+        # has_global_flag = main_scenario
+        121 = {
+          or = {
+            is_owned_by = ROOT
+            any_country = {
+              is_subject_of = ROOT
+              owns_state = 121
+            }
+          } 
+        }
+        349 = {
+          or = {
+            is_owned_by = ROOT
+            any_country = {
+              is_subject_of = ROOT
+              owns_state = 349
+            }
+          } 
+        }
+      }
+
+      completion_reward = {
+        set_country_flag = wusuntunbing_ONS
+        custom_effect_tooltip = SEJ_kaifawenquan_tt
+        add_manpower = 500
+        121 = {
+          add_manpower = 1000
+        }
+        119 = {
+          add_manpower = 1500
+        }
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+  focus = {
+      id = SEJ_lianjiedidideziyuan
+      icon = GFX_goal_generic_construction2
+      cost = 10
+      x = 0
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_kaifawenquan
+      }
+      # mutually_exclusive = {
+      #   focus = ty_tourububing
+      # }
+
+      relative_position_id = SEJ_kaifawenquan
+
+      available ={
+        121 = {
+          or = {
+            is_owned_by = ROOT
+            any_country = {
+              is_subject_of = ROOT
+              owns_state = 121
+            }
+          } 
+        }
+        349 = {
+          or = {
+            is_owned_by = ROOT
+            any_country = {
+              is_subject_of = ROOT
+              owns_state = 349
+            }
+          } 
+        }
+      }
+
+      completion_reward = {
+        121 = {
+          add_resource = {
+            type = crystal
+            amount = 12
+          } 
+        }
+        349 = {
+          add_resource = {
+            type = crystal
+            amount = 12
+          } 
+        }
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  } 
+  focus = {
+      id = SEJ_dididekuangchan
+      icon = GFX_goal_generic_construction2
+      cost = 10
+      x = -1
+      y = 2
+
+      prerequisite = {
+        focus = SEJ_lianjiedidideziyuan
+      }
+
+      relative_position_id = SEJ_kaifawenquan
+
+      available ={
+        121 = {
+          or = {
+            is_owned_by = ROOT
+            any_country = {
+              is_subject_of = ROOT
+              owns_state = 121
+            }
+          } 
+        }
+      }
+
+      completion_reward = {
+        add_tech_bonus = {
+          category = crystal_res
+          uses = 1
+          bonus = 0.8
+        }
+        add_tech_bonus = {
+          category = resource
+          uses = 1
+          bonus = 0.8
+        }
+        121 = {
+          add_building_construction = {
+              type = rock_factory
+              level = 1
+              instant_build = yes
+          }
+        }
+
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  } 
+  focus = {
+      id = SEJ_bianyuanfazhan
+      icon = GFX_goal_generic_construct_civ_factory
+      cost = 10
+      x = 1
+      y = 2
+
+      prerequisite = {
+        focus = SEJ_lianjiedidideziyuan
+      }
+
+      relative_position_id = SEJ_kaifawenquan
+
+      available ={
+        121 = {
+          or = {
+            is_owned_by = ROOT
+            any_country = {
+              is_subject_of = ROOT
+              owns_state = 121
+            }
+          } 
+        }
+        349 = {
+          or = {
+            is_owned_by = ROOT
+            any_country = {
+              is_subject_of = ROOT
+              owns_state = 349
+            }
+          } 
+        }
+      }
+
+      completion_reward = {
+        121 = {
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+              type = industrial_complex
+              level = 2
+              instant_build = yes
+          }
+        }
+        349 = {
+          add_extra_state_shared_building_slots = 3
+          add_building_construction = {
+              type = industrial_complex
+              level = 3
+              instant_build = yes
+          }
+        }
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  } 
+  focus = {
+      id = SEJ_diditonglukaifa
+      icon = GFX_goal_generic_national_unity
+      cost = 10
+      x = 0
+      y = 3
+
+      prerequisite = {
+        focus = SEJ_dididekuangchan
+        focus = SEJ_bianyuanfazhan
+      }
+      # mutually_exclusive = {
+      #   focus = ty_tourububing
+      # }
+
+      relative_position_id = SEJ_kaifawenquan
+
+      available ={
+        121 = {
+          or = {
+            is_owned_by = ROOT
+            any_country = {
+              is_subject_of = ROOT
+              owns_state = 121
+            }
+          } 
+        }
+        349 = {
+          or = {
+            is_owned_by = ROOT
+            any_country = {
+              is_subject_of = ROOT
+              owns_state = 349
+            }
+          } 
+        }
+
+
+      }
+
+      completion_reward = {
+        121 = {
+          add_extra_state_shared_building_slots = 2
+        }
+        349 = {
+          add_extra_state_shared_building_slots = 2
+        }
+        121 = {
+          add_building_construction = {
+              type = infrastructure
+              level = 3
+              instant_build = yes
+          }
+        }
+        349 = {
+          add_building_construction = {
+              type = infrastructure
+              level = 3
+              instant_build = yes
+          }
+        }
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  } 
+  focus = {
+      id = SEJ_guyongdidiyaoguai
+      icon = GFX_goal_generic_military_deal
+      cost = 10
+      x = 0
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_diditonglukaifa
+      }
+      # mutually_exclusive = {
+      #   focus = ty_tourububing
+      # }
+
+      relative_position_id = SEJ_diditonglukaifa
+
+      available ={
+        custom_trigger_tooltip = {
+          tooltip = SEJ_guyongdidiyaoguai_tt
+          any_neighbor_country = {
+            capital_scope = {
+              is_on_continent = Underground
+            }
+            not = {
+              has_idea = Ghost
+            }
+          }
+        }
+        
+      }
+
+      completion_reward = {
+        add_stability = -0.05
+        add_ideas = SEJ_guyongdidiyaoguai_idea
+        add_named_threat = {
+          name = SEJ_guyongdidiyaoguai
+          threat = 1.5
+        }
+        hidden_effect = {
+          news_event = { id = sei.37 days = 2}
+        }
+        add_political_power = -150
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  } 
+
+  focus = {
+      id = SEJ_xuanyangxiakeshangsixiang
+      icon = GFX_goal_support_communism
+      cost = 12
+      x = -2
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_sixianggonggu
+      }
+
+      mutually_exclusive = {
+        focus = SEJ_ruozheleyuan
+        focus = SEJ_zuiyaoguaidexingshi
+      }
+
+      relative_position_id = SEJ_sixianggonggu
+
+      available ={
+        has_government = fandong
+      }
+
+      completion_reward = {
+        set_country_flag = SEJ_half_core
+        custom_effect_tooltip = SEJ_xuanyangxiakeshangsixiang_tt
+        add_war_support = 0.06
+        add_named_threat = {
+          name = SEJ_xuanyangxiakeshangsixiang
+          threat = 2.5
+        }
+        add_popularity = {
+          ideology = fandong
+          popularity = 0.05
+        }
+
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 2.5
+          date > 148.1.1
+        }
+      }
+  }
+
+  focus = {
+      id = SEJ_ruozheleyuan
+      icon = GFX_goal_support_democracy
+      cost = 12
+      x = 2
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_sixianggonggu
+      }
+
+      mutually_exclusive = {
+        focus = SEJ_xuanyangxiakeshangsixiang
+      }
+
+      relative_position_id = SEJ_sixianggonggu
+
+      available ={
+        has_government = qinwai
+      }
+
+      completion_reward = {
+        add_stability = 0.06
+        add_popularity = {
+          ideology = qinwai
+          popularity = 0.05
+        }
+        lobbydecrease = yes
+
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 2.5
+          date > 148.1.1
+        }
+      }
+  }
+
+  focus = {
+      id = SEJ_jiaqianghuizhenchengminyong
+      icon = GFX_goal_generic_construct_civ_factory
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_ruozheleyuan
+      }
+
+      relative_position_id = SEJ_ruozheleyuan
+
+      available ={
+
+      }
+
+      completion_reward = {
+        add_timed_idea =  { idea = mingong_long_focus days = 365}
+        random_owned_controlled_state = {
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+            instant_build = yes
+            type = industrial_complex 
+            level = 2
+          }
+        }
+        
+
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 2.5
+          date > 148.1.1
+        }
+      }
+  }
+  focus = {
+      id = SEJ_jiaqianghuizhenchengjunyong
+      icon = GFX_goal_generic_construct_mil_factory
+      cost = 12
+      x = 2
+      y = 0
+
+      prerequisite = {
+        focus = SEJ_ruozheleyuan
+      }
+
+      relative_position_id = SEJ_jiaqianghuizhenchengminyong
+
+      available ={
+
+      }
+
+      completion_reward = {
+        add_timed_idea =  { idea = jungong_long_focus days = 365}
+        random_owned_controlled_state = {
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+            instant_build = yes
+            type = arms_factory 
+            level = 2
+          }
+        }
+        
+
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 2.5
+          date > 148.1.1
+        }
+      }
+  }
+
+  focus = {
+      id = SEJ_xuanchengdiguo
+      icon = GFX_focus_hun_elect_a_king
+      cost = 12
+      x = -2
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_jiaqianghuizhenchengjunyong
+      }
+      prerequisite = {
+        focus = SEJ_jiaqianghuizhenchengminyong
+      }
+
+      relative_position_id = SEJ_jiaqianghuizhenchengjunyong
+
+      available ={
+        is_subject = no
+        num_of_factories > 50
+      }
+
+      completion_reward = {
+        add_ideas = can_create_faction_idea
+        create_faction = SEJ_faction2
+        set_cosmetic_tag = SEJ_empire
+        add_ideas = Empire
+        CO_core_Pri_youkai = yes
+        hidden_effect = {
+          news_event = { id = sei.53 days = 2}
+        }
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 2.5
+          date > 148.1.1
+        }
+      }
+  }
+  focus = {
+      id = SEJ_xiaomiexijianyaoguai
+      icon = GFX_goal_generic_major_war
+      cost = 12
+      x = 3
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_xuanchengdiguo
+      }
+
+      will_lead_to_war_with = YKR
+
+      relative_position_id = SEJ_xuanchengdiguo
+
+      available ={
+        YKR = {
+          before_declare_war = yes
+        }
+      }
+      bypass = {
+        YKR = {
+          bypass_declare_war = yes
+        }
+      }
+
+      completion_reward = {
+        declare_war_on = {
+          target = YKR
+          type = puppet_wargoal_focus
+        }
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+		      NOT = { date > 150.1.1 }
+          factor = 0
+        }
+        modifier = {
+          has_war = yes
+          factor = 0
+        }
+      }
+  }
+
+  focus = {
+      id = SEJ_diguodeyaoguaigongmin
+      icon = GFX_goal_generic_national_unity
+      cost = 12
+      x = -1
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_xiaomiexijianyaoguai
+      }
+
+      relative_position_id = SEJ_xiaomiexijianyaoguai
+
+      available ={
+        is_subject = no
+      }
+      mutually_exclusive = {
+        focus = SEJ_diguodeyaoshougongmin
+      }
+
+      completion_reward = {
+        CO_core_Youkai = yes
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+  focus = {
+      id = SEJ_diguodeyaoshougongmin
+      icon = GFX_goal_generic_national_unity
+      cost = 12
+      x = 1
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_xiaomiexijianyaoguai
+      }
+      mutually_exclusive = {
+        focus = SEJ_diguodeyaoguaigongmin
+      }
+
+      relative_position_id = SEJ_xiaomiexijianyaoguai
+
+      available ={
+        is_subject = no
+      }
+
+      completion_reward = {
+        CO_core_Beast = yes
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+
+  focus = {
+      id = SEJ_zuiyaoguaidexingshi
+      icon = GFX_goal_support_fascism
+      cost = 12
+      x = -6
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_shuliweiyan
+      }
+
+      mutually_exclusive = {
+        focus = SEJ_xuanyangxiakeshangsixiang
+        focus = SEJ_fuxingwomendeguoqu
+      }
+
+      relative_position_id = SEJ_sixianggonggu
+
+      available ={
+        has_government = neworder
+      }
+
+      completion_reward = {
+        CO_factor_minus0.3 = yes
+        add_named_threat = {
+          threat = 1
+          name = SEJ_zuiyaoguaidexingshi
+        }
+        add_popularity = {
+          ideology = neworder
+          popularity = 0.06
+        }
+        add_stability = 0.03
+        add_war_support = 0.03
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 2.5
+          date > 148.1.1
+        }
+      }
+  }
+
+  focus = {
+      id = SEJ_rangmofashijuedelihai
+      icon = GFX_goal_generic_political_pressure
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_zuiyaoguaidexingshi
+      }
+      prerequisite = {
+        focus = SEJ_kongzhijianxiequan
+      }
+
+      mutually_exclusive = {
+
+      }
+
+      will_lead_to_war_with = MRS
+      will_lead_to_war_with = ALI
+      will_lead_to_war_with = MYK
+
+      relative_position_id = SEJ_zuiyaoguaidexingshi
+
+      available ={
+        ALI = {
+          before_declare_war = yes
+        }
+        MYK = {
+          before_declare_war = yes
+        }
+        MRS = {
+          before_declare_war = yes
+        }
+      }
+
+      completion_reward = {
+        declare_war_on = {
+          type = puppet_wargoal_focus
+          target = MRS
+        }
+        declare_war_on = {
+          type = puppet_wargoal_focus
+          target = ALI
+        }
+        declare_war_on = {
+          type = puppet_wargoal_focus
+          target = MYK
+        }
+        CO_core_Pri_youkai = yes
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          has_war = yes
+          factor = 0
+        }
+      }
+  }
+
+  focus = {
+      id = SEJ_ruzhubolishenshe
+      icon = GFX_goal_rhineland
+      cost = 12
+      x = 1
+      y = 2
+
+      prerequisite = {
+        focus = SEJ_rangmofashijuedelihai
+      }
+
+      mutually_exclusive = {
+        focus = SEJ_duimuhoudezhunbei
+      }
+
+      relative_position_id = SEJ_zuiyaoguaidexingshi
+
+      available ={
+        HKR = {
+          faqiqingqiu = yes
+        }
+      }
+
+      completion_reward = {
+        HKR = { country_overlord_get = yes }
+        event_target:trigger_target = { country_event = {id = sei.38 days = 1} }
+        custom_effect_tooltip = event_accept
+        custom_effect_tooltip = focus_warning3
+        effect_tooltip = {
+          HMIF_daily_factor_add0.3 = yes
+          OL_add10 = yes
+          add_popularity = {
+            ideology = oldorder
+            popularity = 0.1
+          }
+          if = {
+            limit = {
+              HKR = {
+                is_subject = no
+              }
+            }
+            HKR = {
+              subject_level3 = yes
+            }
+          }
+        }
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+
+  focus = {
+      id = SEJ_chengweixianbing
+      icon = GFX_focus_YUG_zmaj
+      cost = 12
+      x = 0
+      y = 4
+
+      prerequisite = {
+        focus = SEJ_ruzhubolishenshe
+      }
+
+      relative_position_id = SEJ_ruzhubolishenshe
+
+      available ={
+          is_subject = no
+          YKR = {
+            faqiqingqiu = yes
+          }
+      }
+
+      completion_reward = {
+        YKR = {
+          country_event = { days = 2 id = sei.39}
+        }
+        custom_effect_tooltip = event_accept
+        effect_tooltip = {
+          go_oldorder = yes
+          set_politics = {
+            ruling_party = oldorder
+          }
+          add_popularity = {
+            ideology = oldorder
+            popularity = 0.45
+          }
+          PO_add10 = yes
+          PO_add10 = yes
+          OL_add10 = yes
+          conservativedecrease = yes
+        }
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+
+
+  focus = {
+      id = SEJ_yaoqiushoudaoyaoguaichengfu
+      icon = GFX_goal_generic_political_pressure
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_xuanyangxiakeshangsixiang
+        focus = SEJ_zuiyaoguaidexingshi
+      }
+
+      relative_position_id = SEJ_xuanyangxiakeshangsixiang
+
+      available ={
+        MSD = {
+          before_declare_war = yes
+        }
+      }
+
+      bypass = {
+          MSD = {
+            bypass_declare_war = yes
+          }
+      }
+
+      will_lead_to_war_with = MSD
+
+      completion_reward = {
+          MSD = { country_overlord_get = yes }
+          event_target:trigger_target = { country_event = {id = sei.16 days = 1} }
+          custom_effect_tooltip = TEG_accept
+          effect_tooltip = {
+            add_named_threat = {
+              threat = 0.5
+              name = SEJ_yaoqiushoudaoyaoguaichengfu
+            }
+            MSD = {
+              subject_level3 = yes
+            }
+          }
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          has_war = yes
+          factor = 0
+        }
+        modifier = {
+          factor = 2.5
+          date > 148.1.1
+        }
+      }
+  }
+  
+
+  focus = {
+      id = SEJ_duimuhoudezhunbei
+      icon = GFX_focus_generic_home_defense
+      cost = 12
+      x = -1
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_yaoqiushoudaoyaoguaichengfu
+        focus = SEJ_duohuishengcunkongjian
+        focus = SEJ_rangmofashijuedelihai
+      }
+
+      mutually_exclusive = {
+        focus = SEJ_ruzhubolishenshe
+      }
+
+      relative_position_id = SEJ_yaoqiushoudaoyaoguaichengfu
+
+      available ={
+        is_subject = no
+      }
+
+      completion_reward = {
+        # add_opinion_modifier = { target = YKR modifier = SEJ_duimuhoudezhunbei_op}
+        # reverse_add_opinion_modifier = { target = YKR modifier = SEJ_duimuhoudezhunbei_op}
+        183 = {
+          if = {
+              limit = {
+                or = {
+                  is_owned_by = ROOT
+                  any_country = {
+                    is_subject_of = ROOT
+                    owns_state = PREV
+                  }
+                }
+              }
+              add_building_construction = {
+                instant_build = yes
+                type = bunker
+                level = 3
+                province = 3264
+              }
+              add_building_construction = {
+                instant_build = yes
+                type = bunker
+                level = 3
+                province = 3268
+              }
+              add_building_construction = {
+                instant_build = yes
+                type = bunker
+                level = 3
+                province = 4546
+              }
+              add_building_construction = {
+                instant_build = yes
+                type = bunker
+                level = 3
+                province = 2228
+              }
+          }
+        }
+        147 = {
+          if = {
+              limit = {
+                or = {
+                  is_owned_by = ROOT
+                  any_country = {
+                    is_subject_of = ROOT
+                    owns_state = PREV
+                  }
+                }
+              }
+              add_building_construction = {
+                instant_build = yes
+                type = bunker
+                level = 3
+                province = 3855
+              }
+              add_building_construction = {
+                instant_build = yes
+                type = bunker
+                level = 3
+                province = 844
+              }
+          }
+        }
+        130 = {
+          if = {
+              limit = {
+                or = {
+                  is_owned_by = ROOT
+                  any_country = {
+                    is_subject_of = ROOT
+                    owns_state = PREV
+                  }
+                }
+              }
+              add_building_construction = {
+                instant_build = yes
+                type = bunker
+                level = 3
+                province = 1123
+              }
+              add_building_construction = {
+                instant_build = yes
+                type = bunker
+                level = 3
+                province = 1716
+              }
+          }
+        }
+        add_opinion_modifier = {
+          modifier = background_enemy
+          target = YKR
+        }
+        reverse_add_opinion_modifier = {
+          modifier = background_enemy
+          target = YKR
+        }
+        YKR = {
+          add_ai_strategy = {
+            type = antagonize
+            id = ROOT
+            value = 20000
+          }
+        }
+        add_ideas = SEJ_duimuhoudezhunbei_idea
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 2.5
+          date > 148.1.1
+        }
+      }
+  }
+
+  focus = {
+      id = SEJ_xuanchengxianzhe
+      icon = GFX_goal_generic_major_war
+      cost = 12
+      x = -1
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_duimuhoudezhunbei
+      }
+
+      mutually_exclusive = {
+        # focus = SEJ_ruzhubolishenshe
+      }
+
+      relative_position_id = SEJ_duimuhoudezhunbei
+
+      will_lead_to_war_with = YKR
+
+      available ={
+        YKR = {
+          before_declare_war = yes
+        }
+      }
+      bypass = {
+        YKR = {
+          bypass_declare_war = yes
+        }
+      }
+
+      completion_reward = {
+        declare_war_on = {
+          type = puppet_wargoal_focus
+          target = YKR
+        }
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          has_government = fandong
+          NOT = { has_completed_focus = SEJ_emoyapozhe }
+          factor = 0
+        }
+        modifier = {
+          has_war = yes
+          factor = 0
+        }
+      }
+  }
+
+  focus = {
+      id = SEJ_xiangmingliansiyouhao
+      icon = GFX_goal_generic_improve_relations
+      cost = 12
+      x = -2
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_ruozheleyuan
+      }
+
+      relative_position_id = SEJ_ruozheleyuan
+
+      available ={
+
+      }
+
+      completion_reward = {
+          add_opinion_modifier = { target = NMS modifier = SEJ_xiangmingliansiyouhao_op}
+          reverse_add_opinion_modifier = { target = NMS modifier = SEJ_xiangmingliansiyouhao_op}
+          NMS = {
+            can_use = yes
+          }
+          hidden_effect = {
+            news_event = { days = 2 id = sei.14}
+          }
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+
+  focus = {
+      id = SEJ_xiangjiumengyouyouhao
+      icon = GFX_goal_generic_improve_relations
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_xiangmingliansiyouhao
+        focus = SEJ_yaoqiushoudaoyaoguaichengfu
+      }
+
+      relative_position_id = SEJ_xiangmingliansiyouhao
+
+      available ={
+        has_completed_focus = SEJ_xuanyangxiakeshangsixiang
+      }
+
+      completion_reward = {
+        custom_effect_tooltip = SEJ_xiangjiumengyouyouhao_tt
+        TKM = {
+          add_opinion_modifier = { target = ROOT modifier = SEJ_xiangjiumengyouyouhao_op}
+          reverse_add_opinion_modifier = { target = ROOT modifier = SEJ_xiangjiumengyouyouhao_op}
+        }
+        WAK = {
+          add_opinion_modifier = { target = ROOT modifier = SEJ_xiangjiumengyouyouhao_op}
+          reverse_add_opinion_modifier = { target = ROOT modifier = SEJ_xiangjiumengyouyouhao_op}
+        }
+        KAG = {
+          add_opinion_modifier = { target = ROOT modifier = SEJ_xiangjiumengyouyouhao_op}
+          reverse_add_opinion_modifier = { target = ROOT modifier = SEJ_xiangjiumengyouyouhao_op}
+        }
+        SBK = {
+          add_opinion_modifier = { target = ROOT modifier = SEJ_xiangjiumengyouyouhao_op}
+          reverse_add_opinion_modifier = { target = ROOT modifier = SEJ_xiangjiumengyouyouhao_op}
+        }
+
+        hidden_effect = {
+          news_event = { days = 2 id = sei.13}
+        }
+        
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+
+  focus = {
+      id = SEJ_hulixieyi
+      icon = GFX_goal_generic_major_alliance
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_xiangjiumengyouyouhao
+      }
+
+      relative_position_id = SEJ_xiangjiumengyouyouhao
+
+      available ={
+
+      }
+
+      completion_reward = {
+        NMS = { country_event = {days = 1 id = sei.27 } }
+        custom_effect_tooltip = TEG_accept
+        effect_tooltip = {
+          ROOT = {
+            add_tech_bonus = {
+              bonus = 1.2
+              ahead_reduction = 1.5
+              uses = 2
+              category = primary_weapons
+            }
+            
+          }
+          NMS = {
+            add_tech_bonus = {
+              bonus = 1.2
+              ahead_reduction = 1.5
+              uses = 2
+              category = resource
+            }
+            
+          }
+        }
+
+        TKM = { country_event = {days = 1 id = sei.27 } }
+
+        custom_effect_tooltip = TEG_accept
+        effect_tooltip = {
+          ROOT = {
+            add_tech_bonus = {
+              bonus = 1.2
+              ahead_reduction = 1.5
+              uses = 2
+              category = industrys
+            }
+          }
+
+            
+          TKM = {
+            add_tech_bonus = {
+              bonus = 1.2
+              ahead_reduction = 1.5
+              uses = 2
+              category = resource
+            }
+          }
+        }
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+
+  focus = {
+      id = SEJ_xiangmofashihejie
+      icon = GFX_goal_generic_dangerous_deal
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_xuanchengdiguo
+      }
+
+      relative_position_id = SEJ_xuanchengdiguo
+
+      available ={
+        MRS = {
+          faqiqingqiu = yes
+        }
+      }
+      bypass = {
+        MRS = {
+          bypass_declare_war = yes
+        }
+      }
+
+      completion_reward = {
+        add_popularity = {
+          ideology = qinwai
+          popularity = 0.02
+        }
+        MRS = {
+          country_event = { id =  sei.36 hours = 11}
+        }
+        custom_effect_tooltip = TEG_accept
+        effect_tooltip = {
+          add_opinion_modifier = { target = MRS modifier = SEJ_xiangmofashihejie_op}
+          reverse_add_opinion_modifier = { target = MRS modifier = SEJ_xiangmofashihejie_op}
+          MRS = { 
+            remove_state_claim = 151
+          }
+          MYK = { 
+            remove_state_claim = 151
+          }
+          188 = {
+            add_manpower = 1800
+          }
+          135 = {
+            add_manpower = 800
+          }
+          119 = {
+            add_manpower = 800
+          }
+        }
+        
+
+        
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 2.5
+          date > 148.1.1
+        }
+      }
+  }
+
+  focus = {
+      id = SEJ_fangyanhongmoguan
+      icon = GFX_goal_generic_political_pressure
+      cost = 12
+      x = 0
+      y = 3
+
+      prerequisite = {
+        focus = SEJ_duimuhoudezhunbei
+      }
+
+      relative_position_id = SEJ_xuanyangxiakeshangsixiang
+
+      available ={
+        has_completed_focus = SEJ_xuanyangxiakeshangsixiang
+        is_subject = no
+      }
+
+      bypass = {
+
+      }
+
+      completion_reward = {
+        add_political_power = 150
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 2.5
+          date > 148.1.1
+        }
+      }
+  }
+
+  focus = {
+      id = SEJ_yuyaojinghezuo
+      icon = GFX_goal_generic_improve_relations
+      cost = 12
+      x = 2
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_fangyanhongmoguan
+        focus = SEJ_xiangmofashihejie
+      }
+
+      mutually_exclusive = {
+        focus = SEJ_shandongyaojing
+        focus = SEJ_yaojingqianzaiweixie
+      }
+
+
+      relative_position_id = SEJ_fangyanhongmoguan
+
+      available ={
+        CIR = {
+          faqiqingqiu = yes
+        }
+        CIR = {
+          has_government = ROOT
+        }
+      }
+
+      completion_reward = {
+        CIR = {
+          country_event = { id = sei.51 days = 2}
+        }
+        custom_effect_tooltip = event_accept
+        effect_tooltip = {
+          add_named_threat = {
+            name = SEJ_yuyaojinghezuo
+            threat = 2
+          }
+          CIR = {
+            can_use = yes
+            ROOT = {
+              can_use = yes
+            }
+            xianghubaodu = yes
+            jiemeng = yes
+          }
+        }
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 2.5
+          date > 148.1.1
+        }
+      }
+  }
+
+  focus = {
+      id = SEJ_shandongyaojing
+      icon = GFX_goal_generic_improve_relations
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_fangyanhongmoguan
+      }
+
+      mutually_exclusive = {
+        focus = SEJ_yuyaojinghezuo
+      }
+
+
+      relative_position_id = SEJ_fangyanhongmoguan
+
+      available ={
+        is_subject = no
+      }
+
+      completion_reward = {
+        add_ideas = SEJ_shandongyaojing_idea
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 2.5
+          date > 148.1.1
+        }
+      }
+  }
+
+  focus = {
+      id = SEJ_emoyapozhe
+      icon = GFX_goal_generic_major_war
+      cost = 12
+      x = -6
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_yuyaojinghezuo
+        focus = SEJ_shandongyaojing
+        focus = SEJ_rangmofashijuedelihai
+        focus = SEJ_yaoqingshoudaoyaoguai
+        # focus = SEJ_yingduiqiangdayaoguai
+      }
+
+
+      relative_position_id = SEJ_yuyaojinghezuo
+
+      will_lead_to_war_with = SCA
+
+      available ={
+        or = {
+          and = {
+            has_completed_focus = SEJ_rangmofashijuedelihai
+            SCA = {
+              not = { has_government = ROOT }
+            }
+          }
+          not = { has_completed_focus = SEJ_rangmofashijuedelihai }
+        }
+        not = {
+          has_completed_focus = SEJ_chengweixianbing
+        }
+        SCA = {
+          before_declare_war = yes
+        }
+      }
+      bypass = {
+        SCA = {
+          bypass_declare_war = yes
+        }
+      }
+
+      completion_reward = {
+        declare_war_on = {
+          target = SCA
+          type = dahongmoguan_wargoal
+        }
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          has_war = yes
+          factor = 0
+        }
+        modifier = {
+          factor = 2.5
+          date > 148.1.1
+        }
+        modifier = {
+          SCA = { has_war = yes }
+          factor = 100
+        }
+      }
+  }
+
+  focus = {
+      id = SEJ_yaojingqianzaiweixie
+      icon = GFX_goal_generic_political_pressure
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_xiangmofashihejie
+      }
+      mutually_exclusive = {
+        focus = SEJ_yuyaojinghezuo
+      }
+
+      relative_position_id = SEJ_xiangmofashihejie
+
+      available ={
+        is_subject = no
+        CIR = { 
+          not = {
+            has_government = ROOT
+          }
+        }
+      }
+
+      completion_reward = {
+        add_opinion_modifier = { target = CIR modifier = SEJ_yaojingqianzaiweixie_op}
+        reverse_add_opinion_modifier = { target = CIR modifier = SEJ_yaojingqianzaiweixie_op}
+        add_ideas = SEJ_yaojingqianzaiweixie_idea
+        hidden_effect = {
+          news_event = { id = sei.32 days = 2}
+        }
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+
+  focus = {
+      id = SEJ_guifanyaojinglinian
+      icon = GFX_goal_generic_major_war
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_yaojingqianzaiweixie
+      }
+
+      relative_position_id = SEJ_yaojingqianzaiweixie
+
+      will_lead_to_war_with = CIR
+
+      available ={
+        CIR = {
+          before_declare_war = yes
+        }
+      }
+      bypass = {
+        CIR = {
+          bypass_declare_war = yes
+        }
+      }
+
+      completion_reward = {
+        declare_war_on = {
+          target = CIR
+          type = puppet_wargoal_focus
+        }
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          has_war = yes
+          factor = 0
+
+        }
+      }
+  }
+
+  focus = {
+      id = SEJ_fuxingwomendeguoqu
+      icon = GFX_goal_support_fascism
+      cost = 12
+      x = -2
+      y = 0
+
+      prerequisite = {
+        focus = SEJ_huaqinghexianzhedejiexian
+      }
+      mutually_exclusive = {
+        focus = SEJ_zuiyaoguaidexingshi
+      }
+
+      relative_position_id = SEJ_zuiyaoguaidexingshi
+
+      available ={
+        has_government = neworder
+      }
+      bypass = {
+      }
+
+      completion_reward = {
+        add_popularity = {
+          ideology = neworder
+          popularity = 0.1
+        }
+        lobbyincrease = yes
+        conservativedecrease = yes
+        add_war_support = 0.1
+        hidden_effect = {
+          news_event = { id = sei.45 days = 2}
+        }
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 2.5
+          date > 148.1.1
+        }
+      }
+  }
+
+  focus = {
+      id = SEJ_duohuishengcunkongjian
+      icon = GFX_goal_generic_demand_territory
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_fuxingwomendeguoqu
+      }
+      mutually_exclusive = {
+
+      }
+
+      relative_position_id = SEJ_fuxingwomendeguoqu
+
+      available ={
+        is_subject = no
+      }
+      bypass = {
+        or = {
+            owns_state = 355
+            any_country = {
+                is_subject_of = ROOT
+                owns_state = 355
+            }
+            any_country = {
+                owns_state = 355
+                has_war_with = ROOT
+            }
+            355 = {
+              owner = {
+                bypass_declare_war = yes
+              }
+            }
+        }
+      }
+
+      will_lead_to_war_with = MRS
+      will_lead_to_war_with = ALI
+      will_lead_to_war_with = MYK
+
+      completion_reward = {
+        355 = { state_owner_get = yes }
+        event_target:trigger_target = { country_event = {id = sei.19 days = 2} }
+        custom_effect_tooltip = event_accept
+        effect_tooltip = {
+          MYK = {
+            transfer_state = 154
+            transfer_state = 175
+            transfer_state = 162
+            transfer_state = 355
+            SEJ = {
+              MYK = {
+                subject_level3 = yes
+              }
+            }
+          }
+          SEJ = { 
+            add_named_threat = {
+              threat = 1.5
+              name = SEJ_duohuishengcunkongjian
+            }
+          }
+        }
+
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          has_war = yes
+          factor = 0
+        }
+      }
+  }
+
+  focus = {
+      id = SEJ_yaoqingshoudaoyaoguai
+      icon = GFX_goal_generic_improve_relations
+      cost = 12
+      x = 0
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_duohuishengcunkongjian
+      }
+      mutually_exclusive = {
+
+      }
+
+      relative_position_id = SEJ_duohuishengcunkongjian
+
+      available ={
+        is_subject = no
+        MSD = {
+          faqiqingqiu = yes
+        }
+      }
+      bypass = {
+        or = {
+          MSD = {
+            bypass_declare_war = yes
+          }
+          MSD = {
+            is_subject = yes
+          }
+        }
+        
+      }
+
+      completion_reward = {
+        MSD = { country_event = {id = sei.16 days = 1} }
+        custom_effect_tooltip = TEG_accept
+        effect_tooltip = {
+          add_named_threat = {
+            threat = 0.5
+            name = SEJ_yaoqiushoudaoyaoguaichengfu
+          }
+          MSD = {
+            subject_level3 = yes
+          }
+        }
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+
+  focus = {
+      id = SEJ_lianhesuoyouyaoguai
+      icon = GFX_goal_generic_national_unity
+      cost = 12
+      x = 0
+      y = 2
+
+      prerequisite = {
+        focus = SEJ_yaoqingshoudaoyaoguai
+      }
+      mutually_exclusive = {
+
+      }
+
+      relative_position_id = SEJ_yaoqingshoudaoyaoguai
+
+      available ={
+        is_subject = no
+      }
+      bypass = {
+      }
+
+      completion_reward = {
+        CO_core_Pri_youkai = yes
+        add_named_threat = {
+          name = SEJ_lianhesuoyouyaoguai
+          threat = 5
+        }
+        NIB = {
+          can_core = yes
+        }
+        RMI = {
+          can_core = yes
+        }
+        ONS = {
+          can_core = yes
+        }
+        MSD = {
+          can_core = yes
+        }
+        MYK = {
+          can_core = yes
+        }
+        drop_cosmetic_tag = yes
+        set_cosmetic_tag = SEJ_union
+        hidden_effect = {
+          news_event = { id = sei.48 days = 2}
+        }
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+
+  #军事线
+  focus = {
+      id = SEJ_yurenleizhanzhengjiaoxun
+      icon = GFX_goal_generic_axis_build_infantry 
+      cost = 10
+      x = 22
+      y = 0
+
+      # prerequisite = {
+      #   focus = SEJ_yaoqingyaojinghezhongguo
+      # }
+
+      relative_position_id = SEJ_wendingneibu
+
+      available ={
+        has_global_flag = main_scenario
+      }
+
+      completion_reward = {
+        add_tech_bonus = {
+          category = land_doctrine
+          uses = 1
+          bonus = 0.8
+        }
+        army_experience = 25
+
+      }
+      ai_will_do = {
+        factor = 1
+      }
+  }
+  focus = {
+      id = SEJ_zhongshijichuxueshuo
+      icon = GFX_goal_generic_army_doctrines
+      cost = 10
+      x = -1
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_yurenleizhanzhengjiaoxun
+      }
+
+      relative_position_id = SEJ_yurenleizhanzhengjiaoxun
+
+      available ={
+
+      }
+
+      completion_reward = {
+        army_experience = 5
+        add_tech_bonus = {
+          uses = 1
+          bonus = 0.6
+          category = basic_doctrine
+        }
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 0.6
+          and = {
+            has_war = no
+            date < 150.6.1
+          }
+        }
+      }
+  }
+  focus = {
+      id = SEJ_linglijiejing
+      icon = GFX_goal_generic_small_arms
+      cost = 10
+      x = 1
+      y = 1
+
+      prerequisite = {
+        focus = SEJ_yurenleizhanzhengjiaoxun
+      }
+
+      relative_position_id = SEJ_yurenleizhanzhengjiaoxun
+
+      available ={
+
+      }
+
+      completion_reward = {
+        army_experience = 5
+        add_tech_bonus = {
+          uses = 1
+          bonus = 0.8
+          category = primary_weapons
+        }
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 0.6
+          and = {
+            has_war = no
+            date < 150.6.1
+          }
+        }
+      }
+  }
+  focus = {
+      id = SEJ_bujinengliqianghua
+      icon = GFX_goal_generic_construct_infrastructure
+      cost = 10
+      x = -2
+      y = 2
+
+      prerequisite = {
+        focus = SEJ_zhongshijichuxueshuo
+      }
+
+      relative_position_id = SEJ_yurenleizhanzhengjiaoxun
+
+      available ={
+
+      }
+
+      completion_reward = {
+        add_ideas = SEJ_bujinengliyouhua_idea
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 0.6
+          and = {
+            has_war = no
+            date < 150.6.1
+          }
+        }
+      }
+  }
+  focus = {
+      id = SEJ_mofazhisenyoujidui
+      icon = GFX_goal_generic_special_forces
+      cost = 10
+      x = 0
+      y = 2
+
+      prerequisite = {
+        focus = SEJ_zhongshijichuxueshuo
+        focus = SEJ_linglijiejing
+      }
+
+      relative_position_id = SEJ_yurenleizhanzhengjiaoxun
+
+      available ={
+
+      }
+
+      completion_reward = {
+        add_to_variable = { EXHC_root_base_add = 0.8}
+        custom_effect_tooltip = SEJ_mofazhisenyoujidui_tt
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 0.6
+          and = {
+            has_war = no
+            date < 150.6.1
+          }
+        }
+      }
+  }
+  focus = {
+      id = SEJ_xingnenggailiang
+      icon = GFX_goal_generic_small_arms
+      cost = 10
+      x = 2
+      y = 2
+
+      prerequisite = {
+        focus = SEJ_linglijiejing
+      }
+
+      relative_position_id = SEJ_yurenleizhanzhengjiaoxun
+
+      available ={
+
+      }
+
+      completion_reward = {
+        add_tech_bonus = {
+          uses = 1
+          bonus = 0.8
+          category = primary_weapons
+        }
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 0.6
+          and = {
+            has_war = no
+            date < 150.6.1
+          }
+        }
+      }
+  }
+  focus = {
+      id = SEJ_fuzhuzhuangbei
+      icon = GFX_goal_generic_army_artillery
+      cost = 10
+      x = -1
+      y = 3
+
+      prerequisite = {
+        focus = SEJ_bujinengliqianghua
+      }
+      prerequisite = {
+        focus = SEJ_mofazhisenyoujidui
+      }
+
+      relative_position_id = SEJ_yurenleizhanzhengjiaoxun
+
+      available ={
+
+      }
+
+      completion_reward = {
+        add_tech_bonus = {
+          uses = 1
+          bonus = 0.8
+          category = support_tech
+        }
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 0.6
+          and = {
+            has_war = no
+            date < 150.6.1
+          }
+        }
+      }
+  }
+  focus = {
+      id = SEJ_zhuangbeishuliangmanzu
+      icon = GFX_goal_continuous_repairments
+      cost = 10
+      x = 1
+      y = 3
+
+      prerequisite = {
+        focus = SEJ_xingnenggailiang
+      }
+      prerequisite = {
+        focus = SEJ_mofazhisenyoujidui
+      }
+
+      relative_position_id = SEJ_yurenleizhanzhengjiaoxun
+
+      available ={
+
+      }
+
+      completion_reward = {
+        add_ideas = SEJ_zhuangbeishuliangmanzu1_idea
+        add_timed_idea = { idea = SEJ_zhuangbeishuliangmanzu2_idea days = 365}
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 0.6
+          and = {
+            has_war = no
+            date < 150.6.1
+          }
+        }
+      }
+  }
+  focus = {
+      id = SEJ_shiyingfuzadixing
+      icon = GFX_goal_generic_special_forces
+      cost = 10
+      x = 0
+      y = 4
+
+      prerequisite = {
+        focus = SEJ_fuzhuzhuangbei
+      }
+      prerequisite = {
+        focus = SEJ_zhuangbeishuliangmanzu
+      }
+
+      relative_position_id = SEJ_yurenleizhanzhengjiaoxun
+
+      available ={
+
+      }
+
+      completion_reward = {
+        set_technology = { SEJ_shiyingfuzadixing_tech = 1}
+        custom_effect_tooltip = SEJ_shiyingfuzadixing_tt
+      }
+      ai_will_do = {
+        factor = 1
+        modifier = {
+          factor = 0.6
+          and = {
+            has_war = no
+            date < 150.6.1
+          }
+        }
+      }
+  }
+}

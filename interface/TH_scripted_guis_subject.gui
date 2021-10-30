@@ -7,7 +7,7 @@ guiTypes = {
 
 	    buttonType = {
 			name = "show_subjects_button"
-			position = { x = 5 y = 440 }
+			position = { x = 5 y = 390 }
 			quadTextureSprite = "GFX_government_button"
 			buttonFont = "hoi_16mbs"
 			Orientation = "UPPER_RIGHT"
@@ -15,7 +15,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "show_subjects_button_text"
-			position = { x = 50 y = 448 }
+			position = { x = 50 y = 398 }
 			font = "hoi_16mbs"
 			text = "MANAGE_SUBJECTS"
 			Orientation = "UPPER_RIGHT"
@@ -25,7 +25,7 @@ guiTypes = {
 		iconType = {
 			name = "icon_manage_subjects"
 			spriteType = "GFX_icon_manage_subjects"
-			position = { x = 7 y = 441 }
+			position = { x = 7 y = 391 }
 		}
 	}
 
@@ -149,10 +149,11 @@ guiTypes = {
 				name = "current_autonomy_name"
 				position = { x = -160 y = -6 }
 				font = "hoi_16mbs"
-				text = "[?this.GetName]"
-				maxWidth = 158
+				text = "SS_subject_name"
+				maxWidth = 220
 				maxHeight = 20
-				format = right		
+				format = center	
+				pdx_tooltip = "SS_can_core_tt"
 
 			}
 

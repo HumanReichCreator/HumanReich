@@ -1,0 +1,405 @@
+KYK_zhengzhibuwending_up = {
+	if = {
+		limit = {
+			has_idea = KYK_zhengzhibuwending5_idea
+		}
+		remove_ideas = KYK_zhengzhibuwending5_idea
+	}
+	if = {
+		limit = {
+			has_idea = KYK_zhengzhibuwending4_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_zhengzhibuwending4_idea
+			add_idea = KYK_zhengzhibuwending5_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_zhengzhibuwending3_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_zhengzhibuwending3_idea
+			add_idea = KYK_zhengzhibuwending4_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_zhengzhibuwending2_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_zhengzhibuwending2_idea
+			add_idea = KYK_zhengzhibuwending3_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_zhengzhibuwending1_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_zhengzhibuwending1_idea
+			add_idea = KYK_zhengzhibuwending2_idea
+		}
+	}
+	add_political_power = 25
+}
+KYK_TKMhezuo = {
+	if = {
+		limit = {
+			has_idea = KYK_TKMhezuo19_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_TKMhezuo19_idea
+			add_idea = KYK_TKMhezuo20_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_TKMhezuo18_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_TKMhezuo18_idea
+			add_idea = KYK_TKMhezuo19_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_TKMhezuo17_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_TKMhezuo17_idea
+			add_idea = KYK_TKMhezuo18_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_TKMhezuo16_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_TKMhezuo16_idea
+			add_idea = KYK_TKMhezuo17_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_TKMhezuo15_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_TKMhezuo15_idea
+			add_idea = KYK_TKMhezuo16_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_TKMhezuo14_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_TKMhezuo14_idea
+			add_idea = KYK_TKMhezuo15_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_TKMhezuo13_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_TKMhezuo13_idea
+			add_idea = KYK_TKMhezuo14_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_TKMhezuo12_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_TKMhezuo12_idea
+			add_idea = KYK_TKMhezuo13_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_TKMhezuo11_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_TKMhezuo11_idea
+			add_idea = KYK_TKMhezuo12_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_TKMhezuo10_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_TKMhezuo10_idea
+			add_idea = KYK_TKMhezuo11_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_TKMhezuo9_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_TKMhezuo9_idea
+			add_idea = KYK_TKMhezuo10_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_TKMhezuo8_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_TKMhezuo8_idea
+			add_idea = KYK_TKMhezuo9_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_TKMhezuo7_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_TKMhezuo7_idea
+			add_idea = KYK_TKMhezuo8_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_TKMhezuo6_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_TKMhezuo6_idea
+			add_idea = KYK_TKMhezuo7_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_TKMhezuo5_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_TKMhezuo5_idea
+			add_idea = KYK_TKMhezuo6_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_TKMhezuo4_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_TKMhezuo4_idea
+			add_idea = KYK_TKMhezuo5_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_TKMhezuo3_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_TKMhezuo3_idea
+			add_idea = KYK_TKMhezuo4_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_TKMhezuo2_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_TKMhezuo2_idea
+			add_idea = KYK_TKMhezuo3_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_TKMhezuo1_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_TKMhezuo1_idea
+			add_idea = KYK_TKMhezuo2_idea
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {	KYK_TKMhezuo = 0 }
+		}
+		add_ideas = KYK_TKMhezuo1_idea
+	}
+	add_to_variable = {	KYK_TKMhezuo = 1 }
+}
+KYK_SRBhezuo = {
+	if = {
+		limit = {
+			has_idea = KYK_SRBhezuo19_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_SRBhezuo19_idea
+			add_idea = KYK_SRBhezuo20_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_SRBhezuo18_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_SRBhezuo18_idea
+			add_idea = KYK_SRBhezuo19_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_SRBhezuo17_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_SRBhezuo17_idea
+			add_idea = KYK_SRBhezuo18_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_SRBhezuo16_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_SRBhezuo16_idea
+			add_idea = KYK_SRBhezuo17_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_SRBhezuo15_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_SRBhezuo15_idea
+			add_idea = KYK_SRBhezuo16_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_SRBhezuo14_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_SRBhezuo14_idea
+			add_idea = KYK_SRBhezuo15_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_SRBhezuo13_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_SRBhezuo13_idea
+			add_idea = KYK_SRBhezuo14_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_SRBhezuo12_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_SRBhezuo12_idea
+			add_idea = KYK_SRBhezuo13_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_SRBhezuo11_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_SRBhezuo11_idea
+			add_idea = KYK_SRBhezuo12_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_SRBhezuo10_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_SRBhezuo10_idea
+			add_idea = KYK_SRBhezuo11_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_SRBhezuo9_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_SRBhezuo9_idea
+			add_idea = KYK_SRBhezuo10_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_SRBhezuo8_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_SRBhezuo8_idea
+			add_idea = KYK_SRBhezuo9_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_SRBhezuo7_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_SRBhezuo7_idea
+			add_idea = KYK_SRBhezuo8_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_SRBhezuo6_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_SRBhezuo6_idea
+			add_idea = KYK_SRBhezuo7_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_SRBhezuo5_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_SRBhezuo5_idea
+			add_idea = KYK_SRBhezuo6_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_SRBhezuo4_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_SRBhezuo4_idea
+			add_idea = KYK_SRBhezuo5_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_SRBhezuo3_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_SRBhezuo3_idea
+			add_idea = KYK_SRBhezuo4_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_SRBhezuo2_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_SRBhezuo2_idea
+			add_idea = KYK_SRBhezuo3_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = KYK_SRBhezuo1_idea
+		}
+		swap_ideas = {
+			remove_idea = KYK_SRBhezuo1_idea
+			add_idea = KYK_SRBhezuo2_idea
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {	KYK_SRBhezuo = 0 }
+		}
+		add_ideas = KYK_SRBhezuo1_idea
+	}
+	add_to_variable = {	KYK_SRBhezuo = 1 }
+}

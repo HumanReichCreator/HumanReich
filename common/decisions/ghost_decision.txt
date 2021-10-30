@@ -1,0 +1,125 @@
+ghost_category = {
+    ghost_zhanju = {
+        target_root_trigger = {
+            has_idea = Ghost
+        }
+        target_trigger = {
+            FROM = {
+                not = {
+                    has_idea = Fairy
+                    has_idea = Ghost
+                    has_idea = God
+                }
+                has_war_with = ROOT
+            }
+        }
+        visible = {
+            FROM = {
+                has_war_with = ROOT
+            }
+        }
+        target_array = enemies
+        available = {
+            set_temp_variable = {
+                z1 = max_manpower_k
+            }
+            multiply_temp_variable = {
+                z1 = 0.5
+            }
+            has_manpower > z1
+            # custom_trigger_tooltip = {
+            #     tooltip = ghost_zhanju_tt
+            #     always = yes
+            # }
+            custom_trigger_tooltip = {
+                tooltip = ghost_zhanju_tt2
+                not = {
+                    FROM = { has_country_flag = GO_beizhanju }
+                }
+            }
+            not = {
+                has_country_flag = ghost_jinzhizhanju
+            }
+        }
+        targeted_modifier = {
+            tag = FROM
+            attack_bonus_against = 0.25
+            defense_bonus_against = 0.5
+        }
+        modifier = {
+            conscription_factor = -0.05
+            mobilization_laws_cost_factor = 1
+        }
+        days_remove = GO_time_current
+        days_re_enable = 60
+
+        complete_effect = {
+            set_temp_variable = {
+                z1 = max_manpower_k
+            }
+            multiply_temp_variable = {
+                z1 = -0.5
+            }
+            add_manpower = z1
+            FROM = {
+                set_country_flag = {
+                    flag = GO_beizhanju
+                    value = 1
+                    days = ROOT.GO_time_current
+                }
+                country_event = go.1
+                hidden_effect = {
+                    add_timed_idea = {
+                        idea = GO_nerf_puppet
+                        days = ROOT.GO_time_current
+                    }
+                }
+                set_variable = {
+                    GO_being_nerf = ROOT.GO_attack_defence_nerf_base_current
+                }
+                if = {
+                    limit = {
+                        or = {
+                            has_idea = Human
+                            has_idea = Magician
+                        }
+                    }
+                    multiply_variable = {
+                        GO_being_nerf = 0.5
+                    }
+                    custom_effect_tooltip = ghost_zhanju_tt3
+                }
+                if = {
+                    limit = {
+                        capital_scope = {
+                            or = {
+                                is_on_continent = Hell
+                                is_on_continent = Underground
+                            }
+                        }
+                    }
+                    multiply_variable = {
+                        GO_being_nerf = 0.5
+                    }
+                    custom_effect_tooltip = ghost_zhanju_tt4
+                }
+                hidden_effect = {
+                    country_event = { days = GO_time_current id = go.2 }
+                }
+                
+            }
+        }
+        cancel_trigger = {
+            not = {
+                # has_war_with = FROM
+            }
+        }
+
+        fire_only_once = no
+
+        ai_will_do = {
+           factor = 10000
+        }
+    }
+
+}

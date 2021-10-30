@@ -3,23 +3,37 @@ state={
 	id=69
 	name="STATE_69"
 	resources={
-		energy = 20
-		powder=15.000
+		energy=20.000
+		powder=20.000
 		metal=5.000
 		gas=0.000
 		crystal=0.000
 	}
 
 	history={
-			owner = NTR
-		146.1.1 = {
-			owner = NTR
+		143.7.1 = {
+			owner = GRS
+			add_core_of = GRS
 			add_core_of = KAP
 			add_core_of = NTR
 			buildings = {
-				infrastructure =6
+				infrastructure = 5
+				industrial_complex = 5
+				arms_factory = 1
+
+			}
+
+		}
+		146.1.1 = {
+			owner = GRS
+			add_core_of = GRS
+			add_core_of = KAP
+			add_core_of = NTR
+			buildings = {
+				infrastructure = 6
 				industrial_complex = 7
 				arms_factory = 1
+				radar_station = 1
 
 			}
 
@@ -28,9 +42,9 @@ state={
 	}
 
 	provinces={
-		516 693 919 3028 3389 3455 3456 3677 4268 4269 4270 4271 4273 4274 
+		516 693 919 3389 3455 3456 3677 4268 4269 4270 4271 4273 4274 
 	}
-	manpower=3331.0
+	manpower=3331
 	buildings_max_level_factor=1.000
 	state_category=s12
 }

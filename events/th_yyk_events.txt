@@ -1,0 +1,2522 @@
+﻿add_namespace = yyk
+news_event = {#向四季请罪
+	id = yyk.1
+	title = yyk.1.t
+	desc = yyk.1.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.1.1
+		trigger = {
+			tag = YYK
+		}
+	}
+
+	option = {
+		name = yyk.1.2
+		trigger = {
+			not = {
+				tag = YYK
+			}
+		}
+	}
+}
+
+news_event = {#加深与八云紫的联系
+	id = yyk.2
+	title = yyk.2.t
+	desc = yyk.2.d
+	picture = GFX_news_event_yyk.2
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.2.1
+		trigger = {
+			tag = YYK
+		}
+	}
+
+	option = {
+		name = yyk.2.2
+		trigger = {
+			not = {
+				tag = YYK
+			}
+		}
+	}
+}
+
+news_event = {#破坏幽冥结界
+	id = yyk.3
+	title = yyk.3.t
+	desc = yyk.3.d
+	picture = GFX_news_event_yyk.3
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.3.1
+		trigger = {
+			tag = YYK
+		}
+	}
+
+	option = {
+		name = yyk.3.2
+		trigger = {
+			not = {
+				tag = YYK
+				tag = SKI
+			}
+		}
+	}
+
+	option = {
+		name = yyk.3.3
+		trigger = {
+			tag = SKI
+		}
+	}
+}
+
+news_event = {#积极干涉幻想乡事物
+	id = yyk.4
+	title = yyk.4.t
+	desc = yyk.4.d
+	picture = GFX_news_event_yyk.4
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.4.1
+		trigger = {
+			or = {
+				tag = YYK
+				tag = YKR
+				is_subject_of = YYK
+				is_subject_of = YKR
+			}
+		}
+	}
+
+	option = {
+		name = yyk.4.2
+		trigger = {
+			not = {
+				tag = YYK
+				tag = YKR
+				is_subject_of = YYK
+				is_subject_of = YKR
+			}
+		}
+	}
+}
+
+news_event = {#引入幻想乡滞留的幽灵
+	id = yyk.5
+	title = yyk.5.t
+	desc = yyk.5.d
+	picture = GFX_news_event_yyk.5
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.5.1
+		trigger = {
+			tag = YYK
+		}
+	}
+
+	option = {
+		name = yyk.5.2
+		trigger = {
+			not = {
+				tag = YYK
+				tag = SKI
+			}
+		}
+	}
+
+	option = {
+		name = yyk.5.3
+		trigger = {
+			tag = SKI
+		}
+	}
+}
+
+news_event = {#向外明确与紫的同盟
+	id = yyk.6
+	title = yyk.6.t
+	desc = yyk.6.d
+	picture = GFX_news_event_yyk.6
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.6.1
+		trigger = {
+			or = {
+				tag = YYK
+				tag = YKR
+				is_subject_of = YYK
+				is_subject_of = YKR
+			}
+		}
+	}
+
+	option = {
+		name = yyk.6.2
+		trigger = {
+			not = {
+				tag = YYK
+				tag = YKR
+				is_subject_of = YYK
+				is_subject_of = YKR
+			}
+		}
+	}
+}
+
+news_event = {#开展冥界赏樱会
+	id = yyk.7
+	title = yyk.7.t
+	desc = yyk.7.d
+	picture = GFX_news_event_yyk.7
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.7.1
+		trigger = {
+			or = {
+				tag = YYK
+				tag = YKR
+				is_subject_of = YYK
+				is_subject_of = YKR
+			}
+		}
+	}
+
+	option = {
+		name = yyk.7.2
+		trigger = {
+			not = {
+				tag = YYK
+				tag = YKR
+				is_subject_of = YYK
+				is_subject_of = YKR
+			}
+		}
+	}
+}
+
+news_event = {#融入幻想乡
+	id = yyk.8
+	title = yyk.8.t
+	desc = yyk.8.d
+	picture = GFX_news_event_yyk.8
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.8.1
+		trigger = {
+			or = {
+				tag = YYK
+				tag = YKR
+				is_subject_of = YYK
+				is_subject_of = YKR
+			}
+		}
+	}
+
+	option = {
+		name = yyk.8.2
+		trigger = {
+			not = {
+				tag = YYK
+				tag = YKR
+				is_subject_of = YYK
+				is_subject_of = YKR
+			}
+		}
+	}
+}
+
+news_event = {#宣布脱离地狱管辖
+	id = yyk.9
+	title = yyk.9.t
+	desc = yyk.9.d
+	picture = GFX_news_event_yyk.9
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.9.1
+		trigger = {
+			tag = YYK
+		}
+	}
+
+	option = {
+		name = yyk.9.2
+		trigger = {
+			not = {
+				tag = YYK
+				tag = SKI
+			}
+		}
+	}
+
+	option = {
+		name = yyk.9.3
+		trigger = {
+			tag = SKI
+		}
+	}
+}
+
+news_event = {#取缔四季审判所
+	id = yyk.10
+	title = yyk.10.t
+	desc = yyk.10.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.10.1
+		trigger = {
+			tag = YYK
+		}
+	}
+
+	option = {
+		name = yyk.10.2
+		trigger = {
+			not = {
+				tag = YYK
+				tag = SKI
+				tag = YKR
+			}
+		}
+	}
+
+	option = {
+		name = yyk.10.3
+		trigger = {
+			tag = SKI
+		}
+	}
+
+	option = {
+		name = yyk.10.4
+		trigger = {
+			tag = YKR
+		}
+	}
+}
+
+news_event = {#主导死后世界
+	id = yyk.11
+	title = yyk.11.t
+	desc = yyk.11.d
+	picture = GFX_news_event_yyk.11
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.11.1
+		trigger = {
+			tag = YYK
+		}
+	}
+
+	option = {
+		name = yyk.11.2
+		trigger = {
+			not = {
+				tag = YYK
+				tag = YKR
+			}
+		}
+	}
+
+	option = {
+		name = yyk.11.3
+		trigger = {
+			tag = YKR
+		}
+	}
+}
+
+news_event = {#征服畜生界
+	id = yyk.12
+	title = yyk.12.t
+	desc = yyk.12.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.12.1
+		trigger = {
+			tag = YYK
+		}
+	}
+
+	option = {
+		name = yyk.12.2
+		trigger = {
+			not = {
+				tag = YYK
+				tag = YKR
+				tag = SAK
+				tag = KEK
+				tag = YCE
+				tag = GYK
+			}
+		}
+	}
+	option = {
+		name = yyk.12.3
+		trigger = {
+			tag = YKR
+		}
+	}
+	option = {
+		name = yyk.12.4
+		trigger = {
+			or = {
+				tag = SAK
+				tag = KEK
+				tag = YCE
+				tag = GYK
+			}
+		}
+	}
+}
+
+news_event = {#通往天界的道路
+	id = yyk.13
+	title = yyk.13.t
+	desc = yyk.13.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.13.1
+		trigger = {
+			tag = YYK
+		}
+	}
+
+	option = {
+		name = yyk.13.2
+		trigger = {
+			not = {
+				tag = YYK
+				tag = YKR
+				tag = HB1
+			}
+		}
+	}
+
+	option = {
+		name = yyk.13.3
+		trigger = {
+			tag = YKR
+		}
+	}
+	option = {
+		name = yyk.13.4
+		trigger = {
+			tag = HB1	
+		}
+	}
+}
+
+news_event = {#驱逐地狱的神明
+	id = yyk.14
+	title = yyk.14.t
+	desc = yyk.14.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.14.1
+		trigger = {
+			tag = YYK
+		}
+	}
+
+	option = {
+		name = yyk.14.2
+		trigger = {
+			not = {
+				tag = YYK
+				tag = YKR
+				tag = HCT
+			}
+		}
+	}
+	option = {
+		name = yyk.14.3
+		trigger = {
+			tag = YKR
+		}
+	}
+	option = {
+		name = yyk.14.4
+		trigger = {
+			tag = HCT
+		}
+	}
+}
+
+news_event = {#真正的亡灵女皇
+	id = yyk.15
+	title = yyk.15.t
+	desc = yyk.15.d
+	picture = GFX_news_event_yyk.15
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.15.1
+		trigger = {
+			tag = YYK
+		}
+	}
+
+	option = {
+		name = yyk.15.2
+		trigger = {
+			not = {
+				tag = YYK
+				tag = YKR
+			}
+		}
+	}
+	option = {
+		name = yyk.15.3
+		trigger = {
+			tag = YKR
+		}
+	}
+}
+
+news_event = {#外界人类集中营
+	id = yyk.16
+	title = yyk.16.t
+	desc = yyk.16.d
+	picture = GFX_news_event_yyk.16
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.16.1
+		trigger = {
+			tag = YYK
+		}
+	}
+
+	option = {
+		name = yyk.16.2
+		trigger = {
+			not = {
+				tag = YYK
+				tag = YKR
+			}
+		}
+	}
+	option = {
+		name = yyk.16.3
+		trigger = {
+			tag = YKR
+		}
+	}
+}
+
+news_event = {#与紫的背德之行
+	id = yyk.17
+	title = yyk.17.t
+	desc = yyk.17.d
+	picture = GFX_news_event_yyk.17
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.17.1
+		trigger = {
+			tag = YYK
+		}
+	}
+
+	option = {
+		name = yyk.17.2
+		trigger = {
+			tag = YKR
+		}
+	}
+	
+	option = {
+		name = yyk.17.3
+		trigger = {
+			not = {
+				tag = YYK
+				tag = YKR
+			}
+		}
+	}
+}
+
+news_event = {#调整好友，纠正思想
+	id = yyk.18
+	title = yyk.18.t
+	desc = yyk.18.d
+	picture = GFX_news_event_yyk.18
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.18.1
+		trigger = {
+			tag = YYK
+		}
+	}
+
+	option = {
+		name = yyk.18.2
+		trigger = {
+			tag = YKR
+		}
+	}
+	
+	option = {
+		name = yyk.18.3
+		trigger = {
+			not = {
+				tag = YYK
+				tag = YKR
+			}
+		}
+	}
+}
+
+news_event = {#宣称幻想乡的贤者
+	id = yyk.19
+	title = yyk.19.t
+	desc = yyk.19.d
+	picture = GFX_news_event_yyk.19
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.19.1
+		trigger = {
+			tag = YYK
+		}
+	}
+
+	option = {
+		name = yyk.19.2
+		trigger = {
+			tag = YKR
+		}
+	}
+	
+	option = {
+		name = yyk.19.3
+		trigger = {
+			not = {
+				tag = YYK
+				tag = YKR
+			}
+		}
+	}
+}
+
+news_event = {#谁说冥界只能有幽灵定居？
+	id = yyk.20
+	title = yyk.20.t
+	desc = yyk.20.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.20.1
+		trigger = {
+			tag = YYK
+		}
+	}
+	option = {
+		name = yyk.20.2
+		trigger = {
+			has_government = fandong
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.20.3
+		trigger = {
+			has_government = neworder
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.20.4
+		trigger = {
+			has_government = qinwai
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.20.5
+		trigger = {
+			has_government = guli
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.20.6
+		trigger = {
+			has_government = oldorder
+			not = {
+				tag = YYK
+			}
+		}
+	}
+}
+
+news_event = {#请求制裁地狱鬼族 肯定
+	id = yyk.21
+	title = yyk.21.t
+	desc = yyk.21.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.21.1
+		trigger = {
+			tag = YYK
+		}
+	}
+
+	option = {
+		name = yyk.21.2
+		trigger = {
+			tag = SKI
+		}
+	}
+	option = {
+		name = yyk.21.2
+		trigger = {
+			or = {
+				tag = AOO
+				tag = AKO
+			}
+		}
+	}
+	option = {
+		name = yyk.21.2
+		trigger = {
+			not = {
+				tag = YYK
+				tag = SKI
+				tag = AOO
+				tag = AKO
+			}
+		}
+	}
+}
+
+news_event = {#冥界——世外桃源
+	id = yyk.22
+	title = yyk.22.t
+	desc = yyk.22.d
+	picture = GFX_news_event_yyk.22
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.22.1
+		trigger = {
+			tag = YYK
+		}
+	}
+	option = {
+		name = yyk.22.2
+		trigger = {
+			has_government = fandong
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.22.3
+		trigger = {
+			has_government = neworder
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.22.4
+		trigger = {
+			has_government = qinwai
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.22.5
+		trigger = {
+			has_government = guli
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.22.6
+		trigger = {
+			has_government = oldorder
+			not = {
+				tag = YYK
+			}
+		}
+	}
+}
+
+news_event = {#试图开放和旧地狱的通路
+	id = yyk.23
+	title = yyk.23.t
+	desc = yyk.23.d
+	picture = GFX_news_event_yyk.23
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.23.1
+		trigger = {
+			tag = YYK
+		}
+	}
+
+	option = {
+		name = yyk.23.2
+		trigger = {
+			capital_scope = {
+				is_on_continent = Underground
+			}
+		}
+	}
+
+	option = {
+		name = yyk.23.3
+		trigger = {
+			not = {
+				tag = YYK
+			}
+		}
+	}
+}
+
+news_event = {#进攻旧地狱的政治中心
+	id = yyk.24
+	title = yyk.24.t
+	desc = yyk.24.d
+	picture = GFX_news_event_yyk.24
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.24.1
+		trigger = {
+			tag = YYK
+		}
+	}
+
+	option = {
+		name = yyk.24.2
+		trigger = {
+			capital_scope = {
+				is_on_continent = Underground
+			}
+		}
+	}
+
+	option = {
+		name = yyk.24.3
+		trigger = {
+			not = {
+				tag = YYK
+			}
+		}
+	}
+}
+
+news_event = {#突破幽冥结界
+	id = yyk.25
+	title = yyk.25.t
+	desc = yyk.25.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.25.1
+		trigger = {
+			tag = YYK
+		}
+	}
+
+	option = {
+		name = yyk.25.2
+		trigger = {
+			tag = YKR
+		}
+	}
+	option = {
+		name = yyk.25.3
+		trigger = {
+			not = {
+				tag = YYK
+				tag = YKR
+			}
+		}
+	}
+}
+
+news_event = {#与紫沟通
+	id = yyk.26
+	title = yyk.26.t
+	desc = yyk.26.d
+	picture = GFX_news_event_yyk.26
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.26.1
+		trigger = {
+			tag = YYK
+		}
+	}
+
+	option = {
+		name = yyk.26.2
+		trigger = {
+			tag = YKR
+		}
+	}
+	option = {
+		name = yyk.26.3
+		trigger = {
+			or = {
+				tag = HKR
+				and = {
+					tag = TKM
+					or = {
+						has_government = fandong
+						has_government = neworder
+					}
+				}
+				and = {
+					tag = SEJ
+					has_government = fandong
+				}
+			}
+		}
+	}
+	option = {
+		name = yyk.26.4
+		trigger = {
+			not = {
+				tag = YYK
+				tag = YKR
+				tag = HKR
+				and = {
+					tag = TKM
+					or = {
+						has_government = fandong
+						has_government = neworder
+					}
+				}
+				and = {
+					tag = SEJ
+					has_government = fandong
+				}
+			}
+		}
+	}
+}
+
+news_event = {#打通旧地狱——幻想乡的通路
+	id = yyk.27
+	title = yyk.27.t
+	desc = yyk.27.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.27.1
+		trigger = {
+			tag = YYK
+		}
+	}
+
+	option = {
+		name = yyk.27.2
+		trigger = {
+			or = {
+				tag = SEJ
+				tag = RMI
+				tag = NIB
+			}
+		}
+	}
+
+	option = {
+		name = yyk.27.3
+		trigger = {
+			not = {
+				tag = SEJ
+				tag = RMI
+				tag = NIB
+				tag = YYK
+			}
+		}
+	}
+}
+
+news_event = {#幽灵的新栖息地
+	id = yyk.28
+	title = yyk.28.t
+	desc = yyk.28.d
+	picture = GFX_news_event_yyk.28
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.28.1
+		trigger = {
+			tag = YYK
+		}
+	}
+
+	option = {
+		name = yyk.28.2
+		trigger = {
+			not = {
+				tag = YYK
+			}
+		}
+	}
+}
+
+news_event = {#宣布幽灵保护法案
+	id = yyk.29
+	title = yyk.29.t
+	desc = yyk.29.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.29.1
+		trigger = {
+			tag = YYK
+		}
+	}
+	option = {
+		name = yyk.29.2
+		trigger = {
+			has_government = fandong
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.29.3
+		trigger = {
+			has_government = neworder
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.29.4
+		trigger = {
+			has_government = qinwai
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.29.5
+		trigger = {
+			has_government = guli
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.29.6
+		trigger = {
+			has_government = oldorder
+			not = {
+				tag = YYK
+			}
+		}
+	}
+}
+
+news_event = {#幽灵亡灵神灵统一论
+	id = yyk.30
+	title = yyk.30.t
+	desc = yyk.30.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.30.1
+		trigger = {
+			tag = YYK
+		}
+	}
+	option = {
+		name = yyk.30.2
+		trigger = {
+			has_government = fandong
+			not = {
+				has_idea = god
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.30.3
+		trigger = {
+			has_government = neworder
+			not = {
+				has_idea = god
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.30.4
+		trigger = {
+			has_government = qinwai
+			not = {
+				has_idea = god
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.30.5
+		trigger = {
+			has_government = guli
+			not = {
+				has_idea = god
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.30.6
+		trigger = {
+			or = {
+				has_idea = god
+				has_government = oldorder
+			}
+			not = {
+				tag = YYK
+			}
+		}
+	}
+}
+
+news_event = {#泛幽灵主义
+	id = yyk.31
+	title = yyk.31.t
+	desc = yyk.31.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.31.1
+		trigger = {
+			tag = YYK
+		}
+	}
+	option = {
+		name = yyk.31.2
+		trigger = {
+			has_government = fandong
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.31.3
+		trigger = {
+			has_government = neworder
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.31.4
+		trigger = {
+			has_government = qinwai
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.31.5
+		trigger = {
+			has_government = guli
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.31.6
+		trigger = {
+			has_government = oldorder
+			not = {
+				tag = YYK
+			}
+		}
+	}
+}
+
+news_event = {#春度再收集计划
+	id = yyk.32
+	title = yyk.32.t
+	desc = yyk.32.d
+	picture = GFX_news_event_yyk.32
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.32.1
+		trigger = {
+			tag = YYK
+		}
+	}
+	option = {
+		name = yyk.32.2
+		trigger = {
+			has_government = fandong
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.32.3
+		trigger = {
+			has_government = neworder
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.32.4
+		trigger = {
+			has_government = qinwai
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.32.5
+		trigger = {
+			has_government = guli
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.32.6
+		trigger = {
+			has_government = oldorder
+			not = {
+				tag = YYK
+			}
+		}
+	}
+}
+
+news_event = {#榨干自然之力
+	id = yyk.33
+	title = yyk.33.t
+	desc = yyk.33.d
+	picture = GFX_news_event_yyk.33
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.33.1
+		trigger = {
+			tag = YYK
+		}
+	}
+	option = {
+		name = yyk.33.2
+		trigger = {
+			has_government = fandong
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.33.3
+		trigger = {
+			has_government = neworder
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.33.4
+		trigger = {
+			has_government = qinwai
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.33.5
+		trigger = {
+			has_government = guli
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.33.6
+		trigger = {
+			has_government = oldorder
+			not = {
+				tag = YYK
+			}
+		}
+	}
+}
+
+news_event = {#开花的另一种可能——灵魂收集
+	id = yyk.34
+	title = yyk.34.t
+	desc = yyk.34.d
+	picture = GFX_news_event_yyk.34
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.34.1
+		trigger = {
+			tag = YYK
+		}
+	}
+	option = {
+		name = yyk.34.2
+		trigger = {
+			has_government = fandong
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.34.3
+		trigger = {
+			has_government = neworder
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.34.4
+		trigger = {
+			has_government = qinwai
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.34.5
+		trigger = {
+			has_government = guli
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.34.6
+		trigger = {
+			has_government = oldorder
+			not = {
+				tag = YYK
+			}
+		}
+	}
+}
+
+news_event = {#死亡即和平
+	id = yyk.35
+	title = yyk.35.t
+	desc = yyk.35.d
+	picture = GFX_news_event_yyk.35
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.35.1
+		trigger = {
+			tag = YYK
+		}
+	}
+	option = {
+		name = yyk.35.2
+		trigger = {
+			has_government = fandong
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.35.3
+		trigger = {
+			has_government = neworder
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.35.4
+		trigger = {
+			has_government = qinwai
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.35.5
+		trigger = {
+			has_government = guli
+			not = {
+				tag = YYK
+			}
+		}
+	}
+	option = {
+		name = yyk.35.6
+		trigger = {
+			has_government = oldorder
+			not = {
+				tag = YYK
+			}
+		}
+	}
+}
+
+news_event = {#成功开花的西行妖？
+	id = yyk.36
+	title = yyk.36.t
+	desc = yyk.36.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.36.1
+		trigger = {
+			tag = YYK
+		}
+	}
+
+	option = {
+		name = yyk.36.2
+		trigger = {
+			not = {
+				tag = YYK
+				tag = YKR
+			}
+		}
+	}
+	option = {
+		name = yyk.36.3
+		trigger = {
+			tag = YKR
+		}
+	}
+}
+
+country_event = {#引入幻想乡滞留的幽灵(幻想乡的幽灵国家)
+	id = yyk.37
+	title = yyk.37.t
+	desc = yyk.37.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = yyk.37.1
+		custom_effect_tooltip = YYK_yinruzhiliuyouling_tt2
+		every_owned_state = {
+			limit = {
+				is_on_continent = Gensokyo
+				ST_race_is_Ghost = yes
+			}
+			set_temp_variable = {
+				v = state_population_k
+			}
+			multiply_temp_variable = {
+				v = 0.05
+			}
+			multiply_temp_variable = {
+				v = 0.25
+			}
+			multiply_temp_variable = {
+				v = -1000
+			}
+			add_manpower = v
+			add_manpower = v
+			add_manpower = v
+			add_manpower = v
+		}
+	}
+}
+
+country_event = {#要求地狱幽灵臣服(易者）
+	id = yyk.38
+	title = yyk.38.t
+	desc = yyk.38.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = yyk.38.1
+		FROM = {
+			HGH = {
+				subject_level2 = yes
+			}
+		}
+		every_country = {
+			limit = {
+				has_idea = YYK_xuanbutuolidiyu2_idea
+			}
+			swap_ideas = {
+				remove_idea = YYK_xuanbutuolidiyu2_idea
+				add_idea = YYK_xuanbutuolidiyu3_idea
+			}
+		}
+		FROM = {
+			approved_event = yes
+		}
+		ai_chance = {
+			base = 75
+		}
+	}
+
+	option = {
+		name = yyk.38.2
+		FROM = {
+			declare_war_on = {
+				target = HGH
+				type = puppet_wargoal_focus
+			}
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = {
+						target = FROM
+						value > 49
+					}
+				}
+			}
+		}	
+	}
+}
+
+country_event = {#拉拢紫一起孤立（紫）
+	id = yyk.39
+	title = yyk.39.t
+	desc = yyk.39.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = yyk.39.1
+		FROM = {
+			custom_effect_tooltip = YYK_lalongziguli_tt
+			set_country_flag = YYK_lalongziguli
+			huxiangbaodu = yes
+			approved_event = yes
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+
+	option = {
+		name = yyk.39.2
+		YYK = {
+			refused_event = yes
+		}
+		ai_chance = {
+			base = 70
+		}
+	}
+}
+
+country_event = {#与紫加强防御工作（紫）
+	id = yyk.40
+	title = yyk.40.t
+	desc = yyk.40.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = yyk.40.1
+		ai_chance = {
+			base = 50
+		}
+		FROM = {
+			251 = {
+				if = {
+					limit = {
+						is_fully_controlled_by = PREV
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						instant_build = yes
+						province = 978
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						instant_build = yes
+						province = 2537
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						instant_build = yes
+						province = 695
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						instant_build = yes
+						province = 1955
+					}
+				}
+			}
+			218 = {
+				if = {
+					limit = {
+						is_fully_controlled_by = PREV
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						instant_build = yes
+						province = 301
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						instant_build = yes
+						province = 2542
+					}
+				}
+			}
+			145 = {
+				if = {
+					limit = {
+						is_fully_controlled_by = PREV
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						instant_build = yes
+						province = 1252
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						instant_build = yes
+						province = 1444
+					}
+				}
+			}
+			159 = {
+				if = {
+					limit = {
+						is_fully_controlled_by = PREV
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						instant_build = yes
+						province = 2410
+					}
+				}
+			}
+			136 = {
+				if = {
+					limit = {
+						is_fully_controlled_by = PREV
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						instant_build = yes
+						province = 496
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						instant_build = yes
+						province = 2371
+					}
+				}
+			}
+		}
+		YKR = {
+			add_political_power = -100
+			add_popularity = {
+				ideology = guli
+				popularity = 0.3
+			}
+			244 = {
+				if = {
+					limit = {
+						is_fully_controlled_by = PREV
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes
+						province = 1045
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes
+						province = 396
+					}
+				}
+			}
+			220 = {
+				if = {
+					limit = {
+						is_fully_controlled_by = PREV
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes
+						province = 2845
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes
+						province = 37
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes
+						province = 220
+					}
+				}
+			}
+			201 = {
+				if = {
+					limit = {
+						is_fully_controlled_by = PREV
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes
+						province = 2258
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes
+						province = 99
+					}
+				}
+			}
+			180 = {
+				if = {
+					limit = {
+						is_fully_controlled_by = PREV
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes
+						province = 1614
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes
+						province = 722
+					}
+				}
+			}
+			509 = {
+				if = {
+					limit = {
+						is_fully_controlled_by = PREV
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes
+						province = 6629
+					}
+				}
+			}
+			544 = {
+				if = {
+					limit = {
+						is_fully_controlled_by = PREV
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes
+						province = 7088
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes
+						province = 7086
+					}
+				}
+			}
+		}
+		FROM = {
+			approved_event = yes
+		}
+	}
+
+	option = {
+		name = yyk.40.2
+		FROM = {
+			refused_event = yes
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+country_event = {#释放西行妖的力量（占领冥界的国家）
+	id = yyk.41
+	title = yyk.41.t
+	desc = yyk.41.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		YYK = {
+			has_completed_focus = YYK_xixingyaodeliliang
+		}
+		any_state = {
+			is_on_continent = Netherworld
+			is_controlled_by = ROOT
+		}
+		not = {
+			has_idea = Ghost
+			has_idea = YYK_xixingyaodeliliang_idea
+		}
+		has_war_with = YYK
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = {
+		name = yyk.41.1
+		add_ideas = YYK_xixingyaodeliliang_idea
+	}
+}
+
+country_event = { #请求制裁地狱鬼族(四季)
+	id = yyk.42
+	title = yyk.42.t
+	desc = yyk.42.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = yyk.42.1
+		FROM = {
+			add_ideas = YYK_zhicaiguizu_idea
+			approved_event = yes
+		}
+		hidden_effect = {
+			news_event = { days = 2 id = yyk.21 }
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	option = {
+		name = yyk.42.2
+		FROM = {
+			refused_event = yes
+		}
+		hidden_effect = {
+			news_event = { days = 2 id = yyk.55 }
+		}
+		ai_chance = {
+			base = 60
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = {
+						target = FROM
+						value > 0
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = {
+						target = FROM
+						value > 40
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {#加深与各处幽灵的联系(其他幽灵)
+	id = yyk.43
+	title = yyk.43.t
+	desc = yyk.43.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = yyk.43.1
+		effect_tooltip = {
+			add_ideas = YYK_jiashenlianxi2_idea
+		}
+	}
+}
+
+country_event = {#援助外部的幽灵势力(其他幽灵)
+	id = yyk.44
+	title = yyk.44.t
+	desc = yyk.44.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = yyk.44.1
+		effect_tooltip = {
+			add_ideas = YYK_yuanzhuwaibushili2_idea
+		}
+	}
+}
+
+country_event = {#所有幽灵的家(决议，接壤的其他幽灵)
+	id = yyk.45
+	title = yyk.45.t
+	desc = yyk.45.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = yyk.45.1
+		YYK = {
+			ROOT = {
+				subject_level2 = yes
+                can_core = yes
+			}
+			approved_event = yes
+		}
+		ai_chance = {
+			base = 75
+		}
+	}	
+
+	option = {
+		name = yyk.45.2
+		YYK = {
+			refused_event = yes
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0
+				ROOT = {
+					has_opinion = {
+						target = FROM
+						value > 60
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {#各色作战计划 被交战的国家
+	id = yyk.46
+	title = yyk.46.t
+	desc = yyk.46.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		not = {
+			has_idea = YYK_hongsejihua_idea
+		}
+		YYK = {
+			is_subject = no
+		}
+		or = {
+			and = {
+				YYK = {
+					has_completed_focus = YYK_hongsejihua
+				}
+				has_war_with = YYK
+				capital_scope = {
+					is_on_continent = Hell
+				}
+			}
+			and = {
+				YYK = {
+					has_completed_focus = YYK_huisejihua
+				}
+				has_war_with = YYK
+				capital_scope = {
+					is_on_continent = Underground
+				}
+			}
+			and = {
+				YYK = {
+					has_completed_focus = YYK_caisejihua
+				}
+				has_war_with = YYK
+				capital_scope = {
+					is_on_continent = Gensokyo
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	option = {
+		name = yyk.46.1
+		add_ideas = YYK_hongsejihua_idea
+	}
+}
+
+country_event = {#联合地狱的幽灵 易者
+	id = yyk.47
+	title = yyk.47.t
+	desc = yyk.47.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = yyk.47.1
+		custom_effect_tooltip = YYK_lianhediyulouling_tt
+		FROM = {
+			set_country_flag = YYK_lianhediyulouling
+			approved_event = yes
+		}
+		ai_chance = {
+			base = 85
+		}
+	}
+
+	option = {
+		name = yyk.47.2
+		FROM = {
+			refused_event = yes
+		}
+		ai_chance = {
+			base = 15
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = {
+						target = FROM
+						value > 50
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {#试图开放和旧地狱的通路 HUB
+	id = yyk.49
+	title = yyk.49.t
+	desc = yyk.49.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = yyk.49.1
+		FROM = {
+			ROOT = {
+				subject_level2 = yes
+			}
+			approved_event = yes
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	option = {
+		name = yyk.49.2
+		FROM = {
+			declare_war_on = {
+				target = ROOT
+				type = puppet_wargoal_focus
+			}
+		}
+		ai_chance = {
+			base = 60
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = {
+						target = FROM
+						value > 40
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {#与紫沟通 紫
+	id = yyk.51
+	title = yyk.51.t
+	desc = yyk.51.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = yyk.51.1
+		FROM = {
+			approved_event = yes
+			transfer_state = 544
+			transfer_state = 137
+			set_country_flag = YYK_yuzigoutong
+		}
+		ai_chance = {
+			base = 60
+		}
+	}
+
+	option = {
+		name = yyk.51.2
+		FROM = {
+			refused_event = yes
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+country_event = {#幽灵掠夺分队 和YYK作战的国家
+	id = yyk.52
+	title = yyk.52.t
+	desc = yyk.52.d
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		not = {
+			has_idea = YYK_youlinglveduo_idea
+		}
+		has_war_with = YYK
+		YYK = {
+			has_completed_focus = YYK_youlinglveduo
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = {
+		name = yyk.52.1
+		add_ideas = YYK_youlinglveduo_idea
+	}
+}
+
+country_event = {#拉拢紫一起孤立（勒令决议 第一次）
+	id = yyk.53
+	title = yyk.53.t
+	desc = yyk.53.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = yyk.53.1
+		every_country = {
+			limit = {
+				has_defensive_war_with = YKR
+				not = { has_defensive_war_with = FROM }
+			}
+			white_peace = YKR
+		}
+		ai_chance = {
+			base = 50
+		}
+		FROM = {
+			approved_event = yes
+		}
+	}
+
+	option = {
+		name = yyk.53.2
+		ai_chance = {
+			base = 50
+		}
+		FROM = {
+			declare_war_on = {
+				target = YKR
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+}
+
+news_event = {#请求制裁地狱鬼族 否定
+	id = yyk.55
+	title = yyk.55.t
+	desc = yyk.55.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yyk.55.1
+		trigger = {
+			tag = YYK
+		}
+	}
+
+	option = {
+		name = yyk.55.2
+		trigger = {
+			tag = SKI
+		}
+	}
+	option = {
+		name = yyk.55.2
+		trigger = {
+			or = {
+				tag = AOO
+				tag = AKO
+			}
+		}
+	}
+	option = {
+		name = yyk.55.2
+		trigger = {
+			not = {
+				tag = YYK
+				tag = SKI
+				tag = AOO
+				tag = AKO
+			}
+		}
+	}
+}
+
+country_event = {#拉拢紫一起孤立（勒令决议 后多次）
+	id = yyk.56
+	title = yyk.56.t
+	desc = yyk.56.d
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = yyk.56.1
+		every_country = {
+			limit = {
+				has_defensive_war_with = YKR
+				not = { has_defensive_war_with = FROM }
+			}
+			white_peace = YKR
+		}
+		ai_chance = {
+			base = 25
+		}
+		FROM = {
+			approved_event = yes
+		}
+	}
+
+	option = {
+		name = yyk.56.2
+		ai_chance = {
+			base = 75
+		}
+		FROM = {
+			declare_war_on = {
+				target = YKR
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+}

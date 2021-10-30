@@ -1,0 +1,682 @@
+peace_decision = {
+	TKM_peace_SCA = {
+		visible = {
+			SCA = {	
+				165 = { 
+					or = {
+						is_owned_by = TKM
+						is_owned_by = PREV
+						any_country = {
+							is_subject_of = PREV.PREV
+							owns_state = PREV
+						}
+					}	
+				}
+				177 = { 
+					or = {
+						is_owned_by = TKM
+						is_owned_by = PREV
+						any_country = {
+							is_subject_of = PREV.PREV
+							owns_state = PREV
+						}
+					}	
+				}
+				316 = { 
+					or = {
+						is_owned_by = TKM
+						is_owned_by = PREV
+						any_country = {
+							is_subject_of = PREV.PREV
+							owns_state = PREV
+						}
+					}	
+				}
+				173 = { 
+					or = {
+						is_owned_by = TKM
+						is_owned_by = PREV
+						any_country = {
+							is_subject_of = PREV.PREV
+							owns_state = PREV
+						}
+					}	
+				}
+			}
+			not = { SCA = { has_war_with = NMS} }
+			or = {
+				and = {
+					tag = TKM
+          			is_subject = no
+					has_war_with = SCA
+				}
+				and = {
+					tag = SCA
+          			is_subject = no
+					has_war_with = TKM
+				}
+			}
+			not = {
+				has_global_flag = TKM_peace_SCA
+			}
+			not = {
+				any_country = {
+					NOT = { tag = SCA }
+          			is_major = yes
+					is_in_faction_with = SCA
+				}
+				any_country = {
+					NOT = { tag = TKM }
+          			is_major = yes
+					is_in_faction_with = TKM
+				}
+				any_country = {
+					NOT = { tag = SCA }
+					NOT = { tag = WAK }
+					NOT = { tag = PRI }
+					NOT = { tag = GRS }
+					is_in_faction_with = SCA
+					or = {
+						is_neighbor_of = TKM
+						any_neighbor_country = {
+							or = {
+								is_subject_of = TKM
+								is_in_faction_with = TKM
+							}
+						}
+					}
+				}
+				any_country = {
+					NOT = { tag = TKM }
+					NOT = { tag = NMS }
+					or = {
+						is_in_faction_with = TKM
+						is_in_faction_with = NMS
+					}
+					is_neighbor_of = SCA
+				}
+			}
+			
+		}
+		available = {
+			not = {
+				has_global_flag = SCA_two_peace_TKM
+				has_global_flag = SCA_three_peace
+			}
+		}
+      	complete_effect = {
+          	custom_effect_tooltip = TEG_accept
+          	effect_tooltip = {
+          		TKM = {
+					if = {
+						limit = {
+							173 = { 
+								or = {
+									is_owned_by = SCA
+									any_country = {
+										is_subject_of = SCA
+										owns_state = PREV
+									}
+								}	
+							}
+						}
+						transfer_state = 173
+					}
+					if = {
+						limit = {
+							177 = { 
+								or = {
+									is_owned_by = SCA
+									any_country = {
+										is_subject_of = SCA
+										owns_state = PREV
+									}
+								}	
+							}
+						}
+						transfer_state = 177
+					}
+					if = {
+						limit = {
+							316 = { 
+								or = {
+									is_owned_by = SCA
+									any_country = {
+										is_subject_of = SCA
+										owns_state = PREV
+									}
+								}	
+							}
+						}
+						transfer_state = 316
+					}
+					if = {
+						limit = {
+							165 = { 
+								or = {
+									is_owned_by = SCA
+									any_country = {
+										is_subject_of = SCA
+										owns_state = PREV
+									}
+								}	
+							}
+						}
+						transfer_state = 165
+					}
+					white_peace = SCA
+				}
+          	}
+          	if = {
+          		limit = {
+          			tag = TKM
+          		}
+          		SCA = { country_event = sca.48}
+          	}
+          	if = {
+          		limit = {
+          			tag = SCA
+          		}
+          		TKM = { country_event = sca.48}
+          	}
+          	set_global_flag = {
+          		days = 50
+          		flag = SCA_two_peace_TKM
+          		value = 1
+          	}
+     	}
+     	cost = 50
+      	fire_only_once = no
+      	days_re_enable = 30
+
+      	ai_will_do = {
+         	factor = -200
+         	modifier = {
+				SCA = {
+					set_temp_variable = { global.v = surrender_progress }
+					multiply_temp_variable = { global.v = 100 }
+				}
+				SCA = {
+					add_to_temp_variable = { b = EXHC_current_exhaustion }
+					add_to_temp_variable = { c = 1 }
+					all_country = {
+						if = {
+							limit = {
+								is_in_faction_with = PREV
+								is_major = yes
+								has_war_with = TKM
+							}
+							add_to_temp_variable = { PREV.b = EXHC_current_exhaustion }
+							add_to_temp_variable = { PREV.c = 1}
+						}
+					}
+					divide_temp_variable = { b = c}
+					multiply_temp_variable = { b = 2}
+				}
+				add_to_temp_variable = { global.v = SCA.b }
+				TKM = {
+					add_to_temp_variable = { d = EXHC_current_exhaustion }
+					add_to_temp_variable = { e = 1 }
+					all_country = {
+						if = {
+							limit = {
+								is_in_faction_with = PREV
+								is_major = yes
+								has_war_with = SCA
+							}
+							add_to_temp_variable = { PREV.d = EXHC_current_exhaustion }
+							add_to_temp_variable = { PREV.e = 1}
+						}
+					}
+					divide_temp_variable = { d = e}
+					multiply_temp_variable = { d = 2}
+				}
+				add_to_temp_variable = { global.v = TKM.d }
+				if = {
+					limit = {
+						WAK = { has_capitulated = yes}
+					}
+					add_to_temp_variable = { global.v = 5 }
+				}
+				if = {
+					limit = {
+						PRI = { has_capitulated = yes}
+					}
+					add_to_temp_variable = { global.v = 5 }
+				}
+				add = global.v
+			}
+      	}
+	}
+	NMS_peace_SCA = {
+		visible = {
+			or = {
+				WAK = { is_subject_of = SCA}
+				PRI = { is_subject_of = SCA}
+			}
+			not = { SCA = { has_war_with = TKM} }
+			or = {
+				and = {
+					tag = NMS
+          			is_subject = no
+					has_war_with = SCA
+				}
+				and = {
+					tag = SCA
+          			is_subject = no
+					has_war_with = NMS
+				}
+			}
+			not = {
+				has_global_flag = NMS_peace_SCA
+			}
+			not = {
+				any_country = {
+					NOT = { tag = SCA }
+          			is_major = yes
+					is_in_faction_with = SCA
+				}
+				any_country = {
+					NOT = { tag = NMS }
+          			is_major = yes
+					is_in_faction_with = NMS
+				}
+				any_country = {
+					NOT = { tag = SCA }
+					NOT = { tag = WAK }
+					NOT = { tag = PRI }
+					NOT = { tag = GRS }
+					is_in_faction_with = SCA
+					or = {
+						is_neighbor_of = NMS
+						any_neighbor_country = {
+							or = {
+								is_subject_of = NMS
+								is_in_faction_with = NMS
+							}
+						}
+					}
+				}
+				any_country = {
+					NOT = { tag = TKM }
+					NOT = { tag = NMS }
+					or = {
+						is_in_faction_with = TKM
+						is_in_faction_with = NMS
+					}
+					is_neighbor_of = SCA
+				}
+			}
+		}
+		available = {
+			not = {
+				has_global_flag = SCA_two_peace_NMS
+				has_global_flag = SCA_three_peace
+			}
+		}
+      	complete_effect = {
+          	custom_effect_tooltip = TEG_accept
+          	effect_tooltip = {
+          		NMS = {
+					if = {
+						limit = {
+							PRI = { is_subject_of = SCA}
+						}
+						PRI = {
+							subject_level4 = yes
+						}
+					}
+					if = {
+						limit = {
+							WAK = { is_subject_of = SCA}
+						}
+						WAK = {
+							subject_level4 = yes
+						}
+					}
+					white_peace = SCA
+				}
+          	}
+          	if = {
+          		limit = {
+          			tag = NMS
+          		}
+          		SCA = { country_event = sca.49}
+          	}
+          	if = {
+          		limit = {
+          			tag = SCA
+          		}
+          		NMS = { country_event = sca.49}
+          	}
+          	set_global_flag = {
+          		days = 50
+          		flag = SCA_two_peace_NMS
+          		value = 1
+          	}
+     	}
+     	cost = 50
+      	fire_only_once = no
+      	days_re_enable = 30
+
+      	ai_will_do = {
+         	factor = -200
+         	modifier = {
+				SCA = {
+					set_temp_variable = { global.v = surrender_progress }
+					multiply_temp_variable = { global.v = 100 }
+				}
+				SCA = {
+					add_to_temp_variable = { b = EXHC_current_exhaustion }
+					add_to_temp_variable = { c = 1 }
+					all_country = {
+						if = {
+							limit = {
+								is_in_faction_with = PREV
+								is_major = yes
+								has_war_with = NMS
+							}
+							add_to_temp_variable = { PREV.b = EXHC_current_exhaustion }
+							add_to_temp_variable = { PREV.c = 1}
+						}
+					}
+					divide_temp_variable = { b = c}
+					multiply_temp_variable = { b = 2}
+				}
+				add_to_temp_variable = { global.v = SCA.b }
+				NMS = {
+					add_to_temp_variable = { d = EXHC_current_exhaustion }
+					add_to_temp_variable = { e = 1 }
+					all_country = {
+						if = {
+							limit = {
+								is_in_faction_with = PREV
+								is_major = yes
+								has_war_with = SCA
+							}
+							add_to_temp_variable = { PREV.d = EXHC_current_exhaustion }
+							add_to_temp_variable = { PREV.e = 1}
+						}
+					}
+					divide_temp_variable = { d = e}
+					multiply_temp_variable = { d = 2}
+				}
+				add_to_temp_variable = { global.v = NMS.d }
+				if = {
+					limit = {
+						WAK = { has_capitulated = yes}
+					}
+					add_to_temp_variable = { global.v = 5 }
+				}
+				if = {
+					limit = {
+						PRI = { has_capitulated = yes}
+					}
+					add_to_temp_variable = { global.v = 5 }
+				}
+				add = global.v
+			}
+      	}
+	}
+	NMS_or_TKM_peace_SCA = {
+		visible = {
+			not = { NMS = { has_war_with = TKM} }
+			SCA = {
+				has_war_with = TKM
+				has_war_with = NMS
+			}
+			or = {
+				AND = {
+					tag = TKM
+					is_subject = no
+				}
+				AND = {
+					tag = NMS
+					is_subject = no
+				}
+				AND = {
+					tag = SCA
+					is_subject = no
+				}
+			}
+			not = {
+				has_global_flag = NMS_peace_SCA
+				has_global_flag = TKM_peace_SCA
+			}
+			not = {
+				any_country = {
+					NOT = { tag = SCA }
+          			is_major = yes
+					is_in_faction_with = SCA
+				}
+				any_country = {
+					NOT = { tag = TKM }
+          			is_major = yes
+					is_in_faction_with = TKM
+				}
+				any_country = {
+					NOT = { tag = NMS }
+          			is_major = yes
+					is_in_faction_with = NMS
+				}
+				any_country = {
+					NOT = { tag = SCA }
+					NOT = { tag = WAK }
+					NOT = { tag = PRI }
+					NOT = { tag = GRS }
+					is_in_faction_with = SCA
+					or = {
+						is_neighbor_of = NMS
+						any_neighbor_country = {
+							or = {
+								is_subject_of = NMS
+								is_in_faction_with = NMS
+							}
+						}
+					}
+				}
+				any_country = {
+					NOT = { tag = SCA }
+					NOT = { tag = WAK }
+					NOT = { tag = PRI }
+					NOT = { tag = GRS }
+					is_in_faction_with = SCA
+					or = {
+						is_neighbor_of = TKM
+						any_neighbor_country = {
+							or = {
+								is_subject_of = TKM
+								is_in_faction_with = TKM
+							}
+						}
+					}
+        		}	
+				any_country = {
+					NOT = { tag = TKM }
+					NOT = { tag = NMS }
+					or = {
+						is_in_faction_with = TKM
+						is_in_faction_with = NMS
+					}
+					is_neighbor_of = SCA
+				}
+			}
+		}
+		available = {
+			not = {
+				has_global_flag = SCA_three_peace
+			}
+		}
+      	complete_effect = {
+          	custom_effect_tooltip = TEG_accept
+          	effect_tooltip = {
+          		TKM = {
+					if = {
+						limit = {
+							173 = { 
+								or = {
+									is_owned_by = SCA
+									any_country = {
+										is_subject_of = SCA
+										owns_state = PREV
+									}
+								}	
+							}
+						}
+						transfer_state = 173
+					}
+					if = {
+						limit = {
+							177 = { 
+								or = {
+									is_owned_by = SCA
+									any_country = {
+										is_subject_of = SCA
+										owns_state = PREV
+									}
+								}	
+							}
+						}
+						transfer_state = 177
+					}
+					if = {
+						limit = {
+							316 = { 
+								or = {
+									is_owned_by = SCA
+									any_country = {
+										is_subject_of = SCA
+										owns_state = PREV
+									}
+								}	
+							}
+						}
+						transfer_state = 316
+					}
+					if = {
+						limit = {
+							165 = { 
+								or = {
+									is_owned_by = SCA
+									any_country = {
+										is_subject_of = SCA
+										owns_state = PREV
+									}
+								}	
+							}
+						}
+						transfer_state = 165
+					}
+					white_peace = SCA
+				}
+				NMS = {
+					if = {
+						limit = {
+							PRI = { is_subject_of = SCA}
+						}
+						PRI = {
+							subject_level4 = yes
+						}
+					}
+					if = {
+						limit = {
+							WAK = { is_subject_of = SCA}
+						}
+						WAK = {
+							subject_level4 = yes
+						}
+					}
+					white_peace = SCA
+				}
+          	}
+          	if = {
+          		limit = {
+          			tag = NMS
+          		}
+          		SCA = { country_event = sca.54}
+          		TKM = { country_event = sca.54}
+          	}
+          	if = {
+          		limit = {
+          			tag = SCA
+          		}
+          		NMS = { country_event = sca.54}
+          		TKM = { country_event = sca.54}
+          	}
+          	if = {
+          		limit = {
+          			tag = TKM
+          		}
+          		NMS = { country_event = sca.54}
+          		SCA = { country_event = sca.54}
+          	}
+          	set_global_flag = {
+          		days = 50
+          		flag = SCA_three_peace
+          		value = 1
+          	}
+     	}
+     	cost = 25
+      	fire_only_once = no
+      	days_re_enable = 50
+
+      	ai_will_do = {
+         	factor = -100
+         	modifier = {
+				SCA = {
+					set_temp_variable = { global.v = surrender_progress }
+					multiply_temp_variable = { global.v = 100 }
+				}
+				SCA = {
+					add_to_temp_variable = { b = EXHC_current_exhaustion }
+					add_to_temp_variable = { c = 1 }
+					all_country = {
+						if = {
+							limit = {
+								is_in_faction_with = PREV
+								is_major = yes
+								has_war_with = ROOT
+							}
+							add_to_temp_variable = { PREV.b = EXHC_current_exhaustion }
+							add_to_temp_variable = { PREV.c = 1}
+						}
+					}
+					divide_temp_variable = { b = c}
+					multiply_temp_variable = { b = 2}
+				}
+				add_to_temp_variable = { global.v = SCA.b }
+				ROOT = {
+					add_to_temp_variable = { d = EXHC_current_exhaustion }
+					add_to_temp_variable = { e = 1 }
+					all_country = {
+						if = {
+							limit = {
+								is_in_faction_with = PREV
+								is_major = yes
+								has_war_with = SCA
+							}
+							add_to_temp_variable = { PREV.d = EXHC_current_exhaustion }
+							add_to_temp_variable = { PREV.e = 1}
+						}
+					}
+					divide_temp_variable = { d = e}
+					multiply_temp_variable = { d = 2}
+				}
+				add_to_temp_variable = { global.v = ROOT.d }
+				if = {
+					limit = {
+						WAK = { has_capitulated = yes}
+					}
+					add_to_temp_variable = { global.v = 5 }
+				}
+				if = {
+					limit = {
+						PRI = { has_capitulated = yes}
+					}
+					add_to_temp_variable = { global.v = 5 }
+				}
+				add = global.v
+			}
+      	}
+	}
+}

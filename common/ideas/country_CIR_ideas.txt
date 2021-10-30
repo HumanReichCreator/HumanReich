@@ -18,8 +18,8 @@ ideas = {
 			}
 			targeted_modifier = { 
 				tag = SCA
-				attack_bonus_against = 0.05
-				defense_bonus_against = 0.05
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
 			}	
 			available = {
 				is_subject = no
@@ -84,7 +84,7 @@ ideas = {
 			removal_cost = -1
 	
 			modifier = {
-				production_speed_buildings_factor = 0.05
+	    	production_speed_arms_factory_factor = 0.10
 			}
 	    }
 	    CIR_yaojingzuzhihua_idea = {
@@ -119,8 +119,8 @@ ideas = {
 			removal_cost = -1
 	
 			modifier = {
-				conscription = 0.01
-				send_volunteer_size = 4
+				conscription = 0.012
+				send_volunteer_size = 2
 			}
 	    }
 	    CIR_junshichaoyue1_idea = {
@@ -155,7 +155,7 @@ ideas = {
 			removal_cost = -1
 	
 			modifier = {
-				training_time_factor = -0.08
+				training_time_factor = -0.25
 			}
 	    }
 	    CIR_shengchanchaoyue1_idea = {
@@ -191,7 +191,7 @@ ideas = {
 			removal_cost = -1
 	
 			modifier = {
-				industrial_capacity_factory = 0.05
+				industrial_capacity_factory = 0.20
 			}
 	    }
 	    CIR_gemingdejianxin_idea = {
@@ -208,7 +208,11 @@ ideas = {
 			removal_cost = -1
 	
 			modifier = {
-				consumer_goods_factor = -0.03
+				war_support_factor = 0.10
+				mobilization_laws_cost_factor = -0.25
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				surrender_limit = 0.05
 			}
 	    }
 	    CIR_ziranzhili_idea = {
@@ -259,7 +263,7 @@ ideas = {
 			removal_cost = -1
 	
 			modifier = {
-				production_speed_buildings_factor = 0.05
+				production_speed_buildings_factor = 0.10
 			}
 	    }
 	    CIR_zhenduiemo_idea = {
@@ -389,7 +393,7 @@ ideas = {
 			removal_cost = -1
 	
 			modifier = {
-				industrial_capacity_factory = 0.05
+	    	production_factory_max_efficiency_factor = 0.10
 			}
 			research_bonus = {
 				
@@ -434,7 +438,7 @@ ideas = {
 				research_speed_factor = -0.02
 			}
 			research_bonus = {
-				industrys = 0.06
+				industrys = 0.10
 			}
 	    }
 
@@ -515,6 +519,70 @@ ideas = {
 				stability_weekly = -0.001
 				war_support_weekly = -0.002
 			}			
+	    }
+	    CIR_ziranronghebudui_idea = {
+	    	name = CIR_ziranronghebudui
+
+			  picture = eng_special_air_service
+
+	    	modifier = {
+	    		special_forces_cap = 0.2
+	    	}
+	    }
+	    CIR_weilaikeji_idea = {
+	    	name = CIR_weilaikeji
+
+			  picture = generic_research_bonus
+
+	    	research_bonus = {
+	    		combined = 0.15
+	    	}
+	    }
+	    CIR_jiadashengchanxian_idea = {
+	    	name = CIR_jiadashengchanxian
+
+			  picture = generic_production_bonus
+
+	    	modifier = {
+	    		industrial_capacity_factory = 0.10
+	    	}
+	    }
+	    CIR_yaojingchongfeng_idea = {
+	    	name = CIR_yaojingchongfeng
+
+			  picture = warrior_traditions_idea
+
+	    	modifier = {
+	    		army_morale_Factor = 0.1
+	    		army_org_Factor = 0.1
+	    	}
+	    }
+	    CIR_yudaziranweiyiti_type1_idea = {
+	    	name =  CIR_yudaziranweiyiti
+
+			  picture = generic_intel_bonus
+
+	    	modifier = {
+	    		army_attack_factor = 0.05
+	    		army_defence_factor = 0.05
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
+	    	}
+	    }
+	    CIR_yudaziranweiyiti_type2_idea = {
+	    	name =  CIR_yudaziranweiyiti
+
+			  picture = generic_intel_bonus
+
+	    	modifier = {
+	    		army_attack_factor = 0.05
+	    		army_defence_factor = 0.05
+	    		research_speed_factor = 0.1
+	    	}
+	    	research_bonus = {
+	    		race = 0.05
+	    		secret = 0.1
+	    	}
 	    }
 
 

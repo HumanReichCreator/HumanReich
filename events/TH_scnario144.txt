@@ -1,0 +1,291 @@
+﻿# add_namespace = scn144
+
+# country_event = {
+# 	id = scn144.1
+# 	title = scn144.1.title
+# 	desc = scn144.1.desc
+
+# 	is_triggered_only = yes
+ 
+# 	option = {
+# 		   name = scn144.1.a
+# 		   trigger = { tag = HUM}
+# 	}
+# 	immediate = {
+# 		WAK = {
+# 			add_ai_strategy = {
+# 				type = force_defend_ally_borders
+# 				id = "NMS"
+# 				value = 200
+# 			}
+# 			add_ai_strategy = {
+# 				type = force_defend_ally_borders
+# 				id = "TKM"
+# 				value = 200
+# 			}
+# 			add_ai_strategy = {
+# 				type = force_defend_ally_borders
+# 				id = "MSD"
+# 				value = 200
+# 			}
+# 		}
+		
+# 		CHE = {
+# 			add_ai_strategy = {
+# 				type = force_defend_ally_borders
+# 				id = "NMS"
+# 				value = 200
+# 			}
+# 			add_ai_strategy = {
+# 				type = force_defend_ally_borders
+# 				id = "TKM"
+# 				value = 200
+# 			}
+# 			add_ai_strategy = {
+# 				type = force_defend_ally_borders
+# 				id = "MSD"
+# 				value = 200
+# 			}
+# 		}
+# 		SEI = {
+# 			add_ai_strategy = {
+# 				type = force_defend_ally_borders
+# 				id = "NMS"
+# 				value = 200
+# 			}
+# 			add_ai_strategy = {
+# 				type = force_defend_ally_borders
+# 				id = "TKM"
+# 				value = 200
+# 			}
+# 			add_ai_strategy = {
+# 				type = force_defend_ally_borders
+# 				id = "MSD"
+# 				value = 200
+# 			}
+# 		}
+# 		HKM = {
+# 			add_ai_strategy = {
+# 				type = force_defend_ally_borders
+# 				id = "NMS"
+# 				value = 200
+# 			}
+# 			add_ai_strategy = {
+# 				type = force_defend_ally_borders
+# 				id = "TKM"
+# 				value = 200
+# 			}
+# 			add_ai_strategy = {
+# 				type = force_defend_ally_borders
+# 				id = "MSD"
+# 				value = 200
+# 			}
+# 		}
+
+# 		RMI = {
+# 			add_ai_strategy = {
+# 				type = force_defend_ally_borders
+# 				id = "NMS"
+# 				value = 200
+# 			}
+# 			add_ai_strategy = {
+# 				type = force_defend_ally_borders
+# 				id = "TKM"
+# 				value = 200
+# 			}
+# 			add_ai_strategy = {
+# 				type = force_defend_ally_borders
+# 				id = "MSD"
+# 				value = 200
+# 			}
+# 			add_ai_strategy = {
+# 				type = ignore
+# 				id = "XXX"
+# 				value = 200
+# 			}
+# 			add_ai_strategy = {
+# 				type = ignore
+# 				id = "MRS"
+# 				value = 200
+# 			}
+# 		}
+# 	}
+# 	# option = {
+# 	# 	   name = scn144.1.b
+# 	# 	   trigger = { NOT = {tag = HUM} }
+# 	# }
+# 	# immediate = {
+#  #      hidden_effect = {
+#  #       # HUM = { add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 500 producer = HUM } }
+#  #       CRU = { country_event = {id = scn144.2 days = 1}}
+#  #      }
+#  #    }
+# }
+# country_event = {
+# 	id = scn144.2
+
+# 	is_triggered_only = yes
+# 	fire_only_once = yes
+# 	hidden = yes
+
+# 	immediate = {
+# 		name = ucantsee
+# 	#HUM
+# 		if = {
+# 			limit = {
+# 				HUM = {
+# 					has_country_flag = L_s
+# 				}
+# 			}
+# 			HUM = {
+# 				add_ideas = renlidebuff_h_l
+# 			}
+# 			every_country = {
+# 				limit = {
+# 					has_war_with = HUM
+# 				}
+# 				add_ideas = qingbaobuff1
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				HUM = {
+# 					has_country_flag = H_s
+# 				}
+# 			}
+# 			HUM = {
+# 				add_ideas = renlidebuff_h_l
+# 			}
+# 			every_country = {
+# 				limit = {
+# 					has_war_with = HUM
+# 				}
+# 				add_ideas = qingbaobuff2
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				HUM = {
+# 					has_country_flag = N_s
+# 				}
+# 			}
+# 			HUM = {
+# 				add_ideas = renlidebuff_n
+# 			}
+# 			every_country = {
+# 				limit = {
+# 					has_war_with = HUM
+# 				}
+# 				add_ideas = qingbaobuff2
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				HUM = {
+# 					has_country_flag = E_s
+# 				}
+# 			}
+# 			# HUM = {
+# 			# 	add_ideas = renlidebuff_n
+# 			# }
+# 			every_country = {
+# 				limit = {
+# 					has_war_with = HUM
+# 				}
+# 				add_ideas = qingbaobuff3
+# 			}
+# 		}
+
+# 	#	TKM
+# 		if = {
+# 			limit = {
+# 				TKM = {
+# 					has_country_flag = L_s
+# 				}
+# 			}
+# 			HUM = {
+# 				add_ideas = renlidebuff_n
+# 			}
+# 			every_country = {
+# 				limit = {
+# 					has_war_with = HUM
+# 				}
+# 				add_ideas = qingbaobuff3
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				TKM = {
+# 					has_country_flag = H_s
+# 				}
+# 			}
+# 			HUM = {
+# 				add_ideas = renlidebuff_n
+# 			}
+# 			every_country = {
+# 				limit = {
+# 					has_war_with = HUM
+# 				}
+# 				add_ideas = qingbaobuff2
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				TKM = {
+# 					has_country_flag = N_s
+# 				}
+# 			}
+# 			HUM = {
+# 				add_ideas = renlidebuff_h_l
+# 			}
+# 			every_country = {
+# 				limit = {
+# 					has_war_with = HUM
+# 				}
+# 				add_ideas = qingbaobuff2
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				TKM = {
+# 					has_country_flag = E_s
+# 				}
+# 			}
+# 			HUM = {
+# 				add_ideas = renlidebuff_h_l
+# 			}
+# 			every_country = {
+# 				limit = {
+# 					has_war_with = HUM
+# 				}
+# 				add_ideas = qingbaobuff1
+# 			}
+# 		}
+# 	}
+
+# }
+# #结分
+# country_event = {
+# 	id = scn144.3
+# 	title = scn144.3.title
+# 	desc = scn144.3.desc
+
+# 	fire_only_once = yes
+
+# 	trigger = {
+# 	 has_global_flag = scnario144
+# 	 OR = {
+# 	   date>146.1.1
+#        HUM = {has_war = no}
+# 	 }
+# 	 is_ai = no
+# 	}
+
+
+# option = {
+# 	  name = scn144.5.a
+# 	  hidden_effect = {
+# 	    HKM = {white_peace = HUM}
+# 	  }
+# 	}
+# }

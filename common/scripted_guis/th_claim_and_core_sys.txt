@@ -102,6 +102,12 @@ scripted_gui = {
 							has_country_flag = SEJ_half_core
 						}
 					}
+					and = {
+						compliance > 60
+						ROOT = {
+							has_country_flag = NUE_yiyexingweirenzhi
+						}
+					}
 				}
 				
 				NOT = {

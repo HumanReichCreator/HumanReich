@@ -579,14 +579,14 @@ defined_text = {
 	text = {
 	     trigger = {
 	     	ROOT = {
-				NOT = {has_country_flag = recent_root_action }
+				has_country_flag = recent_root_action
 			}
 	     }
 	     localization_key = "root_sys_recent_action"
 	}
 	text = {
 	     trigger = {
-	     	NOT = { has_state_flag = been_rooted}
+	     	has_state_flag = been_rooted 
 	     }
 	     localization_key = "root_sys_recent_rooted"
 	}
@@ -898,21 +898,6 @@ defined_text = {
 	text = {
 	   trigger = {
 	      not = { has_country_flag = EXHC_lowing_exhaustion }
-	   }
-	   localization_key = exhaustion_low_or_not.b
-	}
-}
-defined_text = {
-	name = exhaustion_battle_fairy_or_not
-	text = {
-	   trigger = {
-	      has_country_flag = EXHC_lowing_battle_fairy
-	   }
-	   localization_key = exhaustion_lowing_by_battle_fairy
-	}
-	text = {
-	   trigger = {
-	      not = { has_country_flag = EXHC_lowing_battle_fairy }
 	   }
 	   localization_key = exhaustion_low_or_not.b
 	}
@@ -2164,12 +2149,21 @@ defined_text = {
 	}
 	text = {
 	   trigger = {
-	      compliance < 50
+	      compliance < 40
 	      ROOT = {
 	      	has_country_flag = SEJ_half_core
 	      }
 	   }
 	   localization_key = CO_core_cant_11
+	}
+	text = {
+	   trigger = {
+	      compliance < 60
+	      ROOT = {
+	      	has_country_flag = NUE_yiyexingweirenzhi
+	      }
+	   }
+	   localization_key = CO_core_cant_12
 	}
 	text = {
 	   trigger = {
@@ -2481,5 +2475,152 @@ defined_text = {
 	   		}
 	   }
 	   localization_key = LS_subject_sys_cant_delayed_tt3
+	}
+}
+defined_text = {
+	name = SS_subject_name0
+	text = {
+	   trigger = {
+	   		ROOT = { has_country_flag = wusuntunbing_@PREV }
+	   }
+	   localization_key = SS_subject_name2
+	}
+	text = {
+	   trigger = {
+	   		ROOT = { 
+				is_same_race = yes
+			}
+	   }
+	   localization_key = SS_subject_name3
+	}
+	text = {
+	   trigger = {
+	   		not = {
+	   			ROOT = { 
+					has_country_flag = wusuntunbing_@PREV 
+					is_same_race = yes
+				}
+	   		}
+	   }
+	   localization_key = SS_subject_name1
+	}
+}
+defined_text = {
+	name = YYK_kaihua_type
+	text = {
+	   trigger = {
+	   		ROOT = { has_completed_focus = YYK_chunduzaishouji }
+	   }
+	   localization_key = YYK_kaihua_type1
+	}
+	text = {
+	   trigger = {
+	   		ROOT = { has_completed_focus = YYK_linghunshouji }
+	   }
+	   localization_key = YYK_kaihua_type2
+	}
+}
+defined_text = {
+	name = YYK_kaihua_process
+	text = {
+	   trigger = {
+	   		ROOT = { 
+				has_completed_focus = YYK_chenggongkaihua
+			}
+	   }
+	   localization_key = YYK_kaihua_process6
+	}
+	text = {
+	   trigger = {
+	   		ROOT = { 
+				check_variable = {
+					YYK_kaihua < 50
+				}
+			}
+	   }
+	   localization_key = YYK_kaihua_process1
+	}
+	text = {
+	   trigger = {
+	   		ROOT = { 
+				check_variable = {
+					YYK_kaihua > 49.99
+				}
+				check_variable = {
+					YYK_kaihua < 150
+				}
+			}
+	   }
+	   localization_key = YYK_kaihua_process2
+	}
+	text = {
+	   trigger = {
+	   		ROOT = { 
+				check_variable = {
+					YYK_kaihua > 149.99
+				}
+				check_variable = {
+					YYK_kaihua < 300
+				}
+			}
+	   }
+	   localization_key = YYK_kaihua_process3
+	}
+	text = {
+	   trigger = {
+	   		ROOT = { 
+				check_variable = {
+					YYK_kaihua > 299.99
+				}
+				check_variable = {
+					YYK_kaihua < 900
+				}
+			}
+	   }
+	   localization_key = YYK_kaihua_process4
+	}
+	text = {
+	   trigger = {
+	   		ROOT = { 
+				check_variable = {
+					YYK_kaihua > 899.99
+				}
+			}
+	   }
+	   localization_key = YYK_kaihua_process5
+	}
+}
+defined_text = {
+	name = NET_shared_jianshulianxi0
+	text = {
+	   trigger = {
+	   		tag = YYK
+	   }
+	   localization_key = NET_shared_jianshulianxi1
+	}
+	text = {
+	   trigger = {
+	   		not = {
+				tag = YYK
+			}
+	   }
+	   localization_key = NET_shared_jianshulianxi2
+	}
+}
+defined_text = {
+	name = NET_shared_jianshulianxi0_desc
+	text = {
+	   trigger = {
+	   		tag = YYK
+	   }
+	   localization_key = NET_shared_jianshulianxi1_desc
+	}
+	text = {
+	   trigger = {
+	   		not = {
+				tag = YYK
+			}
+	   }
+	   localization_key = NET_shared_jianshulianxi2_desc
 	}
 }

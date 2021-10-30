@@ -1,0 +1,350 @@
+﻿add_namespace = s143
+
+news_event = {
+	#SCA进入战争
+	id = s143.1
+	title = s143.1.t
+	desc = s143.1.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	trigger = {
+		has_global_flag = scenario143
+		date > 144.1.1
+		tag = HUM
+	}
+
+	immediate = {
+		SCA = {
+			declare_war_on = {
+				target = HUM
+				type = scenario143
+			}
+			MRS = {
+				add_to_war = {
+					targeted_alliance = HUM
+					enemy = SCA
+				}
+			}
+			TKM = {
+				add_to_war = {
+					targeted_alliance = HUM
+					enemy = SCA
+				}
+			}
+			HKR = {
+				add_to_war = {
+					targeted_alliance = HUM
+					enemy = SCA
+				}
+			}
+		}
+	}
+	option = {
+		name = s143.1.1
+	}
+}
+news_event = {
+	#CIR起义
+	id = s143.2
+	title = s143.2.t
+	desc = s143.2.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+
+	mean_time_to_happen = {
+		days = 15
+	}
+
+	trigger = {
+		has_global_flag = scenario143
+		date > 144.4.1
+		tag = HUM
+	}
+
+	immediate = {
+		SCA = {
+			add_ideas = SCA_yaojingsaodong_idea
+			release = CIR
+			release = SC2
+			delete_unit_template_and_units = { division_template = "东雾之湖精英妖精战队" disband = no}
+		}
+		CIR = {
+			declare_war_on = {
+				target = SCA
+				type = annex_everything
+			}
+			load_oob = "CIR_143"
+		}
+		SC2 = {
+			declare_war_on = {
+				target = SCA
+				type = annex_everything
+			}
+			load_oob = "SC2_143"
+			every_owned_state = {
+				add_core_of = SCA
+			}
+		}
+
+	}
+	option = {
+		name = s143.2.1
+	}
+}
+
+news_event = {
+	#CHE进入战争
+	id = s143.3
+	title = s143.3.t
+	desc = s143.3.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+
+	mean_time_to_happen = {
+		days = 20
+	}
+
+	trigger = {
+		has_global_flag = scenario143
+		date > 144.6.1
+		tag = HUM
+	}
+
+	immediate = {
+		CHE = {
+			declare_war_on = {
+				target = HUM
+				type = scenario143
+			}
+			MRS = {
+				add_to_war = {
+					targeted_alliance = HUM
+					enemy = CHE
+				}
+			}
+			TKM = {
+				add_to_war = {
+					targeted_alliance = HUM
+					enemy = CHE
+				}
+			}
+			HKR = {
+				add_to_war = {
+					targeted_alliance = HUM
+					enemy = CHE
+				}
+			}
+		}
+		NMS = {
+			add_to_faction = CHE
+		}
+	}
+	option = {
+		name = s143.3.1
+	}
+}
+
+news_event = {
+	#TKM叛变
+	id = s143.4
+	title = s143.4.t
+	desc = s143.4.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		HUM = {
+			end_puppet = TKM
+		}
+		TKM = {
+			leave_faction = yes
+			set_politics = {
+		    	ruling_party = qinwai
+		    	election_frequency = 48
+		    	elections_allowed = no
+		    }
+		    set_popularities = {
+		        qinwai = 80
+		        guli = 10
+		        neworder = 5
+		        oldorder = 0
+		        fandong = 5
+		    }
+		    drop_cosmetic_tag = yes
+		    add_ideas = juexin_idea
+		    remove_ideas = qingbaoxielu143_idea 
+			every_country = {
+				limit = {
+					has_war_with = HUM
+				}
+				white_peace = TKM
+				diplomatic_relation = {
+			        country = TKM
+			        relation = military_access
+			        active = yes
+			    }
+			}
+			NMS = {
+				add_to_faction = TKM
+			}
+			TKM = {
+				declare_war_on = {
+					type = scenario143
+					target = HUM
+				}
+				MRS = {
+					add_to_war = {
+						targeted_alliance = HUM
+						enemy = TKM
+					}
+				}
+				HKR = {
+					add_to_war = {
+						targeted_alliance = HUM
+						enemy = TKM
+					}
+				}
+			}
+			HUM = {
+				every_owned_state = {
+					limit = {
+						not = { check_variable = { ST_present_race = 4 } }
+					}
+					remove_core_of = HUM
+					start_resistance = yes
+				}
+			}
+		}
+		
+	}
+	option = {
+		name = s143.4.1
+		custom_effect_tooltip = s143.4_tt
+	}
+}
+
+country_event = {
+	#TKM叛变倾向
+	id = s143.5
+	title = s143.5.t
+	desc = s143.5.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		has_global_flag = scenario143
+		tag = HUM
+		surrender_progress > 0.1
+	}
+	immediate = {
+		add_to_variable = { global.sce143_fusangshenzhongcheng = -30}
+	}
+	option = {
+		name = s143.5.1
+		custom_effect_tooltip = sce143_TKMzhujia4
+	}
+}
+country_event = {
+	#TKM叛变倾向
+	id = s143.6
+	title = s143.6.t
+	desc = s143.6.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		has_global_flag = scenario143
+		tag = HUM
+		surrender_progress > 0.2
+	}
+	immediate = {
+		add_to_variable = { global.sce143_fusangshenzhongcheng = -30}
+	}
+	option = {
+		name = s143.6.1
+		custom_effect_tooltip = sce143_TKMzhujia4
+      	
+	}
+}
+country_event = {
+	#TKM叛变倾向
+	id = s143.7
+	title = s143.7.t
+	desc = s143.7.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		has_global_flag = scenario143
+		tag = HUM
+		surrender_progress > 0.4
+	}
+	immediate = {
+		add_to_variable = { global.sce143_fusangshenzhongcheng = -30}
+	}
+	option = {
+		name = s143.7.1
+		custom_effect_tooltip = sce143_TKMzhujia4
+      	
+	}
+}
+country_event = {
+	#TKM叛变倾向
+	id = s143.8
+	title = s143.8.t
+	desc = s143.8.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		has_global_flag = scenario143
+		tag = HUM
+		surrender_progress > 0.5
+	}
+	immediate = {
+		add_to_variable = { global.sce143_fusangshenzhongcheng = -30}
+	}
+	option = {
+		name = s143.8.1
+		custom_effect_tooltip = sce143_TKMzhujia4
+      	
+	}
+}
+country_event = {
+	#TKM直接叛变
+	id = s143.9
+	title = s143.9.t
+	desc = s143.9.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		has_global_flag = scenario143
+		tag = HUM
+		check_variable = { global.sce143_fusangshenzhongcheng < 1}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	immediate = {
+		HUM = {
+			news_event = s143.4
+		}
+		TKM = {
+			drop_cosmetic_tag = yes
+		}
+	}
+	hidden = yes
+	option = {
+
+	}
+}

@@ -1,0 +1,1885 @@
+add_namespace = sei
+##########焦点事件###########
+
+country_event = { #迷茫
+	id = sei.2
+	title = sei.2.t
+	desc = sei.2.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		date > 146.6.1
+		tag = SEJ
+		has_global_flag = main_scenario
+	}
+
+	option = { #革命
+		name = sei.2.1
+		add_popularity = {
+			ideology = fandong
+			popularity = 0.05
+		}
+		add_stability = -0.02
+		add_political_power = -20
+		ai_chance = {
+			base = 35
+		}
+	}
+	option = { #弱小
+		name = sei.2.2
+		add_stability = 0.1
+		add_war_support = -0.1
+		add_popularity = {
+			ideology = qinwai
+			popularity = 0.05
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+	option = { #自己
+		name = sei.2.3
+		add_popularity = {
+			ideology = neworder
+			popularity = 0.05
+		}
+		add_stability = -0.1
+		add_political_power = -55
+		ai_chance = {
+			base = 15
+		}
+	}
+}
+
+country_event = {#政治危机
+	id = sei.3
+	title = sei.3.t
+	desc = sei.3.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		tag = SEJ
+		date > 146.9.1
+	}
+
+	mean_time_to_happen = {
+		days = 9
+	}
+
+
+	option = { #情况能好转吗
+		hidden_effect = {
+			news_event = { id = sei.31 days = 1}
+		}
+		name = sei.3.1
+
+		NIB = {
+			if = {
+				limit = {
+					is_subject_of = ROOT
+				}
+				country_event = {id = sei.4 days = 3}
+			}
+		}
+		RMI = {
+			if = {
+				limit = {
+					is_subject_of = ROOT
+				}
+				country_event = {id = sei.4 days = 3}
+			}
+		}
+
+		hidden_effect = {
+			country_event = { id = sei.10 days = 120}
+		}
+
+	}
+}
+
+country_event = {
+	id = sei.10
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+	immediate = {
+		set_country_flag = SEJ_zhengzhiweiji_checker
+	}
+}
+
+country_event = {
+	id = sei.11
+	title = sei.11.t
+	desc = sei.11.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	trigger = {
+		tag = SEJ
+		has_country_flag = SEJ_zhengzhiweiji_checker
+		not = {
+			has_war_with = NIB
+			has_war_with = RMI
+		}
+	}
+
+
+	option = { #结束政治危机
+		name = sei.11.1
+		add_political_power = 15
+		set_global_flag = SEJ_zhengzhiweijijieshu 
+		clr_country_flag = SEJ_zhengzhiweiji_checker
+	}
+}
+
+news_event = {#SEJ的政治危机
+	id = sei.31
+	title = sei.31.t
+	desc = sei.31.d
+	picture = GFX_news_event_sei.31
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = { #情况能好转吗
+		name = sei.31.1
+		trigger = {
+			tag = SEJ
+		}
+	}
+	option = { #等待转机
+		name = sei.31.2
+		trigger = {
+			not = { tag = SEJ }
+		}
+	}
+}
+
+
+country_event = {#政治危机 NIB RMI
+	id = sei.4
+	title = sei.4.t
+	desc = sei.4.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+
+	option = { #没必要维持
+		name = sei.4.1
+		add_political_power = 10
+		add_stability = 0.1
+		SEJ  ={
+			end_puppet = ROOT
+		}
+		
+		leave_faction = yes
+
+		ai_chance = {
+			base = 70
+			modifier = {
+				tag = NIB
+				add = -15
+			}
+		}
+
+		add_ai_strategy = {
+			id = SEJ
+			type = antagonize
+			value = 10
+		}
+
+		SEJ = { country_event = {id = sei.5 days = 2 random = 12}}
+		hidden_effect = {
+			country_event = {id = sei.6 days = 20 random = 12}
+		}
+	}
+
+	option = { #继续保持
+		name = sei.4.2
+		add_political_power = -20
+		add_stability = -0.05
+
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+
+country_event = {#有人离开了！
+	id = sei.5
+	title = sei.5.t
+	desc = sei.5.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { #
+		name = sei.5.1
+		add_political_power = -55
+		add_stability = -0.12
+		set_global_flag = SEJ_zhengzhiweiji
+	}
+}
+
+country_event = {#反抗
+	id = sei.6
+	title = sei.6.t
+	desc = sei.6.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { #
+		name = sei.6.1
+		SEJ = {
+			every_owned_state = {
+				add_claim_by = ROOT
+			}
+		}
+		ONS = {
+			every_owned_state = {
+				add_claim_by = ROOT
+			}
+		}
+		declare_war_on = {
+			type = duli_wargoal
+    		target = SEJ
+		}
+		add_ideas = SEJ_buwendingdeduli_idea
+		hidden_effect ={
+			country_event = sei.9
+		}
+		
+		
+	}
+}
+
+country_event = {#buffer
+	id = sei.9
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate ={
+		news_event = {id = sei.7 days = 3 random = 24}
+	}
+}
+
+news_event = {#反抗
+	id = sei.7
+	title = sei.7.t
+	desc = sei.7.d
+	picture = GFX_news_event_sei.7
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = { #
+		name = sei.7.1
+		trigger = {
+			tag = SEJ
+		}
+	}
+	option = { #
+		name = sei.7.2
+		trigger = {
+			has_war_with = SEJ
+		}
+	}
+	option = { #
+		name = sei.7.3
+		trigger = {
+			not = {
+				has_war_with = SEJ
+				tag = SEJ
+			}
+		}
+	}
+}
+
+news_event = {#下克上同盟的恢复
+	id = sei.8
+	title = sei.8.t
+	desc = sei.8.d
+	picture = GFX_news_event_sei.8
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = { #
+		name = sei.8.1
+		trigger = {
+			or = {
+				is_subject_of = SEJ
+				tag = SEJ
+			}
+		}
+	}
+	option = { #
+		name = sei.8.2
+		trigger = {
+			not = {
+				is_subject_of = SEJ
+				tag = SEJ
+			}
+		}
+	}
+
+}
+
+news_event = {#向旧盟友友好（国策）
+	id = sei.13
+	title = sei.13.t
+	desc = sei.13.d
+	picture = GFX_news_event_sei.13
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = { #
+		name = sei.13.1
+		trigger = {
+			or = {
+				is_subject_of = SEJ
+				tag = SEJ
+				tag = KAG
+				tag = TKM
+				tag = WAK
+			}
+		}
+	}
+	option = { #
+		name = sei.13.2
+		trigger = {
+			not = {
+				is_subject_of = SEJ
+				tag = SEJ
+				tag = KAG
+				tag = TKM
+				tag = WAK
+			}
+		}
+	}
+}
+
+news_event = {#向命莲寺友好（国策）
+	id = sei.14
+	title = sei.14.t
+	desc = sei.14.d
+	picture = GFX_news_event_sei.14
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = { #
+		name = sei.14.1
+		trigger = {
+			or = {
+				is_subject_of = SEJ
+				tag = SEJ
+				tag = NMS
+			}
+		}
+	}
+	option = { #
+		name = sei.14.2
+		trigger = {
+			not = {
+				is_subject_of = SEJ
+				tag = SEJ
+				tag = NMS
+			}
+		}
+	}
+}
+
+# news_event = {#与博丽友好（国策）
+# 	id = sei.15
+# 	title = sei.15.t
+# 	desc = sei.15.d
+# 
+# 	fire_only_once = no
+# 	is_triggered_only = yes
+# 	major = yes
+
+# 	immediate = {
+# 		hidden_effect = {
+# 			if = {
+# 	          limit = {
+# 	            HKR = {
+# 	              not = { has_war_with = YKR }
+# 	            }
+# 	          }
+# 	          HKR = { 
+	          	
+# 	            declare_war_on = {
+# 	              target = YKR
+# 	              type = duli_wargoal
+# 	            }
+# 	          }
+# 	        }
+# 	        SEJ = { 
+# 	          give_military_access = HKR
+# 	          declare_war_on = {
+# 	            target = YKR
+# 	            type = annex_everything
+# 	          }
+# 	        }
+# 		}
+# 	}
+
+# 	option = { #
+# 		name = sei.15.1
+# 		trigger = {
+# 			or = {
+# 				is_subject_of = SEJ
+# 				tag = SEJ
+# 				tag = HKR
+# 			}
+# 		}
+# 	}
+# 	option = { #
+# 		name = sei.15.2
+# 		trigger = {
+# 			not = {
+# 				is_subject_of = SEJ
+# 				tag = SEJ
+# 				tag = HKR
+# 				tag = YKR
+# 			}
+# 		}
+# 	}
+# 	option = { #
+# 		name = sei.15.3
+# 		trigger = {
+# 			tag = YKR
+# 		}
+# 	}
+# }
+
+country_event = {#要求兽道臣服(msd)
+	id = sei.16
+	title = sei.16.t
+	desc = sei.16.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	#major = yes
+
+	option = { #
+		name = sei.16.1
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 1000
+				has_completed_focus = SEJ_fuxingwomendeguoqu
+			}
+		}
+		SEJ = {
+			MSD = {
+				subject_level3 = yes
+			}
+		}
+		SEJ = { country_event = {id = glo.2001 hours = 11} }
+		hidden_effect = {
+			if = {
+				limit = {
+					has_completed_focus = SEJ_fuxingwomendeguoqu
+				}
+				news_event = { id = sei.47 days = 2}
+				else = {
+					news_event = { id = sei.18 days = 2}
+				}
+			}
+		}
+		SEJ = { 
+			add_named_threat = {
+				threat = 1.5
+				name = SEJ_yaoqiushoudaoyaoguaichengfu
+			}
+		}
+	}
+	option = { #
+		name = sei.16.2
+		ai_chance = {
+			factor = 65
+		}
+		set_country_flag = SEJ_refused
+		SEJ = { country_event = { id = sei.17 days = 1}}
+	}
+}
+
+country_event = {#要求兽道臣服(sei)
+	id = sei.17
+	title = sei.17.t
+	desc = sei.17.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	#major = yes
+
+	option = { #
+		name = sei.17.1
+		ai_chance = {
+			factor = 85
+		}
+		SEJ = { 
+			add_named_threat = {
+				threat = 1.5
+				name = SEJ_yaoqiushoudaoyaoguaichengfu
+			}
+		}
+		declare_war_on = {
+			target = MSD
+			type = puppet_wargoal_focus
+		}
+		hidden_effect = {
+			
+		}
+
+	}
+	option = { #
+		name = sei.17.2
+		ai_chance = {
+			factor = 15
+		}
+		add_war_support = -0.01
+	}
+}
+
+news_event = {#要求兽道臣服(新闻）
+	id = sei.18
+	title = sei.18.t
+	desc = sei.18.d
+	picture = GFX_news_event_sei.18
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = { #
+		name = sei.18.1
+		trigger = {
+			or = {
+				is_subject_of = SEJ
+				tag = SEJ
+			}
+		}
+		
+	}
+	option = { #
+		name = sei.18.2
+		trigger = {
+			tag = MSD
+			not = {
+				is_subject_of = SEJ
+			}
+		}
+	}
+
+	option = { #
+		name = sei.18.3
+		trigger = {
+			not = {
+				is_subject_of = SEJ
+				tag = SEJ
+				tag = MSD
+			}
+		}
+	}
+}
+
+country_event = {#夺回生存空间(mrs)
+	id = sei.19
+	title = sei.19.t
+	desc = sei.19.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	#major = yes
+
+	option = { #
+		name = sei.19.1
+		ai_chance = {
+			factor = 85
+		}
+		MYK = {
+			transfer_state = 154
+			transfer_state = 175
+			transfer_state = 162
+			transfer_state = 355
+			SEJ = {
+				MYK = {
+					subject_level3 = yes
+				}
+			}
+		}
+		SEJ = { country_event = {id = glo.2001 hours = 11} }
+		hidden_effect = {
+			news_event = { id = sei.23 days = 2}
+		}
+		SEJ = { 
+			add_named_threat = {
+				threat = 3
+				name = SEJ_duohuishengcunkongjian
+			}
+		}
+	}
+	option = { #
+		name = sei.19.2
+		ai_chance = {
+			factor = 15
+		}
+		set_country_flag = SEJ_refused
+		SEJ = { country_event = { id = sei.20 days = 1}}
+	}
+}
+
+country_event = {#夺回生存空间(sei)
+	id = sei.20
+	title = sei.20.t
+	desc = sei.20.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	#major = yes
+
+	option = { #
+		name = sei.20.1
+		ai_chance = {
+			factor = 99
+		}
+		SEJ = { 
+			add_named_threat = {
+				threat = 3
+				name = SEJ_duohuishengcunkongjian
+			}
+		}
+		declare_war_on = {
+			target = MRS
+			type = puppet_wargoal_focus
+		}
+		hidden_effect = {
+			
+		}
+
+	}
+	option = { #
+		name = sei.20.2
+		ai_chance = {
+			factor = 1
+		}
+		add_war_support = -0.01
+	}
+}
+
+news_event = {#夺回生存空间(新闻）
+	id = sei.23
+	title = sei.23.t
+	desc = sei.23.d
+	picture = GFX_news_event_sei.23
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = { #
+		name = sei.23.1
+		trigger = {
+			or = {
+				is_subject_of = SEJ
+				tag = SEJ
+			}
+		}
+		
+	}
+	option = { #
+		name = sei.23.2
+		trigger = {
+			tag = MRS
+			not = {
+				is_subject_of = SEJ
+			}
+		}
+	}
+
+	option = { #
+		name = sei.23.3
+		trigger = {
+			not = {
+				is_subject_of = SEJ
+				tag = SEJ
+				tag = MRS
+			}
+		}
+	}
+}
+
+news_event = {#要求妖精臣服(新闻）
+	id = sei.26
+	title = sei.26.t
+	desc = sei.26.d
+	picture = GFX_news_event_sei.26
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = { #
+		name = sei.26.1
+		trigger = {
+			or = {
+				is_subject_of = SEJ
+				tag = SEJ
+			}
+		}
+		
+	}
+	option = { #
+		name = sei.26.2
+		trigger = {
+			tag = CIR
+			not = {
+				is_subject_of = SEJ
+			}
+		}
+	}
+
+	option = { #
+		name = sei.26.3
+		trigger = {
+			not = {
+				is_subject_of = SEJ
+				tag = SEJ
+				tag = CIR
+			}
+		}
+	}
+}
+
+country_event = {#互利的协议
+	id = sei.27
+	title = sei.27.t
+	desc = sei.27.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	#major = yes
+
+	option = { #
+		name = sei.27.1
+		ai_chance = {
+			factor = 100
+		}
+		if = {
+			limit = {
+				tag = TKM
+			}
+			SEJ = {
+				add_tech_bonus = {
+	              bonus = 1.2
+	              ahead_reduction = 1.5
+	              uses = 2
+	              category = industrys
+	            }
+			}
+			TKM = {
+				add_tech_bonus = {
+	              bonus = 1.2
+	              ahead_reduction = 1.5
+	              uses = 2
+	              category = resource
+	            }
+			}
+		}
+
+		if = {
+			limit = {
+				tag = NMS
+			}
+			SEJ = {
+				add_tech_bonus = {
+	              bonus = 1.2
+	              ahead_reduction = 1.5
+	              uses = 2
+	              category = primary_weapons
+	            }
+			}
+			NMS = {
+				add_tech_bonus = {
+	              bonus = 1.2
+	              ahead_reduction = 1.5
+	              uses = 2
+	              category = resource
+	            }
+			}
+		}
+		SEJ = { country_event = { id = glo.2001 hours = 11} }
+
+	}
+	option = { #
+		name = sei.27.2
+		ai_chance = {
+			factor = 0
+		}
+		SEJ = { country_event = { id = glo.2002 hours = 11} }
+	}
+}
+
+news_event = {#旧时代的余孽
+	id = sei.28
+	title = sei.28.t
+	desc = sei.28.d
+	picture = GFX_news_event_sei.28
+
+	fire_only_once = no
+
+	is_triggered_only = yes
+	major = yes
+
+	option = { #
+		name = sei.28.1
+		trigger = {
+			or = {
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+			
+		}
+
+	}
+	option = { #
+		name = sei.28.2
+		trigger = {
+			not = {
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+		}
+	}
+}
+
+news_event = {#固定辉针城
+	id = sei.29
+	title = sei.29.t
+	desc = sei.29.d
+	picture = GFX_news_event_sei.29
+
+	fire_only_once = no
+
+	is_triggered_only = yes
+	major = yes
+
+	option = { #
+		name = sei.29.1
+		trigger = {
+			or = {
+				tag = SEJ
+			}
+			
+		}
+
+	}
+	option = { #
+		name = sei.29.2
+		trigger = {
+			not = {
+				tag = SEJ
+			}
+		}
+	}
+}
+
+news_event = {#新辉针城
+	id = sei.30
+	title = sei.30.t
+	desc = sei.30.d
+	picture = GFX_news_event_sei.30
+
+	fire_only_once = no
+
+	is_triggered_only = yes
+	major = yes
+
+	option = { #
+		name = sei.30.1
+		trigger = {
+			or = {
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+			
+		}
+
+	}
+	option = { #
+		name = sei.30.2
+		trigger = {
+			not = {
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+		}
+	}
+}
+
+news_event = {#妖精威胁
+	id = sei.32
+	title = sei.32.t
+	desc = sei.32.d
+	picture = [SEJ.sei32]
+
+	fire_only_once = no
+
+	is_triggered_only = yes
+	major = yes
+
+	option = { #
+		name = sei.32.1
+		trigger = {
+			or = {
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+			
+		}
+	}
+	option = { #
+		name = sei.32.2
+		trigger = {
+			or = {
+				tag = CIR
+			}
+			
+		}
+	}
+	option = { #
+		name = sei.32.3
+		trigger = {
+			not = {
+				tag = SEJ
+				is_subject_of = SEJ
+				tag = CIR
+			}
+		}
+	}
+}
+
+news_event = {#余妖精合作
+	id = sei.33
+	title = sei.33.t
+	desc = sei.33.d
+	picture = [SEJ.sei33]
+
+	fire_only_once = no
+
+	is_triggered_only = yes
+	major = yes
+
+	option = { #
+		name = sei.33.1
+		trigger = {
+			or = {
+				tag = SEJ
+				is_subject_of = SEJ
+				tag = CIR
+			}
+			
+		}
+	}
+	option = { #
+		name = sei.33.2
+		trigger = {
+			not = {
+				tag = SEJ
+				is_subject_of = SEJ
+				tag = CIR
+			}
+		}
+	}
+}
+
+# news_event = {#煽动猫妖
+# 	id = sei.34
+# 	title = sei.34.t
+# 	desc = sei.34.d
+# 
+# 	fire_only_once = no
+
+# 	is_triggered_only = yes
+# 	major = yes
+
+# 	immediate ={
+# 		hidden_effect = {
+# 			if = {
+# 	          limit = {
+# 	            CHE = {
+# 	              not = { has_war_with = YKR }
+# 	            }
+# 	          }
+# 	          CHE = { 
+	          	
+# 	            declare_war_on = {
+# 	              target = YKR
+# 	              type = duli_wargoal
+# 	            }
+# 	          }
+# 	        }
+# 	        SEJ = { 
+# 	          give_military_access = CHE
+# 	          declare_war_on = {
+# 	            target = YKR
+# 	            type = puppet_wargoal_focus
+# 	          }
+# 	        }
+# 		}
+# 	}
+
+# 	option = { #
+# 		name = sei.34.1
+# 		trigger = {
+# 			or = {
+# 				tag = SEJ
+# 				is_subject_of = SEJ
+# 				is_in_faction_with = SEJ
+# 			}
+			
+# 		}
+# 	}
+# 	option = { #
+# 		name = sei.34.2
+# 		trigger = {
+# 			or = {
+# 				tag = YKR
+# 			}
+			
+# 		}
+# 	}
+# 	option = { #
+# 		name = sei.34.3
+# 		trigger = {
+# 			not = {
+# 				tag = SEJ
+# 				is_subject_of = SEJ
+# 				is_in_faction_with = SEJ
+# 				tag = YKR
+# 			}
+# 		}
+# 	}
+# }
+
+country_event = {#与魔法使和解
+	id = sei.36
+	title = sei.36.t
+	desc = sei.36.d
+
+	fire_only_once = no
+
+	is_triggered_only = yes
+
+	option = { #
+		name = sei.36.1
+
+		ai_chance = {
+			base = 80
+		}
+		add_opinion_modifier = { target = SEJ modifier = SEJ_xiangmofashihejie_op}
+	      reverse_add_opinion_modifier = { target = SEJ modifier = SEJ_xiangmofashihejie_op}
+	      MRS = { 
+	        remove_state_claim = 151
+	      }
+	      MYK = { 
+	        remove_state_claim = 151
+	      }
+	      188 = {
+	        add_manpower = 1800
+	      }
+	      135 = {
+	        add_manpower = 800
+	      }
+	      119 = {
+	        add_manpower = 800
+	      }
+        
+        hidden_effect = {
+        	SEJ = { country_event = { id = glo.2001 hours = 11} }
+        }
+		
+
+	}
+	option = { #
+		name = sei.36.2
+
+		ai_chance = {
+			base = 20
+		}
+		hidden_effect = {
+        	SEJ = { country_event = { id = glo.2002 hours = 11} }
+        }
+	}
+}
+
+news_event = {#SEJ雇佣地底的妖怪
+	id = sei.37
+	title = sei.37.t
+	desc = sei.37.d
+	picture = GFX_news_event_sei.37
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = sei.37.1
+		trigger = {
+			tag = SEJ
+		}
+	}
+	option = { 
+		name = sei.37.2
+		trigger = {
+			capital_scope = {
+				is_on_continent = Underground
+			}
+		}
+	}
+	option = { 
+		name = sei.37.3
+		trigger = {
+			not = { 
+				tag = SEJ 
+				capital_scope = {
+					is_on_continent = Underground
+				}
+			}
+		}
+	}
+}
+
+country_event = {#入驻博丽神社
+	id = sei.38
+	title = sei.38.t
+	desc = sei.38.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { #
+		name = sei.38.1
+		ai_chance = {
+			base = 20
+		}
+		SEJ = {
+			HMIF_daily_factor_add0.3 = yes
+	        OL_add10 = yes
+	        add_popularity = {
+	            ideology = oldorder
+	            popularity = 0.1
+	        }
+	        if = {
+	            limit = {
+	            	HKR = {
+	                	is_subject = no
+	            	}	
+	        	}
+	            HKR = {
+	              subject_level3 = yes
+	            }
+	        }
+	        set_country_flag = SEJ_chenggongruzhu
+		}
+        hidden_effect = {
+        	SEJ = { news_event = { id = sei.40 days = 2} }
+        }		
+	}
+	option = { #
+		name = sei.38.2
+
+		ai_chance = {
+			base = 80
+			modifier = {
+				factor = 0.5
+				HKR = {
+					has_opinion = { target = SEJ value > 40 } }
+				}
+			modifier = {
+				factor = 0.5
+				HKR = {
+					is_subject = yes
+				}
+			}
+		}
+		hidden_effect = {
+        	SEJ = { country_event = { id = glo.2002 hours = 11} }
+        }
+	}
+}
+
+country_event = {#成为宪兵
+	id = sei.39
+	title = sei.39.t
+	desc = sei.39.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { #
+		name = sei.39.1
+		ai_chance = {
+			base = 10
+		}
+		SEJ = {
+			go_oldorder = yes
+          	set_politics = {
+            	ruling_party = oldorder
+          	}
+          	add_popularity = {
+            	ideology = oldorder
+            	popularity = 0.45
+          	}
+          	PO_add10 = yes
+          	PO_add10 = yes
+          	OL_add10 = yes
+          	conservativedecrease = yes
+		}
+        hidden_effect = {
+        	SEJ = { news_event = { id = sei.41 days = 2} }
+        }	
+	}
+	option = { #
+		name = sei.39.2
+
+		ai_chance = {
+			base = 90
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = { target = FROM value > 0 } 
+				}
+			}
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = { target = FROM value > 30 } 
+				}
+			}
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = { target = FROM value > 50 } 
+				}
+			}
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_opinion = { target = FROM value > 90 } 
+				}
+			}
+			modifier = {
+				factor = 0.5
+				ROOT = {
+					has_country_flag = SEJ_chenggongruzhu
+				}
+			}
+			modifier = {
+				factor = 0.5
+				date > 151.1.1
+				ROOT = {
+					has_war = yes
+				}
+			}
+		}
+		hidden_effect = {
+        	SEJ = { country_event = { id = glo.2002 hours = 11} }
+        }
+	}
+}
+
+news_event = {#SEJ入驻博丽神社
+	id = sei.40
+	title = sei.40.t
+	desc = sei.40.d
+	picture = GFX_news_event_sei.40
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = sei.40.1
+		trigger = {
+			or = {
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+		}
+	}
+	option = { 
+		name = sei.40.2
+		trigger = {
+			has_government = oldorder
+		}
+	}
+	option = { 
+		name = sei.40.3
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = { 
+		name = sei.40.4
+		trigger = {
+			not = {
+				has_government = oldorder
+				tag = HKR
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+		}
+	}
+}
+
+news_event = {#SEJ成为宪兵
+	id = sei.41
+	title = sei.41.t
+	desc = sei.41.d
+	picture = GFX_news_event_sei.41
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = sei.41.1
+		trigger = {
+			or = {
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+		}
+	}
+	option = { 
+		name = sei.41.2
+		trigger = {
+			not = {
+				tag = SEJ
+				tag = YKR
+				is_subject_of = SEJ
+			}
+		}
+	}
+	option = { 
+		name = sei.41.3
+		trigger = {
+			or = {
+				tag = YKR
+			}
+		}
+	}
+}
+
+news_event = {#SEJ宣战YKR
+	id = sei.42
+	title = sei.42.t
+	desc = sei.42.d
+	picture = GFX_news_event_sei.42
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = sei.42.1
+		trigger = {
+			or = {	
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+		}
+	}
+	option = { 
+		name = sei.42.2
+		trigger = {
+			tag = YKR
+		}
+	}
+	option = { 
+		name = sei.42.3
+		trigger = {
+			not = {
+				tag = YKR
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+		}
+	}
+}
+
+news_event = {#宣称博丽职责
+	id = sei.43
+	title = sei.43.t
+	desc = sei.43.d
+	picture = GFX_news_event_sei.43
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = sei.43.1
+		trigger = {
+			or = {
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+		}
+	}
+	option = { 
+		name = sei.43.2
+		trigger = {
+			tag = HKR
+		}
+	}
+	option = { 
+		name = sei.43.3
+		trigger = {
+			not = {
+				tag = HKR
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+		}
+	}
+}
+
+news_event = {#宣称新能力
+	id = sei.44
+	title = sei.44.t
+	desc = sei.44.d
+	picture = GFX_news_event_sei.44
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = sei.44.1
+		trigger = {
+			or = {
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+			
+		}
+	}
+	option = { 
+		name = sei.42.2
+		trigger = {
+			not = {
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+		}
+	}
+}
+
+news_event = {#复兴过去（新闻）
+	id = sei.45
+	title = sei.45.t
+	desc = sei.45.d
+	picture = GFX_news_event_sei.45
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = sei.45.1
+		trigger = {
+			tag = SEJ
+			is_subject_of = SEJ
+		}
+	}
+	option = { 
+		name = sei.45.2
+		trigger = {
+			not = {
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+		}
+	}
+}
+
+news_event = {#驱赶正邪（新闻）
+	id = sei.46
+	title = sei.46.t
+	desc = sei.46.d
+	picture = GFX_news_event_sei.46
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = sei.46.1
+		trigger = {
+			or = {
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+		}
+	}
+	option = { 
+		name = sei.46.2
+		trigger = {
+			not = {
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+		}
+	}
+}
+
+news_event = {#邀请兽道妖怪（新闻）
+	id = sei.47
+	title = sei.47.t
+	desc = sei.47.d
+	picture = GFX_news_event_sei.47
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = sei.47.1
+		trigger = {
+			or = {
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+		}
+	}
+	option = { 
+		name = sei.47.2
+		trigger = {
+			not = {
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+		}
+	}
+}
+
+news_event = {#联合妖怪同盟（新闻）
+	id = sei.48
+	title = sei.48.t
+	desc = sei.48.d
+	picture = GFX_news_event_sei.48
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = sei.48.1
+		trigger = {
+			or = {
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+		}
+	}
+	option = { 
+		name = sei.48.2
+		trigger = {
+			not = {
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+		}
+	}
+}
+
+country_event = {#妖怪同盟另一方加入（对方）
+	id = sei.49
+	title = sei.49.t
+	desc = sei.49.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		SEJ = {
+			has_country_flag = SEJ_fankangchenggong
+			check_variable = {	all_value_plus_manpower > 249 }
+		}
+        has_country_flag = SEJ_not_zhuren
+	}
+
+	option = { 
+		name = sei.49.1
+		SEJ = { country_event = { days = 2 id = sei.50} }
+		custom_effect_tooltip = event_accept
+		effect_tooltip = {
+			SEJ = {
+				ROOT = {
+					subject_level3 = yes
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = { 
+		name = sei.49.2
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {#妖怪同盟另一方加入（SEJ）
+	id = sei.50
+	title = sei.50.t
+	desc = sei.50.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = sei.50.1
+		ROOT = {
+			FROM = {
+				subject_level3 = yes
+				hidden_effect = {
+					country_event = { id = glo.2001 days = 2}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = { 
+		name = sei.50.2
+		hidden_effect = {
+			country_event = { id = glo.2002 days = 2}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {#与妖精合作
+	id = sei.51
+	title = sei.51.t
+	desc = sei.51.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = sei.51.1
+		FROM = {
+			add_named_threat = {
+            	name = SEJ_yuyaojinghezuo
+            	threat = 2.5
+            }
+          	CIR = {
+            	can_use = yes
+            	FROM = {
+              		can_use = yes
+            	}
+          	}
+          	xianghubaodu = yes
+          	jiemeng = yes
+		}
+		ai_chance = {
+			factor = 500
+			modifier = {
+				factor = 0
+				has_government = neworder
+			}
+		}
+		hidden_effect = {
+          news_event = { id = sei.33 days = 2}
+        }
+	}
+	option = { 
+		name = sei.51.2
+		ai_chance = {
+			factor = 1	
+		}
+		hidden_effect = {
+          SEJ = { country_event = { id = glo.2002 days = 2} }
+        }
+	}
+}
+
+country_event = {#加入SEJ的同盟
+	id = sei.52
+	title = sei.52.t
+	desc = sei.52.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = sei.52.1
+	    add_ai_strategy = {
+	        type = alliance
+	        id = FROM
+	        value = 40
+	    }
+		ai_chance = {
+			factor = 20
+			modifier = {
+				not = { has_government = FROM } 
+				factor = 0.05
+			}
+		}
+	}
+	option = { 
+		name = sei.52.2
+		hidden_effect = {
+			SEJ = { country_event = { id = glo.2002 days = 2} }
+		}
+		ai_chance = {
+			factor = 80
+			modifier = {
+				has_government = FROM
+				factor = 0.25
+			}
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+}
+
+news_event = {#辉光帝国
+	id = sei.53
+	title = sei.53.t
+	desc = sei.53.d
+	picture = GFX_news_event_sei.53
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = sei.53.1
+		trigger = {
+			or = {
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+		}
+	}
+	option = { 
+		name = sei.53.2
+		trigger = {
+			not = {
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+		}
+	}
+}
+
+news_event = {#vs 紫（针妙丸
+	id = sei.54
+	title = sei.54.t
+	desc = sei.54.d
+	picture = GFX_news_event_sei.54
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = sei.54.1
+		trigger = {
+			or = {
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+		}
+	}
+	option = { 
+		name = sei.54.2
+		trigger = {
+			not = {
+				tag = YKR
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+		}
+	}
+	option = { 
+		name = sei.54.3
+		trigger = {
+			tag = YKR
+		}
+	}
+}
+
+news_event = {#vs 勇仪
+	id = sei.55
+	title = sei.55.t
+	desc = sei.55.d
+	picture = GFX_news_event_sei.55
+
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = sei.55.1
+		trigger = {
+			or = {
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+		}
+	}
+	option = { 
+		name = sei.55.2
+		trigger = {
+			not = {
+				tag = SEJ
+				is_subject_of = SEJ
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+# unit_base is the base value used for evaluating how important it is to deploy the various categories
+# Written by Henrik "Groogy" Hansson
+#AI 倾向
+NUE_YKR_support = {
+	enable = {
+		tag = NUE
+		has_country_flag = NUE_xunqiuxianzhezhichi
+	}
+	abort = {
+		not = {
+			has_country_flag = NUE_xunqiuxianzhezhichi
+		}
+	}
+	reversed = yes
+	ai_strategy = {
+		type = support
+		id = "YKR"			
+		value = 100
+	}	
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "YKR"			
+		value = 100
+	}	
+}

@@ -615,7 +615,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				army_speed_factor = 0.1
-				operative_slot = 2
+				operative_slot = 1
 			}
 			# equipment_bonus = {
 			# 	spell_card_a = {
@@ -1698,10 +1698,10 @@ ideas = {
 				factor = 5
 			}
 		}
-		ICR_manu2 = {
-		    picture = manufacturer_ICR
+		NUE_manu2 = {
+		    picture = manufacturer_NUE
 		    available = {   
-		    	ICR = {
+		    	NUE = {
 		    		# manufacture_conditions = yes
 		    	}           	    
 		    }

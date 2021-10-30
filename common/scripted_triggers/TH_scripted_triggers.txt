@@ -1,4 +1,5 @@
 manufacture_conditions = {
+	exists = yes
 	custom_trigger_tooltip = {
     	tooltip = manufacturer_condition
     	#下面这些如果无特殊需求请不要改	
@@ -222,74 +223,154 @@ is_same_government = {
 				has_government = oldorder
 			}
 		}
-		and = {
-			has_government = lienin
-			PREV = {
-				has_government = lienin
-			}
-		}
-		and = {
-			has_government = authordemo
-			PREV = {
-				has_government = authordemo
-			}
-		}
-		and = {
-			has_government = humanfirst
-			PREV = {
-				has_government = humanfirst
-			}
-		}
-		and = {
-			has_government = destroyid
-			PREV = {
-				has_government = destroyid
-			}
-		}
 	}
 }
 
+before_declare_war = {
+	if = {
+		limit = {
+			THIS = { exists = yes }
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = before_declare_war2_tt
+				OVERLORD = {
+					not = {
+						has_non_aggression_pact_with = ROOT
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = before_declare_war1_tt
+					not = {
+						has_non_aggression_pact_with = ROOT
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = before_declare_war3_tt
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				OVERLORD = {
+					or = {
+						is_neighbor_of = ROOT
+
+						any_neighbor_country = {
+							is_subject_of = ROOT
+						}
+
+						any_allied_country = {
+							is_neighbor_of = ROOT
+						}
+
+						any_allied_country = {
+							any_neighbor_country = {
+								is_subject_of = ROOT
+							}
+						}
+
+						any_country = {
+							is_subject_of = PREV
+							is_neighbor_of = ROOT
+						}
+
+						any_country = {
+							is_subject_of = PREV
+							any_neighbor_country = {
+								is_subject_of = ROOT
+							}
+						}
+					}
+				}
+			}
+			else = {
+				or = {
+					is_neighbor_of = ROOT
+
+					any_neighbor_country = {
+						is_subject_of = ROOT
+					}
+
+					any_allied_country = {
+						is_neighbor_of = ROOT
+					}
+
+					any_allied_country = {
+						any_neighbor_country = {
+							is_subject_of = ROOT
+						}
+					}
+
+					any_country = {
+						is_subject_of = PREV
+						is_neighbor_of = ROOT
+					}
+
+					any_country = {
+						is_subject_of = PREV
+						any_neighbor_country = {
+							is_subject_of = ROOT
+						}
+					}
+				}
+			}
+		}
+	}
+	ROOT = {
+		is_subject = no
+	}
+}
 faqiqingqiu = {
 	country_exists = THIS
-	# or = {
-	# 	is_subject = no
-	# 	and = {
-	# 		is_subject = yes
-	# 		is_subject_of = ROOT
-	# 	}
-	# }
 	not = {
    		has_war_with = ROOT
   	}
+	ROOT = {
+		is_subject = no
+	}
 }
 
 youkai_mountain_country = {
 	or = {
-		tag = TEG
-		tag = OTG
+		tag = TEG#
+		tag = OTG#
 
-		tag = MRY
+		tag = MRY#
 
-		tag = UNA
-		tag = LIL
+		tag = KAP#
+		tag = SAP#
+		tag = GRS#
+		tag = NTR#
 
-		tag = KAP
-		tag = SAP
-		tag = GRS
-		tag = NTR
+		tag = KAS#
 
-		tag = KAS
+		tag = NMN#
+		tag = AKI#
 
-		tag = NMN
-		tag = ZYD
-
-		tag = AKI
-		
-		tag = NUC
 		tag = HU5
-		tag = KTK
 
-		tag = HU7
+	}
+}
+
+SW_country = {
+	or = {
+		tag = GH1
+		tag = GH2
+		tag = GH3
+		tag = HU3
+		tag = ZYD
+		tag = HU6
+		tag = MEL
+		tag = SGS
 	}
 }
 
@@ -311,6 +392,8 @@ Ghost_country = {
 		tag = SAK
 		tag = GYK
 		tag = HGH
+		tag = YYG
+		tag = YYH
 	}
 }
 
@@ -321,6 +404,7 @@ Fairy_country = {
 		tag = CIR
 		tag = HKM
 		tag = SC2
+		tag = SC3
 		tag = SCA
 		tag = SGS
 		tag = LIL
@@ -348,6 +432,7 @@ Human_country = {
 		tag = HU7
 		tag = HU8
 		tag = MHV
+		tag = ZBT
 	}
 }
 
@@ -359,7 +444,7 @@ Magician_country = {
 		tag = ZYD
 		tag = ALI
 		tag = HU5
-
+		tag = SRB
 		tag = MOK
 	}
 }
@@ -380,7 +465,6 @@ God_country = {
 		tag = AKI
 		tag = OKI
 		tag = SKI
-		tag = SRB
 		tag = TES
 		tag = CCA
 		tag = KTK
@@ -419,6 +503,8 @@ Pri_youkai_country = {
 		
 		tag = MNM
 		tag = ICR
+
+		tag = YKV
 	}
 }
 
@@ -446,7 +532,7 @@ Beast_country = {
 		tag = WAK
 		# tag = SBK
 		tag = KAS
-
+		tag = SAT
 		tag = BYA
 		tag = RGO
 		
@@ -463,7 +549,7 @@ Youkai_country = {
 		tag = PRS
 		# tag = ONI
 		tag = NMN
-		tag = SAT
+		# tag = SAT
 		tag = UNA
 		tag = UNL
 		tag = YKR
@@ -478,6 +564,8 @@ Youkai_country = {
 		tag = AKO
 		tag = AOO
 		tag = ONI
+
+		tag = NUE
 	}
 }
 
@@ -552,6 +640,9 @@ random_leader = {
 		# tag = ONI
 		tag = UFA
 		tag = GYK
+		tag = SC1
+		tag = SC2
+		tag = SC3
 		# tag = UUG
 		# tag = ACE
 		# tag = NG1
@@ -566,75 +657,23 @@ lv2_manpower = {
 	NOT = { has_idea = isolation }
 }
 lv3_manpower = {
-	or = {
-		has_war_support > 0.2
-		and = {
-			has_offensive_war = yes
-			has_war_support > 0.15
-		}
-		and = {
-			has_defensive_war = yes
-			has_war_support > 0
-		}
-		
-	}
+	has_war_support > 0.3
 	NOT = { has_idea = isolation }
 }
 lv4_manpower = {
-	or = {
-		has_war_support > 0.4
-		and = {
-			has_offensive_war = yes
-			has_war_support > 0.35
-		}
-		and = {
-			has_defensive_war = yes
-			has_war_support > 0.2
-		}
-		
-	}
+	has_war_support > 0.5
 	NOT = { has_idea = isolation }
 }
 lv5_manpower = {
-	or = {
-		has_war_support > 0.6
-		and = {
-			has_offensive_war = yes
-			has_war_support > 0.55
-		}
-		and = {
-			has_defensive_war = yes
-			has_war_support > 0.4
-		}
-	}
+	has_war_support > 0.7
 	NOT = { has_idea = isolation }
 }
 lv6_manpower = {
-	or = {
-		has_war_support > 0.8
-		and = {
-			has_offensive_war = yes
-			has_war_support > 0.75
-		}
-		and = {
-			has_defensive_war = yes
-			has_war_support > 0.6
-		}
-	}
+	has_war_support > 0.9
 	NOT = { has_idea = isolation }
 }
 lv7_manpower = {
-	or = {
-		has_war_support > 1
-		and = {
-			has_offensive_war = yes
-			has_war_support > 0.95
-		}
-		and = {
-			has_defensive_war = yes
-			has_war_support > 0.8
-		}
-	}
+	has_war_support > 1.2
 	NOT = { has_idea = isolation }
 }
 
@@ -645,61 +684,61 @@ caidankaiqi = {
 ST_origin_same_race = {
 	or = {
 		and = {
-			owner = {
+			controller = {
 				has_idea = Beast
 			}
 			check_variable = { ST_origin_race = 0}
 		}
 		and = {
-			owner = {
+			controller = {
 				has_idea = Pri_youkai
 			}
 			check_variable = { ST_origin_race = 1}
 		}
 		and = {
-			owner = {
+			controller = {
 				has_idea = Youkai
 			}
 			check_variable = { ST_origin_race = 2}
 		}
 		and = {
-			owner = {
+			controller = {
 				has_idea = God
 			}
 			check_variable = { ST_origin_race = 3}
 		}
 		and = {
-			owner = {
+			controller = {
 				has_idea = Human
 			}
 			check_variable = { ST_origin_race = 4}
 		}
 		and = {
-			owner = {
+			controller = {
 				has_idea = Magician
 			}
 			check_variable = { ST_origin_race = 5}
 		}
 		and = {
-			owner = {
+			controller = {
 				has_idea = Fairy
 			}
 			check_variable = { ST_origin_race = 6}
 		}
 		and = {
-			owner = {
+			controller = {
 				has_idea = Ghost
 			}
 			check_variable = { ST_origin_race = 7}
 		}
 		and = {
-			owner = {
+			controller = {
 				has_idea = Kappa
 			}
 			check_variable = { ST_origin_race = 8}
 		}
 		and = {
-			owner = {
+			controller = {
 				has_idea = Tenggu
 			}
 			check_variable = { ST_origin_race = 9}
@@ -709,61 +748,61 @@ ST_origin_same_race = {
 ST_present_same_race = {
 	or = {
 		and = {
-			owner = {
+			controller = {
 				has_idea = Beast
 			}
 			check_variable = { ST_present_race = 0}
 		}
 		and = {
-			owner = {
+			controller = {
 				has_idea = Pri_youkai
 			}
 			check_variable = { ST_present_race = 1}
 		}
 		and = {
-			owner = {
+			controller = {
 				has_idea = Youkai
 			}
 			check_variable = { ST_present_race = 2}
 		}
 		and = {
-			owner = {
+			controller = {
 				has_idea = God
 			}
 			check_variable = { ST_present_race = 3}
 		}
 		and = {
-			owner = {
+			controller = {
 				has_idea = Human
 			}
 			check_variable = { ST_present_race = 4}
 		}
 		and = {
-			owner = {
+			controller = {
 				has_idea = Magician
 			}
 			check_variable = { ST_present_race = 5}
 		}
 		and = {
-			owner = {
+			controller = {
 				has_idea = Fairy
 			}
 			check_variable = { ST_present_race = 6}
 		}
 		and = {
-			owner = {
+			controller = {
 				has_idea = Ghost
 			}
 			check_variable = { ST_present_race = 7}
 		}
 		and = {
-			owner = {
+			controller = {
 				has_idea = Kappa
 			}
 			check_variable = { ST_present_race = 8}
 		}
 		and = {
-			owner = {
+			controller = {
 				has_idea = Tenggu
 			}
 			check_variable = { ST_present_race = 9}
@@ -932,5 +971,66 @@ is_same_continent = {
 				}
 			}
 		}
+	}
+}
+
+ST_race_is_Beast = {
+	custom_trigger_tooltip = {
+		tooltip = ST_race_is_0_tt
+		check_variable = { ST_present_race = 0 }
+	}
+}
+ST_race_is_Pri_youkai = {
+	custom_trigger_tooltip = {
+		tooltip = ST_race_is_1_tt
+		check_variable = { ST_present_race = 1 }
+	}
+}
+ST_race_is_Youkai = {
+	custom_trigger_tooltip = {
+		tooltip = ST_race_is_2_tt
+		check_variable = { ST_present_race = 2 }
+	}
+}
+ST_race_is_God = {
+	custom_trigger_tooltip = {
+		tooltip = ST_race_is_3_tt
+		check_variable = { ST_present_race = 3 }
+	}
+}
+ST_race_is_Human = {
+	custom_trigger_tooltip = {
+		tooltip = ST_race_is_4_tt
+		check_variable = { ST_present_race = 4 }
+	}
+}
+ST_race_is_Magician = {
+	custom_trigger_tooltip = {
+		tooltip = ST_race_is_5_tt
+		check_variable = { ST_present_race = 5 }
+	}
+}
+ST_race_is_Fairy = {
+	custom_trigger_tooltip = {
+		tooltip = ST_race_is_6_tt
+		check_variable = { ST_present_race = 6 }
+	}
+}
+ST_race_is_Ghost = {
+	custom_trigger_tooltip = {
+		tooltip = ST_race_is_7_tt
+		check_variable = { ST_present_race = 7 }
+	}
+}
+ST_race_is_Kappa = {
+	custom_trigger_tooltip = {
+		tooltip = ST_race_is_8_tt
+		check_variable = { ST_present_race = 8 }
+	}
+}
+ST_race_is_Tengu = {
+	custom_trigger_tooltip = {
+		tooltip = ST_race_is_9_tt
+		check_variable = { ST_present_race = 9 }
 	}
 }

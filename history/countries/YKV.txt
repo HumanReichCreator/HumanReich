@@ -1,0 +1,70 @@
+﻿capital = 246
+146.1.1={
+    oob = "TEST"
+    add_ideas = {
+        Pri_youkai
+    }
+    set_politics = {
+    	ruling_party = neworder
+    	election_frequency = 48
+    	elections_allowed = no
+    }
+    set_popularities = {
+        qinwai = 0 
+        guli = 0
+        neworder = 100
+        oldorder = 0
+        fandong = 0
+    }
+}
+
+create_country_leader = {
+    # name = "Council"
+    name = "妖怪之里建设规划组织"
+    desc = ""
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    ideology = guli_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Council"
+    name = "妖怪之里建设规划组织"
+    desc = ""
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    ideology = fandong_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Council"
+    name = "妖怪之里建设规划组织"
+    desc = ""
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    ideology = neworder_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Council"
+    name = "妖怪之里建设规划组织"
+    desc = ""
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    ideology = qinwai_type
+    traits = {
+        #warrior_code
+    }
+}
+create_country_leader = {
+    # name = "Council"
+    name = "妖怪之里建设规划组织"
+    desc = ""
+    picture = "gfx/leaders/ZYD/ZYD_council.dds"
+    ideology = oldorder_type
+    traits = {
+        #warrior_code
+    }
+}

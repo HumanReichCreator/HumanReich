@@ -1,0 +1,88 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+    YYK_sijidezhicai_op = {
+	    value = -50
+	}
+    YYK_sijidezhicai_op2 = {
+	    value = -100
+	}
+	YYK_tingzhiyuanzhu_op = {
+		value = -20
+	}
+	YYK_pohuaiyouminjiejie_op = {
+		trade = yes
+		value = 100
+	}
+	YYK_rongruhxx_op = {
+		trade = yes
+		value = 100
+	}
+	YYK_pohuaiyouminjiejie_op2 = {
+		value = -30
+	}
+	YYK_yuzibeidezhixin_op = {
+		value = 30
+	}
+	YYK_xuanchenxianzhe_op = {
+		value = -200
+	}
+	YYK_xuanchenxianzhe_op2 = {
+		value = -100
+	}
+	YYK_minjiekaifangfangan_op = {
+		trade = yes
+		value = 130
+	}
+	YYK_shengzhedeminjieshequ_op = {
+		value = -30
+	}
+	YYK_fanyouling_op = {
+		value = -40
+	}
+	YYK_chunduzaishouji_op = {
+		value = -40
+	}
+	YYK_ziranzhili_op = {
+		value = -200
+	}
+	YYK_linghunshouji_op = {
+		value = -80
+	}
+	YYK_youdaosiwang_op = {
+		value = -25
+	}
+	YYK_yuanzhuwaibushili_op = {
+		value = -25
+	}
+	YYK_hongsejihua_op = {
+		value = -60
+	}
+	YYK_qingzui_op = {
+		value = -20
+	}
+	YYK_kuoda_op = {
+		value = -40
+	}
+	YYK_qingzui_op2 = {
+		value = 25
+	}
+	YYK_sijidezhicai_op3 = {
+	    value = -100
+		decay = 10
+	}
+	YYK_tingzhiyuanzhu_op2 = {
+		value = 25
+	}
+	YYK_fangwendiyu_op = {
+		value = 40
+	}
+}

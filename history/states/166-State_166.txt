@@ -3,16 +3,16 @@ state={
 	id=166
 	name="STATE_166"
 	resources={
-		powder=0.000
-		metal=0.000
+		powder = 0.0
+		metal = 0.0
 		gas=0.000
 		crystal=0.000
 	}
 
 	history={
-			owner = PRI
 		143.7.1 = {
 			owner = SCA
+			add_core_of = WAK
 			buildings = {
 				infrastructure = 2
 				industrial_complex = 0
@@ -22,9 +22,8 @@ state={
 
 		}
 		146.1.1 = {
-			owner = PRI
+			owner = WAK
 			add_core_of = WAK
-			add_core_of = PRI
 			buildings = {
 				infrastructure = 3
 				industrial_complex = 0
@@ -39,7 +38,7 @@ state={
 	provinces={
 		1389 3243 3549 3550 3558 3563 5952 5953 5954 
 	}
-	manpower=30
+	manpower=330
 	buildings_max_level_factor=1.000
 	state_category=s2
 }

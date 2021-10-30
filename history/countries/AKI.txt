@@ -1,6 +1,4 @@
 ﻿capital = 125
-
-
 146.1.1 = {
     set_technology = {
         #通用武器线
@@ -40,6 +38,7 @@
         #种族
             shengetansuo1 = 1
     }
+    
 }
 
 
@@ -57,7 +56,8 @@
     }
 
     set_country_flag = bunengsuiyiqiehuanzhengti
-    WHM = { give_guarantee = AKI}
+    give_guarantee = HU3      
+    
     add_ideas = {
     God
     Village
@@ -78,16 +78,16 @@
     }
     set_popularities = {
         qinwai = 33
-        guli = 53
-        neworder = 9
-        oldorder = 5
-        fandong = 0
+        guli = 9
+        neworder = 53
+        oldorder = 0
+        fandong = 5
     }
     
 }
 
 create_country_leader = {
-    # name = "Aki Minoriko"
+    # name = "Kagiyama Hina"
     name = "键山雏"
     picture = "AKI_hin.dds"
     ideology = qinwai_type
@@ -97,7 +97,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-    # name = "Kagiyama Hina"
+    # name = "Aki Minoriko"
     name = "秋穰子"
     picture = "AKI_szh.dds"
     ideology = guli_type
@@ -107,7 +107,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-    # name = "Aki Sizuha"
+    # name = "Kagiyama Hina"
     name = "键山雏"
     picture = "AKI_hin.dds"
     ideology = fandong_type
@@ -127,7 +127,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-    # name = "Kagiyama Hina"
+    # name = "Aki Minoriko"
     name = "秋穰子"
     picture = "AKI_szh.dds"
     ideology = oldorder_type

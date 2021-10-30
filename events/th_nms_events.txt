@@ -1,0 +1,2124 @@
+add_namespace = nms2
+news_event = {
+	id = nms2.1
+	title = nms2.1.t
+	desc = nms2.1.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.1.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.1.2
+		trigger = {
+			or = {
+				tag = SRB
+				has_idea = Kappa
+			}
+		}
+	}
+	option = {
+		name = nms2.1.3
+		trigger = {
+			tag = HUM
+		}
+	}
+	option = {
+		name = nms2.1.4
+		trigger = {
+			not = {
+				tag = HUM
+				tag = SRB
+				tag = NMS
+				has_idea = Kappa
+			}
+		}
+	}
+}
+news_event = {
+	id = nms2.2
+	title = nms2.2.t
+	desc = nms2.2.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.2.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.2.2
+		trigger = {
+			not = { tag = NMS }
+		}
+	}
+}
+news_event = {
+	id = nms2.3
+	title = nms2.3.t
+	desc = nms2.3.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.3.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.3.2
+		trigger = {
+			or = {
+				tag = MNM
+				tag = NUE
+			}
+		}
+	}
+	option = {
+		name = nms2.3.3
+		trigger = {
+			not = { 
+				tag = NMS 
+				tag = MNM
+				tag = NUE
+			}
+		}
+	}
+}
+news_event = {
+	id = nms2.4
+	title = nms2.4.t
+	desc = nms2.4.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.4.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.4.2
+		trigger = {
+			not = { tag = NMS }
+		}
+	}
+}
+news_event = {
+	id = nms2.5
+	title = nms2.5.t
+	desc = nms2.5.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.5.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.5.2
+		trigger = {
+			not = { tag = NMS }
+		}
+	}
+}
+news_event = {
+	id = nms2.6
+	title = nms2.6.t
+	desc = nms2.6.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.6.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.6.2
+		trigger = {
+			tag = MAM
+		}
+	}
+	option = {
+		name = nms2.6.3
+		trigger = {
+			not = { 
+				tag = NMS 
+				tag = MAM
+			}
+		}
+	}
+}
+news_event = {
+	id = nms2.7
+	title = nms2.7.t
+	desc = nms2.7.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.7.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.7.2
+		trigger = {
+			tag = TKM
+		}
+	}
+	option = {
+		name = nms2.7.3
+		trigger = {
+			not = { 
+				tag = NMS 
+				tag = TKM
+			}
+		}
+	}
+}
+news_event = {
+	id = nms2.8
+	title = nms2.8.t
+	desc = nms2.8.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.8.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.8.2
+		trigger = {
+			tag = KYK
+		}
+	}
+	option = {
+		name = nms2.8.3
+		trigger = {
+			not = { 
+				tag = NMS
+				tag = KYK 
+			}
+		}
+	}
+}
+news_event = {
+	id = nms2.9
+	title = nms2.9.t
+	desc = nms2.9.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.9.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.9.2
+		trigger = {
+			has_idea = Human
+		}
+	}
+	option = {
+		name = nms2.9.3
+		trigger = {
+			or = {
+				tag = OKI
+				tag = YKR
+				tag = KAS
+			}
+		}
+	}
+	option = {
+		name = nms2.9.4
+		trigger = {
+			not = { 
+				tag = NMS 
+				tag = OKI
+				tag = YKR
+				tag = KAS
+				has_idea = Human
+			}
+		}
+	}
+}
+news_event = {
+	id = nms2.10
+	title = nms2.10.t
+	desc = nms2.10.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.10.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.10.2
+		trigger = {
+			has_idea = Human
+		}
+	}
+	option = {
+		name = nms2.10.3
+		trigger = {
+			not = { 
+				tag = NMS
+				has_idea = Human 
+			}
+		}
+	}
+}
+news_event = {
+	id = nms2.11
+	title = nms2.11.t
+	desc = nms2.11.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.11.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.11.2
+		trigger = {
+			or = {
+				has_idea = Tenggu
+				has_idea = Youkai
+				tag = SCA
+			}
+		}
+	}
+	option = {
+		name = nms2.11.3
+		trigger = {
+			or = {
+				has_idea = Pri_youkai
+				has_idea = Beast
+				has_idea = Kappa
+			}
+			not = {
+				tag = NMS
+			}
+		}
+	}
+	option = {
+		name = nms2.11.4
+		trigger = {
+			not = {
+				has_idea = Pri_youkai
+				has_idea = Beast
+				has_idea = Kappa
+				has_idea = Tenggu
+				has_idea = Youkai
+				tag = SCA
+				tag = NMS
+			}
+		}
+	}
+}
+news_event = {
+	id = nms2.12
+	title = nms2.12.t
+	desc = nms2.12.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.12.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.12.2
+		trigger = {
+			not = { tag = NMS }
+		}
+	}
+}
+news_event = {#佛道一体化的理想 合作的情况下
+	id = nms2.13
+	title = nms2.13.t
+	desc = nms2.13.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.13.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.13.2
+		trigger = {
+			not = { tag = NMS }
+		}
+	}
+}
+news_event = {
+	id = nms2.14
+	title = nms2.14.t
+	desc = nms2.14.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.14.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.14.2
+		trigger = {
+			not = { tag = NMS }
+		}
+	}
+}
+news_event = {
+	id = nms2.15
+	title = nms2.15.t
+	desc = nms2.15.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.15.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.15.2
+		trigger = {
+			tag = HUM
+		}
+	}
+	option = {
+		name = nms2.15.3
+		trigger = {
+			not = { 
+				tag = NMS 
+				tag = HUM
+			}
+		}
+	}
+}
+news_event = {
+	id = nms2.16
+	title = nms2.16.t
+	desc = nms2.16.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.16.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.16.2
+		trigger = {
+			tag = TEG
+		}
+	}
+	option = {
+		name = nms2.16.3
+		trigger = {
+			not = { 
+				tag = NMS 
+				tag = TEG
+			}
+		}
+	}
+}
+news_event = {
+	id = nms2.17
+	title = nms2.17.t
+	desc = nms2.17.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.17.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.17.2
+		trigger = {
+			not = { tag = NMS }
+		}
+	}
+}
+news_event = {
+	id = nms2.18
+	title = nms2.18.t
+	desc = nms2.18.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.18.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.18.2
+		trigger = {
+			tag = SCA
+		}
+	}
+	option = {
+		name = nms2.18.3
+		trigger = {
+			is_subject_of = SCA
+		}
+	}
+	option = {
+		name = nms2.18.4
+		trigger = {
+			not = {
+				tag = NMS
+				tag = SCA
+				is_subject_of = SCA
+			}
+		}
+	}
+}
+news_event = {
+	id = nms2.19
+	title = nms2.19.t
+	desc = nms2.19.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.19.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.19.2
+		trigger = {
+			tag = TKM
+		}
+	}
+	option = {
+		name = nms2.19.2
+		trigger = {
+			not = { 
+				tag = NMS 
+				tag = TKM
+			}
+		}
+	}
+}
+news_event = {
+	id = nms2.20
+	title = nms2.20.t
+	desc = nms2.20.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.20.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.20.2
+		trigger = {
+			not = { tag = NMS }
+		}
+	}
+}
+news_event = {
+	id = nms2.21
+	title = nms2.21.t
+	desc = nms2.21.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.21.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.21.2
+		trigger = {
+			not = { tag = NMS }
+		}
+	}
+}
+news_event = {
+	id = nms2.22
+	title = nms2.22.t
+	desc = nms2.22.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.22.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.22.2
+		trigger = {
+			not = { tag = NMS }
+		}
+	}
+}
+country_event = {#与斯卡蕾特划分势力范围
+	id = nms2.23
+	title = nms2.23.t
+	desc = nms2.23.d
+	is_triggered_only = yes
+	option = {
+		name = nms2.23.1
+		163 = {
+			remove_claim_by = PRI
+			if = {
+				limit = {
+					is_claimed_by = SCA
+				}
+				remove_claim_by = SCA
+			}
+		}
+		321 = {
+			remove_claim_by = PRI
+			if = {
+				limit = {
+					is_claimed_by = SCA
+				}
+				remove_claim_by = SCA
+			}
+		}
+		168 = {
+			remove_claim_by = PRI
+			if = {
+				limit = {
+					is_claimed_by = SCA
+				}
+				remove_claim_by = SCA
+			}
+		}
+		433 = {
+			remove_claim_by = WAK
+			if = {
+				limit = {
+					is_claimed_by = SCA
+				}
+				remove_claim_by = SCA
+			}
+		}
+		187 = {
+			remove_core_of = WAK
+			if = {
+				limit = {
+					is_claimed_by = SCA
+				}
+				remove_claim_by = SCA
+			}
+		}
+		204 = {
+			remove_core_of = WAK
+			if = {
+				limit = {
+					is_claimed_by = SCA
+				}
+				remove_claim_by = SCA
+			}
+		}
+		FROM = {
+			jiemeng = yes
+			hidden_effect = {
+				country_event = { days = 2 id = glo.2001 }
+			}
+		}
+		ai_chance = {
+			base = 80
+			modifier = {
+				has_government = guli
+				factor = 100
+			}
+			modifier = {
+				has_government = qinwai
+				factor = 0.1
+			}
+			modifier = {
+				has_opinion = {
+					target = FROM
+					value > 60
+				}
+				add = 10
+			}
+		}
+	}
+	option = {
+		name = nms2.23.2
+		hidden_effect = {
+			FROM = {
+				country_event = { days = 2 id = glo.2002 }
+			}
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+country_event = {#要求参拜村落回归事件
+	id = nms2.24
+	title = nms2.24.t
+	desc = nms2.24.d
+	is_triggered_only = yes
+	option = {
+		name = nms2.24.1
+		FROM = {
+			ROOT = {
+				subject_level1 = yes
+			}
+		}
+		hidden_effect = {
+			FROM = {
+				country_event = { id = glo.2001 days = 2 }
+			}
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				any_country = {
+					has_guaranteed = ROOT
+				}
+				factor = 0
+			}
+		}
+		trigger = {
+			is_subject = no
+		}
+	}
+	option = {
+		name = nms2.24.2
+		FROM = {
+			declare_war_on = {
+				target = ROOT
+				type = puppet_wargoal_focus
+			}
+		}
+		ai_chance = {
+			base = 75
+		}
+	}
+}
+country_event = {#向狸猫妖怪施压事件
+	id = nms2.25
+	title = nms2.25.t
+	desc = nms2.25.d
+	is_triggered_only = yes
+	option = {
+		name = nms2.25.1
+		FROM = {
+			ROOT = {
+				subject_level2 = yes
+			}
+		}
+		hidden_effect = {
+			FROM = {
+				country_event = { id = glo.2001 days = 2 }
+			}
+		}
+		ai_chance = {
+			base = 50
+		}
+		trigger = {
+			is_subject = no
+		}
+	}
+	option = {
+		name = nms2.25.2
+		FROM = {
+			declare_war_on = {
+				target = ROOT
+				type = puppet_wargoal_focus
+			}
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+country_event = {#邀请狸猫加入
+	id = nms2.26
+	title = nms2.26.t
+	desc = nms2.26.d
+	is_triggered_only = yes
+	option = {
+		name = nms2.26.1
+		FROM = {
+			qiangjiemeng = yes
+		}
+		hidden_effect = {
+			FROM = {
+				country_event = { id = glo.2001 days = 2 }
+			}
+		}
+		ai_chance = {
+			base = 80
+		}
+	}
+	option = {
+		name = nms2.26.2
+		FROM = {
+			ROOT = {
+				subject_level3 = yes
+			}
+		}
+		hidden_effect = {
+			FROM = {
+				country_event = { id = nms2.37 days = 2 }
+			}
+		}
+		ai_chance = {
+			base = 15
+		}
+		trigger = {
+			is_subject = no
+		}
+	}
+	option = {
+		name = nms2.26.3
+		hidden_effect = {
+			FROM = {
+				country_event = { id = glo.2002 days = 2 }
+			}
+		}
+		ai_chance = {
+			base = 5
+			modifier = {
+				NMS = {
+					is_ai = yes
+				}
+				factor = 0
+			}
+		}
+	}
+}
+country_event = {#花田的孤立者
+	id = nms2.27
+	title = nms2.27.t
+	desc = nms2.27.d
+	is_triggered_only = yes
+	option = {
+		name = nms2.27.1
+		FROM = {
+			qiangjiemeng = yes
+			add_ideas = NMS_huatiangulizhe_idea
+		}
+		hidden_effect = {
+			FROM = {
+				country_event = { id = glo.2001 days = 2 }
+			}
+		}
+		ai_chance = {
+			base = 40
+			modifier = {
+				YUK = {
+					has_government = fandong
+					has_government = neworder
+				}
+				factor = 0
+			}
+			modifier = {
+				has_opinion = {
+					target = FROM
+					value > 60
+				}
+				factor = 2
+			}
+		}
+	}
+	option = {
+		name = nms2.27.2
+		hidden_effect = {
+			FROM = {
+				country_event = { id = glo.2002 days = 2 }
+			}
+		}
+		ai_chance = {
+			base = 60
+		}
+	}
+}
+country_event = {#佛道交流会
+	id = nms2.28
+	title = nms2.28.t
+	desc = nms2.28.d
+	is_triggered_only = yes
+	option = {
+		name = nms2.28.1
+		FROM = {
+			qiangjiemeng = yes
+			add_ideas = NMS_xuexidaojiaosixiang_idea
+			set_country_flag = NMS_xuexidaojiaosixiang
+		}
+		hidden_effect = {
+			FROM = {
+				country_event = { id = glo.2001 days = 2 }
+			}
+		}
+		ai_chance = {
+			base = 35
+			modifier = {
+				ROOT = {
+					has_government = fandong
+					has_government = neworder
+				}
+				factor = 0
+			}
+			modifier = {
+				has_opinion = {
+					target = FROM
+					value > 60
+				}
+				factor = 2
+			}
+		}
+	}
+	option = {
+		name = nms2.28.2
+		hidden_effect = {
+			FROM = {
+				country_event = { id = glo.2002 days = 2 }
+			}
+		}
+		ai_chance = {
+			base = 65
+		}
+	}
+}
+country_event = {#和人类和解
+	id = nms2.29
+	title = nms2.29.t
+	desc = nms2.29.d
+	is_triggered_only = yes
+	option = {
+		name = nms2.28.1
+		FROM = {
+			HMIF_daily_factor_add0.1 = yes
+			ROOT = {
+				remove_background_enemy = yes
+				FROM = {
+					remove_background_enemy = yes
+				}
+			}
+		}
+		hidden_effect = {
+			FROM = {
+				country_event = { id = glo.2001 days = 2 }
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				ROOT = {
+					has_government = fandong
+					has_government = neworder
+				}
+				factor = 0
+			}
+			modifier = {
+				has_opinion = {
+					target = FROM
+					value > -180
+				}
+				factor = 2
+			}
+		}
+	}
+	option = {
+		name = nms2.28.2
+		hidden_effect = {
+			FROM = {
+				country_event = { id = glo.2002 days = 2 }
+			}
+		}
+		ai_chance = {
+			base = 90
+		}
+	}
+}
+country_event = {#佛道一体化的理想
+	id = nms2.30
+	title = nms2.30.t
+	desc = nms2.30.d
+	is_triggered_only = yes
+	option = {
+		name = nms2.30.1
+		FROM = {
+			add_ideas = NMS_fodaoyitihua1_idea
+		}
+		ROOT = {
+			add_ideas = NMS_fodaoyitihua2_idea
+		}
+		hidden_effect = {
+			FROM = {
+				country_event = { id = glo.2001 days = 2 }
+			}
+			news_event = { id = nms2.13 days = 2}
+		}
+		ai_chance = {
+			base = 80
+			modifier = {
+				ROOT = {
+					has_government = fandong
+					has_government = neworder
+				}
+				factor = 0
+			}
+		}
+	}
+	option = {
+		name = nms2.30.2
+		FROM = {
+			country_event = { id = nms2.38 days = 2 }
+		}
+		custom_effect_tooltip = TEG_accept
+		effect_tooltip = {
+			FROM = {
+				ROOT = {
+					subject_level4 = yes
+					can_core = yes
+				}
+			}
+		}
+		ai_chance = {
+			base = 15
+			modifier = {
+				ROOT = {
+					has_government = fandong
+					has_government = neworder
+				}
+				factor = 0
+			}
+			modifier = {
+				has_opinion = {
+					target = FROM
+					value > 60
+				}
+				factor = 2
+			}
+		}
+	}
+	option = {
+		name = nms2.30.3
+		hidden_effect = {
+			FROM = {
+				country_event = { id = glo.2002 days = 2 }
+			}
+		}
+		ai_chance = {
+			base = 5
+			modifier = {
+				has_opinion = {
+					target = FROM
+					value > 60
+				}
+				factor = 0
+			}
+		}
+	}
+}
+country_event = {#和平的付丧神妖怪们
+	id = nms2.31
+	title = nms2.31.t
+	desc = nms2.31.d
+	is_triggered_only = yes
+	option = {
+		name = nms2.31.1 #保独
+		TKM = {
+			country_event = { id = nms2.40 days = 2 }
+		}
+		effect_tooltip = {
+			TKM = {
+				xianghubaodu = yes
+			}
+			add_ideas = NMS_hepingdeTKM_idea
+		}
+		ai_chance = {
+			base = 80
+		}
+	}
+	option = {
+		name = nms2.31.2 #结盟
+		TKM = {
+			country_event = { id = nms2.41 days = 2 }
+		}
+		effect_tooltip = {
+			TKM = {
+				qiangjiemeng = yes
+			}
+			add_ideas = NMS_hepingdeTKM_idea
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+country_event = {#和平的神明
+	id = nms2.32
+	title = nms2.32.t
+	desc = nms2.32.d
+	is_triggered_only = yes
+	option = {
+		name = nms2.32.1 #保独
+		AKI = {
+			country_event = { id = nms2.40 days = 2 }
+		}
+		effect_tooltip = {
+			AKI = {
+				xianghubaodu = yes
+			}
+			add_ideas = NMS_fengshoudejiemei_idea
+		}
+		ai_chance = {
+			base = 80
+		}
+	}
+	option = {
+		name = nms2.32.2 #结盟
+		AKI = {
+			country_event = { id = nms2.41 days = 2 }
+		}
+		effect_tooltip = {
+			AKI = {
+				qiangjiemeng = yes
+			}
+			add_ideas = NMS_fengshoudejiemei_idea
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+country_event = {#趁其他势力不备之时控制人类
+	id = nms2.34
+	title = nms2.34.t
+	desc = nms2.34.d
+	is_triggered_only = yes
+	option = {
+		name = nms2.34.1
+		FROM = {
+			HUM = {
+				subject_level4 = yes
+			}
+		}
+		hidden_effect = {
+			news_event = { id = nms2.15 days = 2 }
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = nms2.34.2
+		FROM = {
+			declare_war_on = {
+				target = ROOT
+				type = puppet_wargoal_focus
+			}		
+		}
+		ai_chance = {
+			base = 90
+		}
+	}
+}
+country_event = {#正式重建圣辇船事件
+	id = nms2.35
+	title = nms2.35.t
+	desc = nms2.35.d
+	is_triggered_only = yes
+	option = {
+		name = nms2.35.1
+		223 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+			}
+		}
+		hidden_effect = {
+			news_event = { id = nms2.1 days = 2 }
+		}
+	}
+	option = {
+		name = nms2.35.2
+		223 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 3
+			}
+		}
+		hidden_effect = {
+			news_event = { id = nms2.1 days = 2 }
+		}
+	}
+	option = {
+		name = nms2.35.3
+		add_manpower = 100
+		add_ideas = NMS_zhengshijianzaoshengnianchuan_idea
+		hidden_effect = {
+			news_event = { id = nms2.1 days = 2 }
+		}
+	}
+}
+country_event = {#“保障”狸猫妖怪
+	id = nms2.36
+	title = nms2.36.t
+	desc = nms2.36.d
+	is_triggered_only = yes
+	option = {
+		name = nms2.36.1
+		approved_event = yes
+		FROM = {
+			ROOT = {
+				subject_level3 = yes
+			}
+		}
+		ai_chance = {
+			base = 90
+			modifier = {
+				not = {
+					has_government = guli
+					has_government = qinwai
+				}
+				factor = 0
+			}
+		}
+	}
+	option = {
+		name = nms2.36.2
+		if = {
+			limit = {
+				MAM = {
+					not = {
+						has_government = guli
+						has_government = qinwai
+					}
+				}
+			}
+			FROM = {
+				declare_war_on = {
+					target = ROOT
+					type = puppet_wargoal_focus
+				}
+			}
+			else = {
+				refused_event = yes
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				has_opinion = {
+					target = FROM
+					value > 40
+				}
+				factor = 0
+			}
+		}
+	}
+}
+country_event = {#邀请狸猫加入（狸猫附庸）
+	id = nms2.37
+	title = nms2.37.t
+	desc = nms2.37.d
+	is_triggered_only = yes
+	option = {
+		name = nms2.37.1
+	}
+}
+country_event = {#佛道一体化的理想（神灵庙附庸）
+	id = nms2.38
+	title = nms2.38.t
+	desc = nms2.38.d
+	is_triggered_only = yes
+	option = {
+		name = nms2.38.1
+		FROM = {
+			subject_level4 = yes
+			can_core = yes
+		}
+		set_country_flag = NMS_fodaoyitihua
+		hidden_effect = {
+			news_event = { id = nms2.39 days = 2 }
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = nms2.38.2
+		FROM = {
+			hidden_effect = {
+				country_event = { id = glo.2002 days = 2 }
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+news_event = {#佛道一体化的理想 附庸的情况下
+	id = nms2.39
+	title = nms2.39.t
+	desc = nms2.39.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.39.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.39.2
+		trigger = {
+			not = { tag = NMS }
+		}
+	}
+}
+country_event = {#和平的付丧神妖怪们/和平的神明 要求互相保独
+	id = nms2.40
+	title = nms2.40.t
+	desc = nms2.40.d
+	is_triggered_only = yes
+	option = {
+		name = nms2.40.1 
+		FROM = {
+			xianghubaodu = yes
+			if = {
+				limit = {
+					ROOT = {
+						tag = TKM
+					}
+				}
+				add_ideas = NMS_hepingdeTKM_idea
+				else = {
+					add_ideas = NMS_fengshoudejiemei_idea
+				}
+			}
+		}
+		approved_event = yes
+		ai_chance = {
+			base = 90
+			modifier = {
+				or = {
+					has_government = fandong
+					has_government = neworder
+				}
+				factor = 0.04
+			}
+		}
+	}
+	option = {
+		name = nms2.40.2
+		refused_event = yes
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+country_event = {#和平的付丧神妖怪们/和平的神明 要求结盟
+	id = nms2.41
+	title = nms2.41.t
+	desc = nms2.41.d
+	is_triggered_only = yes
+	option = {
+		name = nms2.41.1 
+		FROM = {
+			qiangjiemeng = yes
+			if = {
+				limit = {
+					ROOT = {
+						tag = TKM
+					}
+				}
+				add_ideas = NMS_hepingdeTKM_idea
+				else = {
+					add_ideas = NMS_fengshoudejiemei_idea
+				}
+			}
+		}
+		approved_event = yes
+		ai_chance = {
+			base = 65
+			modifier = {
+				or = {
+					has_government = fandong
+					has_government = neworder
+					is_in_faction = yes
+				}
+				factor = 0
+			}
+		}
+	}
+	option = {
+		name = nms2.41.2
+		refused_event = yes
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+news_event = {#建设一流的妖怪城
+	id = nms2.42
+	title = nms2.42.t
+	desc = nms2.42.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.42.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.42.2
+		trigger = {
+			not = { tag = NMS }
+		}
+	}
+}
+country_event = {#花田贸易协定
+	id = nms2.43
+	title = nms2.43.t
+	desc = nms2.43.d
+	is_triggered_only = yes
+	option = {
+		name = nms2.43.1 
+		custom_effect_tooltip = NMS_longduanjueyi2
+		FROM = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 4
+			}
+			add_to_variable = {
+				NMS_maoyixieding = 2
+			}
+			add_ideas = NMS_huatianmaoyixieding1_idea
+			YUK = {
+				huxiangbaodu = yes
+				set_country_flag = NMS_maoyixieding
+				add_offsite_building = {
+					type = industrial_complex
+					level = 4
+				}
+				add_ideas = NMS_huatianmaoyixieding2_idea
+			}	
+		}
+		approved_event = yes
+		ai_chance = {
+			base = 35
+			modifier = {
+				or = {
+					has_government = fandong
+					has_government = neworder
+				}
+				factor = 0
+			}
+			modifier = {
+				has_opinion = {
+					target = FROM
+					value > 40
+				}
+				factor = 2
+			}
+		}
+	}
+	option = {
+		name = nms2.43.2
+		refused_event = yes
+		ai_chance = {
+			base = 65
+		}
+	}
+}
+country_event = {#神灵庙贸易协定
+	id = nms2.44
+	title = nms2.44.t
+	desc = nms2.44.d
+	is_triggered_only = yes
+	option = {
+		name = nms2.44.1 
+		custom_effect_tooltip = NMS_longduanjueyi2
+		FROM = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 4
+			}
+			add_ideas = NMS_SRBmaoyixieding_idea
+			add_to_variable = {
+				NMS_maoyixieding = 2
+			}
+			SRB = {
+				huxiangbaodu = yes
+				set_country_flag = NMS_maoyixieding
+				add_offsite_building = {
+					type = industrial_complex
+					level = 4
+				}
+				add_ideas = NMS_huatianmaoyixieding2_idea
+			}
+			
+		}
+		approved_event = yes
+		ai_chance = {
+			base = 50
+			modifier = {
+				or = {
+					has_government = fandong
+					has_government = neworder
+				}
+				factor = 0
+			}
+			modifier = {
+				has_opinion = {
+					target = FROM
+					value > 40
+				}
+				factor = 2
+			}
+		}
+	}
+	option = {
+		name = nms2.44.2
+		refused_event = yes
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+country_event = {#向无名之丘妖怪传教
+	id = nms2.45
+	title = nms2.45.t
+	desc = nms2.45.d
+	is_triggered_only = yes
+	option = {
+		name = nms2.45.1 
+		custom_effect_tooltip = NMS_longduanjueyi2
+		FROM = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 3
+			}
+			add_ideas = NMS_xiangMELchuanjiao_idea
+			add_to_variable = {
+				NMS_maoyixieding = 2
+			}
+			MEL = {
+				huxiangbaodu = yes
+				set_country_flag = NMS_maoyixieding
+				add_offsite_building = {
+					type = industrial_complex
+					level = 3
+				}
+				add_ideas = NMS_huatianmaoyixieding2_idea
+			}
+			
+		}
+		approved_event = yes
+		ai_chance = {
+			base = 75
+			modifier = {
+				or = {
+					has_government = fandong
+					has_government = neworder
+				}
+				factor = 0
+			}
+			modifier = {
+				has_opinion = {
+					target = FROM
+					value > 40
+				}
+				factor = 2
+			}
+		}
+	}
+	option = {
+		name = nms2.45.2
+		refused_event = yes
+		ai_chance = {
+			base = 25
+		}
+	}
+}
+country_event = {#向蛮荒之地的妖精传教
+	id = nms2.46
+	title = nms2.46.t
+	desc = nms2.46.d
+	is_triggered_only = yes
+	option = {
+		name = nms2.46.1 
+		custom_effect_tooltip = NMS_longduanjueyi2
+		FROM = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+			add_ideas = NMS_xiangSGSchuanjiao_idea
+			add_to_variable = {
+				NMS_maoyixieding = 2
+			}
+			SGS = {
+				huxiangbaodu = yes
+				set_country_flag = NMS_maoyixieding
+				add_offsite_building = {
+					type = industrial_complex
+					level = 2
+				}
+				add_ideas = NMS_huatianmaoyixieding2_idea
+			}
+		}
+		approved_event = yes
+		ai_chance = {
+			base = 80
+			modifier = {
+				or = {
+					has_government = fandong
+					has_government = neworder
+				}
+				factor = 0
+			}
+			modifier = {
+				has_opinion = {
+					target = FROM
+					value > 40
+				}
+				factor = 2
+			}
+		}
+	}
+	option = {
+		name = nms2.46.2
+		refused_event = yes
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+country_event = {#被垄断贸易
+	id = nms2.47
+	title = nms2.47.t
+	desc = nms2.47.d
+	is_triggered_only = yes
+	option = {
+		name = nms2.47.1 
+		effect_tooltip = {
+			add_timed_idea = {
+				idea = NMS_beilongduanmaoyi_idea
+				days = 120
+			}
+		}
+	}
+}
+country_event = {#被垄断传教
+	id = nms2.48
+	title = nms2.48.t
+	desc = nms2.48.d
+	is_triggered_only = yes
+	option = {
+		name = nms2.48.1 
+		effect_tooltip = {
+			add_timed_idea = {
+				idea = NMS_maoyichuanjiao_idea
+				days = 120
+			}
+		}
+	}
+}
+country_event = {
+	id = nms2.50
+	title = nms2.50.t
+	desc = nms2.50.d
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 2
+	}
+	trigger = {
+		has_global_flag = main_scenario
+		date > 146.6.1
+		tag = NMS
+	}
+	option = {
+		name = nms2.50.1 
+		add_political_power = -10
+		hidden_effect = {
+			country_event = { id = nms2.51 days = 10 random = 48 }
+		}
+	}
+}
+country_event = {
+	id = nms2.51
+	title = nms2.51.t
+	desc = nms2.51.d
+	is_triggered_only = yes
+	option = {
+		name = nms2.51.1 
+		add_ideas = NMS_zhongzuhuyizhebaodong1_idea
+		add_political_power = -75
+		hidden_effect = {
+			country_event = { id = nms2.52 days = 5 random = 48 }
+		}
+	}
+}
+country_event = {
+	id = nms2.52
+	title = nms2.52.t
+	desc = nms2.52.d
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			complete_national_focus = NMS_zhongzuhuyizhebaodong
+		}
+	}
+	option = {
+		swap_ideas = {
+			remove_idea = NMS_zhongzuhuyizhebaodong1_idea
+			add_idea = NMS_zhongzuhuyizhebaodong2_idea
+		}
+		add_political_power = -40
+		name = nms2.52.1 
+	}
+}
+news_event = {#篡改佛法
+	id = nms2.55
+	title = nms2.55.t
+	desc = nms2.55.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.55.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.55.2
+		trigger = {
+			not = { tag = NMS }
+		}
+	}
+}
+country_event = {#玩响子
+	id = nms2.56
+	title = nms2.56.t
+	desc = nms2.56.d
+	is_triggered_only = yes
+	option = {
+		name = nms2.56.1
+		hidden_effect = {
+			set_division_template_lock = { division_template = "妖怪突击掠夺队" is_locked = no }
+			set_division_template_lock = { division_template = "圣辇船陆战队" is_locked = no }
+			set_division_template_lock = { division_template = "东村落驻守编制" is_locked = no }
+			set_division_template_lock = { division_template = "大妖怪编制" is_locked = no }
+			set_division_template_lock = { division_template = "大妖怪仆从编制" is_locked = no }
+			set_division_template_lock = { division_template = "命莲寺护卫队" is_locked = no }
+			set_division_template_lock = { division_template = "佛教僧侣编制" is_locked = no }
+			set_division_template_lock = { division_template = "实验圣佛光炮小队" is_locked = no }
+			KYK = { 
+				change_tag_from = ROOT 
+				set_technology = {
+					tech_changed = 1
+				}
+			}
+		}
+		custom_effect_tooltip = KYK_play_tt
+		trigger = {
+			is_ai = no
+		}
+	}
+	option = {
+		name = nms2.56.2
+		custom_effect_tooltip = NMS_jiesuobianzhi_tt
+		hidden_effect = {
+			set_division_template_lock = { division_template = "妖怪突击掠夺队" is_locked = no }
+			set_division_template_lock = { division_template = "圣辇船陆战队" is_locked = no }
+			set_division_template_lock = { division_template = "东村落驻守编制" is_locked = no }
+			set_division_template_lock = { division_template = "大妖怪编制" is_locked = no }
+			set_division_template_lock = { division_template = "大妖怪仆从编制" is_locked = no }
+			set_division_template_lock = { division_template = "命莲寺护卫队" is_locked = no }
+			set_division_template_lock = { division_template = "佛教僧侣编制" is_locked = no }
+			set_division_template_lock = { division_template = "实验圣佛光炮小队" is_locked = no }
+		}
+	}
+}
+country_event = {#信仰和平的军队
+	id = nms2.57
+	title = nms2.57.t
+	desc = nms2.57.d
+	trigger = {
+		tag = NMS
+		has_country_flag = NMS_xinyanghepingdejundui
+		has_defensive_war = yes
+		has_offensive_war = no
+		not = {
+			has_idea = NMS_xinyanghepingdejundui2_idea
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = {
+		name = nms2.57.1
+		add_ideas = NMS_xinyanghepingdejundui2_idea
+	}
+}
+country_event = {#玩船长或鵺
+	id = nms2.58
+	title = nms2.58.t
+	desc = nms2.58.d
+	is_triggered_only = yes
+	option = {
+		name = nms2.58.1
+		hidden_effect = {
+			set_division_template_lock = { division_template = "妖怪突击掠夺队" is_locked = no }
+			set_division_template_lock = { division_template = "圣辇船陆战队" is_locked = no }
+			set_division_template_lock = { division_template = "东村落驻守编制" is_locked = no }
+			set_division_template_lock = { division_template = "大妖怪编制" is_locked = no }
+			set_division_template_lock = { division_template = "大妖怪仆从编制" is_locked = no }
+			set_division_template_lock = { division_template = "命莲寺护卫队" is_locked = no }
+			set_division_template_lock = { division_template = "佛教僧侣编制" is_locked = no }
+			set_division_template_lock = { division_template = "实验圣佛光炮小队" is_locked = no }
+			NUE = { 
+				change_tag_from = ROOT 
+				set_technology = {
+					tech_changed = 1
+				}
+			}
+		}
+		custom_effect_tooltip = NUE_play_tt
+		trigger = {
+			is_ai = no
+		}
+		
+	}
+	option = {
+		name = nms2.58.2
+		
+		hidden_effect = {
+			set_division_template_lock = { division_template = "妖怪突击掠夺队" is_locked = no }
+			set_division_template_lock = { division_template = "圣辇船陆战队" is_locked = no }
+			set_division_template_lock = { division_template = "东村落驻守编制" is_locked = no }
+			set_division_template_lock = { division_template = "大妖怪编制" is_locked = no }
+			set_division_template_lock = { division_template = "大妖怪仆从编制" is_locked = no }
+			set_division_template_lock = { division_template = "命莲寺护卫队" is_locked = no }
+			set_division_template_lock = { division_template = "佛教僧侣编制" is_locked = no }
+			set_division_template_lock = { division_template = "实验圣佛光炮小队" is_locked = no }
+			MNM = { 
+				change_tag_from = ROOT 
+				set_technology = {
+					tech_changed = 1
+				}
+			}
+		}
+		custom_effect_tooltip = MNM_play_tt
+		trigger = {
+			is_ai = no
+		}
+	}
+	option = {
+		name = nms2.58.3
+		hidden_effect = {
+			set_division_template_lock = { division_template = "妖怪突击掠夺队" is_locked = no }
+			set_division_template_lock = { division_template = "圣辇船陆战队" is_locked = no }
+			set_division_template_lock = { division_template = "东村落驻守编制" is_locked = no }
+			set_division_template_lock = { division_template = "大妖怪编制" is_locked = no }
+			set_division_template_lock = { division_template = "大妖怪仆从编制" is_locked = no }
+			set_division_template_lock = { division_template = "命莲寺护卫队" is_locked = no }
+			set_division_template_lock = { division_template = "佛教僧侣编制" is_locked = no }
+			set_division_template_lock = { division_template = "实验圣佛光炮小队" is_locked = no }
+		}
+		custom_effect_tooltip = NMS_jiesuobianzhi_tt
+	}
+}
+country_event = {#玩星或者娜兹玲
+	id = nms2.59
+	title = nms2.59.t
+	desc = nms2.59.d
+	# is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 60
+	}
+	fire_only_once = yes
+	trigger = {
+		has_intelligence_agency = yes
+		has_country_flag = NMS_laoshujiuchadui
+	}
+	option = {
+		name = nms2.59.1
+		
+	}
+	option = {
+		name = nms2.59.2
+		NMS_naziling_leader = yes
+		hidden_effect = {
+			news_event = { id = nms2.65 days = 2 }
+		}
+	}
+}
+country_event = {#清理各主义者的影响
+	id = nms2.60
+	title = nms2.60.t
+	desc = nms2.60.d
+	trigger = {
+		NMS = {
+			or = {
+				is_subject = yes
+				exists = no
+			}
+			not = { has_country_flag = NMS_wending }
+		}
+		or = {
+			owns_state = 223
+			any_country = {
+				owns_state = 223
+				is_subject_of = ROOT
+			}
+		}
+	}
+	fire_only_once = yes
+	option = {
+		name = nms2.60.1
+		NMS = {
+			set_country_flag = NMS_wending
+		}
+		every_state = {
+			remove_dynamic_modifier = {
+				modifier = NMS_lvse_state
+			}
+			remove_dynamic_modifier = {
+				modifier = NMS_zongse_state
+			}
+			remove_dynamic_modifier = {
+				modifier = NMS_zise_state
+			}
+		}
+	}
+}
+country_event = {#重新添加影响（隐藏）
+	id = nms2.61
+	title = nms2.61.t
+	desc = nms2.61.d
+	trigger = {
+		tag = NMS
+		has_completed_focus = NMS_zunxunhepingdejiaoyi
+		is_subject = no
+		not = {
+			has_war_with = NUE
+			has_war_with = MNM
+			has_country_flag = NMS_zunxunhepingdejiaoyi
+		}
+	}
+	fire_only_once = yes
+	option = {
+		name = nms2.61.1
+		433 = {
+			add_dynamic_modifier = {
+				modifier = NMS_zongse_state
+			}
+		}
+		328 = {
+			add_dynamic_modifier = {
+				modifier = NMS_zongse_state
+			}
+		}
+		168 = {
+			add_dynamic_modifier = {
+				modifier = NMS_zongse_state
+			}
+		}
+		321 = {
+			add_dynamic_modifier = {
+				modifier = NMS_zongse_state
+			}
+		}
+		163 = {
+			add_dynamic_modifier = {
+				modifier = NMS_zongse_state
+			}
+		}
+		195 = {
+			add_dynamic_modifier = {
+				modifier = NMS_zise_state
+			}
+		}
+		327 = {
+			add_dynamic_modifier = {
+				modifier = NMS_zise_state
+			}
+		}
+		245 = {
+			add_dynamic_modifier = {
+				modifier = NMS_zise_state
+			}
+		}
+		238 = {
+			add_dynamic_modifier = {
+				modifier = NMS_zise_state
+			}
+		}
+	}
+}
+country_event = {#NUE和MNM打（引导）
+	id = nms2.62
+	title = nms2.62.t
+	desc = nms2.62.d
+	mean_time_to_happen = {
+		days = 2
+	}
+	fire_only_once = yes
+	trigger = {
+		or = {
+			tag = MNM
+			tag = NUE
+		}
+		or = {
+			any_country = {
+				or = {
+					is_subject_of = MNM
+					is_subject_of = NUE
+				}
+				controls_state = 223
+			}
+			controls_state = 223
+		}
+		country_exists = MNM
+		country_exists = NUE
+		MNM = {
+			is_subject = no
+		}
+		NUE = {
+			is_subject = no
+		}
+	}
+	hidden = yes
+	immediate = {
+		if = {
+			limit = {
+				MNM = { 
+					or = {
+						any_country = {
+							is_subject_of = NUE
+							controls_state = 223
+						}
+						controls_state = 223
+					} 
+				}
+			}
+			NUE = {
+				declare_war_on = {
+					target = MNM
+					type = annex_everything
+				}
+			}
+		}
+		if = {
+			limit = {
+				NUE = { 
+					or = {
+						any_country = {
+							is_subject_of = NUE
+							controls_state = 223
+						}
+						controls_state = 223
+					} 
+				}
+			}
+			MNM = {
+				declare_war_on = {
+					target = NUE
+					type = annex_everything
+				}
+			}
+		}
+		news_event = { id = nms2.63 days = 2 }
+	}
+}
+news_event = {#NUE和MNM打
+	id = nms2.63
+	title = nms2.63.t
+	desc = nms2.63.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.63.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.63.2
+		trigger = {
+			not = { tag = NMS }
+		}
+	}
+}
+country_event = {#内战开始
+	id = nms2.64
+	title = nms2.64.t
+	desc = nms2.64.d
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		NUE = {
+			declare_war_on = {
+				target = NMS
+				type = annex_everything
+			}
+		}
+		MNM = {
+			declare_war_on = {
+				target = NMS
+				type = annex_everything
+			}
+		}
+		hidden_effect = {
+			news_event = { id = nms2.3 days = 2 }
+		}
+	}
+}
+news_event = {#老鼠上台后
+	id = nms2.65
+	title = nms2.65.t
+	desc = nms2.65.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = nms2.65.1
+		trigger = {
+			tag = NMS
+		}
+	}
+	option = {
+		name = nms2.65.2
+		trigger = {
+			not = { tag = NMS }
+		}
+	}
+}

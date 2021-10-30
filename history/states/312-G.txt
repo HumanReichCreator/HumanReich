@@ -3,7 +3,6 @@ state={
 	id=312
 	name="STATE_312"
 	resources={
-
 		powder=0.000
 		metal=0.000
 		gas=0.000
@@ -11,13 +10,27 @@ state={
 	}
 
 	history={
-			owner = SEJ
-		146.1.1 = {
-			owner = SEJ
-			add_core_of = NIB
-			add_core_of = SEJ
+		143.7.1 = {
+			owner = SCA
+			add_core_of = SCA
+			add_core_of = SC3
+			ADD_CORE_OF = NIB
 			buildings = {
-				infrastructure =2
+				infrastructure = 1
+				industrial_complex = 0
+				arms_factory = 0
+				radar_station = 0
+
+			}
+
+		}
+		146.1.1 = {
+			owner = SCA
+			add_core_of = SC3
+			ADD_CORE_OF = NIB
+			ADD_CORE_OF = SCA
+			buildings = {
+				infrastructure = 2
 				industrial_complex = 0
 				arms_factory = 0
 
@@ -30,7 +43,7 @@ state={
 	provinces={
 		145 536 606 1451 1844 2085 2370 3075 3077 5820 5822 5824 5826 5829 5831 5844 5845 
 	}
-	manpower=218.0
+	manpower=218
 	buildings_max_level_factor=1.000
 	state_category=s2
 }

@@ -17,10 +17,15 @@ scripted_gui = {
 				
 				owner = {
 					ROOT = {
-						set_country_flag = {
-							flag = recent_root_action
-							value = 1
-							days = 182
+						if = {
+							limit = {
+								not = { has_completed_focus = YYK_chunduzaishouji }###UUZ无CD
+							}
+							set_country_flag = {
+								flag = recent_root_action
+								value = 1
+								days = 182
+							}
 						}
 						set_variable = { root_state = PREV.PREV.id}
 						set_variable = { root_country = PREV.id}
@@ -35,7 +40,7 @@ scripted_gui = {
 				set_state_flag = {
 					flag = been_rooted
 					value = 1
-					days = 365
+					days = 730
 				}
 
 				set_temp_variable = { root_level = random}
@@ -45,14 +50,14 @@ scripted_gui = {
 						arms_factory > 4
 					}
 					remove_building = { type = arms_factory level = 1 }
-					add_to_temp_variable = {root_level = random}
+					add_to_temp_variable = {root_level = 1}
 				}
 				if = {
 					limit ={
 						industrial_complex > 4
 					}
 					remove_building = { type = industrial_complex level = 1 }
-					add_to_temp_variable = {root_level = random}
+					add_to_temp_variable = {root_level = 1}
 
 				}
 				if = {
@@ -60,7 +65,7 @@ scripted_gui = {
 						infrastructure > 5
 					}
 					remove_building = { type = infrastructure level = 1 }
-					add_to_temp_variable = {root_level = random}
+					add_to_temp_variable = {root_level = 1}
 				}
 
 				if = {
@@ -68,21 +73,21 @@ scripted_gui = {
 						arms_factory > 0
 					}
 					remove_building = { type = arms_factory level = 1 }
-					add_to_temp_variable = {root_level = 1}
+					add_to_temp_variable = {root_level = random}
 				}						
 				if = {
 					limit = {
 						industrial_complex > 0
 					}
 					remove_building = { type = industrial_complex level = 1 }
-					add_to_temp_variable = {root_level = 1}
+					add_to_temp_variable = {root_level = random}
 				}						
 				if = {
 					limit = {
 						infrastructure > 2
 					}
 					remove_building = { type = infrastructure level = 1 }
-					add_to_temp_variable = {root_level = 1}
+					add_to_temp_variable = {root_level = random}
 				}						
 
 				if = {
@@ -99,7 +104,16 @@ scripted_gui = {
 				set_variable = { pp_power = random}
 				multiply_variable = { pp_power = root_level }
 				multiply_variable = { pp_power = 10 }
-				
+				####YYK
+				ROOT = {
+					if = {
+						limit = {
+							has_completed_focus = YYK_ziranzhili
+						}
+						multiply_variable = { pp_power = 1.5 }
+					}
+				}
+
 				ROOT = {
 					add_political_power = PREV.pp_power
 						if = {
@@ -110,12 +124,19 @@ scripted_gui = {
 							}
 							set_temp_variable = { rp = PREV.pp_power}
 							multiply_temp_variable = { rp = 0.1 }
+							set_temp_variable = {
+								v = 1
+							}
+							add_to_temp_variable = {
+								v = PO_root_power_factor_add
+							}
 							if = {
 								limit = {
 									has_country_flag = SRB_huoshaomingliansi
 								}
-								multiply_temp_variable = { rp = 1.3 }
+								add_to_temp_variable = { v = 0.3 }
 							}
+							multiply_temp_variable = { rp = v }
 							add_to_variable = {PO_mp_add = rp}
 							else = {
 								add_political_power = PREV.pp_power
@@ -150,6 +171,88 @@ scripted_gui = {
 						set_variable = { EXC_minus = rand1}
 						multiply_variable ={ EXC_minus = EXHC_root_base_modifier}
 						subtract_from_variable = { EXHC_current_exhaustion = EXC_minus }
+				}
+				
+				#####YYK
+				ROOT = {
+					if = {
+						limit = {
+							has_completed_focus = YYK_chunduzaishouji
+						}
+						set_temp_variable = {
+							YYK_kaihua_get = PREV.pp_power
+						}
+						if = {### 妖精翻倍
+							limit = {
+								PREV = {
+									ST_race_is_Fairy = yes
+								}
+							}
+							multiply_temp_variable = {
+								YYK_kaihua_get = 2
+							}
+						}
+						if = {### 隐岐奈3倍
+							limit = {
+								PREV = {
+									is_core_of = OKI
+								}
+							}
+							multiply_temp_variable = {
+								YYK_kaihua_get = 3
+							}
+						}
+						if = {### 幽香翻倍
+							limit = {
+								PREV = {
+									is_core_of = YUK
+								}
+							}
+							multiply_temp_variable = {
+								YYK_kaihua_get = 2
+							}
+						}
+						if = {### 莉莉白3倍
+							limit = {
+								PREV = {
+									is_core_of = LIL
+								}
+							}
+							multiply_temp_variable = {
+								YYK_kaihua_get = 3
+							}
+						}
+						if = {### 被抢过
+							limit = {
+								PREV = {
+									has_state_flag = YYK_previous_been_rooted
+								}
+							}
+							multiply_temp_variable = {
+								YYK_kaihua_get = 0.75
+							}
+						}
+						if = {### 冥界 地狱 旧地狱
+							limit = {
+								PREV = {
+									or = {
+										is_on_continent = Hell
+										is_on_continent = Netherworld
+										is_on_continent = Underground
+									}
+								}
+							}
+							multiply_temp_variable = {
+								YYK_kaihua_get = 0.5
+							}
+						}
+						PREV = {
+							set_state_flag = YYK_previous_been_rooted
+						}
+						add_to_variable = {
+							YYK_kaihua = YYK_kaihua_get
+						}
+					}
 				}
 				
 				clear_variable = pp_power

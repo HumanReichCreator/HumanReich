@@ -1,0 +1,139 @@
+leader_traits = {
+	YOM_character_1 = { #反亂剣-上无道
+		type = all
+		trait_type = personality_trait
+		allowed = {
+			always = no
+		}
+		attack_skill = 1
+		defense_skill = 1
+		modifier = {
+			modifier_army_sub_unit_melee_infantry_attack_factor = 0.05
+			modifier_army_sub_unit_melee_infantry_defence_factor = 0.05
+			plains = {
+				movement = 0.1
+				attack = 0.1
+				defence = 0.1
+			}
+		}
+	}
+	YOM_character_2 = { #獄神剣
+		type = all
+		trait_type = personality_trait
+		allowed = {
+			always = no
+		}
+		
+		modifier = {
+			modifier_army_sub_unit_melee_infantry_attack_factor = 0.05
+			modifier_army_sub_unit_melee_infantry_defence_factor = 0.05
+			modifier_army_sub_unit_melee_cavalry_attack_factor = 0.05
+			modifier_army_sub_unit_melee_cavalry_defence_factor = 0.05
+			offence = 0.15
+			army_morale_factor = 0.10
+		}			
+	}
+	YOM_character_3 = { #幽鬼剣
+		type = all
+		trait_type = personality_trait
+		allowed = {
+			always = no
+		}
+		
+		modifier = {
+			defence = 0.15
+			army_morale_factor = 0.10
+			terrain_penalty_reduction = 0.5
+			modifier_army_sub_unit_melee_infantry_attack_factor = 0.05
+			modifier_army_sub_unit_melee_infantry_defence_factor = 0.05
+			modifier_army_sub_unit_melee_cavalry_attack_factor = 0.05
+			modifier_army_sub_unit_melee_cavalry_defence_factor = 0.05
+		}			
+	}	
+	YOM_character_4 = { #天神剣
+		type = all
+		trait_type = personality_trait
+		allowed = {
+			always = no
+		}
+		
+		modifier = {
+			modifier_army_sub_unit_melee_infantry_attack_factor = 0.1
+			modifier_army_sub_unit_melee_infantry_defence_factor = 0.1
+			planning_speed = 0.15
+			max_planning = 0.3
+		}			
+	}	
+	YOM_character_5 = { #六道剣
+		type = all
+		trait_type = personality_trait
+		allowed = {
+			always = no
+		}
+		
+		modifier = {
+			army_morale_factor = 0.2
+			planning_speed = 0.15
+			max_planning = 0.15
+			army_infantry_defence_factor = 0.2
+			army_infantry_attack_factor = 0.2
+		}			
+	}
+	YOM_character_6 = { #心剣-心见花开
+		type = all
+		trait_type = personality_trait
+		allowed = {
+			always = no
+		}
+		
+		modifier = {
+			army_org_factor = 0.2
+			army_morale_factor = 0.2
+			recon_factor = 0.05
+		}			
+	}
+	YOM_character_7 = { #轮回剣-断绝轮回
+		type = all
+		trait_type = personality_trait
+		allowed = {
+			always = no
+		}
+		
+		modifier = {
+			army_infantry_attack_factor = 0.1
+			army_attack_factor = 0.05
+		}			
+	}
+	YOM_character_8 = { #眾生平等剣-吾剑之下众生平等
+		type = all
+		trait_type = personality_trait
+		allowed = {
+			always = no
+		}
+		
+		modifier = {
+			army_infantry_attack_factor = 0.15
+			army_attack_factor = 0.1
+			army_speed_factor = 0.1
+			modifier_army_sub_unit_melee_infantry_attack_factor = 0.25
+			modifier_army_sub_unit_melee_infantry_defence_factor = 0.25
+			modifier_army_sub_unit_melee_cavalry_attack_factor = 0.25
+			modifier_army_sub_unit_melee_cavalry_defence_factor = 0.25
+		}		
+		non_shared_modifier = {
+			wounded_chance_factor = -1.25
+		}	
+	}
+	YOM_character_9 = { #大徹大悟剣-悟道
+		type = all
+		trait_type = personality_trait
+		allowed = {
+			always = no
+		}
+		
+		modifier = {
+			army_infantry_defence_factor = 0.2
+			army_infantry_attack_factor = 0.2
+		}			
+	}	
+}

@@ -1,0 +1,22 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+	MNM_qiangdashiliquan_op = {
+		value = -200
+	}
+	MNM_quganKYKderenlei_op = {
+		value = -200
+	}
+	MNM_lingyizhongfangshi_op = {
+		value = -200
+	}
+}	
+

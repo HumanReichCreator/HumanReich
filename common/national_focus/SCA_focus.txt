@@ -1,0 +1,4775 @@
+focus_tree = {
+	id = SCA_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SCA
+		}
+	}
+	
+
+	shared_focus = ty_medium_main 
+  # GFX_goal_continuous_air_production
+  # GFX_goal_continuous_non_factory_construct
+  # GFX_goal_continuous_reduce_training_time
+  # GFX_goal_continuous_boost_freedom
+  # GFX_goal_continuous_suppression
+  # GFX_goal_continuous_restrict_freedom
+  # GFX_goal_continuous_def_against_influence
+  # GFX_goal_continuous_research
+  # GFX_goal_continuous_increase_nu
+  # GFX_goal_continuous_repairments
+  # GFX_goal_continuous_naval_production
+  # GFX_goal_continuous_armor_production
+  # GFX_focus_generic_steel
+  # GFX_focus_generic_aluminum
+  # GFX_focus_generic_tungsten
+  # GFX_focus_research2
+  # GFX_focus_generic_treaty
+  # GFX_focus_generic_military_academy
+  # GFX_focus_generic_military_mission
+  # GFX_focus_generic_concessions
+  # GFX_focus_generic_self_management
+  # GFX_focus_generic_license_production
+  # GFX_focus_smiling_buddha
+  # GFX_focus_generic_join_comintern
+  # GFX_focus_generic_home_defense
+  # GFX_focus_generic_the_giant_wakes
+  # GFX_focus_generic_cryptologic_bomb
+  # GFX_focus_generic_socialist_science
+  # GFX_focus_generic_italy_first
+  # GFX_focus_generic_little_entente
+  # GFX_focus_generic_soviet_politics
+  # GFX_focus_generic_strike_at_democracy3
+  # GFX_focus_generic_strike_at_democracy2
+  # GFX_focus_generic_strike_at_democracy1
+  # GFX_focus_generic_anti_fascist_diplomacy
+  # GFX_focus_generic_japanese_imperial_glory
+  # GFX_focus_generic_support_the_left_right
+  # GFX_focus_generic_polish_deal
+  # GFX_focus_generic_air_defense
+  # GFX_focus_generic_coastal_fort
+  # GFX_focus_generic_paratrooper
+  # GFX_focus_generic_diplomatic_treaty
+  # GFX_focus_NZL_bob_semple_tank
+  # GFX_goal_unknown
+  # GFX_goal_generic_production
+  # GFX_goal_shine_test
+  # GFX_goal_generic_attack_allies
+  # GFX_goal_generic_oil_refinery
+  # GFX_goal_generic_positive_trade_relations
+  # GFX_goal_generic_military_deal
+  # GFX_goal_generic_wolf_pack
+  # GFX_goal_generic_amphibious_assault
+  # GFX_goal_generic_dangerous_deal
+  # GFX_goal_generic_military_sphere
+  # GFX_goal_generic_major_alliance
+  # GFX_goal_generic_more_territorial_claims
+  # GFX_goal_generic_major_war
+  # GFX_goal_generic_soviet_construction
+  # GFX_goal_generic_fortify_city
+  # GFX_goal_generic_war_with_comintern
+  # GFX_goal_generic_territory_or_war
+  # GFX_goal_generic_forceful_treaty
+  # GFX_goal_generic_scientific_exchange
+  # GFX_goal_generic_intelligence_exchange
+  # GFX_goal_generic_small_arms
+  # GFX_goal_generic_trade
+  # GFX_goal_generic_consumer_goods
+  # GFX_goal_generic_defence
+  # GFX_goal_generic_air_production
+  # GFX_goal_generic_radar
+  # GFX_goal_generic_alliance
+  # GFX_goal_generic_construction2
+  # GFX_goal_generic_air_fighter2
+  # GFX_goal_generic_cavalry
+  # GFX_goal_generic_construction
+  # GFX_goal_generic_production2
+  # GFX_goal_generic_neutrality_focus
+  # GFX_goal_generic_secret_weapon
+  # GFX_goal_generic_navy_cruiser
+  # GFX_goal_generic_construct_naval_dockyard
+  # GFX_goal_generic_air_naval_bomber
+  # GFX_goal_generic_national_unity
+  # GFX_goal_generic_construct_infrastructure
+  # GFX_goal_generic_construct_mil_factory
+  # GFX_goal_generic_construct_civ_factory
+  # GFX_goal_generic_army_artillery2
+  # GFX_goal_generic_army_artillery
+  # GFX_goal_generic_army_doctrines
+  # GFX_goal_generic_army_tanks
+  # GFX_goal_generic_army_motorized
+  # GFX_goal_generic_navy_doctrines_tactics
+  # GFX_goal_generic_navy_anti_submarine
+  # GFX_goal_generic_navy_submarine
+  # GFX_goal_generic_navy_carrier
+  # GFX_goal_generic_navy_battleship
+  # GFX_goal_generic_air_doctrine
+  # GFX_goal_generic_CAS
+  # GFX_goal_generic_air_fighter
+  # GFX_goal_generic_air_bomber
+  # GFX_goal_generic_propaganda
+  # GFX_goal_generic_special_forces
+  # GFX_focus_wonderweapons
+  # GFX_focus_research
+  # GFX_focus_rocketry
+  # GFX_goal_support_fascism
+  # GFX_goal_support_communism
+  # GFX_goal_support_fourth_int
+  # GFX_goal_support_democracy
+  # GFX_goal_generic_allies_build_infantry
+  # GFX_goal_generic_build_tank
+  # GFX_goal_generic_build_airforce
+  # GFX_goal_generic_axis_build_infantry
+  # GFX_goal_generic_build_navy
+  # GFX_goal_generic_improve_relations
+  # GFX_goal_generic_political_pressure
+  # GFX_goal_generic_demand_territory
+  # GFX_goal_generic_occupy_start_war
+  # GFX_goal_generic_occupy_states_coastal
+  # GFX_goal_generic_occupy_states_ongoing_war
+  # GFX_goal_generic_position_armies
+  # GFX_goal_generic_construct_military
+  # GFX_goal_generic_construct_civilian
+  # GFX_focus_generic_cruiser2
+  # GFX_focus_generic_destroyer
+  # GFX_focus_generic_navy_battleship2
+  # GFX_focus_generic_industry_3
+  # GFX_focus_generic_industry_2
+  # GFX_focus_focus_generic_industry_1
+  # GFX_focus_generic_combined_arms
+  # GFX_focus_generic_tank_production
+  # GFX_focus_generic_army_tanks2
+  # GFX_goal_fortify_the_westwall
+  # GFX_goal_reichsautobahn
+  # GFX_goal_panzerwaffe
+  # GFX_goal_expand_the_luftwaffe
+  # GFX_goal_molotov_ribbentrop_pact
+  # GFX_goal_anschluss
+  # GFX_goal_rhineland
+  # GFX_goal_poland_goal
+  # GFX_goal_demand_sudetenland
+  # GFX_goal_tripartite_pact
+  # GFX_goal_anti_comintern_pact
+  # GFX_focus_ger_reichskommisariats
+  # GFX_focus_generic_rubber
+  # GFX_focus_ger_revive_kaiserreich
+  # GFX_focus_ger_return_of_the_kaiser
+  # GFX_focus_ger_assassinate_mussolini
+  # GFX_focus_ger_great_red_menace
+  # GFX_focus_ger_oppose_hitler
+  # GFX_focus_ger_bulwark_against_bolshevism
+  # GFX_focus_ger_strike_at_the_source
+  # GFX_focus_ger_accept_british_naval_dominance
+  # GFX_focus_ger_break_anglo_french_colonial_hegemony
+  # GFX_goal_tfv_sever_ties_with_uk
+  # GFX_goal_tfv_strengthen_commonwealth_ties
+  # GFX_goal_tfv_generic_tech_sharing
+  # GFX_goal_tfv_burn_the_royal_portraits
+  # GFX_goal_tfv_can_forced_quebec_conscription
+  # GFX_goal_tfv_can_compromise_with_quebec
+  # GFX_focus_AST_never_gallipoli
+  # GFX_focus_generic_provoke_border_clashes
+  # GFX_focus_AST_rats_tobruk
+  # GFX_focus_AST_squander_bug
+  # GFX_focus_AST_war_japan
+  # GFX_goal_tfv_saf_anti_colonialist_crusade
+  # GFX_goal_tfv_saf_support_german_coup
+  # GFX_goal_tfv_saf_secure_interests_in_africa
+  # GFX_goal_tfv_saf_support_ossebrandwag
+  # GFX_focus_rom_preserve_romania
+  # GFX_focus_rom_abdicate
+  # GFX_focus_rom_coup
+  # GFX_focus_rom_handle_king
+  # GFX_focus_rom_royal_dictatorship
+  # GFX_focus_rom_parties_end
+  # GFX_focus_hun_elect_a_king
+  # GFX_focus_hun_assassinate_horthy
+  # GFX_focus_secret_rearmament
+  # GFX_focus_proclaim_the_restauration_of_Austria_Hungary
+  # GFX_focus_renounce_the_treaty_of_trianon
+  # GFX_focus_attack_switzerland
+  # GFX_focus_CZE_military_aeronautical_institute
+  # GFX_focus_CZE_german_puppet
+  # GFX_focus_CZE_military_research_institute
+  # GFX_focus_YUG_zmaj
+  # GFX_focus_YUG_rogozarski
+  # GFX_focus_YUG_ikarus
+  # GFX_focus_YUG_banovina_of_croatia
+  # GFX_focus_YUG_pan_slavic_congress
+  # GFX_focus_RAJ_all_india_forward_bloc
+  # GFX_focus_RAJ_british_investors
+  # GFX_focus_RAJ_clamp_down_on_corruption
+  # GFX_focus_RAJ_indian_gentlemen_offcers
+  # GFX_focus_RAJ_indian_gurkhas
+  # GFX_focus_RAJ_indianisation_of_army
+  # GFX_focus_RAJ_lions_of_the_great_war
+  # GFX_focus_RAJ_seek_help_from_germany
+  # GFX_focus_RAJ_seek_help_from_soviet
+  # GFX_focus_RAJ_two_nation_theory
+  # GFX_focus_generic_commonwealth_build_infantry
+  # GFX_focus_chi_legislative_yuan
+  # GFX_focus_chi_examination_yuan
+  # GFX_focus_chi_united_front
+  # GFX_focus_chi_army_reform
+  # GFX_focus_chi_flying_tigers
+  # GFX_focus_chi_whampoa_military_academy
+  # GFX_focus_chi_one_china_policy
+  # GFX_focus_chi_mission_to_germany
+  # GFX_focus_chi_mission_to_the_soviet_union
+  # GFX_focus_chi_reach_out_to_france
+  # GFX_focus_chi_british_cooperation
+  # GFX_focus_chi_mission_to_the_us
+  # GFX_focus_chi_collaboration_with_the_japanese
+  # GFX_focus_chi_cooperation_with_the_nationalists
+  # GFX_focus_chi_proclaim_rival_government
+  # GFX_focus_chi_cooperation_with_the_communists
+  # GFX_focus_man_claim_the_mandate_of_heaven
+  # GFX_focus_prc_proclaim_the_peoples_republic
+  # GFX_focus_prc_infiltration
+  # GFX_focus_prc_remove_chiang_kai_shek
+  # GFX_focus_prc_social_democracy
+  # GFX_focus_prc_agrarian_socialism
+  # GFX_focus_prc_maoism
+  # GFX_focus_generic_china1
+  # GFX_focus_jap_strike_south
+  # GFX_focus_jap_cast_the_die
+  # GFX_focus_jap_zaibatsu
+  # GFX_focus_jap_showa_restoration
+  # GFX_focus_jap_pacific_guardian
+  # GFX_focus_jap_manchurian_project
+  # GFX_focus_jap_spiritual_mobilization
+  # GFX_focus_jap_zero
+  
+		# ai_will_do = {
+		# 	factor = 1
+		# }
+
+		# bypass = {
+			
+		# }
+
+		# cancel_if_invalid = no
+		# continue_if_invalid = yes
+		# available_if_capitulated = yes
+	default = no
+	#################内部政治线####################
+	focus = {
+		id = SCA_hongmochengshijian
+		icon = GFX_focus_generic_air_defense
+		cost = 0
+		x = 3
+		y = 0
+
+		# prerequisite = {
+		# 	focus = ty_kejichuangxin
+		# }
+		# mutually_exclusive = {
+		# 	focus = ty_tourububing
+		# }
+
+		# relative_position_id = ty_medium_main
+
+		available ={
+			custom_trigger_tooltip = {
+				tooltip = suifazhanjiesuo
+				always = no
+			}
+		}
+
+		completion_reward = {
+		  
+	    }
+	}
+
+	focus = {
+		id = SCA_pachy
+		icon = GFX_focus_Patchouli_Knowledge
+		cost = 0
+		x = -2
+		y = 1
+
+		
+		mutually_exclusive = {
+			focus = SCA_sakura
+			focus = SCA_flandre
+		}
+		prerequisite = {
+			focus = SCA_hongmochengshijian
+		}
+		# mutually_exclusive = {
+			
+		# }
+
+		relative_position_id = SCA_hongmochengshijian
+
+		available ={
+			custom_trigger_tooltip = {
+				tooltip = suifazhanjiesuo
+				always = no
+			}
+		}
+
+		completion_reward = {
+		  
+	    }
+	}
+
+	focus = {
+		id = SCA_sakura
+		icon = GFX_focus_Izayoi_Sakuya
+		cost = 0
+		x = 0
+		y = 1
+
+		mutually_exclusive = {
+			focus = SCA_flandre
+			focus = SCA_pachy
+		}
+
+		prerequisite = {
+			focus = SCA_hongmochengshijian
+		}
+
+		relative_position_id = SCA_hongmochengshijian
+
+		available ={
+			custom_trigger_tooltip = {
+				tooltip = suifazhanjiesuo
+				always = no
+			}
+		}
+
+		completion_reward = {
+		  
+	    }
+	}
+
+	focus = {
+		id = SCA_flandre
+		icon = GFX_focus_Flandre_Scarlet
+		cost = 0
+		x = 2
+		y = 1
+
+		
+		mutually_exclusive = {
+			focus = SCA_sakura
+			focus = SCA_pachy
+		}
+		prerequisite = {
+			focus = SCA_hongmochengshijian
+		}
+		# mutually_exclusive = {
+			
+		# }
+
+		relative_position_id = SCA_hongmochengshijian
+
+		available ={
+			custom_trigger_tooltip = {
+				tooltip = suifazhanjiesuo
+				always = no
+			}
+		}
+
+		completion_reward = {
+		  
+	    }
+	}
+
+	focus = {
+		id = SCA_souchahongmocheng
+		icon = GFX_focus_generic_industry_3
+		cost = 12
+		x = 1
+		y = 1
+
+		
+		mutually_exclusive = {
+			focus = SCA_guanbiguojie
+		}
+		prerequisite = {
+			focus = SCA_pachy
+			focus = SCA_sakura
+		}
+		# mutually_exclusive = {
+			
+		# }
+
+		relative_position_id = SCA_pachy
+
+		available ={
+
+		}
+
+		completion_reward = {
+		  bianjiebaoshou = yes
+	    }
+	}
+
+	focus = {
+		id = SCA_guanbiguojie
+		icon = GFX_focus_generic_closure
+		cost = 12
+		x = -1
+		y = 1
+
+		
+		mutually_exclusive = {
+			focus = SCA_souchahongmocheng
+		}
+		prerequisite = {
+			focus = SCA_flandre
+			focus = SCA_sakura
+		}
+		# mutually_exclusive = {
+			
+		# }
+
+		relative_position_id = SCA_flandre
+
+		available ={
+
+		}
+
+		completion_reward = {
+		  conservativedecrease = yes
+		  bianjiebaoshou = yes
+		  add_political_power = -40
+	    }
+	}
+
+	focus = {
+		id = SCA_jixucelve
+		icon = GFX_goal_generic_demand_territory
+		cost = 12
+		x = 1
+		y = 3
+
+		
+		mutually_exclusive = {
+			focus = SCA_fengsuopanluanquyu
+		}
+		prerequisite = {
+			focus = SCA_souchahongmocheng
+			focus = SCA_guanbiguojie
+		}
+		prerequisite = {
+			focus = SCA_huancaoyuan
+		}
+		# mutually_exclusive = {
+			
+		# }
+
+		relative_position_id = SCA_pachy
+
+		available ={
+
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+	    }
+	}
+
+	focus = {
+		id = SCA_fengsuopanluanquyu
+		icon = GFX_focus_generic_closure
+		cost = 12
+		x = -1
+		y = 3
+
+		
+		mutually_exclusive = {
+			focus = SCA_jixucelve
+		}
+		prerequisite = {
+			focus = SCA_souchahongmocheng
+			focus = SCA_guanbiguojie
+		}
+		prerequisite = {
+			focus = SCA_huancaoyuan
+		}
+		# mutually_exclusive = {
+			
+		# }
+
+		relative_position_id = SCA_flandre
+
+		available ={
+
+		}
+
+		completion_reward = {
+		  	add_manpower = -1000
+		  	conservativedecrease = yes
+		  	add_stability = 0.05
+	    }
+	}
+
+	focus = {
+		id = SCA_gonggusca
+		icon = GFX_focus_Remilia_Scarlet_flags
+		cost = 12
+		x = -1
+		y = 5
+
+		
+		mutually_exclusive = {
+			focus = SCA_hexinzhuanyi
+		}
+
+		prerequisite = {
+			focus = SCA_xiqujiaoxun
+		}
+		# mutually_exclusive = {
+			
+		# }
+
+		relative_position_id = SCA_sakura
+
+		available ={
+			or = {
+				has_government = guli
+				has_government = neworder
+			}
+			custom_trigger_tooltip = {
+				tooltip = SCA_leimihuifu
+				has_country_flag = SCA_leimihuifu
+			}
+		}
+
+		completion_reward = {
+		  	if = {
+		  		limit = {
+		  			has_government = guli
+		  		}
+		  		add_stability = 0.25
+		  		add_war_support = 0.05
+		  		else = {
+		  			add_stability = 0.05
+		  			add_war_support = 0.25
+		  		}
+		  	}
+	    }
+
+
+	}
+
+	focus = {
+		id = SCA_hexinzhuanyi
+		icon = GFX_focus_Patchouli_Knowledge
+		cost = 12
+		x = 1
+		y = 5
+
+		
+		mutually_exclusive = {
+			focus = SCA_gonggusca
+		}
+
+		prerequisite = {
+			focus = SCA_xiqujiaoxun
+		}
+		# mutually_exclusive = {
+			
+		# }
+
+		relative_position_id = SCA_sakura
+
+		available ={
+			has_government = qinwai
+			custom_trigger_tooltip = {
+				tooltip = SCA_leimihuifu
+				has_country_flag = SCA_leimihuifu
+			}
+		}
+
+		completion_reward = {
+		  	add_political_power = 75
+		  	add_stability = 0.35
+	    }
+	}
+
+	focus = {
+		id = SCA_huancaoyuan
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 12
+		x = 5
+		y = 2
+
+		# mutually_exclusive = {
+			
+		# }
+
+		relative_position_id = SCA_hongmochengshijian
+
+		available ={
+			custom_trigger_tooltip = {
+				tooltip = suifazhanjiesuo
+				always = no
+			}
+		}
+
+		completion_reward = {
+		  
+	    }
+	}
+
+	focus = {
+		id = SCA_zhenduiyaojingruodian
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 12
+		x = -1
+		y = 1
+
+		mutually_exclusive = {
+			focus = SCA_gongguyaojingxinnian
+		}
+		prerequisite = {
+			focus = SCA_huancaoyuan
+		}
+
+		relative_position_id = SCA_huancaoyuan
+
+		available ={
+
+		}
+
+		completion_reward = {
+
+		  	add_ideas = SCA_zhenduiyaojingruodian_idea
+
+		  	lobbyincrease = yes
+	    }
+
+	    ai_will_do = {
+	    	factor = 5
+	    	modifier = {
+	    		has_country_flag = SCA_panluan
+	    		factor = 5
+	    	}
+	    }
+	}
+
+	focus = {
+		id = SCA_gongguyaojingxinnian
+		icon = GFX_goal_generic_national_unity
+		cost = 12
+		x = 1
+		y = 1
+
+		mutually_exclusive = {
+			focus = SCA_zhenduiyaojingruodian
+		}
+		prerequisite = {
+			focus = SCA_huancaoyuan
+		}
+
+		relative_position_id = SCA_huancaoyuan
+
+		available ={
+
+		}
+
+		completion_reward = {
+			add_ideas = SCA_gongguyaojingxinnian_idea
+
+			lobbydecrease = yes
+		  
+	    }
+
+	    ai_will_do = {
+	    	factor = 5
+	    	modifier = {
+	    		has_country_flag = SCA_panluan
+	    		factor = 5
+	    	}
+	    }
+	}
+
+	focus = {
+		id = SCA_kuozhanyaoguaijun
+		icon = GFX_goal_generic_military_sphere
+		cost = 12
+		x = -1
+		y = 2
+
+		mutually_exclusive = {
+			focus = SCA_nvpujinweijun
+		}
+		prerequisite = {
+			focus = SCA_zhenduiyaojingruodian
+			focus = SCA_gongguyaojingxinnian
+		}
+
+		relative_position_id = SCA_huancaoyuan
+
+		available ={
+
+		}
+
+		completion_reward = {
+		  	add_ideas = SCA_kuozhanyaoguaijun_idea
+		  	PO_add1 = yes
+	    }
+
+	    ai_will_do = {
+	    	factor = 5
+	    	modifier = {
+	    		has_country_flag = SCA_panluan
+	    		factor = 5
+	    	}
+	    }
+	}
+
+	focus = {
+		id = SCA_nvpujinweijun
+		icon = GFX_goal_generic_special_forces
+		cost = 12
+		x = 1
+		y = 2
+
+		mutually_exclusive = {
+			focus = SCA_kuozhanyaoguaijun
+		}
+		prerequisite = {
+			focus = SCA_zhenduiyaojingruodian
+			focus = SCA_gongguyaojingxinnian
+		}
+
+		relative_position_id = SCA_huancaoyuan
+
+		available ={
+
+		}
+
+		completion_reward = {
+		  	add_ideas = SCA_nvpujinweijun_idea
+	    }
+
+	    ai_will_do = {
+	    	factor = 5
+	    	modifier = {
+	    		has_country_flag = SCA_panluan
+	    		factor = 5
+	    	}
+	    }
+	}
+
+	focus = {
+		id = SCA_xiqujiaoxun
+		icon = GFX_goal_generic_national_unity
+		cost = 12
+		x = -5
+		y = 3
+
+		prerequisite = {
+			focus = SCA_kuozhanyaoguaijun
+			focus = SCA_nvpujinweijun
+		}
+
+		relative_position_id = SCA_huancaoyuan
+
+		available ={
+			custom_trigger_tooltip = {
+				tooltip = SCA_xiqujiaoxun_tt
+				not = {
+					has_war_with = SC1
+					has_war_with = SC2
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.05
+	    }
+
+	    ai_will_do = {
+	    	factor = 5
+	    	modifier = {
+	    		has_country_flag = SCA_panluan
+	    		factor = 5
+	    	}
+	    }
+	}
+	#################内部政治线结束####################
+
+	#################经济线####################
+
+	focus = {
+		id = SCA_jingjichongzheng
+		icon = GFX_goal_generic_production
+		cost = 12
+		x = 16
+		y = 0
+
+		# relative_position_id = SCA_hongmochengshijian
+
+		available ={
+			has_completed_focus = SCA_xiqujiaoxun
+		}
+		completion_reward = {
+		  	add_tech_bonus = {
+		  		uses = 2
+		  		category = industrys
+		  		bonus = 0.5
+		  	}
+	    }
+
+	    ai_will_do = {
+	    	factor = 5
+	    	modifier = {
+	    		has_country_flag = SCA_panluan
+	    		factor = 5
+	    	}
+	    }
+	}
+
+	focus = {
+		id = SCA_quanminjingji
+		icon = GFX_goal_generic_consumer_goods
+		cost = 12
+		x = -3
+		y = 1
+
+		relative_position_id = SCA_jingjichongzheng
+
+		prerequisite = {
+			focus = SCA_jingjichongzheng
+		}
+
+		mutually_exclusive = {
+			focus = SCA_diguojingji
+			focus = SCA_weilescarlet
+		}
+
+		available ={
+			custom_trigger_tooltip = {
+			    tooltip = SCA_quanminjingji_tt	
+			    OR = {
+			    	has_government = qinwai
+			    	has_country_flag = SCA_pachy
+			    }	
+			}
+			
+		}
+		completion_reward = {
+		  	add_ideas = SCA_quanminjingji_idea
+		  	add_offsite_building = { type = industrial_complex level = 1}
+	    }
+
+	    ai_will_do = {
+	    	factor = 5
+	    	modifier = {
+	    		has_country_flag = SCA_panluan
+	    		factor = 5
+	    	}
+	    }
+	}
+
+	focus = {
+		id = SCA_diguojingji
+		icon = GFX_goal_generic_production
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = SCA_jingjichongzheng
+
+		prerequisite = {
+			focus = SCA_jingjichongzheng
+		}
+
+		mutually_exclusive = {
+			focus = SCA_quanminjingji
+			focus = SCA_weilescarlet
+		}
+
+		available ={
+			
+		}
+		completion_reward = {
+		  	add_ideas = SCA_diguojingji_idea
+		  	add_offsite_building = { type = industrial_complex level = 1}
+		  	add_offsite_building = { type = arms_factory level = 1}
+	    }
+
+	    ai_will_do = {
+	    	factor = 5
+	    	modifier = {
+	    		has_country_flag = SCA_panluan
+	    		factor = 5
+	    	}
+	    }
+	}
+
+	focus = {
+		id = SCA_weilescarlet
+		icon = GFX_goal_support_fascism
+		cost = 12
+		x = 3
+		y = 1
+
+		relative_position_id = SCA_jingjichongzheng
+
+		prerequisite = {
+			focus = SCA_jingjichongzheng
+		}
+
+		mutually_exclusive = {
+			focus = SCA_diguojingji
+			focus = SCA_quanminjingji
+		}
+
+		available ={
+			custom_trigger_tooltip = {
+			    tooltip = SCA_weilescarlet_tt	
+			    OR = {
+			    	has_government = neworder
+			    	has_country_flag = SCA_flandre
+			    }	
+			}
+		}
+		completion_reward = {
+		  	add_ideas = SCA_weilescarlet_idea
+		  	add_offsite_building = { type = arms_factory level = 2}
+	    }
+
+	    ai_will_do = {
+	    	factor = 5
+	    	modifier = {
+	    		has_country_flag = SCA_panluan
+	    		factor = 5
+	    	}
+	    }
+	}
+
+	focus = {
+		id = SCA_mingongjianshe
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		x = 1
+		y = 1
+
+		relative_position_id = SCA_quanminjingji
+
+		prerequisite = {
+			focus = SCA_quanminjingji
+			focus = SCA_diguojingji
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+
+		available ={
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex 
+					level = 4
+					instant_build = yes
+				}
+			}
+	    }
+
+	    ai_will_do = {
+	    	factor = 5
+	    	modifier = {
+	    		has_country_flag = SCA_panluan
+	    		factor = 2
+	    	}
+	    }
+	}
+
+	focus = {
+		id = SCA_mingongyezhenghe
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		x = -1
+		y = 1
+
+		relative_position_id = SCA_quanminjingji
+
+		prerequisite = {
+			focus = SCA_quanminjingji
+		}
+		available ={
+			
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex 
+					level = 3
+					instant_build = yes
+				}
+			}
+	    }	
+
+	    ai_will_do = {
+	    	factor = 5
+	    	modifier = {
+	    		has_country_flag = SCA_panluan
+	    		factor = 2
+	    	}
+	    }
+	}
+
+	focus = {
+		id = SCA_diguogaosugonglu
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = SCA_diguojingji
+
+		prerequisite = {
+			focus = SCA_diguojingji
+		}
+
+		mutually_exclusive = {
+
+		}
+
+
+		available ={
+			any_owned_state = {
+				region = 31
+				is_controlled_by = ROOT
+			}
+			
+		}
+		completion_reward = {
+		  	every_owned_state = {
+		  		limit = {
+		  			region = 31
+		  			is_controlled_by = ROOT
+		  		}
+		  		add_extra_state_shared_building_slots = 1
+		  		add_building_construction = {
+		  			type = infrastructure
+		  			level = 2
+		  			instant_build = yes
+		  		}
+		  	}
+	    }
+
+	    ai_will_do = {
+	    	factor = 5
+	    	modifier = {
+	    		has_country_flag = SCA_panluan
+	    		factor = 10
+	    	}
+	    }
+	}
+
+	focus = {
+		id = SCA_jungongyejianshe
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		x = -1
+		y = 1
+
+		relative_position_id = SCA_weilescarlet
+
+		prerequisite = {
+			focus = SCA_weilescarlet
+			focus = SCA_diguojingji
+		}
+
+		mutually_exclusive = {
+			
+		}
+
+
+		available ={
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory 
+					level = 4
+					instant_build = yes
+				}
+			}
+	    }
+
+	    ai_will_do = {
+	    	factor = 5
+	    	modifier = {
+	    		has_country_flag = SCA_panluan
+	    		factor = 2
+	    	}
+	    }
+	}
+
+	focus = {
+		id = SCA_jungongyezhenghe
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		x = 1
+		y = 1
+
+		relative_position_id = SCA_weilescarlet
+
+		prerequisite = {
+			focus = SCA_weilescarlet
+		}
+
+
+		available ={
+
+		}
+		completion_reward = {
+		  	random_owned_controlled_state = {
+		  		limit = {
+		  			is_core_of = ROOT
+		  		}
+		  		add_extra_state_shared_building_slots = 3
+		  		add_building_construction = {
+		  			type = arms_factory 
+		  			level = 3
+		  			instant_build = yes
+		  		}
+		  	}
+	    }
+
+	    ai_will_do = {
+	    	factor = 5
+	    	modifier = {
+	    		has_country_flag = SCA_panluan
+	    		factor = 2
+	    	}
+	    }
+	}
+
+	focus = {
+		id = SCA_zhongshiyaojing
+		icon = GFX_goal_generic_national_unity
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = SCA_quanminjingji
+
+		prerequisite = {
+			focus = SCA_mingongyezhenghe
+			focus = SCA_mingongjianshe
+		}
+
+
+		available ={
+
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+			add_war_support = -0.025
+	    }
+
+	    ai_will_do = {
+	    	factor = 5
+	    	modifier = {
+	    		has_country_flag = SCA_panluan
+	    		factor = 5
+	    	}
+	    }
+	}
+
+	focus = {
+		id = SCA_fangkuanduiyaojingdexianzhi
+		icon = GFX_goal_generic_national_unity
+		cost = 12
+		x = 1
+		y = 1
+
+		relative_position_id = SCA_zhongshiyaojing
+
+		prerequisite = {
+			focus = SCA_zhongshiyaojing
+			focus = SCA_chongzhengdiguozhuangkuang
+		}
+		mutually_exclusive = {
+			focus = SCA_rengjinshengchanxian
+		}
+
+
+		available ={
+			
+		}
+		completion_reward = {
+			custom_effect_tooltip = focus_warning4
+		  	if = {
+		  		limit = {
+		  			has_government = qinwai
+			    	has_country_flag = SCA_pachy
+		  		}
+		  		OL_minus7.5 = yes
+		  	}
+		  	if = {
+		  		limit = {
+		  			has_government = qinwai
+		  		}
+		  		set_country_flag = OL_to_pingheng
+		  	}
+		  	clr_country_flag = forbidden_fairy_sys 
+		  	custom_effect_tooltip = SCA_fangkuanduiyaojingdexianzhi_tt
+	    }
+
+	    ai_will_do = {
+	    	factor = 5
+	    	modifier = {
+	    		has_country_flag = SCA_panluan
+	    		factor = 5
+	    	}
+	    }
+	}
+
+	focus = {
+		id = SCA_anfuzhengce
+		icon = GFX_goal_generic_national_unity
+		cost = 12
+		x = -1
+		y = 1
+
+		relative_position_id = SCA_fangkuanduiyaojingdexianzhi
+
+		prerequisite = {
+			focus = SCA_fangkuanduiyaojingdexianzhi
+		}
+		prerequisite = {
+			focus = SCA_zhongshiyaojing
+		}
+
+
+		available ={
+			
+		}
+		completion_reward = {
+			custom_effect_tooltip = SCA_zaohejueyi1_tt
+		  	set_country_flag = SCA_zaohejueyi
+		  	add_timed_idea = {
+		  		days = 365 idea = SCA_anfuzhengce_idea
+		  	}
+		  	multiply_variable = {
+				SCA_zaoheshijian1 = 0.5
+			}
+			multiply_variable = {
+				SCA_zaoheshijian2 = 0.5
+			}
+			multiply_variable = {
+				SCA_zaoheshijian3 = 0.5
+			}
+			multiply_variable = {
+				SCA_zaoheshijian4 = 0.5
+			}
+			multiply_variable = {
+				SCA_zaoheshijian5 = 0.5
+			}
+	    }
+
+	    ai_will_do = {
+	    	factor = 5
+	    	modifier = {
+	    		has_country_flag = SCA_panluan
+	    		factor = 5
+	    	}
+	    }
+	}
+
+	focus = {
+		id = SCA_chongzhengdiguozhuangkuang
+		icon = GFX_goal_generic_propaganda
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = SCA_diguojingji
+
+		prerequisite = {
+			focus = SCA_diguogaosugonglu
+		}
+
+
+		available ={
+
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+		  	custom_effect_tooltip = SCA_zaohejueyi2_tt
+		  	set_country_flag = SCA_zaohejueyi
+		  	add_political_power = 200
+	    }
+
+	    ai_will_do = {
+	    	factor = 5
+	    	modifier = {
+	    		has_country_flag = SCA_panluan
+	    		factor = 10
+	    	}
+	    }
+	}
+
+	focus = {
+		id = SCA_zhongyusikaleite
+		icon = GFX_goal_generic_propaganda
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = SCA_chongzhengdiguozhuangkuang
+
+		prerequisite = {
+			focus = SCA_fangkuanduiyaojingdexianzhi
+			focus = SCA_rengjinshengchanxian
+		}
+
+
+		available ={
+			has_war = yes
+			has_government = guli
+			NOT = { has_idea = SCA_Lax_military_discipline_idea_1 }
+      		NOT = { has_idea = SCA_Lax_military_discipline_idea_2 }
+			or = {
+				surrender_progress > 0.1
+				and = {
+					GRS = {
+						is_subject_of = ROOT
+						has_capitulated = yes
+					}
+				}
+				and = {
+					PRI = {
+						is_subject_of = ROOT
+						has_capitulated = yes
+					}
+				}
+				and = {
+					WAK = {
+						is_subject_of = ROOT
+						has_capitulated = yes
+					}
+				}
+			}
+			
+
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			add_stability = 0.1
+			EXHC_exhaustion_factor_add5 = yes
+			add_ideas = SCA_zhongyusikaleite_idea
+	    }
+
+	    ai_will_do = {
+	    	factor = 20
+	    }
+	}
+
+	focus = {
+		id = SCA_qingxiyaojing
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = SCA_weilescarlet
+
+		prerequisite = {
+			focus = SCA_jungongyejianshe
+		}
+		prerequisite = {
+			focus = SCA_jungongyezhenghe
+		}
+
+
+		available ={
+			
+		}
+		completion_reward = {
+			add_political_power = 160
+			add_stability = -0.1
+	    }
+
+	    ai_will_do = {
+	    	factor = 5
+	    	modifier = {
+	    		has_country_flag = SCA_panluan
+	    		factor = 5
+	    	}
+	    }
+	}
+
+	focus = {
+		id = SCA_rengjinshengchanxian
+		icon = GFX_focus_generic_combined_arms
+		cost = 12
+		x = -1
+		y = 1
+
+		relative_position_id = SCA_qingxiyaojing
+
+		prerequisite = {
+			focus = SCA_qingxiyaojing
+			focus = SCA_chongzhengdiguozhuangkuang
+		}
+		mutually_exclusive = {
+			focus = SCA_fangkuanduiyaojingdexianzhi
+		}
+
+
+		available ={
+			
+		}
+		completion_reward = {
+		  	add_ideas = SCA_rengjinshenchanxian_idea
+	    }
+
+	    ai_will_do = {
+	    	factor = 5
+	    	modifier = {
+	    		has_country_flag = SCA_panluan
+	    		factor = 5
+	    	}
+	    }
+	}
+
+	focus = {
+		id = SCA_shaixuanyaojing
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 12
+		x = 1
+		y = 1
+
+		relative_position_id = SCA_rengjinshengchanxian
+
+		prerequisite = {
+			focus = SCA_rengjinshengchanxian
+		}
+		prerequisite = {
+			focus = SCA_qingxiyaojing
+		}
+
+
+		available ={
+			
+		}
+		completion_reward = {
+			add_political_power = -50
+		  	custom_effect_tooltip = SCA_zaohejueyi3_tt
+		  	set_country_flag = SCA_zaohejueyi
+		  	multiply_variable = {
+				SCA_zaoheshijian1 = 0.66
+			}
+			multiply_variable = {
+				SCA_zaoheshijian2 = 0.66
+			}
+			multiply_variable = {
+				SCA_zaoheshijian3 = 0.66
+			}
+			multiply_variable = {
+				SCA_zaoheshijian4 = 0.66
+			}
+			multiply_variable = {
+				SCA_zaoheshijian5 = 0.66
+			}
+			multiply_variable = {
+				SCA_zaohePP1 = 0.66
+			}
+			multiply_variable = {
+				SCA_zaohePP2 = 0.66
+			}
+			multiply_variable = {
+				SCA_zaohePP3 = 0.66
+			}
+			multiply_variable = {
+				SCA_zaohePP4 = 0.66
+			}
+			multiply_variable = {
+				SCA_zaohePP5 = 0.66
+			}
+	    }
+
+	    ai_will_do = {
+	    	factor = 5
+	    	modifier = {
+	    		has_country_flag = SCA_panluan
+	    		factor = 5
+	    	}
+	    }
+	}
+
+	##########经济线结束##########
+
+	#########外交线开始########
+
+	focus = {
+		id = SCA_kuodayingxiangli
+		icon = GFX_goal_generic_major_alliance
+		cost = 12
+		x = 27
+		y = 0
+
+
+		prerequisite = {
+
+		}
+
+		mutually_exclusive = {
+
+		}
+
+
+		available ={
+			is_subject = no
+			or = {
+				has_completed_focus = SCA_gonggusca
+				has_completed_focus = SCA_hexinzhuanyi
+			}
+			custom_trigger_tooltip = {
+				tooltip = SCA_qiehuanshijian3_tt
+				not = { has_country_flag = SCA_qiehuanshijian }
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = SCA_qiehuanshijian1_tt
+			set_country_flag = {
+				value = 1
+				days = 365
+				flag = SCA_qiehuanshijian
+			}
+			lobbyincrease = yes
+		  	add_war_support = 0.05
+		  	# if = {
+		  	# 	limit = {
+		  	# 		or = {
+		  	# 			has_idea = manpowerlv1
+		  	# 			has_idea = type1_manpowerlv2
+		  	# 			has_idea = type1_manpowerlv3
+		  	# 		}
+		  	# 	}
+		  	# 	add_ideas = type1_manpowerlv4
+		  	# }
+
+	    }
+	}
+
+	focus = {
+		id = SCA_baochimuqiande
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 12
+		x = 8
+		y = 0
+
+		relative_position_id = SCA_kuodayingxiangli
+
+		mutually_exclusive = {
+
+		}
+
+		prerequisite = {
+			
+		}
+
+
+		available ={
+			is_subject = no
+			or = {
+				has_completed_focus = SCA_gonggusca
+				has_completed_focus = SCA_hexinzhuanyi
+			}
+			custom_trigger_tooltip = {
+				tooltip = SCA_qiehuanshijian3_tt
+				not = { has_country_flag = SCA_qiehuanshijian }
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = SCA_qiehuanshijian2_tt
+			set_country_flag = {
+				value = 1
+				days = 365
+				flag = SCA_qiehuanshijian
+			}
+		  	add_stability = 0.05
+		  	lobbydecrease = yes
+
+		  	# if = {
+		  	# 	limit = {
+		  	# 		or = {
+		  	# 			has_idea = manpowerlv1
+		  	# 			has_idea = type1_manpowerlv2
+		  	# 			has_idea = type1_manpowerlv3
+		  	# 		}
+		  	# 	}
+		  	# 	add_ideas = type1_manpowerlv4
+		  	# }
+	    }
+	}
+
+	focus = {
+		id = SCA_jingtiyaoguaishan
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 12
+		x = -3
+		y = 1
+
+		relative_position_id = SCA_kuodayingxiangli
+
+		prerequisite = {
+			focus = SCA_kuodayingxiangli
+		}
+		# mutually_exclusive = {
+		# 	focus = SCA_guanzhurenlei
+		# }
+
+		available = {
+			is_subject = no
+		}
+
+
+		available ={
+			GRS = {
+				is_subject_of = ROOT
+			}
+		}
+		completion_reward = {
+			add_named_threat = { 
+	            threat = 1
+	            name = SCA_jingtiyaoguaishan
+	        }
+		  	reverse_add_opinion_modifier = {
+				target = MRY
+			    modifier = SCA_jingtiyaoguaishan_op
+			}
+			reverse_add_opinion_modifier = {
+				target = TEG
+			    modifier = SCA_jingtiyaoguaishan_op
+			}
+			reverse_add_opinion_modifier = {
+				target = KAP
+			    modifier = SCA_jingtiyaoguaishan_op
+			}
+
+			hidden_effect = {
+				news_event = { id = sca.1 days = 2}
+			}
+	    }
+	}
+
+	focus = {
+		id = SCA_rongrudiguo
+		icon = GFX_focus_generic_home_defense
+		cost = 12
+		x = -1
+		y = 1
+
+		relative_position_id = SCA_jingtiyaoguaishan
+
+		prerequisite = {
+			focus = SCA_jingtiyaoguaishan
+		}
+
+		mutually_exclusive = {
+			focus = SCA_diyuyaoguaishanweixie
+		}
+
+
+		available ={
+			is_subject = no
+			GRS = {
+				is_subject_of = ROOT
+			}	
+		}
+		bypass = {
+			not = {
+				country_exists = GRS
+			}
+			owns_state = 69
+			owns_state = 93
+			owns_state = 372
+		}
+		completion_reward = {
+		  	GRS = {
+		  		low_puppet_level = yes
+		  	}
+	    }
+	}
+
+	focus = {
+		id = SCA_diyuyaoguaishanweixie
+		icon = GFX_focus_generic_little_entente
+		cost = 12
+		x = 1
+		y = 1
+
+		relative_position_id = SCA_jingtiyaoguaishan
+
+		prerequisite = {
+			focus = SCA_jingtiyaoguaishan
+		}
+
+		mutually_exclusive = {
+			focus = SCA_rongrudiguo
+		}
+
+
+		available ={
+			is_subject = no
+			GRS = {
+				is_subject_of = ROOT
+			}
+		}
+		completion_reward = {
+		  	GRS = {
+		  		every_owned_state = {
+		  			limit = {
+		  				is_demilitarized_zone = yes
+		  			}
+		  			set_demilitarized_zone = no
+		  		}
+		  		custom_effect_tooltip = SCA_diyuyaoguaishanweixie_tt
+		  		hidden_effect = {
+		  			load_oob = GRS_on
+		  		}
+		  	}
+	    }
+	}
+
+	focus = {
+		id = SCA_jianshexuanwuchuan
+		icon = GFX_goal_generic_construction
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = SCA_jingtiyaoguaishan
+
+		prerequisite = {
+			focus = SCA_rongrudiguo
+			focus = SCA_diyuyaoguaishanweixie
+		}
+
+
+		available ={
+			is_subject = no
+			GRS = {
+				is_subject_of = ROOT
+			}
+		}
+		bypass = {
+			not = {
+				country_exists = GRS
+			}
+		}
+		completion_reward = {
+		  	GRS = {
+		  		random_owned_controlled_state = {
+		  			add_extra_state_shared_building_slots = 2
+		  			add_building_construction = {
+		  				type = industrial_complex
+		  				level = 2
+		  				instant_build = yes
+		  			}
+		  		}
+		  		random_owned_controlled_state = {
+		  			add_extra_state_shared_building_slots = 2
+		  			add_building_construction = {
+		  				type = arms_factory
+		  				level = 2
+		  				instant_build = yes
+		  			}
+		  		}
+		  	}
+	    }
+	}
+
+	focus = {
+		id = SCA_zhongzukaifang
+		icon = GFX_goal_generic_national_unity
+		cost = 12
+		x = -1
+		y = 1
+
+		relative_position_id = SCA_jianshexuanwuchuan
+
+		prerequisite = {
+			focus = SCA_jianshexuanwuchuan
+		}
+		prerequisite = {
+			focus = SCA_rongrudiguo
+		}
+
+
+		available ={
+			is_subject = no
+			GRS = {
+				is_subject_of = ROOT
+			}
+		}
+		bypass = {
+			not = {
+				country_exists = GRS
+			}
+		}
+		completion_reward = {
+		  	conservativeincrease = yes
+		  	CO_factor_minus0.1 = yes
+	    }
+	}
+
+	focus = {
+		id = SCA_yaoguaishanbilei
+		icon = GFX_goal_generic_construct_military
+		cost = 12
+		x = 1
+		y = 1
+
+		relative_position_id = SCA_jianshexuanwuchuan
+
+		prerequisite = {
+			focus = SCA_jianshexuanwuchuan
+		}
+		prerequisite = {
+			focus = SCA_diyuyaoguaishanweixie
+		}
+
+
+		available ={
+			is_subject = no
+			or = {
+				93 = {
+					or = {
+						is_controlled_by = ROOT
+						and = {
+							is_controlled_by = GRS
+							GRS = {
+								is_subject_of = ROOT
+							}
+						}
+						
+					}
+				}
+				69 = {
+					or = {
+						is_controlled_by = ROOT
+						and = {
+							is_controlled_by = GRS
+							GRS = {
+								is_subject_of = ROOT
+							}
+						}
+						
+					}
+				}
+				372 = {
+					or = {
+						is_controlled_by = ROOT
+						and = {
+							is_controlled_by = GRS
+							GRS = {
+								is_subject_of = ROOT
+							}
+						}
+						
+					}
+				}
+				
+			}
+			
+			
+		}
+		completion_reward = {
+			93 = {
+				if = {
+					limit = {
+						or = {
+							is_controlled_by = ROOT
+							is_controlled_by = GRS
+						}
+						
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 3452
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 3449
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 4033
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 4050
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 3454
+					}
+				}
+			}	
+			69 = {
+				if = {
+					limit = {
+						or = {
+							is_controlled_by = ROOT
+							is_controlled_by = GRS
+						}
+						
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 4271
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 4269
+					}
+				}
+			}
+			372 = {
+				if = {
+					limit = {
+						or = {
+							is_controlled_by = ROOT
+							is_controlled_by = GRS
+						}
+						
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 4146
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 3398
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 976
+					}
+				}
+			}
+
+		  	
+	    }
+	}
+
+	focus = {
+		id = SCA_tongyihetong
+		icon = GFX_goal_generic_major_war
+		cost = 12
+		x = -1
+		y = 2
+
+		will_lead_to_war_with = KAP
+		will_lead_to_war_with = NTR
+
+		relative_position_id = SCA_jianshexuanwuchuan
+
+		prerequisite = {
+			focus = SCA_zhongzukaifang
+			focus = SCA_yaoguaishanbilei
+		}
+
+		available ={
+			NTR = {
+				before_declare_war = yes
+			}
+			KAP = {
+				before_declare_war = yes
+			}
+			or = {
+				not = {
+					has_government = guli
+				}
+				and = {
+					has_government = guli
+					or = {
+						threat > 0.40
+						NTR = {
+							has_war = yes
+						}
+						KAP = {
+							has_war = yes
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = SCA_shoushixianghubaodutongguo_2
+				not = {
+					has_country_flag = SCA_shoushixianghubaodutonggu
+				}
+			}
+		}
+		mutually_exclusive = {
+			# focus = SCA_shoushigongtongfangyu
+		}
+
+		bypass = {
+			and = {
+				KAP = {
+					bypass_declare_war = yes
+				}
+				NTR = {
+					bypass_declare_war = yes
+				}
+			}
+		}
+
+		continue_if_invalid = yes
+		
+		completion_reward = {
+			custom_effect_tooltip = SCA_tongyihetong_1
+			custom_effect_tooltip = focus_warning3
+			add_named_threat = { 
+	            threat = 4
+	            name = SCA_tongyihetong
+	        }
+			add_ideas = SCA_hetongyanjiu_idea
+
+			every_state = {
+				limit = {
+					or = {
+						is_core_of = KAP
+						is_core_of = NTR
+						is_core_of = SAP
+					}
+				}
+				if = {
+					limit = {
+						SCA = {
+							owns_state = 69
+						}
+					}
+					add_core_of = SCA
+					else = {
+						add_core_of = GRS
+					}
+				}
+				
+			}
+			if = {
+				limit = {
+					MRY = { owns_state = 40 }
+				}
+				declare_war_on = {
+			  		type = liberate_wargoal
+			  		target = MRY
+			  	}
+			  	else = {
+			  		declare_war_on = {
+				  		type = puppet_wargoal_focus
+				  		target = KAP
+				  	}
+			  	}
+			}
+		  	
+		  	declare_war_on = {
+		  		type = puppet_wargoal_focus
+		  		target = NTR
+		  	}
+	    }
+
+	    ai_will_do = {
+	    	factor = 1
+	    	modifier = {
+	    		has_war = yes
+	    		factor = 0
+	    	}
+	    }
+	}
+
+	focus = {
+		id = SCA_hetongyanjiu
+		icon = GFX_focus_research
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = SCA_tongyihetong
+
+		prerequisite = {
+			focus = SCA_tongyihetong
+		}
+
+
+		available ={
+			is_subject = no
+			GRS = {
+				is_subject_of = ROOT
+			}
+			or = {
+				owns_state = 69
+				any_country = {
+					owns_state = 69
+					is_subject_of = ROOT
+				}
+			}
+			or = {
+				owns_state = 40
+				any_country = {
+					owns_state = 40
+					is_subject_of = ROOT
+				}
+			}
+			or = {
+				owns_state = 88
+				any_country = {
+					owns_state = 88
+					is_subject_of = ROOT
+				}
+			}
+		}
+		completion_reward = {
+		  	add_research_slot = 1
+	    }
+	}
+
+	focus = {
+		id = SCA_shoushigongtongfangyu
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = SCA_yaoguaishanbilei
+
+		prerequisite = {
+			focus = SCA_yaoguaishanbilei
+		}
+		mutually_exclusive = {
+
+		}
+
+
+		available ={
+			MRY = {
+				faqiqingqiu = yes
+			}
+			not = {
+				has_completed_focus = SCA_shoushigongtongfangyu
+			}
+		}
+		completion_reward = {
+			add_political_power = -60
+			custom_effect_tooltip = SCA_shoushigongtongfangyu_1
+			MRY = {
+				country_event = { id = sca.37 days = 2 }
+			}
+			custom_effect_tooltip = event_accept
+			effect_tooltip = {
+				MRY = {
+					huxiangbaodu = yes
+					jiemeng = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = SCA_shoushikejibangzhu
+		icon = GFX_goal_continuous_research
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = SCA_shoushigongtongfangyu
+
+		prerequisite = {
+			focus = SCA_shoushigongtongfangyu
+		}
+		mutually_exclusive = {
+
+		}
+
+
+		available ={
+			custom_trigger_tooltip = {
+				tooltip = SCA_shoushixianghubaodutongguo
+				has_country_flag = SCA_shoushixianghubaodutongguo
+			}
+			is_subject = no
+			MRY = {
+				faqiqingqiu = yes
+			}
+		}
+		completion_reward = {
+			add_ideas = SCA_shoushikejibangzhu_idea
+			MRY = {
+				add_ideas = SCA_shoushikejibangzhu_idea
+				can_use = yes
+				SCA = {
+					can_use = yes
+				}
+			}
+			hidden_effect = {
+				news_event = {
+					id = sca.39 days = 2
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = SCA_guanzhurenlei
+		icon = GFX_goal_generic_improve_relations
+		cost = 12
+		x = 3
+		y = 1
+
+		relative_position_id = SCA_kuodayingxiangli
+
+		prerequisite = {
+			focus = SCA_kuodayingxiangli
+		}
+		available ={
+			is_subject = no
+			not = {
+				has_government = qinwai
+			}
+		}
+		completion_reward = {
+
+			add_political_power = 100
+			
+			lobbyincrease = yes
+			
+	    }
+	}
+
+	focus = {
+		id = SCA_renliqiyue
+		icon = GFX_focus_bypass_the_treaty_of_vampires
+		cost = 12
+		x = 1
+		y = 1
+
+		relative_position_id = SCA_guanzhurenlei
+
+		prerequisite = {
+			focus = SCA_guanzhurenlei
+		}
+
+		mutually_exclusive = {
+			focus = SCA_pohuaitiaoyue
+		}
+
+		available = {
+			has_government = guli
+			is_subject = no
+			HUM = {
+				faqiqingqiu = yes
+			}
+
+		}
+
+		completion_reward = {
+			add_named_threat = {
+				threat = 1
+				name = SCA_renliqiyue
+			}
+			HUM = { country_event = { id = sca.23 hours = 11 }}
+
+			custom_effect_tooltip = TEG_accept
+			effect_tooltip = {
+				add_opinion_modifier = {
+				    target = HUM
+				    modifier = SCA_renliqiyue_op
+				}
+				reverse_add_opinion_modifier = {
+				    target = HUM
+				    modifier = SCA_renliqiyue_op
+				}
+				swap_ideas = { add_idea = SCA_bufentuolitiaoyue_idea remove_idea = SCA_xixueguitiaoyue_idea}
+			}
+	    }
+	}
+
+	focus = {
+		id = SCA_renlihezuo
+		icon = GFX_focus_generic_befriend_HUM
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = SCA_renliqiyue
+
+		prerequisite = {
+			focus = SCA_renliqiyue
+		}
+
+
+		available ={
+			is_subject = no
+			HUM = {
+				faqiqingqiu = yes
+			}
+		}
+		completion_reward = {
+			hidden_effect = {
+				HUM = { country_event = { id = sca.24 hours = 11 }}
+			}
+			ROOT = {
+				add_tech_bonus = {
+					category = combined
+					uses = 2
+					bonus = 1.5
+					ahead_reduction = 1.5
+				}
+			}
+			HUM = {
+				add_tech_bonus = {
+					category = combined
+					uses = 2
+					bonus = 1.5
+					ahead_reduction = 1.5
+				}
+			}
+	    }
+
+	    cancel_if_invalid = yes
+	}
+
+	focus = {
+		id = SCA_yaoqingrenleijiaru
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = SCA_renlihezuo
+
+		prerequisite = {
+			focus = SCA_renlihezuo
+		}
+		prerequisite = {
+			focus = SCA_eshazongjiaozhashili
+		}
+
+
+		available ={
+			has_war_with = NMS
+			is_subject = no
+			HUM = {
+				faqiqingqiu = yes
+				is_subject = no
+				is_in_faction = no
+			}
+		}
+		bypass = {
+			HUM = {
+				has_war_with = NMS
+			}
+		}
+		completion_reward = {
+			HUM = {
+				country_event = { id = sca.46 days = 2}
+			}
+			custom_effect_tooltip = event_accept
+			effect_tooltip = {
+				HUM = {
+					declare_war_on = {
+						target = NMS
+						type = annex_everything
+					}
+				}
+				if = {
+					limit = {
+						HUM = {
+							is_in_faction_with = no
+						}
+					}
+					SCA = {
+						add_to_faction = HUM
+					}
+				}
+				
+			}
+			
+	    }
+
+	    cancel_if_invalid = yes
+	}
+
+	focus = {
+		id = SCA_renliyingzizhengfu
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = SCA_yaoqingrenleijiaru
+
+		prerequisite = {
+			focus = SCA_yaoqingrenleijiaru
+		}
+
+
+		available ={
+			HUM = {
+				is_in_faction_with = ROOT
+			}
+			is_subject = no
+			HUM = {
+				faqiqingqiu = yes
+				or = {
+					is_subject_of = ROOT
+					is_subject = no
+				}
+			}
+		}
+		completion_reward = {
+			HUM = {
+				country_event = { days = 2 id = sca.44}
+			}
+			custom_effect_tooltip = event_accept
+			effect_tooltip = {
+				add_ideas = SCA_renliyingzizhengfu_idea
+				HUM = {
+					subject_level4 = yes
+				}
+			}
+			
+
+	    }
+
+	    cancel_if_invalid = yes
+	}
+
+	focus = {
+		id = SCA_pingxirenlei
+		icon = GFX_focus_YUG_zmaj
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = SCA_renliyingzizhengfu
+
+		prerequisite = {
+			focus = SCA_renliyingzizhengfu
+		}
+		mutually_exclusive = {
+			focus = SCA_xinhongmoxiang
+		}
+
+
+		available ={
+			is_subject = no
+			YKR = {
+				faqiqingqiu = yes
+			}
+		}
+		completion_reward = {
+			YKR = {
+				country_event = {
+					days = 2 id = sca.35
+				}
+			}
+			custom_effect_tooltip = event_accept
+			effect_tooltip = {
+				go_oldorder = yes
+		        set_politics = {
+		            ruling_party = oldorder
+		        }
+		        add_popularity = {
+		            ideology = oldorder
+		            popularity = 0.45
+		        }
+		        PO_add10 = yes
+		        PO_add10 = yes
+		        OL_add10 = yes
+		        conservativedecrease = yes
+			}
+			
+	    }
+
+	    cancel_if_invalid = yes
+	}
+
+	focus = {
+		id = SCA_pohuaitiaoyue
+		icon = GFX_focus_renounce_the_treaty_of_vampires
+		cost = 12
+		x = -2
+		y = 1
+
+		relative_position_id = SCA_guanzhurenlei
+
+		prerequisite = {
+			focus = SCA_guanzhurenlei
+		}
+		mutually_exclusive = {
+			focus = SCA_renliqiyue
+		}
+
+		available ={
+			is_subject = no
+			has_government = neworder
+		}
+		completion_reward = {
+			add_named_threat = {
+				threat = 8
+				name = SCA_pohuaitiaoyue
+			}
+			every_country = {
+				limit = {
+					or = {
+						# is_major = yes
+						has_idea = gensoukyo_creator_idea
+					}
+					not = { tag = ROOT}
+				}
+				add_opinion_modifier = { target = ROOT modifier = SCA_tiaoyueyifei_op}
+			}
+			hidden_effect = {
+				news_event = {id = sca.26 days = 2}
+			}
+	    }
+	}
+
+	focus = {
+		id = SCA_rongheyaoguai
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 12
+		x = -1
+		y = 1
+
+		relative_position_id = SCA_pohuaitiaoyue
+
+		prerequisite = {
+			focus = SCA_pohuaitiaoyue
+		}
+		mutually_exclusive = {
+			focus = SCA_rongheyaojing
+		}
+
+
+		available ={
+			is_subject = no
+		}
+		completion_reward = {
+			add_ideas = SCA_rongheyaoguai_idea
+	    }
+	}
+
+	focus = {
+		id = SCA_rongheyaojing
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 12
+		x = 1
+		y = 1
+
+		relative_position_id = SCA_pohuaitiaoyue
+
+		prerequisite = {
+			focus = SCA_pohuaitiaoyue
+		}
+		mutually_exclusive = {
+			focus = SCA_rongheyaoguai
+		}
+
+
+		available ={
+			is_subject = no
+		}
+		completion_reward = {
+			# custom_effect_tooltip = SCA_rongheyaoguai_tt
+			add_ideas = SCA_rongheyaojing_idea
+	    }
+	}
+
+	focus = {
+		id = SCA_kuodaxuezu
+		icon = GFX_goal_generic_propaganda
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = SCA_pohuaitiaoyue
+
+		prerequisite = {
+			focus = SCA_rongheyaoguai
+			focus = SCA_rongheyaojing
+		}
+
+
+		available ={
+			is_subject = no
+		}
+		completion_reward = {
+			add_ideas = SCA_kuodaxuezu_idea
+	    }
+	}
+
+	focus = {
+		id = SCA_xijirenlei
+		icon = GFX_goal_generic_major_war
+		cost = 12
+		x = 0
+		y = 3
+
+		relative_position_id = SCA_pohuaitiaoyue
+
+		prerequisite = {
+			focus = SCA_kuodaxuezu
+		}
+
+		will_lead_to_war_with = AKI
+
+		available ={
+			AKI = {
+				before_declare_war = yes
+			}
+		}
+
+		bypass = {
+			AKI = {
+				bypass_declare_war = yes
+			}
+		}
+		completion_reward = {
+			declare_war_on = {
+				target = AKI
+				type = puppet_wargoal_focus
+			}
+	    }
+
+	    ai_will_do = {
+	    	factor = 1
+	    	modifier ={
+	    		factor = 0
+	    		has_war = yes
+	    	}
+	    }
+	}
+
+	focus = {
+		id = SCA_renleishouyi
+		icon = GFX_goal_generic_demand_territory
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = SCA_xijirenlei
+
+		prerequisite = {
+			focus = SCA_xijirenlei
+		}
+
+
+		available ={
+			is_subject = no
+			or = {
+				custom_trigger_tooltip = {
+					tooltip = SCA_renleishouyi_tt
+					any_country = {
+						has_idea = Human
+						is_subject_of = ROOT
+					}
+				}
+				or = {
+					HU1 = { is_subject_of = ROOT}
+					HU2 = { is_subject_of = ROOT}
+					HU3 = { is_subject_of = ROOT}
+					HU4 = { is_subject_of = ROOT}
+				}
+			}
+			
+			has_war = no
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = SCA_xixueguitiaoyue_idea
+				}
+				remove_ideas = SCA_xixueguitiaoyue_idea
+				else = {
+					remove_ideas = SCA_bufentuolitiaoyue_idea
+				}
+			}
+	    }
+	}
+
+	focus = {
+		id = SCA_xinhongmoxiang
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = SCA_renleishouyi
+
+		prerequisite = {
+			focus = SCA_renleishouyi
+			focus = SCA_hetongyanjiu
+			focus = SCA_shouhuidongbeiwuzhihu
+			focus = SCA_wuzhihuniudai
+		}
+		mutually_exclusive = {
+			focus = SCA_pingxirenlei
+		}
+
+
+		available ={
+			or = {
+				has_government = guli
+				has_government = neworder
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = SCA_xinhongmoxiang_tt
+				if = {
+					limit = {
+						has_completed_focus = SCA_renleishouyi
+					}
+					add_to_temp_variable = { t = 1}
+				}
+				if = {
+					limit = {
+						has_completed_focus = SCA_hetongyanjiu
+					}
+					add_to_temp_variable = { t = 1}
+				}
+				if = {
+					limit = {
+						has_completed_focus = SCA_shouhuidongbeiwuzhihu
+					}
+					add_to_temp_variable = { t = 1}
+				}
+				if = {
+					limit = {
+						has_completed_focus = SCA_wuzhihuniudai
+					}
+					add_to_temp_variable = { t = 1}
+				}
+				check_variable = { t > 2 }
+			}
+		}
+		completion_reward = {
+			set_country_flag = SCA_xinhongmoxiang
+			custom_effect_tooltip = SCA_xinhongmoxiang_tt
+			if = {
+				limit = {
+					has_idea = SCA_xixueguitiaoyue_idea
+				}
+				remove_ideas = SCA_xixueguitiaoyue_idea
+				else = {
+					remove_ideas = SCA_bufentuolitiaoyue_idea
+				}
+			}
+			every_country = {
+				limit = {
+					capital_scope = {
+						is_on_continent = Gensokyo
+					}
+					not = {
+						tag = SCA
+					}
+				}
+				add_ideas = SCA_xinhongmoxiang_idea
+	            add_opinion_modifier = { target = ROOT modifier = set_enemy}
+	            add_ai_strategy = {
+	            	type = antagonize
+	            	id = ROOT
+	            	value = 20000
+	          	}
+	        }
+
+	        hidden_effect = {
+	        	news_event = { id = sca.47 days = 2}
+	        }
+	    }
+	}
+
+	
+
+	focus = {
+		id = SCA_wuzhihushili
+		icon = GFX_goal_tfv_generic_tech_sharing
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = SCA_baochimuqiande
+
+		prerequisite = {
+			focus = SCA_baochimuqiande
+		}
+
+
+		available = {
+			is_subject = no
+			not = {
+				has_government = neworder
+			}
+		}
+
+
+		available ={
+			or = {
+				WAK = {
+					is_subject_of = ROOT
+				}
+				PRI = {
+					is_subject_of = ROOT
+				}
+			}	
+		}
+		completion_reward = {
+			add_named_threat = { 
+	            threat = 0.5
+	            name = SCA_wuzhihushili
+	        }
+		  	# add_to_tech_sharing_group = wuzhihuyanjiu
+		  	every_country = {
+		  		limit = {
+		  			or = {
+		              is_subject_of = ROOT
+		              tag = ROOT
+		            }  
+		  		}
+		  		add_to_tech_sharing_group = wuzhihuyanjiu
+		  		add_ideas = SCA_wuzhihushili_idea
+		  	}
+		  	hidden_effect = {
+		  		news_event = { id = sca.17 days = 2}
+		  	}
+	    }
+	}
+
+	focus = {
+		id = SCA_qianghuaziyuanjianshe
+		icon = GFX_goal_generic_construction2
+		cost = 12
+		x = 2
+		y = 1
+
+		relative_position_id = SCA_wuzhihushili
+
+		prerequisite = {
+			focus = SCA_wuzhihushili
+		}
+
+
+		available ={
+			is_subject = no
+			has_war = no
+			or = {
+				WAK = {
+					is_subject_of = ROOT
+				}
+				PRI = {
+					is_subject_of = ROOT
+				}
+			}
+
+			
+		}
+
+		bypass = {
+			
+		}
+		completion_reward = {
+			WAK = {
+				if = {
+					limit = {
+						is_subject_of = ROOT
+					}
+					random_owned_controlled_state = {
+						add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+							level = 3
+							type = industrial_complex 
+							instant_build = yes
+						}
+					}
+					random_owned_controlled_state = {
+						add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+							level = 3
+							type = arms_factory
+							instant_build = yes
+						}
+					}
+				} 
+			}
+
+			PRI = {
+				if = {
+					limit = {
+						is_subject_of = ROOT
+					}
+					random_owned_controlled_state = {
+						add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+							level = 3
+							type = industrial_complex 
+							instant_build = yes
+						}
+					}
+					random_owned_controlled_state = {
+						add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+							level = 3
+							type = arms_factory
+							instant_build = yes
+						}
+					}
+				} 
+			}
+		  	
+	    }
+	}
+
+	focus = {
+		id = SCA_qianghuajunshishili
+		icon = GFX_focus_generic_military_academy
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = SCA_wuzhihushili
+
+		prerequisite = {
+			focus = SCA_wuzhihushili
+		}
+
+
+		available ={
+			is_subject = no
+			has_war = no
+			or = {
+				WAK = {
+				is_subject_of = ROOT
+				}
+				PRI = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+		bypass = { 
+
+		}
+		completion_reward = {
+		  	if = {
+		  		limit = {
+		  			WAK = { is_subject_of = ROOT }
+		  		}
+		  		WAK = { add_ideas = SCA_qianghuajunshishili_idea }
+		  	}
+		  	if = {
+		  		limit = {
+		  			PRI = { is_subject_of = ROOT }
+		  		}
+		  		PRI = { add_ideas = SCA_qianghuajunshishili_idea }
+		  	}
+	    }
+	}
+
+	focus = {
+		id = SCA_tichumingliansi
+		icon = GFX_goal_generic_defence
+		cost = 12
+		x = -1
+		y = 1
+
+		relative_position_id = SCA_qianghuajunshishili
+
+		prerequisite = {
+			focus = SCA_qianghuajunshishili
+			focus = SCA_renliqiyue
+		}
+
+		mutually_exclusive = {
+			focus = SCA_baozhengfuyonganquan
+		}
+
+		available ={
+			is_subject = no
+			not = {
+				has_government = qinwai
+			}
+		}
+		bypass = { 
+			NMS = {
+				bypass_declare_war = yes
+			}
+		}
+		completion_reward = {
+				if = {
+					limit = {
+						PRI = { is_subject_of = ROOT }
+					}
+					PRI = { add_ideas = SCA_yishijiagu_idea }
+				} 
+				if = {
+					limit = {
+						WAK = { is_subject_of = ROOT }
+					}
+					WAK = { add_ideas = SCA_yishijiagu_idea }
+				} 
+				reverse_add_opinion_modifier = {
+					target = NMS
+					modifier = SCA_tichumingliansi_op
+				}
+				reverse_add_opinion_modifier = {
+					target = TKM
+					modifier = SCA_tichumingliansi_op
+				}
+				NMS = { add_timed_idea = { idea = SCA_tichumingliansi_idea days = 547 } }
+				TKM = { add_timed_idea = { idea = SCA_tichumingliansi_idea days = 547 } }
+				hidden_effect = {
+					news_event = { id = sca.2 days = 2}
+				}
+	    }
+	}
+
+	focus = {
+		id = SCA_baozhengfuyonganquan
+		icon = GFX_goal_generic_defence
+		cost = 12
+		x = 1
+		y = 1
+
+		relative_position_id = SCA_qianghuajunshishili
+
+		prerequisite = {
+			focus = SCA_qianghuajunshishili
+			focus = SCA_qianghuaziyuanjianshe
+		}
+
+		mutually_exclusive = {
+			focus = SCA_tichumingliansi
+		}
+
+		available ={
+			is_subject = no
+			or = {
+				WAK = {
+				is_subject_of = ROOT
+				}
+				PRI = {
+					is_subject_of = ROOT
+				}
+			}
+			has_government = qinwai
+		}	
+		bypass = { 
+
+		}
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_subject_of = ROOT
+				}
+				low_puppet_level = yes
+			}
+	    }
+	}
+
+	focus = {
+		id = SCA_eshazongjiaozhashili
+		icon = GFX_goal_generic_major_war
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = SCA_tichumingliansi
+
+		prerequisite = {
+			focus = SCA_tichumingliansi
+		}
+		mutually_exclusive = {
+			focus = SCA_yaoqingmonvjiaru
+			focus = SCA_yazhinananfusangshen
+		}
+
+		will_lead_to_war_with = NMS
+
+		available = {
+			NMS = {
+				before_declare_war = yes
+			}
+			or = {
+				not = {
+					has_government = guli
+				}
+				and = {
+					has_government = guli
+					or = {
+						threat > 0.40
+						NMS = {
+							has_war = yes
+						}
+					}
+				}
+			}
+		}
+
+		bypass = {
+			NMS = {
+				bypass_declare_war = yes
+			}
+		}
+		completion_reward = {
+			add_ideas = SCA_eshazongjiaozhashili_idea
+			declare_war_on = {
+		  		type = puppet_wargoal_focus
+		  		target = NMS
+		  	}
+
+	    }
+
+	    ai_will_do = {
+	    	factor = 1
+	    	modifier ={
+	    		factor = 0
+	    		has_war = yes
+	    	}
+	    }
+	}
+
+	focus = {
+		id = SCA_yazhinananfusangshen
+		icon = GFX_goal_generic_major_war
+		cost = 12
+		x = -2
+		y = 1
+
+		relative_position_id = SCA_tichumingliansi
+
+		prerequisite = {
+			focus = SCA_tichumingliansi
+		}
+		mutually_exclusive = {
+			focus = SCA_eshazongjiaozhashili
+		}
+
+		will_lead_to_war_with = TKM
+
+		available = {
+			TKM = {
+				before_declare_war = yes
+			}
+			or = {
+				not = {
+					has_government = guli
+				}
+				and = {
+					has_government = guli
+					or = {
+						threat > 0.40
+						TKM = {
+							has_war = yes
+						}
+					}
+				}
+			}
+		}
+
+		bypass = {
+			TKM = {
+				bypass_declare_war = yes
+			}
+		}
+		completion_reward = {
+			add_ideas = SCA_yazhinananfusangshen_idea
+			declare_war_on = {
+		  		type = puppet_wargoal_focus
+		  		target = TKM
+		  	}
+	    }
+
+	    ai_will_do = {
+	    	factor = 1
+	    	modifier ={
+	    		factor = 0
+	    		has_war = yes
+	    	}
+	    }
+	}
+
+	focus = {
+		id = SCA_jianshounanwuzhihu
+		icon = GFX_goal_generic_construct_military
+		cost = 12
+		x = -1
+		y = 2
+
+		relative_position_id = SCA_tichumingliansi
+
+		prerequisite = {
+			focus = SCA_tichumingliansi
+		}
+
+		available = {
+			is_subject = no
+			or = {
+				166 = {
+					or = {
+						is_controlled_by = ROOT
+						and = {
+							is_controlled_by = WAK
+							WAK = {
+								is_subject_of = ROOT
+							}
+						}
+					}	
+				}
+				317 = {
+					or = {
+						is_controlled_by = ROOT
+						and = {
+							is_controlled_by = WAK
+							WAK = {
+								is_subject_of = ROOT
+							}
+						}
+					}	
+				}
+				173 = {
+					or = {
+						is_controlled_by = ROOT
+						and = {
+							is_controlled_by = WAK
+							WAK = {
+								is_subject_of = ROOT
+							}
+						}
+					}	
+				}
+				177 = {
+					or = {
+						is_controlled_by = ROOT
+						and = {
+							is_controlled_by = WAK
+							WAK = {
+								is_subject_of = ROOT
+							}
+						}
+					}	
+				}
+				316 = {
+					or = {
+						is_controlled_by = ROOT
+						and = {
+							is_controlled_by = WAK
+							WAK = {
+								is_subject_of = ROOT
+							}
+						}
+					}	
+				}
+			}
+			
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			166 = {
+				if = {
+					limit = {
+						or = {
+							is_controlled_by = ROOT
+							and = {
+								is_controlled_by = WAK
+								WAK = {
+									is_subject_of = ROOT
+								}
+							}
+						}
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 3243
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 3549
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 3550
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 799
+					}
+				}
+			}	
+			317 = {
+				if = {
+					limit = {
+						or = {
+							is_controlled_by = ROOT
+							and = {
+								is_controlled_by = WAK
+								WAK = {
+									is_subject_of = ROOT
+								}
+							}
+						}
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 1030
+					}
+				}
+			}
+			173 = {
+				if = {
+					limit = {
+						or = {
+							is_controlled_by = ROOT
+							and = {
+								is_controlled_by = WAK
+								WAK = {
+									is_subject_of = ROOT
+								}
+							}
+						}
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 3526
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 3223
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 3530
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 253
+					}
+				}
+			}
+			177 = {
+				if = {
+					limit = {
+						or = {
+							is_controlled_by = ROOT
+							and = {
+								is_controlled_by = WAK
+								WAK = {
+									is_subject_of = ROOT
+								}
+							}
+						}
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 610
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 3226
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 4332
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 2820
+					}
+				}
+			}
+			316 = {
+				if = {
+					limit = {
+						or = {
+							is_controlled_by = ROOT
+							and = {
+								is_controlled_by = WAK
+								WAK = {
+									is_subject_of = ROOT
+								}
+							}
+						}
+					}
+					add_building_construction = {
+					    type = bunker
+					    level = 2
+					    instant_build = yes
+					    province = 4333
+					}
+				}
+			}
+	    }
+
+	    ai_will_do = {
+	    	factor = 1
+	    }
+	}
+
+	focus = {
+		id = SCA_yaoqingmonvjiaru
+		icon = GFX_focus_generic_befriend_MRS
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = SCA_baozhengfuyonganquan
+
+		prerequisite = {
+			focus = SCA_baozhengfuyonganquan
+		}
+		mutually_exclusive = {
+			focus = SCA_eshazongjiaozhashili
+		}
+
+		available = {
+			if = {
+				limit = {
+					MRS = { is_subject = no }
+					country_exists = MRS
+				}
+				MRS = {
+					faqiqingqiu = yes
+					NOT = { has_government = fandong }
+          			is_in_faction = no 
+				}
+			}
+			if = {
+				limit = {
+					ALI = { is_subject = no }
+					country_exists = ALI
+				}
+				ALI = {
+					faqiqingqiu = yes
+					NOT = { has_government = fandong }
+          			is_in_faction = no 
+				}
+			}
+			
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					MRS = {
+						is_subject = no
+					}
+				}
+				MRS = {
+					country_event = { id = sca.40 days = 2}
+				}
+				custom_effect_tooltip = event_accept
+				effect_tooltip = {
+					every_country = {
+						limit = {
+							or = {
+								tag = MRS
+								is_subject_of = MRS
+							}
+						}
+						subject_level4 = YES
+					}
+				}
+				else = {
+					ALI = {
+						country_event = { id = sca.40 days = 2}
+					}
+					custom_effect_tooltip = event_accept
+					effect_tooltip = {
+						every_country = {
+							limit = {
+								or = {
+									tag = ALI
+									is_subject_of = ALI
+								}
+							}
+							subject_level4 = YES
+						}
+					}
+				}
+			}
+			
+
+	    }
+
+	    ai_will_do = {
+	    	factor = 1
+	    }
+	}
+
+	focus = {
+		id = SCA_fusangshenfangyutiaoyue
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 12
+		x = 1
+		y = 2
+
+		relative_position_id = SCA_baozhengfuyonganquan
+
+		prerequisite = {
+			focus = SCA_baozhengfuyonganquan
+		}
+
+		available = {
+			TKM = {
+				faqiqingqiu = yes
+				NOT = { has_completed_focus = TKM_Revolutionary_vanguard }
+			}
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			TKM = {
+				country_event = {
+					id = sca.42 days = 2
+				}
+			}
+			custom_effect_tooltip = event_accept
+			effect_tooltip = {
+				TKM = {
+					huxiangbaodu = yes
+				}
+			}
+	    }
+
+	    ai_will_do = {
+	    	factor = 1
+	    }
+	}
+
+	focus = {
+		id = SCA_wuzhihuniudai
+		icon = GFX_focus_generic_home_defense
+		cost = 12
+		x = 1
+		y = 2
+
+		relative_position_id = SCA_eshazongjiaozhashili
+
+		prerequisite = {
+			focus = SCA_yaoqingmonvjiaru
+			focus = SCA_eshazongjiaozhashili
+		}
+		prerequisite = {
+			focus = SCA_qianghuajunshishili
+		}
+
+
+		available ={
+			is_subject = no
+			or = {
+				WAK = {
+				is_subject_of = ROOT
+				}
+				PRI = {
+					is_subject_of = ROOT
+				}
+			}
+			has_war = no
+		}
+		bypass = { 
+
+		}
+		completion_reward = {
+		  	LS_base_time_minus0.1 = yes
+			every_country = {
+	          limit = {
+	            is_subject_of = ROOT
+	          }
+	          low_puppet_level = yes
+	        }
+	    }
+	}
+
+	focus = {
+		id = SCA_jingtiyaojing
+		icon = GFX_goal_continuous_suppression
+		cost = 12
+		x = 5
+		y = 1
+
+		relative_position_id = SCA_baochimuqiande
+
+		prerequisite = {
+			focus = SCA_baochimuqiande
+		}
+
+		# mutually_exclusive = {
+		# 	focus = SCA_wuzhihushili
+		# }
+
+		bypass = { 
+
+		}
+
+		available ={
+			is_subject = no
+		}
+		completion_reward = {
+			hidden_effect = {
+		  		news_event = { id = sca.18 days = 2}
+		  	}
+	        add_stability = 0.05
+	        add_political_power = 100
+	        lobbydecrease = yes
+		  # custom_effect_tooltip = SCA_jingtiyaojing_tt 
+		  # add_to_variable = { SCA_decrease_cost = -20}
+	    }
+	}
+
+	focus = {
+		id = SCA_fangyuzhunbei
+		icon = GFX_goal_generic_defence
+		cost = 12
+		x = -1
+		y = 1
+
+		relative_position_id = SCA_jingtiyaojing
+
+		prerequisite = {
+			focus = SCA_jingtiyaojing
+		}
+
+		mutually_exclusive ={
+			focus = SCA_gongjizhunbei
+		}
+
+
+		available ={
+			is_subject = no
+		}
+		completion_reward = {
+		  	every_owned_state = {
+		  		limit = {
+		  			any_neighbor_state = {
+		  				is_owned_by = CIR
+		  			}
+		  		}
+		  		add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+					    all_provinces = yes
+					    limit_to_border = yes
+					}
+				}
+		  	}
+	    }
+	}
+
+	focus = {
+		id = SCA_gongjizhunbei
+		icon = GFX_goal_generic_army_doctrines
+		cost = 12
+		x = 1
+		y = 1
+
+		relative_position_id = SCA_jingtiyaojing
+
+		prerequisite = {
+			focus = SCA_jingtiyaojing
+		}
+
+		mutually_exclusive = {
+			focus = SCA_fangyuzhunbei
+		}
+
+
+		available ={
+			is_subject = no
+		}
+		completion_reward = {
+			add_named_threat = {
+				name = SCA_gongjizhunbei
+				threat = 3
+			}
+		  	every_owned_state = {
+		  		limit = {
+		  			any_neighbor_state = {
+		  				is_owned_by = CIR
+		  			}
+		  		}
+		  		add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		  	}
+	    }
+	}
+
+	focus = {
+		id = SCA_kongjunzhunbei
+		icon = GFX_goal_generic_air_fighter
+		cost = 12
+		x = 0
+		y = 2
+
+		relative_position_id = SCA_jingtiyaojing
+
+		prerequisite = {
+			focus = SCA_fangyuzhunbei
+			focus = SCA_gongjizhunbei
+		}
+
+
+		available ={
+			is_subject = no
+		}
+		completion_reward = {
+		  	every_owned_state = {
+		  		limit = {
+		  			any_neighbor_state = {
+		  				is_owned_by = CIR
+		  			}
+		  		}
+		  		add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+		  	}
+
+		  	custom_effect_tooltip = SCA_kongjunzhunbei_tt
+		  	if = {
+		  		limit = {
+		  			has_government = qinwai
+		  		}
+		  		add_ideas = SCA_kongjunzhunbei2_idea
+		  		else = {
+		  			add_ideas = SCA_kongjunzhunbei1_idea
+		  		}
+		  	}
+	    }
+	}
+
+	focus = {
+		id = SCA_yanchangfangxian
+		icon = GFX_goal_generic_construct_military
+		cost = 12
+		x = -1
+		y = 1
+
+		relative_position_id = SCA_kongjunzhunbei
+
+		prerequisite = {
+			focus = SCA_kongjunzhunbei
+		}
+		prerequisite = {
+			focus = SCA_fangyuzhunbei
+		}
+
+
+		available ={
+			is_subject = no
+		}
+		completion_reward = {
+		  	every_owned_state = {
+		  		limit = {
+		  			any_neighbor_state = {
+		  				is_owned_by = CIR
+		  			}
+		  		}
+		  		add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = {
+					    all_provinces = yes
+					    limit_to_border = yes
+					}
+				}
+		  	}
+		  	every_owned_state = {
+		  		limit = {
+		  			any_neighbor_state = {
+		  				is_owned_by = NIB
+		  			}
+		  			all_neighbor_state = {
+		  				NOT = { is_owned_by = CIR }
+		  			}
+		  		}
+		  		add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = {
+					    all_provinces = yes
+					    limit_to_border = yes
+					}
+				}
+		  	}
+	    }
+	}
+
+	focus = {
+		id = SCA_jiadakongyongwuqishengchan
+		icon = GFX_goal_generic_air_production
+		cost = 12
+		x = 1
+		y = 1
+
+		relative_position_id = SCA_kongjunzhunbei
+
+		prerequisite = {
+			focus = SCA_kongjunzhunbei
+		}
+		prerequisite = {
+			focus = SCA_gongjizhunbei
+		}
+
+
+		available ={
+			is_subject = no
+		}
+		completion_reward = {
+		  	add_timed_idea = { idea = SCA_jiadakongyongwuqishengchan_idea days = 365}
+	    }
+	}
+
+	focus = {
+		id = SCA_pantuyaojing
+		icon = GFX_goal_generic_major_war
+		cost = 12
+		x = 2
+		y = 1
+
+		will_lead_to_war_with = CIR
+
+		relative_position_id = SCA_yanchangfangxian
+
+		prerequisite = {
+			focus = SCA_jiadakongyongwuqishengchan
+		}
+
+		available ={
+			or = {
+				not = {
+					has_government = guli
+				}
+				and = {
+					has_government = guli
+					or = {
+						threat > 0.40
+						CIR = {
+							has_war = yes
+						}
+					}
+				}
+			}
+			CIR = {
+				before_declare_war = yes
+			}
+		}
+
+		bypass = {
+			CIR = {
+				bypass_declare_war = yes
+			}
+		}
+		
+		completion_reward = {
+		  	declare_war_on = {
+				target = CIR
+				type = puppet_wargoal_focus
+			}
+	    }
+
+	    ai_will_do = {
+	    	factor = 1
+	    	modifier = {
+	    		factor = 0
+	    		has_war = yes
+	    	}
+	    }
+	}
+
+	focus = {
+		id = SCA_shouhuidongbeiwuzhihu
+		icon = GFX_goal_generic_demand_territory
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = SCA_pantuyaojing
+
+		prerequisite = {
+			focus = SCA_pantuyaojing
+		}
+
+		available ={
+			is_subject = no
+			CIR = {
+				is_subject_of = ROOT
+			}
+		}
+
+		bypass = {
+			not = { country_exists = CIR }
+			owns_state = 128
+			owns_state = 118
+		}
+		
+		completion_reward = {
+			CIR = {
+				can_core = yes
+			}
+	    }
+
+	    ai_will_do = {
+	    	factor = 1
+	    }
+	}
+
+	focus = {
+		id = SCA_wendinghoufang
+		icon = GFX_goal_generic_national_unity
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = SCA_yanchangfangxian
+
+		prerequisite = {
+			focus = SCA_yanchangfangxian
+		}
+
+		available ={
+			is_subject = no
+		}
+
+		bypass = {
+
+		}
+		
+		completion_reward = {
+			add_political_power = 500
+			add_stability = 0.33
+	    }
+
+	    ai_will_do = {
+	    	factor = 1
+	    }
+	}
+
+	focus = {
+		id = SCA_yaojingdeningjuli
+		icon = GFX_goal_generic_national_unity
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = SCA_wendinghoufang
+
+		prerequisite = {
+			focus = SCA_wendinghoufang
+		}
+
+		available ={
+			has_war = yes
+			and = {
+				122 = {
+					is_controlled_by = ROOT
+				}
+				113 = {
+					is_controlled_by = ROOT
+				}
+				307 = {
+					is_controlled_by = ROOT
+				}
+				134 = {
+					is_controlled_by = ROOT
+				}
+			}
+		}
+
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			add_manpower = 1200
+			122 = {
+				set_temp_variable = {
+					man = state_population
+				}
+				multiply_temp_variable = {
+					man = 0.25
+				}
+				add_manpower = man
+			}
+			113 = {
+				set_temp_variable = {
+					man = state_population
+				}
+				multiply_temp_variable = {
+					man = 0.25
+				}
+				add_manpower = man
+			}
+			307 = {
+				set_temp_variable = {
+					man = state_population
+				}
+				multiply_temp_variable = {
+					man = 0.25
+				}
+				add_manpower = man
+			}
+			134 = {
+				set_temp_variable = {
+					man = state_population
+				}
+				multiply_temp_variable = {
+					man = 0.25
+				}
+				add_manpower = man
+			}
+	    }
+	}
+	##################军事线############
+	focus = {
+		id = SCA_zhianzhandejiaoxun
+		icon = GFX_focus_generic_Basic_Weapons
+		cost = 10
+		x = 45
+		y = 0
+
+		# relative_position_id = SCA_kongjunzhunbei
+
+		prerequisite = {
+			# focus = SCA_kongjunzhunbei
+		}
+
+
+		available ={
+			has_global_flag = main_scenario
+			has_completed_focus = SCA_xiqujiaoxun
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = primary_weapons
+				uses = 2
+				ahead_reduction = 1
+				bonus = 0.5
+			}
+			army_experience = 5
+	    }
+	    ai_will_do = {
+	    	factor = 5
+	    	modifier = {
+	    		has_country_flag = SCA_panluan
+	    		factor = 5
+	    	}
+	    }
+	}
+	focus = {
+		id = SCA_duirenzhanzhengdejiaoxun
+		icon = GFX_focus_generic_Artillery_Weapons
+		cost = 10
+		x = 4
+		y = 0
+
+		relative_position_id = SCA_zhianzhandejiaoxun
+
+		prerequisite = {
+			# focus = SCA_kongjunzhunbei
+		}
+
+
+		available ={
+			has_global_flag = main_scenario
+			has_completed_focus = SCA_xiqujiaoxun
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = mortar
+				uses = 1
+				# ahead_reduction = 1
+				bonus = 0.5
+			}
+			army_experience = 20
+	    }
+	    ai_will_do = {
+	    	factor = 5
+	    	modifier = {
+	    		has_country_flag = SCA_panluan
+	    		factor = 5
+	    	}
+	    }
+	}
+	focus = {
+		id = SCA_zujiankuangsufanyingbudui
+		icon = GFX_focus_generic_little_entente
+		cost = 10
+		x = -2
+		y = 1
+
+		relative_position_id = SCA_zhianzhandejiaoxun
+
+		prerequisite = {
+			focus = SCA_zhianzhandejiaoxun
+		}
+
+
+		available ={
+
+		}
+
+		completion_reward = {
+			add_ideas = SCA_zujiankuangsufanyingbudui_idea
+			random_army_leader = {
+	            limit = {
+	              has_id = 25
+	            }
+           		add_defense = 1
+          	}
+	    }
+	    ai_will_do = {
+	    	factor = 5
+	    	modifier = {
+	    		has_country_flag = SCA_panluan
+	    		factor = 5
+	    	}
+	    }
+	}
+	focus = {
+		id = SCA_jianliyaojingjiandiewang
+		icon = GFX_focus_prc_infiltration
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = SCA_zujiankuangsufanyingbudui
+
+		prerequisite = {
+			focus = SCA_zujiankuangsufanyingbudui
+		}
+
+
+		available ={
+
+		}
+
+		completion_reward = {
+			add_ideas = SCA_jianliyaojingjiandiewang_idea
+			random_army_leader = {
+				limit = {
+				has_id = 34
+				}
+				add_attack = 1
+			}
+	    }
+	    ai_will_do = {
+	    	factor = 5
+	    	modifier = {
+	    		has_country_flag = SCA_panluan
+	    		factor = 5
+	    	}
+	    }
+	}
+	focus = {
+		id = SCA_fanghuzhuangbei
+		icon = GFX_focus_generic_Shield
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = SCA_zhianzhandejiaoxun
+
+		prerequisite = {
+			focus = SCA_zhianzhandejiaoxun
+		}
+
+
+		available ={
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = shield
+				uses = 2
+				bonus = 0.5
+				ahead_reduction = 1
+			}
+			random_army_leader = {
+				limit = {
+					has_id = 24
+				}
+				add_defense = 1
+			}
+	    }
+	    ai_will_do = {
+	    	factor = 1
+	    	modifier = {
+	    		factor = 0.6
+	    		and = {
+	    			has_war = no
+	    			date < 149.1.1
+	    		}
+	    	}
+	    }
+	}
+	focus = {
+		id = SCA_yaojinghangkongbing
+		icon = GFX_goal_generic_air_fighter
+		cost = 10
+		x = 2
+		y = 1
+
+		relative_position_id = SCA_duirenzhanzhengdejiaoxun
+		prerequisite = {
+			focus = SCA_duirenzhanzhengdejiaoxun
+		}
+
+
+		available ={
+
+		}
+
+		completion_reward = {
+			air_experience = 25
+			add_tech_bonus = {
+				category = fighter
+				uses = 2
+				ahead_reduction = 2
+				bonus = 0.5
+			}
+			add_equipment_to_stockpile = {
+		        type = ma_fighter_equipment
+		        amount = 300
+		        producer = SCA
+		    }
+	    }
+	    ai_will_do = {
+	    	factor = 1
+	    	modifier = {
+	    		factor = 0.6
+	    		and = {
+	    			has_war = no
+	    			date < 149.1.1
+	    		}
+	    	}
+	    }
+	}
+	focus = {
+		id = SCA_yaojingzhiyuanbing
+		icon = GFX_goal_generic_air_bomber
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = SCA_yaojinghangkongbing
+		prerequisite = {
+			focus = SCA_yaojinghangkongbing
+		}
+
+
+		available ={
+
+		}
+
+		completion_reward = {
+			air_experience = 25
+			custom_effect_tooltip = focus_warning3
+			add_tech_bonus = {
+				category = bomber
+				uses = 1
+				ahead_reduction = 2
+				bonus = 0.5
+			}
+			if = {
+				limit = {
+					has_tech = ma_bomber1
+				}
+				add_equipment_to_stockpile = {
+			        type = ma_bomber_equipment
+			        amount = 300
+			        producer = SCA
+			    }
+			    else = {
+			    	add_tech_bonus = {
+						category = bomber
+						uses = 1
+						ahead_reduction = 2
+						bonus = 0.5
+					}
+			    }
+			}
+	    }
+	    ai_will_do = {
+	    	factor = 1
+	    	modifier = {
+	    		factor = 0.6
+	    		and = {
+	    			has_war = no
+	    			date < 149.1.1
+	    		}
+	    	}
+	    }
+	}
+	focus = {
+		id = SCA_yaojingjitizhuyi
+		icon = GFX_focus_chi_army_reform
+		cost = 12
+		x = 0
+		y = 1
+
+		relative_position_id = SCA_duirenzhanzhengdejiaoxun
+		prerequisite = {
+			focus = SCA_duirenzhanzhengdejiaoxun
+		}
+
+
+		available ={
+
+		}
+
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = basic_doctrine
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = jitizhuyi
+			}
+	    }
+	    ai_will_do = {
+	    	factor = 5
+	    	modifier = {
+	    		has_country_flag = SCA_panluan
+	    		factor = 5
+	    	}
+	    }
+	}
+	focus = {
+		id = SCA_emolinglizhiyuan
+		icon = GFX_focus_generic_promotion_of_spiritual_power
+		cost = 12
+		x = 2
+		y = 1
+
+		relative_position_id = SCA_fanghuzhuangbei
+		prerequisite = {
+			focus = SCA_fanghuzhuangbei
+		}
+		prerequisite = {
+			focus = SCA_yaojingjitizhuyi
+		}
+
+
+		available ={
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				ahead_reduction = 1
+				bonus = 0.5
+				technology = linglijiejie149 
+				technology = linglijiejie155
+				technology = linglijiejie161
+				technology = linglijiejie167
+			}
+			random_army_leader = {
+				limit = {
+					has_id = 26
+				}
+				add_skill_level = 1
+			}
+	    }
+	    ai_will_do = {
+	    	factor = 1
+	    	modifier = {
+	    		factor = 0.6
+	    		and = {
+	    			has_war = no
+	    			date < 149.1.1
+	    		}
+	    	}
+	    }
+	}
+	focus = {
+		id = SCA_zujiansikaleitejinweidui
+		icon = GFX_focus_Remilia_Scarlet_flags
+		cost = 12
+		x = -1
+		y = 1
+
+		relative_position_id = SCA_emolinglizhiyuan
+		prerequisite = {
+			focus = SCA_emolinglizhiyuan
+		}
+		mutually_exclusive = {
+			focus = SCA_judayaojingmofa
+		}
+
+
+		available ={
+			not = {
+				has_government = qinwai
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = focus_warning3
+			if = {
+				limit = {
+					has_tech = core_shield1
+				}
+				add_tech_bonus = {
+					category = shield_weapons 
+					bonus = 0.5
+					uses = 1
+				}
+				else = {
+					set_technology = { core_shield1 = 1}
+				}
+			}
+			custom_effect_tooltip = SCA_zujiansikaleitejinweidui_tt
+			hidden_effect = {
+				load_oob = SCA_zujiansikaleitejinweidui_oob
+			}	
+			
+	    }
+	    ai_will_do = {
+	    	factor = 1
+	    	modifier = {
+	    		factor = 0.6
+	    		and = {
+	    			has_war = no
+	    			date < 149.1.1
+	    		}
+	    	}
+	    }
+	}
+	focus = {
+		id = SCA_judayaojingmofa
+		icon = GFX_focus_generic_tank_production
+		cost = 12
+		x = 1
+		y = 1
+
+		relative_position_id = SCA_emolinglizhiyuan
+		prerequisite = {
+			focus = SCA_emolinglizhiyuan
+		}
+		mutually_exclusive = {
+			focus = SCA_zujiansikaleitejinweidui
+		}
+
+
+		available ={
+			has_government = qinwai
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = focus_warning3
+			if = {
+				limit = {
+					has_tech = zhanshujiejiehexin1
+				}
+				add_tech_bonus = {
+					category = heavy
+					bonus = 0.5
+					uses = 1
+				}
+				else = {
+					set_technology = { zhanshujiejiehexin1 = 1}
+				}
+			}
+			custom_effect_tooltip = SCA_judayaojingmofa_tt
+			hidden_effect = {
+				load_oob = SCA_judayaojingmofa_oob
+			}
+	    }
+	    ai_will_do = {
+	    	factor = 1
+	    	modifier = {
+	    		factor = 0.6
+	    		and = {
+	    			has_war = no
+	    			date < 149.1.1
+	    		}
+	    	}
+	    }
+	}
+
+	#########军事线结束#########\
+
+	# focus = {
+	# 	id = SCA_xianedewaijiaohuanjing
+	# 	icon = GFX_goal_generic_dangerous_deal
+	# 	cost = 12
+	# 	x = 0
+	# 	y = 2
+
+	# 	relative_position_id = SCA_wuzhihuniudai
+
+	# 	prerequisite = {
+	# 		focus = SCA_hetongyanjiu
+	# 		focus = SCA_wuzhihuniudai
+	# 		focus = SCA_yaojingdeningjuli
+	# 	}
+
+	# 	available ={
+			
+	# 		custom_trigger_tooltip = {
+	# 			tooltip = houqijuben
+	# 			always = no
+	# 		}
+	# 	}
+
+	# 	bypass = {
+
+	# 	}
+		
+	# 	completion_reward = {
+
+	#     }
+	# }
+
+	# focus = {
+	# 	id = SCA_zunshouSCA_xixueguitiaoyue_idea
+	# 	icon = GFX_goal_generic_improve_relations
+	# 	cost = 12
+	# 	x = -2
+	# 	y = 1
+
+	# 	relative_position_id = SCA_xianedewaijiaohuanjing
+
+	# 	prerequisite = {
+	# 		focus = SCA_xianedewaijiaohuanjing
+	# 	}
+	# 	mutually_exclusive = {
+	# 		focus = SCA_tuolixianzhedeshufu
+	# 		focus = SCA_weicengshexiangdedaolu
+	# 	}
+
+	# 	available ={
+
+	# 	}
+
+	# 	bypass = {
+
+	# 	}
+		
+	# 	completion_reward = {
+
+	#     }
+	# }
+
+	# focus = {
+	# 	id = SCA_tuolixianzhedeshufu
+	# 	icon = GFX_goal_generic_political_pressure
+	# 	cost = 12
+	# 	x = 0
+	# 	y = 1
+
+	# 	relative_position_id = SCA_xianedewaijiaohuanjing
+
+	# 	prerequisite = {
+	# 		focus = SCA_xianedewaijiaohuanjing
+	# 	}
+	# 	mutually_exclusive = {
+	# 		focus = SCA_zunshouSCA_xixueguitiaoyue_idea
+	# 		focus = SCA_weicengshexiangdedaolu
+	# 	}
+
+	# 	available ={
+
+	# 	}
+
+	# 	bypass = {
+
+	# 	}
+		
+	# 	completion_reward = {
+
+	#     }
+	# }
+
+	# focus = {
+	# 	id = SCA_weicengshexiangdedaolu
+	# 	icon = GFX_goal_support_democracy
+	# 	cost = 12
+	# 	x = 2
+	# 	y = 1
+
+	# 	relative_position_id = SCA_xianedewaijiaohuanjing
+
+	# 	prerequisite = {
+	# 		focus = SCA_xianedewaijiaohuanjing
+	# 	}
+	# 	mutually_exclusive = {
+	# 		focus = SCA_zunshouSCA_xixueguitiaoyue_idea
+	# 		focus = SCA_tuolixianzhedeshufu
+	# 	}
+
+	# 	available ={
+
+	# 	}
+
+	# 	bypass = {
+
+	# 	}
+		
+	# 	completion_reward = {
+
+	#     }
+	# }
+
+	# focus = {
+	# 	id = SCA_mofashitongmengdekenengxing
+	# 	icon = GFX_goal_generic_military_deal
+	# 	cost = 12
+	# 	x = 0
+	# 	y = 2
+
+	# 	relative_position_id = SCA_weicengshexiangdedaolu
+
+	# 	prerequisite = {
+	# 		focus = SCA_wuzhihutongmeng
+	# 	}
+
+	# 	available ={
+
+	# 	}
+
+	# 	bypass = {
+
+	# 	}
+		
+	# 	completion_reward = {
+
+	#     }
+	# }
+
+	
+
+	# focus = {
+	# 	id = SCA_wuzhihutongmeng
+	# 	icon = GFX_goal_generic_national_unity
+	# 	cost = 12
+	# 	x = 0
+	# 	y = 1
+
+	# 	relative_position_id = SCA_weicengshexiangdedaolu
+
+	# 	prerequisite = {
+	# 		focus = SCA_weicengshexiangdedaolu
+	# 	}
+
+	# 	available ={
+
+	# 	}
+
+	# 	bypass = {
+
+	# 	}
+		
+	# 	completion_reward = {
+
+	#     }
+	# }
+
+	
+	
+}
+

@@ -86,7 +86,7 @@ leader_attack_skills = {
 		cost = 100
 		type = corps_commander
 		modifier = {
-			offence = 0.05
+			offence = 0.03
 		}
 	}
 		
@@ -94,72 +94,142 @@ leader_attack_skills = {
 		cost = 200
 		type = corps_commander
 		modifier = {
-			offence = 0.1
+			offence = 0.06
 		}
 	}
 	
 	
 	3 = {
-		cost = 400
+		cost = 300
+		type = corps_commander
+		modifier = {
+			offence = 0.09
+		}
+	}
+	
+	4 = {
+		cost = 500
+		type = corps_commander
+		modifier = {
+			offence = 0.12
+		}
+	}
+	
+	5 = {
+		cost = 700
 		type = corps_commander
 		modifier = {
 			offence = 0.15
 		}
 	}
-	
-	4 = {
-		cost = 800
+
+	6 = {
+		cost = 1100
 		type = corps_commander
 		modifier = {
-			offence = 0.2
-		}
-	}
-	
-	5 = {
-		cost = 1600
-		type = corps_commander
-		modifier = {
-			offence = 0.25
+			offence = 0.18
 		}
 	}
 
-	6 = {
-		cost = 3200
+	7 = {
+		cost = 1500
+		type = corps_commander
+		modifier = {
+			offence = 0.21
+		}
+	}
+
+	8 = {
+		cost = 2300
+		type = corps_commander
+		modifier = {
+			offence = 0.24
+		}
+	}
+
+	9 = {
+		cost = 3100
+		type = corps_commander
+		modifier = {
+			offence = 0.27
+		}
+	}
+	
+	10 = {
+		cost = 4700
 		type = corps_commander
 		modifier = {
 			offence = 0.3
 		}
 	}
-
-	7 = {
-		cost = 6400
+	11 = {
+		cost = 6300
 		type = corps_commander
 		modifier = {
-			offence = 0.35
+			offence = 0.33
 		}
 	}
-
-	8 = {
-		cost = 12800
+	12 = {
+		cost = 9500
 		type = corps_commander
 		modifier = {
-			offence = 0.40
+			offence = 0.36
 		}
 	}
-
-	9 = {
-		cost = 25600
+	13 = {
+		cost = 12700
+		type = corps_commander
+		modifier = {
+			offence = 0.39
+		}
+	}
+	14 = {
+		cost = 19100
+		type = corps_commander
+		modifier = {
+			offence = 0.42
+		}
+	}
+	15 = {
+		cost = 25500
 		type = corps_commander
 		modifier = {
 			offence = 0.45
 		}
 	}
-	
-	10 = {
-		cost = 51200
+	16 = {
+		cost = 38300
 		type = corps_commander
 		modifier = {
-			offence = 0.50
+			offence = 0.48
+		}
+	}
+	17 = {
+		cost = 51100
+		type = corps_commander
+		modifier = {
+			offence = 0.51
+		}
+	}
+	18 = {
+		cost = 76700
+		type = corps_commander
+		modifier = {
+			offence = 0.54
+		}
+	}
+	19 = {
+		cost = 102300
+		type = corps_commander
+		modifier = {
+			offence = 0.57
+		}
+	}
+	20 = {
+		cost = 153500
+		type = corps_commander
+		modifier = {
+			offence = 0.6
 		}
 	}
 	
@@ -169,81 +239,150 @@ leader_attack_skills = {
 		cost = 100
 		type = field_marshal
 		modifier = {
-			offence = 0.05
+			offence = 0.03
 		}
 	}
-	
-	
+		
 	2 = {
 		cost = 200
 		type = field_marshal
 		modifier = {
-			offence = 0.1
+			offence = 0.06
 		}
 	}
 	
 	
 	3 = {
-		cost = 400
+		cost = 300
+		type = field_marshal
+		modifier = {
+			offence = 0.09
+		}
+	}
+	
+	4 = {
+		cost = 500
+		type = field_marshal
+		modifier = {
+			offence = 0.12
+		}
+	}
+	
+	5 = {
+		cost = 700
 		type = field_marshal
 		modifier = {
 			offence = 0.15
 		}
 	}
-	
-	4 = {
-		cost = 800
+
+	6 = {
+		cost = 1100
 		type = field_marshal
 		modifier = {
-			offence = 0.2
-		}
-	}
-	
-	5 = {
-		cost = 1600
-		type = field_marshal
-		modifier = {
-			offence = 0.25
+			offence = 0.18
 		}
 	}
 
-	6 = {
-		cost = 3200
+	7 = {
+		cost = 1500
+		type = field_marshal
+		modifier = {
+			offence = 0.21
+		}
+	}
+
+	8 = {
+		cost = 2300
+		type = field_marshal
+		modifier = {
+			offence = 0.24
+		}
+	}
+
+	9 = {
+		cost = 3100
+		type = field_marshal
+		modifier = {
+			offence = 0.27
+		}
+	}
+	
+	10 = {
+		cost = 4700
 		type = field_marshal
 		modifier = {
 			offence = 0.3
 		}
-	}	
-
-	7 = {
-		cost = 6400
+	}
+	11 = {
+		cost = 6300
 		type = field_marshal
 		modifier = {
-			offence = 0.35
+			offence = 0.33
 		}
-	}	
-
-	8 = {
-		cost = 12800
+	}
+	12 = {
+		cost = 9500
 		type = field_marshal
 		modifier = {
-			offence = 0.4
+			offence = 0.36
 		}
-	}	
-
-	9 = {
-		cost = 25600
+	}
+	13 = {
+		cost = 12700
+		type = field_marshal
+		modifier = {
+			offence = 0.39
+		}
+	}
+	14 = {
+		cost = 19100
+		type = field_marshal
+		modifier = {
+			offence = 0.42
+		}
+	}
+	15 = {
+		cost = 25500
 		type = field_marshal
 		modifier = {
 			offence = 0.45
 		}
-	}	
-	
-	10 = {
-		cost = 51200
+	}
+	16 = {
+		cost = 38300
 		type = field_marshal
 		modifier = {
-			offence = 0.50
+			offence = 0.48
+		}
+	}
+	17 = {
+		cost = 51100
+		type = field_marshal
+		modifier = {
+			offence = 0.51
+		}
+	}
+	18 = {
+		cost = 76700
+		type = field_marshal
+		modifier = {
+			offence = 0.54
+		}
+	}
+	19 = {
+		cost = 102300
+		type = field_marshal
+		modifier = {
+			offence = 0.57
+		}
+	}
+	20 = {
+		cost = 153500
+		type = field_marshal
+		modifier = {
+			offence = 0.6
 		}
 	}
 }

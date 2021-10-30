@@ -1,0 +1,4663 @@
+#!gfx:interface\TH_focus.gfx
+focus_tree = {
+	id = YYK_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = YYK
+		}
+	}
+	shared_focus = NET_shared_minjiezhengchanghua
+	shared_focus = NET_shared_danmuyanxizhan
+	shared_focus = ty_medium_main 
+	default = no
+	continuous_focus_position = { x = 800 y = 1100 }
+	focus = {
+		id = YYK_fangwendiyu
+		icon = GFX_goal_generic_improve_relations
+		cost = 12.00
+		x = 10
+		y = 0
+		available = {
+			has_global_flag = main_scenario
+			has_completed_focus = YYK_mingjiechongtongyi
+		}
+		completion_reward = {
+			add_political_power = 150
+			SKI = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = YYK_fangwendiyu_op
+				}
+			}
+			
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	focus = {
+		id = YYK_fangwenhuanxiangxiang
+		icon = GFX_goal_generic_improve_relations
+		cost = 12.00
+		x = 8
+		y = 0
+		relative_position_id = YYK_fangwendiyu
+		available = {
+			has_global_flag = main_scenario
+			
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+		ai_will_do = {
+			base = 20
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = YYK_paths
+					option = YYK_path_oldorder
+				}
+			}
+		}
+	}
+	focus = {
+		id = YYK_zhuzhongdangqianzhuangkuang
+		icon = GFX_goal_generic_national_unity
+		cost = 6.00
+		x = 36
+		y = 0
+		relative_position_id = YYK_fangwendiyu
+		available = {
+			has_global_flag = main_scenario
+			not = { has_country_flag = YYK_neizhanqianxi }
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			base = 20
+			modifier = {
+				factor = 1000
+				not = {
+					has_game_rule = {
+						rule = YYK_paths
+						option = YYK_path_oldorder
+					}
+					has_game_rule = {
+						rule = YYK_paths
+						option = path_random
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = YYK_xiangsijiqingzui
+		icon = GFX_focus_Shikieiki_treaty
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_fangwendiyu
+		}
+		mutually_exclusive = {
+			focus = YYK_jiashenyubayunzidelianxi
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = YYK_neizhanover_tt
+				is_subject = no
+				not = {
+					has_war_with = NG1
+					has_war_with = NG2
+					has_war_with = NG3
+					has_war_with = NG4
+					has_country_flag = YYK_neizhanzhunbeibaofa
+				}
+			}
+		}
+		x = 0
+		y = 2
+		relative_position_id = YYK_fangwendiyu
+		completion_reward = {
+			custom_effect_tooltip = YYK_xiangsijiqingzui_tt
+			add_political_power = -150
+			add_timed_idea = {
+				idea = YYK_xiangsijiqingzui_idea days = 730
+			}
+			SKI = {
+                add_opinion_modifier = {
+                    target = YYK
+                    modifier = YYK_qingzui_op2
+                }
+            }
+			hidden_effect = {
+				news_event = { days = 2 id = yyk.1 }
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+
+	}
+	focus = {
+		id = YYK_kaifangyouling
+		icon = GFX_goal_support_democracy
+		cost = 15.00
+		prerequisite = {
+			focus = YYK_zhuzhongdangqianzhuangkuang
+		}
+		x = -4
+		y = 1
+		relative_position_id = YYK_zhuzhongdangqianzhuangkuang
+		available = {
+			not = { has_country_flag = YYK_neizhanqianxi }
+		}
+		completion_reward = {
+			NG4 = {
+				low_puppet_level = yes
+			}
+			add_stability = -0.12
+			add_ideas = YYK_kaifangyouling_idea
+			conservativeincrease = yes
+			lobbydecrease = yes
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = YYK_paths
+					option = YYK_path_qinwai
+				}
+			}
+		}
+	}
+	focus = {
+		id = YYK_guiyiyouling
+		icon = GFX_goal_support_communism
+		cost = 15.00
+		prerequisite = {
+			focus = YYK_zhuzhongdangqianzhuangkuang
+		}
+		x = 4
+		y = 1
+		relative_position_id = YYK_zhuzhongdangqianzhuangkuang
+		available = {
+			not = { has_country_flag = YYK_neizhanqianxi }
+		}
+		completion_reward = {
+			NG2 = {
+				low_puppet_level = yes
+			}
+			add_political_power = -200
+			add_ideas = YYK_guiyiyouling_idea
+			conservativeincrease = yes
+			lobbyincrease = yes
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = YYK_paths
+					option = YYK_path_fandong
+				}
+			}
+		}
+	}
+	focus = {
+		id = YYK_shangyingyouling
+		icon = GFX_goal_support_fascism
+		cost = 15.00
+		prerequisite = {
+			focus = YYK_zhuzhongdangqianzhuangkuang
+		}
+		x = 21
+		y = 1
+		relative_position_id = YYK_zhuzhongdangqianzhuangkuang
+		available = {
+			not = { has_country_flag = YYK_neizhanqianxi }
+		}
+		completion_reward = {
+			NG3 = {
+				low_puppet_level = yes
+			}
+			217 = {
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+				remove_building = {
+					type = arms_factory
+					level = 1
+				}
+				remove_building = {
+					type = infrastructure
+					level = 2
+				}
+			}
+			add_ideas = YYK_shangyingyouling_idea
+			YYK_yaomengdanyou = yes
+			conservativedecrease = yes
+			lobbyincrease = yes
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = YYK_paths
+					option = YYK_path_neworder
+				}
+			}
+		}
+	}
+	focus = {
+		id = YYK_guliyouling
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 15.00
+		prerequisite = {
+			focus = YYK_zhuzhongdangqianzhuangkuang
+		}
+		x = -15
+		y = 1
+		relative_position_id = YYK_zhuzhongdangqianzhuangkuang
+		available = {
+			not = { has_country_flag = YYK_neizhanqianxi }
+		}
+		completion_reward = {
+			NG1 = {
+				low_puppet_level = yes
+			}
+			add_ideas = manpowerlv1
+			add_ideas = YYK_guliyouling_idea
+			conservativedecrease = yes
+			lobbydecrease = yes
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = YYK_paths
+					option = YYK_path_guli
+				}
+			}
+		}
+	}
+	focus = {
+		id = YYK_anfuyouling
+		icon = GFX_goal_generic_national_unity
+		cost = 6.00
+		prerequisite = {
+			focus = YYK_kaifangyouling
+			focus = YYK_guiyiyouling
+			focus = YYK_shangyingyouling
+			focus = YYK_guliyouling
+		}
+		x = 0
+		y = 2
+		relative_position_id = YYK_zhuzhongdangqianzhuangkuang
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = YYK_anfuyouling_tt
+				or = {
+					has_completed_focus = YYK_guliyouling
+					has_completed_focus = YYK_guiyiyouling
+					has_completed_focus = YYK_kaifangyouling
+				}
+				or = {
+					has_completed_focus = YYK_guliyouling
+					has_completed_focus = YYK_guiyiyouling
+					has_completed_focus = YYK_shangyingyouling
+				}
+				or = {
+					has_completed_focus = YYK_guliyouling
+					has_completed_focus = YYK_kaifangyouling
+					has_completed_focus = YYK_shangyingyouling
+				}
+				or = {
+					has_completed_focus = YYK_guiyiyouling
+					has_completed_focus = YYK_kaifangyouling
+					has_completed_focus = YYK_shangyingyouling
+				}
+			}
+		}
+		completion_reward = {
+			YYK_xiaochudongdang = yes
+			add_timed_idea = {
+				idea = YYK_anfuyouling_idea
+				days = 365
+			}
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+	focus = {
+		id = YYK_qingqiukuodaminjie
+		icon = GFX_focus_CZE_german_puppet
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_xiangsijiqingzui
+		}
+		available = {
+			not = {
+				has_idea = YYK_xiangsijiqingzui_idea
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = YYK_xiangsijiqingzui
+		completion_reward = {
+			custom_effect_tooltip = YYK_qingqiukuodaminjie_tt
+			add_political_power = -100
+			add_stability = -0.1
+			if = {
+                limit = {
+                    is_ai = yes
+                    SKI = {
+                        has_opinion_modifier = YYK_kuoda_op
+                    }
+                }
+                SKI = {
+                    remove_opinion_modifier = {
+                        target = YYK
+                        modifier = YYK_kuoda_op
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        YYK_kuoda = 1
+                    }
+                    custom_effect_tooltip = YYK_xiwangkuoda_tt
+                }
+            }
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	focus = {
+		id = YYK_jiashenyubayunzidelianxi
+		icon = GFX_focus_generic_youkai
+		cost = 24.00
+		prerequisite = {
+			focus = YYK_fangwenhuanxiangxiang
+		}
+		mutually_exclusive = {
+			focus = YYK_xiangsijiqingzui
+			focus = YYK_lequsihoushijie
+			focus = YYK_zaicikaihua
+			focus = YYK_youlingquanli
+			focus = YYK_guliyudouzhengzhiwai
+		}
+		x = -1
+		y = 2
+		relative_position_id = YYK_fangwenhuanxiangxiang
+		available = {
+			not = { has_country_flag = YYK_neizhanqianxi }
+		}
+		completion_reward = {
+			custom_effect_tooltip = YYK_jiashenyubayunzidelianxi_tt
+			YYK_yaomengdanyou = yes
+			add_popularity = {
+				ideology = oldorder
+				popularity = 0.1
+			}
+			lobbyincrease = yes
+			conservativedecrease = yes
+			hidden_effect = {
+				news_event = { id = yyk.2 days = 2 }
+			}
+		}
+		ai_will_do = {
+			base = 5
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = YYK_paths
+					option = YYK_path_oldorder
+				}
+			}
+			modifier = {
+				factor = 0
+				or = {
+					has_game_rule = {
+						rule = YYK_paths
+						option = YYK_path_neworder
+					}
+					has_game_rule = {
+						rule = YYK_paths
+						option = YYK_path_guli
+					}
+					has_game_rule = {
+						rule = YYK_paths
+						option = YYK_path_qinwai
+					}
+					has_game_rule = {
+						rule = YYK_paths
+						option = YYK_path_fandong
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = YYK_zhichibayunzi
+		icon = GFX_goal_support_fascism
+		cost = 0
+		prerequisite = {
+			focus = YYK_jiashenyubayunzidelianxi
+		}
+		x = 2
+		y = 1
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = suifazhanjiesuo
+				always = no
+			}
+		}
+		bypass = {
+			has_country_flag = YYK_zoubayunzi
+		}
+		relative_position_id = YYK_jiashenyubayunzidelianxi
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_xuanbutuolidiyu
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_zhichibayunzi
+		}
+		x = 3
+		y = 1
+		relative_position_id = YYK_zhichibayunzi
+		available = {
+			has_completed_focus = YYK_jiashenyubayunzidelianxi
+			custom_trigger_tooltip = {
+				tooltip = YYK_neizhanover_tt
+				is_subject = no
+				not = {
+					has_war_with = NG1
+					has_war_with = NG2
+					has_war_with = NG3
+					has_war_with = NG4
+					has_country_flag = YYK_neizhanzhunbeibaofa
+				}
+			}
+		}
+		completion_reward = {
+			add_ideas = YYK_xuanbutuolidiyu_idea
+			every_country = {
+				limit = {
+					capital_scope = {
+						is_on_continent = Hell
+					}
+				}
+				add_ideas = YYK_xuanbutuolidiyu2_idea
+			}
+			lobbyincrease = yes
+			hidden_effect = {
+				news_event = { id = yyk.9 days = 2 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_youlingquanli
+		icon = GFX_focus_generic_radicalist
+		cost = 0.00
+		prerequisite = {
+			focus = YYK_guiyiyouling
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = suifazhanjiesuo
+				always = no
+			}
+		}
+		bypass = {
+			has_government = fandong
+		}
+		mutually_exclusive = {
+			focus = YYK_jiashenyubayunzidelianxi
+			focus = YYK_lequsihoushijie
+			focus = YYK_zaicikaihua
+			focus = YYK_guliyudouzhengzhiwai
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_guiyiyouling
+
+	}
+	focus = {
+		id = YYK_zaicikaihua
+		icon = GFX_focus_generic_new_order
+		cost = 0.00
+		prerequisite = {
+			focus = YYK_shangyingyouling
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = suifazhanjiesuo
+				always = no
+			}
+		}
+		bypass = {
+			has_government = neworder
+		}
+		mutually_exclusive = {
+			focus = YYK_jiashenyubayunzidelianxi
+			focus = YYK_youlingquanli
+			focus = YYK_guliyudouzhengzhiwai
+			focus = YYK_lequsihoushijie
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_shangyingyouling
+		
+	}
+	focus = {
+		id = YYK_weiUUZ
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_youlingquanli
+			focus = YYK_zaicikaihua
+		}
+		x = 7
+		y = 1
+		relative_position_id = YYK_youlingquanli
+		available = {
+			has_completed_focus = YYK_xiangsijiqingzui
+			not = {
+				has_idea = YYK_xiangsijiqingzui_idea
+			}
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			YYK_xuqingzui = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_guizudeguanli
+		icon = GFX_focus_spa_caudillo_of_spain
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_xiangsijiqingzui
+		}
+		x = -1
+		y = 1
+		relative_position_id = YYK_xiangsijiqingzui
+		available = {
+			not = {
+				has_idea = YYK_xiangsijiqingzui_idea
+			}
+		}
+		completion_reward = {
+			add_ideas = YYK_guizudeguanli_idea
+			YYK_xiaochudongdang = yes
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	focus = {
+		id = YYK_huifuhediyudeguanxi
+		icon = GFX_focus_CZE_german_puppet
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_guizudeguanli
+		}
+		x = 1
+		y = 1
+		relative_position_id = YYK_guizudeguanli
+		completion_reward = {
+			remove_ideas = YYK_sijidezhicai_idea
+			custom_effect_tooltip = YYK_huifuhediyudeguanxi_tt
+			hidden_effect = {
+				SKI = {
+					remove_opinion_modifier = {
+						target = ROOT
+						modifier = YYK_sijidezhicai_op2
+					}
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = YYK_sijidezhicai_op3
+					}
+				}
+			}
+			
+			every_country = {
+				limit = {
+					has_opinion_modifier = YYK_sijidezhicai_op
+				}
+				remove_opinion_modifier = {
+					target = ROOT
+					modifier = YYK_sijidezhicai_op
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	focus = {
+		id = YYK_huifuminjie
+		icon = GFX_focus_jap_showa_restoration
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_huifuhediyudeguanxi
+		}
+		x = -1
+		y = 1
+		relative_position_id = YYK_huifuhediyudeguanxi
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			clr_country_flag = world_limit
+			custom_effect_tooltip = YYK_huifuminjie_tt
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	focus = {
+		id = YYK_tingzhiyuanzhu
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_huifuhediyudeguanxi
+		}
+		x = 1
+		y = 1
+		relative_position_id = YYK_huifuhediyudeguanxi
+		completion_reward = {
+			remove_ideas = YYK_duibayunzideyuanzhu_idea
+			reverse_add_opinion_modifier = {
+				target = YKR
+				modifier = YYK_tingzhiyuanzhu_op
+			}
+			reverse_add_opinion_modifier = {
+				target = SKI
+				modifier = YYK_tingzhiyuanzhu_op2
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	focus = {
+		id = YYK_diyuyoulingdechongliuru
+		icon = GFX_focus_research
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_huifuminjie
+		}
+		prerequisite = {
+			focus = YYK_tingzhiyuanzhu
+		}
+		x = 1
+		y = 1
+		relative_position_id = YYK_huifuminjie
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			add_stability = -0.1
+			add_research_slot = 1
+		}
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	focus = {
+		id = YYK_duiziyuanzhujinsuo
+		icon = GFX_focus_YYK_duiziyuanzhujinsuo
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_fangwenhuanxiangxiang
+		}
+		x = 1
+		y = 1
+		relative_position_id = YYK_fangwenhuanxiangxiang
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = YYK_duibayunzideyuanzhu_idea
+				add_idea = YYK_duibayunzideyuanzhu2_idea
+			}
+			lobbydecrease = yes
+		}
+		ai_will_do = {
+			base = 20
+		}
+	}
+	focus = {
+		id = YYK_zidejunshiyuanzhu
+		icon = GFX_goal_generic_army_doctrines
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_jiashenyubayunzidelianxi
+		}
+		x = -2
+		y = 1
+		relative_position_id = YYK_jiashenyubayunzidelianxi
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			set_technology = {
+				spell_card3 = 1
+			}
+			add_tech_bonus = {
+				category = primary_weapons
+				uses = 2
+				bonus = 1
+			}
+			add_timed_idea = {
+				idea = YYK_zidejunshiyuanzhu_idea
+				days = 730
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_zidegongyeyuanzhu
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_jiashenyubayunzidelianxi
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_jiashenyubayunzidelianxi
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
+			add_tech_bonus = {
+				category = build
+				uses = 2
+				bonus = 1
+			}
+			add_timed_idea = {
+				idea = YYK_zidegongyeyuanzhu_idea
+				days = 1095
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_pohuaiyouminjiejie
+		icon = GFX_focus_YYK_wreck_the_boundary
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_zhichibayunzi
+		}
+		x = -3
+		y = 1
+		relative_position_id = YYK_zhichibayunzi
+		available = {
+			is_subject = no
+			has_completed_focus = YYK_jiashenyubayunzidelianxi
+			custom_trigger_tooltip = {
+				tooltip = YYK_neizhanover_tt
+				is_subject = no
+				not = {
+					has_war_with = NG1
+					has_war_with = NG2
+					has_war_with = NG3
+					has_war_with = NG4
+					has_country_flag = YYK_neizhanzhunbeibaofa
+				}
+			}
+		}
+		completion_reward = {
+			every_country = {
+				limit = {
+					capital_scope = {
+						is_on_continent = Gensokyo
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = YYK_pohuaiyouminjiejie_op
+				}
+			}
+			every_country = {
+				limit = {
+					capital_scope = {
+						is_on_continent = Hell
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = YYK_pohuaiyouminjiejie_op2
+				}
+			}
+			custom_effect_tooltip = YYK_pohuaiyouminjiejie_tt
+			add_ideas = YYK_pohuaiyouminjiejie_idea
+			YYK_xiaochudongdang = yes
+			conservativeincrease = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_jijiganshehxx
+		icon = GFX_focus_generic_hawkish
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_pohuaiyouminjiejie
+		}
+		x = -1
+		y = 1
+		relative_position_id = YYK_pohuaiyouminjiejie
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			custom_effect_tooltip = YYK_jijiganshehxx_tt
+			add_ideas = YYK_jijiganshehxx_idea
+			hidden_effect = {
+				news_event = { days = 2 id = yyk.4 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_yinruzhiliuyouling
+		icon = GFX_goal_generic_national_unity
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_pohuaiyouminjiejie
+		}
+		x = 1
+		y = 1
+		relative_position_id = YYK_pohuaiyouminjiejie
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			custom_effect_tooltip = YYK_yinruzhiliuyouling_tt
+			every_country = {
+				limit = {
+					any_owned_state = {
+						is_on_continent = Gensokyo
+						ST_race_is_Ghost = yes
+					}
+				}
+				country_event = { id = yyk.37 days = 7 }
+			}
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						is_on_continent = Netherworld
+					}
+					set_temp_variable = {
+						v = state_population_k
+					}
+					multiply_temp_variable = {
+						v = 0.05
+					}
+					multiply_temp_variable = {
+						v = 0.25
+					}
+					multiply_temp_variable = {
+						v = 1000
+					}
+					add_manpower = v
+					add_manpower = v
+					add_manpower = v
+					add_manpower = v
+				}
+				news_event = { id = yyk.5 days = 30 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_liaojieyaoguaizhuangkuang
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_jijiganshehxx
+		}
+		x = -1
+		y = 1
+		relative_position_id = YYK_jijiganshehxx
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			add_ideas = YYK_liaojieyaoguaizhuangkuang_idea
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	focus = {
+		id = YYK_mingquetongmeng
+		icon = GFX_focus_Yakumo_Yukari_deal
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_jijiganshehxx
+		}
+		prerequisite = {
+			focus = YYK_yinruzhiliuyouling
+		}
+		x = 1
+		y = 1
+		available = {
+			is_subject = no
+		}
+		relative_position_id = YYK_jijiganshehxx
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = YKR_manu
+				}
+				add_political_power = 200
+				else = {
+					add_ideas = YKR_manu
+				}
+			}
+			hidden_effect = {
+				news_event = { days = 2 id = yyk.6 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_xinminjiejihua
+		icon = GFX_focus_generic_industry_3
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_yinruzhiliuyouling
+		}
+		x = 1
+		y = 1
+		available = {
+			is_subject = no
+		}
+		relative_position_id = YYK_yinruzhiliuyouling
+		completion_reward = {
+			custom_effect_tooltip = YYK_xinminjiejihua_tt
+			every_owned_state = {
+				limit = {
+					is_on_continent = Netherworld
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_minjieshangyinhui
+		icon = GFX_focus_rom_parties_end
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_mingquetongmeng
+		}
+		prerequisite = {
+			focus = YYK_xinminjiejihua
+		}
+		prerequisite = {
+			focus = YYK_liaojieyaoguaizhuangkuang
+		}
+		available = {
+			is_subject = no
+		}
+		x = -2
+		y = 1
+		relative_position_id = YYK_xinminjiejihua
+		completion_reward = {
+			lobbyincrease = yes
+			add_political_power = 100
+			add_ideas = YYK_minjieshangyinhui_idea
+			hidden_effect = {
+				news_event = { days = 2 id = yyk.7 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_rongruhxx
+		icon = GFX_focus_chi_united_front
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_minjieshangyinhui
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_minjieshangyinhui
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			remove_ideas = YYK_sijidezhicai_idea
+			remove_ideas = not_gensoukyo_idea
+			every_country = {
+				limit = {
+					capital_scope = {
+						is_on_continent = Gensokyo
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = YYK_rongruhxx_op
+				}
+			}
+			custom_effect_tooltip = YYK_pohuaiyouminjiejie_tt
+			hidden_effect = {
+				news_event = { days = 2 id = yyk.8 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_fanxiangruqindiyu
+		icon = GFX_focus_jap_strike_south
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_xuanbutuolidiyu
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_xuanbutuolidiyu
+		will_lead_to_war_with = AKO
+		will_lead_to_war_with = AOO
+		available = {
+			or = {
+				AKO = {
+					before_declare_war = yes
+				}
+				AOO = {
+					before_declare_war = yes
+				}
+			}	
+		}
+		bypass = {
+			AKO = {
+				bypass_declare_war = yes
+			}
+			AOO = {
+				bypass_declare_war = yes
+			}
+		}
+		completion_reward = {
+			declare_war_on = {
+				target = AKO
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = AOO
+				type = annex_everything
+			}
+			YYK_xiaochudongdang = yes
+			SKI = {
+				background_enemy = yes
+				ROOT = {
+					background_enemy = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+	focus = {
+		id = YYK_yaoqiudiyuyoulingchenfu
+		icon = GFX_goal_generic_political_pressure
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_fanxiangruqindiyu
+		}
+		x = -2
+		y = 1
+		relative_position_id = YYK_fanxiangruqindiyu
+		available = {
+			HGH = {
+				before_declare_war = yes
+			}
+		}
+		bypass = {
+			HGH = {
+				bypass_declare_war = yes
+			}
+		}
+		will_lead_to_war_with = HGH
+		completion_reward = {
+			YYK_xiaochudongdang = yes
+			if = {
+				limit = {
+					HGH = { is_subject = no }
+				}
+				HGH = {
+					country_event = { id = yyk.38 days = 2}
+				}
+				custom_effect_tooltip = TEG_accept
+				effect_tooltip = {
+					HGH = {
+						subject_level2 = yes
+					}
+					every_country = {
+						limit = {
+							has_idea = YYK_xuanbutuolidiyu2_idea
+						}
+						swap_ideas = {
+							remove_idea = YYK_xuanbutuolidiyu2_idea
+							add_idea = YYK_xuanbutuolidiyu3_idea
+						}
+					}
+				}
+				custom_effect_tooltip = NUE_yaoqiudangdiyaoguaiqufu_tt
+				else = {
+					declare_war_on = {
+						target = HGH
+						type = puppet_wargoal_focus
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_diyuyoulingdiqu
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_yaoqiudiyuyoulingchenfu
+			focus = YYK_zhengfuchushengjie
+		}
+		x = 2
+		y = 1
+		relative_position_id = YYK_yaoqiudiyuyoulingchenfu
+		available = {
+			any_owned_state = {
+				is_on_continent = Hell
+				ST_race_is_Ghost = yes
+			}
+		}
+		completion_reward = {
+			YYK_xiaochudongdang = yes
+			custom_effect_tooltip = YYK_diyuyoulingdiqu_tt
+			effect_tooltip = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_on_continent = Hell
+					ST_race_is_Ghost = yes
+				}
+				ROOT = {
+					add_to_array = {
+						states_target = PREV
+					}
+				}
+				
+			}
+			for_each_scope_loop = {
+				array = states_target
+				add_to_temp_variable = {
+					t = 1
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				if = {
+					limit = {
+						check_variable = {
+							t = 5
+						}
+					}
+					set_temp_variable = {
+						break = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_xiangdiyuyimin
+		icon = GFX_focus_por_latin_american_communism
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_diyuyoulingdiqu
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_diyuyoulingdiqu
+		available = {
+			is_subject = no
+			any_state = {
+				is_on_continent = Hell
+				is_owned_by = ROOT
+			}
+		}
+		completion_reward = {
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						is_on_continent = Hell
+						not = {
+							ST_race_is_Ghost = yes
+						}
+					}
+					ST_race_to_Ghost = yes
+				}
+				every_owned_state = {
+					limit = {
+						is_on_continent = Hell
+						not = {
+							is_core_of = ROOT
+						}
+					}
+					add_core_of = ROOT
+					remove_claim_by = ROOT
+				}
+			}
+			
+			custom_effect_tooltip = YYK_xiangdiyuyimin_tt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_qudisiji
+		icon = GFX_focus_YYK_qudisiji
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_yaoqiudiyuyoulingchenfu
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_yaoqiudiyuyoulingchenfu
+		will_lead_to_war_with = SKI
+		available = {
+			SKI = {
+				before_declare_war = yes
+			}
+		}
+		bypass = {
+			SKI = {
+				bypass_declare_war = yes
+			}
+		}
+		completion_reward = {
+			declare_war_on = {
+				target = SKI
+				type = puppet_wargoal_focus
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+	focus = {
+		id = YYK_zhudaosihoushijie
+		icon = GFX_focus_BUL_restore_the_bulgarian_patriarchate
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_qudisiji
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_qudisiji
+		available = {
+			is_subject = no
+			has_war = no
+			or = {
+				owns_state = 269
+				any_country = {
+					is_subject_of = ROOT
+					owns_state = 269
+				}
+			}
+		}
+		completion_reward = {
+			add_ideas = YYK_zhudaosihoushijie_idea
+			YYK_xiaochudongdang = yes
+			transfer_state = 269
+			269 = {
+				ST_race_to_Ghost = yes
+				add_core_of = ROOT
+				set_state_name = YYK_zhudaosihoushijie_state
+			}
+			hidden_effect = {
+				news_event = { id = yyk.11 days = 2 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_tongyisihoushijie
+		icon = GFX_focus_YYK_tongyisihoushijie
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_zhudaosihoushijie
+		}
+		prerequisite = {
+			focus = YYK_xiangdiyuyimin
+		}
+		available = {
+			is_subject = no
+            custom_trigger_tooltip = {
+                tooltip = Hell_claim_tt
+                check_variable = {
+                    RE_Hell_ratio > 0.5
+                }
+            }
+        }
+		x = 2
+		y = 1
+		relative_position_id = YYK_zhudaosihoushijie
+		completion_reward = {
+			remove_ideas = YYK_xuanbutuolidiyu_idea
+			add_timed_idea = {
+				idea = YYK_tongyisihoushijie_idea
+				days = 1460
+			}
+			CO_factor_minus0.5 = yes
+			every_state = {
+				limit = {
+					is_on_continent = Hell
+					not = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				add_claim_by = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_zhengfuchushengjie
+		icon = GFX_focus_YYK_zhengfuchushengjie
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_fanxiangruqindiyu
+		}
+		will_lead_to_war_with = KEK
+		will_lead_to_war_with = GYK
+		will_lead_to_war_with = YCE
+		will_lead_to_war_with = SAK
+		available = {
+			or = {
+				KEK = {
+					before_declare_war = yes
+				}
+				GYK = {
+					before_declare_war = yes
+				}
+				YCE = {
+					before_declare_war = yes
+				}
+				SAK = {
+					before_declare_war = yes
+				}
+			}
+		}
+		bypass = {
+			KEK = {
+				bypass_declare_war = yes
+			}
+			GYK = {
+				bypass_declare_war = yes
+			}
+			YCE = {
+				bypass_declare_war = yes
+			}
+			SAK = {
+				bypass_declare_war = yes
+			}
+		}
+		x = 2
+		y = 1
+		relative_position_id = YYK_fanxiangruqindiyu
+		completion_reward = {
+			if = {
+				limit = {
+					KEK = { 
+						not = { 
+							has_non_aggression_pact_with = ROOT 
+							is_subject_of = ROOT
+						}
+					}
+				}
+				declare_war_on = {
+					target = KEK
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					GYK = { 
+						not = { 
+							has_non_aggression_pact_with = ROOT 
+							is_subject_of = ROOT
+						}
+					}
+				}
+				declare_war_on = {
+					target = GYK
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					YCE = { 
+						not = { 
+							has_non_aggression_pact_with = ROOT 
+							is_subject_of = ROOT
+						}
+					}
+				}
+				declare_war_on = {
+					target = YCE
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					SAK = { 
+						not = { 
+							has_non_aggression_pact_with = ROOT 
+							is_subject_of = ROOT
+						}
+					}
+				}
+				declare_war_on = {
+					target = SAK
+					type = annex_everything
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+		}
+	}
+	focus = {
+		id = YYK_tianjiedaolu
+		icon = GFX_focus_por_the_pink_map
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_zhengfuchushengjie
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_zhengfuchushengjie
+		will_lead_to_war_with = HB1
+		available = {
+			HB1 = {
+				before_declare_war = yes
+			}
+		}
+		bypass = {
+			HB1 = {
+				bypass_declare_war = yes
+			}
+		}
+		completion_reward = {
+			declare_war_on = {
+				target = HB1
+				type = puppet_wargoal_focus
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+
+	}
+	focus = {
+		id = YYK_shangcengyouling
+		icon = GFX_goal_generic_major_war
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_tianjiedaolu
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_tianjiedaolu
+		will_lead_to_war_with = TES
+		will_lead_to_war_with = CCA
+		will_lead_to_war_with = CFA
+		available = {
+			TES = {
+				if = {
+					limit = {
+						is_subject = no
+					}
+					before_declare_war = yes
+				}
+			}
+			CCA = {
+				if = {
+					limit = {
+						is_subject = no
+					}
+					before_declare_war = yes
+				}
+			}
+			IKU = {
+				if = {
+					limit = {
+						is_subject = no
+					}
+					before_declare_war = yes
+				}
+			}
+			CFA = {
+				if = {
+					limit = {
+						is_subject = no
+					}
+					before_declare_war = yes
+				}
+			}
+			
+		}
+		bypass = {
+			TES = {
+				if = {
+					limit = {
+						is_subject = no
+					}
+					bypass_declare_war = yes
+				}
+			}
+			CCA = {
+				if = {
+					limit = {
+						is_subject = no
+					}
+					bypass_declare_war = yes
+				}
+			}
+			IKU = {
+				if = {
+					limit = {
+						is_subject = no
+					}
+					bypass_declare_war = yes
+				}
+			}
+			CFA = {
+				if = {
+					limit = {
+						is_subject = no
+					}
+					bypass_declare_war = yes
+				}
+			}
+		}
+		completion_reward = {
+			every_country = {
+				limit = {
+					before_declare_war = yes
+					is_subject = no
+					or = {
+						tag = CFA
+						tag = IKU
+						tag = CCA
+						tag = TES
+					}
+				}
+				ROOT = {
+					declare_war_on = {
+						target = PREV
+						type = puppet_wargoal_focus
+					}
+				}
+			}
+			
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+	focus = {
+		id = YYK_datonghxxdezhengmian
+		icon = GFX_focus_YYK_invade_Sanzu_River
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_zhengfuchushengjie
+		}
+		x = 2
+		y = 1
+		relative_position_id = YYK_zhengfuchushengjie
+		will_lead_to_war_with = GH1
+		will_lead_to_war_with = URM
+		available = {
+			or = {
+				GH1 = {
+					before_declare_war = yes
+				}
+				URM = {
+					before_declare_war = yes
+				}
+			}
+		}
+		bypass = {
+			GH1 = {
+				bypass_declare_war = yes
+			}
+			URM = {
+				bypass_declare_war = yes
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					GH1 = { 
+						not = { 
+							has_non_aggression_pact_with = ROOT 
+							is_subject_of = ROOT
+						}
+					}
+				}
+				declare_war_on = {
+					target = GH1
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					URM = { 
+						not = { 
+							has_non_aggression_pact_with = ROOT 
+							is_subject_of = ROOT
+						}
+					}
+				}
+				declare_war_on = {
+					target = URM
+					type = annex_everything
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+	focus = {
+		id = YYK_quzhudiyushenming
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_datonghxxdezhengmian
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_datonghxxdezhengmian
+		will_lead_to_war_with = HCT
+		available = {
+			HCT = {
+				before_declare_war = yes
+			}
+		}
+		bypass = {
+			HCT = {
+				bypass_declare_war = yes
+			}
+		}
+		completion_reward = {
+			declare_war_on = {
+				target = HCT
+				type = puppet_wargoal_focus
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+	
+	
+	
+	focus = {
+		id = YYK_wanglingnvhuang
+		icon = GFX_focus_YYK_wanglingnvhuang
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_rongruhxx
+		}
+		prerequisite = {
+			focus = YYK_zhudaosihoushijie
+		}
+		prerequisite = {
+			focus = YYK_shangcengyouling
+		}
+		x = 3
+		y = 1
+		relative_position_id = YYK_rongruhxx
+		available = {
+			is_subject = no
+			custom_trigger_tooltip = {
+                tooltip = Hell_claim_tt
+                check_variable = {
+                    RE_Hell_ratio > 0.5
+                }
+            }
+			custom_trigger_tooltip = {
+                tooltip = Celestial_claim_tt
+                check_variable = {
+                    RE_Celestial_ratio > 0.5
+                }
+            }
+			custom_trigger_tooltip = {
+                tooltip = Netherworld_claim_tt
+                check_variable = {
+                    RE_Netherworld_ratio > 0.5
+                }
+            }
+		}
+		completion_reward = {
+			add_ideas = YYK_wanglingnvhuang_idea
+			add_ideas = Empire
+			set_cosmetic_tag = YYK_empire
+			YYK_xiaochudongdang = yes
+			hidden_effect = {
+				news_event = { days = 2 id = yyk.15 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_renleijizhongying
+		icon = GFX_focus_eng_the_kings_party
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_wanglingnvhuang
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_wanglingnvhuang
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			add_ideas = YYK_renleijizhongying_idea
+			add_research_slot = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	focus = {
+		id = YYK_youlingyuanzhu
+		icon = GFX_goal_generic_consumer_goods
+		cost = 8.00
+		prerequisite = {
+			focus = YYK_anfuyouling
+		}
+		available = {
+			has_completed_focus = YYK_guliyouling
+			has_completed_focus = YYK_guiyiyouling
+			has_completed_focus = YYK_kaifangyouling
+			has_completed_focus = YYK_shangyingyouling
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_anfuyouling
+		completion_reward = {
+			YYK_xiaochudongdang = yes
+			add_ideas = YYK_youlingyuanzhu_idea
+		}
+		ai_will_do = {
+			base = 30
+		}
+	}
+	focus = {
+		id = YYK_guliyudouzhengzhiwai
+		icon = GFX_focus_generic_isolationist
+		cost = 0.00
+		prerequisite = {
+			focus = YYK_guliyouling
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = suifazhanjiesuo
+				always = no
+			}
+		}
+		bypass = {
+			has_government = guli
+		}
+		mutually_exclusive = {
+			focus = YYK_jiashenyubayunzidelianxi
+			focus = YYK_lequsihoushijie
+			focus = YYK_zaicikaihua
+			focus = YYK_youlingquanli
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_guliyouling
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = YYK_paths
+					option = YYK_path_guli
+				}
+			}
+		}
+	}
+	focus = {
+		id = YYK_zhongshihxxweiji
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_guliyudouzhengzhiwai
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_guliyudouzhengzhiwai
+		available = {
+			or = {
+				has_country_flag = YYK_mingjieweineizhan
+				custom_trigger_tooltip = {
+					tooltip = YYK_neizhanover_tt
+					is_subject = no
+					not = {
+						has_war_with = NG1
+						has_war_with = NG2
+						has_war_with = NG3
+						has_war_with = NG4
+						has_country_flag = YYK_neizhanzhunbeibaofa
+					}
+				}
+			}
+		}
+		completion_reward = {
+			set_country_flag = NET_shared_YYK
+			add_war_support = 0.05
+			add_ideas = YYK_zhongshihxxweiji_idea
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_yuzibeidezhixin
+		icon = GFX_focus_rom_parties_end
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_zhongshihxxweiji
+		}
+		x = -1
+		y = 1
+		relative_position_id = YYK_zhongshihxxweiji
+		completion_reward = {
+			YYK_xuqingzui = yes
+			conservativeincrease = yes
+			add_ideas = YYK_yuzibeidezhixin_idea
+			if = {
+				limit = {
+					has_idea = YKR_manu
+				}
+				add_political_power = 200
+				else = {
+					add_ideas = YKR_manu
+				}
+			}
+			YKR = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = YYK_yuzibeidezhixin_op
+				}
+				reverse_add_opinion_modifier = {
+					target = ROOT
+					modifier = YYK_yuzibeidezhixin_op
+				}
+			}
+			hidden_effect = {
+				news_event = { id = yyk.17 days = 2 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_lalongziguli
+		icon = GFX_focus_Yakumo_Yukari_treaty
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_yuzibeidezhixin
+		}
+		x = -1
+		y = 1
+		relative_position_id = YYK_yuzibeidezhixin
+		available = {
+			is_subject = no
+			not = {
+				has_completed_focus = YYK_jiuzhengsixiang
+			}
+		}
+		completion_reward = {
+			lobbydecrease = yes
+			YKR = {
+				country_event = { days = 2 id = yyk.39 }
+			}
+			custom_effect_tooltip = TEG_accept
+			effect_tooltip = {
+				custom_effect_tooltip = YYK_lalongziguli_tt
+				YKR = {
+					huxiangbaodu = yes
+				}
+			}
+			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_jiaqiangfangyu
+		icon = GFX_goal_generic_fortify_city
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_lalongziguli
+		}
+		available = {
+			has_country_flag = YYK_lalongziguli
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_lalongziguli
+		completion_reward = {
+			add_ideas = YYK_jiaqiangfangyu_idea
+			YKR = {
+				country_event = { id = yyk.40 days = 2 }
+			}
+			custom_effect_tooltip = TEG_accept
+			add_political_power = -150
+			effect_tooltip = {
+				YYK = {
+					251 = {
+						if = {
+							limit = {
+								is_fully_controlled_by = PREV
+							}
+							add_building_construction = {
+								type = bunker
+								level = 4
+								instant_build = yes
+								province = 978
+							}
+							add_building_construction = {
+								type = bunker
+								level = 4
+								instant_build = yes
+								province = 2537
+							}
+							add_building_construction = {
+								type = bunker
+								level = 4
+								instant_build = yes
+								province = 695
+							}
+							add_building_construction = {
+								type = bunker
+								level = 4
+								instant_build = yes
+								province = 1955
+							}
+						}
+					}
+					218 = {
+						if = {
+							limit = {
+								is_fully_controlled_by = PREV
+							}
+							add_building_construction = {
+								type = bunker
+								level = 4
+								instant_build = yes
+								province = 301
+							}
+							add_building_construction = {
+								type = bunker
+								level = 4
+								instant_build = yes
+								province = 2542
+							}
+						}
+					}
+					145 = {
+						if = {
+							limit = {
+								is_fully_controlled_by = PREV
+							}
+							add_building_construction = {
+								type = bunker
+								level = 4
+								instant_build = yes
+								province = 1252
+							}
+							add_building_construction = {
+								type = bunker
+								level = 4
+								instant_build = yes
+								province = 1444
+							}
+						}
+					}
+					159 = {
+						if = {
+							limit = {
+								is_fully_controlled_by = PREV
+							}
+							add_building_construction = {
+								type = bunker
+								level = 4
+								instant_build = yes
+								province = 2410
+							}
+						}
+					}
+					136 = {
+						if = {
+							limit = {
+								is_fully_controlled_by = PREV
+							}
+							add_building_construction = {
+								type = bunker
+								level = 4
+								instant_build = yes
+								province = 496
+							}
+							add_building_construction = {
+								type = bunker
+								level = 4
+								instant_build = yes
+								province = 2371
+							}
+						}
+					}
+				}
+				YKR = {
+					add_political_power = -100
+					add_popularity = {
+						ideology = guli
+						popularity = 0.3
+					}
+					244 = {
+						if = {
+							limit = {
+								is_fully_controlled_by = PREV
+							}
+							add_building_construction = {
+								type = bunker
+								level = 3
+								instant_build = yes
+								province = 1045
+							}
+							add_building_construction = {
+								type = bunker
+								level = 3
+								instant_build = yes
+								province = 396
+							}
+						}
+					}
+					220 = {
+						if = {
+							limit = {
+								is_fully_controlled_by = PREV
+							}
+							add_building_construction = {
+								type = bunker
+								level = 3
+								instant_build = yes
+								province = 2845
+							}
+							add_building_construction = {
+								type = bunker
+								level = 3
+								instant_build = yes
+								province = 37
+							}
+							add_building_construction = {
+								type = bunker
+								level = 3
+								instant_build = yes
+								province = 220
+							}
+						}
+					}
+					201 = {
+						if = {
+							limit = {
+								is_fully_controlled_by = PREV
+							}
+							add_building_construction = {
+								type = bunker
+								level = 3
+								instant_build = yes
+								province = 2258
+							}
+							add_building_construction = {
+								type = bunker
+								level = 3
+								instant_build = yes
+								province = 99
+							}
+						}
+					}
+					180 = {
+						if = {
+							limit = {
+								is_fully_controlled_by = PREV
+							}
+							add_building_construction = {
+								type = bunker
+								level = 3
+								instant_build = yes
+								province = 1614
+							}
+							add_building_construction = {
+								type = bunker
+								level = 3
+								instant_build = yes
+								province = 722
+							}
+						}
+					}
+					509 = {
+						if = {
+							limit = {
+								is_fully_controlled_by = PREV
+							}
+							add_building_construction = {
+								type = bunker
+								level = 3
+								instant_build = yes
+								province = 6629
+							}
+						}
+					}
+					544 = {
+						if = {
+							limit = {
+								is_fully_controlled_by = PREV
+							}
+							add_building_construction = {
+								type = bunker
+								level = 3
+								instant_build = yes
+								province = 7088
+							}
+							add_building_construction = {
+								type = bunker
+								level = 3
+								instant_build = yes
+								province = 7086
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_zhishenyushiwai
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_jiaqiangfangyu
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_jiaqiangfangyu
+		completion_reward = {
+			add_ideas = gulijiaqiang
+			add_ideas = YYK_zhishenyushiwai_idea
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_jiuzhengsixiang
+		icon = GFX_focus_Yakumo_Yukari_backstabbed
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_yuzibeidezhixin
+		}
+		x = 1
+		y = 1
+		relative_position_id = YYK_yuzibeidezhixin
+		will_lead_to_war_with = YKR
+		available = {
+			has_completed_focus = YYK_xiangsijiqingzui
+			not = {
+				has_idea = YYK_xiangsijiqingzui_idea
+				has_country_flag = YYK_lalongziguli
+			}
+			YKR = {
+				before_declare_war = yes
+			}
+		}
+		bypass = {
+			YKR = {
+				bypass_declare_war = yes
+			}
+		}
+		completion_reward = {
+			lobbyincrease = yes
+			declare_war_on = {
+				target = YKR
+				type = puppet_wargoal_focus
+			}
+		}
+
+	}
+	focus = {
+		id = YYK_youqingronghe
+		icon = GFX_focus_YYK_a_thousand_year_friendship
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_jiuzhengsixiang
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_jiuzhengsixiang
+		available = {
+			is_subject = no
+			has_war = no
+			custom_trigger_tooltip = {
+				tooltip = YYK_youqingronghe_tt
+				any_state = {
+					region = 10
+					or = {
+						is_owned_by = ROOT
+						any_country = {
+							is_subject_of = ROOT
+							owns_state = PREV
+						}
+					}
+					not = {
+						is_core_of = ROOT
+					}
+				}
+			}
+		}
+		completion_reward = {
+			YYK_xukuoda = yes
+			YKR = {
+				if = {
+					limit = {
+						is_subject_of = ROOT
+					}
+					can_core = yes
+					low_puppet_level = yes
+					low_puppet_level = yes
+					low_puppet_level = yes
+					low_puppet_level = yes
+				}
+			}
+			
+			every_state = {
+				limit = {
+					region = 10
+				}
+				add_core_of = ROOT
+				remove_claim_by = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_xuanchenxianzhe
+		icon = GFX_focus_YUG_zmaj
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_youqingronghe
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_youqingronghe
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			YYK_xukuoda = yes
+			leave_faction = yes
+			every_country = {
+				limit = {
+					has_idea = gensoukyo_creator_idea
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = YYK_xuanchenxianzhe_op
+				}
+			}
+			every_country = {
+				limit = {
+					not = { has_idea = gensoukyo_creator_idea }
+					capital_scope = {
+						is_on_continent = Gensokyo
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = YYK_xuanchenxianzhe_op2
+				}
+			}
+			add_ideas = gensoukyo_creator_idea
+			hidden_effect = {
+				news_event = { days = 2 id = yyk.19 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_annei
+		icon = GFX_goal_continuous_def_against_influence
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_zhongshihxxweiji
+		}
+		x = 1
+		y = 1
+		relative_position_id = YYK_zhongshihxxweiji
+		completion_reward = {
+			YYK_xiaochudongdang = yes
+			conservativedecrease = yes
+			add_timed_idea = {
+				idea = YYK_annei_idea
+				days = 365
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_baohuxixingyao
+		icon = GFX_focus_YYK_a_defence_in_Hakugyokurou
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_annei
+		}
+		x = 1
+		y = 1
+		relative_position_id = YYK_annei
+		available = {
+			or = {
+				has_full_control_of_state = 205
+				has_full_control_of_state = 236
+				has_full_control_of_state = 247
+				has_full_control_of_state = 217
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_full_control_of_state = 205
+				}
+				205 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 1359
+					}
+				}	
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 236
+				}
+				236 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 350
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 1987
+					}
+				}	
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 247
+				}
+				247 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 289
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 2216
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 1250
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 2175
+					}
+				}	
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 217
+				}
+				217 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 2255
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 2125
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 1574
+					}
+				}	
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_xixingyaodeliliang
+		icon = GFX_focus_YYK_generic_Hakugyokurou_power_unleash
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_baohuxixingyao
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_baohuxixingyao
+		completion_reward = {
+			YYK_xuqingzui = yes
+			custom_effect_tooltip = YYK_xixingyaodeliliang_tt
+			show_ideas_tooltip = YYK_xixingyaodeliliang_idea
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	focus = {
+		id = YYK_lequsihoushijie
+		icon = GFX_focus_generic_reformist
+		cost = 0.00
+		prerequisite = {
+			focus = YYK_kaifangyouling
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = suifazhanjiesuo
+				always = no
+			}
+		}
+		bypass = {
+			has_government = qinwai
+		}
+		mutually_exclusive = {
+			focus = YYK_jiashenyubayunzidelianxi
+			focus = YYK_guliyudouzhengzhiwai
+			focus = YYK_youlingquanli
+			focus = YYK_zaicikaihua
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_kaifangyouling
+
+	}
+	focus = {
+		id = YYK_minjiekaifangfangan
+		icon = GFX_focus_generic_open_up
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_lequsihoushijie
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_lequsihoushijie
+		available = {
+			or = {
+				has_country_flag = YYK_mingjieweineizhan
+				custom_trigger_tooltip = {
+					tooltip = YYK_neizhanover_tt
+					is_subject = no
+					not = {
+						has_war_with = NG1
+						has_war_with = NG2
+						has_war_with = NG3
+						has_war_with = NG4
+						has_country_flag = YYK_neizhanzhunbeibaofa
+					}
+				}
+			}
+		}
+		completion_reward = {
+			set_country_flag = NET_shared_YYK
+			conservativeincrease = yes
+			every_country = {
+				limit = {
+					capital_scope = {
+						is_on_continent = Gensokyo
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = YYK_minjiekaifangfangan_op
+				}
+			}
+			custom_effect_tooltip = YYK_minjiekaifangfangan_tt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_zhinengyoulingdingju
+		icon = GFX_focus_generic_industry_3
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_minjiekaifangfangan
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_minjiekaifangfangan
+		completion_reward = {
+			ST_race_penalty_reduce0.5 = yes
+			GO_attack_defence_nerf_add5 = yes
+			conservativeincrease = yes
+			hidden_effect = {
+				news_event = { days = 2 id = yyk.20 }
+			}
+			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_shengzhedeminjieshequ
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_zhinengyoulingdingju
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_zhinengyoulingdingju
+		available = {
+			is_subject = no
+			has_completed_focus = YYK_xiangsijiqingzui
+			not = {
+				has_idea = YYK_xiangsijiqingzui_idea
+			}
+		}
+		completion_reward = {
+			YYK_xuqingzui = yes
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			SKI = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = YYK_shengzhedeminjieshequ_op
+				}
+			}
+			add_ideas = YYK_shengzhedeminjieshequ_idea
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_zhicaiguizu
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_minjiekaifangfangan
+		}
+		x = 2
+		y = 1
+		relative_position_id = YYK_minjiekaifangfangan
+		available = {
+			has_completed_focus = YYK_xiangsijiqingzui
+			not = {
+				has_idea = YYK_xiangsijiqingzui_idea
+			}
+		}
+		completion_reward = {
+			YYK_xuqingzui = yes
+			SKI = {
+				country_event = { days = 2 id = yyk.42 }
+			}
+			custom_effect_tooltip = TEG_accept
+			effect_tooltip = {
+				add_ideas = YYK_zhicaiguizu_idea
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_jiaoxunguizu
+		icon = GFX_goal_generic_major_war
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_zhicaiguizu
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_zhicaiguizu
+		will_lead_to_war_with = AOO
+		will_lead_to_war_with = AKO
+		available = {
+			or = {
+				AOO = {
+					before_declare_war = yes
+				}
+				AKO = {
+					before_declare_war = yes
+				}
+			}
+		}
+		bypass = {
+			AOO = {
+				bypass_declare_war = yes
+			}
+			AKO = {
+				bypass_declare_war = yes
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					AOO = { 
+						not = { 
+							has_non_aggression_pact_with = ROOT 
+							is_subject_of = ROOT
+						}
+					}
+				}
+				declare_war_on = {
+					target = AOO
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					AKO = { 
+						not = { 
+							has_non_aggression_pact_with = ROOT 
+							is_subject_of = ROOT
+						}
+					}
+				}
+				declare_war_on = {
+					target = AKO
+					type = annex_everything
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+		}
+
+	}
+	focus = {
+		id = YYK_guizuzaijiaoyu
+		icon = GFX_goal_generic_propaganda
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_jiaoxunguizu
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_jiaoxunguizu
+		completion_reward = {
+			AOO = {
+				can_core = yes
+			}
+			AKO = {
+				can_core = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_shengsizhedezhihuijiehe
+		icon = GFX_focus_research
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_shengzhedeminjieshequ
+		}
+		prerequisite = {
+			focus = YYK_guizuzaijiaoyu
+		}
+		x = 1
+		y = 2
+		relative_position_id = YYK_shengzhedeminjieshequ
+		completion_reward = {
+			YYK_xukuoda = yes
+			add_research_slot = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_minjieshiwaitaoyuan
+		icon = GFX_focus_HKR_the_Miko_of_new_age
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_shengzhedeminjieshequ
+		}
+		prerequisite = {
+			focus = NET_shared_minjieyoulingzhihui
+		}
+		allow_branch = {
+			tag = YYK
+		}
+		x = -2
+		y = 2
+		relative_position_id = YYK_shengzhedeminjieshequ
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			add_tech_bonus = {
+				category = build
+				bonus = 1
+				uses = 1
+			}
+			conservativeincrease = yes
+			hidden_effect = {
+				news_event = { id = yyk.22 days = 2}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	focus = {
+		id = YYK_beihushideshenling
+		icon = GFX_goal_generic_national_unity
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_youlingquanli
+		}
+		available = {
+			or = {
+				has_country_flag = YYK_mingjieweineizhan
+				custom_trigger_tooltip = {
+					tooltip = YYK_neizhanover_tt
+					is_subject = no
+					not = {
+						has_war_with = NG1
+						has_war_with = NG2
+						has_war_with = NG3
+						has_war_with = NG4
+						has_country_flag = YYK_neizhanzhunbeibaofa
+					}
+				}
+			}
+		}
+		x = -1
+		y = 1
+		relative_position_id = YYK_youlingquanli
+		completion_reward = {
+			add_ideas = YYK_beihushideshenling_idea
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_youlingfaan
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_youlingquanli
+		}
+		available = {
+			or = {
+				has_country_flag = YYK_mingjieweineizhan
+				custom_trigger_tooltip = {
+					tooltip = YYK_neizhanover_tt
+					is_subject = no
+					not = {
+						has_war_with = NG1
+						has_war_with = NG2
+						has_war_with = NG3
+						has_war_with = NG4
+						has_country_flag = YYK_neizhanzhunbeibaofa
+					}
+				}
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = YYK_youlingquanli
+		completion_reward = {
+			add_political_power = 50
+			YYK_xiaochudongdang = yes
+			YYK_xiaochudongdang = yes
+			hidden_effect = {
+				news_event = { days = 2 id = yyk.29 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_jiashenlianxi
+		icon = GFX_goal_generic_improve_relations
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_beihushideshenling
+			focus = YYK_youlingfaan
+		}
+		x = 1
+		y = 1
+		relative_position_id = YYK_beihushideshenling
+		completion_reward = {
+			add_ideas = YYK_jiashenlianxi_idea
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = YYK_jiashenlianxi_dy
+				}
+			}
+			every_country = {
+				limit = {
+					has_idea = Ghost
+					not = {
+						tag = YYK
+					}
+				}
+				add_ideas = YYK_jiashenlianxi2_idea
+				country_event = { id = yyk.43 days = 2 }
+			}
+			custom_effect_tooltip = YYK_jiashenlianxi_tt
+			conservativeincrease = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_tongyilun
+		icon = GFX_focus_jap_manchurian_project
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_beihushideshenling
+		}
+		x = 0
+		y = 2
+		relative_position_id = YYK_beihushideshenling
+		available = {
+			has_completed_focus = YYK_xiangsijiqingzui
+			not = {
+				has_idea = YYK_xiangsijiqingzui_idea
+			}
+		}
+		completion_reward = {
+			add_stability = 0.25
+			add_ideas = YYK_tongyilun_idea
+			ST_hexie_God = yes
+			YYK_xiaochudongdang = yes
+			hidden_effect = {
+				news_event = { days = 2 id = yyk.30 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_yuanzhuwaibushili
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_jiashenlianxi
+		}
+		prerequisite = {
+			focus = YYK_youlingfaan
+		}
+		x = 0
+		y = 2
+		relative_position_id = YYK_youlingfaan
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			YYK_xuqingzui = yes
+			SKI = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = YYK_yuanzhuwaibushili_op
+				}
+			}
+			add_political_power = -120
+			every_country = {
+				limit = {
+					has_idea = Ghost
+					not = {
+						tag = YYK
+					}
+				}
+				add_ideas = YYK_yuanzhuwaibushili2_idea
+				country_event = { days = 2 id = yyk.44 }
+			}
+			add_ideas = YYK_yuanzhuwaibushili_idea
+			lobbyincrease = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_youyouzishenling
+		icon = GFX_focus_jap_spiritual_mobilization
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_tongyilun
+		}
+		prerequisite = {
+			focus = YYK_yuanzhuwaibushili
+		}
+		x = 1
+		y = 1
+		relative_position_id = YYK_tongyilun
+		completion_reward = {
+			YYK_xuqingzui = yes
+			random_army_leader = {
+				limit = {
+					has_id = 43
+				}
+				add_skill_level = 2
+			}
+			add_political_power = 100
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_fanyouling
+		icon = GFX_focus_TUR_treaty_of_saadabad
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_youyouzishenling
+		}
+		mutually_exclusive = {
+			focus = YYK_suoyouyoulingdejia
+		}
+		x = -1
+		y = 1
+		available = {
+			is_subject = no
+		}
+		relative_position_id = YYK_youyouzishenling
+		completion_reward = {
+			YYK_xuqingzui = yes
+			CO_core_God = yes
+			CO_core_Ghost = yes
+			every_country = {
+				limit = {
+					not = { has_idea = Ghost }
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = YYK_fanyouling_op
+				}
+			}
+			hidden_effect = {
+				news_event = { days = 2 id = yyk.31 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_suoyouyoulingdejia
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_youyouzishenling
+		}
+		mutually_exclusive = {
+			focus = YYK_fanyouling
+		}
+		x = 1
+		y = 1
+		available = {
+			is_subject = no
+		}
+		relative_position_id = YYK_youyouzishenling
+		completion_reward = {
+			YYK_xukuoda = yes
+			every_country = {
+				limit = {
+					has_idea = Ghost
+				}
+				can_use = yes
+			}
+			custom_effect_tooltip = YYK_suoyouyoulingdejia_tt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_chunduzaishouji
+		icon = GFX_focus_jap_spiritual_mobilization
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_zaicikaihua
+		}
+		mutually_exclusive = {
+			focus = YYK_linghunshouji
+		}
+		x = -2
+		y = 1
+		relative_position_id = YYK_zaicikaihua
+		available = {
+			or = {
+				has_country_flag = YYK_mingjieweineizhan
+				custom_trigger_tooltip = {
+					tooltip = YYK_neizhanover_tt
+					is_subject = no
+					not = {
+						has_war_with = NG1
+						has_war_with = NG2
+						has_war_with = NG3
+						has_war_with = NG4
+						has_country_flag = YYK_neizhanzhunbeibaofa
+					}
+				}
+			}
+		}
+		completion_reward = {
+			YYK_xuqingzui = yes
+			set_variable = {
+				YYK_kaihua = 0
+			}
+			add_tech_bonus = {
+				category = build 
+				uses = 2
+				bonus = 0.5
+			}		
+			every_country = {
+				limit = {
+					capital_scope = {
+						is_on_continent = Gensokyo
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = YYK_chunduzaishouji_op
+				}
+			}
+			custom_effect_tooltip = YYK_chunduzaishouji_tt
+			hidden_effect = {
+				news_event = { id = yyk.32 days = 2 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_youlinglveduo
+		icon = GFX_focus_RAJ_indian_gurkhas
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_chunduzaishouji
+		}
+		x = -2
+		y = 1
+		relative_position_id = YYK_chunduzaishouji
+		completion_reward = {
+			YYK_xuqingzui = yes
+			YYK_xiaochudongdang = yes
+			add_tech_bonus = {
+				category = land_doctrine
+				uses = 2
+				bonus = 1
+			}
+			custom_effect_tooltip = YYK_youlinglveduo_tt
+			show_ideas_tooltip = YYK_youlinglveduo_idea
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_yaomengyaoshu
+		icon = GFX_focus_generic_Melee_Weapons
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_chunduzaishouji
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_chunduzaishouji
+		completion_reward = {
+			random_army_leader = {
+				limit = {
+					has_id = 42
+				}
+				add_planning = 2
+			}
+			PO_add5 = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_chunduduo
+		icon = GFX_focus_generic_power_of_nature
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_yaomengyaoshu
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_yaomengyaoshu
+		completion_reward = {
+			add_ideas = YYK_chunduduo_idea
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_chenggongkaihua
+		icon = GFX_focus_YYK_generic_Hakugyokurou
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_chunduduo
+			focus = YYK_gansidui
+		}
+		x = 2
+		y = 1
+		relative_position_id = YYK_chunduduo
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = YYK_chenggongkaihua_tt
+				check_variable = {
+					YYK_kaihua > 899.99
+				}
+			}
+			
+		}
+		completion_reward = {
+			YYK_xuqingzui = yes
+			YYK_xuqingzui = yes
+			CO_core_Ghost = yes
+			random_army_leader = {
+				limit = {
+					has_id = 43
+				}
+				add_skill_level = 3
+				add_attack = 2
+				add_defense = 2
+				add_logistics = 2
+				add_planning = 2
+			}
+			GO_time_add60 = yes
+			GO_time_add30 = yes
+			add_tech_bonus = {
+				category = secret
+				uses = 3
+				bonus = 1.5
+				ahead_reduction = 3
+			}
+			add_tech_bonus = {
+				category = build
+				uses = 3
+				bonus = 1.5
+			}
+			add_ideas = YYK_chenggongkaihua_idea
+			hidden_effect = {
+				news_event = { days = 2 id = yyk.36 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_ziranzhili
+		icon = GFX_focus_jap_manchurian_project
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_chunduduo
+		}
+		x = 0
+		y = 2
+		relative_position_id = YYK_chunduduo
+		available = {
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = YYK_ziranzhili_tt2
+				check_variable = {
+					YYK_kaihua > 299
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = YYK_ziranzhili_tt
+			every_country = {
+				limit = {
+					has_idea = Fairy
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = YYK_ziranzhili_op
+				}
+			}
+			YYK_xukuoda = yes
+			hidden_effect = {
+				news_event = { days = 2 id = yyk.33 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_linghunshouji
+		icon = GFX_goal_generic_secret_weapon
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_zaicikaihua
+		}
+		mutually_exclusive = {
+			focus = YYK_chunduzaishouji
+		}
+		x = 2
+		y = 1
+		relative_position_id = YYK_zaicikaihua
+		available = {
+			or = {
+				has_country_flag = YYK_mingjieweineizhan
+				custom_trigger_tooltip = {
+					tooltip = YYK_neizhanover_tt
+					is_subject = no
+					not = {
+						has_war_with = NG1
+						has_war_with = NG2
+						has_war_with = NG3
+						has_war_with = NG4
+						has_country_flag = YYK_neizhanzhunbeibaofa
+					}
+				}
+			}
+		}
+		completion_reward = {
+			set_variable = {
+				YYK_kaihua = 0
+			}
+			YYK_xuqingzui = yes
+			YYK_xuqingzui = yes
+			every_country = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = YYK_linghunshouji_op
+				}
+			}
+			CONV_convert_cost_factor_minus0.3 = yes
+			custom_effect_tooltip = YYK_linghunshouji_tt
+			hidden_effect = {
+				news_event = { days = 2 id = yyk.34 }
+			}
+		}
+	}
+	focus = {
+		id = YYK_youdaosiwang
+		icon = GFX_goal_generic_CAS
+		cost = 12.00
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = YYK_linghunshouji
+		}
+		relative_position_id = YYK_linghunshouji
+		completion_reward = {
+			add_ideas = YYK_youdaosiwang_idea
+			random_army_leader = {
+				limit = {
+					has_id = 43
+				}
+				add_attack = 1
+				add_defense = 1
+				add_logistics = 1
+				add_planning = 1
+			}
+			SKI = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = YYK_youdaosiwang_op
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_zibaoyouling
+		icon = GFX_focus_YYK_zibaoyouling
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_linghunshouji
+		}
+		x = 2
+		y = 1
+		relative_position_id = YYK_linghunshouji
+		completion_reward = {
+			YYK_xuqingzui = yes
+			YYK_xiaochudongdang = yes
+			add_ideas = YYK_zibaoyouling_idea
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_gansidui
+		icon = GFX_focus_RAJ_indian_gurkhas
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_youdaosiwang
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_youdaosiwang
+		completion_reward = {
+			YYK_xuqingzui = yes
+			add_ideas = YYK_gansidui_idea
+			GO_attack_defence_nerf_add20 = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_siwangheping
+		icon = GFX_goal_generic_secret_weapon
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_gansidui
+		}
+		x = 0
+		y = 2
+		relative_position_id = YYK_gansidui
+		available = {
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = YYK_ziranzhili_tt2
+				check_variable = {
+					YYK_kaihua > 299
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = YYK_siwangheping_tt
+			every_country = {
+				add_opinion_modifier = { target = ROOT modifier = set_enemy}
+				add_ai_strategy = {
+				type = antagonize
+				id = ROOT
+				value = 20000
+				}
+			}
+			hidden_effect = {
+				news_event = { id = yyk.35 days = 2 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_kaihuazhihui
+		icon = GFX_focus_YYK_kaihuazhihui
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_chunduzaishouji
+			focus = YYK_linghunshouji
+		}
+		x = 2
+		y = 1
+		relative_position_id = YYK_chunduzaishouji
+		completion_reward = {
+			add_ideas = YYK_kaihuazhihui_idea
+		}
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+	focus = {
+		id = YYK_zhouquanjihua
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_kaihuazhihui
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_kaihuazhihui
+		completion_reward = {
+			YYK_xiaochudongdang = yes
+			swap_ideas = {
+				add_idea = YYK_zhouquanjihua_idea
+				remove_idea = YYK_kaihuazhihui_idea
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_hongsejihua
+		icon = GFX_focus_YYK_hongsejihua
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_weiUUZ
+		}
+		x = -3
+		y = 1
+		relative_position_id = YYK_weiUUZ
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			YYK_xuqingzui = yes
+			SKI = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = YYK_hongsejihua_op
+				}
+			}
+			custom_effect_tooltip = YYK_hongsejihua_tt
+			show_ideas_tooltip = YYK_hongsejihua_idea
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_lianhediyulouling
+		icon = GFX_goal_generic_improve_relations
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_hongsejihua
+		}
+		x = -1
+		y = 1
+		relative_position_id = YYK_hongsejihua
+		available = {
+			HGH = {
+				is_subject = no
+				faqiqingqiu = yes
+			}
+		}
+		completion_reward = {
+			HGH = {
+				country_event = { id = yyk.47 days = 2 }
+			}
+			custom_effect_tooltip = TEG_accept
+			custom_effect_tooltip = YYK_lianhediyulouling_tt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_zizhuchuji
+		icon = GFX_goal_poland_goal
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_hongsejihua
+		}
+		x = 1
+		y = 1
+		relative_position_id = YYK_hongsejihua
+		available = {
+			is_subject = no
+			not = {
+				has_country_flag = YYK_lianhediyulouling
+			}
+		}
+		completion_reward = {
+			add_ideas = YYK_zizhuchuji_idea
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_qingsuanguizu
+		icon = GFX_goal_generic_major_war
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_lianhediyulouling
+			focus = YYK_zizhuchuji
+		}
+		x = 1
+		y = 1
+		relative_position_id = YYK_lianhediyulouling
+		will_lead_to_war_with = AKO
+		will_lead_to_war_with = AOO
+		available = {
+			or = {
+				has_country_flag = YYK_lianhediyulouling
+				has_completed_focus = YYK_zizhuchuji
+			}
+			or = {
+				AKO = {
+					before_declare_war = yes
+				}
+				AOO = {
+					before_declare_war = yes
+				}
+			}
+		}
+		bypass = {
+			AKO = {
+				bypass_declare_war = yes
+			}
+			AOO = {
+				bypass_declare_war = yes
+			}
+		}
+		completion_reward = {
+			YYK_xukuoda = yes
+			if = {
+				limit = {
+					AKO = {
+						not = {
+							is_subject_of = ROOT
+							has_non_aggression_pact_with = ROOT
+						}
+					}
+				}
+				declare_war_on = {
+					target = AKO
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					AOO = {
+						not = {
+							is_subject_of = ROOT
+							has_non_aggression_pact_with = ROOT
+						}
+					}
+				}
+				declare_war_on = {
+					target = AOO
+					type = annex_everything
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+		}
+	}
+	focus = {
+		id = YYK_anfudiyuyouling
+		icon = GFX_goal_generic_national_unity
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_qingsuanguizu
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_qingsuanguizu
+		available = {
+			is_subject = no
+			or = {
+				any_owned_state = {
+					is_on_continent = Hell
+					ST_race_is_Ghost = yes
+				}
+				HGH = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+		completion_reward = {
+			YYK_xukuoda = yes
+			custom_effect_tooltip = focus_warning2
+			every_owned_state = {
+				limit = {
+					is_on_continent = Hell
+				}
+				if = {
+					limit = {
+						HGH = {
+							is_subject_of = ROOT
+						}
+					}
+					HGH = {
+						transfer_state = PREV
+						add_state_core = PREV
+						can_core = yes
+					}
+					else = {
+						YYH = {
+							transfer_state = PREV
+							add_state_core = PREV
+							
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					HGH = {
+						not = { is_subject_of = ROOT }
+					}
+				}
+				YYH = {
+					can_core = yes
+					subject_level2 = yes
+					inherit_technology = YYK
+				}
+				else = {
+					HGH = {
+						can_core = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_diyuyoulingliliang
+		icon = GFX_goal_generic_CAS
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_anfudiyuyouling
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_anfudiyuyouling
+		completion_reward = {
+			GO_attack_defence_nerf_add10 = yes
+			YYK_xuqingzui = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_huisejihua
+		icon = GFX_focus_YYK_huisejihua
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_weiUUZ
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_weiUUZ
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			YYK_xuqingzui = yes
+			custom_effect_tooltip = YYK_huisejihua_tt
+			show_ideas_tooltip = YYK_hongsejihua_idea
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_kaifangtonglu
+		icon = GFX_goal_generic_political_pressure
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_huisejihua
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_huisejihua
+		will_lead_to_war_with = HUB
+		available = {
+			HUB = {
+				before_declare_war = yes
+			}
+		}
+		bypass = {
+			HUB = {
+				bypass_declare_war = yes
+			}
+		}
+		completion_reward = {
+			HUB = {
+				country_event = { days = 2 id = yyk.49 }
+			}
+			custom_effect_tooltip = TEG_accept
+			effect_tooltip = {
+				HUB = {
+					subject_level2 = yes
+				}
+			}
+			custom_effect_tooltip = focus_warning5
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+	focus = {
+		id = YYK_jiudiyuzhongxin
+		icon = GFX_goal_generic_major_war
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_kaifangtonglu
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_kaifangtonglu
+		will_lead_to_war_with = SAT
+		will_lead_to_war_with = YUG
+		available = {
+			or = {
+				SAT = {
+					before_declare_war = yes
+				}
+				YUG = {
+					before_declare_war = yes
+				}
+			}
+		}
+		bypass = {
+			SAT = {
+				bypass_declare_war = yes
+			}
+			YUG = {
+				bypass_declare_war = yes
+			}
+		}
+		completion_reward = {
+			YYK_xiaochudongdang = yes
+			YYK_xukuoda = yes
+			if = {
+				limit = {
+					SAT = {
+						not = {
+							is_subject_of = ROOT
+							has_non_aggression_pact_with = ROOT
+						}
+					}
+				}
+				declare_war_on = {
+					target = SAT
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					YUG = {
+						not = {
+							is_subject_of = ROOT
+							has_non_aggression_pact_with = ROOT
+						}
+					}
+				}
+				declare_war_on = {
+					target = YUG
+					type = annex_everything
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+	focus = {
+		id = YYK_caisejihua
+		icon = GFX_focus_YYK_caisejihua
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_weiUUZ
+		}
+		x = 2
+		y = 1
+		relative_position_id = YYK_weiUUZ
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			YYK_xuqingzui = yes
+			custom_effect_tooltip = YYK_caisejihua_tt
+			show_ideas_tooltip = YYK_hongsejihua_idea
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_tupojiejie
+		icon = GFX_focus_YYK_break_through_the_boundary
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_caisejihua
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_caisejihua
+		available = {
+			YKR = {
+				before_declare_war = yes
+			}
+			not = {
+				has_country_flag = YYK_yuzigoutong
+			}
+		}
+		bypass = {
+			YKR = {
+				bypass_declare_war = yes
+			}
+		}
+		completion_reward = {
+			YYK_xiaochudongdang = yes
+			YYK_xukuoda = yes
+			add_ideas = YYK_tupojiejie_idea
+			declare_war_on = {
+				target = YKR
+				type = annex_everything
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+	focus = {
+		id = YYK_zhanlingxijian
+		icon = GFX_goal_generic_political_pressure
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_tupojiejie
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_tupojiejie
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = YYK_zhanlingxijian_tt
+				any_state = {
+					region = 10
+					is_fully_controlled_by = ROOT
+				}
+			}
+		}
+		completion_reward = {
+			every_controlled_state = {
+				limit = {
+					region = 10
+					not = {
+						is_core_of = ROOT
+					}
+				}
+				add_resistance = -100
+				add_compliance = 10
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_yuzigoutong
+		icon = GFX_focus_Yakumo_Yukari_treaty
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_caisejihua
+		}
+		x = 2
+		y = 1
+		relative_position_id = YYK_caisejihua
+		available = {
+			YKR = {
+				is_subject = no
+				or = {
+					owns_state = 544
+					any_country = {
+						is_subject_of = PREV
+						owns_state = 544
+					}
+				}
+				or = {
+					owns_state = 137
+					any_country = {
+						is_subject_of = PREV
+						owns_state = 137
+					}
+				}
+				faqiqingqiu = yes
+			}
+			
+		}
+		bypass = {
+			owns_state = 544
+			owns_state = 137
+		}
+		mutually_exclusive = {
+			focus = YYK_tupojiejie
+		}
+		completion_reward = {
+			YKR = {
+				country_event = { days = 2 id = yyk.51 }
+			}
+			custom_effect_tooltip = TEG_accept
+			effect_tooltip = {
+				transfer_state = 544
+				transfer_state = 137
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_ruqintonglu
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_yuzigoutong
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_yuzigoutong
+		available = {
+			any_state = {
+				is_on_continent = Gensokyo
+				is_controlled_by = ROOT
+			}
+		}
+		completion_reward = {
+			every_controlled_state = {
+				limit = {
+					is_on_continent = Gensokyo
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_datongtonglu
+		icon = GFX_goal_generic_major_war
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_zhanlingxijian
+			focus = YYK_ruqintonglu
+		}
+		prerequisite = {
+			focus = YYK_jiudiyuzhongxin
+		}
+		x = 1
+		y = 1
+		relative_position_id = YYK_jiudiyuzhongxin
+		will_lead_to_war_with = SEJ
+		available = {
+			SEJ = {
+				before_declare_war = yes
+			}
+		}
+		bypass = {
+			SEJ = {
+				bypass_declare_war = yes
+			}
+		}
+		completion_reward = {
+			YYK_xukuoda = yes
+			declare_war_on = {
+				target = SEJ
+				type = annex_everything
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+	focus = {
+		id = YYK_xinqixidi
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		cost = 12.00
+		prerequisite = {
+			focus = YYK_datongtonglu
+		}
+		x = 0
+		y = 1
+		relative_position_id = YYK_datongtonglu
+		available = {
+			is_subject = no
+			or = {
+				any_owned_state = {
+					ST_race_is_Ghost = yes
+					or = {
+						is_on_continent = Gensokyo
+						is_on_continent = Underground
+					}
+				}
+				UUG = {
+					is_subject_of = ROOT
+				}
+			}
+			
+		}
+		completion_reward = {
+			YYK_xukuoda = yes
+			every_owned_state = {
+				limit = {
+					or = {
+						is_on_continent = Gensokyo
+						is_on_continent = Underground
+					}
+				}
+				if = {
+					limit = {
+						UUG = {
+							is_subject_of = ROOT
+						}
+					}
+					UUG = {
+						transfer_state = PREV
+						add_state_core = PREV
+					}
+					else = {
+						YYG = {
+							transfer_state = PREV
+							add_state_core = PREV
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					UUG = {
+						not = { is_subject_of = ROOT }
+					}
+				}
+				YYG = {
+					can_core = yes
+					subject_level4 = yes
+					inherit_technology = YYK
+				}
+				else = {
+					UUG = {
+						can_core = yes
+					}
+				}
+			}
+			hidden_effect = {
+				news_event = { id = yyk.28 days = 2 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = YYK_minjieqingkuangehua
+		icon = GFX_focus_YYK_netherworld_bad_to_worse
+		cost = 0
+		x = -7
+		y = 0
+		relative_position_id = YYK_fangwendiyu
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = suifazhanjiesuo
+				always = no
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = YYK_minjieqingkuangehua_tt
+				date < 149.1.1
+				or = {
+					has_war_with = NG1
+					has_war_with = NG2
+					has_war_with = NG3
+					has_war_with = NG4
+				}
+			}
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	focus = {
+		id = YYK_sizhedezhuangbei
+		icon = GFX_focus_NUE_temporary_rifle_regiments
+		cost = 12
+		x = -3
+		y = 1
+		relative_position_id = YYK_minjieqingkuangehua
+		prerequisite = {
+			focus = YYK_minjieqingkuangehua
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = magic_core117
+				amount = 1000
+			}
+			add_tech_bonus = {
+				category = primary_weapons
+				uses = 1
+				bonus = 1
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	focus = {
+		id = YYK_uuzyinweijun
+		icon = GFX_goal_generic_defence
+		cost = 12
+		x = -1
+		y = 1
+		relative_position_id = YYK_minjieqingkuangehua
+		prerequisite = {
+			focus = YYK_minjieqingkuangehua
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			custom_effect_tooltip = YYK_uuzyinweijun_tt
+			hidden_effect = {
+				load_oob = "YYK_1"
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	focus = {
+		id = YYK_yaomengzuozhanruodian
+		icon = GFX_focus_generic_air_defense
+		cost = 12
+		x = 0
+		y = 1
+		relative_position_id = YYK_uuzyinweijun
+		prerequisite = {
+			focus = YYK_uuzyinweijun
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = YYK_yaomengzuozhanruodian_tt
+				all_country = {
+					or = {
+						not = { has_country_flag = YOM_is_here }
+						is_subject_of = ROOT
+					}
+				}
+			}
+			
+		}
+		mutually_exclusive = {
+			focus = YYK_yaomengcuiruolingdao
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					NG1 = {
+						has_country_flag = YOM_is_here
+					}
+				}
+				add_ideas = YYK_yaomengzuozhanruodian1_idea
+			}
+			if = {
+				limit = {
+					NG2 = {
+						has_country_flag = YOM_is_here
+					}
+				}
+				add_ideas = YYK_yaomengzuozhanruodian2_idea
+			}
+			if = {
+				limit = {
+					NG3 = {
+						has_country_flag = YOM_is_here
+					}
+				}
+				add_ideas = YYK_yaomengzuozhanruodian3_idea
+			}
+			if = {
+				limit = {
+					NG4 = {
+						has_country_flag = YOM_is_here
+					}
+				}
+				add_ideas = YYK_yaomengzuozhanruodian4_idea
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	focus = {
+		id = YYK_jingjizhuangkuangtiaozheng
+		icon = GFX_focus_YYK_fine_tune_our_economics
+		cost = 12
+		x = 3
+		y = 1
+		relative_position_id = YYK_minjieqingkuangehua
+		prerequisite = {
+			focus = YYK_minjieqingkuangehua
+		}
+		available = {
+			is_subject = no
+		}
+		bypass = {
+			or = {
+				has_idea = low_economic_mobilisation
+				has_idea = partial_economic_mobilisation
+				has_idea = war_economy
+				has_idea = tot_economic_mobilisation
+			}
+		}
+		completion_reward = {
+			add_political_power = -75
+			add_ideas = low_economic_mobilisation
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	focus = {
+		id = YYK_uuzweiyan
+		icon = GFX_goal_generic_political_pressure
+		cost = 12
+		x = 1
+		y = 1
+		relative_position_id = YYK_minjieqingkuangehua
+		prerequisite = {
+			focus = YYK_minjieqingkuangehua
+		}
+		available = {
+			is_subject = no
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = YYK_neizhanover_tt
+				is_subject = no
+				not = {
+					has_war_with = NG1
+					has_war_with = NG2
+					has_war_with = NG3
+					has_war_with = NG4
+					has_country_flag = YYK_neizhanzhunbeibaofa
+				}
+			}
+		}
+		completion_reward = {
+			add_political_power = 150
+			add_manpower = -300
+			add_timed_idea = {
+				idea = YYK_uuzweiyan_idea
+				days = 365
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	focus = {
+		id = YYK_yaomengcuiruolingdao
+		icon = GFX_goal_generic_national_unity
+		cost = 12
+		x = 0
+		y = 1
+		relative_position_id = YYK_uuzweiyan
+		prerequisite = {
+			focus = YYK_uuzweiyan
+		}
+		mutually_exclusive = {
+			focus = YYK_yaomengzuozhanruodian
+		}
+		available = {
+			is_subject = no
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = YYK_yaomengzuozhanruodian_tt
+				all_country = {
+					or = {
+						not = { has_country_flag = YOM_is_here }
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+		completion_reward = {
+			every_country = {
+				limit = {
+					or = {
+						tag = NG1
+						tag = NG2
+						tag = NG3
+						tag = NG4
+					}
+					has_country_flag = YOM_is_here
+				}
+				add_ideas = YYK_yaomengcuiruolingdao_idea
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	focus = {
+		id = YYK_mingjiedehepingguodu
+		icon = GFX_focus_NMS_Commonwealth_of_Peace
+		cost = 0
+		x = 0
+		y = 1
+		relative_position_id = YYK_sizhedezhuangbei
+		bypass = {
+			has_country_flag = YYK_mingjieweineizhan
+			
+		}
+		prerequisite = {
+
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = suifazhanjiesuo
+				always = no
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+
+	}
+	focus = {
+		id = YYK_mingjiechongtongyi
+		icon = GFX_focus_jap_showa_restoration
+		cost = 12
+		x = 1
+		y = 1
+		relative_position_id = YYK_yaomengzuozhanruodian
+		prerequisite = {
+			focus = YYK_yaomengcuiruolingdao
+			focus = YYK_yaomengzuozhanruodian
+			focus = YYK_mingjiedehepingguodu
+		}
+		available = {
+			or = {
+				has_country_flag = YYK_mingjieweineizhan
+					custom_trigger_tooltip = {
+					tooltip = YYK_neizhanover_tt
+					is_subject = no
+					not = {
+						has_war_with = NG1
+						has_war_with = NG2
+						has_war_with = NG3
+						has_war_with = NG4
+						has_country_flag = YYK_neizhanzhunbeibaofa
+					}
+				}
+			}
+			
+		}
+		completion_reward = {
+			global_every_army_leader = {
+				limit = {
+					has_id = 42
+				}
+				every_country = {
+					clr_country_flag = YOM_is_here
+				}
+				set_nationality = ROOT
+			}
+			
+			every_country = {
+				limit = {
+					is_subject_of = ROOT
+				}
+				low_puppet_level = yes
+			}
+			every_state = {
+				limit = {
+					is_on_continent = Netherworld
+				}
+				remove_claim_by = ROOT	
+				add_core_of = ROOT
+			}
+			if = {
+				limit = {
+					has_idea = YYK_yaomengdanyou1_idea
+				}
+				remove_ideas = YYK_yaomengdanyou1_idea
+			}
+			if = {
+				limit = {
+					has_idea = YYK_yaomengdanyou2_idea
+				}
+				remove_ideas = YYK_yaomengdanyou2_idea
+			}
+			if = {
+				limit = {
+					has_idea = YYK_yaomengdanyou3_idea
+				}
+				remove_ideas = YYK_yaomengdanyou3_idea
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+}

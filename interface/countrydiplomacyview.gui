@@ -54,10 +54,10 @@ guiTypes = {
 			
 			instantTextboxType = {
 				name = "country_name"
-				position = { x = 330 y = 3 }
+				position = { x = 326 y = 3 }
 				font = "hoi_18mbs"
 				text = "Germanian"
-				maxWidth = 195
+				maxWidth = 205
 				fixedsize = yes
 				maxHeight = 20
 				format = left
@@ -65,7 +65,7 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "faction"
-				position = { x = 335 y = 23}	
+				position = { x = 331 y = 23}	
 				size = { width = 175 height = 20 }
 				clipping = no
 			
@@ -74,7 +74,7 @@ guiTypes = {
 					position = { x = -5 y = 0 }
 					font = "hoi_18mbs"
 					text = "faction"
-					maxWidth = 195
+					maxWidth = 205
 					maxHeight = 20
 					fixedsize = yes		
 					format = left
@@ -83,10 +83,10 @@ guiTypes = {
 			
 			instantTextboxType = {
 				name = "leader_name"
-				position = { x = 330 y = 43 }
+				position = { x = 326 y = 43 }
 				font = "hoi_16mbs"
 				text = "Rudolf Kittler"
-				maxWidth = 195
+				maxWidth = 205
 				maxHeight = 20
 				format = left
 				fixedsize = yes						
@@ -175,26 +175,26 @@ guiTypes = {
 							
 					instantTextboxType = {
 						name = "party_name"
-						position = { x = -5 y = -5 }
+						position = { x = -4 y = -10 }
 						font = "hoi_16mbs"
 						text = "party"
-						maxWidth = 245
-						maxHeight = 20
+						maxWidth = 100
+						maxHeight = 33
 						fixedsize = yes
 					}
 					
 					instantTextboxType = {
 						name = "ideology_name"
-						position = { x = -5 y = 25 }
+						position = { x = -4 y = 25 }
 						font = "hoi_16mbs"
 						text = "ideology"
-						maxWidth = 245
-						maxHeight = 20
+						maxWidth = 100
+						maxHeight = 33
 					}
 					
 					instantTextboxType = {
 						name = "elections"
-						position = { x = -300 y = 25 }#changed
+						position = { x = -400 y = 25 }#changed
 						font = "hoi_16mbs"
 						text = "elections"
 						maxWidth = 245

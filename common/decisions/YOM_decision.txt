@@ -1,0 +1,263 @@
+YOM_find_his_sword_category = {#妖梦重铸白楼-楼观剑
+
+    YOM_begin_find_sword_white_bailou = { #重铸白楼
+
+		icon = generic_political_actions
+
+        visible = {
+			has_completed_focus = ROA_YOM_66
+            NOT = { has_country_flag = YOM_has_finish_find_sword_white }			
+        }
+
+        available = {
+            NOT = { has_country_flag = YOM_doing_sword }
+        }
+
+        cost = 50
+
+        complete_effect = {
+			country_event = yom.1 
+            set_country_flag = YOM_doing_sword
+        }
+		  
+        ai_will_do = {
+            factor = 100
+        }
+    }
+
+
+    YOM_begin_find_sword_white_louguan = {# 重铸楼观
+
+		icon = generic_political_actions
+
+        visible = {
+			has_completed_focus = ROA_YOM_66
+            NOT = { has_country_flag = YOM_has_finish_find_sword_evil }			
+        }
+
+        available = {
+            NOT = { has_country_flag = YOM_doing_sword }
+        }
+
+        cost = 50
+
+        complete_effect = {
+			set_country_flag = YOM_doing_sword
+			country_event = yom.5
+        }
+		  
+        ai_will_do = {
+            factor = 100
+        }
+    }
+}
+
+YOM_jiledi_category = {
+	YOM_Bliss_deci_1 = { #极乐地-pp点
+        visible = {
+            or = {
+                has_completed_focus = ROA_YOM_74
+                check_variable = {
+                    YOM_Bliss_var > 0
+                }
+            }
+        }		
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = YOM_Bliss_deci_1_tt2
+                check_variable = {
+                    YOM_Bliss_var < 30
+                }
+            }
+        }
+        cost = 125
+		days_remove = 75
+		days_re_enable = 30
+		
+        remove_effect = {
+            custom_effect_tooltip = YOM_Bliss_deci_1_tt
+			add_to_variable = {
+                var = YOM_Bliss_var
+                value = 1
+            }		
+        }
+		  
+        ai_will_do = {
+            factor = 100
+        }	
+	}
+	
+	YOM_Bliss_deci_2 = {#极乐地-工厂
+        visible = {
+			has_completed_focus = ROA_YOM_83
+        }	
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = YOM_Bliss_deci_2_tt
+                check_variable = {
+                    YOM_Bliss_var > 0
+                }
+            }
+        }	
+		days_remove = 100
+		days_re_enable = 30
+		
+        modifier = {
+             civilian_factory_use = 3
+        }		
+        remove_effect = {
+			add_offsite_building = { 
+				type = arms_factory 
+				level = 1 
+			}
+        }
+		complete_effect = {
+            custom_effect_tooltip = YOM_Bliss_deci_2_tt2
+            add_to_variable = {
+                var = YOM_Bliss_var
+                value = -1
+            }
+        }  
+        ai_will_do = {
+            factor = 100
+        }	
+	}
+
+    YOM_Bliss_deci_4 = {#极乐地-科研
+        visible = {
+			has_completed_focus = ROA_YOM_84
+        }	
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = YOM_Bliss_deci_2_tt
+                check_variable = {
+                    YOM_Bliss_var > 0
+                }
+            }
+        }	
+		days_remove = 100
+		days_re_enable = 30
+		
+        modifier = {
+             research_speed_factor = 0.2
+        }		
+		complete_effect = {
+            custom_effect_tooltip = YOM_Bliss_deci_2_tt2
+            add_to_variable = {
+                var = YOM_Bliss_var
+                value = -1
+            }
+        }  
+        ai_will_do = {
+            factor = 100
+        }	
+	}
+
+	YOM_Bliss_deci_3 = {#极乐地-双稳
+        visible = {
+			has_completed_focus = ROA_YOM_85
+        }	
+        available = {	
+            custom_trigger_tooltip = {
+                tooltip = YOM_Bliss_deci_2_tt
+                check_variable = {
+                    YOM_Bliss_var > 0
+                }
+            }
+        }	
+		days_remove = 100
+		days_re_enable = 30
+        modifier = {
+            political_power_gain = 0.2
+            stability_weekly = 0.007
+            war_support_weekly = 0.007
+        }
+        complete_effect = {
+            custom_effect_tooltip = YOM_Bliss_deci_2_tt2
+            add_to_variable = {
+                var = YOM_Bliss_var
+                value = -1
+            }
+        }
+		  
+        ai_will_do = {
+            factor = 100
+        }	
+	}
+
+	YOM_Bliss_deci_5 = {#极乐地-工厂和研究
+        visible = {
+			has_completed_focus = ROA_YOM_87
+        }	
+        available = {	
+            custom_trigger_tooltip = {
+                tooltip = YOM_Bliss_deci_5_tt
+                check_variable = {
+                    YOM_Bliss_var > 14
+                }
+            }
+        }	
+		days_remove = 150
+		days_re_enable = 730
+        modifier = {
+            research_speed_factor = 1
+        }
+        remove_effect = {
+            add_offsite_building = {
+                type = arms_factory 
+				level = 5
+            }
+        }
+
+        complete_effect = {
+            custom_effect_tooltip = YOM_Bliss_deci_5_tt2
+            add_to_variable = {
+                var = YOM_Bliss_var
+                value = -10
+            }
+        }
+		  
+        ai_will_do = {
+            factor = 100
+        }	
+	}
+	YOM_Bliss_deci_6 = {#军事加成
+        visible = {
+			has_completed_focus = ROA_YOM_87
+        }	
+        available = {	
+            custom_trigger_tooltip = {
+                tooltip = YOM_Bliss_deci_5_tt
+                check_variable = {
+                    YOM_Bliss_var > 14
+                }
+            }
+        }	
+		days_remove = 150
+		days_re_enable = 730
+        modifier = {
+            army_attack_factor = 0.4
+            army_defence_factor = 0.4
+            industrial_capacity_factory = 0.5
+            production_speed_buildings_factor = 0.5
+        }
+        remove_effect = {
+
+        }
+
+        complete_effect = {
+            custom_effect_tooltip = YOM_Bliss_deci_5_tt2
+            add_to_variable = {
+                var = YOM_Bliss_var
+                value = -10
+            }
+        }
+		  
+        ai_will_do = {
+            factor = 100
+        }	
+	}
+
+		
+	
+}

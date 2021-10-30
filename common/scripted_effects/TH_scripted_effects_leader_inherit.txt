@@ -3,16 +3,468 @@ army_leader_inherit_146 = {
         limit = {
             has_global_flag =  main_scenario
         }
-        # if = {
-        #     limit = {
-        #         english_leaders = yes
-        #     }
+        if = {
+            limit = {
+                english_leaders = yes
+            }
             
-        #     army_english_leader_inherit_146 = yes
+            army_english_leader_inherit_146 = yes
 
-        #     else = {
+            else = {
                 army_chinese_leader_inherit_146 = yes
-        #     }
-        # }
+            }
+        }
+    }
+}
+NUE_shuofuhuiguiyexing = {
+    if = {
+        limit = {
+            not = {
+                has_country_flag = has_inherit_NMS
+            }
+        }
+        set_country_flag = has_inherit_NMS
+        if = {
+            limit = {
+                english_leaders = yes
+            }
+            random_list = {
+                90 = {
+                    create_corps_commander = {
+                        name = "Murasa Minamitsu"
+                        # name = "村纱水蜜"
+                        portrait_path = "gfx/leaders/NMS/NMS_murasa.dds"
+                        traits = {  th_character  th_trait_chongjizhuanjia th_trait_huoqiangzhuanjia trait_reckless war_hero }
+                        attack_skill = 7
+                        defense_skill = 6
+                        planning_skill = 4
+                        logistics_skill = 4
+                        skill = 6
+                    }
+                }
+                10 = {
+
+                }
+            }
+            random_list = {
+                60 = {
+                    create_corps_commander = {
+                        name = "Kumoi Ichirin"
+                        # name = "云居一轮"
+                        portrait_path = "gfx/leaders/NMS/NMS_kumoi.dds"
+                        traits = {  th_character  th_trait_chongjizhuanjia war_hero }
+                        attack_skill = 6
+                        defense_skill = 7
+                        planning_skill = 4
+                        logistics_skill = 2
+                        skill = 5
+                    }
+                }
+                40 = {
+                    
+                }
+            }
+            random_list = {
+                50 = {
+                    create_corps_commander = {
+                        name = "Toramaru Syou"
+                        # name = "寅丸星"
+                        portrait_path = "gfx/leaders/NMS/NMS_syou.dds"
+                        traits = {  th_character  old_guard  }
+                        attack_skill = 5
+                        defense_skill = 5
+                        planning_skill = 5
+                        logistics_skill = 9
+                        skill = 6
+                    }
+                }
+                50 = {
+                    
+                }
+            }
+            random_list = {
+                25 = {
+                    create_corps_commander = {
+                        name = "Nazrin"
+                        # name = "娜兹玲"
+                        portrait_path = "gfx/leaders/NMS/NMS_mouse.dds"
+                        traits = {  th_character  th_trait_tezhongzhuanjia  }
+                        attack_skill = 2
+                        defense_skill = 4
+                        planning_skill = 6
+                        logistics_skill = 4
+                        skill = 4
+                    }
+                }
+                75 = {
+                    
+                }
+            }
+            random_list = {
+                15 = {
+                    create_corps_commander = {
+                        name = "Kasodani Kyouko"
+                        # name = "幽谷响子"
+                        portrait_path = "gfx/leaders/NMS/NMS_kyouko.dds"
+                        traits = {  th_character  trait_cautious th_trait_huoqiangzhuanjia  }
+                        attack_skill = 3
+                        defense_skill = 5
+                        planning_skill = 3
+                        logistics_skill = 2
+                        skill = 4
+                    }
+                }
+                85 = {
+                    
+                }
+            }
+            random_list = {
+                10 = {
+                    create_field_marshal = {
+                        name = "Hijiri Byakuren"
+                        # name = "圣白莲"
+                        portrait_path = "gfx/leaders/NMS/NMS_bkr.dds"
+                        traits = {  th_character  war_hero trait_cautious }
+                        attack_skill = 10
+                        defense_skill = 14
+                        planning_skill = 10
+                        logistics_skill = 7
+                        skill = 11
+                    }
+                }
+                90 = {
+
+                }
+            }
+            else = {
+                random_list = {
+                    90 = {
+                        create_corps_commander = {
+                            # name = "Murasa Minamitsu"
+                            name = "村纱水蜜"
+                            portrait_path = "gfx/leaders/NMS/NMS_murasa.dds"
+                            traits = {  th_character  th_trait_chongjizhuanjia th_trait_huoqiangzhuanjia trait_reckless war_hero }
+                            attack_skill = 7
+                            defense_skill = 6
+                            planning_skill = 4
+                            logistics_skill = 4
+                            skill = 6
+                        }
+                    }
+                    10 = {
+
+                    }
+                }
+                random_list = {
+                    60 = {
+                        create_corps_commander = {
+                            # name = "Kumoi Ichirin"
+                            name = "云居一轮"
+                            portrait_path = "gfx/leaders/NMS/NMS_kumoi.dds"
+                            traits = {  th_character  th_trait_chongjizhuanjia war_hero }
+                            attack_skill = 6
+                            defense_skill = 7
+                            planning_skill = 4
+                            logistics_skill = 2
+                            skill = 5
+                        }
+                    }
+                    40 = {
+                        
+                    }
+                }
+                random_list = {
+                    50 = {
+                        create_corps_commander = {
+                            # name = "Toramaru Syou"
+                            name = "寅丸星"
+                            portrait_path = "gfx/leaders/NMS/NMS_syou.dds"
+                            traits = {  th_character  old_guard  }
+                            attack_skill = 5
+                            defense_skill = 5
+                            planning_skill = 5
+                            logistics_skill = 9
+                            skill = 6
+                        }
+                    }
+                    50 = {
+                        
+                    }
+                }
+                random_list = {
+                    25 = {
+                        create_corps_commander = {
+                            # name = "Nazrin"
+                            name = "娜兹玲"
+                            portrait_path = "gfx/leaders/NMS/NMS_mouse.dds"
+                            traits = {  th_character  th_trait_tezhongzhuanjia  }
+                            attack_skill = 2
+                            defense_skill = 4
+                            planning_skill = 6
+                            logistics_skill = 4
+                            skill = 4
+                        }
+                    }
+                    75 = {
+                        
+                    }
+                }
+                random_list = {
+                    15 = {
+                        create_corps_commander = {
+                            # name = "Kasodani Kyouko"
+                            name = "幽谷响子"
+                            portrait_path = "gfx/leaders/NMS/NMS_kyouko.dds"
+                            traits = {  th_character  trait_cautious th_trait_huoqiangzhuanjia  }
+                            attack_skill = 3
+                            defense_skill = 5
+                            planning_skill = 3
+                            logistics_skill = 2
+                            skill = 4
+                        }
+                    }
+                    85 = {
+                        
+                    }
+                }
+                random_list = {
+                    10 = {
+                        create_field_marshal = {
+                            # name = "Hijiri Byakuren"
+                            name = "圣白莲"
+                            portrait_path = "gfx/leaders/NMS/NMS_bkr.dds"
+                            traits = {  th_character  war_hero trait_cautious }
+                            attack_skill = 10
+                            defense_skill = 14
+                            planning_skill = 10
+                            logistics_skill = 7
+                            skill = 11
+                        }
+                    }
+                    90 = {
+
+                    }
+                }
+            }
+        }
+    }
+}
+NUE_heshengbailianhejie = {
+    if = {
+        limit = {
+            not = {
+                has_country_flag = has_inherit_NMS
+            }
+        }
+        set_country_flag = has_inherit_NMS
+        if = {
+            limit = {
+                english_leaders = yes
+            }
+            create_field_marshal = {
+                name = "Hijiri Byakuren"
+                # name = "圣白莲"
+                portrait_path = "gfx/leaders/NMS/NMS_bkr.dds"
+                traits = {  th_character  war_hero trait_cautious }
+                attack_skill = 10
+                defense_skill = 14
+                planning_skill = 10
+                logistics_skill = 7
+                skill = 11
+            }
+            random_list = {
+                90 = {
+                    create_corps_commander = {
+                        name = "Kumoi Ichirin"
+                        # name = "云居一轮"
+                        portrait_path = "gfx/leaders/NMS/NMS_kumoi.dds"
+                        traits = {  th_character  th_trait_chongjizhuanjia war_hero }
+                        attack_skill = 6
+                        defense_skill = 7
+                        planning_skill = 4
+                        logistics_skill = 2
+                        skill = 5
+                    }
+                }
+                10 = {
+                    
+                }
+            }
+            random_list = {
+                80 = {
+                    create_corps_commander = {
+                        name = "Toramaru Syou"
+                        # name = "寅丸星"
+                        portrait_path = "gfx/leaders/NMS/NMS_syou.dds"
+                        traits = {  th_character  old_guard  }
+                        attack_skill = 5
+                        defense_skill = 5
+                        planning_skill = 5
+                        logistics_skill = 9
+                        skill = 6
+                    }
+                }
+                20 = {
+                    
+                }
+            }
+            random_list = {
+                80 = {
+                    create_corps_commander = {
+                        name = "Nazrin"
+                        # name = "娜兹玲"
+                        portrait_path = "gfx/leaders/NMS/NMS_mouse.dds"
+                        traits = {  th_character  th_trait_tezhongzhuanjia  }
+                        attack_skill = 2
+                        defense_skill = 4
+                        planning_skill = 6
+                        logistics_skill = 4
+                        skill = 4
+                    }
+                }
+                20 = {
+                    
+                }
+            }
+            random_list = {
+                70 = {
+                    create_corps_commander = {
+                        name = "Kasodani Kyouko"
+                        # name = "幽谷响子"
+                        portrait_path = "gfx/leaders/NMS/NMS_kyouko.dds"
+                        traits = {  th_character  trait_cautious th_trait_huoqiangzhuanjia  }
+                        attack_skill = 3
+                        defense_skill = 5
+                        planning_skill = 3
+                        logistics_skill = 2
+                        skill = 4
+                    }
+                }
+                30 = {
+                    
+                }
+            }
+            random_list = {
+                45 = {
+                    create_corps_commander = {
+                        name = "Murasa Minamitsu"
+                        # name = "村纱水蜜"
+                        portrait_path = "gfx/leaders/NMS/NMS_murasa.dds"
+                        traits = {  th_character  th_trait_chongjizhuanjia th_trait_huoqiangzhuanjia trait_reckless war_hero }
+                        attack_skill = 7
+                        defense_skill = 6
+                        planning_skill = 4
+                        logistics_skill = 4
+                        skill = 6
+                    }
+                }
+                55 = {
+                    
+                }
+            }
+            else = {
+                create_field_marshal = {
+                    # name = "Hijiri Byakuren"
+                    name = "圣白莲"
+                    portrait_path = "gfx/leaders/NMS/NMS_bkr.dds"
+                    traits = {  th_character  war_hero trait_cautious }
+                    attack_skill = 10
+                    defense_skill = 14
+                    planning_skill = 10
+                    logistics_skill = 7
+                    skill = 11
+                }
+                random_list = {
+                    90 = {
+                        create_corps_commander = {
+                            # name = "Kumoi Ichirin"
+                            name = "云居一轮"
+                            portrait_path = "gfx/leaders/NMS/NMS_kumoi.dds"
+                            traits = {  th_character  th_trait_chongjizhuanjia war_hero }
+                            attack_skill = 6
+                            defense_skill = 7
+                            planning_skill = 4
+                            logistics_skill = 2
+                            skill = 5
+                        }
+                    }
+                    10 = {
+                        
+                    }
+                }
+                random_list = {
+                    80 = {
+                        create_corps_commander = {
+                            # name = "Toramaru Syou"
+                            name = "寅丸星"
+                            portrait_path = "gfx/leaders/NMS/NMS_syou.dds"
+                            traits = {  th_character  old_guard  }
+                            attack_skill = 5
+                            defense_skill = 5
+                            planning_skill = 5
+                            logistics_skill = 9
+                            skill = 6
+                        }
+                    }
+                    20 = {
+                        
+                    }
+                }
+                random_list = {
+                    80 = {
+                        create_corps_commander = {
+                            # name = "Nazrin"
+                            name = "娜兹玲"
+                            portrait_path = "gfx/leaders/NMS/NMS_mouse.dds"
+                            traits = {  th_character  th_trait_tezhongzhuanjia  }
+                            attack_skill = 2
+                            defense_skill = 4
+                            planning_skill = 6
+                            logistics_skill = 4
+                            skill = 4
+                        }
+                    }
+                    20 = {
+                        
+                    }
+                }
+                random_list = {
+                    70 = {
+                        create_corps_commander = {
+                            # name = "Kasodani Kyouko"
+                            name = "幽谷响子"
+                            portrait_path = "gfx/leaders/NMS/NMS_kyouko.dds"
+                            traits = {  th_character  trait_cautious th_trait_huoqiangzhuanjia  }
+                            attack_skill = 3
+                            defense_skill = 5
+                            planning_skill = 3
+                            logistics_skill = 2
+                            skill = 4
+                        }
+                    }
+                    30 = {
+                        
+                    }
+                }
+                random_list = {
+                    45 = {
+                        create_corps_commander = {
+                            # name = "Murasa Minamitsu"
+                            name = "村纱水蜜"
+                            portrait_path = "gfx/leaders/NMS/NMS_murasa.dds"
+                            traits = {  th_character  th_trait_chongjizhuanjia th_trait_huoqiangzhuanjia trait_reckless war_hero }
+                            attack_skill = 7
+                            defense_skill = 6
+                            planning_skill = 4
+                            logistics_skill = 4
+                            skill = 6
+                        }
+                    }
+                    55 = {
+                        
+                    }
+                }
+            }
+        }
     }
 }

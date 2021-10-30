@@ -26,7 +26,40 @@ division_template = {
 	support = {
 	}
 }
+division_template = {
+	name = "赫卡的伪分身"
+	regiments = {
+		ma_shield_tank = { x = 0 y = 0 }
+		ma_shield_tank = { x = 0 y = 1 }
+		ma_shield_tank = { x = 0 y = 2 }
+		ma_light_infantry = { x = 1 y = 0 }
+		ma_light_infantry = { x = 1 y = 1 }
+	}
+	support = {
+	}
+}
 units = {
+	division = {
+		name = "赫卡的伪分身"
+		location = 6085
+		division_template = "赫卡的伪分身"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "赫卡的伪分身"
+		location = 6085
+		division_template = "赫卡的伪分身"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "赫卡的伪分身"
+		location = 6085
+		division_template = "赫卡的伪分身"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
 	division = {
 		name = "地狱神明编制"
 		location = 6085

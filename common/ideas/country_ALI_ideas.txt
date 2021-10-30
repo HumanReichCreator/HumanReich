@@ -20,13 +20,18 @@ ideas = {
 
 			targeted_modifier = {
 	    		tag = TKM
-	    		attack_bonus_against = 0.3
-	    		defense_bonus_against = 0.3
+	    		attack_bonus_against = 0.1
+	    		defense_bonus_against = 0.1
 	    	}
 	    	targeted_modifier = {
 	    		tag = MEL
-	    		attack_bonus_against = 0.3
-	    		defense_bonus_against = 0.3
+	    		attack_bonus_against = 0.1
+	    		defense_bonus_against = 0.1
+	    	}
+	    	targeted_modifier = {
+	    		tag = MTM
+	    		attack_bonus_against = 0.1
+	    		defense_bonus_against = 0.1
 	    	}
 	    }
 	    ALI_moheiquchumolisha_idea = {
@@ -98,7 +103,7 @@ ideas = {
 	    	picture = strategic_bombing_focus
 
 	    	equipment_bonus = {
-				ma_magic_energy_a = {
+				magic_energy_a = {
 					breakthrough = 0.2
 					defense = 0.2
 					instant = yes
@@ -127,7 +132,7 @@ ideas = {
 	    	picture = generic_artillery_regiments
 
 	    	equipment_bonus = {
-				ma_magic_energy_a = {
+				magic_energy_a = {
 					soft_attack = 0.1
 					hard_attack = 0.1
 					instant = yes
@@ -445,10 +450,122 @@ ideas = {
 	    		has_war_with = ALI
 	    	}
 	    	modifier = {
-				army_attack_factor = -0.06
-				army_defence_factor = -0.06
+				army_attack_factor = -0.03
+				army_defence_factor = -0.03
 			}
 	    }
+	    ###########
+	    ALI_qidongtitainiyarenou_keyongxing_idea = {
+	    	name = ALI_qidongtitainiyarenou_keyongxing
 
+	    	available = {
+
+	    	}
+	    	equipment_bonus = {
+	    		core_shield_a = {
+	    			reliability = 0.1
+	    			instant = yes
+	    		}
+	    	}
+	    }
+	    ALI_qidongtitainiyarenou_tupo_idea = {
+	    	name = ALI_qidongtitainiyarenou_tupo
+
+	    	available = {
+
+	    	}
+	    	equipment_bonus = {
+	    		core_shield_a = {
+	    			breakthrough = 0.1
+	    			defense = 0.1
+	    			instant = yes
+	    		}
+	    	}
+	    }
+	    ALI_qidongtitainiyarenou_huoli_idea = {
+	    	name = ALI_qidongtitainiyarenou_huoli
+
+	    	available = {
+
+	    	}
+	    	equipment_bonus = {
+	    		core_shield_a = {
+	    			soft_attack = 0.1
+	    			hard_attack = 0.1
+	    			air_attack = 0.1
+	    			instant = yes
+	    		}
+	    	}
+	    }
+	    ALI_qidongtitainiyarenou_hudun_idea = {
+	    	name = ALI_qidongtitainiyarenou_hudun
+
+	    	available = {
+
+	    	}
+	    	equipment_bonus = {
+	    		core_shield_a = {
+	    			hardness = 0.1
+	    			armor_value = 0.1
+	    			instant = yes
+	    		}
+	    	}
+	    }
+	    ALI_qidonggeliyayarenou_keyongxing_idea = {
+	    	name = ALI_qidonggeliyayarenou_keyongxing
+
+	    	available = {
+
+	    	}
+	    	equipment_bonus = {
+	    		tactical_core_a = {
+	    			reliability = 0.1
+	    			instant = yes
+	    		}
+	    	}
+	    }
+	    ALI_qidonggeliyayarenou_tupo_idea = {
+	    	name = ALI_qidonggeliyayarenou_tupo
+
+	    	available = {
+
+	    	}
+	    	equipment_bonus = {
+	    		tactical_core_a = {
+	    			breakthrough = 0.1
+	    			defense = 0.1
+	    			instant = yes
+	    		}
+	    	}
+	    }
+	    ALI_qidonggeliyayarenou_huoli_idea = {
+	    	name = ALI_qidonggeliyayarenou_huoli
+
+	    	available = {
+
+	    	}
+	    	equipment_bonus = {
+	    		tactical_core_a = {
+	    			soft_attack = 0.1
+	    			hard_attack = 0.1
+	    			air_attack = 0.1
+	    			instant = yes
+	    		}
+	    	}
+	    }
+	    ALI_qidonggeliyayarenou_hudun_idea = {
+	    	name = ALI_qidonggeliyayarenou_hudun
+
+	    	available = {
+
+	    	}
+	    	equipment_bonus = {
+	    		tactical_core_a = {
+	    			hardness = 0.1
+	    			armor_value = 0.1
+	    			instant = yes
+	    		}
+	    	}
+	    }
 	}
 }

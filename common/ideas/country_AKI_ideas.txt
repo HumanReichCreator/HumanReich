@@ -6,6 +6,8 @@ ideas = {
 			modifier = {
 				generate_wargoal_tension = 0.5
 				send_volunteer_factor = -0.50
+				production_speed_buildings_factor = 0.05
+        industrial_capacity_factory = 0.05
 			}
 			available = {
 
@@ -110,12 +112,12 @@ ideas = {
 			removal_cost = -1
 	
 			modifier = {
-				political_power_factor = -0.75
-                conscription_factor = -0.30
+				political_power_factor = -0.50
+        		conscription_factor = -0.30
 				production_speed_buildings_factor = -0.15
-                industrial_capacity_factory = -0.15
+        		industrial_capacity_factory = -0.15
 				research_speed_factor = -0.15
-		        experience_gain_army = 0.10
+		    	experience_gain_army = 0.10
 			}
 
 		}
@@ -141,7 +143,7 @@ ideas = {
 	    	picture = man_five_year_plan_industry
 	
 			modifier = {
-				production_speed_buildings_factor = 0.35
+				production_speed_buildings_factor = 0.20
 			}
 
 		}
@@ -187,7 +189,7 @@ ideas = {
 			removal_cost = -1
 	
 			modifier = {
-				weekly_manpower = 5
+				weekly_manpower = 3
 			}
 
 			research_bonus = {
@@ -262,12 +264,92 @@ ideas = {
 			removal_cost = -1
 	
 			modifier = {
-				generate_wargoal_tension = -0.15
-        justify_war_goal_time = -0.15
+        justify_war_goal_time = -0.30
 			  mobilization_laws_cost_factor = -0.25
 				war_support_factor = 0.15
 				surrender_limit = 0.10
 				research_speed_factor = -0.05
+			}
+
+			targeted_modifier = {
+				tag = SGS
+				attack_bonus_against = 0.10
+			}
+
+			targeted_modifier = {
+				tag = MEL
+				attack_bonus_against = 0.10
+			}
+
+			targeted_modifier = {
+				tag = GH1
+				attack_bonus_against = 0.10
+			}
+
+			targeted_modifier = {
+				tag = GH2
+				attack_bonus_against = 0.10
+			}
+
+			targeted_modifier = {
+				tag = GH3
+				attack_bonus_against = 0.10
+			}
+
+		}
+
+		AKI_shanshangdetudi_idea = {
+			picture = man_militarism
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+				is_subject = no
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+        justify_war_goal_time = -0.30
+			  mobilization_laws_cost_factor = -0.25
+				war_support_factor = 0.25
+				surrender_limit = 0.15
+				research_speed_factor = -0.05
+			}
+
+			targeted_modifier = {
+				tag = SGS
+				attack_bonus_against = 0.10
+			}
+
+			targeted_modifier = {
+				tag = MEL
+				attack_bonus_against = 0.10
+			}
+
+			targeted_modifier = {
+				tag = GH1
+				attack_bonus_against = 0.10
+			}
+
+			targeted_modifier = {
+				tag = GH2
+				attack_bonus_against = 0.10
+			}
+
+			targeted_modifier = {
+				tag = GH3
+				attack_bonus_against = 0.10
+			}
+
+			targeted_modifier = {
+				tag = TEG
+				attack_bonus_against = 0.10
 			}
 
 		}
@@ -311,10 +393,11 @@ ideas = {
 			picture = generic_agrarian_reform
 
 			modifier = {
-				stability_factor = 0.1
+				stability_factor = 0.25
 				production_speed_buildings_factor = 0.10
-				industrial_capacity_factory = 0.10
-                conscription_factor = -0.30
+		    conscription_factor = -0.30
+		    training_time_factor = 0.30
+		    mobilization_speed = -0.30
 			}
 		}	
 
@@ -324,8 +407,9 @@ ideas = {
 
 			modifier = {
 				war_support_factor = 0.10
-                training_time_factor = -0.25
-                mobilization_speed = 0.25
+		    training_time_factor = -0.10
+		    mobilization_speed = 0.10
+				industrial_capacity_factory = 0.05
 			}
 		}	
 
@@ -351,8 +435,8 @@ ideas = {
 			picture = generic_acquire_tanks
 
 			modifier = {
-		        no_supply_grace = 24
-		        supply_consumption_factor = -0.10
+		    no_supply_grace = 24
+		    supply_consumption_factor = -0.10
 			}
 
 			targeted_modifier = {
@@ -367,16 +451,11 @@ ideas = {
 
 			picture = generic_acquire_tanks
 
-			targeted_modifier = {
-				tag = HU1
-				attack_bonus_against = 0.30
-				defense_bonus_against = 0.15
-			}
-
-			targeted_modifier = {
-				tag = HU2
-				attack_bonus_against = 0.30
-				defense_bonus_against = 0.15
+			modifier = {
+				political_power_factor = -0.20
+				industrial_capacity_factory = 0.20
+				army_attack_factor = 0.30
+				army_defence_factor = 0.15
 			}
 
 		}
@@ -385,10 +464,11 @@ ideas = {
 
 			picture = generic_acquire_tanks
 
-			targeted_modifier = {
-				tag = HU4
-				attack_bonus_against = 0.30
-				defense_bonus_against = 0.15
+			modifier = {
+				political_power_factor = -0.10
+				industrial_capacity_factory = 0.10
+				army_attack_factor = 0.10
+				army_defence_factor = 0.05
 			}
 
 		}
@@ -482,10 +562,11 @@ ideas = {
 			}
 
 			modifier = {
-                neworder_drift = 0.05	
-				army_attack_factor = 0.03
-				army_defence_factor = 0.03
-				research_speed_factor = -0.05
+        neworder_drift = 0.05	
+				army_org_factor = -0.05
+				army_morale_factor = -0.05
+				army_attack_factor = 0.08
+				army_defence_factor = 0.08
 			}
 		}
 
@@ -585,6 +666,28 @@ ideas = {
 			}
 		}
 
+		AKI_mefo_bills_idea = {
+
+			allowed = {
+				original_tag = HU3
+			}
+
+			available = {
+          is_subject = no 
+			}
+
+			removal_cost = -1
+
+			picture = ger_mefo_bills
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+		    experience_gain_army = 0.01
+				weekly_manpower = 10
+				political_power_factor = -0.3
+			}
+		}
+
 		AKI_laiziqiushendezhichi_idea = {
 
 			picture = por_volunteers_in_the_war2
@@ -609,11 +712,19 @@ ideas = {
 			
 			removal_cost = -1
 
+			targeted_modifier = { 
+				tag = AKI
+	
+				trade_opinion_factor = 0.50  
+				cic_to_target_factor = 0.10
+				
+			}
+
 			modifier = {
-				army_org_factor = 0.05
-				army_morale_factor = 0.05
-				army_attack_factor = 0.03
-				army_defence_factor = 0.03
+				political_power_factor = -0.10
+				army_org_factor = 0.10
+				army_morale_factor = 0.10
+				conscription = 0.02
 			}
 		}
 
@@ -626,9 +737,9 @@ ideas = {
 			}
 
 			available = {
-			is_subject = no
-	        AKI = { has_idea = AKI_zhanlipin_idea }
-	        NOT = { has_war_with = AKI }
+				is_subject = no
+		        AKI = { has_idea = AKI_zhanlipin_idea }
+		        NOT = { has_war_with = AKI }
 			}
 
 			allowed_civil_war = {
@@ -637,8 +748,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				production_speed_buildings_factor = 0.05
-                industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.08
+        industrial_capacity_factory = 0.08
 			}
 		}
 
@@ -651,8 +762,8 @@ ideas = {
 			}
 
 			available = {
-			is_subject = no
-	        HU3 = { has_idea = AKI_laiziqiushendezhichi_idea }
+				is_subject = no
+		        HU3 = { has_idea = AKI_laiziqiushendezhichi_idea }
 			}
 
 			allowed_civil_war = {
@@ -674,8 +785,8 @@ ideas = {
 			}
 
 			available = {
-			is_subject = no
-	        HU3 = { has_idea = AKI_laiziqiushendezhichi_idea }
+				is_subject = no
+		        HU3 = { has_idea = AKI_laiziqiushendezhichi_idea }
 			}
 
 			allowed_civil_war = {
@@ -684,7 +795,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				industrial_capacity_factory = 0.20
+				industrial_capacity_factory = 0.10
+				weekly_manpower = 5
 			}
 		}
 
@@ -697,8 +809,8 @@ ideas = {
 			}
 
 			available = {
-			is_subject = no
-	        HU3 = { has_idea = AKI_laiziqiushendezhichi_idea }
+				is_subject = no
+		        HU3 = { has_idea = AKI_laiziqiushendezhichi_idea }
 			}
 
 			allowed_civil_war = {
@@ -707,9 +819,30 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				army_attack_factor = 0.10
-				army_defence_factor = 0.10
+				army_attack_factor = 0.08
+				army_defence_factor = 0.08
 			}
+		}
+
+		AKI_tikaidamen_idea = {
+
+			picture = generic_acquire_tanks
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+			  is_subject = no
+			}
+
+			modifier = {
+				planning_speed = 0.15
+				max_planning = 0.15
+				org_loss_when_moving = -0.10
+				land_reinforce_rate = 0.03
+			}
+
 		}
 
 		AKI_zhichigongshi_idea = {
@@ -721,8 +854,8 @@ ideas = {
 			}
 
 			available = {
-			is_subject = no
-	        HU3 = { has_idea = AKI_laiziqiushendezhichi_idea }
+				is_subject = no
+		        HU3 = { has_idea = AKI_laiziqiushendezhichi_idea }
 			}
 
 			allowed_civil_war = {
@@ -744,8 +877,8 @@ ideas = {
 			}
 
 			available = {
-			is_subject = no
-	        HU3 = { has_idea = AKI_laiziqiushendezhichi_idea }
+				is_subject = no
+		        HU3 = { has_idea = AKI_laiziqiushendezhichi_idea }
 			}
 
 			allowed_civil_war = {
@@ -769,8 +902,8 @@ ideas = {
 			}
 
 			available = {
-			is_subject = no
-	        HU3 = { has_idea = AKI_laiziqiushendezhichi_idea }
+				is_subject = no
+		        HU3 = { has_idea = AKI_laiziqiushendezhichi_idea }
 			}
 
 			allowed_civil_war = {
@@ -792,8 +925,8 @@ ideas = {
 			}
 
 			available = {
-			is_subject = no
-	        HU3 = { has_idea = AKI_laiziqiushendezhichi_idea }
+				is_subject = no
+		        HU3 = { has_idea = AKI_laiziqiushendezhichi_idea }
 			}
 
 			allowed_civil_war = {
@@ -847,8 +980,8 @@ ideas = {
 		        surrender_limit = 0.05
                 training_time_factor = -0.15
                 mobilization_speed = 0.15
-				army_core_attack_factor = 0.05
-				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.10
 				army_org_factor = 0.05
 				production_speed_buildings_factor = 0.05
 				industrial_capacity_factory = 0.05
@@ -873,12 +1006,11 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-                justify_war_goal_time = -0.35
-		        resistance_damage_to_garrison = -0.30
-		        max_command_power = 20
-		        command_power_gain_mult = 0.25
-                terrain_penalty_reduction = 0.15
-				attrition = -0.10
+        justify_war_goal_time = -0.35
+		    resistance_damage_to_garrison = -0.30
+		    max_command_power = 20
+		    command_power_gain_mult = 0.25
+				attrition = -0.15
 			}
 
 		}
@@ -891,7 +1023,7 @@ ideas = {
 			}
 
 			available = {
-	        NOT = { has_war_with = YUK }
+	        	NOT = { has_war_with = YUK }
 			}
 
 			allowed_civil_war = {
@@ -901,7 +1033,7 @@ ideas = {
 
 			modifier = {
 
-			MONTHLY_POPULATION = 0.1
+				MONTHLY_POPULATION = 0.1
     
 			}
 
@@ -915,7 +1047,7 @@ ideas = {
 			}
 
 			available = {
-	        NOT = { has_war_with = AKI }
+	        	NOT = { has_war_with = AKI }
 			}
 
 			allowed_civil_war = {
@@ -924,8 +1056,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-			production_speed_buildings_factor = 0.05
-		    local_resources_factor = 0.10    
+				production_speed_buildings_factor = 0.05
+			    local_resources_factor = 0.10    
 			}
 
 		}
@@ -959,7 +1091,7 @@ ideas = {
 			}
 
 			available = {
-	        country_exists = NMS
+	        	country_exists = NMS
 			}
 
 			allowed_civil_war = {
@@ -985,7 +1117,7 @@ ideas = {
 			}
 
 			available = {
-	        country_exists = NMS
+	        	country_exists = NMS
 			}
 
 			allowed_civil_war = {
@@ -1019,8 +1151,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.03
-				political_power_factor = 0.10
+				consumer_goods_factor = 0.05
+				political_power_factor = 0.05
 				stability_weekly = 0.001
 			}
 		}
@@ -1065,9 +1197,9 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-		    ai_call_ally_desire_factor = 20
-		    ai_join_ally_desire_factor = 20
-        guli_drift = 0.03	
+			  ai_call_ally_desire_factor = 20
+			  ai_join_ally_desire_factor = 20
+	      conscription = 0.03	
 				army_core_attack_factor = 0.10
 				army_core_defence_factor = 0.10
 			}
@@ -1082,7 +1214,7 @@ ideas = {
 			}
 
 			available = {
-            is_faction_leader = yes
+            	is_faction_leader = yes
 			}
 
 			allowed_civil_war = {
@@ -1091,9 +1223,9 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				ai_get_ally_desire_factor = -30
-        guli_drift = 0.03	
-		    surrender_limit = 0.05
+				ai_get_ally_desire_factor = -200
+	      guli_drift = 0.03	
+			  surrender_limit = 0.10
 			}
 		}
 
@@ -1106,7 +1238,7 @@ ideas = {
 			}
 
 			available = {
-            is_in_faction_with = HU1
+            	is_in_faction_with = HU1
 			}
 
 			allowed_civil_war = {
@@ -1115,7 +1247,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-						MONTHLY_POPULATION = 0.1
+				MONTHLY_POPULATION = 0.1
 			}
 		}
 
@@ -1128,7 +1260,7 @@ ideas = {
 			}
 
 			available = {
-            is_in_faction_with = HU2
+            	is_in_faction_with = HU2
 			}
 
 			allowed_civil_war = {
@@ -1150,7 +1282,7 @@ ideas = {
 			}
 
 			available = {
-            is_in_faction_with = HU4
+            	is_in_faction_with = HU4
 			}
 
 			allowed_civil_war = {
@@ -1208,6 +1340,74 @@ ideas = {
 				civilian_factory_use = 10
 			}
 		}	
+
+		AKI_first_war_idea_1 = {
+
+			picture = sour_loser
+
+	    allowed = {
+				always = no
+			}
+
+			available = {
+        is_subject = no 
+        has_war = yes
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.001
+		    war_support_weekly = -0.001
+				required_garrison_factor = 0.50
+		    resistance_damage_to_garrison = 0.50
+				stability_factor = 0.25
+				war_support_factor = 0.25
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				attrition = -0.05
+				supply_consumption_factor = -0.05
+				surrender_limit = 0.10
+			}
+
+			rule = {
+				can_join_factions = no
+			}
+
+		}
+
+		AKI_first_war_idea_2 = {
+
+			picture = sour_loser
+
+	    allowed = {
+				always = no
+			}
+
+			available = {
+        is_subject = no 
+        has_war_with = HU3
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.10
+				surrender_limit = 0.10
+			}
+
+			rule = {
+				can_join_factions = no
+			}
+
+		}
 		
 	}
 }

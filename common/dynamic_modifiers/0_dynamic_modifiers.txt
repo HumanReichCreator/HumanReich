@@ -43,6 +43,10 @@ PO_influ = {
 
 }
 
+POPU_pp_gain = {
+	political_power_gain = POPU_pp_gain
+}
+
 EXH_influ = {
 		# icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
 		# enable = { always = yes } #optional, the modifier won't apply if not enabled
@@ -132,4 +136,120 @@ ALI_manpower = {
 	# icon = "GFX_generic_production_bonus"
 	weekly_manpower = ALI_weekly
 	# conscription_factor = -0.5
+}
+
+state_different_race = {
+	enable = { always = yes }
+	icon = GFX_resistance_icon
+	local_manpower = ST_current_race_conscription_ratio ###这个不会因惩罚的变动而变动
+	recruitable_population_factor = ST_current_recruitable_population_factor
+	local_supplies_for_controller = ST_current_local_supplies_for_controller
+	compliance_growth = ST_current_compliance_growth
+	resistance_growth = ST_current_resistance_growth
+	state_production_speed_buildings_factor = ST_current_state_production_speed_buildings_factor
+	state_resources_factor = ST_current_state_resources_factor
+	# conscription_factor = -0.5
+}
+
+NUE_nms_state = {
+	enable = { 
+		or = {
+			is_controlled_by = NMS
+			is_controlled_by = NUE
+		}
+	}
+	icon = GFX_resistance_icon
+	resistance_growth = -0.9
+	compliance_growth = 0.5
+}
+
+NMS_zongse_state = {
+	enable = {
+		is_owned_by = NMS
+	}
+	icon = GFX_resistance_icon
+	state_production_speed_buildings_factor = -0.5
+	recruitable_population_factor = -1
+	state_resources_factor = -0.25
+}
+NMS_lvse_state = {
+	enable = {
+		is_owned_by = NMS
+	}
+	icon = GFX_resistance_icon
+	state_production_speed_buildings_factor = -0.25
+	recruitable_population_factor = -0.5
+	state_resources_factor = -1
+}
+NMS_zise_state = {
+	enable = {
+		is_owned_by = NMS
+	}
+	icon = GFX_resistance_icon
+	state_production_speed_buildings_factor = -1
+	recruitable_population_factor = -0.25
+	state_resources_factor = -0.5
+}
+NMS_zongse_stability = {
+	enable = {
+		not = { has_country_flag = NMS_wending }
+	}
+	stability_factor = NMS_zongse_x
+}
+NMS_lvse_stability = {
+	enable = {
+		not = { has_country_flag = NMS_wending }
+	}
+	stability_factor = NMS_lvse_x
+}
+NMS_zise_stability = {
+	enable = {
+		not = { has_country_flag = NMS_wending }
+	}
+	stability_factor = NMS_zise_x
+}
+GO_nerf = {
+	army_attack_factor = GO_being_nerf
+	army_defence_factor = GO_being_nerf
+}
+lingliguozaizhadan_bombed = {
+	icon = GFX_idea_th_nuke_idea1
+	industry_free_repair_factor = -0.75
+	industry_repair_factor = -0.75
+	state_production_speed_buildings_factor = -0.75
+	recruitable_population_factor = -0.75
+	state_resources_factor = -0.75
+	attrition = 1
+}
+YYK_jiashenlianxi_dy = {
+	army_attack_factor = YYK_jiashenlianxi
+	army_defence_factor = YYK_jiashenlianxi
+}
+YYK_sihoushijie_dy = {
+	conscription_factor = YYK_sihoushijie_conscription
+}
+NET_shared_xintingyuan_jianshe_dm = {
+	icon = XXX
+	state_production_speed_buildings_factor = 0.5
+}
+NET_shared_xintingyuan_renli_dm = {
+	icon = XXX
+	recruitable_population_factor = 0.5
+}
+NET_shared_xintingyuan_ziyuan_dm = {
+	icon = XXX
+	state_resources_factor = 0.5
+}
+YOM_jiledian_d_modifier = {
+	icon = XXX
+	stability_factor = YOM_jiledian_1
+	consumer_goods_factor = YOM_jiledian_2
+	political_power_factor = YOM_jiledian_3
+}
+YOM_vassal = {
+	icon = XXX
+	army_attack_factor = YOM_vassal_at
+	army_defence_factor = YOM_vassal_de
+	army_org_factor = YOM_vassal_org
+	army_morale_factor = YOM_vassal_mor
 }

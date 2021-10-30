@@ -123,7 +123,7 @@ ideas = {
 				modifier = {
 					#Prio if low on manpower
 					factor = 20
-					manpower_per_military_factory <  10
+					manpower_per_military_factory <  5
 				}
 
 
@@ -170,14 +170,17 @@ ideas = {
 				modifier = {
 					#Prio if low on manpower
 					factor = 20
-					manpower_per_military_factory <  15
+					manpower_per_military_factory <  7.5
 				}
 				modifier = {
 					#Lower chance if has decent amount
 					factor = 0.5
-					manpower_per_military_factory >  10
+					manpower_per_military_factory >  5
 				}
-
+				modifier = {
+					factor = 0.1
+					has_manpower > 1500
+				}
 
 			}
 			
@@ -220,14 +223,17 @@ ideas = {
 				modifier = {
 					#Prio if low on manpower
 					factor = 20
-					manpower_per_military_factory <  20
+					manpower_per_military_factory <  10
 				}
 				modifier = {
 					#Lower chance if has decent amount
 					factor = 0.5
-					manpower_per_military_factory >  10
+					manpower_per_military_factory >  5
 				}
-
+				modifier = {
+					factor = 0.1
+					has_manpower > 1000
+				}
 
 
 			}
@@ -281,17 +287,21 @@ ideas = {
 				modifier = {
 					#Prio if low on manpower
 					factor = 20
-					manpower_per_military_factory <  25
+					manpower_per_military_factory <  12.5
 				}				
 				modifier = {
 					#Lower chance if has decent amount
 					factor = 0.5
-					manpower_per_military_factory >  10
+					manpower_per_military_factory >  5
 				}
 				modifier = {
 					#Block has plenty manpower
 					factor = 0
-					manpower_per_military_factory >  50
+					manpower_per_military_factory >  25
+				}
+				modifier = {
+					factor = 0.1
+					has_manpower > 500
 				}
 			}
 
@@ -395,7 +405,7 @@ ideas = {
 				modifier = {
 					#Prio if low on manpower
 					factor = 20
-					manpower_per_military_factory <  10
+					manpower_per_military_factory <  5
 				}
 
 
@@ -436,14 +446,17 @@ ideas = {
 				modifier = {
 					#Prio if low on manpower
 					factor = 20
-					manpower_per_military_factory <  15
+					manpower_per_military_factory <  7.5
 				}
 				modifier = {
 					#Lower chance if has decent amount
 					factor = 0.5
-					manpower_per_military_factory >  10
+					manpower_per_military_factory >  5
 				}
-
+				modifier = {
+					factor = 0.1
+					has_manpower > 1500
+				}
 
 			}
 			
@@ -482,14 +495,17 @@ ideas = {
 				modifier = {
 					#Prio if low on manpower
 					factor = 20
-					manpower_per_military_factory <  20
+					manpower_per_military_factory <  10
 				}
 				modifier = {
 					#Lower chance if has decent amount
 					factor = 0.5
-					manpower_per_military_factory >  10
+					manpower_per_military_factory >  5
 				}
-
+				modifier = {
+					factor = 0.1
+					has_manpower > 1000
+				}
 
 
 			}
@@ -530,17 +546,21 @@ ideas = {
 				modifier = {
 					#Prio if low on manpower
 					factor = 20
-					manpower_per_military_factory <  25
+					manpower_per_military_factory <  12.5
 				}				
 				modifier = {
 					#Lower chance if has decent amount
 					factor = 0.5
-					manpower_per_military_factory >  10
+					manpower_per_military_factory >  5
 				}
 				modifier = {
 					#Block has plenty manpower
 					factor = 0
-					manpower_per_military_factory >  50
+					manpower_per_military_factory >  25
+				}
+				modifier = {
+					factor = 0.1
+					has_manpower > 500
 				}
 			}
 
@@ -647,7 +667,7 @@ ideas = {
 				modifier = {
 					#Prio if low on manpower
 					factor = 20
-					manpower_per_military_factory <  10
+					manpower_per_military_factory <  5
 				}
 
 
@@ -689,14 +709,17 @@ ideas = {
 				modifier = {
 					#Prio if low on manpower
 					factor = 20
-					manpower_per_military_factory <  15
+					manpower_per_military_factory <  7.5
 				}
 				modifier = {
 					#Lower chance if has decent amount
 					factor = 0.5
-					manpower_per_military_factory >  10
+					manpower_per_military_factory >  5
 				}
-
+				modifier = {
+					factor = 0.1
+					has_manpower > 1500
+				}
 
 			}
 			
@@ -714,6 +737,7 @@ ideas = {
 			}
 
 			modifier = {
+        		mobilization_speed = 0.12
 				conscription = 0.12
 				industrial_capacity_factory = -0.1
 				production_speed_buildings_factor = -0.1
@@ -736,14 +760,17 @@ ideas = {
 				modifier = {
 					#Prio if low on manpower
 					factor = 20
-					manpower_per_military_factory <  20
+					manpower_per_military_factory <  10
 				}
 				modifier = {
 					#Lower chance if has decent amount
 					factor = 0.5
-					manpower_per_military_factory >  10
+					manpower_per_military_factory >  5
 				}
-
+				modifier = {
+					factor = 0.1
+					has_manpower > 1000
+				}
 
 
 			}
@@ -762,6 +789,7 @@ ideas = {
 			}
 			
 			modifier = {
+        		mobilization_speed = 0.24
 				conscription = 0.24
 				industrial_capacity_factory = -0.3
 				production_speed_buildings_factor = -0.3
@@ -785,17 +813,21 @@ ideas = {
 				modifier = {
 					#Prio if low on manpower
 					factor = 20
-					manpower_per_military_factory <  25
+					manpower_per_military_factory <  12.5
 				}				
 				modifier = {
 					#Lower chance if has decent amount
 					factor = 0.5
-					manpower_per_military_factory >  10
+					manpower_per_military_factory >  5
 				}
 				modifier = {
 					#Block has plenty manpower
 					factor = 0
-					manpower_per_military_factory >  50
+					manpower_per_military_factory >  25
+				}
+				modifier = {
+					factor = 0.1
+					has_manpower > 500
 				}
 			}
 
@@ -813,6 +845,7 @@ ideas = {
 			}
 
 			modifier = {
+        		mobilization_speed = 0.30
 				conscription = 0.30
 				industrial_capacity_factory = -0.4
 				production_speed_buildings_factor = -0.4
@@ -906,7 +939,7 @@ ideas = {
 				modifier = {
 					#Prio if low on manpower
 					factor = 20
-					manpower_per_military_factory <  10
+					manpower_per_military_factory <  5
 				}
 
 
@@ -928,6 +961,7 @@ ideas = {
 			}
 			
 			modifier = {
+        		mobilization_speed = 0.17
 				conscription = 0.176
 				#industrial_capacity_factory = -0.1
 				#production_speed_buildings_factor = -0.1
@@ -950,14 +984,17 @@ ideas = {
 				modifier = {
 					#Prio if low on manpower
 					factor = 20
-					manpower_per_military_factory <  15
+					manpower_per_military_factory <  7.5
 				}
 				modifier = {
 					#Lower chance if has decent amount
 					factor = 0.5
-					manpower_per_military_factory >  10
+					manpower_per_military_factory >  5
 				}
-
+				modifier = {
+					factor = 0.1
+					has_manpower > 1500
+				}
 
 			}
 			
@@ -977,6 +1014,7 @@ ideas = {
 			}
 
 			modifier = {
+        		mobilization_speed = 0.44
 				conscription = 0.44
 				industrial_capacity_factory = -0.1
 				production_speed_buildings_factor = -0.1
@@ -999,14 +1037,17 @@ ideas = {
 				modifier = {
 					#Prio if low on manpower
 					factor = 20
-					manpower_per_military_factory <  20
+					manpower_per_military_factory <  10
 				}
 				modifier = {
 					#Lower chance if has decent amount
 					factor = 0.5
-					manpower_per_military_factory >  10
+					manpower_per_military_factory >  5
 				}
-
+				modifier = {
+					factor = 0.1
+					has_manpower > 1000
+				}
 
 
 			}
@@ -1027,6 +1068,7 @@ ideas = {
 			}
 			
 			modifier = {
+        		mobilization_speed = 0.55
 				conscription = 0.55
 				industrial_capacity_factory = -0.3
 				production_speed_buildings_factor = -0.3
@@ -1050,17 +1092,21 @@ ideas = {
 				modifier = {
 					#Prio if low on manpower
 					factor = 20
-					manpower_per_military_factory <  25
+					manpower_per_military_factory <  12.5
 				}				
 				modifier = {
 					#Lower chance if has decent amount
 					factor = 0.5
-					manpower_per_military_factory >  10
+					manpower_per_military_factory >  5
 				}
 				modifier = {
 					#Block has plenty manpower
 					factor = 0
-					manpower_per_military_factory >  50
+					manpower_per_military_factory >  25
+				}
+				modifier = {
+					factor = 0.1
+					has_manpower > 500
 				}
 			}
 
@@ -1080,6 +1126,7 @@ ideas = {
 			}
 
 			modifier = {
+        		mobilization_speed = 0.66
 				conscription = 0.66
 				industrial_capacity_factory = -0.4
 				production_speed_buildings_factor = -0.4
@@ -1174,7 +1221,7 @@ ideas = {
 				modifier = {
 					#Prio if low on manpower
 					factor = 20
-					manpower_per_military_factory <  10
+					manpower_per_military_factory <  5
 				}
 
 
@@ -1196,6 +1243,7 @@ ideas = {
 			}
 			
 			modifier = {
+        		mobilization_speed = 0.11
 				conscription = 0.112
 				#industrial_capacity_factory = -0.1
 				#production_speed_buildings_factor = -0.1
@@ -1218,14 +1266,17 @@ ideas = {
 				modifier = {
 					#Prio if low on manpower
 					factor = 20
-					manpower_per_military_factory <  15
+					manpower_per_military_factory <  7.5
 				}
 				modifier = {
 					#Lower chance if has decent amount
 					factor = 0.5
-					manpower_per_military_factory >  10
+					manpower_per_military_factory >  5
 				}
-
+				modifier = {
+					factor = 0.1
+					has_manpower > 1500
+				}
 
 			}
 			
@@ -1245,6 +1296,7 @@ ideas = {
 			}
 
 			modifier = {
+        		mobilization_speed = 0.28
 				conscription = 0.28
 				industrial_capacity_factory = -0.1
 				production_speed_buildings_factor = -0.1
@@ -1267,14 +1319,17 @@ ideas = {
 				modifier = {
 					#Prio if low on manpower
 					factor = 20
-					manpower_per_military_factory <  20
+					manpower_per_military_factory <  10
 				}
 				modifier = {
 					#Lower chance if has decent amount
 					factor = 0.5
-					manpower_per_military_factory >  10
+					manpower_per_military_factory >  5
 				}
-
+				modifier = {
+					factor = 0.1
+					has_manpower > 1000
+				}
 
 
 			}
@@ -1295,6 +1350,7 @@ ideas = {
 			}
 			
 			modifier = {
+        		mobilization_speed = 0.42
 				conscription = 0.42
 				industrial_capacity_factory = -0.3
 				production_speed_buildings_factor = -0.3
@@ -1318,17 +1374,21 @@ ideas = {
 				modifier = {
 					#Prio if low on manpower
 					factor = 20
-					manpower_per_military_factory <  25
+					manpower_per_military_factory <  12.5
 				}				
 				modifier = {
 					#Lower chance if has decent amount
 					factor = 0.5
-					manpower_per_military_factory >  10
+					manpower_per_military_factory >  5
 				}
 				modifier = {
 					#Block has plenty manpower
 					factor = 0
-					manpower_per_military_factory >  50
+					manpower_per_military_factory >  25
+				}
+				modifier = {
+					factor = 0.1
+					has_manpower > 500
 				}
 			}
 
@@ -1348,6 +1408,7 @@ ideas = {
 			}
 
 			modifier = {
+        		mobilization_speed = 0.56
 				conscription = 0.56
 				industrial_capacity_factory = -0.4
 				production_speed_buildings_factor = -0.4

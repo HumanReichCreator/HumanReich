@@ -4,10 +4,9 @@ state={
 	name="STATE_203"
 
 	history={
-			owner = HUM
 		143.7.1 = {
-			owner = KYK
-			add_core_of = KYK
+			owner = HUM
+			add_core_of = HUM
 			buildings = {
 				infrastructure =3
 				industrial_complex = 1
@@ -16,13 +15,16 @@ state={
 			}
 		}
 		146.1.1 = {
-			owner = HUM
-			add_claim_by = KYK
+			owner = NMS
+			add_core_of = NMS
 			add_core_of = HUM
+			add_core_of = HU6
+			add_core_of = HU7
+			add_core_of = HU8
 			buildings = {
 				infrastructure =3
-				industrial_complex = 1
-				arms_factory = 1
+				industrial_complex = 3
+				arms_factory = 0
 
 			}
 
@@ -33,7 +35,7 @@ state={
 	provinces={
 		136 1905 2546 3194 3622 3627 5709 5716 
 	}
-	manpower=755.0
+	manpower=3055.0
 	buildings_max_level_factor=1.000
 	state_category=s5
 }

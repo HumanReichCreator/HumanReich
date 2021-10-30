@@ -1,0 +1,886 @@
+add_namespace = mnm
+news_event = {#放大圣白莲的过
+	id = mnm.1
+	title = mnm.1.t
+	desc = mnm.1.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = mnm.1.1
+		trigger = {
+			tag = MNM
+		}
+	}
+	option = {
+		name = mnm.1.2
+		trigger = {
+			not = { tag = MNM }
+		}
+	}
+}
+news_event = {#组建新的妖怪政府
+	id = mnm.2
+	title = mnm.2.t
+	desc = mnm.2.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = mnm.2.1
+		trigger = {
+			tag = MNM
+		}
+	}
+	option = {
+		name = mnm.2.2
+		trigger = {
+			not = { tag = MNM }
+		}
+	}
+}
+news_event = {#拆解命莲寺
+	id = mnm.3
+	title = mnm.3.t
+	desc = mnm.3.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = mnm.3.1
+		trigger = {
+			tag = MNM
+		}
+	}
+	option = {
+		name = mnm.3.2
+		trigger = {
+			not = { tag = MNM }
+		}
+	}
+}
+news_event = {#把付丧神变回道具
+	id = mnm.4
+	title = mnm.4.t
+	desc = mnm.4.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = mnm.4.1
+		trigger = {
+			tag = MNM
+		}
+	}
+	option = {
+		name = mnm.4.2
+		trigger = {
+			not = { 
+				tag = MNM 
+				is_subject_of = MNM
+				is_in_faction_with = MNM
+				tag = TKM
+			}
+		}
+	}
+	option = {	
+		name = mnm.4.3
+		trigger = {
+			or = { 
+				is_subject_of = MNM
+				is_in_faction_with = MNM
+			}
+		}
+	}
+	option = {	
+		name = mnm.4.4
+		trigger = {
+			tag = TKM
+		}
+	}
+}
+news_event = {#远征太阳花田
+	id = mnm.5
+	title = mnm.5.t
+	desc = mnm.5.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = mnm.5.1
+		trigger = {
+			tag = MNM
+		}
+	}
+	option = {
+		name = mnm.5.2
+		trigger = {
+			not = { 
+				tag = MNM 
+				is_subject_of = MNM
+				is_in_faction_with = MNM
+				tag = TKM
+			}
+		}
+	}
+	option = {	
+		name = mnm.5.3
+		trigger = {
+			or = { 
+				is_subject_of = MNM
+				is_in_faction_with = MNM
+			}
+		}
+	}
+	option = {	
+		name = mnm.5.4
+		trigger = {
+			tag = YUK
+		}
+	}
+}
+news_event = {#人类村落侵入
+	id = mnm.6
+	title = mnm.6.t
+	desc = mnm.6.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = mnm.6.1
+		trigger = {
+			or = {
+				tag = MNM
+				is_in_faction_with = MNM
+				is_subject_of = MNM
+			}
+		}
+	}
+	option = {
+		name = mnm.6.2
+		trigger = {
+			has_war_with = MNM
+		}
+	}
+	option = {
+		name = mnm.6.3
+		trigger = {
+			not = {
+				has_war_with = MNM
+				tag = MNM
+				is_in_faction_with = MNM
+				is_subject_of = MNM
+			}
+		}
+	}
+}
+news_event = {#烧毁西北的人类聚集地
+	id = mnm.7
+	title = mnm.7.t
+	desc = mnm.7.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = mnm.7.1
+		trigger = {
+			tag = MNM
+		}
+	}
+	option = {
+		name = mnm.7.2
+		trigger = {
+			has_war_with = MNM
+		}
+	}
+	option = {
+		name = mnm.7.3
+		trigger = {
+			not = { 
+				tag = MNM 
+				has_war_with = MNM
+			}
+		}
+	}
+}
+news_event = {#妖怪之国
+	id = mnm.8
+	title = mnm.8.t
+	desc = mnm.8.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = mnm.8.1
+		trigger = {
+			tag = MNM
+		}
+	}
+	option = {
+		name = mnm.8.2
+		trigger = {
+			has_war_with = MNM
+		}
+	}
+	option = {
+		name = mnm.8.3
+		trigger = {
+			not = { 
+				tag = MNM 
+				has_war_with = MNM
+			}
+		}
+	}
+}
+news_event = {#要求狸猫屈服
+	id = mnm.9
+	title = mnm.9.t
+	desc = mnm.9.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = mnm.9.1
+		trigger = {
+			or = {
+				tag = MNM
+				is_subject_of = MNM
+				is_in_faction_with = MNM
+			}
+		}
+	}
+	option = {
+		name = mnm.9.2
+		trigger = {
+			not = {
+				tag = MNM
+				is_subject_of = MNM
+				is_in_faction_with = MNM
+			}
+		}
+	}
+}
+news_event = {#消灭亲人庙
+	id = mnm.10
+	title = mnm.10.t
+	desc = mnm.10.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = mnm.10.1
+		trigger = {
+			or = {
+				tag = MNM
+			}
+		}
+	}
+	option = {
+		name = mnm.10.2
+		trigger = {
+			not = {
+				tag = MNM
+				is_subject_of = MNM
+				is_in_faction_with = MNM
+				tag = SRB
+			}
+		}
+	}
+	option = {
+		name = mnm.10.3
+		trigger = {
+			or = {
+				is_subject_of = MNM
+				is_in_faction_with = MNM
+			}
+		}
+	}
+	option = {
+		name = mnm.10.4
+		trigger = {
+			or = {
+				tag = SRB
+			}
+		}
+	}
+}
+news_event = {#平息人类暴动
+	id = mnm.11
+	title = mnm.11.t
+	desc = mnm.11.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = mnm.11.1
+		trigger = {
+			tag = MNM
+		}
+	}
+	option = {
+		name = mnm.11.2
+		trigger = {
+			not = { 
+				tag = MNM 
+				is_subject_of = MNM
+				is_in_faction_with = MNM
+				tag = TKM
+				tag = HUM
+			}
+		}
+	}
+	option = {
+		name = mnm.11.3
+		trigger = {
+			or = { 
+				is_subject_of = MNM
+				is_in_faction_with = MNM
+				tag = TKM
+			}
+		}
+	}
+	option = {
+		name = mnm.11.4
+		trigger = {
+			tag = HUM
+		}
+	}
+}
+news_event = {#合作瓜分人类村落
+	id = mnm.12
+	title = mnm.12.t
+	desc = mnm.12.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = mnm.12.1
+		trigger = {
+			tag = MNM
+		}
+	}
+	option = {
+		name = mnm.12.2
+		trigger = {
+			not = { 
+				tag = MNM 
+				is_subject_of = MNM
+				is_in_faction_with = MNM
+				tag = TKM
+				tag = HUM
+			}
+		}
+	}
+	option = {
+		name = mnm.12.3
+		trigger = {
+			or = { 
+				is_subject_of = MNM
+				is_in_faction_with = MNM
+				tag = TKM
+			}
+		}
+	}
+	option = {
+		name = mnm.12.4
+		trigger = {
+			tag = HUM
+		}
+	}
+}
+news_event = {#趁吸血鬼慌乱之时
+	id = mnm.13
+	title = mnm.13.t
+	desc = mnm.13.d
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = mnm.13.1
+		trigger = {
+			tag = MNM
+		}
+	}
+	option = {
+		name = mnm.13.2
+		trigger = {
+			tag = SCA
+		}
+	}
+	option = {
+		name = mnm.13.3
+		trigger = {
+			not = { 
+				tag = MNM 
+				tag = SCA
+			}
+		}
+	}
+}
+country_event = {#和斯卡蕾特划定势力圈
+	id = mnm.14
+	title = mnm.14.t
+	desc = mnm.14.d
+	is_triggered_only = yes
+	option = {
+		name = mnm.14.1
+		SCA = {
+			diplomatic_relation = {
+				country = FROM
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		FROM = {
+			every_owned_state = {
+				limit = {
+					or = {
+						is_claimed_by = SCA
+						any_country = {
+							is_subject_of = SCA
+							PREV = { is_claimed_by = PREV }
+						}
+					}
+				}
+				remove_claim_by = SCA
+				every_country = {
+					limit = {
+						is_subject_of = SCA
+					}
+					PREV = { remove_claim_by = PREV }
+				}
+			}
+		}
+		hidden_effect = {
+			FROM = { country_event = { id = glo.2001 days = 2 } }
+		}
+		ai_chance = {
+			base = 95
+		}
+	}
+	option = {
+		name = mnm.14.2
+		hidden_effect = {
+			FROM = { country_event = { id = glo.2002 days = 2 } }
+		}
+		ai_chance = {
+			base = 5
+			modifier = {
+				has_opinion = {
+					target = FROM
+					value > 60
+				}
+				factor = 0
+			}
+		}
+	}
+}
+country_event = {#吹响对人类圣战的号角
+	id = mnm.15
+	title = mnm.15.t
+	desc = mnm.15.d
+	mean_time_to_happen = {
+		days = 0
+	}
+	trigger = {
+		tag = MNM
+		has_country_flag = MNM_shengzhanhaojiao
+		any_country = {
+			has_war_with = ROOT
+			has_idea = Human
+		}
+		not = {
+			has_idea = MNM_shengzhanhaojiao_idea
+		}
+	}
+	option = {
+		name = mnm.15.1
+		add_ideas = MNM_shengzhanhaojiao_idea
+	}
+}
+country_event = {#和付丧神划定势力圈
+	id = mnm.16
+	title = mnm.16.t
+	desc = mnm.16.d
+	is_triggered_only = yes
+	option = {
+		name = mnm.16.1
+		TKM = {
+			diplomatic_relation = {
+				country = FROM
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		FROM = {
+			every_owned_state = {
+				limit = {
+					or = {
+						is_claimed_by = TKM
+						any_country = {
+							is_subject_of = TKM
+							PREV = { is_claimed_by = PREV }
+						}
+					}
+				}
+				remove_claim_by = TKM
+				every_country = {
+					limit = {
+						is_subject_of = TKM
+					}
+					PREV = { remove_claim_by = PREV }
+				}
+			}
+		}
+		hidden_effect = {
+			FROM = { country_event = { id = glo.2001 days = 2 } }
+		}
+		ai_chance = {
+			base = 95
+		}
+	}
+	option = {
+		name = mnm.16.2
+		hidden_effect = {
+			FROM = { country_event = { id = glo.2002 days = 2 } }
+		}
+		ai_chance = {
+			base = 5
+			modifier = {
+				has_opinion = {
+					target = FROM
+					value > 60
+				}
+				factor = 0
+			}
+		}
+	}
+}
+country_event = {#要求狸猫屈服
+	id = mnm.17
+	title = mnm.17.t
+	desc = mnm.17.d
+	is_triggered_only = yes
+	option = {
+		name = mnm.17.1
+		FROM = {
+			MAM = {
+				subject_level3 = yes
+			}
+		}
+		hidden_effect = {
+			FROM = {
+				country_event = { id = glo.2001 days = 2 }
+			}
+		}
+		ai_chance = {
+			base = 70
+		}
+		trigger = {
+			is_subject = no
+		}
+	}
+	option = {
+		name = mnm.17.2
+		FROM = {
+			declare_war_on = {
+				target = MAM
+				type = puppet_wargoal_focus
+			}
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+}
+country_event = {#合作瓜分人类村落
+	id = mnm.18
+	title = mnm.18.t
+	desc = mnm.18.d
+	is_triggered_only = yes
+	option = {
+		name = mnm.18.1
+		FROM = {
+			HMIF_daily_add0.01 = yes
+		}
+		HUM = {
+			add_ideas = MNM_hezuoguafenHUM1_idea
+			add_ideas = MNM_hezuoguafenHUM2_idea
+		}
+		hidden_effect = {
+			news_event = { id = mnm.12 days = 2 }
+		}
+		ai_chance = {
+			base = 95
+		}
+	}
+	option = {
+		name = mnm.18.2
+		ai_chance = {
+			base = 5
+		}
+	}
+}
+country_event = {#雇佣人类老兵
+	id = mnm.19
+	title = mnm.19.t
+	desc = mnm.19.d
+	is_triggered_only = yes
+	option = {
+		name = mnm.19.1
+		add_political_power = -40
+		add_stability = -0.04
+		add_equipment_to_stockpile = {
+			type = gun_a
+			amount = 30
+		}
+		add_equipment_to_stockpile = {
+			type = mortar_a
+			amount = 6
+		}
+		custom_effect_tooltip = MNM_guyongrenleijundui1_tt
+		hidden_effect = {
+			division_template = {
+				name = "人类雇佣兵"
+				is_locked = yes
+				regiments = {
+					sc_infantry = { x = 0 y = 0 }
+					sc_infantry = { x = 0 y = 1 }
+					sc_infantry = { x = 0 y = 2 }
+					sc_mortar_brigade = { x = 0 y = 3 }
+					sc_mortar_brigade = { x = 0 y = 4 }
+				}
+				support = {
+				}
+			}
+			321 = {
+				create_unit = {
+					division = "division_template = \"人类雇佣兵\" start_experience_factor = 0.7 start_equipment_factor = 1"
+					owner = ROOT
+					prioritize_location = 5439
+					allow_spawning_on_enemy_provs = no 
+				}
+			}
+			
+		}
+	}
+	option = {
+		name = mnm.19.2
+		add_political_power = -80
+		add_stability = -0.08
+		add_equipment_to_stockpile = {
+			type = gun_a
+			amount = 60
+		}
+		add_equipment_to_stockpile = {
+			type = mortar_a
+			amount = 12
+		}
+		custom_effect_tooltip = MNM_guyongrenleijundui2_tt
+		hidden_effect = {
+			division_template = {
+				name = "人类雇佣兵"
+				is_locked = yes
+				regiments = {
+					sc_infantry = { x = 0 y = 0 }
+					sc_infantry = { x = 0 y = 1 }
+					sc_infantry = { x = 0 y = 2 }
+					sc_mortar_brigade = { x = 0 y = 3 }
+					sc_mortar_brigade = { x = 0 y = 4 }
+				}
+				support = {
+				}
+			}
+			321 = {
+				create_unit = {
+					division = "division_template = \"人类雇佣兵\" start_experience_factor = 0.7 start_equipment_factor = 1"
+					owner = ROOT
+					prioritize_location = 5439
+					allow_spawning_on_enemy_provs = no 
+				}
+				create_unit = {
+					division = "division_template = \"人类雇佣兵\" start_experience_factor = 0.7 start_equipment_factor = 1"
+					owner = ROOT
+					prioritize_location = 5439
+					allow_spawning_on_enemy_provs = no 
+				}
+			}
+		}
+	}
+	option = {
+		name = mnm.19.3
+		add_political_power = -120
+		add_stability = -0.12
+		add_equipment_to_stockpile = {
+			type = gun_a
+			amount = 90
+		}
+		add_equipment_to_stockpile = {
+			type = mortar_a
+			amount = 18
+		}
+		custom_effect_tooltip = MNM_guyongrenleijundui3_tt
+		hidden_effect = {
+			division_template = {
+				name = "人类雇佣兵"
+				is_locked = yes
+				regiments = {
+					sc_infantry = { x = 0 y = 0 }
+					sc_infantry = { x = 0 y = 1 }
+					sc_infantry = { x = 0 y = 2 }
+					sc_mortar_brigade = { x = 0 y = 3 }
+					sc_mortar_brigade = { x = 0 y = 4 }
+				}
+				support = {
+				}
+			}
+			321 = {
+				create_unit = {
+					division = "division_template = \"人类雇佣兵\" start_experience_factor = 0.7 start_equipment_factor = 1"
+					owner = ROOT
+					prioritize_location = 5439
+					allow_spawning_on_enemy_provs = no 
+				}
+				create_unit = {
+					division = "division_template = \"人类雇佣兵\" start_experience_factor = 0.7 start_equipment_factor = 1"
+					owner = ROOT
+					prioritize_location = 5439
+					allow_spawning_on_enemy_provs = no 
+				}
+				create_unit = {
+					division = "division_template = \"人类雇佣兵\" start_experience_factor = 0.7 start_equipment_factor = 1"
+					owner = ROOT
+					prioritize_location = 5439
+					allow_spawning_on_enemy_provs = no 
+				}
+			}
+		}
+	}
+	option = {
+		name = mnm.19.4
+		add_political_power = -160
+		add_stability = -0.16
+		add_equipment_to_stockpile = {
+			type = gun_a
+			amount = 120
+		}
+		add_equipment_to_stockpile = {
+			type = mortar_a
+			amount = 24
+		}
+		custom_effect_tooltip = MNM_guyongrenleijundui4_tt
+		hidden_effect = {
+			division_template = {
+				name = "人类雇佣兵"
+				is_locked = yes
+				regiments = {
+					sc_infantry = { x = 0 y = 0 }
+					sc_infantry = { x = 0 y = 1 }
+					sc_infantry = { x = 0 y = 2 }
+					sc_mortar_brigade = { x = 0 y = 3 }
+					sc_mortar_brigade = { x = 0 y = 4 }
+				}
+				support = {
+				}
+			}
+			321 = {
+				create_unit = {
+					division = "division_template = \"人类雇佣兵\" start_experience_factor = 0.7 start_equipment_factor = 1"
+					owner = ROOT
+					prioritize_location = 5439
+					allow_spawning_on_enemy_provs = no 
+				}
+				create_unit = {
+					division = "division_template = \"人类雇佣兵\" start_experience_factor = 0.7 start_equipment_factor = 1"
+					owner = ROOT
+					prioritize_location = 5439
+					allow_spawning_on_enemy_provs = no 
+				}
+				create_unit = {
+					division = "division_template = \"人类雇佣兵\" start_experience_factor = 0.7 start_equipment_factor = 1"
+					owner = ROOT
+					prioritize_location = 5439
+					allow_spawning_on_enemy_provs = no 
+				}
+				create_unit = {
+					division = "division_template = \"人类雇佣兵\" start_experience_factor = 0.7 start_equipment_factor = 1"
+					owner = ROOT
+					prioritize_location = 5439
+					allow_spawning_on_enemy_provs = no 
+				}
+			}
+		}
+	}
+	option = {
+		name = mnm.19.5
+		add_political_power = -200
+		add_stability = -0.2
+		add_equipment_to_stockpile = {
+			type = gun_a
+			amount = 150
+		}
+		add_equipment_to_stockpile = {
+			type = mortar_a
+			amount = 30
+		}
+		custom_effect_tooltip = MNM_guyongrenleijundui5_tt
+		hidden_effect = {
+			division_template = {
+				name = "人类雇佣兵"
+				is_locked = yes
+				regiments = {
+					sc_infantry = { x = 0 y = 0 }
+					sc_infantry = { x = 0 y = 1 }
+					sc_infantry = { x = 0 y = 2 }
+					sc_mortar_brigade = { x = 0 y = 3 }
+					sc_mortar_brigade = { x = 0 y = 4 }
+				}
+				support = {
+				}
+			}
+			321 = {
+				create_unit = {
+					division = "division_template = \"人类雇佣兵\" start_experience_factor = 0.7 start_equipment_factor = 1"
+					owner = ROOT
+					prioritize_location = 5439
+					allow_spawning_on_enemy_provs = no 
+				}
+				create_unit = {
+					division = "division_template = \"人类雇佣兵\" start_experience_factor = 0.7 start_equipment_factor = 1"
+					owner = ROOT
+					prioritize_location = 5439
+					allow_spawning_on_enemy_provs = no 
+				}
+				create_unit = {
+					division = "division_template = \"人类雇佣兵\" start_experience_factor = 0.7 start_equipment_factor = 1"
+					owner = ROOT
+					prioritize_location = 5439
+					allow_spawning_on_enemy_provs = no 
+				}
+				create_unit = {
+					division = "division_template = \"人类雇佣兵\" start_experience_factor = 0.7 start_equipment_factor = 1"
+					owner = ROOT
+					prioritize_location = 5439
+					allow_spawning_on_enemy_provs = no 
+				}
+				create_unit = {
+					division = "division_template = \"人类雇佣兵\" start_experience_factor = 0.7 start_equipment_factor = 1"
+					owner = ROOT
+					prioritize_location = 5439
+					allow_spawning_on_enemy_provs = no 
+				}
+			}
+		}
+	}
+}
+country_event = {#结束雇佣
+	id = mnm.20
+	title = mnm.20.t
+	desc = mnm.20.d
+	fire_only_once = yes
+	trigger = {
+		tag = MNM
+		has_completed_focus = MNM_guyongrenleijundui
+		not = {
+			has_war_with = NUE
+			has_war_with = NMS
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	option = {
+		name = mnm.20.1
+		delete_unit_template_and_units = { 
+			division_template = "人类雇佣兵"
+			disband = no 
+		}
+	}
+}

@@ -1,5 +1,4 @@
-﻿
-146.1.1 = {
+﻿146.1.1 = {
     set_technology = {
         #通用武器线
         spell_card1 = 1
@@ -32,6 +31,7 @@
         zhanchangzhihui140 = 1
         zuzhihuazhanzheng142 = 1
         zhanchangzhihui145 = 1
+        paobingzhenxian = 1
             
         #工程学 
         jichushuxue = 1
@@ -54,6 +54,7 @@
         #种族
             
     }
+    
 }
 138.1.1 = {
 	oob = "TEST"
@@ -109,9 +110,10 @@ capital = 28
     oob = "MRY_146"
     
     set_major = yes
-    
+    set_country_flag = bunengqie_fandong
+
     diplomatic_relation = { 
-        country = NTR relation = non_aggression_pact 
+        country = KAP relation = non_aggression_pact 
     }
     add_ideas = {
     Shrine
@@ -129,34 +131,30 @@ capital = 28
         days = 1825
     }
     set_politics = {
-    	ruling_party = authordemo
+    	ruling_party = neworder
     	election_frequency = 48
     	elections_allowed = no
     }
     set_popularities = {
-        qinwai = 10
-        guli = 10
-        neworder = 10
+        qinwai = 25
+        guli = 5
+        neworder = 70
         oldorder = 0
         fandong = 0
-        authordemo = 70
     }
-    
-    
-    
-    
+    give_guarantee = KAP
 }
 create_country_leader = {
 	# name = "Yasaka Kanako"  
-    name = "泄矢诹访子"
-	picture = "MRY_mry.dds"
+    name = "八坂神奈子"
+	picture = "MRY_ysk.dds"
 	ideology = neworder_type
 	traits = {  }
 }
 create_country_leader = {
 	# name = "Moriya Suwako" 
-    name = "东风谷早苗"
-    picture = "MRY_sanae.dds"
+    name = "泄矢诹访子"
+    picture = "MRY_mry.dds"
 	ideology = guli_type
 	traits = {  }
 }
@@ -169,36 +167,15 @@ create_country_leader = {
 }
 create_country_leader = {
     # name = "Kochiya Sanae"
-    name = "八坂神奈子"  
-    picture = "MRY_ysk.dds"
+    name = "东风谷早苗"  
+    picture = "MRY_sanae.dds"
     ideology = fandong_type
     traits = {  }
 }
 create_country_leader = {
     # name = "Yasaka Kanako"  
-    name = "泄矢诹访子"
-    picture = "MRY_mry.dds"
+    name = "八坂神奈子"
+    picture = "MRY_ysk.dds"
     ideology = oldorder_type
-    traits = {  }
-}
-create_country_leader = {
-    # name = "Yasaka Kanako"  
-    name = "八坂神奈子"
-    picture = "MRY_ysk.dds"
-    ideology = authordemo_type
-    traits = {  }
-}
-create_country_leader = {
-    # name = "Yasaka Kanako"  
-    name = "八坂神奈子"
-    picture = "MRY_ysk.dds"
-    ideology = lienin_type
-    traits = {  }
-}
-create_country_leader = {
-    # name = "Yasaka Kanako"  
-    name = "东风谷早苗"
-    picture = "MRY_sanae.dds"
-    ideology = humanfirst_type
     traits = {  }
 }

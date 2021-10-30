@@ -13,8 +13,8 @@ ideas = {
       
       modifier = {
         planning_speed = 0.25
-        max_command_power = 25
-        command_power_gain_mult = 0.15
+        max_command_power = 15
+        command_power_gain_mult = 0.05
       }
     }
     
@@ -32,7 +32,7 @@ ideas = {
         planning_speed = 0.25
         max_command_power = 25
         command_power_gain_mult = 0.15
-        land_reinforce_rate = 0.15
+        land_reinforce_rate = 0.05
         army_leader_start_planning_level = 1
         army_leader_start_logistics_level = 1
       }
@@ -53,11 +53,11 @@ ideas = {
 			picture = man_five_year_plan_industry
       
       modifier = {
-        production_speed_arms_factory_factor = 0.15
-        production_speed_bunker_factor = 0.10
-        production_speed_infrastructure_factor = 0.10
-        production_speed_air_base_factor = 0.10
-        conscription_factor = -0.10
+        conscription_factor = -0.05
+        production_speed_arms_factory_factor = 0.10
+        production_speed_bunker_factor = 0.05
+        production_speed_infrastructure_factor = 0.05
+        production_speed_air_base_factor = 0.05
       }
       
       research_bonus = {
@@ -86,11 +86,10 @@ ideas = {
 			picture = man_five_year_plan_industry
       
       modifier = {
-        conscription_factor = -0.1
-        production_speed_arms_factory_factor = 0.15
-        production_speed_bunker_factor = 0.10
-        production_speed_infrastructure_factor = 0.10
-        production_speed_air_base_factor = 0.10
+        production_speed_arms_factory_factor = 0.10
+        production_speed_bunker_factor = 0.05
+        production_speed_infrastructure_factor = 0.05
+        production_speed_air_base_factor = 0.05
         weekly_manpower = 2
       }
       
@@ -120,7 +119,7 @@ ideas = {
 			picture = SPR_seize_the_gold_reserves
       
       modifier = {
-        consumer_goods_factor = -0.05
+        consumer_goods_factor = -0.03
         political_power_gain = 0.10
       }
       
@@ -181,8 +180,8 @@ ideas = {
       
       modifier = {
         consumer_goods_factor = -0.025
-        local_building_slots_factor = 0.25
-        local_resources_factor = 0.15
+        global_building_slots_factor = 0.15
+        local_resources_factor = 0.10
       }
     
     }
@@ -215,10 +214,10 @@ ideas = {
 			picture = generic_flexible_foreign_policy
       
       modifier = {
-        army_attack_factor = 0.15
+        army_attack_factor = 0.10
         army_defence_factor = 0.05
         supply_consumption_factor = 0.05
-        attrition = 0.05
+        attrition = 0.03
       }
     }
       
@@ -290,8 +289,8 @@ ideas = {
 			picture = generic_artillery_regiments
       
       equipment_bonus = {
-				sc_mortar_a = {
-					build_cost_ic = -0.2 instant = yes
+				mortar_a = {
+					build_cost_ic = -0.1 instant = yes
           reliability = 0.05
 				}
 			}
@@ -310,11 +309,11 @@ ideas = {
       
       equipment_bonus = {
 				gun_a = {
-					build_cost_ic = -0.2 instant = yes
+					build_cost_ic = -0.1 instant = yes
           reliability = 0.05
 				}
         magic_core_a = {
-          build_cost_ic = -0.2 instant = yes
+          build_cost_ic = -0.1 instant = yes
           reliability = 0.05
         }
 			}
@@ -368,7 +367,7 @@ ideas = {
 			picture = por_hydroelectric_power
 
 			modifier = {
-         production_speed_infrastructure_factor = 0.15
+         production_speed_infrastructure_factor = 0.10
          political_power_gain = -0.10
 			}
     }
@@ -380,14 +379,12 @@ ideas = {
       name = MEL_Infrastructure_Committee
       #desc = MEL_Infrastructure_Committee_desc
 			removal_cost = -1
-      name = MEL_Infrastructure_Committee
 
 			picture = por_hydroelectric_power
 
 			modifier = {
          production_speed_infrastructure_factor = 0.20
-         industrial_capacity_factory = 0.10
-         global_building_slots_factor = 0.25
+         global_building_slots_factor = 0.20
          consumer_goods_factor = 0.025
          political_power_gain = -0.15
 			}
@@ -467,7 +464,7 @@ ideas = {
 			picture = the_long_lance
 
 			equipment_bonus = {
-				sc_mortar_a = {
+				mortar_a = {
 					build_cost_ic = 0.10 instant = yes
           soft_attack = 0.20
 				}
@@ -534,7 +531,7 @@ ideas = {
       modifier = {
         resistance_damage_to_garrison = -0.20
         army_morale_factor = 0.15
-        compliance_gain = 0.10
+        compliance_gain = 0.01
         non_core_manpower = 0.002
       }
     }
@@ -550,8 +547,8 @@ ideas = {
 			picture = generic_production_bonus
       
       modifier = {
-        production_speed_industrial_complex_factor = 0.15
-        local_building_slots_factor = 0.20
+        production_speed_industrial_complex_factor = 0.05
+        global_building_slots_factor = 0.1
       }
     }
     
@@ -568,7 +565,6 @@ ideas = {
       modifier = {
         training_time_factor = -0.20
         minimum_training_level = -0.20
-        industrial_capacity_factory = 0.10
       }
     }
     
@@ -583,7 +579,6 @@ ideas = {
 			picture = por_the_fifth_empire
       
       modifier = {
-        production_speed_buildings_factor = 0.10
         min_export = -0.20
         army_core_attack_factor = 0.10
         army_core_defence_factor = 0.20
@@ -601,9 +596,9 @@ ideas = {
 			picture = chi_forced_conscription
       
       modifier = {
-        local_resources_factor = 0.35
+        local_resources_factor = 0.25
         # conscription_factor = 0.25
-        consumer_goods_factor = -0.05
+        consumer_goods_factor = 0.03
       }
     }
     
@@ -656,12 +651,11 @@ ideas = {
 			picture = por_unstable_republic
 
 			modifier = {
+        conscription = 0.01
         army_morale_factor = -0.10
         army_org_factor = -0.10
-        recon_factor = 0.10
-        army_attack_factor = 0.05
-        army_defence_factor = 0.05
-        army_speed_factor = 0.10
+        army_core_attack_factor = 0.05
+        army_core_defence_factor = 0.05
 			}
     }
     
@@ -680,13 +674,11 @@ ideas = {
 			picture = por_unstable_republic
 
 			modifier = {
-          conscription = 0.04
+          conscription = 0.05
           army_morale_factor = -0.10
 					army_org_factor = -0.10
-          recon_factor = 0.10
-          army_attack_factor = 0.05
-          army_defence_factor = 0.05
-          army_speed_factor = 0.10
+          army_core_attack_factor = 0.05
+          army_core_defence_factor = 0.05
 			}
     }
     
@@ -705,13 +697,12 @@ ideas = {
 			picture = por_unstable_republic
 
 			modifier = {
-          conscription = 0.04
+          conscription = 0.05
+          mobilization_speed = 0.10
           stability_factor = 0.10
 					army_org_factor = -0.10
-          recon_factor = 0.10
-          army_attack_factor = 0.05
-          army_defence_factor = 0.05
-          army_speed_factor = 0.10
+          army_core_attack_factor = 0.05
+          army_core_defence_factor = 0.05
 			}
     }
     
@@ -730,14 +721,14 @@ ideas = {
 			picture = por_unstable_republic
 
 			modifier = {
-          conscription = 0.04
+          conscription = 0.05
+          mobilization_speed = 0.15
           stability_factor = 0.10
-          recon_factor = 0.10
-          # army_org_factor = 0.05
+          army_core_attack_factor = 0.05
+          army_core_defence_factor = 0.05
           army_attack_factor = 0.05
           army_defence_factor = 0.05
-          army_speed_factor = 0.10
-          experience_gain_army_factor = 0.15
+          experience_gain_army_factor = 0.05
 			}
     }
     
@@ -756,14 +747,14 @@ ideas = {
 			picture = por_unstable_republic
 
 			modifier = {
-          conscription = 0.04
+          conscription = 0.05
+          mobilization_speed = 0.15
           stability_factor = 0.10
-          recon_factor = 0.15
-          army_org_factor = 0.05
+          army_org_factor = 0.10
+          army_morale_factor = 0.10
           army_attack_factor = 0.10
           army_defence_factor = 0.10
-          army_speed_factor = 0.10
-          experience_gain_army_factor = 0.15
+          experience_gain_army_factor = 0.10
 			}
     }
     
@@ -914,7 +905,7 @@ ideas = {
       
       modifier = {
         army_core_attack_factor = 0.05
-        army_core_defence_factor = 0.20
+        army_core_defence_factor = 0.10
       }
     }
     
@@ -934,7 +925,7 @@ ideas = {
       
       modifier = {
         army_core_attack_factor = 0.10
-        army_core_defence_factor = 0.20
+        army_core_defence_factor = 0.10
       }
       
       equipment_bonus = {
@@ -963,9 +954,8 @@ ideas = {
         local_resources_factor = 0.10
         production_speed_industrial_complex_factor = 0.10 
         industrial_capacity_factory = 0.10
-        production_factory_max_efficiency_factor = 0.10
-        line_change_production_efficiency_factor = 0.15
-        industry_free_repair_factor = 0.30
+        production_factory_max_efficiency_factor = 0.05
+        line_change_production_efficiency_factor = 0.05
       }
     
     }
@@ -985,7 +975,6 @@ ideas = {
 			picture = MEX_politicised_army
       
       modifier = {
-        production_speed_arms_factory_factor = 0.05
         custom_modifier_tooltip = MEL_daily_weapon_acquire_1
       }
     }
@@ -1005,7 +994,6 @@ ideas = {
 			picture = MEX_politicised_army
       
       modifier = {
-        production_speed_arms_factory_factor = 0.05
         custom_modifier_tooltip = MEL_daily_weapon_acquire_2
       }
     }
@@ -1025,7 +1013,7 @@ ideas = {
 			picture = MEX_politicised_army
       
       modifier = {
-        production_speed_arms_factory_factor = 0.15
+        production_speed_arms_factory_factor = 0.10
         custom_modifier_tooltip = MEL_daily_weapon_acquire_2
       }
     }

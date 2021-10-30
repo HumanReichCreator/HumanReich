@@ -3,7 +3,6 @@ state={
 	id=97
 	name="STATE_97"
 	resources={
-
 		powder=0.000
 		metal=0.000
 		gas=5.000
@@ -11,12 +10,24 @@ state={
 	}
 
 	history={
-			owner = CIR
+		143.7.1 = {
+			owner = SCA
+			add_core_of = SCA
+			add_core_of = CIR
+			buildings = {
+				infrastructure = 3
+				industrial_complex = 2
+				arms_factory = 1
+
+			}
+
+		}
 		146.1.1 = {
 			owner = CIR
 			add_core_of = CIR
+			remove_core_of = SCA
 			buildings = {
-				infrastructure =4
+				infrastructure = 4
 				industrial_complex = 2
 				arms_factory = 1
 
@@ -27,9 +38,9 @@ state={
 	}
 
 	provinces={
-		470 957 1265 2020 2218 2314 2392 2519 2691 3285 3938 3940 3944 3946 3947 5792 5795 5803 
+		470 957 1265 2020 2218 2314 2392 2519 2691 3938 3940 3944 3946 3947 5792 5795 5803 
 	}
-	manpower=4070.0
+	manpower=4070
 	buildings_max_level_factor=1.000
 	state_category=s7
 }

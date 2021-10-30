@@ -1,0 +1,475 @@
+YYK_siji_category = {
+    YYK_qingzui = {
+        allowed = {
+            tag = YYK
+        }
+        visible = {
+            not = {
+                has_completed_focus = YYK_jiashenyubayunzidelianxi
+            }
+        }
+        available = {
+            has_completed_focus = YYK_xiangsijiqingzui
+        }
+        cost = 35
+        complete_effect = {
+            SKI = {
+                add_opinion_modifier = {
+                    target = YYK
+                    modifier = YYK_qingzui_op2
+                }
+            }
+        }
+        ai_will_do = {
+            base = 0
+            modifier = {
+                add = 250
+                SKI = {
+                    has_opinion = {
+                        target = ROOT
+                        value < 30
+                    }
+                }
+            }
+        }
+    }
+    YYK_kuoda = {
+        allowed = {
+            tag = YYK
+        }
+        visible = {
+            not = {
+                has_completed_focus = YYK_jiashenyubayunzidelianxi
+            }
+        }
+        available = {
+            has_completed_focus = YYK_qingqiukuodaminjie
+        }
+        cost = 60
+        complete_effect = {
+            add_stability = -0.03
+            if = {
+                limit = {
+                    is_ai = yes
+                    SKI = {
+                        has_opinion_modifier = YYK_kuoda_op
+                    }
+                }
+                SKI = {
+                    remove_opinion_modifier = {
+                        target = YYK
+                        modifier = YYK_kuoda_op
+                    }
+                }
+                else = {
+                    add_to_variable = {
+                        YYK_kuoda = 1
+                    }
+                    custom_effect_tooltip = YYK_xiwangkuoda_tt
+                }
+            }
+        }
+        ai_will_do = {
+            base = 0
+            modifier = {
+                add = 500
+                SKI = {
+                    has_opinion_modifier = YYK_kuoda_op
+                }
+            }
+            modifier = {
+                factor = 10
+                SKI = {
+                    has_opinion = {
+                        target = ROOT
+                        value < 5
+                    }
+                }
+            }
+        }
+    }
+}
+YYK_ganshe_category = {
+    YYK_bangzhu_YKR = {
+        allowed = {
+            tag = YYK
+        }
+        target_root_trigger = {
+            has_completed_focus = YYK_jijiganshehxx
+            has_war = no
+            not = {
+                has_country_flag = YYK_bangzhu_YKR_flag
+            }
+        }
+        visible = {
+            YKR = {
+                is_subject = no
+                not = { has_war_with = ROOT }
+            }
+        }
+        target_trigger = {
+            FROM = {
+                has_war_with = YKR
+            }
+        }
+        target_array = YKR.enemies
+        available = {
+            threat > 0.2
+            FROM = {
+                not = {
+                    has_non_aggression_pact_with = ROOT
+                    tag = ROOT
+                }
+            }
+        }
+        targeted_modifier = {
+            tag = FROM
+            attack_bonus_against = 0.1
+            defense_bonus_against = 0.1
+        }
+        cost = 40
+        modifier = {
+            send_volunteer_factor = 0.25
+        }
+        complete_effect = {
+            set_country_flag = {
+                value = 1
+                days = 180
+                flag = YYK_bangzhu_YKR_flag
+            }
+        }
+        days_remove = 90
+        days_re_enable = 90
+        ai_will_do = {
+            factor = 0
+        }
+        cancel_trigger = {
+            has_war = yes
+        }
+    }
+    YYK_zhijiebangzhu_YKR = {
+        allowed = {
+            tag = YYK
+        }
+        visible = {
+            has_completed_focus = YYK_jijiganshehxx
+            YKR = {
+                is_subject = no
+                not = { has_war_with = ROOT }
+                has_war = yes
+            }
+            has_war = no
+        }
+        available = {
+            YKR = {
+                surrender_progress > 0.6
+            }
+        }
+        cost = 250
+        days_remove = 30
+        days_re_enable = 180
+        complete_effect = {
+            custom_effect_tooltip = YYK_zhijiebangzhu_YKR_tt
+            if = {
+                limit = {
+                    any_country = {
+                        or = {
+                            is_faction_leader = yes
+                            is_major = yes
+                        }
+                        has_war_with = YKR
+                    }
+                }
+                every_country = {
+                    limit = {
+                        or = {
+                            is_faction_leader = yes
+                            is_major = yes
+                        }
+                        has_war_with = YKR
+                    }
+                    ROOT = {
+                        declare_war_on = {
+                            target = PREV
+                            type = puppet_wargoal_focus
+                        }
+                    }
+                }
+                else = {
+                    random_country = {
+                        limit = {
+                            is_subject = no
+                            has_war_with = YKR
+                        }
+                        ROOT = {
+                            declare_war_on = {
+                                target = PREV
+                                type = puppet_wargoal_focus
+                            }
+                        }
+                    }
+                }
+            }
+            set_variable = { EXHC_current_exhaustion = 0}
+        }
+    }
+    YYK_houfanggongchang = {
+        allowed = {
+            tag = YYK
+        }
+        visible = {
+            has_completed_focus = YYK_jijiganshehxx
+        }
+        available = {
+            has_war = no
+            or = {
+                and = {
+                    threat > 0.5
+                    custom_trigger_tooltip = {
+                        tooltip = YYK_houfanggongchang_tt
+                        any_country = {
+                            not = {
+                                has_idea = gensoukyo_creator_idea
+                            }
+                            capital_scope = {
+                                is_on_continent = Gensokyo
+                            }
+                            any_country = {
+                                has_war_with = PREV
+                                capital_scope = {
+                                    is_on_continent = Gensokyo
+                                }
+                                not = {
+                                    has_idea = gensoukyo_creator_idea
+                                }
+                            }
+                        }
+                    }
+                }
+                and = {
+                    threat > 0.2
+                    YKR = { has_war = yes }
+                }
+            }
+           
+        }
+        days_remove = 90
+        days_re_enable = 90
+        cost = 150
+        modifier = {
+            production_speed_buildings_factor = 0.25
+            industrial_capacity_factory = 0.25
+        }
+        ai_will_do = {
+            base = 100
+        }
+        cancel_trigger = {
+            has_war = yes
+        }
+    }
+    YYK_zhanzhengzhunbei = {
+        allowed = {
+            tag = YYK
+        }
+        visible = {
+            has_completed_focus = YYK_jijiganshehxx
+        }
+        available = {
+            has_war = no
+            threat > 0.75
+            YKR = { has_war = yes }
+        }
+        days_remove = 90
+        days_re_enable = 90
+        cost = 100
+        modifier = {
+            training_time_factor = -0.33
+        }
+        ai_will_do = {
+            base = 100
+        }
+        cancel_trigger = {
+            has_war = yes
+        }
+    }
+    YYK_shentou = {
+        allowed = {
+            tag = YYK
+        }
+        visible = {
+            has_completed_focus = YYK_jijiganshehxx
+        }
+        available = {
+            has_war = yes
+            threat > 0.9
+        }
+        days_remove = 90
+        days_re_enable = 90
+        cost = 180
+        modifier = {
+            army_speed_factor = 0.1
+            org_loss_when_moving = -0.1
+        }
+        ai_will_do = {
+            base = 100
+        }
+    }
+}
+YYK_jianshe_category = {
+    YYK_jianshe = {
+        allowed = {
+            tag = YYK
+        }
+        target_root_trigger = {
+            has_completed_focus = YYK_xinminjiejihua
+            not = {
+                has_country_flag = YYK_jianshe_flag
+            }
+        }
+        available = {
+            FROM = {
+                infrastructure > 5
+                free_building_slots = {
+                    building = industrial_complex
+                    size > 2
+                }
+            }
+        }
+        state_target = yes
+        target_trigger = {
+            FROM = {
+                is_on_continent = Netherworld
+                is_owned_by = ROOT
+                is_fully_controlled_by = ROOT
+                is_core_of = ROOT
+            }
+        }
+        target_array = core_states
+        target_array = controlled_states
+        target_array = owned_states
+        cost = 75
+        days_remove = 75
+        days_re_enable = 75
+        fire_only_once = yes
+        complete_effect = {
+            set_country_flag = {
+                flag = YYK_jianshe_flag
+                days = 150
+                value = 1
+            }
+        }
+        remove_effect = {
+            FROM = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            base = 500
+        }
+    }
+}
+YYK_fuyong_category = {
+    YYK_fuyong = {
+        allowed = {
+            tag = YYK
+        }
+        target_root_trigger = {
+            is_subject = no
+            has_completed_focus = YYK_suoyouyoulingdejia
+        }
+        target_trigger = {
+            FROM = {
+                has_idea = Ghost
+                is_neighbor_of = ROOT
+                not = {
+                    tag = ROOT
+                    is_subject_of = ROOT
+                }
+            }
+        }
+        target_array = neighbors
+        available = {
+            FROM = {
+                has_war = no
+                is_subject = no
+            }
+        }
+        cost = 150
+        fire_only_once = yes
+        complete_effect = {
+            FROM = {
+                country_event = { id = yyk.45 days = 2}
+            }
+            custom_effect_tooltip = TEG_accept
+            effect_tooltip = {
+                subject_level2 = yes
+                can_core = yes
+            }
+        }
+        ai_will_do = {
+            base = 100
+        }
+    }
+}
+YYK_YKRtingzhan_category = {
+    YYK_tingzhan_YKR = {
+        allowed = {
+            tag = YYK
+        }
+        visible = {
+            has_country_flag = YYK_lalongziguli
+            YKR = {
+                not = {
+                    is_subject_of = ROOT
+                    has_war_with = YYK
+                }
+            }
+        }
+        available = {
+            has_war = no
+            YKR = {
+                has_offensive_war = yes
+                not = { has_war_together_with = ROOT }
+                surrender_progress < 0.01
+            }
+        }   
+        cost = 200
+        complete_effect = {
+            if = {
+                limit = {
+                    not = {
+                        has_country_flag = YYK_YKR_peace_first
+                    }
+                }
+                YKR = {
+                    country_event = { id = yyk.56 days =2 }
+                }
+                else = {
+                    YKR = {
+                        country_event = { id = yyk.53 days =2 }
+                    }
+                }
+            }
+           
+            set_country_flag = YYK_YKR_peace_first
+            custom_effect_tooltip = TEG_accept
+            effect_tooltip = {
+                every_country = {
+                    limit = {
+                        has_defensive_war_with = YKR
+                        not = { has_defensive_war_with = ROOT }
+                    }
+                    white_peace = YKR
+                }
+            }
+            custom_effect_tooltip = NUE_yaoqiudangdiyaoguaiqufu_tt
+        }
+        ai_will_do = {
+            base = 2000
+        }
+    }
+}

@@ -3,7 +3,6 @@ state={
 	id=153
 	name="STATE_153"
 	resources={
-
 		powder=0.000
 		metal=0.000
 		gas=10.000
@@ -11,15 +10,23 @@ state={
 	}
 
 	history={
-			owner = HKR
-		146.1.1 = {
-			owner = HKR
+		143.7.1 = {
+			owner = MRS
 			add_core_of = MFA
-			add_core_of = MRS
-			add_core_of = HKR
 			buildings = {
-				infrastructure =1
+				infrastructure = 0
 				industrial_complex = 1
+				arms_factory = 1
+
+			}
+
+		}
+		146.1.1 = {
+			owner = MFA
+			add_core_of = MFA
+			add_core_of = CIR
+			buildings = {
+				infrastructure = 1
 				arms_factory = 1
 
 			}
@@ -29,9 +36,9 @@ state={
 	}
 
 	provinces={
-		671 928 999 1214 1453 1841 1923 2230 3037 3272 3273 3332 3334 3335 4381 4383 4387 5755 
+		671 928 999 1841 1923 3272 3273 3332 3334 5755 
 	}
-	manpower=3021.0
+	manpower=1221
 	buildings_max_level_factor=1.000
 	state_category=s5
 }

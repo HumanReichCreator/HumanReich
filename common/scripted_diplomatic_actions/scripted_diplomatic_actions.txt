@@ -94,6 +94,151 @@
 
 
 scripted_diplomatic_actions = {
+	new_peace = { # will be used in most localizations
+	
+		allowed = { #if action is valid
+			always = yes
+		}
+		visible = { #if action is visible on gui
+			FROM = {
+				has_war_with = ROOT
+			}
+		}
+		selectable = { #if action is selectable on gui
+			ROOT = {
+				is_subject = no
+			}
+			FROM = {
+				is_subject = no
+			}
+			and = {
+				or = {
+					FROM = {
+						is_in_faction = yes
+						is_faction_leader = yes
+					}
+					FROM = {
+						is_in_faction = no
+					}	
+				}
+				or = {
+					ROOT = {
+						is_in_faction = yes
+						is_faction_leader = yes
+					}
+					ROOT = {
+						is_in_faction = no
+					}
+				}
+			}
+		}
+
+		requires_acceptance = yes # if true the action will require acceptance of target country
+		cost = 30 # pp cost, can be zero
+		# command_power = 10 # cp cost, can be zero
+
+		# cost_string = loc_key # if you have a custom cost, use this loc to display it
+		show_acceptance_on_action_button = yes # set to no if acceptance shouldn't be displayed on the action button
+
+		icon = 1 # icon frame to use in notification
+
+      #for effects/triggers/variables, from is the sender and this is receiver
+
+		# runs when the action is properly sent and accepted
+		complete_effect = {
+			white_peace = FROM
+			if = {
+				limit = {
+					or = {
+						FROM = { is_major = yes}
+						ROOT = { is_major = yes}
+					}
+				}
+				news_event = { id = gen.17 days = 2}
+			}
+		}
+		
+		# PLAYER FEEDBACK ON ACCEPT/REJECT
+		accept_title = PEACE_title #can be overridden to customize accepted/rejected pop ups for the sender
+		accept_description = PEACE_desc
+		reject_title = PEACE_reject_title
+		reject_description = PEACE_reject_desc
+	
+		
+		# # AI
+		# # a list of ai_will_do entries that will be used to decide if AI should accept or reject a request
+		ai_acceptance = {
+			base = {
+				base = -250
+			}
+			surrender_progress = {
+				base = 0
+				modifier = {
+					FROM = {
+						set_temp_variable = { v = surrender_progress }
+						multiply_temp_variable = { v = 100 }
+					}
+					add = v
+				}
+			}
+			war_exhaustion = {
+				base = 0
+				modifier = {
+					FROM = {
+						add_to_temp_variable = { v = EXHC_current_exhaustion }
+						add_to_temp_variable = { c = 1 }
+						all_country = {
+							if = {
+								limit = {
+									is_in_faction_with = PREV
+									is_major = yes
+									has_war_with = ROOT
+								}
+								add_to_temp_variable = { FROM.v = EXHC_current_exhaustion }
+								add_to_temp_variable = { FROM.c = 1}
+							}
+						}
+						divide_temp_variable = { v = c}
+						multiply_temp_variable = { v = 2}
+					}
+					add = v
+				}
+			}
+			not_neighbor = {
+				base = 100
+				modifier = {
+					or = {
+						FROM = {
+							or = {
+								is_neighbor_of = ROOT
+								any_allied_country = {
+									is_neighbor_of = ROOT
+								}
+							}
+						}
+						ROOT = {
+							any_allied_country = {
+								FROM = {
+									or = {
+										is_neighbor_of = PREV
+										any_allied_country = {
+											is_neighbor_of = PREV.PREV
+										}
+									}
+								}
+							}
+						}
+					}
+					add = -100
+				}
+			}
+		}
+
+		# # ai_will_do to decide if AI should send this action or not
+		ai_desire = {
+			# base = 10000
+		}
+	}
 
 	SSI_support_independence = { # will be used in most localizations
 	

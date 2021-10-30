@@ -3,7 +3,7 @@ state={
 	id=138
 	name="STATE_138"
 	resources={
-		energy = 15
+		energy=15.000
 		powder=0.000
 		metal=0.000
 		gas=15.000
@@ -11,14 +11,24 @@ state={
 	}
 
 	history={
-			owner = CIR
+		143.7.1 = {
+			owner = MRS
+			add_core_of = MFA
+			buildings = {
+				infrastructure = 1
+				industrial_complex = 1
+				arms_factory = 1
+
+			}
+
+		}
 		146.1.1 = {
-			owner = CIR
+			owner = MFA
 			add_core_of = MFA
 			add_core_of = CIR
 			buildings = {
-				infrastructure =2
-				industrial_complex = 2
+				infrastructure = 2
+				industrial_complex = 1
 				arms_factory = 1
 
 			}
@@ -28,9 +38,9 @@ state={
 	}
 
 	provinces={
-		186 910 1643 1979 2002 2253 2484 3035 4384 4385 4386 4388 4389 5756 5759 
+		186 910 1643 1979 2002 2253 2484 4384 4385 4386 4388 4389 5756 5759 
 	}
-	manpower=4600.0
+	manpower=4600
 	buildings_max_level_factor=1.000
 	state_category=s5
 }

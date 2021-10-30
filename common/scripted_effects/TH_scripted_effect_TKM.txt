@@ -1,0 +1,159 @@
+TKM_Develop_civil_industry = {
+	if = {
+		limit = { has_idea = tkm_Deformed_industry_idea }
+		swap_ideas = {
+			remove_idea = tkm_Deformed_industry_idea
+			add_idea = TKM_Perfect_industrial_zone_idea_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = TKM_Perfect_industrial_zone_idea_1 }
+		swap_ideas = {
+			remove_idea = TKM_Perfect_industrial_zone_idea_1
+			add_idea = TKM_Perfect_industrial_zone_idea_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = TKM_Perfect_industrial_zone_idea_2 }
+		swap_ideas = {
+			remove_idea = TKM_Perfect_industrial_zone_idea_2
+			add_idea = TKM_Perfect_industrial_zone_idea_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = TKM_Perfect_industrial_zone_idea_3 }
+		swap_ideas = {
+			remove_idea = TKM_Perfect_industrial_zone_idea_3
+			add_idea = TKM_Perfect_industrial_zone_idea_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = TKM_Perfect_industrial_zone_idea_4 }
+		swap_ideas = {
+			remove_idea = TKM_Perfect_industrial_zone_idea_4
+			add_idea = TKM_Perfect_industrial_zone_idea_5
+		}
+	}
+}
+
+TKM_Continue_military_industry = {
+	if = {
+		limit = { has_idea = tkm_Deformed_industry_idea }
+		swap_ideas = {
+			remove_idea = tkm_Deformed_industry_idea
+			add_idea = TKM_War_industrial_zone_idea_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = TKM_War_industrial_zone_idea_1 }
+		swap_ideas = {
+			remove_idea = TKM_War_industrial_zone_idea_1
+			add_idea = TKM_War_industrial_zone_idea_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = TKM_War_industrial_zone_idea_2 }
+		swap_ideas = {
+			remove_idea = TKM_War_industrial_zone_idea_2
+			add_idea = TKM_War_industrial_zone_idea_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = TKM_War_industrial_zone_idea_3 }
+		swap_ideas = {
+			remove_idea = TKM_War_industrial_zone_idea_3
+			add_idea = TKM_War_industrial_zone_idea_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = TKM_War_industrial_zone_idea_4 }
+		swap_ideas = {
+			remove_idea = TKM_War_industrial_zone_idea_4
+			add_idea = TKM_War_industrial_zone_idea_5
+		}
+	}
+}
+
+TKM_Political_concept_establishment = {
+	if = {
+		limit = { has_idea = tkm_New_forces_idea_1 }
+		swap_ideas = {
+			remove_idea = tkm_New_forces_idea_1
+			add_idea = tkm_New_forces_idea_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = tkm_New_forces_idea_2 }
+		swap_ideas = {
+			remove_idea = tkm_New_forces_idea_2
+			add_idea = tkm_New_forces_idea_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = tkm_New_forces_idea_3 }
+		swap_ideas = {
+			remove_idea = tkm_New_forces_idea_3
+			add_idea = tkm_New_forces_idea_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = tkm_New_forces_idea_4 }
+		swap_ideas = {
+			remove_idea = tkm_New_forces_idea_4
+			add_idea = tkm_New_forces_idea_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = tkm_New_forces_idea_5 }
+		swap_ideas = {
+			remove_idea = tkm_New_forces_idea_5
+			add_idea = tkm_New_forces_idea_6
+		}
+	}
+	else_if = {
+		limit = { has_idea = tkm_New_forces_idea_6 }
+		swap_ideas = {
+			remove_idea = tkm_New_forces_idea_6
+			add_idea = tkm_New_forces_idea_7
+		}
+	}
+	else_if = {
+		limit = { has_idea = tkm_New_forces_idea_7 }
+		remove_ideas = { tkm_New_forces_idea_7 }
+	}
+}
+
+TKM_War_against_pacifism = {
+	if = {
+		limit = { has_idea = TKM_shell_shocked_spectator_5 }
+		swap_ideas = {
+			remove_idea = TKM_shell_shocked_spectator_5
+			add_idea = TKM_shell_shocked_spectator_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = TKM_shell_shocked_spectator_4 }
+		swap_ideas = {
+			remove_idea = TKM_shell_shocked_spectator_4
+			add_idea = TKM_shell_shocked_spectator_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = TKM_shell_shocked_spectator_3 }
+		swap_ideas = {
+			remove_idea = TKM_shell_shocked_spectator_3
+			add_idea = TKM_shell_shocked_spectator_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = TKM_shell_shocked_spectator_2 }
+		swap_ideas = {
+			remove_idea = TKM_shell_shocked_spectator_2
+			add_idea = TKM_shell_shocked_spectator_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = TKM_shell_shocked_spectator_1 }
+		remove_ideas = { TKM_shell_shocked_spectator_1 }
+	}
+}

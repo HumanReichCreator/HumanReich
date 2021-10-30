@@ -96,101 +96,102 @@ CO_coring_daily = {
 
         clamp_variable = { var = CO_core_time max = 500 min = 10 }
     }
+}
 
+CO_auto_core = {
     #auto core
     every_owned_state = {
         if = {
             limit = {
-                ROOT = { has_country_flag = CO_core_Beast }
-                is_owned_by = ROOT
+                PREV = { has_country_flag = CO_core_Beast }
+                is_owned_by = PREV
                 check_variable = { ST_present_race = 0 }
-                not = { is_core_of = ROOT}
+                not = { is_core_of = PREV}
             }
-            add_core_of = ROOT
+            add_core_of = PREV
         }
         if = {
             limit = {
-                ROOT = { has_country_flag = CO_core_Pri_youkai }
-                is_owned_by = ROOT
+                PREV = { has_country_flag = CO_core_Pri_youkai }
+                is_owned_by = PREV
                 check_variable = { ST_present_race = 1 }
-                not = { is_core_of = ROOT}
+                not = { is_core_of = PREV}
             }
-            add_core_of = ROOT
+            add_core_of = PREV
         }
         if = {
             limit = {
-                ROOT = { has_country_flag = CO_core_Youkai }
-                is_owned_by = ROOT
+                PREV = { has_country_flag = CO_core_Youkai }
+                is_owned_by = PREV
                 check_variable = { ST_present_race = 2 }
-                not = { is_core_of = ROOT}
+                not = { is_core_of = PREV}
             }
-            add_core_of = ROOT
+            add_core_of = PREV
         }
         if = {
             limit = {
-                ROOT = { has_country_flag = CO_core_God }
-                is_owned_by = ROOT
+                PREV = { has_country_flag = CO_core_God }
+                is_owned_by = PREV
                 check_variable = { ST_present_race = 3 }
-                not = { is_core_of = ROOT}
+                not = { is_core_of = PREV}
             }
-            add_core_of = ROOT
+            add_core_of = PREV
         }
         if = {
             limit = {
-                ROOT = { has_country_flag = CO_core_Human }
-                is_owned_by = ROOT
+                PREV = { has_country_flag = CO_core_Human }
+                is_owned_by = PREV
                 check_variable = { ST_present_race = 4 }
-                not = { is_core_of = ROOT}
+                not = { is_core_of = PREV}
             }
-            add_core_of = ROOT
+            add_core_of = PREV
         }
         if = {
             limit = {
-                ROOT = { has_country_flag = CO_core_Magician }
-                is_owned_by = ROOT
+                PREV = { has_country_flag = CO_core_Magician }
+                is_owned_by = PREV
                 check_variable = { ST_present_race = 5 }
-                not = { is_core_of = ROOT}
+                not = { is_core_of = PREV}
             }
-            add_core_of = ROOT
+            add_core_of = PREV
         }
         if = {
             limit = {
-                ROOT = { has_country_flag = CO_core_Fairy }
-                is_owned_by = ROOT
+                PREV = { has_country_flag = CO_core_Fairy }
+                is_owned_by = PREV
                 check_variable = { ST_present_race = 6 }
-                not = { is_core_of = ROOT}
+                not = { is_core_of = PREV}
             }
-            add_core_of = ROOT
+            add_core_of = PREV
         }
         if = {
             limit = {
-                ROOT = { has_country_flag = CO_core_Ghost }
-                is_owned_by = ROOT
+                PREV = { has_country_flag = CO_core_Ghost }
+                is_owned_by = PREV
                 check_variable = { ST_present_race = 7 }
-                not = { is_core_of = ROOT}
+                not = { is_core_of = PREV}
             }
-            add_core_of = ROOT
+            add_core_of = PREV
         }
         if = {
             limit = {
-                ROOT = { has_country_flag = CO_core_Kappa }
-                is_owned_by = ROOT
+                PREV = { has_country_flag = CO_core_Kappa }
+                is_owned_by = PREV
                 check_variable = { ST_present_race = 8 }
-                not = { is_core_of = ROOT}
+                not = { is_core_of = PREV}
             }
-            add_core_of = ROOT
+            add_core_of = PREV
         }
         if = {
             limit = {
-                ROOT = { has_country_flag = CO_core_Tengu }
-                is_owned_by = ROOT
+                PREV = { has_country_flag = CO_core_Tengu }
+                is_owned_by = PREV
                 check_variable = { ST_present_race = 9 }
-                not = { is_core_of = ROOT}
+                not = { is_core_of = PREV}
             }
-            add_core_of = ROOT
+            add_core_of = PREV
         }
     }
-    
 }
 
 CO_core_Pri_youkai = {

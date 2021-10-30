@@ -1,0 +1,462 @@
+SCA_army_reform_cate = {
+
+    SCA_Reorganize_the_army = {
+
+	      icon = hol_draw_up_staff_plans
+
+        visible = {
+          tag = SCA
+          has_country_flag = SCA_leimihuifu
+          has_idea = SCA_Lax_military_discipline_idea_1
+        }
+        available = {
+          is_subject = no
+			    has_army_experience > 39
+          has_completed_focus = SCA_yaojingjitizhuyi
+          has_idea = SCA_Lax_military_discipline_idea_1
+        }
+
+        fire_only_once = yes
+
+        days_remove = 30
+
+        cost = 0
+
+        modifier = {
+
+        }
+
+        complete_effect = {   
+
+          if = {
+            limit = {
+              has_defensive_war = yes
+            }
+            add_political_power = -40
+            add_stability = -0.04
+            else = {
+              add_political_power = -150
+              add_stability = -0.15
+            }
+          }
+
+			    army_experience = -40
+
+        }
+
+        cancel_trigger = {
+          NOT = { has_idea = SCA_Lax_military_discipline_idea_1 }
+        }
+
+        remove_effect = {
+
+          if = {
+            limit = {
+              has_government = qinwai
+            }
+            add_political_power = 50
+            add_stability = 0.05
+            add_tech_bonus = {
+              bonus = 0.25
+              uses = 1
+              category = jitizhuyi
+            }
+          }
+
+          add_tech_bonus = {
+            bonus = 0.25
+            uses = 1
+            category = jitizhuyi
+          }
+
+				  swap_ideas = { remove_idea = SCA_Lax_military_discipline_idea_1 add_idea = SCA_Lax_military_discipline_idea_2 }
+        }
+
+        ai_will_do = {
+            factor = 10000
+            modifier = {
+              has_war = no
+              factor = 0
+            }
+        }
+    }
+
+    SCA_Defense_is_better_than_attack = {
+
+	      icon = hol_draw_up_staff_plans
+
+        visible = {
+          tag = SCA
+          has_country_flag = SCA_leimihuifu
+          has_idea = SCA_Lax_military_discipline_idea_2
+        }
+        available = {
+          is_subject = no
+			    has_army_experience > 39
+          has_idea = SCA_Lax_military_discipline_idea_2
+        }
+
+        fire_only_once = yes
+
+        days_remove = 60
+
+        cost = 0
+
+        modifier = {
+
+        }
+
+        complete_effect = {   
+
+          if = {
+            limit = {
+              has_defensive_war = yes
+            }
+            add_political_power = -40
+            add_stability = -0.04
+            else = {
+              add_political_power = -150
+              add_stability = -0.15
+            }
+          }
+
+			    army_experience = -4
+
+        }
+
+        cancel_trigger = {
+          NOT = { has_idea = SCA_Lax_military_discipline_idea_2 }
+        }
+
+        remove_effect = {
+
+          if = {
+            limit = {
+              has_government = qinwai
+            }
+            add_political_power = 50
+            add_stability = 0.05
+            add_tech_bonus = {
+              bonus = 0.25
+              uses = 1
+              category = jitizhuyi
+            }
+          }
+
+          add_tech_bonus = {
+            bonus = 0.25
+            uses = 1
+            category = jitizhuyi
+          }
+
+				  swap_ideas = { remove_idea = SCA_Lax_military_discipline_idea_2 add_idea = SCA_Lax_military_discipline_idea_3 }
+
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+    }
+
+    SCA_The_final_reform = {
+
+	      icon = hol_draw_up_staff_plans
+
+        visible = {
+          tag = SCA
+          has_country_flag = SCA_leimihuifu
+          has_idea = SCA_Lax_military_discipline_idea_3
+        }
+        available = {
+          is_subject = no
+			    has_army_experience > 39
+          has_idea = SCA_Lax_military_discipline_idea_3
+        }
+
+        fire_only_once = yes
+
+        days_remove = 90
+
+        cost = 0
+
+        modifier = {
+
+        }
+
+        complete_effect = {   
+
+          if = {
+            limit = {
+              has_defensive_war = yes
+            }
+            add_political_power = -40
+            add_stability = -0.04
+            else = {
+              add_political_power = -150
+              add_stability = -0.15
+            }
+          }
+
+			    army_experience = -40	
+
+        }
+
+        cancel_trigger = {
+          NOT = { has_idea = SCA_Lax_military_discipline_idea_3 }
+        }
+
+        remove_effect = {
+
+          if = {
+            limit = {
+              has_government = qinwai
+            }
+            add_political_power = 50
+            add_stability = 0.05
+            add_tech_bonus = {
+              bonus = 0.5
+              uses = 1
+              category = jitizhuyi
+            }
+          }
+
+          add_tech_bonus = {
+            bonus = 0.5
+            uses = 1
+            category = jitizhuyi
+          }
+
+				  remove_ideas = SCA_Lax_military_discipline_idea_3
+
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+    }
+
+    SCA_Improve_the_treatment_of_officers = {
+
+	      icon = hol_draw_up_staff_plans
+
+        visible = {
+          tag = SCA
+          has_country_flag = SCA_leimihuifu
+          has_idea = SCA_disloyal_Officer_idea_1
+        }
+        available = {
+          is_subject = no
+          has_government = guli
+          has_idea = SCA_disloyal_Officer_idea_1
+        }
+
+        fire_only_once = yes
+
+        days_remove = 120
+
+        cost = 50
+
+        modifier = {
+				  consumer_goods_factor = 0.05
+        }
+
+        complete_effect = {   
+
+        }
+
+        remove_effect = {
+	        add_stability = 0.05
+
+				  swap_ideas = { remove_idea = SCA_disloyal_Officer_idea_1 add_idea = SCA_disloyal_Officer_idea_2 }
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+    }
+
+    SCA_Encourage_disclosure = {
+
+	      icon = hol_draw_up_staff_plans
+
+        visible = {
+          tag = SCA
+          has_country_flag = SCA_leimihuifu
+          has_idea = SCA_disloyal_Officer_idea_2
+        }
+        available = {
+          is_subject = no
+          has_government = guli
+          has_completed_focus = SCA_jianliyaojingjiandiewang
+          has_idea = SCA_disloyal_Officer_idea_2
+        }
+
+        fire_only_once = yes
+
+        days_remove = 180
+
+        cost = 50
+
+        modifier = {
+				  political_power_cost = 0.3
+          weekly_manpower = -3
+        }
+
+        complete_effect = {   
+
+        }
+
+        remove_effect = {
+		  		add_war_support = -0.05
+
+				  swap_ideas = { remove_idea = SCA_disloyal_Officer_idea_2 add_idea = SCA_Small_group_of_officers_idea }
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+    }
+
+    SCA_Training_fa_officers = {
+
+	      icon = hol_draw_up_staff_plans
+
+        visible = {
+          tag = SCA
+          has_country_flag = SCA_leimihuifu
+          has_idea = SCA_disloyal_Officer_idea_1
+        }
+        available = {
+          is_subject = no
+          has_government = qinwai
+          has_completed_focus = SCA_zujiankuangsufanyingbudui
+          has_idea = SCA_disloyal_Officer_idea_1
+        }
+
+        fire_only_once = yes
+
+        days_remove = 180
+
+        cost = 50
+
+        modifier = {
+				  consumer_goods_factor = 0.10
+				  research_speed_factor = -0.10
+        }
+
+        complete_effect = {   
+
+        }
+
+        remove_effect = {
+	        add_stability = 0.05
+		  		add_war_support = 0.05
+				  remove_ideas = SCA_disloyal_Officer_idea_1
+				  swap_ideas = { remove_idea = SCA_zujiankuangsufanyingbudui_idea add_idea = SCA_zujiankuangsufanyingbudui_idea_1 } 
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+    }
+
+    SCA_great_purge_officers = {
+
+	      icon = hol_draw_up_staff_plans
+
+        visible = {
+          tag = SCA
+          has_country_flag = SCA_leimihuifu
+          has_idea = SCA_disloyal_Officer_idea_1
+        }
+        available = {
+          is_subject = no
+          has_government = neworder
+          has_idea = SCA_disloyal_Officer_idea_1
+        }
+
+        fire_only_once = yes
+
+        days_remove = 180
+
+        cost = 50
+
+        modifier = {
+				  political_power_cost = 0.25
+          weekly_manpower = -10
+        }
+
+        complete_effect = {   
+
+				  swap_ideas = { remove_idea = SCA_disloyal_Officer_idea_1 add_idea = SCA_great_purge_officers_idea } 
+        }
+
+        remove_effect = {
+
+        }
+
+        ai_will_do = {
+            factor = 10000
+            modifier = {
+              NOT = { has_completed_focus = SCA_jianliyaojingjiandiewang }
+              factor = 0
+            }
+        }
+    }
+
+    SCA_Let_them_come_to_me = {
+
+	      icon = hol_draw_up_staff_plans
+
+        visible = {
+          tag = SCA
+          has_country_flag = SCA_leimihuifu
+          has_idea = SCA_great_purge_officers_idea
+        }
+        available = {
+          is_subject = no
+          has_government = neworder
+          has_completed_focus = SCA_jianliyaojingjiandiewang
+          has_idea = SCA_great_purge_officers_idea
+        }
+
+        fire_only_once = yes
+
+        days_remove = 180
+
+        cost = 50
+
+        modifier = {
+				  political_power_cost = 0.25
+          weekly_manpower = -10
+        }
+
+        complete_effect = {   
+
+
+
+        }
+
+        remove_effect = {
+
+          random_army_leader = {
+            limit = {
+              has_id = 35
+            }
+            add_attack = 1
+          }
+
+	        add_stability = 0.10
+
+				  swap_ideas = { remove_idea = SCA_jianliyaojingjiandiewang_idea add_idea = SCA_jianliyaojingjiandiewang_idea_1 } 
+
+				  remove_ideas = SCA_great_purge_officers_idea
+
+        }
+
+        ai_will_do = {
+            factor = 10000
+        }
+    }
+
+}

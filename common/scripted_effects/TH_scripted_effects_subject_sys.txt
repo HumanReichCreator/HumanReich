@@ -137,7 +137,16 @@ SS_power_calculator = {
       #add factor
       set_variable = { SS_gain_base = 1} 
       add_to_variable = { SS_gain_base = PREV.SS_gain_factor_add }
+      if = {
+        limit = {
+          PREV = {
+            has_country_flag = SS_gonggushiliquan
+          }
+        }
+        add_to_variable = { SS_gain_base = 1 }
+      }
       multiply_variable = { SS_subject_give_power_ratio = SS_gain_base }
+      
 
       #race
       if = {

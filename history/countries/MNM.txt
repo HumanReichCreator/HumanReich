@@ -6,22 +6,33 @@
         spear1 = 1
         gun1 = 1
         linglicunchu = 1
+        linglizhufu = 1
+        linglidanyao = 1
         spell_card2 = 1
+        spear2 = 1
+        lingliliushuixian = 1
+        spell_card3 = 1
+        spear3 = 1
             
         #辅助
+        zhiyuanzhuangbei = 1
+        zhihuixiaodui146 = 1
 
         #专用辅助
+        lingliganying147 = 1
 
         #专用基础
 
         #专用进阶
 
         #混合系
+        ma_shield1 = 1
 
         #陆军学说
         zhanchangzhihui140 = 1
         zuzhihuazhanzheng142 = 1
         zhanchangzhihui145 = 1
+        jingyingxunlian = 1
             
         #工程学 
         jichushuxue = 1
@@ -38,43 +49,49 @@
             
         #专用工业
         linglishengchan130 = 1
+        linglishengchan140 = 1
 
         #种族
         caogenchuantong1 = 1
         caogenchuantong2 = 1
+        qinlvetianxing1 = 1
+        qinlvetianxing2 = 1
             
     }
+    
 }
 146.1.1={
+    set_country_flag = bunengsuiyiqiehuanzhengti
     # set_cosmetic_tag = NMS_nue
     # set_cosmetic_tag = NMS_SRB
     # set_cosmetic_tag = NMS_youkai
-    oob = "MNM_146"
+    set_cosmetic_tag = MNM_panluan
+    set_truce = {target = HKR days = 300}
+    set_truce = {target = HUM days = 300}
+    set_truce = {target = ZBT days = 300}
+    oob = "TEST"
     # set_research_slots = 5
     # Starting tech
     add_ideas = {
-    Pri_youkai
-    type3_manpowerlv2
-    Village
-    # anti_fairy
-    #new_sytle_buddism
-    close1
-    hawk2
-    normal_border
-    free_magic
+        Pri_youkai
+        type3_manpowerlv2
+        Village
+        close3
+        hawk4
+        strict_border
+        sc_rule
     }
     set_politics = {
-        ruling_party = guli
+        ruling_party = neworder
         election_frequency = 48
         elections_allowed = no
     }
     set_popularities = {
         qinwai = 0
-        guli = 80
-        neworder = 0
-        oldorder = 0
+        guli = 15
+        neworder = 70
+        oldorder = 5
         fandong = 10
-        lienin = 10
     }
 }
 

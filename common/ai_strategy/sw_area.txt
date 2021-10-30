@@ -1,0 +1,121 @@
+# unit_base is the base value used for evaluating how important it is to deploy the various categories
+# Written by Henrik "Groogy" Hansson
+#AI 倾向
+dont_alliance_sw_area_early1 = {
+	# reversed = yes
+
+	enable = {
+		not = {
+			SW_country = yes
+		}
+	}
+	abort = {
+		date > 151.1.1
+	}
+
+	ai_strategy = {
+		type = alliance 
+		id = "ZYD"			
+		value = -75
+	}	
+	ai_strategy = {
+		type = alliance 
+		id = "GH1"			
+		value = -75
+	}	
+	ai_strategy = {
+		type = alliance 
+		id = "HU6"			
+		value = -75
+	}	
+	ai_strategy = {
+		type = alliance 
+		id = "HU3"			
+		value = -75
+	}	
+	ai_strategy = {
+		type = alliance 
+		id = "MEL"			
+		value = -75
+	}	
+	ai_strategy = {
+		type = alliance 
+		id = "GH3"			
+		value = -75
+	}	
+	ai_strategy = {
+		type = alliance 
+		id = "GH2"			
+		value = -75
+	}	
+	ai_strategy = {
+		type = alliance 
+		id = "SGS"			
+		value = -75
+	}	
+	ai_strategy = {
+		type = alliance 
+		id = "HU4"			
+		value = -75
+	}	
+
+}
+dont_alliance_sw_area_early1 = {
+	reversed = yes
+
+	enable = {
+		not = {
+			SW_country = yes
+		}
+	}
+	abort = {
+		date > 151.1.1
+	}
+
+	ai_strategy = {
+		type = alliance 
+		id = "ZYD"			
+		value = -75
+	}	
+	ai_strategy = {
+		type = alliance 
+		id = "GH1"			
+		value = -75
+	}	
+	ai_strategy = {
+		type = alliance 
+		id = "HU6"			
+		value = -75
+	}	
+	ai_strategy = {
+		type = alliance 
+		id = "HU3"			
+		value = -75
+	}	
+	ai_strategy = {
+		type = alliance 
+		id = "MEL"			
+		value = -75
+	}	
+	ai_strategy = {
+		type = alliance 
+		id = "GH3"			
+		value = -75
+	}	
+	ai_strategy = {
+		type = alliance 
+		id = "GH2"			
+		value = -75
+	}	
+	ai_strategy = {
+		type = alliance 
+		id = "SGS"			
+		value = -75
+	}	
+	ai_strategy = {
+		type = alliance 
+		id = "HU4"			
+		value = -75
+	}	
+
+}

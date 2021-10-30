@@ -1,0 +1,660 @@
+ideas = {
+    country = {
+		YYK_sijidezhicai_idea = {
+			picture = generic_constitutional_guarantees
+			available = {
+				country_exists = SKI
+				not = {
+					SKI = { is_subject_of = ROOT }
+				}
+			}
+			modifier = {
+				conscription = -0.001
+				mobilization_laws_cost_factor = 1
+			}
+		}
+		YYK_sihoushijie_idea = {
+			picture = ENG_the_war_to_end_all_wars
+		}
+		YYK_duibayunzideyuanzhu_idea = {
+			picture = generic_deal_with_the_devil2
+			available = {
+				country_exists = YKR
+				not = {
+					has_war_with = YKR
+				}
+			}
+			modifier = {
+				political_power_factor = -0.15
+			}
+			targeted_modifier = { 
+				tag = YKR
+				trade_cost_for_target_factor = -0.2
+				cic_to_target_factor = 0.15
+				mic_to_target_factor = 0.15
+			}
+		}
+		YYK_duibayunzideyuanzhu2_idea = {
+			name = YYK_duibayunzideyuanzhu_idea
+			picture = generic_deal_with_the_devil2
+			available = {
+				country_exists = YKR
+				not = {
+					has_war_with = YKR
+				}
+			}
+			modifier = {
+				political_power_factor = -0.075
+			}
+			targeted_modifier = { 
+				tag = YKR
+				trade_cost_for_target_factor = -0.1
+				cic_to_target_factor = 0.08
+				mic_to_target_factor = 0.08
+			}
+		}
+		YYK_mingjiedongdang6_idea = {
+			name = YYK_mingjiedongdang1_idea
+			picture = chi_war_of_resistance3
+			modifier = {
+				stability_factor = -0.4
+				army_org_Factor = -0.32
+				research_speed_factor = -0.24
+			}
+		}
+		YYK_mingjiedongdang5_idea = {
+			name = YYK_mingjiedongdang1_idea
+			picture = chi_war_of_resistance3
+			modifier = {
+				stability_factor = -0.3
+				army_org_Factor = -0.24
+				research_speed_factor = -0.18
+			}
+		}
+		YYK_mingjiedongdang4_idea = {
+			name = YYK_mingjiedongdang1_idea
+			picture = chi_war_of_resistance2
+			modifier = {
+				stability_factor = -0.2
+				army_org_Factor = -0.16
+				research_speed_factor = -0.12
+			}
+		}
+		YYK_mingjiedongdang3_idea = {
+			name = YYK_mingjiedongdang1_idea
+			picture = chi_war_of_resistance2
+			modifier = {
+				stability_factor = -0.15
+				army_org_Factor = -0.12
+				research_speed_factor = -0.09
+			}
+		}
+		YYK_mingjiedongdang2_idea = {
+			name = YYK_mingjiedongdang1_idea
+			picture = chi_war_of_resistance
+			modifier = {
+				stability_factor = -0.1
+				army_org_Factor = -0.08
+				research_speed_factor = -0.06
+			}
+		}
+		YYK_mingjiedongdang1_idea = {
+			picture = chi_war_of_resistance
+			modifier = {
+				stability_factor = -0.05
+				army_org_Factor = -0.04
+				research_speed_factor = -0.03
+			}
+		}
+		YYK_yaomengdanyou1_idea = {
+			picture = jap_militarism_shogun
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.1
+			}
+		}
+		YYK_yaomengdanyou2_idea = {
+			name = jap_militarism_showa
+			picture = XXX
+			modifier = {
+				stability_factor = -0.2
+				political_power_factor = -0.2
+			}
+		}
+		YYK_yaomengdanyou3_idea = {
+			name = jap_militarism_showa
+			picture = XXX
+			modifier = {
+				stability_factor = -0.3
+				political_power_factor = -0.3
+			}
+		}
+		YYK_uuzweiyan_idea = {
+			name = YYK_uuzweiyan
+			picture = tur_ottoman_spirit
+			available = {
+				or = {
+					has_war_with = NG1
+					has_war_with = NG2
+					has_war_with = NG3
+					has_war_with = NG4
+				}
+			}
+			modifier = {
+				war_support_factor = 0.4
+				stability_factor = 0.3
+				weekly_manpower = -7
+				stability_weekly = -0.003
+				war_support_weekly = -0.005
+			}
+		}
+		YYK_yaomengzuozhanruodian1_idea = {
+			name = YYK_yaomengzuozhanruodian
+			picture = generic_purge
+			available = {
+				has_war_with = NG1
+			}
+			targeted_modifier = {
+				tag = NG1
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+		YYK_yaomengzuozhanruodian2_idea = {
+			name = YYK_yaomengzuozhanruodian
+			picture = generic_purge
+			available = {
+				has_war_with = NG2
+			}
+			targeted_modifier = {
+				tag = NG2
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+		YYK_yaomengzuozhanruodian3_idea = {
+			name = YYK_yaomengzuozhanruodian
+			picture = generic_purge
+			available = {
+				has_war_with = NG3
+			}
+			targeted_modifier = {
+				tag = NG3
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+		YYK_yaomengzuozhanruodian4_idea = {
+			name = YYK_yaomengzuozhanruodian
+			picture = generic_purge
+			available = {
+				has_war_with = NG4
+			}
+			targeted_modifier = {
+				tag = NG4
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+		YYK_yaomengcuiruolingdao_idea = {
+			picture = generic_purge
+			available = {
+				has_war_with = YYK
+			}
+			modifier = {
+				surrender_limit = -0.3
+			}
+		}
+		YYK_xiangsijiqingzui_idea = {
+			name = YYK_xiangsijiqingzui
+			picture = hol_aloof_neutrality
+			available = {
+				country_exists = SKI
+				not = {
+					has_war_with = SKI
+				}
+			}
+			modifier = {
+				stability_factor = -0.15
+				political_power_factor = 0.1
+				political_power_gain = 0.5
+			}
+		}
+		YYK_guizudeguanli_idea = {
+			name = YYK_guizudeguanli
+			picture = ROM_iron_guard
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.2
+			}
+		}
+		YYK_zidejunshiyuanzhu_idea = {
+			name = YYK_zidejunshiyuanzhu
+			picture = combined_bomber_offensive
+			modifier = {
+				army_org_Factor = 0.25
+			}
+		}
+		YYK_zidegongyeyuanzhu_idea = {
+			name = YYK_zidegongyeyuanzhu
+			picture = generic_production_bonus
+			modifier = {
+				research_speed_factor = 0.25
+				industrial_capacity_factory = 0.25
+			}
+		}
+		YYK_pohuaiyouminjiejie_idea = {
+			name = YYK_pohuaiyouminjiejie
+			picture = hol_gateway_to_europe
+			modifier = {
+				improve_relations_maintain_cost_factor = -0.15
+			}
+		}
+		YYK_jijiganshehxx_idea = {
+			name = YYK_jijiganshehxx
+			picture = vittoria_mutilata
+			modifier = {
+				send_volunteer_factor = 0.25
+			}
+		}
+		YYK_liaojieyaoguaizhuangkuang_idea = {
+			name = YYK_liaojieyaoguaizhuangkuang
+			picture = generic_intel_bonus
+			modifier = {
+				land_night_attack = 0.1
+			}
+		}
+		YYK_minjieshangyinhui_idea = {
+			name = YYK_minjieshangyinhui
+			picture = ROM_king_carol_ii_hedonist
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
+		YYK_xuanbutuolidiyu_idea = {
+			name = YYK_xuanbutuolidiyu
+			picture = SPR_crush_the_revolution
+			modifier = {
+				resistance_growth = 0.1
+				compliance_growth = -0.1
+			}
+		}
+		YYK_xuanbutuolidiyu2_idea = {
+			picture = SPR_crush_the_revolution
+			available = {
+				not = {
+					is_subject_of = YYK
+				}
+			}
+			targeted_modifier = {
+				tag = YYK
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+		YYK_xuanbutuolidiyu3_idea = {
+			name = YYK_xuanbutuolidiyu2_idea
+			picture = SPR_crush_the_revolution
+			available = {
+				not = {
+					is_subject_of = YYK
+				}
+			}
+			targeted_modifier = {
+				tag = YYK
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+		YYK_zhudaosihoushijie_idea = {
+			name = YYK_zhudaosihoushijie
+			picture = vittoria_mutilata
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
+		YYK_tongyisihoushijie_idea = {
+			name = YYK_tongyisihoushijie
+			picture = SPR_crush_the_revolution
+			modifier = {
+				compliance_growth = 0.15
+			}
+		}
+		YYK_wanglingnvhuang_idea = {
+			name = YYK_wanglingnvhuang
+			picture = hol_wilhelmina
+			modifier = {
+				political_power_factor = 0.3
+			}
+		}
+		YYK_renleijizhongying_idea = {
+			name = YYK_renleijizhongying
+			picture = prc_low_popular_support3
+			research_bonus = {
+				science = 0.05
+				combined = 0.1
+			}
+		}
+		YYK_anfuyouling_idea = {
+			name = YYK_anfuyouling
+			picture = ROM_carol_ii_deal
+			modifier = {
+				war_support_weekly = 0.002
+			}
+		}
+		YYK_youlingyuanzhu_idea = {
+			name = YYK_youlingyuanzhu
+			picture = ROM_carol_ii_greed
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		YYK_zhongshihxxweiji_idea = {
+			name = YYK_zhongshihxxweiji
+			picture = FRA_fortification_focus
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		YYK_annei_idea = {
+			name = YYK_annei
+			picture = SPR_crush_the_revolution
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = -0.1
+				guli_drift = 0.02
+			}
+		}
+		YYK_zhishenyushiwai_idea = {
+			name = YYK_zhishenyushiwai
+			picture = generic_neutrality_drift_bonus
+			modifier = {
+				conscription_factor = 0.05
+			}
+		}
+		YYK_jiaqiangfangyu_idea = {
+			name = YYK_jiaqiangfangyu
+			picture = FRA_fortification_focus
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_speed_bunker_factor = 0.15
+			}
+		}
+		YYK_shengzhedeminjieshequ_idea = {
+			name = YYK_shengzhedeminjieshequ
+			picture = eng_the_kings_party
+			modifier = {
+				improve_relations_maintain_cost_factor = -0.25
+				production_speed_buildings_factor = 0.25
+			}
+		}
+		YYK_beihushideshenling_idea = {
+			name = YYK_beihushideshenling
+			picture = hol_de_vaarplicht
+			modifier = {
+				conscription_factor = 0.05
+				mobilization_laws_cost_factor = -0.1
+				research_speed_factor = 0.05
+			}
+		}
+		YYK_tongyilun_idea = {
+			name = YYK_tongyilun
+			picture = SPR_international_brigades
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		YYK_youlinglveduo_idea = {
+			picture = SPR_anarchist_society
+			available = {
+				has_war_with = YYK
+			}
+			modifier = {
+				army_org_Factor = -0.2
+			}
+		}
+		YYK_chunduduo_idea = {
+			name = YYK_chunduduo
+			picture = bul_the_fate_of_the_balkans
+			targeted_modifier = {
+				tag = LIL
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = OKI
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+		YYK_kaihuazhihui_idea = {
+			name = YYK_kaihuazhihui
+			picture = eng_imperial_conscription
+			modifier = {
+				max_command_power_mult = 1
+				command_power_gain_mult = 0.25 
+			}
+		}
+		YYK_zhouquanjihua_idea = {
+			name = YYK_zhouquanjihua
+			picture = eng_imperial_conscription
+			modifier = {
+				max_command_power_mult = 1
+				command_power_gain_mult = 0.25 
+				planning_speed = 0.25
+				max_planning = 0.5
+			}
+		}
+		YYK_chenggongkaihua_idea = {
+			name = YYK_chenggongkaihua
+			picture = generic_flexible_foreign_policy2
+			modifier = {
+				weekly_manpower = 14
+			}
+		}
+		YYK_youdaosiwang_idea = {
+			name = YYK_youdaosiwang
+			picture = air_war_plans_division_focus
+			modifier = {
+				weekly_manpower = 7
+			}
+		}
+		YYK_zibaoyouling_idea = {
+			name = YYK_zibaoyouling
+			picture = air_war_plans_division_focus
+			modifier = {
+				stability_factor = -0.1
+			}
+			equipment_bonus = {
+				magic_core_a = {
+					build_cost_ic = -0.5
+					reliability = -0.25
+					instant = yes
+				}
+			}
+		}
+		YYK_gansidui_idea = {
+			name = YYK_gansidui
+			picture = generic_spy_coup
+			modifier = {
+				conscription_factor = -0.15
+				training_time_factor = 0.5
+			}
+		}
+		YYK_jiashenlianxi_idea = {
+			name = YYK_jiashenlianxi
+			picture = gre_venerate_the_ancient_hellenes_complete
+			modifier = {
+				send_volunteer_factor = 0.25
+			}
+		}
+		YYK_jiashenlianxi2_idea = {
+			picture = gre_venerate_the_ancient_hellenes_complete
+			available = {
+				not = {
+					has_war_with = YYK
+				}
+				country_exists = YYK
+				YYK = {
+					is_subject = no
+				}
+			}
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+		YYK_yuanzhuwaibushili_idea = {
+			name = YYK_yuanzhuwaibushili
+			picture = received_attache
+			modifier = {
+				political_power_factor = 0.4
+			}
+		}
+		YYK_yuanzhuwaibushili2_idea = {
+			available = {
+				not = {
+					has_war_with = YYK
+				}
+				country_exists = YYK
+				YYK = {
+					is_subject = no
+				}
+			}
+			picture = received_attache
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+		}
+		YYK_zizhuchuji_idea = {
+			name = YYK_zizhuchuji
+			picture = ROM_balkans_dominance
+			targeted_modifier = {
+				tag = AOO
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = AKO
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+		}
+		YYK_tupojiejie_idea = {
+			name = YYK_tupojiejie
+			picture = ROM_balkans_dominance
+			targeted_modifier = {
+				tag = YKR
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+		YYK_xixingyaodeliliang_idea = {
+			picture = air_war_plans_division_focus
+			available = {
+				any_state = {
+					is_on_continent = Netherworld
+					is_controlled_by = ROOT
+				}
+				has_war_with = YYK
+				217 = {
+					is_fully_controlled_by = YYK
+				}
+				not = {
+					has_idea = Ghost
+				}
+			}
+			modifier = {
+				resistance_growth = 0.15
+			}
+			targeted_modifier = {
+				tag = YYK
+				attack_bonus_against = -0.15
+				defense_bonus_against = -0.15
+			}
+		}
+		YYK_yuzibeidezhixin_idea = {
+			picture = ROM_king_carol_ii_hedonist
+			name = YYK_yuzibeidezhixin
+			targeted_modifier = {
+				tag = YKR
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.2
+			}
+		}
+		YYK_zhicaiguizu_idea = {
+			picture = ROM_balkans_dominance
+			name = YYK_zhicaiguizu
+			targeted_modifier = {
+				tag = AOO
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = AKO
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+		YYK_hongsejihua_idea = {
+			picture = FRA_matignon_agreements
+			available = {
+				has_war_with = YYK
+			}
+			targeted_modifier = {
+				tag = YYK
+				attack_bonus_against = -0.05
+				defense_bonus_against = -0.05
+			}
+		}
+		YYK_guliyouling_idea = {
+			picture = HUN_dynastic_ties
+			available = {
+				country_exists = NG1
+			}
+			targeted_modifier = {
+				tag = NG1
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+				breakthrough_bonus_against = 0.15
+			}		
+		}
+		YYK_guiyiyouling_idea = {
+			picture = HUN_dynastic_ties
+			available = {
+				country_exists = NG2
+			}
+			targeted_modifier = {
+				tag = NG2
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+				breakthrough_bonus_against = 0.15
+			}		
+		}
+		YYK_shangyingyouling_idea = {
+			picture = HUN_dynastic_ties
+			available = {
+				country_exists = NG3
+			}
+			targeted_modifier = {
+				tag = NG3
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+				breakthrough_bonus_against = 0.15
+			}		
+		}
+		YYK_kaifangyouling_idea = {
+			picture = HUN_dynastic_ties
+			available = {
+				country_exists = NG4
+			}
+			targeted_modifier = {
+				tag = NG4
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+				breakthrough_bonus_against = 0.15
+			}		
+		}
+	}
+}

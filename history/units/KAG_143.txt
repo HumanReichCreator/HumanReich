@@ -1,0 +1,220 @@
+﻿division_template = {
+	name = "游击编制"
+	regiments = {
+		sc_light_infantry = { x = 0 y = 0 }
+		melee_infantry = { x = 0 y = 1 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "仿人类村落编制"
+	regiments = {
+		melee_infantry = { x = 0 y = 0 }
+		melee_infantry = {x = 0 y = 1 }
+		melee_infantry = {x = 0 y = 2 }
+		sc_infantry = { x = 1 y = 0 }
+		sc_infantry = { x = 1 y = 1 }
+		sc_infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "灵力编制"
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		melee_infantry = { x = 1 y = 0 }
+	}
+}
+
+units = {
+	division = {
+		name = "游击编制"
+		location = 5655
+		division_template = "仿人类村落编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 2916
+		division_template = "仿人类村落编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 271
+		division_template = "仿人类村落编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 3806
+		division_template = "仿人类村落编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 5528
+		division_template = "仿人类村落编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 1065
+		division_template = "仿人类村落编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 2556
+		division_template = "仿人类村落编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 1486
+		division_template = "仿人类村落编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 5659
+		division_template = "仿人类村落编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 2435
+		division_template = "仿人类村落编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 939
+		division_template = "仿人类村落编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 3808
+		division_template = "仿人类村落编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "游击编制"
+		location = 1674
+		division_template = "仿人类村落编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "仿人类村落编制"
+		location = 5663
+		division_template = "仿人类村落编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "仿人类村落编制"
+		location = 5623
+		division_template = "仿人类村落编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "仿人类村落编制"
+		location = 5592
+		division_template = "仿人类村落编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "仿人类村落编制"
+		location = 5554
+		division_template = "仿人类村落编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "仿人类村落编制"
+		location = 3146
+		division_template = "仿人类村落编制"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "灵力编制"
+		location = 5663
+		division_template = "灵力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "灵力编制"
+		location = 2275
+		division_template = "灵力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "灵力编制"
+		location = 5623
+		division_template = "灵力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "灵力编制"
+		location = 5606
+		division_template = "灵力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "灵力编制"
+		location = 5592
+		division_template = "灵力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "灵力编制"
+		location = 545
+		division_template = "灵力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "灵力编制"
+		location = 5554
+		division_template = "灵力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "灵力编制"
+		location = 3146
+		division_template = "灵力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "灵力编制"
+		location = 3140
+		division_template = "灵力编制"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+}

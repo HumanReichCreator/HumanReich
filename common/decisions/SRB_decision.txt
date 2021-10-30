@@ -1,21 +1,19 @@
 SRB_category = {
     SRB_support = {
-        visible = {
+        allowed = {
             tag = SRB
+        }
+        target_root_trigger = {
             has_country_flag = SRB_duigedashilidejihua 
         }
         target_trigger = {
             FROM = {
-                OR = {
-                    AND = {
-                        is_neighbor_of = ROOT
-                        NOT = {is_subject_of = ROOT}              
-                    }
-                    any_neighbor_country = {
-                        is_subject_of = ROOT
-                    }
-                }
-                NOT = {is_in_faction_with = ROOT}        
+                before_declare_war = yes  
+            }
+        }
+        visible = {
+            FROM = {
+                exists = yes
             }
         }
 

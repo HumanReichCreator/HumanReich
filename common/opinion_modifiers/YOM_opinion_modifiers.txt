@@ -1,0 +1,36 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+    YOM_Contempt_for_Gods_op = {
+	    value = -60
+	}
+    YOM_to_SKI_opin = {
+	    value = 60
+	}
+	ROA_YOM_17_op1 = {
+		value = -10
+	}
+	ROA_YOM_17_op2 = {
+		value = 5
+	}
+	ROA_YOM_18_op = {
+		value = 30
+	}
+	ROA_YOM_19_op1 = {
+		value = 60
+	}
+	ROA_YOM_19_op2 = {
+		value = -60
+	}
+	ROA_YOM_26_op = {
+		value = 35
+	}
+}

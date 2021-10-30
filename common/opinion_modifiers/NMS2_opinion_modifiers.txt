@@ -1,0 +1,31 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+	NMS_yaoguaidejiushizhu_op = {
+		value = -80
+	}
+	NMS_yaoguaidejiushizhu_op2 = {
+		value = -200
+	}
+	NMS_jiaqiangherenlidajiazulianxi_op = {
+		value = 30
+	}
+	NMS_chenzhanminzhu_op = {
+		value = 50
+	}
+	NMS_yaoqingzhenzhengdehepingzhe_op = {
+		value = 20
+	}
+	NMS_nanHXXmaoyizhongxin_op = {
+		value = 50
+	}
+}	
+

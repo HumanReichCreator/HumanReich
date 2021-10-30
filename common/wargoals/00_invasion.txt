@@ -32,14 +32,16 @@ wargoal_types = {
 		}
 		
 		available = {
-
+			PREV = {
+				is_neighbor_of = ROOT
+			}
 		}
 		
 		take_states = {
-
+			
 		}
 
-		generate_base_cost = 200#test
+		generate_base_cost = 300#test
 		generate_per_state_cost = 0
 
 		take_states_limit = 1
@@ -128,33 +130,6 @@ wargoal_types = {
 		
 		threat = 0.1
 	}
-
-	spoil_wargoal = {
-		# PREV = original target country
-		# ROOT = goal owner country
-
-		war_name = SPOIL_WARGOAL_NAME
-		
-		allowed = {
-			always = no
-		}
-		
-		take_states = {
-
-		}
-		
-		generate_base_cost = 75#test
-		generate_per_state_cost = 0
-		
-		take_states_limit = 99
-		take_states_cost = -150
-
-		expire = 365
-		
-		
-		threat = 0.1
-	}
-
 	
 	take_claimed_state = {
 		# PREV = original target country
@@ -259,6 +234,7 @@ wargoal_types = {
 			always = no
 		}
 		
+
 		available = {
 			# is_neighbor_of = ROOT
 		}
@@ -300,32 +276,6 @@ wargoal_types = {
 		threat = 1
 		annex_threat_factor = 0.1
 		annex_cost = -75
-	}
-
-	fairy_area_unite_war = {
-		# PREV = original target country
-		# ROOT = goal owner country
-
-		war_name = FAIRY_AREA_UNITE_WAR
-
-		allowed = {
-			always = no
-		}
-		
-		available = {
-		
-		}
-		
-		take_states = {
-			
-		}
-
-		expire = 365
-				
-		threat = 1
-		puppet_cost = 100000
-		annex_threat_factor = 0.5
-		annex_cost = -50
 	}
 
 	topple_government = {
@@ -437,5 +387,129 @@ wargoal_types = {
 		threat = 0.1
 
 		expire = 182
+	}
+
+	scenario143 = {
+		# PREV = original target country
+		# ROOT = goal owner country
+		war_name = WAR_scenario143
+
+		allowed = {
+			always = no
+		}		
+	}
+
+	CIR_jiefangyaojing = {
+		# PREV = original target country
+		# ROOT = goal owner country
+
+		war_name = WAR_CIR_jiefangyaojing
+		
+		allowed = {
+			#always = no
+		}
+		available = {
+			ROOT = { has_country_flag = CIR_tongyiyaojing }
+		}
+		
+		take_states = {
+			ST_race_is_Fairy = yes
+			PREV = {
+				or = {
+					not = {
+						has_idea = Fairy
+					}
+					and = {
+						is_subject = yes
+						OVERLORD = {
+							not = {
+								has_idea = Fairy
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		generate_base_cost = 30#test
+		generate_per_state_cost = 0
+		
+		take_states_limit = 99
+		take_states_cost = -300
+
+		expire = 182
+		
+		
+		threat = 5
+	}
+	TEG_quanyaoguaishangeming = {
+		# PREV = original target country
+		# ROOT = goal owner country
+
+		war_name = WAR_TEG_quanyaoguaishangeming
+		
+		allowed = {
+			#always = no
+		}
+		available = {
+			ROOT = { has_country_flag = TEG_quanyaoguaishangeming }
+		}
+		
+		take_states = {
+			or = {
+				region = 28
+				region = 27
+				region = 34
+				region = 35
+				region = 26
+				region = 25
+				region = 71
+				region = 73
+				region = 72
+				region = 24
+				region = 36
+				region = 38
+			}
+		}
+		
+		generate_base_cost = 30#test
+		generate_per_state_cost = 0
+		
+		take_states_limit = 99
+		take_states_cost = -300
+
+		expire = 182
+		
+		
+		threat = 5
+	}
+	SCA_xinhongmoxiang = {
+		# PREV = original target country
+		# ROOT = goal owner country
+
+		war_name = WAR_SCA_xinhongmoxiang
+		
+		allowed = {
+			#always = no
+		}
+		available = {
+			ROOT = { has_country_flag = SCA_xinhongmoxiang }
+		}
+		
+		take_states = {
+			any_neighbor_state = {
+				is_owned_by = ROOT
+			}
+		}
+		generate_base_cost = 100#test
+		generate_per_state_cost = 0
+		
+		take_states_limit = 99
+		take_states_cost = -300
+
+		expire = 182
+		
+		
+		threat = 5
 	}
 }

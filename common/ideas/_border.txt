@@ -12,7 +12,7 @@ ideas = {
 		    }
 									
 			on_add = {
-				add_stability = -0.05
+				add_stability = -0.03
 			}
 			cost = 200
 			cancel_if_invalid = no
@@ -20,7 +20,7 @@ ideas = {
 			level = 1
 
 			modifier = {
-				stability_factor = -0.1
+				stability_factor = -0.08
 				monthly_population = 0.1
 				consumer_goods_factor = 0.04
 				encryption = -3
@@ -46,7 +46,7 @@ ideas = {
 			}
 
 			modifier = {
-				stability_factor = -0.05
+				stability_factor = -0.04
 				monthly_population = 0.05
 				encryption = -1
 				production_speed_buildings_factor = 0.05
@@ -85,7 +85,7 @@ ideas = {
 			
 			
 			modifier = {
-				stability_factor = 0.1
+				stability_factor = 0.05
 				encryption = 2
 				non_core_manpower = -1
 			}

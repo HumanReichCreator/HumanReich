@@ -1,5 +1,16 @@
 ﻿capital = 411
+138.8.13 = {
 
+}
+141.6.2 = {
+    
+}
+142.3.8 = {
+    
+}
+144.2.5 = {
+    
+}
 146.1.1 = {
     set_technology = {
         #通用武器线
@@ -53,6 +64,7 @@
         yanjiujingshen1 = 1
             
     }
+    
 }
 146.1.1={
     oob = "SAP_146"
@@ -68,14 +80,7 @@
     limit_magic
      
     }
-    SAP = {
-        HU5 = {
-            subject_level3 = yes
-        }
-    }
-
-    set_truce = {target = NTR days = 300}
-    set_truce = {target = KAP days = 300}
+    
     set_politics = {
     	ruling_party = guli
     	election_frequency = 48
@@ -96,15 +101,6 @@ create_country_leader = {
     desc = ""
     picture = "gfx/leaders/ZYD/ZYD_council.dds"
     ideology = qinwai_type
-    traits = {
-
-    }
-}
-create_country_leader = {
-    name = "河童商会代表"
-    desc = ""
-    picture = "gfx/leaders/gen/kap1.dds"
-    ideology = guli_type
     traits = {
 
     }

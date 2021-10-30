@@ -1,5 +1,51 @@
 
 HUM_qianzhai = {
+    test = {
+        visible = {
+            tag = NMS
+            is_debug = yes
+        }
+        complete_effect = {
+            KYK = {
+                transfer_state = 330
+                transfer_state = 329
+                transfer_state = 227
+                transfer_state = 204
+                transfer_state = 203
+                transfer_state = 187
+                transfer_state = 241
+                every_owned_state = {
+                    add_core_of = PREV
+                }
+                set_cosmetic_tag = KYK_country
+                load_oob = "KYK_146"
+            }
+            MNM = {
+                transfer_state = 163
+                transfer_state = 321
+                transfer_state = 168
+                transfer_state = 328
+                transfer_state = 433
+                every_owned_state = {
+                    add_core_of = PREV
+                }
+                set_cosmetic_tag = MNM_country
+                load_oob = "MNM_146"
+            }
+            NUE = {
+                transfer_state = 327
+                transfer_state = 245
+                transfer_state = 195
+                transfer_state = 238
+                transfer_state = 423
+                every_owned_state = {
+                    add_core_of = PREV
+                }
+                set_cosmetic_tag = NUE_mufu
+                load_oob = "NUE_146"
+            }
+        }
+    }
     HUM_qiuzhai = {
         visible = {
             not = {

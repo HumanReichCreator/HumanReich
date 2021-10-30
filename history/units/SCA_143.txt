@@ -1,0 +1,1370 @@
+﻿division_template = {
+	#80
+	name = "妖精女仆军"
+	is_locked = no
+	regiments = {
+		ma_light_infantry = { x = 0 y = 0 }
+		ma_light_infantry = { x = 0 y = 1 }
+		ma_light_infantry = { x = 0 y = 2 }
+		ma_light_infantry = { x = 0 y = 3 }
+	}
+	support = {
+
+	}
+}
+
+division_template = {
+	#30
+	name = "帝国卫队"
+	is_locked = no
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 2 }
+		
+		ma_infantry = { x = 1 y = 0 }
+		ma_infantry = { x = 1 y = 1 }
+		ma_infantry = { x = 1 y = 2 }
+	}
+	support = {
+		sp_zhihuidui = { x = 0 y = 0 }  
+	}
+}
+
+division_template = {
+	#25
+	name = "妖精护盾骑兵队"
+	is_locked = no
+	regiments = {
+		melee_cavalry = { x = 0 y = 0 }
+		melee_cavalry = { x = 0 y = 1 }
+		melee_cavalry = { x = 0 y = 2 }
+		melee_cavalry = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	#50
+	name = "东雾之湖精英妖精战队"
+	is_locked = yes
+	regiments = {
+		ma_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
+		ma_infantry = { x = 0 y = 2 }
+		melee_infantry = { x = 0 y = 3 }
+		ma_infantry = { x = 1 y = 0 }
+		ma_infantry = { x = 1 y = 1 }
+		ma_infantry = { x = 1 y = 2 }
+		melee_infantry = { x = 1 y = 3 }
+	}
+}
+
+units = {
+	#25
+	division = {
+		name = "妖精护盾骑兵队"
+		location = 1473
+		division_template = "妖精护盾骑兵队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精护盾骑兵队"
+		location = 1473
+		division_template = "妖精护盾骑兵队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精护盾骑兵队"
+		location = 1473
+		division_template = "妖精护盾骑兵队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精护盾骑兵队"
+		location = 1473
+		division_template = "妖精护盾骑兵队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精护盾骑兵队"
+		location = 1473
+		division_template = "妖精护盾骑兵队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精护盾骑兵队"
+		location = 1473
+		division_template = "妖精护盾骑兵队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精护盾骑兵队"
+		location = 1473
+		division_template = "妖精护盾骑兵队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精护盾骑兵队"
+		location = 1473
+		division_template = "妖精护盾骑兵队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精护盾骑兵队"
+		location = 1473
+		division_template = "妖精护盾骑兵队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精护盾骑兵队"
+		location = 1473
+		division_template = "妖精护盾骑兵队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精护盾骑兵队"
+		location = 1473
+		division_template = "妖精护盾骑兵队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精护盾骑兵队"
+		location = 1473
+		division_template = "妖精护盾骑兵队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精护盾骑兵队"
+		location = 1473
+		division_template = "妖精护盾骑兵队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精护盾骑兵队"
+		location = 1473
+		division_template = "妖精护盾骑兵队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精护盾骑兵队"
+		location = 1473
+		division_template = "妖精护盾骑兵队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精护盾骑兵队"
+		location = 1473
+		division_template = "妖精护盾骑兵队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精护盾骑兵队"
+		location = 1473
+		division_template = "妖精护盾骑兵队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精护盾骑兵队"
+		location = 1473
+		division_template = "妖精护盾骑兵队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精护盾骑兵队"
+		location = 1473
+		division_template = "妖精护盾骑兵队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精护盾骑兵队"
+		location = 1473
+		division_template = "妖精护盾骑兵队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精护盾骑兵队"
+		location = 1473
+		division_template = "妖精护盾骑兵队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精护盾骑兵队"
+		location = 1473
+		division_template = "妖精护盾骑兵队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精护盾骑兵队"
+		location = 1473
+		division_template = "妖精护盾骑兵队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精护盾骑兵队"
+		location = 1473
+		division_template = "妖精护盾骑兵队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精护盾骑兵队"
+		location = 1473
+		division_template = "妖精护盾骑兵队"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+
+	#30
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "帝国卫队"
+		location = 1473
+		division_template = "帝国卫队"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	#80
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "妖精女仆军"
+		location = 1473
+		division_template = "妖精女仆军"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1
+	}
+
+	#50
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东雾之湖精英妖精战队"
+		location = 1167
+		division_template = "东雾之湖精英妖精战队"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+
+
+}	

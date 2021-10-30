@@ -4,27 +4,27 @@ state={
 	name="STATE_163"
 	resources={
 
-		powder=0.000
-		metal=0.000
+		powder = 0.0
+		metal = 0.0
 		gas=5.000
 		crystal=0.000
 	}
 
 	history={
-			owner = MNM
-		# 143.7.1 = {
-		# 	owner = NMS
-		# 	add_core_of = NMS
-		# 	buildings = {
-		# 		infrastructure =0
-		# 		industrial_complex = 0
-		# 		arms_factory = 0
+		143.7.1 = {
+			owner = NMS
+			add_core_of = NMS
+			add_claim_by = PRI
+			buildings = {
+				infrastructure =0
+				industrial_complex = 0
+				arms_factory = 0
 
-		# 	}
-		# }
+			}
+		}
 		146.1.1 = {
-			owner = MNM
-			add_core_of = MNM
+			owner = NMS
+			add_core_of = NMS
 			add_claim_by = PRI
 			buildings = {
 				infrastructure =1
@@ -40,7 +40,7 @@ state={
 	provinces={
 		905 1286 3228 3238 3538 3544 3547 3554 3555 3556 
 	}
-	manpower=46.0
+	manpower=346.0
 	buildings_max_level_factor=1.000
 	state_category=s2
 }

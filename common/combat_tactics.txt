@@ -172,9 +172,9 @@ tactic_cc_withdraw = {
 	attacker = -0.05
 	defender = -0.05
 }
-
-
-tactic_encirclement = {
+###以上为近战战术
+###以下为常规战术
+tactic_encirclement = {#战术包围/围攻
 	is_attacker = yes
 	trigger = {
 		is_attacker = yes
@@ -273,7 +273,7 @@ tactic_tactical_withdrawal = { #counters encirclement
 	attacker = -0.25
 	defender = -0.05
 }
-###tactical withdrawal tactics
+###tactical withdrawal tactics 战术撤退阶段
 tactic_tw_attack = { 
 	is_attacker = yes
 	trigger = {
@@ -354,7 +354,7 @@ tactic_tw_intercept = {
 }
 
 
-
+###常规
 tactic_breakthrough = { #counters ambush
 	is_attacker = yes
 	trigger = {
@@ -478,7 +478,7 @@ tactic_backhand_blow = { #counters breakthrough
 	attacker = -0.2
 	defender = 0.25
 }
-
+###夺桥阶段
 tactic_seize_bridge = { 
 	is_attacker = yes
 	trigger = {
@@ -586,7 +586,7 @@ tactic_defender_sb_retake_bridge = {
 	attacker = 0.1
 	defender = -0.05
 }
-
+#坚守桥梁
 tactic_hold_bridge = { 
 	is_attacker = no
 	trigger = {
@@ -739,6 +739,16 @@ tactic_banzai_charge = { #Special Japan attacker tactic
 		or = {
 			Ghost_country = yes
 			Fairy_country = yes
+			and = {
+				TKM = {
+					has_completed_focus = TKM_banzai_charge
+				}
+				tag = TKM
+			}
+			# any_country = {
+			# 	tag = ROOT
+			# 	has_idea = Tribal
+			# }
 		}
 		is_attacker = yes
 		phase = no
@@ -850,4 +860,919 @@ tactic_barrage = { #Superior firepower attacker tactic
 	
 	attacker = 0.1
 	defender = -0.2	
+}
+
+###elimt-妖梦
+YOM_tactic_df_1 = {#反射下界斩
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		tag = YOM
+	}		 
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_df_1
+	
+	attacker = -0.05
+	defender = 0.05
+}	
+
+YOM_tactic_df_2 = {# 弦月斩
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		tag = YOM			 
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_df_2
+	
+	defender = 0.1
+	attacker_movement_speed = -0.1
+}	
+
+YOM_tactic_df_3 = {#  凭依之缚
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		tag = YOM
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_df_3
+	
+	defender = 0.05
+	attacker_movement_speed = -0.25
+}
+
+YOM_tactic_df_4 = {#  恶魂
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		tag = YOM				 
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_df_4
+	
+	defender = 0.1
+}
+
+YOM_tactic_df_5 = {#  炯眼剑
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		tag = YOM			 
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_df_5
+	
+	attacker = -0.1
+	defender = 0.1
+}
+
+YOM_tactic_df_6 = {#  六道剑「一念无量劫」
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		tag = YOM
+		has_trait = YOM_character_9
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_df_6
+	
+	attacker = -0.1
+	defender = 0.3
+}
+
+YOM_tactic_df_7 = {#  断灵剑「成佛得脱斩」
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		tag = YOM
+		has_trait = YOM_character_6
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_df_7
+	
+	attacker = -0.3
+	defender = 0.4
+}
+
+YOM_tactic_df_8 = {#  瞑斩「楼观赋予我能斩断弹幕的心之眼」
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		tag = YOM
+		has_trait = YOM_character_9
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_df_8
+	
+	attacker = -0.5
+}
+
+YOM_tactic_df_9 = {#   空观剑「六根清净斩」
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		tag = YOM	
+		has_trait = YOM_character_6
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_df_9
+	
+	attacker = -0.4
+	defender = 0.5
+}
+
+YOM_tactic_df_10 = {#  畜趣剑「无为无策之冥罚」
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		tag = YOM				
+		has_trait = YOM_character_3
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_df_10
+	
+	attacker = -0.2
+	defender = 0.1
+}
+
+YOM_tactic_df_11 = {#   修罗剑「现世妄执」
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		tag = YOM
+		has_trait = YOM_character_5
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_df_11
+	
+	attacker = -0.25
+	defender = 0.4
+}
+
+YOM_tactic_df_12 = {#   人界剑「悟入幻想」
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		tag = YOM
+		has_trait = YOM_character_5
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_df_12
+	
+	attacker = -0.2
+	defender = 0.1
+	attacker_movement_speed = -0.1
+}
+
+YOM_tactic_df_13 = {#   人世剑「大悟显晦」
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		tag = YOM
+		has_trait = YOM_character_5
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_df_13
+	
+	attacker = -0.3
+	defender = 0.2
+	attacker_movement_speed = -0.25
+}
+
+YOM_tactic_df_14 = {#   人神剑「俗谛常住」
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		tag = YOM
+		has_trait = YOM_character_5
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_df_14
+	
+	attacker = -0.4
+	defender = 0.3
+	attacker_movement_speed = -0.5
+}
+
+YOM_tactic_at_1 = {# 生死流转斩
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		tag = YOM			 
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_at_1
+	
+	attacker = 0.1
+}	
+
+YOM_tactic_at_2 = {#  结跏跗斩
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		tag = YOM			 
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_at_2
+	
+	attacker = 0.1
+	defender = -0.05
+}	
+
+YOM_tactic_at_3 = {#  头上花剪斩
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		tag = YOM			 
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_at_3
+	
+	attacker = 0.1
+	defender = 0.1
+	attacker_movement_speed = 0.25
+}	
+
+YOM_tactic_at_4 = {#  人符「现世斩」
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		tag = YOM
+		 
+		has_trait = YOM_character_1
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_at_3
+	
+	attacker = 0.15
+	attacker_movement_speed = 0.35
+}	
+
+YOM_tactic_at_5 = {#   魂符「幽明的苦轮」
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		tag = YOM			 
+		has_trait = YOM_character_1
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_at_5
+	
+	attacker = 0.1
+	defender = -0.1
+	combat_width = 0.1
+}	
+
+YOM_tactic_at_6 = {#   人智剑「天女返」
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		tag = YOM		 
+		has_trait = YOM_character_1
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_at_6
+	
+	attacker = 0.1
+	attacker_movement_speed = 0.5
+}	
+
+YOM_tactic_at_7 = {#  「心眼迷想斩」
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		tag = YOM			 
+		has_trait = YOM_character_1
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_at_7
+	
+	attacker = 0.2
+}	
+
+YOM_tactic_at_8 = {#   断命剑「冥想斩」
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		tag = YOM			 
+		has_trait = YOM_character_7
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_at_8
+	
+	attacker = 0.25
+}	
+
+YOM_tactic_at_9 = {#   剑伎「樱花闪闪」
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		tag = YOM				 
+		has_trait = YOM_character_7
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_at_9
+	
+	attacker = 0.25
+	attacker_movement_speed = 0.55
+}	
+
+YOM_tactic_at_10 = {#   转生剑「圆心流转斩」
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		tag = YOM		 
+		has_trait = YOM_character_7
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_at_10
+	
+	attacker = 0.3
+	defender = -0.15
+}	
+
+YOM_tactic_at_11 = {#   妄执剑「修罗之血」
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		tag = YOM			 
+		has_trait = YOM_character_7
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_at_11
+	
+	defender = 0.1
+	attacker_movement_speed = 0.75
+}	
+
+YOM_tactic_at_12 = {#    断迷剑「迷津慈航斩」
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		tag = YOM			 
+		has_trait = YOM_character_9
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_at_12
+	
+	attacker = 0.4
+	combat_width = -0.5
+}	
+
+YOM_tactic_at_13 = {#   「西行春风斩」
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		tag = YOM
+		
+		has_trait = YOM_character_9
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_at_13
+	
+	attacker = 0.3
+	defender = -0.4
+}	
+
+YOM_tactic_at_14 = {#   断想剑「草木成佛斩」
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		tag = YOM
+		has_trait = YOM_character_6
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_at_14
+	
+	attacker = 0.4
+	defender = -0.25
+}	
+
+YOM_tactic_at_15 = {#   人鬼「未来永劫斩」
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		tag = YOM
+		has_trait = YOM_character_8
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_at_15
+	
+	attacker = 0.5
+	defender = -0.5
+}	
+
+YOM_tactic_at_16 = {#    魂魄「幽明求闻持聪明之法」
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		tag = YOM
+		has_trait = YOM_character_9
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_at_16
+	
+	defender = -0.3
+	combat_width = 1
+}	
+
+YOM_tactic_at_17 = {#    瞑斩「楼观赋予我能斩断弹幕的心之眼」
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		tag = YOM
+		has_trait = YOM_character_9
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_at_17
+	
+	defender = -0.5
+}	
+
+YOM_tactic_at_18 = {#    天星剑「仿若涅槃寂静」
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		tag = YOM
+		has_trait = YOM_character_6
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_at_18
+	
+	attacker = 0.4
+	defender = -0.4
+}	
+
+YOM_tactic_at_19 = {#    「待宵反射卫星斩」
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		tag = YOM 
+		has_trait = YOM_character_9
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_at_19
+	
+	attacker = 0.75
+	attacker_movement_speed = -0.5
+}	
+
+YOM_tactic_at_20 = {#     四生剑「众生无情之声」
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		tag = YOM
+		has_trait = YOM_character_8
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_at_20
+	
+	attacker = 0.4
+	defender = -0.2
+	attacker_movement_speed = 1
+}	
+
+YOM_tactic_at_21 = {#     修罗剑「现世妄执」
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		tag = YOM
+		has_trait = YOM_unit_trait_2
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_at_21
+	
+	attacker = 0.4
+	defender = -0.25
+}	
+
+YOM_tactic_at_22 = {#     人界剑「悟入幻想」
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		tag = YOM
+		has_trait = YOM_unit_trait_2
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_at_22
+	
+	attacker = 0.2
+	defender = -0.1
+	attacker_movement_speed = 0.1
+}	
+
+YOM_tactic_at_23 = {#     人世剑「大悟显晦」
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		tag = YOM
+		has_id = 42
+		has_trait = YOM_unit_trait_2
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_at_23
+	
+	attacker = 0.3
+	defender = -0.2
+	attacker_movement_speed = 0.25
+}	
+
+YOM_tactic_at_24 = {#     人神剑「俗谛常住」
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = no
+		tag = YOM
+		has_trait = YOM_unit_trait_2
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_at_24
+	
+	attacker = 0.4
+	defender = -0.3
+	attacker_movement_speed = 0.5
+}	
+
+YOM_tactic_cc_1 = {#  折伏无间
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = close_combat
+		tag = YOM			 
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_cc_1
+	
+	attacker = 0.1
+	defender = -0.05
+	combat_width = -0.1
+}
+
+YOM_tactic_cc_2 = {#  心抄斩
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = close_combat
+		tag = YOM		 
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_cc_2
+	
+	attacker = 0.2
+	defender = 0.1
+	attacker_movement_speed = 0.25
+}
+
+YOM_tactic_cc_3 = {#  燐气斩
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = close_combat
+		tag = YOM				 
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_cc_3
+	
+	attacker = 0.1
+	defender = -0.1
+}
+
+YOM_tactic_cc_4 = {#  天上剑「天人之五衰」
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = close_combat
+		tag = YOM			 
+		has_trait = YOM_character_4
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_cc_4
+	
+	attacker = 0.1
+	defender = -0.1
+	attacker_movement_speed = 0.1
+	combat_width = 0.1
+}
+
+YOM_tactic_cc_5 = {#  天界剑「七魄忌讳」
+
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = close_combat
+		tag = YOM
+		has_trait = YOM_character_4	
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_cc_5
+	
+	attacker = 0.2
+	defender = -0.2
+	attacker_movement_speed = 0.2
+	combat_width = 0.2
+}
+
+YOM_tactic_cc_6 = {#  天神剑「三魂七魄」
+
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = close_combat
+		tag = YOM
+		has_trait = YOM_character_4
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_cc_6
+	
+	attacker = 0.3
+	defender = -0.3
+	attacker_movement_speed = 0.3
+	combat_width = 0.3
+}
+
+YOM_tactic_cc_7 = {#  幽鬼剑「妖童饿鬼之断食」
+
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = close_combat
+		tag = YOM	
+		has_trait = YOM_character_3
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_cc_7
+	
+	attacker = 0.2
+	defender = -0.1
+}
+
+YOM_tactic_cc_8 = {#  饿鬼剑「饿鬼道草纸」
+
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = close_combat
+		tag = YOM		
+		has_trait = YOM_character_3
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_cc_8
+	
+	attacker = 0.3
+	defender = -0.2
+}
+
+YOM_tactic_cc_9 = {# 饿王剑「饿鬼十王的报应」
+
+	is_attacker = yes
+	trigger = {
+		is_attacker = yes
+		phase = close_combat
+		tag = YOM		
+		has_trait = YOM_character_3
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_cc_9
+	
+	attacker = 0.4
+	defender = -0.3
+}
+
+YOM_tactic_cc_10 = {#  狱界剑「二百由旬之一闪」
+
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = close_combat
+		tag = YOM			 
+		has_trait = YOM_character_2
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_cc_10
+	
+	attacker = -0.2
+	defender = 0.1
+	combat_width = -0.25
+}
+
+YOM_tactic_cc_11 = {#  狱炎剑「业风闪影阵」
+
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = close_combat
+		tag = YOM
+		has_trait = YOM_character_2	
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_cc_11
+	
+	attacker = -0.3
+	defender = 0.2
+	combat_width = -0.35
+}
+
+YOM_tactic_cc_12 = {# 狱神剑「业风神闪斩」
+
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = close_combat
+		tag = YOM
+		has_trait = YOM_character_2	
+	}
+	
+	active = yes
+	
+	base =  { factor = 20 }
+	picture = YOM_tactic_cc_12
+	
+	attacker = -0.4
+	defender = 0.3
+	combat_width = -0.5
 }

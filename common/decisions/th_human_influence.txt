@@ -6,8 +6,8 @@ human_influ = {
                 check_variable = { all_value < HUM.all_value}
                 check_variable = { all_value = HUM.all_value}
             }
+            has_global_flag = main_scenario
         }
-
         custom_cost_trigger = {
             check_variable = { HMIF_influence > 39.99}
         }
@@ -72,6 +72,7 @@ human_influ = {
         visible = {
             not = { has_idea = Human}
             check_variable = { all_value > HUM.all_value}
+            has_global_flag = main_scenario
         }
 
         custom_cost_trigger = {
@@ -136,6 +137,7 @@ human_influ = {
     human_influ_yaoli = {
         visible = {
             not = { has_idea = Human}
+            has_global_flag = main_scenario
         }
 
         custom_cost_trigger = {
@@ -205,6 +207,7 @@ human_influ = {
     human_influ_zhongzurenzhi = {
         visible = {
             not = { has_idea = Human}
+            has_global_flag = main_scenario
         }
 
         custom_cost_trigger = {
@@ -272,6 +275,7 @@ human_influ = {
     human_influ_lianbing = {
         visible = {
             not = { has_idea = Human}
+            has_global_flag = main_scenario
         }
 
         custom_cost_trigger = {
@@ -323,6 +327,7 @@ human_influ = {
     human_influ_yaoyan = {
         visible = {
             not = { has_idea = Human}
+            has_global_flag = main_scenario
         }
 
         custom_cost_trigger = {
@@ -392,6 +397,7 @@ human_influ = {
     human_influ_yexing = {
         visible = {
             not = { has_idea = Human}
+            has_global_flag = main_scenario
         }
 
         custom_cost_trigger = {
@@ -465,6 +471,7 @@ human_influ = {
     human_influ_xiji = {
         visible = {
             not = { has_idea = Human}
+            has_global_flag = main_scenario
         }
 
         custom_cost_trigger = {
@@ -560,6 +567,7 @@ human_influ = {
     human_influ_liberate = {
         visible = {
             tag = HUM
+            has_global_flag = main_scenario
         }
         available = {
             always = no

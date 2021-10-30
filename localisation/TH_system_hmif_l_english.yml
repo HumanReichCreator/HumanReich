@@ -1,6 +1,6 @@
 ﻿l_english:
- ##############人里影响系统
- th_hum_influ_tt:0 "§Y人类影响力§!为[?HMIF_influence|1]\n每日增长速度为[?HMIF_daily_add|+=]\n\n基础增长速度为世界观[view_type] [?HMIF_view|+=]\n修正为[?HMIF_daily_changer_factor|Y%0]\n\n影响因素为：[th_hum_influ_guandian]  [?HMIF_op_hum|+=%]\n[th_power_word_type]§Y[?PO_average_mp|1]%§! [?HMIF_po|+=%]\n政治理念§Y[Root.GetRulingIdeology]§! [?HMIF_government|%Y]\n位于§Y[continent_location]§! [?HMIF_continent|Y0%] \n首都与人间之里首都的距离 [?HMIF_distance|Y] [?HMIF_distance_influ|Y%] \n再额外修正[?HMIF_daily_add_factor_add|%+] \n其他常数加成 [?HMIF_daily_add_cons|+]"
+ ##############人类村落影响系统
+ th_hum_influ_tt:0 "§Y人类影响力§!为[?HMIF_influence|1]\n每日增长速度为[?HMIF_daily_add|+=]\n\n基础增长速度为世界观[view_type] [?HMIF_view|+=]\n修正为[?HMIF_daily_changer_factor|Y%0]\n\n影响因素为：[th_hum_influ_guandian]  [?HMIF_op_hum|+=%]\n[th_power_word_type]§Y[?PO_average_mp|1]%§! [?HMIF_po|+=%]\n政治理念§Y[Root.GetRulingIdeology]§! [?HMIF_government|%Y]\n位于§Y[continent_location]§! [?HMIF_continent|Y0%] \n首都与人类村落首都的距离 [?HMIF_distance|Y] [?HMIF_distance_influ|Y%] \n再额外修正[?HMIF_daily_add_factor_add|%+] \n其他常数加成 [?HMIF_daily_add_cons|+]"
  th_hum_influ_delayed_tt:0 "人类影响值代表你对人类的影响力，通过花费一定的影响力可以从人类当中受益。"
  th_hum_influ_guandian1:0 "\n[HUM.GetFlag]§Y[HUM.GetName]§!对你的观点为[?HMIF_hum_op|+]"
  th_hum_influ_guandian2:0 "\n[th_hum_influ_zhanjushoudu]"
@@ -10,12 +10,12 @@
  human_influ_desc:0 "[human_influence_desc]"
  human_influ1:0 "影响人类"
  human_influ1_desc:0 "人类影响值代表你对人类的影响力，通过花费[HUM.GetFlag] 40从人类当中受益。"
- human_influ2:0 "被妖怪影响的人间之里"
+ human_influ2:0 "被妖怪影响的人类村落"
  human_influ2_desc:0 "我们在战败以后，妖怪逐渐开始恢复对我们的影响，当她们每正执行一条影响时，会让我们受到一定的负收益影响，当前的影响有:\n生活消费品工厂: [?global.HMIF_influenced_goods|%0R]\n工厂产出: [?global.HMIF_influenced_factory|%2R]"
  human_influ_debuff:0 "被[FROM.GetFlag][FROM.GetName]影响"
  human_influ_liberate:0 "从妖怪的影响中解脱"
- HMIF_same_time:0 "没有其他正在影响人里的行动"
- HUM_influenced:0 "妖怪影响人里"
+ HMIF_same_time:0 "没有其他正在影响人类村落的行动"
+ HUM_influenced:0 "妖怪影响人类村落"
  HMIF_influence_not_enough:0 "[HUM.GetFlag] 40"
  HMIF_influence_not_enough_blocked:0 "[HUM.GetFlag] §R40§!"
  HMIF_influence_not_enough_tooltip:0 "需要§Y[HUM.GetFlag] 40§!"

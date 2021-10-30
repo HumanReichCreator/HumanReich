@@ -4,73 +4,33 @@ state={
 	name="STATE_90"
 	resources={
 
-		powder=0.000
-		metal=0.000
+		powder = 0.0
+		metal = 0.0
 		gas=5.000
 		crystal=0.000
 	}
 
 	history={
-			owner = SGS
-		146.1.1 = {
-			owner = SGS
+		143.7.1 = {
+			owner = SCA
 			add_core_of = SCA
-			add_core_of = SGS
+			add_core_of = SC1
+			buildings = {
+				infrastructure = 4
+				industrial_complex = 1
+				arms_factory = 0
+				radar_station = 0
+			}
+		}
+		146.1.1 = {
+			owner = SCA
+			add_core_of = SCA
+			add_core_of = SC1
 			buildings = {
 				infrastructure =4
 				industrial_complex = 1
-				arms_factory = 1
-				669 = {
-					bunker = 5
-				}
-				1713 = {
-					bunker = 5
-				}
-				1782 = {
-					bunker = 5
-				}
-				1857 = {
-					bunker = 5
-				}
-				2687 = {
-					bunker = 5
-				}
-				2694 = {
-					bunker = 5
-				}
-				3072 = {
-					bunker = 5
-				}
-				3100 = {
-					bunker = 5
-				}
-				3369 = {
-					bunker = 5
-				}
-				3373 = {
-					bunker = 5
-				}
-				3379 = {
-					bunker = 5
-				}
-				4059 = {
-					bunker = 5
-				}
-				4073 = {
-					bunker = 5
-				}
-				4077 = {
-					bunker = 5
-				}
-				4105 = {
-					bunker = 5
-				}
-				4266 = {
-					bunker = 5
-				}
-				4267 = {
-					bunker = 5
-				}
+				arms_factory = 0
+
 			}
 
 		}
@@ -80,7 +40,7 @@ state={
 	provinces={
 		669 1713 1782 1857 2687 2694 3072 3100 3369 3373 3379 4059 4073 4077 4105 4266 4267 
 	}
-	manpower=10700.0
+	manpower=1070.0
 	buildings_max_level_factor=1.000
 	state_category=s7
 }

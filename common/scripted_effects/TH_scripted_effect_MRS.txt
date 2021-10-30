@@ -1,0 +1,31 @@
+MRS_Expand_Literature_Center_effect = {
+	if = {
+		limit = { has_idea = MRS_Establish_Literature_Center_idea }
+		swap_ideas = {
+			remove_idea = MRS_Establish_Literature_Center_idea
+			add_idea = MRS_Establish_Literature_Center_2_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = MRS_Establish_Literature_Center_2_idea }
+		swap_ideas = {
+			remove_idea = MRS_Establish_Literature_Center_2_idea
+			add_idea = MRS_Establish_Literature_Center_3_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = MRS_Establish_Literature_Center_3_idea }
+		swap_ideas = {
+			remove_idea = MRS_Establish_Literature_Center_3_idea
+			add_idea = MRS_Establish_Literature_Center_4_idea
+		}
+	}
+  else_if = {
+		limit = { has_idea = MRS_Establish_Literature_Center_4_idea }
+		swap_ideas = {
+			remove_idea = MRS_Establish_Literature_Center_4_idea
+			add_idea = MRS_Establish_Literature_Center_5_idea
+		}
+	}
+}
+

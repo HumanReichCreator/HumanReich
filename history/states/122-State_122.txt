@@ -4,14 +4,13 @@ state={
 	name="STATE_122"
 	resources={
 
-		powder=5.000
-		metal=0.000
+		powder = 6.0
+		metal = 0.0
 		gas=20.000
 		crystal=0.000
 	}
 
 	history={
-			owner = SCA
 		143.7.1 = {
 			owner = SCA
 			add_core_of = SCA
@@ -29,6 +28,8 @@ state={
 				infrastructure =8
 				industrial_complex = 12
 				arms_factory = 6
+				radar_station = 1
+				
 
 			}
 
@@ -39,7 +40,7 @@ state={
 	provinces={
 		893 1047 1116 1283 1473 1870 2507 2730 3668 3671 3963 3965 3968 3969 3970 3981 3983 3984 3988 3989 
 	}
-	manpower=46470.0
+	manpower=56470.0
 	buildings_max_level_factor=1.000
 	state_category=s20
 }

@@ -1,0 +1,1033 @@
+NIB_SEJ_decision_leader = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_country_leader = {
+			name = "Wriggle Nightbug" 
+			# name = "莉格露·奈特巴格"
+			picture = "gfx/leaders/SEJ/NIB_nib.dds"
+			# picture = "MRS_mrs.dds"
+			ideology = neworder_type
+			traits = {  }
+		}
+		else = {
+			create_country_leader = {
+				# name = "Wriggle Nightbug" 
+				name = "莉格露·奈特巴格"
+				picture = "gfx/leaders/SEJ/NIB_nib.dds"
+				# picture = "MRS_mrs.dds"
+				ideology = neworder_type
+				traits = {  }
+			}
+		}
+	}
+}
+RMI_SEJ_decision_leader = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_country_leader = {
+			name = "Rumia"  
+			# name = "露米娅"
+			picture = "gfx/leaders/SEJ/SEJ_rmi.dds"
+			ideology = neworder_type
+			traits = {  }
+		}
+		else = {
+			create_country_leader = {
+				# name = "Rumia"  
+				name = "露米娅"
+				picture = "gfx/leaders/SEJ/SEJ_rmi.dds"
+				ideology = neworder_type
+				traits = {  }
+			}
+		}
+	}
+}
+WAK_yonglisikaleite_focus_leader1 = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_country_leader = {
+			name = "Remilia Scarlet"
+			# name = "蕾米莉亚 斯卡蕾特"
+			picture = "gfx/leaders/SCA/SCA_rem.dds"
+			ideology = guli_type
+		}
+		create_country_leader = {
+			name = "Remilia Scarlet"
+			# name = "蕾米莉亚 斯卡蕾特"
+			picture = "gfx/leaders/SCA/SCA_rem.dds"
+			ideology = neworder_type
+		}
+		else = {
+			create_country_leader = {
+				# name = "Remilia Scarlet"
+				name = "蕾米莉亚 斯卡蕾特"
+				picture = "gfx/leaders/SCA/SCA_rem.dds"
+				ideology = guli_type
+			}
+			create_country_leader = {
+				# name = "Remilia Scarlet"
+				name = "蕾米莉亚 斯卡蕾特"
+				picture = "gfx/leaders/SCA/SCA_rem.dds"
+				ideology = neworder_type
+			}
+		}
+	}
+}
+WAK_yonglisikaleite_focus_leader2 = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_country_leader = {
+			name = "Flandre Scarlet"
+			# name = "芙兰朵露 斯卡蕾特"
+			picture = "gfx/leaders/SCA/SCA_flan.dds"
+			ideology = neworder_type
+		}
+		else = {
+			create_country_leader = {
+				# name = "Flandre Scarlet"
+				name = "芙兰朵露 斯卡蕾特"
+				picture = "gfx/leaders/SCA/SCA_flan.dds"
+				ideology = neworder_type
+			}
+		}
+	}
+}
+ALI_mojiehua_event_leader = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_country_leader = {
+			name = "Shinki"
+			# name = "神绮"
+			picture = "ALI_ski.dds"
+			ideology = oldorder_type
+			traits = {  }
+		}
+		else = {
+			create_country_leader = {
+				# name = "Shinki"
+				name = "神绮"
+				picture = "ALI_ski.dds"
+				ideology = oldorder_type
+				traits = {  }
+			}
+		}
+	}
+}
+ALI_mojiehua_focus_army_leader = {
+	if = {
+        limit = {
+          english_leaders = yes
+        }
+        create_field_marshal = {
+          name = "Shinki"
+            # name = "神绮"
+            picture = "ALI_ski.dds"
+            traits = {  th_character th_trait_dayaoguai trait_cautious }
+            skill = 13
+            attack_skill = 15
+            defense_skill = 14
+            planning_skill = 4
+            logistics_skill = 10
+        }
+        else = {
+          create_field_marshal = {
+            # name = "Shinki"
+              name = "神绮"
+              picture = "ALI_ski.dds"
+              traits = {  th_character th_trait_dayaoguai trait_cautious }
+              skill = 13
+              attack_skill = 15
+              defense_skill = 14
+              planning_skill = 4
+              logistics_skill = 10
+          }
+        }
+    }
+}
+CIR_clownpiece_leader1 = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_country_leader = {
+			name = "Clownpiece"
+			# name = "克劳恩皮丝"
+			picture ="CIR_clown.dds"
+			ideology = neworder_type
+			traits = {
+				# cir_cirno_leader
+			}
+		}
+		create_corps_commander = {
+			name = "Clownpiece"
+			# name = "克劳恩皮丝"
+			portrait_path = "gfx/leaders/CIR/CIR_clown.dds"
+
+			traits = {  th_character  th_trait_huoqiangzhuanjia trait_reckless }
+			attack_skill = 6
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 3
+			
+			skill = 5
+		}
+		else = {
+			create_country_leader = {
+				# name = "Clownpiece"
+				name = "克劳恩皮丝"
+				picture ="CIR_clown.dds"
+				ideology = neworder_type
+				traits = {
+					# cir_cirno_leader
+				}
+			}
+			create_corps_commander = {
+				# name = "Clownpiece"
+				name = "克劳恩皮丝"
+				portrait_path = "gfx/leaders/CIR/CIR_clown.dds"
+
+				traits = {  th_character  th_trait_huoqiangzhuanjia trait_reckless }
+				attack_skill = 6
+				defense_skill = 3
+				planning_skill = 5
+				logistics_skill = 3
+				
+				skill = 5
+			}
+		}
+	}
+}
+CIR_clownpiece_leader2 = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_corps_commander = {
+			name = "Clownpiece"
+			# name = "克劳恩皮丝"
+			picture ="CIR_clown.dds"
+
+			traits = {  th_character  th_trait_huoqiangzhuanjia trait_reckless }
+			attack_skill = 6
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 3
+			
+			skill = 5
+		}
+		else = {
+			create_corps_commander = {
+				# name = "Clownpiece"
+				name = "克劳恩皮丝"
+				picture ="CIR_clown.dds"
+
+				traits = {  th_character  th_trait_huoqiangzhuanjia trait_reckless }
+				attack_skill = 6
+				defense_skill = 3
+				planning_skill = 5
+				logistics_skill = 3
+				
+				skill = 5
+			}
+		}
+	}
+}
+HKR_zuihoudeshenshe_focus_suika_army_leader = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_field_marshal = {
+			name = "Suika Ibuki"
+			# name = "伊吹萃香"
+			picture = "SUK_suk.dds"
+			traits = {  th_character th_trait_chongjizhuanjia th_trait_dayaoguai th_trait_qianxianzhandou }
+			skill = 11
+			attack_skill = 6
+			defense_skill = 9
+			planning_skill = 1
+			logistics_skill = 4
+		}
+		else = {
+			create_field_marshal = {
+				# name = "Suika Ibuki"
+				name = "伊吹萃香"
+				picture = "SUK_suk.dds"
+				traits = {  th_character th_trait_chongjizhuanjia th_trait_dayaoguai th_trait_qianxianzhandou }
+				skill = 11
+				attack_skill = 6
+				defense_skill = 9
+				planning_skill = 1
+				logistics_skill = 4
+			}
+		}
+	}
+}
+HKR_zuihoudeshenshe_focus_yorigami_army_leader = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_corps_commander = {
+			name = "Shion Yorigami"
+			# name = "依神紫苑"
+			picture = "HKR_son.dds"
+			traits = {  th_character  }
+			id = 14
+			skill = 5
+			attack_skill = 8
+			defense_skill = 7
+			planning_skill = 3
+			logistics_skill = 6
+		}
+		create_corps_commander = {
+			name = "Jyoon Yorigami"
+			# name = "依神女苑"
+			picture = "HKR_jyo.dds"
+			traits = {  th_character media_personality }
+			id = 15
+			skill = 6
+			attack_skill = 3
+			defense_skill = 6
+			planning_skill = 8
+			logistics_skill = 7
+		}
+		else = {
+			create_corps_commander = {
+			# name = "Shion Yorigami"
+				name = "依神紫苑"
+				picture = "HKR_son.dds"
+				traits = {  th_character  }
+				id = 14
+				skill = 5
+				attack_skill = 8
+				defense_skill = 7
+				planning_skill = 3
+				logistics_skill = 6
+			}
+			create_corps_commander = {
+			# name = "Jyoon Yorigami"
+				name = "依神女苑"
+				picture = "HKR_jyo.dds"
+				traits = {  th_character media_personality }
+				id = 15
+				skill = 6
+				attack_skill = 3
+				defense_skill = 6
+				planning_skill = 8
+				logistics_skill = 7
+			}
+		}
+	}
+}
+HKR_yorigami_event_army_leader = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_corps_commander = {
+			name = "Yorigami Jyoon"
+			# name = "依神女苑"
+			picture = "HKR_jyo.dds"
+			traits = {  th_character media_personality }
+			id = 15
+			skill = 6
+			attack_skill = 3
+			defense_skill = 6
+			planning_skill = 8
+			logistics_skill = 7
+		}
+		create_corps_commander = {
+			name = "Yorigami Shion"
+			# name = "依神紫苑"
+			picture = "HKR_son.dds"
+			traits = {  th_character th_trait_huolizhuanjia th_trait_huoqiangzhuanjia }
+			id = 14
+			skill = 7
+			attack_skill = 8
+			defense_skill = 7
+			planning_skill = 3
+			logistics_skill = 6
+		}	
+		else = {
+			create_corps_commander = {
+				# name = "Yorigami Jyoon"
+				name = "依神女苑"
+				picture = "HKR_jyo.dds"
+				traits = {  th_character media_personality }
+				skill = 6
+				attack_skill = 3
+				defense_skill = 6
+				planning_skill = 8
+				logistics_skill = 7
+			}
+			create_corps_commander = {
+				# name = "Yorigami Shion"
+				name = "依神紫苑"
+				picture = "HKR_son.dds"
+				traits = {  th_character th_trait_huolizhuanjia th_trait_huoqiangzhuanjia }
+				skill = 7
+				attack_skill = 8
+				defense_skill = 7
+				planning_skill = 3
+				logistics_skill = 6
+			}	
+		}
+	}
+}
+HKR_suika_leader = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_field_marshal = {
+			name = "Suika Ibuki"
+			# name = "伊吹萃香"
+			picture = "SUK_suk.dds"
+			traits = {  th_character th_trait_qianxianzhandou th_trait_dayaoguai th_trait_chongjizhuanjia }
+			skill = 11
+			attack_skill = 6
+			defense_skill = 9
+			planning_skill = 1
+			logistics_skill = 4
+		}
+		create_country_leader = {
+			name = "Suika Ibuki"
+			# name = "伊吹萃香"
+			picture = "SUK_suk.dds"
+			ideology = neworder_type
+			traits = { }
+		}
+		else = {
+			create_field_marshal = {
+				# name = "Suika Ibuki"
+				name = "伊吹萃香"
+				picture = "SUK_suk.dds"
+				traits = {  th_character th_trait_qianxianzhandou th_trait_dayaoguai th_trait_chongjizhuanjia }
+				skill = 11
+				attack_skill = 6
+				defense_skill = 9
+				planning_skill = 1
+				logistics_skill = 4
+			}
+			create_country_leader = {
+				# name = "Ibuki Suika"
+				name = "伊吹萃香"
+				picture = "SUK_suk.dds"
+				ideology = neworder_type
+				traits = { }
+			}
+		}
+	}
+}
+HKR_aunn_leader = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_country_leader = {
+			name = "Aunn Komano"
+			# name = "高丽野阿吽"
+			picture = "HKR_aunn.dds"
+			ideology = qinwai_type
+			traits = { }
+		}
+		else = {
+			create_country_leader = {
+				# name = "Komano Aunn"
+				name = "高丽野阿吽"
+				picture = "HKR_aunn.dds"
+				ideology = qinwai_type
+				traits = { }
+			}
+		}
+	}
+}
+
+SCA_cisha_event_leader = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_country_leader = {
+			name = "Imperial Interim Council"
+			picture = "gfx/leaders/OTG/OTG_council.dds"
+			ideology = guli_type
+			traits = {
+
+			}
+		}
+		else = {
+			create_country_leader = {
+				# name = "Council"
+				name = "帝国临时议会"
+				picture = "gfx/leaders/OTG/OTG_council.dds"
+				ideology = guli_type
+				traits = {
+
+				}
+			}
+		}
+	}
+}
+SCA_xuanju1_event_leader = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_country_leader = {
+		    name = "Patchouli Knowledge"
+		    # name = "帕秋莉·诺蕾姬"
+		    picture = "SCA_pachy.dds"
+		    ideology = guli_type
+		    traits = {
+
+		    }
+		}
+		else = {
+			create_country_leader = {
+				# name = "Patchouli Knowledge"
+				name = "帕秋莉·诺蕾姬"
+				picture = "SCA_pachy.dds"
+				ideology = guli_type
+				traits = {
+
+				}
+			}
+		}
+	}
+}
+SCA_xuanju2_event_leader = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_country_leader = {
+			name = "Izayoi Sakuya"
+		    # name = "十六夜咲夜"
+    		picture = "SCA_sky.dds"
+			ideology = guli_type
+			traits = {
+
+			}
+		}
+		else = {
+			create_country_leader = {
+				# name = "Izayoi Sakuya"
+				name = "十六夜咲夜"
+				picture = "SCA_sky.dds"
+				ideology = guli_type
+				traits = {
+
+				}
+			}
+		}
+	}
+}
+SCA_xuanju3_event_leader = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_country_leader = {
+		    name = "Flandre Scarlet"
+		    # name = "芙兰朵露·斯卡蕾特"
+		    picture = "SCA_flan.dds"
+		    ideology = guli_type
+		    traits = {
+
+		    }
+		}
+		else = {
+			create_country_leader = {
+				# name = "Flandre Scarlet"
+				name = "芙兰朵露·斯卡蕾特"
+				picture = "SCA_flan.dds"
+				ideology = guli_type
+				traits = {
+
+				}
+			}
+		}
+	}
+}
+SCA_remi_return_event_leader = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_country_leader = { 
+			name = "Remilia Scarlet"
+			# name = "蕾米莉亚·斯卡蕾特"
+			picture = "SCA_rem.dds"
+			ideology = guli_type
+			traits = { 
+			}
+		}
+		else = {
+			create_country_leader = { 
+				# name = "Remilia Scarlet"
+			    name = "蕾米莉亚·斯卡蕾特"
+				picture = "SCA_rem.dds"
+				ideology = guli_type
+				traits = { 
+				}
+			}
+		}
+	}
+}
+SCA_remi_return_event_leader2 = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_country_leader = {
+			name = "Remilia Scarlet"
+		    # name = "蕾米莉亚·斯卡蕾特"
+			picture = "SCA_rem.dds"
+			ideology = neworder_type
+			traits = { 
+			}
+		}
+		else = {
+			create_country_leader = {
+				# name = "Remilia Scarlet"
+				name = "蕾米莉亚·斯卡蕾特"
+				picture = "SCA_rem.dds"
+				ideology = neworder_type
+				traits = { 
+				}
+			}
+		}
+	}
+}
+TKM_xuanju_raiko_leader = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_country_leader = {
+			name = "Horikawa Raiko"
+			# name = "堀川雷鼓"
+			picture = "TKM_raiko.dds"
+			ideology = qinwai_type
+			traits = {
+			}
+		}
+		else = {
+			create_country_leader = {
+				# name = "Horikawa Raiko"
+				name = "堀川雷鼓"
+				picture = "TKM_raiko.dds"
+				ideology = qinwai_type
+				traits = {
+				}
+			}
+		}
+	}
+}
+TKM_xuanju_kogasa_leader = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		 create_country_leader = {
+			name = "Tatara Kogasa"
+		    # name = "多多良小伞"
+			picture = "TKM_kog.dds"
+			ideology = qinwai_type
+			traits = {
+			}
+		}
+		else = {
+			 create_country_leader = {
+				# name = "Tatara Kogasa"
+				name = "多多良小伞"
+				picture = "TKM_kog.dds"
+				ideology = qinwai_type
+				traits = {
+				}
+			}
+		}
+	}
+}
+WAK_rescure_remi_event_army_leader = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_field_marshal = {
+			name = "Remilia Scarlet"
+			# name = "蕾米莉亚·斯卡蕾特"
+			portrait_path = "gfx/leaders/SCA/SCA_rem.dds"
+			traits = {  th_character  harsh_leader th_trait_huoqiangzhuanjia th_trait_qianxianzhandou }
+			attack_skill = 8
+			defense_skill = 10
+			planning_skill = 5
+			logistics_skill = 8
+			id = 501
+			skill = 9
+		}
+		create_corps_commander = {
+			name = "Izayoi Sakuya"
+			# name = "十六夜咲夜"
+			portrait_path = "gfx/leaders/SSL/SSL_sky.dds"
+			traits = {  th_character  harsh_leader  }
+			attack_skill = 3
+			defense_skill = 7
+			planning_skill = 3
+			logistics_skill = 9
+			id = 503
+			skill = 6
+		}
+		else = {
+			create_field_marshal = {
+				# name = "Remilia Scarlet"
+				name = "蕾米莉亚·斯卡蕾特"
+				portrait_path = "gfx/leaders/SCA/SCA_rem.dds"
+				traits = {  th_character  harsh_leader th_trait_huoqiangzhuanjia th_trait_qianxianzhandou }
+				attack_skill = 8
+				defense_skill = 10
+				planning_skill = 5
+				logistics_skill = 8
+				id = 501
+				skill = 9
+			}
+			create_corps_commander = {
+				# name = "Izayoi Sakuya"
+				name = "十六夜咲夜"
+				portrait_path = "gfx/leaders/SSL/SSL_sky.dds"
+				traits = {  th_character  harsh_leader  }
+				attack_skill = 3
+				defense_skill = 7
+				planning_skill = 3
+				logistics_skill = 9
+				id = 503
+				skill = 6
+			}
+		}
+	}
+}
+WAK_rescure_flan_event_army_leader = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_corps_commander = {
+			name = "Flandre Scarlet"
+			# name = "芙兰朵露·斯卡蕾特"
+			portrait_path = "gfx/leaders/SCA/SCA_flan.dds"
+			traits = {  th_character  th_trait_qianxianzhandou th_trait_chongjizhuanjia }
+			attack_skill = 16
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			id = 496
+			skill = 5
+		}
+		else = {
+			create_corps_commander = {
+				# name = "Flandre Scarlet"
+				name = "芙兰朵露·斯卡蕾特"
+				portrait_path = "gfx/leaders/SCA/SCA_flan.dds"
+				traits = {  th_character  th_trait_qianxianzhandou th_trait_chongjizhuanjia }
+				attack_skill = 16
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 1
+				id = 496
+				skill = 5
+			}
+		}
+	}
+}
+WAK_remi_away_event_leader = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_country_leader = {
+			name = "Flandre Scarlet"
+			# name = "芙兰朵露 斯卡蕾特"
+			picture = "SCA_flan.dds"
+			ideology = guli_type
+		}
+		create_country_leader = {
+			name = "Flandre Scarlet"
+			# name = "芙兰朵露 斯卡蕾特"
+			picture = "SCA_flan.dds"
+			ideology = oldorder_type
+		}
+		else = {
+			create_country_leader = {
+				# name = "Flandre Scarlet"
+				name = "芙兰朵露 斯卡蕾特"
+				picture = "SCA_flan.dds"
+				ideology = guli_type
+			}
+			create_country_leader = {
+				# name = "Flandre Scarlet"
+				name = "芙兰朵露 斯卡蕾特"
+				picture = "SCA_flan.dds"
+				ideology = oldorder_type
+			}
+		}
+	}
+}
+WAK_flan_away_event_leader = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_country_leader = {
+			name = "Remilia Scarlet"
+			# name = "蕾米莉亚 斯卡蕾特"
+			picture = "SCA_rem.dds"
+			ideology = neworder_type
+		}
+		else = {
+			create_country_leader = {
+				# name = "Remilia Scarlet"
+				name = "蕾米莉亚 斯卡蕾特"
+				picture = "SCA_rem.dds"
+				ideology = neworder_type
+			}
+		}
+	}
+}
+WAK_remi_return_event_leader = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_country_leader = {
+			name = "Wakasagihime"
+			# name = "若鹭姬"
+			picture = "WAK_wak.dds"
+			ideology = guli_type
+		}
+		create_country_leader = {
+			name = "Wakasagihime"
+			# name = "若鹭姬"
+			picture = "WAK_wak.dds"
+			ideology = neworder_type
+		}
+		else = {
+			create_country_leader = {
+				# name = "Wakasagihime"
+				name = "若鹭姬"
+				picture = "WAK_wak.dds"
+				ideology = guli_type
+		}
+			create_country_leader = {
+				# name = "Wakasagihime"
+				name = "若鹭姬"
+				picture = "WAK_wak.dds"
+				ideology = neworder_type
+			}
+		}
+	}
+}
+WAK_remi_return_event_army_leader = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_field_marshal = {
+			name = "Remilia Scarlet"
+			# name = "蕾米莉亚·斯卡蕾特"
+			portrait_path = "gfx/leaders/SCA/SCA_rem.dds"
+			traits = {  th_character  harsh_leader th_trait_huoqiangzhuanjia th_trait_qianxianzhandou }
+			attack_skill = 8
+			defense_skill = 10
+			planning_skill = 5
+			logistics_skill = 8
+			id = 502
+			skill = 9
+		}
+		else = {
+			create_field_marshal = {
+				# name = "Remilia Scarlet"
+				name = "蕾米莉亚·斯卡蕾特"
+				portrait_path = "gfx/leaders/SCA/SCA_rem.dds"
+				traits = {  th_character  harsh_leader th_trait_huoqiangzhuanjia th_trait_qianxianzhandou }
+				attack_skill = 8
+				defense_skill = 10
+				planning_skill = 5
+				logistics_skill = 8
+				id = 502
+				skill = 9
+			}
+		}
+	}
+}
+WAK_flan_return_event_leader = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_country_leader = {
+			name = "Wakasagihime"
+			# name = "若鹭姬"
+			picture = "WAK_wak.dds"
+			ideology = neworder_type
+		}
+		else = {
+			create_country_leader = {
+				# name = "Wakasagihime"
+				name = "若鹭姬"
+				picture = "WAK_wak.dds"
+				ideology = neworder_type
+			}
+		}
+	}
+}
+WAK_flan_return_event_army_leader = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_corps_commander = {
+			name = "Flandre Scarlet"
+			# name = "芙兰朵露·斯卡蕾特"
+			portrait_path = "gfx/leaders/SCA/SCA_flan.dds"
+			traits = {  th_character  th_trait_qianxianzhandou th_trait_chongjizhuanjia }
+			attack_skill = 16
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			id = 497
+			skill = 5
+		}
+		else = {
+			create_corps_commander = {
+				name = "Flandre Scarlet"
+				# name = "芙兰朵露·斯卡蕾特"
+				portrait_path = "gfx/leaders/SCA/SCA_flan.dds"
+				traits = {  th_character  th_trait_qianxianzhandou th_trait_chongjizhuanjia }
+				attack_skill = 16
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 1
+				id = 497
+				skill = 5
+			}
+		}
+	}
+}
+TKM_143_leader = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_country_leader = {
+			name = "Youkai Management Committee"
+			picture = "gfx/leaders/ZYD/ZYD_council.dds"
+			ideology = guli_type
+		}
+		else = {
+			create_country_leader = {
+				name = "妖怪管理委员会"
+				picture = "gfx/leaders/ZYD/ZYD_council.dds"
+				ideology = guli_type
+			}
+		}
+	}
+	set_party_name = { 
+		ideology = guli 
+		long_name = TKM_143_guli 
+		name = TKM_143_guli 
+	}
+}
+
+NMS_naziling_leader = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_country_leader = {
+			name = "Nazrin"
+            # name = "娜兹玲"
+			picture = "NMS_mouse.dds"
+			ideology = guli_type
+		}
+		else = {
+			create_country_leader = {
+				# name = "Nazrin"
+				name = "娜兹玲"
+				picture = "NMS_mouse.dds"
+				ideology = guli_type
+			}
+		}
+	}
+}
+
+NET_shared_yaoji_army_leader = {
+	if = {
+		limit = {
+			english_leaders = yes
+		}
+		create_corps_commander = {
+			name = "Youki Konpaku"
+			# name = "魂魄妖忌"
+			portrait_path = "gfx/leaders/YYK/YYK_yok.dds"
+			traits = {  th_character  th_trait_chongjizhuanjia th_trait_qianxianzhandou trait_cautious }
+			skill = 8
+			attack_skill = 11
+			defense_skill = 6
+			planning_skill = 4
+			logistics_skill = 10
+		}	
+		else = {
+			create_corps_commander = {
+				# name = "Youki Konpaku"
+				name = "魂魄妖忌"
+				portrait_path = "gfx/leaders/YYK/YYK_yok.dds"
+				traits = {  th_character  th_trait_chongjizhuanjia th_trait_qianxianzhandou trait_cautious }
+				skill = 8
+				attack_skill = 11
+				defense_skill = 6
+				planning_skill = 4
+				logistics_skill = 10
+			}
+		}
+	}
+}
+
+NET_yaomeng_leader = {
+	current_government = yes
+	meta_effect = {
+		text = {
+			if = {
+				limit = {
+					english_leaders = yes
+				}
+				create_country_leader = {
+					name = "Konpaku Youmu"
+					#name = "魂魄妖梦"
+					picture = "gfx/leaders/YYK/YYK_youmu.dds"
+					ideology = [IDO]
+				}
+				else = {
+					create_country_leader = {
+						# name = "Konpaku Youmu"
+						name = "魂魄妖梦"
+						picture = "gfx/leaders/YYK/YYK_youmu.dds"
+						ideology = [IDO]
+					}
+				}
+			}
+		}
+		IDO = "[THIS.government_type]"
+	}
+}

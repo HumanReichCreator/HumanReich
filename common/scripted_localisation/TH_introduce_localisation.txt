@@ -98,6 +98,13 @@ defined_text = { # 某页内的文本
 	text = { 
 		trigger = { 
 			check_variable = { introduce_page = 0 } 
+			tag = YYK
+		}
+		localization_key = introduce_YYK_page1
+	}
+	text = { 
+		trigger = { 
+			check_variable = { introduce_page = 0 } 
 			capital_scope = {
 				is_on_continent = Gensokyo
 			}
@@ -240,5 +247,65 @@ defined_text = { # 机制介绍
 	name = introduce_page2_010
 	text = {
 		localization_key = introduce_page2_10
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_011
+	text = {
+		localization_key = introduce_page2_11
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_012
+	text = {
+		localization_key = introduce_page2_12
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_013
+	text = {
+		localization_key = introduce_page2_13
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_014
+	text = {
+		localization_key = introduce_page2_14
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_015
+	text = {
+		localization_key = introduce_page2_15
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_016
+	text = {
+		localization_key = introduce_page2_16
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_017
+	text = {
+		localization_key = introduce_page2_17
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_018
+	text = {
+		localization_key = introduce_page2_18
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_019
+	text = {
+		localization_key = introduce_page2_19
+	}
+}
+defined_text = { # 机制介绍
+	name = introduce_page2_020
+	text = {
+		localization_key = introduce_page2_20
 	}
 }

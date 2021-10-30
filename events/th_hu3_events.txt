@@ -1,0 +1,642 @@
+﻿add_namespace = hu3
+##########事件###########
+country_event = { #HU3希望获取补给
+	id = hu3.1
+	title = hu3.1.t
+	desc = hu3.1.d
+
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hu3.1.1#
+		trigger = {
+
+		}
+
+		ai_chance = {
+			base = 70
+		}
+
+		HU3 = {
+            country_event = { id = hu3.2 hours = 1 } 
+		}
+
+	}
+
+	option = {
+		name = hu3.1.2#
+		trigger = {
+
+		}
+
+		ai_chance = {
+			base = 30
+		}
+
+         custom_effect_tooltip = AKI_jujuelehu3_tt
+
+		HU3 = {
+            country_event = { id = hu3.3 hours = 1 } 
+		}
+
+	}
+
+}
+
+country_event = { #AKI提供补给
+	id = hu3.2
+	title = hu3.2.t
+	desc = hu3.2.d
+
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hu3.2.1#
+		trigger = {
+
+		}
+
+		set_country_flag = {
+			value = 1
+			days = 180
+			flag = AKI_yunxusangejungong_flag
+		}
+
+	}
+
+}
+
+country_event = { #AKI拒绝了
+	id = hu3.3
+	title = hu3.3.t
+	desc = hu3.3.d
+
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hu3.3.1#
+		trigger = {
+
+		}
+
+	  	 if = {
+	  	 	limit = {
+                has_country_flag = AKI_jujueleliangci_flag
+	  	 		NOT = { has_country_flag = AKI_jujuelesanci_flag }
+	  	 	}
+
+		AKI = {
+		add_ai_strategy = {
+			type = befriend
+			id = "HU3"
+			value = -200
+		}
+
+		diplomatic_relation = {
+		    country = HU3
+		    relation = guarantee
+		    active = no
+		}
+
+		}
+
+		add_ai_strategy = {
+			type = befriend
+			id = "AKI"
+			value = -200
+		}
+
+		diplomatic_relation = {
+		    country = AKI
+		    relation = guarantee
+		    active = no
+		}
+
+	  	 	set_country_flag = AKI_jujuelesanci_flag
+            remove_ideas = AKI_laiziqiushendezhichi_idea
+
+			AKI = { remove_opinion_modifier = { target = HU3 modifier = AKI_kaoshan_op } }
+	        remove_opinion_modifier = { target = AKI modifier = AKI_kaoshan_op }  
+
+			reverse_add_opinion_modifier = { target = AKI modifier = AKI_fanlian_op }
+    		add_opinion_modifier = { target = AKI modifier = AKI_fanlian_op }
+
+	  	 }
+
+	  	 if = {
+	  	 	limit = {
+                has_country_flag = AKI_jujueleyici_flag
+	  	 		NOT = { has_country_flag = AKI_jujueleliangci_flag }
+	  	 	}
+	  	 	set_country_flag = AKI_jujueleliangci_flag
+	  	 }
+
+	  	 if = {
+	  	 	limit = {
+	  	 		NOT = { has_country_flag = AKI_jujueleyici_flag }
+	  	 	}
+	  	 	set_country_flag = AKI_jujueleyici_flag
+	  	 }
+
+
+	}
+
+
+}
+
+country_event = { #HU3希望发起攻势
+	id = hu3.4
+	title = hu3.4.t
+	desc = hu3.4.d
+
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hu3.4.1#
+		trigger = {
+
+		}
+
+		ai_chance = {
+			base = 70
+		}
+
+		HU3 = {
+            country_event = { id = hu3.5 hours = 1 } 
+		}
+
+	}
+
+	option = {
+		name = hu3.4.2#
+		trigger = {
+
+		}
+
+		ai_chance = {
+			base = 30
+		}
+
+         custom_effect_tooltip = AKI_jujuelehu3_tt
+
+		HU3 = {
+            country_event = { id = hu3.3 hours = 1 } 
+		}
+
+	}
+
+}
+
+country_event = { #AKI支持了攻势
+	id = hu3.5
+	title = hu3.5.t
+	desc = hu3.5.d
+
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hu3.5.1#
+		trigger = {
+
+		}
+
+		set_country_flag = {
+			value = 1
+			days = 180
+			flag = AKI_yunxuliugejungong_flag
+		}
+
+	}
+
+}
+
+country_event = { #HU3向我们上交贡品
+	id = hu3.6
+	title = hu3.6.t
+	desc = hu3.6.d
+
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hu3.6.1#
+		trigger = {
+        NOT = { has_government = qinwai }
+		}
+
+		ai_chance = {
+			base = 1
+		}
+
+        add_timed_idea = { idea = AKI_zhanlipin_touzijianshe_idea days = 90 }
+
+	}
+
+	option = {
+		name = hu3.6.2#
+		trigger = {
+        NOT = { has_government = qinwai }
+		}
+
+		ai_chance = {
+			base = 1
+		}
+
+        add_timed_idea = { idea = AKI_zhanlipin_touzishengchan_idea days = 90 }
+
+	}
+
+	option = {
+		name = hu3.6.3#
+		trigger = {
+        has_government = qinwai
+		}
+
+		ai_chance = {
+			base = 98
+		}
+
+			HU3 = {
+            country_event = { id = hu3.7 hours = 1 } 
+			}
+
+	}
+
+}
+
+country_event = { #AKI拒绝了贡品
+	id = hu3.7
+	title = hu3.7.t
+	desc = hu3.7.d
+
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hu3.7.1#
+		trigger = {
+
+		}
+
+		ai_chance = {
+			base = 100
+		}
+
+
+		AKI = {
+		add_ai_strategy = {
+			type = befriend
+			id = "HU3"
+			value = -200
+		}
+
+		diplomatic_relation = {
+		    country = HU3
+		    relation = guarantee
+		    active = no
+		}
+
+		}
+
+		add_ai_strategy = {
+			type = befriend
+			id = "AKI"
+			value = -200
+		}
+
+		diplomatic_relation = {
+		    country = AKI
+		    relation = guarantee
+		    active = no
+		}
+
+              remove_ideas = AKI_laiziqiushendezhichi_idea
+
+		AKI = { remove_opinion_modifier = { target = HU3 modifier = AKI_kaoshan_op } }
+        remove_opinion_modifier = { target = AKI modifier = AKI_kaoshan_op }  
+
+		reverse_add_opinion_modifier = { target = AKI modifier = AKI_fanlian_op }
+        add_opinion_modifier = { target = AKI modifier = AKI_fanlian_op }
+
+	}
+
+}
+
+country_event = { #HU3请求支援
+	id = hu3.8
+	title = hu3.8.t
+	desc = hu3.8.d
+
+	# major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = hu3.8.1#
+		trigger = {
+
+		}
+
+		ai_chance = {
+			base = 99
+        modifier = {
+          has_war = yes 
+          factor = 0
+        }
+		}
+
+		if = {
+			limit = { 
+				AKI = { is_faction_leader = yes }
+				AKI = { is_in_faction = yes }
+			}			
+			HU3 = { 
+				qiangjiemeng = yes
+				add_ideas = AKI_xinanliancun_idea
+			}
+			add_to_faction = HU3
+		}
+
+		if = {
+			limit = { 
+				AKI = { is_faction_leader = no }
+				AKI = { is_in_faction = yes }
+			}			
+			AKI = {
+				HU3 = {
+					subject_level4 = yes
+				}
+			}
+		}
+
+		if = {
+			limit = { 
+				AKI = { is_in_faction = no }
+			}			
+			AKI = {
+				HU3 = {
+					subject_level4 = yes
+				}
+			}
+		}
+
+		hidden_effect = {
+			news_event = { id = aki.59 days = 2 }
+		}
+
+	}
+
+	option = {
+		name = hu3.8.2#
+		trigger = {
+
+		}
+
+		ai_chance = {
+			base = 1
+		}
+
+		HU3 = { remove_opinion_modifier = { target = AKI modifier = AKI_kaoshan_op } }
+        remove_opinion_modifier = { target = HU3 modifier = AKI_kaoshan_op }  
+
+		reverse_add_opinion_modifier = { target = HU3 modifier = AKI_fanlian_op }
+        add_opinion_modifier = { target = HU3 modifier = AKI_fanlian_op }
+
+		HU3 = { country_event = { hours = 1 id = glo.2002} }
+
+	}
+
+}
+
+country_event = {  #宣战MEL
+	id = hu3.9
+	title = hu3.9.t
+	desc = hu3.9.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		date > 146.10.1
+    	has_country_flag = SW_xinanluanzhan
+		tag = HU3
+		is_subject = no
+		has_war = no
+		country_exists = MEL 
+		MEL = { has_war = yes }
+		country_exists = SGS 
+		SGS  = { has_war = yes }
+	}
+
+	option = { 
+		name = hu3.9.1
+
+		ai_chance = {
+			base = 100
+		}
+
+		add_political_power = 50
+
+		add_manpower = 300
+
+		add_timed_idea = { idea = AKI_tikaidamen_idea days = 90 }
+
+		add_ai_strategy = {
+			type = antagonize
+			id = "MEL"
+			value = 200
+		}
+
+		every_state = {
+			limit = { 
+				is_core_of = MEL 
+			}
+			add_claim_by = HU3
+		}
+
+		declare_war_on = {
+			target = MEL
+			type = annex_everything
+		}
+
+      	add_ideas = AKI_first_war_idea_1
+
+     	 MEL = { add_ideas = AKI_first_war_idea_2 }
+
+		every_state = {
+			limit = { 
+				is_core_of = SGS 
+			}
+			add_claim_by = HU3
+		}
+
+		declare_war_on = {
+			target = SGS
+			type = annex_everything
+		}
+
+      	SGS = { add_ideas = AKI_first_war_idea_2 }
+
+		every_state = {
+			limit = { 
+				is_core_of = GH1 
+			}
+			add_claim_by = HU3
+		}
+
+		if = {
+			limit = {
+				GH1 = { has_country_flag = SW_xinanluanzhan }
+			}
+			declare_war_on = {
+				target = GH1
+				type = annex_everything
+			}
+			GH1 = { add_ideas = AKI_first_war_idea_2 }
+		}
+
+		every_state = {
+			limit = { 
+				is_core_of = GH2 
+			}
+			add_claim_by = HU3
+		}
+
+		declare_war_on = {
+			target = GH2
+			type = annex_everything
+		}
+
+      	GH2 = { add_ideas = AKI_first_war_idea_2 }
+
+		every_state = {
+			limit = { 
+				is_core_of = GH3 
+			}
+			add_claim_by = HU3
+		}
+
+		declare_war_on = {
+			target = GH3
+			type = annex_everything
+		}
+
+		GH3 = { add_ideas = AKI_first_war_idea_2 }
+
+		set_global_flag = HU3_attack_MEL_FLAG
+
+	}
+
+
+}
+
+country_event = {  #有条件停战
+	id = hu3.10
+	title = hu3.10.t
+	desc = hu3.10.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		NOT = { AKI = { has_completed_focus = AKI_waijiaofanglue } }
+		tag = HU3
+	    is_subject = no
+        is_in_faction = no
+        has_war_with = MEL
+        has_war_with = SGS
+        HU3 = { surrender_progress > 0.50 }
+        MEL = { is_subject = no }
+        MEL = { has_idea = SGS_tuanjiexieding_idea }
+        MEL = { is_in_faction = no }
+        SGS = { is_subject = no }
+        SGS = { has_idea = SGS_tuanjiexieding_idea }
+        SGS = { is_in_faction = no }
+	}
+
+	option = { 
+		name = hu3.10.1
+
+		ai_chance = {
+			base = 100
+		}
+
+		MEL = {
+			country_event = { id = hu3.11 days = 1 random = 1 }
+		}
+
+	}
+
+	option = { 
+		name = hu3.10.2
+
+		ai_chance = {
+			base = 0
+		}
+
+
+
+	}
+
+}
+
+country_event = {  #是否停战
+	id = hu3.11
+	title = hu3.11.t
+	desc = hu3.11.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = { 
+		name = hu3.11.1
+
+		ai_chance = {
+			base = 90
+		}
+
+			white_peace = HU3
+            SGS = { white_peace = HU3 }
+            GH1 = { white_peace = HU3 }
+            GH2 = { white_peace = HU3 }
+            GH3 = { white_peace = HU3 }
+		    transfer_state = 148
+
+            HU3 = { remove_ideas = AKI_gengduodetudi_idea }
+            HU3 = { remove_ideas = AKI_laiziqiushendezhichi_idea }
+      		set_global_flag = HU3_white_MEL_FLAG
+
+	}
+
+	option = { 
+		name = hu3.11.2
+
+		ai_chance = {
+			base = 10
+		}
+
+
+
+	}
+
+}

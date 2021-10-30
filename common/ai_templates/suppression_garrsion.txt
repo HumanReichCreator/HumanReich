@@ -29,7 +29,7 @@ suppression_generic = {
 
 			modifier = {
 				factor = 0
-				has_tech = lingben
+				not = { has_tech = waike }
 			}
 		}
 		
@@ -186,7 +186,7 @@ garrison_generic = {
 
 			modifier = {
 				factor = 0
-				has_tech = lingben
+				not = { has_tech = waike }
 			}
 		}
 		

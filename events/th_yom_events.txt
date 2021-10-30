@@ -1,0 +1,1255 @@
+﻿add_namespace = yom
+country_event = {#重铸白楼剑
+	id = yom.1
+	title = yom.1.t
+	desc = yom.1.d
+
+	is_triggered_only = yes
+
+	option = {#献上幽灵
+		name = yom.1.1
+		add_manpower = -600
+		random_list = {
+			64 = {#失败
+				country_event = yom.2
+			}
+			33 = {#找到了一些其他东西
+				country_event = yom.3
+			}
+			3 = {#成功
+				country_event = yom.4
+			}
+		}
+		ai_chance = {
+			base = 25
+		}		
+	}
+
+	option = {#献上精力
+		name = yom.1.2
+		add_political_power = -50
+		random_list = {
+			60 = {#失败
+				country_event = yom.2
+			}
+			35 = {#找到了一些其他东西
+				country_event = yom.3
+			}
+			5 = {#成功
+				country_event = yom.4
+			}
+		}
+		ai_chance = {
+			base = 25
+		}	
+	}
+	
+	option = {#献上灵力
+		name = yom.1.3
+		PO_minus1 = yes
+		random_list = {
+			55 = {#失败
+				country_event = yom.2
+			}
+			37 = {#找到了一些其他东西
+				country_event = yom.3
+			}
+			8 = {#成功
+				country_event = yom.4
+			}
+		}
+		ai_chance = {
+			base = 25
+		}		
+	}
+	option = {#随便找找有没有可以献的
+		name = yom.1.d
+		add_war_support = -0.01
+		add_stability = -0.01
+		random_list = {
+			80 = {#失败
+				country_event = yom.2
+			}
+			19 = {#找到了一些其他东西
+				country_event = yom.3
+			}
+			1 = {#成功
+				country_event = yom.4
+			}
+		}
+		ai_chance = {
+			base = 25
+		}	
+	}		
+}
+
+country_event = {#失败
+	id = yom.2
+	title = yom.2.t
+	desc = yom.2.d
+
+	is_triggered_only = yes
+
+	option = {#无事发生
+		name = yom.2.1
+		hidden_effect = { 
+			clr_country_flag = YOM_doing_sword
+		}				
+	}	
+}
+
+country_event = {#找到了一些其他东西
+	id = yom.3
+	title = yom.3.t
+	desc = yom.3.d
+
+	is_triggered_only = yes
+
+	option = {#找到东西
+		name = yom.3.1
+		random_list = {
+			40 = {#剑术经验
+				army_experience = 10
+			}
+			40 = {#被吸引的幽灵
+				add_manpower = 500
+			}
+			20 = {#弥漫着的灵力
+				PO_add3 = yes
+			}
+			20 = {#一些刀剑
+				add_equipment_to_stockpile = {
+					type = melee_a
+					amount = 500
+					producer = YOM
+				}				
+			}			
+		}		
+		hidden_effect = { 
+			clr_country_flag = YOM_doing_sword
+		}	
+		ai_chance = {
+			base = 25
+		}			
+	}				
+}
+
+country_event = {#成功重铸白楼剑
+	id = yom.4
+	title = yom.4.t
+	desc = yom.4.d
+
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = YOM_has_finish_find_sword_white
+			clr_country_flag = YOM_doing_sword
+		}	
+	}
+	
+	option = {#白楼剑-贪
+		name = yom.4.1
+		swap_ideas = {
+			add_idea = ROA_YOM_idea_14_a
+			remove_idea = ROA_YOM_idea_14
+		}
+		ai_chance = {
+			base = 25
+		}			
+	}
+
+	option = {#白楼剑-痴
+		name = yom.4.2
+		swap_ideas = {
+			add_idea = ROA_YOM_idea_14_b
+			remove_idea = ROA_YOM_idea_14
+		}
+		ai_chance = {
+			base = 25
+		}			
+	}		
+
+	option = {#白楼剑-嗔
+		name = yom.4.3
+		swap_ideas = {
+			add_idea = ROA_YOM_idea_14_c
+			remove_idea = ROA_YOM_idea_14
+		}
+		ai_chance = {
+			base = 25
+		}			
+	}			
+}
+
+country_event = {#重铸楼观剑
+	id = yom.5
+	title = yom.5.t
+	desc = yom.5.d
+
+	is_triggered_only = yes
+
+	option = {#献上幽灵
+		name = yom.1.1
+		add_manpower = -600
+		random_list = {
+			64 = {#失败
+				country_event = yom.2
+			}
+			33 = {#找到了一些其他东西
+				country_event = yom.3
+			}
+			3 = {#成功
+				country_event = yom.6
+			}
+		}
+		ai_chance = {
+			base = 25
+		}		
+	}
+
+	option = {#献上精力
+		name = yom.1.2
+		add_political_power = -50
+		random_list = {
+			60 = {#失败
+				country_event = yom.2
+			}
+			35 = {#找到了一些其他东西
+				country_event = yom.3
+			}
+			5 = {#成功
+				country_event = yom.6
+			}
+		}
+		ai_chance = {
+			base = 25
+		}	
+	}
+	
+	option = {#献上灵力
+		name = yom.1.3
+		PO_minus1 = yes
+		random_list = {
+			55 = {#失败
+				country_event = yom.2
+			}
+			37 = {#找到了一些其他东西
+				country_event = yom.3
+			}
+			8 = {#成功
+				country_event = yom.6
+			}
+		}
+		ai_chance = {
+			base = 25
+		}		
+	}
+	option = {#随便找找有没有可以献的
+		name = yom.1.4
+		add_war_support = -0.01
+		add_stability = -0.01
+		random_list = {
+			80 = {#失败
+				country_event = yom.2
+			}
+			19 = {#找到了一些其他东西
+				country_event = yom.3
+			}
+			1 = {#成功
+				country_event = yom.6
+			}
+		}
+		ai_chance = {
+			base = 25
+		}	
+	}		
+}
+
+country_event = {#成功重铸楼观剑
+	id = yom.6
+	title = yom.6.t
+	desc = yom.6.d
+
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = YOM_has_finish_find_sword_evil
+			clr_country_flag = YOM_doing_sword
+		}	
+	}
+	
+	option = {#楼观剑-生
+		name = yom.6.1
+		swap_ideas = {
+			add_idea = ROA_YOM_idea_15_a
+			remove_idea = ROA_YOM_idea_15
+		}
+		ai_chance = {
+			base = 25
+		}			
+	}
+
+	option = {#楼观剑-老
+		name = yom.6.2
+		swap_ideas = {
+			add_idea = ROA_YOM_idea_15_b
+			remove_idea = ROA_YOM_idea_15
+		}
+		ai_chance = {
+			base = 25
+		}			
+	}		
+
+	option = {#楼观剑-病
+		name = yom.6.3
+		swap_ideas = {
+			add_idea = ROA_YOM_idea_15_c
+			remove_idea = ROA_YOM_idea_15
+		}
+		ai_chance = {
+			base = 25
+		}			
+	}
+	option = {#楼观剑-死
+		name = yom.6.4
+		swap_ideas = {
+			add_idea = ROA_YOM_idea_15_d
+			remove_idea = ROA_YOM_idea_15
+		}
+		ai_chance = {
+			base = 25
+		}			
+	}
+	option = {#楼观剑-爱别离
+		name = yom.6.5
+		swap_ideas = {
+			add_idea = ROA_YOM_idea_15_e
+			remove_idea = ROA_YOM_idea_15
+		}
+		ai_chance = {
+			base = 25
+		}			
+	}	
+	option = {#楼观剑-怨憎会
+		name = yom.6.6
+		swap_ideas = {
+			add_idea = ROA_YOM_idea_15_f
+			remove_idea = ROA_YOM_idea_15
+		}
+		ai_chance = {
+			base = 25
+		}			
+	}	
+	option = {#楼观剑-求不得
+		name = yom.6.7
+		swap_ideas = {
+			add_idea = ROA_YOM_idea_15_g
+			remove_idea = ROA_YOM_idea_15
+		}
+		ai_chance = {
+			base = 25
+		}			
+	}		
+}
+
+country_event = {#人间五十年
+	id = yom.7
+	title = yom.7.t
+	desc = yom.7.d
+
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = YOM_has_finish_find_sword_white
+			clr_country_flag = YOM_doing_sword_white 
+		}	
+	}
+	
+	option = {#无我相
+		name = yom.7.1
+		add_ideas = ROA_YOM_idea_22
+		ai_chance = {
+			base = 25
+		}			
+	}
+
+	option = {#不执着
+		name = yom.7.2
+		add_ideas = ROA_YOM_idea_23
+		ai_chance = {
+			base = 25
+		}			
+	}		
+
+	option = {#不分别
+		name = yom.7.3
+		add_ideas = ROA_YOM_idea_24
+		ai_chance = {
+			base = 25
+		}			
+	}
+
+	option = {#不妄想
+		name = yom.7.3
+		add_ideas = ROA_YOM_idea_25	
+		ai_chance = {
+			base = 25
+		}			
+	}		
+}
+
+country_event = {#冥界五十年
+	id = yom.8
+	title = yom.8.t
+	desc = yom.8.d
+
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = YOM_has_finish_find_sword_white
+			clr_country_flag = YOM_doing_sword_white 
+		}	
+	}
+	
+	option = {#贪心
+		name = yom.8.1
+		add_ideas = ROA_YOM_idea_26
+		ai_chance = {
+			base = 25
+		}			
+	}
+
+	option = {#嗔恨
+		name = yom.8.2
+		add_ideas = ROA_YOM_idea_27
+		ai_chance = {
+			base = 25
+		}			
+	}		
+
+	option = {#愚痴
+		name = yom.8.3
+		add_ideas = ROA_YOM_idea_28
+		ai_chance = {
+			base = 25
+		}			
+	}
+
+	option = {#绮语
+		name = yom.8.3
+		add_ideas = ROA_YOM_idea_29
+		ai_chance = {
+			base = 25
+		}			
+	}		
+}
+
+country_event = {#斩神佛
+	id = yom.9
+	title = yom.9.t
+	desc = yom.9.d
+
+	is_triggered_only = no
+	fire_only_once = no
+	trigger = {
+		tag = YOM
+		has_completed_focus = ROA_YOM_40
+		any_country = {
+			has_war_with = ROOT
+			or = {
+				has_idea = God
+				tag = NMS
+				tag = MNM
+				tag = NUE
+				tag = KYK
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = {
+		name = yom.9.1
+		add_ideas = ROA_YOM_40_idea
+	}
+	
+}
+
+news_event = {#调解幽灵间的纷争
+	id = yom.10
+	title = yom.10.t
+	desc = yom.10.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = yom.10.1
+		trigger = {
+			tag = YOM
+		}
+	}
+	option = {
+		name = yom.10.2
+		trigger = {
+			tag = YYK
+		}
+	}
+	option = {
+		name = yom.10.3
+		trigger = {
+			not = {
+				tag = YOM
+				tag = YYK
+				tag = SKI
+			}
+			has_government = neworder
+		}
+	}
+	option = {
+		name = yom.10.4
+		trigger = {
+			not = {
+				tag = YOM
+				tag = YYK
+				tag = SKI
+			}
+			has_government = qinwai
+		}
+	}
+	option = {
+		name = yom.10.5
+		trigger = {
+			not = {
+				tag = YOM
+				tag = YYK
+				tag = SKI
+			}
+			has_government = guli
+		}
+	}
+	option = {
+		name = yom.10.6
+		trigger = {
+			not = {
+				tag = YOM
+				tag = YYK
+				tag = SKI
+			}
+			has_government = fandong
+		}
+	}
+	option = {
+		name = yom.10.7
+		trigger = {
+			not = {
+				tag = YOM
+				tag = YYK
+				tag = SKI
+			}
+			has_government = oldorder
+		}
+	}
+	option = {
+		name = yom.10.8
+		trigger = {
+			tag = SKI
+		}
+	}
+}
+
+news_event = {#组建幽灵联合战线
+	id = yom.11
+	title = yom.11.t
+	desc = yom.11.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = yom.11.1
+		trigger = {
+			tag = YOM
+		}
+	}
+	option = {
+		name = yom.11.2
+		trigger = {
+			tag = YYK
+		}
+	}
+	option = {
+		name = yom.11.3
+		trigger = {
+			not = {
+				tag = YOM
+				tag = YYK
+				tag = SKI
+			}
+			has_government = neworder
+		}
+	}
+	option = {
+		name = yom.11.4
+		trigger = {
+			not = {
+				tag = YOM
+				tag = YYK
+				tag = SKI
+			}
+			has_government = qinwai
+		}
+	}
+	option = {
+		name = yom.11.5
+		trigger = {
+			not = {
+				tag = YOM
+				tag = YYK
+				tag = SKI
+			}
+			has_government = guli
+		}
+	}
+	option = {
+		name = yom.11.6
+		trigger = {
+			not = {
+				tag = YOM
+				tag = YYK
+				tag = SKI
+			}
+			has_government = fandong
+		}
+	}
+	option = {
+		name = yom.11.7
+		trigger = {
+			not = {
+				tag = YOM
+				tag = YYK
+				tag = SKI
+			}
+			has_government = oldorder
+		}
+	}
+	option = {
+		name = yom.11.8
+		trigger = {
+			tag = SKI
+		}
+	}
+}
+
+news_event = {#冥界联合政府
+	id = yom.12
+	title = yom.12.t
+	desc = yom.12.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = yom.12.1
+		trigger = {
+			tag = YOM
+		}
+	}
+	option = {
+		name = yom.12.2
+		trigger = {
+			tag = YYK
+		}
+	}
+	option = {
+		name = yom.12.3
+		trigger = {
+			not = {
+				tag = YOM
+				tag = YYK
+				tag = SKI
+			}
+			has_government = neworder
+		}
+	}
+	option = {
+		name = yom.12.4
+		trigger = {
+			not = {
+				tag = YOM
+				tag = YYK
+				tag = SKI
+			}
+			has_government = qinwai
+		}
+	}
+	option = {
+		name = yom.12.5
+		trigger = {
+			not = {
+				tag = YOM
+				tag = YYK
+				tag = SKI
+			}
+			has_government = guli
+		}
+	}
+	option = {
+		name = yom.12.6
+		trigger = {
+			not = {
+				tag = YOM
+				tag = YYK
+				tag = SKI
+			}
+			has_government = fandong
+		}
+	}
+	option = {
+		name = yom.12.7
+		trigger = {
+			not = {
+				tag = YOM
+				tag = YYK
+				tag = SKI
+			}
+			has_government = oldorder
+		}
+	}
+	option = {
+		name = yom.12.8
+		trigger = {
+			tag = SKI
+		}
+	}
+}
+
+news_event = {#我才是冥界之主！
+	id = yom.13
+	title = yom.13.t
+	desc = yom.13.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = yom.13.1
+		trigger = {
+			tag = YOM
+		}
+	}
+	option = {
+		name = yom.13.2
+		trigger = {
+			not = {
+				tag = YOM
+				tag = SKI
+			}
+			has_government = neworder
+		}
+	}
+	option = {
+		name = yom.13.3
+		trigger = {
+			not = {
+				tag = YOM
+				tag = SKI
+			}
+			has_government = qinwai
+		}
+	}
+	option = {
+		name = yom.13.4
+		trigger = {
+			not = {
+				tag = YOM
+				tag = SKI
+			}
+			has_government = guli
+		}
+	}
+	option = {
+		name = yom.13.5
+		trigger = {
+			not = {
+				tag = YOM
+				tag = SKI
+			}
+			has_government = fandong
+		}
+	}
+	option = {
+		name = yom.13.6
+		trigger = {
+			not = {
+				tag = YOM
+				tag = SKI
+			}
+			has_government = oldorder
+		}
+	}
+	option = {
+		name = yom.13.7
+		trigger = {
+			tag = SKI
+		}
+	}
+}
+
+news_event = {#让幽幽子担任要职
+	id = yom.14
+	title = yom.14.t
+	desc = yom.14.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = yom.14.1
+		trigger = {
+			tag = YOM
+		}
+	}
+	option = {
+		name = yom.14.2
+		trigger = {
+			tag = SKI
+		}
+	}
+	option = {
+		name = yom.14.3
+		trigger = {
+			not = {
+				tag = SKI
+				tag = YOM
+			}
+			has_government = oldorder
+		}
+	}
+	option = {
+		name = yom.14.4
+		trigger = {
+			not = {
+				tag = SKI
+				tag = YOM
+				has_government = oldorder
+			}
+		}
+	}
+}
+
+news_event = {#幽幽子再教育
+	id = yom.15
+	title = yom.15.t
+	desc = yom.15.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yom.15.1
+		trigger = {
+			tag = YOM
+		}
+	}
+	option = {
+		name = yom.15.2
+		trigger = {
+			tag = SKI
+		}
+	}
+	option = {
+		name = yom.15.3
+		trigger = {
+			not = {
+				tag = SKI
+				tag = YOM
+			}
+			has_government = oldorder
+		}
+	}
+	option = {
+		name = yom.15.4
+		trigger = {
+			not = {
+				tag = SKI
+				tag = YOM
+				has_government = oldorder
+			}
+		}
+	}
+}
+
+news_event = {#囚禁幽幽子
+	id = yom.16
+	title = yom.16.t
+	desc = yom.16.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = yom.16.1
+		trigger = {
+			tag = YOM
+		}
+	}
+	option = {
+		name = yom.16.2
+		trigger = {
+			tag = SKI
+		}
+	}
+	option = {
+		name = yom.16.3
+		trigger = {
+			not = {
+				tag = SKI
+				tag = YOM
+			}
+			has_government = oldorder
+		}
+	}
+	option = {
+		name = yom.16.4
+		trigger = {
+			not = {
+				tag = SKI
+				tag = YOM
+				has_government = oldorder
+			}
+		}
+	}
+}
+
+news_event = {#阎魔的认可
+	id = yom.17
+	title = yom.17.t
+	desc = yom.17.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = yom.17.1
+		trigger = {
+			tag = YOM
+		}
+	}
+	option = {
+		name = yom.17.2
+		trigger = {
+			tag = SKI
+		}
+	}
+	option = {
+		name = yom.17.3
+		trigger = {
+			not = {
+				tag = SKI
+				tag = YOM
+			}
+			has_government = oldorder
+		}
+	}
+	option = {
+		name = yom.17.4
+		trigger = {
+			not = {
+				tag = SKI
+				tag = YOM
+				has_government = oldorder
+			}
+		}
+	}
+}
+
+news_event = {#采用武力的政策
+	id = yom.18
+	title = yom.18.t
+	desc = yom.18.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = yom.18.1
+		trigger = {
+			tag = YOM
+		}
+	}
+	option = {
+		name = yom.18.2
+		trigger = {
+			tag = SKI
+		}
+	}
+	option = {
+		name = yom.18.3
+		trigger = {
+			not = {
+				tag = SKI
+				tag = YOM
+			}
+			has_government = oldorder
+		}
+	}
+	option = {
+		name = yom.18.4
+		trigger = {
+			not = {
+				tag = SKI
+				tag = YOM
+				has_government = oldorder
+			}
+		}
+	}
+}
+
+country_event = {#组建幽灵联合战线 解散
+	id = yom.19
+	title = yom.19.t
+	desc = yom.19.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 2
+	}
+	trigger = {
+		tag = YOM
+		is_faction_leader = yes
+		not = {
+			has_war_with = YYK
+		}
+	}
+	option = {
+		name = yom.19.1
+		dismantle_faction = yes
+	}
+}
+
+country_event = {#斩魂魄(触发）
+	id = yom.20
+	title = yom.20.t
+	desc = yom.20.d
+
+	is_triggered_only = no
+	fire_only_once = no
+	trigger = {
+		tag = YOM
+		has_completed_focus = ROA_YOM_39
+		any_country = {
+			has_war_with = ROOT
+			has_idea = Human
+		}
+		not = {
+			has_idea = ROA_YOM_39_idea
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = {
+		name = yom.20.1
+		add_ideas = ROA_YOM_39_idea
+	}
+	
+}
+news_event = {#建立幕府体制
+	id = yom.21
+	title = yom.21.t
+	desc = yom.21.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yom.21.1
+		trigger = {
+			tag = YOM
+		}
+	}
+
+	option = {
+		name = yom.21.2
+		trigger = {
+			not = {
+				tag = YOM
+			}
+		}
+	}
+}
+
+news_event = {#破晓
+	id = yom.22
+	title = yom.22.t
+	desc = yom.22.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yom.22.1
+		trigger = {
+			tag = YOM
+		}
+	}
+
+	option = {
+		name = yom.22.2
+		trigger = {
+			not = {
+				tag = YOM
+			}
+		}
+	}
+}
+
+news_event = {#进攻旧地狱的政治中心
+	id = yom.23
+	title = yom.23.t
+	desc = yom.23.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yom.23.1
+		trigger = {
+			tag = YOM
+		}
+	}
+
+	option = {
+		name = yom.23.2
+		trigger = {
+			not = {
+				tag = YOM
+			}
+		}
+	}
+}
+
+news_event = {#清算隙间妖怪
+	id = yom.24
+	title = yom.24.t
+	desc = yom.24.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yom.24.1
+		trigger = {
+			tag = YOM
+		}
+	}
+
+	option = {
+		name = yom.24.2
+		trigger = {
+			not = {
+				tag = YOM
+			}
+		}
+	}
+}
+
+news_event = {#结盟下克上妖怪
+	id = yom.25
+	title = yom.25.t
+	desc = yom.25.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yom.25.1
+		trigger = {
+			tag = YOM
+		}
+	}
+
+	option = {
+		name = yom.25.2
+		trigger = {
+			not = {
+				tag = YOM
+			}
+		}
+	}
+}
+
+news_event = {#结盟下克上妖精
+	id = yom.26
+	title = yom.26.t
+	desc = yom.26.d
+#	picture = GFX_report_event_chinese_soldiers_01
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+
+	option = {
+		name = yom.26.1
+		trigger = {
+			tag = YOM
+		}
+	}
+
+	option = {
+		name = yom.26.2
+		trigger = {
+			not = {
+				tag = YOM
+			}
+		}
+	}
+}

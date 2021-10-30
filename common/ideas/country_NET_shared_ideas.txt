@@ -1,0 +1,73 @@
+ideas = {
+    country = {
+		NET_shared_jiaqiangminjierentong_idea = {
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
+		NET_shared_minjieyoulingzhihui_idea = {
+			picture = generic_research_bonus
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+		NET_shared_liantongminjiegefang_idea = {
+			picture = generic_build_infrastructure
+			modifier = {
+				production_speed_infrastructure_factor = 0.2
+			}
+		}
+		NET_shared_linghundanmuhongzha_idea = {
+			picture = ast_volunteer_defence_corps
+			research_bonus = {
+				primary_weapons = 0.25
+			}
+			equipment_bonus = {
+				magic_core_a =  {
+					hard_attack = 0.25
+					instant = yes
+				}
+			}
+		}
+		NET_shared_youlingzishadanmu_idea = {
+			picture = tur_arctic_wolves
+			modifier = {
+				conscription_factor = -0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		NET_shared_youlinghuayumimi_idea = {
+			picture = generic_disjointed_gov
+			modifier = {
+				encryption_factor = 0.1
+			}
+			research_bonus = {
+				jiami = 0.1
+			}
+		}
+		NET_shared_jiemiyoulinghuayu_idea = {
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				decryption_factor = 0.1
+			}
+			research_bonus = {
+				jiemi = 0.1
+			}
+		}
+		NET_shared_fukajuedou2_idea = {
+			picture = SPR_masters_of_our_own_fate
+			modifier = {
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.1
+			}
+		}
+		NET_shared_fukajuedou_idea = {
+			picture = generic_manpower_bonus
+			modifier = {
+				training_time_factor = -0.15
+			}
+		}
+	}
+}

@@ -1,0 +1,474 @@
+add_namespace = nue
+news_event = {#回归原始妖怪
+	id = nue.1
+	title = nue.1.t
+	desc = nue.1.d
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = nue.1.1
+		trigger = {
+			tag = NUE
+		}
+	}
+	option = {
+		name = nue.1.2
+		trigger = {
+			not = { tag = NUE }
+		}
+	}
+}
+news_event = {#成立妖怪幕府
+	id = nue.2
+	title = nue.2.t
+	desc = nue.2.d
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = nue.2.1
+		trigger = {
+			tag = NUE
+		}
+	}
+	option = {
+		name = nue.2.2
+		trigger = {
+			not = { tag = NUE }
+		}
+	}
+}
+news_event = {#传播最初的恐惧
+	id = nue.3
+	title = nue.3.t
+	desc = nue.3.d
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = nue.3.1
+		trigger = {
+			tag = NUE
+		}
+	}
+	option = {
+		name = nue.3.2
+		trigger = {
+			not = { tag = NUE }
+		}
+	}
+}
+news_event = {#争夺在雾之湖的地位
+	id = nue.4
+	title = nue.4.t
+	desc = nue.4.d
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = nue.4.1
+		trigger = {
+			tag = NUE
+		}
+	}
+	option = {
+		name = nue.4.2
+		trigger = {
+			not = { 
+				tag = NUE 
+				tag = SCA 
+			}
+		}
+	}
+	option = {
+		name = nue.4.3
+		trigger = {
+			tag = SCA
+		}
+	}
+}
+news_event = {#突破贤者的屏障
+	id = nue.5
+	title = nue.5.t
+	desc = nue.5.d
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = nue.5.1
+		trigger = {
+			tag = NUE
+		}
+	}
+	option = {
+		name = nue.5.2
+		trigger = {
+			not = { tag = NUE }
+		}
+	}
+}
+news_event = {#妖怪的大汗
+	id = nue.6
+	title = nue.6.t
+	desc = nue.6.d
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = nue.6.1
+		trigger = {
+			tag = NUE
+		}
+	}
+	option = {
+		name = nue.6.2
+		trigger = {
+			not = { tag = NUE }
+		}
+	}
+}
+news_event = {#合作攻打神灵庙
+	id = nue.7
+	title = nue.7.t
+	desc = nue.7.d
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = nue.7.1
+		trigger = {
+			tag = NUE
+		}
+	}
+	option = {
+		name = nue.7.2
+		trigger = {
+			not = { tag = NUE }
+		}
+	}
+}
+news_event = {#平息花田妖精的恶作剧
+	id = nue.8
+	title = nue.8.t
+	desc = nue.8.d
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = nue.8.1
+		trigger = {
+			tag = NUE
+		}
+	}
+	option = {
+		name = nue.8.2
+		trigger = {
+			not = { tag = NUE }
+		}
+	}
+}
+news_event = {#纠正人类村落的政治
+	id = nue.9
+	title = nue.9.t
+	desc = nue.9.d
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = nue.9.1
+		trigger = {
+			tag = NUE
+		}
+	}
+	option = {
+		name = nue.9.2
+		trigger = {
+			not = { tag = NUE }
+		}
+	}
+}
+news_event = {#所有妖怪最初的理想
+	id = nue.10
+	title = nue.10.t
+	desc = nue.10.d
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = nue.10.1
+		trigger = {
+			tag = NUE
+		}
+	}
+	option = {
+		name = nue.10.2
+		trigger = {
+			not = { tag = NUE }
+		}
+	}
+}
+news_event = {#固守自己的秩序
+	id = nue.11
+	title = nue.11.t
+	desc = nue.11.d
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = nue.11.1
+		trigger = {
+			tag = NUE
+		}
+	}
+	option = {
+		name = nue.11.2
+		trigger = {
+			not = { tag = NUE }
+		}
+	}
+}
+country_event = {#要求当地妖怪屈服
+	id = nue.12
+	title = nue.12.t
+	desc = nue.12.d
+	is_triggered_only = yes
+	option = {
+		name = nue.12.1
+		FROM = {
+			ROOT = {
+				subject_level2 = yes
+			}
+		}
+		ai_chance = {
+			base = 60
+		}
+		trigger = {
+			is_subject = no
+		}
+	}
+	option = {
+		name = nue.12.2
+		FROM = {
+			declare_war_on = {
+				target = ROOT
+				type = puppet_wargoal_focus
+			}
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+country_event = {#尝试和付丧神友好
+	id = nue.13
+	title = nue.13.t
+	desc = nue.13.d
+	is_triggered_only = yes
+	option = {
+		name = nue.13.1
+		every_state = {
+			limit = {
+				is_owned_by = NUE
+				is_claimed_by = TKM
+			}
+			remove_claim_by = TKM
+		}
+		FROM = {
+			jiemeng = yes
+			set_country_flag = NUE_heTKMyouhao
+			can_use = yes
+			ROOT = {
+				can_use = yes
+			}
+		}
+		hidden_effect = {
+			FROM = { country_event = { days = 2 id = glo.2001 } }
+		}
+		ai_chance = {
+			base = 95
+			modifier = {
+				TKM = {
+					has_government = fandong
+					has_government = qinwai
+				}
+				factor = 0
+			}
+		}
+	}
+	option = {
+		name = nue.13.2
+		hidden_effect = {
+			FROM = { country_event = { days = 2 id = glo.2002 } }
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+}
+country_event = {#和付丧神互助妖怪民用发展
+	id = nue.14
+	title = nue.14.t
+	desc = nue.14.d
+	is_triggered_only = yes
+	option = {
+		name = nue.14.1
+		TKM = {
+			add_political_power = -30
+			add_ideas = NUE_TKMminyongfazhan_idea
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+			FROM = {
+				add_ideas = NUE_TKMminyongfazhan_idea
+				add_offsite_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+		}
+		hidden_effect = {
+			FROM = { country_event = { days = 2 id = glo.2001 } }
+		}
+		ai_chance = {
+			base = 95
+		}
+	}
+	option = {
+		name = nue.14.2
+		hidden_effect = {
+			FROM = { country_event = { days = 2 id = glo.2002 } }
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+}
+country_event = {#和付丧神互助妖怪军事发展
+	id = nue.15
+	title = nue.15.t
+	desc = nue.15.d
+	is_triggered_only = yes
+	option = {
+		name = nue.15.1
+		TKM = {
+			add_political_power = -30
+			add_ideas = NUE_TKMjunshifazhan_idea
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
+			FROM = {
+				add_ideas = NUE_TKMjunshifazhan_idea
+				add_offsite_building = {
+					type = arms_factory
+					level = 2
+				}
+			}
+		}
+		hidden_effect = {
+			FROM = { country_event = { days = 2 id = glo.2001 } }
+		}
+		ai_chance = {
+			base = 95
+		}
+	}
+	option = {
+		name = nue.15.2
+		hidden_effect = {
+			FROM = { country_event = { days = 2 id = glo.2002 } }
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+}
+country_event = {#合作攻打神灵庙
+	id = nue.16
+	title = nue.16.t
+	desc = nue.16.d
+	is_triggered_only = yes
+	option = {
+		name = nue.16.1
+		FROM = {
+			declare_war_on = {
+				target = SRB
+				type = puppet_wargoal_focus
+			}
+		}
+		declare_war_on = {
+			target = SRB
+			type = puppet_wargoal_focus
+		}
+		ai_chance = {
+			base = 90
+		}
+		trigger = {
+			is_subject = no
+		}
+	}
+	option = {
+		name = nue.16.2
+		if = {
+			limit = {
+				FROM = { not = { has_war_with = SRB } }
+			}
+			FROM = {
+				country_event = { id = nue.18 days = 2 }
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+news_event = {#纠正付丧神的理念
+	id = nue.17
+	title = nue.17.t
+	desc = nue.17.d
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = nue.17.1
+		trigger = {
+			tag = NUE
+		}
+	}
+	option = {
+		name = nue.17.2
+		trigger = {
+			not = { tag = NUE }
+		}
+	}
+}
+country_event = {#合作攻打神灵庙(mam不同意)
+	id = nue.18
+	title = nue.18.t
+	desc = nue.18.d
+	is_triggered_only = yes
+	option = {
+		name = nue.18.1
+		declare_war_on = {
+			target = SRB
+			type = puppet_wargoal_focus
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+	option = {
+		name = nue.18.2
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+news_event = {#邀请老朋友加入
+	id = nue.19
+	title = nue.19.t
+	desc = nue.19.d
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = nue.19.1
+		trigger = {
+			tag = NUE
+		}
+	}
+	option = {
+		name = nue.19.2
+		trigger = {
+			not = { tag = NUE }
+		}
+	}
+}

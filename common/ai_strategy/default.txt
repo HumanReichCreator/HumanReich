@@ -329,6 +329,12 @@ civ_factory_focus = {
 		NOT = { tag = MRS }
 		NOT = { tag = ALI }
 		NOT = { tag = TEG }
+		NOT = { tag = PRI }
+		NOT = { tag = WAK }
+		NOT = { tag = MRY }
+		NOT = { tag = HKR }
+		NOT = { tag = SEJ }
+		NOT = { tag = MSD }
 		has_war = no
 	}
 	abort = {
@@ -377,19 +383,25 @@ mil_factory_focus2 = {
 
 We_are_the_most_elegant_militarists = {
 	enable = {
-	  or = {
-		  tag = AKI
-		  tag = HU4
- 		  tag = HU3
-	      tag = MEL
-	      tag = SGS
-	      tag = GH1
-	      tag = GH2
-	      tag = GH3
-	      tag = TES
-	      tag = MRS
-	      tag = ALI
-	  }
+	  	or = {
+			  tag = AKI
+			  tag = HU4
+	 		  tag = HU3
+		      tag = MEL
+		      tag = SGS
+		      tag = GH1
+		      tag = GH2
+		      tag = GH3
+		      tag = TES
+		      tag = MRS
+		      tag = ALI
+		      tag = PRI
+		      tag = WAK
+		      tag = MRY
+		      tag = HKR
+		      tag = SEJ
+		      tag = MSD
+	  	}
 	}
 
 	abort = { 
@@ -400,5 +412,111 @@ We_are_the_most_elegant_militarists = {
 		type = building_target
 		id = arms_factory
 		value = 75
+	}
+}
+
+YKR_sage_no_join1 = {
+	enable = {
+	  	YKR = {
+			has_idea = gensoukyo_creator_idea
+		}
+	}
+	abort = { 
+		YKR = {
+			not = { has_idea = gensoukyo_creator_idea }
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = YKR
+		value = -1000
+	}
+}
+YKR_sage_no_join2 = {
+	enable = {
+	  	YKR = {
+			has_idea = gensoukyo_creator_idea
+		}
+	}
+	abort = { 
+		YKR = {
+			not = { has_idea = gensoukyo_creator_idea }
+		}
+	}
+	reversed = yes
+	ai_strategy = {
+		type = alliance
+		id = YKR
+		value = -1000
+	}
+}
+KAS_sage_no_join1 = {
+	enable = {
+	  	KAS = {
+			has_idea = gensoukyo_creator_idea
+		}
+	}
+	abort = { 
+		KAS = {
+			not = { has_idea = gensoukyo_creator_idea }
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = KAS
+		value = -1000
+	}
+}
+KAS_sage_no_join2 = {
+	enable = {
+	  	KAS = {
+			has_idea = gensoukyo_creator_idea
+		}
+	}
+	abort = { 
+		KAS = {
+			not = { has_idea = gensoukyo_creator_idea }
+		}
+	}
+	reversed = yes
+	ai_strategy = {
+		type = alliance
+		id = KAS
+		value = -1000
+	}
+}
+OKI_sage_no_join1 = {
+	enable = {
+	  	OKI = {
+			has_idea = gensoukyo_creator_idea
+		}
+	}
+	abort = { 
+		OKI = {
+			not = { has_idea = gensoukyo_creator_idea }
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = OKI
+		value = -1000
+	}
+}
+OKI_sage_no_join2 = {
+	enable = {
+	  	OKI = {
+			has_idea = gensoukyo_creator_idea
+		}
+	}
+	abort = { 
+		OKI = {
+			not = { has_idea = gensoukyo_creator_idea }
+		}
+	}
+	reversed = yes
+	ai_strategy = {
+		type = alliance
+		id = OKI
+		value = -1000
 	}
 }

@@ -9,18 +9,24 @@ music = {
 	}
 }
 music = {
-	song = superevent_sgs_star
-	chance = {
-		modifier = {
-			factor = 0
-		}		
-	}
-}
-music = {
 	song = "song_t1"
 	chance = {
 		modifier = {
-			factor = 1
+      country_exists = SCA
+      SCA = { is_subject = no }
+      SCA = { has_war = yes }
+      or = {
+        original_tag = SCA
+        any_country = {
+          NOT = { original_tag = SCA }
+          or = {
+          has_war_with = SCA
+          is_subject_of = SCA
+          is_in_faction_with = SCA
+          }
+        }
+      }
+			factor = 3
 		}		
 	}
 }
@@ -28,7 +34,8 @@ music = {
 	song = "song_t2"
 	chance = {
 		modifier = {
-			factor = 1
+      has_war = no
+			factor = 2
 		}		
 	}
 }
@@ -36,7 +43,9 @@ music = {
 	song = "song_t3"
 	chance = {
 		modifier = {
-			factor = 1
+      has_war = no
+			threat > 0.34
+			factor = 2
 		}		
 	}
 }
@@ -44,23 +53,38 @@ music = {
 	song = "song_t4"
 	chance = {
 		modifier = {
-			factor = 1
+      or = {
+        has_war = no
+			  casualties > 1999
+        surrender_progress > 0.50
+        is_subject = yes
+      }
+			factor = 2
 		}		
 	}
 }
 music = {
 	song = "song_t5"
 	chance = {
-		modifier = {
-			factor = 1
-		}		
+    modifier = {
+      or = {
+        has_war = yes
+        AND = {
+          threat > 0.49
+          has_war = no
+        }
+      }
+      factor = 2
+    }
 	}
 }
 music = {
 	song = "song_t6"
 	chance = {
 		modifier = {
-			factor = 1
+      threat < 0.20
+      has_war = no
+			factor = 2
 		}		
 	}
 }
@@ -68,7 +92,17 @@ music = {
 	song = "song_t7"
 	chance = {
 		modifier = {
-			factor = 1
+      or = {
+        AND = {
+          original_tag = AKI
+          has_government = qinwai
+        }
+        AND = {
+          threat < 0.30
+          has_war = no
+        }
+      }
+			factor = 2
 		}		
 	}
 }
@@ -76,7 +110,8 @@ music = {
 	song = "song_t8"
 	chance = {
 		modifier = {
-			factor = 1
+			threat > 0.20
+			factor = 2
 		}		
 	}
 }
@@ -92,7 +127,8 @@ music = {
 	song = "song_t10"
 	chance = {
 		modifier = {
-			factor = 1
+      has_war = no
+			factor = 2
 		}		
 	}
 }
@@ -107,9 +143,16 @@ music = {
 music = {
 	song = "song_t12"
 	chance = {
-		modifier = {
-			factor = 1
-		}		
+    modifier = {
+      or = {
+        has_war = yes
+        AND = {
+          threat > 0.34
+          has_war = no
+        }
+      }
+      factor = 2
+    }
 	}
 }
 music = {
@@ -123,9 +166,16 @@ music = {
 music = {
 	song = "song_t14"
 	chance = {
-		modifier = {
-			factor = 1
-		}		
+    modifier = {
+      or = {
+        has_war = yes
+        AND = {
+          threat > 0.49
+          has_war = no
+        }
+      }
+      factor = 2
+    }
 	}
 }
 music = {
@@ -148,7 +198,11 @@ music = {
 	song = "song_t17"
 	chance = {
 		modifier = {
-			factor = 1
+      or = {
+        date < 147.6.31
+        date > 150.12.31
+      }
+			factor = 2
 		}		
 	}
 }
@@ -156,7 +210,8 @@ music = {
 	song = "song_t18"
 	chance = {
 		modifier = {
-			factor = 1
+      has_war = no
+			factor = 2
 		}		
 	}
 }
@@ -180,7 +235,8 @@ music = {
 	song = "song_t21"
 	chance = {
 		modifier = {
-			factor = 1
+      has_war = yes
+			factor = 2
 		}		
 	}
 }
@@ -196,7 +252,14 @@ music = {
 	song = "song_t23"
 	chance = {
 		modifier = {
-			factor = 1
+      or = {
+        AND = {
+          original_tag = TKM
+          has_government = guli
+        }
+        has_war = no
+      }
+			factor = 2
 		}		
 	}
 }
@@ -204,7 +267,8 @@ music = {
 	song = "song_t24"
 	chance = {
 		modifier = {
-			factor = 1
+      has_war = no
+			factor = 2
 		}		
 	}
 }
@@ -244,7 +308,819 @@ music = {
 	song = "song_t29"
 	chance = {
 		modifier = {
-			factor = 1
+      country_exists = MRY
+      MRY = { is_subject = no }
+      MRY = { has_war = yes }
+      or = {
+        original_tag = MRY
+        any_country = {
+          NOT = { original_tag = MRY }
+          or = {
+            has_war_with = MRY
+            is_subject_of = MRY
+            is_in_faction_with = MRY
+          }
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t30"
+	chance = {
+		modifier = {
+      country_exists = TKM
+      TKM = { is_subject = no }
+      TKM = { has_war = no }
+      or = {
+        original_tag = TKM
+        any_country = {
+          NOT = { original_tag = TKM }
+          or = {
+          is_subject_of = TKM
+          is_in_faction_with = TKM
+          }
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t31"
+	chance = {
+		modifier = {
+      original_tag = HKR
+      num_of_factories < 35
+			has_war = no
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t32"
+	chance = {
+		modifier = {
+      country_exists = HKR
+      HKR = { is_subject = no }
+      HKR = { has_war = yes }
+      or = {
+        original_tag = HKR
+        any_country = {
+          NOT = { original_tag = HKR }
+          or = {
+          has_war_with = HKR
+          is_subject_of = HKR
+          is_in_faction_with = HKR
+          }
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t33"
+	chance = {
+		modifier = {
+      or = {
+        AND = {
+          original_tag = ALI
+          or = {
+            has_government = qinwai
+            has_government = neworder
+          }
+        }
+        has_war = yes
+      }
+			factor = 2
+		}		
+	}
+}
+music = {
+	song = "song_t34"
+	chance = {
+		modifier = {
+      or = {
+        AND = {
+          original_tag = EET
+          has_government = neworder
+        }
+        has_war = yes
+      }
+			factor = 2
+		}		
+	}
+}
+music = {
+	song = "song_t35"
+	chance = {
+		modifier = {
+      has_war = yes
+      or = {
+        original_tag = KAG
+        has_war_with = KAG
+        is_in_faction_with = KAG
+        original_tag = INB
+        has_war_with = INB
+        is_in_faction_with = INB
+        original_tag = BYA
+        has_war_with = BYA
+        is_in_faction_with = BYA
+        original_tag = MOK
+        has_war_with = MOK
+        is_in_faction_with = MOK
+        original_tag = HU8
+        has_war_with = HU8
+        is_in_faction_with = HU8
+        original_tag = RGO
+        has_war_with = RGO
+        is_in_faction_with = RGO
+        original_tag = EET
+        has_war_with = EET
+        is_in_faction_with = EET
+        original_tag = UDO
+        has_war_with = UDO
+        is_in_faction_with = UDO
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t36"
+	chance = {
+		modifier = {
+      country_exists = TKM
+      TKM = { is_subject = no }
+      TKM = { has_war = yes }
+      or = {
+        original_tag = TKM
+        any_country = {
+          NOT = { original_tag = TKM }
+          or = {
+            has_war_with = TKM
+            is_subject_of = TKM
+            is_in_faction_with = TKM
+          }
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t37"
+	chance = {
+		modifier = {
+      or = {
+        original_tag = SBK
+        has_war = yes
+      }
+			factor = 2
+		}		
+	}
+}
+music = {
+	song = "song_t38"
+	chance = {
+		modifier = {
+      country_exists = SEJ
+      SEJ = { has_government = fandong }
+      SEJ = { is_subject = no }
+      SEJ = { has_war = yes }
+      or = {
+        original_tag = SEJ
+        any_country = {
+          NOT = { original_tag = SEJ }
+          or = {
+            has_war_with = SEJ
+            is_subject_of = SEJ
+            is_in_faction_with = SEJ
+          }
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t39"
+	chance = {
+		modifier = {
+      country_exists = SEJ
+		  or = {
+        SEJ = { has_government = fandong }
+        SEJ = { has_government = qinwai }
+      }
+      SEJ = { is_subject = no }
+      SEJ = { has_war = yes }
+      or = {
+        original_tag = SEJ
+        any_country = {
+          NOT = { original_tag = SEJ }
+          or = {
+            has_war_with = SEJ
+            is_subject_of = SEJ
+            is_in_faction_with = SEJ
+          }
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t40"
+	chance = {
+		modifier = {
+      or = {
+        AND = {
+          original_tag = AKI
+          has_government = neworder
+        }
+        AND = {
+          original_tag = MRY
+          has_government = neworder
+        }
+        AND = {
+          original_tag = TEG
+          has_government = fandong
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t41"
+	chance = {
+		modifier = {
+      country_exists = MRS
+		  or = {
+        MRS = { has_government = guli }
+        MRS = { has_government = qinwai }
+        MRS = { has_government = neworder }
+      }
+      MRS = { is_subject = no }
+      MRS = { has_war = yes }
+      or = {
+        original_tag = MRS
+        any_country = {
+          NOT = { original_tag = MRS }
+          or = {
+            has_war_with = MRS
+            is_subject_of = MRS
+            is_in_faction_with = MRS
+          }
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t42"
+	chance = {
+		modifier = {
+      country_exists = TKM
+      TKM = { has_government = guli }
+      TKM = { is_subject = no }
+      or = {
+        original_tag = TKM
+        any_country = {
+          NOT = { original_tag = TKM }
+          or = {
+            is_subject_of = TKM
+            is_in_faction_with = TKM
+          }
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t43"
+	chance = {
+		modifier = {
+      or = {
+        AND = {
+          country_exists = CIR
+          CIR = { is_subject = no }
+          CIR = { has_war = yes }
+        }
+        AND = {
+          country_exists = SGS
+          SGS = { is_subject = no }
+          SGS = { has_war = yes }
+        }
+      }
+      or = {
+        original_tag = CIR
+        original_tag = SGS
+        any_country = {
+          NOT = { original_tag = CIR }
+          NOT = { original_tag = SGS }
+          or = {
+            has_war_with = CIR
+            is_subject_of = CIR
+            is_in_faction_with = CIR
+            has_war_with = SGS
+            is_subject_of = SGS
+            is_in_faction_with = SGS
+          }
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t44"
+	chance = {
+		modifier = {
+      country_exists = SCA
+      SCA = { is_subject = no }
+      SCA = { has_war = yes }
+      or = {
+        original_tag = SCA
+        any_country = {
+          NOT = { original_tag = SCA }
+          or = {
+          has_war_with = SCA
+          is_subject_of = SCA
+          is_in_faction_with = SCA
+          }
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t45"
+	chance = {
+		modifier = {
+      or = {
+        AND = {
+          original_tag = AKI
+          or = {
+            has_government = guli
+            has_government = qinwai
+          }
+        }
+        AND = {
+          original_tag = MRY
+          or = {
+            has_government = guli
+            has_government = qinwai
+          }
+        }
+        AND = {
+          original_tag = TEG
+          or = {
+            has_government = guli
+            has_government = qinwai
+          }
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t46"
+	chance = {
+		modifier = {
+      or = {
+        original_tag = SCA
+        has_government = fandong
+      }
+        has_war = no
+			factor = 2
+		}		
+	}
+}
+music = {
+	song = "song_t47"
+	chance = {
+		modifier = {
+      country_exists = TKM
+      TKM = { has_country_flag = TKM_gugelvse }
+      TKM = { is_subject = no }
+      TKM = { has_war = yes }
+      or = {
+        original_tag = TKM
+        any_country = {
+          NOT = { original_tag = TKM }
+          or = {
+            has_war_with = TKM
+            is_subject_of = TKM
+            is_in_faction_with = TKM
+          }
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t48"
+	chance = {
+		modifier = {
+      country_exists = AKI
+      AKI = { has_government = guli }
+      AKI = { is_subject = no }
+      or = {
+        original_tag = AKI
+        any_country = {
+          NOT = { original_tag = AKI }
+          or = {
+            is_subject_of = AKI
+            is_in_faction_with = AKI
+          }
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t49"
+	chance = {
+		modifier = {
+      country_exists = ALI
+      ALI = { has_government = oldorder }
+      ALI = { is_subject = no }
+      ALI = { has_war = yes }
+      or = {
+        original_tag = ALI
+        any_country = {
+          NOT = { original_tag = ALI }
+          or = {
+            has_war_with = ALI
+            is_subject_of = ALI
+            is_in_faction_with = ALI
+          }
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t50"
+	chance = {
+		modifier = {
+      country_exists = AKI
+		  or = {
+        AKI = { has_government = guli }
+        AKI = { has_government = neworder }
+      }
+      AKI = { is_subject = no }
+      AKI = { has_war = yes }
+      or = {
+        original_tag = AKI
+        any_country = {
+          NOT = { original_tag = AKI }
+          or = {
+            has_war_with = AKI
+            is_subject_of = AKI
+            is_in_faction_with = AKI
+          }
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t51"
+	chance = {
+		modifier = {
+      country_exists = HKR
+      HKR = { is_subject = no }
+      HKR = { has_war = yes }
+      or = {
+        original_tag = HKR
+        any_country = {
+          NOT = { original_tag = HKR }
+          or = {
+          has_war_with = HKR
+          is_subject_of = HKR
+          is_in_faction_with = HKR
+          }
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t52"
+	chance = {
+		modifier = {
+      has_war = no
+      or = {
+        original_tag = KAG
+        is_in_faction_with = KAG
+        original_tag = INB
+        is_in_faction_with = INB
+        original_tag = BYA
+        is_in_faction_with = BYA
+        original_tag = MOK
+        is_in_faction_with = MOK
+        original_tag = HU8
+        is_in_faction_with = HU8
+        original_tag = RGO
+        is_in_faction_with = RGO
+        original_tag = EET
+        is_in_faction_with = EET
+        original_tag = UDO
+        is_in_faction_with = UDO
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t53"
+	chance = {
+		modifier = {
+      original_tag = SCA
+      has_government = guli
+      has_war = no
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t54"
+	chance = {
+		modifier = {
+      has_war = no
+      or = {
+        original_tag = RMI
+        AND = {
+          original_tag = SEJ
+          RMI = { is_subject_of = SEJ }
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t55"
+	chance = {
+		modifier = {
+      has_war = no
+      or = {
+        original_tag = NIB
+        AND = {
+          original_tag = SEJ
+          NIB = { is_subject_of = SEJ }
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t56"
+	chance = {
+		modifier = {
+      country_exists = ALI
+      or = {
+        ALI = { has_government = qinwai }
+        ALI = { has_government = neworder }
+        ALI = { has_government = fandong }
+      }
+      ALI = { is_subject = no }
+      ALI = { has_war = yes }
+      or = {
+        original_tag = ALI
+        any_country = {
+          NOT = { original_tag = ALI }
+          or = {
+            has_war_with = ALI
+            is_subject_of = ALI
+            is_in_faction_with = ALI
+          }
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t57"
+	chance = {
+		modifier = {
+      country_exists = CIR
+      CIR = { is_subject = no }
+      CIR = { has_war = no }
+      or = {
+        original_tag = CIR
+        any_country = {
+          NOT = { original_tag = CIR }
+          or = {
+            is_subject_of = CIR
+            is_in_faction_with = CIR
+          }
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t58"
+	chance = {
+		modifier = {
+      country_exists = SCA
+      SCA = { has_government = qinwai }
+      SCA = { is_subject = no }
+      SCA = { has_war = yes }
+      or = {
+        original_tag = SCA
+        any_country = {
+          NOT = { original_tag = SCA }
+          or = {
+          has_war_with = SCA
+          is_subject_of = SCA
+          is_in_faction_with = SCA
+          }
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t59"
+	chance = {
+		modifier = {
+      country_exists = TES
+      TES = { has_government = qinwai }
+      TES = { is_subject = no }
+      TES = { has_war = yes }
+      or = {
+        original_tag = TES
+        any_country = {
+          NOT = { original_tag = TES }
+          or = {
+          has_war_with = TES
+          is_subject_of = TES
+          is_in_faction_with = TES
+          }
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t60"
+	chance = {
+		modifier = {
+      original_tag = TES
+      country_exists = TES
+      TES = { is_subject = no }
+      TES = { has_completed_focus = TES_zhuanyishoudou }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t61"
+	chance = {
+		modifier = {
+      country_exists = TES
+      TES = { is_subject = no }
+      TES = { has_war = yes }
+      or = {
+        original_tag = TES
+        any_country = {
+          NOT = { original_tag = TES }
+          or = {
+          has_war_with = TES
+          is_subject_of = TES
+          is_in_faction_with = TES
+          }
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t62"
+	chance = {
+		modifier = {
+      country_exists = TES
+      TES = { has_government = neworder }
+      TES = { is_subject = no }
+      TES = { has_war = yes }
+      or = {
+        original_tag = TES
+        any_country = {
+          NOT = { original_tag = TES }
+          or = {
+          has_war_with = TES
+          is_subject_of = TES
+          is_in_faction_with = TES
+          }
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t63"
+	chance = {
+		modifier = {
+      country_exists = MRS
+		  or = {
+        MRS = { has_government = guli }
+        MRS = { has_government = qinwai }
+        MRS = { has_government = neworder }
+      }
+      MRS = { is_subject = no }
+      MRS = { has_war = yes }
+      or = {
+        original_tag = MRS
+        any_country = {
+          NOT = { original_tag = MRS }
+          or = {
+            has_war_with = MRS
+            is_subject_of = MRS
+            is_in_faction_with = MRS
+          }
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t64"
+	chance = {
+		modifier = {
+      or = {
+        AND = {
+          country_exists = CIR
+          CIR = { is_subject = no }
+          CIR = { has_war = yes }
+        }
+        AND = {
+          country_exists = SGS
+          SGS = { is_subject = no }
+          SGS = { has_war = yes }
+        }
+      }
+      or = {
+        original_tag = CIR
+        original_tag = SGS
+        any_country = {
+          NOT = { original_tag = CIR }
+          NOT = { original_tag = SGS }
+          or = {
+            has_war_with = CIR
+            is_subject_of = CIR
+            is_in_faction_with = CIR
+            has_war_with = SGS
+            is_subject_of = SGS
+            is_in_faction_with = SGS
+          }
+        }
+      }
+			factor = 3
+		}		
+	}
+}
+music = {
+	song = "song_t65"
+	chance = {
+		modifier = {
+      country_exists = MSD
+      MSD = { is_subject = no }
+      MSD = { has_war = yes }
+      or = {
+        original_tag = MSD
+        any_country = {
+          NOT = { original_tag = MSD }
+          or = {
+            has_war_with = MSD
+            is_subject_of = MSD
+            is_in_faction_with = MSD
+          }
+        }
+      }
+			factor = 3
 		}		
 	}
 }

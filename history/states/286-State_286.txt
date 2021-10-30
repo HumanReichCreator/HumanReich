@@ -4,18 +4,16 @@ state={
 	name="STATE_286"
 
 	resources={
-		powder=8.000
-		metal=5.000
+		powder = 10.0
+		metal = 5.0
 		gas=0.000
 		crystal=0.000
 	}
 
 	history={
-			owner = MOK
 		146.1.1 = {
-			owner = MOK
+			owner = BYA
 			add_core_of = BYA
-			add_core_of = MOK
 			add_claim_by = INB
 			buildings = {
 				infrastructure = 3

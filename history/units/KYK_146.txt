@@ -1,133 +1,354 @@
-﻿division_template = {
-	name = "扫荡编制"
-	regiments = {
-		sc_light_infantry = { x = 0 y = 0 }
-		sc_light_infantry = { x = 0 y = 1 }
-		sc_light_infantry = { x = 0 y = 2 }
-		sc_light_infantry = { x = 0 y = 3 }
-	}
-	support = {
-	}
-}
 division_template = {
-	name = "参拜护卫编制"
+	name = "东村落驻守编制"
 	regiments = {
-		sc_infantry = { x = 0 y = 0 }
-		melee_infantry = { x = 0 y = 1 }
-		sc_infantry = { x = 0 y = 2 }
-		melee_infantry = { x = 0 y = 3 }
+		melee_infantry = { x = 0 y = 0 }
+		ma_infantry = { x = 0 y = 1 }
 	}
 }
 
 units = {
+	#KYK
 	division = {
-		name = "参拜护卫编制"
-		location = 811
-		division_template = "参拜护卫编制"
-		start_experience_factor = 0.1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "参拜护卫编制"
-		location = 811
-		division_template = "参拜护卫编制"
-		start_experience_factor = 0.1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "参拜护卫编制"
-		location = 811
-		division_template = "参拜护卫编制"
-		start_experience_factor = 0.1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "参拜护卫编制"
-		location = 811
-		division_template = "参拜护卫编制"
-		start_experience_factor = 0.1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "参拜护卫编制"
-		location = 811
-		division_template = "参拜护卫编制"
-		start_experience_factor = 0.1
-		start_equipment_factor = 1
-	}
-
-	division = {
-		name = "参拜护卫编制"
-		location = 993
-		division_template = "参拜护卫编制"
-		start_experience_factor = 0.1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "参拜护卫编制"
-		location = 993
-		division_template = "参拜护卫编制"
-		start_experience_factor = 0.1
-		start_equipment_factor = 1
-	}
-
-	division = {
-		name = "参拜护卫编制"
-		location = 1905
-		division_template = "参拜护卫编制"
-		start_experience_factor = 0.1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "参拜护卫编制"
-		location = 1905
-		division_template = "参拜护卫编制"
-		start_experience_factor = 0.1
-		start_equipment_factor = 1
-	}
-
-	division = {
-		name = "参拜护卫编制"
-		location = 3615
-		division_template = "参拜护卫编制"
-		start_experience_factor = 0.1
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "参拜护卫编制"
-		location = 3615
-		division_template = "参拜护卫编制"
-		start_experience_factor = 0.1
-		start_equipment_factor = 1
-	}
-
-	division = {
-		name = "参拜护卫编制"
+		name = "东村落驻守编制"
 		location = 1315
-		division_template = "参拜护卫编制"
-		start_experience_factor = 0.1
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "参拜护卫编制"
+		name = "东村落驻守编制"
 		location = 1315
-		division_template = "参拜护卫编制"
-		start_experience_factor = 0.1
-		start_equipment_factor = 1
-	}
-
-	division = {
-		name = "参拜护卫编制"
-		location = 3514
-		division_template = "参拜护卫编制"
-		start_experience_factor = 0.1
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "参拜护卫编制"
+		name = "东村落驻守编制"
+		location = 1315
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 1315
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 1315
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 1315
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 1315
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 3529
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 3529
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 3529
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 3529
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 3529
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 3529
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 3529
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
 		location = 3514
-		division_template = "参拜护卫编制"
-		start_experience_factor = 0.1
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 3514
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 3514
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 3514
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 3514
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 3514
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 3514
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 1905
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 1905
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 1905
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 1905
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 1905
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 1905
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 1905
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 3615
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 3615
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 3615
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 3615
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 3615
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 3615
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 3615
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 811
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 811
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 811
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 811
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 811
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 811
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 811
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 993
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 993
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 993
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 993
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 993
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 993
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "东村落驻守编制"
+		location = 993
+		division_template = "东村落驻守编制"
+		start_experience_factor = 0.25
 		start_equipment_factor = 1
 	}
 }

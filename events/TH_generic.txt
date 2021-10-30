@@ -1058,19 +1058,16 @@ country_event = {
 		name = gen.16.1
 	}
 }
-# country_event = {
-# 	id = gen.15
-# 	title = gen.15.t
-# 	desc = gen.15.d
-# 
-# 	fire_only_once = no
-# 	is_triggered_only = yes
+news_event = {
+	id = gen.17
+	title = gen.17.t
+	desc = gen.17.d
 
-# 	mean_time_to_happen = {
-# 		days = 2
-# 	}
+	major = yes
+	fire_only_once = no
+	is_triggered_only = yes
 
-# 	option = {
-# 		name = gen.15.1
-# 	}
-# }
+	option = {
+		name = gen.17.1
+	}
+}

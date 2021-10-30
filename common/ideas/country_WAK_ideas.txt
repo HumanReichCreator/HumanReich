@@ -1,0 +1,695 @@
+ideas = {
+    country = {
+      WAK_Prop_riot_1_idea = {
+
+        picture = generic_army_problems
+
+        allowed = {
+          always = no
+        }
+
+        available = {
+          country_exists = TKM
+          TKM = { is_subject = no}
+          NOT = { TKM = { is_in_faction_with = WAK } }
+        }
+
+        allowed_civil_war = {
+        }
+        
+        removal_cost = -1
+
+        modifier = {
+          stability_factor = -0.10
+        }
+
+        targeted_modifier = {
+          tag = TKM
+          attack_bonus_against = -0.10
+          defense_bonus_against = -0.10
+        }
+
+      }
+      WAK_Prop_riot_2_idea = {
+
+        picture = generic_army_problems
+
+        allowed = {
+          always = no
+        }
+
+        available = {
+          NOT = { is_in_faction_with = TKM }
+          NOT = { is_subject_of = TKM  }
+        }
+
+        allowed_civil_war = {
+        }
+        
+        removal_cost = -1
+
+        modifier = {
+          stability_factor = -0.05
+        }
+
+        targeted_modifier = {
+          tag = TKM
+          attack_bonus_against = -0.05
+          defense_bonus_against = -0.05
+        }
+
+      }
+      WAK_jushihunluan_idea = {
+			  picture = sour_loser
+        allowed = {
+            always = no
+        }
+        available = {
+            WAK = {
+              is_subject = no
+              is_in_faction = no
+          }
+        }
+
+        allowed_civil_war = {
+        }
+        
+        removal_cost = -1
+
+        modifier = {
+          political_power_factor = -0.3
+          stability_factor = -0.3
+          war_support_factor = 0.1
+          army_core_attack_factor = 0.20
+          army_core_defence_factor = 0.20
+        }
+
+        rule = {
+          can_join_factions = no
+        }
+      }
+	    WAK_duliyundong_idea = {
+	    	picture = generic_disjointed_gov
+	    	allowed = {
+          always = no
+        }
+
+        available = {
+				  is_subject = yes
+        }
+
+        allowed_civil_war = {
+        }
+        
+        removal_cost = -1
+    
+        modifier = {
+          political_power_factor = -0.15
+				  stability_weekly = -0.001
+          war_support_factor = -0.2
+        }
+	    }
+
+	    WAK_duliyundong1_idea = {
+	    	picture = generic_disjointed_gov
+	    	allowed = {
+          always = no
+        }
+
+        available = {
+				  is_subject = yes
+        }
+
+        allowed_civil_war = {
+        }
+        
+        removal_cost = -1
+    
+        modifier = {
+          political_power_factor = 0.15
+          war_support_factor = -0.2
+        }
+	    }
+
+	    WAK_duliyundong2_idea = {
+	    	picture = generic_disjointed_gov
+	    	allowed = {
+          always = no
+        }
+
+        available = {
+				  is_subject = yes
+        }
+
+        allowed_civil_war = {
+        }
+        
+        removal_cost = -1
+    
+        modifier = {
+          political_power_factor = -0.05
+          war_support_factor = -0.1
+        }
+	    }
+
+	    WAK_hongmoguandechuantongjunshisixiang_idea = {
+		    picture = can_send_in_the_zombies
+        modifier = {
+          attrition = 0.05
+          army_morale_factor = -0.1
+          conscription_factor = 0.1
+          ai_focus_aggressive_factor = 0.1
+        }
+        research_bonus = {
+          military = -0.05
+        }
+		}
+		WAK_gaigechuantongjunshisixiang_idea = {
+		    picture = generic_reserve_divisions
+        research_bonus = {
+          military = 0.05
+        }
+		}
+		WAK_hongmoguandechuantongjunshisixiang2_idea = {
+		    picture = can_send_in_the_zombies
+        modifier = {
+          army_attack_factor = 0.05
+          attrition = 0.05
+          army_morale_factor = -0.1
+          conscription_factor = 0.20
+          ai_focus_aggressive_factor = 0.2
+          mobilization_speed = 0.1
+        }
+        research_bonus = {
+          military = -0.05
+        }
+		}
+		WAK_jiurenlidewanbeigongye_idea = {
+      picture = man_five_year_plan_industry
+      modifier = {
+        production_speed_buildings_factor = 0.05
+        industrial_capacity_factory = 0.05
+      }
+		}
+		WAK_jiurenlidewanbeigongye2_idea = {
+      picture = man_five_year_plan_industry
+      modifier = {
+        production_speed_buildings_factor = 0.075
+        industrial_capacity_factory = 0.075
+      }
+		}
+		WAK_jiurenlidewanbeigongye3_idea = {
+      picture = man_five_year_plan_industry
+      modifier = {
+        production_speed_buildings_factor = 0.10
+        industrial_capacity_factory = 0.10
+        consumer_goods_factor = -0.03
+      }
+		}
+		WAK_jiurenlidewanbeigongye4_idea = {
+		    picture = man_five_year_plan_industry
+        modifier = {
+          production_speed_buildings_factor = 0.15
+          industrial_capacity_factory = 0.15
+          consumer_goods_factor = -0.03
+        }
+		}
+		WAK_jiurenlidewanbeigongye5_idea = {
+			picture = man_five_year_plan_industry
+			modifier = {
+			  production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+				production_speed_arms_factory_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		WAK_jiurenlidewanbeigongye6_idea = {
+			picture = man_five_year_plan_industry
+			modifier = {
+			  production_speed_buildings_factor = 0.075
+				industrial_capacity_factory = 0.075
+				production_speed_arms_factory_factor = 0.075
+				production_factory_efficiency_gain_factor = 0.075
+				production_factory_max_efficiency_factor = 0.075
+			}
+		}
+		WAK_shenjiuyaoguaikexue_idea = {
+		    picture = jap_duplicate_research
+			research_bonus = { 
+			    science = 0.03 
+				magic = 0.03
+			}
+		}
+		WAK_yaoqinghetongkexuejia_idea = {
+		    picture = generic_research_bonus
+			modifier = {
+			    research_speed_factor = 0.03
+			}
+		}
+		WAK_yaoshoukejixueyuan_idea = {
+		    picture = generic_research_bonus
+			research_bonus = {
+			    science = 0.05
+			}
+		}
+		WAK_zhanluejuecejigou_idea = {
+		    picture = generic_army_war_college
+			modifier = {
+			    army_org_factor = 0.10
+				planning_speed = 0.10
+			}
+		}
+		###三个必点焦点###
+		WAK_anfurenleichengfazhanzhengdelaobing_idea = {
+		    picture = eng_service_overseas
+			modifier = {
+			    consumer_goods_factor = 0.02
+			}
+		}
+		WAK_dedaobuzhu_idea = {
+		    picture = ger_mefo_bills_payment
+			modifier = {
+			    consumer_goods_factor = -0.05
+			}
+		}
+		WAK_dedaoyouxianbuzhu_idea = {
+		    picture = ger_mefo_bills
+			modifier = {
+			    consumer_goods_factor = -0.03
+			}
+		}
+		WAK_huifurenkouyugongye_idea = {
+		    picture = great_depression
+			modifier = {
+			    consumer_goods_factor = 0.05
+			}
+		}
+		WAK_buzhunanwuzhihugongyequ_idea = {
+		    picture = ger_mefo_bills_payment
+			modifier = {
+			    consumer_goods_factor = 0.05
+			}
+		}
+		WAK_youxianbuzhunanwuzhihugongyequ_idea = {
+		    picture = ger_mefo_bills
+			modifier = {
+			    consumer_goods_factor = 0.03
+			}
+		}
+		###左线精神###
+		WAK_tuolihongmoguan_idea = {
+		    picture = can_patriation
+			allowed = {
+			    always = no
+			}
+			modifier = {
+			    drift_defence_factor = -0.45
+			}
+		}
+		WAK_yuhetongdexieyi_idea = {
+		    picture = generic_artillery_regiments
+			allowed = {
+			    always = no
+			}
+			available = {
+			    GRS = {
+					exists = yes
+					not = {
+						has_war_with = ROOT
+					}
+				}
+			}
+			equipment_bonus = {
+				mortar_a = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				gun_a = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+		}
+		WAK_yaojingdeyingxiang_idea = {
+			picture = generic_communism_drift_bonus
+			modifier = {
+				fandong_drift = 0.05
+			}
+		}
+		WAK_zhicai_idea = {
+			picture = generic_closed_economy
+			allowed = {
+				always = no
+			}
+			available = {
+				is_in_faction_with = SCA
+				has_government = fandong
+				is_subject_of = SCA
+			}
+			modifier = {
+				trade_opinion_factor = -0.5
+				research_speed_factor = -0.1
+				production_speed_buildings_factor = -0.1
+				consumer_goods_factor = 0.03
+			}
+		}
+		WAK_yuyaojingjiaohuanqingbao_idea = {
+			picture = SOV_scientist_defect
+			modifier = {
+				encryption_factor = 0.05
+				decryption_factor = 0.05
+			}
+		}
+		WAK_zhenduixingxunlian_idea = {
+			picture = ger_the_great_red_menace
+			modifier = {
+				army_org_factor = 0.1
+			}
+			targeted_modifier = { 
+				tag = SCA
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+		}
+		WAK_cujinjiudaojuyaohua_idea = {
+			picture = generic_production_bonus
+			modifier = {
+				production_speed_arms_factory_factor = -0.1
+				weekly_manpower = 25
+			}
+		}
+		WAK_fusangshenzhiyuanjun_idea = {
+			picture = chi_army_corruption3
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+					has_war_with = TKM
+				}
+			}
+
+			equipment_bonus = {
+				gun_a = {
+					soft_attack = 0.03
+					hard_attack = 0.03
+					instant = yes
+				}
+				magic_core_a = {
+					soft_attack = 0.03
+					hard_attack = 0.03
+					instant = yes
+				}
+			}
+
+			modifier = {
+				conscription = 0.022
+			}
+		}
+		WAK_bianjingmoca_idea = {
+			picture = generic_purge
+			allowed = {
+			    always = no
+			}
+			targeted_modifier = { 
+				tag = PRI
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+		WAK_yingxiangsaoling_idea = {
+			picture = generic_communism_drift_bonus
+			allowed = {
+				always = no
+			}
+			modifier = {
+				drift_defence_factor = -0.15
+				fandong_drift = 0.04
+			}
+		}
+		###中线精神###
+		WAK_qingxijijinyaoguai_idea = {
+		    picture = anti_soviet_pact
+			allowed = {
+			    always = no
+			}
+			modifier = {
+			    fandong_drift = -0.05
+				stability_weekly = 0.003
+			}
+		}
+		WAK_qiangpogengduodefusangshengongzuo_idea = {
+		    picture = service_by_requirement
+			allowed = {
+			    always = no
+			}
+			available = {
+			    WAK = {
+				    not = {
+					    is_subject_of = TKM
+					}
+				}
+			}
+			modifier = {
+			    conscription_factor = 0.025
+				consumer_goods_factor = -0.02
+				industrial_capacity_factory = 0.025
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		WAK_gongfangyanlian_idea = {
+		    picture = SPA_la_division_azul
+			modifier = {
+			    army_attack_factor = 0.04
+				army_defence_factor = 0.04
+			}
+		}
+		WAK_yanjiukongyongwuqi_idea = {
+		    picture = generic_air_research
+			research_bonus = {
+			    air_equipment = 0.1
+			}
+		}
+		WAK_weixiejingjie_idea = {
+		    picture = YUG_federal_defense_council
+			modifier = {
+			    conscription = 0.014
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.10
+			}
+		}
+		WAK_sikaleitegangtiaoyue_idea = {
+		    picture = generic_constitutional_guarantee
+			allowed = {
+			    always = no
+			}
+			available = {
+
+			}
+			modifier = {
+			    industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.3
+				consumer_goods_factor = -0.05
+			}
+		}
+		WAK_sikaleitegangtiaoyue2_idea = {
+		    picture = generic_constitutional_guarantee
+			allowed = {
+			    always = no
+			}
+			available = {
+			    WAK = {
+				    is_in_faction_with = SCA
+				}
+			}
+			modifier = {
+			    industrial_capacity_factory = -0.15
+				production_speed_buildings_factor = -0.3
+				consumer_goods_factor = 0.05
+			}
+		}
+		###右线精神###
+		WAK_congzhenyingzhongtuoli_idea = {
+		    picture = FRA_matignon_agreements
+			modifier = {
+				political_power_factor = -0.30
+		        ai_get_ally_desire_factor = -100
+		    }
+		}
+		SCA_yaojingsaodong2_idea = {
+	    	picture = chi_war_of_resistance3
+
+			available = {
+				country_exists = CIR
+				CIR = { is_subject = no}
+			}
+
+			allowed_civil_war = {
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				stability_factor = -0.75
+				mobilization_laws_cost_factor = 0.2
+				conscription_factor = -0.1
+				consumer_goods_factor = 0.05
+			}
+			targeted_modifier = { 
+				tag = WAK
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.3
+			}
+			targeted_modifier = { 
+				tag = CIR
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.3
+			}
+			targeted_modifier = { 
+				tag = LIL
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.3
+			}
+		}
+		###孤立线###
+		WAK_zuohaofangyuzhunbei_idea = {
+			picture = generic_wall_line
+			modifier = {
+				production_speed_arms_factory_factor = 0.05
+				production_speed_bunker_factor = 0.25
+				ai_focus_defense_factor = 0.2
+			}
+		}
+		WAK_chengliwuzhuangnanminying_idea = {
+			picture = raj_indian_gentlemen_officers
+			modifier = {
+				conscription = 0.028
+			}
+		}
+		WAK_chengliyaoshoutezhongbudui_idea = {
+			picture = FRA_scw_intervention_nationalists_focus
+			modifier = {
+				special_forces_attack_factor = 0.15
+				special_forces_defence_factor = 0.15
+			}
+		}
+		###帝国线###
+		WAK_chushouzhiyuanzhuangbei_idea = {
+			picture = can_wartime_prices_and_trade_board
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		WAK_goumaizhiyuanzhuangbei_idea = {
+			picture = can_wartime_prices_and_trade_board
+			allowed = {
+				always = no
+			}
+			equipment_bonus = {
+				support_tech = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+		}
+		WAK_xixueguitiaoyueshixing_idea = {
+			picture = HUN_treaty_of_triannon
+			allowed = {
+				always = no
+			}
+			available = {
+				any_country = {
+					has_idea = Human
+					NOT = {
+						has_war_with = WAK
+					}
+				}
+				NOT = {
+					has_war_with = YKR
+					has_war_with = OKI
+					has_war_with = KAS
+				}
+			}
+			modifier = {
+				political_power_factor = -0.05
+				training_time_factor = 0.1
+				oldorder_acceptance = 30
+				generate_wargoal_tension = 0.4
+				stability_weekly = 0.001
+			}
+		}
+		WAK_gaizuzongdufu_idea = {
+			picture = generic_pp_unity_bonus
+			modifier = {
+				political_power_factor = 0.3
+				stability_weekly = 0.002
+			}
+		}
+		WAK_yaoqingdiguotouzizhe_idea = {
+			picture = generic_goods_red_bonus
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+					has_completed_focus = WAK_tianmingyougui
+				}
+			}
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.4
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_infrastructure_factor = 0.2
+			}
+		}
+		WAK_diguoweidui_idea = {
+			picture = generic_manpower_bonus
+			modifier = {
+				conscription_factor = 0.05
+				army_infantry_attack_factor = 0.06
+				army_infantry_defence_factor = 0.06
+				army_org_factor = 0.1
+				supply_consumption_factor = -0.05
+			}
+		}
+		WAK_zhongyangjiquan_idea = {
+			picture = bra_monarchist_uprising
+			modifier = {
+				mobilization_laws_cost_factor = -0.25
+				economy_cost_factor = -0.25
+				magic_laws_cost_factor = -0.25
+				border_policy_cost_factor = -0.25
+				manufacturer_cost_factor = -0.25
+			}
+		}
+		WAK_diguodeyaojing_idea = {
+			picture = generic_victors_of_ww1
+			modifier = {
+				conscription_factor = -0.85
+			}
+		}
+		###新规线###
+		WAK_yaoguaiziyouzhuyi_idea = {
+			picture = generic_fascism_drift_bonus
+			modifier = {
+				neworder_drift = 0.05
+			}
+		}
+		WAK_waixuanwuchuanbuluowuzhuang_idea = {
+			picture = generic_manpower_bonus
+			modifier = {
+				army_morale_factor = 0.1
+				training_time_factor = -0.1
+			}
+		}
+		WAK_ningjurenxin_idea = {
+			picture = generic_fascism_drift_2
+			modifier = {
+				consumer_goods_factor = -0.02
+				army_org_factor = 0.1
+				compliance_growth = 0.10
+				non_core_manpower = 0.0010
+			}
+		}
+	}
+}

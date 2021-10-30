@@ -2,25 +2,23 @@ state={
 	id=377
 	name="STATE_377"
 	provinces={
-		941 1772 2294 2351 3033 3895 5040 5046 5055 5072 5076 
+		941 1772 2294 2351 3895 5040 5046 5055 5072 5076 
 	}
 	resources={
 
-		powder=2.000
-		metal=5.000
+		powder = 2.0
+		metal = 5.0
 		gas=0.000
 		crystal=0.000
 	}
 
 	history={
-			owner = WHM
 		146.1.1 = {
-			owner = WHM
+			owner = HU2
 			add_core_of = HU2
-			add_core_of = WHM
 			buildings = {
 				infrastructure = 2 
-				industrial_complex = 0
+				industrial_complex = 2
 				arms_factory = 0
 
 			}

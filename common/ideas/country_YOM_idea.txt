@@ -1,0 +1,518 @@
+
+ideas = {
+	country = {
+		ROA_YOM_idea_1 = {#孤阁白玉楼
+			picture = neutrality_idea
+			modifier = {
+				drift_defence_factor = 0.5
+				stability_weekly = 0.003
+				subversive_activites_upkeep = 0.5
+			}
+		}
+
+		ROA_YOM_idea_3 = {#妖灵共处
+			picture = usa_desegregation_2
+			modifier = {
+				compliance_growth = 0.15
+				consumer_goods_factor = -0.05
+				global_building_slots_factor = 0.1
+			}
+		}
+
+		ROA_YOM_idea_4 = {#人间五十年
+			picture = neutrality_idea
+
+			modifier = {
+				political_power_gain = -0.25
+				ai_get_ally_desire_factor = -100
+				ai_focus_defense_factor = 100
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.2
+				mobilization_laws_cost_factor = 0.33
+				magic_laws_cost_factor = 0.33
+				border_policy_cost_factor = 0.33
+				economy_cost_factor = 0.33
+			}		
+		}
+		ROA_YOM_idea_5 = {#冥界五十年
+			picture = neutrality_idea
+
+			modifier = {
+				political_power_gain = -0.25
+				ai_get_ally_desire_factor = -100
+				ai_focus_defense_factor = 100
+				army_attack_factor = -0.25
+				army_attack_factor = -0.25
+				defensive_war_stability_factor = 1
+			}		
+		}
+		ROA_YOM_idea_6 = {#心道
+			picture = FRA_national_mobilization_focus
+
+			modifier = {
+				political_power_gain = 0.25
+				max_planning = 0.5
+				surrender_limit = 0.3
+			}		
+		}
+		ROA_YOM_idea_7 = {#六界道论
+			picture = FRA_national_mobilization_focus
+
+			modifier = {
+				political_power_gain = 0.25
+				max_planning = 0.5
+				surrender_limit = 0.3
+				opinion_gain_monthly_factor = 0.3
+				conscription = 0.005
+				army_org_factor = 0.1
+			}		
+		}	
+		ROA_YOM_idea_8 = {#六道剣
+			picture = jap_militarism_shogun
+
+			modifier = {
+				army_infantry_attack_factor = 0.15
+				army_infantry_attack_factor = 0.15
+			}		
+		}
+		
+		ROA_YOM_idea_10 = {#斩敬畏
+			picture = jap_militarism_shogun
+
+			modifier = {
+
+			}
+			targeted_modifier = {
+				tag = SKI
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}			
+		}	
+		ROA_YOM_idea_11 = {#冥界新典
+			picture = leningrad_polytechnical_institute
+
+			modifier = {
+				mobilization_laws_cost_factor = -0.5
+				army_org_factor = 0.1
+				conscription = 0.001
+			}
+			targeted_modifier = {
+				tag = SKI
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}			
+		}		
+		ROA_YOM_idea_12 = {#断绝轮回
+			picture = HUN_treaty_of_triannon
+
+			modifier = {
+				conscription = 0.002
+				stability_factor = -0.25
+				economy_cost_factor = -0.25	
+			}		
+		}		
+		ROA_YOM_idea_17 = {#剑痴
+			picture = ast_volunteer_defence_corps
+
+			modifier = {
+				war_support_factor = 0.15
+			}	
+			equipment_bonus = {
+				melee_a = {
+					instant = yes
+					hardness = 0.2
+					soft_attack = 0.2
+					hard_attack = 0.2
+					breakthrough = 0.4
+					defense = -0.15
+					ap_attack = 4
+				}	
+			}		
+		}
+		ROA_YOM_idea_14 = {#重铸剑魂-白楼剑
+			picture = man_militarism
+
+			modifier = {
+				political_power_gain = 0.25
+			}		
+		}
+		ROA_YOM_idea_14_a = {#白楼剑-贪
+			picture = man_militarism
+
+			modifier = {
+				political_power_gain = 0.5
+				land_reinforce_rate = 0.06
+			}		
+		}
+		ROA_YOM_idea_14_b = {#白楼剑-痴
+			picture = man_militarism
+
+			modifier = {
+				political_power_gain = 0.5
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}		
+		}
+		ROA_YOM_idea_14_c = {#白楼剑-嗔
+			picture = man_militarism
+
+			modifier = {
+				political_power_gain = 0.5
+				army_speed_factor = 0.03
+			}		
+		}
+		ROA_YOM_idea_15 = {#重铸剑魂-楼观剑
+			picture = man_militarism
+
+			modifier = {
+				political_power_gain = 0.25
+			}		
+		}		
+		ROA_YOM_idea_15_a = {#楼观剑-生
+			picture = man_militarism
+
+			modifier = {
+				political_power_gain = 0.5
+				army_morale_factor = 0.1
+			}		
+		}
+		ROA_YOM_idea_15_b = {#楼观剑-老
+			picture = man_militarism
+
+			modifier = {
+				political_power_gain = 0.5
+				max_dig_in = 8
+			}		
+		}	
+		ROA_YOM_idea_15_c = {#楼观剑-病
+			picture = man_militarism
+
+			modifier = {
+				political_power_gain = 0.5
+				attrition = -0.35
+			}		
+		}
+		ROA_YOM_idea_15_d = {#楼观剑-死
+			picture = man_militarism
+
+			modifier = {
+				political_power_gain = 0.5
+				weekly_manpower = 6	
+			}		
+		}
+		ROA_YOM_idea_15_e = {#楼观剑-爱别离
+			picture = man_militarism
+
+			modifier = {
+				political_power_gain = 0.5
+			}		
+			research_bonus = {
+				military = 0.1
+			}
+		}
+		ROA_YOM_idea_15_f = {#楼观剑-怨憎会
+			picture = man_militarism
+
+			modifier = {
+				political_power_gain = 0.5
+				training_time_factor = -0.15
+			}		
+		}
+		ROA_YOM_idea_15_g = {#楼观剑-求不得
+			picture = man_militarism
+
+			modifier = {
+				political_power_gain = 0.5
+				land_night_attack = 0.3
+			}		
+		}
+		ROA_YOM_idea_32 = {#弃刃
+			picture = FRA_matignon_agreements
+
+			modifier = {
+				generate_wargoal_tension = 0.5
+				justify_war_goal_time = 0.5
+				defensive_war_stability_factor = 0.3
+				research_speed_factor = 0.05
+			}		
+		}
+		ROA_YOM_idea_18 = {#息念忘虑
+			picture = generic_research_bonus
+
+			modifier = {
+				research_speed_factor = 0.1
+			}		
+		}
+		ROA_YOM_idea_19 = {#禁欲
+			picture = ROM_king_carol_ii_hedonist
+
+			modifier = {
+				supply_consumption_factor = -0.33
+				no_supply_grace = 72
+				org_loss_when_moving = 0.1				
+			}		
+		}
+		ROA_YOM_idea_19_b = {#苦行
+			picture = chi_forced_conscription
+
+			modifier = {
+				supply_consumption_factor = -0.33
+				no_supply_grace = 72
+				org_loss_when_moving = 0.1	
+				army_infantry_defence_factor = 0.1
+				experience_gain_army_factor = 0.1
+				army_core_defence_factor = 0.1
+			}		
+		}
+		ROA_YOM_idea_19_c = {#殉道
+			picture = air_war_plans_division_focus
+
+			modifier = {
+				supply_consumption_factor = -0.33
+				no_supply_grace = 72
+				org_loss_when_moving = 0.1	
+				army_infantry_defence_factor = 0.1
+				experience_gain_army_factor = 0.1
+				army_core_defence_factor = 0.1
+				army_infantry_attack_factor = 0.1
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+			}		
+		}
+		ROA_YOM_idea_20 = {#无处不修行
+			picture = prc_the_long_march2
+
+			modifier = {
+				stability_weekly = 0.003
+				war_support_weekly = -0.001
+			}		
+		}
+		ROA_YOM_idea_21 = {#功满得极乐
+			picture = ROM_king_carol_ii_hedonist
+
+			modifier = {
+				opinion_gain_monthly_factor = 0.5
+				political_power_factor = 0.25
+				resistance_growth = -0.5
+			}		
+		}
+		ROA_YOM_idea_22 = {#无我相
+			picture = generic_infantry_bonus
+
+			modifier = {
+				army_infantry_attack_factor = 0.1
+			}		
+		}
+		ROA_YOM_idea_23 = {#不执着
+			picture = generic_goods_red_bonus
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}		
+		}
+		ROA_YOM_idea_24 = {#不分别
+			picture = generic_infantry_bonus
+
+			modifier = {
+				army_infantry_defence_factor = 0.1
+			}		
+		}
+		ROA_YOM_idea_25 = {#不妄想
+			picture = neutrality_idea
+
+			modifier = {
+				stability_weekly = 0.005
+			}		
+		}
+		ROA_YOM_idea_26 = {#贪心
+			picture = generic_political_support
+
+			modifier = {
+				political_power_factor = 0.33
+			}		
+		}
+		ROA_YOM_idea_27 = {#嗔恨
+			picture = SPR_masters_of_our_own_fate
+
+			modifier = {
+				army_morale_factor = 0.1
+			}		
+		}
+		ROA_YOM_idea_28 = {#愚痴
+			picture = tur_kemalist_officers
+
+			modifier = {
+				max_planning = 0.3
+			}		
+		}
+		ROA_YOM_idea_29 = {#绮语
+			picture = usa_desegregation_1
+
+			modifier = {
+				war_support_weekly = 0.003
+			}		
+		}	
+		ROA_YOM_idea_31 = {#悟道
+			picture = FRA_la_deluge
+
+			modifier = {
+				drift_defence_factor = 0.5
+				stability_weekly = 0.006
+				subversive_activites_upkeep = 0.5
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1				
+			}		
+		}		
+		
+
+		################
+		ROA_YOM_3_idea = {
+			picture = hol_liberation
+			name = ROA_YOM_3
+			modifier = {
+				industrial_capacity_factory = 0.5
+			}
+		}
+		ROA_YOM_2_idea = {
+			name = ROA_YOM_2
+			picture = gre_agricultural_communes
+			modifier = {
+				political_power_factor = 0.15
+			}
+		}
+		ROA_YOM_8_idea = {
+			name = ROA_YOM_8
+			picture = hol_the_fourth_ally
+			modifier = {
+				training_time_factor = -0.25
+			}
+		}
+		ROA_YOM_9_idea = {
+			name = ROA_YOM_9
+			picture = HUN_dynastic_ties
+			modifier = {
+				stability_weekly = 0.003
+			}
+		}
+		ROA_YOM_10_idea = {
+			name = ROA_YOM_10
+			picture = generic_pp_unity_bonus
+			modifier = {
+				political_power_gain = 0.5
+			}
+		}
+		ROA_YOM_13_idea = {
+			name = ROA_YOM_13
+			picture = HUN_hungarian_monarchy
+			modifier = {
+				political_power_gain = 0.3
+			}
+		}
+		ROA_YOM_19_idea = {
+			name = ROA_YOM_19
+			picture = anti_soviet_pact
+			modifier = {
+				political_power_gain = 1.2
+			}
+		}
+		ROA_YOM_20_idea = {
+			name = ROA_YOM_20
+			picture = ROM_balkans_dominance
+			targeted_modifier = {
+				tag = NG1
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+			targeted_modifier = {
+				tag = NG2
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+			targeted_modifier = {
+				tag = NG3
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+			targeted_modifier = {
+				tag = NG4
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+		ROA_YOM_21_idea = {
+			name = ROA_YOM_21
+			picture = FRA_market_dynamism
+			modifier = {
+				weekly_manpower = 1
+			}
+		}
+		ROA_YOM_31_idea = {#入魔
+			name = ROA_YOM_31
+
+			picture = bul_zveno
+
+			modifier = {
+				political_power_factor = -0.25
+				stability_factor = -0.5
+				war_support_factor = -0.5			
+			}		
+		}	
+		ROA_YOM_40_idea	= {
+			name = ROA_YOM_40
+			picture = jap_militarism_shogun
+			available = {
+				any_country = {
+					has_war_with = ROOT
+					or = {
+						has_idea = God
+						tag = NMS
+						tag = MNM
+						tag = NUE
+						tag = KYK
+					}
+				}
+			}
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+		ROA_YOM_39_idea = {
+			name = ROA_YOM_39
+			picture = jap_militarism_shogun
+			available = {
+				any_country = {
+					has_war_with = ROOT
+					has_idea = Human
+				}
+			}
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+		ROA_YOM_50_idea	= {	
+			name = ROA_YOM_50
+			picture = free_trade
+			modifier = {
+				opinion_gain_monthly_factor = 0.5
+				trade_opinion_factor = 0.33
+			}
+		}
+		YOM_daojianzhixin_idea = {
+			name = YOM_daojianzhixin
+			picture = jap_militarism_shogun
+			modifier = {
+				justify_war_goal_time = -0.9
+			}
+		}
+		YOM_zhengyaodajiangjun_idea = {
+			name = YOM_zhengyaodajiangjun
+			picture = generic_pp_unity_bonus
+			modifier = {
+				political_power_factor = 0.15
+			}
+		}
+
+	}
+}	

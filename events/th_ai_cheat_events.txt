@@ -1,132 +1,40 @@
 ﻿add_namespace = ac
-country_event = { #命莲寺跳过国策到宣SCA之前
-	id = ac.1
-	title = ac.1.t
-	desc = ac.1.d
-	fire_only_once = yes
-	is_triggered_only = no
-	trigger = {
-		tag = NMS
-		date > 148.1.1
-		SCA = {	has_war = yes }
-		not = {
-			has_completed_focus = NMS_hongmoguanyouhao
-		}
-		is_ai = yes
-	}
-	mean_time_to_happen = {
-		days = 30
-	}
-	option = {
-		name = ac.test
-		##NMS_shentouboruodiqu的效果
-		add_ideas = NMS_shentouboruodiqu_idea
-		complete_national_focus = NMS_shentouboruodiqu
-		##
-		ai_chance = {
-			base = 80
-		}
-	}
-	option = {
-		name = ac.test
-		ai_chance = {
-			base = 20
-			modifier = {
-				has_government = guli
-				add = 60
-			}
-		}
-	}
-}
-country_event = { #命莲寺跳过国策到宣SCA之前
-	id = ac.2
-	title = ac.2.t
-	desc = ac.2.d
-	fire_only_once = yes
-	is_triggered_only = no
-	trigger = {
-		tag = TKM
-		date > 148.1.1
-		SCA = {	has_war = yes }
-		threat > 0.5
-		is_ai = yes
-	    or = {
-	        and = {
-		        custom_trigger_tooltip = {
-		            tooltip = TKM_bianbian_tt
-		            has_government = neworder
-		          }
-		        has_completed_focus = TKM_zichengjiushijiushen
-	        }
-	        and = {
-	          	custom_trigger_tooltip = {
-	            	tooltip = TKM_baqiao_tt
-	            	has_government = fandong
-	          	}
-	          	has_completed_focus = TKM_budiuqirenheyigejiudaoju
-	        }
-	    }
-	    if = {
-	    	limit = {
-	    		has_government = fandong
-	    	}
-	    	not = {
-	    		has_completed_focus = TKM_jianlidaojugongtuan
-	    	}
-	    }
-	    if = {
-	    	limit = {
-	    		has_government = neworder
-	    	}
-	    	not = {
-	    		has_completed_focus = TKM_jianlijiushijiuguo
-	    	}
-	    }
-	}
-	mean_time_to_happen = {
-		days = 30
-	}
-	option = {
-		name = ac.test
-		###TKM_jianlijiushijiuguo的效果
-		if = {
-			limit = {
-				has_government = neworder
-			}
-			set_cosmetic_tag = TKM_great
-	      	add_ideas = Country
-	      	hidden_effect = {
-	          	news_event = { days = 2 id = kog2.37 }
-	      	}
-			complete_national_focus = TKM_jianlijiushijiuguo
-		}
-		##
-		###TKM_jianlidaojugongtuan的效果
-		if = {
-			limit = {
-				has_government = fandong
-			}
-			set_cosmetic_tag = TKM_gongtuan
-	        add_war_support = 0.1
-	        add_popularity = {
-	            ideology = fandong
-	            popularity = 0.05
-	        }
-	        hidden_effect = {
-	            news_event = { days = 2 id = kog2.38 }
-	        }
-			complete_national_focus = TKM_jianlidaojugongtuan
-		}
-		##
-		ai_chance = {
-			base = 90
-		}
-	}
-	option = {
-		name = ac.test
-		ai_chance = {
-			base = 10
-		}
-	}
-}
-
+# country_event = { #命莲寺跳过国策到宣SCA之前
+# 	id = ac.1
+# 	title = ac.1.t
+# 	desc = ac.1.d
+# 	fire_only_once = yes
+# 	is_triggered_only = no
+# 	trigger = {
+# 		tag = NMS
+# 		date > 148.1.1
+# 		SCA = {	has_war = yes }
+# 		not = {
+# 			has_completed_focus = NMS_hongmoguanyouhao
+# 		}
+# 		is_ai = yes
+# 	}
+# 	mean_time_to_happen = {
+# 		days = 30
+# 	}
+# 	option = {
+# 		name = ac.test
+# 		##NMS_shentouboruodiqu的效果
+# 		add_ideas = NMS_shentouboruodiqu_idea
+# 		complete_national_focus = NMS_shentouboruodiqu
+# 		##
+# 		ai_chance = {
+# 			base = 80
+# 		}
+# 	}
+# 	option = {
+# 		name = ac.test
+# 		ai_chance = {
+# 			base = 20
+# 			modifier = {
+# 				has_government = guli
+# 				add = 60
+# 			}
+# 		}
+# 	}
+# }

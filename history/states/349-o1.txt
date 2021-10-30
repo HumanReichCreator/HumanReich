@@ -1,25 +1,20 @@
+
 state={
 	id=349
 	name="STATE_349"
-	provinces={
-		510 525 1770 2499 2736 3284 3338 3340 3343 3351 3873 3876 3877 3878 3879 3882 3883 3884 
-	}
 	resources={
-
-		powder=5.000
+		powder=6.000
 		metal=0.000
 		gas=0.000
 		crystal=5.000
 	}
 
 	history={
-			owner = ONS
 		146.1.1 = {
 			owner = ONS
 			add_core_of = ONS
-			# add_claim_by = SEJ
 			buildings = {
-				infrastructure =2
+				infrastructure = 2
 				industrial_complex = 1
 				arms_factory = 0
 
@@ -28,7 +23,11 @@ state={
 		}
 
 	}
-	manpower=112.0
+
+	provinces={
+		510 525 1770 2499 2736 3338 3340 3343 3351 3873 3876 3877 3878 3879 3882 3883 3884 
+	}
+	manpower=112
 	buildings_max_level_factor=1.000
 	state_category=s2
 }

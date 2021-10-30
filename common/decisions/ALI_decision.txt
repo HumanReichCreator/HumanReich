@@ -1,12 +1,10 @@
 ALI_category = {
 	ALI_renoujiaqiang = {
-
-		available = {
-			
+		allowed = {
+			tag = ALI
 		}
 
 		visible = {
-			tag = ALI
 			has_country_flag = ALI_jianlirenougongfang
 		}
 
@@ -35,10 +33,18 @@ ALI_category = {
 
 		icon = onmap_recruit_operative
 
-		available = {
-			
+		allowed = {
+			tag = ALI
 		}
-
+		target_root_trigger = {
+			has_country_flag = ALI_jianlirenougongfang
+			not = {
+				has_country_flag = ALI_renoujiaqiang
+			}
+			not = {
+				has_country_flag = ALI_gailiangrenougongfang
+			}
+		}
 		state_target = yes
 		target_trigger = {
 			FROM = {
@@ -48,16 +54,9 @@ ALI_category = {
 				industrial_complex > 0 
 			}
 		}
-		visible = {
-			tag = ALI
-			has_country_flag = ALI_jianlirenougongfang
-			not = {
-				has_country_flag = ALI_renoujiaqiang
-			}
-			not = {
-				has_country_flag = ALI_gailiangrenougongfang
-			}
-		}
+		target_array = owned_states
+		target_array = core_states
+		target_array = controlled_states
 
 		fire_only_once = no
 		cost = 0
@@ -65,7 +64,7 @@ ALI_category = {
 		days_re_enable = 100
 		days_remove = 140
 
-		on_map_mode = map_only
+		on_map_mode = map_and_decisions_view
 		complete_effect = {
 			FROM = {
 				remove_building = { type = industrial_complex  level = 1 }
@@ -94,10 +93,16 @@ ALI_category = {
 
 		icon = onmap_recruit_operative
 
-		available = {
-			
+		allowed = {
+			tag = ALI
 		}
-
+		target_root_trigger = {
+			has_country_flag = ALI_jianlirenougongfang
+			has_country_flag = ALI_renoujiaqiang
+			not = {
+				has_country_flag = ALI_gailiangrenougongfang
+			}
+		}
 		state_target = yes
 		target_trigger = {
 			FROM = {
@@ -107,14 +112,9 @@ ALI_category = {
 				industrial_complex > 0 
 			}
 		}
-		visible = {
-			tag = ALI
-			has_country_flag = ALI_jianlirenougongfang
-			has_country_flag = ALI_renoujiaqiang
-			not = {
-				has_country_flag = ALI_gailiangrenougongfang
-			}
-		}
+		target_array = owned_states
+		target_array = core_states
+		target_array = controlled_states
 
 		fire_only_once = no
 		cost = 0
@@ -122,7 +122,7 @@ ALI_category = {
 		days_re_enable = 100
 		days_remove = 140
 
-		on_map_mode = map_only
+		on_map_mode = map_and_decisions_view
 		complete_effect = {
 			FROM = {
 				remove_building = { type = industrial_complex  level = 1 }
@@ -152,10 +152,16 @@ ALI_category = {
 
 		icon = onmap_recruit_operative
 
-		available = {
-			
+		allowed = {
+			tag = ALI
 		}
-
+		target_root_trigger = {
+			has_country_flag = ALI_jianlirenougongfang
+			not = {
+				has_country_flag = ALI_renoujiaqiang
+			}
+			has_country_flag = ALI_gailiangrenougongfang
+		}
 		state_target = yes
 		target_trigger = {
 			FROM = {
@@ -165,14 +171,9 @@ ALI_category = {
 				industrial_complex > 0 
 			}
 		}
-		visible = {
-			tag = ALI
-			has_country_flag = ALI_jianlirenougongfang
-			not = {
-				has_country_flag = ALI_renoujiaqiang
-			}
-			has_country_flag = ALI_gailiangrenougongfang
-		}
+		target_array = owned_states
+		target_array = core_states
+		target_array = controlled_states
 
 		fire_only_once = no
 		cost = 0
@@ -180,7 +181,7 @@ ALI_category = {
 		days_re_enable = 100
 		days_remove = 140
 
-		on_map_mode = map_only
+		on_map_mode = map_and_decisions_view
 		complete_effect = {
 			FROM = {
 				remove_building = { type = industrial_complex  level = 1 }
@@ -209,10 +210,14 @@ ALI_category = {
 
 		icon = onmap_recruit_operative
 
-		available = {
-			
+		allowed = {
+			tag = ALI
 		}
-
+		target_root_trigger = {
+			has_country_flag = ALI_jianlirenougongfang
+			has_country_flag = ALI_renoujiaqiang
+			has_country_flag = ALI_gailiangrenougongfang
+		}
 		state_target = yes
 		target_trigger = {
 			FROM = {
@@ -222,12 +227,9 @@ ALI_category = {
 				industrial_complex > 0 
 			}
 		}
-		visible = {
-			tag = ALI
-			has_country_flag = ALI_jianlirenougongfang
-			has_country_flag = ALI_renoujiaqiang
-			has_country_flag = ALI_gailiangrenougongfang
-		}
+		target_array = owned_states
+		target_array = core_states
+		target_array = controlled_states
 
 		fire_only_once = no
 		cost = 0
@@ -235,7 +237,7 @@ ALI_category = {
 		days_re_enable = 100
 		days_remove = 140
 
-		on_map_mode = map_only
+		on_map_mode = map_and_decisions_view
 		complete_effect = {
 			FROM = {
 				remove_building = { type = industrial_complex  level = 1 }
@@ -254,6 +256,378 @@ ALI_category = {
 		modifier = {
 			weekly_manpower = 12
 			production_speed_industrial_complex_factor = -0.01
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+}
+ALI_category2 = {
+	ALI_qidongtitainiyarenou_keyongxing = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ALI_qidongtitainiyarenou_tupo_tt1
+				check_variable = { ALI_qidongtitainiyarenou < 4 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = ALI_qidongtitainiyarenou_tupo_tt2
+				not = {
+					has_country_flag = ALI_qidongtitainiyarenou_jihuazhong
+				}
+			}
+		}
+
+		allowed = {
+			tag = ALI
+		}
+		visible = {
+			
+			has_country_flag = ALI_qidongtitainiyarenou
+			check_variable = { ALI_qidongtitainiyarenou < 4 }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 100
+
+		complete_effect = {
+			add_to_variable = { ALI_qidongtitainiyarenou = 1 }
+			set_country_flag = {
+				flag = ALI_qidongtitainiyarenou_jihuazhong
+				days = 100
+				value = 1
+			}
+		}
+		remove_effect = {
+			add_ideas = ALI_qidongtitainiyarenou_keyongxing_idea
+		}
+		modifier = {
+			industrial_capacity_factory = -0.15
+			political_power_cost = 0.15
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	ALI_qidongtitainiyarenou_tupo = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ALI_qidongtitainiyarenou_tupo_tt1
+				check_variable = { ALI_qidongtitainiyarenou < 4 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = ALI_qidongtitainiyarenou_tupo_tt2
+				not = {
+					has_country_flag = ALI_qidongtitainiyarenou_jihuazhong
+				}
+			}
+		}
+		allowed = {
+			tag = ALI
+		}
+		visible = {
+			has_country_flag = ALI_qidongtitainiyarenou
+			check_variable = { ALI_qidongtitainiyarenou < 4 }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 100
+
+		complete_effect = {
+			add_to_variable = { ALI_qidongtitainiyarenou = 1 }
+			set_country_flag = {
+				flag = ALI_qidongtitainiyarenou_jihuazhong
+				days = 100
+				value = 1
+			}
+		}
+		remove_effect = {
+			add_ideas = ALI_qidongtitainiyarenou_tupo_idea
+		}
+		modifier = {
+			industrial_capacity_factory = -0.15
+			political_power_cost = 0.15
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	ALI_qidongtitainiyarenou_huoli = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ALI_qidongtitainiyarenou_tupo_tt1
+				check_variable = { ALI_qidongtitainiyarenou < 4 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = ALI_qidongtitainiyarenou_tupo_tt2
+				not = {
+					has_country_flag = ALI_qidongtitainiyarenou_jihuazhong
+				}
+			}
+		}
+		allowed = {
+			tag = ALI
+		}
+		visible = {
+			has_country_flag = ALI_qidongtitainiyarenou
+			check_variable = { ALI_qidongtitainiyarenou < 4 }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 100
+
+		complete_effect = {
+			add_to_variable = { ALI_qidongtitainiyarenou = 1 }
+			set_country_flag = {
+				flag = ALI_qidongtitainiyarenou_jihuazhong
+				days = 100
+				value = 1
+			}
+		}
+		remove_effect = {
+			add_ideas = ALI_qidongtitainiyarenou_huoli_idea
+		}
+		modifier = {
+			industrial_capacity_factory = -0.15
+			political_power_cost = 0.15
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	ALI_qidongtitainiyarenou_hudun = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ALI_qidongtitainiyarenou_tupo_tt1
+				check_variable = { ALI_qidongtitainiyarenou < 4 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = ALI_qidongtitainiyarenou_tupo_tt2
+				not = {
+					has_country_flag = ALI_qidongtitainiyarenou_jihuazhong
+				}
+			}
+		}
+		allowed = {
+			tag = ALI
+		}
+		visible = {
+			has_country_flag = ALI_qidongtitainiyarenou
+			check_variable = { ALI_qidongtitainiyarenou < 4 }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 100
+
+		complete_effect = {
+			add_to_variable = { ALI_qidongtitainiyarenou = 1 }
+			set_country_flag = {
+				flag = ALI_qidongtitainiyarenou_jihuazhong
+				days = 100
+				value = 1
+			}
+		}
+		remove_effect = {
+			add_ideas = ALI_qidongtitainiyarenou_hudun_idea
+		}
+		modifier = {
+			industrial_capacity_factory = -0.15
+			political_power_cost = 0.15
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	ALI_qidonggeliyayarenou_keyongxing = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ALI_qidonggeliyayarenou_tupo_tt1
+				check_variable = { ALI_qidonggeliyayarenou < 4 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = ALI_qidonggeliyayarenou_tupo_tt2
+				not = {
+					has_country_flag = ALI_qidonggeliyayarenou_jihuazhong
+				}
+			}
+		}
+		allowed = {
+			tag = ALI
+		}
+		visible = {
+			has_country_flag = ALI_qidonggeliyayarenou
+			check_variable = { ALI_qidonggeliyayarenou < 4 }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 100
+
+		complete_effect = {
+			add_to_variable = { ALI_qidonggeliyayarenou = 1 }
+			set_country_flag = {
+				flag = ALI_qidonggeliyayarenou_jihuazhong
+				days = 100
+				value = 1
+			}
+		}
+		remove_effect = {
+			add_ideas = ALI_qidonggeliyayarenou_keyongxing_idea
+		}
+		modifier = {
+			industrial_capacity_factory = -0.15
+			political_power_cost = 0.15
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	ALI_qidonggeliyayarenou_tupo = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ALI_qidonggeliyayarenou_tupo_tt1
+				check_variable = { ALI_qidonggeliyayarenou < 4 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = ALI_qidonggeliyayarenou_tupo_tt2
+				not = {
+					has_country_flag = ALI_qidonggeliyayarenou_jihuazhong
+				}
+			}
+		}
+		allowed = {
+			tag = ALI
+		}
+		visible = {
+			has_country_flag = ALI_qidonggeliyayarenou
+			check_variable = { ALI_qidonggeliyayarenou < 4 }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 100
+
+		complete_effect = {
+			add_to_variable = { ALI_qidonggeliyayarenou = 1 }
+			set_country_flag = {
+				flag = ALI_qidonggeliyayarenou_jihuazhong
+				days = 100
+				value = 1
+			}
+		}
+		remove_effect = {
+			add_ideas = ALI_qidonggeliyayarenou_tupo_idea
+		}
+		modifier = {
+			industrial_capacity_factory = -0.15
+			political_power_cost = 0.15
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	ALI_qidonggeliyayarenou_huoli = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ALI_qidonggeliyayarenou_tupo_tt1
+				check_variable = { ALI_qidonggeliyayarenou < 4 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = ALI_qidonggeliyayarenou_tupo_tt2
+				not = {
+					has_country_flag = ALI_qidonggeliyayarenou_jihuazhong
+				}
+			}
+		}
+		allowed = {
+			tag = ALI
+		}
+		visible = {
+			has_country_flag = ALI_qidonggeliyayarenou
+			check_variable = { ALI_qidonggeliyayarenou < 4 }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 100
+
+		complete_effect = {
+			add_to_variable = { ALI_qidonggeliyayarenou = 1 }
+			set_country_flag = {
+				flag = ALI_qidonggeliyayarenou_jihuazhong
+				days = 100
+				value = 1
+			}
+		}
+		remove_effect = {
+			add_ideas = ALI_qidonggeliyayarenou_huoli_idea
+		}
+		modifier = {
+			industrial_capacity_factory = -0.15
+			political_power_cost = 0.15
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	ALI_qidonggeliyayarenou_hudun = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ALI_qidonggeliyayarenou_tupo_tt1
+				check_variable = { ALI_qidonggeliyayarenou < 4 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = ALI_qidonggeliyayarenou_tupo_tt2
+				not = {
+					has_country_flag = ALI_qidonggeliyayarenou_jihuazhong
+				}
+			}
+		}
+		allowed = {
+			tag = ALI
+		}
+		visible = {
+			has_country_flag = ALI_qidonggeliyayarenou
+			check_variable = { ALI_qidonggeliyayarenou < 4 }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 100
+
+		complete_effect = {
+			add_to_variable = { ALI_qidonggeliyayarenou = 1 }
+			set_country_flag = {
+				flag = ALI_qidonggeliyayarenou_jihuazhong
+				days = 100
+				value = 1
+			}
+		}
+		remove_effect = {
+			add_ideas = ALI_qidonggeliyayarenou_hudun_idea
+		}
+		modifier = {
+			industrial_capacity_factory = -0.15
+			political_power_cost = 0.15
 		}
 
 		ai_will_do = {

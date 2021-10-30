@@ -6,26 +6,25 @@ state={
 	}
 	resources={
 		energy = 0
-		powder=0.000
-		metal=0.000
+		powder = 0.0
+		metal = 0.0
 		gas=0.000
 		crystal=8.000
 	}
 	history={
-			owner = YCE
 		146.1.1 = {
 			owner = YCE
 			add_core_of = YCE
 			buildings = {
 				infrastructure = 2
 				industrial_complex = 0
-				arms_factory = 0
+				arms_factory = 1
 
 			}
 
 		}
 	}
-	manpower=7428.0
+	manpower=19428.0
 	state_category=s2
 	buildings_max_level_factor=1.000
 }

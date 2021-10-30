@@ -1039,8 +1039,7 @@ shared_focus = {
 	}
 
 	available = {
-	     
-		 
+
 	}
 
 	bypass = {
@@ -1065,7 +1064,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = ty_lingli
-	icon = GFX_focus_research2
+	icon = GFX_focus_generic_spirit_power_research
 	cost = 11
 	prerequisite = {
 		focus = ty_shuxuejinbu
@@ -1112,7 +1111,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = ty_lingli_shengceng
-	icon = GFX_focus_research2
+	icon = GFX_focus_generic_spirit_power_research
 	cost = 11
 	prerequisite = {
 		focus = ty_lingli
@@ -1267,7 +1266,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = ty_waijiekexue
-	icon = GFX_focus_research2
+	icon = GFX_focus_generic_science_research
 	cost = 11
 	prerequisite = {
 		focus = ty_shuxuejinbu
@@ -1314,7 +1313,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = ty_waijiekexue_shenceng
-	icon = GFX_focus_research2
+	icon = GFX_focus_generic_science_research
 	cost = 11
 	prerequisite = {
 		focus = ty_waijiekexue
@@ -1514,7 +1513,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = ty_bubingwuqi
-	icon = GFX_goal_generic_small_arms
+	icon = GFX_focus_generic_Basic_Weapons
 	cost = 11
 	prerequisite = {
 		focus = ty_luzhanlilun
@@ -1561,7 +1560,7 @@ shared_focus = {
 }
 shared_focus = {
 		id = ty_lianjiabubingwuqi
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_focus_generic_Basic_Weapons
 		cost = 11
 		prerequisite = {
 			focus = ty_bubingwuqi
@@ -1605,52 +1604,9 @@ shared_focus = {
 		add_ideas = lianjiaqiang
 	}
 }
-# shared_focus = {
-# 		id = ty_zhiyuanbudui
-# 		icon = GFX_goal_generic_army_artillery
-# 		cost = 14.00
-# 		prerequisite = {
-# 			focus = ty_lianjiabubingwuqi
-# 		}
-# 		prerequisite = {
-# 			focus = ty_lianjiahuopao
-# 		}
-# 		x = 5
-# 		y = 5
-# 		relative_position_id = ty_early_main
-
-# 	ai_will_do = {
-# 		factor = 1
-# 	}
-
-# 	available = {
-	     
-		 
-# 	}
-
-# 	bypass = {
-		
-# 	}
-
-# 	cancel_if_invalid = no
-# 	continue_if_invalid = yes
-# 	available_if_capitulated = yes
-
-# 	complete_tooltip = {
-
-# 	}
-
-# 	completion_reward = {
-# 		add_tech_bonus = {
-# 			bonus = 0.3
-# 			uses = 1
-# 			category = support_tech
-# 		}
-# 	}
-# }
 shared_focus = {
 		id = ty_lianjiahuopao
-		icon = GFX_goal_generic_army_artillery2
+		icon = GFX_focus_generic_Artillery_Weapons
 		cost = 11
 		prerequisite = {
 			focus = ty_huopao
@@ -1696,7 +1652,7 @@ shared_focus = {
 }
 shared_focus = {
 		id = ty_huopao
-		icon = GFX_goal_generic_army_artillery2
+		icon = GFX_focus_generic_Artillery_Weapons
 		cost = 11
 		prerequisite = {
 			focus = ty_luzhanlilun
@@ -2026,11 +1982,8 @@ shared_focus = {
 
 	completion_reward = {
 		custom_effect_tooltip = ty_fuyongguanxichuli_tt
-		every_country = {
-			limit = {
-				is_subject_of = ROOT
-			}
-			can_core = yes
+		add_to_variable = {
+			ty_fuyongguanxichuli = 2
 		}
 	}
 }
@@ -2117,8 +2070,7 @@ shared_focus = {
 	completion_reward = {
 		OL_minus5 = yes
 		PO_add2.5 = yes
-		custom_effect_tooltip = TKM_kaifabendiwuqi_tt
-        add_to_variable = { OL_to_weiwu_base_add = 0.1 }
+		OL_xiajiangsudu0.1 = yes
 
 		#weixindu -5
 		#lingli +2.5
@@ -2128,7 +2080,7 @@ shared_focus = {
 
 shared_focus = {
 	id = ty_jifalingliqianneng
-	icon = GFX_goal_generic_wolf_pack
+	icon = GFX_focus_generic_promotion_of_spiritual_power
 	cost = 11
 	prerequisite = {
 		focus = ty_herenleidebiaomianguanxi
@@ -2181,7 +2133,7 @@ shared_focus = {
 
 shared_focus = {
 	id = ty_baituoshufu
-	icon = GFX_goal_generic_political_pressure
+	icon = GFX_focus_generic_materialism_drift
 	cost = 11
 	prerequisite = {
 		focus = ty_herenleidebiaomianguanxi
@@ -2225,8 +2177,7 @@ shared_focus = {
 	completion_reward = {
 		OL_minus10 = yes
 		add_political_power = 50
-		custom_effect_tooltip = TKM_kaifabendiwuqi_tt
-        add_to_variable = { OL_to_weiwu_base_add = 0.1 }
+		OL_xiajiangsudu0.1 = yes
        
         if = {
         	limit = {
@@ -2240,7 +2191,7 @@ shared_focus = {
 
 shared_focus = {
 		id = ty_kaifangshehui
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_generic_open_up
 		cost = 11
 		prerequisite = {
 			focus = ty_neizhengchuli
@@ -2260,7 +2211,7 @@ shared_focus = {
 				has_government = qinwai
 				has_government = fandong
 			}
-			factor = 100
+			factor = 4
 		}
 		modifier = {
 			is_subject = no
@@ -2268,7 +2219,7 @@ shared_focus = {
 				has_government = qinwai
 				has_government = fandong
 			}
-			factor = 1.1
+			factor = 1.05
 		}
 		modifier = {
 			is_subject = no
@@ -2276,7 +2227,11 @@ shared_focus = {
 				has_country_flag = go_qinwai
 				has_country_flag = go_fandong
 			}
-			factor = 1.5
+			factor = 10000
+		}
+		modifier = {
+			tag = KAS
+			factor = 10000
 		}
 		
 	}
@@ -2333,7 +2288,7 @@ shared_focus = {
 }
 shared_focus = {
 		id = ty_baoshousixiang
-		icon = GFX_goal_generic_defence
+		icon = GFX_focus_generic_closure
 		cost = 11
 		prerequisite = {
 			focus = ty_neizhengchuli
@@ -2353,7 +2308,7 @@ shared_focus = {
 				has_government = guli
 				has_government = neworder
 			}
-			factor = 100
+			factor = 4
 		}
 		modifier = {
 			is_subject = no
@@ -2361,7 +2316,7 @@ shared_focus = {
 				has_government = guli
 				has_government = neworder
 			}
-			factor = 1.1
+			factor = 1.05
 		}
 		modifier = {
 			is_subject = no
@@ -2369,11 +2324,18 @@ shared_focus = {
 				has_country_flag = go_guli
 				has_country_flag = go_neworder
 			}
-			factor = 1.5
+			factor = 10000
 		}
 		modifier = {
 			tag = HUM
 			factor = 2.5
+		}
+		modifier = {
+			or = {
+				tag = OKI
+				tag = YKR
+			}
+			factor = 10000
 		}
 	}
 
@@ -2431,7 +2393,7 @@ shared_focus = {
 
 shared_focus = {
 	id = ty_hepingdiyi
-	icon = GFX_goal_generic_improve_relations
+	icon = GFX_focus_generic_dovish
 	cost = 11
 	prerequisite = {
 		focus = ty_neizhengchuli
@@ -2451,7 +2413,7 @@ shared_focus = {
 				has_government = guli
 				has_government = qinwai
 			}
-			factor = 100
+			factor = 4
 		}
 		modifier = {
 			is_subject = no
@@ -2459,7 +2421,7 @@ shared_focus = {
 				has_government = guli
 				has_government = qinwai
 			}
-			factor = 1.1
+			factor = 1.05
 		}
 		modifier = {
 			is_subject = no
@@ -2467,7 +2429,14 @@ shared_focus = {
 				has_country_flag = go_guli
 				has_country_flag = go_qinwai
 			}
-			factor = 1.5
+			factor = 10000
+		}
+		modifier = {
+			or = {
+				tag = OKI
+				tag = KAS
+			}
+			factor = 10000
 		}
 		modifier = {
 			tag = HUM
@@ -2526,7 +2495,7 @@ shared_focus = {
 
 shared_focus = {
 	id = ty_zhijiedeshouduan
-	icon = GFX_goal_generic_political_pressure
+	icon = GFX_focus_generic_hawkish
 	cost = 11
 	prerequisite = {
 		focus = ty_neizhengchuli
@@ -2546,7 +2515,7 @@ shared_focus = {
 				has_government = fandong
 				has_government = neworder
 			}
-			factor = 100
+			factor = 4
 		}
 		modifier = {
 			is_subject = no
@@ -2554,7 +2523,7 @@ shared_focus = {
 				has_government = fandong
 				has_government = neworder
 			}
-			factor = 1.1
+			factor = 1.05
 		}
 		modifier = {
 			is_subject = no
@@ -2562,7 +2531,11 @@ shared_focus = {
 				has_country_flag = go_fandong
 				has_country_flag = go_neworder
 			}
-			factor = 1.5
+			factor = 10000
+		}
+		modifier = {
+			tag = YKR
+			factor = 10000
 		}
 	}
 
@@ -2991,11 +2964,8 @@ shared_focus = {
 				has_completed_focus = ty_zhengduobaquan
 				has_government = neworder
 			}
-			and = {
-				has_government = oldorder
-				has_completed_focus = ty_wuzhihudehunluan
-			}
 		}
+		has_completed_focus = ty_wuzhihudehunluan
 	}
 
 	bypass = {
@@ -3207,7 +3177,7 @@ shared_focus = {
 		}
 		modifier = {
 			has_government = oldorder
-			factor = 2
+			factor = 3
 		}
 		modifier = {
 			has_opinion_modifier = SCA_tiaoyueyifei_op
@@ -3268,7 +3238,7 @@ shared_focus = {
 		relative_position_id = ty_wuzhihudehunluan
 
     ai_will_do = {
-		factor = 2
+		factor = 2.5
 		modifier = {
 			factor = 10
 			is_subject = yes
@@ -3384,7 +3354,7 @@ shared_focus = {
 		}
 		modifier = {
 			has_war = yes
-			factor = 0.6
+			factor = 0
 		}
 	}
 
@@ -3455,7 +3425,7 @@ shared_focus = {
 
 
     ai_will_do = {
-		factor = 2
+		factor = 3
 		modifier = {
 			or = {
 				has_government = neworder

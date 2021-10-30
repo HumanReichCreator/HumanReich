@@ -1,0 +1,1009 @@
+ NMS_overcome_category = {
+    NMS_overcome_research = {
+        allowed = {
+            tag = NMS
+        }
+        visible = {
+            has_country_flag = NMS_kefuzongjiaobiduan
+            check_variable = { NMS_overcome_research < 2 }
+            has_idea = Shrine
+        }
+        available = {
+            has_war = no
+        }
+
+        fire_only_once = no
+
+        days_remove = 90
+
+        cost = 80
+
+        modifier = {
+            political_power_factor = -0.15
+        }
+
+        complete_effect = {   
+
+        }
+
+        remove_effect = {
+            if = {
+                limit = {
+                    not = { has_idea = NMS_overcome_research1_idea }
+                }
+                add_ideas = NMS_overcome_research1_idea
+                else = {
+                    swap_ideas = {
+                        remove_idea = NMS_overcome_research1_idea
+                        add_idea = NMS_overcome_research2_idea
+                    }
+                }
+            }
+            add_to_variable = {
+                NMS_overcome_research = 1
+            }
+        }
+        ai_will_do = {
+            factor = 1000
+        }
+    }
+    NMS_overcome_build = {
+        allowed = {
+            tag = NMS
+        }
+        visible = {
+            has_country_flag = NMS_kefuzongjiaobiduan
+            check_variable = { NMS_overcome_build < 2 }
+            has_idea = Shrine
+        }
+        available = {
+            has_war = no
+        }
+
+        fire_only_once = no
+
+        days_remove = 90
+
+        cost = 65
+
+        modifier = {
+            political_power_factor = -0.1
+        }
+
+        complete_effect = {   
+
+        }
+
+        remove_effect = {
+            if = {
+                limit = {
+                    not = { has_idea = NMS_overcome_build1_idea }
+                }
+                add_ideas = NMS_overcome_build1_idea
+                else = {
+                    swap_ideas = {
+                        remove_idea = NMS_overcome_build1_idea
+                        add_idea = NMS_overcome_build2_idea
+                    }
+                }
+            }
+            add_to_variable = {
+                NMS_overcome_build = 1
+            }
+        }
+        ai_will_do = {
+            factor = 1000
+        }
+    }
+    NMS_overcome_output = {
+        allowed = {
+            tag = NMS
+        }
+        visible = {
+            has_country_flag = NMS_kefuzongjiaobiduan
+            check_variable = { NMS_overcome_output < 2 }
+            has_idea = Shrine
+        }
+        available = {
+            has_war = no
+        }
+
+        fire_only_once = no
+
+        days_remove = 90
+
+        cost = 65
+
+        modifier = {
+            political_power_factor = -0.1
+        }
+
+        complete_effect = {   
+
+        }
+
+        remove_effect = {
+            if = {
+                limit = {
+                    not = { has_idea = NMS_overcome_output1_idea }
+                }
+                add_ideas = NMS_overcome_output1_idea
+                else = {
+                    swap_ideas = {
+                        remove_idea = NMS_overcome_output1_idea
+                        add_idea = NMS_overcome_output2_idea
+                    }
+                }
+            }
+            add_to_variable = {
+                NMS_overcome_output = 1
+            }
+        }
+        ai_will_do = {
+            factor = 1000
+        }
+    }
+}
+NMS_feiyue_category = {
+    NMS_feiyue = {
+        allowed = {
+            tag = NMS
+        }
+        visible = {
+            has_country_flag = NMS_junshifeiyuejihua
+        }
+        available = {
+            any_controlled_state = {
+                infrastructure > 5
+                is_owned_by = ROOT
+                free_building_slots = {
+                    building = arms_factory
+                    size > 0
+                    include_locked = no
+                }
+            }
+        }
+        days_remove = 45
+        cost = NMS_junshifeiyuejihua
+        remove_effect = {
+            set_temp_variable = {
+                v = NMS_junshifeiyuejihua
+            }
+            divide_temp_variable = {
+                v = 80
+            }
+            subtract_from_temp_variable = {
+                v = 0.5
+            }
+            round_temp_variable = v
+            add_to_temp_variable = {
+                v = 1
+            }
+            if = {
+                limit = {
+                    check_variable = {
+                        NMS_junshifeiyuejihua > 79
+                    }
+                    not = {
+                        has_country_flag = NMS_qiangzhikaizhan
+                    }
+                }
+                set_country_flag = NMS_qiangzhikaizhan
+                custom_effect_tooltip = NMS_qiangzhikaizhan_tt1
+            }
+            multiply_temp_variable = {
+                v = 20
+            }
+            add_to_variable = {
+                NMS_junshifeiyuejihua = v
+            }
+            if = {
+                limit = {
+                    has_country_flag = NMS_qiangzhikaizhan
+                }
+                add_days_mission_timeout = {
+                    mission = NMS_kaizhan
+                    days = 60
+                }
+            }
+            random_owned_controlled_state = {
+                limit = {
+                    infrastructure > 5
+                    free_building_slots = {
+                        building = arms_factory
+                        size > 0
+                        include_locked = no
+                    }
+                }
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 10000
+            modifier = {
+                check_variable = {
+                    NMS_junshifeiyuejihua = 80
+                }
+                date < 149.7.1
+                factor = 0
+            }
+        }
+    }
+    NMS_kaizhan = {
+        allowed = {
+            tag = NMS
+        }
+        available = {
+            has_war = yes
+        }
+        activation = {
+            has_country_flag = NMS_qiangzhikaizhan
+        }
+        fire_only_once = yes
+        is_good = no
+        days_mission_timeout = 365
+        timeout_effect = {
+            add_timed_idea = { idea = NMS_kaizhan_idea days = 365 }
+            add_stability = -0.25
+            add_political_power = -200
+        }
+    }
+}
+NMS_fodao_category = {
+    NMS_fodaolianhe = {
+        allowed = {
+            tag = NMS
+        }
+        visible = {
+            has_country_flag = NMS_fodaoyitihua
+        }
+        available = {
+            291 = {
+                is_core_of = ROOT
+                is_owned_by = ROOT
+            }  
+        }
+        cost = 100
+        complete_effect = {
+            set_cosmetic_tag = NMS_SRB
+            ST_hexie_Magician = yes
+        }
+        ai_will_do = {
+            factor = 1000
+        }
+    }
+    NMS_zhongshifo = {
+        allowed = {
+            tag = NMS
+        }
+        visible = {
+            has_country_flag = NMS_fodaoyitihua
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = NMS_fodaolianhe
+                has_cosmetic_tag = NMS_SRB
+            }
+            not = { has_country_flag = NMS_zhixingzhong }
+        }
+        cost = 10
+        days_remove = 90
+        modifier = {
+            stability_weekly = 0.002
+        }
+        complete_effect = {
+            set_country_flag = {
+                flag = NMS_zhixingzhong
+                value = 1
+                days = 90
+            }
+        }
+        remove_effect = {
+            add_stability = 0.02
+        }
+        ai_will_do = {
+            factor = 10000
+        }
+    }
+    NMS_zhongshidao = {
+        allowed = {
+            tag = NMS
+        }
+        visible = {
+            has_country_flag = NMS_fodaoyitihua
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = NMS_fodaolianhe
+                has_cosmetic_tag = NMS_SRB
+            }
+            not = { has_country_flag = NMS_zhixingzhong }
+        }
+        cost = 10
+        days_remove = 90
+        modifier = {
+            research_speed_factor = 0.05
+        }
+        complete_effect = {
+            set_country_flag = {
+                flag = NMS_zhixingzhong
+                value = 1
+                days = 90
+            }
+        }
+        ai_will_do = {
+            factor = 10000
+        }
+    }
+}
+NMS_hepingxiedu_category = {
+    NMS_xiaomiexieduzhe = {
+        allowed = {
+            tag = NMS
+        }
+        target_root_trigger = {
+            has_country_flag = NMS_xiaomiehepingxieduzhe
+        }
+        visible = {
+            FROM = {
+                not = {
+                    is_in_faction_with = ROOT
+                    is_subject_of = ROOT
+                    has_non_aggression_pact_with = ROOT
+                    has_war_with = ROOT
+                }
+            }
+        }
+        target_trigger = {
+            FROM = {
+                is_neighbor_of = ROOT
+            }
+        }
+        target_array = neighbors
+        available = {
+            FROM = {
+                or = {
+                    has_offensive_war = yes
+                    has_added_tension_amount > 30
+                }
+                before_declare_war = yes
+            }
+            custom_trigger_tooltip = {
+                tooltip = NMS_xiaomiexieduzhe_tt
+                not = {
+                    has_country_flag = NMS_xiaomie_@FROM
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = NMS_xiaomiexieduzhe_tt2
+                not = {
+                    has_country_flag = NMS_xiaomiexieduzhe
+                }
+            }
+        }
+
+        war_with_target_on_remove = yes
+        days_remove = 60
+        cost = 20
+        complete_effect = {
+            set_variable = {
+                war_clear = 60
+            }
+            prepare_war_for_FROM = yes
+            set_country_flag = NMS_xiaomie_@FROM
+            set_country_flag = {
+                flag = NMS_xiaomiexieduzhe
+                days = 60
+                value = 1
+            }
+        }
+        remove_effect = {
+            declare_war_on = {
+                target = FROM
+                type = liberate_wargoal
+            }
+        }
+
+        ai_will_do = {
+            factor = 100
+            modifier = {
+                has_opinion = {
+                    target = FROM
+                    value > 70
+                }
+                factor = 0
+            }
+        }
+
+    }
+}
+NMS_caifa_category = {
+    NMS_caifa = {
+        allowed = {
+            tag = NMS
+        }
+        visible = {
+            has_country_flag = NMS_yaoqingrenleitouzu
+            country_exists = ZBT
+        }
+        available = {
+            ZBT = { has_war = no }
+            has_war = no
+        }
+        modifier = {
+            political_power_gain = -0.1
+        }
+        cost = 50
+        days_remove = 90
+        days_re_enable = 60
+        remove_effect = {
+            add_offsite_building = {
+                type = industrial_complex
+                level = 1
+            }
+        }
+        ai_will_do = {
+            base = 10000
+        }
+    }
+}
+NMS_longduan_category = {
+    NMS_longduan = {
+        allowed = {
+            tag = NMS
+        }
+        target_root_trigger = {
+            has_country_flag = NMS_yaoguaimaoyitongmeng
+            is_subject = no
+        }
+        available = {
+            FROM = {
+                faqiqingqiu = yes
+            }
+            custom_trigger_tooltip = {
+                tooltip = NMS_longduan_tt
+                set_temp_variable = {
+                    x1 = ROOT.all_value_plus_manpower
+                }
+                set_temp_variable = {
+                    x2 = FROM.all_value_plus_manpower
+                }
+                multiply_temp_variable = {
+                    x2 = 3
+                }
+                check_variable = {
+                    x1 > x2
+                }
+            }
+        }
+        target_trigger = {
+            FROM = {
+                or = {
+                    has_country_flag = NMS_maoyixieding
+                    is_subject_of = ROOT
+                }
+            }
+        }
+        visible = {
+            FROM = {
+                not = {
+                    and = {
+                        has_country_flag = NMS_maoyixieding
+                        is_subject_of = ROOT
+                    }
+                }
+            }
+        }
+        modifier = {
+            political_power_gain = -0.15
+        }
+        complete_effect = {
+            FROM = {
+                add_timed_idea = {
+                    idea = NMS_beilongduanmaoyi_idea
+                    days = 120
+                }
+                country_event = nms2.47
+            }
+        }
+        cost = 50
+        days_remove = 120
+        days_re_enable = 30
+        ai_will_do = {
+            base = 10000
+        }
+    }
+}
+NMS_chuanjiao_category = {
+    NMS_chuanjiao = {
+        allowed = {
+            tag = NMS
+        }
+        target_root_trigger = {
+            has_country_flag = NMS_maoyichuanjiao
+        }
+        available = {
+            FROM = {
+                faqiqingqiu = yes
+            }
+            custom_trigger_tooltip = {
+                tooltip = NMS_chuanjiao_tt
+                set_temp_variable = {
+                    x1 = ROOT.all_value_plus_manpower
+                }
+                set_temp_variable = {
+                    x2 = FROM.all_value_plus_manpower
+                }
+                multiply_temp_variable = {
+                    x2 = 1.5
+                }
+                check_variable = {
+                    x1 > x2
+                }
+            }
+        }
+        visible = {
+            FROM = {
+                not = { 
+                    has_country_flag = NMS_maoyixieding 
+                    is_subject_of = ROOT
+                }
+            }
+        }
+        target_trigger = {
+            FROM = {
+                is_neighbor_of = ROOT
+            }
+        }
+        target_array = neighbors
+        days_remove = 120
+        days_re_enable = 30
+        cost = 100
+        complete_effect = {
+            if = {
+                limit = {
+                    has_idea = NMS_maoyichuanjiao2_idea
+                }
+                modify_timed_idea = {
+                    idea = NMS_maoyichuanjiao2_idea
+                    days = 120
+                }
+                else = {
+                    add_timed_idea = {
+                        idea = NMS_maoyichuanjiao2_idea
+                        days = 120
+                    }
+                }
+            }
+            FROM = {
+                add_timed_idea = {
+                    idea = NMS_maoyichuanjiao_idea
+                    days = 120
+                }
+                country_event = nms2.48
+            }
+        }
+        ai_will_do = {
+            base = 1000
+        }
+    }
+}
+NMS_xunbao_category = {
+    NMS_xunbao1 = {
+        allowed = {
+            tag = NMS
+        }
+        visible = {
+            has_country_flag = NMS_kaishixunbao
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = NMS_xunbao
+                any_state = {
+                    region = 42
+                    any_country = {
+                        PREV = { is_owned_by = PREV }
+                        or = {
+                            has_country_flag = NMS_maoyixieding
+                            tag = ROOT
+                            any_country = {
+                                is_subject_of = ROOT
+                            }
+                            OVERLORD = {
+                                has_country_flag = NMS_maoyixieding
+                            }
+                        }
+                    }
+                }
+            }
+            not = {
+                has_country_flag = NMS_zaitudexunbao
+            }
+        }
+        cost = 100
+        days_remove = 120
+        complete_effect = {
+            set_country_flag = {
+                flag = NMS_zaitudexunbao
+                value = 1
+                days = 120
+            }
+        }
+        remove_effect = {
+            custom_effect_tooltip = NMS_xunbao1_tt
+            set_variable = { NMS_wuyuanzhongkongzhi = 0 }
+            every_state = {
+                limit = {
+                    region = 42
+                    any_country = {
+                        PREV = { is_owned_by = PREV }
+                        or = {
+                            has_country_flag = NMS_maoyixieding
+                            tag = ROOT
+                            any_country = {
+                                is_subject_of = ROOT
+                            }
+                            OVERLORD = {
+                                has_country_flag = NMS_maoyixieding
+                            }
+                        }
+                    }
+                }
+                add_to_variable = {
+                    NMS.NMS_wuyuanzhongkongzhi = 0.1
+                }
+            }
+            set_variable = {
+                NMS_wuyuanzhongkongzhi2 = NMS_wuyuanzhongkongzhi
+            }
+            multiply_variable = {
+                NMS_wuyuanzhongkongzhi2 = 2
+            }
+            meta_effect = {
+                text = {
+                    add_tech_bonus = {
+                        category = civil
+                        uses = 1
+                        bonus = [v1]
+                        ahead_reduction = [v2]
+                    }
+                }
+                v1 = "[?NMS.NMS_wuyuanzhongkongzhi]"
+                v2 = "[?NMS.NMS_wuyuanzhongkongzhi2]"
+            }
+        }
+    }
+    NMS_xunbao2 = {
+        allowed = {
+            tag = NMS
+        }
+        visible = {
+            has_country_flag = NMS_kaishixunbao
+        }
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = NMS_xunbao
+                any_state = {
+                    region = 42
+                    any_country = {
+                        PREV = { is_owned_by = PREV }
+                        or = {
+                            has_country_flag = NMS_maoyixieding
+                            tag = ROOT
+                            any_country = {
+                                is_subject_of = ROOT
+                            }
+                            OVERLORD = {
+                                has_country_flag = NMS_maoyixieding
+                            }
+                        }
+                    }
+                }
+            }
+            not = {
+                has_country_flag = NMS_zaitudexunbao
+            }
+        }
+        cost = 100
+        days_remove = 120
+        complete_effect = {
+            set_country_flag = {
+                flag = NMS_zaitudexunbao
+                value = 1
+                days = 120
+            }
+        }
+        remove_effect = {
+            custom_effect_tooltip = NMS_xunbao2_tt
+            set_variable = { NMS_wuyuanzhongkongzhi = 0 }
+            every_state = {
+                limit = {
+                    region = 42
+                    any_country = {
+                        PREV = { is_owned_by = PREV }
+                        or = {
+                            has_country_flag = NMS_maoyixieding
+                            tag = ROOT
+                            any_country = {
+                                is_subject_of = ROOT
+                            }
+                            OVERLORD = {
+                                has_country_flag = NMS_maoyixieding
+                            }
+                        }
+                    }
+                }
+                add_to_variable = {
+                    NMS.NMS_wuyuanzhongkongzhi = 0.1
+                }
+            }
+            set_variable = {
+                NMS_wuyuanzhongkongzhi2 = NMS_wuyuanzhongkongzhi
+            }
+            multiply_variable = {
+                NMS_wuyuanzhongkongzhi2 = 2
+            }
+            meta_effect = {
+                text = {
+                    add_tech_bonus = {
+                        category = military
+                        uses = 1
+                        bonus = [v1]
+                        ahead_reduction = [v2]
+                    }
+                }
+                v1 = "[?NMS.NMS_wuyuanzhongkongzhi]"
+                v2 = "[?NMS.NMS_wuyuanzhongkongzhi2]"
+            }
+        }
+    }
+}
+NMS_chongzheng_category = {
+    NMS_chongzhenglvse = {
+        allowed = {
+            tag = NMS
+        }
+        target_root_trigger = {
+            has_country_flag = NMS_pingxidongluan
+        }
+        target_trigger = {
+            FROM = {
+                has_dynamic_modifier = {
+                    modifier = NMS_lvse_state
+                }
+            }
+        }
+        visible = {
+            FROM = {
+                has_dynamic_modifier = {
+                    modifier = NMS_lvse_state
+                }
+            }
+        }
+        state_target = yes
+        target_array = owned_states
+        cost = NMS_pingxi_cost
+        days_remove = NMS_pingxi_day
+        fire_only_once = yes
+        remove_effect = {
+            FROM = {
+                remove_dynamic_modifier = {
+                    modifier = NMS_lvse_state
+                }
+            }
+            
+            add_to_variable = {
+                NMS_dikuaishu = 1.5
+            }
+        }
+        ai_will_do = {
+            base = 100000
+        }
+    }
+    NMS_chongzhengzongse = {
+        allowed = {
+            tag = NMS
+        }
+        target_root_trigger = {
+            has_country_flag = NMS_pingxidongluan
+        }
+        target_trigger = {
+            FROM = {
+                has_dynamic_modifier = {
+                    modifier = NMS_zongse_state
+                }
+            }
+        }
+        visible = {
+            FROM = {
+                has_dynamic_modifier = {
+                    modifier = NMS_zongse_state
+                }
+            }
+        }
+        fire_only_once = yes
+        state_target = yes
+        target_array = owned_states
+        cost = NMS_pingxi_cost
+        days_remove = NMS_pingxi_day
+        remove_effect = {
+            FROM = {
+                remove_dynamic_modifier = {
+                    modifier = NMS_zongse_state
+                }
+            }
+            add_to_variable = {
+                NMS_dikuaishu = 1.5
+            }
+        }
+        ai_will_do = {
+            base = 100000
+        }
+    }
+    NMS_chongzhengzise = {
+        allowed = {
+            tag = NMS
+        }
+        target_root_trigger = {
+            has_country_flag = NMS_pingxidongluan
+        }
+        target_trigger = {
+            FROM = {
+                has_dynamic_modifier = {
+                    modifier = NMS_zise_state
+                }
+            }
+        }
+        visible = {
+            FROM = {
+                has_dynamic_modifier = {
+                    modifier = NMS_zise_state
+                }
+            }
+        }
+        fire_only_once = yes
+        state_target = yes
+        target_array = owned_states
+        cost = NMS_pingxi_cost
+        days_remove = NMS_pingxi_day
+        remove_effect = {
+            FROM = {
+                remove_dynamic_modifier = {
+                    modifier = NMS_zise_state
+                }
+            }
+            add_to_variable = {
+                NMS_dikuaishu = 1.5
+            }
+        }
+        ai_will_do = {
+            base = 100000
+        }
+    }
+}
+NMS_yaoguaihua_category = {
+    NMS_yaoguaihua = {
+        allowed = {
+            tag = NMS
+        }
+        target_root_trigger = {
+            has_country_flag = NMS_renliyaoguaihuafangan
+        }
+        available = {
+            
+        }
+        target_trigger = {
+            FROM = {
+                ST_race_is_Human = yes
+                or = {
+                    region = 50
+                    region = 51
+                    region = 55
+                }
+                or = {
+                    is_controlled_by = ROOT
+                    any_country = {
+                        is_subject_of = ROOT
+                        controls_state = PREV
+                    }
+                }
+                not = {
+                    state = 246
+                    state = 232
+                    state = 545
+                    state = 266
+                    state = 258
+                    state = 242
+                }
+            }
+        }
+        fire_only_once = yes
+        state_target = yes
+        target_array = HUM.core_states
+        cost = 30
+        days_remove = 90
+        remove_effect = {
+            FROM = {
+                set_state_controller = NMS
+                CONV_convert = yes
+                add_manpower = 100
+                add_core_of = YKV   
+                add_to_variable = {
+                    NMS.NMS_zhuanhuazhongzushu = 1
+                }
+                YKV = {
+                    if = {
+                        limit = {
+                            exists = yes
+                        }
+                        transfer_state = PREV
+                    }
+                }
+            }
+        }
+        ai_will_do = {
+            base = 100000
+        }
+    }
+    NMS_yaoguaihua2 = {
+        allowed = {
+            tag = NMS
+        }
+        target_root_trigger = {
+            has_country_flag = NMS_renliyaoguaihuafangan
+        }
+        available = {
+            
+        }
+        target_trigger = {
+            FROM = {
+                ST_race_is_Human = yes
+                or = {
+                    is_controlled_by = ROOT
+                    any_country = {
+                        is_subject_of = ROOT
+                        controls_state = PREV
+                    }
+                }
+                or = {
+                    state = 246
+                    state = 232
+                    state = 545
+                    state = 266
+                    state = 258
+                    state = 242
+                }
+            }
+        }
+        fire_only_once = yes
+        state_target = yes
+        cost = 60
+        days_remove = 180
+        remove_effect = {
+            FROM = {
+                set_state_controller = NMS
+                CONV_convert = yes
+                add_manpower = 250
+                add_core_of = YKV
+                add_to_variable = {
+                    NMS.NMS_zhuanhuazhongzushu = 1
+                }
+                YKV = {
+                    if = {
+                        limit = {
+                            exists = yes
+                        }
+                        transfer_state = PREV
+                    }
+                }
+            }
+        }
+        ai_will_do = {
+            base = 100000
+        }
+    }
+}

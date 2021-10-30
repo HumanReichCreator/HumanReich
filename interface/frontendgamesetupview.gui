@@ -185,21 +185,21 @@ guiTypes = {
 		}		
 	}
 	
-	### country entry
+	### country entry####
 	containerWindowType = {
 		name = "country_entry_mini"
 	
 		iconType = {
 			name = "country_flag"
-			quadTextureSprite ="GFX_flag_small2"
-			position = { x = 8 y = 7 }
+			quadTextureSprite ="GFX_shield_medium"
+			position = { x = 26 y = 22 }
 			Orientation = "UPPER_LEFT"
 			allwaystransparent = yes
 		}
 
 		buttonType = {
 			name = "country"	
-			quadTextureSprite = "GFX_mini_country_selector"
+			quadTextureSprite = "GFX_country_selection_minor_entry"
 			position = { x=0 y =0 }
 			clicksound = click_checkbox
 		}		
@@ -500,11 +500,9 @@ guiTypes = {
 			oversound = ui_menu_over
 		}
 	}
-
 	containerWindowType = {
 		name ="gamesetup_scenario_window"
-		size = { width = 1469 height = 512 }#changed
-		position = { x = 0 y = -170 }
+		size = { width = 579 height = 512 }
 		clipping = no
 		orientation = center
 		origo = center
@@ -512,7 +510,7 @@ guiTypes = {
 		
 		instantTextBoxType = {
 			name = "title"
-			position = { x = 560 y = 15 }#changed
+			position = { x = 120 y = 15 }
 			textureFile = ""
 			font = "hoi_20b"
 			borderSize = {x = 0 y = 0}
@@ -529,38 +527,23 @@ guiTypes = {
 		
 		containerWindowType = {
 			name ="bookmarks"
-			position = { x = 155 y = 55 }#changed
-			size = { width = 1350 height = 500}#changed
-
-
-			##########changed############
-			iconType = {
-				name = "bookmark_middle"
-				spriteType = "GFX_bookmark_middle"
-				position = { x = 94 y = 190 }
-			}
-
-			background = {
-			    name = "bookmarks_bg"
-			    quadTextureSprite ="GFX_null"
-			}
-			##########changed############
+			position = { x = 43 y = 55 }
+			size = { width = -10 height = 120}
 			
 			gridboxType = {
 				name ="bookmarks_grid"
-				position = { x = 100 y = 0 }
+				position = { x = 0 y = 0 }
 				size = { width = 100%% height = 100%% }
-				slotsize = { width = 245 height = 250 }
+				slotsize = { width = 260 height = 0 }
 				add_horizontal = yes
-				max_slots_horizontal = 4
-				max_slots_vertical = 2#changed
+				max_slots_vertical = 1
 				format = "UPPER_LEFT"
 			}
 		}
 		
 		instantTextBoxType = {
 			name = "history_title"
-			position = { x = 560 y = 575 }#changed
+			position = { x = 110 y = 275 }
 			font = "hoi_20b"
 			borderSize = {x = 0 y = 0}
 			text = "BM_HISTORY_TITLE"
@@ -571,27 +554,28 @@ guiTypes = {
 		
 		instantTextBoxType = {
 			name = "bookmark_title"
-			position = { x = 465 y = 600 }#changed
+			position = { x = 25 y = 298 }
 			font = "hoi4_typewriter22"
-			borderSize = {x = 0 y = 0}
-			maxWidth = 540#changed
-			maxHeight = 30	
-			format = left
-		}
-		
-		instantTextBoxType = {
-			name = "bookmark_desc"
-			position = { x = 465 y = 622 }#changed
-			font = "hoi4_typewriter16"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 540
 			maxHeight = 30	
 			format = left
 		}
 		
+		instantTextBoxType = {
+			name = "bookmark_desc"
+			position = { x = 25 y = 319 }
+			font = "hoi4_typewriter16"
+			borderSize = {x = 0 y = 0}
+			maxWidth = 540
+			maxHeight = 130	
+			format = left
+			scrollbarType = standardtext_slider
+		}
+		
 		ButtonType = {
 			name = "back_button"
-			position = { x = 465 y = 240 }#changed
+			position = { x = 30 y = -57 }
 			quadTextureSprite ="GFX_button_221x34"	
 			buttonText = "BACK"
 			buttonFont = "hoi_18mbs"
@@ -603,7 +587,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "select_button"
-			position = { x = -690 y = 240 }#changed
+			position = { x = -252 y = -57 }
 			quadTextureSprite ="GFX_button_221x34"
 			buttonText = "FE_SELECT_SCENARIO"
 			buttonFont = "hoi_18mbs"
@@ -613,6 +597,119 @@ guiTypes = {
 			shortcut = "RETURN"
 		}
 	}
+	#######################4x2 剧本选择栏
+	# containerWindowType = { 	
+	# 	name ="gamesetup_scenario_window" 
+	# 	size = { width = 1469 height = 512 }#changed
+	# 	position = { x = 0 y = -170 }
+	# 	clipping = no
+	# 	orientation = center
+	# 	origo = center
+	# 	moveable = yes
+		
+	# 	instantTextBoxType = {
+	# 		name = "title"
+	# 		position = { x = 560 y = 15 }#changed
+	# 		textureFile = ""
+	# 		font = "hoi_20b"
+	# 		borderSize = {x = 0 y = 0}
+	# 		text = "FE_SELECT_SCENARIO"
+	# 		maxWidth = 340
+	# 		maxHeight = 30	
+	# 		format = center
+	# 	}
+		
+	# 	background = {
+	# 		name = "single_player_date_bg"		
+	# 		quadTextureSprite ="GFX_select_date_bg"
+	# 	}
+		
+	# 	containerWindowType = {
+	# 		name ="bookmarks"
+	# 		position = { x = 155 y = 55 }#changed
+	# 		size = { width = 1350 height = 500}#changed
+
+
+	# 		##########changed############
+	# 		iconType = {
+	# 			name = "bookmark_middle"
+	# 			spriteType = "GFX_bookmark_middle"
+	# 			position = { x = 94 y = 190 }
+	# 		}
+
+	# 		background = {
+	# 		    name = "bookmarks_bg"
+	# 		    quadTextureSprite ="GFX_null"
+	# 		}
+	# 		##########changed############
+			
+	# 		gridboxType = {
+	# 			name ="bookmarks_grid"
+	# 			position = { x = 100 y = 0 }
+	# 			size = { width = 100%% height = 100%% }
+	# 			slotsize = { width = 245 height = 250 }
+	# 			add_horizontal = yes
+	# 			max_slots_horizontal = 4
+	# 			max_slots_vertical = 2#changed
+	# 			format = "UPPER_LEFT"
+	# 		}
+	# 	}
+		
+	# 	instantTextBoxType = {
+	# 		name = "history_title"
+	# 		position = { x = 560 y = 575 }#changed
+	# 		font = "hoi_20b"
+	# 		borderSize = {x = 0 y = 0}
+	# 		text = "BM_HISTORY_TITLE"
+	# 		maxWidth = 340
+	# 		maxHeight = 30	
+	# 		format = centre
+	# 	}
+		
+	# 	instantTextBoxType = {
+	# 		name = "bookmark_title"
+	# 		position = { x = 465 y = 600 }#changed
+	# 		font = "hoi4_typewriter22"
+	# 		borderSize = {x = 0 y = 0}
+	# 		maxWidth = 540#changed
+	# 		maxHeight = 30	
+	# 		format = left
+	# 	}
+		
+	# 	instantTextBoxType = {
+	# 		name = "bookmark_desc"
+	# 		position = { x = 465 y = 622 }#changed
+	# 		font = "hoi4_typewriter16"
+	# 		borderSize = {x = 0 y = 0}
+	# 		maxWidth = 540
+	# 		maxHeight = 30	
+	# 		format = left
+	# 	}
+		
+	# 	ButtonType = {
+	# 		name = "back_button"
+	# 		position = { x = 465 y = 240 }#changed
+	# 		quadTextureSprite ="GFX_button_221x34"	
+	# 		buttonText = "BACK"
+	# 		buttonFont = "hoi_18mbs"
+	# 		Orientation = "LOWER_LEFT"
+	# 		clicksound = click_close
+	# 		oversound = ui_menu_over
+	# 		shortcut = "ESCAPE"
+	# 	}
+
+	# 	ButtonType = {
+	# 		name = "select_button"
+	# 		position = { x = -690 y = 240 }#changed
+	# 		quadTextureSprite ="GFX_button_221x34"
+	# 		buttonText = "FE_SELECT_SCENARIO"
+	# 		buttonFont = "hoi_18mbs"
+	# 		Orientation = "LOWER_RIGHT"
+	# 		clicksound = click_ok
+	# 		oversound = ui_menu_over
+	# 		shortcut = "RETURN"
+	# 	}
+	# }
 	
 	containerWindowType = {
 		name ="gamesetup_interesting_countries_window"
@@ -696,18 +793,34 @@ guiTypes = {
 			}
 		}
 
+		###########原版#############
+		# containerWindowType = {
+		# 	name ="countries_mini"
+		# 	position = { x = 15 y = 340 }
+		# 	size = { width = -15 height = 120}
+			
+		# 	gridboxType = {
+		# 		name ="countries_grid"
+		# 		position = { x = 0 y = 0 }
+		# 		size = { width = 100% height = 100% }
+		# 		slotsize = { width = 53 height = 40 }
+		# 		add_horizontal = yes
+		# 		max_slots_vertical = 2
+		# 		format = "UPPER_LEFT"
+		# 	}
+		# }
 		containerWindowType = {
 			name ="countries_mini"
-			position = { x = 15 y = 340 }
+			position = { x = 15 y = 330 }
 			size = { width = -15 height = 120}
 			
 			gridboxType = {
 				name ="countries_grid"
 				position = { x = 0 y = 0 }
 				size = { width = 100% height = 100% }
-				slotsize = { width = 53 height = 40 }
+				slotsize = { width = 130 height = 0 }
 				add_horizontal = yes
-				max_slots_vertical = 2
+				# max_slots_vertical = 1
 				format = "UPPER_LEFT"
 			}
 		}
@@ -905,6 +1018,7 @@ guiTypes = {
 			maxWidth = 340
 			maxHeight = 30	
 			format = centre
+			
 		}
 		
 		instantTextBoxType = {
@@ -913,8 +1027,9 @@ guiTypes = {
 			font = "hoi4_typewriter16"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 380
-			maxHeight = 30	
+			maxHeight = 210	
 			format = left
+			scrollbarType = standardtext_slider
 		}
 	}
 

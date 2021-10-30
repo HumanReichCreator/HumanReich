@@ -1,0 +1,71 @@
+NUE_category = {
+	NUE_shuncong = {
+		state_target = yes
+		allowed = {
+			tag = NUE
+		}
+		target_root_trigger = {
+			has_country_flag = NUE_kongzhiheshuncong
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = NUE_shuncong_tt
+				FROM = {
+					check_variable = {
+						NUE_shuncong < 3
+					}
+				}
+			}
+		}
+		remove_effect = {
+			FROM = {
+				add_compliance = 4
+				add_resistance = -10
+				add_to_variable = {
+					NUE_shuncong = 1
+				}
+				set_temp_variable = {
+					v = state_population_k
+				}
+				divide_temp_variable = {
+					v = -100
+				}
+				multiply_temp_variable = {
+					v = 1000
+				}
+				if = {
+					limit = {
+						ST_race_is_Human = yes
+					}
+					multiply_temp_variable = {
+						v = 3
+					}
+				}
+				add_manpower = v
+				ROOT = {
+					set_temp_variable = {
+						v = FROM.state_value
+					}
+					multiply_temp_variable = {
+						v = -0.2
+					}
+					clamp_temp_variable = {
+						var = v
+						min = -100
+						max = -2
+					}
+					add_political_power = v
+				}
+				
+			}
+		}
+		days_remove = 40
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ROOT
+				not = { is_core_of = ROOT }
+			}
+		}
+		target_array = controlled_states
+	}
+}

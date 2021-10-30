@@ -1,12 +1,22 @@
 CLO_battle = {
     CLO_war = {
-        visible = {
+        allowed = {
             tag = CLO
+        }
+        target_root_trigger = {
             is_subject = no
+        }
+        visible = {
             date < 151.2.1
+            FROM = {
+                exists = yes
+            }
         }
         available = {
             date < 151.1.1
+            FROM = {
+                before_declare_war = yes
+            }
         }
         target_trigger = {
             FROM = {
@@ -19,6 +29,9 @@ CLO_battle = {
                     is_on_continent = Hell
                 }
             }
+        }
+        targets = {
+            HUB AOO AKO HCT HGH CLO HB1 SAK KEK GYK YCE URM GH1 KMC SKI
         }
 
         cost = 60

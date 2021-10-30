@@ -5,6 +5,7 @@
 		sc_light_infantry = { x = 0 y = 1 }
 		sc_light_infantry = { x = 0 y = 2 }
 		sc_light_infantry = { x = 0 y = 3 }
+		sc_light_infantry = { x = 0 y = 4 }
 	}
 	support = {
 	}
@@ -17,16 +18,6 @@ division_template = {
 		sc_infantry = { x = 0 y = 2 }
 		sc_infantry = { x = 0 y = 3 }
 		sc_mortar_brigade = { x = 0 y = 4 }
-	}
-	support = {
-	}
-}
-division_template = {
-	name = "共和国义勇编制"
-	regiments = {
-		sc_infantry = { x = 0 y = 0 }
-		melee_infantry = { x = 0 y = 1 }
-		melee_infantry = { x = 0 y = 2 }
 	}
 	support = {
 	}
@@ -59,34 +50,6 @@ units = {
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "共和国义勇编制"
-		location = 4415
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 4415
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 4415
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 4415
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
 		name = "共和国轻装游击编制"
 		location = 4415
 		division_template = "共和国轻装游击编制"
@@ -154,34 +117,6 @@ units = {
 		name = "共和国正式编制"
 		location = 5363
 		division_template = "共和国正式编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 5363
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 5363
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 5363
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 5363
-		division_template = "共和国义勇编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
@@ -256,34 +191,7 @@ units = {
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
-	division = {
-		name = "共和国义勇编制"
-		location = 5352
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 5352
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 5352
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 5352
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
+
 	division = {
 		name = "共和国轻装游击编制"
 		location = 5352
@@ -352,34 +260,6 @@ units = {
 		name = "共和国正式编制"
 		location = 204
 		division_template = "共和国正式编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 204
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 204
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 204
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 204
-		division_template = "共和国义勇编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
@@ -455,34 +335,6 @@ units = {
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "共和国义勇编制"
-		location = 74
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 74
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 74
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 74
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
 		name = "共和国轻装游击编制"
 		location = 74
 		division_template = "共和国轻装游击编制"
@@ -554,34 +406,6 @@ units = {
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "共和国义勇编制"
-		location = 2686
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 2686
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 2686
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 2686
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
 		name = "共和国轻装游击编制"
 		location = 2686
 		division_template = "共和国轻装游击编制"
@@ -649,34 +473,6 @@ units = {
 		name = "共和国正式编制"
 		location = 4395
 		division_template = "共和国正式编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 4395
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 4395
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 4395
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 4395
-		division_template = "共和国义勇编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
@@ -748,34 +544,6 @@ units = {
 		name = "共和国正式编制"
 		location = 5279
 		division_template = "共和国正式编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 5279
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 5279
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 5279
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 5279
-		division_template = "共和国义勇编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
@@ -847,34 +615,6 @@ units = {
 		name = "共和国正式编制"
 		location = 5216
 		division_template = "共和国正式编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 5216
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 5216
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 5216
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 5216
-		division_template = "共和国义勇编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
@@ -946,34 +686,6 @@ units = {
 		name = "共和国正式编制"
 		location = 5148
 		division_template = "共和国正式编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 5148
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 5148
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 5148
-		division_template = "共和国义勇编制"
-		start_experience_factor = 0.7
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "共和国义勇编制"
-		location = 5148
-		division_template = "共和国义勇编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}

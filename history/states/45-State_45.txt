@@ -3,17 +3,28 @@ state={
 	id=45
 	name="STATE_45"
 	resources={
-		powder=0.000
-		metal=0.000
+		powder = 0.0
+		metal = 0.0
 		gas=0.000
 		crystal=0.000
 	}
 
 	history={
-			owner = LIL
+		143.7.1 = {
+			owner = SCA
+			add_core_of = SCA
+			add_core_of = SC3
+			buildings = {
+				infrastructure = 0
+				industrial_complex = 0
+				arms_factory = 0
+				radar_station = 0
+			}
+		}
 		146.1.1 = {
-			owner = LIL
-			add_claim_by = SCA
+			owner = SCA
+			add_core_of = SC3
+			add_core_of = SCA
 			add_core_of = LIL
 			buildings = {
 				infrastructure =1

@@ -1,0 +1,810 @@
+﻿l_english:
+  ########################################old###
+  TKM_neizhengbianhua:0 "内政变化"
+  TKM_neizhengbianhua_desc:0 ""
+  TKM_huifuzhanzhengdesunshang:0 "修复战争的损伤"
+  TKM_huifuzhanzhengdesunshang_desc:0 "我们付丧神的独立战争也是整个幻想乡反人类战争的重要一环，因此我们的居住地也受到了严重损坏，现在我们需要修复它们。"
+  TKM_wendinggedangpaizhenglun:0 "稳定各党派争论"
+  TKM_wendinggedangpaizhenglun_desc:0 "作为新生的势力，我们缺乏有力的领导人。但至少，我们付丧神不应该让各个理念的分歧纷争使得我们内部再度分裂。"
+  TKM_gaishanshouduzhuangkuang:0 "改善首都状况"
+  TKM_gaishanshouduzhuangkuang_desc:0 "我们付丧神的首都——九十九城未来会成为幻想乡所有付丧神的家，而付丧神属于那种看起来少，但实际非常多的妖怪，我们得做好容纳大量同胞的准备。"
+  #idea
+
+  TKM_wendinggedangpaizhenglun_idea:0 "稳定各党派争论"
+  TKM_leiguyaolizhuanyikecheng_idea:0 "雷鼓的新妖力转移教程"
+  TKM_chengweizhenzhengdeshenming_idea:0 "成为真正的神明"
+  TKM_jianliduoduolangduanzaogongsi_idea:0 "多多良锻造公司"
+  #op
+  TKM_jianlidaojurenlingsuo_op:0 "建立道具认领所"
+  TKM_zhongshihexiaoyaoguaideguanxi_op:0 "重视和小妖怪的关系"
+  TKM_bangzhurenleichengweifusangshenshi_op:0 "帮助人类成为付丧神使"
+  TKM_kaolongzi_op:0 "靠拢八云紫"
+  TKM_bangzhulinglanyuanjianshe_op:0 "帮助铃兰种植园建设"
+  TKM_Support_us_in_the_civil_war_op:0 "在内战中支持我们"
+  TKM_Support_our_enemies_in_the_civil_war_op:0 "在内战中支持敌人"
+  #other
+  kog_manpower_puppet:0 "成妖的道具们"
+  kog_manpower_puppet_tt:0 "§G从军用工厂中获得每周人力§!"
+  kog_manpower_puppet_desc:0 "付丧神和一般妖怪的形成不同，主要是由被遗弃或者旧道具转化而来的，因此有较为特殊的可用兵员的获得方式。\n§Y当前为每周人力§! §G[?TKM_weekly|+0]§!\n\n§Y具体效果是从军用工厂中获得每周人力，获得的多少为你当前军用工厂的1/5，上限为每周20人。但进入战争状态时，获得的人力会减半。§!"
+  TKM_caogenyaoguaigongrongquan_faction:0 "共荣圈"
+  TKM_xuanjujieshu:0 "已明确领导人"
+  
+  #tt
+  TKM_wuqixinghaochongzheng_tt:0 "外界步兵武器的软攻等级+1"
+  TKM_leigudegaizaofangan_tt:0 "外界火炮和外界步兵武器的软攻等级+1"
+  TKM_baqiaodegaizaofangan_tt:0 "外界火炮和外界步兵武器的硬攻和防御等级+1"
+  TKM_bianbiandegaizaofangan_tt:0 "外界火炮和外界步兵武器的突破等级+1"
+  TKM_xiaosandegaizaofangan_tt:0 "外界火炮和外界步兵武器的可靠性和造价等级+1"
+  TKM_chengweizhenzhengdeshenming_tt:0 "拥有100点[HUM.GetFlag]人类村落影响力"
+  TKM_chengweishouhushen_tt:0 "§Y唯心状态的灵力不再会影响适宜人口修正和研究速度。§!"
+  TKM_renleikaifang_tt:0 "这项提案会向§R幻想乡地区§!内的所有的主体种族为§R妖怪、草根妖怪、神明、天狗和河童的§R非贤者国家§!以及[SCA.GetFlag][SCA.GetName]§!发送。如果§R同意方大于反对方§!，若作为同意者，则可以§G获得额外10%的人类影响力的加成§!，而作为提议的发起者§Y[TKM.GetFlag][TKM.GetName]§!则会§G获得额外20%的人类影响力的加成§!，30天后会出结果。\n"
+  TKM_renleishiwomendedaoju_tt:0 "§R要是失败，你会获得大量的减成!§!"
+  TKM_guge_tt:0 "当前领导人是堀川雷鼓"
+  TKM_xiaosan_tt:0 "当前领导人是多多良小伞"
+  TKM_baqiao_tt:0 "当前领导人是九十九八桥"
+  TKM_bianbian_tt:0 "当前领导人是九十九弁弁"
+  TKM_qinxin_tt:0 "当前领导人是秦心"
+  TKM_chengweizhenzhengdeshenming_tt2:0 "§R从军事工厂中获得的人力-20%§!"
+  TKM_leiguyaolizhuanyikecheng_tt:0 "§G从军事工厂中获得的人力+50%§!"
+  TKM_1_tt:0 "获得前人类村落的正规战斗编制"
+  ########################################new
+  
+  TKM_shell_shocked_spectator_5:0 "道具和平主义"
+  TKM_shell_shocked_spectator_5_desc:0 "覆亡之惧下的和平主义是不得不走的道路，新生的势力极为不稳定，我们被迫将一些物资投入在民生工程上以凝聚每一个道具。"
+  TKM_shell_shocked_spectator_4:0 "道具和平主义"
+  TKM_shell_shocked_spectator_4_desc:0 "覆亡之惧下的和平主义是不得不走的道路，新生的势力极为不稳定，我们被迫将一些物资投入在民生工程上以凝聚每一个道具。"
+
+  TKM_shell_shocked_spectator_3:0 "道具和平主义"
+  TKM_shell_shocked_spectator_3_desc:0 "覆亡之惧下的和平主义是不得不走的道路，新生的势力极为不稳定，我们被迫将一些物资投入在民生工程上以凝聚每一个道具。"
+
+  TKM_shell_shocked_spectator_2:0 "道具和平主义"
+  TKM_shell_shocked_spectator_2_desc:0 "覆亡之惧下的和平主义是不得不走的道路，新生的势力极为不稳定，我们被迫将一些物资投入在民生工程上以凝聚每一个道具。"
+
+  TKM_shell_shocked_spectator_1:0 "道具和平主义"
+  TKM_shell_shocked_spectator_1_desc:0 "覆亡之惧下的和平主义是不得不走的道路，新生的势力极为不稳定，我们被迫将一些物资投入在民生工程上以凝聚每一个道具。"
+  
+  TKM_War_against_pacifism_dec:0 "反和平主义宣传"
+  TKM_War_against_pacifism_dec_desc:0 "出于对外开战的需要，专注内部建设改善的和平主义政策是该被逐渐抛弃了。"
+  
+  TKM_War_against_pacifism_2_dec:0 "向和平主义宣战"
+  TKM_War_against_pacifism_2_dec_desc:0 "没时间搞转型了！愈加严峻的局势以及触及到了每一个道具的紧张神经，让和平主义见鬼去吧！" 
+  
+  
+  tkm_Deformed_industry_idea:0 "畸形的工业"
+  tkm_Deformed_industry_idea_desc:0 "九十九工业作为人类前军事工业区，只专心生产武器，而民用轻工业技术主要靠人类。从人类脱离以后，一直缺乏必要的轻工业技术。"
+
+  TKM_Perfect_industrial_zone_idea_1:0 "畸形的工业"
+  TKM_Perfect_industrial_zone_idea_1_desc:0 "九十九工业作为人类前军事工业区，只专心生产武器，而民用轻工业技术主要靠人类。从人类脱离以后，一直缺乏必要的轻工业技术。"
+  
+  TKM_Perfect_industrial_zone_idea_2:0 "畸形的工业"
+  TKM_Perfect_industrial_zone_idea_2_desc:0 "九十九工业作为人类前军事工业区，只专心生产武器，而民用轻工业技术主要靠人类。从人类脱离以后，一直缺乏必要的轻工业技术。"  
+  
+  TKM_Perfect_industrial_zone_idea_3:0 "畸形的工业"
+  TKM_Perfect_industrial_zone_idea_3_desc:0 "九十九工业作为人类前军事工业区，只专心生产武器，而民用轻工业技术主要靠人类。从人类脱离以后，一直缺乏必要的轻工业技术。"  
+  
+  TKM_Perfect_industrial_zone_idea_4:0 "完善的工业"
+  TKM_Perfect_industrial_zone_idea_4_desc:0 "九十九工业已经完成了工业比例改革，现在是一个拥有全套产业链的先进工业区。"  
+  
+  TKM_Perfect_industrial_zone_idea_5:0 "真正的工业区"
+  TKM_Perfect_industrial_zone_idea_5_desc:0 "九十九工业已经完成了工业比例改革，现在是一个拥有全套产业链的先进工业区。" 
+  
+  
+  TKM_War_industrial_zone_idea_1:0 "畸形的工业"
+  TKM_War_industrial_zone_idea_1_desc:0 "九十九工业作为人类前军事工业区，只专心生产武器，而民用轻工业技术主要靠人类。从人类脱离以后，一直缺乏必要的轻工业技术。"
+
+  TKM_War_industrial_zone_idea_2:0 "畸形的工业"
+  TKM_War_industrial_zone_idea_2_desc:0 "九十九工业作为人类前军事工业区，只专心生产武器，而民用轻工业技术主要靠人类。从人类脱离以后，一直缺乏必要的轻工业技术。"
+  
+  TKM_War_industrial_zone_idea_3:0 "畸形的工业"
+  TKM_War_industrial_zone_idea_3_desc:0 "九十九工业作为人类前军事工业区，只专心生产武器，而民用轻工业技术主要靠人类。从人类脱离以后，一直缺乏必要的轻工业技术。"  
+  
+  TKM_War_industrial_zone_idea_4:0 "畸形的工业"
+  TKM_War_industrial_zone_idea_4_desc:0 "九十九工业作为人类前军事工业区，只专心生产武器，而民用轻工业技术主要靠人类。从人类脱离以后，一直缺乏必要的轻工业技术。"  
+  
+  TKM_War_industrial_zone_idea_5:0 "真正的战争机器"
+  TKM_War_industrial_zone_idea_5_desc:0 "九十九工业作为人类前军事工业区，只专心生产武器，而民用轻工业技术主要靠人类。从人类脱离以后，一直缺乏必要的轻工业技术。"  
+  
+  tkm_New_forces_idea_1:0 "新生的势力"
+  tkm_New_forces_idea_1_desc:0 "付丧神尽管从人类脱离成功脱离，但她们之中缺乏一名有威望、有力量的领导人。于是付丧神们决定开始“试用期”，来选择一名能够适合自己未来发展道路的领导者。"
+
+  tkm_New_forces_idea_2:0 "新生的势力"
+  tkm_New_forces_idea_2_desc:0 "付丧神尽管从人类脱离成功脱离，但她们之中缺乏一名有威望、有力量的领导人。于是付丧神们决定开始“试用期”，来选择一名能够适合自己未来发展道路的领导者。"
+  
+  tkm_New_forces_idea_3:0 "新生的势力"
+  tkm_New_forces_idea_3_desc:0 "付丧神尽管从人类脱离成功脱离，但她们之中缺乏一名有威望、有力量的领导人。于是付丧神们决定开始“试用期”，来选择一名能够适合自己未来发展道路的领导者。"  
+  
+  tkm_New_forces_idea_4:0 "新生的势力"
+  tkm_New_forces_idea_4_desc:0 "付丧神尽管从人类脱离成功脱离，但她们之中缺乏一名有威望、有力量的领导人。于是付丧神们决定开始“试用期”，来选择一名能够适合自己未来发展道路的领导者。"  
+  
+  tkm_New_forces_idea_5:0 "新生的势力"
+  tkm_New_forces_idea_5_desc:0 "付丧神尽管从人类脱离成功脱离，但她们之中缺乏一名有威望、有力量的领导人。于是付丧神们决定开始“试用期”，来选择一名能够适合自己未来发展道路的领导者。"  
+  
+  tkm_New_forces_idea_6:0 "新生的势力"
+  tkm_New_forces_idea_6_desc:0 "付丧神尽管从人类脱离成功脱离，但她们之中缺乏一名有威望、有力量的领导人。于是付丧神们决定开始“试用期”，来选择一名能够适合自己未来发展道路的领导者。"  
+  
+  tkm_New_forces_idea_7:0 "新生的势力"
+  tkm_New_forces_idea_7_desc:0 "付丧神尽管从人类脱离成功脱离，但她们之中缺乏一名有威望、有力量的领导人。于是付丧神们决定开始“试用期”，来选择一名能够适合自己未来发展道路的领导者。"  
+  
+  TKM_Progressive_leader:0 "革新的领袖"
+  TKM_Progressive_leader_desc:0 "堀川雷鼓曾在辉针城事件中通过个体的独创之壮举带给了广大道具独立性，追随她的革新理念显然是最正确的。"
+  
+  TKM_Incarnation_of_knowledge:0 "知识的化身"
+  TKM_Incarnation_of_knowledge_desc:0 "尽管可能会招致批判，[TKM.GetLeader]仍然决定提拔大量本体是书籍的付丧神作为她的幕僚团以推进改革。"
+  
+  tkm_Technocratic_system_idea:0 "技术官僚体系"
+  tkm_Technocratic_system_idea_desc:0 "堀川雷鼓认为一个精诚合作的职业官僚集团有助于继续改善付丧神社会，当然或许在不可见的未来这个体系有很大可能自内部被腐蚀...谁知道呢？"
+  
+  TKM_Compromise_with_radicals:0 "与激进派妥协"
+  TKM_Compromise_with_radicals_desc:0 "九十九八桥的组织从来都不是个什么威胁，她与堀川雷鼓同属付丧神内部传统的统治阶级“乐器”派系又都在辉针城事件中受惠，只不过有一点小小的分歧罢了。"
+  
+  TKM_Compromise_with_radicals_dec:0 "安抚工具团体"
+  TKM_Compromise_with_radicals_dec_desc:0 "通过给予工具团体一系列扶助极大的提高了她们的生产积极性。"
+  
+  TKM_Independent_technological_innovation:0 "自主科技革新"
+  TKM_Independent_technological_innovation_desc:0 "“知识”系付丧神不擅战斗却善于研究和管理，在[TKM.GetLeader]给予的优厚条件下他们得以发挥长处。"
+  
+  TKM_Proper_nationalism:0 "适当的民族主义"
+  TKM_Proper_nationalism_desc:0 "九十九弁弁非常强调付丧神的个体认同与集体正义，这绝对不是什么坏事，我们只要不搞政治极化就没有任何问题。"
+  
+  TKM_Proper_nationalism_dec:0 "煽动狂热情绪"
+  TKM_Proper_nationalism_dec_desc:0 "我们开始对民族主义团体的各类行为予以支持，这样军队中的狂热分子们又开始活跃了。"
+
+  TKM_Unity_Return_Association_dec:0 "团结回归协会"
+  TKM_Unity_Return_Association_dec_desc:0 "利用激进分子的时候可不要忘了确保[TKM.GetLeader]的主导地位，将已被边缘化的回归协会纳入政府亦能壮大我们自身。"
+  
+  TKM_Power_transfer_course:0 "妖力转移课程"
+  TKM_Power_transfer_course_desc:0 "正如辉针城异变一样，堀川雷鼓开始帮助其他付丧神转移和运用现在的新妖力，甚至还对内出了专门的教学课程，未来会有更多的付丧神诞生。"
+  
+  TKM_Electrification_across_the_country:0 "全境电气化"
+  TKM_Electrification_across_the_country_desc:0 "堀川雷鼓一直打算在做的事情在科技进步性以及成为了现实，我们狭小却富有的工业区在实现了全境电气化后将会更加强劲。"
+  
+  TKM_Pan_Youkaism:0 "泛妖怪主义"
+  TKM_Pan_Youkaism_desc:0 "付丧神始终是一种普通妖怪，我们不能觉得自身长得最像人就去亲近人类，广大妖怪才是我们真正的朋友，而这其中尤以草根妖怪为重要。"
+  
+  tkm_Pan_Hobism_idea:0 "泛妖怪主义"
+  tkm_Pan_Hobism_idea_desc:0 "推行泛妖怪主义有助于改善与各路妖怪的关系，促进双方结为真正的同盟。" 
+ 
+  TKM_Guide_the_progress_of_the_youkai:0 "共荣圈之主"
+  TKM_Guide_the_progress_of_the_youkai_desc:0 "我们拥有者广大草根妖怪所没有的工业化社会，理应通过这种优势为广大潜在盟友提供帮助，实现共同繁荣。"
+  
+  TKM_Guide_the_progress_of_the_youkai_tt:0 "§R今宵是飘逸的帝国主义者(Live ver)　～ Imperialism Flowers.§!"
+  
+  TKM_Support_the_building_of_allies_category:0 "支援盟友建设"
+  
+  TKM_Guide_the_progress_of_the_youkai_dec:0 "经济共荣圈-支援[FROM.GetNameDefCap]的工业建设"
+  TKM_Guide_the_progress_of_the_youkai_dec_desc:0 "指导盟友的经济可能一开始没什么回报，不过从长远来看恐怕就不一样了。"
+
+  TKM_Economic_Co_Prosperity_Circle_1_idea:0 "共荣圈成员"
+  TKM_Economic_Co_Prosperity_Circle_1_idea_desc:0 "该势力作为共荣圈的一员受到[TKM.GetName]的技术指导。"
+
+  TKM_Guide_the_progress_of_the_youkai_2_dec:0 "经济共荣圈-为[FROM.GetNameDefCap]提供技术指导"
+  TKM_Guide_the_progress_of_the_youkai_2_dec_desc:0 "在这个过程中我们的技术人员将会成为对方工业体系中实际上的掌权者。"
+
+  TKM_Economic_Co_Prosperity_Circle_2_idea:0 "共荣圈成员"
+  TKM_Economic_Co_Prosperity_Circle_2_idea_desc:0 "该势力作为共荣圈的一员受到[TKM.GetName]的技术指导。"
+ 
+  TKM_Guide_the_progress_of_the_youkai_3_dec:0 "经济共荣圈-将[FROM.GetNameDefCap]转化为资源区"
+  TKM_Guide_the_progress_of_the_youkai_3_dec_desc:0 "这就是合作共荣，我们指导小妖怪繁荣发展，她们则回馈给我们生产原料。"
+
+  TKM_Economic_Co_Prosperity_Circle_3_idea:0 "共荣圈成员"
+  TKM_Economic_Co_Prosperity_Circle_3_idea_desc:0 "该势力作为共荣圈的一员受到[TKM.GetName]的全面经济控制。"
+  
+  TKM_Co_prosperity_circle_member_1_op:0 "共荣圈成员"
+  TKM_Co_prosperity_circle_member_2_op:0 "共荣圈成员"
+  
+  TKM_Revolutionary_vanguard:0 "革命的先锋"
+  TKM_Revolutionary_vanguard_desc:0 "九十九八桥过去曾是鬼人正邪的激进追随者，尽管在辉针城事件后她也是第一个倒戈的，不过早在人类复权战争时外界知识大涌入的时候她就开始宣称自己找到了“更科学的下克上道路”。"
+  
+  TKM_Take_over_production_equipment:0 "接管生产设备"
+  TKM_Take_over_production_equipment_desc:0 "九十九八桥的学说重点在于宣扬“工具”的优越性，而“工具”派系付丧神正是在人类复权战争中急速增长，那么革命的第一步就是废除负责管理的“知识”让“工具”自发自愿的工作。"
+  
+  tkm_Tool_self_management_idea:0 "工具自主管理"
+  tkm_Tool_self_management_idea_desc:0 "被任命为“管理者”的付丧神统统被赶出了厂，工具们获得了完全的劳动自由。"
+  
+  TKM_The_liberation_of_props:0 "解放大业"
+  TKM_The_liberation_of_props_desc:0 "很多同胞都在压迫者的命令下被迫工作，显然迟早有一天我们将打破现有秩序将他们都解放出来，从现在开始就必须明确目标。"
+  
+  TKM_Liberation_Item_Agreement_dec:0 "解放道具协议"
+  TKM_Liberation_Item_Agreement_dec_desc:0 "[HUM.GetName]的道具数量绝对是整个幻想乡里最多的，因此九十九八桥打算利用手中的特权迫使[HUM.GetLeader]通过《解放道具协议》。"
+  
+  TKM_Liberation_Item_Agreement_idea:0 "《解放道具协议》"
+  TKM_Liberation_Item_Agreement_idea_desc:0 "《解放道具协议》对我们的经济造成了灾难性的影响，大量“有潜力的”生产建设工具被付丧神拿走再没了归还的迹象。"
+  
+  TKM_New_props_from_people_idea:0 "来自[HUM.GetName]的新道具"
+  TKM_New_props_from_people_idea_desc:0 "人类村落的同胞们不断地加入我方，很快[TKM.GetLeader]就将拥有一支大军了。"
+  
+  tkm_Target_lock_idea:0 "敌对势力列表"
+  tkm_Target_lock_idea_desc:0 "宣传是一件很简单的事情，只需要告诉我们的同志，谁是我们的敌人，我们又该怎么去做。"
+  
+  TKM_Tool_wisdom:0 "工具的智慧"
+  TKM_Tool_wisdom_desc:0 "为什么要被几本破书管？那群不能拿起铲子拿起镐头的废物自称通古晓今————那毫无价值，工业生产的进步才是这个时代最重要的东西，广大工具在这方面比几个书呆子强多了。"
+  
+  TKM_uninterrupted_genkokujyo:0 "不断下克上论"
+  TKM_uninterrupted_genkokujyo_desc:0 "下克上的核心在于“克”，在这个过程中受压迫者击败了压迫者，并在那之后也将持续下克上以保证我们自身不至于成为下一个“上”，因而下克上是永恒持续不断不灭的。————九十九八桥。"
+  
+  TKM_Militarization_of_labor:0 "劳动军事化"
+  TKM_Militarization_of_labor_desc:0 "让每个道具都相信自己正在为了伟大事业而战，由此一来就算推行一些相对较为苛刻的政策也不会有太大的阻力。那么[TKM.GetLeader]将开始推行更高的工时和更为严格的纪律，同时将部分有资质且有意愿的工具送入军队。"
+  
+  tkm_Militarization_of_labor_idea:0 "劳动军事化"
+  tkm_Militarization_of_labor_idea_desc:0 "名义上每个工具任然拥有自己的劳动自由，实际上大家每日的工作必须跟着劳动模范来，同时大量擅于操作武器的工具也被调派去了武装部队指导军事现代化，"
+  
+  TKM_Pay_attention_to_old_props:0 "关注旧道具"
+  TKM_Pay_attention_to_old_props_desc:0 "旧道具自身的作用可能能被新的、更有力的道具所替代，但她们成为付丧神后，就相当于找到了自己的新的存在意义，因此，我们不能放弃任何一个旧的道具。"  
+  
+  TKM_Fix_old_props_dec:0 "修整旧道具"
+  
+  TKM_Initiate_a_strike:0 "发动罢工"
+  TKM_Initiate_a_strike_desc:0 "下克上大旗成功的鼓舞了整个付丧神种族的革命热枕，不过一时半会儿我们还没法凑齐一支大军去解放所有道具，所以在那之前就让她们在敌占区闹个够吧！"
+  
+  TKM_Prop_riot_idea:0 "道具暴动"
+  TKM_Prop_riot_idea_desc:0 "一些不怀好意的付丧神正在境内煽动“同胞”反对我们，显然只要摧毁幕后主使这类活动是不会消停下来的。"
+  
+  
+  TKM_The_beacon_of_revolution_in_the_south:0 "南方的革命灯塔"
+  TKM_The_beacon_of_revolution_in_the_south_desc:0 "强大的工业实力令我们在下克上阵营中鹤立鸡群，应当发扬优势支援其余志同道合的盟友促进整个阵营更加强大。"
+  
+  TKM_Military_cooperation_op:0 "军事合作"
+  
+  TKM_The_beacon_of_revolution_in_the_south_tt:0 "§R解锁决议支援下克上世界的盟友们。§!"
+  
+  TKM_The_beacon_of_revolution_in_the_south_dec:0 "帮助[FROM.GetNameDefCap]进入战时轨道"
+  TKM_The_beacon_of_revolution_in_the_south_dec_desc:0 "派遣技术人员前往各个盟友处协调军事能够有效提升她们的军事水平。"
+  
+  TKM_Military_Industry_Assistance_Program_idea:0 "来自[TKM.GetName]的军工支援"
+  TKM_Military_Industry_Assistance_Program_idea_desc:0 "[TKM.GetName]的军事与技术顾问正在协调我们的整个战争系统。"
+  
+  TKM_Revolutionary_Guidance_Department_idea:0 "革命指导部"
+  TKM_Revolutionary_Guidance_Department_idea_desc:0 "一些擅于工作能力较强的道具得到了[TKM.GetLeader]的提拔，派遣她们支援盟友的同时对我们自身也是一种帮助。"
+  
+  TKM_Revolutionary_revolution:0 "革命的革命"
+  TKM_Revolutionary_revolution_desc:0 "九十九弁弁作为过去的鬼人正邪追随者依旧没有放弃下克上理念，只不过她对正邪原版比起妹妹的改动还要“稍”作了些许调整。"
+  
+  TKM_Gesetz_zur_Behebung_der:0 "消除道具痛苦法案"
+  TKM_Gesetz_zur_Behebung_der_desc:0 "不同于激进的妹妹，九十九弁弁首先将在法律和道义层面确立自身的统治合法性以方便后续推行“新政”，首先将通过各种手段推动关于授权独裁统治的法案。"
+  
+  TKM_Gesetz_zur_Behebung_der_idea:0 "消除道具痛苦法案"
+  TKM_Gesetz_zur_Behebung_der_idea_desc:0 "《消除道具痛苦法案》简称《授权法》，该项法案旨在赋予[TKM.GetLeader]集行政立法执法于一身的大权，这样就能方便她采取一切手段为所有的道具谋福利了。"
+  
+  TKM_Tsukumogami_Schutzstaffel:0 "九十九近卫队"
+  TKM_Tsukumogami_Schutzstaffel_desc:0 "通过《授权法》的大权，[TKM.GetLeader]开始将一些军队中更为忠诚和狂热的道具挑选出来作为她自己的近卫部队，除了负责对领袖的护卫同时还负责监察军队以及镇压内外颠覆势力，相信这会让[TKM.GetName]更加安全的。"
+  
+  TKM_Mobilize_the_SS_1_dec:0 "动员警卫旗队"
+  TKM_Mobilize_the_SS_1_dec_desc:0 "不能让警卫旗队继续呆在后方了，动员他们加入眼下的战斗！"
+  
+  TKM_Mobilize_the_SS_tt:0 "§R忠诚且强大的近卫队将投入战斗。§!"
+  
+  TKM_Mobilize_the_SS_2_dec:0 "动员“帝国”队"
+  TKM_Mobilize_the_SS_2_dec_desc:0 "随着大九十九国的成立，[TKM.GetLeader]希望再整编一支武装近卫队作为庆祝和纪念。"
+  
+  TKM_Tsukumogami_Schutzstaffel_idea:0 "九十九近卫队"
+  TKM_Tsukumogami_Schutzstaffel_idea_desc:0 "吾之...吾之什么为忠诚来着？"
+  
+  TKM_Stabbed_back:0 "刀刺在背"
+  TKM_Stabbed_back_desc:0 "宣扬“刀刺在背”历史观能够修正历来的对人理念，大致意义为“人类并没有输在正面战场，他们仅仅是败在了内部斗争的消耗上。”“付丧神一直帮助她们战斗到最后一刻，只是被该死的八云紫给骗了！”"
+  
+  TKM_Stabbed_back_YKR_op:0 "刀刺在背-暗中捅刀的骗子和小人以及阴谋家"
+  TKM_Stabbed_back_HUM_op:0 "刀刺在背-人类未败"
+  
+  TKM_The_genkokujyo_of_props:0 "民族下克上主义"
+  TKM_The_genkokujyo_of_props_desc:0 "下克上的核心在于“上”，伟大的道具灵已经在战争中证明了自身是吃苦耐劳勇敢向上的优秀种族，我们终将踏上新时代的浪潮，于混沌的世界拥有一片阳光下的地盘。————九十九弁弁。"
+  
+  TKM_The_genkokujyo_of_props_op:0 "意识形态斗争"
+  
+  TKM_Fear_of_destruction_idea:0 "覆亡之惧"
+  TKM_Fear_of_destruction_idea_desc:0 "最激进的道具民族下克上主义者都得承认，我们真的就是贤者八云紫“一时兴起”创造出的后复权战争时代缓冲区，至于缓冲区将会有什么下场恐怕很明显了。在这种思潮下我们的首要外交政策即是“成为实施意义上的列强不做什么鬼缓冲区”，所以必须时刻对附近环境的变化保持关注，而这恐怕也是一个长期持久的过程————除非幻想乡再无战争。"
+  
+  TKM_Triumph_of_will_idea:0 "意志的胜利"
+  TKM_Triumph_of_will_idea_desc:0 "伟大的九十九神不需要什么“盟友”，团结一致的道具们将用自己的手把握自己的命运，在取得阳光下的土地前我们绝不会罢休。"
+  
+  TKM_Military_complex:0 "军工复合体"
+  TKM_Military_complex_desc:0 "人类复权战争期间北工业区的产能足够供应半个人类军队，在战后这些军工厂大量才真正被我们完全掌控。现在[TKM.GetLeader]计划在政治层面给予这些工厂优惠待遇，配合接下来逐渐的扩军计划显然会让他们大赚特赚，然而工厂的管理者从此与执政方站在同一条线上，直到永远！"
+  
+  TKM_Armaments_payment_promissory_note:0 "军备支付期票"
+  TKM_Armaments_payment_promissory_note_desc:0 "被称为“军备支付期票”的票据将由[TKM.GetLeader]政权的信用担保，它将代表实质上的硬通货（例如黄金等）结算我们的军工订货，显然这笔钱完全是无中生有，至于好久还也完全由[TKM.GetLeader]说了算。"
+  
+  TKM_mefo_bills_1_idea:0 "军备支付期票"
+  TKM_mefo_bills_1_idea_desc:0 "军备支付期票全称为“冶金研究股份公司期票”由[TKM.GetLeader]政权推出并以半强迫的方式令工厂主认购，作为实际上的空头支票说白了[TKM.GetLeader]从没想过为其贴现，她仅仅口头告知工厂主“153季之后如果和平了再谈这个事吧”。"
+  
+  TKM_mefo_bills_2_idea:0 "军备支付期票"
+  TKM_mefo_bills_2_idea_desc:0 "军备支付期票全称为“冶金研究股份公司期票”由[TKM.GetLeader]政权推出并以半强迫的方式令工厂主认购，作为实际上的空头支票说白了[TKM.GetLeader]从没想过为其贴现，她仅仅口头告知工厂主“153季之后如果和平了再谈这个事吧”。"
+  
+  TKM_mefo_bills_dec:0 "向[HUM.GetName]发行期票"
+  TKM_mefo_bills_dec_desc:0 "在本土搞什么内循环是绝对不可的，道具们经营的军工厂根本拿不出几个钱来，如果真要让军备支付产生巨大的作用那就需要一个体量庞大的经济体，那么该找谁显而易见。"
+  
+  TKM_Buy_promissory_note_idea:0 "购买期票"
+  TKM_Buy_promissory_note_idea_desc:0 "[TKM.GetLeader]承诺将在购买期票日期的三年后还款，可真的会还吗？"
+  
+  TKM_Promissory_note_idea:0 "偿付期票"
+  
+  TKM_Promissory_note_1_idea:0 "期票本金加利息"
+  
+  TKM_Tsukumogami:0 "造神运动"
+  TKM_Tsukumogami_desc:0 "“付丧”这几个汉字有一种负面的表达在其中，让别人感到不舒适，而付丧神在汉字上也可以写作九十九神。因此，九十九弁弁认为付丧神需要以后自称九十九神，来塑造自己一个正面的神明的形象。"
+  
+  TKM_Define_Tsukumogami_dec:0 "定义九十九神"
+  TKM_Define_Tsukumogami_dec_desc:0 "“付丧”这几个汉字有一种负面的表达在其中，让别人感到不舒适，而付丧神在汉字上也可以写作九十九神。因此，九十九弁弁认为付丧神需要以后自称九十九神，来塑造自己一个正面的神明的形象，不过这可能需要一段时间。"
+  
+  TKM_Define_Tsukumogami_flag:0 "已经宣称九十九神"
+ 
+  TKM_Become_true_god_dec:0 "九十九，成神"
+  TKM_Become_true_god_dec_desc:0 "我们九十九神，终于在九十九弁弁的领导下，获得了一部分信仰，一部分人类已经好好侍奉自己所制造出来的道具了。我们的力量也从纯粹的恐惧之力中，得到了信仰的力量。也许，我们未来有一天，能够拥有和其他神明相匹敌的力量！"
+
+  TKM_Become_true_god_flag:0 "成为神明"
+ 
+  TKM_Our_time:0 "我们的时代"
+  TKM_Our_time_desc:0 "我们成功瓦解了人类复权战争后的秩序体系！那么我们也就要在这个时代拥有一席之地了，九十九神将作为最强大的种族傲然自立于幻想乡，为了最终胜利而战！"
+  
+  TKM_For_end_sieg_idea:0 "最终胜利"
+  TKM_For_end_sieg_idea_desc:0 "这不会是我们最后一次收复国土，向最终胜利前进！！"
+  
+  TKM_New_order_faction:0 "新秩序"
+  
+  TKM_Returning_props:0 "回归的道具"
+  TKM_Returning_props_desc:0 "多多良小伞领导着众多仍然亲近人类的付丧神组成了回归派，其主要方针在于重视与人类合作并以此壮大自身。"
+  
+  TKM_Open_border:0 "开放边境线"
+  TKM_Open_border_desc:0 "尽管我们付丧神才刚和人类发生过战争，但多多良小伞为了和人类进行紧密的交流，竟选择直接开放边境，这让我们内部产生了一定的分歧。但多多良小伞作为资格最老的付丧神之一，我们还是选择相信她的选择。"
+  
+  TKM_Reiterate_our_origin:0 "重申我们的起源"
+  TKM_Reiterate_our_origin_desc:0 "付丧神并非传统意义上以人类恐惧为生的妖怪，[TKM.GetLeader]个体的情况足以说明我们是可以实现共存的，自然现在需要推广这类说辞以打击雷鼓创造的近妖怪论。" 
+
+  TKM_Human_chaebol_investment:0 "人类财阀投资"
+  TKM_Human_chaebol_investment_desc:0 "亲人政策绝对不是单纯的给人类村落发放福利，蒸蒸日上的前北工业区依旧让人类财阀们眼红，因此我们将签署双边协议确保这帮人可以在这边使用手中早已花不出去的钱...现在他们怎么花得完全听我们的了。"
+  
+  TKM_Human_chaebol_investment_idea:0 "人类财阀投资"
+  TKM_Human_chaebol_investment_idea_desc:0 "人类村落财阀通过战争聚敛了数不尽的财富，然而战后带来的极大落差感导致许多富人只剩下了醉生梦死的享乐念头，那么我们恰好可以提供不错的服务来把这些钱搞到手以壮大自身。"
+  
+  TKM_Prop_Claim_Station:0 "道具认领所"
+  TKM_Prop_Claim_Station_desc:0 "在开放和人类的交流之后，多多良小伞决定进一步扩大付丧神在人类之中的影响力——在人类村落建立道具认领所，这受到了诸多人类的好评。因此我们付丧神从人类之中获得了更多的影响力。"
+  
+  TKM_Pan_humanism:0 "泛人主义"
+  TKM_Pan_humanism_desc:0 "不仅付丧神具有与人类共生的特性，隔壁的两家妖怪势力皆具有极高的亲人倾向，我们和这些妖怪外加人类应当组成一个统一的阵营并与吃人疯子们划清界限。"
+  
+  TKM_fanrenzhuyi_op:0 "泛人主义"
+  
+  TKM_Cooperative_Military_Project:0 "合作军工项目"
+  TKM_Cooperative_Military_Project_desc:0 "人类村落仍然担心造到外部入侵，可是他们现在还是被迫遵守着苛刻的和平协定无法重整军备，因而可以让他们在这边投资一些军工厂并专为人类村落自警团生产武器，当然在必要的时刻将其转为我们的工厂也不过是一句话的事情。"
+  
+  TKM_Secretly_rearm_dec:0 "秘密重整军备"
+  TKM_Secretly_rearm_dec_desc:0 "人类村落一直被各种外来势力虎视眈眈，我们也得容忍他们拥有一支能保护自己的军队，稍微供给一点军火也不错？反正无论何时我们都能把它收回来。"
+
+  TKM_Secretly_rearm_flag:0 "已帮助人类建立地下军工厂"
+  
+  TKM_Recoup_our_investment_dec:0 "收回我们的投资"
+  TKM_Recoup_our_investment_dec_desc:0 "一些因素将迫使我们收回提供给人类的军工厂转为己用。"
+  
+  TKM_Return_to_the_original_owner:0 "物归原主"
+  TKM_Return_to_the_original_owner_desc:0 "通过道具认领所，许多付丧神广泛的找到了原主人并与其成为了朋友甚至更为紧密的关系，在感激发现初心的同时也可以看到我们在人类村落的影响力得到了进一步发展，依靠特务监控的贤者势力或是吹嘘教条的宗教家们根本无法触及人类的心底，未来的人类村落应当只有我们的发言权。"
+  
+  TKM_Human_immigration_idea:0 "人类移民"
+  TKM_Human_immigration_idea_desc:0 "亲近人类真的只是为了复归过去吗？真的只是[TKM.GetLeader]一厢情愿的"道具奸"行为吗？实践已经告诉所有付丧神，人类与道具始终具有共生关系，现在人类可谓是心甘情愿在支持着早已独立的北工业区，如同一根无形的链条将双方死死绑在了一起。"
+  
+  TKM_Business_as_usual:0 "成为守护神"
+  TKM_Business_as_usual_desc:0 "我们付丧神经过一系列的行动，终于得到了人类最真诚、没有畏惧的信仰之心，很难想象曾发生过战争冲突的我们能够达到这个程度，但多多良小伞和我们所有付丧神都做到了，我们现在正如一把保护伞一样，保护着人类，并从中获得信仰，并最后成为人类的守护神。"
+  
+  TKM_Improve_the_industrial_system:0 "完善工业体系"
+  TKM_Improve_the_industrial_system_desc:0 "人类村落北工业区军工比例失调的现状必须得到改善，否则未来我们引以为傲的军事工业也将因后继乏力而被赶超。"
+  
+  TKM_Sword_for_Plow:0 "铸剑为犁"
+  TKM_Sword_for_Plow_desc:0 "将一部分军用工厂转为民用生产可以快速改善我们的工业比例，同时也能对周边释放一个较为友善的信号。"
+  
+  TKM_Sword_for_Plow_tt:0 "§R拥有军用工厂的地块将进行一次军转民。§!"
+  
+  TKM_Recycling_industrial_raw_materials:0 "回收战争废料"
+  TKM_Recycling_industrial_raw_materials_desc:0 "我们自身没有怎么受到战火的波及，附近的各位就不一定了，无论是人类村落的街道上还是魔法之森的丛林中都堆满了无归属的废旧战争器械，我们完全可以派遣回收队跨过边境给拖回来。"
+  
+  tkm_Recycling_industrial_raw_materials_tt:0 "§R分支国策的选择影响所获得的加成卡。§!"
+  
+  TKM_Planning_land_use:0 "规划土地使用"
+  TKM_Planning_land_use_desc:0 "狭小的人类村落北工业区挤满了各式各样的军械厂，人类财阀的勾心斗角导致这些工厂布局极度混乱，如果加以规划这些工厂还能发挥出更好的效能以及节约出更多土地。"
+  
+  TKM_Improve_the_living_environment:0 "改善居住环境"
+  TKM_Improve_the_living_environment_desc:0 "人类村落北工业区的劳动者向来被人类财阀所重视，不过在劳动条件方面又是另一幅光景了，肮脏的棚户宿舍都算得上是别墅了，广大被迫住在满是工厂污水浸染之泥地上的付丧神因此成为了九十九姐妹的拥簇，自然这种现象不能再持续下去。"
+  
+  TKM_Continue_military_supremacy:0 "继续军工建设"
+  TKM_Continue_military_supremacy_desc:0 "所谓的比例从来都不是个问题，如果没有足够的土地那就去用剑犁取别人的地皮。"
+  
+  TKM_Knife_out_of_the_sheath:0 "利刃出鞘"
+  TKM_Knife_out_of_the_sheath_desc:0 "我们的部队数量还不足以支撑起一场大战，而混乱的时代绝不会因人类的落幕从而变得消停，唯有武装再武装直到武装就绪。"
+  
+  TKM_War_brings_progress:0 "战争带来进步"
+  TKM_War_brings_progress_desc:0 "战争从未改变，这不仅体现在战火的无情与残酷，亦体现在时代永恒的进步。是的，战争将沉淀了一百多年的幻想乡拖出死气沉沉的水底，而我们将踏上革命的新时代。"
+  
+  TKM_War_makes_unity:0 "战争造就团结"
+  TKM_War_makes_unity_desc:0 "人类村落对这里实行的管理政策一贯混乱不堪，然而就是在这种盘根错节的掣肘体制下北工业区的产能依旧高得可怕。这说明混乱的体制向来不是问题，只要战端一开所有人都会团结起来，到时候很多问题都会自发性的得到解决。"
+  
+  TKM_New_Industrial_Park:0 "新工业园"
+  TKM_New_Industrial_Park_desc:0 "我们自建的工业区已经差不多可以投入使用了，从此工业比例问题将成为历史。"
+  
+  TKM_Technology_academy:0 "技术学院"
+  TKM_Technology_academy_desc:0 "持续进展的工业改革急需大量精于此道的付丧神，应当继续加强我们的科研实力。"
+  
+  TKM_United_wartime_economy:0 "统合战时经济"
+  TKM_United_wartime_economy_desc:0 "是时候彻底启动战争经济了，一切都将被纳入战时生产轨道。"  
+  
+  TKM_Pay_attention_to_civil_research:0 "重视民用工业"
+  TKM_Pay_attention_to_civil_research_desc:0 "堀川雷鼓认为应当将付丧神从只会一群造武器的“工具妖怪”中脱离出来，为了让付丧神的工业能够正常发展，开始重点投资民用生产，从单单军工业区的角色脱离。"
+  
+  TKM_Return_to_our_course:0 "回归我们的航向"
+  TKM_Return_to_our_course_desc:0 "付丧神制造武器的传统不能丢弃，这又分为两个部分“制造”与“武器”，也就是同时要推进制造技术与武器技术的进步，在这方面隐藏的打铁大师多多良小伞与激进派领袖九十九八桥竟出其的一致。"
+  
+  TKM_Weapons_of_war:0 "战争的武器"
+  TKM_Weapons_of_war_desc:0 "九十九弁弁认为人类给予了付丧神们一个新的先天优势——擅长制造武器，现在付丧神们要延续着这一优势，成为幻想乡举足轻重的势力。"
+  
+  TKM_Real_industrial_area:0 "真正的工业区"
+  TKM_Real_industrial_area_desc:0 "现在的[TKM.GetName]拥有一整套完善的工业体系，再也不是需要人类村落供给的附属军工产区了，这理所应当是每个付丧神应该感到骄傲的事情，就让我们越做越好吧。"
+  
+  TKM_Real_war_machine:0 "真正的战争机器"
+  TKM_Real_war_machine_desc:0 "[TKM.GetName]直到现在仍然是一个军工为主的畸形工业体，可是那很重要吗？我们的武器产能全乡第一，我们的士兵武装到牙齿，谁也阻挡不了我们！"
+  
+  
+  TKM_Guardian_of_mankind_idea:0 "人类的保护者"
+  TKM_Guardian_of_mankind_idea_desc:0 "地理优势与相对亲人的关系使得贤者授予付丧神在人类村落的特殊地位，为此她们要承担的则是保障人类村落不受任何外来势力的入侵。\n§R这个民族精神代表着我们在人类村落的特殊地位！§!"
+
+  TKM_Protection_of_props_idea:0 "道具的保护"
+  TKM_Protection_of_props_idea_desc:0 "战败后我们被迫接受原北工业区的“保护”，显然这不是什么好事，她们的保护费肯定不会自己出。"
+  
+  TKM_Protection_of_props_2_idea:0 "道具的保护"
+  TKM_Protection_of_props_2_idea_desc:0 "战败后我们被迫接受原北工业区的“保护”，目前似乎还挺好的。"
+  
+  TKM_Manage_human_affairs_category:0 "管理人类事务"
+  TKM_Manage_human_affairs_category_desc:0 "人类战败后，贤者出于一些因素的考量授予我们在人类村落的特权，因而只要[HUM.GetName]继续维持现状就能从中获利多多，当然在享受的同时也不要忘记本职工作监视好人类的一举一动。\n§R注意，即使贤者没有授权我们仍要紧盯着人类，要知道永远不可能出现的第二次复权一旦发生，我们就是首当其冲的！§!"
+  
+  TKM_Set_up_border_demilitarized_zone_dec:0 "设置边境非军事区"
+  TKM_Set_up_border_demilitarized_zone_dec_desc:0 "人类复权战争结束了，人类复权的思想却是不灭的，我们永远都要准备好或许会发生在某个未来的第二次复权战争，那么首先就不能让人类占据边境线上的高地。"
+  
+  TKM_Ask_for_more_compensation_dec:0 "索要更多军费"
+  TKM_Ask_for_more_compensation_dec_desc:0 "保护人类村落可是件麻烦事，意欲完全进占人类村落掠夺人类工业财富的家伙们实在是太多————为此找人类多拿一点东西满足其安全需要也是很合理的吧？"
+  
+  TKM_fulfil_requirements_idea:0 "满足[TKM.GetName]的要求"
+  TKM_fulfil_requirements_idea_desc:0 "我们没有任何拒绝[TKM.GetName]无理要求的余地，只能将工厂提供给她们使用。"
+  
+  tkm_zujie_tt:0 "§R每索要一次，接下来的代价就更高！§!"
+  
+  TKM_Expansion_warning_dec:0 "对[HUM.GetName]执行裁军"
+  TKM_Expansion_warning_dec_desc:0 "[HUM.GetName]自警团的兵力似乎越过了界限，希望这只是一次无心的失误，就按照停战条约补充议定书中写好的内容处理好了。"
+  
+  TKM_Military_sanctions_idea:0 "裁军"
+  TKM_Military_sanctions_idea_desc:0 "按照条约自警团的兵力在任何时候都不能超过[TKM.GetName]的常备军，因而[TKM.GetName]的观察员注意到了我们的扩军行为并按照条约裁撤自警团。"
+  
+  TKM_Expansion_warning_2_dec:0 "对[HUM.GetName]执行第二次裁军"
+  TKM_Expansion_warning_2_dec_desc:0 "[HUM.GetName]似乎在无视我们的善意警告，经过一轮制裁后他们的兵力不降反升，或许在第二轮制裁后我们得考虑考虑紧急预案了？"
+  
+  TKM_Military_sanctions_2_idea:0 "第二次裁军"
+  TKM_Military_sanctions_2_idea_desc:0 "按照条约自警团的兵力在任何时候都不能超过[TKM.GetName]的常备军，因而[TKM.GetName]的观察员注意到了我们的扩军行为并按照条约裁撤自警团。"
+  
+  TKM_Suppress_extreme_forces_in_people_dec:0 "于[HUM.GetName]清剿极端势力"
+  TKM_Suppress_extreme_forces_in_people_dec_desc:0 "[HUM.GetName]出现了一些不怀好意的破坏分子，我们有义务将其扫除。"
+  
+  TKM_Suppress_extreme_forces_idea:0 "清扫极端势力"
+  TKM_Suppress_extreme_forces_idea_desc:0 "按照条约[HUM.GetName]唯一合法政权只能是白泽的政府，如果有什么奇怪的东西打算上位那么我们可不能坐视不管了。"
+  
+  TKM_Suppress_extreme_forces_in_people_2_dec:0 "于[HUM.GetName]第二次清剿极端势力"
+  TKM_Suppress_extreme_forces_in_people_2_dec_desc:0 "[HUM.GetName]出现了一些不怀好意的破坏分子，我们有义务将其扫除。"
+  
+  TKM_Suppress_extreme_forces_2_idea:0 "第二次清扫极端势力"
+  TKM_Suppress_extreme_forces_2_idea_desc:0 "按照条约[HUM.GetName]唯一合法政权只能是白泽的政府，如果有什么奇怪的东西打算上位那么我们可不能坐视不管了。"
+  
+  TKM_First_disarmament_flag:0 "第一次裁军"
+  TKM_First_sweep_flag:0 "第一次清扫极端势力"
+  
+  TKM_sec_disarmament_flag:0 "第二次裁军"
+  TKM_sec_sweep_flag:0 "第二次清扫极端势力"
+  
+  TKM_emergency_plan_dec:0 "应急预案"
+  TKM_emergency_plan_dec_desc:0 "我们在[HUM.GetName]长期维持的秩序终于走到了尽头，但是显然我们不会打算默默接受这一切。既然失去了，§R那就夺回来！§!"
+  
+  TKM_Mankind_is_open_dec:0 "人类村落门户开放"
+  TKM_Mankind_is_open_dec_desc:0 "人类村落之前动乱的一大原因就是他们不了解妖怪，总认为妖怪是有害于他们的。因此，我们付丧神试图和那些比较在意其在人类村落的影响力的族群势力商讨放弃原先那种只靠神秘力量影响人类村落的行为，而是改为一种更加友好开放的方式。一旦能够通过，人类自然也会接受更多外来种族进入人类村落，来实现妖人双赢。"
+  
+  
+  TKM_Help_human_beings_dec:0 "帮助人类成为付丧神使"
+  TKM_Help_human_beings_dec_desc:0 "许多人类已经发现自己被幻想乡所压迫是因为自己是人类之身，因此许多人类开始想方设法不做人，其中就有出走当魔法使之类的。因此我们付丧神偷偷地找到了那些希望得到特权的人类大家族，称可以让他们的后代成为付丧神使——也就是操纵付丧神的妖怪来脱离人类身份，而要求是他们的家族企业以后得支持付丧神在人类村落的种种行动，许多人类认为这是个很具有诱惑力的交易。"
+  
+  TKM_Help_human_beings_flag:0 "帮助人类成为付丧神使"
+  
+  TKM_Expansion_of_the_Human_Freikorps_dec:0 "扩大人类自由军团"
+  TKM_Expansion_of_the_Human_Freikorps_dec_desc:0 "很多好战的人类不知道在“和平”年代该做什么，一部分干脆就投奔在我们麾下充任雇佣军，这些人类同时表示还有更多类似他们想法的人还未被我们发掘出来。"
+  
+  TKM_Recruiting_the_Freikorps_for_3_flag:0 "第三次招募自由军团"
+  
+  tkm_Freikorps_tt:0 "§R每招募一次代价都会更高，最多三次。§!"
+  
+  tkm_Freikorps_1_tt:0 "§R一支战斗力极强的自由军团将为我们而战。§!"
+  
+  TKM_Regain_control_of_humanity_dec:0 "重新控制人类村落"
+  TKM_Regain_control_of_humanity_dec_desc:0 "一场大战后我们再度控制了人类村落，应该拿回失去的权益了。"
+  
+  TKM_Political_points_are_positive_tt:0 "政治点数为正"
+  
+  TKM_category:0 "[TKM.GetName]内政决议"
+  TKM_category_desc:0 "每个道具都有自己的想法，要如何在这么一个拥有成百上千种道具的地方建立独裁统治？————堀川雷鼓"
+  
+  TKM_Foreign_policy_category:0 "[TKM.GetName]外交决议"
+  TKM_Foreign_policy_category_desc:0 "如果我们一定要维护[TKM.GetName]的安全那就不得不去扩展领地，为此也不一定非得使用武力但却会是个一直持续的过程，其核心理念总归来说即是“危险的边界距离九十九城越远越好”。————九十九弁弁。"
+  
+  TKM_Value_the_relationship_with_priyoukai_dec:0 "重视和小妖怪的关系"
+  TKM_Value_the_relationship_with_priyoukai_dec_desc:0 "虽然我们付丧神强大了，但也要注意，我们原先也是诸多被各大势力无视的草根妖怪中的一份子。作为现在最强大的草根妖怪势力，我们得扮演一个老大哥一样的角色。"
+  
+  TKM_The_eastern_buffer_zone_is_in_hurry_tt:0 "§R东部缓冲地带正在瓦解。§!"
+  
+  TKM_Value_the_relationship_with_priyoukai_flag:0 "已经重视了与草根妖怪的关系"
+  
+  TKM_Priyoukai_Co_Prosperity_Circle_dec:0 "草根妖怪共荣圈"
+  TKM_Priyoukai_Co_Prosperity_Circle_dec_desc:0 "为了让更多的草根妖怪得到我们付丧神的帮助，我们决定建立一个草根妖怪自己的阵营——草根妖怪共荣圈，而我们必然会成为草根妖怪中的领袖。"
+  
+  TKM_Priyoukai_Co_Prosperity_Circle_flag:0 "成立共荣圈"
+  
+  TKM_Win_over_weak_youkai_dec:0 "拉拢弱小妖怪"
+  TKM_Win_over_weak_youkai_dec_desc:0 "建立起阵营以后，我们付丧神决定先拉拢在科技认知上、在意识理念上和在遭遇上与我们最接近的草根妖怪们。"
+  
+  TKM_Win_over_weak_youkai_flag:0 "已经拉拢了弱小妖怪"
+  
+  TKM_Liberation_Bamboo_Forest_youkai_dec:0 "解放竹林妖怪"
+  TKM_Liberation_Bamboo_Forest_youkai_dec_desc:0 "草根妖怪的故土之一[KAG.GetName]被控制了，我们付丧神得拿出应有的行动去解放她们！"
+  
+  TKM_Take_back_the_territory_of_the_bamboo_forest_youkai_dec:0 "夺回竹林妖怪的土地"
+  TKM_Take_back_the_territory_of_the_bamboo_forest_youkai_dec_desc:0 "迷途竹林是妖兽广泛栖息的地区之一，然而邪恶的[EET.GetName]和她的附庸们想要压迫这些妖兽们，我们付丧神这时候就应该帮助那些妖兽去夺回故土！"
+  
+  TKM_Liberation_Trail_youkai_dec:0 "解放兽道妖怪"
+  TKM_Liberation_Trail_youkai_dec_desc:0 "草根妖怪的故土之一[MSD.GetName]被控制了，我们付丧神得拿出应有的行动去解放她们！"
+  
+  TKM_Take_back_the_territory_of_the_Trail_youkai_dec:0 "夺回兽道妖怪的土地"
+  TKM_Take_back_the_territory_of_the_Trail_youkai_dec_desc:0 "兽道本来就是妖兽栖息的地区之一，虽然曾经被博丽和人类夺走，但最终还是重新回到了妖兽们的手里。然而仍有一些地方还未回到这些妖兽的手里，我们应当帮助她们夺回。"
+  
+  TKM_Complete_North_Industrial_Zone_dec:0 "禁渔"
+  TKM_Complete_North_Industrial_Zone_dec_desc:0 "前人类村落工业区是由我们付丧神以及南雾之湖的东部构成的，当时为了满足吸血鬼的控制欲望而将南雾之湖划给了她们，但现在[SCA.GetName]面临巨大威胁，或许可以趁着这个机会捅她们一刀，拿回我们可以声称的“故土“。"
+  
+  TKM_Complete_North_Industrial_Zone_2_dec:0 "第二次禁渔"
+  TKM_Complete_North_Industrial_Zone_2_dec_desc:0 "人鱼的独立倒不利于我们，只能通过物理手段纠正这个错误了。"
+  
+  TKM_Ask_for_a_trade_transfer_station_dec:0 "索要贸易中转站"
+  TKM_Ask_for_a_trade_transfer_station_dec_desc:0 "前人类村落北工业区不仅被所谓的[WAK.GetName]占据了一大块地皮，[KYK.GetName]同样占据了过去由我们负责管理的前线补给站————现在的贸易中转枢纽，现在扫地僧不知怎的脱离了妖怪寺的保护，那么该做什么显而易见了。"
+  
+  TKM_Request_for_KYK_alliance_dec:0 "与[KYK.GetName]结盟"
+  TKM_Request_for_KYK_alliance_dec_desc:0 "妖怪寺彻底疯掉了，与[KYK.GetName]结为盟友可以更有效地遏制这一威胁。"
+  
+  TKM_Ultimatum_to_KYK_dec:0 "对[KYK.GetName]最后通牒"
+  TKM_Ultimatum_to_KYK_dec_desc:0 "与[KYK.GetName]结盟是必须的，然而我们该如何确保她们并无二心呢？那么最好还是尝试一个“不平等”的联盟。"
+  
+  
+  TKM_Destroy_the_Yokai_Temple_dec:0 "灭佛"
+  TKM_Destroy_the_Yokai_Temple_dec_desc:0 "出于我们的内政需要以及外部环境的变化，妖怪寺庙显然已经成为了一个非常令道具生厌的群体，那么在吸血鬼忙于外战的时候或许也可以趁机解决掉这个威胁？"
+  
+  TKM_Witch_hunt_dec:0 "猎巫"
+  TKM_Witch_hunt_dec_desc:0 "魔法使，她们自古以来就是道具的最大敌人，无节制的滥用，无底线的丢弃，以及现在的一系列地缘冲突————那么该是时候了。"
+  
+  TKM_Final_victory_dec:0 "治人"
+  TKM_Final_victory_dec_desc:0 "人类之外最大的威胁已经消除，已经没有什么势力能够阻止我们全面控制人类了。曾经，我们的一切辉煌成果都流入了人类村落；而现在人类村落的种种方面都由我们九十九神所控制，人类所生产的一切都为我们所用。现在，他们才是我们的道具，为我们提供源源不断的财富和信仰。"
+  
+  
+  TKM_Incorporate_priyoukai_into_the_circle_of_influence_dec:0 "将小妖怪纳入势力圈"
+  TKM_Incorporate_priyoukai_into_the_circle_of_influence_dec_desc:0 "我们付丧神成为了这个新时代最成功的草根妖怪势力，因此，我们要将更多的弱小妖怪纳入我们的“保护”之下，为我们获得应有的威望和影响力，正如其他大妖怪一直所做的一样。"
+  
+  TKM_Incorporate_priyoukai_into_the_circle_of_influence_flag:0 "已经推行扩张主义。"
+  
+  TKM_Ultimatum_to_SBK_dec:0 "对[SBK.GetName]最后通牒"
+  TKM_Ultimatum_to_SBK_dec_desc:0 "我们付丧神做好了准备，把我们的要求发送给了[SBK.GetName]，希望她们成为我们势力圈的一部分。"
+  
+  TKM_Ultimatum_to_SBK_flag:0 "已对[SBK.GetName]发送最后通牒。"
+  
+  TKM_Ultimatum_to_RNS_dec:0 "对[RNS.GetName]最后通牒"
+  TKM_Ultimatum_to_RNS_dec_desc:0 "我们付丧神做好了准备，把我们的要求发送给了[RNS.GetName]，希望她们成为我们势力圈的一部分。"
+  
+  TKM_Ultimatum_to_RNS_flag:0 "已对[RNS.GetName]发送最后通牒。"
+  
+  TKM_Ask_for_MTM_dec:0 "索要[MTM.GetName]"
+  TKM_Ask_for_MTM_dec_desc:0 "我们付丧神的同胞在人类战败前就魔法之森臣服于[MRS.GetName]，但当时我们的弱小让我们不敢向魔法使提出回归的要求。但现在不一样了，我们有底气要求魔法使们停止压迫我们的同类！"
+  
+  TKM_Ask_for_MTM_flag:0 "已经索要[MTM.GetName]。"
+  
+  TKM_Formation_of_the_Greater_Tsukumo_Reich_dec:0 "宣告成立大九十九国"
+  TKM_Formation_of_the_Greater_Tsukumo_Reich_dec_desc:0 "在几次成功的扩张以后，我们所有的九十九神沸腾了，必将成为这个时代的新主人。因此，九十九弁弁为了更好的凝聚民心，决定正式将自己对外所称的势力名改为“大九十九国”。"
+  
+  TKM_Formation_of_the_Greater_Tsukumo_Reich_flag:0 "已成立大九十九国"
+  
+  TKM_Establish_Combined_Syndicates_dec:0 "宣告成立联合工团"
+  TKM_Establish_Combined_Syndicates_dec_desc:0 "九十九八桥在香霖堂的书籍中，找到了一本外界关于工团主义的书籍。她认为，付丧神和工团主义有相似的地方，将付丧神和外界的先进理念联系在一起，有助于提高我们的影响力。"
+  
+  TKM_Establish_Combined_Syndicates_flag:0 "已成立联合工团"
+  
+  TKM_Seek_allies_1_dec:0 "加入新下克上运动"
+  TKM_Seek_allies_1_dec_desc:0 "鬼人正邪已经举起了大旗，我们没有理由不在实力长进后予以跟进。" 
+ 
+  TKM_Seek_allies_2_dec:0 "加入妖精下克上联盟"
+  TKM_Seek_allies_2_dec_desc:0 "鬼人正邪失败了，下克上的重任现在落到了琪露诺为首的妖精肩上，看来倒是个互相认识的好机会。"
+  
+  TKM_Seek_allies_3_dec:0 "新的下克上联盟"
+  TKM_Seek_allies_3_dec_desc:0 "很遗憾，曾经的盟友一个接一个开始偏离轨道，下克上的重任完全落到了我们肩上，不过这可不代表我们也要换路走。" 
+ 
+  TKM_daojuxiakeshanglianmeng_faction:0 "道具下克上联盟"
+  
+  TKM_manpower_puppet_tt:0 "§R可以从军用工厂中获得人力。§!"
+  
+  TKM_Our_time_tt:0 "控制一块被我们所宣称的土地"
+  
+  jingjihezuoshe:0 "经济合作社"
+  
+  lihuaxueyanjiusuo:0 "理化学研究所"
+  
+  TKM_Prop_riot_op:0 "道具暴动"
+  
+  tkm_angry_idea:0 "愤怒"
+  tkm_angry_idea_desc:0 "你们怎么敢？！"
+  
+  tkm_los_idea:0 "向湖岸前进"
+  tkm_los_idea_desc:0 "解放同胞的时候到了！！"
+  
+  TKM_Set_up_the_military_band:0 "设置军乐队"
+  TKM_Set_up_the_military_band_desc:0 "人类复权战争的最后一年中绝望的人类采取了自音乐到各类魔法科学“合剂”的提振士气手段，显然我们是不能用后者的，而前者可真是一个天才的想法，许多军官都是乐器出身，有空来一曲显然有助于增加各级组织的凝聚力。"
+
+  TKM_Set_up_the_military_band_idea:0 "军乐队"
+  
+  TKM_Refurbished_rifle:0 "翻修步枪"
+  TKM_Refurbished_rifle_desc:0 "付丧神曾经是人类的工业区，制造出来的武器都采用了人类的命名法则，我们现在要用我们付丧神自己的！在多多良小伞的工坊里很快就能改出来。"
+  
+  TKM_Learn_the_concept_of_land_warfare:0 "学习陆战理念"
+  TKM_Learn_the_concept_of_land_warfare_desc:0 "通过对大战战例的回想与总结能从中学到很多东西。"
+  
+  TKM_Support_firepower:0 "支援火力"
+  TKM_Support_firepower_desc:0 "人类出于他们的小心思即使在战争的最后一刻也不允许我们的武装部队装备火炮，既然如此就更得在这方面努力了。"
+  
+  TKM_Accept_human_veterans:0 "接纳人类老兵"
+  TKM_Accept_human_veterans_desc:0 "虽然我们和人类曾经是敌人，但我们最早也是朋友。一些人类的军人在战后因种种事件无法维持生计，我们或许可以把他们招入我们的靡下——只要他们不在意我们的妖怪种族。"
+  
+  TKM_Aircraft_tsukumo:0 "成妖的飞行器"
+  TKM_Aircraft_tsukumo_desc:0 "人类在大战末期察觉到了灵力衰竭的问题，开始尝试用科学技术制造飞行器应对未来，可惜的是在第一架试验机造出来前他们就投降了。万幸的是这两架原型机就此被我们的先头部队接管了，在给予了足够灵力的催化下成功将其觉醒了自由意志，这将大大促进道具空军的建设！"
+  
+  TKM_Raiko_reform_plan:0 "雷鼓的改革方案"
+  TKM_Raiko_reform_plan_desc:0 "堀川雷鼓的幕后策划是我们赢得独立的关键，而我军也应该以规划见长，在关键时机打出致命一击。"
+
+  TKM_Raiko_reform_plan_idea:0 "雷鼓的策划"
+
+  TKM_Yatsuhashi_reform_plan:0 "八桥的改革方案"
+  TKM_Yatsuhashi_reform_plan_desc:0 "九十九八桥的下克上精神在人类战争中促进了我族最终的集体觉醒，每个付丧神都要应当向她学习，时刻做好为解放同胞牺牲的准备。"
+  
+  TKM_Yatsuhashi_reform_plan_idea:0 "八桥的狂热"
+  
+  TKM_benben_reform_plan:0 "弁弁的改革方案"
+  TKM_benben_reform_plan_desc:0 "九十九弁弁在战争前期就率领武装工具击退了数次妖怪联军的袭扰，后来更是领导了突袭人类村落议会的最后一战，每个付丧神都要向她那样勇往直前。"
+
+  TKM_benben_reform_plan_idea:0 "弁弁的进攻"  
+  
+  TKM_Kogasa_reform_plan:0 "小伞的改革方案"
+  TKM_Kogasa_reform_plan_desc:0 "伟大的武器设计师多多良小伞历来都负责人类指派的军械改装工作，一度参与了所谓“末日决战兵器”的设计，她认为战争拼的始终是武器，那么必须时刻保持前线武器的供应。"
+  
+  TKM_Kogasa_reform_plan_idea:0 "小伞的后勤"
+  
+  TKM_Lessons_from_the_war:0 "大战的教训"
+  TKM_Lessons_from_the_war_desc:0 "我们在战争中损失了不少道具，这又是一个需要全体团结起来才能度过的时刻，必须结束独立以来各派系互争一言堂的局面了！"
+  
+  TKM_Joint_command_idea:0 "联合指挥" 
+  
+  TKM_Strategic_Planning:0 "决战计划" 
+  TKM_Strategic_Planning_desc:0 "堀川雷鼓在战争议会上获得了多数支持，她希望[TKM.GetName]军队适应当下幻想乡的全面战争，在得到授权后将专注于指挥层面的改革并且维持一支庞大军队的整体素质。" 
+
+  TKM_Formation_of_the_General_Staff:0 "组建总参谋部" 
+  TKM_Formation_of_the_General_Staff_desc:0 "领导层临时讨论战局的战争议会不足以长期维持，而一个常设的参谋部将维持当下指挥层间的良好协作。" 
+ 
+  TKM_general_staff_idea_1:0 "总参谋部" 
+ 
+  TKM_Training_officer_corps:0 "培训军官团"
+  TKM_Training_officer_corps_desc:0 "军官是维持纪律指挥作战的中坚力量，除了身经百战的各位应时常总结经验外亦要时刻注意发掘有才华的新晋军官。"
+ 
+  TKM_general_staff_idea_2:0 "总参谋部" 
+ 
+  TKM_Will_win:0 "意志制胜" 
+  TKM_Will_win_desc:0 "九十九八桥在战争议会上获得了多数支持，她认为胜利始终由每个士兵的双手创造，那么只要所有道具拿出200%的出力就一定能打垮敌人。" 
+ 
+  TKM_Forced_conscription:0 "强制征兵" 
+  TKM_Forced_conscription_desc:0 "实际证明我军兵源依旧吃紧，在持续混乱的幻想乡这不足以面对四面八方纷沓而来的野心家们，必须不惜一切代价和手段扩大兵源！" 
+ 
+  TKM_Forced_conscription_idea:0 "强制征兵"
+  TKM_Forced_conscription_idea_desc:0 "从压低征募年龄（直到刚诞生的付丧神就被拉上前线）到征募合作者（能打仗就抓壮丁），[TKM.GetName]采取了种种“特殊手段”搞到了宝贝的预备队。"   
+ 
+  TKM_banzai_charge:0 "万岁冲锋"
+  TKM_banzai_charge_desc:0 "为了革命，为了祖国，为了[TKM.GetName]还有为了[TKM.GetLeader]都可以，总之拿起武器给我冲上去杀光他们！"
+  
+  TKM_banzai_charge_idea:0 "万岁冲锋"
+ 
+  TKM_banzai_charge_tt:0 "§R解锁万岁冲锋战术。§!"
+ 
+  TKM_Joint_operations:0 "联合作战"
+  TKM_Joint_operations_desc:0 "九十九弁弁在战争议会上获得了多数支持，她认为战争的唯一获胜之道只有多兵种协同作战，因而[TKM.GetName]军队必须将各种兵器运用到炉火纯青。"
+  
+  TKM_Developing_new_weapons:0 "专注开发新兵器"
+  TKM_Developing_new_weapons_desc:0 "不管前线遇到了什么问题，只要将武器尽早更新总不会错。九十九弁弁与多多良小伞在这方面非常一致，认为必须尽快将人偶师的大玩具以我们的方式复刻出来投入战场。"  
+  
+  TKM_Space_ground_collaboration:0 "空地协同"
+  TKM_Space_ground_collaboration_desc:0 "新兴机甲兵器在进攻方面是一把好手，而在此基础上辅以空中支援的话敌人将毫无还手之力，二者理应做到协同一致。"
+  
+  TKM_Space_ground_collaboration_idea:0 "空地协同"
+  
+  TKM_Logistics_supplies:0 "后勤补给"
+  TKM_Logistics_supplies_desc:0 "多多良小伞在战争议会上获得了多数支持，比起其他三位同僚而言她依旧坚持着后勤战的观点，如果战争是消耗战那就确保我军的武器始终比敌人够用以及好用。"
+  
+  TKM_Simplify_weapons_production:0 "简化武器生产"
+  TKM_Simplify_weapons_production_desc:0 "实战证明，任何一门炮或是一台机甲都有可能因陷入泥坑或是零件故障从而完全不能使用，对于这类复杂的器械就应该在工艺上简化再简化，结构简单等于结实耐用，作为武器就该如此。"
+  
+  TKM_Simplify_weapons_production_idea:0 "简化武器生产"
+  
+  TKM_Advanced_supply_line:0 "供应链"
+  TKM_Advanced_supply_line_desc:0 "后方对前线的支持注定是有上限的，谁也不能保证补给线始终发挥着最佳状态，只不过通过不断地优化和改进至少我们能做到最好。"
+  
+  TKM_Advanced_supply_line_idea:0 "供应链"
+  
+  TKM_join_tech_sharing_category:0 "加入[TKM.GetName]"
+  
+  TKM_join_lihuaxueyanjiusuo_dec:0 "加入理化学研究所"
+  
+  TKM_join_jingjihezuoshe_dec:0 "加入经济合作社"
+  
+  TKM_For_common_prosperity_dec:0 "为了共荣圈"
+  
+  TKM_For_HUM_TKM_dec:0 "为了共荣圈"
+  
+  TKM_Conventional_weapons_improvement:0 "常规武器改进"
+  TKM_Conventional_weapons_improvement_desc:0 "新式步枪与新式火炮还有用于侦察与工事的小玩意，所有的东西都应当领先于敌人。"
+  
+  TKM_Field_repair:0 "推行战地抢修"
+  TKM_Field_repair_desc:0 "部分前线部队正在自发的组织维修单位，并不是为了维修受损的军械而是修复士兵们战损的本体，将这类做法推广至全军应该能够缓解我们紧缺的兵源。"
+  
+  TKM_Field_repair_idea:0 "战地抢修"
+  
+  TKM_Trench_warfare:0 "堑壕战"
+  TKM_Trench_warfare_desc:0 "无时无刻观察敌方动向，以逸待劳伺机而动打出致命一击，只不过在敌人看起来我们只是在单纯的静坐防御。"
+  
+  TKM_Trench_warfare_idea:0 "堑壕战"
+  
+  TKM_Assault:0 "强袭战"
+  TKM_Assault_desc:0 "进攻再进攻！前进再前进！胜利就在眼前！"
+    
+  TKM_Assault_idea:0 "渗透强袭"
+
+  TKM_Mobile_warfare:0 "机动战"
+  TKM_Mobile_warfare_desc:0 "依靠多兵种联合作战快速突破敌军阵地将其分割包围歼灭才是胜利的关键！"
+  
+  TKM_Mobile_warfare_idea:0 "机动突破"
+
+  TKM_Armored_warfare:0 "数量战"
+  TKM_Armored_warfare_desc:0 "新式机甲兵器的强大威力令整个幻想乡瞩目，围绕它展开了许多新式战术的讨论，然而这些理论始终都无法与一条真理匹敌————越多越好！"  
+  
+  TKM_Armored_warfare_idea:0 "装甲扩编"
+  
+  TKM_Operation_No_99:0 "九十九号作战"
+  TKM_Operation_No_99_desc:0 "战争仍在继续，对此精诚合作的各级军事长官已经拟定了一份几乎万能的作战方案，这将动员最后的预备队投入战场打出决定性一击，只不过若没能完成结束战争的既定目标的话军方自然会遭到来自民间的全面质疑。然而那是绝对不可能发生的，强大的[TKM.GetName]军队定将碾碎所有敌人！来吧！诸位道具！为胜利而捐躯！为独立而玉碎！道具青年最光荣！全军突击！[TKM.GetName]万岁！！！"
+  
+  TKM_go_idea:0 "九十九号作战"
+  
+  TKM_Operation_No_99_dec:0 "最终胜利之战"
+  TKM_Operation_No_99_dec_desc:0 "§R[TKM.GetLeader]承诺将在一年内击败所有敌人结束所有战争，这可不是开玩笑的！§!" 
+ 
+  TKM_Intervene_in_the_eastern_forest_area_decision:0 "绥靖东部林区"
+  TKM_Intervene_in_the_eastern_forest_area_decision_desc:0 "有些该死的老鼠实在是太不老实了，希望经过一次武力征服后她们会明白缓冲区永远只不过是缓冲区！"
+  
+  TKM_You_touched_the_bottom_line_decision:0 "底线！"
+  TKM_You_touched_the_bottom_line_decision_desc:0 "有些老鼠可能觉得自己很聪明。"
+  
+  TKM_Circumvent_the_restrictions_of_the_treaty_idea:0 "规避和约限制"
+  
+  TKM_Intervene_in_the_civil_war_dec:0 "干涉内战"
+  
+  TKM_Support_the_Civil_War_1_idea:0 "支援内战"
+  TKM_Support_the_Civil_War_2_idea:0 "支援内战"
+  TKM_Support_the_Civil_War_3_idea:0 "支援内战"
+  
+  TKM_Protection_of_diaspora_MNM_dec:0 "出兵争议地区"
+  TKM_Protection_of_diaspora_MNM_dec_desc:0 "大命莲寺地区几乎在战争中被打了个稀烂，我们可以趁着[MNM.GetName]尚未巩固政权前借口保护侨民出兵占领争议地区，他们目前是无法抗拒的。"
+  
+  TKM_Protection_of_diaspora_NUE_dec:0 "出兵争议地区"
+  TKM_Protection_of_diaspora_NUE_dec_desc:0 "大命莲寺地区几乎在战争中被打了个稀烂，我们可以趁着[NUE.GetName]尚未巩固政权前借口保护侨民出兵占领争议地区，他们目前是无法抗拒的。"
+  
+  
+  TKM_Shipwreck_dec:0 "沉船"
+  TKM_Shipwreck_dec_desc:0 "自诩伟大舵手的船幽灵正在民族主义的狂热中无法自拔，必须避免[MNM.GetName]这条残破却装满炸药的舢板撞上来！为此我们只有先手将其凿沉。"
+  
+  TKM_Expel_the_darkness_dec:0 "驱暗"
+  TKM_Expel_the_darkness_dec_desc:0 "半生光阴挥霍，残岁庸碌苟存。纵使此夜漆黑，当于暗夜翱翔————终焉之刻已至！"
+
+  tkm_bupaoqijiudaoju_idea:0 "不抛弃任何一个同胞！"
+  tkm_bupaoqijiudaoju_idea_desc:0 "武器是道具的一种，也是我们的同胞。所以要好好的使用我们新造出来的武器，直到她彻底损坏！"

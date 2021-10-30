@@ -1,0 +1,153 @@
+YYK_yaomengdanyou = {
+	if = {
+		limit = {
+			has_idea = YYK_yaomengdanyou2_idea
+		}
+		swap_ideas = {
+			remove_idea = YYK_yaomengdanyou2_idea
+			add_idea = YYK_yaomengdanyou3_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = YYK_yaomengdanyou1_idea
+		}
+		swap_ideas = {
+			remove_idea = YYK_yaomengdanyou1_idea
+			add_idea = YYK_yaomengdanyou2_idea
+		}
+	}
+	if = {
+		limit = {
+			not = {
+				has_idea = YYK_yaomengdanyou1_idea
+				has_idea = YYK_yaomengdanyou2_idea
+				has_idea = YYK_yaomengdanyou3_idea
+			}
+		}
+		add_ideas = YYK_yaomengdanyou1_idea
+	}
+}
+YYK_xiaochudongdang = {
+	if = {
+		limit = {
+			tag = YYK
+			not = {
+				has_idea = YYK_mingjiedongdang1_idea
+				has_idea = YYK_mingjiedongdang2_idea
+				has_idea = YYK_mingjiedongdang3_idea
+				has_idea = YYK_mingjiedongdang4_idea
+				has_idea = YYK_mingjiedongdang5_idea
+				has_idea = YYK_mingjiedongdang6_idea
+			}
+		}
+		add_stability = 0.02
+	}
+	if = {
+		limit = {
+			has_idea = YYK_mingjiedongdang1_idea
+		}
+		remove_ideas = YYK_mingjiedongdang1_idea
+	}
+	if = {
+		limit = {
+			has_idea = YYK_mingjiedongdang2_idea
+		}
+		swap_ideas = {
+			remove_idea = YYK_mingjiedongdang2_idea
+			add_idea = YYK_mingjiedongdang1_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = YYK_mingjiedongdang3_idea
+		}
+		swap_ideas = {
+			remove_idea = YYK_mingjiedongdang3_idea
+			add_idea = YYK_mingjiedongdang2_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = YYK_mingjiedongdang4_idea
+		}
+		swap_ideas = {
+			remove_idea = YYK_mingjiedongdang4_idea
+			add_idea = YYK_mingjiedongdang3_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = YYK_mingjiedongdang5_idea
+		}
+		swap_ideas = {
+			remove_idea = YYK_mingjiedongdang5_idea
+			add_idea = YYK_mingjiedongdang4_idea
+		}
+	}
+	if = {
+		limit = {
+			has_idea = YYK_mingjiedongdang6_idea
+		}
+		swap_ideas = {
+			remove_idea = YYK_mingjiedongdang6_idea
+			add_idea = YYK_mingjiedongdang5_idea
+		}
+	}
+}
+YYK_xuqingzui = {
+	if = {
+		limit = {
+			tag = YYK
+			not = { has_completed_focus = YYK_jiashenyubayunzidelianxi }
+		}
+		custom_effect_tooltip = YYK_xuqingzui_tt
+		if = {
+			limit = {
+				check_variable = {
+					YYK_qingzui > 0
+				}
+			}
+			add_to_variable = {
+				YYK_qingzui = -1
+			}
+			custom_effect_tooltip = YYK_xuqingzui_tt2
+			else = {
+				SKI = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = YYK_qingzui_op
+					}
+				}
+			}
+		}
+	}
+}
+YYK_xukuoda = {
+	if = {
+		limit = {
+			tag = YYK
+			not = { has_completed_focus = YYK_jiashenyubayunzidelianxi }
+		}
+		custom_effect_tooltip = YYK_kuoda_tt
+		if = {
+			limit = {
+				check_variable = {
+					YYK_kuoda > 0
+				}
+			}
+			custom_effect_tooltip = YYK_kuoda_tt2
+			add_to_variable = {
+				YYK_kuoda = -1
+			}
+			else = {
+				SKI = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = YYK_kuoda_op
+					}
+				}
+			}
+		}
+	}
+}

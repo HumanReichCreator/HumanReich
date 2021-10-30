@@ -10,21 +10,23 @@ state={
 	}
 
 	history={
-			owner = MNM
-		# 143.7.1 = {
-		# 	owner = NMS
-		# 	add_core_of = NMS
-		# 	buildings = {
-		# 		infrastructure = 0
-		# 		industrial_complex = 0
-		# 		arms_factory = 0
+		143.7.1 = {
+			owner = TKM
+			add_core_of = TKM
+			add_core_of = WAK
+			buildings = {
+				infrastructure = 0
+				industrial_complex = 0
+				arms_factory = 0
 
-		# 	}
+			}
 
-		# }
+		}
 		146.1.1 = {
-			owner = MNM
-			add_core_of = MNM
+			owner = NMS
+			add_core_of = NMS
+			add_claim_by = TKM
+			remove_core_of = TKM
 			buildings = {
 				infrastructure = 1
 				industrial_complex = 0
@@ -37,9 +39,9 @@ state={
 	}
 
 	provinces={
-		1327 2316 3653 3654 3655 3656 3657 3658 3659 5436 
+		1030 2390 3223 3526 3529 4328 5950 
 	}
-	manpower=55
+	manpower=122
 	buildings_max_level_factor=1.000
 	state_category=s2
 }
