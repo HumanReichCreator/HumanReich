@@ -999,14 +999,22 @@ Ge_race_setting = {
 			}
 		}
 		set_variable = { ST_origin_race = 1 }
-		set_variable = { ST_present_race = 1 }
+		set_variable = { ST_present_race = 6 }
 	}
 
 	#sgs-override
-	#90 = {
-	#	set_variable = { ST_origin_race = 8	 }
-	#	set_variable = { ST_present_race = 6 }
-	#}
+	93 = {
+		set_variable = { ST_origin_race = 8	 }
+		set_variable = { ST_present_race = 6 }
+	}
+	131 = {
+		set_variable = { ST_origin_race = 7	 }
+		set_variable = { ST_present_race = 6 }
+	}
+	376 = {
+		set_variable = { ST_origin_race = 4	 }
+		set_variable = { ST_present_race = 6 }
+	}
 } 
 
 History_race_setting = {
