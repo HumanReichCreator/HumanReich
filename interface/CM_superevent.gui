@@ -3,14 +3,15 @@ guiTypes = {
 	containerWindowType = {
 		name = "CM_SE_main_container"
 		orientation = center
-		size = { width = 800 height = 600 }
-		position = { x = -400   y= -300   }  
-		moveable = yes	
+		Origo = center
+		size = { width = 500 height = 500 }
+		position = { x = 0  y= 0 }  
+		moveable = yes 	
 		
 		background = {
 			name = "Background"
-			quadTextureSprite ="GFX_CM_SE_bg"
-			
+			quadTextureSprite ="GFX_tiled_window_transparent"
+			#need a solid background to drag it around	
 		}	
 		
 		iconType = {
@@ -19,62 +20,104 @@ guiTypes = {
 			position = { x = 0 y = 0 }
 			Orientation = upper_left
 			alwaystransparent = yes
+			#background texture,made it can be clicked through
 			
 		}
+		
 		iconType = {
 			name = "CM_SE_picture_positioning_entry"
 			spriteType = "GFX_CM_SE_pic_entry"
-			position = { x = 14 y = 13 }
+			position = { x = 20  y = 21 }
 			Orientation = upper_left
 			alwaystransparent = yes 
+			#entry of custom pics,defined by scripted guis and scripted locs
 		}
-		
-		
+		  	
 		iconType = {
 			name = "CM_SE_frame_overlay"
 			spriteType = "GFX_CM_SE_frame_overlay"
 			position = { x = 0 y = 0 }
 			Orientation = upper_left
 			alwaystransparent = yes
+			#top overlay texture
 		}
 		buttonType = {
 			name = "CM_SE_exit_btn"
-			position = { x = 145  y = 547    }
+			position = { x = 54  y = 446 }
 			spriteType = "GFX_CM_SE_exit_btn"
 			orientation = upper_left
+			scale = 1.1 
+			#position = { x = 103  y = 444 }
+			#buttonText = "CM_SE_btn"
+			#buttonFont = "hoi_20bs"
 			
-			
+			#option button
 		}
 		instantTextboxType = {
 			name = "CM_SE_btn" 
-			position = { x = 150 y = 557 }
+			position = { x = 0 y = 454  }
 			font = "hoi_20bs"
 			text = "CM_SE_btn"		
 			maxWidth = 500
 			maxHeight = 30
-			format = center 
-			alwaystransparent = yes
+			fixedsize = yes
+			format = center
+			#option text,seperated from buttonText
 		}
 		instantTextboxType = {
 			name = "CM_SE_title" 
-			position = { x = 10 y = 14 }
+			position = { x = 0 y = 278 }
 			font = "hoi_30header"
 			text = "CM_SE_title"		
-			maxWidth = 780
+			maxWidth = 500
 			maxHeight = 80
+			fixedsize = yes
 			format = center
 		}
 		instantTextboxType = {
-			name = "CM_SE_desc" 
-			position = { x = 10 y = 392}
-			font = "hoi_30header"       
+			name = "CM_SE_desc_left" 
+			position = { x = 30 y = 342 }
+			font = "hoi_18mbs"        
 			text = "CM_SE_desc"		
-			maxWidth = 780 
-			maxHeight = 150
+			maxWidth = 440 
+			maxHeight = 88
+			format = left
+			fixedsize = yes
+			#left aligned textbox
+		} 
+		instantTextboxType = {
+			name = "CM_SE_desc_center" 
+			position = { x = 30 y = 342 }
+			font = "hoi_18mbs"        
+			text = "CM_SE_desc"		
+			maxWidth = 440 
+			maxHeight = 88
+			format = center  
+			fixedsize = yes
+			#center aligned textbox,for lyrics or poems
+		}
+		instantTextboxType = {
+			name = "CM_SE_quote" 
+			position = { x = 50  y = 420 }
+			font = "hoi_16mbs"
+			text = "CM_SE_quote"		
+			maxWidth = 400
+			maxHeight = 30
 			format = center
 			fixedsize = yes
-			vertical_alignment = center 
-		} 
+			#where does previous quote come from,optional
+		}
+		instantTextboxType = { 
+			name = "CM_SE_quote_extra" 
+			position = { x = 50  y = 420 }
+			font = "hoi_16mbs"
+			text = "CM_SE_quote"		
+			maxWidth = 400
+			maxHeight = 30
+			format = center
+			fixedsize = yes
+			#emphasize previous text or it'll look a bit blurry in-game due to the small fontsize
+		}
 	}
 	
 	
