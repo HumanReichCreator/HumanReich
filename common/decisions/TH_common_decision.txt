@@ -1,7 +1,7 @@
  common_category = {
 	chengnuoheping = {
         visible = {
-            # NOT = { has_government = neworder}
+            NOT = { has_government = neworder}
         }
         available = {
             # has_political_power < 1

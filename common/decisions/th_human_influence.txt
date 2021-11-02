@@ -1,6 +1,7 @@
 human_influ = {
     human_influ_maoyixingwei1 = {
         visible = {
+            always = no
             not = { has_idea = Human}
             or = {
                 check_variable = { all_value < HUM.all_value}
@@ -70,6 +71,7 @@ human_influ = {
     }
     human_influ_maoyixingwei2 = {
         visible = {
+            always = no
             not = { has_idea = Human}
             check_variable = { all_value > HUM.all_value}
             has_global_flag = main_scenario
@@ -136,6 +138,7 @@ human_influ = {
     }
     human_influ_yaoli = {
         visible = {
+            always = no
             not = { has_idea = Human}
             has_global_flag = main_scenario
         }
@@ -206,6 +209,7 @@ human_influ = {
     }
     human_influ_zhongzurenzhi = {
         visible = {
+            always = no
             not = { has_idea = Human}
             has_global_flag = main_scenario
         }
@@ -274,6 +278,7 @@ human_influ = {
     }
     human_influ_lianbing = {
         visible = {
+            always = no
             not = { has_idea = Human}
             has_global_flag = main_scenario
         }
@@ -326,6 +331,7 @@ human_influ = {
     }
     human_influ_yaoyan = {
         visible = {
+            always = no
             not = { has_idea = Human}
             has_global_flag = main_scenario
         }
@@ -396,6 +402,7 @@ human_influ = {
 
     human_influ_yexing = {
         visible = {
+            always = no
             not = { has_idea = Human}
             has_global_flag = main_scenario
         }
@@ -470,6 +477,7 @@ human_influ = {
 
     human_influ_xiji = {
         visible = {
+            always = no
             not = { has_idea = Human}
             has_global_flag = main_scenario
         }
@@ -566,6 +574,7 @@ human_influ = {
 
     human_influ_liberate = {
         visible = {
+            always = no
             tag = HUM
             has_global_flag = main_scenario
         }
