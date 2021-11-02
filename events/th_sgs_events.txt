@@ -664,7 +664,7 @@ country_event = {
 		name = sgs.8.1
 		load_focus_tree = { tree = SGS_focus_post_cw keep_completed = yes }
 		complete_national_focus = SGS_civil_war_end_focus
-		add_ideas = { type1_manpowerlv2 }
+		add_ideas = { type1_manpowerlv2 low_economic_mobilisation }
 		set_country_flag = SGS_civil_war_finish
 		if  = {
 			limit = {
@@ -789,6 +789,7 @@ country_event = {
 		not = {
 			SGS_restless_stage_is_over = yes
 			has_war = yes
+			has_country_flag = event_sgs10_cd
 		}
 		tag = SGS
 
@@ -796,8 +797,12 @@ country_event = {
 	option = {
 		#不管
 		name = sgs.10.1
-		add_stability = -0.15
+		add_stability = -0.1
 		add_political_power = 50
+		set_country_flag = {
+			flag = event_sgs10_cd
+			days = 90
+		}
 		ai_chance = {
 			base = 30
 		}
@@ -805,7 +810,11 @@ country_event = {
 	option = {
 		#演练
 		name = sgs.10.2
-		add_war_support = 0.2
+		add_war_support = 0.15
+		set_country_flag = {
+			flag = event_sgs10_cd
+			days = 90
+		}
 		ai_chance = {
 			base = 35
 		}
@@ -10361,6 +10370,9 @@ country_event = {
 	option = {
 		#露娜
 		name = sgs.301.2
+		trigger = {
+			is_debug = yes
+		}
 		set_country_flag = SGS_postwar_confer_luna_win
 		set_politics = {
 			ruling_party = oldorder
@@ -10374,6 +10386,9 @@ country_event = {
 	option = {
 		#斯塔
 		name = sgs.301.3
+		trigger = {
+			is_debug = yes
+		}
 		set_country_flag = SGS_postwar_confer_star_win
 		set_politics = {
 			ruling_party = guli
@@ -10386,6 +10401,9 @@ country_event = {
 	option = {
 		#你来选
 		name = sgs.301.4
+		trigger = {
+			is_debug = yes
+		}
 		random_list = {
 			var:sgs_sunny_infl = {
 				set_country_flag = SGS_postwar_confer_sunny_win

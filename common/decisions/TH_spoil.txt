@@ -31,7 +31,10 @@ Spoil_battle = {
 			threat < 0.5
 			date < 150.1.1
 			NOT = {
-				has_country_flag = spoilCD
+				or = {
+					has_country_flag = spoilCD
+					has_war = yes
+				}
 			}
 			FROM = {
 				is_neighbor_of = ROOT
@@ -220,7 +223,10 @@ Spoil_battle = {
 			threat < 0.5
 			date < 150.1.1
 			NOT = {
-				has_country_flag = spoilCD
+				or = {
+					has_country_flag = spoilCD
+					has_war = yes
+				}
 			}
 			FROM = {
 				is_neighbor_of = ROOT
@@ -415,7 +421,10 @@ Spoil_battle = {
 			threat < 0.5
 			date < 150.1.1
 			NOT = {
-				has_country_flag = spoilCD
+				or = {
+					has_country_flag = spoilCD
+					has_war = yes
+				}
 			}
 			not = {
 				and = {
@@ -606,7 +615,10 @@ Spoil_battle = {
 			threat < 0.5
 			date < 150.1.1
 			NOT = {
-				has_country_flag = spoilCD
+				or = {
+					has_country_flag = spoilCD
+					has_war = yes
+				}
 			}
 			not = {
 				and = {
@@ -810,7 +822,10 @@ Spoil_battle = {
 			threat < 0.5
 			date < 150.1.1
 			NOT = {
-				has_country_flag = spoilCD
+				or = {
+					has_country_flag = spoilCD
+					has_war = yes
+				}
 			}
 			not = {
 				and = {
@@ -1007,7 +1022,10 @@ Spoil_battle = {
 			threat < 0.5
 			date < 150.1.1
 			NOT = {
-				has_country_flag = spoilCD
+				or = {
+					has_country_flag = spoilCD
+					has_war = yes
+				}
 			}
 			FROM = {
 				is_neighbor_of = ROOT
@@ -1195,7 +1213,10 @@ Spoil_battle = {
 			threat < 0.5
 			date < 150.1.1
 			NOT = {
-				has_country_flag = spoilCD
+				or = {
+					has_country_flag = spoilCD
+					has_war = yes
+				}
 			}
 			FROM = {
 				is_neighbor_of = ROOT
@@ -1383,7 +1404,10 @@ Spoil_battle = {
 			threat < 0.5
 			date < 150.1.1
 			NOT = {
-				has_country_flag = spoilCD
+				or = {
+					has_country_flag = spoilCD
+					has_war = yes
+				}
 			}
 			FROM = {
 				is_neighbor_of = ROOT
@@ -1565,7 +1589,10 @@ Spoil_battle = {
 			threat < 0.5
 			date < 150.1.1
 			NOT = {
-				has_country_flag = spoilCD
+				or = {
+					has_country_flag = spoilCD
+					has_war = yes
+				}
 			}
 			FROM = {
 				is_neighbor_of = ROOT
@@ -1754,7 +1781,10 @@ Spoil_battle = {
 			threat < 0.5
 			date < 150.1.1
 			NOT = {
-				has_country_flag = spoilCD
+				or = {
+					has_country_flag = spoilCD
+					has_war = yes
+				}
 			}
 			FROM = {
 				is_neighbor_of = ROOT
@@ -1942,7 +1972,10 @@ Spoil_battle = {
 			threat < 0.5
 			date < 150.1.1
 			NOT = {
-				has_country_flag = spoilCD
+				or = {
+					has_country_flag = spoilCD
+					has_war = yes
+				}
 			}
 			FROM = {
 				is_neighbor_of = ROOT
@@ -2124,7 +2157,10 @@ Spoil_battle = {
 			threat < 0.5
 			date < 150.1.1
 			NOT = {
-				has_country_flag = spoilCD
+				or = {
+					has_country_flag = spoilCD
+					has_war = yes
+				}
 			}
 			FROM = {
 				is_neighbor_of = ROOT
@@ -2319,7 +2355,10 @@ Spoil_battle = {
 			threat < 0.5
 			date < 150.1.1
 			NOT = {
-				has_country_flag = spoilCD
+				or = {
+					has_country_flag = spoilCD
+					has_war = yes
+				}
 			}
 			not = {
 				and = {
@@ -2516,7 +2555,10 @@ Spoil_battle = {
 			threat < 0.5
 			date < 150.1.1
 			NOT = {
-				has_country_flag = spoilCD
+				or = {
+					has_country_flag = spoilCD
+					has_war = yes
+				}
 			}
 			FROM = {
 				is_neighbor_of = ROOT
@@ -2698,7 +2740,10 @@ Spoil_battle = {
 			threat < 0.5
 			date < 150.1.1
 			NOT = {
-				has_country_flag = spoilCD
+				or = {
+					has_country_flag = spoilCD
+					has_war = yes
+				}
 			}
 			FROM = {
 				is_neighbor_of = ROOT
