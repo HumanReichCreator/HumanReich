@@ -787,9 +787,11 @@ country_event = {
 	}
 	trigger = {
 		not = {
-			SGS_restless_stage_is_over = yes
-			has_war = yes
-			has_country_flag = event_sgs10_cd
+			or = {
+				SGS_restless_stage_is_over = yes
+				has_war = yes
+				has_country_flag = event_sgs10_cd
+			}
 		}
 		tag = SGS
 
@@ -801,7 +803,7 @@ country_event = {
 		add_political_power = 50
 		set_country_flag = {
 			flag = event_sgs10_cd
-			days = 90
+			days = 50
 		}
 		ai_chance = {
 			base = 30
@@ -813,7 +815,7 @@ country_event = {
 		add_war_support = 0.15
 		set_country_flag = {
 			flag = event_sgs10_cd
-			days = 90
+			days = 60
 		}
 		ai_chance = {
 			base = 35
