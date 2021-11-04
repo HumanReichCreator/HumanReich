@@ -438,18 +438,18 @@ focus_tree = {
 				}
 			}
 			division_template = {
-				name = SGS_template_civilian
+				name = "战场妖精-民兵混合编制"
 				regiments = {
 					ma_light_infantry = { x = 0 y = 0 }
 					ma_light_infantry = { x = 0 y = 1 }
 					ma_light_infantry = { x = 0 y = 2 }
+					melee_infantry = { x = 0 y = 3 }
 					melee_infantry = { x = 0 y = 4 }
-					melee_infantry = { x = 0 y = 5 }
 					sc_infantry = { x = 1 y = 0 }
 					sc_infantry = { x = 1 y = 1 }
 					sc_infantry = { x = 1 y = 2 }
+					sc_infantry = { x = 1 y = 3 }
 					sc_infantry = { x = 1 y = 4 }
-					sc_infantry = { x = 1 y = 5 }
 					sc_mortar_brigade = { x = 2 y = 0 }
 					sc_mortar_brigade = { x = 2 y = 1 }
 					sc_mortar_brigade = { x = 2 y = 2 }
@@ -1112,9 +1112,15 @@ focus_tree = {
 focus = {
 		id = SGS_ind_plan_focus
 		icon = GFX_focus_generic_industry_3
-		cost = 10.00
+		cost = 5
 		x = 35
 		y = 0
+		available = {
+			or = {
+				has_completed_focus = SGS_postwar_confer_focus
+				has_completed_focus = SGS_peaceful_transit_focus
+			}
+		}
 		completion_reward = {
 			#
 			add_tech_bonus = {
@@ -1161,7 +1167,7 @@ focus = {
 	focus = {
 		id = SGS_enforce_picking_up #开发资源
 		icon = GFX_goal_generic_production
-		cost = 10.00
+		cost = 6
 		prerequisite = {
 			focus = SGS_ind_plan_hawk
 		}
@@ -1219,7 +1225,7 @@ focus = {
 	focus = {
 		id = SGS_national_roadway_focus
 		icon = GFX_goal_generic_construct_infrastructure
-		cost = 10.00
+		cost = 6
 		prerequisite = {
 			focus = SGS_enforce_picking_up
 		}
@@ -1244,7 +1250,7 @@ focus = {
 	focus = {
 		id = SGS_planning_product_focus #像筹划恶作剧一样计划性展开生产
 		icon = GFX_goal_generic_position_armies
-		cost = 10.00
+		cost = 8
 		available = {
 			SGS_hawk_get_more = yes	
 		}
@@ -1296,7 +1302,7 @@ focus = {
 	focus = {
 		id = SGS_transform_picking_up
 		icon = GFX_goal_generic_air_production
-		cost = 10.00
+		cost = 6
 		prerequisite = {
 			focus = SGS_ind_plan_dove
 		}
@@ -1360,7 +1366,7 @@ focus = {
 	focus = {
 		id = SGS_city_infra_focus
 		icon = GFX_focus_generic_the_giant_wakes
-		cost = 10.00
+		cost = 6
 		prerequisite = {
 			focus = SGS_transform_picking_up
 		}
@@ -1416,7 +1422,7 @@ focus = {
 	focus = {
 		id = SGS_mili_build_focus
 		icon = GFX_goal_generic_fortify_city
-		cost = 10.00
+		cost = 8
 		prerequisite = {
 			focus = SGS_factory_flexible_trans_focus
 		}
@@ -1435,7 +1441,7 @@ focus = {
 	focus = {
 		id = SGS_civil_build_focus
 		icon = GFX_goal_generic_construction
-		cost = 10.00
+		cost = 8
 		prerequisite = {
 			focus = SGS_factory_flexible_trans_focus
 		}
@@ -1454,7 +1460,7 @@ focus = {
 	focus = {
 		id = SGS_exploring_product_focus
 		icon = GFX_goal_generic_build_airforce
-		cost = 10.00
+		cost = 8
 		available = {
 			SGS_dove_get_more = yes	
 		}
@@ -1524,7 +1530,7 @@ focus = {
 	focus = {
 		id = SGS_completed_moonlight_industry_system
 		icon = GFX_focus_focus_plan_of_luna_final
-		cost = 10.00
+		cost = 6
 		prerequisite = {
 			focus = SGS_planning_contruct_focus
 			focus = SGS_mili_build_focus
@@ -1577,7 +1583,7 @@ focus = {
 	focus = {
 		id = SGS_sunlight_factory_solution
 		icon = GFX_focus_focus_plan_of_sunny
-		cost = 10.00
+		cost = 6
 		prerequisite = {
 			focus = SGS_completed_moonlight_industry_system
 		}
@@ -1607,7 +1613,7 @@ focus = {
 	focus = {
 		id = SGS_starlight_factory_solution
 		icon = GFX_focus_focus_plan_of_star
-		cost = 10.00
+		cost = 6
 		prerequisite = {
 			focus = SGS_completed_moonlight_industry_system
 		}
@@ -1629,9 +1635,12 @@ focus = {
 		cost = 10.00
 		x = 46
 		y = 0
+		available = {
+			always = no	
+		}
 		completion_reward = {
 			#
-			
+			add_war_support = 0.1
 		}
 
 	}
@@ -1684,7 +1693,7 @@ focus = {
 	focus = {
 		id = SGS_deal_with_leaders_focus
 		icon = GFX_focus_focus_CIR_head
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = SGS_occupy_CIR_focus
 		}
@@ -1709,7 +1718,7 @@ focus = {
 	focus = {
 		id = SGS_take_over_dessert_focus
 		icon = GFX_focus_generic_the_giant_wakes
-		cost = 10.00
+		cost = 6
 		prerequisite = {
 			focus = SGS_occupy_SCA_focus
 			
@@ -1741,7 +1750,7 @@ focus = {
 	focus = {
 		id = SGS_expand_weapon_repo_focus
 		icon = GFX_goal_generic_army_artillery
-		cost = 10.00
+		cost = 6
 		available = {
 			SGS_hawk_get_more = yes	
 			controls_state = 104
@@ -1787,7 +1796,7 @@ focus = {
 	focus = {
 		id = SGS_treat_about_people_focus
 		icon = GFX_focus_eng_the_kings_party
-		cost = 10.00
+		cost = 6
 		prerequisite = {
 			focus = SGS_take_over_dessert_focus
 			focus = SGS_expand_weapon_repo_focus
@@ -1803,7 +1812,7 @@ focus = {
 	focus = {
 		id = SGS_integrate_SCA_focus
 		icon = GFX_goal_generic_intelligence_exchange
-		cost = 10.00
+		cost = 6
 		prerequisite = {
 			focus = SGS_treat_about_people_focus
 		}
@@ -1842,7 +1851,7 @@ focus = {
 	focus = {
 		id = SGS_face_CIR_army_focus
 		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = SGS_occupy_CIR_focus
 		}
@@ -1876,7 +1885,7 @@ focus = {
 	focus = {
 		id = SGS_SC2_issue_focus
 		icon = GFX_focus_por_the_pink_map
-		cost = 10.00
+		cost = 6
 		prerequisite = {
 			focus = SGS_no_peace_diplo_focus
 		}
@@ -1887,7 +1896,7 @@ focus = {
 		y = 1
 		relative_position_id = SGS_no_peace_diplo_focus
 		completion_reward = {
-			#弄个新闻
+			#根据军力强度和是否干翻红魔馆以及政党支持度确定基本影响力。弄个新闻
 
 		}
 	}
@@ -1895,7 +1904,7 @@ focus = {
 	focus = {
 		id = SGS_prepare_to_fight_fairy_focus
 		icon = GFX_focus_generic_strike_at_democracy1
-		cost = 10.00
+		cost = 8
 		prerequisite = {
 			focus = SGS_no_peace_diplo_focus
 		}
@@ -1903,7 +1912,7 @@ focus = {
 			or = {
 				has_government = oldorder
 				SGS_peaceful_transit_gov = yes
-				date > 146.1.1  #debug结束后改成148
+				date > 148.1.1  #debug结束后改成148
 			}
 			
 
@@ -1920,7 +1929,7 @@ focus = {
 	focus = {
 		id = SGS_unlcok_attack_fairy_focus
 		icon = GFX_goal_generic_forceful_treaty
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = SGS_prepare_to_fight_fairy_focus
 		}
@@ -1937,7 +1946,7 @@ focus = {
 	focus = {
 		id = SGS_start_recruit_focus
 		icon = GFX_focus_generic_little_entente
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = SGS_prepare_to_fight_fairy_focus
 		}
@@ -1960,7 +1969,7 @@ focus = {
 	focus = {
 		id = SGS_aim_SCA_focus
 		icon = GFX_focus_ger_strike_at_the_source
-		cost = 10.00
+		cost = 8
 		prerequisite = {
 			focus = SGS_unlcok_attack_fairy_focus
 		}
@@ -1983,7 +1992,7 @@ focus = {
 	focus = {
 		id = SGS_ambitious_to_all_fairy_focus
 		icon = GFX_focus_eng_global_defense
-		cost = 10.00
+		cost = 8
 		prerequisite = {
 			focus = SGS_start_recruit_focus
 		}
@@ -1999,7 +2008,7 @@ focus = {
 			#全体妖精++，加计划加成和速度
 			add_timed_idea = {
 				idea = SGS_aim_all_fairy_idea
-				days = 360
+				days = 720
 			}
 		}
 
@@ -2036,7 +2045,7 @@ focus = {
 	focus = {
 		id = SGS_infl_SC2_focus
 		icon = GFX_focus_por_recover_brazil
-		cost = 10.00
+		cost = 6
 		prerequisite = {
 			focus = SGS_SC2_issue_focus
 		}
@@ -2052,7 +2061,7 @@ focus = {
 	focus = {
 		id = SGS_try_to_control_SC2_focus
 		icon = GFX_focus_spa_the_war_of_vengeance
-		cost = 4
+		cost = 6
 		prerequisite = {
 			focus = SGS_infl_SC2_focus
 		}
@@ -2175,7 +2184,7 @@ focus = {
 	focus = {
 		id = SGS_fight_others_focus
 		icon = GFX_goal_generic_war_with_comintern
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = SGS_get_SW_focus
 		}
@@ -2208,7 +2217,7 @@ focus = {
 	focus = {
 		id = SGS_lake_road_focus
 		icon = GFX_focus_generic_cruiser2
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = SGS_occupy_CIR_focus
 		}
@@ -2254,7 +2263,7 @@ focus = {
 	focus = {
 		id = SGS_integrate_CIR_focus
 		icon = GFX_goal_generic_propaganda
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = SGS_lake_road_focus
 		}
@@ -2278,7 +2287,7 @@ focus = {
 	focus = {
 		id = SGS_refugee_issue_focus
 		icon = GFX_focus_generic_military_academy
-		cost = 10.00
+		cost = 6
 		prerequisite = {
 			focus = SGS_occupy_LIL_focus
 		}
@@ -2296,7 +2305,7 @@ focus = {
 	focus = {
 		id = SGS_integrate_LIL_focus
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
-		cost = 10.00
+		cost = 6
 		prerequisite = {
 			focus = SGS_refugee_issue_focus
 		}
@@ -2313,7 +2322,7 @@ focus = {
 	focus = {
 		id = SGS_divide_them_focus
 		icon = GFX_goal_anti_comintern_pact
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = SGS_get_SW_focus
 		}
@@ -2346,7 +2355,7 @@ focus = {
 	focus = {
 		id = SGS_fight_LIL_focus
 		icon = GFX_focus_focus_war_LIL
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = SGS_prepare_LIL_focus
 		}
@@ -2386,7 +2395,7 @@ focus = {
 	focus = {
 		id = SGS_fight_CIR_focus
 		icon = GFX_focus_focus_war_CIR
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = SGS_prepare_CIR_focus
 		}
@@ -2413,7 +2422,7 @@ focus = {
 	focus = {
 		id = SGS_big_fair_war_focus
 		icon = GFX_focus_generic_air_defense
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = SGS_prepare_final_war_focus
 		}
@@ -2435,7 +2444,7 @@ focus = {
 	focus = {
 		id = SGS_unite_fairy_area_focus
 		icon = GFX_focus_chi_one_china_policy
-		cost = 10.00
+		cost = 8
 		prerequisite = {
 			focus = SGS_integrate_SCA_focus
 		}

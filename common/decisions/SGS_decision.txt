@@ -806,7 +806,7 @@ SGS_equipment_issue_category = {
 			}
 		}
 		modifier = {
-			political_power_gain = 0.05
+			political_power_gain = -0.02
 		}
 		cost = 30
 		days_remove = 20
@@ -836,7 +836,7 @@ SGS_equipment_issue_category = {
 			}
 		}
 		modifier = {
-			political_power_gain = 0.1
+			political_power_gain = -0.05
 			stability_weekly = 0.05
 		}
 		cost = 50
@@ -2184,6 +2184,7 @@ SGS_research_team_category = {
 		visible = {
 			SGS_has_research_team_mechanism = yes
 			has_tech = shuxuegongju
+			has_ideas = { SGS_basic_edu_idea }
 			tag = sgs
 		}
 		available = {
