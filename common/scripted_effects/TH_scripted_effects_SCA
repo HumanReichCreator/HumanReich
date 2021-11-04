@@ -3,17 +3,16 @@ create_remilia = {
 		# name = "Remilia Scarlet"
 		name = "蕾米莉亚·斯卡蕾特"
 		portrait_path = "gfx/leaders/SCA/SCA_rem.dds"
-		id = 2000
-		traits = {  th_character  }
-		attack_skill = 6
-		defense_skill = 3
-		planning_skill = 3
-		logistics_skill = 5
-		
-		skill = 6
+		traits = {  th_character  harsh_leader th_trait_huoqiangzhuanjia th_trait_qianxianzhandou }
+		attack_skill = 8
+		defense_skill = 10
+		planning_skill = 5
+		logistics_skill = 8
+		id = 500
+		skill = 9
 	}
 	random_unit_leader = {
-		limit = { has_id = 2000 }
+		limit = { has_id = 500 }
 		save_global_event_target_as = SCA_Remilia_Scarlet
 	}
 }

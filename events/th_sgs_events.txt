@@ -11783,6 +11783,7 @@ country_event = {
 	trigger = {
 		has_country_flag = sgs_planning_construct_flg
 		tag = sgs
+		check_variable = {global.season_month = 1}
 	}
 	option = {
 		#军工
