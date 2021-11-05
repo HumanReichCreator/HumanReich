@@ -3005,5 +3005,130 @@ SGS_research_team_category = {
 		}
 	}
 
+	SGS_RT_tongxunlilun_deci = {
+		visible = {
+			SGS_has_research_team_mechanism = yes
+			has_completed_focus = SGS_mili_admin_focus
+			not = {
+				has_tech = tongxunlilun
+			}
+			can_research = tongxunlilun
+		}
+		available = {
+			SGS_has_idle_reseach_team = yes
+			
+			not = { is_researching_technology =  tongxunlilun}
+		}
+		modifier = {
+		}
+		cost = 50
+		#days_remove = 30
+		#days_re_enable = 30
+		fire_only_once = yes
+		complete_effect = {
+			set_variable = {global.sgs_RT_tech_token = token:tongxunlilun}
+			set_variable = {global.sgs_RT_tech_total_value = 1500}
+			SGS_RT_assign = yes
+			
+		}
+		
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	SGS_RT_jiami137_deci = {
+		visible = {
+			SGS_has_research_team_mechanism = yes
+			has_completed_focus = SGS_mili_admin_focus
+			not = {
+				has_tech = jiami137
+			}
+			can_research = jiami137
+		}
+		available = {
+			SGS_has_idle_reseach_team = yes
+			
+			not = { is_researching_technology =  jiami137}
+		}
+		modifier = {
+		}
+		cost = 50
+		#days_remove = 30
+		#days_re_enable = 30
+		fire_only_once = yes
+		complete_effect = {
+			set_variable = {global.sgs_RT_tech_token = token:jiami137}
+			set_variable = {global.sgs_RT_tech_total_value = 1800}
+			SGS_RT_assign = yes
+			
+		}
+		
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	SGS_RT_jiemi137_deci = {
+		visible = {
+			SGS_has_research_team_mechanism = yes
+			has_completed_focus = SGS_mili_admin_focus
+			not = {
+				has_tech = jiemi137
+			}
+			can_research = jiemi137
+		}
+		available = {
+			SGS_has_idle_reseach_team = yes
+			
+			not = { is_researching_technology =  jiemi137}
+		}
+		modifier = {
+		}
+		cost = 50
+		#days_remove = 30
+		#days_re_enable = 30
+		fire_only_once = yes
+		complete_effect = {
+			set_variable = {global.sgs_RT_tech_token = token:jiemi137}
+			set_variable = {global.sgs_RT_tech_total_value = 1800}
+			SGS_RT_assign = yes
+			
+		}
+		
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	SGS_RT_lingganleida142_deci = {
+		visible = {
+			SGS_has_research_team_mechanism = yes
+			has_completed_focus = SGS_mili_admin_focus
+			not = {
+				has_tech = lingganleida142
+			}
+			can_research = lingganleida142
+		}
+		available = {
+			SGS_has_idle_reseach_team = yes
+			
+			not = { is_researching_technology =  lingganleida142}
+		}
+		modifier = {
+		}
+		cost = 50
+		#days_remove = 30
+		#days_re_enable = 30
+		fire_only_once = yes
+		complete_effect = {
+			set_variable = {global.sgs_RT_tech_token = token:lingganleida142}
+			set_variable = {global.sgs_RT_tech_total_value = 2500}
+			SGS_RT_assign = yes
+			
+		}
+		
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
 
 } 
