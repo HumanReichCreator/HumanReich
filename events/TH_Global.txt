@@ -326,6 +326,15 @@ country_event = {
 		exhuastion_base_seton = yes
 
 		country_event = glo.3000 #种族关系观点修正
+		if = {
+			limit = {
+				english_leaders = yes
+			}
+			army_english_leader_initial = yes
+			else = {
+				army_chinese_leader_initial = yes
+			}
+		}
 	}
 
 	option = {
