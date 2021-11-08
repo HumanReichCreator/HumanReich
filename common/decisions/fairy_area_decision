@@ -800,8 +800,8 @@ lake_deci_category = {
 		allowed = { always = no  }
 		available = {
 			or = {
-				has_equipment = { support_equipment_1 > 1000 }
-				has_equipment = { support_equipment_2 > 1000 }
+				has_equipment = { support_equipment_1 > 3000 }
+				has_equipment = { support_equipment_2 > 3000 }
 			}# 任务目标
 		}
 		activation = {

@@ -74,3 +74,34 @@ CIR_army_uprise_debuff = {
 		}
 	}
 }
+
+#记录妖精区域的省份
+FA_get_states = {
+	every_state = {
+		limit = {
+			or = {
+				is_core_of = CIR
+				is_core_of = SGS
+				is_core_of = SCA
+				is_core_of = SC2
+				is_core_of = LIL
+			}
+			not = {
+				state = 131
+				state = 376
+				state = 93
+			}
+		}
+		set_state_flag = FA_states
+	}
+}
+
+#给整个妖精区域加宣称
+claim_all_FA_area = {
+	every_state = {
+		limit = {
+			has_state_flag = FA_states
+		}
+		add_claim_by = ROOT
+	}
+}
