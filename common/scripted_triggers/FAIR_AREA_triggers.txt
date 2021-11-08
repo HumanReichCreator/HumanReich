@@ -34,6 +34,11 @@ SC2_need_pay_attention = {
     SC2_can_infl = yes
     not = { has_country_flag = FA_in_FPA_flg }
   }
+  SGS = {
+    not = {
+      has_completed_focus = 
+    }
+  }
 }
 
 CIR_army_wait_their_leader = {

@@ -46,15 +46,18 @@ SC2_infl_defines = {
 	set_variable = { CIR.CIR_TASK_time = 360}
 }
 
+# 计算妖精和平条约的所有国家的影响力总和
 cal_FPA_infl = {
-	set_temp_variable = { FPA_infl_total = 0}
-	every_country = {
-		limit = {
-			has_country_flag = FA_in_FPA_flg
+	hidden_effect = {
+		set_temp_variable = { FPA_infl_total = 0}
+		every_country = {
+			limit = {
+				has_country_flag = FA_in_FPA_flg
+			}
+			add_to_temp_variable = { FPA_infl_total = THIS.SC2_infl_value }
 		}
-		add_to_temp_variable = { FPA_infl_total = THIS.SC2_infl_value }
+		set_variable = {SC2.SC2_FPA_infl_value = FPA_infl_total}
 	}
-	set_variable = {SC2.SC2_FPA_infl_value = FPA_infl_total}
 }
 
 

@@ -1656,6 +1656,7 @@ focus = {
 		completion_reward = {
 			#条件：控制并拥有红魔馆，SCA不存在，效果：加政治点，解锁SCA地区的造核
 			add_political_power = 50
+			add_to_variable = { ROOT.SC2_infl_value = 40 }
 			set_country_flag =  FIR_AREA_SCA_MAKE_CORE
 			custom_effect_tooltip = SCA_core_make_tooltup
 		}
@@ -1897,7 +1898,27 @@ focus = {
 		relative_position_id = SGS_no_peace_diplo_focus
 		completion_reward = {
 			#根据军力强度和是否干翻红魔馆以及政党支持度确定基本影响力。弄个新闻
+			set_variable = { ROOT.SC2_infl_value = 20 }
+			if = {
+				limit = { 
+					or = {
+						neworder > 0.5
+						oldorder > 0.5
+					}
+				}
+				add_to_variable = { ROOT.SC2_infl_value = 10 }
+			}
+			if = {
+				limit = { 
+					strength_ratio = {
+						tag = SC2
+						ratio > 2
+					}
+				}
+				add_to_variable = { ROOT.SC2_infl_value = 5 }
+			}
 
+			
 		}
 	}
 
