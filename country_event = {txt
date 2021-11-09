@@ -19,8 +19,12 @@ country_event = {
 	}
 }
 
-
-
+event_sgs_picking_cd
+set_country_flag = {
+	flag = event_sgs1_cd
+	days = 30
+	value = 1
+}
 every_state = {
 	limit = {
 		is_core_of = CIR

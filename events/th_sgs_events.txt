@@ -35,6 +35,7 @@ country_event = {
 			SGS_restless_stage_is_over = yes
 			has_war = yes
 		}
+		not = { has_country_flag = event_sgs1_cd }
 	}
 	option = {
 		#不管
@@ -48,6 +49,11 @@ country_event = {
 			min = 1
 			max = 150
 		}
+		set_country_flag = {
+			flag = event_sgs1_cd
+			days = 30
+			value = 1
+		}
 		add_political_power = 30
 		ai_chance = {
 			base = 35
@@ -59,6 +65,11 @@ country_event = {
 		add_equipment_to_stockpile = {
 			type = magic_core_a
 			amount = -60
+		}
+		set_country_flag = {
+			flag = event_sgs1_cd
+			days = 30
+			value = 1
 		}
 
 		ai_chance = {
@@ -612,7 +623,7 @@ country_event = {
 		tag = SGS
 		or = {
 			and = {
-				date > 146.8.1
+				date > 146.9.1
 				check_variable = { sgs_uprise > 80 }
 			}
 			date > 146.11.1
@@ -804,6 +815,7 @@ country_event = {
 		set_country_flag = {
 			flag = event_sgs10_cd
 			days = 50
+			value = 1
 		}
 		ai_chance = {
 			base = 30
@@ -816,6 +828,7 @@ country_event = {
 		set_country_flag = {
 			flag = event_sgs10_cd
 			days = 60
+			value = 1
 		}
 		ai_chance = {
 			base = 35
@@ -1333,12 +1346,18 @@ country_event = {
 			SGS_restless_stage_is_over = yes
 		}
 		tag = SGS
+		not = { has_country_flag = event_tno_story_cd }
 	}
 	option = {
 		#
 		name = sgs.20.1
 		hidden_effect = {
 			add_stability = -0.03
+		}
+		set_country_flag = {
+			flag = event_tno_story_cd
+			days = 30
+			value = 1
 		}
 		ai_chance = {
 			base = 30
@@ -1368,6 +1387,7 @@ country_event = {
 			has_war = yes
 		}
 		tag = SGS
+		not = { has_country_flag = event_tno_story_cd }
 	}
 	option = {
 		#
@@ -1377,6 +1397,11 @@ country_event = {
 				ideology = neworder
 				popularity = -0.03
 			}
+		}
+		set_country_flag = {
+			flag = event_tno_story_cd
+			days = 30
+			value = 1
 		}
 		ai_chance = {
 			base = 30
@@ -1406,6 +1431,7 @@ country_event = {
 			SGS_restless_stage_is_over = yes
 		}
 		tag = SGS
+		not = { has_country_flag = event_tno_story_cd }
 	}
 	option = {
 		#
@@ -1415,6 +1441,11 @@ country_event = {
 				ideology = neworder
 				popularity = 0.05
 			}
+		}
+		set_country_flag = {
+			flag = event_tno_story_cd
+			days = 30
+			value = 1
 		}
 		ai_chance = {
 			base = 30
@@ -1441,6 +1472,7 @@ country_event = {
 			SGS_restless_stage_is_over = yes
 		}
 		tag = SGS
+		not = { has_country_flag = event_tno_story_cd }
 	}
 	option = {
 		#
@@ -1449,6 +1481,11 @@ country_event = {
 			add_to_variable = {
 				sgs_sunny_infl = 3
 			}
+		}
+		set_country_flag = {
+			flag = event_tno_story_cd
+			days = 30
+			value = 1
 		}
 		ai_chance = {
 			base = 30
@@ -1474,6 +1511,7 @@ country_event = {
 			SGS_restless_stage_is_over = yes
 		}
 		tag = SGS
+		not = { has_country_flag = event_tno_story_cd }
 	}
 	option = {
 		#
@@ -1482,6 +1520,11 @@ country_event = {
 			add_to_variable = {
 				sgs_star_infl = 3
 			}
+		}
+		set_country_flag = {
+			flag = event_tno_story_cd
+			days = 30
+			value = 1
 		}
 		ai_chance = {
 			base = 30
@@ -1507,6 +1550,7 @@ country_event = {
 			SGS_restless_stage_is_over = yes
 		}
 		tag = SGS
+		not = { has_country_flag = event_tno_story_cd }
 	}
 	option = {
 		#
@@ -1515,6 +1559,11 @@ country_event = {
 			add_to_variable = {
 				sgs_luna_infl = 3
 			}
+		}
+		set_country_flag = {
+			flag = event_tno_story_cd
+			days = 30
+			value = 1
 		}
 		ai_chance = {
 			base = 30
@@ -1540,6 +1589,7 @@ country_event = {
 			SGS_restless_stage_is_over = yes
 		}
 		tag = SGS
+		not = { has_country_flag = event_tno_story_cd }
 	}
 	option = {
 		#
@@ -1549,6 +1599,11 @@ country_event = {
 				ideology = guli
 				popularity = 0.03
 			}
+		}
+		set_country_flag = {
+			flag = event_tno_story_cd
+			days = 30
+			value = 1
 		}
 		ai_chance = {
 			base = 30
@@ -1575,6 +1630,7 @@ country_event = {
 			SGS_restless_stage_is_over = yes
 		}
 		tag = SGS
+		not = { has_country_flag = event_tno_story_cd }
 	}
 	option = {
 		#
@@ -1584,6 +1640,11 @@ country_event = {
 				ideology = guli
 				popularity = 0.03
 			}
+		}
+		set_country_flag = {
+			flag = event_tno_story_cd
+			days = 30
+			value = 1
 		}
 		ai_chance = {
 			base = 30
@@ -4070,6 +4131,9 @@ country_event = {
 		check_variable = {
 			sgs_num_picking < 4
 		}
+		not = {
+			has_country_flag = event_sgs_picking_cd
+		}
 	}
 	mean_time_to_happen = {
 		days = 30
@@ -4082,6 +4146,11 @@ country_event = {
 		}
 	}
 	immediate = {
+		set_country_flag = {
+			flag = event_sgs_picking_cd
+			days = 7
+			value = 1
+		}
 	}
 	option = {
 		#给
@@ -4144,6 +4213,11 @@ country_event = {
 		}
 	}
 	immediate = {
+		set_country_flag = {
+			flag = event_sgs_picking_cd
+			days = 7
+			value = 1
+		}
 	}
 	option = {
 		#给
@@ -4207,6 +4281,11 @@ country_event = {
 		}
 	}
 	immediate = {
+		set_country_flag = {
+			flag = event_sgs_picking_cd
+			days = 7
+			value = 1
+		}
 	}
 	option = {
 		#给
@@ -11432,14 +11511,17 @@ country_event = {
 		set_country_flag = {
 			flag = SGS_RT_team_one_stop
 			days = 45
+			value = 1
 		}
 		set_country_flag = {
 			flag = SGS_RT_team_two_stop
 			days = 45
+			value = 1
 		}
 		set_country_flag = {
 			flag = SGS_RT_team_three_stop
 			days = 45
+			value = 1
 		}
 		
 		ai_chance = {
@@ -11472,6 +11554,7 @@ country_event = {
 		set_country_flag = {
 			flag = event_sgs3046_cd
 			days = 75
+			value = 1
 		}
 		random_list = {
 			50 = {#进展
@@ -11500,6 +11583,7 @@ country_event = {
 		set_country_flag = {
 			flag = event_sgs3046_cd
 			days = 45
+			value = 1
 		}
 		random_list = {
 			30 = {# 倒退
