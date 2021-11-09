@@ -15381,7 +15381,7 @@ country_event = {
 	}
 	option = {
 		#
-		name = sgs.7120001.1
+		name = sgs.7120002.1
 		add_manpower = -3
 		hidden_effect = {
 			#add_stability = -0.03
@@ -15389,6 +15389,26 @@ country_event = {
 		ai_chance = {
 			base = 30
 		}
+	}
+}
+country_event = {
+	# 内战小故事：相遇
+	id = sgs.7120003
+	title = sgs.7120003.t
+	desc = sgs.7120003.d
+	fire_only_once = yes
+	is_triggered_only = no
+	mean_time_to_happen = {
+		days = 30
+	}
+	trigger = {
+		tag = sgs
+		has_war_with = BAF
+	}
+	option = {
+		#
+		name = sgs.7120003.1
+		ai_chance = { base = 1 }
 	}
 }
 

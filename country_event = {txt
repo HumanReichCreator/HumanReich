@@ -1,3 +1,11 @@
+ 	
+
+cavalry_speed_factor = 0.5
+army_speed_factor = 0.5
+org_loss_when_moving = 0.2
+
+winter_attrition 
+
 country_event = {
 	#攻占红魔馆
 	id = sgs.40000
@@ -18,13 +26,9 @@ country_event = {
 		}
 	}
 }
-event_tno_story_cd
-event_sgs_picking_cd
-set_country_flag = {
-	flag = event_sgs1_cd
-	days = 30
-	value = 1
-}
+
+
+
 every_state = {
 	limit = {
 		is_core_of = CIR

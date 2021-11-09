@@ -2228,6 +2228,9 @@ focus = {
 		}
 		x = 46
 		y = 6
+		bypass = {
+			CIR_and_LIL_all_gone = yes
+		}
 		completion_reward = {
 			#
 			add_political_power = -30
@@ -2240,6 +2243,9 @@ focus = {
 		cost = 12
 		prerequisite = {
 			focus = SGS_fight_others_focus
+		}
+		bypass = {
+			CIR_and_LIL_all_gone = yes
 		}
 		x = 45
 		y = 7
@@ -2368,6 +2374,26 @@ focus = {
 		mutually_exclusive = {
 			focus = SGS_fight_others_focus
 		}
+		
+		bypass = {
+			or  = {
+				#分家了
+				CIR = {
+					or ={
+					  exists = no
+					  is_puppet_of  = ROOT
+					  has_war_with = ROOT
+					}
+				}
+				LIL = {
+					or ={
+					  exists = no
+					  is_puppet_of  = ROOT
+					  has_war_with = ROOT
+					}
+				}
+			}
+		}
 		x = 50
 		y = 6
 		completion_reward = {
@@ -2386,6 +2412,15 @@ focus = {
 		}
 		x = 49
 		y = 7
+		bypass = {
+			LIL = {
+				or ={
+				  exists = no
+				  is_puppet_of  = ROOT
+				  has_war_with = ROOT
+				}
+			}
+		}
 		completion_reward = {
 			#莉莉++，加速和移动士气损失，特别是骑兵,分家失败则锁死
 			add_ideas = { SGS_prepare_for_LIL_idea }
@@ -2438,6 +2473,15 @@ focus = {
 		id = SGS_prepare_CIR_focus
 		icon = GFX_goal_generic_small_arms
 		cost = 6
+		bypass = {
+			CIR = {
+				or ={
+				  exists = no
+				  is_puppet_of  = ROOT
+				  has_war_with = ROOT
+				}
+			}
+		}
 		prerequisite = {
 			focus = SGS_divide_them_focus
 		}
@@ -2482,6 +2526,9 @@ focus = {
 		cost = 10
 		prerequisite = {
 			focus = SGS_prepare_final_war_focus
+		}
+		bypass = {
+			CIR_and_LIL_all_gone = yes
 		}
 		x = 45
 		y = 8

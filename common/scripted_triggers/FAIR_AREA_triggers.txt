@@ -95,4 +95,21 @@ CIR_peace_task_already_failed = {
   not = { has_country_flag = sgs_all_integrated_peacelly }
 }
 
+CIR_and_LIL_all_gone = {
+  CIR = {
+    or ={
+      exists = no
+      is_puppet_of  = ROOT
+      has_war_with = ROOT
+    }
+  }
+  LIL = {
+    or ={
+      exists = no
+      is_puppet_of  = ROOT
+      has_war_with = ROOT
+    }
+  }
+}
+
 
