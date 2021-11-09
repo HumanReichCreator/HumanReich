@@ -55,6 +55,10 @@ country_event = {
 			value = 1
 		}
 		add_political_power = 30
+		set_country_flag = {
+			flag = event_sgs1_cd
+			days = 25
+		}
 		ai_chance = {
 			base = 35
 		}
@@ -11220,6 +11224,7 @@ country_event = {
 	trigger = {
 		tag = sgs
 		has_country_flag = sgs_black_market_repo_preparing_flag
+		not = { has_country_flag = sgs_black_market_proctect_cd }
 	}
 	option = {
 		#
@@ -11867,6 +11872,7 @@ country_event = {
 	trigger = {
 		has_country_flag = sgs_planning_construct_flg
 		tag = sgs
+		check_variable = {global.season_month = 1}
 	}
 	option = {
 		#军工
@@ -14129,7 +14135,7 @@ country_event = {
 	id = sgs.4043
 	title = sgs.4043.t
 	desc = sgs.4043.d
-	fire_only_once = yes_or_no
+	fire_only_once = no
 	is_triggered_only = no
 	mean_time_to_happen = {
 		days = 50
@@ -14162,7 +14168,7 @@ country_event = {
 	id = sgs.4044
 	title = sgs.4044.t
 	desc = sgs.4044.d
-	fire_only_once = yes_or_no
+	fire_only_once = no
 	is_triggered_only = no
 	mean_time_to_happen = {
 		days = 60
@@ -15238,6 +15244,7 @@ country_event = {
 			limit = {is_core_of = LIL}
 			add_manpower = -1000
 		}
+		clr_country_flag = sgs_all_integrated_peacelly
 		set_variable = { SGS_LIL_good_ending = 0 }
 		ai_chance = { base = 1 }
 	}

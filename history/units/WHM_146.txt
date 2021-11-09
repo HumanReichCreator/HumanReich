@@ -1,78 +1,325 @@
 ﻿division_template = {
-	name = "人类修炼编制"
+	name = "村落卫戍民兵编制"
 	regiments = {
-		ma_light_infantry = { x = 0 y = 0 }
-		ma_light_infantry = { x = 0 y = 1 }
-
+		sc_light_infantry = { x = 0 y = 0 }
+		sc_light_infantry = { x = 0 y = 1 }
+		melee_infantry = { x = 0 y = 2 }
+		melee_infantry = { x = 0 y = 3 }
 	}
 	support = {
 	}
 }
+
+division_template = {
+	name = "西部支援主力编制"
+	regiments = {
+		sc_infantry = { x = 0 y = 0 }
+		sc_infantry = { x = 0 y = 1 }
+		sc_infantry = { x = 0 y = 2 }
+		sc_mortar_brigade = {x = 0 y = 3 } 
+		sc_infantry = { x = 1 y = 0 }
+		sc_infantry = { x = 1 y = 1 }
+		sc_infantry = { x = 1 y = 2 }
+		sc_mortar_brigade = {x = 1 y = 3 } 
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "西部支援精锐小队"
+	regiments = {
+		sc_light_infantry = { x = 0 y = 0 }
+		sc_light_infantry = { x = 0 y = 1 }
+		sc_sf_infantry = { x = 0 y = 2 }
+		sc_sf_infantry = { x = 0 y = 3 }
+		sc_sf_infantry = { x = 0 y = 4 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "西部阵线机动队"
+	regiments = {
+		melee_cavalry = { x = 0 y = 0 }
+		melee_cavalry = { x = 0 y = 1 }
+		melee_cavalry = { x = 0 y = 2 }
+		melee_cavalry = { x = 0 y = 3 }
+		melee_cavalry = { x = 0 y = 4 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "西部阵线防御火炮阵地"
+	regiments = {
+		sc_light_infantry = { x = 0 y = 0 }
+		sc_light_infantry = { x = 0 y = 1 }
+		sc_light_infantry = { x = 0 y = 2 }
+		sc_mortar_brigade = { x = 0 y = 3 }
+		sc_mortar_brigade = { x = 0 y = 4 }
+	}
+	support = {
+	}
+}
+
 units = {
 	division = {
-		name = "人类修炼编制"
+		name = "村落卫戍民兵编制"
 		location = 4999
-		division_template = "人类修炼编制"
+		division_template = "村落卫戍民兵编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "人类修炼编制"
+		name = "村落卫戍民兵编制"
 		location = 4999
-		division_template = "人类修炼编制"
+		division_template = "村落卫戍民兵编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
 
 	division = {
-		name = "人类修炼编制"
+		name = "村落卫戍民兵编制"
 		location = 4999
-		division_template = "人类修炼编制"
+		division_template = "村落卫戍民兵编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
 
 	division = {
-		name = "人类修炼编制"
+		name = "村落卫戍民兵编制"
 		location = 4999
-		division_template = "人类修炼编制"
+		division_template = "村落卫戍民兵编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "人类修炼编制"
+		name = "村落卫戍民兵编制"
 		location = 4999
-		division_template = "人类修炼编制"
+		division_template = "村落卫戍民兵编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "人类修炼编制"
+		name = "村落卫戍民兵编制"
 		location = 4999
-		division_template = "人类修炼编制"
+		division_template = "村落卫戍民兵编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "人类修炼编制"
-		location = 4999
-		division_template = "人类修炼编制"
+		name = "村落卫戍民兵编制"
+		location = 5008
+		division_template = "村落卫戍民兵编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
 
 	division = {
-		name = "人类修炼编制"
-		location = 4999
-		division_template = "人类修炼编制"
+		name = "村落卫戍民兵编制"
+		location = 5008
+		division_template = "村落卫戍民兵编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "人类修炼编制"
-		location = 4999
-		division_template = "人类修炼编制"
+		name = "村落卫戍民兵编制"
+		location = 5008
+		division_template = "村落卫戍民兵编制"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
+	division = {
+		name = "村落卫戍民兵编制"
+		location = 5096
+		division_template = "村落卫戍民兵编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "村落卫戍民兵编制"
+		location = 5096
+		division_template = "村落卫戍民兵编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "村落卫戍民兵编制"
+		location = 5096
+		division_template = "村落卫戍民兵编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "村落卫戍民兵编制"
+		location = 5096
+		division_template = "村落卫戍民兵编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "村落卫戍民兵编制"
+		location = 5096
+		division_template = "村落卫戍民兵编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "村落卫戍民兵编制"
+		location = 5046
+		division_template = "村落卫戍民兵编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "村落卫戍民兵编制"
+		location = 5046
+		division_template = "村落卫戍民兵编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "村落卫戍民兵编制"
+		location = 5046
+		division_template = "村落卫戍民兵编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "村落卫戍民兵编制"
+		location = 5046
+		division_template = "村落卫戍民兵编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "西部支援主力编制"
+		location = 4891
+		division_template = "西部支援主力编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西部支援主力编制"
+		location = 4891
+		division_template = "西部支援主力编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西部支援主力编制"
+		location = 4891
+		division_template = "西部支援主力编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西部支援主力编制"
+		location = 4891
+		division_template = "西部支援主力编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西部支援主力编制"
+		location = 4891
+		division_template = "西部支援主力编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西部支援精锐小队"
+		location = 4891
+		division_template = "西部支援精锐小队"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "西部支援精锐小队"
+		location = 4891
+		division_template = "西部支援精锐小队"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "纷争之地卫戍师"
+		location = 4786
+		division_template = "西部支援主力编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "纷争之地卫戍师"
+		location = 4786
+		division_template = "西部支援主力编制"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "纷争之地卫戍机动队"
+		location = 4786
+		division_template = "西部阵线机动队"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "纷争之地卫戍机动队"
+		location = 4786
+		division_template = "西部阵线机动队"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "纷争之地卫戍机动队"
+		location = 4786
+		division_template = "西部阵线机动队"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "幽灵驻防机动队"
+		location = 2760
+		division_template = "西部阵线机动队"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "幽灵驻防机动队"
+		location = 2760
+		division_template = "西部阵线机动队"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "幽灵驻防机动队"
+		location = 2760
+		division_template = "西部阵线机动队"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "幽灵驻防机动队"
+		location = 2760
+		division_template = "西部阵线机动队"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "幽灵驻防火炮阵地"
+		location = 2760
+		division_template = "西部阵线防御火炮阵地"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "幽灵驻防火炮阵地"
+		location = 2760
+		division_template = "西部阵线防御火炮阵地"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1
+	}
+
 }

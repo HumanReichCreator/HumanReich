@@ -46,15 +46,18 @@ SC2_infl_defines = {
 	set_variable = { CIR.CIR_TASK_time = 360}
 }
 
+# 计算妖精和平条约的所有国家的影响力总和
 cal_FPA_infl = {
-	set_temp_variable = { FPA_infl_total = 0}
-	every_country = {
-		limit = {
-			has_country_flag = FA_in_FPA_flg
+	hidden_effect = {
+		set_temp_variable = { FPA_infl_total = 0}
+		every_country = {
+			limit = {
+				has_country_flag = FA_in_FPA_flg
+			}
+			add_to_temp_variable = { FPA_infl_total = THIS.SC2_infl_value }
 		}
-		add_to_temp_variable = { FPA_infl_total = THIS.SC2_infl_value }
+		set_variable = {SC2.SC2_FPA_infl_value = FPA_infl_total}
 	}
-	set_variable = {SC2.SC2_FPA_infl_value = FPA_infl_total}
 }
 
 
@@ -69,5 +72,36 @@ CIR_army_uprise_debuff = {
 				local_non_core_manpower = -0.1
 			}
 		}
+	}
+}
+
+#记录妖精区域的省份
+FA_get_states = {
+	every_state = {
+		limit = {
+			or = {
+				is_core_of = CIR
+				is_core_of = SGS
+				is_core_of = SCA
+				is_core_of = SC2
+				is_core_of = LIL
+			}
+			not = {
+				state = 131
+				state = 376
+				state = 93
+			}
+		}
+		set_state_flag = FA_states
+	}
+}
+
+#给整个妖精区域加宣称
+claim_all_FA_area = {
+	every_state = {
+		limit = {
+			has_state_flag = FA_states
+		}
+		add_claim_by = ROOT
 	}
 }

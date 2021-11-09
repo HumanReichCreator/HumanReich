@@ -1,17 +1,17 @@
-chinese_leader_set_146 = {
-	every_country = {
-		THIS = {
-            THIS = {
-                army_chinese_leader_inherit_146 = yes
-            }
-		}
-	}
+chinese_leader_set_146 = {###用来生成所有国家的领导（中文不用）
 	########
 	#中文不用
 	########
 }
+army_chinese_leader_initial = { #glo.2000（初始国家用）
+    THIS = {
+        THIS = {
+            army_chinese_leader_inherit_146 = yes
+        }
+    }
+}
 
-army_chinese_leader_inherit_146 = {
+army_chinese_leader_inherit_146 = {#单独吞并
     if = {
         limit = {
             PREV = {
@@ -20,38 +20,65 @@ army_chinese_leader_inherit_146 = {
             not = { has_country_flag = has_inherit_@PREV }
         }
         set_country_flag = has_inherit_@PREV
+        create_corps_commander = {
+            # name = "Nazrin"
+            name = "娜兹玲"
+            portrait_path = "gfx/leaders/NMS/NMS_mouse.dds"
+            traits = {  th_character  th_trait_tezhongzhuanjia  }
+            attack_skill = 2
+            defense_skill = 4
+            planning_skill = 6
+            logistics_skill = 4
+            skill = 4
+        }
+        create_corps_commander = {
+            # name = "Toramaru Syou"
+            name = "寅丸星"
+            portrait_path = "gfx/leaders/NMS/NMS_syou.dds"
+            traits = {  th_character  old_guard  }
+            attack_skill = 5
+            defense_skill = 5
+            planning_skill = 5
+            logistics_skill = 9
+            skill = 6
+        }
         if = {
             limit = {
                 PREV.PREV = {
-                    tag = NMS
+                    tag = KYK
                 }
             }
             create_corps_commander = {
                 # name = "Kasodani Kyouko"
                 name = "幽谷响子"
                 portrait_path = "gfx/leaders/NMS/NMS_kyouko.dds"
-                traits = {  th_character  }
-                attack_skill = 2
-                defense_skill = 3
-                planning_skill = 2
+                traits = {  th_character  trait_cautious th_trait_huoqiangzhuanjia  }
+                attack_skill = 3
+                defense_skill = 5
+                planning_skill = 3
                 logistics_skill = 2
-
-                id = 7
-                
-                skill = 3
+                id = 37
+                skill = 4
             }
             else = {
                 create_corps_commander = {
                     # name = "Kasodani Kyouko"
                     name = "幽谷响子"
                     portrait_path = "gfx/leaders/NMS/NMS_kyouko.dds"
-                    traits = {  th_character  }
-                    attack_skill = 2
-                    defense_skill = 3
-                    planning_skill = 2
+                    traits = {  th_character  trait_cautious th_trait_huoqiangzhuanjia  }
+                    attack_skill = 3
+                    defense_skill = 5
+                    planning_skill = 3
                     logistics_skill = 2
-
-                    skill = 3
+                    skill = 4
+                }
+                if = {
+                    limit = {
+                        PREV.PREV = {
+                            tag = KYK
+                        }
+                    }
+                    clr_global_flag = NMS_KYK_tuoli
                 }
             }
         }
@@ -72,23 +99,23 @@ army_chinese_leader_inherit_146 = {
                 }
             }
             create_corps_commander = {
-                # name = "Aki Minoriko"
-                name = "秋穰子"
-                portrait_path = "gfx/leaders/AKI/AKI_szh.dds"
-                traits = {  th_character  }
-                attack_skill = 3
-                defense_skill = 4
-                planning_skill = 3
+                # name = "Kagiyama Hina"
+                name = "键山雏"
+                portrait_path = "gfx/leaders/AKI/AKI_hin.dds"
+                traits = {  th_character trait_cautious }
+                attack_skill = 5
+                defense_skill = 7
+                planning_skill = 5
                 logistics_skill = 5
-                id = 21
-                skill = 5
+                id = 23
+                skill = 6
             }
             create_corps_commander = {
                 # name = "Aki Sizuha"
                 name = "秋静叶"
                 portrait_path = "gfx/leaders/AKI/AKI_sizuha.dds"
-                traits = {  th_character  }
-                attack_skill = 4
+                traits = {  th_character  harsh_leader  }
+                attack_skill = 5
                 defense_skill = 6
                 planning_skill = 2
                 logistics_skill = 3
@@ -96,52 +123,49 @@ army_chinese_leader_inherit_146 = {
                 skill = 5
             }
             create_corps_commander = {
-                # name = "Kagiyama Hina"
-                name = "键山雏"
-                portrait_path = "gfx/leaders/AKI/AKI_hin.dds"
-                traits = {  th_character  }
-                attack_skill = 5
-                defense_skill = 4
-                planning_skill = 5
-                logistics_skill = 3
-                id = 23
+                # name = "Aki Minoriko"
+                name = "秋穰子"
+                portrait_path = "gfx/leaders/AKI/AKI_szh.dds"
+                traits = {  th_character  old_guard  }
+                attack_skill = 3
+                defense_skill = 6
+                planning_skill = 3
+                logistics_skill = 5
+                id = 21
                 skill = 5
             }
             else = {
                 create_corps_commander = {
-                    # name = "Aki Minoriko"
-                    name = "秋穰子"
-                    portrait_path = "gfx/leaders/AKI/AKI_szh.dds"
-                    traits = {  th_character  }
-                    attack_skill = 3
-                    defense_skill = 4
-                    planning_skill = 3
+                    # name = "Kagiyama Hina"
+                    name = "键山雏"
+                    portrait_path = "gfx/leaders/AKI/AKI_hin.dds"
+                    traits = {  th_character    }
+                    attack_skill = 5
+                    defense_skill = 7
+                    planning_skill = 5
                     logistics_skill = 5
-                    
-                    skill = 5
+                    skill = 6
                 }
                 create_corps_commander = {
                     # name = "Aki Sizuha"
                     name = "秋静叶"
                     portrait_path = "gfx/leaders/AKI/AKI_sizuha.dds"
-                    traits = {  th_character  }
-                    attack_skill = 4
+                    traits = {  th_character  harsh_leader  }
+                    attack_skill = 6
                     defense_skill = 6
                     planning_skill = 2
                     logistics_skill = 3
-                    
                     skill = 5
                 }
                 create_corps_commander = {
-                    # name = "Kagiyama Hina"
-                    name = "键山雏"
-                    portrait_path = "gfx/leaders/AKI/AKI_hin.dds"
-                    traits = {  th_character  }
-                    attack_skill = 5
-                    defense_skill = 4
-                    planning_skill = 5
-                    logistics_skill = 3
-                    
+                    # name = "Aki Minoriko"
+                    name = "秋穰子"
+                    portrait_path = "gfx/leaders/AKI/AKI_szh.dds"
+                    traits = {  th_character  old_guard  }
+                    attack_skill = 3
+                    defense_skill = 6
+                    planning_skill = 3
+                    logistics_skill = 5
                     skill = 5
                 }
             }
@@ -162,8 +186,8 @@ army_chinese_leader_inherit_146 = {
             # name = "Chen"
             name = "橙"
             portrait_path = "gfx/leaders/CHE/CHE_che.dds"
-            traits = {  th_character  }
-            attack_skill = 3
+            traits = {  th_character  th_trait_chongjizhuanjia  }
+            attack_skill = 2
             defense_skill = 3
             planning_skill = 1
             logistics_skill = 1
@@ -180,32 +204,66 @@ army_chinese_leader_inherit_146 = {
             not = { has_country_flag = has_inherit_@PREV }
         }
         set_country_flag = has_inherit_@PREV
-        create_corps_commander = {
-            # name = "Cirno"
-            name = "琪露诺"
-            portrait_path = "gfx/leaders/CIR/CIR_cir.dds"
+        if = {
+            limit = {
+                PREV.PREV = {
+                    tag = CIR
+                }
+            }
+            create_corps_commander = {
+                # name = "Daiyousei"
+                name = "大妖精"
+                portrait_path = "gfx/leaders/CIR/CIR_dys.dds"
 
-            traits = {  th_character  }
-            attack_skill = 3
-            defense_skill = 4
-            planning_skill = 6
-            logistics_skill = 4
-            
-            skill = 6
-        }
-        create_corps_commander = {
-            # name = "Daiyousei"
-            name = "大妖精"
-            portrait_path = "gfx/leaders/CIR/CIR_dys.dds"
+                traits = {  th_character  war_hero trait_cautious }
+                attack_skill = 4
+                defense_skill = 7
+                planning_skill = 5
+                logistics_skill = 7
+                id = 28
+                skill = 6
+            }
+            create_corps_commander = {
+                # name = "Cirno"
+                name = "琪露诺"
+                portrait_path = "gfx/leaders/CIR/CIR_cir.dds"
 
-            traits = {  th_character  }
-            attack_skill = 4
-            defense_skill = 5
-            planning_skill = 3
-            logistics_skill = 2
-            
-            skill = 5
+                traits = {  th_character  war_hero th_trait_huoqiangzhuanjia }
+                attack_skill = 5
+                defense_skill = 7
+                planning_skill = 7
+                logistics_skill = 7
+                id = 27
+                skill = 7
+            }
+            else = {
+                create_corps_commander = {
+                    # name = "Daiyousei"
+                    name = "大妖精"
+                    portrait_path = "gfx/leaders/CIR/CIR_dys.dds"
+
+                    traits = {  th_character  war_hero trait_cautious }
+                    attack_skill = 4
+                    defense_skill = 7
+                    planning_skill = 5
+                    logistics_skill = 7
+                    skill = 6
+                }
+                create_corps_commander = {
+                    # name = "Cirno"
+                    name = "琪露诺"
+                    portrait_path = "gfx/leaders/CIR/CIR_cir.dds"
+
+                    traits = {  th_character  war_hero th_trait_huoqiangzhuanjia }
+                    attack_skill = 5
+                    defense_skill = 7
+                    planning_skill = 7
+                    logistics_skill = 7
+                    skill = 7
+                }
+            }
         }
+        
     }
 
     if = {
@@ -220,25 +278,25 @@ army_chinese_leader_inherit_146 = {
             # name = "Yagokoro Eirin"
             name = "八意永琳"
             portrait_path = "gfx/leaders/EET/EET_eri.dds"
-            traits = {  th_character  }
-            attack_skill = 6
-            defense_skill = 7
-            planning_skill = 10
-            logistics_skill = 5
+            traits = {  th_character  th_trait_moulvedashi th_trait_tezhongzhuanjia  }
+            attack_skill = 7
+            defense_skill = 9
+            planning_skill = 15
+            logistics_skill = 15
 
-            skill = 9
+            skill = 13
         }
         create_field_marshal = {
             # name = "Houraisan Kaguya"
             name = "蓬莱山辉夜"
             portrait_path = "gfx/leaders/EET/EET_kaguya.dds"
-            traits = {  th_character  }
-            attack_skill = 4
-            defense_skill = 6
-            planning_skill = 6
-            logistics_skill = 5
+            traits = {  th_character old_guard th_trait_yinyangshi   }
+            attack_skill = 6
+            defense_skill = 12
+            planning_skill = 12
+            logistics_skill = 9
             
-            skill = 6
+            skill = 10
         }
     }
 
@@ -260,50 +318,48 @@ army_chinese_leader_inherit_146 = {
                 # name = " Hakurei Reimu"
                 name = "博丽灵梦"
                 portrait_path = "gfx/leaders/HKR/HKR_hkr.dds"
-                traits = { th_character }
+                traits = {  th_character th_trait_qianxianzhandou war_hero trait_reckless th_trait_yinyangshi }
                 id = 1
-                skill = 6
-                attack_skill = 9
-                defense_skill = 5
-                planning_skill = 1
-                logistics_skill = 3
+                skill = 9
+                attack_skill = 14
+                defense_skill = 11
+                planning_skill = 2
+                logistics_skill = 4
             }
             create_corps_commander = {
                 # name = "Komano Aunn"
                 name = "高丽野阿吽"
                 portrait_path = "gfx/leaders/HKR/HKR_aunn.dds"
-                traits = { th_character }
+                traits = {  th_character th_trait_huoqiangzhuanjia }
                 id = 3
                 skill = 4
-                attack_skill = 3
-                defense_skill = 5
+                attack_skill = 2
+                defense_skill = 3
                 planning_skill = 3
-                logistics_skill = 3
+                logistics_skill = 7
             }
             else = {
                 create_corps_commander = {
                     # name = " Hakurei Reimu"
                     name = "博丽灵梦"
                     portrait_path = "gfx/leaders/HKR/HKR_hkr.dds"
-                    traits = { th_character }
-                    # id = 1
-                    skill = 6
-                    attack_skill = 9
-                    defense_skill = 5
-                    planning_skill = 1
-                    logistics_skill = 3
+                    traits = {  th_character th_trait_qianxianzhandou war_hero trait_reckless th_trait_yinyangshi }
+                    skill = 9
+                    attack_skill = 14
+                    defense_skill = 11
+                    planning_skill = 2
+                    logistics_skill = 4
                 }
                 create_corps_commander = {
                     # name = "Komano Aunn"
                     name = "高丽野阿吽"
                     portrait_path = "gfx/leaders/HKR/HKR_aunn.dds"
-                    traits = { th_character }
-                    # id = 3
+                    traits = {  th_character th_trait_huoqiangzhuanjia }
                     skill = 4
-                    attack_skill = 3
-                    defense_skill = 5
+                    attack_skill = 2
+                    defense_skill = 3
                     planning_skill = 3
-                    logistics_skill = 3
+                    logistics_skill = 7
                 }
             }
         }
@@ -322,18 +378,18 @@ army_chinese_leader_inherit_146 = {
             # name = "Kamishirasawa Keine"
             name = "上白泽慧音"
             portrait_path = "gfx/leaders/HUM/HUM_keine.dds"
-            traits = {  th_character  }
-            attack_skill = 3
-            defense_skill = 7
+            traits = {  th_character  war_hero old_guard trait_cautious }
+            attack_skill = 4
+            defense_skill = 8
             planning_skill = 7
-            logistics_skill = 3
-            skill = 6
+            logistics_skill = 8
+            skill = 7
         }
         create_corps_commander = {
             #name = "Hieda no Akyu"
             name = "稗田阿求"
             portrait_path = "gfx/leaders/HUM/HUM_aky.dds"
-            traits = {  th_character  }
+            traits = {  th_character  war_hero  }
             attack_skill = 1
             defense_skill = 1
             planning_skill = 1
@@ -354,12 +410,12 @@ army_chinese_leader_inherit_146 = {
             # name = "Fujiwara no Mokou"
             name = "藤原妹红"
             portrait_path = "gfx/leaders/HUM/HUM_mokou.dds"
-            traits = {  th_character  }
-            attack_skill = 6
-            defense_skill = 7
-            planning_skill = 6
-            logistics_skill = 2
-            skill = 7
+            traits = {  th_character  th_trait_qianxianzhandou th_trait_huoqiangzhuanjia }
+            attack_skill = 13
+            defense_skill = 13
+            planning_skill = 4
+            logistics_skill = 4
+            skill = 9
         }
     }
 
@@ -375,13 +431,12 @@ army_chinese_leader_inherit_146 = {
             # name = "Inaba Tewi"
             name = "因幡帝"
             portrait_path = "gfx/leaders/INB/INB_inb.dds"
-            traits = {  th_character  }
+            traits = {  th_character  th_trait_moulvedashi  }
             attack_skill = 4
-            defense_skill = 4
-            planning_skill = 8
-            logistics_skill = 4
-            
-            skill = 7
+            defense_skill = 8
+            planning_skill = 12
+            logistics_skill = 7
+            skill = 9
         }
     }
 
@@ -397,8 +452,8 @@ army_chinese_leader_inherit_146 = {
             # name = "Imaizumi Kagerou"
             name = "今泉影狼"
             portrait_path = "gfx/leaders/KAG/KAG_kag.dds"
-            traits = {  th_character  }
-            attack_skill = 2
+            traits = {  th_character  th_trait_tezhongzhuanjia  }
+            attack_skill = 3
             defense_skill = 6
             planning_skill = 2
             logistics_skill = 6
@@ -419,13 +474,12 @@ army_chinese_leader_inherit_146 = {
             # name = "Kasen Ibara"
             name = "茨木华扇"
             portrait_path = "gfx/leaders/KAS/KAS_kas.dds"
-            traits = {  th_character  }
-            attack_skill = 5
-            defense_skill = 7
-            planning_skill = 7
-            logistics_skill = 7
-            
-            skill = 8
+            traits = {  th_character  th_trait_moulvedashi th_trait_chongjizhuanjia th_trait_dayaoguai }
+            attack_skill = 4
+            defense_skill = 2
+            planning_skill = 4
+            logistics_skill = 11
+            skill = 12
         }
     }
 
@@ -437,65 +491,136 @@ army_chinese_leader_inherit_146 = {
             not = { has_country_flag = has_inherit_@PREV }
         }
         set_country_flag = has_inherit_@PREV
-        create_corps_commander = {
-            # name = "Tatara Kogasa"
-            name = "多多良小伞"
-            portrait_path = "gfx/leaders/TKM/TKM_kog.dds"
-            traits = {  th_character  }
-            attack_skill = 2
-            defense_skill = 2
-            planning_skill = 3
-            logistics_skill = 7
-            
-            skill = 4
+        if = {
+            limit = {
+                PREV.PREV = {
+                    tag = TKM
+                }
+            }
+            create_corps_commander = {
+                # name = "Tatara Kogasa"
+                name = "多多良小伞"
+                portrait_path = "gfx/leaders/TKM/TKM_kog.dds"
+                traits = {  th_character  war_hero old_guard }
+                attack_skill = 4
+                defense_skill = 5
+                planning_skill = 6
+                logistics_skill = 7
+                id = 29            
+                skill = 6
+            }
+            create_corps_commander = {
+                # name = "Tsukumo Benben"
+                name = "九十九弁弁"
+                portrait_path = "gfx/leaders/TKM/TKM_benben.dds"
+                traits = {  th_character  th_trait_huolizhuanjia trait_cautious }
+                attack_skill = 4
+                defense_skill = 4
+                planning_skill = 6
+                logistics_skill = 3
+                id = 30            
+                skill = 5
+            }
+            create_corps_commander = {
+                # name = "Tsukumo Yatsuhashi"
+                name = "九十九八桥"
+                portrait_path = "gfx/leaders/TKM/TKM_yatsuhashi.dds"
+                traits = {  th_character  trait_reckless th_trait_tezhongzhuanjia  }
+                attack_skill = 7
+                defense_skill = 3
+                planning_skill = 2
+                logistics_skill = 3
+                id = 31              
+                skill = 5
+            }
+            create_corps_commander = {
+                # name = "Horikawa Raiko"
+                name = "堀川雷鼓"
+                portrait_path = "gfx/leaders/TKM/TKM_raiko.dds"
+                traits = {  th_character  war_hero th_trait_tezhongzhuanjia }
+                attack_skill = 6
+                defense_skill = 5
+                planning_skill = 8
+                logistics_skill = 7
+                id = 32 
+                skill = 7
+            }
+            create_corps_commander = {
+                # name = "Hata no Kokoro"
+                name = "秦心"
+                portrait_path = "gfx/leaders/TKM/TKM_kokoro.dds"
+                traits = {  th_character  th_trait_chongjizhuanjia  }
+                attack_skill = 6
+                defense_skill = 6
+                planning_skill = 4
+                logistics_skill = 4
+                id = 33            
+                skill = 5
+            }
+            else = {
+                create_corps_commander = {
+                    # name = "Tatara Kogasa"
+                    name = "多多良小伞"
+                    portrait_path = "gfx/leaders/TKM/TKM_kog.dds"
+                    traits = {  th_character  war_hero old_guard }
+                    attack_skill = 4
+                    defense_skill = 5
+                    planning_skill = 6
+                    logistics_skill = 7
+                    id = 29            
+                    skill = 6
+                }
+                create_corps_commander = {
+                    # name = "Tsukumo Benben"
+                    name = "九十九弁弁"
+                    portrait_path = "gfx/leaders/TKM/TKM_benben.dds"
+                    traits = {  th_character  th_trait_huolizhuanjia trait_cautious }
+                    attack_skill = 4
+                    defense_skill = 4
+                    planning_skill = 6
+                    logistics_skill = 3
+                    id = 30            
+                    skill = 5
+                }
+                create_corps_commander = {
+                    # name = "Tsukumo Yatsuhashi"
+                    name = "九十九八桥"
+                    portrait_path = "gfx/leaders/TKM/TKM_yatsuhashi.dds"
+                    traits = {  th_character  trait_reckless th_trait_tezhongzhuanjia  }
+                    attack_skill = 7
+                    defense_skill = 3
+                    planning_skill = 2
+                    logistics_skill = 3
+                    id = 31              
+                    skill = 5
+                }
+                create_corps_commander = {
+                    # name = "Horikawa Raiko"
+                    name = "堀川雷鼓"
+                    portrait_path = "gfx/leaders/TKM/TKM_raiko.dds"
+                    traits = {  th_character  war_hero th_trait_tezhongzhuanjia }
+                    attack_skill = 6
+                    defense_skill = 5
+                    planning_skill = 8
+                    logistics_skill = 7
+                    id = 32 
+                    skill = 7
+                }
+                create_corps_commander = {
+                    # name = "Hata no Kokoro"
+                    name = "秦心"
+                    portrait_path = "gfx/leaders/TKM/TKM_kokoro.dds"
+                    traits = {  th_character  th_trait_chongjizhuanjia  }
+                    attack_skill = 6
+                    defense_skill = 6
+                    planning_skill = 4
+                    logistics_skill = 4
+                    id = 33            
+                    skill = 5
+                }
+            }
         }
-        create_corps_commander = {
-            # name = "Tsukumo Benben"
-            name = "九十九弁弁"
-            portrait_path = "gfx/leaders/TKM/TKM_benben.dds"
-            traits = {  th_character  }
-            attack_skill = 2
-            defense_skill = 4
-            planning_skill = 3
-            logistics_skill = 3
-            
-            skill = 4
-        }
-        create_corps_commander = {
-            # name = "Tsukumo Yatsuhashi"
-            name = "九十九八桥"
-            portrait_path = "gfx/leaders/TKM/TKM_yatsuhashi.dds"
-            traits = {  th_character  }
-            attack_skill = 4
-            defense_skill = 4
-            planning_skill = 1
-            logistics_skill = 3
-            
-            skill = 4
-        }
-        create_corps_commander = {
-            # name = "Horikawa Raiko"
-            name = "堀川雷鼓"
-            portrait_path = "gfx/leaders/TKM/TKM_raiko.dds"
-            traits = {  th_character  }
-            attack_skill = 5
-            defense_skill = 4
-            planning_skill = 8
-            logistics_skill = 3
-            skill = 6
-        }
-        create_corps_commander = {
-            # name = "Hata no Kokoro"
-            name = "秦心"
-            portrait_path = "gfx/leaders/TKM/TKM_kokoro.dds"
-            traits = {  th_character  }
-            attack_skill = 3
-            defense_skill = 3
-            planning_skill = 4
-            logistics_skill = 3
-            
-            skill = 4
-        }
+        
     }
 
     if = {
@@ -510,13 +635,13 @@ army_chinese_leader_inherit_146 = {
             # name = "Hoshiguma Yugi"
             name = "星熊勇仪"
             portrait_path = "gfx/leaders/YUG/YUG_yug.dds"
-            traits = {  th_character  }
-            attack_skill = 8
+            traits = {  th_character  th_trait_qianxianzhandou th_trait_chongjizhuanjia th_trait_dayaoguai }
+            attack_skill = 9
             defense_skill = 8
-            planning_skill = 2
-            logistics_skill = 2
+            planning_skill = 1
+            logistics_skill = 0
             
-            skill = 7
+            skill = 11
         }
     }
 
@@ -532,26 +657,14 @@ army_chinese_leader_inherit_146 = {
             # name = "Hutatsuiwa Mamizou"
             name = "二岩猯藏"
             portrait_path = "gfx/leaders/MAM/MAM_mam.dds"
-            traits = {  th_character  }
+            traits = {  th_character th_trait_moulvedashi  }
             attack_skill = 5
-            defense_skill = 4
-            planning_skill = 8
-            logistics_skill = 3
+            defense_skill = 7
+            planning_skill = 6
+            logistics_skill = 7
             
-            skill = 6
-        }
-        create_field_marshal = {
-            # name = "Houjuu Nue"
-            name = "封兽鵺"
-            portrait_path = "gfx/leaders/MAM/MAM_nue.dds"
-            traits = {  th_character  }
-            attack_skill = 3
-            defense_skill = 4
-            planning_skill = 7
-            logistics_skill = 6
-            
-            skill = 6
-        }
+            skill = 7
+        }   
     }
 
     if = {
@@ -566,8 +679,8 @@ army_chinese_leader_inherit_146 = {
             # name = "Medicine Melancholy"
             name = "梅蒂欣·梅兰可莉"
             portrait_path = "gfx/leaders/MEL/MEL_mel.dds"
-            traits = {  th_character  }
-            attack_skill = 3
+            traits = {  th_character  th_trait_huoqiangzhuanjia trait_reckless }
+            attack_skill = 4
             defense_skill = 3
             planning_skill = 3
             logistics_skill = 3
@@ -588,20 +701,20 @@ army_chinese_leader_inherit_146 = {
             # name = "Kurodani Yamame"
             name = "黑谷山女"
             portrait_path = "gfx/leaders/YMM/YMM_yamame.dds"
-            traits = {  th_character  }
-            attack_skill = 4
-            defense_skill = 2
-            planning_skill = 2
+            traits = {  th_character  trait_cautious  }
+            attack_skill = 6
+            defense_skill = 3
+            planning_skill = 4
             logistics_skill = 4
             
-            skill = 4
+            skill = 5
         }
         create_corps_commander = {
             # name = "Kisume"
             name = "琪斯美"
             portrait_path = "gfx/leaders/YMM/YMM_kisume.dds"
-            traits = {  th_character  }
-            attack_skill = 2
+            traits = {  th_character  th_trait_huoqiangzhuanjia  }
+            attack_skill = 3
             defense_skill = 3
             planning_skill = 1
             logistics_skill = 2
@@ -622,12 +735,12 @@ army_chinese_leader_inherit_146 = {
             # name = "Mizuhashi Parsee"
             name = "水桥帕露西"
             portrait_path = "gfx/leaders/PRS/PRS_prs.dds"
-            traits = {  th_character  }
-            attack_skill = 2
-            defense_skill = 5
-            planning_skill = 3
-            logistics_skill = 3
-            skill = 4
+            traits = {  th_character th_trait_huoqiangzhuanjia   }
+            attack_skill = 3
+            defense_skill = 6
+            planning_skill = 4
+            logistics_skill = 5
+            skill = 5
         }
     }
 
@@ -653,13 +766,13 @@ army_chinese_leader_inherit_146 = {
                     # name = "Kirisame Marisa"
                     name = "雾雨魔理沙"
                     portrait_path = "gfx/leaders/MRS/MRS_mrs.dds"
-                    traits = {  th_character  }
+                    traits = {  th_character  th_trait_qianxianzhandou trait_reckless th_trait_huolizhuanjia }
                     id = 19
-                    attack_skill = 6
-                    defense_skill = 4
+                    attack_skill = 11
+                    defense_skill = 6
                     planning_skill = 1
                     logistics_skill = 2
-                    skill = 4
+                    skill = 6
                 }
             }
             if = {
@@ -673,13 +786,13 @@ army_chinese_leader_inherit_146 = {
                     # name = "Kirisame Marisa"
                     name = "雾雨魔理沙"
                     portrait_path = "gfx/leaders/MRS/MRS_mrs.dds"
-                    traits = {  th_character  }
+                    traits = {  th_character  th_trait_qianxianzhandou trait_reckless th_trait_huolizhuanjia }
                     id = 19
-                    attack_skill = 7
-                    defense_skill = 5
-                    planning_skill = 2
-                    logistics_skill = 3
-                    skill = 5
+                    attack_skill = 11
+                    defense_skill = 6
+                    planning_skill = 1
+                    logistics_skill = 2
+                    skill = 6
                 }
             }
             if = {
@@ -690,13 +803,13 @@ army_chinese_leader_inherit_146 = {
                     # name = "Yatadera Narumi"
                     name = "矢田寺成美"
                     portrait_path = "gfx/leaders/MRS/MRS_narumi.dds"
-                    traits = {  th_character  }
+                    traits = {  th_character  trait_cautious  }
                     id = 20
                     attack_skill = 2
-                    defense_skill = 4
-                    planning_skill = 3
-                    logistics_skill = 4
-                    skill = 4
+                    defense_skill = 5
+                    planning_skill = 4
+                    logistics_skill = 6
+                    skill = 5
                 }
             }
         }
@@ -706,28 +819,49 @@ army_chinese_leader_inherit_146 = {
                     not = { tag = ALI }
                 }
             }
-            create_corps_commander = {
-                # name = "Kirisame Marisa"
-                name = "雾雨魔理沙"
-                portrait_path = "gfx/leaders/MRS/MRS_mrs.dds"
-                traits = {  th_character  }
-                attack_skill = 7
-                defense_skill = 5
-                planning_skill = 2
-                logistics_skill = 3
-                skill = 5
+            if = {
+                limit = {
+                    PREV.PREV = {
+                        tag = MRS
+                    }
+                }
+                create_corps_commander = {
+                    # name = "Kirisame Marisa"
+                    name = "雾雨魔理沙"
+                    portrait_path = "gfx/leaders/MRS/MRS_mrs.dds"
+                    traits = {  th_character  th_trait_qianxianzhandou trait_reckless th_trait_huolizhuanjia }
+                    attack_skill = 11
+                    defense_skill = 6
+                    planning_skill = 1
+                    logistics_skill = 2
+                    id = 41
+                    skill = 6
+                }
+                else = {
+                    create_corps_commander = {
+                        # name = "Kirisame Marisa"
+                        name = "雾雨魔理沙"
+                        portrait_path = "gfx/leaders/MRS/MRS_mrs.dds"
+                        traits = {  th_character  th_trait_qianxianzhandou trait_reckless th_trait_huolizhuanjia }
+                        attack_skill = 11
+                        defense_skill = 6
+                        planning_skill = 1
+                        logistics_skill = 2
+                        skill = 6
+                    }
+                }
             }
+            
             create_corps_commander = {
                 # name = "Yatadera Narumi"
                 name = "矢田寺成美"
                 portrait_path = "gfx/leaders/MRS/MRS_narumi.dds"
-                traits = {  th_character  }
+                traits = {  th_character  trait_cautious  }
                 attack_skill = 2
-                defense_skill = 4
-                planning_skill = 3
-                logistics_skill = 4
-                
-                skill = 4
+                defense_skill = 5
+                planning_skill = 4
+                logistics_skill = 6
+                skill = 5
             }
         }
     }
@@ -744,13 +878,12 @@ army_chinese_leader_inherit_146 = {
             # name = "Mystia Lorelei"
             name = "米斯蒂娅·萝蕾拉"
             portrait_path = "gfx/leaders/MSD/MSD_msd.dds"
-            traits = {  th_character  }
-            attack_skill = 2
+            traits = {  th_character  th_trait_chongjizhuanjia  }
+            attack_skill = 4
             defense_skill = 5
-            planning_skill = 2
-            logistics_skill = 3
-            
-            skill = 4
+            planning_skill = 3
+            logistics_skill = 5
+            skill = 5
         }
     }
 
@@ -766,11 +899,11 @@ army_chinese_leader_inherit_146 = {
             # name = "Wriggle Nightbug"  
             name = "莉格露·奈特巴格"
             portrait_path = "gfx/leaders/SEJ/NIB_nib.dds"
-            traits = {  th_character  }
+            traits = {  th_character  th_trait_huoqiangzhuanjia  }
             attack_skill = 2
             defense_skill = 3
             planning_skill = 3
-            logistics_skill = 3
+            logistics_skill = 5
             
             skill = 4
         }
@@ -788,9 +921,9 @@ army_chinese_leader_inherit_146 = {
             # name = "Kawasiro Nitori"
             name = "河城荷取"
             portrait_path = "gfx/leaders/NTR/NTR_ntr.dds"
-            traits = {  th_character  }
+            traits = {  th_character  th_trait_jijiacaokongzhe  }
             attack_skill = 4
-            defense_skill = 5
+            defense_skill = 6
             planning_skill = 2
             logistics_skill = 5
             
@@ -817,99 +950,216 @@ army_chinese_leader_inherit_146 = {
                 # name = "Hijiri Byakuren"
                 name = "圣白莲"
                 portrait_path = "gfx/leaders/NMS/NMS_bkr.dds"
-                traits = {  th_character  }
-                attack_skill = 5
-                defense_skill = 5
-                planning_skill = 6
-                logistics_skill = 5
+                traits = {  th_character  war_hero trait_cautious }
+                attack_skill = 10
+                defense_skill = 14
+                planning_skill = 10
+                logistics_skill = 7
 
                 id = 4
                 
-                skill = 7
+                skill = 11
             }
             create_corps_commander = {
                 # name = "Toramaru Syou"
                 name = "寅丸星"
                 portrait_path = "gfx/leaders/NMS/NMS_syou.dds"
-                traits = {  th_character  }
+                traits = {  th_character  old_guard  }
                 attack_skill = 5
-                defense_skill = 3
+                defense_skill = 5
                 planning_skill = 5
-                logistics_skill = 3
-
+                logistics_skill = 9
                 id = 5
-                
-                skill = 5
+                skill = 6
             }
-
             create_corps_commander = {
                 # name = "Nazrin"
                 name = "娜兹玲"
                 portrait_path = "gfx/leaders/NMS/NMS_mouse.dds"
-                traits = {  th_character  }
-                attack_skill = 1
-                defense_skill = 1
+                traits = {  th_character  th_trait_tezhongzhuanjia  }
+                attack_skill = 2
+                defense_skill = 4
+                planning_skill = 6
+                logistics_skill = 4
+                id = 6
+                skill = 4
+            }
+
+            create_corps_commander = {
+                # name = "Kumoi Ichirin"
+                name = "云居一轮"
+                portrait_path = "gfx/leaders/NMS/NMS_kumoi.dds"
+                traits = {  th_character  th_trait_chongjizhuanjia war_hero }
+                attack_skill = 6
+                defense_skill = 7
+                planning_skill = 4
+                logistics_skill = 2
+                
+                id = 8
+
+                skill = 5
+            }
+            create_corps_commander = {
+                # name = "Kasodani Kyouko"
+                name = "幽谷响子"
+                portrait_path = "gfx/leaders/NMS/NMS_kyouko.dds"
+                traits = {  th_character  trait_cautious th_trait_huoqiangzhuanjia  }
+                attack_skill = 3
+                defense_skill = 5
+                planning_skill = 3
+                logistics_skill = 2
+                id = 7
+                skill = 4
+            }
+            create_corps_commander = {
+                # name = "Murasa Minamitsu"
+                name = "村纱水蜜"
+                portrait_path = "gfx/leaders/NMS/NMS_murasa.dds"
+                traits = {  th_character  th_trait_chongjizhuanjia th_trait_huoqiangzhuanjia trait_reckless war_hero }
+                attack_skill = 7
+                defense_skill = 6
                 planning_skill = 4
                 logistics_skill = 4
-                
-                id = 6
+                id = 9
+                skill = 6
+            }
 
-                skill = 3
+            create_field_marshal = {
+                # name = "Houjuu Nue"
+                name = "封兽鵺"
+                portrait_path = "gfx/leaders/MAM/MAM_nue.dds"
+                traits = {  th_character  th_trait_dayaoguai  }
+                attack_skill = 1
+                defense_skill = 5
+                planning_skill = 1
+                logistics_skill = -1
+                id = 36
+                skill = 8
             }
             else = {
-                create_field_marshal = {
-                    # name = "Hijiri Byakuren"
-                    name = "圣白莲"
-                    portrait_path = "gfx/leaders/NMS/NMS_bkr.dds"
-                    traits = {  th_character  }
-                    attack_skill = 5
-                    defense_skill = 5
-                    planning_skill = 6
-                    logistics_skill = 5
-
-                    # id = 4
-                    
-                    skill = 7
-                }
                 create_corps_commander = {
-                    # name = "Toramaru Syou"
-                    name = "寅丸星"
-                    portrait_path = "gfx/leaders/NMS/NMS_syou.dds"
-                    traits = {  th_character  }
-                    attack_skill = 5
-                    defense_skill = 3
-                    planning_skill = 5
-                    logistics_skill = 3
-
-                    # id = 5
-                    
+                    # name = "Kumoi Ichirin"
+                    name = "云居一轮"
+                    portrait_path = "gfx/leaders/NMS/NMS_kumoi.dds"
+                    traits = {  th_character  th_trait_chongjizhuanjia war_hero }
+                    attack_skill = 6
+                    defense_skill = 7
+                    planning_skill = 4
+                    logistics_skill = 2
                     skill = 5
                 }
+                if = {
+                    limit = {
+                        PREV.PREV = { tag = MNM }
+                    }
+                    create_field_marshal = {
+                        # name = "Hijiri Byakuren"
+                        name = "圣白莲"
+                        portrait_path = "gfx/leaders/NMS/NMS_bkr.dds"
+                        traits = {  th_character  war_hero trait_cautious }
+                        attack_skill = 10
+                        defense_skill = 14
+                        planning_skill = 10
+                        logistics_skill = 7
 
-                create_corps_commander = {
-                    # name = "Nazrin"
-                    name = "娜兹玲"
-                    portrait_path = "gfx/leaders/NMS/NMS_mouse.dds"
-                    traits = {  th_character  }
-                    attack_skill = 1
-                    defense_skill = 1
-                    planning_skill = 4
-                    logistics_skill = 4
-                    
-                    # id = 6
-
-                    skill = 3
+                        id = 40
+                        
+                        skill = 11
+                    }
+                    else = {
+                        create_field_marshal = {
+                            # name = "Hijiri Byakuren"
+                            name = "圣白莲"
+                            portrait_path = "gfx/leaders/NMS/NMS_bkr.dds"
+                            traits = {  th_character  war_hero trait_cautious }
+                            attack_skill = 10
+                            defense_skill = 14
+                            planning_skill = 10
+                            logistics_skill = 7
+                            skill = 11
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        not = { has_global_flag = NMS_NUE_tuoli }
+                        not = { tag = NUE }
+                    }
+                    create_field_marshal = {
+                        # name = "Houjuu Nue"
+                        name = "封兽鵺"
+                        portrait_path = "gfx/leaders/MAM/MAM_nue.dds"
+                        traits = {  th_character  th_trait_dayaoguai  }
+                        attack_skill = 1
+                        defense_skill = 5
+                        planning_skill = 1
+                        logistics_skill = -1
+                        skill = 8
+                    }
+                }
+                if = {
+                    limit = {
+                        not = { has_global_flag = NMS_MNM_tuoli }
+                        not = { tag = MNM }
+                    }
+                    create_corps_commander = {
+                        # name = "Murasa Minamitsu"
+                        name = "村纱水蜜"
+                        portrait_path = "gfx/leaders/NMS/NMS_murasa.dds"
+                        traits = {  th_character  th_trait_chongjizhuanjia th_trait_huoqiangzhuanjia trait_reckless war_hero }
+                        attack_skill = 7
+                        defense_skill = 6
+                        planning_skill = 4
+                        logistics_skill = 4
+                        skill = 6
+                    }
+                }
+                if = {
+                    limit = {
+                        not = { has_global_flag = NMS_KYK_tuoli }
+                        not = { tag = KYK }
+                    }
+                    create_corps_commander = {
+                        # name = "Kasodani Kyouko"
+                        name = "幽谷响子"
+                        portrait_path = "gfx/leaders/NMS/NMS_kyouko.dds"
+                        traits = {  th_character  trait_cautious th_trait_huoqiangzhuanjia  }
+                        attack_skill = 3
+                        defense_skill = 5
+                        planning_skill = 3
+                        logistics_skill = 2
+                        skill = 4
+                    }
+                    create_corps_commander = {
+                        # name = "Toramaru Syou"
+                        name = "寅丸星"
+                        portrait_path = "gfx/leaders/NMS/NMS_syou.dds"
+                        traits = {  th_character  old_guard  }
+                        attack_skill = 5
+                        defense_skill = 5
+                        planning_skill = 5
+                        logistics_skill = 9
+                        skill = 6
+                    }
+                    create_corps_commander = {
+                        # name = "Nazrin"
+                        name = "娜兹玲"
+                        portrait_path = "gfx/leaders/NMS/NMS_mouse.dds"
+                        traits = {  th_character  th_trait_tezhongzhuanjia  }
+                        attack_skill = 2
+                        defense_skill = 4
+                        planning_skill = 6
+                        logistics_skill = 4
+                        skill = 4
+                    }
                 }
             }
         }
-
-        
     }
-
     if = {
         limit = {
             PREV = {
-                tag = ICR
+                tag = NUE
             }
             not = { has_country_flag = has_inherit_@PREV }
         }
@@ -917,41 +1167,43 @@ army_chinese_leader_inherit_146 = {
         if = {
             limit = {
                 PREV.PREV = {
-                    tag = NMS
+                    tag = NUE
                 }
             }
-            create_corps_commander = {
-                # name = "Kumoi Ichirin"
-                name = "云居一轮"
-                portrait_path = "gfx/leaders/NMS/NMS_kumoi.dds"
-                traits = {  th_character  }
-                attack_skill = 4
-                defense_skill = 3
-                planning_skill = 2
-                logistics_skill = 2
-                
-                id = 8
-
-                skill = 4
+            create_field_marshal = {
+                # name = "Houjuu Nue"
+                name = "封兽鵺"
+                portrait_path = "gfx/leaders/MAM/MAM_nue.dds"
+                traits = {  th_character  th_trait_dayaoguai  }
+                attack_skill = 1
+                defense_skill = 5
+                planning_skill = 1
+                logistics_skill = -1
+                id = 39
+                skill = 8
             }
             else = {
-                create_corps_commander = {
-                    # name = "Kumoi Ichirin"
-                    name = "云居一轮"
-                    portrait_path = "gfx/leaders/NMS/NMS_kumoi.dds"
-                    traits = {  th_character  }
-                    attack_skill = 4
-                    defense_skill = 3
-                    planning_skill = 2
-                    logistics_skill = 2
-                    
-                    # id = 8
-
-                    skill = 4
+                create_field_marshal = {
+                    # name = "Houjuu Nue"
+                    name = "封兽鵺"
+                    portrait_path = "gfx/leaders/MAM/MAM_nue.dds"
+                    traits = {  th_character  th_trait_dayaoguai  }
+                    attack_skill = 1
+                    defense_skill = 5
+                    planning_skill = 1
+                    logistics_skill = -1
+                    skill = 8
+                }
+                if = {
+                    limit = {
+                        PREV.PREV = {
+                            tag = NMS
+                        }
+                    }
+                    clr_global_flag = NMS_NUE_tuoli
                 }
             }
         }
-        
     }
 
     if = {
@@ -966,35 +1218,40 @@ army_chinese_leader_inherit_146 = {
         if = {
             limit = {
                 PREV.PREV = {
-                    tag = NMS
+                    tag = MNM
                 }
             }
             create_corps_commander = {
                 # name = "Murasa Minamitsu"
                 name = "村纱水蜜"
                 portrait_path = "gfx/leaders/NMS/NMS_murasa.dds"
-                traits = {  th_character  }
-                attack_skill = 3
-                defense_skill = 4
-                planning_skill = 3
+                traits = {  th_character  th_trait_chongjizhuanjia th_trait_huoqiangzhuanjia trait_reckless war_hero }
+                attack_skill = 7
+                defense_skill = 6
+                planning_skill = 4
                 logistics_skill = 4
-
-                id = 9
-
-                skill = 4
+                id = 38
+                skill = 6
             }
             else = {
                 create_corps_commander = {
                     # name = "Murasa Minamitsu"
                     name = "村纱水蜜"
                     portrait_path = "gfx/leaders/NMS/NMS_murasa.dds"
-                    traits = {  th_character  }
-                    attack_skill = 3
-                    defense_skill = 4
-                    planning_skill = 3
+                    traits = {  th_character  th_trait_chongjizhuanjia th_trait_huoqiangzhuanjia trait_reckless war_hero }
+                    attack_skill = 7
+                    defense_skill = 6
+                    planning_skill = 4
                     logistics_skill = 4
-
-                    skill = 4
+                    skill = 6
+                }
+                if = {
+                    limit = {
+                        PREV.PREV = {
+                            tag = NMS
+                        }
+                    }
+                    clr_global_flag = NMS_MNM_tuoli
                 }
             }
         }
@@ -1014,37 +1271,37 @@ army_chinese_leader_inherit_146 = {
             # name = "Matara Okina"
             name = "摩多罗隐岐奈"
             portrait_path = "gfx/leaders/OKI/OKI_oki.dds"
-            traits = {  th_character  }
-            attack_skill = 6
-            defense_skill = 4
-            planning_skill = 8
-            logistics_skill = 8
+            traits = {  th_character  th_trait_moulvedashi th_trait_dayaoguai old_guard }
+            attack_skill = 5
+            defense_skill = 5
+            planning_skill = 5
+            logistics_skill = 6
             
-            skill = 8
+            skill = 12
         }
         create_corps_commander = {
             # name = "Teireida Mai"
             name = "丁礼田舞"
             portrait_path = "gfx/leaders/OKI/OKI_mai.dds"
-            traits = {  th_character  }
+            traits = {  th_character  th_trait_huoqiangzhuanjia  }
             attack_skill = 2
-            defense_skill = 3
-            planning_skill = 1
-            logistics_skill = 4
+            defense_skill = 4
+            planning_skill = 2
+            logistics_skill = 5
             
-            skill = 3
+            skill = 4
         }
         create_corps_commander = {
             # name = "Nishida Satono"
             name = "尔子田里乃"
             portrait_path = "gfx/leaders/OKI/OKI_satono.dds"
-            traits = {  th_character  }
-            attack_skill = 4
+            traits = {  th_character  th_trait_huoqiangzhuanjia  }
+            attack_skill = 5
             defense_skill = 2
             planning_skill = 2
-            logistics_skill = 2
+            logistics_skill = 4
             
-            skill = 3
+            skill = 4
         }
     }
 
@@ -1060,10 +1317,10 @@ army_chinese_leader_inherit_146 = {
             # name = "Rumia"  
             name = "露米娅"
             portrait_path = "gfx/leaders/SEJ/SEJ_rmi.dds"
-            traits = {  th_character  }
+            traits = {  th_character  th_trait_chongjizhuanjia trait_reckless }
             attack_skill = 4
             defense_skill = 2
-            planning_skill = 2
+            planning_skill = 4
             logistics_skill = 4
             
             skill = 4
@@ -1082,25 +1339,25 @@ army_chinese_leader_inherit_146 = {
             # name = "Morichika Rinnosuke"
             name = "森近霖之助"
             portrait_path = "gfx/leaders/RNS/RNS_rns.dds"
-            traits = {  th_character  }
-            attack_skill = 1
+            traits = {  th_character trait_cautious   }
+            attack_skill = 2
             defense_skill = 4
-            planning_skill = 1
+            planning_skill = 4
             logistics_skill = 4
             
-            skill = 3
+            skill = 4
         }
         create_corps_commander = {
             # name = "Tokiko"
             name = "朱鷺子"
             portrait_path = "gfx/leaders/RNS/RNS_tokiko.dds"
-            traits = {  th_character  }
+            traits = {  th_character  th_trait_chongjizhuanjia  }
             attack_skill = 3
             defense_skill = 3
             planning_skill = 1
             logistics_skill = 2
             
-            skill = 3
+            skill = 4
         }
     }
 
@@ -1116,25 +1373,25 @@ army_chinese_leader_inherit_146 = {
             # name = "Reiuji Utsuho"
             name = "灵乌路空"
             portrait_path = "gfx/leaders/UTH/UTH_uth.dds"
-            traits = {  th_character  }
-            attack_skill = 8
-            defense_skill = 1
+            traits = {  th_character  th_trait_qianxianzhandou trait_reckless th_trait_huolizhuanjia }
+            attack_skill = 13
+            defense_skill = 4
             planning_skill = 1
             logistics_skill = 1
             
-            skill = 3
+            skill = 5
         }
         create_corps_commander = {
             # name = "Kaenbyou Rin"
             name = "火焰猫燐"
             portrait_path = "gfx/leaders/UTH/UTH_rin.dds"
-            traits = {  th_character  }
-            attack_skill = 4
-            defense_skill = 2
+            traits = {  th_character  th_trait_moulvedashi th_trait_jijiacaokongzhe  }
+            attack_skill = 5
+            defense_skill = 4
             planning_skill = 7
-            logistics_skill = 5
+            logistics_skill = 8
             
-            skill = 6
+            skill = 7
         }
     }
 
@@ -1150,10 +1407,10 @@ army_chinese_leader_inherit_146 = {
             # name = "Sakata Nemuno"
             name = "坂田合欢乃"
             portrait_path = "gfx/leaders/NMN/NMN_nmn.dds"
-            traits = {  th_character  }
+            traits = {  th_character  th_trait_chongjizhuanjia  }
             attack_skill = 4
-            defense_skill = 7
-            planning_skill = 2
+            defense_skill = 8
+            planning_skill = 3
             logistics_skill = 2
             
             skill = 5
@@ -1172,25 +1429,25 @@ army_chinese_leader_inherit_146 = {
             # name = "Komeiji Satori"
             name = "古明地觉"
             portrait_path = "gfx/leaders/SAT/SAT_sat.dds"
-            traits = {  th_character  }
-            attack_skill = 2
-            defense_skill = 7
-            planning_skill = 5
-            logistics_skill = 3
+            traits = {  th_character  th_trait_dayaoguai  }
+            attack_skill = -3
+            defense_skill = 5
+            planning_skill = 1
+            logistics_skill = 9
             
-            skill = 6
+            skill = 9
         }
         create_corps_commander = {
             # name = "Komeiji Koishi"
             name = "古明地恋"
             portrait_path = "gfx/leaders/SAT/SAT_koishi.dds"
-            traits = {  th_character  }
-            attack_skill = 4
-            defense_skill = 8
+            traits = {  th_character  th_trait_qianxianzhandou  }
+            attack_skill = 6
+            defense_skill = 15
             planning_skill = 1
-            logistics_skill = 1
+            logistics_skill = 2
             
-            skill = 4
+            skill = 6
         }
     }
 
@@ -1202,87 +1459,176 @@ army_chinese_leader_inherit_146 = {
             not = { has_country_flag = has_inherit_@PREV }
         }
         set_country_flag = has_inherit_@PREV
+        if = {
+            limit = {
+                PREV.PREV = {
+                    tag = SCA
+                }
+            }
+            #create_field_marshal = {
+            #    # name = "Patchouli Knowledge"
+            #    name = "帕秋莉·诺雷姬"
+            #    portrait_path = "gfx/leaders/SCA/SCA_pachy.dds"
+            #    traits = {  th_character  trait_cautious  }
+            #    attack_skill = 7
+            #    defense_skill = 5
+            #    planning_skill = 10
+            #    logistics_skill = 11
+            #    id = 24
+            #    skill = 9
+            #}
+            # random_unit_leader = {
+            #	limit = { has_id = 24 }
+            #	save_global_event_target_as = SCA_Pachu
+            #}
+            create_corps_commander = {
+                # name = "Hong Meirin"
+                name = "红美铃"
+                portrait_path = "gfx/leaders/SWL/SWL_mli.dds"
+                traits = {  th_character  th_trait_chongjizhuanjia }
+                attack_skill = 5
+                defense_skill = 5
+                planning_skill = 5
+                logistics_skill = 5
+                id = 25
+                skill = 5
+            }
+            random_unit_leader = {
+                limit = { has_id = 25 }
+                save_global_event_target_as = SCA_Meiling
+            }
+
+            create_corps_commander = {
+                # name = "Koakuma"
+                name = "小恶魔"
+                portrait_path = "gfx/leaders/SCA/SCA_kak.dds"
+                traits = {  th_character  trait_cautious old_guard }
+                attack_skill = 2
+                defense_skill = 2
+                planning_skill = 5
+                logistics_skill = 3
+                id = 26
+                skill = 3
+            }
+            random_unit_leader = {
+                limit = { has_id = 26 }
+                save_global_event_target_as = SCA_Koakuma
+            }
+            #create_field_marshal = {
+            #    # name = "Remilia Scarlet"
+            #    name = "蕾米莉亚·斯卡蕾特"
+            #    portrait_path = "gfx/leaders/SCA/SCA_rem.dds"
+            #    traits = {  th_character  harsh_leader th_trait_huoqiangzhuanjia th_trait_qianxianzhandou }
+            #    attack_skill = 8
+            #    defense_skill = 10
+            #    planning_skill = 5
+            #    logistics_skill = 8
+            #    id = 500
+            #    skill = 9
+            #}
+            create_corps_commander = {
+                # name = "Flandre Scarlet"
+                name = "芙兰朵露·斯卡蕾特"
+                portrait_path = "gfx/leaders/SCA/SCA_flan.dds"
+                traits = {  th_character  th_trait_qianxianzhandou th_trait_chongjizhuanjia }
+                attack_skill = 16
+                defense_skill = 2
+                planning_skill = 1
+                logistics_skill = 1
+                id = 35
+                skill = 5
+            }
+            random_unit_leader = {
+                limit = { has_id = 35 }
+                save_global_event_target_as = SCA_Frandre
+            }
+            create_corps_commander = {
+                # name = "Izayoi Sakuya"
+                name = "十六夜咲夜"
+                portrait_path = "gfx/leaders/SSL/SSL_sky.dds"
+                traits = {  th_character  harsh_leader  }
+                attack_skill = 3
+                defense_skill = 7
+                planning_skill = 3
+                logistics_skill = 9
+                id = 34
+                skill = 6
+            }
+            random_unit_leader = {
+                limit = { has_id = 34 }
+                save_global_event_target_as = SCA_Sakuya
+            }
+            else = {
+                create_field_marshal = {
+                    # name = "Patchouli Knowledge"
+                    name = "帕秋莉·诺雷姬"
+                    portrait_path = "gfx/leaders/SCA/SCA_pachy.dds"
+                    traits = {  th_character  trait_cautious  }
+                    attack_skill = 7
+                    defense_skill = 5
+                    planning_skill = 10
+                    logistics_skill = 11
+                    skill = 9
+                }
+                create_corps_commander = {
+                    # name = "Hong Meirin"
+                    name = "红美铃"
+                    portrait_path = "gfx/leaders/SWL/SWL_mli.dds"
+                    traits = {  th_character  th_trait_chongjizhuanjia }
+                    attack_skill = 5
+                    defense_skill = 5
+                    planning_skill = 5
+                    logistics_skill = 5
+                    skill = 5
+                }
+                create_corps_commander = {
+                    # name = "Koakuma"
+                    name = "小恶魔"
+                    portrait_path = "gfx/leaders/SCA/SCA_kak.dds"
+                    traits = {  th_character  trait_cautious old_guard }
+                    attack_skill = 2
+                    defense_skill = 2
+                    planning_skill = 5
+                    logistics_skill = 3
+                    skill = 3
+                }
+                create_field_marshal = {
+                    # name = "Remilia Scarlet"
+                    name = "蕾米莉亚·斯卡蕾特"
+                    portrait_path = "gfx/leaders/SCA/SCA_rem.dds"
+                    traits = {  th_character  harsh_leader th_trait_huoqiangzhuanjia th_trait_qianxianzhandou }
+                    attack_skill = 8
+                    defense_skill = 10
+                    planning_skill = 5
+                    logistics_skill = 8
+                    skill = 9
+                }
+                create_corps_commander = {
+                    # name = "Flandre Scarlet"
+                    name = "芙兰朵露·斯卡蕾特"
+                    portrait_path = "gfx/leaders/SCA/SCA_flan.dds"
+                    traits = {  th_character  th_trait_qianxianzhandou th_trait_chongjizhuanjia }
+                    attack_skill = 16
+                    defense_skill = 2
+                    planning_skill = 1
+                    logistics_skill = 1
+                    skill = 5
+                }
+                create_corps_commander = {
+                    # name = "Izayoi Sakuya"
+                    name = "十六夜咲夜"
+                    portrait_path = "gfx/leaders/SSL/SSL_sky.dds"
+                    traits = {  th_character  harsh_leader  }
+                    attack_skill = 3
+                    defense_skill = 7
+                    planning_skill = 3
+                    logistics_skill = 9
+                    skill = 6
+                }
+            }
+        }
         
-        #create_field_marshal = {
-        #    # name = "Patchouli Knowledge"
-        #    name = "帕秋莉·诺雷姬"
-        #    portrait_path = "gfx/leaders/SCA/SCA_pachy.dds"
-        #    traits = {  th_character  }
-        #    attack_skill = 4
-        #    defense_skill = 5
-        #    planning_skill = 6
-        #    logistics_skill = 4
-        #    id = 2005
-        #    skill = 6
-        # }
-        # random_unit_leader = {
-		#	limit = { has_id = 2005 }
-		#	save_global_event_target_as = SCA_Pachu
-		#}
-        create_corps_commander = {
-            # name = "Flandre Scarlet"
-            name = "芙兰朵露·斯卡蕾特"
-            portrait_path = "gfx/leaders/SCA/SCA_flan.dds"
-            traits = {  th_character  }
-            attack_skill = 7
-            defense_skill = 1
-            planning_skill = 1
-            logistics_skill = 1
-            id = 2003
-            skill = 3
-        }
-        random_unit_leader = {
-			limit = { has_id = 2003 }
-			save_global_event_target_as = SCA_Frandre
-		}
-        create_corps_commander = {
-            # name = "Izayoi Sakuya"
-            name = "十六夜咲夜"
-            portrait_path = "gfx/leaders/SSL/SSL_sky.dds"
-            traits = {  th_character  }
-            attack_skill = 2
-            defense_skill = 5
-            planning_skill = 4
-            logistics_skill = 2
-            id = 2001
-            skill = 4
-        }
-        random_unit_leader = {
-			limit = { has_id = 2001 }
-			save_global_event_target_as = SCA_Sakuya
-		}
-        create_corps_commander = {
-            # name = "Hong Meirin"
-            name = "红美铃"
-            portrait_path = "gfx/leaders/SWL/SWL_mli.dds"
-            traits = {  th_character  }
-            attack_skill = 3
-            defense_skill = 3
-            planning_skill = 3
-            logistics_skill = 3
-            id = 2002
-            skill = 4
-        }
-        random_unit_leader = {
-			limit = { has_id = 2002 }
-			save_global_event_target_as = SCA_Meiling
-		}
-        create_corps_commander = {
-            # name = "Koakuma"
-            name = "小恶魔"
-            portrait_path = "gfx/leaders/SCA/SCA_kak.dds"
-            traits = {  th_character  }
-            attack_skill = 1
-            defense_skill = 2
-            planning_skill = 3
-            logistics_skill = 3
-            id = 2004
-            skill = 3
-        }
-        random_unit_leader = {
-			limit = { has_id = 2004 }
-			save_global_event_target_as = SCA_Koakuma
-		}
+        
     }
 
     if = {
@@ -1303,26 +1649,25 @@ army_chinese_leader_inherit_146 = {
                 # name = "Kijin Seija"
                 name = "鬼人正邪"
                 portrait_path = "gfx/leaders/SEJ/SEJ_sej.dds"
-                traits = {  th_character  }
-                attack_skill = 3
-                defense_skill = 5
-                planning_skill = 2
-                logistics_skill = 5
+                traits = {  th_character  war_hero  }
+                attack_skill = 4
+                defense_skill = 6
+                planning_skill = 11
+                logistics_skill = 2
                 id = 999
-                skill = 5
+                skill = 7
             }
             else = {
                 create_field_marshal = {
                     # name = "Kijin Seija"
                     name = "鬼人正邪"
                     portrait_path = "gfx/leaders/SEJ/SEJ_sej.dds"
-                    traits = {  th_character  }
-                    attack_skill = 3
-                    defense_skill = 5
-                    planning_skill = 2
-                    logistics_skill = 5
-                    # id = 999
-                    skill = 5
+                    traits = {  th_character  war_hero  }
+                    attack_skill = 4
+                    defense_skill = 6
+                    planning_skill = 11
+                    logistics_skill = 2
+                    skill = 7
                 }
             }
         }
@@ -1331,13 +1676,13 @@ army_chinese_leader_inherit_146 = {
             # name = "Sukuna Shinmyoumaru"
             name = "少名针妙丸"
             portrait_path = "gfx/leaders/SEJ/SEJ_smm.dds"
-            traits = {  th_character  }
-            attack_skill = 3
-            defense_skill = 4
+            traits = {  th_character  war_hero th_trait_huoqiangzhuanjia }
+            attack_skill = 6
+            defense_skill = 7
             planning_skill = 4
-            logistics_skill = 3
+            logistics_skill = 7
             
-            skill = 5
+            skill = 6
         }
     }
 
@@ -1353,9 +1698,9 @@ army_chinese_leader_inherit_146 = {
             # name = "Sunny Milk"
             name = "桑尼·米尔克"
             portrait_path = "gfx/leaders/SGS/SGS_sun.dds"
-            traits = {  th_character  }
-            attack_skill = 3
-            defense_skill = 1
+            traits = {  th_character  trait_reckless th_trait_huolizhuanjia }
+            attack_skill = 4
+            defense_skill = 2
             planning_skill = 2
             logistics_skill = 3
             
@@ -1365,10 +1710,10 @@ army_chinese_leader_inherit_146 = {
             # name = "Lunar Child"
             name = "露娜·切露德"
             portrait_path = "gfx/leaders/SGS/SGS_lunar.dds"
-            traits = {  th_character  }
-            attack_skill = 2
-            defense_skill = 3
-            planning_skill = 2
+            traits = {  th_character  trait_cautious  }
+            attack_skill = 3
+            defense_skill = 5
+            planning_skill = 1
             logistics_skill = 2
             
             skill = 3
@@ -1377,11 +1722,11 @@ army_chinese_leader_inherit_146 = {
             # name = "Star Sapphire"
             name = "斯塔·萨菲雅"
             portrait_path = "gfx/leaders/SGS/SGS_star.dds"
-            traits = {  th_character  }
+            traits = {  th_character  th_trait_moulvedashi th_trait_yinyangshi }
 
-            attack_skill = 1
+            attack_skill = 2
             defense_skill = 3
-            planning_skill = 4
+            planning_skill = 2
             logistics_skill = 1
             
             skill = 3
@@ -1400,34 +1745,34 @@ army_chinese_leader_inherit_146 = {
             # name = "Lunasa Prismriver"
             name = "露娜萨·普莉兹姆利巴"
             portrait_path = "gfx/leaders/PRI/PRI_luna.dds"
-            traits = {  th_character  }
-            attack_skill = 2
-            defense_skill = 3
+            traits = {  th_character  th_trait_huoqiangzhuanjia  }
+            attack_skill = 4
+            defense_skill = 5
+            planning_skill = 4
+            logistics_skill = 4
+            
+            skill = 5
+        }
+        create_corps_commander = {
+            # name = "Merlin Prismriver"
+            name = "梅露兰·普莉兹姆利巴"
+            portrait_path = "gfx/leaders/PRI/PRI_merlin.dds"
+            traits = {  th_character  th_trait_tezhongzhuanjia  }
+            attack_skill = 3
+            defense_skill = 4
             planning_skill = 3
             logistics_skill = 3
             
             skill = 4
         }
         create_corps_commander = {
-            # name = "Merlin Prismriver"
-            name = "梅露兰·普莉兹姆利巴"
-            portrait_path = "gfx/leaders/PRI/PRI_merlin.dds"
-            traits = {  th_character  }
-            attack_skill = 3
-            defense_skill = 3
-            planning_skill = 2
-            logistics_skill = 2
-            
-            skill = 3
-        }
-        create_corps_commander = {
             # name = "Lyrica Prismriver"
             name = "莉莉卡·普莉兹姆利巴"
             portrait_path = "gfx/leaders/PRI/PRI_lyrica.dds"
-            traits = {  th_character  }
+            traits = {  th_character  trait_reckless  }
             attack_skill = 3
             defense_skill = 2
-            planning_skill = 2
+            planning_skill = 3
             logistics_skill = 2
             
             skill = 3
@@ -1446,22 +1791,22 @@ army_chinese_leader_inherit_146 = {
             # name = "Shikieiki Yamaxanadu"
             name = "四季映姬·亚玛萨那度"
             portrait_path = "gfx/leaders/SKI/SKI_ski.dds"
-            traits = {  th_character  }
-            attack_skill = 5
-            defense_skill = 5
-            planning_skill = 5
-            logistics_skill = 5
+            traits = {  th_character  th_trait_dayaoguai trait_cautious harsh_leader }
+            attack_skill = 2
+            defense_skill = 3
+            planning_skill = 3
+            logistics_skill = 6
             
-            skill = 7
+            skill = 10
         }
         create_corps_commander = {
             #name = "Niwatari Kutaka"
             name = "庭渡久侘歌"
             portrait_path = "gfx/leaders/SKI/SKI_nwt.dds"
-            traits = {  th_character  }
-            attack_skill = 3
-            defense_skill = 3
-            planning_skill = 5
+            traits = {  th_character trait_cautious  }
+            attack_skill = 4
+            defense_skill = 4
+            planning_skill = 7
             logistics_skill = 5
             
             skill = 5
@@ -1480,7 +1825,7 @@ army_chinese_leader_inherit_146 = {
             # name = "Lily White"
             name = "莉莉·霍瓦特"
             portrait_path = "gfx/leaders/LIL/LIL_lil.dds"
-            traits = {  th_character  }
+            traits = {  th_character  th_trait_huoqiangzhuanjia  }
             attack_skill = 1
             defense_skill = 1
             planning_skill = 2
@@ -1508,94 +1853,94 @@ army_chinese_leader_inherit_146 = {
                 # name = "Toyosatomimi no Miko"
                 name = "丰聪耳神子"
                 portrait_path = "gfx/leaders/SRB/SRB_mik.dds"
-                traits = {  th_character  }
-                attack_skill = 4
-                defense_skill = 4
-                planning_skill = 6
-                logistics_skill = 6
+                traits = {  th_character  media_personality  }
+                attack_skill = 6
+                defense_skill = 7
+                planning_skill = 11
+                logistics_skill = 16
                 id = 10
-                skill = 7
+                skill = 10
             }
             create_corps_commander = {
                 # name = "Miyako Yoshika"
                 name = "宫古芳香"
                 portrait_path = "gfx/leaders/SRB/SRB_yoshika.dds"
-                traits = {  th_character  }
-                attack_skill = 3
-                defense_skill = 5
+                traits = {  th_character  trait_reckless th_trait_chongjizhuanjia  }
+                attack_skill = 4
+                defense_skill = 6
                 planning_skill = 1
-                logistics_skill = 1
+                logistics_skill = 2
                 id = 11
-                skill = 3
+                skill = 4
             }
             create_corps_commander = {
                 # name = "Kaku Seiga"
                 name = "霍青娥"
                 portrait_path = "gfx/leaders/SRB/SRB_seiga.dds"
-                traits = {  th_character  }
-                attack_skill = 3
-                defense_skill = 3
-                planning_skill = 6
-                logistics_skill = 5
+                traits = {  th_character  th_trait_moulvedashi  }
+                attack_skill = 2
+                defense_skill = 8
+                planning_skill = 12
+                logistics_skill = 7
                 id = 12
-                skill = 5
+                skill = 8
             }
             create_corps_commander = {
                 # name = "Mononobe no Futo"
                 name = "物部布都"
                 portrait_path = "gfx/leaders/SRB/SRB_futo.dds"
-                traits = {  th_character  }
-                attack_skill = 4
-                defense_skill = 4
-                planning_skill = 2
-                logistics_skill = 2
+                traits = {  th_character  trait_reckless  }
+                attack_skill = 6
+                defense_skill = 7
+                planning_skill = 4
+                logistics_skill = 4
                 id = 13
-                skill = 4
+                skill = 6
             }
             else = {
                 create_field_marshal = {
                     # name = "Toyosatomimi no Miko"
                     name = "丰聪耳神子"
                     portrait_path = "gfx/leaders/SRB/SRB_mik.dds"
-                    traits = {  th_character  }
-                    attack_skill = 4
-                    defense_skill = 4
-                    planning_skill = 6
-                    logistics_skill = 6
-                    skill = 7
+                    traits = {  th_character  media_personality  }
+                    attack_skill = 6
+                    defense_skill = 7
+                    planning_skill = 11
+                    logistics_skill = 16
+                    skill = 10
                 }
                 create_corps_commander = {
                     # name = "Miyako Yoshika"
                     name = "宫古芳香"
                     portrait_path = "gfx/leaders/SRB/SRB_yoshika.dds"
-                    traits = {  th_character  }
-                    attack_skill = 3
-                    defense_skill = 5
+                    traits = {  th_character  trait_reckless th_trait_chongjizhuanjia  }
+                    attack_skill = 4
+                    defense_skill = 6
                     planning_skill = 1
-                    logistics_skill = 1
-                    skill = 3
+                    logistics_skill = 2
+                    skill = 4
                 }
                 create_corps_commander = {
                     # name = "Kaku Seiga"
                     name = "霍青娥"
                     portrait_path = "gfx/leaders/SRB/SRB_seiga.dds"
-                    traits = {  th_character  }
-                    attack_skill = 3
-                    defense_skill = 3
-                    planning_skill = 6
-                    logistics_skill = 5
-                    skill = 5
+                    traits = {  th_character  th_trait_moulvedashi  }
+                    attack_skill = 2
+                    defense_skill = 8
+                    planning_skill = 12
+                    logistics_skill = 7
+                    skill = 8
                 }
                 create_corps_commander = {
                     # name = "Mononobe no Futo"
                     name = "物部布都"
                     portrait_path = "gfx/leaders/SRB/SRB_futo.dds"
-                    traits = {  th_character  }
-                    attack_skill = 4
-                    defense_skill = 4
-                    planning_skill = 2
-                    logistics_skill = 2
-                    skill = 4
+                    traits = {  th_character  trait_reckless  }
+                    attack_skill = 6
+                    defense_skill = 7
+                    planning_skill = 4
+                    logistics_skill = 4
+                    skill = 6
                 }
             }
         }
@@ -1604,13 +1949,13 @@ army_chinese_leader_inherit_146 = {
             # name = "Soga no Toziko"
             name = "苏我屠自古"
             portrait_path = "gfx/leaders/SRB/SRB_toziko.dds"
-            traits = {  th_character  }
-            attack_skill = 3
-            defense_skill = 4
-            planning_skill = 2
-            logistics_skill = 3
+            traits = {  th_character th_trait_huolizhuanjia  }
+            attack_skill = 7
+            defense_skill = 7
+            planning_skill = 3
+            logistics_skill = 5
             
-            skill = 4
+            skill = 6
         }
         
     }
@@ -1627,40 +1972,34 @@ army_chinese_leader_inherit_146 = {
             name = "射命丸文"
             # name = "Shameimaru Aya"
             portrait_path = "gfx/leaders/TEG/TEG_aya.dds"
-            
-            traits = {  th_character  }
-            attack_skill = 5
-            defense_skill = 4
-            planning_skill = 6
-            logistics_skill = 4
-            
-            skill = 6
+            traits = {  th_character  war_hero career_officer th_trait_huolizhuanjia media_personality }
+            attack_skill = 6
+            defense_skill = 7
+            planning_skill = 9
+            logistics_skill = 8
+            skill = 8
         }
         create_corps_commander = {
             # name = "Himekaidou Hatate"
             name = "姬海棠果"
             portrait_path = "gfx/leaders/TEG/TEG_hatate.dds"
-            skill = 5
-
-            traits = {  th_character  }
-            attack_skill = 4
-            defense_skill = 5
-            planning_skill = 4
-            logistics_skill = 4
-            
+            traits = {  th_character  old_guard th_trait_huoqiangzhuanjia career_officer media_personality }
+            attack_skill = 5
+            defense_skill = 8
+            planning_skill = 7
+            logistics_skill = 8
+            skill = 7
         }
         create_corps_commander = {
             # name = "Inubashiri Momiji"
             name = "犬走椛"
             portrait_path = "gfx/leaders/TEG/TEG_mom.dds"
-
-            traits = {  th_character  }
-            attack_skill = 7
-            defense_skill = 6
-            planning_skill = 3
-            logistics_skill = 1
-            
-            skill = 5
+            traits = {  th_character  war_hero career_officer harsh_leader th_trait_chongjizhuanjia }
+            attack_skill = 8
+            defense_skill = 9
+            planning_skill = 5
+            logistics_skill = 2
+            skill = 7
         }
     }
 
@@ -1677,13 +2016,13 @@ army_chinese_leader_inherit_146 = {
             name = "比那名居天子"
             # portrait_path = "gfx/leaders/.dds"
             portrait_path = "gfx/leaders/TES/TES_tes.dds"
-            traits = {  th_character  }
-            attack_skill = 5
-            defense_skill = 3
+            traits = {  th_character  th_trait_qianxianzhandou trait_reckless th_trait_chongjizhuanjia }
+            attack_skill = 10
+            defense_skill = 11
             planning_skill = 4
-            logistics_skill = 4
+            logistics_skill = 7
             
-            skill = 5
+            skill = 8
         }
     }
 
@@ -1699,13 +2038,13 @@ army_chinese_leader_inherit_146 = {
             # name = "Nagae Iku"
             name = "永江衣玖"
             portrait_path = "gfx/leaders/TES/TES_iku.dds"
-            traits = {  th_character  }
-            attack_skill = 4
-            defense_skill = 3
-            planning_skill = 4
-            logistics_skill = 3
+            traits = {  th_character th_trait_huolizhuanjia th_trait_jijiacaokongzhe   }
+            attack_skill = 3
+            defense_skill = 6
+            planning_skill = 5
+            logistics_skill = 10
             
-            skill = 5
+            skill = 6
         }
     }
 
@@ -1721,13 +2060,13 @@ army_chinese_leader_inherit_146 = {
             # name = "Reisen Udongein Inaba"
             name = "铃仙·优昙华院·因幡"
             portrait_path = "gfx/leaders/UDO/UDO_reisen.dds"
-            traits = {  th_character  }
-            attack_skill = 2
-            defense_skill = 4
-            planning_skill = 1
+            traits = {  th_character  trait_cautious th_trait_huoqiangzhuanjia career_officer }
+            attack_skill = 7
+            defense_skill = 7
+            planning_skill = 3
             logistics_skill = 7
             
-            skill = 5
+            skill = 6
         }
     }
 
@@ -1742,10 +2081,10 @@ army_chinese_leader_inherit_146 = {
         create_corps_commander = {
             name = "清兰"
             portrait_path = "gfx/leaders/RGO/RGO_ser.dds"
-            traits = {  th_character  }
+            traits = {  th_character  th_trait_tezhongzhuanjia  }
             attack_skill = 3
-            defense_skill = 3
-            planning_skill = 2
+            defense_skill = 4
+            planning_skill = 1
             logistics_skill = 3
             
             skill = 4
@@ -1753,13 +2092,13 @@ army_chinese_leader_inherit_146 = {
         create_corps_commander = {
             name = "铃瑚"
             portrait_path = "gfx/leaders/RGO/RGO_rgo.dds"
-            traits = {  th_character  }
-            attack_skill = 3
+            traits = {  th_character  th_trait_tezhongzhuanjia th_trait_yinyangshi }
+            attack_skill = 5
             defense_skill = 4
-            planning_skill = 4
-            logistics_skill = 2
+            planning_skill = 5
+            logistics_skill = 4
             
-            skill = 4
+            skill = 5
         }
     }
 
@@ -1775,13 +2114,13 @@ army_chinese_leader_inherit_146 = {
             # name = "Onozuka Komachi"
             name = "小野塚小町"
             portrait_path = "gfx/leaders/KMC/KMC_kmc.dds"
-            traits = {  th_character  }
-            attack_skill = 6
-            defense_skill = 4
+            traits = {  th_character  th_trait_chongjizhuanjia  }
+            attack_skill = 8
+            defense_skill = 7
             planning_skill = 2
-            logistics_skill = 5
+            logistics_skill = 7
             
-            skill = 5
+            skill = 7
         }
 
     }
@@ -1798,13 +2137,13 @@ army_chinese_leader_inherit_146 = {
             # name = "Wakasagihime"
             name = "若鹭姬"
             portrait_path = "gfx/leaders/WAK/WAK_wak.dds"
-            traits = {  th_character  }
-            attack_skill = 1
-            defense_skill = 4
-            planning_skill = 2
-            logistics_skill = 3
+            traits = {  th_character  trait_cautious  }
+            attack_skill = 3
+            defense_skill = 6
+            planning_skill = 4
+            logistics_skill = 4
             
-            skill = 3
+            skill = 5
         }
     }
 
@@ -1820,13 +2159,13 @@ army_chinese_leader_inherit_146 = {
             # name = "Sekibanki"
             name = "赤蛮奇"
             portrait_path = "gfx/leaders/SBK/SBK_sek.dds"
-            traits = {  th_character  }
+            traits = {  th_character  th_trait_huoqiangzhuanjia  }
             attack_skill = 3
-            defense_skill = 3
+            defense_skill = 6
             planning_skill = 3
-            logistics_skill = 4
+            logistics_skill = 5
             
-            skill = 4
+            skill = 5
         }
     }
 
@@ -1842,25 +2181,24 @@ army_chinese_leader_inherit_146 = {
             # name = "Yakumo Yukari"
             name = "八云紫"
             portrait_path = "gfx/leaders/YKR/YKR_ykr.dds"
-            traits = {  th_character  }
-            attack_skill = 3
-            defense_skill = 7
-            planning_skill = 8
-            logistics_skill = 8
-
-            skill = 8
+            traits = {  th_character  th_trait_moulvedashi th_trait_dayaoguai harsh_leader }
+            attack_skill = 0
+            defense_skill = 6
+            planning_skill = 7
+            logistics_skill = 7
+            skill = 12
+            
         }
         create_field_marshal = {
             # name = "Yakumo Ran"
             name = "八云蓝"
             portrait_path = "gfx/leaders/YKR/YKR_ykm.dds"
-            traits = {  th_character  }
-            attack_skill = 2
+            traits = {  th_character  th_trait_moulvedashi  }
+            attack_skill = 5
             defense_skill = 5
-            planning_skill = 7
-            logistics_skill = 6
-
-            skill = 6
+            planning_skill = 9
+            logistics_skill = 12
+            skill = 9
         }
     }
 
@@ -1876,39 +2214,34 @@ army_chinese_leader_inherit_146 = {
             # name = "Yasaka Kanako"  
             name = "八坂神奈子"
             portrait_path = "gfx/leaders/MRY/MRY_ysk.dds"
-            traits = {  th_character  }
-            attack_skill = 7
-            defense_skill = 4
-            planning_skill = 7
-            logistics_skill = 4
-            
-            skill = 7
+            traits = {  th_character  career_officer harsh_leader th_trait_huoqiangzhuanjia}
+            attack_skill = 9
+            defense_skill = 7
+            planning_skill = 15
+            logistics_skill = 10
+            skill = 11
+        }
+        create_corps_commander = {
+            # name = "Kochiya Sanae"
+            name = "东风谷早苗"  
+            portrait_path = "gfx/leaders/MRY/MRY_sanae.dds"
+            traits = {  th_character  media_personality th_trait_huoqiangzhuanjia }
+            attack_skill = 6
+            defense_skill = 6
+            planning_skill = 6
+            logistics_skill = 6
+            skill = 6
         }
         create_field_marshal = {
             # name = "Moriya Suwako"
             name = "泄矢诹访子"
             portrait_path = "gfx/leaders/MRY/MRY_mry.dds"
-            traits = {  th_character  }
-            attack_skill = 3
-            defense_skill = 6
-            planning_skill = 7
-            logistics_skill = 6
-            
-            skill = 7
-        }
-
-        create_corps_commander = {
-            # name = "Kochiya Sanae"
-            name = "东风谷早苗"  
-            portrait_path = "gfx/leaders/MRY/MRY_sanae.dds"
-            
-            traits = {  th_character  }
-            attack_skill = 3
-            defense_skill = 2
-            planning_skill = 2
-            logistics_skill = 5
-            
-            skill = 4
+            traits = {  th_character  th_trait_dayaoguai old_guard }
+            attack_skill = 1
+            defense_skill = 3
+            planning_skill = 5
+            logistics_skill = 9
+            skill = 11
         }
     }
 
@@ -1924,25 +2257,25 @@ army_chinese_leader_inherit_146 = {
             # name = "Kazami Yuka"
             name = "风见幽香"
             portrait_path = "gfx/leaders/YUK/YUK_yuk.dds"
-            traits = {  th_character  }
-            attack_skill = 6
+            traits = {  th_character  th_trait_qianxianzhandou th_trait_dayaoguai th_trait_chongjizhuanjia }
+            attack_skill = 8
             defense_skill = 8
             planning_skill = 1
-            logistics_skill = 6
+            logistics_skill = 3
             
-            skill = 7
+            skill = 11
         }
         create_corps_commander = {
             # name = "Eternity Larva"
             name = "爱塔妮缇·拉尔瓦"
             portrait_path = "gfx/leaders/YUK/YUK_larva.dds"
-            traits = {  th_character  }
+            traits = {  th_character  th_trait_yinyangshi  }
             attack_skill = 2
-            defense_skill = 2
-            planning_skill = 3
+            defense_skill = 3
+            planning_skill = 5
             logistics_skill = 3
             
-            skill = 3
+            skill = 4
         }
     }
 
@@ -1954,29 +2287,139 @@ army_chinese_leader_inherit_146 = {
             not = { has_country_flag = has_inherit_@PREV }
         }
         set_country_flag = has_inherit_@PREV
-        create_field_marshal = {
-            # name = "Saigyouji Yuyuko"
-            name = "西行寺幽幽子"
-            portrait_path = "gfx/leaders/YYK/YYK_yyk.dds"
-            traits = {  th_character  }
-            attack_skill = 4
-            defense_skill = 3
-            planning_skill = 7
-            logistics_skill = 6
-            
-            skill = 7
+        if = {
+            limit = {
+                PREV.PREV = {
+                    tag = YYK
+                }
+            }
+            create_field_marshal = {
+                # name = "Saigyouji Yuyuko"
+                name = "西行寺幽幽子"
+                portrait_path = "gfx/leaders/YYK/YYK_yyk.dds"
+                traits = {  th_character  th_trait_dayaoguai th_trait_moulvedashi th_trait_huoqiangzhuanjia }
+                attack_skill = 2
+                defense_skill = 0
+                planning_skill = 3
+                logistics_skill = 6
+                id = 43
+                skill = 10
+                
+            }
+            create_corps_commander = {
+                # name = "Konpaku Youmu"
+                name = "魂魄妖梦"
+                portrait_path = "gfx/leaders/YYK/YYK_youmu.dds"
+                traits = {  th_character  th_trait_chongjizhuanjia th_trait_qianxianzhandou  }
+                attack_skill = 10
+                defense_skill = 4
+                planning_skill = 3
+                logistics_skill = 7
+                id = 42
+                skill = 6
+            }
+            else = {
+                if = {
+                    limit = {
+                        PREV.PREV = {
+                            or = {
+                                tag = NG1
+                                tag = NG2
+                                tag = NG3
+                                tag = NG4
+                            }
+                            has_country_flag = YOM_is_here
+                        }
+                    }
+                    create_field_marshal = {
+                        # name = "Saigyouji Yuyuko"
+                        name = "西行寺幽幽子"
+                        portrait_path = "gfx/leaders/YYK/YYK_yyk.dds"
+                        traits = {  th_character  th_trait_dayaoguai th_trait_moulvedashi th_trait_huoqiangzhuanjia }
+                        attack_skill = 2
+                        defense_skill = 0
+                        planning_skill = 3
+                        logistics_skill = 6
+                        id = 45
+                        skill = 10
+                        
+                    }
+                    # create_corps_commander = {
+                    #     # name = "Konpaku Youmu"
+                    #     name = "魂魄妖梦"
+                    #     portrait_path = "gfx/leaders/YYK/YYK_youmu.dds"
+                    #     traits = {  th_character  th_trait_chongjizhuanjia th_trait_qianxianzhandou  }
+                    #     attack_skill = 10
+                    #     defense_skill = 4
+                    #     planning_skill = 3
+                    #     logistics_skill = 7
+                    #     id = 44
+                    #     skill = 6
+                    # }
+                    else = {
+                        create_field_marshal = {
+                            # name = "Saigyouji Yuyuko"
+                            name = "西行寺幽幽子"
+                            portrait_path = "gfx/leaders/YYK/YYK_yyk.dds"
+                            traits = {  th_character  th_trait_dayaoguai th_trait_moulvedashi th_trait_huoqiangzhuanjia }
+                            attack_skill = 2
+                            defense_skill = 0
+                            planning_skill = 3
+                            logistics_skill = 6
+                            skill = 10
+                            
+                        }
+                        if = {
+                            limit = {
+                                all_country = {
+                                    not = { has_country_flag = YOM_is_here }
+                                }
+                            }
+                            create_corps_commander = {
+                                # name = "Konpaku Youmu"
+                                name = "魂魄妖梦"
+                                portrait_path = "gfx/leaders/YYK/YYK_youmu.dds"
+                                traits = {  th_character  th_trait_chongjizhuanjia th_trait_qianxianzhandou  }
+                                attack_skill = 10
+                                defense_skill = 4
+                                planning_skill = 3
+                                logistics_skill = 7
+                                skill = 6
+                            }
+                        }
+                    }
+                }
+            }
         }
-        create_corps_commander = {
-            # name = "Konpaku Youmu"
-            name = "魂魄妖梦"
-            portrait_path = "gfx/leaders/YYK/YYK_youmu.dds"
-            traits = {  th_character  }
-            attack_skill = 4
-            defense_skill = 2
-            planning_skill = 1
-            logistics_skill = 5
-            
-            skill = 4
+    }
+
+    if = {
+        limit = {
+            PREV = {
+                has_country_flag = YOM_is_here
+            }
+            not = { has_country_flag = has_inherit_YOM_s }
+        }
+        set_country_flag = has_inherit_YOM_s
+        if = {
+            limit = {
+                PREV.PREV = {
+                    not = {
+                        tag = YYK
+                    }
+                }
+            }
+            create_corps_commander = {
+                # name = "Konpaku Youmu"
+                name = "魂魄妖梦"
+                portrait_path = "gfx/leaders/YYK/YYK_youmu.dds"
+                traits = {  th_character  th_trait_chongjizhuanjia th_trait_qianxianzhandou  }
+                attack_skill = 10
+                defense_skill = 4
+                planning_skill = 3
+                logistics_skill = 7
+                skill = 6
+            }
         }
     }
 
@@ -1999,39 +2442,35 @@ army_chinese_leader_inherit_146 = {
                 name = "爱丽丝·玛格特罗伊德"
                 portrait_path = "gfx/leaders/ALI/ALI_ali.dds"
                 id = 18
-                traits = {  th_character  }
-                attack_skill = 4
+                traits = {  th_character  th_trait_jijiacaokongzhe th_trait_yinyangshi war_hero }
+                attack_skill = 7
                 defense_skill = 4
-                planning_skill = 4
-                logistics_skill = 4
-                
-                skill = 5
+                planning_skill = 6
+                logistics_skill = 11
+                skill = 7
+            }
+            create_corps_commander = {
+                # name = "Alice Margatroid"
+                name = "蓬莱人偶"
+                portrait_path = "gfx/leaders/ALI/ALI_hor.dds"
+                id = 17
+                traits = {  th_character trait_cautious th_trait_huoqiangzhuanjia }
+                attack_skill = 1
+                defense_skill = 1
+                planning_skill = 2
+                logistics_skill = 2
+                skill = 2
             }
             create_corps_commander = {
                 # name = "Alice Margatroid"
                 name = "上海人偶"
                 portrait_path = "gfx/leaders/ALI/ALI_shh.dds"
                 id = 16
-                traits = {  th_character  }
+                traits = {  th_character  trait_reckless th_trait_chongjizhuanjia }
                 attack_skill = 3
                 defense_skill = 1
                 planning_skill = 1
                 logistics_skill = 1
-                
-                skill = 2
-            }
-
-            create_corps_commander = {
-                # name = "Alice Margatroid"
-                name = "蓬莱人偶"
-                portrait_path = "gfx/leaders/ALI/ALI_hor.dds"
-                id = 17
-                traits = {  th_character  }
-                attack_skill = 1
-                defense_skill = 1
-                planning_skill = 2
-                logistics_skill = 2
-                
                 skill = 2
             }
             else = {
@@ -2039,34 +2478,33 @@ army_chinese_leader_inherit_146 = {
                     # name = "Alice Margatroid"
                     name = "爱丽丝·玛格特罗伊德"
                     portrait_path = "gfx/leaders/ALI/ALI_ali.dds"
-                    traits = {  th_character  }
-                    attack_skill = 4
+                    traits = {  th_character  th_trait_jijiacaokongzhe th_trait_yinyangshi war_hero }
+                    attack_skill = 7
                     defense_skill = 4
-                    planning_skill = 4
-                    logistics_skill = 4
-                    
-                    skill = 5
-                }
-                create_corps_commander = {
-                    # name = "Alice Margatroid"
-                    name = "上海人偶"
-                    portrait_path = "gfx/leaders/ALI/ALI_shh.dds"
-                    traits = {  th_character  }
-                    attack_skill = 3
-                    defense_skill = 1
-                    planning_skill = 1
-                    logistics_skill = 1
-                    skill = 2
+                    planning_skill = 6
+                    logistics_skill = 11
+                    skill = 7
                 }
                 create_corps_commander = {
                     # name = "Alice Margatroid"
                     name = "蓬莱人偶"
                     portrait_path = "gfx/leaders/ALI/ALI_hor.dds"
-                    traits = {  th_character  }
+                    traits = {  th_character trait_cautious th_trait_huoqiangzhuanjia }
                     attack_skill = 1
                     defense_skill = 1
                     planning_skill = 2
                     logistics_skill = 2
+                    skill = 2
+                }
+                create_corps_commander = {
+                    # name = "Alice Margatroid"
+                    name = "上海人偶"
+                    portrait_path = "gfx/leaders/ALI/ALI_shh.dds"
+                    traits = {  th_character  trait_reckless th_trait_chongjizhuanjia }
+                    attack_skill = 3
+                    defense_skill = 1
+                    planning_skill = 1
+                    logistics_skill = 1
                     skill = 2
                 }
             }
@@ -2085,7 +2523,7 @@ army_chinese_leader_inherit_146 = {
             #name = "Ebisu Eika"
             name = "戎璎花"
             portrait_path = "gfx/leaders/URM/URM_ebs.dds"
-            traits = {  th_character  }
+            traits = {  th_character th_trait_chongjizhuanjia   }
             attack_skill = 1
             defense_skill = 4
             planning_skill = 1
@@ -2097,13 +2535,13 @@ army_chinese_leader_inherit_146 = {
             #name = "Ushizaki Urumi"
             name = "牛崎润美"
             portrait_path = "gfx/leaders/URM/URM_urm.dds"
-            traits = {  th_character  }
-            attack_skill = 2
+            traits = {  th_character th_trait_huoqiangzhuanjia th_trait_chongjizhuanjia  }
+            attack_skill = 3
             defense_skill = 6
-            planning_skill = 3
-            logistics_skill = 1
+            planning_skill = 4
+            logistics_skill = 6
             
-            skill = 4
+            skill = 5
         }
     }
 
@@ -2118,12 +2556,13 @@ army_chinese_leader_inherit_146 = {
         create_corps_commander = {
             # name = "Clownpiece"
             name = "克劳恩皮丝"
-            portrait_path = "gfx/leaders/CLO/CLO_clown.dds"
-            traits = {  th_character  }
+            portrait_path = "gfx/leaders/CIR/CIR_clown.dds"
+
+            traits = {  th_character  th_trait_huoqiangzhuanjia trait_reckless }
             attack_skill = 6
             defense_skill = 3
             planning_skill = 5
-            logistics_skill = 2
+            logistics_skill = 3
             
             skill = 5
         }
@@ -2139,15 +2578,15 @@ army_chinese_leader_inherit_146 = {
         set_country_flag = has_inherit_@PREV
         create_field_marshal = {
             # name = "Kitcho Yachie"
-            name = "吉吊八千慧"
+            name = "吉弔八千慧"
             portrait_path = "gfx/leaders/YCE/YCE_yce.dds"
-            traits = {  th_character  }
-            attack_skill = 2
+            traits = {  th_character  th_trait_moulvedashi  }
+            attack_skill = 3
             defense_skill = 3
-            planning_skill = 7
-            logistics_skill = 4
+            planning_skill = 10
+            logistics_skill = 10
             
-            skill = 5
+            skill = 8
         }
     }
 
@@ -2163,13 +2602,13 @@ army_chinese_leader_inherit_146 = {
             # name = "Kurokoma Saki"
             name = "骊驹早鬼"
             portrait_path = "gfx/leaders/SAK/SAK_sak.dds"
-            traits = {  th_character  }
-            attack_skill = 6
-            defense_skill = 3
+            traits = {  th_character  career_officer th_trait_chongjizhuanjia trait_reckless }
+            attack_skill = 8
+            defense_skill = 7
             planning_skill = 3
-            logistics_skill = 2
+            logistics_skill = 7
             
-            skill = 5
+            skill = 7
         }
     }
 
@@ -2181,30 +2620,31 @@ army_chinese_leader_inherit_146 = {
             not = { has_country_flag = has_inherit_@PREV }
         }
         set_country_flag = has_inherit_@PREV
-        create_field_marshal = {
-            # name = "Haniyasushin Keiki"
-            name = "埴安神袿姬"
-            portrait_path = "gfx/leaders/KEK/KEK_kek.dds"
-            traits = {  th_character  }
-            attack_skill = 4
-            defense_skill = 8
-            planning_skill = 4
-            logistics_skill = 7
-            
-            skill = 7
-        }
         create_corps_commander = {
             # name = "Joutougu Mayumi"
             name = "杖刀偶磨弓"
             portrait_path = "gfx/leaders/KEK/KEK_jtg.dds"
-            traits = {  th_character  }
+            traits = {  th_character  trait_cautious th_trait_chongjizhuanjia }
             attack_skill = 4
-            defense_skill = 6
-            planning_skill = 2
-            logistics_skill = 4
+            defense_skill = 8
+            planning_skill = 4
+            logistics_skill = 6
             
-            skill = 5
+            skill = 6
         }
+        create_field_marshal = {
+            # name = "Haniyasushin Keiki"
+            name = "埴安神袿姬"
+            portrait_path = "gfx/leaders/KEK/KEK_kek.dds"
+            traits = {  th_character  th_trait_dayaoguai th_trait_jijiacaokongzhe }
+            attack_skill = 2
+            defense_skill = 7
+            planning_skill = 4
+            logistics_skill = 9
+            
+            skill = 12
+        }
+        
     }
 
     if = {
@@ -2216,28 +2656,28 @@ army_chinese_leader_inherit_146 = {
         }
         set_country_flag = has_inherit_@PREV
         create_field_marshal = {
-            # name = "Hecatia Lapislazuli"
-            name = "赫卡提亚·拉碧斯拉祖利"
-            portrait_path = "gfx/leaders/HCT/HCT_hct.dds"
-            traits = {  th_character  }
-            attack_skill = 7
-            defense_skill = 9
-            planning_skill = 5
-            logistics_skill = 8
-            
-            skill = 9
-        }
-        create_field_marshal = {
             # name = "Junko"
             name = "纯狐"
             portrait_path = "gfx/leaders/HCT/HCT_juk.dds"
-            traits = {  th_character  }
-            attack_skill = 9
-            defense_skill = 9
-            planning_skill = 7
-            logistics_skill = 2
+            traits = {  th_character  th_trait_dayaoguai th_trait_huoqiangzhuanjia th_trait_qianxianzhandou }
+            attack_skill = 7
+            defense_skill = 1
+            planning_skill = 9
+            logistics_skill = 7
             
-            skill = 9
+            skill = 13
+        }
+        create_field_marshal = {
+            # name = "Hecatia Lapislazuli"
+            name = "赫卡提亚·拉碧斯拉祖利"
+            portrait_path = "gfx/leaders/HCT/HCT_hct.dds"
+            traits = {  th_character  th_trait_dayaoguai  }
+            attack_skill = 4
+            defense_skill = 8
+            planning_skill = 8
+            logistics_skill = 6
+            
+            skill = 13
         }
     }
 
@@ -2254,10 +2694,10 @@ army_chinese_leader_inherit_146 = {
             name = "易者"
             desc = ""
             portrait_path = "gfx/leaders/HGH/HGH_esh.dds"
-            traits = {  th_character  }
-            attack_skill = 1
-            defense_skill = 2
-            planning_skill = 5
+            traits = {  th_character  th_trait_moulvedashi  }
+            attack_skill = 2
+            defense_skill = 3
+            planning_skill = 2
             logistics_skill = 3
             
             skill = 4
@@ -2276,7 +2716,7 @@ army_chinese_leader_inherit_146 = {
             #name = "Motoori Kosuzu"
             name = "本居小铃"
             portrait_path = "gfx/leaders/HUM/HUM_kosuzu.dds"
-            traits = {  th_character  }
+            traits = {  th_character  media_personality  }
             attack_skill = 1
             defense_skill = 1
             planning_skill = 1
@@ -2297,12 +2737,12 @@ army_chinese_leader_inherit_146 = {
             #name = "Okunoda Miyoi"
             name = "奥野田美宵"
             portrait_path = "gfx/leaders/HUM/HUM_may.dds"
-            traits = {  th_character  }
+            traits = {  th_character media_personality   }
             attack_skill = 1
-            defense_skill = 1
-            planning_skill = 3
+            defense_skill = 3
+            planning_skill = 5
             logistics_skill = 4
-            skill = 3
+            skill = 4
         }
     }
 }

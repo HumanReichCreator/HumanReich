@@ -241,6 +241,7 @@ SC2_infl_category = {
 		complete_effect = {
 			add_to_variable = { ROOT.SC2_infl_value = 5 }
 			cal_FPA_infl = yes
+			custom_effect_tooltip = SC2_add_infl_tt
 		}
 		remove_effect = {
 			
@@ -248,11 +249,161 @@ SC2_infl_category = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				add = 30
+				add = 10
 				SC2_need_pay_attention = yes
 			}
 		}
 	}
+	SC2_large_give_infl = {
+		visible = {
+			ROOT = {
+				SC2_can_infl = yes
+			}
+		}
+		available = {
+			
+		}
+		modifier = {
+		}
+		cost = 55
+		days_remove = 40
+		days_re_enable = 3
+		fire_only_once = no
+		complete_effect = {
+			add_to_variable = { ROOT.SC2_infl_value = 10 }
+			cal_FPA_infl = yes
+			custom_effect_tooltip = SC2_add_infl_big_tt
+		}
+		remove_effect = {
+			
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				add = 3
+				SC2_need_pay_attention = yes
+			}
+		}
+	}
+	SC2_propaganda_infl = {
+		visible = {
+			ROOT = {
+				SC2_can_infl = yes
+				or = {
+					has_government = neworder
+					has_government = oldorder
+				}
+			}
+		}
+		available = {
+			
+		}
+		modifier = {
+			political_power_gain = -0.05
+		}
+		cost = 50
+		days_remove = 30
+		days_re_enable = 15
+		fire_only_once = no
+		complete_effect = {
+			add_to_variable = { ROOT.SC2_infl_value = 20 }
+			cal_FPA_infl = yes
+			custom_effect_tooltip = SC2_add_infl_big_tt
+		}
+		remove_effect = {
+			if  = {
+				limit = { has_government = neworder }
+				SC2 = { 
+					add_popularity = {
+						ideology = neworder
+						popularity = 0.05
+					}
+			 	}
+			}
+			if  = {
+				limit = { has_government = var:num_deployed_planes_with_type@torpedo_cruiser }
+				SC2 = { 
+					add_popularity = {
+						ideology = var:num_deployed_planes_with_type@torpedo_cruiser
+						popularity = 0.05
+					}
+			 	}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	SC2_mili_thread_infl_SGS = {
+		visible = {
+			ROOT = {
+				SC2_can_infl = yes
+				tag = SGS
+				not = {
+					or = {
+						has_government = guli
+						has_government = qinwai
+					}
+				}
+			}
+		}
+		available = {
+			divisions_in_border_state = {
+				type = infantry
+				size > 24
+				state = 77
+				border_state = 64
+			}
+		}
+		modifier = {
+			political_power_gain = -0.05
+		}
+		cost = 75
+		days_remove = 20
+		days_re_enable = 15
+		fire_only_once = no
+		complete_effect = {
+			add_to_variable = { ROOT.SC2_infl_value = 15 }
+			custom_effect_tooltip = SC2_add_infl_big_tt
+			cal_FPA_infl = yes
+		}
+		remove_effect = {
+			custom_effect_tooltip = SC2_add_infl_mili_tt
+			if = {
+				limit = { 
+					strength_ratio = {
+						tag = SC2
+						ratio > 2
+					}
+				}
+				add_to_variable = { ROOT.SC2_infl_value = 10 }
+			}
+			if = {
+				limit = { 
+					strength_ratio = {
+						tag = LIL
+						ratio > 1
+					}
+				}
+				add_to_variable = { ROOT.SC2_infl_value = 10 }
+			}
+			if = {
+				limit = { 
+					strength_ratio = {
+						tag = LIL
+						ratio > 1.5
+					}
+				}
+				add_to_variable = { ROOT.SC2_infl_value = 10 }
+			}
+
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+
 	SC2_debug_give_infl = {
 		visible = {
 			ROOT = {
@@ -649,8 +800,8 @@ lake_deci_category = {
 		allowed = { always = no  }
 		available = {
 			or = {
-				has_equipment = { support_equipment_1 > 1000 }
-				has_equipment = { support_equipment_2 > 1000 }
+				has_equipment = { support_equipment_1 > 3000 }
+				has_equipment = { support_equipment_2 > 3000 }
 			}# 任务目标
 		}
 		activation = {

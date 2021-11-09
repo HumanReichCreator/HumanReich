@@ -211,6 +211,35 @@ ideas = {
 				defense_bonus_against = -0.3
 			}
 		}
+
+		SGS_big_fairy_war_idea = {
+			picture = generic_constitutional_guarantees
+			modifier = {
+				attrition = -0.1
+				out_of_supply_factor = 0.2
+			}
+		}
+
+		SGS_prepare_for_LIL_idea = {
+			picture = generic_constitutional_guarantees
+			modifier = {
+				army_speed_factor = 0.25
+				org_loss_when_moving = -0.1
+			}
+		}
+
+		SGS_prepare_for_CIR_idea = {
+			picture = generic_constitutional_guarantees
+			modifier = {
+				winter_attrition = -0.5
+			}
+			targeted_modifier = {
+				tag = CIR
+				attack_bonus_against = 0.5
+			}
+		}
+
+
 		SGS_aim_SCA_idea = {
 			picture = generic_constitutional_guarantees
 			targeted_modifier = {
@@ -942,6 +971,7 @@ ideas = {
 				political_power_gain = 0.01
 			}
 		}
+
 		
 
 	}

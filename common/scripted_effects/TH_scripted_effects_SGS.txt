@@ -444,6 +444,10 @@ SGS_init_BML_deci = {
 	}
 	round_variable = global.sgs_equip_num_temp
 	set_variable = {global.sgs_equip_total_temp = 0}
+    set_country_flag = {
+		flag = sgs_black_market_proctect_cd
+		days = 15
+	}
     
 }
 SGS_clear_all_BLM_decis = {

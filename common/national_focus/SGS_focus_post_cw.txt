@@ -1623,7 +1623,6 @@ focus = {
 		x = 36
 		y = 7
 		completion_reward = {
-			
 			add_ideas = SGS_starlight_factory_idea
 			SGS_dove_rise5 = yes
 		}
@@ -1641,6 +1640,7 @@ focus = {
 		completion_reward = {
 			#
 			add_war_support = 0.1
+			claim_all_FA_area = yes
 		}
 
 	}
@@ -1656,6 +1656,7 @@ focus = {
 		completion_reward = {
 			#条件：控制并拥有红魔馆，SCA不存在，效果：加政治点，解锁SCA地区的造核
 			add_political_power = 50
+			add_to_variable = { ROOT.SC2_infl_value = 40 }
 			set_country_flag =  FIR_AREA_SCA_MAKE_CORE
 			custom_effect_tooltip = SCA_core_make_tooltup
 		}
@@ -1673,6 +1674,13 @@ focus = {
 		completion_reward = {
 			#条件：控制并拥有琪露诺领土，CIR不存在，效果：加政治点 ？
 			add_political_power = 60
+			if = {
+				limit = {
+					has_idea = SGS_big_fairy_war_idea
+					has_completed_focus = SGS_occupy_LIL_focus
+				}
+				remove_ideas = { SGS_big_fairy_war_idea }
+			}
 		}
 	}
 	focus = {
@@ -1687,6 +1695,13 @@ focus = {
 		completion_reward = {
 			#条件：控制并拥有莉莉白领土，LIL不存在，效果：加政治点 ？
 			add_political_power = 30
+			if = {
+				limit = {
+					has_idea = SGS_big_fairy_war_idea
+					has_completed_focus = SGS_occupy_CIR_focus
+				}
+				remove_ideas = { SGS_big_fairy_war_idea }
+			}
 		}
 
 	}
@@ -1897,7 +1912,27 @@ focus = {
 		relative_position_id = SGS_no_peace_diplo_focus
 		completion_reward = {
 			#根据军力强度和是否干翻红魔馆以及政党支持度确定基本影响力。弄个新闻
+			set_variable = { ROOT.SC2_infl_value = 20 }
+			if = {
+				limit = { 
+					or = {
+						neworder > 0.5
+						oldorder > 0.5
+					}
+				}
+				add_to_variable = { ROOT.SC2_infl_value = 10 }
+			}
+			if = {
+				limit = { 
+					strength_ratio = {
+						tag = SC2
+						ratio > 2
+					}
+				}
+				add_to_variable = { ROOT.SC2_infl_value = 5 }
+			}
 
+			
 		}
 	}
 
@@ -2202,7 +2237,7 @@ focus = {
 	focus = {
 		id = SGS_prepare_final_war_focus
 		icon = GFX_focus_generic_military_mission
-		cost = 10.00
+		cost = 12
 		prerequisite = {
 			focus = SGS_fight_others_focus
 		}
@@ -2210,7 +2245,11 @@ focus = {
 		y = 7
 		completion_reward = {
 			#针对妖精++，减少补给消耗
-			
+			add_command_power = 30
+			swap_ideas = {
+				remove_idea = SGS_admit_attack_fairy_idea
+				add_idea = SGS_big_fairy_war_idea
+			}
 		}
 	}
 	
@@ -2341,7 +2380,7 @@ focus = {
 	focus = {
 		id = SGS_prepare_LIL_focus
 		icon = GFX_goal_generic_political_pressure
-		cost = 10.00
+		cost = 6
 		prerequisite = {
 			focus = SGS_divide_them_focus
 		}
@@ -2349,6 +2388,22 @@ focus = {
 		y = 7
 		completion_reward = {
 			#莉莉++，加速和移动士气损失，特别是骑兵,分家失败则锁死
+			add_ideas = { SGS_prepare_for_LIL_idea }
+			division_template = {
+				name = "幻草原机动队"
+				regiments = {
+					melee_cavalry = { x = 0 y = 0 }
+					melee_cavalry = { x = 0 y = 1 }
+					melee_cavalry = { x = 0 y = 2 }
+					melee_cavalry = { x = 0 y = 3 }
+					melee_cavalry = { x = 0 y = 4 }
+					melee_cavalry = { x = 1 y = 0 }
+					melee_cavalry = { x = 1 y = 1 }
+					melee_cavalry = { x = 1 y = 2 }
+				}
+				support = {
+				}
+			}
 		}
 
 	}
@@ -2382,7 +2437,7 @@ focus = {
 	focus = {
 		id = SGS_prepare_CIR_focus
 		icon = GFX_goal_generic_small_arms
-		cost = 10.00
+		cost = 6
 		prerequisite = {
 			focus = SGS_divide_them_focus
 		}
@@ -2390,6 +2445,8 @@ focus = {
 		y = 7
 		completion_reward = {
 			#琪露诺++，,分家失败则锁死
+			add_ideas = { SGS_prepare_for_CIR_idea }
+			army_experience = 40
 		}
 	}
 	focus = {
@@ -2422,7 +2479,7 @@ focus = {
 	focus = {
 		id = SGS_big_fair_war_focus
 		icon = GFX_focus_generic_air_defense
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = SGS_prepare_final_war_focus
 		}
