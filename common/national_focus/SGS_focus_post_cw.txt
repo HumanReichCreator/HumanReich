@@ -1656,7 +1656,12 @@ focus = {
 		completion_reward = {
 			#条件：控制并拥有红魔馆，SCA不存在，效果：加政治点，解锁SCA地区的造核
 			add_political_power = 50
-			add_to_variable = { ROOT.SC2_infl_value = 40 }
+			if = { 
+				limit = {
+					ROOT = { has_variable = SC2_infl_value }
+				}
+				add_to_variable = { ROOT.SC2_infl_value = 40 }
+			  }
 			set_country_flag =  FIR_AREA_SCA_MAKE_CORE
 			custom_effect_tooltip = SCA_core_make_tooltup
 		}
@@ -1931,7 +1936,12 @@ focus = {
 				}
 				add_to_variable = { ROOT.SC2_infl_value = 5 }
 			}
-
+			if = {
+				limit = {
+					has_completed_focus = SGS_occupy_SCA_focus
+				}
+				add_to_variable = { ROOT.SC2_infl_value = 50 }
+			}
 			
 		}
 	}
@@ -2056,6 +2066,9 @@ focus = {
 			focus = SGS_ambitious_to_all_fairy_focus
 			focus = SGS_aim_SCA_focus
 		}
+		available = {
+			has_war  = no
+		}
 		bypass = {
 			SCA = {
 				or ={
@@ -2163,6 +2176,9 @@ focus = {
 		prerequisite = {
 			focus = SGS_ambitious_to_all_fairy_focus
 			focus = SGS_aim_SCA_focus
+		}
+		available = {
+			has_war  = no
 		}
 		x = 50
 		y = 4
@@ -2460,6 +2476,9 @@ focus = {
 				}
 			}
 		}
+		available = {
+			has_war  = no
+		}
 		completion_reward = {
 			#
 			declare_war_on = {
@@ -2511,6 +2530,9 @@ focus = {
 				}
 			}
 		}
+		available = {
+			has_war  = no
+		}
 		completion_reward = {
 			#
 			declare_war_on = {
@@ -2529,6 +2551,9 @@ focus = {
 		}
 		bypass = {
 			CIR_and_LIL_all_gone = yes
+		}
+		available = {
+			has_war  = no
 		}
 		x = 45
 		y = 8

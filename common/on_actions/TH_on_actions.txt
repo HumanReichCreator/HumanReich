@@ -720,7 +720,10 @@ on_startup = {
 		}
 
 		#获取妖精区域flag
-		FA_get_states = yes
+		SGS = {
+			FA_get_states = yes
+		}
+		
 	}
 }
 

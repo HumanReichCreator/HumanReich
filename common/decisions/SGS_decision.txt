@@ -2237,7 +2237,7 @@ SGS_research_team_category = {
 			#SGS_has_at_least_one_reseach_team_ongoing = yes
 		}
 		modifier = {
-			consumer_goods_factor = 0.05
+			consumer_goods_factor = 0.025
 		}
 		cost = 30
 		days_remove = 45
@@ -2262,7 +2262,7 @@ SGS_research_team_category = {
 			#SGS_has_at_least_one_reseach_team_ongoing = yes
 		}
 		modifier = {
-			political_power_gain = 0.4
+			political_power_gain = -0.2
 		}
 		cost = 20
 		days_remove = 45

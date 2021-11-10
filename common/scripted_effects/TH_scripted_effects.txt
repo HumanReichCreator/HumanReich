@@ -135,6 +135,31 @@ country_value_calculator_and_manpower_gainer = {
     set_variable = { all_value_plus_manpower = manpower_value}
     add_to_variable = { all_value_plus_manpower = all_value}
 
+    CO_auto_core = yes
+
+    if = {
+        limit = {
+            is_subject = yes
+            not = {
+                has_country_flag = LS_start_lowing
+            }
+        }
+        PREV = {
+            OVERLORD = {
+                save_event_target_as = annexed_overlord
+            }
+            every_owned_state = {
+                limit = {
+                    is_core_of = PREV
+                    not = {
+                        has_state_flag = will_be_annexed_by_@event_target:annexed_overlord
+                    }
+                }
+                set_state_flag =  will_be_annexed_by_@event_target:annexed_overlord
+            }
+        }
+    }
+
     if = {
         limit = {
             has_war = no

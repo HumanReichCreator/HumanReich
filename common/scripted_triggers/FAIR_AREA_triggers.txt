@@ -16,6 +16,7 @@ SC2_can_infl = {
     not = {
       tag = SC2
     }
+    not = { has_completed_focus = SGS_try_to_control_SC2_focus }
   } 
 }
 
