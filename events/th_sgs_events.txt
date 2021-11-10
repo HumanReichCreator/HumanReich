@@ -313,7 +313,7 @@ country_event = {
 		if = {
 			limit = {
 				check_variable = {
-					sgs_uprise > 100
+					sgs_uprise > 90
 				}
 			}
 			set_country_flag = SGS_civil_war_from_war_promise
@@ -1972,7 +1972,7 @@ country_event = {
 			has_country_flag = sgs_events_interrupted
 		}
 		check_variable = {
-			sgs_uprise > 80
+			sgs_uprise > 70
 		}
 		has_decision = SGS_dannmakugokko_deci
 	}
@@ -3075,7 +3075,7 @@ country_event = {
 			if = {
 				limit = {
 					check_variable = {
-						sgs_uprise > 80
+						sgs_uprise > 75
 					}
 				}
 				random_list = {
@@ -5013,7 +5013,7 @@ country_event = {
 						local_manpower = 1.5
 					}
 				}
-				add_manpower = 1000
+				add_manpower = 5000
 			}
 		}
 		if = {
@@ -5026,7 +5026,7 @@ country_event = {
 						local_manpower = 1.5
 					}
 				}
-				add_manpower = 1000
+				add_manpower = 5000
 			}
 		}
 		if = {
@@ -5039,7 +5039,7 @@ country_event = {
 						local_manpower = 1.5
 					}
 				}
-				add_manpower = 1000
+				add_manpower = 5000
 			}
 		}
 		if = {
