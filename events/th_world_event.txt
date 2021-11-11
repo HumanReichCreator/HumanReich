@@ -102,7 +102,6 @@ country_event = { ###黑色金耀日
 		hidden_effect = {
 			news_event = { id = world_event.1003  days = 2 }
 		}
-		dismantle_faction = yes
 		ai_chance = {
 			base = 100
 		}
@@ -119,8 +118,6 @@ news_event = { #黑色金耀日新闻
 	
 	option = { 
 		name = world_event.1003.1
-		trigger = {
-			tag = FROM
-		}
+		
 	}
 }

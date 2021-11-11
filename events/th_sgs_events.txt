@@ -12253,6 +12253,49 @@ country_event = {
 		}
 	}
 }
+news_event = { #黑色金耀日新闻
+	id = sgs.400100
+	title = sgs.400100.t
+	desc = sgs.400100.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+	
+	option = { 
+		name = sgs.400100.1
+		trigger = {
+			tag = SGS
+		}
+	}
+	option = { 
+		name = sgs.400100.2
+		trigger = {
+			tag = SC2
+		}
+	}
+	option = { 
+		name = sgs.400100.3
+		trigger = {
+			tag = SCA
+			tag = LIL
+			tag = CIR
+		}
+	}
+	option = { 
+		name = sgs.400100.4
+		trigger = {
+			not = {
+				tag = SCA
+				tag = LIL
+				tag = CIR
+				tag = SC2
+				tag = SGS
+			}
+		}
+	}
+
+}
 country_event = {
 	#要抢人
 	id = sgs.4001
