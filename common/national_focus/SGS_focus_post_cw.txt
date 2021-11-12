@@ -370,6 +370,13 @@ focus_tree = {
 				remove_idea = SGS_post_cw_mic_idea
 				add_idea = SGS_baf_worker_mic_idea
 			}
+			if = {
+				limit = { has_idea = SGS_battle_fairy_talent_pacified_idea }
+				swap_ideas = {
+					remove_idea = SGS_battle_fairy_talent_pacified_idea
+					add_idea = SGS_battle_fairy_talent_idea
+				}
+			}
 			custom_effect_tooltip = SGS_RT_unlcok_more_tt
 		}
 		x = 9
