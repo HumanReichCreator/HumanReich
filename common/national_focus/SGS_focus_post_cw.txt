@@ -2147,6 +2147,8 @@ focus = {
 			custom_effect_tooltip = SGS_try_to_control_SC2_tt
 			hidden_effect = {
 				set_temp_variable = { two_times_FPA = SC2.SC2_FPA_infl_value }
+				set_variable = { SGS.divide_success_p = SGS.SC2_infl_value }
+				divide_variable = { SGS.divide_success_p = 10 }
 				multiply_temp_variable = {two_times_FPA = 1.5}
 				if = {
 					limit = { #影响力极高，高过FPA的1.5倍
@@ -2164,6 +2166,7 @@ focus = {
 						}
 					}
 				}
+				
 			}
 		}
 
@@ -2395,7 +2398,9 @@ focus = {
 		
 		bypass = {
 			or  = {
-				#分家了
+				CIR = {
+					not = { is_in_faction_with = LIL }
+				}
 				CIR = {
 					or ={
 					  exists = no
@@ -2417,7 +2422,15 @@ focus = {
 		completion_reward = {
 			#出事件，CIR和LIL会不会分家。如果已经分家的话则可直接跳过，分家失败的话自动点亮左边
 			add_political_power = -50
-			
+			if = {
+				limit = {
+					LIL = { is_ai = yes }
+				}
+				LIL = { country_event = { id = sgs.4004 } }
+				else = {
+					CIR = { country_event = { id = sgs.4004 } }
+				}
+			}
 		}
 
 	}
@@ -2427,6 +2440,11 @@ focus = {
 		cost = 6
 		prerequisite = {
 			focus = SGS_divide_them_focus
+		}
+		available = {
+			CIR = {
+				not = { is_in_faction_with = LIL }
+			}
 		}
 		x = 49
 		y = 7
@@ -2494,6 +2512,11 @@ focus = {
 		id = SGS_prepare_CIR_focus
 		icon = GFX_goal_generic_small_arms
 		cost = 6
+		available = {
+			CIR = {
+				not = { is_in_faction_with = LIL }
+			}
+		}
 		bypass = {
 			CIR = {
 				or ={

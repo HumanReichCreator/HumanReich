@@ -12253,7 +12253,7 @@ country_event = {
 		}
 	}
 }
-news_event = { #黑色金耀日新闻
+news_event = { #关注SC2新闻
 	id = sgs.400100
 	title = sgs.400100.t
 	desc = sgs.400100.d
@@ -12326,6 +12326,7 @@ country_event = {
 		SGS = {
 			country_event = { id = sgs.40012 }
 		}
+		add_to_variable = { SGS.divide_success_p = 30 }
 
 		ai_chance = {
 			base = var:SGS.SC2_infl_value
@@ -12568,6 +12569,7 @@ country_event = {
 				LIL = {country_event = { id = sgs.40023 } }
 			}
 		}
+		add_to_variable = { SGS.divide_success_p = 5 }
 		
 		ai_chance = {
 			base = 35
@@ -12793,6 +12795,7 @@ country_event = {
 	option = {
 		#
 		name = sgs.40033.1
+		add_to_variable = { SGS.divide_success_p = 20 }
 		ai_chance = {
 			base = 35
 		}
@@ -12815,9 +12818,131 @@ country_event = {
 	option = {
 		#
 		name = sgs.40034.1
+		add_to_variable = { SGS.divide_success_p = 10 }
 		ai_chance = {
 			base = 35
 		}
+	}
+}
+
+country_event = {
+	# SGS分化同盟
+	id = sgs.4004
+	title = sgs.4004.t
+	desc = sgs.4004.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		or = {
+			tag = LIL
+			tag = CIR
+		}
+		
+	}
+	immediate = {
+		if = {
+			limit = { 
+				strength_ratio = {
+					tag = SGS
+					ratio < 1
+				}
+			}
+			add_to_variable = { SGS.divide_success_p = 10 }
+		}
+		if = {
+			limit = { 
+				strength_ratio = {
+					tag = SGS
+					ratio < 0.7
+				}
+			}
+			add_to_variable = { SGS.divide_success_p = 10 }
+		}
+		if = {
+			limit = { 
+				strength_ratio = {
+					tag = SGS
+					ratio < 0.5
+				}
+			}
+			add_to_variable = { SGS.divide_success_p = 10 }
+		}
+
+	}
+	option = {
+		#同意
+		name = sgs.4004.1
+		
+		add_war_support = -0.1
+		every_other_country = {
+			limit = {
+				is_in_faction_with = ROOT
+			}
+			country_event = { id = sgs.40040 }
+		}
+		SGS = { 
+			country_event = { id = sgs.40041 } 
+		}
+		dismantle_faction = yes
+		ai_chance = { base = var:SGS.divide_success_p }
+	}
+	option = {
+		#不同意
+		name = sgs.4004.2
+		add_political_power = 30
+		add_war_support = 0.1
+		SGS = { country_event = { id = sgs.40042 } }
+		ai_chance = { base = 50 }
+	}
+}
+
+country_event = {
+	# 有人退出妖精共同和平协约-通知
+	id = sgs.40040
+	title = sgs.40040.t
+	desc = sgs.40040.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		
+	}
+	option = {
+		#
+		name = sgs.40040.1
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 分化成功-SGS通知
+	id = sgs.40041
+	title = sgs.40041.t
+	desc = sgs.40041.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40041.1
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	# 分化失败-SGS通知
+	id = sgs.40042
+	title = sgs.40042.t
+	desc = sgs.40042.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = sgs
+	}
+	option = {
+		#
+		name = sgs.40042.1
+		complete_national_focus = SGS_fight_others_focus
+		ai_chance = { base = 1 }
 	}
 }
 
@@ -15119,7 +15244,7 @@ country_event = {
 			}
 		}
 		add_tech_bonus = {
-			category = industry
+			category = industrys
 			uses = 1
 			bonus = 0.25
 		}
