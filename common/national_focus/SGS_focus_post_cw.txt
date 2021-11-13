@@ -2233,6 +2233,21 @@ focus = {
 		available = {
 			has_war = no
 		}
+		bypass = {
+			has_war = no
+			122 = {
+				owner = {
+					not = { tag = sgs }
+					not = { is_puppet_of = sgs }
+				}
+			}
+			85 = {
+				owner = {
+					not = { tag = sgs }
+					not = { is_puppet_of = sgs }
+				}
+			}
+		}
 		x = 48
 		y = 5
 		completion_reward = {
@@ -2618,7 +2633,15 @@ focus = {
 		x = 0
 		y = 1
 		relative_position_id = SGS_integrate_CIR_focus
-
+		completion_reward = {
+			if = {
+				limit = {
+					SGS_sunnystar_post_cw_gov = yes
+					has_government = neworder
+				}
+			}
+			news_event = { id = world_event.superevent.1  days = 2 }
+		}
 	}
 }
 

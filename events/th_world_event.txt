@@ -1,5 +1,5 @@
 ﻿add_namespace = world_event
-
+add_namespace = world_event.superevent
 country_event = { ###人里证交所
 	id = world_event.1
 	title = world_event.1.t
@@ -119,5 +119,26 @@ news_event = { #黑色金耀日新闻
 	option = { 
 		name = world_event.1003.1
 		
+	}
+}
+
+news_event = { #战后桑尼线
+	id = world_event.superevent.1
+	title = world_event.superevent.1.t
+	desc = world_event.superevent.1.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+	
+	option = { 
+		name = world_event.superevent.1.1
+		SE_center = yes
+		hidden_effect = {
+			SE_center = yes
+			#add this line if your flavor text should be center aligned(poetry lyric etc.)
+			set_variable = { global.se_display = 0006 }
+			play_song = SGS_reuni_FA_sunny_cw
+		}
 	}
 }

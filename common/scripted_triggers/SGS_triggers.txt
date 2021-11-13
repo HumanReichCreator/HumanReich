@@ -1,3 +1,28 @@
+SGS_doing_focus_not_be_bother = {
+	or = {
+		and = {
+			has_country_flag = SGS_select_fairy_shrine
+			not = {has_completed_focus = SGS_fairy_shrine_focus}
+		}
+		and = {
+			has_country_flag = SGS_select_fairy_diplo
+			not = {has_completed_focus = SGS_trade_with_other_fairy_focus}
+		}
+		and = {
+			has_country_flag = SGS_select_IN
+			not= {
+				or = {
+					has_country_flag = SGS_IN_failed
+					has_completed_focus = SGS_trade_about_industry_focus
+				}
+			}
+
+		}
+		has_war = yes
+
+	}
+}
+
 SGS_peaceful_transit_gov = {
 	AND = {
 		has_government = neworder
