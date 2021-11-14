@@ -7,7 +7,7 @@ country_event = {
 	fire_only_once = no
 	is_triggered_only = no
 	immediate = {
-
+		add_stability = -0.03
 	}
 	mean_time_to_happen = {
 		days = 120
@@ -626,13 +626,13 @@ country_event = {
 	}
 	trigger = {
 		tag = SGS
+		SGS_doing_focus_not_be_bother = no
 		or = {
 			and = {
 				date > 146.9.1
 				check_variable = { sgs_uprise > 80 }
 			}
 			date > 146.11.1
-			SGS_doing_focus_not_be_bother = no
 		}
 
 		not = {
@@ -866,6 +866,9 @@ country_event = {
 		}
 		tag = SGS
 
+	}
+	immediate = {
+		add_stability = -0.03
 	}
 	option = {
 		#不管
@@ -12878,6 +12881,7 @@ country_event = {
 		name = sgs.4004.1
 		
 		add_war_support = -0.1
+		
 		every_other_country = {
 			limit = {
 				is_in_faction_with = ROOT
@@ -12887,7 +12891,7 @@ country_event = {
 		SGS = { 
 			country_event = { id = sgs.40041 } 
 		}
-		dismantle_faction = yes
+		leave_faction = yes
 		ai_chance = { base = var:SGS.divide_success_p }
 	}
 	option = {
@@ -14053,9 +14057,9 @@ country_event = {
 }
 news_event = {
 	# 琪露诺加入新闻
-	id = sgs.40340
-	title = sgs.40340.t
-	desc = sgs.40340.d
+	id = sgs.40440
+	title = sgs.40440.t
+	desc = sgs.40440.d
 	is_triggered_only = yes
 	major = yes
 	trigger = {
@@ -14063,7 +14067,7 @@ news_event = {
 	}
 	option = {
 		#
-		name = sgs.40340.1
+		name = sgs.40440.1
 		ai_chance = { base = 1 }
 	}
 }
@@ -14299,6 +14303,7 @@ country_event = {
 		}
 		set_country_flag = SGS_CIR_forcely_surpress
 		country_event = { id = sgs.405  days = 240}
+		clr_country_flag = sgs_all_integrated_peacelly
 		ai_chance = { base = 1 }
 	}
 }
@@ -14630,7 +14635,7 @@ country_event = {
 		name = sgs.40621.1
 		set_country_flag = SGS_expel_remi_violently_flg
 		#弄个决议准备几天，然后出个事件和新闻，然后是红魔一家出逃
-		activate_decision = debuff_use_one_CIC_No2_day9
+		activate_decision = debuff_prepare_fairy_funeral
 		ai_chance = { base = 1 }
 	}
 }
@@ -15240,17 +15245,17 @@ country_event = {
 		name = sgs.407.1
 		add_political_power = -50
 		122 = {
-			add_extra_state_shared_building_slots = 2
+			add_extra_state_shared_building_slots = 4
 			add_building_construction = {
-				level = 2
+				level = 4
 				instant_build = yes
 				type = industrial_complex
 			}
 		}
 		add_tech_bonus = {
 			category = industrys
-			uses = 1
-			bonus = 0.25
+			uses = 3
+			bonus = 0.35
 		}
 		ai_chance = { base = 1 }
 	}
@@ -15410,7 +15415,7 @@ country_event = {
 	}
 	option = {
 		#撵走
-		name = sgs.408.3
+		name = sgs.408.4
 		add_political_power = 50
 		every_owned_state = {
 			limit = {is_core_of = LIL}

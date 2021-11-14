@@ -223,7 +223,7 @@ ideas = {
 		SGS_prepare_for_LIL_idea = {
 			picture = generic_constitutional_guarantees
 			modifier = {
-				army_speed_factor = 0.25
+				army_speed_factor = 0.15
 				org_loss_when_moving = -0.1
 			}
 		}
@@ -455,6 +455,7 @@ ideas = {
 			picture = generic_war_preparation
 			modifier = {
 				consumer_goods_factor = -0.04
+				political_power_gain = -0.02
 			}
 		}
 		SCA_smuggle_comsume_to_SGS_idea = {

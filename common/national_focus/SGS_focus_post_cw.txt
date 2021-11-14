@@ -2481,7 +2481,10 @@ focus = {
 		}
 		completion_reward = {
 			#莉莉++，加速和移动士气损失，特别是骑兵,分家失败则锁死
-			add_ideas = { SGS_prepare_for_LIL_idea }
+			add_timed_idea = {
+				idea = SGS_prepare_for_LIL_idea
+				days = 360
+			}
 			division_template = {
 				name = "幻草原机动队"
 				regiments = {

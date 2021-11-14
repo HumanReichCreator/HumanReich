@@ -11,6 +11,7 @@ SGS_init_hawk_dove_value = {
     set_variable = {sgs_dove_infl = 50}
 }
 SGS_hawk_dove_buff_add = {
+    add_political_power = 100
     remove_ideas = SGS_dove_60_idea
     remove_ideas = SGS_dove_70_idea
     remove_ideas = SGS_dove_80_idea
