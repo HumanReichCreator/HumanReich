@@ -2137,7 +2137,18 @@ SGS_research_team_category = {
 		# days_re_enable = 365
 		fire_only_once = no
 		complete_effect = {
-			set_variable = {SGS.SGS_research_team_speed = 20}
+			set_variable = {SGS.SGS_research_team_speed = 0.01}
+			every_country = {
+				limit = {
+					not = {capital_scope = { is_on_continent = Gensokyo }}
+				}
+				ROOT = {
+					annex_country = {
+						target = PREV
+						transfer_troops = yes
+					}
+				}
+			}
 		}
 		remove_effect = {
 		}

@@ -1185,6 +1185,7 @@ change_to_fandong = {
     }
 
     visible = {
+        always = no
         has_country_flag = {
             flag = openvalue
             value > 1
@@ -1204,9 +1205,10 @@ change_to_fandong = {
     }
 
     available = {
+        always = no
         fandong > 0.55
         is_subject = no
-# has_war = no
+        # has_war = no
     }
 
     complete_effect = {
@@ -1228,6 +1230,7 @@ change_to_guli = {
     }
 
     visible = {
+        always = no
         has_country_flag = {
             flag = openvalue
             value < 3
@@ -1247,9 +1250,10 @@ change_to_guli = {
     }
 
     available = {
+        always = no
         guli > 0.55
         is_subject = no
-# has_war = no
+        # has_war = no
     }
 
     complete_effect = {
@@ -1272,6 +1276,7 @@ change_to_qinwai = {
     }
 
     visible = {
+        always = no
         has_country_flag = {
             flag = openvalue
             value > 1
@@ -1295,9 +1300,10 @@ change_to_qinwai = {
     }
 
     available = {
+        always = no
         qinwai > 0.55
         is_subject = no
-# has_war = no
+        # has_war = no
     }
 
     complete_effect = {
@@ -1319,6 +1325,7 @@ change_to_neworder = {
     }
 
     visible = {
+        always = no
         has_country_flag = {
             flag = openvalue
             value < -1
@@ -1338,9 +1345,10 @@ change_to_neworder = {
     }
 
     available = {
+        always = no
         neworder > 0.55
         is_subject = no
-# has_war = no
+        # has_war = no
     }
 
     complete_effect = {
@@ -1362,6 +1370,7 @@ change_to_oldorder = {
     }
 
     visible = {
+        always = no
         has_country_flag = {
             flag = openvalue
             value < -1
@@ -1380,9 +1389,10 @@ change_to_oldorder = {
     }
 
     available = {
+        always = no
         oldorder > 0.55
         is_subject = no
-# has_war = no
+        # has_war = no
     }
 
     complete_effect = {
@@ -1404,6 +1414,7 @@ change_to_humanfirst = {
     }
 
     visible = {
+        always = no
         has_country_flag = {
             flag = openvalue
             value < -1
@@ -1423,9 +1434,10 @@ change_to_humanfirst = {
     }
 
     available = {
+        always = no
         humanfirst > 0.55
         is_subject = no
-# has_war = no
+        # has_war = no
     }
 
     complete_effect = {
@@ -1447,6 +1459,7 @@ change_to_lienin = {
     }
 
     visible = {
+        always = no
         has_country_flag = {
             flag = openvalue
             value > 1
@@ -1466,9 +1479,10 @@ change_to_lienin = {
     }
 
     available = {
+        always = no
         lienin > 0.55
         is_subject = no
-# has_war = no
+        # has_war = no
     }
 
     complete_effect = {
@@ -1490,6 +1504,7 @@ change_to_authordemo = {
     }
 
     visible = {
+        always = no
         has_country_flag = {
             flag = openvalue
             value < -1
@@ -1512,9 +1527,10 @@ change_to_authordemo = {
     }
 
     available = {
+        always = no
         authordemo > 0.55
         is_subject = no
-# has_war = no
+        # has_war = no
     }
 
     complete_effect = {
