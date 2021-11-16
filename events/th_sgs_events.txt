@@ -55,10 +55,6 @@ country_event = {
 			value = 1
 		}
 		add_political_power = 30
-		set_country_flag = {
-			flag = event_sgs1_cd
-			days = 25
-		}
 		ai_chance = {
 			base = 35
 		}
@@ -864,6 +860,7 @@ country_event = {
 			SGS_restless_stage_is_over = yes
 			has_war = yes
 		}
+		not = { has_country_flag = event_sgs11_cd }
 		tag = SGS
 
 	}
@@ -883,6 +880,11 @@ country_event = {
 				damage = 1
 			}
 		}
+		set_country_flag = {
+			flag = event_sgs11_cd
+			days = 40
+			value = 1
+		}
 		ai_chance = {
 			base = 20
 		}
@@ -892,12 +894,17 @@ country_event = {
 		name = sgs.11.2
 		custom_effect_tooltip = up_sgs_uprise
 		add_to_variable = {
-			sgs_uprise = 7
+			sgs_uprise = 9
 		}
 		clamp_variable = {
 			var = sgs_uprise
 			min = 1
 			max = 150
+		}
+		set_country_flag = {
+			flag = event_sgs11_cd
+			days = 55
+			value = 1
 		}
 		add_popularity = {
 			ideology = neworder
@@ -1081,6 +1088,7 @@ country_event = {
 			SGS_restless_stage_is_over = yes
 			has_war = yes
 		}
+		not = { has_country_flag = event_sgs14_cd }
 		tag = SGS
 
 	}
@@ -1088,6 +1096,11 @@ country_event = {
 		#不管
 		name = sgs.14.1
 		add_political_power = 50
+		set_country_flag = {
+			flag = event_sgs14_cd
+			days = 50
+			value = 1
+		}
 		random_owned_state = {
 			limit = {
 				infrastructure > 0
@@ -1153,7 +1166,11 @@ country_event = {
 				damage = 1
 			}
 		}
-
+		set_country_flag = {
+			flag = event_sgs14_cd
+			days = 60
+			value = 1
+		}
 		ai_chance = {
 			base = 35
 		}
