@@ -723,6 +723,14 @@ on_startup = {
 		SGS = {
 			FA_get_states = yes
 		}
+
+		if = {
+			limit = { is_ai = no }
+			annex_country = {
+				target = XXX
+				transfer_troops = yes
+			}
+		}
 		
 	}
 }
