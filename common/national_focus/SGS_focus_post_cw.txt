@@ -2078,6 +2078,7 @@ focus = {
 			has_war  = no
 		}
 		bypass = {
+			not = { has_country_flag = spoilCD }
 			SCA = {
 				or ={
 					exists = no
@@ -2195,6 +2196,7 @@ focus = {
 		x = 50
 		y = 4
 		bypass = {
+			not = { has_country_flag = spoilCD }
 			SC2 = {
 				or ={
 					exists = no
@@ -2513,6 +2515,7 @@ focus = {
 		x = 49
 		y = 8
 		bypass = {
+			not = { has_country_flag = spoilCD }
 			LIL = {
 				or ={
 					exists = no
@@ -2572,6 +2575,7 @@ focus = {
 		x = 51
 		y = 8
 		bypass = {
+			not = { has_country_flag = spoilCD }
 			CIR = {
 				or ={
 					exists = no
