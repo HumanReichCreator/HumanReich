@@ -27,7 +27,7 @@ ideas = {
 			}
 		}
 		SGS_battle_fairy_elite_army = {
-			picture = can_send_in_the_zombies
+			picture = chi_army_corruption3
 			modifier = {
 				war_support_weekly = 0.01
 				army_attack_factor = 0.15
@@ -39,7 +39,7 @@ ideas = {
 			}
 		}
 		SGS_battle_fairy_elite_army_loose = {
-			picture = can_send_in_the_zombies
+			picture = MEX_politicised_army
 			modifier = {
 				army_attack_factor = 0.1
 				army_speed_factor = 0.07
@@ -49,7 +49,7 @@ ideas = {
 			}
 		}
 		SGS_BaF_civ_mix_troop_idea = {
-			picture = can_send_in_the_zombies
+			picture = eng_imperial_conscription
 			modifier = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
@@ -68,7 +68,7 @@ ideas = {
 			}
 		}
 		SGS_battle_fairy_restlessness_at_war_idea = {
-			picture = chi_war_of_resistance3
+			picture = chi_war_of_resistance
 			modifier = {
 				experience_gain_army = 0.06
 			}
@@ -82,14 +82,14 @@ ideas = {
 			}
 		}
 		SGS_post_cw_mic_idea = {
-			picture = generic_local_self_management
+			picture = man_five_year_plan_industry
 			modifier = {
 				industrial_capacity_factory = -0.05
 				production_speed_buildings_factor = -0.05
 			}
 		}
 		SGS_baf_worker_mic_idea = {
-			picture = generic_local_self_management
+			picture = generic_production_bonus
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.05
 			}
@@ -213,7 +213,7 @@ ideas = {
 		}
 
 		SGS_big_fairy_war_idea = {
-			picture = generic_constitutional_guarantees
+			picture = extensive_conscription
 			modifier = {
 				attrition = -0.1
 				out_of_supply_factor = -0.2
@@ -221,7 +221,7 @@ ideas = {
 		}
 
 		SGS_prepare_for_LIL_idea = {
-			picture = generic_constitutional_guarantees
+			picture = idea_porsche
 			modifier = {
 				army_speed_factor = 0.15
 				org_loss_when_moving = -0.1
@@ -229,7 +229,7 @@ ideas = {
 		}
 
 		SGS_prepare_for_CIR_idea = {
-			picture = generic_constitutional_guarantees
+			picture = cir9
 			modifier = {
 				winter_attrition = -0.5
 			}
@@ -241,7 +241,7 @@ ideas = {
 
 
 		SGS_aim_SCA_idea = {
-			picture = generic_constitutional_guarantees
+			picture = FRA_scw_intervention_nationalists_focus
 			targeted_modifier = {
 				tag = SCA
 				attack_bonus_against = 0.15
@@ -252,7 +252,7 @@ ideas = {
 			}
 		}
 		SGS_aim_all_fairy_idea = {
-			picture = generic_constitutional_guarantees
+			picture = hol_gateway_to_europe
 			modifier = {
 				max_planning_factor = 0.4
 				planning_speed = 0.2
@@ -261,7 +261,7 @@ ideas = {
 		}
 
 		SGS_get_intel_from_NTR_idea = {
-			picture = generic_constitutional_guarantees
+			picture = generic_spy_intel
 			targeted_modifier = {
 				tag = NTR
 				attack_bonus_against = 0.2
@@ -269,7 +269,7 @@ ideas = {
 			}
 		}
 		SGS_get_trained_get_strong_idea = {
-			picture = chi_war_of_resistance3
+			picture = generic_volunteer_expedition_bonus
 			modifier = {
 				experience_gain_army_factor = 0.1
 				army_org_regain = 0.06
@@ -325,27 +325,27 @@ ideas = {
 			}
 		}
 		SGS_science_bureau_idea = {
-			picture = jap_supremacy_of_will
+			picture = jap_supremacy_of_technology
 			modifier = {
 				research_speed_factor = 0.3
 				political_power_gain = 0.05
 			}
 		}
 		SGS_science_battle_team = {
-			picture = jap_supremacy_of_will
+			picture = jap_supremacy_of_technology
 			modifier = {
 				research_speed_factor = 0.1
 				stability_weekly = 0.02
 			}
 		}
 		SGS_basic_edu_idea = {
-			picture = jap_supremacy_of_will
+			picture = generic_army_war_college
 			modifier = {
 				research_speed_factor = 0.02
 			}
 		}
 		SGS_basic_edu_2_idea = {
-			picture = jap_supremacy_of_will
+			picture = generic_army_war_college
 			modifier = {
 				research_speed_factor = 0.04
 			}
@@ -381,7 +381,7 @@ ideas = {
 			}
 		}
 		SGS_easy_product_support_idea = {
-			picture = generic_war_preparation
+			picture = generic_intel_bonus
 			equipment_bonus = {
 				gun_a = {
 					build_cost_ic = -0.25
@@ -401,7 +401,7 @@ ideas = {
 			}
 		}
 		SGS_easy_product_artillery_idea = {
-			picture = generic_war_preparation
+			picture = generic_artillery_regiments
 			equipment_bonus = {
 				gun_a = {
 					build_cost_ic = -0.25
@@ -446,20 +446,20 @@ ideas = {
 			}
 		}
 		SGS_buy_comsume_idea = {
-			picture = generic_war_preparation
+			picture = civilian_economy
 			modifier = {
 				consumer_goods_factor = -0.03
 			}
 		}
 		SGS_smuggle_comsume_from_SCA_idea = {
-			picture = generic_war_preparation
+			picture = generic_goods_red_bonus
 			modifier = {
 				consumer_goods_factor = -0.04
 				political_power_gain = -0.02
 			}
 		}
 		SCA_smuggle_comsume_to_SGS_idea = {
-			picture = generic_war_preparation
+			picture = generic_goods_red_bonus
 			modifier = {
 				stability_factor = -0.10 
 				consumer_goods_factor = 0.02
@@ -616,14 +616,14 @@ ideas = {
 			}
 		}
 		SGS_industy_focus_idea = {
-			picture = generic_local_self_management
+			picture = generic_central_management
 			modifier = {
 				industrial_capacity_factory = 0.03
 				production_factory_start_efficiency_factor = 0.05
 			}
 		}
 		SGS_industy_hawk_plan_idea = {
-			picture = generic_local_self_management
+			picture = generic_central_management
 			modifier = {
 				industrial_capacity_factory = 0.08
 				production_factory_start_efficiency_factor = 0.05
@@ -631,7 +631,7 @@ ideas = {
 			}
 		}
 		SGS_industy_dove_plan_idea = {
-			picture = generic_local_self_management
+			picture = generic_central_management
 			modifier = {
 				industrial_capacity_factory = 0.03
 				production_factory_start_efficiency_factor = 0.05
@@ -640,7 +640,7 @@ ideas = {
 			}
 		}
 		SGS_flexible_factory_idea = {
-			picture = generic_local_self_management
+			picture = generic_flexible_foreign_policy
 			modifier = {
 				conversion_cost_civ_to_mil_factor = 0.5
 				conversion_cost_mil_to_civ_factor = 0.5	
@@ -648,7 +648,7 @@ ideas = {
 			}
 		}
 		SGS_flexible_factory_mil_idea = {
-			picture = generic_local_self_management
+			picture = generic_fortify_the_borders
 			modifier = {
 				conversion_cost_civ_to_mil_factor = 0.7
 				conversion_cost_mil_to_civ_factor = 0.5
@@ -660,7 +660,7 @@ ideas = {
 			}
 		}
 		SGS_flexible_factory_civ_idea = {
-			picture = generic_local_self_management
+			picture = generic_exploit_mines
 			modifier = {
 				conversion_cost_civ_to_mil_factor = 0.5
 				conversion_cost_mil_to_civ_factor = 0.7
@@ -672,21 +672,21 @@ ideas = {
 			}
 		}
 		SGS_planning_product_idea = {
-			picture = generic_local_self_management
+			picture = tur_etatism
 			modifier = {
 				industrial_capacity_factory = 0.05
 				line_change_production_efficiency_factor = 0.1
 			}
 		}
 		SGS_exploring_product_idea = {
-			picture = generic_local_self_management
+			picture = SOV_scientist_defect
 			modifier = {
 				production_factory_max_efficiency_factor = 0.1
 				production_factory_start_efficiency_factor = 0.1
 			}
 		}
 		SGS_planning_product_moonlight_idea = {
-			picture = generic_local_self_management 
+			picture = tur_varlik_vergisi 
 			modifier = {
 				local_resources_factor = 0.1
 				production_factory_efficiency_gain_factor = 0.1
@@ -695,7 +695,7 @@ ideas = {
 			}
 		}
 		SGS_exploring_product_moonlight_idea = {
-			picture = generic_local_self_management
+			picture = tur_varlik_vergisi
 			modifier = {
 				local_resources_factor = 0.1
 				production_factory_efficiency_gain_factor = 0.1
@@ -704,7 +704,7 @@ ideas = {
 			}
 		}
 		SGS_flexible_factory_mil_moonlight_idea = {
-			picture = generic_local_self_management
+			picture = tur_varlik_vergisi
 			modifier = {
 				local_resources_factor = 0.1
 				production_factory_efficiency_gain_factor = 0.1
@@ -718,7 +718,7 @@ ideas = {
 			}
 		}
 		SGS_flexible_factory_civ_moonlight_idea = {
-			picture = generic_local_self_management
+			picture = tur_varlik_vergisi
 			modifier = {
 				local_resources_factor = 0.1
 				production_factory_efficiency_gain_factor = 0.1
@@ -732,14 +732,14 @@ ideas = {
 			}
 		}
 		SGS_starlight_factory_idea = {
-			picture = generic_local_self_management
+			picture = soviet_german_friendship
 			modifier = {
 				global_building_slots_factor = 0.5
 				production_speed_infrastructure_factor = 0.05
 			}
 		}
 		SGS_sunlightlight_factory_idea = {
-			picture = generic_local_self_management
+			picture = jap_the_unthinkable_option
 			modifier = {
 				global_building_slots_factor = -0.1
 				industrial_capacity_factory = 0.1
@@ -837,8 +837,14 @@ ideas = {
 				stability_factor = -0.2
 			}
 		}
+		SGS_hawk_dove_50_idea = {
+			picture = jap_interservice_rivalry_balanced
+			modifier = {
+				political_power_gain = 0.05
+			}
+		}
 		SGS_lake_road_political_idea = {
-			picture = jap_interservice_rivalry_army_dominant
+			picture = generic_coastal_navy
 			modifier = {
 				political_power_factor = 0.1
 				occupation_cost = -0.05
@@ -846,14 +852,14 @@ ideas = {
 			}
 		}
 		SGS_lake_road_economy_idea = {
-			picture = jap_interservice_rivalry_army_dominant
+			picture = generic_coastal_navy
 			modifier = {
 				consumer_goods_factor = -0.03
 				production_speed_industrial_complex_factor = -0.1
 			}
 		}
 		SC2_defence_SGS_idea = {
-			picture = generic_constitutional_guarantees
+			picture = chi_war_of_resistance3
 			targeted_modifier = {
 				tag = SGS
 				attack_bonus_against = 0.15
@@ -868,14 +874,14 @@ ideas = {
 			}
 		}
 		SGS_CIR_army_uprise_idea = {
-			picture = generic_constitutional_guarantees
+			picture = cir9
 			modifier = {
 				occupation_cost = 0.1
 				political_power_gain = -0.1
 			}
 		}
 		SGS_CIR_and_army_uprise_idea = {
-			picture = generic_constitutional_guarantees
+			picture = cir9
 			modifier = {
 				occupation_cost = 0.3
 				political_power_gain = -0.15
@@ -883,14 +889,14 @@ ideas = {
 			}
 		}
 		SGS_CIR_group_tactics_idea = {
-			picture = generic_constitutional_guarantees
+			picture = prc_low_popular_support3
 			modifier = {
 				supply_consumption_factor = -0.1
 				army_core_defence_factor = 0.1
 			}
 		}
 		SGS_CIR_army_catched_idea = {
-			picture = generic_constitutional_guarantees
+			picture = saf_history_of_segregation
 			modifier = {
 				political_power_gain = -0.05
 				stability_factor = 0.1
@@ -898,7 +904,7 @@ ideas = {
 		}
 
 		SGS_CIR_army_worker_idea = {
-			picture = generic_constitutional_guarantees
+			picture = ger_rebuild_the_nation
 			modifier = {
 				industrial_capacity_factory = 0.05
 				production_factory_efficiency_gain_factor = 0.03
@@ -906,14 +912,14 @@ ideas = {
 		}
 
 		SGS_CIR_army_police_idea = {
-			picture = generic_constitutional_guarantees
+			picture = generic_secret_police
 			modifier = {
 				political_power_gain = 0.1
 				stability_weekly = 0.05
 			}
 		}
 		SGS_CIR_new_leader_soft_idea = {
-			picture = generic_constitutional_guarantees
+			picture = chi_chinese_unity
 			modifier = {
 				political_power_gain = -0.1
 				guli_drift = 0.01
@@ -921,7 +927,7 @@ ideas = {
 			}
 		}
 		SGS_CIR_new_leader_strict_idea = {
-			picture = generic_constitutional_guarantees
+			picture = jap_intervene_in_china
 			modifier = {
 				political_power_gain = -0.05
 				neworder_drift = 0.01
@@ -930,7 +936,7 @@ ideas = {
 		}
 
 		SGS_CIR_new_leader_forcely_surpress_idea = {
-			picture = generic_constitutional_guarantees
+			picture = jap_ichi_go
 			modifier = {
 				political_power_gain = -0.2
 				stability_weekly = -0.01
@@ -940,7 +946,7 @@ ideas = {
 		}
 
 		SGS_free_market_to_SCA_idea = {
-			picture = generic_war_preparation
+			picture = generic_agrarian_reform
 			modifier = {
 				consumer_goods_factor = -0.06
 				political_power_gain = -0.1
@@ -948,7 +954,7 @@ ideas = {
 			}
 		}
 		SGS_good_free_market_to_SCA_idea = {
-			picture = generic_war_preparation
+			picture = generic_political_support
 			modifier = {
 				consumer_goods_factor = -0.1
 				political_power_gain = -0.05
@@ -957,14 +963,14 @@ ideas = {
 			}
 		}
 		SGS_SCA_company_play_yourselves_idea = {
-			picture = generic_war_preparation
+			picture = received_attache
 			modifier = {
 				consumer_goods_factor = -0.08
 				political_power_gain = 0.02
 			}
 		}
 		SGS_SCA_mix_dessert_idea = {
-			picture = generic_war_preparation
+			picture = generic_goods_red_bonus
 			modifier = {
 				trade_opinion_factor = 0.15
 				industrial_capacity_factory = 0.1

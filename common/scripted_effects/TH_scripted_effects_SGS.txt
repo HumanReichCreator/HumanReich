@@ -22,6 +22,7 @@ SGS_hawk_dove_buff_add = {
     remove_ideas = SGS_hawk_80_idea
     remove_ideas = SGS_hawk_90_idea
     remove_ideas = SGS_hawk_100_idea
+    remove_ideas = SGS_hawk_dove_50_idea
     if = {
         limit = {
             check_variable = {sgs_dove_infl > 59}
@@ -89,6 +90,13 @@ SGS_hawk_dove_buff_add = {
             check_variable = {sgs_hawk_infl > 99}
         }
         add_ideas =  SGS_hawk_100_idea
+    }
+    if = {
+        limit = {
+            check_variable = {sgs_hawk_infl < 60}
+            check_variable = {sgs_dove_infl < 60}
+        }
+        add_ideas =  SGS_hawk_90_idea
     }
 
 }

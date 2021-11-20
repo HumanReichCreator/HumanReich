@@ -4,10 +4,22 @@ bookmarks = {
 		desc = "DAWN_DESCS"
 		date = 146.1.1.7
 		picture = "GFX_Scenario146"
-		default_country = "SCA"
+		default_country = "SGS"
 		default = no
 		
-
+		"SGS"={
+			history = "SGS_DAWN_DESC"		#sca
+			ideas={ 
+				SGS_battle_fairy_talent_idea
+				SGS_battle_fairy_restlessness_idea
+				SGS_hurry_mic_idea
+			}	
+            focuses = {
+            	SGS_battle_fariy_issue_focus
+            	SGS_fight_SCA_focus
+            	SGS_final_solution_focus
+			}			
+		}
 		"HUM"={
 			history = "HUM_DAWN_DESC"
 			ideas = { 
@@ -26,15 +38,15 @@ bookmarks = {
 
 			}
 		}
-		"HKR"={
-			history = "HKR_DAWN_DESC"
-			ideas = { 
-
-			}
-			focuses = {
-
-			}
-		}
+		#"HKR"={
+		#	history = "HKR_DAWN_DESC"
+		#	ideas = { 
+			#
+			#}
+			#focuses = {
+			#
+			#}
+		#}
 		"TEG"={
 			history = "TEG_DAWN_DESC"
 		#	ideology = gexin
@@ -167,20 +179,7 @@ bookmarks = {
             	
 			}			
 		}
-		"SGS"={
-		    minor = yes
-			history = "SGS_DAWN_DESC"		#sca
-			ideas={ 
-				SGS_battle_fairy_talent_idea
-				SGS_battle_fairy_restlessness_idea
-				SGS_hurry_mic_idea
-			}	
-            focuses = {
-            	SGS_battle_fariy_issue_focus
-            	SGS_fight_SCA_focus
-            	SGS_final_solution_focus
-			}			
-		}
+		
 
 		
 		
