@@ -4713,6 +4713,9 @@ country_event = {
 			has_country_flag = sgs_events_interrupted
 		}
 		has_decision = SGS_accept_now_deci
+		not = {
+			has_country_flag = event_sgs148_cd
+		}
 	}
 	mean_time_to_happen = {
 		days = 50
@@ -4726,6 +4729,11 @@ country_event = {
 		}
 	}
 	immediate = {
+		set_country_flag = {
+			flag = event_sgs148_cd
+			days = 15
+			value = 1
+		}
 	}
 	option = {
 		#策划游戏

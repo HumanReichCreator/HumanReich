@@ -580,8 +580,11 @@ SGS_IN_category = {
 		}
 		# This mission is only allowed for Poland. Other countries will not be able to see it or activate it.
 		available = {
-			# Available here means as much as goal because:
-			has_completed_focus = SGS_surpress_bad_BaF_focus			# we can only finish this mission if we control state 64 (Berlin)
+			or = {
+				has_completed_focus = SGS_surpress_bad_BaF_focus	
+				has_country_flag = SGS_civil_war_start
+			}
+			
 		}
 		activation = {
 			# The mission appears and starts counting down under these circumstances:
@@ -593,7 +596,7 @@ SGS_IN_category = {
 		days_mission_timeout = 100		# How many days before the mission fails?
 		timeout_effect = {
 			# What happens when we fail the mission?
-			add_political_power = -50
+			add_political_power = -100
 			complete_national_focus = SGS_surpress_bad_BaF_focus			# Lose 50 PP
 		}
 		complete_effect = {

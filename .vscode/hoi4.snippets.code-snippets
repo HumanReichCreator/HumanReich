@@ -74,14 +74,14 @@
         ]
     },
     "SimpleLoc": {
-        "scope": "yaml,hoi4,paradox,plaintext,lua",
+        "scope": "yaml,hoi4,paradox,plaintext,lua,YAML",
         "prefix": "_loc_simple",
         "body": [
             "${tag}:0 \"content\"",
         ]
     },
     "DescLoc": {
-        "scope": "yaml,hoi4,paradox,plaintext,lua",
+        "scope": "yaml,hoi4,paradox,plaintext,lua,YAML",
         "prefix": "_loc_with_desc",
         "body": [
             "${tag}:0 \"content\"",
@@ -89,7 +89,7 @@
         ]
     },
     "EventLoc": {
-        "scope": "yaml,hoi4,paradox,plaintext,lua",
+        "scope": "yaml,hoi4,paradox,plaintext,lua,YAML",
         "prefix": "_loc_of_event",
         "body": [
             "${Namespace}.${Id}.t:0 \"title\"",

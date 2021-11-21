@@ -2131,23 +2131,7 @@ focus = {
 
 		}
 		available = {
-			or = {
-				custom_trigger_tooltip = {
-					tooltip = SGS_hawk_enough_infl_to_SC2
-					check_variable = {
-						SGS.SC2_infl_value > SC2.SC2_FPA_infl_value
-					}
-					any_country = {
-						has_country_flag = FA_in_FPA_flg
-					}
-				}
-				not = {
-					SC2 = {
-						has_country_flag = FA_in_FPA_flg
-					}
-				}
-
-			}
+			has_country_flag = can_control_SC2_flag
 		}
 		x = 52
 		y = 3

@@ -403,6 +403,46 @@ SC2_infl_category = {
 		}
 	}
 
+	SC2_SGS_prepare_to_control_deci = {
+		visible = {
+			ROOT = {
+				SC2_can_infl = yes
+			}
+			has_completed_focus = SGS_infl_SC2_focus
+		}
+		available = {
+			or = {
+				custom_trigger_tooltip = {
+					tooltip = SGS_hawk_enough_infl_to_SC2
+					check_variable = {
+						SGS.SC2_infl_value > SC2.SC2_FPA_infl_value
+					}
+					any_country = {
+						has_country_flag = FA_in_FPA_flg
+					}
+				}
+				not = {
+					SC2 = {
+						has_country_flag = FA_in_FPA_flg
+					}
+				}
+
+			}
+
+		}
+		cost = 1
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = can_control_SC2_flag
+			custom_effect_tooltip = can_control_SC2_flag_tt
+		}
+		remove_effect = {
+			
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
 
 	SC2_debug_give_infl = {
 		visible = {
