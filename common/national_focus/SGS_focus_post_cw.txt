@@ -121,6 +121,9 @@ focus_tree = {
 		}
 		x = 4
 		y = 3
+		ai_will_do = {
+			factor = 100
+		}
 	}
 	focus = {
 		id = SGS_find_suuport_equip_focus
@@ -228,6 +231,9 @@ focus_tree = {
 					}
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 80
 		}
 		x = 8
 		y = 3
@@ -1137,6 +1143,9 @@ focus = {
 			}
 			add_ideas = SGS_industy_focus_idea
 		}
+		ai_will_do = {
+			factor = 30
+		}
 	}
 	focus = {
 		id = SGS_ind_plan_hawk
@@ -1169,7 +1178,9 @@ focus = {
 		}
 		x = 33
 		y = 1
-
+		ai_will_do = {
+			factor = var:sgs_hawk_infl
+		}
 	}
 	focus = {
 		id = SGS_enforce_picking_up #开发资源
@@ -1304,6 +1315,9 @@ focus = {
 				remove_idea = SGS_industy_focus_idea
 				add_idea = SGS_industy_dove_plan_idea
 			}
+		}
+		ai_will_do = {
+			factor = var:sgs_dove_infl
 		}
 	}
 	focus = {
@@ -1952,6 +1966,13 @@ focus = {
 			}
 			
 		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				num_of_military_factories < 10
+				factor = 0
+			}
+		}
 	}
 
 	focus = {
@@ -1993,6 +2014,13 @@ focus = {
 			swap_ideas = {
 				remove_idea = SGS_donot_attack_fairy_idea
 				add_idea = SGS_admit_attack_fairy_idea
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				num_of_military_factories < 10
+				factor = 0
 			}
 		}
 	}
