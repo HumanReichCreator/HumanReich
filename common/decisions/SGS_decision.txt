@@ -795,7 +795,7 @@ SGS_equipment_issue_category = {
 			clr_country_flag = SGS_BLM_pay_prompt_repo_2_flag
 		}
 		ai_will_do = {
-			factor = 0
+			factor = 2
 		}
 	}
 	SGS_black_marketer_find_garbage = {
@@ -2095,6 +2095,10 @@ SGS_hawk_dove_category = {
 		}
 		ai_will_do = {
 			factor = 30
+			modifier = {
+				SGS_dove_have_supporter = yes
+				factor = 1.5
+			}
 		}
 	}
 	SGS_supprot_dove_deci = {
@@ -2117,6 +2121,10 @@ SGS_hawk_dove_category = {
 		}
 		ai_will_do = {
 			factor = 30
+			modifier = {
+				SGS_hawk_have_supporter = yes
+				factor = 1.5
+			}
 		}
 	}
 }
@@ -2175,6 +2183,9 @@ SGS_research_team_category = {
 			add_ideas = {SGS_basic_edu_idea}
 			set_country_flag = SGS_RT_improve_basic_edu_1_over
 		}
+		ai_will_do = {
+			factor = 200
+		}
 	}
 	SGS_RT_expan_research_team_two = {
 		visible = {
@@ -2217,6 +2228,9 @@ SGS_research_team_category = {
 			}
 			set_country_flag = SGS_RT_improve_basic_edu_2_over
 		}
+		ai_will_do = {
+			factor = 100
+		}
 	}
 	SGS_RT_expan_research_team_three = {
 		visible = {
@@ -2239,6 +2253,9 @@ SGS_research_team_category = {
 		remove_effect = {
 			set_variable = {SGS_research_team_three = 0}
 			SGS_RT_close_concentrate = yes
+		}
+		ai_will_do = {
+			factor = 100
 		}
 	}
 	SGS_RT_improve_teams_life = {
@@ -2264,6 +2281,8 @@ SGS_research_team_category = {
 		remove_effect = {
 			clr_country_flag = SGS_RT_reseacher_better_life
 			SGS_RT_update_research_speed = yes
+		}ai_will_do = {
+			factor = 10
 		}
 	}
 	SGS_RT_improve_teams_political_statue = {
@@ -2305,6 +2324,9 @@ SGS_research_team_category = {
 		fire_only_once = no
 		complete_effect = {
 			SGS_RT_open_overtime = yes
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 	SGS_RT_close_overtime_deci = {
@@ -2391,7 +2413,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			factor = 80
 		}
 	}
 	SGS_RT_shuxuegongju_deci = {
@@ -2421,7 +2443,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			factor = 80
 		}
 	}
 	SGS_RT_zhanchangzhihui145_deci = {
