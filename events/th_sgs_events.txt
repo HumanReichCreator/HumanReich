@@ -207,6 +207,10 @@ country_event = {
 		not = {
 			has_country_flag = sgs_promise_to_BaF
 		}
+		not = {
+			SGS_restless_stage_is_over = yes
+			has_war = yes
+		}
 	}
 	option = {
 		#承诺
