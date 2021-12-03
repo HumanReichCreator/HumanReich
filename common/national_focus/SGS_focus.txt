@@ -93,7 +93,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 30
 		}
 		cancel_if_invalid = no
 		continue_if_invalid = no
@@ -158,6 +158,9 @@ focus_tree = {
 				uses = 1
 				bonus = 0.2
 			}
+		}
+		ai_will_do = {
+			factor = 60
 		}
 	}
 	focus = {
@@ -339,7 +342,7 @@ focus_tree = {
 		}
 		#国家精神修正√
 		ai_will_do = {
-			factor = 1
+			factor = 35
 		}
 		cancel_if_invalid = no
 		continue_if_invalid = no
@@ -376,6 +379,16 @@ focus_tree = {
 				popularity = -0.12
 			}
 			add_political_power = 40
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				or = {
+					has_completed_focus = SGS_pacify_battle_fariy_focus
+					has_completed_focus = SGS_develop_our_country_focus
+				}
+				add = -8
+			}
 		}
 	}
 	focus = {
@@ -516,6 +529,9 @@ focus_tree = {
 				bonus = 0.4
 			}
 		}
+		ai_will_do = {
+			factor = 50
+		}
 	}
 	focus = {
 		#加科研槽，加躁动和稳定，追加全体科研加速
@@ -553,6 +569,9 @@ focus_tree = {
 				idea = SGS_organize_smart_fairy_idea
 				days = 180
 			}
+		}
+		ai_will_do = {
+			factor = 100
 		}
 	}
 	focus = {
@@ -708,6 +727,9 @@ focus_tree = {
 				uses = 1
 				category = math
 			}
+		}
+		ai_will_do = {
+			factor = 50
 		}
 	}
 	focus = {
