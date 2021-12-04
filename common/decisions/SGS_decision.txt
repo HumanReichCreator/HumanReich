@@ -105,7 +105,7 @@ SGS_category = {
 			}
 		}
 		ai_will_do = {
-			factor = 75
+			base = 750
 			modifier = {
 				has_equipment = {
 					magic_core_a < 250
@@ -173,7 +173,7 @@ SGS_category = {
 			custom_effect_tooltip = SGS_itazura_remove_ins
 		}
 		ai_will_do = {
-			factor = 45
+			base = 450
 			modifier = {
 				has_war_support < 0.5
 				factor = 1.5
@@ -221,7 +221,7 @@ SGS_category = {
 			}
 		}
 		ai_will_do = {
-			factor = 30
+			base = 300
 			modifier = {
 				num_of_civilian_factories > 10
 				factor = 1.5
@@ -282,7 +282,7 @@ SGS_category = {
 			}
 		}
 		ai_will_do = {
-			factor = 15
+			base = 150
 			modifier = {
 				has_stability < 0.1
 				factor = 1.2
@@ -331,7 +331,7 @@ SGS_category = {
 			}
 		}
 		ai_will_do = {
-			factor = 80
+			base = 800
 		}
 	}
 	SGS_producing_war_deci = {
@@ -377,7 +377,7 @@ SGS_category = {
 			clr_country_flag = sgs_selected_battle_fairy_deci
 		}
 		ai_will_do = {
-			factor = 65
+			base = 65
 			modifier = {
 				has_equipment = {
 					magic_core_a < 100
@@ -430,7 +430,7 @@ SGS_category = {
 			clr_country_flag = sgs_selected_battle_fairy_deci
 		}
 		ai_will_do = {
-			factor = 70
+			base = 700
 			modifier = {
 				has_equipment = {
 					magic_core_a < 0
@@ -485,7 +485,7 @@ SGS_category = {
 			clr_country_flag = sgs_selected_battle_fairy_deci
 		}
 		ai_will_do = {
-			factor = 50
+			base = 500
 			modifier = {
 				has_political_power < 100
 				factor = 1.5
@@ -768,7 +768,7 @@ SGS_equipment_issue_category = {
 			}
 		}
 		ai_will_do = {
-			factor = 100
+			base = 100
 		}
 	}
 	SGS_fire_black_marketer_deci = {
@@ -795,7 +795,7 @@ SGS_equipment_issue_category = {
 			clr_country_flag = SGS_BLM_pay_prompt_repo_2_flag
 		}
 		ai_will_do = {
-			factor = 2
+			base = 2
 		}
 	}
 	SGS_black_marketer_find_garbage = {
@@ -825,7 +825,7 @@ SGS_equipment_issue_category = {
 			country_event = {id = sgs.3043}
 		}
 		ai_will_do = {
-			factor = 10
+			base = 10
 		}
 	}
 	SGS_black_marketer_find_garbage_by_leader = {
@@ -856,7 +856,7 @@ SGS_equipment_issue_category = {
 			country_event = {id = sgs.3043}
 		}
 		ai_will_do = {
-			factor = 5
+			base = 5
 		}
 	}
 	SGS_black_marketer_pay_for_deli_safe_1_deci = {
@@ -886,7 +886,7 @@ SGS_equipment_issue_category = {
 			set_country_flag = SGS_BLM_deli_safe_1
 		}
 		ai_will_do = {
-			factor = 10
+			base = 10
 		}
 	}
 	SGS_black_marketer_pay_for_deli_safe_2_deci = {
@@ -917,7 +917,7 @@ SGS_equipment_issue_category = {
 			set_country_flag = SGS_BLM_deli_safe_2
 		}
 		ai_will_do = {
-			factor = 5
+			base = 5
 		}
 	}
 	SGS_black_marketer_pay_for_prompt_repo_1_deci = {
@@ -947,7 +947,7 @@ SGS_equipment_issue_category = {
 			set_country_flag = SGS_BLM_pay_prompt_repo_1_flag
 		}
 		ai_will_do = {
-			factor = 10
+			base = 10
 		}
 	}
 	SGS_black_marketer_pay_for_prompt_repo_2_deci = {
@@ -978,7 +978,7 @@ SGS_equipment_issue_category = {
 			set_country_flag = SGS_BLM_pay_prompt_repo_2_flag
 		}
 		ai_will_do = {
-			factor = 5
+			base = 5
 		}
 	}
 	SGS_fire_black_marketer_buy_gun_small = {
@@ -1023,7 +1023,7 @@ SGS_equipment_issue_category = {
 			country_event = {id = sgs.3040} #交货
 		}
 		ai_will_do = {
-			factor = 1
+			base = 1
 		}
 	}
 	SGS_fire_black_marketer_buy_magic_core_small = {
@@ -2094,7 +2094,7 @@ SGS_hawk_dove_category = {
 			
 		}
 		ai_will_do = {
-			factor = 30
+			base = 300
 			modifier = {
 				SGS_dove_have_supporter = yes
 				factor = 1.5
@@ -2120,7 +2120,7 @@ SGS_hawk_dove_category = {
 			
 		}
 		ai_will_do = {
-			factor = 30
+			base = 300
 			modifier = {
 				SGS_hawk_have_supporter = yes
 				factor = 1.5
@@ -2184,7 +2184,7 @@ SGS_research_team_category = {
 			set_country_flag = SGS_RT_improve_basic_edu_1_over
 		}
 		ai_will_do = {
-			factor = 200
+			base = 200
 		}
 	}
 	SGS_RT_expan_research_team_two = {
@@ -2229,7 +2229,7 @@ SGS_research_team_category = {
 			set_country_flag = SGS_RT_improve_basic_edu_2_over
 		}
 		ai_will_do = {
-			factor = 100
+			base = 100
 		}
 	}
 	SGS_RT_expan_research_team_three = {
@@ -2255,7 +2255,7 @@ SGS_research_team_category = {
 			SGS_RT_close_concentrate = yes
 		}
 		ai_will_do = {
-			factor = 100
+			base = 100
 		}
 	}
 	SGS_RT_improve_teams_life = {
@@ -2282,7 +2282,7 @@ SGS_research_team_category = {
 			clr_country_flag = SGS_RT_reseacher_better_life
 			SGS_RT_update_research_speed = yes
 		}ai_will_do = {
-			factor = 10
+			base = 10
 		}
 	}
 	SGS_RT_improve_teams_political_statue = {
@@ -2326,7 +2326,7 @@ SGS_research_team_category = {
 			SGS_RT_open_overtime = yes
 		}
 		ai_will_do = {
-			factor = 10
+			base = 10
 		}
 	}
 	SGS_RT_close_overtime_deci = {
@@ -2413,7 +2413,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 80
+			base = 80
 		}
 	}
 	SGS_RT_shuxuegongju_deci = {
@@ -2443,7 +2443,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 80
+			base = 80
 		}
 	}
 	SGS_RT_zhanchangzhihui145_deci = {
@@ -2474,7 +2474,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			base = 300
 		}
 	}
 	SGS_RT_zuzhihuazhanzheng147_deci = {
@@ -2505,7 +2505,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			base = 300
 		}
 	}
 	SGS_RT_lingliliushuixian_deci = {
@@ -2536,7 +2536,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			base = 300
 		}
 	}
 	SGS_RT_gun3_deci = {
@@ -2567,7 +2567,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			base = 300
 		}
 	}
 	SGS_RT_yaojinggansiban1_deci = {
@@ -2598,7 +2598,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			base = 300
 		}
 	}
 	SGS_RT_yaojinggansiban2_deci = {
@@ -2629,7 +2629,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			base = 300
 		}
 	}
 	SGS_RT_spear3_deci = {
@@ -2660,7 +2660,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			base = 300
 		}
 	}
 	SGS_RT_spell_card3_deci = {
@@ -2691,7 +2691,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			base = 300
 		}
 	}
 	SGS_RT_org_production_deci = {
@@ -2722,7 +2722,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			base = 300
 		}
 	}
 	SGS_RT_jizhongshenchan145_deci = {
@@ -2756,7 +2756,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			base = 300
 		}
 	}
 	SGS_RT_fensanshenchan145_deci = {
@@ -2789,7 +2789,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			base = 300
 		}
 	}
 	SGS_RT_ziyuankaifa130_deci = {
@@ -2820,7 +2820,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			base = 300
 		}
 	}
 	SGS_RT_ziyuankaifa140_deci = {
@@ -2851,7 +2851,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			base = 300
 		}
 	}
 	SGS_RT_fangwaijieshengchan130_deci = {
@@ -2882,7 +2882,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			base = 300
 		}
 	}
 	SGS_RT_fangwaijieshengchan140_deci = {
@@ -2913,7 +2913,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			base = 300
 		}
 	}
 	SGS_RT_linglishengchan130_deci = {
@@ -2944,7 +2944,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			base = 300
 		}
 	}
 	SGS_RT_linglishengchan140_deci = {
@@ -2975,7 +2975,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			base = 300
 		}
 	}
 	SGS_RT_jianzaojishu130_deci = {
@@ -3006,7 +3006,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			base = 300
 		}
 	}
 	SGS_RT_jianzaojishu140_deci = {
@@ -3037,7 +3037,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			base = 300
 		}
 	}
 
@@ -3069,7 +3069,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			base = 300
 		}
 	}
 	SGS_RT_jiami137_deci = {
@@ -3100,7 +3100,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			base = 300
 		}
 	}
 	SGS_RT_jiemi137_deci = {
@@ -3131,7 +3131,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			base = 300
 		}
 	}
 	SGS_RT_lingganleida142_deci = {
@@ -3162,7 +3162,7 @@ SGS_research_team_category = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			base = 300
 		}
 	}
 

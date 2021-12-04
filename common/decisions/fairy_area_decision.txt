@@ -40,7 +40,7 @@ FAIRY_AREA_CORE_MAKE = {
 		}
 
 		ai_will_do = {
-			base = 1000
+			base = 10000
 		}
 	}
 	SC2_core_make = {
@@ -84,7 +84,7 @@ FAIRY_AREA_CORE_MAKE = {
 		}
 
 		ai_will_do = {
-			base = 1000
+			base = 10000
 		}
 	}
 	CIR_core_make = {
@@ -128,7 +128,7 @@ FAIRY_AREA_CORE_MAKE = {
 		}
 
 		ai_will_do = {
-			base = 1000
+			base = 10000
 		}
 	}
 	LIL_core_make = {
@@ -172,7 +172,7 @@ FAIRY_AREA_CORE_MAKE = {
 		}
 
 		ai_will_do = {
-			base = 1000
+			base = 10000
 		}
 	}
 	SGS_core_make = {
@@ -216,7 +216,7 @@ FAIRY_AREA_CORE_MAKE = {
 		}
 
 		ai_will_do = {
-			base = 1000
+			base = 10000
 		}
 	}
 
@@ -331,7 +331,7 @@ SC2_infl_category = {
 			}
 		}
 		ai_will_do = {
-			factor = 50
+			base = 600
 		}
 	}
 	SC2_mili_thread_infl_SGS = {
@@ -399,7 +399,7 @@ SC2_infl_category = {
 
 		}
 		ai_will_do = {
-			factor = 50
+			base = 800
 		}
 	}
 
@@ -440,7 +440,7 @@ SC2_infl_category = {
 			
 		}
 		ai_will_do = {
-			factor = 100
+			base = 10000
 		}
 	}
 
@@ -605,7 +605,7 @@ SC2_infl_category = {
 			
 		}
 		ai_will_do = {
-			factor = 0
+			factor = 1
 			
 		}
 	}
