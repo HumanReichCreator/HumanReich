@@ -1283,6 +1283,7 @@ country_event = {
 	desc = sgs.17.d
 	fire_only_once = yes
 	is_triggered_only = no
+	hidden = yes
 	trigger = {
 		or = {
 			BAF = {
@@ -1293,7 +1294,6 @@ country_event = {
 			}
 		}
 		has_global_flag =  Baf_win
-		tag = xxx
 	}
 	immediate = {
 
@@ -1306,10 +1306,16 @@ country_event = {
 			limit = {
 				is_core_of = SGS
 				not = {
-					is_core_of = WHM
-					is_core_of = NTR
-					is_core_of = SCA
-					is_core_of = PRI
+					and = { is_core_of = WHM is_owned_by = WHM }
+				}
+				not = {
+					and = { is_core_of = NTR is_owned_by = NTR }
+				}
+				not = {
+					and = { is_core_of = SCA is_owned_by = SCA }
+				}
+				not = {
+					and = { is_core_of = PRI is_owned_by = PRI }
 				}
 			}
 			SGS = {
@@ -1320,13 +1326,13 @@ country_event = {
 			set_popularities = {
 				guli = 100
 			}
-			set_politics = {
-				ruling_party = guli
-			}
 			load_focus_tree = { tree = SGS_focus_post_cw keep_completed = yes }
 			complete_national_focus = SGS_civil_war_end_focus
 			complete_national_focus = SGS_postwar_confer_focus
 			complete_national_focus = SGS_star_win_focus
+			set_politics = {
+				ruling_party = guli
+			}
 		}
 
 		news_event = {id = sgs.18}
@@ -1341,7 +1347,8 @@ news_event = {
 	id = sgs.18
 	title = sgs.18.t
 	desc = sgs.18.d
-	fire_only_once = yes
+	major = yes
+	fire_only_once = no
 	is_triggered_only = yes
 
 	immediate = {
@@ -10452,6 +10459,7 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		tag = sgs
+		not = { has_global_flag =  Baf_win }
 	}
 	option = {
 		#
@@ -10474,6 +10482,7 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		tag = sgs
+		not = { has_global_flag =  Baf_win }
 	}
 	option = {
 		#桑尼
